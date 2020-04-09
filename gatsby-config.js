@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `CARA | NASA`,
+    description: `A centralized airborne data inventory`,
+    author: `@AliceR`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -30,5 +30,21 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
+    },
+    {
+      resolve: `gatsby-source-pg`,
+      options: {
+        connectionString: `postgres:///shakespeare`,
+        // for example: `postgres://pg_user:pg_pass@pg_host:pg_port/pg_db?ssl=1`
+        schema: `public`,
+        graphiql: true, // make postgres show up in graphiql
+        refetchInterval: 60, // Refetch data every 60 seconds
+      },
+    },
   ],
 }
