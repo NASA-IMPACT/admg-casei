@@ -44,6 +44,7 @@ module.exports = {
         schema: `public`,
         graphiql: true, // make postgres show up in graphiql
         refetchInterval: 60, // Refetch data every 60 seconds
+        appendPlugins: [require("postgraphile-plugin-connection-filter")],
       },
     },
   ],
