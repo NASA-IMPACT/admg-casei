@@ -9,6 +9,14 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `data`,
+        path: `${__dirname}/src/data/`,
+      },
+    },
+    `gatsby-transformer-csv`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
@@ -43,7 +51,7 @@ module.exports = {
         // for example: `postgres://pg_user:pg_pass@pg_host:pg_port/pg_db?ssl=1`
         schema: `public`,
         graphiql: true, // make postgres show up in graphiql
-        refetchInterval: 60, // Refetch data every 60 seconds
+        refetchInterval: 3600, // Refetch data every 1 hour
         appendPlugins: [require("postgraphile-plugin-connection-filter")],
       },
     },

@@ -1,10 +1,9 @@
 import React from "react"
 import { Button } from "@devseed-ui/button"
-import { Form, FormInput } from "@devseed-ui/form"
 
 const Searchbar = () => (
   <div className="search-container">
-    <Form style={{ margin: 0, display: `flex` }}>
+    <form style={{ margin: 0, display: `flex` }}>
       <input
         type="text"
         placeholder="Search..."
@@ -13,13 +12,6 @@ const Searchbar = () => (
           borderRadius: `0.25rem`,
         }}
       />
-      {/* <FormInput
-        type="text"
-        size="large"
-        id="searchtext"
-        name="search"
-        placeholder="Search..."
-      /> */}
       <Button
         variation="base-raised-light"
         size="medium"
@@ -30,7 +22,7 @@ const Searchbar = () => (
           🔍
         </span>
       </Button>
-    </Form>
+    </form>
   </div>
 )
 

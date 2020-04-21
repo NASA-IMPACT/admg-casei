@@ -1,13 +1,22 @@
 import React from "react"
-import ExploreCard from "./explore-card"
 
-const ExploreSection = () => (
+const ExploreSection = ({
+  totalCount,
+  sortOrder,
+  toggleSortOrder,
+  children,
+}) => (
   <section>
     <header style={{ display: `flex`, justifyContent: `space-between` }}>
-      <small>Showing 300 campaigns</small>
-      <select name="sort" id="sort">
-        <option value="latest">latest</option>
-        <option value="oldest">oldest</option>
+      <small>Showing {totalCount} campaigns</small>
+      <select
+        defaultValue={sortOrder}
+        name="sort"
+        id="sort"
+        onChange={e => toggleSortOrder(e.target.value)}
+      >
+        <option value="asc">A to Z</option>
+        <option value="desc">Z to A</option>
       </select>
     </header>
     <div
@@ -19,10 +28,7 @@ const ExploreSection = () => (
         justifyItems: `center`,
       }}
     >
-      <ExploreCard title={"Test"} description={"lorem ipsum bla bla bla"} />
-      {[...Array(19).keys()].map(key => (
-        <ExploreCard key={key} />
-      ))}
+      {children}
     </div>
   </section>
 )
