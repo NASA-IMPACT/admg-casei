@@ -13,7 +13,12 @@ module.exports = {
         path: `${__dirname}/src/data/`,
       },
     },
-    `gatsby-transformer-csv`,
+    {
+      resolve: `gatsby-transformer-csv`,
+      options: {
+        delimiter: ";",
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

@@ -6,8 +6,8 @@ export default ({ data }) => {
   return (
     <Layout>
       <div>
-        <h1>{data.campaignCsv.short_name}</h1>
-        <h2>{data.campaignCsv.long_name}</h2>
+        <h1>{data.campaign.shortname}</h1>
+        <h2>{data.campaign.longname}</h2>
       </div>
     </Layout>
   )
@@ -15,9 +15,9 @@ export default ({ data }) => {
 
 export const query = graphql`
   query($slug: String!) {
-    campaignCsv(id: { eq: $slug }) {
-      short_name
-      long_name
+    campaign: campaignCsv(id: { eq: $slug }) {
+      shortname: Campaign_Shortname
+      longname: Campaign_Longname
     }
   }
 `

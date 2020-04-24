@@ -26,8 +26,8 @@ const ListLink = props => {
   )
 }
 
-const ExploreMenu = () => {
-  const [isFiltering, setFilterVisible] = useState(false)
+const ExploreMenu = ({ filters, addFilter, removeFilter }) => {
+  const [isFiltering, toggleFilterMenu] = useState(false)
 
   return (
     <>
@@ -64,7 +64,7 @@ const ExploreMenu = () => {
           variation="base-raised-light"
           size="medium"
           title="filter"
-          onClick={() => setFilterVisible(!isFiltering)}
+          onClick={() => toggleFilterMenu(!isFiltering)}
           style={{ width: `90px` }}
         >
           {isFiltering ? `🆇` : `🔧`}
@@ -72,7 +72,13 @@ const ExploreMenu = () => {
           Filter
         </Button>
       </div>
-      {isFiltering && <FilterMenu />}
+      {isFiltering && (
+        <FilterMenu
+          filters={filters}
+          addFilter={addFilter}
+          removeFilter={removeFilter}
+        />
+      )}
     </>
   )
 }

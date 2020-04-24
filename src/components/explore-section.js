@@ -1,36 +1,62 @@
 import React from "react"
 
+import FilterChip from "./filter-chip"
+
 const ExploreSection = ({
+  filters,
+  removeFilter,
+  filteredCount,
   totalCount,
   sortOrder,
   toggleSortOrder,
   children,
-}) => (
-  <section>
-    <header style={{ display: `flex`, justifyContent: `space-between` }}>
-      <small>Showing {totalCount} campaigns</small>
-      <select
-        defaultValue={sortOrder}
-        name="sort"
-        id="sort"
-        onChange={e => toggleSortOrder(e.target.value)}
+}) => {
+  const filteredLabel =
+    filteredCount === totalCount ? null : `${filteredCount} of `
+
+  return (
+    <section>
+      <header style={{ display: `flex`, justifyContent: `space-between` }}>
+        <div style={{ display: `flex` }}>
+          <small style={{ whiteSpace: `nowrap` }}>
+            Showing {filteredLabel}
+            {totalCount} campaigns
+          </small>
+          <div style={{ display: `flex`, flexWrap: `wrap` }}>
+            {filters.map(f => (
+              <FilterChip
+                key={f}
+                id={f}
+                label={f}
+                removeFilter={removeFilter}
+              />
+            ))}
+          </div>
+        </div>
+        <select
+          defaultValue={sortOrder}
+          name="sort"
+          id="sort"
+          onChange={e => toggleSortOrder(e.target.value)}
+          style={{ height: `2rem` }}
+        >
+          <option value="asc">A to Z</option>
+          <option value="desc">Z to A</option>
+        </select>
+      </header>
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: `1fr 1fr 1fr 1fr`,
+          gap: `1rem`,
+          margin: `1rem`,
+          justifyItems: `center`,
+        }}
       >
-        <option value="asc">A to Z</option>
-        <option value="desc">Z to A</option>
-      </select>
-    </header>
-    <div
-      style={{
-        display: "grid",
-        gridTemplateColumns: `1fr 1fr 1fr 1fr`,
-        gap: `1rem`,
-        margin: `1rem`,
-        justifyItems: `center`,
-      }}
-    >
-      {children}
-    </div>
-  </section>
-)
+        {children}
+      </div>
+    </section>
+  )
+}
 
 export default ExploreSection
