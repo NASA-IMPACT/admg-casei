@@ -29,6 +29,7 @@ const Campaigns = ({ data }) => {
         removeFilter={removeFilter}
       />
       <ExploreSection
+        category="campaigns"
         filters={filters}
         removeFilter={removeFilter}
         filteredCount={list.length}

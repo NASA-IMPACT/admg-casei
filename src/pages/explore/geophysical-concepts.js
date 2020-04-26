@@ -7,7 +7,7 @@ import ExploreSection from "../../components/explore-section"
 const GeophysicalConcepts = () => (
   <Layout>
     <ExploreMenu />
-    <ExploreSection />
+    <ExploreSection category="geophysical concepts" />
   </Layout>
 )
 

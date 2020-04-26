@@ -3,7 +3,8 @@ import React from "react"
 import FilterChip from "./filter-chip"
 
 const ExploreSection = ({
-  filters,
+  category,
+  filters = [],
   removeFilter,
   filteredCount,
   totalCount,
@@ -19,8 +20,8 @@ const ExploreSection = ({
       <header style={{ display: `flex`, justifyContent: `space-between` }}>
         <div style={{ display: `flex` }}>
           <small style={{ whiteSpace: `nowrap` }}>
-            Showing {filteredLabel}
-            {totalCount} campaigns
+            {totalCount > 0 ? `Showing` : `No`} {filteredLabel}
+            {totalCount} {category}
           </small>
           <div style={{ display: `flex`, flexWrap: `wrap` }}>
             {filters.map(f => (

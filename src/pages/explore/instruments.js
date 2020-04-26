@@ -7,7 +7,7 @@ import ExploreSection from "../../components/explore-section"
 const Instruments = () => (
   <Layout>
     <ExploreMenu />
-    <ExploreSection />
+    <ExploreSection category="instruments" />
   </Layout>
 )
 
