@@ -25,25 +25,37 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <div
+      style={{
+        display: `flex`,
+        minHeight: `100vh`,
+        flexDirection: `column`,
+      }}
+    >
       <Header siteTitle={data.site.siteMetadata.title}>
         <Nav />
       </Header>
       <div
         style={{
           margin: `0 auto`,
+          width: `100%`,
           maxWidth: 960,
           padding: `0 1.0875rem 1.45rem`,
+          flexGrow: 1,
         }}
       >
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
       </div>
-    </>
+      <footer
+        style={{
+          flexShrink: 0,
+          alignSelf: `flex-end`,
+        }}
+      >
+        © {new Date().getFullYear()}, Built by{" "}
+        <a href="https://www.developmentseed.org">Development Seed</a>.
+      </footer>
+    </div>
   )
 }
 

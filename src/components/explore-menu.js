@@ -61,7 +61,7 @@ const ExploreMenu = ({ filters, addFilter, removeFilter }) => {
         </ul>
 
         <Button
-          variation="base-raised-light"
+          variation="base-raised-dark"
           size="medium"
           title="filter"
           onClick={() => toggleFilterMenu(!isFiltering)}

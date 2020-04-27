@@ -4,8 +4,8 @@ import Layout from "../components/layout"
 
 const About = () => (
   <Layout>
-    <h1>About me</h1>
-    <p>I’m good enough, I’m smart enough, and gosh darn it, people like me!</p>
+    <h1>About</h1>
+    <p>The airborne invetory is developed by ADMG and Development Seed.</p>
   </Layout>
 )
 
