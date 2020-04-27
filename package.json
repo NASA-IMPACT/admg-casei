@@ -38,7 +38,8 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^25.4.0",
     "prettier": "^1.19.1",
-    "react-test-renderer": "^16.13.1"
+    "react-test-renderer": "^16.13.1",
+    "surge": "^0.21.3"
   },
   "license": "MIT",
   "scripts": {
