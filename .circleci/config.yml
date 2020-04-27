@@ -72,4 +72,4 @@ workflows:
             - test
           filters:
             branches:
-              only: prototype
+              only: develop
