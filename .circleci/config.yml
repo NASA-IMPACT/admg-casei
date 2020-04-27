@@ -52,7 +52,7 @@ jobs:
       - restore_cache:
           <<: *restore_cache_def
       - run: yarn build
-      - run: surge --project ./public --domain airborne-inventory.surge.sh
+      - run: ./node_modules/surge/lib/cli.js --project ./public --domain airborne-inventory.surge.sh
 
 workflows:
   version: 2
