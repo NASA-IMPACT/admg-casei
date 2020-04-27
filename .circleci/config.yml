@@ -1,0 +1,60 @@
+# YAML anchors for base definitions
+base_def: &base_def
+  docker:
+    - image: node:12
+  working_directory: ~/repo
+  environment:
+    - DEVELOPMENT_BRANCH: develop
+    - PRODUCTION_BRANCH: master
+
+restore_cache_def: &restore_cache_def
+  # Download and cache dependencies
+  keys:
+  - v1-dependencies-{{ checksum "package.json" }}
+  - v1-dependencies-  # fallback if checksum fails
+
+##
+## START Circle CI configuration
+##
+
+version: 2.1
+jobs:
+  prepare:
+    <<: *base_def
+    steps:
+      - checkout
+      - restore_cache:
+          <<: *restore_cache_def
+      - run: yarn install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+  lint:
+    <<: *base_def
+    steps:
+      - checkout
+      - restore_cache:
+          <<: *restore_cache_def
+      - run: yarn install
+      - run: yarn lint
+  test:
+    <<: *base_def
+    steps:
+      - checkout
+      - restore_cache:
+          <<: *restore_cache_def
+      - run: yarn install
+      - run: yarn test
+
+workflows:
+  version: 2
+  main:
+    jobs:
+      - prepare
+      - lint:
+          requires:
+            - prepare
+      - test:
+          requires:
+            - prepare
