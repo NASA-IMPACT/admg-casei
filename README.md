@@ -1,35 +1,35 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
+  <a href="https://earthdata.nasa.gov/esds/impact/admg">
+    <img alt="NASA" src="https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png" width="300" />
   </a>
 </p>
 <h1 align="center">
-  Gatsby's default starter
+  Airborne Data Inventory
 </h1>
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+The goal of this project is to build a centralized airborne data inventory for easier user access to data and information. Airborne scientists and researchers would like to
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+- get curated and organized data context for efficient data search,
+- gain detailed information with consistent terminology about ongoing and past airborne campaigns in a one-stop-shop for airborne data resources and information
+- quickly* find and access relevant data products and view the associated context (* quickly could mean _fewer clicks_)
+- provide feedback on inventory contents, noting inaccuracies or requesting ADMG for more details
 
-## 🚀 Quick start
+_To learn more about the goals and ideas of this project, [have a look at the User Story Map](https://miro.com/app/board/o9J_kumT768=/)._
 
-1.  **Create a Gatsby site.**
+## 🚀 Start developing
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
+1.  **Install the dependencies.**
+
+    This assumes that you already cloned the repository and have yarn installed globally on your machine.
 
     ```shell
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
+    yarn install
     ```
 
 1.  **Start developing.**
 
-    Navigate into your new site’s directory and start it up.
-
     ```shell
-    cd my-default-starter/
-    gatsby develop
+    yarn develop
     ```
 
 1.  **Open the source code and start editing!**
@@ -37,8 +37,6 @@ _Have another more specific idea? You may want to check out our vibrant collecti
     Your site is now running at `http://localhost:8000`!
 
     _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
-
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
 
 ## 🧐 What's inside?
 
@@ -86,14 +84,12 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
 Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
 
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
+- **For most developers, we recommend starting with the [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
 
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+- **To dive straight into code samples, head [to the documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
 
 ## 💫 Deploy
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+The project is set up to deploy with CircleCI when changes are merged into the branch `develop`.
 
-[![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/import/project?template=https://github.com/gatsbyjs/gatsby-starter-default)
-
-<!-- AUTO-GENERATED-CONTENT:END -->
+[![CircleCI Status](https://circleci.com/gh/developmentseed/airborne-metadata-catalog-internal.svg?style=svg&circle-token=7382cd33d87c082027d281aecdb24433511223c1)](https://app.circleci.com/pipelines/github/developmentseed/airborne-metadata-catalog-internal)
