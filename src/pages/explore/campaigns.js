@@ -10,14 +10,14 @@ const Campaigns = ({ data }) => {
   const [sortOrder, toggleSortOrder] = useState("asc")
   const [filters, setFilter] = useState([])
 
-  const addFilter = id => setFilter([...filters, id])
-  const removeFilter = id => setFilter(filters.filter(f => f !== id))
+  const addFilter = (id) => setFilter([...filters, id])
+  const removeFilter = (id) => setFilter(filters.filter((f) => f !== id))
 
-  const list = data[sortOrder].list.filter(campaign =>
+  const list = data[sortOrder].list.filter((campaign) =>
     filters.length === 0
       ? true
       : filters.every(
-          f => campaign.season.includes(f) || campaign.focus.includes(f)
+          (f) => campaign.season.includes(f) || campaign.focus.includes(f)
         )
   )
 
@@ -37,7 +37,7 @@ const Campaigns = ({ data }) => {
         sortOrder={sortOrder}
         toggleSortOrder={toggleSortOrder}
       >
-        {list.map(node => (
+        {list.map((node) => (
           <Link to={`/campaign/${node.id}`} key={node.shortname}>
             <ExploreCard title={node.shortname} description={node.longname} />
           </Link>

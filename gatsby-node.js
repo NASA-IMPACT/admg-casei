@@ -19,7 +19,7 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  result.data.allCampaignCsv.nodes.forEach(node => {
+  result.data.allCampaignCsv.nodes.forEach((node) => {
     createPage({
       path: `campaign/${node.id}`,
       component: path.resolve(`./src/templates/campaign.js`),

@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
-const ListLink = props => (
+const ListLink = (props) => (
   <li style={{ margin: `0 1rem 0 0` }}>
     <Link to={props.to}>{props.children}</Link>
   </li>
