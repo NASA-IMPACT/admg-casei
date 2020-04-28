@@ -24,7 +24,7 @@ const ExploreSection = ({
             {totalCount} {category}
           </small>
           <div style={{ display: `flex`, flexWrap: `wrap` }}>
-            {filters.map((f) => (
+            {filters.map(f => (
               <FilterChip
                 key={f}
                 id={f}
@@ -38,7 +38,7 @@ const ExploreSection = ({
           defaultValue={sortOrder}
           name="sort"
           id="sort"
-          onChange={(e) => toggleSortOrder(e.target.value)}
+          onChange={e => toggleSortOrder(e.target.value)}
           style={{ height: `2rem` }}
         >
           <option value="asc">A to Z</option>

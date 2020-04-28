@@ -9,7 +9,7 @@ const Filter = ({
   addFilter,
   removeFilter,
 }) => {
-  const handleSelection = (value) => {
+  const handleSelection = value => {
     filters.includes(value) ? removeFilter(value) : addFilter(value)
     document.getElementById(id).value = ""
   }
@@ -25,10 +25,10 @@ const Filter = ({
       <select
         name={name}
         id={id}
-        onChange={(e) => handleSelection(e.target.value)}
+        onChange={e => handleSelection(e.target.value)}
       >
         <option value="">--{label}--</option>
-        {options.map((o) => (
+        {options.map(o => (
           <option key={o} value={o}>
             {o}
           </option>

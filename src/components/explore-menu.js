@@ -5,7 +5,7 @@ import { Button } from "@devseed-ui/button"
 import FilterMenu from "./filter-menu"
 import Searchbar from "./searchbar"
 
-const ListLink = (props) => {
+const ListLink = props => {
   return (
     <li
       style={{
