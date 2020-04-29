@@ -28,10 +28,7 @@ describe("Accessibility tests", () => {
   })
 
   it("Navigates to page /about and checks for accessibility violations", () => {
-    cy.get("nav")
-      .findByText(/About/i)
-      .click()
-      .checkA11y()
+    cy.get("nav").findByText(/About/i).click().checkA11y()
   })
 
   it("Navigates to page /contact and checks for accessibility violations", () => {
