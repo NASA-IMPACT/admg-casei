@@ -45,6 +45,13 @@ jobs:
           <<: *restore_cache_def
       - run: yarn install
       - run: yarn test
+  test-end-to-end:
+    <<: *base_def
+    steps:
+      - checkout
+      - restore_cache:
+          <<: *restore_cache_def
+      - run: yarn test:e2e:ci
   build-and-deploy:
     <<: *base_def
     steps:
@@ -65,11 +72,17 @@ workflows:
       - test:
           requires:
             - prepare
+      - test-end-to-end:
+          requires:
+            - prepare
+            - lint
+            - test
       - build-and-deploy:
           requires:
             - prepare
             - lint
             - test
+            - test-end-to-end
           filters:
             branches:
               only: develop
