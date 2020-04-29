@@ -1,4 +1,3 @@
-/* eslint-disable jest/expect-expect */
 /// <reference types="Cypress" />
 
 describe("Accessibility tests", () => {

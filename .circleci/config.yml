@@ -46,11 +46,15 @@ jobs:
       - run: yarn install
       - run: yarn test
   test-end-to-end:
-    <<: *base_def
+    docker:
+      # the Docker image with Cypress dependencies
+      - image: cypress/base:10
+        environment:
+          ## this enables colors in the output
+          TERM: xterm
     steps:
       - checkout
-      - restore_cache:
-          <<: *restore_cache_def
+      - run: yarn install
       - run: yarn test:e2e:ci
   build-and-deploy:
     <<: *base_def
