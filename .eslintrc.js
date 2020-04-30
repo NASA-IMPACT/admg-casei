@@ -28,4 +28,27 @@ module.exports = {
   rules: {
     "react/prop-types": "off", // Disable prop-types // TODO: add type checking!
   },
+  overrides: [
+    {
+      files: ["**/cypress/**"],
+      rules: {
+        "jest/expect-expect": "off",
+        "jest/no-commented-out-tests": "off",
+        "jest/no-disabled-tests": "off",
+        "jest/no-export": "off",
+        "jest/no-focused-tests": "off",
+        "jest/no-identical-title": "off",
+        "jest/no-jest-import": "off",
+        "jest/no-mocks-import": "off",
+        "jest/no-jasmine-globals": "off",
+        "jest/no-standalone-expect": "off",
+        "jest/no-test-callback": "off",
+        "jest/no-test-prefixes": "off",
+        "jest/no-try-expect": "off",
+        "jest/valid-describe": "off",
+        "jest/valid-expect": "off",
+        "jest/valid-expect-in-promise": "off",
+      },
+    },
+  ],
 }
