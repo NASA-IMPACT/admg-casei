@@ -19,7 +19,7 @@ const Nav = () => {
           listStyle: `none`,
         }}
       >
-        <ListLink to="/explore">Explore</ListLink>
+        <ListLink to="/explore/campaigns">Explore</ListLink>
         <ListLink to="/resources">Resources</ListLink>
         <ListLink to="/about/">About</ListLink>
         <ListLink to="/contact/">Contact</ListLink>

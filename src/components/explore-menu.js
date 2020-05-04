@@ -1,8 +1,6 @@
-import React, { useState } from "react"
+import React from "react"
 import { Link } from "gatsby"
-import { Button } from "@devseed-ui/button"
 
-import FilterMenu from "./filter-menu"
 import Searchbar from "./searchbar"
 
 const ListLink = props => {
@@ -26,61 +24,46 @@ const ListLink = props => {
   )
 }
 
-const ExploreMenu = ({ filters, addFilter, removeFilter }) => {
-  const [isFiltering, toggleFilterMenu] = useState(false)
-
-  return (
-    <>
-      <div
+const ExploreMenu = ({
+  filters,
+  addFilter,
+  removeFilter,
+  sortOrder,
+  toggleSortOrder,
+}) => (
+  <>
+    <div
+      style={{
+        display: `flex`,
+        justifyContent: `space-around`,
+        marginBottom: `2rem`,
+      }}
+    >
+      <ul
         style={{
           display: `flex`,
           flexDirection: `row`,
-          justifyContent: `space-between`,
-          alignItems: `flex-end`,
-          marginBottom: `2rem`,
+          margin: 0,
+          listStyle: `none`,
+          alignItems: "center",
         }}
+        data-cy="tabbar"
       >
-        <Searchbar />
-        <ul
-          style={{
-            display: `flex`,
-            flexDirection: `row`,
-            margin: 0,
-            listStyle: `none`,
-            alignItems: "center",
-          }}
-        >
-          <ListLink to="/explore/campaigns" isActive>
-            Campaigns
-          </ListLink>
-          <ListLink to="/explore/platforms">Platforms</ListLink>
-          <ListLink to="/explore/instruments">Instruments</ListLink>
-          <ListLink to="/explore/geophysical-concepts">
-            Geophysical Concepts
-          </ListLink>
-        </ul>
-
-        <Button
-          variation="base-raised-dark"
-          size="medium"
-          title="filter"
-          onClick={() => toggleFilterMenu(!isFiltering)}
-          style={{ width: `90px` }}
-        >
-          {isFiltering ? `🆇` : `🔧`}
-          {` `}
-          Filter
-        </Button>
-      </div>
-      {isFiltering && (
-        <FilterMenu
-          filters={filters}
-          addFilter={addFilter}
-          removeFilter={removeFilter}
-        />
-      )}
-    </>
-  )
-}
+        <ListLink to="/explore/campaigns" isActive>
+          Campaigns
+        </ListLink>
+        <ListLink to="/explore/platforms">Platforms</ListLink>
+        <ListLink to="/explore/instruments">Instruments</ListLink>
+      </ul>
+    </div>
+    <Searchbar
+      filters={filters}
+      addFilter={addFilter}
+      removeFilter={removeFilter}
+      sortOrder={sortOrder}
+      toggleSortOrder={toggleSortOrder}
+    />
+  </>
+)
 
 export default ExploreMenu

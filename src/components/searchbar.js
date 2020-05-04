@@ -1,35 +1,73 @@
 import React from "react"
-import { Button } from "@devseed-ui/button"
 
-const Searchbar = () => (
-  <div className="search-container">
-    <form style={{ margin: 0, display: `flex`, flexDirection: `column` }}>
-      <label htmlFor="search">
-        <small>Search</small>
-      </label>
-      <div>
-        <input
-          id="search"
-          type="text"
-          placeholder="Enter text..."
-          style={{
-            boxShadow: `0 -1px 1px 0 rgba(68,63,63,0.08), 0 2px 6px 0 rgba(68,63,63,0.08)`,
-            borderRadius: `0.25rem`,
-          }}
-        />
-        <Button
-          variation="base-raised-light"
-          size="medium"
-          title="search"
-          type="submit"
-        >
-          <span role="img" aria-label="magnifying-glass-emoji">
-            🔍
-          </span>
-        </Button>
+import FilterMenu from "./filter-menu"
+import FilterChip from "./filter-chip"
+
+const Searchbar = ({
+  filters = [],
+  addFilter,
+  removeFilter,
+  sortOrder,
+  toggleSortOrder,
+}) => (
+  <form
+    onSubmit={e => e.preventDefault()}
+    style={{ display: `flex`, margin: `2rem 0` }}
+    data-cy="searchbar"
+  >
+    <FilterMenu
+      filters={filters}
+      addFilter={addFilter}
+      removeFilter={removeFilter}
+    />
+    <div
+      style={{
+        display: "flex",
+        flexGrow: 1,
+        boxShadow: `0 -1px 1px 0 rgba(68,63,63,0.08), 0 2px 6px 0 rgba(68,63,63,0.08)`,
+        borderRadius: `0.25rem`,
+        padding: "0.25rem",
+      }}
+    >
+      <div style={{ display: `flex`, flexWrap: `wrap` }}>
+        {filters.map(f => (
+          <FilterChip key={f} id={f} label={f} removeFilter={removeFilter} />
+        ))}
       </div>
-    </form>
-  </div>
+      <input
+        aria-label="Enter search text"
+        name="search"
+        placeholder="Enter text..."
+        style={{ border: "none", flexGrow: 1 }}
+        type="text"
+      />
+      <button
+        type="button"
+        style={{ border: "none", flexGrow: 0 }}
+        data-cy="submit"
+      >
+        <span
+          role="img"
+          aria-label="m
+        Magnifying glass icon"
+        >
+          🔍
+        </span>
+      </button>
+    </div>
+    <select
+      defaultValue={sortOrder}
+      aria-label="Select sort order"
+      name="sort"
+      id="sort-select"
+      onChange={e => toggleSortOrder(e.target.value)}
+      style={{ height: `2.25rem` }}
+      data-cy="sort-select"
+    >
+      <option value="asc">A to Z</option>
+      <option value="desc">Z to A</option>
+    </select>
+  </form>
 )
 
 export default Searchbar

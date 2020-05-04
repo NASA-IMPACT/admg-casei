@@ -1,25 +1,26 @@
 import React from "react"
-import { Button } from "@devseed-ui/button"
 
 const FilterChip = ({ id, label, removeFilter }) => (
   <div
     style={{
       backgroundColor: `#efefef`,
-      borderRadius: `1rem`,
-      padding: `0 0.5rem`,
-      margin: `0 0 0.5rem 0.5rem`,
+      borderRadius: `0.25rem`,
+      paddingLeft: `0.5rem`,
+      margin: `0 0.5rem`,
     }}
+    data-cy="filter-chip"
   >
-    <Button
-      variation="base-plain"
-      size="small"
-      title="filter"
-      onClick={() => removeFilter(id)}
-      style={{}}
-    >
-      🆇
-    </Button>
     <small>{label}</small>
+    <button
+      type="button"
+      onClick={() => removeFilter(id)}
+      style={{ background: "none", border: "none", flexGrow: 0 }}
+      data-cy="remove-filter"
+    >
+      <span role="img" aria-label="close-icon">
+        🆇
+      </span>
+    </button>
   </div>
 )
 

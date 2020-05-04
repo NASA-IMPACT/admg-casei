@@ -27,6 +27,8 @@ const Campaigns = ({ data }) => {
         filters={filters}
         addFilter={addFilter}
         removeFilter={removeFilter}
+        sortOrder={sortOrder}
+        toggleSortOrder={toggleSortOrder}
       />
       <ExploreSection
         category="campaigns"
@@ -34,8 +36,6 @@ const Campaigns = ({ data }) => {
         removeFilter={removeFilter}
         filteredCount={list.length}
         totalCount={data.all.totalCount}
-        sortOrder={sortOrder}
-        toggleSortOrder={toggleSortOrder}
       >
         {list.map(node => (
           <Link to={`/campaign/${node.id}`} key={node.shortname}>
