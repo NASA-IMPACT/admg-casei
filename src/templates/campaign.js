@@ -1,7 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/layout"
 
+import ExploreCard from "../components/explore-card"
+import Layout from "../components/layout"
 import NorthAmerica from "../data/north-america.svg"
 
 const Header = ({
@@ -154,7 +155,26 @@ const OverviewSection = ({
   )
 }
 
-const CampaignTemplate = ({ data: { campaign } }) => {
+const PlatformsSection = ({ platforms }) => (
+  <section id="platforms" data-cy="platforms-section">
+    <h2>Platforms & Instruments</h2>
+    <div
+      style={{
+        display: `grid`,
+        gap: `0.5rem`,
+        gridTemplateColumns: ` 1fr 1fr 1fr 1fr`,
+      }}
+    >
+      {platforms.nodes.map(node => (
+        <div key={node.shortname} data-cy="platform">
+          <ExploreCard title={node.shortname} description={node.longname} />
+        </div>
+      ))}
+    </div>
+  </section>
+)
+
+const CampaignTemplate = ({ data: { campaign, platforms } }) => {
   return (
     <Layout>
       <Header
@@ -178,9 +198,7 @@ const CampaignTemplate = ({ data: { campaign } }) => {
       <section id="milestones" data-cy="milestones-section">
         <h2>Milestones</h2>
       </section>
-      <section id="platforms" data-cy="platforms-section">
-        <h2>Platforms & Instruments</h2>
-      </section>
+      <PlatformsSection platforms={platforms} />
       <section id="data" data-cy="data-section">
         <h2>Data</h2>
       </section>
@@ -192,7 +210,7 @@ const CampaignTemplate = ({ data: { campaign } }) => {
 }
 
 export const query = graphql`
-  query($slug: String!) {
+  query($slug: String!, $platforms: [String!]) {
     campaign: campaignCsv(id: { eq: $slug }) {
       shortname: Campaign_Shortname
       longname: Campaign_Longname
@@ -208,6 +226,14 @@ export const query = graphql`
       region: Region_of_Campaign_Description
       season: Season_s__of_Study
       bounds: Campaign_Spatial_Bounds__N_S_E_W_lat_lon_
+    }
+    platforms: allPlatformCsv(
+      filter: { ADMG_s_Platform_Shortname: { in: $platforms } }
+    ) {
+      nodes {
+        shortname: ADMG_s_Platform_Shortname
+        longname: ADMG_s_Platform_Longname
+      }
     }
   }
 `

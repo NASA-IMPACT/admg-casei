@@ -6,7 +6,7 @@ const ExploreCard = ({
 }) => (
   <div style={{ maxWidth: `13rem` }} data-cy="explore-card">
     <img style={{ margin: 0 }} src="https://picsum.photos/300/200" alt=""></img>
-    <h2 style={{ marginTop: `0.5rem` }}>{title}</h2>
+    <big style={{ fontWeight: `bold`, marginTop: `0.5rem` }}>{title}</big>
     <p>{description}</p>
   </div>
 )

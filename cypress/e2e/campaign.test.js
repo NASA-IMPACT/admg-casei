@@ -106,4 +106,22 @@ describe("Campaign", () => {
         })
     })
   })
+
+  describe("the platforms section", () => {
+    it("exists", () => {
+      cy.get("[data-cy=platforms-section]").should("exist")
+    })
+
+    it("has a heading", () => {
+      cy.get("[data-cy=platforms-section]")
+        .find("h2")
+        .should("have.text", "Platforms & Instruments")
+    })
+
+    it("displays some platforms", () => {
+      cy.get("[data-cy=platform]").should($div => {
+        expect($div, "5 platforms").to.have.length(5)
+      })
+    })
+  })
 })
