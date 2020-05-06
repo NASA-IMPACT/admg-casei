@@ -124,4 +124,26 @@ describe("Campaign", () => {
       })
     })
   })
+
+  describe("the resources section", () => {
+    it("exists", () => {
+      cy.get("[data-cy=resources-section]").should("exist")
+    })
+
+    it("has a heading", () => {
+      cy.get("[data-cy=resources-section]")
+        .find("h2")
+        .should("have.text", "Additional Information")
+    })
+
+    it("displays the logo", () => {
+      cy.get("[data-cy=campaign-logo]").should("exist")
+    })
+
+    it("displays some infos", () => {
+      cy.get("[data-cy=info-item]").should($div => {
+        expect($div, "9 info items").to.have.length(9)
+      })
+    })
+  })
 })

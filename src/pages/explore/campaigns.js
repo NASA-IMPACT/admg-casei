@@ -37,9 +37,13 @@ const Campaigns = ({ data }) => {
         filteredCount={list.length}
         totalCount={data.all.totalCount}
       >
-        {list.map(node => (
-          <Link to={`/campaign/${node.id}`} key={node.shortname}>
-            <ExploreCard title={node.shortname} description={node.longname} />
+        {list.map(campaign => (
+          <Link to={`/campaign/${campaign.id}`} key={campaign.shortname}>
+            <ExploreCard
+              image={campaign.logo.length === 0 ? undefined : campaign.logo}
+              title={campaign.shortname}
+              description={campaign.longname}
+            />
           </Link>
         ))}
       </ExploreSection>
@@ -54,22 +58,23 @@ export const query = graphql`
     }
     asc: allCampaignCsv(sort: { order: ASC, fields: Campaign_Shortname }) {
       list: nodes {
-        shortname: Campaign_Shortname
-        longname: Campaign_Longname
-        id
-        season: Season_s__of_Study
-        focus: NASA_Earth_Science_Focus_Areas
+        ...campaignFields
       }
     }
     desc: allCampaignCsv(sort: { order: DESC, fields: Campaign_Shortname }) {
       list: nodes {
-        shortname: Campaign_Shortname
-        longname: Campaign_Longname
-        id
-        season: Season_s__of_Study
-        focus: NASA_Earth_Science_Focus_Areas
+        ...campaignFields
       }
     }
+  }
+
+  fragment campaignFields on CampaignCsv {
+    shortname: Campaign_Shortname
+    longname: Campaign_Longname
+    id
+    season: Season_s__of_Study
+    focus: NASA_Earth_Science_Focus_Areas
+    logo: Campaign_Logo___Image_Location__URL_
   }
 `
 
