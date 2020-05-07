@@ -52,12 +52,16 @@ const InpageNav = ({ website }) => {
   return (
     <div
       style={{
+        position: `sticky`,
+        top: `0`,
+        backgroundColor: `#FEFEFE`,
         display: `flex`,
         padding: `1rem`,
         borderTop: `1px solid #9E9E9E`,
         borderBottom: `1px solid #9E9E9E`,
         justifyContent: `space-between`,
         alignItems: `center`,
+        zIndex: 99,
       }}
     >
       <nav role="inpage-scroll">
