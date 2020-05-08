@@ -16,6 +16,7 @@ section {
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box;
+  z-index: -1;
 }
 
 /* In case you really need a border, use :before:

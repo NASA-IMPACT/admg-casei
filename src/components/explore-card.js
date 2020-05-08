@@ -15,7 +15,7 @@ const ExploreCard = ({
         objectFit: `contain`,
       }}
       src={image}
-      alt={title}
+      alt={`${title}-image`}
     ></img>
     <big style={{ fontWeight: `bold`, marginTop: `0.5rem` }}>{title}</big>
     <p>{description}</p>
