@@ -30,7 +30,7 @@ const ResourcesSection = ({
   )
 
   return (
-    <section id="resources" data-cy="resources-section">
+    <section className="inpage-nav" id="resources" data-cy="resources-section">
       <h2>Additional Information</h2>
       <div style={{ display: `flex`, alignItems: `stretch` }}>
         <div

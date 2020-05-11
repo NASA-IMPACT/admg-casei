@@ -57,12 +57,32 @@ describe("Campaign", () => {
         .should($anchor => {
           expect($anchor, "5 items").to.have.length(5)
           expect($anchor.eq(0), "first item").to.contain("Overview")
-          expect($anchor.eq(1), "first item").to.contain("Milestones")
-          expect($anchor.eq(2), "first item").to.contain(
+          expect($anchor.eq(1), "second item").to.contain("Milestones")
+          expect($anchor.eq(2), "third item").to.contain(
             "Platforms & Instruments"
           )
-          expect($anchor.eq(3), "first item").to.contain("Data")
-          expect($anchor.eq(4), "first item").to.contain("Resources")
+          expect($anchor.eq(3), "fourth item").to.contain("Data")
+          expect($anchor.eq(4), "last item").to.contain("Resources")
+        })
+    })
+
+    it("navigates to the inpage section", () => {
+      cy.get("[data-cy=resources-section]").find("h2").should("be.visible")
+      cy.get("[data-cy=resources-section]")
+        .find("h2")
+        .should("not.be.inViewport")
+
+      cy.get("main").find("nav").find("a").last().click()
+
+      cy.url().should("include", "#resources")
+      cy.get("[data-cy=resources-section]").find("h2").should("be.inViewport")
+    })
+
+    it("all template sections should have the class 'inpage-nav'", () => {
+      cy.get("main")
+        .find("section")
+        .each($section => {
+          expect($section).to.have.class("inpage-nav")
         })
     })
   })

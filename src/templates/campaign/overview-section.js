@@ -35,7 +35,7 @@ const OverviewSection = ({
   )
 
   return (
-    <section id="overview" data-cy="overview-section">
+    <section className="inpage-nav" id="overview" data-cy="overview-section">
       <h2>Overview</h2>
       <div style={{ display: `flex` }}>
         <div style={{ flex: `1.61803398875` }}>

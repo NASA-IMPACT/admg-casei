@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import ExploreCard from "../../components/explore-card"
 
 const PlatformsSection = ({ platforms }) => (
-  <section id="platforms" data-cy="platforms-section">
+  <section className="inpage-nav" id="platforms" data-cy="platforms-section">
     <h2>Platforms & Instruments</h2>
     <div
       style={{

@@ -29,11 +29,15 @@ const CampaignTemplate = ({ data: { campaign, platforms } }) => {
         focusPenomena={campaign.focusPenomena}
         keywords={campaign.keywords}
       />
-      <section id="milestones" data-cy="milestones-section">
+      <section
+        className="inpage-nav"
+        id="milestones"
+        data-cy="milestones-section"
+      >
         <h2>Milestones</h2>
       </section>
       <PlatformsSection platforms={platforms} />
-      <section id="data" data-cy="data-section">
+      <section className="inpage-nav" id="data" data-cy="data-section">
         <h2>Data</h2>
       </section>
       <ResourcesSection

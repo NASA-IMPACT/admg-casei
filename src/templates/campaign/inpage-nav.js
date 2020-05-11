@@ -19,6 +19,7 @@ const InpageNav = ({ website }) => {
         borderBottom: `1px solid #9E9E9E`,
         justifyContent: `space-between`,
         alignItems: `center`,
+        zIndex: 1000,
       }}
     >
       <nav role="inpage-scroll">
