@@ -3,8 +3,8 @@ import { graphql } from "gatsby"
 
 import ExploreCard from "../../components/explore-card"
 
-const PlatformsSection = ({ platforms }) => (
-  <section className="inpage-nav" id="platforms" data-cy="platforms-section">
+const PlatformSection = ({ platforms }) => (
+  <section className="inpage-nav" id="platforms" data-cy="platform-section">
     <h2>Platforms & Instruments</h2>
     <div
       style={{
@@ -22,7 +22,7 @@ const PlatformsSection = ({ platforms }) => (
   </section>
 )
 
-export default PlatformsSection
+export default PlatformSection
 
 export const platforms = graphql`
   fragment platformFragment on PlatformCsvConnection {

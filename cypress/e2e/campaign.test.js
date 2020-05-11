@@ -127,13 +127,22 @@ describe("Campaign", () => {
     })
   })
 
+  describe("the milestones section", () => {
+    it("displays a milestone carousel", () => {
+      cy.get("[data-cy=milestone-carousel]").find(".slider").should("exist")
+    })
+    it("displays a timeline of milestones", () => {
+      cy.get("[data-cy=milestone-timeline]").should("exist")
+    })
+  })
+
   describe("the platforms section", () => {
     it("exists", () => {
-      cy.get("[data-cy=platforms-section]").should("exist")
+      cy.get("[data-cy=platform-section]").should("exist")
     })
 
     it("has a heading", () => {
-      cy.get("[data-cy=platforms-section]")
+      cy.get("[data-cy=platform-section]")
         .find("h2")
         .should("have.text", "Platforms & Instruments")
     })
