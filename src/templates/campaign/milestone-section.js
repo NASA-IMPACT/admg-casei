@@ -17,7 +17,7 @@ const MilestoneSection = ({ deployments }) => {
       <label
         style={{
           textTransform: `uppercase`,
-          color: `#9E9E9E`,
+          color: `#6B6B6B`,
         }}
       >
         {type}

@@ -22,7 +22,7 @@ const InpageNav = ({ website }) => {
         zIndex: 1000,
       }}
     >
-      <nav role="inpage-scroll">
+      <nav aria-label="inpage-scroll">
         <ul
           style={{
             display: `flex`,

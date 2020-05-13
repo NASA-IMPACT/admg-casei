@@ -16,7 +16,7 @@ const OverviewSection = ({
       <label
         style={{
           textTransform: `uppercase`,
-          color: `#9E9E9E`,
+          color: `#6B6B6B`,
         }}
       >
         {label}
@@ -27,7 +27,7 @@ const OverviewSection = ({
 
   const WordList = ({ label, list }) => (
     <>
-      <label style={{ textTransform: `uppercase`, color: `#9E9E9E` }}>
+      <label style={{ textTransform: `uppercase`, color: `#6B6B6B` }}>
         {label}
       </label>
       <p>{list}</p>

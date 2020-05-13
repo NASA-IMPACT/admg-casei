@@ -19,6 +19,13 @@ describe("Accessibility tests", () => {
       .checkA11y()
   })
 
+  it("Navigates to page for a /campaign and checks for accessibility violations", () => {
+    cy.get("nav")
+      .findByText(/Explore/i)
+      .click()
+    cy.get("[data-cy=explore-card]").first().click().checkA11y()
+  })
+
   it("Navigates to page /resources and checks for accessibility violations", () => {
     cy.get("nav")
       .findByText(/Resources/i)
