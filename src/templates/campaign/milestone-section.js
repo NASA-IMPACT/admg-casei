@@ -52,6 +52,7 @@ const MilestoneSection = ({ deployments }) => {
         >
           {deployments.nodes.map(deployment => (
             <Milestone
+              key={deployment.name}
               type="deployment"
               date={`${deployment.start} - ${deployment.end}`}
               name={`${deployment.longname} (${deployment.name})`}
