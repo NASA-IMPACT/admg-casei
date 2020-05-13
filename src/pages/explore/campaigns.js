@@ -40,7 +40,6 @@ const Campaigns = ({ data }) => {
         {list.map(campaign => (
           <Link to={`/campaign/${campaign.id}`} key={campaign.shortname}>
             <ExploreCard
-              image={campaign.logo.length === 0 ? undefined : campaign.logo}
               title={campaign.shortname}
               description={campaign.longname}
             />
@@ -53,28 +52,27 @@ const Campaigns = ({ data }) => {
 
 export const query = graphql`
   query {
-    all: allCampaignCsv {
+    all: allCampaign(sort: { order: ASC, fields: short_name }) {
       totalCount
     }
-    asc: allCampaignCsv(sort: { order: ASC, fields: Campaign_Shortname }) {
+    asc: allCampaign(sort: { order: ASC, fields: short_name }) {
       list: nodes {
         ...campaignFields
       }
     }
-    desc: allCampaignCsv(sort: { order: DESC, fields: Campaign_Shortname }) {
+    desc: allCampaign(sort: { order: DESC, fields: short_name }) {
       list: nodes {
         ...campaignFields
       }
     }
   }
 
-  fragment campaignFields on CampaignCsv {
-    shortname: Campaign_Shortname
-    longname: Campaign_Longname
+  fragment campaignFields on campaign {
+    shortname: short_name
+    longname: long_name
     id
-    season: Season_s__of_Study
-    focus: NASA_Earth_Science_Focus_Areas
-    logo: Campaign_Logo___Image_Location__URL_
+    season: seasons
+    focus: focus_areas
   }
 `
 

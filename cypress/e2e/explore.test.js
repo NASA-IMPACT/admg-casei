@@ -25,6 +25,6 @@ describe("Explore", () => {
 
     cy.url().should("include", "/campaign/")
 
-    cy.get("h1").should("contain", "Global Tropospheric Experiment")
+    cy.get("h1").should("exist")
   })
 })

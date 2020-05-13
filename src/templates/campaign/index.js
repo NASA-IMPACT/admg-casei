@@ -54,9 +54,9 @@ const CampaignTemplate = ({ data: { campaign, deployments, platforms } }) => {
 
 export const query = graphql`
   query($slug: String!, $shortname: String!, $platforms: [String!]) {
-    campaign: campaignCsv(id: { eq: $slug }) {
+    campaign: campaign(id: { eq: $slug }) {
       ...headerFields
-      website: Repository_Primary_Website__DAAC_homepage_
+      website: project_website
       ...overviewFields
       ...resourcesFields
     }

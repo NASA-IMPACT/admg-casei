@@ -70,14 +70,14 @@ const OverviewSection = ({
 export default OverviewSection
 
 export const overviewFields = graphql`
-  fragment overviewFields on CampaignCsv {
-    description: Description___DRAFT
-    startdate: Campaign_Start_Date__date_of_first_deployment_start_
-    enddate: Campaign_End_Date__date_of_last_deployment_end_
-    region: Region_of_Campaign_Description
-    season: Season_s__of_Study
-    bounds: Campaign_Spatial_Bounds__N_S_E_W_lat_lon_
-    focusPenomena: Scientific_Objective_Focus_Phenomena
-    keywords: Campaign_Geophysical_Phenomena_Studied__from_GCMD_variable_list_
+  fragment overviewFields on campaign {
+    description: description_long
+    startdate: start_date
+    enddate: end_date
+    region: region_description
+    season: seasons
+    bounds: spatial_bounds
+    focusPenomena: focus_phenomena
+    keywords: focus_areas
   }
 `

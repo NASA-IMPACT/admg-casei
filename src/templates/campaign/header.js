@@ -7,7 +7,7 @@ const Header = ({
   shortname,
   longname,
   focus,
-  countDeployments,
+  countCollectionPeriods,
   countDataproducts,
 }) => {
   const StatNumber = ({ number = "--", label }) => (
@@ -28,7 +28,10 @@ const Header = ({
           <p>{focus}</p>
         </div>
         <dl style={{ display: `grid` }} data-cy="stats">
-          <StatNumber number={countDeployments} label="Deployments" />
+          <StatNumber
+            number={countCollectionPeriods}
+            label="Collection Periods"
+          />
           <StatNumber number="--" label="Flights" />
           <StatNumber number={countDataproducts} label="Data Products" />
         </dl>
@@ -43,11 +46,11 @@ const Header = ({
 export default Header
 
 export const headerFields = graphql`
-  fragment headerFields on CampaignCsv {
-    shortname: Campaign_Shortname
-    longname: Campaign_Longname
-    focus: NASA_Earth_Science_Focus_Areas
-    countDeployments: Number_of_Deployments
-    countDataproducts: Number_of_Published_Data_Products
+  fragment headerFields on campaign {
+    shortname: short_name
+    longname: long_name
+    focus: focus_areas
+    countCollectionPeriods: number_collection_periods
+    countDataproducts: number_data_products
   }
 `
