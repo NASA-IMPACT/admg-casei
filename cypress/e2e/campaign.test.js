@@ -130,6 +130,20 @@ describe("Campaign", () => {
   describe("the milestones section", () => {
     it("displays a milestone carousel", () => {
       cy.get("[data-cy=milestone-carousel]").find(".slider").should("exist")
+
+      cy.get("[data-cy=milestone]").should("have.length", 3)
+
+      cy.get("[data-cy=milestone]").first().find("label").should("exist")
+      cy.get("[data-cy=milestone]").first().find("img").should("exist")
+      cy.get("[data-cy=milestone]").first().find("img").should("be.visible")
+      cy.get("[data-cy=milestone]").first().find("h1").should("exist")
+      cy.get("[data-cy=milestone]").first().find("h2").should("exist")
+
+      cy.get("[data-cy=milestone-carousel]")
+        .find(".slider-control-centerright > button")
+        .click()
+
+      cy.get("[data-cy=milestone]").first().find("img").should("not.be.visible")
     })
     it("displays a timeline of milestones", () => {
       cy.get("[data-cy=milestone-timeline]").should("exist")

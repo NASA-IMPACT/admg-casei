@@ -1,7 +1,8 @@
 import React from "react"
+import { graphql } from "gatsby"
 import Carousel from "nuka-carousel"
 
-const MilestoneSection = () => {
+const MilestoneSection = ({ deployments }) => {
   const Milestone = ({
     type = "Deployment",
     date = "June - September 2018",
@@ -9,7 +10,10 @@ const MilestoneSection = () => {
     details = "some list of platforms, number of flights",
     region = "Alaska and Western Canada",
   }) => (
-    <div style={{ backgroundColor: `#FBFBFB`, padding: `3rem` }}>
+    <div
+      style={{ backgroundColor: `#FBFBFB`, padding: `3rem` }}
+      data-cy="milestone"
+    >
       <label
         style={{
           textTransform: `uppercase`,
@@ -35,6 +39,7 @@ const MilestoneSection = () => {
       </div>
     </div>
   )
+
   return (
     <section className="inpage-nav" id="milestones" data-cy="milestone-section">
       <h2>Milestones</h2>
@@ -45,10 +50,15 @@ const MilestoneSection = () => {
             prevButtonText: "<",
           }}
         >
-          <Milestone />
-          <Milestone />
-          <Milestone />
-          <Milestone />
+          {deployments.nodes.map(deployment => (
+            <Milestone
+              type="deployment"
+              date={`${deployment.start} - ${deployment.end}`}
+              name={`${deployment.longname} (${deployment.name})`}
+              details={`${deployment.flights} Flights`}
+              region={deployment.region}
+            />
+          ))}
         </Carousel>
       </div>
       <div data-cy="milestone-timeline"></div>
@@ -57,3 +67,18 @@ const MilestoneSection = () => {
 }
 
 export default MilestoneSection
+
+export const deployments = graphql`
+  fragment deploymentFragment on DeploymentCsvConnection {
+    nodes {
+      name: ADMG_deployment_name
+      flights: number_flights
+      region: Geographical_Region_Type_s_
+      campaign: campaign_shortname
+      alias: Deployment_Alias_es_
+      longname: deployment_longname
+      end: end_date
+      start: start_date
+    }
+  }
+`

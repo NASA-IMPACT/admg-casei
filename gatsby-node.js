@@ -14,6 +14,7 @@ exports.createPages = async ({ graphql, actions }) => {
       allCampaignCsv {
         nodes {
           id
+          shortname: Campaign_Shortname
           platforms: ADMG_s_Aircraft_Shortames__Camp_Plat_Inst_tab_
         }
       }
@@ -26,6 +27,7 @@ exports.createPages = async ({ graphql, actions }) => {
       component: path.resolve(`./src/templates/campaign/index.js`),
       context: {
         slug: node.id,
+        shortname: node.shortname,
         platforms: node.platforms.split(", "),
       },
     })

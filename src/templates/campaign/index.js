@@ -9,7 +9,7 @@ import MilestoneSection from "./milestone-section"
 import PlatformSection from "./platform-section"
 import ResourcesSection from "./resources-section"
 
-const CampaignTemplate = ({ data: { campaign, platforms } }) => {
+const CampaignTemplate = ({ data: { campaign, deployments, platforms } }) => {
   return (
     <Layout>
       <Header
@@ -30,7 +30,7 @@ const CampaignTemplate = ({ data: { campaign, platforms } }) => {
         focusPenomena={campaign.focusPenomena}
         keywords={campaign.keywords}
       />
-      <MilestoneSection />
+      <MilestoneSection deployments={deployments} />
       <PlatformSection platforms={platforms} />
       <section className="inpage-nav" id="data" data-cy="data-section">
         <h2>Data</h2>
@@ -53,12 +53,17 @@ const CampaignTemplate = ({ data: { campaign, platforms } }) => {
 }
 
 export const query = graphql`
-  query($slug: String!, $platforms: [String!]) {
+  query($slug: String!, $shortname: String!, $platforms: [String!]) {
     campaign: campaignCsv(id: { eq: $slug }) {
       ...headerFields
       website: Repository_Primary_Website__DAAC_homepage_
       ...overviewFields
       ...resourcesFields
+    }
+    deployments: allDeploymentCsv(
+      filter: { campaign_shortname: { eq: $shortname } }
+    ) {
+      ...deploymentFragment
     }
     platforms: allPlatformCsv(
       filter: { ADMG_s_Platform_Shortname: { in: $platforms } }
