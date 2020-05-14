@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import NorthAmerica from "../../data/north-america.svg"
+import NorthAmerica from "../../images/north-america.svg"
 
 const Header = ({
   shortname,
