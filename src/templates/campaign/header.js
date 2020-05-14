@@ -29,11 +29,11 @@ const Header = ({
         </div>
         <dl style={{ display: `grid` }} data-cy="stats">
           <StatNumber
-            number={countCollectionPeriods}
+            number={countCollectionPeriods || ""}
             label="Collection Periods"
           />
           <StatNumber number="--" label="Flights" />
-          <StatNumber number={countDataproducts} label="Data Products" />
+          <StatNumber number={countDataproducts || ""} label="Data Products" />
         </dl>
       </div>
       <div style={{ flex: `1` }}>

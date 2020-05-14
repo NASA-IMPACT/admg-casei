@@ -8,42 +8,53 @@ const path = require(`path`)
 
 exports.sourceNodes = async ({ actions, createContentDigest }) => {
   const { createNode } = actions
+  try {
+    let responses = await Promise.all([
+      fetchData("campaign"),
+      fetchData("deployment"),
+      fetchData("platform"),
+    ])
 
-  const response = await fetchData("http://admg.nasa-impact.net/api/campaign", {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: "Bearer <token>",
-    },
-  })
+    responses.forEach(response => {
+      if (response.success) {
+        response.data.forEach(item => {
+          createNode({
+            // Data for the node.
+            ...item,
 
-  if (response.success) {
-    response.data.forEach(campaign => {
-      createNode({
-        // Data for the node.
-        ...campaign,
-
-        // Required fields.
-        id: campaign.uuid,
-        parent: null,
-        children: [],
-        internal: {
-          type: `campaign`,
-          contentDigest: createContentDigest(campaign),
-          description: `Creating nodes from /campaign endpoint`,
-        },
-      })
+            // Required fields.
+            id: item.uuid,
+            parent: null,
+            children: [],
+            internal: {
+              type: response.type,
+              contentDigest: createContentDigest(item),
+              description: `Creating nodes from ${response.type} endpoint`,
+            },
+          })
+        })
+      } else {
+        console.log("request failed", response.message)
+      }
     })
-  } else {
-    console.log("request failed", response.message)
+  } catch (err) {
+    console.log("catch error", err)
   }
+
   // You're done, return.
   return
 }
 
-const fetchData = async (url, options = {}) => {
-  const response = await fetch(`${url}`, options)
-  return await response.json()
+const fetchData = async endpoint => {
+  const response = await fetch(`http://admg.nasa-impact.net/api/${endpoint}`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: "Bearer YOIg2sl50O5wf0XgeTJtGZdI6iDTGc",
+    },
+  })
+  const json = await response.json()
+  return { type: endpoint, ...json }
 }
 
 exports.createPages = async ({ graphql, actions }) => {
@@ -55,7 +66,6 @@ exports.createPages = async ({ graphql, actions }) => {
       allCampaign {
         nodes {
           id
-          shortname: short_name
           platforms: platform_types
         }
       }
@@ -68,7 +78,6 @@ exports.createPages = async ({ graphql, actions }) => {
       component: path.resolve(`./src/templates/campaign/index.js`),
       context: {
         slug: node.id,
-        shortname: node.shortname,
         platforms: node.platforms,
       },
     })

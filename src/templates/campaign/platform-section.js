@@ -25,10 +25,10 @@ const PlatformSection = ({ platforms }) => (
 export default PlatformSection
 
 export const platforms = graphql`
-  fragment platformFragment on PlatformCsvConnection {
+  fragment platformFragment on platformConnection {
     nodes {
-      shortname: ADMG_s_Platform_Shortname
-      longname: ADMG_s_Platform_Longname
+      shortname: short_name
+      longname: long_name
     }
   }
 `
