@@ -16,7 +16,7 @@ const CampaignTemplate = ({ data: { campaign, deployments, platforms } }) => {
         shortname={campaign.shortname}
         longname={campaign.longname}
         focusIds={campaign.focus}
-        countDeployments={campaign.countDeployments}
+        countDeployments={deployments.totalCount}
         countDataproducts={campaign.countDataproducts}
       />
       <InpageNav website={campaign.website} />
@@ -61,6 +61,7 @@ export const query = graphql`
       ...resourcesFields
     }
     deployments: allDeployment(filter: { campaign: { eq: $slug } }) {
+      totalCount
       ...deploymentFragment
     }
     platforms: allPlatform(filter: { id: { in: $platforms } }) {

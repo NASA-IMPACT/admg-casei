@@ -7,7 +7,7 @@ const Header = ({
   shortname,
   longname,
   focusIds,
-  countCollectionPeriods,
+  countDeployments,
   countDataproducts,
 }) => {
   const data = useStaticQuery(graphql`
@@ -44,12 +44,9 @@ const Header = ({
           <p>{focus}</p>
         </div>
         <dl style={{ display: `grid` }} data-cy="stats">
-          <StatNumber
-            number={countCollectionPeriods || ""}
-            label="Collection Periods"
-          />
+          <StatNumber number={countDeployments} label="Deployments" />
           <StatNumber number="--" label="Flights" />
-          <StatNumber number={countDataproducts || ""} label="Data Products" />
+          <StatNumber number={countDataproducts} label="Data Products" />
         </dl>
       </div>
       <div style={{ flex: `1` }}>
