@@ -5,9 +5,10 @@ import Layout from "../../components/layout"
 import Header from "./header"
 import InpageNav from "./inpage-nav"
 import OverviewSection from "./overview-section"
-import MilestoneSection from "./milestone-section"
+import TimelineSection from "./timeline-section"
 import PlatformSection from "./platform-section"
-import ResourcesSection from "./resources-section"
+import FundingSection from "./funding-section"
+import FocusSection from "./focus-section"
 
 const CampaignTemplate = ({ data: { campaign, deployments, platforms } }) => {
   return (
@@ -31,12 +32,17 @@ const CampaignTemplate = ({ data: { campaign, deployments, platforms } }) => {
         keywordIds={campaign.keywords}
         website={campaign.website}
       />
-      <MilestoneSection deployments={deployments} />
+      <FocusSection
+        focusAreaIds={campaign.focusAreaIds}
+        focusPhenomena={campaign.focusPhenomena}
+        scienceKeywords={campaign.scienceKeywords}
+      />
       <PlatformSection platforms={platforms} />
+      <TimelineSection deployments={deployments} />
       <section className="inpage-nav" id="data" data-cy="data-section">
         <h2>Data</h2>
       </section>
-      <ResourcesSection
+      <FundingSection
         logo={campaign.logo}
         logoAlt={campaign.logoAlt}
         fundingAgency={campaign.fundingAgency}
@@ -53,11 +59,14 @@ const CampaignTemplate = ({ data: { campaign, deployments, platforms } }) => {
   )
 }
 
+export default CampaignTemplate
+
 export const query = graphql`
   query($slug: String!, $platforms: [String!]) {
     campaign: campaign(id: { eq: $slug }) {
       ...headerFields
       ...overviewFields
+      ...focusFields
       ...resourcesFields
     }
     deployments: allDeployment(filter: { campaign: { eq: $slug } }) {
@@ -69,5 +78,3 @@ export const query = graphql`
     }
   }
 `
-
-export default CampaignTemplate

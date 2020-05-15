@@ -29,7 +29,7 @@ const Header = ({
   const StatNumber = ({ number = "--", label }) => (
     <>
       <dt style={{ fontSize: `3rem` }}>
-        {number.length === 0 ? "--" : number}
+        {!number || number.length === 0 ? "--" : number}
       </dt>
       <dd style={{ gridRowStart: 2, textTransform: `uppercase` }}>{label}</dd>
     </>

@@ -33,18 +33,20 @@ const InpageNav = ({ website }) => {
           }}
         >
           <InpageLink to="#overview">Overview</InpageLink>
-          <InpageLink to="#milestones">Milestones</InpageLink>
-          <InpageLink to="#platforms">Platforms & Instruments</InpageLink>
+          <InpageLink to="#focus">Focus</InpageLink>
+          <InpageLink to="#platforms">Platforms</InpageLink>
+          <InpageLink to="#platforms">Instruments</InpageLink>
+          <InpageLink to="#timeline">Timeline</InpageLink>
           <InpageLink to="#data">Data</InpageLink>
-          <InpageLink to="#resources">Resources</InpageLink>
+          <InpageLink to="#resources">Funding</InpageLink>
         </ul>
       </nav>
       <div style={{ display: `flex` }}>
-        <div style={{ padding: `0 1rem`, borderLeft: `1px solid #9E9E9E` }}>
-          <a href={website}>Primary Website</a>
+        <div style={{ padding: `0 1rem` }}>
+          <a>💬 Submit Feedback</a>
         </div>
-        <div style={{ padding: `0 1rem`, borderLeft: `1px solid #9E9E9E` }}>
-          <a href={website}>Data</a>
+        <div style={{ padding: `0 1rem` }}>
+          <a>📤 Share</a>
         </div>
       </div>
     </div>
