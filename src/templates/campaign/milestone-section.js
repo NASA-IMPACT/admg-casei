@@ -25,7 +25,7 @@ const MilestoneSection = ({ deployments }) => {
       <div style={{ display: `flex` }}>
         <div style={{ flex: `1` }}>
           <img
-            src="https://via.placeholder.com/400/ffffff/c0392b/&text=image"
+            src="https://picsum.photos/300/300"
             alt="Milestone-image"
             data-cy="overview-map"
           />

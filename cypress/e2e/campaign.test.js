@@ -115,15 +115,10 @@ describe("Campaign", () => {
         })
     })
 
-    it("displays word lists", () => {
-      cy.get("[data-cy=word-list]")
+    it("displays link list", () => {
+      cy.get("[data-cy=link-list]")
         .find("label")
-        .should($label => {
-          expect($label, "2 items").to.have.length(2)
-
-          expect($label.eq(0), "first item").to.contain("Focus Phenomena")
-          expect($label.eq(1), "first item").to.contain("Science Keywords")
-        })
+        .should("contain", "Relevant Links")
     })
   })
 

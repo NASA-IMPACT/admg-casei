@@ -15,7 +15,7 @@ const CampaignTemplate = ({ data: { campaign, deployments, platforms } }) => {
       <Header
         shortname={campaign.shortname}
         longname={campaign.longname}
-        focus={campaign.focus}
+        focusIds={campaign.focus}
         countDeployments={campaign.countDeployments}
         countDataproducts={campaign.countDataproducts}
       />
@@ -25,10 +25,11 @@ const CampaignTemplate = ({ data: { campaign, deployments, platforms } }) => {
         startdate={campaign.startdate}
         enddate={campaign.enddate}
         region={campaign.region}
-        season={campaign.season}
+        seasonIds={campaign.season}
         bounds={campaign.bounds}
         focusPenomena={campaign.focusPenomena}
-        keywords={campaign.keywords}
+        keywordIds={campaign.keywords}
+        website={campaign.website}
       />
       <MilestoneSection deployments={deployments} />
       <PlatformSection platforms={platforms} />
@@ -45,7 +46,7 @@ const CampaignTemplate = ({ data: { campaign, deployments, platforms } }) => {
         campaignLead={campaign.campaignLead}
         dataManager={campaign.dataManager}
         archive={campaign.archive}
-        partnerOrg={campaign.partnerOrg}
+        partnerOrgIds={campaign.partnerOrg}
         partnerWebsite={campaign.partnerWebsite}
       />
     </Layout>
@@ -56,7 +57,6 @@ export const query = graphql`
   query($slug: String!, $platforms: [String!]) {
     campaign: campaign(id: { eq: $slug }) {
       ...headerFields
-      website: project_website
       ...overviewFields
       ...resourcesFields
     }

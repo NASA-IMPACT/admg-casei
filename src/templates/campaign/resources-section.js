@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
 const ResourcesSection = ({
   logo,
@@ -9,9 +9,26 @@ const ResourcesSection = ({
   leadInvestigator,
   dataManager,
   archive,
-  partnerOrg,
+  partnerOrgIds,
   tertiaryWebsite,
 }) => {
+  const data = useStaticQuery(graphql`
+    query {
+      allPartnerOrg {
+        nodes {
+          id
+          website
+          short_name
+          long_name
+        }
+      }
+    }
+  `)
+  const partnerOrg = data.allPartnerOrg.nodes
+    .filter(x => partnerOrgIds.includes(x.id))
+    .map(x => x.shortname)
+    .join(", ")
+
   const InfoItem = ({ label, info }) => (
     <div data-cy="info-item">
       <label

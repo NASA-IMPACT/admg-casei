@@ -1,16 +1,31 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
 const OverviewSection = ({
   description,
   startdate,
   enddate,
   region,
-  season,
+  seasonIds,
   bounds,
-  focusPenomena,
-  keywords,
+  website,
 }) => {
+  const data = useStaticQuery(graphql`
+    query {
+      allSeason {
+        nodes {
+          id
+          shortname: short_name
+          longname: long_name
+        }
+      }
+    }
+  `)
+  const season = data.allSeason.nodes
+    .filter(x => seasonIds.includes(x.id))
+    .map(x => x.shortname)
+    .join(", ")
+
   const FactItem = ({ label, fact }) => (
     <div data-cy="overview-fact">
       <label
@@ -25,13 +40,10 @@ const OverviewSection = ({
     </div>
   )
 
-  const WordList = ({ label, list }) => (
-    <>
-      <label style={{ textTransform: `uppercase`, color: `#6B6B6B` }}>
-        {label}
-      </label>
-      <p>{list}</p>
-    </>
+  const ListLink = props => (
+    <li style={{ padding: `1rem`, borderBottom: `1px solid` }}>
+      <a href={props.to}>{props.children}</a>
+    </li>
   )
 
   return (
@@ -49,18 +61,31 @@ const OverviewSection = ({
               gridTemplateRows: ` 1fr 1fr`,
             }}
           >
-            <FactItem label="Study dates" fact={`${startdate} - ${enddate}`} />
+            <FactItem label="Study dates" fact={`${startdate} – ${enddate}`} />
             <FactItem label="Region" fact={region} />
             <FactItem label="Season of Study" fact={season} />
             <FactItem label="Spatial bounds" fact={bounds} />
           </div>
         </div>
         <div
-          style={{ flex: `1`, padding: `1rem`, backgroundColor: `#FBFBFB` }}
-          data-cy="word-list"
+          style={{
+            flex: `1`,
+            marginLeft: `2rem`,
+            padding: `1rem`,
+            backgroundColor: `#FBFBFB`,
+          }}
         >
-          <WordList label="Focus Phenomena" list={focusPenomena} />
-          <WordList label="Science Keywords" list={keywords} />
+          <ul style={{ margin: 0, listStyle: `none` }} data-cy="link-list">
+            <label
+              style={{
+                textTransform: `uppercase`,
+                color: `#6B6B6B`,
+              }}
+            >
+              Relevant Links
+            </label>
+            <ListLink to={website}>Primary website</ListLink>
+          </ul>
         </div>
       </div>
     </section>
@@ -77,7 +102,6 @@ export const overviewFields = graphql`
     region: region_description
     season: seasons
     bounds: spatial_bounds
-    focusPenomena: focus_phenomena
-    keywords: focus_areas
+    website: project_website
   }
 `

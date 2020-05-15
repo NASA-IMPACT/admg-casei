@@ -1,15 +1,31 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
 import NorthAmerica from "../../images/north-america.svg"
 
 const Header = ({
   shortname,
   longname,
-  focus,
+  focusIds,
   countCollectionPeriods,
   countDataproducts,
 }) => {
+  const data = useStaticQuery(graphql`
+    query {
+      allFocusArea {
+        nodes {
+          id
+          shortname: short_name
+          longname: long_name
+        }
+      }
+    }
+  `)
+  const focus = data.allFocusArea.nodes
+    .filter(x => focusIds.includes(x.id))
+    .map(x => x.shortname)
+    .join(", ")
+
   const StatNumber = ({ number = "--", label }) => (
     <>
       <dt style={{ fontSize: `3rem` }}>
