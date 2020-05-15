@@ -3,7 +3,6 @@ import { graphql } from "gatsby"
 
 const ResourcesSection = ({
   logo,
-  logoAlt,
   fundingAgency,
   fundingProgram,
   programLead,

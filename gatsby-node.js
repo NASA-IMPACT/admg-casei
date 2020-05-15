@@ -9,11 +9,15 @@ const path = require(`path`)
 exports.sourceNodes = async ({ actions, createContentDigest }) => {
   const { createNode } = actions
   try {
-    let responses = await Promise.all([
-      fetchData("campaign"),
-      fetchData("deployment"),
-      fetchData("platform"),
-    ])
+    const endpoints = [
+      "campaign",
+      "deployment",
+      "focus_area",
+      "platform",
+      "season",
+    ]
+
+    let responses = await Promise.all(endpoints.map(key => fetchData(key)))
 
     responses.forEach(response => {
       if (response.success) {
@@ -37,8 +41,8 @@ exports.sourceNodes = async ({ actions, createContentDigest }) => {
         console.log("request failed", response.message)
       }
     })
-  } catch (err) {
-    console.log("catch error", err)
+  } catch (error) {
+    console.log("catch error", error)
   }
 
   // You're done, return.

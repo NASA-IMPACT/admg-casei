@@ -63,7 +63,7 @@ export const query = graphql`
     deployments: allDeployment(filter: { campaign: { eq: $slug } }) {
       ...deploymentFragment
     }
-    platforms: allPlatform(filter: { uuid: { in: $platforms } }) {
+    platforms: allPlatform(filter: { id: { in: $platforms } }) {
       ...platformFragment
     }
   }
