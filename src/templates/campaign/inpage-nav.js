@@ -1,6 +1,6 @@
 import React from "react"
 
-const InpageNav = ({ website }) => {
+const InpageNav = () => {
   const InpageLink = props => (
     <li style={{ margin: `0 1rem 0 0` }}>
       <a href={props.to}>{props.children}</a>

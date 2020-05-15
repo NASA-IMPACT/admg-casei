@@ -20,7 +20,7 @@ const CampaignTemplate = ({ data: { campaign, deployments, platforms } }) => {
         countDeployments={deployments.totalCount}
         countDataproducts={campaign.countDataproducts}
       />
-      <InpageNav website={campaign.website} />
+      <InpageNav />
       <OverviewSection
         description={campaign.description}
         startdate={campaign.startdate}
