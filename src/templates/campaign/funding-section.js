@@ -45,7 +45,7 @@ const FundingSection = ({
   )
 
   return (
-    <section className="inpage-nav" id="resources" data-cy="resources-section">
+    <section className="inpage-nav" id="funding" data-cy="funding-section">
       <h2>Funding</h2>
       <div style={{ display: `flex`, alignItems: `stretch` }}>
         <div
@@ -87,8 +87,8 @@ const FundingSection = ({
 
 export default FundingSection
 
-export const resourcesFields = graphql`
-  fragment resourcesFields on campaign {
+export const fundingFields = graphql`
+  fragment fundingFields on campaign {
     # logo: Campaign_Logo___Image_Location__URL_
 
     fundingAgency: funding_agency

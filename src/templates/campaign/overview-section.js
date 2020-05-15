@@ -74,6 +74,7 @@ const OverviewSection = ({
             padding: `1rem`,
             backgroundColor: `#FBFBFB`,
           }}
+          data-cy="link-list"
         >
           <label
             style={{
@@ -83,7 +84,7 @@ const OverviewSection = ({
           >
             Relevant Links
           </label>
-          <ul style={{ margin: 0, listStyle: `none` }} data-cy="link-list">
+          <ul style={{ margin: 0, listStyle: `none` }}>
             <ListLink to={website}>Primary website</ListLink>
             <ListLink to={website}>Secondary website</ListLink>
             <ListLink to={website}>Tertiary website</ListLink>

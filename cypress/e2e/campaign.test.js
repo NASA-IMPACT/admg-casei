@@ -59,15 +59,13 @@ describe("Campaign", () => {
     })
 
     it("navigates to the inpage section", () => {
-      cy.get("[data-cy=resources-section]").find("h2").should("be.visible")
-      cy.get("[data-cy=resources-section]")
-        .find("h2")
-        .should("not.be.inViewport")
+      cy.get("[data-cy=funding-section]").find("h2").should("be.visible")
+      cy.get("[data-cy=funding-section]").find("h2").should("not.be.inViewport")
 
       cy.get("main").find("nav").find("a").last().click()
 
-      cy.url().should("include", "#resources")
-      cy.get("[data-cy=resources-section]").find("h2").should("be.inViewport")
+      cy.url().should("include", "#funding")
+      cy.get("[data-cy=funding-section]").find("h2").should("be.inViewport")
     })
 
     it("all template sections should have the class 'inpage-nav'", () => {
@@ -111,6 +109,8 @@ describe("Campaign", () => {
       cy.get("[data-cy=link-list]")
         .find("label")
         .should("contain", "Relevant Links")
+
+      cy.get("[data-cy=link-list]").find("li").should("have.length", 5)
     })
   })
 
@@ -153,15 +153,15 @@ describe("Campaign", () => {
     })
   })
 
-  describe("the resources section", () => {
+  describe("the funding section", () => {
     it("exists", () => {
-      cy.get("[data-cy=resources-section]").should("exist")
+      cy.get("[data-cy=funding-section]").should("exist")
     })
 
     it("has a heading", () => {
-      cy.get("[data-cy=resources-section]")
+      cy.get("[data-cy=funding-section]")
         .find("h2")
-        .should("have.text", "Additional Information")
+        .should("have.text", "Funding")
     })
 
     it("displays the logo", () => {

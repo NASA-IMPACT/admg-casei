@@ -38,7 +38,7 @@ const InpageNav = ({ website }) => {
           <InpageLink to="#platforms">Instruments</InpageLink>
           <InpageLink to="#timeline">Timeline</InpageLink>
           <InpageLink to="#data">Data</InpageLink>
-          <InpageLink to="#resources">Funding</InpageLink>
+          <InpageLink to="#funding">Funding</InpageLink>
         </ul>
       </nav>
       <div style={{ display: `flex` }}>

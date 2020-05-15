@@ -67,7 +67,7 @@ export const query = graphql`
       ...headerFields
       ...overviewFields
       ...focusFields
-      ...resourcesFields
+      ...fundingFields
     }
     deployments: allDeployment(filter: { campaign: { eq: $slug } }) {
       totalCount
