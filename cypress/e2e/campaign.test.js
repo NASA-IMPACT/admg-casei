@@ -2,7 +2,8 @@
 
 describe("Campaign", () => {
   before(() => {
-    cy.visit("/campaign/21a8e675-9b74-4582-8cf0-582c707b27d9")
+    cy.visit("/explore/campaigns")
+    cy.get("main").find("[data-cy=explore-card]").contains("AirMOSS").click()
   })
 
   describe("the header", () => {
@@ -11,7 +12,8 @@ describe("Campaign", () => {
     })
 
     it("displays the long name as title", () => {
-      cy.get("main").find("header").find("h1").should("exist")
+      cy.get("main").find("h1").should("exist")
+      cy.get("h1").should("have.length", 1)
     })
 
     it("displays the focus area as subtitle", () => {
@@ -121,8 +123,8 @@ describe("Campaign", () => {
       cy.get("[data-cy=milestone]").first().find("label").should("exist")
       cy.get("[data-cy=milestone]").first().find("img").should("exist")
       cy.get("[data-cy=milestone]").first().find("img").should("be.visible")
-      cy.get("[data-cy=milestone]").first().find("h1").should("exist")
-      cy.get("[data-cy=milestone]").first().find("h2").should("exist")
+      cy.get("[data-cy=milestone]").first().find("h3").should("exist")
+      cy.get("[data-cy=milestone]").first().find("h4").should("exist")
 
       cy.get("[data-cy=milestone-carousel]")
         .find(".slider-control-centerright > button")
@@ -148,7 +150,7 @@ describe("Campaign", () => {
 
     it("displays some platforms", () => {
       cy.get("[data-cy=platform]").should($div => {
-        expect($div, "5 platforms").to.have.length(5)
+        expect($div, "2 platforms").to.have.length(2)
       })
     })
   })

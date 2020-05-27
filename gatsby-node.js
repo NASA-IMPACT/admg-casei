@@ -55,7 +55,7 @@ const fetchData = async endpoint => {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
-      Authorization: "Bearer YOIg2sl50O5wf0XgeTJtGZdI6iDTGc",
+      Authorization: "Bearer UPTYI9C7Isk2RCMln3ogf6r0hkUEiW",
     },
   })
   const json = await response.json()
@@ -71,7 +71,7 @@ exports.createPages = async ({ graphql, actions }) => {
       allCampaign {
         nodes {
           id
-          platforms: platform_types
+          platforms: platforms
         }
       }
     }

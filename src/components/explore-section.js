@@ -6,19 +6,20 @@ const ExploreSection = ({ category, filteredCount, totalCount, children }) => {
 
   return (
     <section>
-      <header style={{ display: `flex` }}>
-        <small style={{ whiteSpace: `nowrap` }}>
+      <div style={{ display: `flex` }}>
+        <h1
+          style={{ fontSize: `small`, whiteSpace: `nowrap` }}
+          data-cy="item-count"
+        >
           {totalCount > 0 ? `Showing` : `No`} {filteredLabel}
           {totalCount} {category}
-        </small>
-      </header>
+        </h1>
+      </div>
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: `1fr 1fr 1fr 1fr`,
+          gridTemplateColumns: `repeat(auto-fill, 271px)`,
           gap: `1rem`,
-          margin: `1rem`,
-          justifyItems: `center`,
         }}
       >
         {children}
