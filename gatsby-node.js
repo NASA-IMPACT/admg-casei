@@ -55,7 +55,7 @@ const fetchData = async endpoint => {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
-      Authorization: "Bearer UPTYI9C7Isk2RCMln3ogf6r0hkUEiW",
+      Authorization: "Bearer rGl230cqhwdXKKm3XiaXWlPahkgwjZ",
     },
   })
   const json = await response.json()

@@ -1,6 +1,8 @@
 import React, { useState } from "react"
 import { graphql, Link } from "gatsby"
 
+import api from "../../utils/api"
+
 import Layout from "../../components/layout"
 import ExploreMenu from "../../components/explore-menu"
 import ExploreSection from "../../components/explore-section"
@@ -15,6 +17,14 @@ const Campaigns = ({ data }) => {
   const addFilter = id => setFilter([...selectedFilterIds, id])
   const removeFilter = id => setFilter(selectedFilterIds.filter(f => f !== id))
 
+  const submitSearch = async e => {
+    e.preventDefault()
+    let searchstring = document.querySelector("input").value
+    const result = await api.fetchSearchResult(searchstring)
+    // TODO: apply the result as filter
+    console.log(result)
+  }
+
   const list = data[sortOrder].list.filter(campaign =>
     selectedFilterIds.length === 0
       ? true
@@ -26,6 +36,7 @@ const Campaigns = ({ data }) => {
   return (
     <Layout>
       <ExploreMenu
+        submitSearch={submitSearch}
         filterOptions={{ focus, season }}
         selectedFilterIds={selectedFilterIds}
         addFilter={addFilter}
