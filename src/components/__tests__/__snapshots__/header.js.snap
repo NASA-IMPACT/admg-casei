@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders correctly 1`] = `
+<header
+  style={
+    Object {
+      "marginBottom": "1.45rem",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "alignItems": "baseline",
+        "display": "flex",
+        "justifyContent": "space-between",
+        "margin": "0 auto",
+        "maxWidth": 960,
+        "padding": "1.45rem 1.0875rem",
+      }
+    }
+  >
+    <h1
+      style={
+        Object {
+          "margin": 0,
+        }
+      }
+    >
+      <a
+        href="/"
+        style={
+          Object {
+            "textDecoration": "none",
+          }
+        }
+      >
+        Site title from props
+      </a>
+    </h1>
+  </div>
+</header>
+`;
