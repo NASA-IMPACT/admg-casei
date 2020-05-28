@@ -78,64 +78,60 @@ describe("Searchbar", () => {
       })
   })
 
-  describe("the free text search, on api success", () => {
+  let searchApiStub
+  // Turns out, dealing with fetch requests in cypress isn't that easy:
+  // https://github.com/cypress-io/cypress/issues/95
+  describe("the free text search", () => {
     beforeEach(() => {
-      cy.stub(api, "fetchSearchResult").resolves({
-        searchstring: "what is the meaning of life?",
-        result: ["id1", "id2"],
-      })
+      searchApiStub = cy
+        .stub(api, "fetchSearchResult")
+        .as("fetchSearchResultStub")
+
+      cy.get("[data-cy=searchbar]").find("input").type("arctic")
+
+      cy.get("[data-cy=submit]").click()
     })
 
     it("should indicate the loading", () => {
-      // TODO: build and test loading indicator
-      expect("TODO").to.eq("DONE")
+      cy.get("[data-cy=loading-indicator]").should("be.visible")
     })
 
-    it("filters the campaigns based on api response", () => {
-      cy.get("[data-cy=searchbar]")
-        .find("input")
-        .type("what is the meaning of life?")
-
-      cy.get("[data-cy=submit]")
-        .click()
-        .then(() => {
-          expect(api.fetchSearchResult).to.be.calledWith(
-            "what is the meaning of life?"
-          )
+    describe("on api success", () => {
+      beforeEach(() => {
+        searchApiStub.returns({
+          searchstring: "arctic",
+          result: ["id1", "id2"],
         })
-
-      cy.get("[data-cy=searchbar]")
-        .find("input")
-        .should("have.value", "what is the meaning of life?")
-    })
-  })
-})
-
-describe("the free text search, on api failure", () => {
-  beforeEach(() => {
-    cy.stub(api, "fetchSearchResult").rejects(
-      new Error("UUUPS, there was an error")
-    )
-  })
-
-  it("displays an error message", () => {
-    cy.get("[data-cy=searchbar]")
-      .find("input")
-      .type("what is the meaning of life?")
-
-    cy.get("[data-cy=submit]")
-      .click()
-      .then(() => {
-        expect(api.fetchSearchResult).to.be.calledWith(
-          "what is the meaning of life?"
-        )
       })
 
-    cy.get("[data-cy=searchbar]")
-      .find("input")
-      .should("have.value", "what is the meaning of life?")
+      it("call the api and get a successfull response", () => {
+        // TODO: why does it claim not to be called? Why does it still call the implementation? What's going on with the stubbing here?
+        expect(api.fetchSearchResult).to.be.called
+      })
 
-    // TODO: build and test error message
-    expect("TODO").to.eq("DONE")
+      it("should hide the loading indicator", () => {
+        cy.get("[data-cy=loading-indicator]").should("not.be.visible")
+      })
+
+      it("filters the campaigns based on api response", () => {
+        cy.get("[data-cy=searchbar]")
+          .find("input")
+          .should("have.value", "arctic")
+
+        cy.get("main")
+          .find("[data-cy=explore-card]")
+          .should("have.length.greaterThan", 1)
+      })
+    })
+
+    describe("on api failure", () => {
+      beforeEach(() => {
+        searchApiStub.returns(new Error("UUUPS, there was an error"))
+      })
+
+      it("displays an error message", () => {
+        cy.get("[data-cy=error-indicator]").should("be.visible")
+      })
+    })
   })
 })

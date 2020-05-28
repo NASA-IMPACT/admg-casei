@@ -15,7 +15,7 @@ export default {
       const json = await response.json()
       return { searchstring, ...json }
     } catch (error) {
-      return new Error(error)
+      new Error(error)
     }
   },
 }

@@ -4,7 +4,7 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 const fetch = require("node-fetch")
-const path = require(`path`)
+const path = require("path")
 
 exports.sourceNodes = async ({ actions, createContentDigest }) => {
   const { createNode } = actions

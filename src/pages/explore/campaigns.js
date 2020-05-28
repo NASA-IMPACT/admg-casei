@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { graphql, Link } from "gatsby"
+import Spinner from "react-spinkit"
 
 import api from "../../utils/api"
 
@@ -11,6 +12,7 @@ import CampaignCard from "../../components/campaign-card"
 const Campaigns = ({ data }) => {
   const { focus, season } = data
 
+  const [isLoading, setLoading] = useState(false)
   const [sortOrder, toggleSortOrder] = useState("asc")
   const [selectedFilterIds, setFilter] = useState([])
 
@@ -18,9 +20,11 @@ const Campaigns = ({ data }) => {
   const removeFilter = id => setFilter(selectedFilterIds.filter(f => f !== id))
 
   const submitSearch = async e => {
+    setLoading(true)
     e.preventDefault()
     let searchstring = document.querySelector("input").value
     const result = await api.fetchSearchResult(searchstring)
+    setLoading(false)
     // TODO: apply the result as filter
     console.log(result)
   }
@@ -44,31 +48,40 @@ const Campaigns = ({ data }) => {
         sortOrder={sortOrder}
         toggleSortOrder={toggleSortOrder}
       />
-      <ExploreSection
-        category="campaigns"
-        selectedFilterIds={selectedFilterIds}
-        removeFilter={removeFilter}
-        filteredCount={list.length}
-        totalCount={data.all.totalCount}
-      >
-        {list.map(campaign => {
-          const startdate = new Date(campaign.startdate)
-          const enddate = new Date(campaign.enddate)
-          return (
-            <Link to={`/campaign/${campaign.id}`} key={campaign.shortname}>
-              <CampaignCard
-                ongoing={campaign.ongoing}
-                shortname={campaign.shortname}
-                longname={campaign.longname}
-                daterange={`${startdate.getFullYear()}—${enddate.getFullYear()}`}
-                region={campaign.region}
-                countCollectionPeriods={campaign.countCollectionPeriods}
-                countDataProducts={campaign.countDataProducts}
-              />
-            </Link>
-          )
-        })}
-      </ExploreSection>
+      {isLoading ? (
+        <div
+          style={{ display: `flex`, justifyContent: `space-around` }}
+          data-cy="loading-indicator"
+        >
+          <Spinner name="cube-grid" />
+        </div>
+      ) : (
+        <ExploreSection
+          category="campaigns"
+          selectedFilterIds={selectedFilterIds}
+          removeFilter={removeFilter}
+          filteredCount={list.length}
+          totalCount={data.all.totalCount}
+        >
+          {list.map(campaign => {
+            const startdate = new Date(campaign.startdate)
+            const enddate = new Date(campaign.enddate)
+            return (
+              <Link to={`/campaign/${campaign.id}`} key={campaign.shortname}>
+                <CampaignCard
+                  ongoing={campaign.ongoing}
+                  shortname={campaign.shortname}
+                  longname={campaign.longname}
+                  daterange={`${startdate.getFullYear()}—${enddate.getFullYear()}`}
+                  region={campaign.region}
+                  countCollectionPeriods={campaign.countCollectionPeriods}
+                  countDataProducts={campaign.countDataProducts}
+                />
+              </Link>
+            )
+          })}
+        </ExploreSection>
+      )}
     </Layout>
   )
 }
