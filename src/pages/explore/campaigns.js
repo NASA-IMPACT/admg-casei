@@ -15,6 +15,7 @@ const Campaigns = ({ data }) => {
   const [isLoading, setLoading] = useState(false)
   const [sortOrder, toggleSortOrder] = useState("asc")
   const [selectedFilterIds, setFilter] = useState([])
+  const [searchResult, setSearchResult] = useState()
 
   const addFilter = id => setFilter([...selectedFilterIds, id])
   const removeFilter = id => setFilter(selectedFilterIds.filter(f => f !== id))
@@ -24,18 +25,21 @@ const Campaigns = ({ data }) => {
     e.preventDefault()
     let searchstring = document.querySelector("input").value
     const result = await api.fetchSearchResult(searchstring)
+    setSearchResult(result)
     setLoading(false)
-    // TODO: apply the result as filter
-    console.log(result)
   }
 
-  const list = data[sortOrder].list.filter(campaign =>
-    selectedFilterIds.length === 0
-      ? true
-      : selectedFilterIds.every(
-          f => campaign.season.includes(f) || campaign.focus.includes(f)
-        )
-  )
+  const list = data[sortOrder].list
+    .filter(campaign =>
+      selectedFilterIds.length === 0
+        ? true
+        : selectedFilterIds.every(
+            f => campaign.season.includes(f) || campaign.focus.includes(f)
+          )
+    )
+    .filter(campaign =>
+      searchResult ? searchResult.includes(campaign.shortname) : true
+    )
 
   return (
     <Layout>
