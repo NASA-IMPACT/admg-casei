@@ -36,7 +36,7 @@ const ExploreMenu = ({ filters, addFilter, removeFilter }) => {
           display: `flex`,
           flexDirection: `row`,
           justifyContent: `space-between`,
-          alignItems: `baseline`,
+          alignItems: `flex-end`,
           marginBottom: `2rem`,
         }}
       >
