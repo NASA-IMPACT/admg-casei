@@ -67,10 +67,10 @@ describe("Searchbar", () => {
 
     cy.get("main")
       .find("[data-cy=explore-card]")
-      .find("h2")
-      .should($h2 => {
-        const first = $h2.first().text()
-        const last = $h2.last().text()
+      .find("big")
+      .should($big => {
+        const first = $big.first().text()
+        const last = $big.last().text()
 
         expect(first < last).to.be.true
       })
@@ -79,10 +79,10 @@ describe("Searchbar", () => {
 
     cy.get("main")
       .find("[data-cy=explore-card]")
-      .find("h2")
-      .should($h2 => {
-        const first = $h2.first().text()
-        const last = $h2.last().text()
+      .find("big")
+      .should($big => {
+        const first = $big.first().text()
+        const last = $big.last().text()
 
         expect(first > last).to.be.true
       })

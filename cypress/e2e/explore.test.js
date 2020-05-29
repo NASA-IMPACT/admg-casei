@@ -17,6 +17,14 @@ describe("Explore", () => {
         expect($li[2], "text content").to.have.text("Instruments")
       })
 
-    cy.get("main").find("[data-cy=searchbar]")
+    cy.get("main").find("[data-cy=searchbar]").should("exist")
+  })
+
+  it("navigates to the campaign page", () => {
+    cy.get("main").find("[data-cy=explore-card]").first().click()
+
+    cy.url().should("include", "/campaign/")
+
+    cy.get("h1").should("contain", "Global Tropospheric Experiment")
   })
 })
