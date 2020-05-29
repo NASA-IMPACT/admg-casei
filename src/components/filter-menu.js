@@ -1,65 +1,33 @@
 import React from "react"
 
-const Filter = ({
-  id,
-  label,
-  name,
-  options,
-  filters,
-  addFilter,
-  removeFilter,
-}) => {
+const Filter = ({ label, options }) => (
+  <optgroup label={label}>
+    {options.map(o => (
+      <option key={o} value={o}>
+        {o}
+      </option>
+    ))}
+  </optgroup>
+)
+
+const FilterMenu = ({ filters, addFilter, removeFilter }) => {
   const handleSelection = value => {
     filters.includes(value) ? removeFilter(value) : addFilter(value)
-    document.getElementById(id).value = ""
+    document.getElementById("filter-select").value = ""
   }
-
   return (
-    <li
-      style={{
-        display: `flex`,
-        flexDirection: `column`,
-        marginRight: `0.5rem`,
-      }}
+    <select
+      aria-label="Select filters"
+      name="filter"
+      id="filter-select"
+      style={{ flexGrow: 0, maxHeight: `2.25rem`, maxWidth: `5rem` }}
+      data-cy="filter-select"
+      onChange={e => handleSelection(e.target.value)}
     >
-      <select
-        name={name}
-        id={id}
-        onChange={e => handleSelection(e.target.value)}
-      >
-        <option value="">--{label}--</option>
-        {options.map(o => (
-          <option key={o} value={o}>
-            {o}
-          </option>
-        ))}
-      </select>
-    </li>
-  )
-}
-
-const FilterMenu = ({ filters, addFilter, removeFilter }) => (
-  <div
-    style={{
-      display: `flex`,
-      flexDirection: `row`,
-      justifyContent: `space-around`,
-      alignItems: `baseline`,
-      marginBottom: `2rem`,
-    }}
-  >
-    <ul
-      style={{
-        display: `flex`,
-        flexDirection: `row`,
-        margin: 0,
-        listStyle: `none`,
-      }}
-    >
+      <option value="">Filter</option>
       <Filter
         id="focus"
         label="Focus Area"
-        name="focus"
         options={[
           "Atmospheric Composition",
           "Weather",
@@ -68,14 +36,10 @@ const FilterMenu = ({ filters, addFilter, removeFilter }) => (
           "Carbon Cycle & Ecosystems",
           "Earth Surface & Interior",
         ]}
-        filters={filters}
-        addFilter={addFilter}
-        removeFilter={removeFilter}
       />
       <Filter
         id="season"
         label="Season"
-        name="season"
         options={[
           "boreal winter",
           "boreal spring",
@@ -94,12 +58,9 @@ const FilterMenu = ({ filters, addFilter, removeFilter }) => (
           "equatorial",
           "year round",
         ]}
-        filters={filters}
-        addFilter={addFilter}
-        removeFilter={removeFilter}
       />
-    </ul>
-  </div>
-)
+    </select>
+  )
+}
 
 export default FilterMenu
