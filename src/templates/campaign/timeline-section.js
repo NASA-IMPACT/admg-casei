@@ -10,10 +10,7 @@ const TimelineSection = ({ deployments }) => {
     details = "some list of platforms, number of flights",
     region = "Alaska and Western Canada",
   }) => (
-    <div
-      style={{ backgroundColor: `#FBFBFB`, padding: `3rem` }}
-      data-cy="milestone"
-    >
+    <div style={{ padding: `3rem` }} data-cy="milestone">
       <label
         style={{
           textTransform: `uppercase`,

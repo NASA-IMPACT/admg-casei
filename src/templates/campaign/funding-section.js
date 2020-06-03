@@ -51,7 +51,6 @@ const FundingSection = ({
         <div
           style={{
             flex: `0.618`,
-            backgroundColor: `#D8D8D8`,
             padding: `2rem`,
           }}
         >
@@ -61,7 +60,6 @@ const FundingSection = ({
         <div
           style={{
             flex: `2.618`,
-            backgroundColor: `#FBFBFB`,
             display: `grid`,
             gap: `0.5rem`,
             gridTemplateColumns: ` 1fr 1fr 1fr`,

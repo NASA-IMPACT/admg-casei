@@ -4,6 +4,7 @@ const FilterChip = ({ id, label, removeFilter }) => (
   <div
     style={{
       backgroundColor: `#efefef`,
+      color: `hsla(0,0%,0%,0.73)`,
       borderRadius: `0.25rem`,
       paddingLeft: `0.5rem`,
       margin: `0 0.5rem`,
