@@ -4,9 +4,9 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `CARA | NASA`,
-    description: `A centralized airborne data inventory`,
-    author: `@AliceR`,
+    title: `Sub-orbital catalog`,
+    description: `Sub-orbital catalog`,
+    author: `@developmentseed`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -22,8 +22,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Airborne Inventory`,
-        short_name: `CARA | NASA`,
+        name: `Sub-orbital catalog`,
+        short_name: `Sub-orbital catalog`,
         start_url: `/`,
         background_color: `#008888`,
         theme_color: `#008888`,
