@@ -52,17 +52,5 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
-    // Postgres data source, for test purposes only:
-    // {
-    //   resolve: `gatsby-source-pg`,
-    //   options: {
-    //     connectionString: `postgres:///shakespeare`,
-    //     // for example: `postgres://pg_user:pg_pass@pg_host:pg_port/pg_db?ssl=1`
-    //     schema: `public`,
-    //     graphiql: true, // make postgres show up in graphiql
-    //     refetchInterval: 3600, // Refetch data every 1 hour
-    //     appendPlugins: [require("postgraphile-plugin-connection-filter")],
-    //   },
-    // },
   ],
 }
