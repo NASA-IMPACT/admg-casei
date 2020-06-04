@@ -13,9 +13,10 @@ import {
   GlobalWaterEnergyCycleIcon,
   WeatherIcon,
 } from "../components/icons"
+import { RegionCarousel } from "../components/home/region-carousel"
 
 const SectionHeader = ({ tagline, headline }) => (
-  <div style={{ marginTop: `5rem` }}>
+  <div style={{ marginTop: `8rem` }}>
     <div style={{ textTransform: `uppercase` }}>{tagline}</div>
     <h2>{headline}</h2>
   </div>
@@ -88,6 +89,7 @@ const IndexPage = ({ data }) => {
 
       <section>
         <SectionHeader tagline="explore campaigns by" headline="Region Type" />
+        <RegionCarousel regions={data.allGeographicalRegion.nodes} />
       </section>
 
       <section>
@@ -123,6 +125,13 @@ export const query = graphql`
       nodes {
         id
         shortname: short_name
+      }
+    }
+    allGeographicalRegion {
+      nodes {
+        id
+        shortname: short_name
+        example
       }
     }
   }

@@ -13,6 +13,7 @@ exports.sourceNodes = async ({ actions, createContentDigest }) => {
       "campaign",
       "deployment",
       "focus_area",
+      "geographical_region",
       "partner_org",
       "platform",
       "season",
