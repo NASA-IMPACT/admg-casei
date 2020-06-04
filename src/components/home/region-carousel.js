@@ -1,19 +1,60 @@
-import React, { useState } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import Carousel from "nuka-carousel"
+import styled from "styled-components"
+
+const ControlTextButton = styled.button`
+  margin: 0.2rem 0.5rem;
+  padding: 0;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 1);
+  opacity: ${({ selected }) => (selected ? 1 : 0.6)};
+  border: 0;
+  background: rgba(255, 255, 255, 0);
+  text-transform: uppercase;
+  text-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+`
+
+const CarouselImage = styled.div`
+  height: 550px;
+  background: ${({ url }) => {
+    return `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),
+    url(${url}) center no-repeat`
+  }};
+  background-size: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+
+// nuka carousel expects inline styles
+const controlButtonLRStyle = {
+  padding: 0,
+  borderRadius: `100%`,
+  width: 42,
+  height: 42,
+  backgroundColor: `hsla(0,0%,100%,0.9)`,
+  color: `hsla(0,0%,0%,0.73)`,
+  fontWeight: `bold`,
+  fontSize: `large`,
+}
 
 export const RegionCarousel = ({ regions }) => {
+  const element = useRef(null)
+
   const [slideIndex, setSlideIndex] = useState(0)
 
-  const controlButtonStyle = {
-    padding: 0,
-    borderRadius: `100%`,
-    width: 42,
-    height: 42,
-    backgroundColor: `hsla(0,0%,100%,0.9)`,
-    color: `hsla(0,0%,0%,0.73)`,
-    fontWeight: `bold`,
-    fontSize: `large`,
-  }
+  useEffect(() => {
+    if (element)
+      element.current.scrollIntoView({
+        behavior: "smooth",
+        block: "nearest",
+        inline: "nearest",
+      })
+
+    return () => {
+      // cleanup
+    }
+  }, [slideIndex])
 
   return (
     <>
@@ -21,27 +62,17 @@ export const RegionCarousel = ({ regions }) => {
         style={{
           display: `flex`,
           overflow: `scroll`,
-          marginLeft: `-0.5rem`, // replaces :first { margin: 0 } on child
         }}
       >
         {regions.map((region, index) => (
-          <button
+          <ControlTextButton
             key={region.id}
+            ref={index === slideIndex ? element : null}
+            selected={index === slideIndex}
             onClick={() => setSlideIndex(index)}
-            style={{
-              margin: `0 0.5rem`,
-              padding: 0,
-              fontWeight: 600,
-              color: `rgba(255, 255, 255, 1)`,
-              opacity: index === slideIndex ? 1 : 0.6,
-              border: 0,
-              background: `rgba(255, 255, 255, 0)`,
-              textTransform: `uppercase`,
-              textShadow: `0 2px 4px 0 rgba(0,0,0,0.5)`,
-            }}
           >
             {region.shortname}
-          </button>
+          </ControlTextButton>
         ))}
       </div>
 
@@ -51,9 +82,9 @@ export const RegionCarousel = ({ regions }) => {
         renderBottomCenterControls={null}
         defaultControlsConfig={{
           nextButtonText: `⦊`,
-          nextButtonStyle: controlButtonStyle,
+          nextButtonStyle: controlButtonLRStyle,
           prevButtonText: `⦉`,
-          prevButtonStyle: controlButtonStyle,
+          prevButtonStyle: controlButtonLRStyle,
         }}
         getControlsContainerStyles={key => {
           switch (key) {
@@ -67,23 +98,10 @@ export const RegionCarousel = ({ regions }) => {
           }
         }}
       >
-        {regions.map((region, index) => (
-          <div
+        {regions.map(region => (
+          <CarouselImage
             key={region.id}
-            style={{
-              height: 550,
-              background: `linear-gradient(
-                rgba(0, 0, 0, 0.2),
-                rgba(0, 0, 0, 0.5)
-                ),
-                url(
-                  https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e001600/GSFC_20171208_Archive_e001600~orig.jpg
-                ) center no-repeat`,
-              backgroundSize: `100%`,
-              display: `flex`,
-              alignItems: `center`,
-              justifyContent: `center`,
-            }}
+            url="https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e001600/GSFC_20171208_Archive_e001600~orig.jpg"
           >
             <div
               style={{
@@ -95,7 +113,7 @@ export const RegionCarousel = ({ regions }) => {
             >
               {region.shortname}
             </div>
-          </div>
+          </CarouselImage>
         ))}
       </Carousel>
     </>

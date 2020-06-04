@@ -17,7 +17,7 @@ module.exports = {
     node: true,
     es6: true,
   },
-  plugins: ["react"],
+  plugins: ["react", "react-hooks"],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
