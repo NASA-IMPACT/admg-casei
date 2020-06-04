@@ -2,22 +2,18 @@ import Typography from "typography"
 
 const typography = new Typography({
   baseFontSize: "16px",
-  baseLineHeight: 1.666,
+  baseLineHeight: 1.42,
   googleFonts: [
     {
-      name: "Varela Round",
-      styles: ["400"],
-    },
-    {
-      name: "Roboto",
-      styles: ["400", "400i", "700"],
+      name: "Titillium Web",
+      styles: ["400", "600", "700"],
     },
   ],
-  headerFontFamily: ["Varela Round", "sans-serif"],
-  bodyFontFamily: ["Roboto", "sans-serif"],
+  headerFontFamily: ["Titillium Web", "sans-serif"],
+  bodyFontFamily: ["Titillium Web", "sans-serif"],
   headerColor: "hsla(0,0%,100%,0.9)",
   bodyColor: "hsla(0,0%,100%,0.73)",
-  headerWeight: "400",
+  headerWeight: "600",
   bodyWeight: 400,
   boldWeight: 700,
   overrideStyles: ({ rhythm }) => {
@@ -31,8 +27,9 @@ const typography = new Typography({
         backgroundImage: "none",
       },
       "h1,h2,h3,h4,h5,h6": {
-        marginTop: rhythm(1.5),
-        marginBottom: rhythm(0.5),
+        fontSize: rhythm(1.5),
+        marginTop: rhythm(0.25),
+        marginBottom: rhythm(1.5),
       },
       // children ol, ul
       "li>ol,li>ul": {

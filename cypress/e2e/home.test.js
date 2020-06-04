@@ -7,5 +7,6 @@ describe("Homepage", () => {
   it("renders correctly", () => {
     cy.get("main").find("h1").contains("Sub-orbital catalog")
     cy.get("main").find("p").contains("airborne, field stationary")
+    cy.get("main").find("section").should("have.length", 6)
   })
 })

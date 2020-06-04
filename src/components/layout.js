@@ -35,7 +35,7 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title}>
         <Nav />
       </Header>
-      <div
+      <main
         style={{
           margin: `0 auto`,
           width: `100%`,
@@ -44,8 +44,8 @@ const Layout = ({ children }) => {
           flexGrow: 1,
         }}
       >
-        <main>{children}</main>
-      </div>
+        {children}
+      </main>
       <footer
         style={{
           flexShrink: 0,
