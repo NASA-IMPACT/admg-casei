@@ -1,28 +1,50 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Image from "../components/image"
+import {
+  AtmosphericCompositionIcon,
+  AtmosphericDynamicsIcon,
+  CarbonCycleEcosystemsIcon,
+  ClimateVariabilityChangeIcon,
+  EarthSurfaceInteriorIcon,
+  GlobalWaterEnergyCycleIcon,
+  WeatherIcon,
+} from "../components/icons"
 
 const SectionHeader = ({ tagline, headline }) => (
-  <>
+  <div style={{ marginTop: `5rem` }}>
     <div style={{ textTransform: `uppercase` }}>{tagline}</div>
     <h2>{headline}</h2>
-  </>
+  </div>
 )
 
-const IndexPage = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+const FocusArea = ({ id, caption }) => {
+  // TODO: This mapping is currently done by shortname, as I don't trust
+  // the id yet to be stable.
+  const icons = {
+    "Atmospheric Composition": <AtmosphericCompositionIcon />,
+    "Atmospheric Dynamics": <AtmosphericDynamicsIcon />,
+    "Carbon Cycle & Ecosystems": <CarbonCycleEcosystemsIcon />,
+    "Climate Variability & Change": <ClimateVariabilityChangeIcon />,
+    "Earth Surface & Interior": <EarthSurfaceInteriorIcon />,
+    "Global Water & Energy Cycle": <GlobalWaterEnergyCycleIcon />,
+    Weather: <WeatherIcon />,
+  }
 
+  if (!icons[id]) return null
+
+  return (
+    <div style={{ textAlign: `center` }}>
+      {icons[id]}
+      <div>{caption}</div>
+    </div>
+  )
+}
+
+const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" />
@@ -51,6 +73,17 @@ const IndexPage = () => {
           tagline="explore nasa earth science"
           headline="Focus Areas"
         />
+        <div
+          style={{
+            display: `grid`,
+            gridTemplateColumns: `repeat(auto-fill, minmax(min(120px, 100%), 1fr))`,
+            gap: `1rem`,
+          }}
+        >
+          {data.allFocusArea.nodes.map(f => (
+            <FocusArea key={f.id} id={f.shortname} caption={f.shortname} />
+          ))}
+        </div>
       </section>
 
       <section>
@@ -79,4 +112,19 @@ const IndexPage = () => {
   )
 }
 
+export const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    allFocusArea {
+      nodes {
+        id
+        shortname: short_name
+      }
+    }
+  }
+`
 export default IndexPage
