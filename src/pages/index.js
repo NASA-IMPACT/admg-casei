@@ -38,7 +38,7 @@ const FocusArea = ({ id, caption }) => {
   if (!icons[id]) return null
 
   return (
-    <div style={{ textAlign: `center` }}>
+    <div style={{ textAlign: `center` }} data-cy="focus-area">
       {icons[id]}
       <div>{caption}</div>
     </div>
@@ -69,7 +69,7 @@ const IndexPage = ({ data }) => {
         </div>
       </div>
 
-      <section>
+      <section data-cy="focus-area-section">
         <SectionHeader
           tagline="explore nasa earth science"
           headline="Focus Areas"
@@ -87,23 +87,19 @@ const IndexPage = ({ data }) => {
         </div>
       </section>
 
-      <section>
+      <section data-cy="region-type-section">
         <SectionHeader tagline="explore campaigns by" headline="Region Type" />
         <RegionCarousel regions={data.allGeographicalRegion.nodes} />
       </section>
 
-      <section>
+      <section data-cy="geophysical-concepts-section">
         <SectionHeader
           tagline="explore campaigns by"
           headline="Geophysical Concepts"
         />
       </section>
 
-      <section>
-        <SectionHeader tagline="explore" headline="Platforms" />
-      </section>
-
-      <section>
+      <section data-cy="platforms-section">
         <SectionHeader tagline="explore" headline="Platforms" />
       </section>
 

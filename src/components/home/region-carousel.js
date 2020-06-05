@@ -63,6 +63,7 @@ export const RegionCarousel = ({ regions }) => {
           display: `flex`,
           overflow: `scroll`,
         }}
+        data-cy="region-text-control"
       >
         {regions.map((region, index) => (
           <ControlTextButton
@@ -102,6 +103,7 @@ export const RegionCarousel = ({ regions }) => {
           <CarouselImage
             key={region.id}
             url="https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e001600/GSFC_20171208_Archive_e001600~orig.jpg"
+            data-cy="region-type"
           >
             <div
               style={{
