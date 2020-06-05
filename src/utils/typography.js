@@ -12,7 +12,7 @@ const typography = new Typography({
   headerFontFamily: ["Titillium Web", "sans-serif"],
   bodyFontFamily: ["Titillium Web", "sans-serif"],
   headerColor: "hsla(0,0%,100%,0.9)",
-  bodyColor: "hsla(0,0%,100%,0.73)",
+  bodyColor: "hsla(0,0%,100%,0.9)",
   headerWeight: "600",
   bodyWeight: 400,
   boldWeight: 700,

@@ -16,7 +16,7 @@ import {
 import { RegionCarousel } from "../components/home/region-carousel"
 
 const SectionHeader = ({ tagline, headline }) => (
-  <div style={{ marginTop: `8rem` }}>
+  <div>
     <div style={{ textTransform: `uppercase` }}>{tagline}</div>
     <h2>{headline}</h2>
   </div>
@@ -69,7 +69,7 @@ const IndexPage = ({ data }) => {
         </div>
       </div>
 
-      <section data-cy="focus-area-section">
+      <section style={{ marginTop: `8rem` }} data-cy="focus-area-section">
         <SectionHeader
           tagline="explore nasa earth science"
           headline="Focus Areas"
@@ -87,23 +87,71 @@ const IndexPage = ({ data }) => {
         </div>
       </section>
 
-      <section data-cy="region-type-section">
+      <section style={{ marginTop: `8rem` }} data-cy="region-type-section">
         <SectionHeader tagline="explore campaigns by" headline="Region Type" />
         <RegionCarousel regions={data.allGeographicalRegion.nodes} />
       </section>
 
-      <section data-cy="geophysical-concepts-section">
+      <section
+        style={{ marginTop: `8rem` }}
+        data-cy="geophysical-concepts-section"
+      >
         <SectionHeader
           tagline="explore campaigns by"
           headline="Geophysical Concepts"
         />
+        <div
+          style={{
+            display: `flex`,
+            flexWrap: `wrap`,
+          }}
+        >
+          {data.allGeophysicalConcept.nodes.map(concept => (
+            <div
+              key={concept.id}
+              style={{
+                border: `1px solid white`,
+                padding: `1rem`,
+                flexGrow: 1,
+                textAlign: `center`,
+              }}
+            >
+              {concept.shortname}
+            </div>
+          ))}
+        </div>
       </section>
 
-      <section data-cy="platforms-section">
-        <SectionHeader tagline="explore" headline="Platforms" />
+      <section style={{ marginTop: `8rem` }} data-cy="platforms-section">
+        <div
+          style={{
+            display: `grid`,
+            gridTemplateColumns: `1fr 1fr`,
+            columnGap: `5rem`,
+          }}
+        >
+          <div style={{ gridArea: `1 / 1 / 4 / 2` }}>
+            <Image
+              filename="platform.png"
+              alt={`aircraft flying over ground`}
+            />
+          </div>
+          <div style={{ alignSelf: `end` }}>
+            <SectionHeader tagline="explore" headline="Platforms" />{" "}
+          </div>
+          <div>
+            <p>
+              From aircrafts to balloons, from sensors to plaftorms, it takes a
+              lot to understand earth.
+            </p>
+          </div>
+          <div>
+            <button>Explore</button>
+          </div>
+        </div>
       </section>
 
-      <section>
+      <section style={{ marginTop: `8rem` }}>
         <SectionHeader tagline="explore" headline="Instruments" />
       </section>
     </Layout>
@@ -128,6 +176,12 @@ export const query = graphql`
         id
         shortname: short_name
         example
+      }
+    }
+    allGeophysicalConcept {
+      nodes {
+        id
+        shortname: short_name
       }
     }
   }
