@@ -12,6 +12,12 @@ import {
   EarthSurfaceInteriorIcon,
   GlobalWaterEnergyCycleIcon,
   WeatherIcon,
+  AirborneInsitu,
+  GroundInstruments,
+  AirborneRemoteSensors,
+  ExperimentalInstruments,
+  OceanInstruments,
+  FacilityInstruments,
 } from "../components/icons"
 import { RegionCarousel } from "../components/home/region-carousel"
 
@@ -45,6 +51,32 @@ const FocusArea = ({ id, caption }) => {
   )
 }
 
+const Instrument = ({ id, caption }) => {
+  // TODO: This mapping is more or less random
+  // we don't have icons for the existing instrument types.
+  const icons = {
+    "In Situ - Magnetic/Electric": <AirborneInsitu />,
+    "In Situ - Spectrometer/Radiometer": <GroundInstruments />,
+    Remote: <AirborneRemoteSensors />,
+    "Solar/Space": <ExperimentalInstruments />,
+    NID: <OceanInstruments />,
+    "Data Analyses": <FacilityInstruments />,
+  }
+
+  if (!icons[id]) return null
+
+  return (
+    <div style={{ textAlign: `center` }} data-cy="instrument">
+      {icons[id]}
+      <div>{caption}</div>
+    </div>
+  )
+}
+
+const styles = {
+  section: { marginTop: `8rem` },
+}
+
 const IndexPage = ({ data }) => {
   return (
     <Layout>
@@ -69,7 +101,7 @@ const IndexPage = ({ data }) => {
         </div>
       </div>
 
-      <section style={{ marginTop: `8rem` }} data-cy="focus-area-section">
+      <section style={styles.section} data-cy="focus-area-section">
         <SectionHeader
           tagline="explore nasa earth science"
           headline="Focus Areas"
@@ -81,21 +113,22 @@ const IndexPage = ({ data }) => {
             gap: `1rem`,
           }}
         >
-          {data.allFocusArea.nodes.map(f => (
-            <FocusArea key={f.id} id={f.shortname} caption={f.shortname} />
+          {data.allFocusArea.nodes.map(focus => (
+            <FocusArea
+              key={focus.id}
+              id={focus.shortname}
+              caption={focus.shortname}
+            />
           ))}
         </div>
       </section>
 
-      <section style={{ marginTop: `8rem` }} data-cy="region-type-section">
+      <section style={styles.section} data-cy="region-type-section">
         <SectionHeader tagline="explore campaigns by" headline="Region Type" />
         <RegionCarousel regions={data.allGeographicalRegion.nodes} />
       </section>
 
-      <section
-        style={{ marginTop: `8rem` }}
-        data-cy="geophysical-concepts-section"
-      >
+      <section style={styles.section} data-cy="geophysical-concepts-section">
         <SectionHeader
           tagline="explore campaigns by"
           headline="Geophysical Concepts"
@@ -122,7 +155,7 @@ const IndexPage = ({ data }) => {
         </div>
       </section>
 
-      <section style={{ marginTop: `8rem` }} data-cy="platforms-section">
+      <section style={styles.section} data-cy="platforms-section">
         <div
           style={{
             display: `grid`,
@@ -151,8 +184,23 @@ const IndexPage = ({ data }) => {
         </div>
       </section>
 
-      <section style={{ marginTop: `8rem` }}>
+      <section style={styles.section} data-cy="instruments-section">
         <SectionHeader tagline="explore" headline="Instruments" />
+        <div
+          style={{
+            display: `grid`,
+            gridTemplateColumns: `repeat(auto-fill, minmax(min(120px, 100%), 1fr))`,
+            gap: `1rem`,
+          }}
+        >
+          {data.allInstrumentType.nodes.map(instrument => (
+            <Instrument
+              key={instrument.id}
+              id={instrument.shortname}
+              caption={instrument.longname}
+            />
+          ))}
+        </div>
       </section>
     </Layout>
   )
@@ -182,6 +230,19 @@ export const query = graphql`
       nodes {
         id
         shortname: short_name
+      }
+    }
+    allGeophysicalConcept {
+      nodes {
+        id
+        shortname: short_name
+      }
+    }
+    allInstrumentType {
+      nodes {
+        id
+        shortname: short_name
+        longname: long_name
       }
     }
   }
