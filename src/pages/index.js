@@ -66,7 +66,11 @@ const Instrument = ({ id, caption }) => {
   if (!icons[id]) return null
 
   return (
-    <div style={{ textAlign: `center` }} data-cy="instrument">
+    <div
+      className="placeholder"
+      style={{ textAlign: `center` }}
+      data-cy="instrument"
+    >
       {icons[id]}
       <div>{caption}</div>
     </div>
@@ -96,7 +100,7 @@ const IndexPage = ({ data }) => {
         <div style={{ gridArea: `1 / 2 / 3 / 3` }}>
           <Image
             filename="globe.png"
-            alt={`a globe displaying natural features and slight cloud coverage`}
+            alt="a globe displaying natural features and slight cloud coverage"
           />
         </div>
       </div>
@@ -137,6 +141,7 @@ const IndexPage = ({ data }) => {
           style={{
             display: `flex`,
             flexWrap: `wrap`,
+            border: `1px solid white`,
           }}
         >
           {data.allGeophysicalConcept.nodes.map(concept => (
@@ -164,13 +169,10 @@ const IndexPage = ({ data }) => {
           }}
         >
           <div style={{ gridArea: `1 / 1 / 4 / 2` }}>
-            <Image
-              filename="platform.png"
-              alt={`aircraft flying over ground`}
-            />
+            <Image filename="platform.png" alt="aircraft flying over ground" />
           </div>
           <div style={{ alignSelf: `end` }}>
-            <SectionHeader tagline="explore" headline="Platforms" />{" "}
+            <SectionHeader tagline="explore" headline="Platforms" />
           </div>
           <div>
             <p>
@@ -179,7 +181,17 @@ const IndexPage = ({ data }) => {
             </p>
           </div>
           <div>
-            <button>Explore</button>
+            <button
+              style={{
+                padding: `1rem 5rem`,
+                textTransform: `uppercase`,
+                color: `hsla(0,0%,100%,0.9)`,
+                background: `transparent`,
+                border: `1px solid white`,
+              }}
+            >
+              Explore
+            </button>
           </div>
         </div>
       </section>
