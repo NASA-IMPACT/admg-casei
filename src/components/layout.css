@@ -29,3 +29,8 @@ section:before {
   border-top: 2px solid #ccc;
 }
 */
+
+.placeholder {
+  box-shadow: 0 0 4px teal;
+  border: 1px solid teal;
+}

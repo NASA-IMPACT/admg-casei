@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import Nav from "./nav"
+import Footer from "./footer"
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -46,15 +47,7 @@ const Layout = ({ children }) => {
       >
         {children}
       </main>
-      <footer
-        style={{
-          flexShrink: 0,
-          alignSelf: `flex-end`,
-        }}
-      >
-        © {new Date().getFullYear()}, Built by{" "}
-        <a href="https://www.developmentseed.org">Development Seed</a>.
-      </footer>
+      <Footer />
     </div>
   )
 }
