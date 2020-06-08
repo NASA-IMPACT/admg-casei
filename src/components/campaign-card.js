@@ -31,6 +31,7 @@ const CampaignCard = ({
         }}
       >
         <div
+          className="placeholder"
           style={{
             borderRadius: `2.5rem`,
             backgroundColor: `#9E9E9E`,

@@ -28,7 +28,12 @@ const Header = ({
 
   const StatNumber = ({ number = "--", label }) => (
     <>
-      <dt style={{ fontSize: `3rem` }}>
+      <dt
+        className={
+          !number || number.length === 0 || number === "--" ? "placeholder" : ""
+        }
+        style={{ fontSize: `3rem` }}
+      >
         {!number || number.length === 0 ? "--" : number}
       </dt>
       <dd style={{ gridRowStart: 2, textTransform: `uppercase` }}>{label}</dd>
@@ -49,7 +54,7 @@ const Header = ({
           <StatNumber number={countDataproducts} label="Data Products" />
         </dl>
       </div>
-      <div style={{ flex: `1` }}>
+      <div className="placeholder" style={{ flex: `1` }}>
         <img src={NorthAmerica} alt="North America" data-cy="overview-map" />
       </div>
     </header>

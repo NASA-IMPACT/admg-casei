@@ -20,6 +20,7 @@ const Searchbar = ({
   }
   return (
     <form
+      className="placeholder"
       onSubmit={submitSearch}
       style={{ display: `flex`, margin: `2rem 0` }}
       data-cy="searchbar"
