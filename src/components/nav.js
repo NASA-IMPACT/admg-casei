@@ -3,7 +3,16 @@ import { Link } from "gatsby"
 
 const ListLink = props => (
   <li style={{ margin: `0 1rem 0 0` }}>
-    <Link to={props.to}>{props.children}</Link>
+    <Link
+      to={props.to}
+      activeStyle={{
+        color: `#AAC9FF`,
+        fontWeight: `bold`,
+      }}
+      partiallyActive={true}
+    >
+      {props.children}
+    </Link>
   </li>
 )
 
