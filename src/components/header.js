@@ -18,7 +18,13 @@ const Header = ({ siteTitle, children }) => (
         alignItems: `baseline`,
       }}
     >
-      <h1 style={{ margin: 0 }}>
+      <div
+        style={{
+          margin: 0,
+          fontFamily: `'Varela Round',sans-serif`,
+          fontSize: `2rem`,
+        }}
+      >
         <Link
           to="/"
           style={{
@@ -27,7 +33,7 @@ const Header = ({ siteTitle, children }) => (
         >
           {siteTitle}
         </Link>
-      </h1>
+      </div>
       {children}
     </div>
   </header>

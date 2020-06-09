@@ -1,8 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import ExploreCard from "../../components/explore-card"
-
 const PlatformSection = ({ platforms }) => (
   <section className="inpage-nav" id="platforms" data-cy="platform-section">
     <h2>Platforms & Instruments</h2>
@@ -15,7 +13,10 @@ const PlatformSection = ({ platforms }) => (
     >
       {platforms.nodes.map(node => (
         <div key={node.shortname} data-cy="platform">
-          <ExploreCard title={node.shortname} description={node.longname} />
+          <div>
+            <big>{node.shortname}</big>
+            <p>{node.longname}</p>
+          </div>
         </div>
       ))}
     </div>

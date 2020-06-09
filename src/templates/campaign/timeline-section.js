@@ -32,8 +32,8 @@ const TimelineSection = ({ deployments }) => {
         </div>
         <div style={{ flex: `1.61803398875`, padding: `1rem` }}>
           <p>{date}</p>
-          <h1>{name}</h1>
-          <h2>{details}</h2>
+          <h3>{name}</h3>
+          <h4>{details}</h4>
           <p>{region}</p>
         </div>
       </div>
@@ -56,7 +56,7 @@ const TimelineSection = ({ deployments }) => {
               type="deployment"
               date={`${deployment.start} - ${deployment.end}`}
               name={`${deployment.longname} (${deployment.shortname})`}
-              details={`${deployment.flights} Flights`}
+              details={`${deployment.flights.length} Flights`}
               region={deployment.region}
             />
           ))}
@@ -74,7 +74,7 @@ export const deployments = graphql`
     nodes {
       id: uuid
       shortname: short_name
-      flights: number_flights
+      flights: collection_periods
       region: geographical_regions
       campaign: campaign
       longname: long_name

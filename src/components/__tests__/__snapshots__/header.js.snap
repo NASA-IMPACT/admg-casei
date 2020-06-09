@@ -20,9 +20,11 @@ exports[`Header renders correctly 1`] = `
       }
     }
   >
-    <h1
+    <div
       style={
         Object {
+          "fontFamily": "'Varela Round',sans-serif",
+          "fontSize": "2rem",
           "margin": 0,
         }
       }
@@ -37,7 +39,7 @@ exports[`Header renders correctly 1`] = `
       >
         Site title from props
       </a>
-    </h1>
+    </div>
   </div>
 </header>
 `;

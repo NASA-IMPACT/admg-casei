@@ -4,7 +4,7 @@ import { graphql, Link } from "gatsby"
 import Layout from "../../components/layout"
 import ExploreMenu from "../../components/explore-menu"
 import ExploreSection from "../../components/explore-section"
-import ExploreCard from "../../components/explore-card"
+import CampaignCard from "../../components/campaign-card"
 
 const Campaigns = ({ data }) => {
   const { focus, season } = data
@@ -40,14 +40,23 @@ const Campaigns = ({ data }) => {
         filteredCount={list.length}
         totalCount={data.all.totalCount}
       >
-        {list.map(campaign => (
-          <Link to={`/campaign/${campaign.id}`} key={campaign.shortname}>
-            <ExploreCard
-              title={campaign.shortname}
-              description={campaign.longname}
-            />
-          </Link>
-        ))}
+        {list.map(campaign => {
+          const startdate = new Date(campaign.startdate)
+          const enddate = new Date(campaign.enddate)
+          return (
+            <Link to={`/campaign/${campaign.id}`} key={campaign.shortname}>
+              <CampaignCard
+                ongoing={campaign.ongoing}
+                shortname={campaign.shortname}
+                longname={campaign.longname}
+                daterange={`${startdate.getFullYear()}—${enddate.getFullYear()}`}
+                region={campaign.region}
+                countCollectionPeriods={campaign.countCollectionPeriods}
+                countDataProducts={campaign.countDataProducts}
+              />
+            </Link>
+          )
+        })}
       </ExploreSection>
     </Layout>
   )
@@ -85,11 +94,17 @@ export const query = graphql`
   }
 
   fragment campaignFields on campaign {
+    ongoing
     shortname: short_name
     longname: long_name
     id
     season: seasons
     focus: focus_areas
+    startdate: start_date
+    enddate: end_date
+    region: region_description
+    countCollectionPeriods: number_collection_periods
+    countDataproducts: number_data_products
   }
 `
 
