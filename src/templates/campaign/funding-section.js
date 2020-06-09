@@ -1,7 +1,7 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
-const ResourcesSection = ({
+const FundingSection = ({
   logo,
   fundingAgency,
   fundingProgram,
@@ -9,9 +9,26 @@ const ResourcesSection = ({
   leadInvestigator,
   dataManager,
   archive,
-  partnerOrg,
+  partnerOrgIds,
   tertiaryWebsite,
 }) => {
+  const data = useStaticQuery(graphql`
+    query {
+      allPartnerOrg {
+        nodes {
+          id
+          website
+          short_name
+          long_name
+        }
+      }
+    }
+  `)
+  const partnerOrg = data.allPartnerOrg.nodes
+    .filter(x => partnerOrgIds.includes(x.id))
+    .map(x => x.shortname)
+    .join(", ")
+
   const InfoItem = ({ label, info }) => (
     <div data-cy="info-item">
       <label
@@ -28,8 +45,8 @@ const ResourcesSection = ({
   )
 
   return (
-    <section className="inpage-nav" id="resources" data-cy="resources-section">
-      <h2>Additional Information</h2>
+    <section className="inpage-nav" id="funding" data-cy="funding-section">
+      <h2>Funding</h2>
       <div style={{ display: `flex`, alignItems: `stretch` }}>
         <div
           style={{
@@ -68,10 +85,10 @@ const ResourcesSection = ({
   )
 }
 
-export default ResourcesSection
+export default FundingSection
 
-export const resourcesFields = graphql`
-  fragment resourcesFields on campaign {
+export const fundingFields = graphql`
+  fragment fundingFields on campaign {
     # logo: Campaign_Logo___Image_Location__URL_
 
     fundingAgency: funding_agency

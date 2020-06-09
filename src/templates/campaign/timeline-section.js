@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Carousel from "nuka-carousel"
 
-const MilestoneSection = ({ deployments }) => {
+const TimelineSection = ({ deployments }) => {
   const Milestone = ({
     type = "Deployment",
     date = "June - September 2018",
@@ -25,7 +25,7 @@ const MilestoneSection = ({ deployments }) => {
       <div style={{ display: `flex` }}>
         <div style={{ flex: `1` }}>
           <img
-            src="https://via.placeholder.com/400/ffffff/c0392b/&text=image"
+            src="https://picsum.photos/300/300"
             alt="Milestone-image"
             data-cy="overview-map"
           />
@@ -41,8 +41,8 @@ const MilestoneSection = ({ deployments }) => {
   )
 
   return (
-    <section className="inpage-nav" id="milestones" data-cy="milestone-section">
-      <h2>Milestones</h2>
+    <section className="inpage-nav" id="timeline" data-cy="timeline-section">
+      <h2>Timeline</h2>
       <div data-cy="milestone-carousel">
         <Carousel
           defaultControlsConfig={{
@@ -67,7 +67,7 @@ const MilestoneSection = ({ deployments }) => {
   )
 }
 
-export default MilestoneSection
+export default TimelineSection
 
 export const deployments = graphql`
   fragment deploymentFragment on deploymentConnection {

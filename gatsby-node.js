@@ -13,6 +13,7 @@ exports.sourceNodes = async ({ actions, createContentDigest }) => {
       "campaign",
       "deployment",
       "focus_area",
+      "partner_org",
       "platform",
       "season",
     ]
@@ -38,7 +39,7 @@ exports.sourceNodes = async ({ actions, createContentDigest }) => {
           })
         })
       } else {
-        console.log("request failed", response.message)
+        console.log("request failed for ", response.type, response.message)
       }
     })
   } catch (error) {

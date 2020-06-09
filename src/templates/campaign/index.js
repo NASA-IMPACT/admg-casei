@@ -5,9 +5,10 @@ import Layout from "../../components/layout"
 import Header from "./header"
 import InpageNav from "./inpage-nav"
 import OverviewSection from "./overview-section"
-import MilestoneSection from "./milestone-section"
+import TimelineSection from "./timeline-section"
 import PlatformSection from "./platform-section"
-import ResourcesSection from "./resources-section"
+import FundingSection from "./funding-section"
+import FocusSection from "./focus-section"
 
 const CampaignTemplate = ({ data: { campaign, deployments, platforms } }) => {
   return (
@@ -15,27 +16,33 @@ const CampaignTemplate = ({ data: { campaign, deployments, platforms } }) => {
       <Header
         shortname={campaign.shortname}
         longname={campaign.longname}
-        focus={campaign.focus}
-        countDeployments={campaign.countDeployments}
+        focusIds={campaign.focus}
+        countDeployments={deployments.totalCount}
         countDataproducts={campaign.countDataproducts}
       />
-      <InpageNav website={campaign.website} />
+      <InpageNav />
       <OverviewSection
         description={campaign.description}
         startdate={campaign.startdate}
         enddate={campaign.enddate}
         region={campaign.region}
-        season={campaign.season}
+        seasonIds={campaign.season}
         bounds={campaign.bounds}
         focusPenomena={campaign.focusPenomena}
-        keywords={campaign.keywords}
+        keywordIds={campaign.keywords}
+        website={campaign.website}
       />
-      <MilestoneSection deployments={deployments} />
+      <FocusSection
+        focusAreaIds={campaign.focusAreaIds}
+        focusPhenomena={campaign.focusPhenomena}
+        scienceKeywords={campaign.scienceKeywords}
+      />
       <PlatformSection platforms={platforms} />
+      <TimelineSection deployments={deployments} />
       <section className="inpage-nav" id="data" data-cy="data-section">
         <h2>Data</h2>
       </section>
-      <ResourcesSection
+      <FundingSection
         logo={campaign.logo}
         logoAlt={campaign.logoAlt}
         fundingAgency={campaign.fundingAgency}
@@ -45,22 +52,25 @@ const CampaignTemplate = ({ data: { campaign, deployments, platforms } }) => {
         campaignLead={campaign.campaignLead}
         dataManager={campaign.dataManager}
         archive={campaign.archive}
-        partnerOrg={campaign.partnerOrg}
+        partnerOrgIds={campaign.partnerOrg}
         partnerWebsite={campaign.partnerWebsite}
       />
     </Layout>
   )
 }
 
+export default CampaignTemplate
+
 export const query = graphql`
   query($slug: String!, $platforms: [String!]) {
     campaign: campaign(id: { eq: $slug }) {
       ...headerFields
-      website: project_website
       ...overviewFields
-      ...resourcesFields
+      ...focusFields
+      ...fundingFields
     }
     deployments: allDeployment(filter: { campaign: { eq: $slug } }) {
+      totalCount
       ...deploymentFragment
     }
     platforms: allPlatform(filter: { id: { in: $platforms } }) {
@@ -68,5 +78,3 @@ export const query = graphql`
     }
   }
 `
-
-export default CampaignTemplate

@@ -2,24 +2,16 @@
 
 describe("Campaign", () => {
   before(() => {
-    cy.visit("/campaign/81018499-61ea-47c6-baad-41d96e8d42e5")
+    cy.visit("/campaign/21a8e675-9b74-4582-8cf0-582c707b27d9")
   })
 
   describe("the header", () => {
     it("displays the short name", () => {
-      cy.get("main")
-        .find("header")
-        .find("p")
-        .contains("OLYMPEX")
-        .should("exist")
+      cy.get("main").find("header").find("p").should("exist")
     })
 
     it("displays the long name as title", () => {
-      cy.get("main")
-        .find("header")
-        .find("h1")
-        .contains("Olympic Mountains Experiment")
-        .should("exist")
+      cy.get("main").find("header").find("h1").should("exist")
     })
 
     it("displays the focus area as subtitle", () => {
@@ -32,7 +24,7 @@ describe("Campaign", () => {
         .find("dd")
         .should($stat => {
           expect($stat, "3 items").to.have.length(3)
-          expect($stat.eq(0), "first item").to.contain("Collection Periods")
+          expect($stat.eq(0), "first item").to.contain("Deployments")
           expect($stat.eq(1), "second item").to.contain("Flights")
           expect($stat.eq(2), "third item").to.contain("Data Products")
         })
@@ -55,27 +47,25 @@ describe("Campaign", () => {
         .find("nav")
         .find("a")
         .should($anchor => {
-          expect($anchor, "5 items").to.have.length(5)
+          expect($anchor, "7 items").to.have.length(7)
           expect($anchor.eq(0), "first item").to.contain("Overview")
-          expect($anchor.eq(1), "second item").to.contain("Milestones")
-          expect($anchor.eq(2), "third item").to.contain(
-            "Platforms & Instruments"
-          )
-          expect($anchor.eq(3), "fourth item").to.contain("Data")
-          expect($anchor.eq(4), "last item").to.contain("Resources")
+          expect($anchor.eq(1), "second item").to.contain("Focus")
+          expect($anchor.eq(2), "third item").to.contain("Platforms")
+          expect($anchor.eq(3), "fourth item").to.contain("Instruments")
+          expect($anchor.eq(4), "fifth item").to.contain("Timeline")
+          expect($anchor.eq(5), "sixth item").to.contain("Data")
+          expect($anchor.eq(6), "last item").to.contain("Funding")
         })
     })
 
     it("navigates to the inpage section", () => {
-      cy.get("[data-cy=resources-section]").find("h2").should("be.visible")
-      cy.get("[data-cy=resources-section]")
-        .find("h2")
-        .should("not.be.inViewport")
+      cy.get("[data-cy=funding-section]").find("h2").should("be.visible")
+      cy.get("[data-cy=funding-section]").find("h2").should("not.be.inViewport")
 
       cy.get("main").find("nav").find("a").last().click()
 
-      cy.url().should("include", "#resources")
-      cy.get("[data-cy=resources-section]").find("h2").should("be.inViewport")
+      cy.url().should("include", "#funding")
+      cy.get("[data-cy=funding-section]").find("h2").should("be.inViewport")
     })
 
     it("all template sections should have the class 'inpage-nav'", () => {
@@ -115,19 +105,16 @@ describe("Campaign", () => {
         })
     })
 
-    it("displays word lists", () => {
-      cy.get("[data-cy=word-list]")
+    it("displays link list", () => {
+      cy.get("[data-cy=link-list]")
         .find("label")
-        .should($label => {
-          expect($label, "2 items").to.have.length(2)
+        .should("contain", "Relevant Links")
 
-          expect($label.eq(0), "first item").to.contain("Focus Phenomena")
-          expect($label.eq(1), "first item").to.contain("Science Keywords")
-        })
+      cy.get("[data-cy=link-list]").find("li").should("have.length", 5)
     })
   })
 
-  describe("the milestones section", () => {
+  describe("the timeline section", () => {
     it("displays a milestone carousel", () => {
       cy.get("[data-cy=milestone-carousel]").find(".slider").should("exist")
 
@@ -166,15 +153,15 @@ describe("Campaign", () => {
     })
   })
 
-  describe("the resources section", () => {
+  describe("the funding section", () => {
     it("exists", () => {
-      cy.get("[data-cy=resources-section]").should("exist")
+      cy.get("[data-cy=funding-section]").should("exist")
     })
 
     it("has a heading", () => {
-      cy.get("[data-cy=resources-section]")
+      cy.get("[data-cy=funding-section]")
         .find("h2")
-        .should("have.text", "Additional Information")
+        .should("have.text", "Funding")
     })
 
     it("displays the logo", () => {

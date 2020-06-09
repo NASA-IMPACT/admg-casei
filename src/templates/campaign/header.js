@@ -1,19 +1,35 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
 import NorthAmerica from "../../images/north-america.svg"
 
 const Header = ({
   shortname,
   longname,
-  focus,
-  countCollectionPeriods,
+  focusIds,
+  countDeployments,
   countDataproducts,
 }) => {
+  const data = useStaticQuery(graphql`
+    query {
+      allFocusArea {
+        nodes {
+          id
+          shortname: short_name
+          longname: long_name
+        }
+      }
+    }
+  `)
+  const focus = data.allFocusArea.nodes
+    .filter(x => focusIds.includes(x.id))
+    .map(x => x.shortname)
+    .join(", ")
+
   const StatNumber = ({ number = "--", label }) => (
     <>
       <dt style={{ fontSize: `3rem` }}>
-        {number.length === 0 ? "--" : number}
+        {!number || number.length === 0 ? "--" : number}
       </dt>
       <dd style={{ gridRowStart: 2, textTransform: `uppercase` }}>{label}</dd>
     </>
@@ -28,12 +44,9 @@ const Header = ({
           <p>{focus}</p>
         </div>
         <dl style={{ display: `grid` }} data-cy="stats">
-          <StatNumber
-            number={countCollectionPeriods || ""}
-            label="Collection Periods"
-          />
+          <StatNumber number={countDeployments} label="Deployments" />
           <StatNumber number="--" label="Flights" />
-          <StatNumber number={countDataproducts || ""} label="Data Products" />
+          <StatNumber number={countDataproducts} label="Data Products" />
         </dl>
       </div>
       <div style={{ flex: `1` }}>
