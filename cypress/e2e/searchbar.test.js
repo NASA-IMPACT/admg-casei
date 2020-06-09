@@ -43,13 +43,11 @@ describe("Searchbar", () => {
   it("adds and removes filters", () => {
     cy.get("[data-cy=filter-select]").select("monsoon")
 
-    cy.get("[data-cy=searchbar]").find("[data-cy=filter-chip]").should("exist")
+    cy.get("[data-cy=filter-chip]").should("exist")
 
     cy.get("[data-cy=filter-chip]").find("button").click()
 
-    cy.get("[data-cy=searchbar]")
-      .find("[data-cy=filter-chip]")
-      .should("not.exist")
+    cy.get("[data-cy=filter-chip]").should("not.exist")
   })
 
   it("sorts the list asc or desc", () => {

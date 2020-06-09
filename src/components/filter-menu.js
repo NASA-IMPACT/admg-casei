@@ -25,7 +25,17 @@ const FilterMenu = ({
       aria-label="Select filters"
       name="filter"
       id="filter-select"
-      style={{ flexGrow: 0, maxHeight: `2.25rem`, maxWidth: `5rem` }}
+      style={{
+        flexGrow: 0,
+        height: `2.5rem`,
+        maxWidth: `5rem`,
+        "-webkit-appearance": `none`,
+        background: `transparent`,
+        border: `1px solid hsla(0,0%,100%,0.9)`,
+        borderRadius: `2px 0 0 2px`,
+        color: `hsla(0,0%,100%,0.9)`,
+        padding: `0.5rem`,
+      }}
       data-cy="filter-select"
       onChange={e => handleSelection(e.target.value)}
     >

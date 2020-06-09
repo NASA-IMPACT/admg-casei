@@ -2,10 +2,10 @@ import React from "react"
 
 const CampaignCard = ({
   ongoing = false,
-  shortname = "Shortname",
-  longname = "Campaign Longname over 2 lines",
-  daterange = "2012-2015",
-  region = "North America",
+  shortname,
+  longname,
+  daterange,
+  region,
   countCollectionPeriods = 0,
   countDataProducts = 0,
 }) => (

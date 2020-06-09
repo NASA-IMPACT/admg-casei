@@ -54,12 +54,13 @@ const Campaigns = ({ data }) => {
         sortOrder={sortOrder}
         toggleSortOrder={toggleSortOrder}
       />
+
       {isLoading ? (
         <div
           style={{ display: `flex`, justifyContent: `space-around` }}
           data-cy="loading-indicator"
         >
-          <Spinner name="cube-grid" />
+          <Spinner name="cube-grid" color="hsla(0,0%,100%,0.9)" />
         </div>
       ) : (
         <ExploreSection

@@ -18,7 +18,7 @@ const ExploreSection = ({ category, filteredCount, totalCount, children }) => {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: `repeat(auto-fill, 271px)`,
+          gridTemplateColumns: `repeat(auto-fill, minmax(270px, 1fr))`,
           gap: `1rem`,
         }}
       >
