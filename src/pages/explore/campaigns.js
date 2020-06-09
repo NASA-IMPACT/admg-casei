@@ -7,16 +7,18 @@ import ExploreSection from "../../components/explore-section"
 import ExploreCard from "../../components/explore-card"
 
 const Campaigns = ({ data }) => {
-  const [sortOrder, toggleSortOrder] = useState("asc")
-  const [filters, setFilter] = useState([])
+  const { focus, season } = data
 
-  const addFilter = id => setFilter([...filters, id])
-  const removeFilter = id => setFilter(filters.filter(f => f !== id))
+  const [sortOrder, toggleSortOrder] = useState("asc")
+  const [selectedFilterIds, setFilter] = useState([])
+
+  const addFilter = id => setFilter([...selectedFilterIds, id])
+  const removeFilter = id => setFilter(selectedFilterIds.filter(f => f !== id))
 
   const list = data[sortOrder].list.filter(campaign =>
-    filters.length === 0
+    selectedFilterIds.length === 0
       ? true
-      : filters.every(
+      : selectedFilterIds.every(
           f => campaign.season.includes(f) || campaign.focus.includes(f)
         )
   )
@@ -24,7 +26,8 @@ const Campaigns = ({ data }) => {
   return (
     <Layout>
       <ExploreMenu
-        filters={filters}
+        filterOptions={{ focus, season }}
+        selectedFilterIds={selectedFilterIds}
         addFilter={addFilter}
         removeFilter={removeFilter}
         sortOrder={sortOrder}
@@ -32,7 +35,7 @@ const Campaigns = ({ data }) => {
       />
       <ExploreSection
         category="campaigns"
-        filters={filters}
+        selectedFilterIds={selectedFilterIds}
         removeFilter={removeFilter}
         filteredCount={list.length}
         totalCount={data.all.totalCount}
@@ -40,7 +43,6 @@ const Campaigns = ({ data }) => {
         {list.map(campaign => (
           <Link to={`/campaign/${campaign.id}`} key={campaign.shortname}>
             <ExploreCard
-              image={campaign.logo.length === 0 ? undefined : campaign.logo}
               title={campaign.shortname}
               description={campaign.longname}
             />
@@ -53,28 +55,41 @@ const Campaigns = ({ data }) => {
 
 export const query = graphql`
   query {
-    all: allCampaignCsv {
+    all: allCampaign(sort: { order: ASC, fields: short_name }) {
       totalCount
     }
-    asc: allCampaignCsv(sort: { order: ASC, fields: Campaign_Shortname }) {
+    asc: allCampaign(sort: { order: ASC, fields: short_name }) {
       list: nodes {
         ...campaignFields
       }
     }
-    desc: allCampaignCsv(sort: { order: DESC, fields: Campaign_Shortname }) {
+    desc: allCampaign(sort: { order: DESC, fields: short_name }) {
       list: nodes {
         ...campaignFields
+      }
+    }
+    season: allSeason {
+      options: nodes {
+        id
+        shortname: short_name
+        longname: long_name
+      }
+    }
+    focus: allFocusArea {
+      options: nodes {
+        id
+        shortname: short_name
+        longname: long_name
       }
     }
   }
 
-  fragment campaignFields on CampaignCsv {
-    shortname: Campaign_Shortname
-    longname: Campaign_Longname
+  fragment campaignFields on campaign {
+    shortname: short_name
+    longname: long_name
     id
-    season: Season_s__of_Study
-    focus: NASA_Earth_Science_Focus_Areas
-    logo: Campaign_Logo___Image_Location__URL_
+    season: seasons
+    focus: focus_areas
   }
 `
 

@@ -24,13 +24,7 @@ const ListLink = props => {
   )
 }
 
-const ExploreMenu = ({
-  filters,
-  addFilter,
-  removeFilter,
-  sortOrder,
-  toggleSortOrder,
-}) => (
+const ExploreMenu = props => (
   <>
     <div
       style={{
@@ -56,13 +50,7 @@ const ExploreMenu = ({
         <ListLink to="/explore/instruments">Instruments</ListLink>
       </ul>
     </div>
-    <Searchbar
-      filters={filters}
-      addFilter={addFilter}
-      removeFilter={removeFilter}
-      sortOrder={sortOrder}
-      toggleSortOrder={toggleSortOrder}
-    />
+    <Searchbar {...props} />
   </>
 )
 

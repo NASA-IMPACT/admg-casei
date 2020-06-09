@@ -3,16 +3,21 @@ import React from "react"
 const Filter = ({ label, options }) => (
   <optgroup label={label}>
     {options.map(o => (
-      <option key={o} value={o}>
-        {o}
+      <option key={o.id} value={o.id}>
+        {o.shortname}
       </option>
     ))}
   </optgroup>
 )
 
-const FilterMenu = ({ filters, addFilter, removeFilter }) => {
+const FilterMenu = ({
+  filterOptions,
+  selectedFilterIds,
+  addFilter,
+  removeFilter,
+}) => {
   const handleSelection = value => {
-    filters.includes(value) ? removeFilter(value) : addFilter(value)
+    selectedFilterIds.includes(value) ? removeFilter(value) : addFilter(value)
     document.getElementById("filter-select").value = ""
   }
   return (
@@ -28,36 +33,12 @@ const FilterMenu = ({ filters, addFilter, removeFilter }) => {
       <Filter
         id="focus"
         label="Focus Area"
-        options={[
-          "Atmospheric Composition",
-          "Weather",
-          "Climate Variability & Change",
-          "Global Water & Energy Cycle",
-          "Carbon Cycle & Ecosystems",
-          "Earth Surface & Interior",
-        ]}
+        options={filterOptions.focus.options}
       />
       <Filter
         id="season"
         label="Season"
-        options={[
-          "boreal winter",
-          "boreal spring",
-          "boreal summer",
-          "boreal fall",
-          "austral winter",
-          "austral spring",
-          "austral summer",
-          "austral fall",
-          "monsoon",
-          "break",
-          "dry",
-          "wet",
-          "warm",
-          "cold",
-          "equatorial",
-          "year round",
-        ]}
+        options={filterOptions.season.options}
       />
     </select>
   )

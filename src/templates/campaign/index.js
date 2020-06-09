@@ -53,21 +53,17 @@ const CampaignTemplate = ({ data: { campaign, deployments, platforms } }) => {
 }
 
 export const query = graphql`
-  query($slug: String!, $shortname: String!, $platforms: [String!]) {
-    campaign: campaignCsv(id: { eq: $slug }) {
+  query($slug: String!, $platforms: [String!]) {
+    campaign: campaign(id: { eq: $slug }) {
       ...headerFields
-      website: Repository_Primary_Website__DAAC_homepage_
+      website: project_website
       ...overviewFields
       ...resourcesFields
     }
-    deployments: allDeploymentCsv(
-      filter: { campaign_shortname: { eq: $shortname } }
-    ) {
+    deployments: allDeployment(filter: { campaign: { eq: $slug } }) {
       ...deploymentFragment
     }
-    platforms: allPlatformCsv(
-      filter: { ADMG_s_Platform_Shortname: { in: $platforms } }
-    ) {
+    platforms: allPlatform(filter: { id: { in: $platforms } }) {
       ...platformFragment
     }
   }

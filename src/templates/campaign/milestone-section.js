@@ -52,10 +52,10 @@ const MilestoneSection = ({ deployments }) => {
         >
           {deployments.nodes.map(deployment => (
             <Milestone
-              key={deployment.name}
+              key={deployment.id}
               type="deployment"
               date={`${deployment.start} - ${deployment.end}`}
-              name={`${deployment.longname} (${deployment.name})`}
+              name={`${deployment.longname} (${deployment.shortname})`}
               details={`${deployment.flights} Flights`}
               region={deployment.region}
             />
@@ -70,14 +70,14 @@ const MilestoneSection = ({ deployments }) => {
 export default MilestoneSection
 
 export const deployments = graphql`
-  fragment deploymentFragment on DeploymentCsvConnection {
+  fragment deploymentFragment on deploymentConnection {
     nodes {
-      name: ADMG_deployment_name
+      id: uuid
+      shortname: short_name
       flights: number_flights
-      region: Geographical_Region_Type_s_
-      campaign: campaign_shortname
-      alias: Deployment_Alias_es_
-      longname: deployment_longname
+      region: geographical_regions
+      campaign: campaign
+      longname: long_name
       end: end_date
       start: start_date
     }

@@ -3,7 +3,63 @@
  *
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
+const fetch = require("node-fetch")
 const path = require(`path`)
+
+exports.sourceNodes = async ({ actions, createContentDigest }) => {
+  const { createNode } = actions
+  try {
+    const endpoints = [
+      "campaign",
+      "deployment",
+      "focus_area",
+      "platform",
+      "season",
+    ]
+
+    let responses = await Promise.all(endpoints.map(key => fetchData(key)))
+
+    responses.forEach(response => {
+      if (response.success) {
+        response.data.forEach(item => {
+          createNode({
+            // Data for the node.
+            ...item,
+
+            // Required fields.
+            id: item.uuid,
+            parent: null,
+            children: [],
+            internal: {
+              type: response.type,
+              contentDigest: createContentDigest(item),
+              description: `Creating nodes from ${response.type} endpoint`,
+            },
+          })
+        })
+      } else {
+        console.log("request failed", response.message)
+      }
+    })
+  } catch (error) {
+    console.log("catch error", error)
+  }
+
+  // You're done, return.
+  return
+}
+
+const fetchData = async endpoint => {
+  const response = await fetch(`http://admg.nasa-impact.net/api/${endpoint}`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: "Bearer YOIg2sl50O5wf0XgeTJtGZdI6iDTGc",
+    },
+  })
+  const json = await response.json()
+  return { type: endpoint, ...json }
+}
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
@@ -11,24 +67,22 @@ exports.createPages = async ({ graphql, actions }) => {
   // see: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise for more info
   const result = await graphql(`
     {
-      allCampaignCsv {
+      allCampaign {
         nodes {
           id
-          shortname: Campaign_Shortname
-          platforms: ADMG_s_Aircraft_Shortames__Camp_Plat_Inst_tab_
+          platforms: platform_types
         }
       }
     }
   `)
 
-  result.data.allCampaignCsv.nodes.forEach(node => {
+  result.data.allCampaign.nodes.forEach(node => {
     createPage({
       path: `campaign/${node.id}`,
       component: path.resolve(`./src/templates/campaign/index.js`),
       context: {
         slug: node.id,
-        shortname: node.shortname,
-        platforms: node.platforms.split(", "),
+        platforms: node.platforms,
       },
     })
   })

@@ -2,28 +2,28 @@
 
 describe("Campaign", () => {
   before(() => {
-    cy.visit("/campaign/6d179d67-ebd8-5750-9f5d-dc55c92697b9")
+    cy.visit("/campaign/81018499-61ea-47c6-baad-41d96e8d42e5")
   })
 
   describe("the header", () => {
     it("displays the short name", () => {
-      cy.get("main").find("header").find("p").contains("ABoVE").should("exist")
+      cy.get("main")
+        .find("header")
+        .find("p")
+        .contains("OLYMPEX")
+        .should("exist")
     })
 
     it("displays the long name as title", () => {
       cy.get("main")
         .find("header")
         .find("h1")
-        .contains("Arctic-Boreal Vulnerability Experiment")
+        .contains("Olympic Mountains Experiment")
         .should("exist")
     })
 
     it("displays the focus area as subtitle", () => {
-      cy.get("main")
-        .find("header")
-        .find("p")
-        .contains("Carbon Cycle & Ecosystems, Climate Variability & Change")
-        .should("exist")
+      cy.get("main").find("header").find("p").should("exist")
     })
     it("displays 3 big numbers", () => {
       cy.get("main")
@@ -32,7 +32,7 @@ describe("Campaign", () => {
         .find("dd")
         .should($stat => {
           expect($stat, "3 items").to.have.length(3)
-          expect($stat.eq(0), "first item").to.contain("Deployments")
+          expect($stat.eq(0), "first item").to.contain("Collection Periods")
           expect($stat.eq(1), "second item").to.contain("Flights")
           expect($stat.eq(2), "third item").to.contain("Data Products")
         })
@@ -131,8 +131,6 @@ describe("Campaign", () => {
     it("displays a milestone carousel", () => {
       cy.get("[data-cy=milestone-carousel]").find(".slider").should("exist")
 
-      cy.get("[data-cy=milestone]").should("have.length", 3)
-
       cy.get("[data-cy=milestone]").first().find("label").should("exist")
       cy.get("[data-cy=milestone]").first().find("img").should("exist")
       cy.get("[data-cy=milestone]").first().find("img").should("be.visible")
@@ -185,7 +183,7 @@ describe("Campaign", () => {
 
     it("displays some infos", () => {
       cy.get("[data-cy=info-item]").should($div => {
-        expect($div, "9 info items").to.have.length(9)
+        expect($div, "8 info items").to.have.length(8)
       })
     })
   })

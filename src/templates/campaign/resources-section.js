@@ -3,16 +3,14 @@ import { graphql } from "gatsby"
 
 const ResourcesSection = ({
   logo,
-  logoAlt,
   fundingAgency,
   fundingProgram,
-  supportedMission,
   programLead,
-  campaignLead,
+  leadInvestigator,
   dataManager,
   archive,
   partnerOrg,
-  partnerWebsite,
+  tertiaryWebsite,
 }) => {
   const InfoItem = ({ label, info }) => (
     <div data-cy="info-item">
@@ -40,7 +38,7 @@ const ResourcesSection = ({
             padding: `2rem`,
           }}
         >
-          <img src={logo} alt={logoAlt} data-cy="campaign-logo" />
+          <img src={logo} alt="campaign-logo" data-cy="campaign-logo" />
         </div>
 
         <div
@@ -55,16 +53,15 @@ const ResourcesSection = ({
         >
           <InfoItem label="Funding Agency" info={fundingAgency} />
           <InfoItem label="Funding Program" info={fundingProgram} />
-          <InfoItem label="Supported NASA Mission" info={supportedMission} />
           <InfoItem label="Funding Program Lead" info={programLead} />
-          <InfoItem label="Campaign or Project Lead" info={campaignLead} />
+          <InfoItem label="Lead Investigator" info={leadInvestigator} />
           <InfoItem
             label="Data Manager / Technical Contact"
             info={dataManager}
           />
           <InfoItem label="Assigned Archive Repository" info={archive} />
           <InfoItem label="Partner Organisation" info={partnerOrg} />
-          <InfoItem label="Partner Website" info={partnerWebsite} />
+          <InfoItem label="Tertiary Website" info={tertiaryWebsite} />
         </div>
       </div>
     </section>
@@ -74,20 +71,19 @@ const ResourcesSection = ({
 export default ResourcesSection
 
 export const resourcesFields = graphql`
-  fragment resourcesFields on CampaignCsv {
-    logo: Campaign_Logo___Image_Location__URL_
-    logoAlt: Campaign_Logo___Image_Name
+  fragment resourcesFields on campaign {
+    # logo: Campaign_Logo___Image_Location__URL_
 
-    fundingAgency: Funding_Agency
-    fundingProgram: NASA_Funding_Program
-    supportedMission: Supported_NASA_Mission_s_
+    fundingAgency: funding_agency
+    fundingProgram: funding_program
+    # supportedMission: Supported_NASA_Mission_s_
 
-    programLead: Responsible_NASA_Funding_Program_Lead
-    campaignLead: Responsible_NASA_Campaign_or_Project_Lead
-    dataManager: Data_Manager__Technical_Contact__person_or_NID_
+    programLead: funding_program_lead
+    leadInvestigator: lead_investigator
+    dataManager: technical_contact
 
-    archive: Assigned_Archive_Repository__DAAC_
-    partnerOrg: Partner_Organizations
-    partnerWebsite: Partner_Website_s_
+    archive: repository_website
+    partnerOrg: partner_orgs
+    tertiaryWebsite: tertiary_website
   }
 `
