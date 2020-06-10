@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useRef } from "react"
 import { graphql, Link } from "gatsby"
 import Spinner from "react-spinkit"
 
@@ -21,10 +21,12 @@ const Campaigns = ({ data }) => {
   const addFilter = id => setFilter([...selectedFilterIds, id])
   const removeFilter = id => setFilter(selectedFilterIds.filter(f => f !== id))
 
+  const inputElement = useRef(null)
+
   const submitSearch = async e => {
     setLoading(true)
     e.preventDefault()
-    let searchstring = document.querySelector("input").value
+    let searchstring = inputElement.current.value
     const result = await api.fetchSearchResult(searchstring)
     setSearchResult(result)
     setLoading(false)
@@ -53,6 +55,7 @@ const Campaigns = ({ data }) => {
         removeFilter={removeFilter}
         sortOrder={sortOrder}
         toggleSortOrder={toggleSortOrder}
+        ref={inputElement}
       />
 
       {isLoading ? (

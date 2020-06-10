@@ -14,15 +14,18 @@ const SearchIcon = ({ color = "#FFF" }) => (
   </svg>
 )
 
-const Searchbar = ({
-  submitSearch,
-  filterOptions,
-  selectedFilterIds,
-  addFilter,
-  removeFilter,
-  sortOrder,
-  toggleSortOrder,
-}) => {
+const Searchbar = (
+  {
+    submitSearch,
+    filterOptions,
+    selectedFilterIds,
+    addFilter,
+    removeFilter,
+    sortOrder,
+    toggleSortOrder,
+  },
+  ref
+) => {
   const getFilterLabelById = id => {
     for (let [key, value] of Object.entries(filterOptions)) {
       const filter = value.options.find(i => i.id === id)
@@ -67,6 +70,7 @@ const Searchbar = ({
               color: `hsla(0,0%,100%,0.9)`,
             }}
             type="text"
+            ref={ref}
           />
           <button
             type="submit"
@@ -124,4 +128,4 @@ const Searchbar = ({
   )
 }
 
-export default Searchbar
+export default React.forwardRef(Searchbar)
