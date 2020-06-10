@@ -5,7 +5,8 @@ describe("Header", () => {
     cy.visit("/")
   })
   it("renders correctly", () => {
-    cy.get("header").contains("CARA | NASA")
+    cy.get("header").contains("NASA")
+    cy.get("header").contains("Sub-orbital catalog")
     cy.get("nav")
       .find("li")
       .should($li => {

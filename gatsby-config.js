@@ -4,9 +4,9 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `CARA | NASA`,
-    description: `A centralized airborne data inventory`,
-    author: `@AliceR`,
+    title: `Sub-orbital catalog`,
+    description: `Sub-orbital catalog`,
+    author: `@developmentseed`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -22,8 +22,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Airborne Inventory`,
-        short_name: `CARA | NASA`,
+        name: `Sub-orbital catalog`,
+        short_name: `Sub-orbital catalog`,
         start_url: `/`,
         background_color: `#008888`,
         theme_color: `#008888`,
@@ -52,17 +52,6 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
-    // Postgres data source, for test purposes only:
-    // {
-    //   resolve: `gatsby-source-pg`,
-    //   options: {
-    //     connectionString: `postgres:///shakespeare`,
-    //     // for example: `postgres://pg_user:pg_pass@pg_host:pg_port/pg_db?ssl=1`
-    //     schema: `public`,
-    //     graphiql: true, // make postgres show up in graphiql
-    //     refetchInterval: 3600, // Refetch data every 1 hour
-    //     appendPlugins: [require("postgraphile-plugin-connection-filter")],
-    //   },
-    // },
+    `gatsby-plugin-styled-components`,
   ],
 }

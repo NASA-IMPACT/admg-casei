@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import Nav from "./nav"
+import Footer from "./footer"
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -35,7 +36,7 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title}>
         <Nav />
       </Header>
-      <div
+      <main
         style={{
           margin: `0 auto`,
           width: `100%`,
@@ -44,17 +45,9 @@ const Layout = ({ children }) => {
           flexGrow: 1,
         }}
       >
-        <main>{children}</main>
-      </div>
-      <footer
-        style={{
-          flexShrink: 0,
-          alignSelf: `flex-end`,
-        }}
-      >
-        © {new Date().getFullYear()}, Built by{" "}
-        <a href="https://www.developmentseed.org">Development Seed</a>.
-      </footer>
+        {children}
+      </main>
+      <Footer />
     </div>
   )
 }

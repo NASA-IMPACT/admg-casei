@@ -13,20 +13,47 @@ import Img from "gatsby-image"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const Image = () => {
+/*
+ * We can not pass props directly into a static query because it is
+ * compiled and doesn't support string interpolation in its template literal.
+ * This is a workaround to still build a reuseable Image component using Gatsby's
+ * image functionalities:
+ * It first queries all the images with graphql, and then uses javascript to filter
+ * them based on the provided props.
+ *
+ * Read more here on this topic:
+ * - https://noahgilmore.com/blog/easy-gatsby-image-components/
+ * - https://spectrum.chat/gatsby-js/general/using-variables-in-a-staticquery~abee4d1d-6bc4-4202-afb2-38326d91bd05
+ */
+
+const Image = props => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
+      images: allFile {
+        edges {
+          node {
+            relativePath
+            name
+            childImageSharp {
+              fluid(maxWidth: 600) {
+                ...GatsbyImageSharpFluid
+              }
+            }
           }
         }
       }
     }
   `)
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+  const image = data.images.edges.find(n => {
+    return n.node.relativePath.includes(props.filename)
+  })
+  if (!image) {
+    return null
+  }
+
+  const imageFluid = image.node.childImageSharp.fluid
+  return <Img alt={props.alt} fluid={imageFluid} />
 }
 
 export default Image

@@ -6,6 +6,7 @@ import api from "../../utils/api"
 
 import Layout from "../../components/layout"
 import ExploreMenu from "../../components/explore-menu"
+import Searchbar from "../../components/searchbar"
 import ExploreSection from "../../components/explore-section"
 import CampaignCard from "../../components/campaign-card"
 
@@ -43,7 +44,8 @@ const Campaigns = ({ data }) => {
 
   return (
     <Layout>
-      <ExploreMenu
+      <ExploreMenu />
+      <Searchbar
         submitSearch={submitSearch}
         filterOptions={{ focus, season }}
         selectedFilterIds={selectedFilterIds}

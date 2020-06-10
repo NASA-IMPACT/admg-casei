@@ -12,7 +12,6 @@ const InpageNav = () => {
       style={{
         position: `sticky`,
         top: `0`,
-        backgroundColor: `#FEFEFE`,
         display: `flex`,
         padding: `1rem`,
         borderTop: `1px solid #9E9E9E`,

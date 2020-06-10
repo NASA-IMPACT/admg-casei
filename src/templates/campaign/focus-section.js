@@ -21,7 +21,6 @@ const FocusSection = ({ focusAreaIds, focusPhenomena, scienceKeywords }) => {
           <div
             style={{
               borderRadius: `2.5rem`,
-              backgroundColor: `#9E9E9E`,
               width: `2.5rem`,
               height: `2.5rem`,
               margin: `0.5rem`,
@@ -41,7 +40,6 @@ const FocusSection = ({ focusAreaIds, focusPhenomena, scienceKeywords }) => {
           gap: `1rem`,
           margin: `0 -1rem`,
           padding: `1rem`,
-          backgroundColor: `#FBFBFB`,
         }}
       >
         <div>

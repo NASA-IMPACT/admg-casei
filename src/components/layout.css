@@ -7,6 +7,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: radial-gradient(circle at top, #294060 0%, #0c1520 45%);
 }
 
 section.inpage-nav {
@@ -28,3 +29,8 @@ section:before {
   border-top: 2px solid #ccc;
 }
 */
+
+.placeholder {
+  box-shadow: 0 0 4px teal;
+  border: 1px solid teal;
+}

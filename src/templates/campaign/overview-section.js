@@ -72,7 +72,6 @@ const OverviewSection = ({
             flex: `1`,
             marginLeft: `2rem`,
             padding: `1rem`,
-            backgroundColor: `#FBFBFB`,
           }}
           data-cy="link-list"
         >
