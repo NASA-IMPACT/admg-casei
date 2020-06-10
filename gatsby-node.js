@@ -4,7 +4,7 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 const fetch = require("node-fetch")
-const path = require(`path`)
+const path = require("path")
 
 exports.sourceNodes = async ({ actions, createContentDigest }) => {
   const { createNode } = actions
@@ -55,7 +55,7 @@ const fetchData = async endpoint => {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
-      Authorization: "Bearer UPTYI9C7Isk2RCMln3ogf6r0hkUEiW",
+      Authorization: `Bearer ${process.env.ADMG_ACCESS_TOKEN}`,
     },
   })
   const json = await response.json()

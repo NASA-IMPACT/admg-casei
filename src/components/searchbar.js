@@ -4,6 +4,7 @@ import FilterMenu from "./filter-menu"
 import FilterChip from "./filter-chip"
 
 const Searchbar = ({
+  submitSearch,
   filterOptions,
   selectedFilterIds,
   addFilter,
@@ -19,7 +20,7 @@ const Searchbar = ({
   }
   return (
     <form
-      onSubmit={e => e.preventDefault()}
+      onSubmit={submitSearch}
       style={{ display: `flex`, margin: `2rem 0` }}
       data-cy="searchbar"
     >
@@ -56,7 +57,7 @@ const Searchbar = ({
           type="text"
         />
         <button
-          type="button"
+          type="submit"
           style={{ border: "none", flexGrow: 0 }}
           data-cy="submit"
         >

@@ -1,5 +1,7 @@
 /// <reference types="Cypress" />
 
+import api from "../../src/utils/api"
+
 describe("Searchbar", () => {
   beforeEach(() => {
     cy.visit("/explore/campaigns")
@@ -38,18 +40,6 @@ describe("Searchbar", () => {
     cy.window().should("have.prop", "beforeReload", true)
   })
 
-  it("accepts typed input for search", () => {
-    cy.get("[data-cy=searchbar]")
-      .find("input")
-      .type("what is the meaning of life?")
-
-    cy.get("[data-cy=submit]").click()
-
-    cy.get("[data-cy=searchbar]")
-      .find("input")
-      .should("have.value", "what is the meaning of life?")
-  })
-
   it("adds and removes filters", () => {
     cy.get("[data-cy=filter-select]").select("monsoon")
 
@@ -86,5 +76,59 @@ describe("Searchbar", () => {
 
         expect(first > last).to.be.true
       })
+  })
+
+  let searchApiStub
+  // Turns out, dealing with fetch requests in cypress isn't that easy:
+  // https://github.com/cypress-io/cypress/issues/95
+  describe.skip("the free text search", () => {
+    beforeEach(() => {
+      searchApiStub = cy
+        .stub(api, "fetchSearchResult")
+        .as("fetchSearchResultStub")
+
+      cy.get("[data-cy=searchbar]").find("input").type("arctic")
+
+      cy.get("[data-cy=submit]").click()
+    })
+
+    it("should indicate the loading", () => {
+      cy.get("[data-cy=loading-indicator]").should("be.visible")
+    })
+
+    describe("on api success", () => {
+      beforeEach(() => {
+        searchApiStub.resolves(["id1", "id2"])
+      })
+
+      it("call the api and get a successfull response", () => {
+        // TODO: why does it claim not to be called? Why does it still call the implementation? What's going on with the stubbing here?
+        expect(api.fetchSearchResult).to.be.called
+      })
+
+      it("should hide the loading indicator", () => {
+        cy.get("[data-cy=loading-indicator]").should("not.be.visible")
+      })
+
+      it("filters the campaigns based on api response", () => {
+        cy.get("[data-cy=searchbar]")
+          .find("input")
+          .should("have.value", "arctic")
+
+        cy.get("main")
+          .find("[data-cy=explore-card]")
+          .should("have.length.greaterThan", 1)
+      })
+    })
+
+    describe("on api failure", () => {
+      beforeEach(() => {
+        searchApiStub.returns(new Error("UUUPS, there was an error"))
+      })
+
+      it("displays an error message", () => {
+        cy.get("[data-cy=error-indicator]").should("be.visible")
+      })
+    })
   })
 })
