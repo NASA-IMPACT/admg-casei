@@ -8,6 +8,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import { DevseedUiThemeProvider } from "@devseed-ui/helpers"
+import theme from "../utils/theme"
 
 import Header from "./header"
 import Nav from "./nav"
@@ -26,29 +28,31 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <div
-      style={{
-        display: `flex`,
-        minHeight: `100vh`,
-        flexDirection: `column`,
-      }}
-    >
-      <Header siteTitle={data.site.siteMetadata.title}>
-        <Nav />
-      </Header>
-      <main
+    <DevseedUiThemeProvider theme={theme.main}>
+      <div
         style={{
-          margin: `0 auto`,
-          width: `100%`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-          flexGrow: 1,
+          display: `flex`,
+          minHeight: `100vh`,
+          flexDirection: `column`,
         }}
       >
-        {children}
-      </main>
-      <Footer />
-    </div>
+        <Header siteTitle={data.site.siteMetadata.title}>
+          <Nav />
+        </Header>
+        <main
+          style={{
+            margin: `0 auto`,
+            width: `100%`,
+            maxWidth: 960,
+            padding: `0 1.0875rem 1.45rem`,
+            flexGrow: 1,
+          }}
+        >
+          {children}
+        </main>
+        <Footer />
+      </div>
+    </DevseedUiThemeProvider>
   )
 }
 

@@ -1120,7 +1120,7 @@
     polished "^3.4.2"
     styled-components "^4.4.1"
 
-"@devseed-ui/helpers@^2.2.1":
+"@devseed-ui/helpers@^2.2.1", "@devseed-ui/helpers@^2.3.0":
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/@devseed-ui/helpers/-/helpers-2.3.0.tgz#f8e622a4184c6663b8c30adcdebb443500afbf65"
   integrity sha512-e0HjzsBQlU3ZPC8ARIGPp4SayOzYXajpdixxkqXvkdQxuFxB2l3fMGQh1AjP18MmJNxCx6lwXi4CnZ/A3+xWYQ==
@@ -11882,6 +11882,13 @@ polished@^3.4.2:
   version "3.6.0"
   resolved "https://registry.yarnpkg.com/polished/-/polished-3.6.0.tgz#03eb2871c9bc4785d5199dd751cde7af6de42ff8"
   integrity sha512-H7tsy9h5JVGXh7BdNzm/v/Q+zIasiwXnYflSmrLd+YpK+8dXKJTKl/kzCtB2kns2N5dyelRvjUtpOKK/nLCanA==
+  dependencies:
+    "@babel/runtime" "^7.9.2"
+
+polished@^3.6.4:
+  version "3.6.4"
+  resolved "https://registry.yarnpkg.com/polished/-/polished-3.6.4.tgz#cec6bc0fbffc5d6ce5799c85bcc1bca5e63f1dee"
+  integrity sha512-21moJXCm/7EvjeKQz5w89QDDKNPCoimc83CqwZZGJluFdMXsFlMQl9lPA/OMRkoceZ19kU0anKlMgZmY7LJSJw==
   dependencies:
     "@babel/runtime" "^7.9.2"
 
