@@ -2,15 +2,15 @@ import { rgba, tint } from "polished"
 
 let color = {
   base: "#FFFFFF",
-  primary: "#00B074",
+  primary: "#294060",
   secondary: "#AAC9E1",
   tertiary: "#303641",
   quaternary: "#262A31",
 }
 color = {
   ...color,
-  background: "#FFFFFF",
-  surface: "#FFFFFF",
+  background: "#0c1520",
+  surface: "#0c1520",
   mist: rgba(color.base, 0.04),
   shadow: rgba(color.base, 0.08),
   smoke: rgba(color.base, 0.16),
