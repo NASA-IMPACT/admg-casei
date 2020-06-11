@@ -9,12 +9,12 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { DevseedUiThemeProvider } from "@devseed-ui/helpers"
-import theme from "../utils/theme"
 
 import Header from "./header"
 import Nav from "./nav"
 import Footer from "./footer"
-import "./layout.css"
+import theme from "../utils/theme"
+import GlobalStyles from "./global-styles"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -29,6 +29,7 @@ const Layout = ({ children }) => {
 
   return (
     <DevseedUiThemeProvider theme={theme.main}>
+      <GlobalStyles />
       <div
         style={{
           display: `flex`,
