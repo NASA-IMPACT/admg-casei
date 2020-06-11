@@ -1,11 +1,13 @@
 import React from "react"
 
+import theme from "../utils/theme"
+
 const FilterChip = ({ id, label, removeFilter }) => (
   <div
     style={{
-      backgroundColor: `#efefef`,
-      color: `hsla(0,0%,0%,0.73)`,
-      borderRadius: `0.25rem`,
+      backgroundColor: `${theme.main.color.lightgray}`,
+      color: `${theme.main.color.primary}`,
+      borderRadius: `${theme.main.shape.rounded}`,
       paddingLeft: `0.5rem`,
       margin: `0 0.5rem`,
     }}
