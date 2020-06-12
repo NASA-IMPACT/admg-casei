@@ -3,7 +3,10 @@
   "private": true,
   "description": "A centralized airborne data inventory",
   "version": "0.1.0",
-  "author": "Alice Rühl <alice@developmentseed.org>",
+  "contributors": [
+    "Necoline Hubner <necoline@developmentseed.org>",
+    "Alice Rühl <alice@developmentseed.org>"
+  ]
   "dependencies": {
     "@devseed-ui/button": "2.3.2",
     "@devseed-ui/helpers": "^2.3.0",
