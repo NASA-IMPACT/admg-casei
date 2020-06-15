@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilterChip renders correctly 1`] = `
+<div
+  data-cy="filter-chip"
+  style={
+    Object {
+      "backgroundColor": "#EEEEEE",
+      "borderRadius": "0.25rem",
+      "color": "#294060",
+      "margin": "0 0.5rem",
+      "paddingLeft": "0.5rem",
+    }
+  }
+>
+  <small>
+    Weather
+  </small>
+  <button
+    data-cy="remove-filter"
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "none",
+        "border": "none",
+        "flexGrow": 0,
+      }
+    }
+    type="button"
+  >
+    <span
+      aria-label="close-icon"
+      role="img"
+    >
+      🆇
+    </span>
+  </button>
+</div>
+`;
