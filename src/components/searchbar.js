@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 
 import FilterMenu from "./filter-menu"
 import FilterChip from "./filter-chip"
@@ -85,6 +86,25 @@ const Searchbar = ({
       </select>
     </form>
   )
+}
+
+Searchbar.propTypes = {
+  submitSearch: PropTypes.func.isRequired,
+  filterOptions: PropTypes.shape({
+    focus: PropTypes.shape({
+      id: PropTypes.string,
+      shortname: PropTypes.string,
+    }),
+    season: PropTypes.shape({
+      id: PropTypes.string,
+      shortname: PropTypes.string,
+    }),
+  }).isRequired,
+  selectedFilterIds: PropTypes.arrayOf(PropTypes.string),
+  addFilter: PropTypes.func.isRequired,
+  removeFilter: PropTypes.func.isRequired,
+  sortOrder: PropTypes.string.isRequired,
+  toggleSortOrder: PropTypes.func.isRequired,
 }
 
 export default Searchbar

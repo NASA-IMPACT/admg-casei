@@ -1,5 +1,26 @@
 import React from "react"
+import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+
+const InfoItem = ({ label, info }) => (
+  <div data-cy="info-item">
+    <label
+      style={{
+        textTransform: `uppercase`,
+        color: `#6B6B6B`,
+      }}
+    >
+      {label}
+    </label>
+    <hr />
+    <p>{info}</p>
+  </div>
+)
+
+InfoItem.propTypes = {
+  label: PropTypes.string.isRequired,
+  info: PropTypes.string.isRequired,
+}
 
 const FundingSection = ({
   logo,
@@ -28,21 +49,6 @@ const FundingSection = ({
     .filter(x => partnerOrgIds.includes(x.id))
     .map(x => x.shortname)
     .join(", ")
-
-  const InfoItem = ({ label, info }) => (
-    <div data-cy="info-item">
-      <label
-        style={{
-          textTransform: `uppercase`,
-          color: `#6B6B6B`,
-        }}
-      >
-        {label}
-      </label>
-      <hr />
-      <p>{info}</p>
-    </div>
-  )
 
   return (
     <section className="inpage-nav" id="funding" data-cy="funding-section">
@@ -83,8 +89,6 @@ const FundingSection = ({
   )
 }
 
-export default FundingSection
-
 export const fundingFields = graphql`
   fragment fundingFields on campaign {
     # logo: Campaign_Logo___Image_Location__URL_
@@ -102,3 +106,17 @@ export const fundingFields = graphql`
     tertiaryWebsite: tertiary_website
   }
 `
+
+FundingSection.propTypes = {
+  logo: PropTypes.string,
+  fundingAgency: PropTypes.string.isRequired,
+  fundingProgram: PropTypes.string.isRequired,
+  programLead: PropTypes.string.isRequired,
+  leadInvestigator: PropTypes.string.isRequired,
+  dataManager: PropTypes.string.isRequired,
+  archive: PropTypes.string.isRequired,
+  partnerOrgIds: PropTypes.arrayOf(PropTypes.string).isRequired,
+  tertiaryWebsite: PropTypes.string.isRequired,
+}
+
+export default FundingSection

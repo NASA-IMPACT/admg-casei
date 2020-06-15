@@ -5,6 +5,7 @@
  */
 
 import React from "react"
+import PropTypes from "prop-types"
 import { DevseedUiThemeProvider } from "@devseed-ui/helpers"
 
 import theme from "./src/utils/theme"
@@ -17,4 +18,8 @@ export const wrapRootElement = ({ element }) => {
       {element}
     </DevseedUiThemeProvider>
   )
+}
+
+wrapRootElement.propTypes = {
+  element: PropTypes.element,
 }

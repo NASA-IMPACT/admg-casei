@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react"
+import PropTypes from "prop-types"
 import Carousel from "nuka-carousel"
 import styled from "styled-components"
 
@@ -120,4 +121,13 @@ export const RegionCarousel = ({ regions }) => {
       </Carousel>
     </>
   )
+}
+
+RegionCarousel.propTypes = {
+  regions: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      shortname: PropTypes.string,
+    })
+  ),
 }

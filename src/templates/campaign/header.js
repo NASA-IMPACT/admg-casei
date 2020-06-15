@@ -1,7 +1,25 @@
 import React from "react"
+import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import NorthAmerica from "../../images/north-america.svg"
+
+const StatNumber = ({ number, label }) => (
+  <>
+    <dt
+      className={!number || number.length === 0 ? "placeholder" : ""}
+      style={{ fontSize: `3rem` }}
+    >
+      {!number || number.length === 0 ? "--" : number}
+    </dt>
+    <dd style={{ gridRowStart: 2, textTransform: `uppercase` }}>{label}</dd>
+  </>
+)
+
+StatNumber.propTypes = {
+  number: PropTypes.number,
+  label: PropTypes.string.isRequired,
+}
 
 const Header = ({
   shortname,
@@ -26,20 +44,6 @@ const Header = ({
     .map(x => x.shortname)
     .join(", ")
 
-  const StatNumber = ({ number = "--", label }) => (
-    <>
-      <dt
-        className={
-          !number || number.length === 0 || number === "--" ? "placeholder" : ""
-        }
-        style={{ fontSize: `3rem` }}
-      >
-        {!number || number.length === 0 ? "--" : number}
-      </dt>
-      <dd style={{ gridRowStart: 2, textTransform: `uppercase` }}>{label}</dd>
-    </>
-  )
-
   return (
     <header style={{ display: `flex` }}>
       <div style={{ flex: `1.61803398875` }}>
@@ -50,7 +54,7 @@ const Header = ({
         </div>
         <dl style={{ display: `grid` }} data-cy="stats">
           <StatNumber number={countDeployments} label="Deployments" />
-          <StatNumber number="--" label="Flights" />
+          <StatNumber number={null} label="Flights" />
           <StatNumber number={countDataproducts} label="Data Products" />
         </dl>
       </div>
@@ -61,8 +65,6 @@ const Header = ({
   )
 }
 
-export default Header
-
 export const headerFields = graphql`
   fragment headerFields on campaign {
     shortname: short_name
@@ -72,3 +74,13 @@ export const headerFields = graphql`
     countDataproducts: number_data_products
   }
 `
+
+Header.propTypes = {
+  shortname: PropTypes.string.isRequired,
+  longname: PropTypes.string.isRequired,
+  focusIds: PropTypes.arrayOf(PropTypes.string).isRequired,
+  countDeployments: PropTypes.number.isRequired,
+  countDataproducts: PropTypes.number.isRequired,
+}
+
+export default Header

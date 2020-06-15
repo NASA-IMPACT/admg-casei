@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 
 import theme from "../utils/theme"
 
@@ -26,5 +27,11 @@ const FilterChip = ({ id, label, removeFilter }) => (
     </button>
   </div>
 )
+
+FilterChip.propTypes = {
+  id: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  removeFilter: PropTypes.func.isRequired,
+}
 
 export default FilterChip

@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import PropTypes from "prop-types"
 import { graphql, Link } from "gatsby"
 import Spinner from "react-spinkit"
 
@@ -137,5 +138,51 @@ export const query = graphql`
     countDataproducts: number_data_products
   }
 `
+
+const campaignShape = PropTypes.shape({
+  ongoing: PropTypes.bool,
+  shortname: PropTypes.string.isRequired,
+  longname: PropTypes.string,
+  id: PropTypes.string.isRequired,
+  season: PropTypes.arrayOf(PropTypes.string),
+  focus: PropTypes.arrayOf(PropTypes.string),
+  startdate: PropTypes.string.isRequired,
+  enddate: PropTypes.string,
+  region: PropTypes.string.isRequired,
+  countCollectionPeriods: PropTypes.number,
+  countDataproducts: PropTypes.number,
+})
+
+Campaigns.propTypes = {
+  data: PropTypes.shape({
+    all: PropTypes.shape({
+      totalCount: PropTypes.number.isRequired,
+    }),
+    asc: PropTypes.shape({
+      list: PropTypes.arrayOf(campaignShape).isRequired,
+    }),
+    desc: PropTypes.shape({
+      list: PropTypes.arrayOf(campaignShape).isRequired,
+    }),
+    focus: PropTypes.shape({
+      options: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string.isRequired,
+          shortname: PropTypes.string.isRequired,
+          longname: PropTypes.string,
+        })
+      ).isRequired,
+    }).isRequired,
+    season: PropTypes.shape({
+      options: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string.isRequired,
+          shortname: PropTypes.string.isRequired,
+          longname: PropTypes.string,
+        })
+      ).isRequired,
+    }).isRequired,
+  }).isRequired,
+}
 
 export default Campaigns
