@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
 const PlatformSection = ({ platforms }) => (
@@ -23,8 +24,6 @@ const PlatformSection = ({ platforms }) => (
   </section>
 )
 
-export default PlatformSection
-
 export const platforms = graphql`
   fragment platformFragment on platformConnection {
     nodes {
@@ -33,3 +32,16 @@ export const platforms = graphql`
     }
   }
 `
+
+PlatformSection.propTypes = {
+  platforms: PropTypes.shape({
+    nodes: PropTypes.arrayOf(
+      PropTypes.shape({
+        shortname: PropTypes.string.isRequired,
+        longname: PropTypes.string.isRequired,
+      }).isRequired
+    ).isRequired,
+  }).isRequired,
+}
+
+export default PlatformSection

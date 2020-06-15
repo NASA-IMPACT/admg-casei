@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
@@ -54,6 +55,11 @@ const Image = props => {
 
   const imageFluid = image.node.childImageSharp.fluid
   return <Img alt={props.alt} fluid={imageFluid} />
+}
+
+Image.propTypes = {
+  filename: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
 }
 
 export default Image

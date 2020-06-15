@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 const FocusSection = ({ focusAreaIds, focusPhenomena, scienceKeywords }) => {
@@ -80,11 +81,17 @@ const FocusSection = ({ focusAreaIds, focusPhenomena, scienceKeywords }) => {
   )
 }
 
-export default FocusSection
-
 export const focus = graphql`
   fragment focusFields on campaign {
     focusAreaIds: focus_areas
     focusPhenomena: focus_phenomena
   }
 `
+
+FocusSection.propTypes = {
+  focusAreaIds: PropTypes.arrayOf(PropTypes.string).isRequired,
+  focusPhenomena: PropTypes.string.isRequired,
+  scienceKeywords: PropTypes.string,
+}
+
+export default FocusSection

@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 
 const Filter = ({ label, options }) => (
   <optgroup label={label}>
@@ -9,6 +10,16 @@ const Filter = ({ label, options }) => (
     ))}
   </optgroup>
 )
+
+Filter.propTypes = {
+  label: PropTypes.string.isRequired,
+  options: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      shortname: PropTypes.string,
+    })
+  ).isRequired,
+}
 
 const FilterMenu = ({
   filterOptions,
@@ -42,6 +53,30 @@ const FilterMenu = ({
       />
     </select>
   )
+}
+
+FilterMenu.propTypes = {
+  filterOptions: PropTypes.shape({
+    focus: PropTypes.shape({
+      options: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string,
+          shortname: PropTypes.string.isRequired,
+        }).isRequired
+      ).isRequired,
+    }),
+    season: PropTypes.shape({
+      options: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string,
+          shortname: PropTypes.string.isRequired,
+        }).isRequired
+      ).isRequired,
+    }),
+  }).isRequired,
+  selectedFilterIds: PropTypes.arrayOf(PropTypes.string),
+  addFilter: PropTypes.func.isRequired,
+  removeFilter: PropTypes.func.isRequired,
 }
 
 export default FilterMenu
