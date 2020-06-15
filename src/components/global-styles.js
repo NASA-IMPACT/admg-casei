@@ -2,8 +2,8 @@ import { createGlobalStyle, css } from "styled-components"
 import { normalize } from "polished"
 import theme from "../utils/theme"
 
-const color = theme.main.color
-const type = theme.main.type
+const color = theme.color
+const type = theme.type
 
 // Global styles for these components are included here for performance reasons.
 // This way they're only rendered when absolutely needed.
