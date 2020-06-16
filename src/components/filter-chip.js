@@ -5,7 +5,7 @@ import theme from "../utils/theme"
 const FilterChip = ({ id, label, removeFilter }) => (
   <div
     style={{
-      backgroundColor: `${theme.color.lightgray}`,
+      backgroundColor: `${theme.color.gray}`,
       color: `${theme.color.primary}`,
       borderRadius: `${theme.shape.rounded}`,
       paddingLeft: `0.5rem`,

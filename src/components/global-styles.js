@@ -26,8 +26,8 @@ const baseStyles = css`
     -moz-osx-font-smoothing: grayscale;
     background: radial-gradient(
       circle at top,
-      ${color.primary} 0%,
-      ${color.surface} 45%
+      ${color.tertiary} 0%,
+      ${color.primary} 45%
     );
   }
 
@@ -50,6 +50,18 @@ section:before {
   border-top: 2px solid #ccc;
 }
 */
+
+  /* Links
+   ========================================================================== */
+  a {
+    cursor: pointer;
+    color: ${color.base};
+    text-decoration: none;
+    transition: opacity 0.24s ease 0s;
+  }
+  a:visited {
+    color: ${color.base};
+  }
 
   .placeholder {
     box-shadow: 0 0 4px teal;
