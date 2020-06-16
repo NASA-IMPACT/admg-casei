@@ -18,6 +18,10 @@ const CloseIcon = ({ color = "hsla(0,0%,100%,0.9)" }) => (
   </svg>
 )
 
+CloseIcon.propTypes = {
+  color: PropTypes.string,
+}
+
 const FilterChip = ({ id, label, removeFilter }) => (
   <div
     style={{

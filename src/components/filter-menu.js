@@ -40,7 +40,7 @@ const FilterMenu = ({
         flexGrow: 0,
         height: `2.5rem`,
         maxWidth: `5rem`,
-        "-webkit-appearance": `none`,
+        WebkitAppearance: `none`,
         background: `transparent`,
         border: `1px solid hsla(0,0%,100%,0.9)`,
         borderRadius: `2px 0 0 2px`,

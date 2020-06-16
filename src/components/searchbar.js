@@ -15,119 +15,125 @@ const SearchIcon = ({ color = "#FFF" }) => (
   </svg>
 )
 
-const Searchbar = (
-  {
-    submitSearch,
-    filterOptions,
-    selectedFilterIds,
-    addFilter,
-    removeFilter,
-    sortOrder,
-    toggleSortOrder,
-  },
-  ref
-) => {
-  const getFilterLabelById = id => {
-    for (let [key, value] of Object.entries(filterOptions)) {
-      const filter = value.options.find(i => i.id === id)
-      if (filter) return `${key}: ${filter.shortname}`
-    }
-  }
-  return (
-    <>
-      <form
-        onSubmit={submitSearch}
-        style={{ display: `flex`, margin: `2rem 0` }}
-        data-cy="searchbar"
-      >
-        <FilterMenu
-          filterOptions={filterOptions}
-          selectedFilterIds={selectedFilterIds}
-          addFilter={addFilter}
-          removeFilter={removeFilter}
-        />
-
-        <div
-          style={{
-            display: "flex",
-            flexGrow: 1,
-            boxShadow: `0 -1px 1px 0 rgba(68,63,63,0.08), 0 2px 6px 0 rgba(68,63,63,0.08)`,
-            border: `1px solid hsla(0,0%,100%,0.9)`,
-            borderLeft: 0,
-            borderRight: 0,
-            borderRadius: `0`,
-            padding: "0.25rem",
-          }}
-        >
-          <input
-            autoComplete="off"
-            aria-label="Enter search text"
-            name="search"
-            placeholder="Enter text..."
-            style={{
-              border: "none",
-              flexGrow: 1,
-              background: `transparent`,
-              color: `hsla(0,0%,100%,0.9)`,
-            }}
-            type="text"
-            ref={ref}
-          />
-          <button
-            type="submit"
-            style={{
-              border: "none",
-              flexGrow: 0,
-              background: `transparent`,
-              color: `hsla(0,0%,100%,0.9)`,
-              verticalAlign: `middle`,
-            }}
-            data-cy="submit"
-          >
-            <span role="img" aria-label="Magnifying glass icon">
-              <SearchIcon />
-            </span>
-          </button>
-        </div>
-
-        <select
-          defaultValue={sortOrder}
-          aria-label="Select sort order"
-          name="sort"
-          id="sort-select"
-          onChange={e => toggleSortOrder(e.target.value)}
-          style={{
-            height: `2.5rem`,
-            "-webkit-appearance": `none`,
-            background: `transparent`,
-            border: `1px solid hsla(0,0%,100%,0.9)`,
-            borderRadius: `0 2px 2px 0`,
-            color: `hsla(0,0%,100%,0.9)`,
-            padding: `0.5rem`,
-          }}
-          data-cy="sort-select"
-        >
-          <option value="asc">A to Z</option>
-          <option value="desc">Z to A</option>
-        </select>
-      </form>
-
-      {selectedFilterIds.length > 0 && (
-        <div style={{ display: `flex`, flexWrap: `wrap`, margin: `2rem 0` }}>
-          Active filters:
-          {selectedFilterIds.map(f => (
-            <FilterChip
-              key={f}
-              id={f}
-              label={getFilterLabelById(f)}
-              removeFilter={removeFilter}
-            />
-          ))}
-        </div>
-      )}
-    </>
-  )
+SearchIcon.propTypes = {
+  color: PropTypes.string,
 }
+
+const Searchbar = React.forwardRef(
+  (
+    {
+      submitSearch,
+      filterOptions,
+      selectedFilterIds,
+      addFilter,
+      removeFilter,
+      sortOrder,
+      toggleSortOrder,
+    },
+    ref
+  ) => {
+    const getFilterLabelById = id => {
+      for (let [key, value] of Object.entries(filterOptions)) {
+        const filter = value.options.find(i => i.id === id)
+        if (filter) return `${key}: ${filter.shortname}`
+      }
+    }
+    return (
+      <>
+        <form
+          onSubmit={submitSearch}
+          style={{ display: `flex`, margin: `2rem 0` }}
+          data-cy="searchbar"
+        >
+          <FilterMenu
+            filterOptions={filterOptions}
+            selectedFilterIds={selectedFilterIds}
+            addFilter={addFilter}
+            removeFilter={removeFilter}
+          />
+
+          <div
+            style={{
+              display: "flex",
+              flexGrow: 1,
+              boxShadow: `0 -1px 1px 0 rgba(68,63,63,0.08), 0 2px 6px 0 rgba(68,63,63,0.08)`,
+              border: `1px solid hsla(0,0%,100%,0.9)`,
+              borderLeft: 0,
+              borderRight: 0,
+              borderRadius: `0`,
+              padding: "0.25rem",
+            }}
+          >
+            <input
+              autoComplete="off"
+              aria-label="Enter search text"
+              name="search"
+              placeholder="Enter text..."
+              style={{
+                border: "none",
+                flexGrow: 1,
+                background: `transparent`,
+                color: `hsla(0,0%,100%,0.9)`,
+              }}
+              type="text"
+              ref={ref}
+            />
+            <button
+              type="submit"
+              style={{
+                border: "none",
+                flexGrow: 0,
+                background: `transparent`,
+                color: `hsla(0,0%,100%,0.9)`,
+                verticalAlign: `middle`,
+              }}
+              data-cy="submit"
+            >
+              <span role="img" aria-label="Magnifying glass icon">
+                <SearchIcon />
+              </span>
+            </button>
+          </div>
+
+          <select
+            defaultValue={sortOrder}
+            aria-label="Select sort order"
+            name="sort"
+            id="sort-select"
+            onChange={e => toggleSortOrder(e.target.value)}
+            style={{
+              height: `2.5rem`,
+              WebkitAppearance: `none`,
+              background: `transparent`,
+              border: `1px solid hsla(0,0%,100%,0.9)`,
+              borderRadius: `0 2px 2px 0`,
+              color: `hsla(0,0%,100%,0.9)`,
+              padding: `0.5rem`,
+            }}
+            data-cy="sort-select"
+          >
+            <option value="asc">A to Z</option>
+            <option value="desc">Z to A</option>
+          </select>
+        </form>
+
+        {selectedFilterIds.length > 0 && (
+          <div style={{ display: `flex`, flexWrap: `wrap`, margin: `2rem 0` }}>
+            Active filters:
+            {selectedFilterIds.map(f => (
+              <FilterChip
+                key={f}
+                id={f}
+                label={getFilterLabelById(f)}
+                removeFilter={removeFilter}
+              />
+            ))}
+          </div>
+        )}
+      </>
+    )
+  }
+)
 
 Searchbar.propTypes = {
   submitSearch: PropTypes.func.isRequired,
@@ -148,4 +154,7 @@ Searchbar.propTypes = {
   toggleSortOrder: PropTypes.func.isRequired,
 }
 
-export default React.forwardRef(Searchbar)
+// https://reactjs.org/docs/forwarding-refs.html#displaying-a-custom-name-in-devtools
+Searchbar.displayName = "Searchbar"
+
+export default Searchbar
