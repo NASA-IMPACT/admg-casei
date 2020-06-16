@@ -1,4 +1,5 @@
 import Typography from "typography"
+import theme from "./theme"
 
 const typography = new Typography({
   baseFontSize: "16px",
@@ -11,8 +12,8 @@ const typography = new Typography({
   ],
   headerFontFamily: ["Titillium Web", "sans-serif"],
   bodyFontFamily: ["Titillium Web", "sans-serif"],
-  headerColor: "hsla(0,0%,100%,0.9)",
-  bodyColor: "hsla(0,0%,100%,0.9)",
+  headerColor: theme.color.base,
+  bodyColor: theme.color.base,
   headerWeight: "600",
   bodyWeight: 400,
   boldWeight: 700,
