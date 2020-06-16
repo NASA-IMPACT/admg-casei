@@ -1,6 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 
+import theme from "../utils/theme"
+
 const Filter = ({ label, options }) => (
   <optgroup label={label}>
     {options.map(o => (
@@ -36,7 +38,17 @@ const FilterMenu = ({
       aria-label="Select filters"
       name="filter"
       id="filter-select"
-      style={{ flexGrow: 0, maxHeight: `2.25rem`, maxWidth: `5rem` }}
+      style={{
+        flexGrow: 0,
+        height: `2.5rem`,
+        maxWidth: `5rem`,
+        WebkitAppearance: `none`,
+        background: `transparent`,
+        border: `1px solid ${theme.type.base.color}`,
+        borderRadius: `${theme.shape.rounded} 0 0 ${theme.shape.rounded}`,
+        color: theme.type.base.color,
+        padding: `0.5rem`,
+      }}
       data-cy="filter-select"
       onChange={e => handleSelection(e.target.value)}
     >

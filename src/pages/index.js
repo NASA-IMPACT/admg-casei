@@ -157,14 +157,14 @@ const IndexPage = ({ data }) => {
           style={{
             display: `flex`,
             flexWrap: `wrap`,
-            border: `1px solid white`,
+            border: `1px solid hsla(0,0%,100%,0.9)`,
           }}
         >
           {data.allGeophysicalConcept.nodes.map(concept => (
             <div
               key={concept.id}
               style={{
-                border: `1px solid white`,
+                border: `1px solid hsla(0,0%,100%,0.9)`,
                 padding: `1rem`,
                 flexGrow: 1,
                 textAlign: `center`,
@@ -203,7 +203,7 @@ const IndexPage = ({ data }) => {
                 textTransform: `uppercase`,
                 color: `hsla(0,0%,100%,0.9)`,
                 background: `transparent`,
-                border: `1px solid white`,
+                border: `1px solid hsla(0,0%,100%,0.9)`,
               }}
             >
               Explore

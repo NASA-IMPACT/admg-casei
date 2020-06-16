@@ -2,11 +2,11 @@ import React from "react"
 import PropTypes from "prop-types"
 
 const CampaignCard = ({
-  ongoing = false,
-  shortname = "Shortname",
-  longname = "Campaign Longname over 2 lines",
-  daterange = "2012-2015",
-  region = "North America",
+  ongoing,
+  shortname,
+  longname,
+  daterange,
+  region,
   countCollectionPeriods = 0,
   countDataProducts = 0,
 }) => (
