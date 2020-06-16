@@ -1,11 +1,12 @@
 import React from "react"
+import PropTypes from "prop-types"
 
 const CampaignCard = ({
-  ongoing = false,
-  shortname = "Shortname",
-  longname = "Campaign Longname over 2 lines",
-  daterange = "2012-2015",
-  region = "North America",
+  ongoing,
+  shortname,
+  longname,
+  daterange,
+  region,
   countCollectionPeriods = 0,
   countDataProducts = 0,
 }) => (
@@ -77,5 +78,15 @@ const CampaignCard = ({
     </div>
   </div>
 )
+
+CampaignCard.propTypes = {
+  ongoing: PropTypes.bool.isRequired,
+  shortname: PropTypes.string.isRequired,
+  longname: PropTypes.string.isRequired,
+  daterange: PropTypes.string.isRequired,
+  region: PropTypes.string.isRequired,
+  countCollectionPeriods: PropTypes.number,
+  countDataProducts: PropTypes.number,
+}
 
 export default CampaignCard

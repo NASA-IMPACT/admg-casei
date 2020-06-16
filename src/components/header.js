@@ -51,11 +51,8 @@ const Header = ({ siteTitle, children }) => (
 )
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
+  siteTitle: PropTypes.string.isRequired,
+  children: PropTypes.element,
 }
 
 export default Header

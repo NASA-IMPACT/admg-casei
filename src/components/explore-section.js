@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 
 const ExploreSection = ({ category, filteredCount, totalCount, children }) => {
   const filteredLabel =
@@ -18,7 +19,7 @@ const ExploreSection = ({ category, filteredCount, totalCount, children }) => {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: `repeat(auto-fill, 271px)`,
+          gridTemplateColumns: `repeat(auto-fill, minmax(270px, 1fr))`,
           gap: `1rem`,
         }}
       >
@@ -26,6 +27,17 @@ const ExploreSection = ({ category, filteredCount, totalCount, children }) => {
       </div>
     </section>
   )
+}
+
+ExploreSection.propTypes = {
+  category: PropTypes.oneOf(["campaigns", "platforms", "instruments"])
+    .isRequired,
+  filteredCount: PropTypes.number,
+  totalCount: PropTypes.number,
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.arrayOf(PropTypes.element),
+  ]),
 }
 
 export default ExploreSection

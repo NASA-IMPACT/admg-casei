@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
@@ -28,6 +29,11 @@ const SectionHeader = ({ tagline, headline }) => (
   </div>
 )
 
+SectionHeader.propTypes = {
+  tagline: PropTypes.string.isRequired,
+  headline: PropTypes.string.isRequired,
+}
+
 const FocusArea = ({ id, caption }) => {
   // TODO: This mapping is currently done by shortname, as I don't trust
   // the id yet to be stable.
@@ -49,6 +55,11 @@ const FocusArea = ({ id, caption }) => {
       <div>{caption}</div>
     </div>
   )
+}
+
+FocusArea.propTypes = {
+  id: PropTypes.string.isRequired,
+  caption: PropTypes.string.isRequired,
 }
 
 const Instrument = ({ id, caption }) => {
@@ -75,6 +86,11 @@ const Instrument = ({ id, caption }) => {
       <div>{caption}</div>
     </div>
   )
+}
+
+Instrument.propTypes = {
+  id: PropTypes.string.isRequired,
+  caption: PropTypes.string.isRequired,
 }
 
 const styles = {
@@ -141,14 +157,14 @@ const IndexPage = ({ data }) => {
           style={{
             display: `flex`,
             flexWrap: `wrap`,
-            border: `1px solid white`,
+            border: `1px solid hsla(0,0%,100%,0.9)`,
           }}
         >
           {data.allGeophysicalConcept.nodes.map(concept => (
             <div
               key={concept.id}
               style={{
-                border: `1px solid white`,
+                border: `1px solid hsla(0,0%,100%,0.9)`,
                 padding: `1rem`,
                 flexGrow: 1,
                 textAlign: `center`,
@@ -187,7 +203,7 @@ const IndexPage = ({ data }) => {
                 textTransform: `uppercase`,
                 color: `hsla(0,0%,100%,0.9)`,
                 background: `transparent`,
-                border: `1px solid white`,
+                border: `1px solid hsla(0,0%,100%,0.9)`,
               }}
             >
               Explore
@@ -244,12 +260,6 @@ export const query = graphql`
         shortname: short_name
       }
     }
-    allGeophysicalConcept {
-      nodes {
-        id
-        shortname: short_name
-      }
-    }
     allInstrumentType {
       nodes {
         id
@@ -259,4 +269,49 @@ export const query = graphql`
     }
   }
 `
+
+IndexPage.propTypes = {
+  data: PropTypes.shape({
+    site: PropTypes.shape({
+      siteMetadata: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+      }),
+    }),
+    allFocusArea: PropTypes.shape({
+      nodes: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string.isRequired,
+          shortname: PropTypes.string.isRequired,
+        })
+      ),
+    }),
+    allGeographicalRegion: PropTypes.shape({
+      nodes: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string.isRequired,
+          shortname: PropTypes.string.isRequired,
+          example: PropTypes.string.isRequired,
+        })
+      ),
+    }),
+    allGeophysicalConcept: PropTypes.shape({
+      nodes: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string.isRequired,
+          shortname: PropTypes.string.isRequired,
+        })
+      ),
+    }),
+    allInstrumentType: PropTypes.shape({
+      nodes: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string.isRequired,
+          shortname: PropTypes.string.isRequired,
+          longname: PropTypes.string.isRequired,
+        })
+      ),
+    }),
+  }).isRequired,
+}
+
 export default IndexPage

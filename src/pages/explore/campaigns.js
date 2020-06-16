@@ -1,4 +1,5 @@
-import React, { useState } from "react"
+import React, { useState, useRef } from "react"
+import PropTypes from "prop-types"
 import { graphql, Link } from "gatsby"
 import Spinner from "react-spinkit"
 
@@ -21,10 +22,12 @@ const Campaigns = ({ data }) => {
   const addFilter = id => setFilter([...selectedFilterIds, id])
   const removeFilter = id => setFilter(selectedFilterIds.filter(f => f !== id))
 
+  const inputElement = useRef(null)
+
   const submitSearch = async e => {
     setLoading(true)
     e.preventDefault()
-    let searchstring = document.querySelector("input").value
+    let searchstring = inputElement.current.value
     const result = await api.fetchSearchResult(searchstring)
     setSearchResult(result)
     setLoading(false)
@@ -53,13 +56,15 @@ const Campaigns = ({ data }) => {
         removeFilter={removeFilter}
         sortOrder={sortOrder}
         toggleSortOrder={toggleSortOrder}
+        ref={inputElement}
       />
+
       {isLoading ? (
         <div
           style={{ display: `flex`, justifyContent: `space-around` }}
           data-cy="loading-indicator"
         >
-          <Spinner name="cube-grid" />
+          <Spinner name="cube-grid" color="hsla(0,0%,100%,0.9)" />
         </div>
       ) : (
         <ExploreSection
@@ -137,5 +142,51 @@ export const query = graphql`
     countDataproducts: number_data_products
   }
 `
+
+const campaignShape = PropTypes.shape({
+  ongoing: PropTypes.bool,
+  shortname: PropTypes.string.isRequired,
+  longname: PropTypes.string,
+  id: PropTypes.string.isRequired,
+  season: PropTypes.arrayOf(PropTypes.string),
+  focus: PropTypes.arrayOf(PropTypes.string),
+  startdate: PropTypes.string.isRequired,
+  enddate: PropTypes.string,
+  region: PropTypes.string.isRequired,
+  countCollectionPeriods: PropTypes.number,
+  countDataproducts: PropTypes.number,
+})
+
+Campaigns.propTypes = {
+  data: PropTypes.shape({
+    all: PropTypes.shape({
+      totalCount: PropTypes.number.isRequired,
+    }),
+    asc: PropTypes.shape({
+      list: PropTypes.arrayOf(campaignShape).isRequired,
+    }),
+    desc: PropTypes.shape({
+      list: PropTypes.arrayOf(campaignShape).isRequired,
+    }),
+    focus: PropTypes.shape({
+      options: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string.isRequired,
+          shortname: PropTypes.string.isRequired,
+          longname: PropTypes.string,
+        })
+      ).isRequired,
+    }).isRequired,
+    season: PropTypes.shape({
+      options: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string.isRequired,
+          shortname: PropTypes.string.isRequired,
+          longname: PropTypes.string,
+        })
+      ).isRequired,
+    }).isRequired,
+  }).isRequired,
+}
 
 export default Campaigns
