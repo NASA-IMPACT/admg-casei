@@ -25,9 +25,7 @@ module.exports = {
     ecmaVersion: 2018, // Allows for the parsing of modern ECMAScript features
     sourceType: "module", // Allows for the use of imports
   },
-  rules: {
-    "react/prop-types": "off", // Disable prop-types // TODO: add type checking!
-  },
+  rules: {},
   overrides: [
     {
       files: ["**/cypress/**"],

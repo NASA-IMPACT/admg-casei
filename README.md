@@ -18,6 +18,16 @@ _To learn more about the goals and ideas of this project, [have a look at the Us
 
 ## 🚀 Start developing
 
+1.  **Make sure to use the correct node version.**
+
+    Assuming you already have `nvm` installed on your machine, this is installing the node version specified in `.nvmrc`.
+
+    ```shell
+    nvm install
+    ```
+
+    💡You can [configure your shell](https://github.com/nvm-sh/nvm#deeper-shell-integration) to automatically call `nvm use` when entering a directory with a `.nvmrc` file. That way you don't have to remember this step.
+
 1.  **Install the dependencies.**
 
     This assumes that you already cloned the repository and have yarn installed globally on your machine.

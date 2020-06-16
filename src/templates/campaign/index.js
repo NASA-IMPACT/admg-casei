@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
 import Layout from "../../components/layout"
@@ -28,8 +29,6 @@ const CampaignTemplate = ({ data: { campaign, deployments, platforms } }) => {
         region={campaign.region}
         seasonIds={campaign.season}
         bounds={campaign.bounds}
-        focusPenomena={campaign.focusPenomena}
-        keywordIds={campaign.keywords}
         website={campaign.website}
       />
       <FocusSection
@@ -44,22 +43,19 @@ const CampaignTemplate = ({ data: { campaign, deployments, platforms } }) => {
       </section>
       <FundingSection
         logo={campaign.logo}
-        logoAlt={campaign.logoAlt}
         fundingAgency={campaign.fundingAgency}
         fundingProgram={campaign.fundingProgram}
-        supportedMission={campaign.supportedMission}
         programLead={campaign.programLead}
-        campaignLead={campaign.campaignLead}
+        leadInvestigator={campaign.leadInvestigator}
         dataManager={campaign.dataManager}
         archive={campaign.archive}
         partnerOrgIds={campaign.partnerOrg}
         partnerWebsite={campaign.partnerWebsite}
+        tertiaryWebsite={campaign.tertiaryWebsite}
       />
     </Layout>
   )
 }
-
-export default CampaignTemplate
 
 export const query = graphql`
   query($slug: String!, $platforms: [String!]) {
@@ -78,3 +74,48 @@ export const query = graphql`
     }
   }
 `
+
+CampaignTemplate.propTypes = {
+  data: PropTypes.shape({
+    campaign: PropTypes.shape({
+      shortname: PropTypes.string.isRequired,
+      longname: PropTypes.string.isRequired,
+      focus: PropTypes.arrayOf(PropTypes.string).isRequired,
+      countDeployments: PropTypes.number,
+      countDataproducts: PropTypes.number.isRequired,
+      description: PropTypes.string.isRequired,
+      startdate: PropTypes.string.isRequired,
+      enddate: PropTypes.string.isRequired,
+      region: PropTypes.string.isRequired,
+      season: PropTypes.arrayOf(PropTypes.string).isRequired,
+      bounds: PropTypes.string.isRequired,
+      website: PropTypes.string.isRequired,
+      focusAreaIds: PropTypes.arrayOf(PropTypes.string).isRequired,
+      focusPhenomena: PropTypes.string.isRequired,
+      scienceKeywords: PropTypes.string,
+      logo: PropTypes.string,
+      fundingAgency: PropTypes.string.isRequired,
+      fundingProgram: PropTypes.string.isRequired,
+      programLead: PropTypes.string.isRequired,
+      leadInvestigator: PropTypes.string.isRequired,
+      dataManager: PropTypes.string.isRequired,
+      archive: PropTypes.string.isRequired,
+      partnerOrg: PropTypes.arrayOf(PropTypes.string).isRequired,
+      partnerWebsite: PropTypes.string,
+      tertiaryWebsite: PropTypes.string.isRequired,
+    }).isRequired,
+    deployments: PropTypes.shape({
+      totalCount: PropTypes.number.isRequired,
+    }).isRequired,
+    platforms: PropTypes.shape({
+      nodes: PropTypes.arrayOf(
+        PropTypes.shape({
+          shortname: PropTypes.string,
+          longname: PropTypes.string,
+        }).isRequired
+      ).isRequired,
+    }).isRequired,
+  }).isRequired,
+}
+
+export default CampaignTemplate

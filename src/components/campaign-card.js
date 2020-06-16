@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 
 const CampaignCard = ({
   ongoing = false,
@@ -77,5 +78,15 @@ const CampaignCard = ({
     </div>
   </div>
 )
+
+CampaignCard.propTypes = {
+  ongoing: PropTypes.bool.isRequired,
+  shortname: PropTypes.string.isRequired,
+  longname: PropTypes.string.isRequired,
+  daterange: PropTypes.string.isRequired,
+  region: PropTypes.string.isRequired,
+  countCollectionPeriods: PropTypes.number,
+  countDataProducts: PropTypes.number,
+}
 
 export default CampaignCard

@@ -1,4 +1,7 @@
 import React from "react"
+import PropTypes from "prop-types"
+
+import theme from "../utils/theme"
 
 // TODO: figure out how to import and use collecticons directly
 const CloseIcon = ({ color = "hsla(0,0%,100%,0.9)" }) => (
@@ -20,9 +23,9 @@ const FilterChip = ({ id, label, removeFilter }) => (
     style={{
       display: `flex`,
       alignItems: `center`,
-      backgroundColor: `#303641`,
-      color: `hsla(0,0%,100%,0.9)`,
-      borderRadius: `0.25rem`,
+      backgroundColor: `${theme.color.lightgray}`,
+      color: `${theme.color.primary}`,
+      borderRadius: `${theme.shape.rounded}`,
       paddingLeft: `0.5rem`,
       margin: `0 0.5rem`,
     }}
@@ -48,5 +51,11 @@ const FilterChip = ({ id, label, removeFilter }) => (
     </button>
   </div>
 )
+
+FilterChip.propTypes = {
+  id: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  removeFilter: PropTypes.func.isRequired,
+}
 
 export default FilterChip

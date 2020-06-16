@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
 const ListLink = props => {
@@ -16,6 +17,23 @@ const ListLink = props => {
       </Link>
     </li>
   )
+}
+
+ListLink.propTypes = {
+  to: function (props, propName, componentName) {
+    // validate that prop `to` links to an existing page
+    if (!/\/explore\/(campaigns|platforms|instruments)/.test(props[propName])) {
+      return new Error(
+        "Invalid prop `" +
+          propName +
+          "` supplied to" +
+          " `" +
+          componentName +
+          "`. Validation failed."
+      )
+    }
+  },
+  children: PropTypes.string.isRequired,
 }
 
 const ExploreMenu = () => (

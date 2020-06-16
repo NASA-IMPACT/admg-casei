@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 
 export const GroundInstruments = ({ color = "#FFF" }) => (
   <svg width="58" height="80" xmlns="http://www.w3.org/2000/svg">
@@ -9,3 +10,7 @@ export const GroundInstruments = ({ color = "#FFF" }) => (
     />
   </svg>
 )
+
+GroundInstruments.propTypes = {
+  color: PropTypes.string,
+}
