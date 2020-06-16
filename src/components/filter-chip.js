@@ -27,10 +27,10 @@ const FilterChip = ({ id, label, removeFilter }) => (
     style={{
       display: `flex`,
       alignItems: `center`,
-      backgroundColor: `${theme.color.lightgray}`,
-      color: `${theme.color.primary}`,
-      borderRadius: `${theme.shape.rounded}`,
-      paddingLeft: `0.5rem`,
+      backgroundColor: theme.color.tertiary,
+      color: theme.type.base.color,
+      borderRadius: theme.shape.rounded,
+      padding: `0 0.5rem`,
       margin: `0 0.5rem`,
     }}
     data-cy="filter-chip"
@@ -44,13 +44,14 @@ const FilterChip = ({ id, label, removeFilter }) => (
         border: "none",
         flexGrow: 0,
         cursor: `pointer`,
-        color: `hsla(0,0%,100%,0.9)`,
+        color: theme.type.base.color,
         verticalAlign: `middle`,
+        marginLeft: `0.5rem`,
       }}
       data-cy="remove-filter"
     >
       <span role="img" aria-label="close-icon">
-        <CloseIcon />
+        <CloseIcon color={theme.type.base.color} />
       </span>
     </button>
   </div>

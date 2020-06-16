@@ -56,7 +56,7 @@ const type = {
   },
 }
 const shape = {
-  rounded: "0.25rem",
+  rounded: "0.2rem",
   ellipsoid: "320rem",
 }
 const layout = {

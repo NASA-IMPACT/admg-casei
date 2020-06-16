@@ -1,6 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 
+import theme from "../utils/theme"
+
 const Filter = ({ label, options }) => (
   <optgroup label={label}>
     {options.map(o => (
@@ -42,9 +44,9 @@ const FilterMenu = ({
         maxWidth: `5rem`,
         WebkitAppearance: `none`,
         background: `transparent`,
-        border: `1px solid hsla(0,0%,100%,0.9)`,
-        borderRadius: `2px 0 0 2px`,
-        color: `hsla(0,0%,100%,0.9)`,
+        border: `1px solid ${theme.type.base.color}`,
+        borderRadius: `${theme.shape.rounded} 0 0 ${theme.shape.rounded}`,
+        color: theme.type.base.color,
         padding: `0.5rem`,
       }}
       data-cy="filter-select"

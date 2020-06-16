@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 
 import FilterMenu from "./filter-menu"
 import FilterChip from "./filter-chip"
+import theme from "../utils/theme"
 
 // TODO: figure out how to import and use collecticons directly
 const SearchIcon = ({ color = "#FFF" }) => (
@@ -56,8 +57,7 @@ const Searchbar = React.forwardRef(
             style={{
               display: "flex",
               flexGrow: 1,
-              boxShadow: `0 -1px 1px 0 rgba(68,63,63,0.08), 0 2px 6px 0 rgba(68,63,63,0.08)`,
-              border: `1px solid hsla(0,0%,100%,0.9)`,
+              border: `1px solid ${theme.type.base.color}`,
               borderLeft: 0,
               borderRight: 0,
               borderRadius: `0`,
@@ -73,7 +73,7 @@ const Searchbar = React.forwardRef(
                 border: "none",
                 flexGrow: 1,
                 background: `transparent`,
-                color: `hsla(0,0%,100%,0.9)`,
+                color: theme.type.base.color,
               }}
               type="text"
               ref={ref}
@@ -84,7 +84,7 @@ const Searchbar = React.forwardRef(
                 border: "none",
                 flexGrow: 0,
                 background: `transparent`,
-                color: `hsla(0,0%,100%,0.9)`,
+                color: theme.type.base.color,
                 verticalAlign: `middle`,
               }}
               data-cy="submit"
@@ -105,9 +105,9 @@ const Searchbar = React.forwardRef(
               height: `2.5rem`,
               WebkitAppearance: `none`,
               background: `transparent`,
-              border: `1px solid hsla(0,0%,100%,0.9)`,
-              borderRadius: `0 2px 2px 0`,
-              color: `hsla(0,0%,100%,0.9)`,
+              border: `1px solid ${theme.type.base.color}`,
+              borderRadius: `0 ${theme.shape.rounded} ${theme.shape.rounded} 0`,
+              color: theme.type.base.color,
               padding: `0.5rem`,
             }}
             data-cy="sort-select"
