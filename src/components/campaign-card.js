@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 const CampaignCard = ({
-  ongoing = false,
+  ongoing,
   shortname,
   longname,
   daterange,
