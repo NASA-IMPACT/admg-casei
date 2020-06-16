@@ -90,7 +90,7 @@ const Searchbar = React.forwardRef(
               data-cy="submit"
             >
               <span role="img" aria-label="Magnifying glass icon">
-                <SearchIcon />
+                <SearchIcon color={theme.type.base.color} />
               </span>
             </button>
           </div>

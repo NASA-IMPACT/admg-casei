@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 import theme from "../utils/theme"
 
 // TODO: figure out how to import and use collecticons directly
-const CloseIcon = ({ color = "hsla(0,0%,100%,0.9)" }) => (
+const CloseIcon = ({ color = "#FFF" }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="12px"
