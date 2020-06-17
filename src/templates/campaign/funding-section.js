@@ -2,28 +2,9 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import CampaignSection from "../../components/campaign-section"
+import SectionBlock from "../../components/section/section-block"
+import ContentItem from "../../components/section/content-item"
 import { LogoPlaceholder } from "../../components/icons/"
-
-const InfoItem = ({ label, info }) => (
-  <div data-cy="info-item">
-    <label
-      style={{
-        textTransform: `uppercase`,
-        color: `#6B6B6B`,
-      }}
-    >
-      {label}
-    </label>
-    <hr />
-    <p>{info}</p>
-  </div>
-)
-
-InfoItem.propTypes = {
-  label: PropTypes.string.isRequired,
-  info: PropTypes.string.isRequired,
-}
 
 const FundingSection = ({
   logo,
@@ -54,11 +35,7 @@ const FundingSection = ({
     .join(", ")
 
   return (
-    <CampaignSection
-      sectionTitle="Funding"
-      id="funding"
-      dataCy="funding-section"
-    >
+    <SectionBlock sectionTitle="Funding" id="funding" dataCy="funding-section">
       <div
         style={{
           flex: `0.618`,
@@ -79,21 +56,24 @@ const FundingSection = ({
         style={{
           flex: `2.618`,
           display: `grid`,
-          gap: `0.5rem`,
-          gridTemplateColumns: ` 1fr 1fr 1fr`,
+          gap: `1.5rem`,
+          gridTemplateColumns: `minmax(0,1fr) minmax(0,1fr) minmax(0,1fr)`,
           padding: `2rem`,
         }}
       >
-        <InfoItem label="Funding Agency" info={fundingAgency} />
-        <InfoItem label="Funding Program" info={fundingProgram} />
-        <InfoItem label="Funding Program Lead" info={programLead} />
-        <InfoItem label="Lead Investigator" info={leadInvestigator} />
-        <InfoItem label="Data Manager / Technical Contact" info={dataManager} />
-        <InfoItem label="Assigned Archive Repository" info={archive} />
-        <InfoItem label="Partner Organisation" info={partnerOrg} />
-        <InfoItem label="Tertiary Website" info={tertiaryWebsite} />
+        <ContentItem label="Funding Agency" info={fundingAgency} />
+        <ContentItem label="Funding Program" info={fundingProgram} />
+        <ContentItem label="Funding Program Lead" info={programLead} />
+        <ContentItem label="Lead Investigator" info={leadInvestigator} />
+        <ContentItem
+          label="Data Manager / Technical Contact"
+          info={dataManager}
+        />
+        <ContentItem label="Assigned Archive Repository" info={archive} />
+        <ContentItem label="Partner Organisation" info={partnerOrg} />
+        <ContentItem label="Tertiary Website" info={tertiaryWebsite} />
       </div>
-    </CampaignSection>
+    </SectionBlock>
   )
 }
 
