@@ -69,9 +69,17 @@ const FundingSection = ({
           label="Data Manager / Technical Contact"
           info={dataManager}
         />
-        <ContentItem label="Assigned Archive Repository" info={archive} />
+        <ContentItem
+          label="Assigned Archive Repository"
+          info={archive}
+          type="link"
+        />
         <ContentItem label="Partner Organisation" info={partnerOrg} />
-        <ContentItem label="Tertiary Website" info={tertiaryWebsite} />
+        <ContentItem
+          label="Tertiary Website"
+          info={tertiaryWebsite}
+          type="link"
+        />
       </div>
     </SectionBlock>
   )
