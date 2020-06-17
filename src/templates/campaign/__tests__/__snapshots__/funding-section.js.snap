@@ -50,6 +50,7 @@ exports[`Funding Section renders logo when present in props 1`] = `
         data-cy="info-item"
       >
         <label
+          data-cy="content-label"
           style={
             Object {
               "borderBottom": "1px solid #9E9E9E",
@@ -62,7 +63,9 @@ exports[`Funding Section renders logo when present in props 1`] = `
         >
           Funding Agency
         </label>
-        <p>
+        <p
+          data-cy="content-text"
+        >
           test string
         </p>
       </div>
@@ -70,6 +73,7 @@ exports[`Funding Section renders logo when present in props 1`] = `
         data-cy="info-item"
       >
         <label
+          data-cy="content-label"
           style={
             Object {
               "borderBottom": "1px solid #9E9E9E",
@@ -82,7 +86,9 @@ exports[`Funding Section renders logo when present in props 1`] = `
         >
           Funding Program
         </label>
-        <p>
+        <p
+          data-cy="content-text"
+        >
           test string
         </p>
       </div>
@@ -90,6 +96,7 @@ exports[`Funding Section renders logo when present in props 1`] = `
         data-cy="info-item"
       >
         <label
+          data-cy="content-label"
           style={
             Object {
               "borderBottom": "1px solid #9E9E9E",
@@ -102,7 +109,9 @@ exports[`Funding Section renders logo when present in props 1`] = `
         >
           Funding Program Lead
         </label>
-        <p>
+        <p
+          data-cy="content-text"
+        >
           test string
         </p>
       </div>
@@ -110,6 +119,7 @@ exports[`Funding Section renders logo when present in props 1`] = `
         data-cy="info-item"
       >
         <label
+          data-cy="content-label"
           style={
             Object {
               "borderBottom": "1px solid #9E9E9E",
@@ -122,7 +132,9 @@ exports[`Funding Section renders logo when present in props 1`] = `
         >
           Lead Investigator
         </label>
-        <p>
+        <p
+          data-cy="content-text"
+        >
           test string
         </p>
       </div>
@@ -130,6 +142,7 @@ exports[`Funding Section renders logo when present in props 1`] = `
         data-cy="info-item"
       >
         <label
+          data-cy="content-label"
           style={
             Object {
               "borderBottom": "1px solid #9E9E9E",
@@ -142,7 +155,9 @@ exports[`Funding Section renders logo when present in props 1`] = `
         >
           Data Manager / Technical Contact
         </label>
-        <p>
+        <p
+          data-cy="content-text"
+        >
           test string
         </p>
       </div>
@@ -150,6 +165,7 @@ exports[`Funding Section renders logo when present in props 1`] = `
         data-cy="info-item"
       >
         <label
+          data-cy="content-label"
           style={
             Object {
               "borderBottom": "1px solid #9E9E9E",
@@ -163,6 +179,7 @@ exports[`Funding Section renders logo when present in props 1`] = `
           Assigned Archive Repository
         </label>
         <a
+          data-cy="external-link"
           href="test string"
           rel="noopener noreferrer"
           style={
@@ -179,6 +196,7 @@ exports[`Funding Section renders logo when present in props 1`] = `
         data-cy="info-item"
       >
         <label
+          data-cy="content-label"
           style={
             Object {
               "borderBottom": "1px solid #9E9E9E",
@@ -191,7 +209,9 @@ exports[`Funding Section renders logo when present in props 1`] = `
         >
           Partner Organisation
         </label>
-        <p>
+        <p
+          data-cy="content-text"
+        >
           org a
         </p>
       </div>
@@ -199,6 +219,7 @@ exports[`Funding Section renders logo when present in props 1`] = `
         data-cy="info-item"
       >
         <label
+          data-cy="content-label"
           style={
             Object {
               "borderBottom": "1px solid #9E9E9E",
@@ -212,6 +233,7 @@ exports[`Funding Section renders logo when present in props 1`] = `
           Tertiary Website
         </label>
         <a
+          data-cy="external-link"
           href="test string"
           rel="noopener noreferrer"
           style={
@@ -258,51 +280,11 @@ exports[`Funding Section renders placeholder when no logo is available 1`] = `
         }
       }
     >
-      <svg
-        height="100px"
-        viewBox="0 0 100 100"
-        width="100px"
-      >
-        <g
-          fill="none"
-          fillRule="evenodd"
-          id="Page-1"
-          stroke="none"
-          strokeWidth="1"
-        >
-          <g
-            id="Artboard"
-            transform="translate(-135.000000, -97.000000)"
-          >
-            <g
-              id="placeholder"
-              transform="translate(135.000000, 97.000000)"
-            >
-              <circle
-                cx="50"
-                cy="50"
-                fill="#0C1520"
-                id="Oval"
-                r="50"
-              />
-              <text
-                fill="hsla(0,0%,100%,0.9)"
-                fontFamily="\\"Titillium Web\\", sans-serif"
-                fontSize="22"
-                fontWeight="normal"
-                id="LOGO"
-              >
-                <tspan
-                  x="23.9931641"
-                  y="57"
-                >
-                  LOGO
-                </tspan>
-              </text>
-            </g>
-          </g>
-        </g>
-      </svg>
+      <img
+        alt="campaign-logo"
+        data-cy="campaign-logo"
+        src="test-file-stub"
+      />
     </div>
     <div
       style={
@@ -319,6 +301,7 @@ exports[`Funding Section renders placeholder when no logo is available 1`] = `
         data-cy="info-item"
       >
         <label
+          data-cy="content-label"
           style={
             Object {
               "borderBottom": "1px solid #9E9E9E",
@@ -331,7 +314,9 @@ exports[`Funding Section renders placeholder when no logo is available 1`] = `
         >
           Funding Agency
         </label>
-        <p>
+        <p
+          data-cy="content-text"
+        >
           test string
         </p>
       </div>
@@ -339,6 +324,7 @@ exports[`Funding Section renders placeholder when no logo is available 1`] = `
         data-cy="info-item"
       >
         <label
+          data-cy="content-label"
           style={
             Object {
               "borderBottom": "1px solid #9E9E9E",
@@ -351,7 +337,9 @@ exports[`Funding Section renders placeholder when no logo is available 1`] = `
         >
           Funding Program
         </label>
-        <p>
+        <p
+          data-cy="content-text"
+        >
           test string
         </p>
       </div>
@@ -359,6 +347,7 @@ exports[`Funding Section renders placeholder when no logo is available 1`] = `
         data-cy="info-item"
       >
         <label
+          data-cy="content-label"
           style={
             Object {
               "borderBottom": "1px solid #9E9E9E",
@@ -371,7 +360,9 @@ exports[`Funding Section renders placeholder when no logo is available 1`] = `
         >
           Funding Program Lead
         </label>
-        <p>
+        <p
+          data-cy="content-text"
+        >
           test string
         </p>
       </div>
@@ -379,6 +370,7 @@ exports[`Funding Section renders placeholder when no logo is available 1`] = `
         data-cy="info-item"
       >
         <label
+          data-cy="content-label"
           style={
             Object {
               "borderBottom": "1px solid #9E9E9E",
@@ -391,7 +383,9 @@ exports[`Funding Section renders placeholder when no logo is available 1`] = `
         >
           Lead Investigator
         </label>
-        <p>
+        <p
+          data-cy="content-text"
+        >
           test string
         </p>
       </div>
@@ -399,6 +393,7 @@ exports[`Funding Section renders placeholder when no logo is available 1`] = `
         data-cy="info-item"
       >
         <label
+          data-cy="content-label"
           style={
             Object {
               "borderBottom": "1px solid #9E9E9E",
@@ -411,7 +406,9 @@ exports[`Funding Section renders placeholder when no logo is available 1`] = `
         >
           Data Manager / Technical Contact
         </label>
-        <p>
+        <p
+          data-cy="content-text"
+        >
           test string
         </p>
       </div>
@@ -419,6 +416,7 @@ exports[`Funding Section renders placeholder when no logo is available 1`] = `
         data-cy="info-item"
       >
         <label
+          data-cy="content-label"
           style={
             Object {
               "borderBottom": "1px solid #9E9E9E",
@@ -432,6 +430,7 @@ exports[`Funding Section renders placeholder when no logo is available 1`] = `
           Assigned Archive Repository
         </label>
         <a
+          data-cy="external-link"
           href="test string"
           rel="noopener noreferrer"
           style={
@@ -448,6 +447,7 @@ exports[`Funding Section renders placeholder when no logo is available 1`] = `
         data-cy="info-item"
       >
         <label
+          data-cy="content-label"
           style={
             Object {
               "borderBottom": "1px solid #9E9E9E",
@@ -460,7 +460,9 @@ exports[`Funding Section renders placeholder when no logo is available 1`] = `
         >
           Partner Organisation
         </label>
-        <p>
+        <p
+          data-cy="content-text"
+        >
           org a
         </p>
       </div>
@@ -468,6 +470,7 @@ exports[`Funding Section renders placeholder when no logo is available 1`] = `
         data-cy="info-item"
       >
         <label
+          data-cy="content-label"
           style={
             Object {
               "borderBottom": "1px solid #9E9E9E",
@@ -481,6 +484,7 @@ exports[`Funding Section renders placeholder when no logo is available 1`] = `
           Tertiary Website
         </label>
         <a
+          data-cy="external-link"
           href="test string"
           rel="noopener noreferrer"
           style={

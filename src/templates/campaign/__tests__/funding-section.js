@@ -27,7 +27,7 @@ beforeEach(() => {
 
 describe("Funding Section", () => {
   it("renders logo when present in props", () => {
-    const tree = create(
+    const component = create(
       <FundingSection
         logo={testLogo}
         fundingAgency={testString}
@@ -40,11 +40,16 @@ describe("Funding Section", () => {
         partnerWebsite={testString}
         tertiaryWebsite={testString}
       />
-    ).toJSON()
+    )
+    const tree = component.toJSON()
+    const instance = component.root
+    expect(instance.findByType("img").props.src).toBe(
+      "https://via.placeholder.com/150"
+    )
     expect(tree).toMatchSnapshot()
   })
   it("renders placeholder when no logo is available", () => {
-    const tree = create(
+    const component = create(
       <FundingSection
         fundingAgency={testString}
         fundingProgram={testString}
@@ -56,7 +61,10 @@ describe("Funding Section", () => {
         partnerWebsite={testString}
         tertiaryWebsite={testString}
       />
-    ).toJSON()
+    )
+    const tree = component.toJSON()
+    const instance = component.root
+    expect(instance.findByType("img").props.src).toBeDefined()
     expect(tree).toMatchSnapshot()
   })
 })

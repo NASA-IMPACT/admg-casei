@@ -174,6 +174,9 @@ describe("Campaign", () => {
       cy.get("[data-cy=info-item]").should($div => {
         expect($div, "8 info items").to.have.length(8)
       })
+      cy.get("[data-cy=content-label]").find("label").should("exist")
+      cy.get("[data-cy=content-text]").find("p").should("exist")
+      cy.get("[data-cy=external-link]").find("a").should("exist")
     })
   })
 })

@@ -12,5 +12,3 @@ export { AirborneRemoteSensors } from "./airborne-remote-sensors.js"
 export { ExperimentalInstruments } from "./experimental-instruments.js"
 export { OceanInstruments } from "./ocean-instruments.js"
 export { FacilityInstruments } from "./facility-instruments.js"
-
-export { LogoPlaceholder } from "./logo-placeholder.js"

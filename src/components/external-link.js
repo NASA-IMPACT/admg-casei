@@ -9,6 +9,7 @@ export default function ExternalLink({ label, url }) {
       rel="noopener noreferrer"
       href={url}
       style={{ color: theme.color.link }}
+      data-cy="external-link"
     >
       {label}
     </a>

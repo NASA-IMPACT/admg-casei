@@ -11,7 +11,7 @@ export default function ContentItem({ label, info, type = "text" }) {
       {type === "link" ? (
         <ExternalLink label={info} url={info} />
       ) : (
-        <p>{info || "N/A"}</p>
+        <p data-cy="content-text">{info || "N/A"}</p>
       )}
     </div>
   )

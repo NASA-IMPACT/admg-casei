@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import SectionBlock from "../../components/section/section-block"
 import ContentItem from "../../components/section/content-item"
-import { LogoPlaceholder } from "../../components/icons/"
+import PlaceholderLogo from "../../images/placeholder-logo.png"
 
 const FundingSection = ({
   logo,
@@ -45,11 +45,11 @@ const FundingSection = ({
           padding: `1rem`,
         }}
       >
-        {logo ? (
-          <img src={logo} alt="campaign-logo" data-cy="campaign-logo" />
-        ) : (
-          <LogoPlaceholder />
-        )}
+        <img
+          src={logo || PlaceholderLogo}
+          alt="campaign-logo"
+          data-cy="campaign-logo"
+        />
       </div>
 
       <div

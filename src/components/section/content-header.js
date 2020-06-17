@@ -13,6 +13,7 @@ export default function ContentHeader({ label }) {
         borderBottom: `1px solid ${theme.color.gray}`,
         display: `block`,
       }}
+      data-cy="content-label"
     >
       {label}
     </label>
