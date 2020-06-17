@@ -3,6 +3,8 @@ import PropTypes from "prop-types"
 import Carousel from "nuka-carousel"
 import styled from "styled-components"
 
+import theme from "../../utils/theme"
+
 const ControlTextButton = styled.button`
   margin: 0.2rem 0.5rem;
   padding: 0;
@@ -33,7 +35,7 @@ const controlButtonLRStyle = {
   borderRadius: `100%`,
   width: 42,
   height: 42,
-  backgroundColor: `hsla(0,0%,100%,0.9)`,
+  backgroundColor: theme.color.base,
   color: `hsla(0,0%,0%,0.73)`,
   fontWeight: `bold`,
   fontSize: `large`,
@@ -111,7 +113,7 @@ export const RegionCarousel = ({ regions }) => {
                 fontSize: `xxx-large`,
                 fontWeight: `bold`,
                 textTransform: `uppercase`,
-                color: `hsla(0,0%,100%,0.9)`,
+                color: theme.color.base,
               }}
             >
               {region.shortname}

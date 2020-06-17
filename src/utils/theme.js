@@ -1,42 +1,18 @@
-import { rgba, tint } from "polished"
-
 let color = {
-  base: "#FFFFFF",
-  primary: "#294060",
-  secondary: "#AAC9E1",
-  tertiary: "#303641",
-  quaternary: "#262A31",
+  base: "hsla(0,0%,100%,0.9)", // white
+  primary: "#0c1520", // dark background
+  secondary: "#303641", // dark blue box background
+  tertiary: "#294060", // medium blue for gradiant background
+  gray: "#9E9E9E",
+  link: "#303641",
 }
-color = {
-  ...color,
-  background: "#0c1520",
-  surface: "#0c1520",
-  mist: rgba(color.base, 0.04),
-  shadow: rgba(color.base, 0.08),
-  smoke: rgba(color.base, 0.16),
-  lightgray: "#EEEEEE",
-  secondarylight: "#C3E2E7",
-  gray: "#DBDBDB",
-  darkgray: "#666666",
-  link: color.base,
-  danger: color.tertiary,
-  success: color.primary,
-  warning: color.secondary,
-  info: color.quaternary,
-}
-color = {
-  ...color,
-  silk: `radial-gradient(farthest-side, ${color.surface}, ${rgba(
-    color.surface,
-    0.64
-  )})`,
-}
+
 const type = {
   base: {
     root: "16px",
     size: "1rem",
     line: "1.5",
-    color: tint(0.08, color.base),
+    color: color.base,
     family: '"Titillium Web", sans-serif',
     style: "normal",
     weight: 300,

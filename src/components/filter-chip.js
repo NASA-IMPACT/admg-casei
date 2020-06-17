@@ -27,7 +27,7 @@ const FilterChip = ({ id, label, removeFilter }) => (
     style={{
       display: `flex`,
       alignItems: `center`,
-      backgroundColor: theme.color.tertiary,
+      backgroundColor: theme.color.secondary,
       color: theme.type.base.color,
       borderRadius: theme.shape.rounded,
       padding: `0 0.5rem`,

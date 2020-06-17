@@ -4,6 +4,7 @@ import { graphql, Link } from "gatsby"
 import Spinner from "react-spinkit"
 
 import api from "../../utils/api"
+import theme from "../../utils/theme"
 
 import Layout from "../../components/layout"
 import ExploreMenu from "../../components/explore-menu"
@@ -64,7 +65,7 @@ const Campaigns = ({ data }) => {
           style={{ display: `flex`, justifyContent: `space-around` }}
           data-cy="loading-indicator"
         >
-          <Spinner name="cube-grid" color="hsla(0,0%,100%,0.9)" />
+          <Spinner name="cube-grid" color={theme.color.base} />
         </div>
       ) : (
         <ExploreSection

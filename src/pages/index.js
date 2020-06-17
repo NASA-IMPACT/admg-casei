@@ -21,6 +21,7 @@ import {
   FacilityInstruments,
 } from "../components/icons"
 import { RegionCarousel } from "../components/home/region-carousel"
+import theme from "../utils/theme"
 
 const SectionHeader = ({ tagline, headline }) => (
   <div>
@@ -157,14 +158,14 @@ const IndexPage = ({ data }) => {
           style={{
             display: `flex`,
             flexWrap: `wrap`,
-            border: `1px solid hsla(0,0%,100%,0.9)`,
+            border: `1px solid ${theme.color.base}`,
           }}
         >
           {data.allGeophysicalConcept.nodes.map(concept => (
             <div
               key={concept.id}
               style={{
-                border: `1px solid hsla(0,0%,100%,0.9)`,
+                border: `1px solid ${theme.color.base}`,
                 padding: `1rem`,
                 flexGrow: 1,
                 textAlign: `center`,
@@ -201,9 +202,9 @@ const IndexPage = ({ data }) => {
               style={{
                 padding: `1rem 5rem`,
                 textTransform: `uppercase`,
-                color: `hsla(0,0%,100%,0.9)`,
+                color: theme.color.base,
                 background: `transparent`,
-                border: `1px solid hsla(0,0%,100%,0.9)`,
+                border: `1px solid ${theme.color.base}`,
               }}
             >
               Explore
