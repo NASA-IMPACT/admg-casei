@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import SectionBlock from "../../components/section/section-block"
 import ContentItem from "../../components/section/content-item"
-import PlaceholderLogo from "../../images/placeholder-logo.png"
+import PlaceholderLogo from "../../images/placeholder-logo.svg"
 
 const FundingSection = ({
   logo,
