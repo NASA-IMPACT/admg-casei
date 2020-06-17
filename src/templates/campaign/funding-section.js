@@ -1,7 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+
 import CampaignSection from "../../components/campaign-section"
+import { LogoPlaceholder } from "../../components/icons/"
 
 const InfoItem = ({ label, info }) => (
   <div data-cy="info-item">
@@ -60,10 +62,17 @@ const FundingSection = ({
       <div
         style={{
           flex: `0.618`,
-          padding: `2rem`,
+          display: `flex`,
+          justifyContent: `center`,
+          alignItems: `center`,
+          padding: `1rem`,
         }}
       >
-        <img src={logo} alt="campaign-logo" data-cy="campaign-logo" />
+        {logo ? (
+          <img src={logo} alt="campaign-logo" data-cy="campaign-logo" />
+        ) : (
+          <LogoPlaceholder />
+        )}
       </div>
 
       <div

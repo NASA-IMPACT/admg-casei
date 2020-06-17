@@ -1,0 +1,431 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Funding Section renders logo when present in props 1`] = `
+<section
+  className="inpage-nav"
+  data-cy="funding-section"
+  id="funding"
+>
+  <h2>
+    Funding
+  </h2>
+  <div
+    style={
+      Object {
+        "alignItems": "stretch",
+        "backgroundColor": "#303641",
+        "display": "flex",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flex": "0.618",
+          "justifyContent": "center",
+          "padding": "1rem",
+        }
+      }
+    >
+      <img
+        alt="campaign-logo"
+        data-cy="campaign-logo"
+        src="https://via.placeholder.com/150"
+      />
+    </div>
+    <div
+      style={
+        Object {
+          "display": "grid",
+          "flex": "2.618",
+          "gap": "0.5rem",
+          "gridTemplateColumns": " 1fr 1fr 1fr",
+          "padding": "2rem",
+        }
+      }
+    >
+      <div
+        data-cy="info-item"
+      >
+        <label
+          style={
+            Object {
+              "color": "#6B6B6B",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          Funding Agency
+        </label>
+        <hr />
+        <p>
+          test string
+        </p>
+      </div>
+      <div
+        data-cy="info-item"
+      >
+        <label
+          style={
+            Object {
+              "color": "#6B6B6B",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          Funding Program
+        </label>
+        <hr />
+        <p>
+          test string
+        </p>
+      </div>
+      <div
+        data-cy="info-item"
+      >
+        <label
+          style={
+            Object {
+              "color": "#6B6B6B",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          Funding Program Lead
+        </label>
+        <hr />
+        <p>
+          test string
+        </p>
+      </div>
+      <div
+        data-cy="info-item"
+      >
+        <label
+          style={
+            Object {
+              "color": "#6B6B6B",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          Lead Investigator
+        </label>
+        <hr />
+        <p>
+          test string
+        </p>
+      </div>
+      <div
+        data-cy="info-item"
+      >
+        <label
+          style={
+            Object {
+              "color": "#6B6B6B",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          Data Manager / Technical Contact
+        </label>
+        <hr />
+        <p>
+          test string
+        </p>
+      </div>
+      <div
+        data-cy="info-item"
+      >
+        <label
+          style={
+            Object {
+              "color": "#6B6B6B",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          Assigned Archive Repository
+        </label>
+        <hr />
+        <p>
+          test string
+        </p>
+      </div>
+      <div
+        data-cy="info-item"
+      >
+        <label
+          style={
+            Object {
+              "color": "#6B6B6B",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          Partner Organisation
+        </label>
+        <hr />
+        <p>
+          
+        </p>
+      </div>
+      <div
+        data-cy="info-item"
+      >
+        <label
+          style={
+            Object {
+              "color": "#6B6B6B",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          Tertiary Website
+        </label>
+        <hr />
+        <p>
+          test string
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`Funding Section renders placeholder when no logo is available 1`] = `
+<section
+  className="inpage-nav"
+  data-cy="funding-section"
+  id="funding"
+>
+  <h2>
+    Funding
+  </h2>
+  <div
+    style={
+      Object {
+        "alignItems": "stretch",
+        "backgroundColor": "#303641",
+        "display": "flex",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flex": "0.618",
+          "justifyContent": "center",
+          "padding": "1rem",
+        }
+      }
+    >
+      <svg
+        height="100px"
+        viewBox="0 0 100 100"
+        width="100px"
+      >
+        <g
+          fill="none"
+          fillRule="evenodd"
+          id="Page-1"
+          stroke="none"
+          strokeWidth="1"
+        >
+          <g
+            id="Artboard"
+            transform="translate(-135.000000, -97.000000)"
+          >
+            <g
+              id="placeholder"
+              transform="translate(135.000000, 97.000000)"
+            >
+              <circle
+                cx="50"
+                cy="50"
+                fill="#0C1520"
+                id="Oval"
+                r="50"
+              />
+              <text
+                fill="hsla(0,0%,100%,0.9)"
+                fontFamily="\\"Titillium Web\\", sans-serif"
+                fontSize="22"
+                fontWeight="normal"
+                id="LOGO"
+              >
+                <tspan
+                  x="23.9931641"
+                  y="57"
+                >
+                  LOGO
+                </tspan>
+              </text>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <div
+      style={
+        Object {
+          "display": "grid",
+          "flex": "2.618",
+          "gap": "0.5rem",
+          "gridTemplateColumns": " 1fr 1fr 1fr",
+          "padding": "2rem",
+        }
+      }
+    >
+      <div
+        data-cy="info-item"
+      >
+        <label
+          style={
+            Object {
+              "color": "#6B6B6B",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          Funding Agency
+        </label>
+        <hr />
+        <p>
+          test string
+        </p>
+      </div>
+      <div
+        data-cy="info-item"
+      >
+        <label
+          style={
+            Object {
+              "color": "#6B6B6B",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          Funding Program
+        </label>
+        <hr />
+        <p>
+          test string
+        </p>
+      </div>
+      <div
+        data-cy="info-item"
+      >
+        <label
+          style={
+            Object {
+              "color": "#6B6B6B",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          Funding Program Lead
+        </label>
+        <hr />
+        <p>
+          test string
+        </p>
+      </div>
+      <div
+        data-cy="info-item"
+      >
+        <label
+          style={
+            Object {
+              "color": "#6B6B6B",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          Lead Investigator
+        </label>
+        <hr />
+        <p>
+          test string
+        </p>
+      </div>
+      <div
+        data-cy="info-item"
+      >
+        <label
+          style={
+            Object {
+              "color": "#6B6B6B",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          Data Manager / Technical Contact
+        </label>
+        <hr />
+        <p>
+          test string
+        </p>
+      </div>
+      <div
+        data-cy="info-item"
+      >
+        <label
+          style={
+            Object {
+              "color": "#6B6B6B",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          Assigned Archive Repository
+        </label>
+        <hr />
+        <p>
+          test string
+        </p>
+      </div>
+      <div
+        data-cy="info-item"
+      >
+        <label
+          style={
+            Object {
+              "color": "#6B6B6B",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          Partner Organisation
+        </label>
+        <hr />
+        <p>
+          
+        </p>
+      </div>
+      <div
+        data-cy="info-item"
+      >
+        <label
+          style={
+            Object {
+              "color": "#6B6B6B",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          Tertiary Website
+        </label>
+        <hr />
+        <p>
+          test string
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+`;
