@@ -1,6 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 
+import theme from "../../utils/theme"
+
 const InpageLink = props => (
   <li style={{ margin: `0 1rem 0 0` }}>
     <a href={props.to}>{props.children}</a>
@@ -39,6 +41,7 @@ const InpageNav = () => (
       borderBottom: `1px solid #9E9E9E`,
       justifyContent: `space-between`,
       alignItems: `center`,
+      backgroundColor: theme.color.primary,
       zIndex: 1000,
     }}
   >
