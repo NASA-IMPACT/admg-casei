@@ -8,7 +8,7 @@
     "Alice Rühl <alice@developmentseed.org>"
   ],
   "dependencies": {
-    "@devseed-ui/button": "2.3.2",
+    "@devseed-ui/button": "^2.4.1",
     "@devseed-ui/helpers": "^2.3.0",
     "gatsby": "^2.20.12",
     "gatsby-image": "^2.3.1",
