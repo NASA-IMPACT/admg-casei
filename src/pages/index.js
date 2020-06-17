@@ -6,13 +6,6 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Image from "../components/image"
 import {
-  AtmosphericCompositionIcon,
-  AtmosphericDynamicsIcon,
-  CarbonCycleEcosystemsIcon,
-  ClimateVariabilityChangeIcon,
-  EarthSurfaceInteriorIcon,
-  GlobalWaterEnergyCycleIcon,
-  WeatherIcon,
   AirborneInsitu,
   GroundInstruments,
   AirborneRemoteSensors,
@@ -20,6 +13,7 @@ import {
   OceanInstruments,
   FacilityInstruments,
 } from "../components/icons"
+import { FocusAreaGallery } from "../components/home/focus-area-gallery"
 import { RegionCarousel } from "../components/home/region-carousel"
 
 const SectionHeader = ({ tagline, headline }) => (
@@ -32,34 +26,6 @@ const SectionHeader = ({ tagline, headline }) => (
 SectionHeader.propTypes = {
   tagline: PropTypes.string.isRequired,
   headline: PropTypes.string.isRequired,
-}
-
-const FocusArea = ({ id, caption }) => {
-  // TODO: This mapping is currently done by shortname, as I don't trust
-  // the id yet to be stable.
-  const icons = {
-    "Atmospheric Composition": <AtmosphericCompositionIcon />,
-    "Atmospheric Dynamics": <AtmosphericDynamicsIcon />,
-    "Carbon Cycle & Ecosystems": <CarbonCycleEcosystemsIcon />,
-    "Climate Variability & Change": <ClimateVariabilityChangeIcon />,
-    "Earth Surface & Interior": <EarthSurfaceInteriorIcon />,
-    "Global Water & Energy Cycle": <GlobalWaterEnergyCycleIcon />,
-    Weather: <WeatherIcon />,
-  }
-
-  if (!icons[id]) return null
-
-  return (
-    <div style={{ textAlign: `center` }} data-cy="focus-area">
-      {icons[id]}
-      <div>{caption}</div>
-    </div>
-  )
-}
-
-FocusArea.propTypes = {
-  id: PropTypes.string.isRequired,
-  caption: PropTypes.string.isRequired,
 }
 
 const Instrument = ({ id, caption }) => {
@@ -126,21 +92,7 @@ const IndexPage = ({ data }) => {
           tagline="explore nasa earth science"
           headline="Focus Areas"
         />
-        <div
-          style={{
-            display: `grid`,
-            gridTemplateColumns: `repeat(auto-fill, minmax(min(120px, 100%), 1fr))`,
-            gap: `1rem`,
-          }}
-        >
-          {data.allFocusArea.nodes.map(focus => (
-            <FocusArea
-              key={focus.id}
-              id={focus.shortname}
-              caption={focus.shortname}
-            />
-          ))}
-        </div>
+        <FocusAreaGallery focusAreas={data.allFocusArea.nodes} />
       </section>
 
       <section style={styles.section} data-cy="region-type-section">

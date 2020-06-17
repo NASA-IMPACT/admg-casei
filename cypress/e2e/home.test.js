@@ -30,6 +30,22 @@ describe("Homepage", () => {
           cy.get($el).find("div").should("have.text", $el[0].textContent)
         })
     })
+
+    it("navigates to the campaign list with the focus area as filter applied", () => {
+      cy.get("[data-cy=focus-area-section]")
+        .find("[data-cy=focus-area]")
+        .contains("Weather")
+        .click()
+
+      cy.url().should("include", "/explore/campaigns")
+
+      cy.get("main")
+        .find("[data-cy=filter-chip]")
+        .should("have.length", 1)
+        .and("have.text", "focus: Weather")
+
+      cy.get("main").find("[data-cy=explore-card]").should("have.length", 7)
+    })
   })
 
   describe("region types", () => {

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react"
+import React, { useState, useRef, useEffect } from "react"
 import PropTypes from "prop-types"
 import { graphql, Link } from "gatsby"
 import Spinner from "react-spinkit"
@@ -11,13 +11,21 @@ import Searchbar from "../../components/searchbar"
 import ExploreSection from "../../components/explore-section"
 import CampaignCard from "../../components/campaign-card"
 
-const Campaigns = ({ data }) => {
+const Campaigns = ({ data, location }) => {
   const { focus, season } = data
+  const { selectedFocusId } = location.state || {}
 
   const [isLoading, setLoading] = useState(false)
   const [sortOrder, toggleSortOrder] = useState("asc")
   const [selectedFilterIds, setFilter] = useState([])
   const [searchResult, setSearchResult] = useState()
+
+  useEffect(() => {
+    if (selectedFocusId) setFilter([selectedFocusId]) // applying only this one selection as filter
+    return () => {
+      // cleanup
+    }
+  }, [selectedFocusId])
 
   const addFilter = id => setFilter([...selectedFilterIds, id])
   const removeFilter = id => setFilter(selectedFilterIds.filter(f => f !== id))
@@ -187,6 +195,11 @@ Campaigns.propTypes = {
       ).isRequired,
     }).isRequired,
   }).isRequired,
+  location: PropTypes.shape({
+    state: PropTypes.shape({
+      selectedFocusId: PropTypes.string,
+    }),
+  }),
 }
 
 export default Campaigns
