@@ -5,6 +5,7 @@ let color = {
   tertiary: "#294060", // medium blue for gradiant background
   gray: "#9E9E9E",
   link: "#303641",
+  background: "#0c1520",
 }
 
 const type = {
