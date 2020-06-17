@@ -139,12 +139,28 @@ Searchbar.propTypes = {
   submitSearch: PropTypes.func.isRequired,
   filterOptions: PropTypes.shape({
     focus: PropTypes.shape({
-      id: PropTypes.string,
-      shortname: PropTypes.string,
+      options: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string,
+          shortname: PropTypes.string.isRequired,
+        }).isRequired
+      ).isRequired,
     }),
     season: PropTypes.shape({
-      id: PropTypes.string,
-      shortname: PropTypes.string,
+      options: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string,
+          shortname: PropTypes.string.isRequired,
+        }).isRequired
+      ).isRequired,
+    }),
+    region: PropTypes.shape({
+      options: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string,
+          shortname: PropTypes.string.isRequired,
+        }).isRequired
+      ).isRequired,
     }),
   }).isRequired,
   selectedFilterIds: PropTypes.arrayOf(PropTypes.string),

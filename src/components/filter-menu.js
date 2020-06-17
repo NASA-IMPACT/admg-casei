@@ -63,6 +63,11 @@ const FilterMenu = ({
         label="Season"
         options={filterOptions.season.options}
       />
+      <Filter
+        id="region"
+        label="Geographical Region"
+        options={filterOptions.region.options}
+      />
     </select>
   )
 }
@@ -78,6 +83,14 @@ FilterMenu.propTypes = {
       ).isRequired,
     }),
     season: PropTypes.shape({
+      options: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string,
+          shortname: PropTypes.string.isRequired,
+        }).isRequired
+      ).isRequired,
+    }),
+    region: PropTypes.shape({
       options: PropTypes.arrayOf(
         PropTypes.shape({
           id: PropTypes.string,
