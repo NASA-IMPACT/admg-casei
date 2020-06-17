@@ -31,7 +31,7 @@ const FundingSection = ({
   `)
   const partnerOrg = data.allPartnerOrg.nodes
     .filter(x => partnerOrgIds.includes(x.id))
-    .map(x => x.shortname)
+    .map(x => x.short_name)
     .join(", ")
 
   return (
