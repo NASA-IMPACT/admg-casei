@@ -26,6 +26,7 @@ const FilterChip = ({ id, label, removeFilter }) => (
       size="small"
       id="close-icon"
       title="remove filter"
+      theme={theme} // TODO: figure out why the theme isn't automatically passed through
       style={{ marginLeft: `0.5rem` }}
       onClick={() => removeFilter(id)}
     >
