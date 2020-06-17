@@ -83,18 +83,41 @@ describe("Homepage", () => {
     it("displays the region that was selected", () => {
       cy.get("[data-cy=region-type-section]")
         .find("[data-cy=region-type]")
-        .contains(/Island/i)
+        .contains(/Mountains/i)
         .should("not.be.visible")
 
       cy.get("[data-cy=region-text-control]")
-        .findByText(/Island/i)
+        .findByText(/Mountains/i)
         .as("btn")
         .click()
 
       cy.get("[data-cy=region-type-section]")
         .find("[data-cy=region-type]")
-        .contains(/Island/i)
+        .contains(/Mountains/i)
         .should("be.visible")
+    })
+
+    it("navigates to the campaign list with the region type as filter applied", () => {
+      cy.get("[data-cy=region-text-control]")
+        .findByText(/Mountains/i)
+        .as("btn")
+        .click()
+
+      cy.get("[data-cy=region-type-section]")
+        .find("[data-cy=region-type]")
+        .contains(/Mountains/i)
+        .should("be.visible")
+
+      cy.get(".slide-visible > [data-cy=region-type]").click()
+
+      cy.url().should("include", "/explore/campaigns")
+
+      cy.get("main")
+        .find("[data-cy=filter-chip]")
+        .should("have.length", 1)
+        .and("have.text", "region: mountains")
+
+      cy.get("main").find("[data-cy=explore-card]").should("have.length", 1)
     })
   })
 })

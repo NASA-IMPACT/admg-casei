@@ -43,7 +43,7 @@ const FocusArea = ({ id, caption }) => {
   return (
     <Link
       to="/explore/campaigns"
-      state={{ selectedFocusId: id }} // Pass state as props to the linked page
+      state={{ selectedFilterId: id }} // Pass state as props to the linked page
       style={{ textAlign: `center` }}
       data-cy="focus-area"
     >
