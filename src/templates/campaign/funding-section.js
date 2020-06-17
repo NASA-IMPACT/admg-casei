@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import CampaignSection from "../../components/campaign-section"
 
 const InfoItem = ({ label, info }) => (
   <div data-cy="info-item">
@@ -51,41 +52,39 @@ const FundingSection = ({
     .join(", ")
 
   return (
-    <section className="inpage-nav" id="funding" data-cy="funding-section">
-      <h2>Funding</h2>
-      <div style={{ display: `flex`, alignItems: `stretch` }}>
-        <div
-          style={{
-            flex: `0.618`,
-            padding: `2rem`,
-          }}
-        >
-          <img src={logo} alt="campaign-logo" data-cy="campaign-logo" />
-        </div>
-
-        <div
-          style={{
-            flex: `2.618`,
-            display: `grid`,
-            gap: `0.5rem`,
-            gridTemplateColumns: ` 1fr 1fr 1fr`,
-            padding: `2rem`,
-          }}
-        >
-          <InfoItem label="Funding Agency" info={fundingAgency} />
-          <InfoItem label="Funding Program" info={fundingProgram} />
-          <InfoItem label="Funding Program Lead" info={programLead} />
-          <InfoItem label="Lead Investigator" info={leadInvestigator} />
-          <InfoItem
-            label="Data Manager / Technical Contact"
-            info={dataManager}
-          />
-          <InfoItem label="Assigned Archive Repository" info={archive} />
-          <InfoItem label="Partner Organisation" info={partnerOrg} />
-          <InfoItem label="Tertiary Website" info={tertiaryWebsite} />
-        </div>
+    <CampaignSection
+      sectionTitle="Funding"
+      id="funding"
+      dataCy="funding-section"
+    >
+      <div
+        style={{
+          flex: `0.618`,
+          padding: `2rem`,
+        }}
+      >
+        <img src={logo} alt="campaign-logo" data-cy="campaign-logo" />
       </div>
-    </section>
+
+      <div
+        style={{
+          flex: `2.618`,
+          display: `grid`,
+          gap: `0.5rem`,
+          gridTemplateColumns: ` 1fr 1fr 1fr`,
+          padding: `2rem`,
+        }}
+      >
+        <InfoItem label="Funding Agency" info={fundingAgency} />
+        <InfoItem label="Funding Program" info={fundingProgram} />
+        <InfoItem label="Funding Program Lead" info={programLead} />
+        <InfoItem label="Lead Investigator" info={leadInvestigator} />
+        <InfoItem label="Data Manager / Technical Contact" info={dataManager} />
+        <InfoItem label="Assigned Archive Repository" info={archive} />
+        <InfoItem label="Partner Organisation" info={partnerOrg} />
+        <InfoItem label="Tertiary Website" info={tertiaryWebsite} />
+      </div>
+    </CampaignSection>
   )
 }
 
