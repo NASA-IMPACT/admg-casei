@@ -2,6 +2,9 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
+import SectionBlock from "../../components/section/section-block"
+import ContentGroup from "../../components/section/content-group"
+
 const FocusSection = ({ focusAreaIds, focusPhenomena, scienceKeywords }) => {
   const data = useStaticQuery(graphql`
     query {
@@ -32,52 +35,15 @@ const FocusSection = ({ focusAreaIds, focusPhenomena, scienceKeywords }) => {
       ))
 
   return (
-    <section className="inpage-nav" id="focus" data-cy="focus-section">
-      <h2>Focus</h2>
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: `1fr 1fr 1fr`,
-          gap: `1rem`,
-          margin: `0 -1rem`,
-          padding: `1rem`,
-        }}
-      >
-        <div>
-          <label
-            style={{
-              textTransform: `uppercase`,
-              color: `#6B6B6B`,
-            }}
-          >
-            Focus Area
-          </label>
-          <FocusArea />
-        </div>
-        <div>
-          <label
-            style={{
-              textTransform: `uppercase`,
-              color: `#6B6B6B`,
-            }}
-          >
-            Focus Phenomena
-          </label>
-          <p>{focusPhenomena}</p>
-        </div>
-        <div>
-          <label
-            style={{
-              textTransform: `uppercase`,
-              color: `#6B6B6B`,
-            }}
-          >
-            Science Keywords
-          </label>
-          <p>{scienceKeywords}</p>
-        </div>
-      </div>
-    </section>
+    <SectionBlock sectionTitle="Focus" id="focus" dataCy="focus-section">
+      <ContentGroup
+        contentItems={[
+          { label: "Focus Area", info: <FocusArea />, type: "component" },
+          { label: "Focus Phenomena", info: focusPhenomena },
+          { label: "Science Keywords", info: scienceKeywords },
+        ]}
+      />
+    </SectionBlock>
   )
 }
 

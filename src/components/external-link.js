@@ -17,6 +17,6 @@ export default function ExternalLink({ label, url }) {
 }
 
 ExternalLink.propTypes = {
-  label: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired,
+  label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
+  url: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
 }
