@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Funding Section renders logo when present in props 1`] = `
+exports[`Program Info Section renders logo when present in props 1`] = `
 <section
   className="inpage-nav"
-  data-cy="funding-section"
-  id="funding"
+  data-cy="program-info-section"
+  id="program-info"
 >
   <h2>
-    Funding
+    Program Info
   </h2>
   <div
     style={
@@ -212,7 +212,7 @@ exports[`Funding Section renders logo when present in props 1`] = `
         <p
           data-cy="content-text"
         >
-          org a
+          N/A
         </p>
       </div>
       <div
@@ -251,14 +251,14 @@ exports[`Funding Section renders logo when present in props 1`] = `
 </section>
 `;
 
-exports[`Funding Section renders placeholder when no logo is available 1`] = `
+exports[`Program Info Section renders placeholder when no logo is available 1`] = `
 <section
   className="inpage-nav"
-  data-cy="funding-section"
-  id="funding"
+  data-cy="program-info-section"
+  id="program-info"
 >
   <h2>
-    Funding
+    Program Info
   </h2>
   <div
     style={
@@ -463,7 +463,7 @@ exports[`Funding Section renders placeholder when no logo is available 1`] = `
         <p
           data-cy="content-text"
         >
-          org a
+          N/A
         </p>
       </div>
       <div
