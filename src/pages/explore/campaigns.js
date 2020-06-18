@@ -42,6 +42,12 @@ const Campaigns = ({ data, location }) => {
     setLoading(false)
   }
 
+  /**
+   * Check if the campaign has deployments in a given region.
+   * @param {object} campaign - The campaign data object.
+   * @param {string} filterId - The id of the item to search for, represents a region.
+   * @returns {boolean} - Returns `true` if the campaign has deployments in a given region.
+   */
   const campaignHasDeploymentInRegion = (campaign, filterId) => {
     const deployments = allDeployment.nodes
     const filteredDeploymentIds = deployments
