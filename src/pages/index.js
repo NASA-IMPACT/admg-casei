@@ -5,16 +5,11 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Image from "../components/image"
-import {
-  AirborneInsitu,
-  GroundInstruments,
-  AirborneRemoteSensors,
-  ExperimentalInstruments,
-  OceanInstruments,
-  FacilityInstruments,
-} from "../components/icons"
+import { Hero } from "../components/home/hero"
 import { FocusAreaGallery } from "../components/home/focus-area-gallery"
 import { RegionCarousel } from "../components/home/region-carousel"
+import { GeophysicsGrid } from "../components/home/geophysics-grid"
+import { InstrumentsGallery } from "../components/home/instruments-gallery"
 import theme from "../utils/theme"
 
 const SectionHeader = ({ tagline, headline }) => (
@@ -29,37 +24,6 @@ SectionHeader.propTypes = {
   headline: PropTypes.string.isRequired,
 }
 
-const Instrument = ({ id, caption }) => {
-  // TODO: This mapping is more or less random
-  // we don't have icons for the existing instrument types.
-  const icons = {
-    "In Situ - Magnetic/Electric": <AirborneInsitu />,
-    "In Situ - Spectrometer/Radiometer": <GroundInstruments />,
-    Remote: <AirborneRemoteSensors />,
-    "Solar/Space": <ExperimentalInstruments />,
-    NID: <OceanInstruments />,
-    "Data Analyses": <FacilityInstruments />,
-  }
-
-  if (!icons[id]) return null
-
-  return (
-    <div
-      className="placeholder"
-      style={{ textAlign: `center` }}
-      data-cy="instrument"
-    >
-      {icons[id]}
-      <div>{caption}</div>
-    </div>
-  )
-}
-
-Instrument.propTypes = {
-  id: PropTypes.string.isRequired,
-  caption: PropTypes.string.isRequired,
-}
-
 const styles = {
   section: { marginTop: `8rem` },
 }
@@ -69,24 +33,7 @@ const IndexPage = ({ data }) => {
     <Layout>
       <SEO title="Home" />
 
-      <div style={{ display: `grid`, gridTemplateColumns: `1fr 1fr` }}>
-        <div style={{ alignSelf: `end` }}>
-          <div style={{ textTransform: `uppercase` }}>NASA</div>
-          <h1>{data.site.siteMetadata.title}</h1>
-        </div>
-        <div style={{ alignSelf: `start` }}>
-          <p>
-            Explore NASA’s catalog of airborne, <br /> field stationary and
-            fixed campaigns.
-          </p>
-        </div>
-        <div style={{ gridArea: `1 / 2 / 3 / 3` }}>
-          <Image
-            filename="globe.png"
-            alt="a globe displaying natural features and slight cloud coverage"
-          />
-        </div>
-      </div>
+      <Hero siteMetadata={data.site.siteMetadata} />
 
       <section style={styles.section} data-cy="focus-area-section">
         <SectionHeader
@@ -103,30 +50,12 @@ const IndexPage = ({ data }) => {
 
       <section style={styles.section} data-cy="geophysical-concepts-section">
         <SectionHeader
-          tagline="explore campaigns by"
+          tagline="explore instruments by"
           headline="Geophysical Concepts"
         />
-        <div
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            border: `1px solid ${theme.color.base}`,
-          }}
-        >
-          {data.allGeophysicalConcept.nodes.map(concept => (
-            <div
-              key={concept.id}
-              style={{
-                border: `1px solid ${theme.color.base}`,
-                padding: `1rem`,
-                flexGrow: 1,
-                textAlign: `center`,
-              }}
-            >
-              {concept.shortname}
-            </div>
-          ))}
-        </div>
+        <GeophysicsGrid
+          geophysicalConcepts={data.allGeophysicalConcept.nodes}
+        />
       </section>
 
       <section style={styles.section} data-cy="platforms-section">
@@ -167,21 +96,7 @@ const IndexPage = ({ data }) => {
 
       <section style={styles.section} data-cy="instruments-section">
         <SectionHeader tagline="explore" headline="Instruments" />
-        <div
-          style={{
-            display: `grid`,
-            gridTemplateColumns: `repeat(auto-fill, minmax(min(120px, 100%), 1fr))`,
-            gap: `1rem`,
-          }}
-        >
-          {data.allInstrumentType.nodes.map(instrument => (
-            <Instrument
-              key={instrument.id}
-              id={instrument.shortname}
-              caption={instrument.longname}
-            />
-          ))}
-        </div>
+        <InstrumentsGallery instruments={data.allInstrumentType.nodes} />
       </section>
     </Layout>
   )
@@ -192,6 +107,7 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+        description
       }
     }
     allFocusArea {
@@ -228,6 +144,7 @@ IndexPage.propTypes = {
     site: PropTypes.shape({
       siteMetadata: PropTypes.shape({
         title: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
       }),
     }),
     allFocusArea: PropTypes.shape({
