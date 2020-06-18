@@ -12,6 +12,18 @@ import Searchbar from "../../components/searchbar"
 import ExploreSection from "../../components/explore-section"
 import CampaignCard from "../../components/campaign-card"
 
+export const selector = filterOptions => ({
+  getFilterLabelById: id => {
+    for (let [key, value] of Object.entries(filterOptions)) {
+      const filter = value.options.find(i => i.id === id)
+      if (filter) return `${key}: ${filter.shortname}`
+    }
+  },
+  getFilterOptionsById: id => {
+    return filterOptions[id].options
+  },
+})
+
 const Campaigns = ({ data, location }) => {
   const { allSeason, allFocusArea, allGeographicalRegion, allDeployment } = data
   const { selectedFilterId } = location.state || {}
@@ -72,18 +84,6 @@ const Campaigns = ({ data, location }) => {
     .filter(campaign =>
       searchResult ? searchResult.includes(campaign.shortname) : true
     )
-
-  const selector = filterOptions => ({
-    getFilterLabelById: id => {
-      for (let [key, value] of Object.entries(filterOptions)) {
-        const filter = value.options.find(i => i.id === id)
-        if (filter) return `${key}: ${filter.shortname}`
-      }
-    },
-    getFilterOptionsById: id => {
-      return filterOptions[id].options
-    },
-  })
 
   const { getFilterLabelById, getFilterOptionsById } = selector({
     focus: allFocusArea,
