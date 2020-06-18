@@ -8,7 +8,7 @@ export default function ContentItem({ label, info, type = "text" }) {
   return (
     <div data-cy="info-item">
       <ContentHeader label={label} />
-      {type === "link" ? (
+      {type === "link" && info ? (
         <ExternalLink label={info} url={info} />
       ) : (
         <p data-cy="content-text">{info || "N/A"}</p>

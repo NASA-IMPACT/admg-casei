@@ -2,7 +2,7 @@ import React from "react"
 import { create } from "react-test-renderer"
 import { useStaticQuery } from "gatsby"
 
-import FundingSection from "../funding-section"
+import ProgramInfoSection from "../program-info-section"
 
 const testLogo = "https://via.placeholder.com/150"
 const testString = "test string"
@@ -25,10 +25,10 @@ beforeEach(() => {
   })
 })
 
-describe("Funding Section", () => {
+describe("Program Info Section", () => {
   it("renders logo when present in props", () => {
     const component = create(
-      <FundingSection
+      <ProgramInfoSection
         logo={testLogo}
         fundingAgency={testString}
         fundingProgram={testString}
@@ -50,7 +50,7 @@ describe("Funding Section", () => {
   })
   it("renders placeholder when no logo is available", () => {
     const component = create(
-      <FundingSection
+      <ProgramInfoSection
         fundingAgency={testString}
         fundingProgram={testString}
         programLead={testString}

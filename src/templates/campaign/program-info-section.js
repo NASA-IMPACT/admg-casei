@@ -6,7 +6,7 @@ import SectionBlock from "../../components/section/section-block"
 import ContentItem from "../../components/section/content-item"
 import PlaceholderLogo from "../../images/placeholder-logo.svg"
 
-const FundingSection = ({
+const ProgramInfoSection = ({
   logo,
   fundingAgency,
   fundingProgram,
@@ -23,8 +23,8 @@ const FundingSection = ({
         nodes {
           id
           website
-          short_name: shortname
-          long_name: longname
+          shortname: short_name
+          longname: long_name
         }
       }
     }
@@ -35,7 +35,11 @@ const FundingSection = ({
     .join(", ")
 
   return (
-    <SectionBlock sectionTitle="Funding" id="funding" dataCy="funding-section">
+    <SectionBlock
+      sectionTitle="Program Info"
+      id="program-info"
+      dataCy="program-info-section"
+    >
       <div
         style={{
           flex: `0.618`,
@@ -103,7 +107,7 @@ export const fundingFields = graphql`
   }
 `
 
-FundingSection.propTypes = {
+ProgramInfoSection.propTypes = {
   logo: PropTypes.string,
   fundingAgency: PropTypes.string.isRequired,
   fundingProgram: PropTypes.string.isRequired,
@@ -115,4 +119,4 @@ FundingSection.propTypes = {
   tertiaryWebsite: PropTypes.string.isRequired,
 }
 
-export default FundingSection
+export default ProgramInfoSection
