@@ -1,0 +1,503 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Program Info Section renders logo when present in props 1`] = `
+<section
+  className="inpage-nav"
+  data-cy="program-info-section"
+  id="program-info"
+>
+  <h2>
+    Program Info
+  </h2>
+  <div
+    style={
+      Object {
+        "alignItems": "stretch",
+        "backgroundColor": "#303641",
+        "display": "flex",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flex": "0.618",
+          "justifyContent": "center",
+          "padding": "1rem",
+        }
+      }
+    >
+      <img
+        alt="campaign-logo"
+        data-cy="campaign-logo"
+        src="https://via.placeholder.com/150"
+      />
+    </div>
+    <div
+      style={
+        Object {
+          "display": "grid",
+          "flex": "2.618",
+          "gap": "1.5rem",
+          "gridTemplateColumns": "minmax(0,1fr) minmax(0,1fr) minmax(0,1fr)",
+          "padding": "2rem",
+        }
+      }
+    >
+      <div
+        data-cy="info-item"
+      >
+        <label
+          data-cy="content-label"
+          style={
+            Object {
+              "borderBottom": "1px solid #9E9E9E",
+              "color": "#9E9E9E",
+              "display": "block",
+              "fontSize": "x-small",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          Funding Agency
+        </label>
+        <p
+          data-cy="content-text"
+        >
+          test string
+        </p>
+      </div>
+      <div
+        data-cy="info-item"
+      >
+        <label
+          data-cy="content-label"
+          style={
+            Object {
+              "borderBottom": "1px solid #9E9E9E",
+              "color": "#9E9E9E",
+              "display": "block",
+              "fontSize": "x-small",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          Funding Program
+        </label>
+        <p
+          data-cy="content-text"
+        >
+          test string
+        </p>
+      </div>
+      <div
+        data-cy="info-item"
+      >
+        <label
+          data-cy="content-label"
+          style={
+            Object {
+              "borderBottom": "1px solid #9E9E9E",
+              "color": "#9E9E9E",
+              "display": "block",
+              "fontSize": "x-small",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          Funding Program Lead
+        </label>
+        <p
+          data-cy="content-text"
+        >
+          test string
+        </p>
+      </div>
+      <div
+        data-cy="info-item"
+      >
+        <label
+          data-cy="content-label"
+          style={
+            Object {
+              "borderBottom": "1px solid #9E9E9E",
+              "color": "#9E9E9E",
+              "display": "block",
+              "fontSize": "x-small",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          Lead Investigator
+        </label>
+        <p
+          data-cy="content-text"
+        >
+          test string
+        </p>
+      </div>
+      <div
+        data-cy="info-item"
+      >
+        <label
+          data-cy="content-label"
+          style={
+            Object {
+              "borderBottom": "1px solid #9E9E9E",
+              "color": "#9E9E9E",
+              "display": "block",
+              "fontSize": "x-small",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          Data Manager / Technical Contact
+        </label>
+        <p
+          data-cy="content-text"
+        >
+          test string
+        </p>
+      </div>
+      <div
+        data-cy="info-item"
+      >
+        <label
+          data-cy="content-label"
+          style={
+            Object {
+              "borderBottom": "1px solid #9E9E9E",
+              "color": "#9E9E9E",
+              "display": "block",
+              "fontSize": "x-small",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          Assigned Archive Repository
+        </label>
+        <a
+          data-cy="external-link"
+          href="test string"
+          rel="noopener noreferrer"
+          style={
+            Object {
+              "color": "#aac9ff",
+            }
+          }
+          target="_blank"
+        >
+          test string
+        </a>
+      </div>
+      <div
+        data-cy="info-item"
+      >
+        <label
+          data-cy="content-label"
+          style={
+            Object {
+              "borderBottom": "1px solid #9E9E9E",
+              "color": "#9E9E9E",
+              "display": "block",
+              "fontSize": "x-small",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          Partner Organisation
+        </label>
+        <p
+          data-cy="content-text"
+        >
+          N/A
+        </p>
+      </div>
+      <div
+        data-cy="info-item"
+      >
+        <label
+          data-cy="content-label"
+          style={
+            Object {
+              "borderBottom": "1px solid #9E9E9E",
+              "color": "#9E9E9E",
+              "display": "block",
+              "fontSize": "x-small",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          Tertiary Website
+        </label>
+        <a
+          data-cy="external-link"
+          href="test string"
+          rel="noopener noreferrer"
+          style={
+            Object {
+              "color": "#aac9ff",
+            }
+          }
+          target="_blank"
+        >
+          test string
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`Program Info Section renders placeholder when no logo is available 1`] = `
+<section
+  className="inpage-nav"
+  data-cy="program-info-section"
+  id="program-info"
+>
+  <h2>
+    Program Info
+  </h2>
+  <div
+    style={
+      Object {
+        "alignItems": "stretch",
+        "backgroundColor": "#303641",
+        "display": "flex",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flex": "0.618",
+          "justifyContent": "center",
+          "padding": "1rem",
+        }
+      }
+    >
+      <img
+        alt="campaign-logo"
+        data-cy="campaign-logo"
+        src="test-file-stub"
+      />
+    </div>
+    <div
+      style={
+        Object {
+          "display": "grid",
+          "flex": "2.618",
+          "gap": "1.5rem",
+          "gridTemplateColumns": "minmax(0,1fr) minmax(0,1fr) minmax(0,1fr)",
+          "padding": "2rem",
+        }
+      }
+    >
+      <div
+        data-cy="info-item"
+      >
+        <label
+          data-cy="content-label"
+          style={
+            Object {
+              "borderBottom": "1px solid #9E9E9E",
+              "color": "#9E9E9E",
+              "display": "block",
+              "fontSize": "x-small",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          Funding Agency
+        </label>
+        <p
+          data-cy="content-text"
+        >
+          test string
+        </p>
+      </div>
+      <div
+        data-cy="info-item"
+      >
+        <label
+          data-cy="content-label"
+          style={
+            Object {
+              "borderBottom": "1px solid #9E9E9E",
+              "color": "#9E9E9E",
+              "display": "block",
+              "fontSize": "x-small",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          Funding Program
+        </label>
+        <p
+          data-cy="content-text"
+        >
+          test string
+        </p>
+      </div>
+      <div
+        data-cy="info-item"
+      >
+        <label
+          data-cy="content-label"
+          style={
+            Object {
+              "borderBottom": "1px solid #9E9E9E",
+              "color": "#9E9E9E",
+              "display": "block",
+              "fontSize": "x-small",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          Funding Program Lead
+        </label>
+        <p
+          data-cy="content-text"
+        >
+          test string
+        </p>
+      </div>
+      <div
+        data-cy="info-item"
+      >
+        <label
+          data-cy="content-label"
+          style={
+            Object {
+              "borderBottom": "1px solid #9E9E9E",
+              "color": "#9E9E9E",
+              "display": "block",
+              "fontSize": "x-small",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          Lead Investigator
+        </label>
+        <p
+          data-cy="content-text"
+        >
+          test string
+        </p>
+      </div>
+      <div
+        data-cy="info-item"
+      >
+        <label
+          data-cy="content-label"
+          style={
+            Object {
+              "borderBottom": "1px solid #9E9E9E",
+              "color": "#9E9E9E",
+              "display": "block",
+              "fontSize": "x-small",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          Data Manager / Technical Contact
+        </label>
+        <p
+          data-cy="content-text"
+        >
+          test string
+        </p>
+      </div>
+      <div
+        data-cy="info-item"
+      >
+        <label
+          data-cy="content-label"
+          style={
+            Object {
+              "borderBottom": "1px solid #9E9E9E",
+              "color": "#9E9E9E",
+              "display": "block",
+              "fontSize": "x-small",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          Assigned Archive Repository
+        </label>
+        <a
+          data-cy="external-link"
+          href="test string"
+          rel="noopener noreferrer"
+          style={
+            Object {
+              "color": "#aac9ff",
+            }
+          }
+          target="_blank"
+        >
+          test string
+        </a>
+      </div>
+      <div
+        data-cy="info-item"
+      >
+        <label
+          data-cy="content-label"
+          style={
+            Object {
+              "borderBottom": "1px solid #9E9E9E",
+              "color": "#9E9E9E",
+              "display": "block",
+              "fontSize": "x-small",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          Partner Organisation
+        </label>
+        <p
+          data-cy="content-text"
+        >
+          N/A
+        </p>
+      </div>
+      <div
+        data-cy="info-item"
+      >
+        <label
+          data-cy="content-label"
+          style={
+            Object {
+              "borderBottom": "1px solid #9E9E9E",
+              "color": "#9E9E9E",
+              "display": "block",
+              "fontSize": "x-small",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          Tertiary Website
+        </label>
+        <a
+          data-cy="external-link"
+          href="test string"
+          rel="noopener noreferrer"
+          style={
+            Object {
+              "color": "#aac9ff",
+            }
+          }
+          target="_blank"
+        >
+          test string
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+`;

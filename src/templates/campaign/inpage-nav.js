@@ -1,6 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 
+import theme from "../../utils/theme"
+
 const InpageLink = props => (
   <li style={{ margin: `0 1rem 0 0` }}>
     <a href={props.to}>{props.children}</a>
@@ -11,7 +13,7 @@ InpageLink.propTypes = {
   to: function (props, propName, componentName) {
     // validate that prop `to` links to an existing section
     if (
-      !/(#overview|#focus|#platforms|#platforms|#timeline|#data|#funding)/.test(
+      !/(#overview|#focus|#platforms|#platforms|#timeline|#data|#program-info)/.test(
         props[propName]
       )
     ) {
@@ -39,6 +41,7 @@ const InpageNav = () => (
       borderBottom: `1px solid #9E9E9E`,
       justifyContent: `space-between`,
       alignItems: `center`,
+      backgroundColor: theme.color.primary,
       zIndex: 1000,
     }}
   >
@@ -58,7 +61,7 @@ const InpageNav = () => (
         <InpageLink to="#platforms">Instruments</InpageLink>
         <InpageLink to="#timeline">Timeline</InpageLink>
         <InpageLink to="#data">Data</InpageLink>
-        <InpageLink to="#funding">Funding</InpageLink>
+        <InpageLink to="#program-info">Program Info</InpageLink>
       </ul>
     </nav>
     <div style={{ display: `flex` }}>

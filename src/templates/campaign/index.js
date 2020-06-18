@@ -8,7 +8,7 @@ import InpageNav from "./inpage-nav"
 import OverviewSection from "./overview-section"
 import TimelineSection from "./timeline-section"
 import PlatformSection from "./platform-section"
-import FundingSection from "./funding-section"
+import ProgramInfoSection from "./program-info-section"
 import FocusSection from "./focus-section"
 
 const CampaignTemplate = ({ data: { campaign, deployments, platforms } }) => {
@@ -41,7 +41,7 @@ const CampaignTemplate = ({ data: { campaign, deployments, platforms } }) => {
       <section className="inpage-nav" id="data" data-cy="data-section">
         <h2>Data</h2>
       </section>
-      <FundingSection
+      <ProgramInfoSection
         logo={campaign.logo}
         fundingAgency={campaign.fundingAgency}
         fundingProgram={campaign.fundingProgram}

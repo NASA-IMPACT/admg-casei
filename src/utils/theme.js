@@ -4,7 +4,8 @@ let color = {
   secondary: "#303641", // dark blue box background
   tertiary: "#294060", // medium blue for gradiant background
   gray: "#9E9E9E",
-  link: "#303641",
+  link: "#aac9ff",
+  background: "#0c1520",
 }
 
 const type = {

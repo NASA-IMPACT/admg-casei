@@ -56,18 +56,22 @@ describe("Campaign", () => {
           expect($anchor.eq(3), "fourth item").to.contain("Instruments")
           expect($anchor.eq(4), "fifth item").to.contain("Timeline")
           expect($anchor.eq(5), "sixth item").to.contain("Data")
-          expect($anchor.eq(6), "last item").to.contain("Funding")
+          expect($anchor.eq(6), "last item").to.contain("Program Info")
         })
     })
 
     it("navigates to the inpage section", () => {
-      cy.get("[data-cy=funding-section]").find("h2").should("be.visible")
-      cy.get("[data-cy=funding-section]").find("h2").should("not.be.inViewport")
+      cy.get("[data-cy=program-info-section]").find("h2").should("be.visible")
+      cy.get("[data-cy=program-info-section]")
+        .find("h2")
+        .should("not.be.inViewport")
 
       cy.get("main").find("nav").find("a").last().click()
 
-      cy.url().should("include", "#funding")
-      cy.get("[data-cy=funding-section]").find("h2").should("be.inViewport")
+      cy.url().should("include", "#program-info")
+      cy.get("[data-cy=program-info-section]")
+        .find("h2")
+        .should("be.inViewport")
     })
 
     it("all template sections should have the class 'inpage-nav'", () => {
@@ -155,15 +159,15 @@ describe("Campaign", () => {
     })
   })
 
-  describe("the funding section", () => {
+  describe("the program info section", () => {
     it("exists", () => {
-      cy.get("[data-cy=funding-section]").should("exist")
+      cy.get("[data-cy=program-info-section]").should("exist")
     })
 
     it("has a heading", () => {
-      cy.get("[data-cy=funding-section]")
+      cy.get("[data-cy=program-info-section]")
         .find("h2")
-        .should("have.text", "Funding")
+        .should("have.text", "Program Info")
     })
 
     it("displays the logo", () => {
@@ -173,6 +177,15 @@ describe("Campaign", () => {
     it("displays some infos", () => {
       cy.get("[data-cy=info-item]").should($div => {
         expect($div, "8 info items").to.have.length(8)
+      })
+      cy.get("[data-cy=content-label]").should($label => {
+        expect($label, "8 labels").to.have.length(8)
+      })
+      cy.get("[data-cy=content-text]").should($p => {
+        expect($p, "6 text entries").to.have.length(6)
+      })
+      cy.get("[data-cy=external-link]").should($a => {
+        expect($a, "2 links").to.have.length(2)
       })
     })
   })
