@@ -26,7 +26,7 @@ export default function ContentItem({
 
 ContentItem.propTypes = {
   label: PropTypes.string.isRequired,
-  info: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  info: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   type: PropTypes.string,
   dataCy: PropTypes.string.isRequired,
 }
