@@ -5,7 +5,8 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `Sub-orbital catalog`,
-    description: `Sub-orbital catalog`,
+    description: `Explore NASA’s catalog of airborne, field stationary and fixed
+    campaigns.`,
     author: `@developmentseed`,
   },
   plugins: [
