@@ -23,15 +23,15 @@ const FundingSection = ({
         nodes {
           id
           website
-          short_name
-          long_name
+          short_name: shortname
+          long_name: longname
         }
       }
     }
   `)
   const partnerOrg = data.allPartnerOrg.nodes
     .filter(x => partnerOrgIds.includes(x.id))
-    .map(x => x.short_name)
+    .map(x => x.shortname)
     .join(", ")
 
   return (
