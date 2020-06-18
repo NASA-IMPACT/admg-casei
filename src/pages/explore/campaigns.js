@@ -73,18 +73,33 @@ const Campaigns = ({ data, location }) => {
       searchResult ? searchResult.includes(campaign.shortname) : true
     )
 
+  const selector = filterOptions => ({
+    getFilterLabelById: id => {
+      for (let [key, value] of Object.entries(filterOptions)) {
+        const filter = value.options.find(i => i.id === id)
+        if (filter) return `${key}: ${filter.shortname}`
+      }
+    },
+    getFilterOptionsById: id => {
+      return filterOptions[id].options
+    },
+  })
+
+  const { getFilterLabelById, getFilterOptionsById } = selector({
+    focus: allFocusArea,
+    season: allSeason,
+    region: allGeographicalRegion,
+  })
+
   return (
     <Layout>
       <ExploreMenu />
       <Searchbar
         submitSearch={submitSearch}
-        filterOptions={{
-          focus: allFocusArea,
-          season: allSeason,
-          region: allGeographicalRegion,
-        }}
         selectedFilterIds={selectedFilterIds}
         addFilter={addFilter}
+        getFilterLabelById={getFilterLabelById}
+        getFilterOptionsById={getFilterOptionsById}
         removeFilter={removeFilter}
         sortOrder={sortOrder}
         toggleSortOrder={toggleSortOrder}
