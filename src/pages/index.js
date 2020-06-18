@@ -5,17 +5,10 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Image from "../components/image"
-import {
-  AirborneInsitu,
-  GroundInstruments,
-  AirborneRemoteSensors,
-  ExperimentalInstruments,
-  OceanInstruments,
-  FacilityInstruments,
-} from "../components/icons"
 import { FocusAreaGallery } from "../components/home/focus-area-gallery"
 import { RegionCarousel } from "../components/home/region-carousel"
 import { GeophysicsGrid } from "../components/home/geophysics-grid"
+import { InstrumentsGallery } from "../components/home/instruments-gallery"
 import theme from "../utils/theme"
 
 const SectionHeader = ({ tagline, headline }) => (
@@ -28,37 +21,6 @@ const SectionHeader = ({ tagline, headline }) => (
 SectionHeader.propTypes = {
   tagline: PropTypes.string.isRequired,
   headline: PropTypes.string.isRequired,
-}
-
-const Instrument = ({ id, caption }) => {
-  // TODO: This mapping is more or less random
-  // we don't have icons for the existing instrument types.
-  const icons = {
-    "In Situ - Magnetic/Electric": <AirborneInsitu />,
-    "In Situ - Spectrometer/Radiometer": <GroundInstruments />,
-    Remote: <AirborneRemoteSensors />,
-    "Solar/Space": <ExperimentalInstruments />,
-    NID: <OceanInstruments />,
-    "Data Analyses": <FacilityInstruments />,
-  }
-
-  if (!icons[id]) return null
-
-  return (
-    <div
-      className="placeholder"
-      style={{ textAlign: `center` }}
-      data-cy="instrument"
-    >
-      {icons[id]}
-      <div>{caption}</div>
-    </div>
-  )
-}
-
-Instrument.propTypes = {
-  id: PropTypes.string.isRequired,
-  caption: PropTypes.string.isRequired,
 }
 
 const styles = {
@@ -150,21 +112,7 @@ const IndexPage = ({ data }) => {
 
       <section style={styles.section} data-cy="instruments-section">
         <SectionHeader tagline="explore" headline="Instruments" />
-        <div
-          style={{
-            display: `grid`,
-            gridTemplateColumns: `repeat(auto-fill, minmax(min(120px, 100%), 1fr))`,
-            gap: `1rem`,
-          }}
-        >
-          {data.allInstrumentType.nodes.map(instrument => (
-            <Instrument
-              key={instrument.id}
-              id={instrument.shortname}
-              caption={instrument.longname}
-            />
-          ))}
-        </div>
+        <InstrumentsGallery instruments={data.allInstrumentType.nodes} />
       </section>
     </Layout>
   )
