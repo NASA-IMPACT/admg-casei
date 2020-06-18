@@ -35,7 +35,7 @@ const FundingSection = ({
     .join(", ")
 
   return (
-    <SectionBlock sectionTitle="Funding" id="funding" dataCy="funding-section">
+    <SectionBlock sectionTitle="Program Info" id="program-info" dataCy="program-info-section">
       <div
         style={{
           flex: `0.618`,
