@@ -15,6 +15,7 @@ import {
 } from "../components/icons"
 import { FocusAreaGallery } from "../components/home/focus-area-gallery"
 import { RegionCarousel } from "../components/home/region-carousel"
+import { GeophysicsGrid } from "../components/home/geophysics-grid"
 import theme from "../utils/theme"
 
 const SectionHeader = ({ tagline, headline }) => (
@@ -103,30 +104,12 @@ const IndexPage = ({ data }) => {
 
       <section style={styles.section} data-cy="geophysical-concepts-section">
         <SectionHeader
-          tagline="explore campaigns by"
+          tagline="explore instruments by"
           headline="Geophysical Concepts"
         />
-        <div
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            border: `1px solid ${theme.color.base}`,
-          }}
-        >
-          {data.allGeophysicalConcept.nodes.map(concept => (
-            <div
-              key={concept.id}
-              style={{
-                border: `1px solid ${theme.color.base}`,
-                padding: `1rem`,
-                flexGrow: 1,
-                textAlign: `center`,
-              }}
-            >
-              {concept.shortname}
-            </div>
-          ))}
-        </div>
+        <GeophysicsGrid
+          geophysicalConcepts={data.allGeophysicalConcept.nodes}
+        />
       </section>
 
       <section style={styles.section} data-cy="platforms-section">
