@@ -36,7 +36,7 @@ const ProgramInfoSection = ({
 
   return (
     <SectionBlock
-      sectionTitle="Funding"
+      sectionTitle="Program Info"
       id="program-info"
       dataCy="program-info-section"
     >
