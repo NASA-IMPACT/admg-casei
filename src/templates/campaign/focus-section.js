@@ -37,10 +37,11 @@ const FocusSection = ({ focusAreaIds, focusPhenomena, scienceKeywords }) => {
   return (
     <SectionBlock sectionTitle="Focus" id="focus" dataCy="focus-section">
       <ContentGroup
+        dataCy="focus-content"
         contentItems={[
           { label: "Focus Area", info: <FocusArea />, type: "component" },
+          { label: "Geophysical Concept", info: scienceKeywords },
           { label: "Focus Phenomena", info: focusPhenomena },
-          { label: "Science Keywords", info: scienceKeywords },
         ]}
       />
     </SectionBlock>

@@ -47,10 +47,10 @@ exports[`Program Info Section renders logo when present in props 1`] = `
       }
     >
       <div
-        data-cy="info-item"
+        data-cy="program-info-content"
       >
         <label
-          data-cy="content-label"
+          data-cy="program-info-content-label"
           style={
             Object {
               "borderBottom": "1px solid #9E9E9E",
@@ -64,16 +64,16 @@ exports[`Program Info Section renders logo when present in props 1`] = `
           Funding Agency
         </label>
         <p
-          data-cy="content-text"
+          data-cy="program-info-content-text"
         >
           test string
         </p>
       </div>
       <div
-        data-cy="info-item"
+        data-cy="program-info-content"
       >
         <label
-          data-cy="content-label"
+          data-cy="program-info-content-label"
           style={
             Object {
               "borderBottom": "1px solid #9E9E9E",
@@ -87,16 +87,16 @@ exports[`Program Info Section renders logo when present in props 1`] = `
           Funding Program
         </label>
         <p
-          data-cy="content-text"
+          data-cy="program-info-content-text"
         >
           test string
         </p>
       </div>
       <div
-        data-cy="info-item"
+        data-cy="program-info-content"
       >
         <label
-          data-cy="content-label"
+          data-cy="program-info-content-label"
           style={
             Object {
               "borderBottom": "1px solid #9E9E9E",
@@ -110,16 +110,16 @@ exports[`Program Info Section renders logo when present in props 1`] = `
           Funding Program Lead
         </label>
         <p
-          data-cy="content-text"
+          data-cy="program-info-content-text"
         >
           test string
         </p>
       </div>
       <div
-        data-cy="info-item"
+        data-cy="program-info-content"
       >
         <label
-          data-cy="content-label"
+          data-cy="program-info-content-label"
           style={
             Object {
               "borderBottom": "1px solid #9E9E9E",
@@ -133,16 +133,16 @@ exports[`Program Info Section renders logo when present in props 1`] = `
           Lead Investigator
         </label>
         <p
-          data-cy="content-text"
+          data-cy="program-info-content-text"
         >
           test string
         </p>
       </div>
       <div
-        data-cy="info-item"
+        data-cy="program-info-content"
       >
         <label
-          data-cy="content-label"
+          data-cy="program-info-content-label"
           style={
             Object {
               "borderBottom": "1px solid #9E9E9E",
@@ -156,16 +156,16 @@ exports[`Program Info Section renders logo when present in props 1`] = `
           Data Manager / Technical Contact
         </label>
         <p
-          data-cy="content-text"
+          data-cy="program-info-content-text"
         >
           test string
         </p>
       </div>
       <div
-        data-cy="info-item"
+        data-cy="program-info-content"
       >
         <label
-          data-cy="content-label"
+          data-cy="program-info-content-label"
           style={
             Object {
               "borderBottom": "1px solid #9E9E9E",
@@ -179,7 +179,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
           Assigned Archive Repository
         </label>
         <a
-          data-cy="external-link"
+          data-cy="program-info-content-link"
           href="test string"
           rel="noopener noreferrer"
           style={
@@ -193,10 +193,10 @@ exports[`Program Info Section renders logo when present in props 1`] = `
         </a>
       </div>
       <div
-        data-cy="info-item"
+        data-cy="program-info-content"
       >
         <label
-          data-cy="content-label"
+          data-cy="program-info-content-label"
           style={
             Object {
               "borderBottom": "1px solid #9E9E9E",
@@ -210,16 +210,16 @@ exports[`Program Info Section renders logo when present in props 1`] = `
           Partner Organisation
         </label>
         <p
-          data-cy="content-text"
+          data-cy="program-info-content-text"
         >
-          N/A
+          
         </p>
       </div>
       <div
-        data-cy="info-item"
+        data-cy="program-info-content"
       >
         <label
-          data-cy="content-label"
+          data-cy="program-info-content-label"
           style={
             Object {
               "borderBottom": "1px solid #9E9E9E",
@@ -233,7 +233,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
           Tertiary Website
         </label>
         <a
-          data-cy="external-link"
+          data-cy="program-info-content-link"
           href="test string"
           rel="noopener noreferrer"
           style={
@@ -298,10 +298,10 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
       }
     >
       <div
-        data-cy="info-item"
+        data-cy="program-info-content"
       >
         <label
-          data-cy="content-label"
+          data-cy="program-info-content-label"
           style={
             Object {
               "borderBottom": "1px solid #9E9E9E",
@@ -315,16 +315,16 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
           Funding Agency
         </label>
         <p
-          data-cy="content-text"
+          data-cy="program-info-content-text"
         >
           test string
         </p>
       </div>
       <div
-        data-cy="info-item"
+        data-cy="program-info-content"
       >
         <label
-          data-cy="content-label"
+          data-cy="program-info-content-label"
           style={
             Object {
               "borderBottom": "1px solid #9E9E9E",
@@ -338,16 +338,16 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
           Funding Program
         </label>
         <p
-          data-cy="content-text"
+          data-cy="program-info-content-text"
         >
           test string
         </p>
       </div>
       <div
-        data-cy="info-item"
+        data-cy="program-info-content"
       >
         <label
-          data-cy="content-label"
+          data-cy="program-info-content-label"
           style={
             Object {
               "borderBottom": "1px solid #9E9E9E",
@@ -361,16 +361,16 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
           Funding Program Lead
         </label>
         <p
-          data-cy="content-text"
+          data-cy="program-info-content-text"
         >
           test string
         </p>
       </div>
       <div
-        data-cy="info-item"
+        data-cy="program-info-content"
       >
         <label
-          data-cy="content-label"
+          data-cy="program-info-content-label"
           style={
             Object {
               "borderBottom": "1px solid #9E9E9E",
@@ -384,16 +384,16 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
           Lead Investigator
         </label>
         <p
-          data-cy="content-text"
+          data-cy="program-info-content-text"
         >
           test string
         </p>
       </div>
       <div
-        data-cy="info-item"
+        data-cy="program-info-content"
       >
         <label
-          data-cy="content-label"
+          data-cy="program-info-content-label"
           style={
             Object {
               "borderBottom": "1px solid #9E9E9E",
@@ -407,16 +407,16 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
           Data Manager / Technical Contact
         </label>
         <p
-          data-cy="content-text"
+          data-cy="program-info-content-text"
         >
           test string
         </p>
       </div>
       <div
-        data-cy="info-item"
+        data-cy="program-info-content"
       >
         <label
-          data-cy="content-label"
+          data-cy="program-info-content-label"
           style={
             Object {
               "borderBottom": "1px solid #9E9E9E",
@@ -430,7 +430,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
           Assigned Archive Repository
         </label>
         <a
-          data-cy="external-link"
+          data-cy="program-info-content-link"
           href="test string"
           rel="noopener noreferrer"
           style={
@@ -444,10 +444,10 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
         </a>
       </div>
       <div
-        data-cy="info-item"
+        data-cy="program-info-content"
       >
         <label
-          data-cy="content-label"
+          data-cy="program-info-content-label"
           style={
             Object {
               "borderBottom": "1px solid #9E9E9E",
@@ -461,16 +461,16 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
           Partner Organisation
         </label>
         <p
-          data-cy="content-text"
+          data-cy="program-info-content-text"
         >
-          N/A
+          
         </p>
       </div>
       <div
-        data-cy="info-item"
+        data-cy="program-info-content"
       >
         <label
-          data-cy="content-label"
+          data-cy="program-info-content-label"
           style={
             Object {
               "borderBottom": "1px solid #9E9E9E",
@@ -484,7 +484,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
           Tertiary Website
         </label>
         <a
-          data-cy="external-link"
+          data-cy="program-info-content-link"
           href="test string"
           rel="noopener noreferrer"
           style={

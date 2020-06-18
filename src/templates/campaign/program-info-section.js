@@ -56,6 +56,7 @@ const ProgramInfoSection = ({
         />
       </div>
       <ContentGroup
+        dataCy="program-info-content"
         contentItems={[
           { label: "Funding Agency", info: fundingAgency },
           { label: "Funding Program", info: fundingProgram },

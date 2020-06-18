@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 
 import ContentItem from "./content-item"
 
-export default function ContentGroup({ contentItems }) {
+export default function ContentGroup({ contentItems, dataCy }) {
   return (
     <div
       style={{
@@ -20,6 +20,7 @@ export default function ContentGroup({ contentItems }) {
           label={item.label}
           info={item.info}
           type={item.type || "text"}
+          dataCy={dataCy}
         />
       ))}
     </div>
@@ -27,6 +28,7 @@ export default function ContentGroup({ contentItems }) {
 }
 
 ContentGroup.propTypes = {
+  dataCy: PropTypes.string,
   contentItems: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string,

@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 
 import theme from "../../utils/theme"
 
-export default function ContentHeader({ label }) {
+export default function ContentHeader({ label, dataCy }) {
   return (
     <label
       style={{
@@ -13,7 +13,7 @@ export default function ContentHeader({ label }) {
         borderBottom: `1px solid ${theme.color.gray}`,
         display: `block`,
       }}
-      data-cy="content-label"
+      data-cy={`${dataCy}-label`}
     >
       {label}
     </label>
@@ -22,4 +22,5 @@ export default function ContentHeader({ label }) {
 
 ContentHeader.propTypes = {
   label: PropTypes.string.isRequired,
+  dataCy: PropTypes.string.isRequired,
 }

@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Focus Section displays content 1`] = `
+<section
+  className="inpage-nav"
+  data-cy="focus-section"
+  id="focus"
+>
+  <h2>
+    Focus
+  </h2>
+  <div
+    style={
+      Object {
+        "alignItems": "stretch",
+        "backgroundColor": "#303641",
+        "display": "flex",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "display": "grid",
+          "flex": "2.618",
+          "gap": "1.5rem",
+          "gridTemplateColumns": "minmax(0,1fr) minmax(0,1fr) minmax(0,1fr)",
+          "padding": "2rem",
+        }
+      }
+    >
+      <div
+        data-cy="focus-content"
+      >
+        <label
+          data-cy="focus-content-label"
+          style={
+            Object {
+              "borderBottom": "1px solid #9E9E9E",
+              "color": "#9E9E9E",
+              "display": "block",
+              "fontSize": "x-small",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          Focus Area
+        </label>
+        <div
+          style={
+            Object {
+              "alignItems": "center",
+              "display": "flex",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "borderRadius": "2.5rem",
+                "height": "2.5rem",
+                "margin": "0.5rem",
+                "width": "2.5rem",
+              }
+            }
+          />
+        </div>
+      </div>
+      <div
+        data-cy="focus-content"
+      >
+        <label
+          data-cy="focus-content-label"
+          style={
+            Object {
+              "borderBottom": "1px solid #9E9E9E",
+              "color": "#9E9E9E",
+              "display": "block",
+              "fontSize": "x-small",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          Geophysical Concept
+        </label>
+        <p
+          data-cy="focus-content-text"
+        >
+          test string
+        </p>
+      </div>
+      <div
+        data-cy="focus-content"
+      >
+        <label
+          data-cy="focus-content-label"
+          style={
+            Object {
+              "borderBottom": "1px solid #9E9E9E",
+              "color": "#9E9E9E",
+              "display": "block",
+              "fontSize": "x-small",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          Focus Phenomena
+        </label>
+        <p
+          data-cy="focus-content-text"
+        >
+          test string
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+`;
