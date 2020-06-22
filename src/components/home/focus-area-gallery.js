@@ -59,6 +59,7 @@ const FocusArea = ({ id, caption, size }) => {
 FocusArea.propTypes = {
   id: PropTypes.string.isRequired,
   caption: PropTypes.string.isRequired,
+  size: PropTypes.string,
 }
 
 const FocusAreaGallery = ({ focusAreas, size = "large" }) => {
