@@ -14,8 +14,8 @@ beforeEach(() => {
         nodes: [
           {
             id: "a",
-            short_name: "area a",
-            long_name: "area a",
+            shortname: "area a",
+            longname: "area a",
           },
         ],
       },

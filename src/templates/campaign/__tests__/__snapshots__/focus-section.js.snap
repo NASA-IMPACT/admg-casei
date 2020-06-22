@@ -2,7 +2,7 @@
 
 exports[`Focus Section displays content 1`] = `
 <section
-  className="inpage-nav"
+  className="sc-AxjAm jiDcck sc-AxjAm jiDcck"
   data-cy="focus-section"
   id="focus"
 >
@@ -12,97 +12,87 @@ exports[`Focus Section displays content 1`] = `
   <div
     style={
       Object {
-        "alignItems": "stretch",
-        "backgroundColor": "#303641",
-        "display": "flex",
+        "display": "grid",
+        "flex": "2.618",
+        "gap": "1.5rem",
+        "gridTemplateColumns": "minmax(0,1fr) minmax(0,1fr) minmax(0,1fr)",
+        "padding": "2rem",
       }
     }
   >
     <div
-      style={
-        Object {
-          "display": "grid",
-          "flex": "2.618",
-          "gap": "1.5rem",
-          "gridTemplateColumns": "minmax(0,1fr) minmax(0,1fr) minmax(0,1fr)",
-          "padding": "2rem",
-        }
-      }
+      data-cy="focus-content"
     >
-      <div
-        data-cy="focus-content"
+      <label
+        data-cy="focus-content-label"
+        style={
+          Object {
+            "borderBottom": "1px solid #9E9E9E",
+            "color": "#9E9E9E",
+            "display": "block",
+            "fontSize": "small",
+            "textTransform": "uppercase",
+          }
+        }
       >
-        <label
-          data-cy="focus-content-label"
-          style={
-            Object {
-              "borderBottom": "1px solid #9E9E9E",
-              "color": "#9E9E9E",
-              "display": "block",
-              "fontSize": "small",
-              "textTransform": "uppercase",
-            }
-          }
-        >
-          Focus Area
-        </label>
-        <div
-          style={
-            Object {
-              "display": "grid",
-              "gap": "1rem",
-              "gridTemplateColumns": "repeat(auto-fill, minmax(min(120px, 100%), 1fr))",
-              "paddingTop": "1rem",
-            }
-          }
-        />
-      </div>
+        Focus Area
+      </label>
       <div
-        data-cy="focus-content"
-      >
-        <label
-          data-cy="focus-content-label"
-          style={
-            Object {
-              "borderBottom": "1px solid #9E9E9E",
-              "color": "#9E9E9E",
-              "display": "block",
-              "fontSize": "small",
-              "textTransform": "uppercase",
-            }
+        style={
+          Object {
+            "display": "grid",
+            "gap": "1rem",
+            "gridTemplateColumns": "repeat(auto-fill, minmax(min(120px, 100%), 1fr))",
+            "paddingTop": "1rem",
           }
-        >
-          Geophysical Concept
-        </label>
-        <p
-          data-cy="focus-content-text"
-        >
-          test string
-        </p>
-      </div>
-      <div
-        data-cy="focus-content"
-      >
-        <label
-          data-cy="focus-content-label"
-          style={
-            Object {
-              "borderBottom": "1px solid #9E9E9E",
-              "color": "#9E9E9E",
-              "display": "block",
-              "fontSize": "small",
-              "textTransform": "uppercase",
-            }
+        }
+      />
+    </div>
+    <div
+      data-cy="focus-content"
+    >
+      <label
+        data-cy="focus-content-label"
+        style={
+          Object {
+            "borderBottom": "1px solid #9E9E9E",
+            "color": "#9E9E9E",
+            "display": "block",
+            "fontSize": "small",
+            "textTransform": "uppercase",
           }
-        >
-          Focus Phenomena
-        </label>
-        <p
-          data-cy="focus-content-text"
-        >
-          test string
-        </p>
-      </div>
+        }
+      >
+        Geophysical Concept
+      </label>
+      <p
+        data-cy="focus-content-text"
+      >
+        test string
+      </p>
+    </div>
+    <div
+      data-cy="focus-content"
+    >
+      <label
+        data-cy="focus-content-label"
+        style={
+          Object {
+            "borderBottom": "1px solid #9E9E9E",
+            "color": "#9E9E9E",
+            "display": "block",
+            "fontSize": "small",
+            "textTransform": "uppercase",
+          }
+        }
+      >
+        Focus Phenomena
+      </label>
+      <p
+        data-cy="focus-content-text"
+      >
+        test string
+      </p>
     </div>
   </div>
 </section>
