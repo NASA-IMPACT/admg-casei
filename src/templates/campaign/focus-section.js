@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import SectionBlock from "../../components/section/section-block"
 import ContentGroup from "../../components/section/content-group"
-import ContentHeader from "../../components/section/content-header"
+import Label from "../../components/label"
 import ContentItem from "../../components/section/content-item"
 import FocusAreaGallery from "../../components/home/focus-area-gallery"
 
@@ -25,7 +25,9 @@ const FocusSection = ({ focusAreaIds, focusPhenomena, scienceKeywords }) => {
     <SectionBlock sectionTitle="Focus" id="focus" dataCy="focus-section">
       <ContentGroup>
         <div data-cy="focus-content">
-          <ContentHeader label="Focus Area" dataCy="focus-content" />
+          <Label showBorder data-cy="focus-content-label">
+            Focus Area
+          </Label>
           <FocusAreaGallery
             focusAreas={data.allFocusArea.nodes.filter(x =>
               focusAreaIds.includes(x.id)

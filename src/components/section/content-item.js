@@ -1,13 +1,15 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import ContentHeader from "./content-header"
+import Label from "../label"
 import ExternalLink from "../external-link"
 
 export default function ContentItem({ label, info, type = "text", dataCy }) {
   return (
     <div data-cy={dataCy}>
-      <ContentHeader dataCy={dataCy} label={label} />
+      <Label showBorder data-cy={`${dataCy}-label`}>
+        {label}
+      </Label>
       {type === "link" && info ? (
         <ExternalLink dataCy={dataCy} label={info} url={info} />
       ) : (

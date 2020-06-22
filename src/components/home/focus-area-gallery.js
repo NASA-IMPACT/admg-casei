@@ -12,6 +12,7 @@ import {
   WeatherIcon,
 } from "../icons"
 import theme from "../../utils/theme"
+import Label from "../label"
 
 const FocusArea = ({ id, caption }) => {
   // TODO: This mapping is currently done by shortname, as I don't trust
@@ -51,7 +52,7 @@ const FocusArea = ({ id, caption }) => {
       data-cy="focus-area"
     >
       {icons[caption]}
-      <div>{caption}</div>
+      <Label color={theme.type.base.color}>{caption}</Label>
     </Link>
   )
 }
@@ -68,6 +69,7 @@ const FocusAreaGallery = ({ focusAreas }) => {
         display: `grid`,
         gridTemplateColumns: `repeat(auto-fill, minmax(min(120px, 100%), 1fr))`,
         gap: `1rem`,
+        paddingTop: `1rem`,
       }}
     >
       {focusAreas.map(focus => (
