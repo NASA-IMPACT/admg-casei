@@ -56,7 +56,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
               "borderBottom": "1px solid #9E9E9E",
               "color": "#9E9E9E",
               "display": "block",
-              "fontSize": "x-small",
+              "fontSize": "small",
               "textTransform": "uppercase",
             }
           }
@@ -79,7 +79,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
               "borderBottom": "1px solid #9E9E9E",
               "color": "#9E9E9E",
               "display": "block",
-              "fontSize": "x-small",
+              "fontSize": "small",
               "textTransform": "uppercase",
             }
           }
@@ -102,7 +102,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
               "borderBottom": "1px solid #9E9E9E",
               "color": "#9E9E9E",
               "display": "block",
-              "fontSize": "x-small",
+              "fontSize": "small",
               "textTransform": "uppercase",
             }
           }
@@ -125,7 +125,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
               "borderBottom": "1px solid #9E9E9E",
               "color": "#9E9E9E",
               "display": "block",
-              "fontSize": "x-small",
+              "fontSize": "small",
               "textTransform": "uppercase",
             }
           }
@@ -148,7 +148,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
               "borderBottom": "1px solid #9E9E9E",
               "color": "#9E9E9E",
               "display": "block",
-              "fontSize": "x-small",
+              "fontSize": "small",
               "textTransform": "uppercase",
             }
           }
@@ -171,7 +171,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
               "borderBottom": "1px solid #9E9E9E",
               "color": "#9E9E9E",
               "display": "block",
-              "fontSize": "x-small",
+              "fontSize": "small",
               "textTransform": "uppercase",
             }
           }
@@ -202,7 +202,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
               "borderBottom": "1px solid #9E9E9E",
               "color": "#9E9E9E",
               "display": "block",
-              "fontSize": "x-small",
+              "fontSize": "small",
               "textTransform": "uppercase",
             }
           }
@@ -225,7 +225,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
               "borderBottom": "1px solid #9E9E9E",
               "color": "#9E9E9E",
               "display": "block",
-              "fontSize": "x-small",
+              "fontSize": "small",
               "textTransform": "uppercase",
             }
           }
@@ -307,7 +307,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
               "borderBottom": "1px solid #9E9E9E",
               "color": "#9E9E9E",
               "display": "block",
-              "fontSize": "x-small",
+              "fontSize": "small",
               "textTransform": "uppercase",
             }
           }
@@ -330,7 +330,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
               "borderBottom": "1px solid #9E9E9E",
               "color": "#9E9E9E",
               "display": "block",
-              "fontSize": "x-small",
+              "fontSize": "small",
               "textTransform": "uppercase",
             }
           }
@@ -353,7 +353,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
               "borderBottom": "1px solid #9E9E9E",
               "color": "#9E9E9E",
               "display": "block",
-              "fontSize": "x-small",
+              "fontSize": "small",
               "textTransform": "uppercase",
             }
           }
@@ -376,7 +376,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
               "borderBottom": "1px solid #9E9E9E",
               "color": "#9E9E9E",
               "display": "block",
-              "fontSize": "x-small",
+              "fontSize": "small",
               "textTransform": "uppercase",
             }
           }
@@ -399,7 +399,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
               "borderBottom": "1px solid #9E9E9E",
               "color": "#9E9E9E",
               "display": "block",
-              "fontSize": "x-small",
+              "fontSize": "small",
               "textTransform": "uppercase",
             }
           }
@@ -422,7 +422,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
               "borderBottom": "1px solid #9E9E9E",
               "color": "#9E9E9E",
               "display": "block",
-              "fontSize": "x-small",
+              "fontSize": "small",
               "textTransform": "uppercase",
             }
           }
@@ -453,7 +453,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
               "borderBottom": "1px solid #9E9E9E",
               "color": "#9E9E9E",
               "display": "block",
-              "fontSize": "x-small",
+              "fontSize": "small",
               "textTransform": "uppercase",
             }
           }
@@ -476,7 +476,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
               "borderBottom": "1px solid #9E9E9E",
               "color": "#9E9E9E",
               "display": "block",
-              "fontSize": "x-small",
+              "fontSize": "small",
               "textTransform": "uppercase",
             }
           }
