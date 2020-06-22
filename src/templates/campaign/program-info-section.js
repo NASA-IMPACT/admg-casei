@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import SectionBlock from "../../components/section/section-block"
 import ContentItem from "../../components/section/content-item"
+import ContentGroup from "../../components/section/content-group"
 import PlaceholderLogo from "../../images/placeholder-logo.svg"
 
 const ProgramInfoSection = ({
@@ -34,6 +35,17 @@ const ProgramInfoSection = ({
     .map(x => x.shortname)
     .join(", ")
 
+  const contentList = [
+    { label: "Funding Agency", info: fundingAgency },
+    { label: "Funding Program", info: fundingProgram },
+    { label: "Funding Program Lead", info: programLead },
+    { label: "Lead Investigator", info: leadInvestigator },
+    { label: "Data Manager / Technical Contact", info: dataManager },
+    { label: "Assigned Archive Repository", info: archive, type: "link" },
+    { label: "Partner Organisation", info: partnerOrg },
+    { label: "Tertiary Website", info: tertiaryWebsite, type: "link" },
+  ]
+
   return (
     <SectionBlock
       sectionTitle="Program Info"
@@ -56,35 +68,17 @@ const ProgramInfoSection = ({
         />
       </div>
 
-      <div
-        style={{
-          flex: `2.618`,
-          display: `grid`,
-          gap: `1.5rem`,
-          gridTemplateColumns: `minmax(0,1fr) minmax(0,1fr) minmax(0,1fr)`,
-          padding: `2rem`,
-        }}
-      >
-        <ContentItem label="Funding Agency" info={fundingAgency} />
-        <ContentItem label="Funding Program" info={fundingProgram} />
-        <ContentItem label="Funding Program Lead" info={programLead} />
-        <ContentItem label="Lead Investigator" info={leadInvestigator} />
-        <ContentItem
-          label="Data Manager / Technical Contact"
-          info={dataManager}
-        />
-        <ContentItem
-          label="Assigned Archive Repository"
-          info={archive}
-          type="link"
-        />
-        <ContentItem label="Partner Organisation" info={partnerOrg} />
-        <ContentItem
-          label="Tertiary Website"
-          info={tertiaryWebsite}
-          type="link"
-        />
-      </div>
+      <ContentGroup>
+        {contentList.map(item => (
+          <ContentItem
+            key={item.label}
+            dataCy="program-info-content"
+            label={item.label}
+            info={item.info}
+            type={item.type || "text"}
+          />
+        ))}
+      </ContentGroup>
     </SectionBlock>
   )
 }

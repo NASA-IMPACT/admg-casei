@@ -120,6 +120,28 @@ describe("Campaign", () => {
     })
   })
 
+  describe("the focus section", () => {
+    it("exists", () => {
+      cy.get("[data-cy=focus-section]").should("exist")
+    })
+
+    it("has a heading", () => {
+      cy.get("[data-cy=focus-section]").find("h2").should("have.text", "Focus")
+    })
+
+    it("displays some infos", () => {
+      cy.get("[data-cy=focus-content]").should($div => {
+        expect($div, "3 info items").to.have.length(3)
+      })
+      cy.get("[data-cy=focus-content-label]").should($label => {
+        expect($label, "3 labels").to.have.length(3)
+      })
+      cy.get("[data-cy=focus-content-text]").should($p => {
+        expect($p, "2 text entries").to.have.length(2)
+      })
+    })
+  })
+
   describe("the timeline section", () => {
     it("displays a milestone carousel", () => {
       cy.get("[data-cy=milestone-carousel]").find(".slider").should("exist")
@@ -175,17 +197,17 @@ describe("Campaign", () => {
     })
 
     it("displays some infos", () => {
-      cy.get("[data-cy=info-item]").should($div => {
+      cy.get("[data-cy=program-info-content]").should($div => {
         expect($div, "8 info items").to.have.length(8)
       })
-      cy.get("[data-cy=content-label]").should($label => {
+      cy.get("[data-cy=program-info-content-label]").should($label => {
         expect($label, "8 labels").to.have.length(8)
       })
-      cy.get("[data-cy=content-text]").should($p => {
-        expect($p, "6 text entries").to.have.length(6)
+      cy.get("[data-cy=program-info-content-text]").should($p => {
+        expect($p, "6 text entries").to.have.length.within(6, 8)
       })
-      cy.get("[data-cy=external-link]").should($a => {
-        expect($a, "2 links").to.have.length(2)
+      cy.get("[data-cy=program-info-content-link]").should($a => {
+        expect($a, "2 links").to.have.length.of.at.most(2)
       })
     })
   })

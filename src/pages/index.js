@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Image from "../components/image"
 import { Hero } from "../components/home/hero"
-import { FocusAreaGallery } from "../components/home/focus-area-gallery"
+import FocusAreaGallery from "../components/home/focus-area-gallery"
 import { RegionCarousel } from "../components/home/region-carousel"
 import { GeophysicsGrid } from "../components/home/geophysics-grid"
 import { InstrumentsGallery } from "../components/home/instruments-gallery"
@@ -40,7 +40,7 @@ const IndexPage = ({ data }) => {
           tagline="explore nasa earth science"
           headline="Focus Areas"
         />
-        <FocusAreaGallery focusAreas={data.allFocusArea.nodes} />
+        <FocusAreaGallery focusAreas={data.allFocusArea.nodes} size="large" />
       </section>
 
       <section style={styles.section} data-cy="region-type-section">

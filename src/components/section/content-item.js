@@ -1,17 +1,19 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import ContentHeader from "./content-header"
+import Label from "../label"
 import ExternalLink from "../external-link"
 
-export default function ContentItem({ label, info, type = "text" }) {
+export default function ContentItem({ label, info, type = "text", dataCy }) {
   return (
-    <div data-cy="info-item">
-      <ContentHeader label={label} />
+    <div data-cy={dataCy}>
+      <Label dataCy={dataCy} showBorder data-cy={`${dataCy}-label`}>
+        {label}
+      </Label>
       {type === "link" && info ? (
-        <ExternalLink label={info} url={info} />
+        <ExternalLink dataCy={dataCy} label={info} url={info} />
       ) : (
-        <p data-cy="content-text">{info || "N/A"}</p>
+        <p data-cy={`${dataCy}-text`}>{info || "N/A"}</p>
       )}
     </div>
   )
@@ -19,6 +21,7 @@ export default function ContentItem({ label, info, type = "text" }) {
 
 ContentItem.propTypes = {
   label: PropTypes.string.isRequired,
-  info: PropTypes.string.isRequired,
+  info: PropTypes.string,
   type: PropTypes.string,
+  dataCy: PropTypes.string,
 }
