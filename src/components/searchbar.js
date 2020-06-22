@@ -24,21 +24,16 @@ const Searchbar = React.forwardRef(
   (
     {
       submitSearch,
-      filterOptions,
       selectedFilterIds,
       addFilter,
+      getFilterLabelById,
+      getFilterOptionsById,
       removeFilter,
       sortOrder,
       toggleSortOrder,
     },
     ref
   ) => {
-    const getFilterLabelById = id => {
-      for (let [key, value] of Object.entries(filterOptions)) {
-        const filter = value.options.find(i => i.id === id)
-        if (filter) return `${key}: ${filter.shortname}`
-      }
-    }
     return (
       <>
         <form
@@ -47,9 +42,9 @@ const Searchbar = React.forwardRef(
           data-cy="searchbar"
         >
           <FilterMenu
-            filterOptions={filterOptions}
             selectedFilterIds={selectedFilterIds}
             addFilter={addFilter}
+            getFilterOptionsById={getFilterOptionsById}
             removeFilter={removeFilter}
           />
 
@@ -137,34 +132,10 @@ const Searchbar = React.forwardRef(
 
 Searchbar.propTypes = {
   submitSearch: PropTypes.func.isRequired,
-  filterOptions: PropTypes.shape({
-    focus: PropTypes.shape({
-      options: PropTypes.arrayOf(
-        PropTypes.shape({
-          id: PropTypes.string,
-          shortname: PropTypes.string.isRequired,
-        }).isRequired
-      ).isRequired,
-    }),
-    season: PropTypes.shape({
-      options: PropTypes.arrayOf(
-        PropTypes.shape({
-          id: PropTypes.string,
-          shortname: PropTypes.string.isRequired,
-        }).isRequired
-      ).isRequired,
-    }),
-    region: PropTypes.shape({
-      options: PropTypes.arrayOf(
-        PropTypes.shape({
-          id: PropTypes.string,
-          shortname: PropTypes.string.isRequired,
-        }).isRequired
-      ).isRequired,
-    }),
-  }).isRequired,
   selectedFilterIds: PropTypes.arrayOf(PropTypes.string),
   addFilter: PropTypes.func.isRequired,
+  getFilterLabelById: PropTypes.func.isRequired,
+  getFilterOptionsById: PropTypes.func.isRequired,
   removeFilter: PropTypes.func.isRequired,
   sortOrder: PropTypes.string.isRequired,
   toggleSortOrder: PropTypes.func.isRequired,

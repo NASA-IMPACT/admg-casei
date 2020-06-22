@@ -24,9 +24,9 @@ Filter.propTypes = {
 }
 
 const FilterMenu = ({
-  filterOptions,
   selectedFilterIds,
   addFilter,
+  getFilterOptionsById,
   removeFilter,
 }) => {
   const handleSelection = value => {
@@ -56,51 +56,26 @@ const FilterMenu = ({
       <Filter
         id="focus"
         label="Focus Area"
-        options={filterOptions.focus.options}
+        options={getFilterOptionsById("focus")}
       />
       <Filter
         id="season"
         label="Season"
-        options={filterOptions.season.options}
+        options={getFilterOptionsById("season")}
       />
       <Filter
         id="region"
         label="Geographical Region"
-        options={filterOptions.region.options}
+        options={getFilterOptionsById("region")}
       />
     </select>
   )
 }
 
 FilterMenu.propTypes = {
-  filterOptions: PropTypes.shape({
-    focus: PropTypes.shape({
-      options: PropTypes.arrayOf(
-        PropTypes.shape({
-          id: PropTypes.string,
-          shortname: PropTypes.string.isRequired,
-        }).isRequired
-      ).isRequired,
-    }),
-    season: PropTypes.shape({
-      options: PropTypes.arrayOf(
-        PropTypes.shape({
-          id: PropTypes.string,
-          shortname: PropTypes.string.isRequired,
-        }).isRequired
-      ).isRequired,
-    }),
-    region: PropTypes.shape({
-      options: PropTypes.arrayOf(
-        PropTypes.shape({
-          id: PropTypes.string,
-          shortname: PropTypes.string.isRequired,
-        }).isRequired
-      ).isRequired,
-    }),
-  }).isRequired,
   selectedFilterIds: PropTypes.arrayOf(PropTypes.string),
   addFilter: PropTypes.func.isRequired,
+  getFilterOptionsById: PropTypes.func.isRequired,
   removeFilter: PropTypes.func.isRequired,
 }
 
