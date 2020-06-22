@@ -2,7 +2,7 @@
 
 exports[`Program Info Section renders logo when present in props 1`] = `
 <section
-  className="inpage-nav"
+  className="sc-AxjAm jiDcck sc-AxjAm jiDcck"
   data-cy="program-info-section"
   id="program-info"
 >
@@ -253,7 +253,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
 
 exports[`Program Info Section renders placeholder when no logo is available 1`] = `
 <section
-  className="inpage-nav"
+  className="sc-AxjAm jiDcck sc-AxjAm jiDcck"
   data-cy="program-info-section"
   id="program-info"
 >

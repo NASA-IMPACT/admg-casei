@@ -5,6 +5,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import SectionBlock from "../../components/section/section-block"
 import ContentItem from "../../components/section/content-item"
 import PlaceholderLogo from "../../images/placeholder-logo.svg"
+import theme from "../../utils/theme"
 
 const ProgramInfoSection = ({
   logo,
@@ -35,55 +36,59 @@ const ProgramInfoSection = ({
     .join(", ")
 
   return (
-    <SectionBlock
-      sectionTitle="Program Info"
-      id="program-info"
-      dataCy="program-info-section"
-    >
+    <SectionBlock headline="Program Info" id="program-info">
       <div
         style={{
-          flex: `0.618`,
           display: `flex`,
-          justifyContent: `center`,
-          alignItems: `center`,
-          padding: `1rem`,
+          alignItems: `stretch`,
+          backgroundColor: theme.color.secondary,
         }}
       >
-        <img
-          src={logo || PlaceholderLogo}
-          alt="campaign-logo"
-          data-cy="campaign-logo"
-        />
-      </div>
+        <div
+          style={{
+            flex: `0.618`,
+            display: `flex`,
+            justifyContent: `center`,
+            alignItems: `center`,
+            padding: `1rem`,
+          }}
+        >
+          <img
+            src={logo || PlaceholderLogo}
+            alt="campaign-logo"
+            data-cy="campaign-logo"
+          />
+        </div>
 
-      <div
-        style={{
-          flex: `2.618`,
-          display: `grid`,
-          gap: `1.5rem`,
-          gridTemplateColumns: `minmax(0,1fr) minmax(0,1fr) minmax(0,1fr)`,
-          padding: `2rem`,
-        }}
-      >
-        <ContentItem label="Funding Agency" info={fundingAgency} />
-        <ContentItem label="Funding Program" info={fundingProgram} />
-        <ContentItem label="Funding Program Lead" info={programLead} />
-        <ContentItem label="Lead Investigator" info={leadInvestigator} />
-        <ContentItem
-          label="Data Manager / Technical Contact"
-          info={dataManager}
-        />
-        <ContentItem
-          label="Assigned Archive Repository"
-          info={archive}
-          type="link"
-        />
-        <ContentItem label="Partner Organisation" info={partnerOrg} />
-        <ContentItem
-          label="Tertiary Website"
-          info={tertiaryWebsite}
-          type="link"
-        />
+        <div
+          style={{
+            flex: `2.618`,
+            display: `grid`,
+            gap: `1.5rem`,
+            gridTemplateColumns: `minmax(0,1fr) minmax(0,1fr) minmax(0,1fr)`,
+            padding: `2rem`,
+          }}
+        >
+          <ContentItem label="Funding Agency" info={fundingAgency} />
+          <ContentItem label="Funding Program" info={fundingProgram} />
+          <ContentItem label="Funding Program Lead" info={programLead} />
+          <ContentItem label="Lead Investigator" info={leadInvestigator} />
+          <ContentItem
+            label="Data Manager / Technical Contact"
+            info={dataManager}
+          />
+          <ContentItem
+            label="Assigned Archive Repository"
+            info={archive}
+            type="link"
+          />
+          <ContentItem label="Partner Organisation" info={partnerOrg} />
+          <ContentItem
+            label="Tertiary Website"
+            info={tertiaryWebsite}
+            type="link"
+          />
+        </div>
       </div>
     </SectionBlock>
   )

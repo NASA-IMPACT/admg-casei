@@ -31,6 +31,7 @@ const baseStyles = css`
     );
   }
 
+  // TODO: remove once all inpage-nav sections use the styled component Section
   section.inpage-nav {
     position: relative;
     border-top: 55px solid transparent;

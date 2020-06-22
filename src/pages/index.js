@@ -4,29 +4,13 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Image from "../components/image"
+import SectionBlock, { SectionImage } from "../components/section/section-block"
 import { Hero } from "../components/home/hero"
 import { FocusAreaGallery } from "../components/home/focus-area-gallery"
 import { RegionCarousel } from "../components/home/region-carousel"
 import { GeophysicsGrid } from "../components/home/geophysics-grid"
 import { InstrumentsGallery } from "../components/home/instruments-gallery"
 import theme from "../utils/theme"
-
-const SectionHeader = ({ tagline, headline }) => (
-  <div>
-    <div style={{ textTransform: `uppercase` }}>{tagline}</div>
-    <h2>{headline}</h2>
-  </div>
-)
-
-SectionHeader.propTypes = {
-  tagline: PropTypes.string.isRequired,
-  headline: PropTypes.string.isRequired,
-}
-
-const styles = {
-  section: { marginTop: `8rem` },
-}
 
 const IndexPage = ({ data }) => {
   return (
@@ -35,69 +19,67 @@ const IndexPage = ({ data }) => {
 
       <Hero siteMetadata={data.site.siteMetadata} />
 
-      <section style={styles.section} data-cy="focus-area-section">
-        <SectionHeader
-          tagline="explore nasa earth science"
-          headline="Focus Areas"
-        />
+      <SectionBlock
+        tagline="explore nasa earth science"
+        headline="Focus Areas"
+        id="focus-area"
+      >
         <FocusAreaGallery focusAreas={data.allFocusArea.nodes} />
-      </section>
+      </SectionBlock>
 
-      <section style={styles.section} data-cy="region-type-section">
-        <SectionHeader tagline="explore campaigns by" headline="Region Type" />
+      <SectionBlock
+        tagline="explore campaigns by"
+        headline="Region Type"
+        id="region-type"
+      >
         <RegionCarousel regions={data.allGeographicalRegion.nodes} />
-      </section>
+      </SectionBlock>
 
-      <section style={styles.section} data-cy="geophysical-concepts-section">
-        <SectionHeader
-          tagline="explore instruments by"
-          headline="Geophysical Concepts"
-        />
+      <SectionBlock
+        tagline="explore instruments by"
+        headline="Geophysical Concepts"
+        id="geophysical-concepts"
+      >
         <GeophysicsGrid
           geophysicalConcepts={data.allGeophysicalConcept.nodes}
         />
-      </section>
+      </SectionBlock>
 
-      <section style={styles.section} data-cy="platforms-section">
-        <div
-          style={{
-            display: `grid`,
-            gridTemplateColumns: `1fr 1fr`,
-            columnGap: `5rem`,
-          }}
-        >
-          <div style={{ gridArea: `1 / 1 / 4 / 2` }}>
-            <Image filename="platform.png" alt="aircraft flying over ground" />
-          </div>
-          <div style={{ alignSelf: `end` }}>
-            <SectionHeader tagline="explore" headline="Platforms" />
-          </div>
-          <div>
-            <p>
-              From aircrafts to balloons, from sensors to plaftorms, it takes a
-              lot to understand earth.
-            </p>
-          </div>
-          <div>
-            <button
-              style={{
-                padding: `1rem 5rem`,
-                textTransform: `uppercase`,
-                color: theme.color.base,
-                background: `transparent`,
-                border: `1px solid ${theme.color.base}`,
-              }}
-            >
-              Explore
-            </button>
-          </div>
+      <SectionBlock
+        tagline="explore"
+        headline="Platforms"
+        id="platforms"
+        withImage={true}
+      >
+        <SectionImage
+          filename="platform.png"
+          alt="aircraft flying over ground"
+        />
+
+        <div>
+          <p>
+            From aircrafts to balloons, from sensors to plaftorms, it takes a
+            lot to understand earth.
+          </p>
         </div>
-      </section>
+        <div>
+          <button
+            style={{
+              padding: `1rem 5rem`,
+              textTransform: `uppercase`,
+              color: theme.color.base,
+              background: `transparent`,
+              border: `1px solid ${theme.color.base}`,
+            }}
+          >
+            Explore
+          </button>
+        </div>
+      </SectionBlock>
 
-      <section style={styles.section} data-cy="instruments-section">
-        <SectionHeader tagline="explore" headline="Instruments" />
+      <SectionBlock tagline="explore" headline="Instruments" id="instruments">
         <InstrumentsGallery instruments={data.allInstrumentType.nodes} />
-      </section>
+      </SectionBlock>
     </Layout>
   )
 }

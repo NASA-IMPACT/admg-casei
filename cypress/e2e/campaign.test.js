@@ -73,14 +73,6 @@ describe("Campaign", () => {
         .find("h2")
         .should("be.inViewport")
     })
-
-    it("all template sections should have the class 'inpage-nav'", () => {
-      cy.get("main")
-        .find("section")
-        .each($section => {
-          expect($section).to.have.class("inpage-nav")
-        })
-    })
   })
 
   describe("the overview section", () => {
