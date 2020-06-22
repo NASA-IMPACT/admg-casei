@@ -10,6 +10,7 @@ import TimelineSection from "./timeline-section"
 import PlatformSection from "./platform-section"
 import ProgramInfoSection from "./program-info-section"
 import FocusSection from "./focus-section"
+import SectionBlock from "../../components/section/section-block"
 
 const CampaignTemplate = ({ data: { campaign, deployments, platforms } }) => {
   return (
@@ -38,9 +39,7 @@ const CampaignTemplate = ({ data: { campaign, deployments, platforms } }) => {
       />
       <PlatformSection platforms={platforms} />
       <TimelineSection deployments={deployments} />
-      <section className="inpage-nav" id="data" data-cy="data-section">
-        <h2>Data</h2>
-      </section>
+      <SectionBlock headline="Data" id="data" />
       <ProgramInfoSection
         logo={campaign.logo}
         fundingAgency={campaign.fundingAgency}
