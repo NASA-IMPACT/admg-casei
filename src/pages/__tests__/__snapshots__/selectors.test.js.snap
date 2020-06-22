@@ -1,0 +1,2023 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Campaigns page renders correctly 1`] = `
+<div
+  style={
+    Object {
+      "display": "flex",
+      "flexDirection": "column",
+      "minHeight": "100vh",
+    }
+  }
+>
+  <header
+    style={
+      Object {
+        "marginBottom": "1.45rem",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "justifyContent": "space-between",
+          "margin": "0 auto",
+          "maxWidth": 960,
+          "padding": "1.45rem 1.0875rem",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "fontFamily": "'Varela Round',sans-serif",
+            "fontSize": "1.5rem",
+            "lineHeight": "1.5rem",
+            "margin": 0,
+          }
+        }
+      >
+        <a
+          href="/"
+          style={
+            Object {
+              "columnGap": "0.25rem",
+              "display": "grid",
+              "gridTemplateColumns": "3rem auto",
+              "gridTemplateRows": "1.5rem 1.5rem",
+              "textDecoration": "none",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "gridArea": "1 / 1 / 3 / 2",
+              }
+            }
+          >
+            <div
+              className=" gatsby-image-wrapper"
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "position": "relative",
+                }
+              }
+            >
+              <div
+                aria-hidden={true}
+                style={
+                  Object {
+                    "paddingBottom": "100%",
+                    "width": "100%",
+                  }
+                }
+              />
+              <img
+                alt=""
+                aria-hidden={true}
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsSAAALEgHS3X78AAACjElEQVQ4y2WVWW/MURjGZ7TWTi0htmmj2thFXbQuVAixlbQkgxJBkdAQtdXWZSpVVUtpIqSJihAJiStbQiTc+AJ8BnHjO8z4PfKc5Pj3n/zmPetz3nPe95xJFYvFlNCHHZfyR7kcGqG9UChcx96AC7AHFoZx9KVT8ZcUw6bhFNyHQ0xYDhWU58EqaIE+yEO155QGnaTYXHgITa4vgp0wHapiR1hkDW3dY5yLxGbCa3jD4JzbOuALXIU/cNweLolENsIxmBErlyIyDDWua7sdLkvkNGShC34z7hZ2Asgehss6plhQjbsS7reFLSFwVsEJ23KQvsFW9w9SXh0mToSPOj86SizeBEe0cmKBc7CUcUPYKbAMXipw2B3/FuBnPQ0jWK064PPYbGrpO6BFLTpI/QUoqrvhO9S7rxY6VWhXxY2KaDaKpDz94b4W6vIwi32AzckjeAbzPaZPk/qdLoreXXgLSolp8t4Dj3q7Tc7BUWUHKD9/wQaPy+vnJsyGtY7aU90ElzXxiXdxBc5oLE7sx553pEeoZ2LBizSscEMNjI+S+r0T/XHkbT2shGvMW+yA9rivP+XVtrhTHjR7a1WwHT7APW1RWRBFXZHtVtLTrmhP1fEFr3o9qNfp0uPcqsC2+RjKUonPZ/sVFsAmZUjo0HlVwza4BCctHrZZbtugI9KjAZMduNswi4XvYOcEQQXhkcvh8FuhLvJGWTDkre6DYXjl43inCxEGlkQ5OODyXiUxrHO9TGKJ16bBu/ikbPjvPY1Ec/ZC13ESVEaPbWf0MmUQVDrpQTmRfFuTonXKLR94paMr8eeOfAY+w0/aW6P56TGqQdRbanRadFEeBeVkHqv7flBBCULhb0BafwG7wPZR6IGaZQAAAABJRU5ErkJggg=="
+                style={
+                  Object {
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": "cover",
+                    "objectPosition": "center",
+                    "opacity": 1,
+                    "position": "absolute",
+                    "top": 0,
+                    "transitionDelay": "500ms",
+                    "width": "100%",
+                  }
+                }
+              />
+              <img
+                alt=""
+                aria-hidden={true}
+                src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='400'%20height='400'%20viewBox='0%200%20400%20400'%20preserveAspectRatio='none'%3e%3cpath%20d='M174%201l-2%202%2029%201%2029-1-2-2c1-1-8-1-27-1s-28%200-27%201m-14%2012c-1%202%201%203%2011%203%208%200%2011-1%2012-2%203-2%200-3-12-3-8%200-10%200-11%202m52-1c-5%202%201%203%2013%204%2012%200%2015-1%2014-3s-23-3-27-1m-60%20105v13l3-2c3-4%203-17%200-22l-2-3-1%2014m-71%2017l1%203c2%201%2036%202%2051%201l1-2c0-2-1-2-4-2H81m-15%2013H55c-8%200-10%201-10%202%200%202%201%202%2014%202l14-1c0-2-6-5-7-3m-54%2014v27c2%208%205-14%204-24-1-4-3-5-4-3m373%202c-1%204%201%2020%202%2022%202%202%203-3%203-15%200-8-1-10-2-10l-3%203M3%20172l-2%202c-1-1-1%207-1%2027%200%2018%200%2027%201%2026l2%202%201-28a842%20842%200%2000-1-29m394%2028c0%2027%200%2031%202%2028s2-52%200-55-2%201-2%2027M89%20179H73c-14%200-15%200-15%202%200%203%201%203%205%202h20c4-1%206-2%207-1%202%201%204%200%204-2s-4-3-5-1m298%2035l-1%2014c0%2012%200%2014%202%2013s2-3%202-13c0-14-1-17-3-14m-375%204c-2%205-1%2022%201%2023s3-2%203-12c0-7-1-10-2-12-2-1-2-1-2%201m48%201l7%201h18c3%201%204%201%207-1l2-2H76c-17%200-17%200-16%202m101%20167l-1%202c1%203%2033%203%2035%200%201-1%200-1-2-1-6-2-30-2-32-1m56%200c-2%201-3%202-2%203%203%202%2025%201%2026-1v-2h-24m-44%2013c3%202%2052%202%2055%200s-1-2-28-2c-26%200-30%200-27%202'%20fill='%23d3d3d3'%20fill-rule='evenodd'/%3e%3c/svg%3e"
+                style={
+                  Object {
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": "cover",
+                    "objectPosition": "center",
+                    "opacity": 1,
+                    "position": "absolute",
+                    "top": 0,
+                    "transitionDelay": "500ms",
+                    "width": "100%",
+                  }
+                }
+              />
+              <picture>
+                <source
+                  sizes="(max-width: 62px) 100vw, 62px"
+                  srcSet="/static/c98d88bae1ac1d803f877ce6657b89ab/766b3/logo.webp 62w"
+                  type="image/webp"
+                />
+                <source
+                  sizes="(max-width: 62px) 100vw, 62px"
+                  srcSet="/static/c98d88bae1ac1d803f877ce6657b89ab/73f23/logo.png 62w"
+                />
+                <img
+                  alt="Sub-orbital catalog logo"
+                  loading="lazy"
+                  onLoad={[Function]}
+                  sizes="(max-width: 62px) 100vw, 62px"
+                  src="/static/c98d88bae1ac1d803f877ce6657b89ab/73f23/logo.png"
+                  srcSet="/static/c98d88bae1ac1d803f877ce6657b89ab/73f23/logo.png 62w"
+                  style={
+                    Object {
+                      "height": "100%",
+                      "left": 0,
+                      "objectFit": "cover",
+                      "objectPosition": "center",
+                      "opacity": 0,
+                      "position": "absolute",
+                      "top": 0,
+                      "transition": "opacity 500ms",
+                      "width": "100%",
+                    }
+                  }
+                />
+              </picture>
+              <noscript
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "<picture><source type='image/webp' srcset=\\"/static/c98d88bae1ac1d803f877ce6657b89ab/766b3/logo.webp 62w\\" sizes=\\"(max-width: 62px) 100vw, 62px\\" /><source srcset=\\"/static/c98d88bae1ac1d803f877ce6657b89ab/73f23/logo.png 62w\\" sizes=\\"(max-width: 62px) 100vw, 62px\\" /><img loading=\\"lazy\\" sizes=\\"(max-width: 62px) 100vw, 62px\\" srcset=\\"/static/c98d88bae1ac1d803f877ce6657b89ab/73f23/logo.png 62w\\" src=\\"/static/c98d88bae1ac1d803f877ce6657b89ab/73f23/logo.png\\" alt=\\"Sub-orbital catalog logo\\" style=\\"position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\\"/></picture>",
+                  }
+                }
+              />
+            </div>
+          </div>
+          NASA
+          <b>
+            Sub-orbital catalog
+          </b>
+        </a>
+      </div>
+      <nav>
+        <ul
+          style={
+            Object {
+              "display": "flex",
+              "flexDirection": "row",
+              "justifyContent": "flex-end",
+              "listStyle": "none",
+              "margin": 0,
+            }
+          }
+        >
+          <li
+            style={
+              Object {
+                "margin": "0 1rem 0 0",
+              }
+            }
+          >
+            <a
+              href="/explore/campaigns"
+            >
+              Explore
+            </a>
+          </li>
+          <li
+            style={
+              Object {
+                "margin": "0 1rem 0 0",
+              }
+            }
+          >
+            <a
+              href="/resources"
+            >
+              Resources
+            </a>
+          </li>
+          <li
+            style={
+              Object {
+                "margin": "0 1rem 0 0",
+              }
+            }
+          >
+            <a
+              href="/about"
+            >
+              About
+            </a>
+          </li>
+          <li
+            style={
+              Object {
+                "margin": "0 1rem 0 0",
+              }
+            }
+          >
+            <a
+              href="/contact"
+            >
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main
+    style={
+      Object {
+        "flexGrow": 1,
+        "margin": "0 auto",
+        "maxWidth": 960,
+        "padding": "0 1.0875rem 1.45rem",
+        "width": "100%",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "justifyContent": "space-around",
+          "marginBottom": "2rem",
+        }
+      }
+    >
+      <ul
+        data-cy="tabbar"
+        style={
+          Object {
+            "alignItems": "center",
+            "display": "flex",
+            "flexDirection": "row",
+            "listStyle": "none",
+            "margin": 0,
+          }
+        }
+      >
+        <li
+          style={
+            Object {
+              "margin": "0 1rem 0 0",
+            }
+          }
+        >
+          <a
+            href="/explore/campaigns"
+          >
+            Campaigns
+          </a>
+        </li>
+        <li
+          style={
+            Object {
+              "margin": "0 1rem 0 0",
+            }
+          }
+        >
+          <a
+            href="/explore/platforms"
+          >
+            Platforms
+          </a>
+        </li>
+        <li
+          style={
+            Object {
+              "margin": "0 1rem 0 0",
+            }
+          }
+        >
+          <a
+            href="/explore/instruments"
+          >
+            Instruments
+          </a>
+        </li>
+      </ul>
+    </div>
+    <form
+      data-cy="searchbar"
+      onSubmit={[Function]}
+      style={
+        Object {
+          "display": "flex",
+          "margin": "2rem 0",
+        }
+      }
+    >
+      <select
+        aria-label="Select filters"
+        data-cy="filter-select"
+        id="filter-select"
+        name="filter"
+        onChange={[Function]}
+        style={
+          Object {
+            "WebkitAppearance": "none",
+            "background": "transparent",
+            "border": "1px solid hsla(0,0%,100%,0.9)",
+            "borderRadius": "0.2rem 0 0 0.2rem",
+            "color": "hsla(0,0%,100%,0.9)",
+            "flexGrow": 0,
+            "height": "2.5rem",
+            "maxWidth": "5rem",
+            "padding": "0.5rem",
+          }
+        }
+      >
+        <option
+          value=""
+        >
+          Filter
+        </option>
+        <optgroup
+          label="Focus Area"
+        >
+          <option
+            value="23aedeee-2f83-4ca9-be30-5fda9a311421"
+          >
+            Atmospheric Composition
+          </option>
+          <option
+            value="4c5e9dc3-38ed-40cb-b6ea-cacf96057b53"
+          >
+            Weather
+          </option>
+          <option
+            value="2a132687-f5a1-4bbc-b45a-97228c310cd8"
+          >
+            Climate Variability & Change
+          </option>
+          <option
+            value="a187959e-4132-4c2c-950d-7055bc5082b9"
+          >
+            Global Water & Energy Cycle
+          </option>
+          <option
+            value="75fdf3c3-f55b-4f33-9f56-7d7af49bef97"
+          >
+            Carbon Cycle & Ecosystems
+          </option>
+          <option
+            value="4e90e316-6d36-41b9-ae29-5125842b7b60"
+          >
+            Earth Surface & Interior
+          </option>
+          <option
+            value="e1b07238-763d-4836-a290-fba2eab0b1b8"
+          >
+            NID
+          </option>
+        </optgroup>
+        <optgroup
+          label="Season"
+        >
+          <option
+            value="5ae15f8c-3d9a-4061-953d-5fea2df57654"
+          >
+            boreal winter
+          </option>
+          <option
+            value="416a1c43-85b6-4336-80ac-6ccda1226e54"
+          >
+            boreal spring
+          </option>
+          <option
+            value="65900eb8-fb52-4da9-98e9-190cbf1d1cbe"
+          >
+            boreal summer
+          </option>
+          <option
+            value="4ebcfcd2-1c9c-45b0-bad6-997fc3e3c904"
+          >
+            boreal fall
+          </option>
+          <option
+            value="f5b65f38-162a-473b-869b-0094799b202e"
+          >
+            austral winter
+          </option>
+          <option
+            value="5462d618-6f14-43d1-a9c7-19e7fef9a84b"
+          >
+            austral spring
+          </option>
+          <option
+            value="a27c0f4a-1bab-4f64-a666-0f08ba3c874a"
+          >
+            austral summer
+          </option>
+          <option
+            value="108eb86b-1139-4ae6-859c-bfaaf0acc709"
+          >
+            austral fall
+          </option>
+          <option
+            value="cad0fb1f-bdfa-48af-a17d-9a87f1ecfa49"
+          >
+            monsoon
+          </option>
+          <option
+            value="12b3f425-fbb9-4dcd-9c3a-84fda116e8c5"
+          >
+            break
+          </option>
+          <option
+            value="c29c7993-71a9-423e-bbaf-2646585669b1"
+          >
+            dry
+          </option>
+          <option
+            value="081ccd03-e46f-459e-8101-b270d0266eac"
+          >
+            wet
+          </option>
+          <option
+            value="52b49cd7-4143-4bbd-9f09-bd8de945c837"
+          >
+            warm
+          </option>
+          <option
+            value="d4b539c1-32d3-4089-9e08-db714704a13c"
+          >
+            cold
+          </option>
+          <option
+            value="824e5caa-dc94-4927-aba5-b8e8d8d6273d"
+          >
+            equatorial
+          </option>
+          <option
+            value="80c1e584-8bf7-4cae-b9c1-e7f98d19a7a0"
+          >
+            year round
+          </option>
+          <option
+            value="d3c6d320-e3cf-42e0-b729-b4477da17422"
+          >
+            NID
+          </option>
+        </optgroup>
+        <optgroup
+          label="Geographical Region"
+        >
+          <option
+            value="a9b86ec6-cb57-4ef5-9a13-c5a767195782"
+          >
+            continental
+          </option>
+          <option
+            value="6ad9e3d8-81c0-4c7c-9db8-888988ab677e"
+          >
+            maritime
+          </option>
+          <option
+            value="292950c5-e5df-4cea-9778-b0dc6c011294"
+          >
+            coastal
+          </option>
+          <option
+            value="fd9fb6ee-121e-4a44-8155-d478500599d9"
+          >
+            mountains
+          </option>
+          <option
+            value="12463bc6-32a8-45bd-bdad-d7bd7db6c51c"
+          >
+            island
+          </option>
+          <option
+            value="2567b1ed-8753-433f-b475-9bb3ef5c1bb3"
+          >
+            desert
+          </option>
+          <option
+            value="674d3da5-6bef-439f-838a-eaf79d733e42"
+          >
+            forest
+          </option>
+          <option
+            value="9ff66c70-f482-40e8-9a5e-ec45306760e0"
+          >
+            urban
+          </option>
+          <option
+            value="a95c9bd6-395a-409c-8875-586dbc0601f7"
+          >
+            agriculture
+          </option>
+          <option
+            value="5624a0f2-7b7b-4f4c-a8fd-898e9751e0e1"
+          >
+            equitorial
+          </option>
+          <option
+            value="cb25d6eb-a988-4e21-ac05-4912017415b5"
+          >
+            tropical
+          </option>
+          <option
+            value="731da6a3-04b9-4ca1-826a-388820f6fe90"
+          >
+            mid-latitude
+          </option>
+          <option
+            value="9df5be07-f7e3-4ce4-94fe-c813ad371a71"
+          >
+            polar
+          </option>
+          <option
+            value="26d0e469-de46-4f66-8722-b270e2602b70"
+          >
+            sea ice
+          </option>
+          <option
+            value="67519804-37a2-403a-8ee0-6db25d17a731"
+          >
+            coral
+          </option>
+          <option
+            value="2616378d-bf8c-41a7-b1f3-2c65dd77e759"
+          >
+            rainforest
+          </option>
+          <option
+            value="6ef85571-d903-458b-980a-273bbace62bc"
+          >
+            NID
+          </option>
+        </optgroup>
+      </select>
+      <div
+        style={
+          Object {
+            "border": "1px solid hsla(0,0%,100%,0.9)",
+            "borderLeft": 0,
+            "borderRadius": "0",
+            "borderRight": 0,
+            "display": "flex",
+            "flexGrow": 1,
+            "padding": "0.25rem",
+          }
+        }
+      >
+        <input
+          aria-label="Enter search text"
+          autoComplete="off"
+          name="search"
+          placeholder="Enter text..."
+          style={
+            Object {
+              "background": "transparent",
+              "border": "none",
+              "color": "hsla(0,0%,100%,0.9)",
+              "flexGrow": 1,
+            }
+          }
+          type="text"
+        />
+        <button
+          data-cy="submit"
+          style={
+            Object {
+              "background": "transparent",
+              "border": "none",
+              "color": "hsla(0,0%,100%,0.9)",
+              "flexGrow": 0,
+              "verticalAlign": "middle",
+            }
+          }
+          type="submit"
+        >
+          <span
+            aria-label="Magnifying glass icon"
+            role="img"
+          >
+            <svg
+              height="16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                fill="none"
+                height="16"
+                width="16"
+              />
+              <path
+                d="M15.708,13.587l-3.675-3.675C12.646,8.92,13,7.751,13,6.5C13,2.91,10.09,0,6.5,0S0,2.91,0,6.5S2.91,13,6.5,13 c1.251,0,2.42-0.354,3.412-0.967l3.675,3.675c0.389,0.389,1.025,0.389,1.414,0l0.707-0.707 C16.097,14.612,16.097,13.976,15.708,13.587z M3.318,9.682C2.468,8.832,2,7.702,2,6.5s0.468-2.332,1.318-3.182S5.298,2,6.5,2 s2.332,0.468,3.182,1.318C10.532,4.168,11,5.298,11,6.5s-0.468,2.332-1.318,3.182C8.832,10.532,7.702,11,6.5,11 S4.168,10.532,3.318,9.682z"
+                fill="hsla(0,0%,100%,0.9)"
+              />
+            </svg>
+          </span>
+        </button>
+      </div>
+      <select
+        aria-label="Select sort order"
+        data-cy="sort-select"
+        defaultValue="asc"
+        id="sort-select"
+        name="sort"
+        onChange={[Function]}
+        style={
+          Object {
+            "WebkitAppearance": "none",
+            "background": "transparent",
+            "border": "1px solid hsla(0,0%,100%,0.9)",
+            "borderRadius": "0 0.2rem 0.2rem 0",
+            "color": "hsla(0,0%,100%,0.9)",
+            "height": "2.5rem",
+            "padding": "0.5rem",
+          }
+        }
+      >
+        <option
+          value="asc"
+        >
+          A to Z
+        </option>
+        <option
+          value="desc"
+        >
+          Z to A
+        </option>
+      </select>
+    </form>
+    <section>
+      <div
+        style={
+          Object {
+            "display": "flex",
+          }
+        }
+      >
+        <h1
+          data-cy="item-count"
+          style={
+            Object {
+              "fontSize": "small",
+              "whiteSpace": "nowrap",
+            }
+          }
+        >
+          Showing
+           
+          10
+           
+          campaigns
+        </h1>
+      </div>
+      <div
+        style={
+          Object {
+            "display": "grid",
+            "gap": "1rem",
+            "gridTemplateColumns": "repeat(auto-fill, minmax(270px, 1fr))",
+          }
+        }
+      >
+        <a
+          href="/campaign/d1a09bda-9454-4f66-be12-dafc5f4df308"
+        >
+          <div
+            data-cy="explore-card"
+            style={
+              Object {
+                "backgroundColor": "#303641",
+                "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
+                "display": "flex",
+                "flexDirection": "column",
+                "height": "100%",
+                "justifyContent": "space-between",
+                "padding": "1rem",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "marginBottom": "2rem",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "display": "flex",
+                    "justifyContent": "space-between",
+                    "margin": "0.5rem 0 2rem 0",
+                  }
+                }
+              >
+                <div
+                  className="placeholder"
+                  style={
+                    Object {
+                      "backgroundColor": "#9E9E9E",
+                      "borderRadius": "2.5rem",
+                      "height": "2.5rem",
+                      "width": "2.5rem",
+                    }
+                  }
+                />
+              </div>
+              <big
+                data-cy="shortname"
+                style={
+                  Object {
+                    "fontWeight": "bold",
+                    "marginTop": "0.5rem",
+                  }
+                }
+              >
+                ACES
+              </big>
+              <p
+                data-cy="longname"
+              >
+                Altus Cumulus Electrification Study
+              </p>
+              <div>
+                <small
+                  data-cy="daterange"
+                >
+                  2002—2002
+                </small>
+              </div>
+              <div>
+                <small
+                  data-cy="region"
+                >
+                  Florida Everglades
+                </small>
+              </div>
+            </div>
+            <div>
+              <small
+                data-cy="count1"
+              >
+                <strong>
+                  0
+                </strong>
+                 Collection Periods
+              </small>
+               
+              ·
+               
+              <small
+                data-cy="count2"
+              >
+                <strong>
+                  0
+                </strong>
+                 Data Products
+              </small>
+            </div>
+          </div>
+        </a>
+        <a
+          href="/campaign/34a697c1-4464-4b06-9d73-a9be86c586cc"
+        >
+          <div
+            data-cy="explore-card"
+            style={
+              Object {
+                "backgroundColor": "#303641",
+                "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
+                "display": "flex",
+                "flexDirection": "column",
+                "height": "100%",
+                "justifyContent": "space-between",
+                "padding": "1rem",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "marginBottom": "2rem",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "display": "flex",
+                    "justifyContent": "space-between",
+                    "margin": "0.5rem 0 2rem 0",
+                  }
+                }
+              >
+                <div
+                  className="placeholder"
+                  style={
+                    Object {
+                      "backgroundColor": "#9E9E9E",
+                      "borderRadius": "2.5rem",
+                      "height": "2.5rem",
+                      "width": "2.5rem",
+                    }
+                  }
+                />
+              </div>
+              <big
+                data-cy="shortname"
+                style={
+                  Object {
+                    "fontWeight": "bold",
+                    "marginTop": "0.5rem",
+                  }
+                }
+              >
+                ARCTAS
+              </big>
+              <p
+                data-cy="longname"
+              >
+                Arctic Research of the Composition of the Troposphere from Aircraft and Satellites
+              </p>
+              <div>
+                <small
+                  data-cy="daterange"
+                >
+                  2008—2008
+                </small>
+              </div>
+              <div>
+                <small
+                  data-cy="region"
+                >
+                  Alaska, Western Canada, California
+                </small>
+              </div>
+            </div>
+            <div>
+              <small
+                data-cy="count1"
+              >
+                <strong>
+                  0
+                </strong>
+                 Collection Periods
+              </small>
+               
+              ·
+               
+              <small
+                data-cy="count2"
+              >
+                <strong>
+                  0
+                </strong>
+                 Data Products
+              </small>
+            </div>
+          </div>
+        </a>
+        <a
+          href="/campaign/c0dc0d63-e32a-4fdc-b1ac-4f0e8a5c7754"
+        >
+          <div
+            data-cy="explore-card"
+            style={
+              Object {
+                "backgroundColor": "#303641",
+                "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
+                "display": "flex",
+                "flexDirection": "column",
+                "height": "100%",
+                "justifyContent": "space-between",
+                "padding": "1rem",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "marginBottom": "2rem",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "display": "flex",
+                    "justifyContent": "space-between",
+                    "margin": "0.5rem 0 2rem 0",
+                  }
+                }
+              >
+                <div
+                  className="placeholder"
+                  style={
+                    Object {
+                      "backgroundColor": "#9E9E9E",
+                      "borderRadius": "2.5rem",
+                      "height": "2.5rem",
+                      "width": "2.5rem",
+                    }
+                  }
+                />
+              </div>
+              <big
+                data-cy="shortname"
+                style={
+                  Object {
+                    "fontWeight": "bold",
+                    "marginTop": "0.5rem",
+                  }
+                }
+              >
+                AirMOSS
+              </big>
+              <p
+                data-cy="longname"
+              >
+                Airborne Microwave Observatory of Subcanopy and Subsurface
+              </p>
+              <div>
+                <small
+                  data-cy="daterange"
+                >
+                  2012—2015
+                </small>
+              </div>
+              <div>
+                <small
+                  data-cy="region"
+                >
+                  North America
+                </small>
+              </div>
+            </div>
+            <div>
+              <small
+                data-cy="count1"
+              >
+                <strong>
+                  0
+                </strong>
+                 Collection Periods
+              </small>
+               
+              ·
+               
+              <small
+                data-cy="count2"
+              >
+                <strong>
+                  0
+                </strong>
+                 Data Products
+              </small>
+            </div>
+          </div>
+        </a>
+        <a
+          href="/campaign/7546673c-151c-436a-adf1-6128b2d7a515"
+        >
+          <div
+            data-cy="explore-card"
+            style={
+              Object {
+                "backgroundColor": "#303641",
+                "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
+                "display": "flex",
+                "flexDirection": "column",
+                "height": "100%",
+                "justifyContent": "space-between",
+                "padding": "1rem",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "marginBottom": "2rem",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "display": "flex",
+                    "justifyContent": "space-between",
+                    "margin": "0.5rem 0 2rem 0",
+                  }
+                }
+              >
+                <div
+                  className="placeholder"
+                  style={
+                    Object {
+                      "backgroundColor": "#9E9E9E",
+                      "borderRadius": "2.5rem",
+                      "height": "2.5rem",
+                      "width": "2.5rem",
+                    }
+                  }
+                />
+              </div>
+              <big
+                data-cy="shortname"
+                style={
+                  Object {
+                    "fontWeight": "bold",
+                    "marginTop": "0.5rem",
+                  }
+                }
+              >
+                CARVE
+              </big>
+              <p
+                data-cy="longname"
+              >
+                Carbon in Arctic Reservoirs Vulnerability Experiment
+              </p>
+              <div>
+                <small
+                  data-cy="daterange"
+                >
+                  2012—2015
+                </small>
+              </div>
+              <div>
+                <small
+                  data-cy="region"
+                >
+                  Alaska
+                </small>
+              </div>
+            </div>
+            <div>
+              <small
+                data-cy="count1"
+              >
+                <strong>
+                  0
+                </strong>
+                 Collection Periods
+              </small>
+               
+              ·
+               
+              <small
+                data-cy="count2"
+              >
+                <strong>
+                  0
+                </strong>
+                 Data Products
+              </small>
+            </div>
+          </div>
+        </a>
+        <a
+          href="/campaign/2bca3f73-ee2b-4336-aed0-7454ab8cdf13"
+        >
+          <div
+            data-cy="explore-card"
+            style={
+              Object {
+                "backgroundColor": "#303641",
+                "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
+                "display": "flex",
+                "flexDirection": "column",
+                "height": "100%",
+                "justifyContent": "space-between",
+                "padding": "1rem",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "marginBottom": "2rem",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "display": "flex",
+                    "justifyContent": "space-between",
+                    "margin": "0.5rem 0 2rem 0",
+                  }
+                }
+              >
+                <div
+                  className="placeholder"
+                  style={
+                    Object {
+                      "backgroundColor": "#9E9E9E",
+                      "borderRadius": "2.5rem",
+                      "height": "2.5rem",
+                      "width": "2.5rem",
+                    }
+                  }
+                />
+              </div>
+              <big
+                data-cy="shortname"
+                style={
+                  Object {
+                    "fontWeight": "bold",
+                    "marginTop": "0.5rem",
+                  }
+                }
+              >
+                DC3
+              </big>
+              <p
+                data-cy="longname"
+              >
+                Deep Convective Clouds & Chemistry
+              </p>
+              <div>
+                <small
+                  data-cy="daterange"
+                >
+                  2012—2012
+                </small>
+              </div>
+              <div>
+                <small
+                  data-cy="region"
+                >
+                  Northeastern Colorado, West Texas to Central Oklahoma, Northern Alabama
+                </small>
+              </div>
+            </div>
+            <div>
+              <small
+                data-cy="count1"
+              >
+                <strong>
+                  0
+                </strong>
+                 Collection Periods
+              </small>
+               
+              ·
+               
+              <small
+                data-cy="count2"
+              >
+                <strong>
+                  0
+                </strong>
+                 Data Products
+              </small>
+            </div>
+          </div>
+        </a>
+        <a
+          href="/campaign/b94baa5d-3c69-4270-baf8-afc02f7132de"
+        >
+          <div
+            data-cy="explore-card"
+            style={
+              Object {
+                "backgroundColor": "#303641",
+                "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
+                "display": "flex",
+                "flexDirection": "column",
+                "height": "100%",
+                "justifyContent": "space-between",
+                "padding": "1rem",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "marginBottom": "2rem",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "display": "flex",
+                    "justifyContent": "space-between",
+                    "margin": "0.5rem 0 2rem 0",
+                  }
+                }
+              >
+                <div
+                  className="placeholder"
+                  style={
+                    Object {
+                      "backgroundColor": "#9E9E9E",
+                      "borderRadius": "2.5rem",
+                      "height": "2.5rem",
+                      "width": "2.5rem",
+                    }
+                  }
+                />
+              </div>
+              <big
+                data-cy="shortname"
+                style={
+                  Object {
+                    "fontWeight": "bold",
+                    "marginTop": "0.5rem",
+                  }
+                }
+              >
+                GCPEx
+              </big>
+              <p
+                data-cy="longname"
+              >
+                GPM Cold Season Precipitation Experiment
+              </p>
+              <div>
+                <small
+                  data-cy="daterange"
+                >
+                  2012—2012
+                </small>
+              </div>
+              <div>
+                <small
+                  data-cy="region"
+                >
+                  Ontario, Canada and northern portions of the United States (e.g., New York state, the New England area, etc.)
+                </small>
+              </div>
+            </div>
+            <div>
+              <small
+                data-cy="count1"
+              >
+                <strong>
+                  0
+                </strong>
+                 Collection Periods
+              </small>
+               
+              ·
+               
+              <small
+                data-cy="count2"
+              >
+                <strong>
+                  0
+                </strong>
+                 Data Products
+              </small>
+            </div>
+          </div>
+        </a>
+        <a
+          href="/campaign/2ad3b8b7-5334-4fa9-af06-7a26c7b05e4c"
+        >
+          <div
+            data-cy="explore-card"
+            style={
+              Object {
+                "backgroundColor": "#303641",
+                "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
+                "display": "flex",
+                "flexDirection": "column",
+                "height": "100%",
+                "justifyContent": "space-between",
+                "padding": "1rem",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "marginBottom": "2rem",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "display": "flex",
+                    "justifyContent": "space-between",
+                    "margin": "0.5rem 0 2rem 0",
+                  }
+                }
+              >
+                <div
+                  className="placeholder"
+                  style={
+                    Object {
+                      "backgroundColor": "#9E9E9E",
+                      "borderRadius": "2.5rem",
+                      "height": "2.5rem",
+                      "width": "2.5rem",
+                    }
+                  }
+                />
+              </div>
+              <big
+                data-cy="shortname"
+                style={
+                  Object {
+                    "fontWeight": "bold",
+                    "marginTop": "0.5rem",
+                  }
+                }
+              >
+                GOES-R PLT
+              </big>
+              <p
+                data-cy="longname"
+              >
+                GOES-R Post Launch Test
+              </p>
+              <div>
+                <small
+                  data-cy="daterange"
+                >
+                  2017—2017
+                </small>
+              </div>
+              <div>
+                <small
+                  data-cy="region"
+                >
+                  Continental United States
+                </small>
+              </div>
+            </div>
+            <div>
+              <small
+                data-cy="count1"
+              >
+                <strong>
+                  0
+                </strong>
+                 Collection Periods
+              </small>
+               
+              ·
+               
+              <small
+                data-cy="count2"
+              >
+                <strong>
+                  0
+                </strong>
+                 Data Products
+              </small>
+            </div>
+          </div>
+        </a>
+        <a
+          href="/campaign/58160104-9c7d-4312-a1bb-7e2998bd44b7"
+        >
+          <div
+            data-cy="explore-card"
+            style={
+              Object {
+                "backgroundColor": "#303641",
+                "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
+                "display": "flex",
+                "flexDirection": "column",
+                "height": "100%",
+                "justifyContent": "space-between",
+                "padding": "1rem",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "marginBottom": "2rem",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "display": "flex",
+                    "justifyContent": "space-between",
+                    "margin": "0.5rem 0 2rem 0",
+                  }
+                }
+              >
+                <div
+                  className="placeholder"
+                  style={
+                    Object {
+                      "backgroundColor": "#9E9E9E",
+                      "borderRadius": "2.5rem",
+                      "height": "2.5rem",
+                      "width": "2.5rem",
+                    }
+                  }
+                />
+              </div>
+              <big
+                data-cy="shortname"
+                style={
+                  Object {
+                    "fontWeight": "bold",
+                    "marginTop": "0.5rem",
+                  }
+                }
+              >
+                GRIP
+              </big>
+              <p
+                data-cy="longname"
+              >
+                Genesis and Rapid Intensification Processes
+              </p>
+              <div>
+                <small
+                  data-cy="daterange"
+                >
+                  2010—2010
+                </small>
+              </div>
+              <div>
+                <small
+                  data-cy="region"
+                >
+                  Tropical Atlantic, Gulf of Mexico, Eastern North Pacific, Caribbean Sea
+                </small>
+              </div>
+            </div>
+            <div>
+              <small
+                data-cy="count1"
+              >
+                <strong>
+                  0
+                </strong>
+                 Collection Periods
+              </small>
+               
+              ·
+               
+              <small
+                data-cy="count2"
+              >
+                <strong>
+                  0
+                </strong>
+                 Data Products
+              </small>
+            </div>
+          </div>
+        </a>
+        <a
+          href="/campaign/ffa4a307-c055-4303-adbf-42d243ef188b"
+        >
+          <div
+            data-cy="explore-card"
+            style={
+              Object {
+                "backgroundColor": "#303641",
+                "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
+                "display": "flex",
+                "flexDirection": "column",
+                "height": "100%",
+                "justifyContent": "space-between",
+                "padding": "1rem",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "marginBottom": "2rem",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "display": "flex",
+                    "justifyContent": "space-between",
+                    "margin": "0.5rem 0 2rem 0",
+                  }
+                }
+              >
+                <div
+                  className="placeholder"
+                  style={
+                    Object {
+                      "backgroundColor": "#9E9E9E",
+                      "borderRadius": "2.5rem",
+                      "height": "2.5rem",
+                      "width": "2.5rem",
+                    }
+                  }
+                />
+              </div>
+              <big
+                data-cy="shortname"
+                style={
+                  Object {
+                    "fontWeight": "bold",
+                    "marginTop": "0.5rem",
+                  }
+                }
+              >
+                HS3
+              </big>
+              <p
+                data-cy="longname"
+              >
+                Hurricane and Severe Storm Sentinel
+              </p>
+              <div>
+                <small
+                  data-cy="daterange"
+                >
+                  2012—2014
+                </small>
+              </div>
+              <div>
+                <small
+                  data-cy="region"
+                >
+                  Subtropical Atlantic Ocean and Gulf of Mexico
+                </small>
+              </div>
+            </div>
+            <div>
+              <small
+                data-cy="count1"
+              >
+                <strong>
+                  0
+                </strong>
+                 Collection Periods
+              </small>
+               
+              ·
+               
+              <small
+                data-cy="count2"
+              >
+                <strong>
+                  0
+                </strong>
+                 Data Products
+              </small>
+            </div>
+          </div>
+        </a>
+        <a
+          href="/campaign/4d231fec-f2c0-4bb2-864c-ef4f20a88378"
+        >
+          <div
+            data-cy="explore-card"
+            style={
+              Object {
+                "backgroundColor": "#303641",
+                "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
+                "display": "flex",
+                "flexDirection": "column",
+                "height": "100%",
+                "justifyContent": "space-between",
+                "padding": "1rem",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "marginBottom": "2rem",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "display": "flex",
+                    "justifyContent": "space-between",
+                    "margin": "0.5rem 0 2rem 0",
+                  }
+                }
+              >
+                <div
+                  className="placeholder"
+                  style={
+                    Object {
+                      "backgroundColor": "#9E9E9E",
+                      "borderRadius": "2.5rem",
+                      "height": "2.5rem",
+                      "width": "2.5rem",
+                    }
+                  }
+                />
+              </div>
+              <big
+                data-cy="shortname"
+                style={
+                  Object {
+                    "fontWeight": "bold",
+                    "marginTop": "0.5rem",
+                  }
+                }
+              >
+                OLYMPEX
+              </big>
+              <p
+                data-cy="longname"
+              >
+                Olympic Mountains Experiment
+              </p>
+              <div>
+                <small
+                  data-cy="daterange"
+                >
+                  2015—2016
+                </small>
+              </div>
+              <div>
+                <small
+                  data-cy="region"
+                >
+                  Olympic Peninsula in U.S. Washington State
+                </small>
+              </div>
+            </div>
+            <div>
+              <small
+                data-cy="count1"
+              >
+                <strong>
+                  0
+                </strong>
+                 Collection Periods
+              </small>
+               
+              ·
+               
+              <small
+                data-cy="count2"
+              >
+                <strong>
+                  0
+                </strong>
+                 Data Products
+              </small>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer
+    style={
+      Object {
+        "backgroundColor": "#262A31",
+        "marginTop": "5rem",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "display": "grid",
+          "flexShrink": 0,
+          "gap": "1rem",
+          "gridTemplateColumns": "repeat(12, 1fr)",
+          "margin": "5rem auto",
+          "maxWidth": 960,
+          "padding": "0 1.0875rem 1.45rem",
+          "width": "100%",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "gridColumn": "1 / span 3",
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "fontSize": "30px",
+              "fontWeight": "900",
+              "lineHeight": "2.5rem",
+              "marginBottom": "0.5rem",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          suborbital
+        </div>
+        <p>
+          Suborbital is a comprehensive inventory containing information about all airborne, field stationary and fixed earth science campaigns as well as aircrafts, instruments, and data products.
+        </p>
+      </div>
+      <div
+        style={
+          Object {
+            "gridColumn": "5 / span 2",
+          }
+        }
+      >
+        <div
+          className="placeholder"
+          style={
+            Object {
+              "fontWeight": "bold",
+              "lineHeight": "3rem",
+              "margin": "0 0 1.5rem 0",
+            }
+          }
+        >
+          Explore
+        </div>
+        <ul
+          style={
+            Object {
+              "listStyle": "none",
+              "margin": 0,
+            }
+          }
+        >
+          <li>
+            <a
+              href="/explore/campaigns"
+            >
+              Campaigns
+            </a>
+          </li>
+          <li>
+            <a
+              href="/explore/platforms"
+            >
+              Platforms
+            </a>
+          </li>
+          <li>
+            <a
+              href="/explore/instruments"
+            >
+              Instruments
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div
+        style={
+          Object {
+            "gridColumn": "7 / span 2",
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "fontWeight": "bold",
+              "lineHeight": "3rem",
+              "margin": "0 0 1.5rem 0",
+            }
+          }
+        >
+          <a
+            href="/resources"
+          >
+            Resources
+          </a>
+        </div>
+        <ul
+          style={
+            Object {
+              "listStyle": "none",
+              "margin": 0,
+            }
+          }
+        >
+          <li
+            className="placeholder"
+          >
+            Glossary
+          </li>
+          <li
+            className="placeholder"
+          >
+            Tools
+          </li>
+          <li
+            className="placeholder"
+          >
+            Funding Organizations
+          </li>
+        </ul>
+      </div>
+      <div
+        style={
+          Object {
+            "gridColumn": "9 / span 2",
+          }
+        }
+      >
+        <div
+          className="placeholder"
+          style={
+            Object {
+              "fontWeight": "bold",
+              "lineHeight": "3rem",
+              "margin": "0 0 1.5rem 0",
+            }
+          }
+        >
+          Quick Links
+        </div>
+        <ul
+          style={
+            Object {
+              "listStyle": "none",
+              "margin": 0,
+            }
+          }
+        >
+          <li>
+            <a
+              href="/about/"
+            >
+              About
+            </a>
+          </li>
+          <li>
+            <a
+              href="/contact/"
+            >
+              Contact us
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div
+        style={
+          Object {
+            "gridColumn": "11 / span 2",
+          }
+        }
+      >
+        <div
+          className="placeholder"
+          style={
+            Object {
+              "fontWeight": "bold",
+              "lineHeight": "3rem",
+              "margin": "0 0 1.5rem 0",
+            }
+          }
+        >
+          Organizations
+        </div>
+        <ul
+          style={
+            Object {
+              "listStyle": "none",
+              "margin": 0,
+            }
+          }
+        >
+          <li
+            className="placeholder"
+          >
+            ADMG Website
+          </li>
+          <li
+            className="placeholder"
+          >
+            Impact Team Website
+          </li>
+        </ul>
+      </div>
+      <hr
+        style={
+          Object {
+            "backgroundColor": "rgba(255,255,255,0.2)",
+            "gridColumn": "1 / span 12",
+          }
+        }
+      />
+      <div
+        style={
+          Object {
+            "display": "flex",
+            "gridColumn": "1 / span 12",
+            "justifyContent": "space-between",
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "alignItems": "center",
+              "display": "flex",
+              "fontWeight": "bold",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "backgroundImage": "url('https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png')",
+                "backgroundPosition": "center",
+                "backgroundSize": "cover",
+                "height": 100,
+                "width": 100,
+              }
+            }
+          />
+          <div>
+            <div>
+              National Aeronautics and Space Administration
+            </div>
+            <div>
+              NASA Official:
+               
+              <span
+                className="placeholder"
+                style={
+                  Object {
+                    "fontWeight": "normal",
+                  }
+                }
+              >
+                Name of Official
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          style={
+            Object {
+              "alignItems": "center",
+              "color": "#81AEFB",
+              "display": "flex",
+              "fontWeight": "bold",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          <div
+            className="placeholder"
+            style={
+              Object {
+                "marginLeft": "3rem",
+              }
+            }
+          >
+            Privacy
+          </div>
+          <div
+            className="placeholder"
+            style={
+              Object {
+                "marginLeft": "3rem",
+              }
+            }
+          >
+            Contact NASA
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="placeholder"
+      style={
+        Object {
+          "textAlign": "end",
+        }
+      }
+    >
+      © 
+      2020
+      , Built by
+       
+      <a
+        href="https://www.developmentseed.org"
+      >
+        Development Seed
+      </a>
+      .
+    </div>
+  </footer>
+</div>
+`;

@@ -1,8 +1,14 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { sizes } from "./utils"
 
-export const AirborneRemoteSensors = ({ color = "#FFF" }) => (
-  <svg width="80" height="80" xmlns="http://www.w3.org/2000/svg">
+export const AirborneRemoteSensors = ({ color = "#FFF", size = "large" }) => (
+  <svg
+    viewBox={sizes[size].viewBox}
+    width={sizes[size].width}
+    height={sizes[size].height}
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <path
       fill={color}
       fillRule="evenodd"
@@ -13,4 +19,5 @@ export const AirborneRemoteSensors = ({ color = "#FFF" }) => (
 
 AirborneRemoteSensors.propTypes = {
   color: PropTypes.string,
+  size: PropTypes.string,
 }

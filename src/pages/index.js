@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import SectionBlock, { SectionImage } from "../components/section/section-block"
 import { Hero } from "../components/home/hero"
-import { FocusAreaGallery } from "../components/home/focus-area-gallery"
+import FocusAreaGallery from "../components/home/focus-area-gallery"
 import { RegionCarousel } from "../components/home/region-carousel"
 import { GeophysicsGrid } from "../components/home/geophysics-grid"
 import { InstrumentsGallery } from "../components/home/instruments-gallery"
@@ -24,7 +24,7 @@ const IndexPage = ({ data }) => {
         headline="Focus Areas"
         id="focus-area"
       >
-        <FocusAreaGallery focusAreas={data.allFocusArea.nodes} />
+        <FocusAreaGallery focusAreas={data.allFocusArea.nodes} size="large" />
       </SectionBlock>
 
       <SectionBlock

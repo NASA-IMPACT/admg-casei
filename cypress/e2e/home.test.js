@@ -27,7 +27,7 @@ describe("Homepage", () => {
         .find("[data-cy=focus-area]")
         .each($el => {
           cy.get($el).find("svg").should("exist")
-          cy.get($el).find("div").should("have.text", $el[0].textContent)
+          cy.get($el).find("label").should("have.text", $el[0].textContent)
         })
     })
 
