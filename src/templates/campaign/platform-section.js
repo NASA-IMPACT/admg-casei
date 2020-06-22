@@ -5,7 +5,7 @@ import { graphql } from "gatsby"
 import SectionBlock from "../../components/section/section-block"
 
 const PlatformSection = ({ platforms }) => (
-  <SectionBlock headline="Platforms & Instruments" id="platforms">
+  <SectionBlock headline="Platforms & Instruments" id="platform">
     <div
       style={{
         display: `grid`,
