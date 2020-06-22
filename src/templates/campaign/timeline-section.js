@@ -3,6 +3,8 @@ import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 import Carousel from "nuka-carousel"
 
+import SectionBlock from "../../components/section/section-block"
+
 const Milestone = ({
   type = "Deployment",
   date = "June - September 2018",
@@ -46,8 +48,7 @@ Milestone.propTypes = {
 }
 
 const TimelineSection = ({ deployments }) => (
-  <section className="inpage-nav" id="timeline" data-cy="timeline-section">
-    <h2>Timeline</h2>
+  <SectionBlock headline="Timeline" id="timeline">
     <div data-cy="milestone-carousel">
       <Carousel
         defaultControlsConfig={{
@@ -68,7 +69,7 @@ const TimelineSection = ({ deployments }) => (
       </Carousel>
     </div>
     <div data-cy="milestone-timeline"></div>
-  </section>
+  </SectionBlock>
 )
 
 export const deployments = graphql`

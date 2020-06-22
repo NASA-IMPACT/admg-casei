@@ -2,6 +2,8 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
+import SectionBlock from "../../components/section/section-block"
+
 const FocusSection = ({ focusAreaIds, focusPhenomena, scienceKeywords }) => {
   const data = useStaticQuery(graphql`
     query {
@@ -32,8 +34,7 @@ const FocusSection = ({ focusAreaIds, focusPhenomena, scienceKeywords }) => {
       ))
 
   return (
-    <section className="inpage-nav" id="focus" data-cy="focus-section">
-      <h2>Focus</h2>
+    <SectionBlock headline="Focus" id="focus">
       <div
         style={{
           display: "grid",
@@ -77,7 +78,7 @@ const FocusSection = ({ focusAreaIds, focusPhenomena, scienceKeywords }) => {
           <p>{scienceKeywords}</p>
         </div>
       </div>
-    </section>
+    </SectionBlock>
   )
 }
 

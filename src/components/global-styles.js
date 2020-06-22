@@ -31,27 +31,6 @@ const baseStyles = css`
     );
   }
 
-  // TODO: remove once all inpage-nav sections use the styled component Section
-  section.inpage-nav {
-    position: relative;
-    border-top: 55px solid transparent;
-    margin: -55px 0 0;
-    -webkit-background-clip: padding-box;
-    -moz-background-clip: padding;
-    background-clip: padding-box;
-  }
-
-  /* In case you really need a border, use :before:
-section:before {
-  content: "";
-  position: absolute;
-  top: -2px;
-  left: 0;
-  right: 0;
-  border-top: 2px solid #ccc;
-}
-*/
-
   /* Links
    ========================================================================== */
   a {
