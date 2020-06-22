@@ -10,16 +10,12 @@ const type = theme.type
 const baseStyles = css`
   /* insert overrides for global styles from DevseedUiThemeProvider here */
 
-  body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
   html {
     font-family: ${type.base.family};
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
   }
+
   body {
     margin: 0;
     -webkit-font-smoothing: antialiased;
@@ -29,6 +25,12 @@ const baseStyles = css`
       ${color.tertiary} 0%,
       ${color.primary} 45%
     );
+  }
+
+  // TODO: replace all placeholder elements
+  .placeholder {
+    box-shadow: 0 0 4px teal;
+    border: 1px solid teal;
   }
 
   /* Links
@@ -41,11 +43,6 @@ const baseStyles = css`
   }
   a:visited {
     color: ${color.base};
-  }
-
-  .placeholder {
-    box-shadow: 0 0 4px teal;
-    border: 1px solid teal;
   }
 `
 export default createGlobalStyle`
