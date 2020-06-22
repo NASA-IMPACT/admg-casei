@@ -7,7 +7,7 @@ import ExternalLink from "../external-link"
 export default function ContentItem({ label, info, type = "text", dataCy }) {
   return (
     <div data-cy={dataCy}>
-      <Label showBorder data-cy={`${dataCy}-label`}>
+      <Label dataCy={dataCy} showBorder data-cy={`${dataCy}-label`}>
         {label}
       </Label>
       {type === "link" && info ? (

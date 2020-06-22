@@ -46,13 +46,15 @@ const FocusArea = ({ id, caption }) => {
 
   return (
     <Link
-      to="/explore/campaigns"
+      to="/explore/campaigns" // TODO: where should these link to?
       state={{ selectedFilterId: id }} // Pass state as props to the linked page
       style={{ textAlign: `center` }}
       data-cy="focus-area"
     >
       {icons[caption]}
-      <Label color={theme.type.base.color}>{caption}</Label>
+      <Label dataCy={"focus-area-icons"} color={theme.type.base.color}>
+        {caption}
+      </Label>
     </Link>
   )
 }

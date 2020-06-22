@@ -27,7 +27,7 @@ export default function Label({
 
 Label.propTypes = {
   children: PropTypes.string.isRequired,
-  color: PropTypes.string.isRequired,
-  showBorder: PropTypes.bool.isRequired,
   dataCy: PropTypes.string.isRequired,
+  color: PropTypes.string,
+  showBorder: PropTypes.bool,
 }

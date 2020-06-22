@@ -49,22 +49,13 @@ exports[`Focus Section displays content 1`] = `
         <div
           style={
             Object {
-              "alignItems": "center",
-              "display": "flex",
+              "display": "grid",
+              "gap": "1rem",
+              "gridTemplateColumns": "repeat(auto-fill, minmax(min(120px, 100%), 1fr))",
+              "paddingTop": "1rem",
             }
           }
-        >
-          <div
-            style={
-              Object {
-                "borderRadius": "2.5rem",
-                "height": "2.5rem",
-                "margin": "0.5rem",
-                "width": "2.5rem",
-              }
-            }
-          />
-        </div>
+        />
       </div>
       <div
         data-cy="focus-content"

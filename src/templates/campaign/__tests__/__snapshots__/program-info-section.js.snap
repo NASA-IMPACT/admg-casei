@@ -178,11 +178,19 @@ exports[`Program Info Section renders logo when present in props 1`] = `
         >
           Assigned Archive Repository
         </label>
-        <p
-          data-cy="program-info-content-text"
+        <a
+          data-cy="program-info-content-link"
+          href="test string"
+          rel="noopener noreferrer"
+          style={
+            Object {
+              "color": "#aac9ff",
+            }
+          }
+          target="_blank"
         >
           test string
-        </p>
+        </a>
       </div>
       <div
         data-cy="program-info-content"
@@ -224,11 +232,19 @@ exports[`Program Info Section renders logo when present in props 1`] = `
         >
           Tertiary Website
         </label>
-        <p
-          data-cy="program-info-content-text"
+        <a
+          data-cy="program-info-content-link"
+          href="test string"
+          rel="noopener noreferrer"
+          style={
+            Object {
+              "color": "#aac9ff",
+            }
+          }
+          target="_blank"
         >
           test string
-        </p>
+        </a>
       </div>
     </div>
   </div>
@@ -413,11 +429,19 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
         >
           Assigned Archive Repository
         </label>
-        <p
-          data-cy="program-info-content-text"
+        <a
+          data-cy="program-info-content-link"
+          href="test string"
+          rel="noopener noreferrer"
+          style={
+            Object {
+              "color": "#aac9ff",
+            }
+          }
+          target="_blank"
         >
           test string
-        </p>
+        </a>
       </div>
       <div
         data-cy="program-info-content"
@@ -459,11 +483,19 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
         >
           Tertiary Website
         </label>
-        <p
-          data-cy="program-info-content-text"
+        <a
+          data-cy="program-info-content-link"
+          href="test string"
+          rel="noopener noreferrer"
+          style={
+            Object {
+              "color": "#aac9ff",
+            }
+          }
+          target="_blank"
         >
           test string
-        </p>
+        </a>
       </div>
     </div>
   </div>

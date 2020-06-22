@@ -204,10 +204,10 @@ describe("Campaign", () => {
         expect($label, "8 labels").to.have.length(8)
       })
       cy.get("[data-cy=program-info-content-text]").should($p => {
-        expect($p, "6 text entries").to.have.length(6)
+        expect($p, "6 text entries").to.have.length.within(6, 8)
       })
       cy.get("[data-cy=program-info-content-link]").should($a => {
-        expect($a, "2 links").to.have.length(2)
+        expect($a, "2 links").to.have.length.of.at.most(2)
       })
     })
   })

@@ -25,7 +25,7 @@ const FocusSection = ({ focusAreaIds, focusPhenomena, scienceKeywords }) => {
     <SectionBlock sectionTitle="Focus" id="focus" dataCy="focus-section">
       <ContentGroup>
         <div data-cy="focus-content">
-          <Label showBorder data-cy="focus-content-label">
+          <Label showBorder dataCy="focus-content">
             Focus Area
           </Label>
           <FocusAreaGallery

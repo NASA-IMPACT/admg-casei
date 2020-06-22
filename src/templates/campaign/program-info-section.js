@@ -75,6 +75,7 @@ const ProgramInfoSection = ({
             dataCy="program-info-content"
             label={item.label}
             info={item.info}
+            type={item.type || "text"}
           />
         ))}
       </ContentGroup>
