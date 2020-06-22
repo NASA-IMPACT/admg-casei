@@ -1,8 +1,17 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { sizes } from "./utils"
 
-export const ClimateVariabilityChange = ({ color = "#FFF" }) => (
-  <svg width="120" height="120" xmlns="http://www.w3.org/2000/svg">
+export const ClimateVariabilityChange = ({
+  color = "#FFF",
+  size = "large",
+}) => (
+  <svg
+    viewBox={sizes[size].viewBox}
+    width={sizes[size].width}
+    height={sizes[size].height}
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <path
       fill={color}
       fillRule="nonzero"
@@ -14,4 +23,5 @@ export const ClimateVariabilityChange = ({ color = "#FFF" }) => (
 
 ClimateVariabilityChange.propTypes = {
   color: PropTypes.string,
+  size: PropTypes.string,
 }
