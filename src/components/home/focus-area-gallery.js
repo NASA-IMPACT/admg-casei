@@ -14,32 +14,29 @@ import {
 import theme from "../../utils/theme"
 import Label from "../label"
 
-const FocusArea = ({ id, caption }) => {
+const FocusArea = ({ id, caption, size }) => {
   // TODO: This mapping is currently done by shortname, as I don't trust
   // the id yet to be stable.
   const icons = {
     "Atmospheric Composition": (
-      <AtmosphericCompositionIcon color={theme.type.base.color} size="small" />
+      <AtmosphericCompositionIcon color={theme.type.base.color} size={size} />
     ),
     "Atmospheric Dynamics": (
-      <AtmosphericDynamicsIcon color={theme.type.base.color} size="small" />
+      <AtmosphericDynamicsIcon color={theme.type.base.color} size={size} />
     ),
     "Carbon Cycle & Ecosystems": (
-      <CarbonCycleEcosystemsIcon color={theme.type.base.color} size="small" />
+      <CarbonCycleEcosystemsIcon color={theme.type.base.color} size={size} />
     ),
     "Climate Variability & Change": (
-      <ClimateVariabilityChangeIcon
-        color={theme.type.base.color}
-        size="small"
-      />
+      <ClimateVariabilityChangeIcon color={theme.type.base.color} size={size} />
     ),
     "Earth Surface & Interior": (
-      <EarthSurfaceInteriorIcon color={theme.type.base.color} size="small" />
+      <EarthSurfaceInteriorIcon color={theme.type.base.color} size={size} />
     ),
     "Global Water & Energy Cycle": (
-      <GlobalWaterEnergyCycleIcon color={theme.type.base.color} size="small" />
+      <GlobalWaterEnergyCycleIcon color={theme.type.base.color} size={size} />
     ),
-    Weather: <WeatherIcon color={theme.type.base.color} size="small" />,
+    Weather: <WeatherIcon color={theme.type.base.color} size={size} />,
   }
 
   if (!icons[caption]) return null
@@ -64,7 +61,7 @@ FocusArea.propTypes = {
   caption: PropTypes.string.isRequired,
 }
 
-const FocusAreaGallery = ({ focusAreas }) => {
+const FocusAreaGallery = ({ focusAreas, size = "large" }) => {
   return (
     <div
       style={{
@@ -75,7 +72,12 @@ const FocusAreaGallery = ({ focusAreas }) => {
       }}
     >
       {focusAreas.map(focus => (
-        <FocusArea key={focus.id} id={focus.id} caption={focus.shortname} />
+        <FocusArea
+          key={focus.id}
+          id={focus.id}
+          caption={focus.shortname}
+          size={size}
+        />
       ))}
     </div>
   )
@@ -91,4 +93,5 @@ FocusAreaGallery.propTypes = {
       longname: PropTypes.string,
     })
   ),
+  size: PropTypes.string,
 }

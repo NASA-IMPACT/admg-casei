@@ -15,7 +15,7 @@ export default function Label({
         textTransform: `uppercase`,
         color: color,
         borderBottom: showBorder ? `1px solid ${theme.color.gray}` : `none`,
-        fontSize: `x-small`,
+        fontSize: `small`,
         display: `block`,
       }}
       data-cy={`${dataCy}-label`}

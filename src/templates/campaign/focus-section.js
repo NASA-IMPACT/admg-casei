@@ -32,6 +32,7 @@ const FocusSection = ({ focusAreaIds, focusPhenomena, scienceKeywords }) => {
             focusAreas={data.allFocusArea.nodes.filter(x =>
               focusAreaIds.includes(x.id)
             )}
+            size="small"
           />
         </div>
         <ContentItem
