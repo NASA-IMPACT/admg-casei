@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import SectionBlock from "../../components/section/section-block"
+import ContentItem from "../../components/section/content-item"
 import ContentGroup from "../../components/section/content-group"
 import PlaceholderLogo from "../../images/placeholder-logo.svg"
 
@@ -34,6 +35,17 @@ const ProgramInfoSection = ({
     .map(x => x.shortname)
     .join(", ")
 
+  const contentList = [
+    { label: "Funding Agency", info: fundingAgency },
+    { label: "Funding Program", info: fundingProgram },
+    { label: "Funding Program Lead", info: programLead },
+    { label: "Lead Investigator", info: leadInvestigator },
+    { label: "Data Manager / Technical Contact", info: dataManager },
+    { label: "Assigned Archive Repository", info: archive, type: "link" },
+    { label: "Partner Organisation", info: partnerOrg },
+    { label: "Tertiary Website", info: tertiaryWebsite, type: "link" },
+  ]
+
   return (
     <SectionBlock
       sectionTitle="Program Info"
@@ -55,19 +67,17 @@ const ProgramInfoSection = ({
           data-cy="campaign-logo"
         />
       </div>
-      <ContentGroup
-        dataCy="program-info-content"
-        contentItems={[
-          { label: "Funding Agency", info: fundingAgency },
-          { label: "Funding Program", info: fundingProgram },
-          { label: "Funding Program Lead", info: programLead },
-          { label: "Lead Investigator", info: leadInvestigator },
-          { label: "Data Manager / Technical Contact", info: dataManager },
-          { label: "Assigned Archive Repository", info: archive, type: "link" },
-          { label: "Partner Organisation", info: partnerOrg },
-          { label: "Tertiary Website", info: tertiaryWebsite, type: "link" },
-        ]}
-      />
+
+      <ContentGroup>
+        {contentList.map(item => (
+          <ContentItem
+            key={item.label}
+            dataCy="program-info-content"
+            label={item.label}
+            info={item.info}
+          />
+        ))}
+      </ContentGroup>
     </SectionBlock>
   )
 }

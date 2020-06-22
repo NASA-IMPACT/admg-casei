@@ -4,29 +4,22 @@ import PropTypes from "prop-types"
 import ContentHeader from "./content-header"
 import ExternalLink from "../external-link"
 
-export default function ContentItem({
-  label,
-  info = "N/A",
-  type = "text",
-  dataCy,
-}) {
-  let displayedInfo = {
-    link: <ExternalLink dataCy={dataCy} label={info} url={info} />, // TODO: find out why this causes proptypes to flag the props as objects
-    component: info,
-    text: <p data-cy={`${dataCy}-text`}>{info}</p>,
-  }[type]
-
+export default function ContentItem({ label, info, type = "text", dataCy }) {
   return (
     <div data-cy={dataCy}>
-      <ContentHeader label={label} dataCy={dataCy} />
-      {displayedInfo}
+      <ContentHeader dataCy={dataCy} label={label} />
+      {type === "link" && info ? (
+        <ExternalLink dataCy={dataCy} label={info} url={info} />
+      ) : (
+        <p data-cy={`${dataCy}-text`}>{info || "N/A"}</p>
+      )}
     </div>
   )
 }
 
 ContentItem.propTypes = {
   label: PropTypes.string.isRequired,
-  info: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
+  info: PropTypes.string,
   type: PropTypes.string,
-  dataCy: PropTypes.string.isRequired,
+  dataCy: PropTypes.string,
 }

@@ -1,9 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import ContentItem from "./content-item"
-
-export default function ContentGroup({ contentItems, dataCy }) {
+export default function ContentGroup({ children }) {
   return (
     <div
       style={{
@@ -14,26 +12,12 @@ export default function ContentGroup({ contentItems, dataCy }) {
         padding: `2rem`,
       }}
     >
-      {contentItems.map(item => (
-        <ContentItem
-          key={item.label}
-          label={item.label}
-          info={item.info}
-          type={item.type || "text"}
-          dataCy={dataCy}
-        />
-      ))}
+      {children}
     </div>
   )
 }
 
 ContentGroup.propTypes = {
   dataCy: PropTypes.string,
-  contentItems: PropTypes.arrayOf(
-    PropTypes.shape({
-      label: PropTypes.string,
-      info: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-      type: PropTypes.string,
-    })
-  ).isRequired,
+  children: PropTypes.node.isRequired,
 }

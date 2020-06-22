@@ -4,6 +4,8 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import SectionBlock from "../../components/section/section-block"
 import ContentGroup from "../../components/section/content-group"
+import ContentHeader from "../../components/section/content-header"
+import ContentItem from "../../components/section/content-item"
 
 const FocusSection = ({ focusAreaIds, focusPhenomena, scienceKeywords }) => {
   const data = useStaticQuery(graphql`
@@ -36,14 +38,22 @@ const FocusSection = ({ focusAreaIds, focusPhenomena, scienceKeywords }) => {
 
   return (
     <SectionBlock sectionTitle="Focus" id="focus" dataCy="focus-section">
-      <ContentGroup
-        dataCy="focus-content"
-        contentItems={[
-          { label: "Focus Area", info: <FocusArea />, type: "component" },
-          { label: "Geophysical Concept", info: scienceKeywords },
-          { label: "Focus Phenomena", info: focusPhenomena },
-        ]}
-      />
+      <ContentGroup>
+        <div data-cy="focus-content">
+          <ContentHeader label="Focus Area" dataCy="focus-content" />
+          <FocusArea />
+        </div>
+        <ContentItem
+          dataCy="focus-content"
+          label="Geophysical Concept"
+          info={scienceKeywords}
+        />
+        <ContentItem
+          dataCy="focus-content"
+          label="Focus Phenomena"
+          info={focusPhenomena}
+        />
+      </ContentGroup>
     </SectionBlock>
   )
 }
