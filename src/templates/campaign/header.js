@@ -1,8 +1,11 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import parse from "wellknown"
+import * as turf from "@turf/turf"
+import geoViewport from "@mapbox/geo-viewport"
 
-import NorthAmerica from "../../images/north-america.svg"
+import theme from "../../utils/theme"
 
 const StatNumber = ({ number, label }) => (
   <>
@@ -22,6 +25,7 @@ StatNumber.propTypes = {
 }
 
 const Header = ({
+  bounds,
   shortname,
   longname,
   focusIds,
@@ -44,9 +48,46 @@ const Header = ({
     .map(x => x.shortname)
     .join(", ")
 
+  const geojson = parse(bounds)
+  const [w, s, e, n] = turf.bbox(geojson)
+  const west = turf.point([w, (n + s) / 2])
+  const east = turf.point([e, (n + s) / 2])
+  const options = { units: "degrees" }
+  const distance = turf.distance(west, east, options)
+  const offsetCoords = turf.bbox(
+    turf.transformTranslate(geojson, distance * 0.5, -90, options)
+  )
+  const size = [theme.layout.maxWidth, 356]
+  const vp = geoViewport.viewport(offsetCoords, size)
+
+  // TODO: display outline on map
+  // const layer = {
+  //   id: "bbox",
+  //   source: { type: "geojson", data: geojson },
+  //   type: "fill",
+  //   paint: { "fill-color": "#00ffff" },
+  // }
+
+  const url =
+    "https://api.mapbox.com/styles/v1/mapbox/satellite-streets-v11/static/" +
+    vp.center.join(",") +
+    "," +
+    vp.zoom +
+    "/" +
+    size.join("x") +
+    "?access_token=" +
+    "pk.eyJ1IjoiZGV2c2VlZCIsImEiOiJja2JxbjJhbGQybnpnMnJwdnk0NXloMmt1In0.5ciMNUW3yaadjwmlDLTugw"
+
   return (
-    <header style={{ display: `flex` }}>
-      <div style={{ flex: `1.61803398875` }}>
+    <header
+      style={{
+        display: `flex`,
+        background: `linear-gradient(90deg, rgba(12,21,32, 0.8) 0%, rgba(12,21,32, 0.7)50%, rgba(12,21,32, 0.0)66%),
+    url(${url}) bottom center no-repeat`,
+        padding: `2rem 5rem`,
+      }}
+    >
+      <div style={{ flex: `2` }}>
         <div>
           <p>{shortname}</p>
           <h1>{longname}</h1>
@@ -58,15 +99,14 @@ const Header = ({
           <StatNumber number={countDataproducts} label="Data Products" />
         </dl>
       </div>
-      <div className="placeholder" style={{ flex: `1` }}>
-        <img src={NorthAmerica} alt="North America" data-cy="overview-map" />
-      </div>
+      <div className="placeholder" style={{ flex: `1` }}></div>
     </header>
   )
 }
 
 export const headerFields = graphql`
   fragment headerFields on campaign {
+    bounds: spatial_bounds
     shortname: short_name
     longname: long_name
     focus: focus_areas
@@ -76,6 +116,7 @@ export const headerFields = graphql`
 `
 
 Header.propTypes = {
+  bounds: PropTypes.string.isRequired,
   shortname: PropTypes.string.isRequired,
   longname: PropTypes.string.isRequired,
   focusIds: PropTypes.arrayOf(PropTypes.string).isRequired,

@@ -13,6 +13,8 @@ import Header from "./header"
 import Nav from "./nav"
 import Footer from "./footer"
 
+import theme from "../utils/theme"
+
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -39,7 +41,7 @@ const Layout = ({ children }) => {
         style={{
           margin: `0 auto`,
           width: `100%`,
-          maxWidth: 960,
+          maxWidth: theme.layout.maxWidth,
           padding: `0 1.0875rem 1.45rem`,
           flexGrow: 1,
         }}

@@ -36,7 +36,7 @@ const InpageNav = () => (
       position: `sticky`,
       top: `0`,
       display: `flex`,
-      padding: `1rem`,
+      padding: `1rem 5rem`,
       borderTop: `1px solid #9E9E9E`,
       borderBottom: `1px solid #9E9E9E`,
       justifyContent: `space-between`,

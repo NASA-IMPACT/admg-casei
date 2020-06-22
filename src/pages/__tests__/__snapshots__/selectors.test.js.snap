@@ -10,13 +10,7 @@ exports[`Campaigns page renders correctly 1`] = `
     }
   }
 >
-  <header
-    style={
-      Object {
-        "marginBottom": "1.45rem",
-      }
-    }
-  >
+  <header>
     <div
       style={
         Object {
@@ -24,8 +18,8 @@ exports[`Campaigns page renders correctly 1`] = `
           "display": "flex",
           "justifyContent": "space-between",
           "margin": "0 auto",
-          "maxWidth": 960,
-          "padding": "1.45rem 1.0875rem",
+          "maxWidth": 1280,
+          "padding": "2rem 5rem",
         }
       }
     >
@@ -232,7 +226,7 @@ exports[`Campaigns page renders correctly 1`] = `
       Object {
         "flexGrow": 1,
         "margin": "0 auto",
-        "maxWidth": 960,
+        "maxWidth": 1280,
         "padding": "0 1.0875rem 1.45rem",
         "width": "100%",
       }
@@ -1699,9 +1693,8 @@ exports[`Campaigns page renders correctly 1`] = `
           "gap": "1rem",
           "gridTemplateColumns": "repeat(12, 1fr)",
           "margin": "5rem auto",
-          "maxWidth": 960,
-          "padding": "0 1.0875rem 1.45rem",
-          "width": "100%",
+          "maxWidth": 1280,
+          "padding": "2rem 5rem",
         }
       }
     >

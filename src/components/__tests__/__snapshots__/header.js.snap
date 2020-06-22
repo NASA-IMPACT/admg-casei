@@ -1,13 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header renders correctly 1`] = `
-<header
-  style={
-    Object {
-      "marginBottom": "1.45rem",
-    }
-  }
->
+<header>
   <div
     style={
       Object {
@@ -15,8 +9,8 @@ exports[`Header renders correctly 1`] = `
         "display": "flex",
         "justifyContent": "space-between",
         "margin": "0 auto",
-        "maxWidth": 960,
-        "padding": "1.45rem 1.0875rem",
+        "maxWidth": 1280,
+        "padding": "2rem 5rem",
       }
     }
   >

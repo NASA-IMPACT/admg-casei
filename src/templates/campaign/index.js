@@ -16,6 +16,7 @@ const CampaignTemplate = ({ data: { campaign, deployments, platforms } }) => {
   return (
     <Layout>
       <Header
+        bounds={campaign.bounds}
         shortname={campaign.shortname}
         longname={campaign.longname}
         focusIds={campaign.focus}

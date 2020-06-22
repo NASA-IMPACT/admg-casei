@@ -1,6 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
 
+import theme from "../utils/theme"
+
 const Footer = () => {
   const style = {
     ul: {
@@ -19,9 +21,8 @@ const Footer = () => {
       <div
         style={{
           margin: `5rem auto`,
-          width: `100%`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
+          maxWidth: theme.layout.maxWidth,
+          padding: `2rem 5rem`,
           flexShrink: 0,
           display: `grid`,
           gap: `1rem`,

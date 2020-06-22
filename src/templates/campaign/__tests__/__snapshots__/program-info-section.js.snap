@@ -2,7 +2,7 @@
 
 exports[`Program Info Section renders logo when present in props 1`] = `
 <section
-  className="sc-AxjAm jiDcck sc-AxjAm jiDcck"
+  className="sc-AxjAm dxhynR sc-AxjAm dxhynR"
   data-cy="program-info-section"
   id="program-info"
 >
@@ -253,7 +253,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
 
 exports[`Program Info Section renders placeholder when no logo is available 1`] = `
 <section
-  className="sc-AxjAm jiDcck sc-AxjAm jiDcck"
+  className="sc-AxjAm dxhynR sc-AxjAm dxhynR"
   data-cy="program-info-section"
   id="program-info"
 >
