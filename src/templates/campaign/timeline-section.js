@@ -10,7 +10,8 @@ import theme from "../../utils/theme"
 
 const Milestone = ({
   type = "Deployment",
-  date = "June - September 2018",
+  startDate,
+  endDate,
   name = "ABoVE Deploymeny (L-band)",
   details = "some list of platforms, number of flights",
   region = "Alaska and Western Canada",
@@ -39,9 +40,11 @@ const Milestone = ({
         />
       </div>
       <div style={{ flex: `1.61803398875`, padding: `1rem` }}>
-        <Label id="timeline-milestone-date">{date}</Label>
+        <Label id="timeline-milestone-date">
+          {startDate} &#8212; {endDate}
+        </Label>
         <h3>{name}</h3>
-        <h4>{details}</h4>
+        <h6>{details}</h6>
         <p>{region}</p>
       </div>
     </div>
@@ -50,7 +53,8 @@ const Milestone = ({
 
 Milestone.propTypes = {
   type: PropTypes.string.isRequired,
-  date: PropTypes.string.isRequired,
+  startDate: PropTypes.string.isRequired,
+  endDate: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   details: PropTypes.string.isRequired,
   region: PropTypes.string.isRequired,
@@ -98,7 +102,8 @@ const TimelineSection = ({ deployments }) => {
               <Milestone
                 key={deployment.id}
                 type="deployment"
-                date={`${deployment.start} -- ${deployment.end}`}
+                startDate={deployment.start}
+                endDate={deployment.end}
                 name={`${deployment.longname} (${deployment.shortname})`}
                 details={`${deployment.flights.length} Flights`}
                 region={deployment.region.toString()}
