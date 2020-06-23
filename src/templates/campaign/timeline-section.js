@@ -1,7 +1,9 @@
-import React from "react"
+import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 import Carousel from "nuka-carousel"
+
+import Timeline from "../../components/timeline"
 
 const Milestone = ({
   type = "Deployment",
@@ -45,31 +47,48 @@ Milestone.propTypes = {
   region: PropTypes.string.isRequired,
 }
 
-const TimelineSection = ({ deployments }) => (
-  <section className="inpage-nav" id="timeline" data-cy="timeline-section">
-    <h2>Timeline</h2>
-    <div data-cy="milestone-carousel">
-      <Carousel
-        defaultControlsConfig={{
-          nextButtonText: ">",
-          prevButtonText: "<",
-        }}
-      >
-        {deployments.nodes.map(deployment => (
-          <Milestone
-            key={deployment.id}
-            type="deployment"
-            date={`${deployment.start} - ${deployment.end}`}
-            name={`${deployment.longname} (${deployment.shortname})`}
-            details={`${deployment.flights.length} Flights`}
-            region={deployment.region.toString()}
-          />
-        ))}
-      </Carousel>
-    </div>
-    <div data-cy="milestone-timeline"></div>
-  </section>
-)
+const TimelineSection = ({ deployments }) => {
+  const [selectedMilestone, selectMilestone] = useState(0)
+
+  /**
+   * Finds the index of the milestone given the id.
+   * @param {string} id - of mileston
+   */
+  const setSelectedMilestone = id =>
+    // TODO: replace deployments array with the new array that will combine deployments with other carousel data
+    selectMilestone(
+      deployments.nodes.findIndex(deployment => deployment.id == id)
+    )
+  return (
+    <section className="inpage-nav" id="timeline" data-cy="timeline-section">
+      <h2>Timeline</h2>
+      <div data-cy="milestone-carousel">
+        <Carousel
+          defaultControlsConfig={{
+            nextButtonText: ">",
+            prevButtonText: "<",
+          }}
+          slideIndex={selectedMilestone}
+        >
+          {deployments.nodes.map(deployment => (
+            <Milestone
+              key={deployment.id}
+              type="deployment"
+              date={`${deployment.start} - ${deployment.end}`}
+              name={`${deployment.longname} (${deployment.shortname})`}
+              details={`${deployment.flights.length} Flights`}
+              region={deployment.region.toString()}
+            />
+          ))}
+        </Carousel>
+      </div>
+      <Timeline
+        events={deployments.nodes}
+        timelineAction={setSelectedMilestone}
+      />
+    </section>
+  )
+}
 
 export const deployments = graphql`
   fragment deploymentFragment on deploymentConnection {
