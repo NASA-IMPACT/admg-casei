@@ -68,7 +68,7 @@ const ProgramInfoSection = ({
         {contentList.map(item => (
           <ContentItem
             key={item.label}
-            dataCy="program-info-content"
+            id="program-info-content"
             label={item.label}
             info={item.info}
             type={item.type || "text"}

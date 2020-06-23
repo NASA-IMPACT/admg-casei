@@ -19,7 +19,13 @@ const Milestone = ({
     <label
       style={{
         textTransform: `uppercase`,
-        color: `#6B6B6B`,
+        fontSize: `small`,
+        color: theme.color.base,
+        backgroundColor: `red`,
+        position: `absolute`,
+        top: `4rem`,
+        left: `4rem`,
+        padding: `.25rem`,
       }}
     >
       {type}
@@ -33,7 +39,7 @@ const Milestone = ({
         />
       </div>
       <div style={{ flex: `1.61803398875`, padding: `1rem` }}>
-        <Label>{date}</Label>
+        <Label id="timeline-milestone-date">{date}</Label>
         <h3>{name}</h3>
         <h4>{details}</h4>
         <p>{region}</p>
