@@ -22,7 +22,7 @@ const FocusSection = ({ focusAreaIds, focusPhenomena, scienceKeywords }) => {
   `)
 
   return (
-    <SectionBlock headline="Focus" id="focus">
+    <SectionBlock headline="Focus" id="focus" withBackground>
       <ContentGroup>
         <div data-cy="focus-content">
           <Label showBorder dataCy="focus-content">
