@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import SectionBlock from "../../components/section/section-block"
 
 const FactItem = ({ label, fact }) => (
   <div data-cy="overview-fact">
@@ -58,8 +59,7 @@ const OverviewSection = ({
     .join(", ")
 
   return (
-    <section className="inpage-nav" id="overview" data-cy="overview-section">
-      <h2>Overview</h2>
+    <SectionBlock headline="Overview" id="overview">
       <div style={{ display: `flex` }}>
         <div style={{ flex: `1.61803398875` }}>
           <p data-cy="description">{description}</p>
@@ -103,7 +103,7 @@ const OverviewSection = ({
           </ul>
         </div>
       </div>
-    </section>
+    </SectionBlock>
   )
 }
 

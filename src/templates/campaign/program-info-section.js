@@ -6,6 +6,7 @@ import SectionBlock from "../../components/section/section-block"
 import ContentItem from "../../components/section/content-item"
 import ContentGroup from "../../components/section/content-group"
 import PlaceholderLogo from "../../images/placeholder-logo.svg"
+import theme from "../../utils/theme"
 
 const ProgramInfoSection = ({
   logo,
@@ -47,38 +48,42 @@ const ProgramInfoSection = ({
   ]
 
   return (
-    <SectionBlock
-      sectionTitle="Program Info"
-      id="program-info"
-      dataCy="program-info-section"
-    >
+    <SectionBlock headline="Program Info" id="program-info">
       <div
         style={{
-          flex: `0.618`,
           display: `flex`,
-          justifyContent: `center`,
-          alignItems: `center`,
-          padding: `1rem`,
+          alignItems: `stretch`,
+          backgroundColor: theme.color.secondary,
         }}
       >
-        <img
-          src={logo || PlaceholderLogo}
-          alt="campaign-logo"
-          data-cy="campaign-logo"
-        />
-      </div>
-
-      <ContentGroup>
-        {contentList.map(item => (
-          <ContentItem
-            key={item.label}
-            dataCy="program-info-content"
-            label={item.label}
-            info={item.info}
-            type={item.type || "text"}
+        <div
+          style={{
+            flex: `0.618`,
+            display: `flex`,
+            justifyContent: `center`,
+            alignItems: `center`,
+            padding: `1rem`,
+          }}
+        >
+          <img
+            src={logo || PlaceholderLogo}
+            alt="campaign-logo"
+            data-cy="campaign-logo"
           />
-        ))}
-      </ContentGroup>
+        </div>
+
+        <ContentGroup>
+          {contentList.map(item => (
+            <ContentItem
+              key={item.label}
+              dataCy="program-info-content"
+              label={item.label}
+              info={item.info}
+              type={item.type || "text"}
+            />
+          ))}
+        </ContentGroup>
+      </div>
     </SectionBlock>
   )
 }

@@ -2,9 +2,10 @@ import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
+import SectionBlock from "../../components/section/section-block"
+
 const PlatformSection = ({ platforms }) => (
-  <section className="inpage-nav" id="platforms" data-cy="platform-section">
-    <h2>Platforms & Instruments</h2>
+  <SectionBlock headline="Platforms & Instruments" id="platform">
     <div
       style={{
         display: `grid`,
@@ -21,7 +22,7 @@ const PlatformSection = ({ platforms }) => (
         </div>
       ))}
     </div>
-  </section>
+  </SectionBlock>
 )
 
 export const platforms = graphql`

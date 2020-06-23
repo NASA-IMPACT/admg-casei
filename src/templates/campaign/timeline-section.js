@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import Carousel from "nuka-carousel"
 
 import Timeline from "../../components/timeline"
+import SectionBlock from "../../components/section/section-block"
 
 const Milestone = ({
   type = "Deployment",
@@ -71,8 +72,7 @@ const TimelineSection = ({ deployments }) => {
   const selectedMilestoneId = deployments.nodes[selectedMilestone].id
 
   return (
-    <section className="inpage-nav" id="timeline" data-cy="timeline-section">
-      <h2>Timeline</h2>
+    <SectionBlock headline="Timeline" id="timeline">
       <div data-cy="milestone-carousel">
         <Carousel
           renderTopCenterControls={({ currentSlide }) =>
@@ -101,7 +101,7 @@ const TimelineSection = ({ deployments }) => {
         timelineAction={setSelectedMilestone}
         activeMilestone={selectedMilestoneId}
       />
-    </section>
+    </SectionBlock>
   )
 }
 
