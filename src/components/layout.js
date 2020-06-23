@@ -42,7 +42,6 @@ const Layout = ({ children }) => {
           margin: `0 auto`,
           width: `100%`,
           maxWidth: theme.layout.maxWidth,
-          padding: `0 1.0875rem 1.45rem`,
           flexGrow: 1,
         }}
       >

@@ -57,7 +57,7 @@ const Header = ({
   const offsetCoords = turf.bbox(
     turf.transformTranslate(geojson, distance * 0.5, -90, options)
   )
-  const size = [theme.layout.maxWidth, 356]
+  const size = [theme.layout.maxWidth, 560]
   const vp = geoViewport.viewport(offsetCoords, size)
 
   // TODO: display outline on map
@@ -84,7 +84,9 @@ const Header = ({
         display: `flex`,
         background: `linear-gradient(90deg, rgba(12,21,32, 0.8) 0%, rgba(12,21,32, 0.7)50%, rgba(12,21,32, 0.0)66%),
     url(${url}) bottom center no-repeat`,
-        padding: `2rem 5rem`,
+        padding: `9rem 5rem 0 5rem`,
+        marginTop: `-7rem`,
+        height: `35rem`,
       }}
     >
       <div style={{ flex: `2` }}>

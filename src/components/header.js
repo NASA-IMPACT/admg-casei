@@ -23,6 +23,7 @@ const Header = ({ siteTitle, children }) => (
           fontFamily: `'Varela Round',sans-serif`,
           fontSize: `1.5rem`,
           lineHeight: `1.5rem`,
+          zIndex: 100,
         }}
       >
         <Link
