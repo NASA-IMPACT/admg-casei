@@ -46,42 +46,46 @@ const Header = ({
     .map(x => x.shortname)
     .join(", ")
 
-  const geojson = parse(bounds)
-  const [w, s, e, n] = turf.bbox(geojson)
+  const geometry = parse(bounds)
+  const geojson = {
+    type: "Feature",
+    properties: {
+      stroke: "#f25d0d",
+      "stroke-width": 2,
+      "fill-opacity": 0,
+    },
+    geometry: geometry,
+  }
+  const [w, s, e, n] = turf.bbox(geometry)
   const west = turf.point([w, (n + s) / 2])
   const east = turf.point([e, (n + s) / 2])
   const options = { units: "degrees" }
   const distance = turf.distance(west, east, options)
-  const offsetCoords = turf.bbox(
-    turf.transformTranslate(geojson, distance * 0.5, -90, options)
+  const offsetCoords = turf.transformTranslate(
+    geometry,
+    distance * 0.5,
+    -90,
+    options
+  )
+
+  const scaledCoords = turf.bbox(
+    turf.transformScale(offsetCoords, 1.4, options)
   )
   const size = [theme.layout.maxWidth, 560]
-  const vp = geoViewport.viewport(offsetCoords, size)
-
-  // TODO: display outline on map
-  // const layer = {
-  //   id: "bbox",
-  //   source: { type: "geojson", data: geojson },
-  //   type: "fill",
-  //   paint: { "fill-color": "#00ffff" },
-  // }
-
-  const url =
-    "https://api.mapbox.com/styles/v1/mapbox/satellite-streets-v11/static/" +
-    vp.center.join(",") +
-    "," +
-    vp.zoom +
-    "/" +
-    size.join("x") +
-    "?access_token=" +
+  const viewport = geoViewport.viewport(scaledCoords, size)
+  const overlay = encodeURIComponent(JSON.stringify(geojson))
+  const accessToken =
     "pk.eyJ1IjoiZGV2c2VlZCIsImEiOiJja2JxbjJhbGQybnpnMnJwdnk0NXloMmt1In0.5ciMNUW3yaadjwmlDLTugw"
+
+  const url = `https://api.mapbox.com/styles/v1/mapbox/satellite-streets-v11/static/geojson(${overlay})/${viewport.center.join(
+    ","
+  )},${viewport.zoom}/${size.join("x")}?access_token=${accessToken}`
 
   return (
     <header
       style={{
         display: `flex`,
-        background: `linear-gradient(90deg, rgba(12,21,32, 0.8) 0%, rgba(12,21,32, 0.7)50%, rgba(12,21,32, 0.0)66%),
-    url(${url}) bottom center no-repeat`,
+        background: `linear-gradient(90deg, rgba(12,21,32, 0.8) 0%, rgba(12,21,32, 0.7)50%, rgba(12,21,32, 0.0)66%), url("${url}") bottom center no-repeat`,
         padding: `9rem 5rem 0 5rem`,
         marginTop: `-7rem`,
         height: `35rem`,
@@ -102,7 +106,7 @@ const Header = ({
           <StatNumber number={countDataProducts} label="Data Products" />
         </dl>
       </div>
-      <div className="placeholder" style={{ flex: `1` }}></div>
+      <div style={{ flex: `1` }}></div>
     </header>
   )
 }
