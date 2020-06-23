@@ -12,8 +12,8 @@ exports[`MileStone renders correctly 1`] = `
   <label
     style={
       Object {
-        "backgroundColor": "red",
-        "color": "hsla(0,0%,100%,0.9)",
+        "backgroundColor": "#F93C21",
+        "color": "#0c1520",
         "fontSize": "small",
         "left": "4rem",
         "padding": ".25rem",
@@ -72,9 +72,9 @@ exports[`MileStone renders correctly 1`] = `
       <h3>
         Canada, Oregon Fall 2012
       </h3>
-      <h6>
+      <p>
         2 Flights
-      </h6>
+      </p>
       <p>
         Canada
       </p>
