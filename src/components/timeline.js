@@ -1,7 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { AirborneRemoteSensors } from "./icons"
 
-export default function Timeline({ events, timelineAction }) {
+export default function Timeline({ events, timelineAction, activeMilestone }) {
+  console.log("events", activeMilestone)
   return (
     <section
       data-cy="milestone-timeline"
@@ -21,7 +23,7 @@ export default function Timeline({ events, timelineAction }) {
               position: `relative`,
               display: `inline-block`,
               listStyleType: `none`,
-              width: `160px`,
+              width: `200px`,
               height: `2px`,
               background: `#fff`,
             }}
@@ -45,10 +47,23 @@ export default function Timeline({ events, timelineAction }) {
                 whiteSpace: `normal`,
                 color: `black`,
                 background: `white`,
+                opacity: activeMilestone === event.id ? 1 : 0.7,
               }}
               onClick={() => timelineAction(event.id)}
             >
-              {event.longname}
+              <div
+                style={{
+                  display: `grid`,
+                  gap: `.5rem`,
+                  gridTemplateColumns: `30px 1fr`,
+                }}
+              >
+                <AirborneRemoteSensors
+                  color={activeMilestone === event.id ? "red" : "black"}
+                  size="tiny"
+                />
+                <p>{event.longname}</p>
+              </div>
             </a>
             <p
               style={{
@@ -82,4 +97,5 @@ Timeline.propTypes = {
     })
   ).isRequired,
   timelineAction: PropTypes.func,
+  activeMilestone: PropTypes.string,
 }

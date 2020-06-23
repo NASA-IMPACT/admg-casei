@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 import Carousel from "nuka-carousel"
@@ -49,6 +49,14 @@ Milestone.propTypes = {
 
 const TimelineSection = ({ deployments }) => {
   const [selectedMilestone, selectMilestone] = useState(0)
+  const [currentSlide, setCurrentSlide] = useState(0)
+
+  /**
+   * Updates current milestone on carousel change
+   */
+  useEffect(() => {
+    selectMilestone(currentSlide)
+  }, [currentSlide])
 
   /**
    * Finds the index of the milestone given the id.
@@ -59,11 +67,17 @@ const TimelineSection = ({ deployments }) => {
     selectMilestone(
       deployments.nodes.findIndex(deployment => deployment.id == id)
     )
+
+  const selectedMilestoneId = deployments.nodes[selectedMilestone].id
+
   return (
     <section className="inpage-nav" id="timeline" data-cy="timeline-section">
       <h2>Timeline</h2>
       <div data-cy="milestone-carousel">
         <Carousel
+          renderTopCenterControls={({ currentSlide }) =>
+            setCurrentSlide(currentSlide)
+          }
           defaultControlsConfig={{
             nextButtonText: ">",
             prevButtonText: "<",
@@ -85,6 +99,7 @@ const TimelineSection = ({ deployments }) => {
       <Timeline
         events={deployments.nodes}
         timelineAction={setSelectedMilestone}
+        activeMilestone={selectedMilestoneId}
       />
     </section>
   )
