@@ -199,7 +199,7 @@ export const query = graphql`
     region: region_description
     deploymentIds: deployments
     countCollectionPeriods: number_collection_periods
-    countDataproducts: number_data_products
+    countDataProducts: number_data_products
   }
 `
 
@@ -215,7 +215,7 @@ const campaignShape = PropTypes.shape({
   region: PropTypes.string.isRequired,
   deploymentIds: PropTypes.arrayOf(PropTypes.string),
   countCollectionPeriods: PropTypes.number,
-  countDataproducts: PropTypes.number,
+  countDataProducts: PropTypes.number,
 })
 
 Campaigns.propTypes = {

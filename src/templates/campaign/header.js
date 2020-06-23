@@ -9,11 +9,8 @@ import theme from "../../utils/theme"
 
 const StatNumber = ({ number, label }) => (
   <>
-    <dt
-      className={!number || number.length === 0 ? "placeholder" : ""}
-      style={{ fontSize: `3rem` }}
-    >
-      {!number || number.length === 0 ? "--" : number}
+    <dt style={{ fontSize: `3rem` }}>
+      {!number && number !== 0 ? "--" : number}
     </dt>
     <dd style={{ gridRowStart: 2, textTransform: `uppercase` }}>{label}</dd>
   </>
@@ -30,7 +27,8 @@ const Header = ({
   longname,
   focusIds,
   countDeployments,
-  countDataproducts,
+  countCollectionPeriods,
+  countDataProducts,
 }) => {
   const data = useStaticQuery(graphql`
     query {
@@ -97,8 +95,11 @@ const Header = ({
         </div>
         <dl style={{ display: `grid` }} data-cy="stats">
           <StatNumber number={countDeployments} label="Deployments" />
-          <StatNumber number={null} label="Flights" />
-          <StatNumber number={countDataproducts} label="Data Products" />
+          <StatNumber
+            number={countCollectionPeriods}
+            label="Collection Periods"
+          />
+          <StatNumber number={countDataProducts} label="Data Products" />
         </dl>
       </div>
       <div className="placeholder" style={{ flex: `1` }}></div>
@@ -113,7 +114,8 @@ export const headerFields = graphql`
     longname: long_name
     focus: focus_areas
     countCollectionPeriods: number_collection_periods
-    countDataproducts: number_data_products
+    countDataProducts: number_data_products
+    countDeployments: number_deployments
   }
 `
 
@@ -123,7 +125,8 @@ Header.propTypes = {
   longname: PropTypes.string.isRequired,
   focusIds: PropTypes.arrayOf(PropTypes.string).isRequired,
   countDeployments: PropTypes.number.isRequired,
-  countDataproducts: PropTypes.number.isRequired,
+  countCollectionPeriods: PropTypes.number.isRequired,
+  countDataProducts: PropTypes.number.isRequired,
 }
 
 export default Header

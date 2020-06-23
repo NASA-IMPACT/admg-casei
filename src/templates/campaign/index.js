@@ -20,8 +20,9 @@ const CampaignTemplate = ({ data: { campaign, deployments, platforms } }) => {
         shortname={campaign.shortname}
         longname={campaign.longname}
         focusIds={campaign.focus}
-        countDeployments={deployments.totalCount}
-        countDataproducts={campaign.countDataproducts}
+        countDeployments={campaign.countDeployments}
+        countCollectionPeriods={campaign.countCollectionPeriods}
+        countDataProducts={campaign.countDataProducts}
       />
       <InpageNav />
       <OverviewSection
@@ -66,7 +67,6 @@ export const query = graphql`
       ...fundingFields
     }
     deployments: allDeployment(filter: { campaign: { eq: $slug } }) {
-      totalCount
       ...deploymentFragment
     }
     platforms: allPlatform(filter: { id: { in: $platforms } }) {
@@ -82,7 +82,8 @@ CampaignTemplate.propTypes = {
       longname: PropTypes.string.isRequired,
       focus: PropTypes.arrayOf(PropTypes.string).isRequired,
       countDeployments: PropTypes.number,
-      countDataproducts: PropTypes.number.isRequired,
+      countCollectionPeriods: PropTypes.number.isRequired,
+      countDataProducts: PropTypes.number.isRequired,
       description: PropTypes.string.isRequired,
       startdate: PropTypes.string.isRequired,
       enddate: PropTypes.string.isRequired,
@@ -105,7 +106,18 @@ CampaignTemplate.propTypes = {
       tertiaryWebsite: PropTypes.string.isRequired,
     }).isRequired,
     deployments: PropTypes.shape({
-      totalCount: PropTypes.number.isRequired,
+      nodes: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string.isRequired,
+          shortname: PropTypes.string.isRequired,
+          flights: PropTypes.array.isRequired,
+          region: PropTypes.array.isRequired,
+          campaign: PropTypes.string.isRequired,
+          longname: PropTypes.string.isRequired,
+          end: PropTypes.string.isRequired,
+          start: PropTypes.string.isRequired,
+        })
+      ),
     }).isRequired,
     platforms: PropTypes.shape({
       nodes: PropTypes.arrayOf(

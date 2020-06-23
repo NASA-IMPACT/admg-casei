@@ -24,7 +24,7 @@ export const query = {
         region: "Florida Everglades",
         deploymentIds: ["ddc8ce9e-d4db-4b39-8041-06b272902544"],
         countCollectionPeriods: 0,
-        countDataproducts: 0,
+        countDataProducts: 0,
       },
       {
         ongoing: false,
@@ -50,7 +50,7 @@ export const query = {
           "d1b6132c-96f6-4f5c-9c47-7d9544339452",
         ],
         countCollectionPeriods: 0,
-        countDataproducts: 0,
+        countDataProducts: 0,
       },
       {
         ongoing: false,
@@ -102,7 +102,7 @@ export const query = {
           "83c4522a-641b-405a-85e7-90878e797db0",
         ],
         countCollectionPeriods: 0,
-        countDataproducts: 0,
+        countDataProducts: 0,
       },
       {
         ongoing: false,
@@ -129,7 +129,7 @@ export const query = {
           "458e6f74-3827-4b7b-8f85-416fe010918b",
         ],
         countCollectionPeriods: 0,
-        countDataproducts: 0,
+        countDataProducts: 0,
       },
       {
         ongoing: false,
@@ -151,7 +151,7 @@ export const query = {
           "Northeastern Colorado, West Texas to Central Oklahoma, Northern Alabama",
         deploymentIds: ["dc2fa7b2-3143-4ca8-9e5a-ee07e807e712"],
         countCollectionPeriods: 0,
-        countDataproducts: null,
+        countDataProducts: null,
       },
       {
         ongoing: false,
@@ -170,7 +170,7 @@ export const query = {
           "Ontario, Canada and northern portions of the United States (e.g., New York state, the New England area, etc.)",
         deploymentIds: ["9cfa5b55-7378-48af-9018-ba2d82afe2eb"],
         countCollectionPeriods: 0,
-        countDataproducts: 0,
+        countDataProducts: 0,
       },
       {
         ongoing: false,
@@ -190,7 +190,7 @@ export const query = {
         region: "Continental United States",
         deploymentIds: ["2e0877ea-d96e-4f8d-ae6f-3ec531812b6c"],
         countCollectionPeriods: 0,
-        countDataproducts: 0,
+        countDataProducts: 0,
       },
       {
         ongoing: false,
@@ -208,7 +208,7 @@ export const query = {
           "Tropical Atlantic, Gulf of Mexico, Eastern North Pacific, Caribbean Sea",
         deploymentIds: ["1a7c31aa-85ff-4aab-8d43-caf0fa0cf4be"],
         countCollectionPeriods: 0,
-        countDataproducts: 0,
+        countDataProducts: 0,
       },
       {
         ongoing: false,
@@ -226,7 +226,7 @@ export const query = {
           "dbe8a890-33e2-46b1-92ea-bcf2d6a3a026",
         ],
         countCollectionPeriods: 0,
-        countDataproducts: 0,
+        countDataProducts: 0,
       },
       {
         ongoing: false,
@@ -247,7 +247,7 @@ export const query = {
         region: "Olympic Peninsula in U.S. Washington State",
         deploymentIds: ["04f5d90a-b356-42ea-9c17-1c8d3b46722b"],
         countCollectionPeriods: 0,
-        countDataproducts: 0,
+        countDataProducts: 0,
       },
     ],
   },
@@ -272,7 +272,7 @@ export const query = {
         region: "Olympic Peninsula in U.S. Washington State",
         deploymentIds: ["04f5d90a-b356-42ea-9c17-1c8d3b46722b"],
         countCollectionPeriods: 0,
-        countDataproducts: 0,
+        countDataProducts: 0,
       },
       {
         ongoing: false,
@@ -290,7 +290,7 @@ export const query = {
           "dbe8a890-33e2-46b1-92ea-bcf2d6a3a026",
         ],
         countCollectionPeriods: 0,
-        countDataproducts: 0,
+        countDataProducts: 0,
       },
       {
         ongoing: false,
@@ -308,7 +308,7 @@ export const query = {
           "Tropical Atlantic, Gulf of Mexico, Eastern North Pacific, Caribbean Sea",
         deploymentIds: ["1a7c31aa-85ff-4aab-8d43-caf0fa0cf4be"],
         countCollectionPeriods: 0,
-        countDataproducts: 0,
+        countDataProducts: 0,
       },
       {
         ongoing: false,
@@ -328,7 +328,7 @@ export const query = {
         region: "Continental United States",
         deploymentIds: ["2e0877ea-d96e-4f8d-ae6f-3ec531812b6c"],
         countCollectionPeriods: 0,
-        countDataproducts: 0,
+        countDataProducts: 0,
       },
       {
         ongoing: false,
@@ -347,7 +347,7 @@ export const query = {
           "Ontario, Canada and northern portions of the United States (e.g., New York state, the New England area, etc.)",
         deploymentIds: ["9cfa5b55-7378-48af-9018-ba2d82afe2eb"],
         countCollectionPeriods: 0,
-        countDataproducts: 0,
+        countDataProducts: 0,
       },
       {
         ongoing: false,
@@ -369,7 +369,7 @@ export const query = {
           "Northeastern Colorado, West Texas to Central Oklahoma, Northern Alabama",
         deploymentIds: ["dc2fa7b2-3143-4ca8-9e5a-ee07e807e712"],
         countCollectionPeriods: 0,
-        countDataproducts: null,
+        countDataProducts: null,
       },
       {
         ongoing: false,
@@ -396,7 +396,7 @@ export const query = {
           "458e6f74-3827-4b7b-8f85-416fe010918b",
         ],
         countCollectionPeriods: 0,
-        countDataproducts: 0,
+        countDataProducts: 0,
       },
       {
         ongoing: false,
@@ -448,7 +448,7 @@ export const query = {
           "83c4522a-641b-405a-85e7-90878e797db0",
         ],
         countCollectionPeriods: 0,
-        countDataproducts: 0,
+        countDataProducts: 0,
       },
       {
         ongoing: false,
@@ -474,7 +474,7 @@ export const query = {
           "d1b6132c-96f6-4f5c-9c47-7d9544339452",
         ],
         countCollectionPeriods: 0,
-        countDataproducts: 0,
+        countDataProducts: 0,
       },
       {
         ongoing: false,
@@ -496,7 +496,7 @@ export const query = {
         region: "Florida Everglades",
         deploymentIds: ["ddc8ce9e-d4db-4b39-8041-06b272902544"],
         countCollectionPeriods: 0,
-        countDataproducts: 0,
+        countDataProducts: 0,
       },
     ],
   },

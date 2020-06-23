@@ -30,6 +30,7 @@ exports[`Campaigns page renders correctly 1`] = `
             "fontSize": "1.5rem",
             "lineHeight": "1.5rem",
             "margin": 0,
+            "zIndex": 100,
           }
         }
       >
@@ -153,7 +154,13 @@ exports[`Campaigns page renders correctly 1`] = `
           </b>
         </a>
       </div>
-      <nav>
+      <nav
+        style={
+          Object {
+            "zIndex": 100,
+          }
+        }
+      >
         <ul
           style={
             Object {
@@ -227,7 +234,6 @@ exports[`Campaigns page renders correctly 1`] = `
         "flexGrow": 1,
         "margin": "0 auto",
         "maxWidth": 1280,
-        "padding": "0 1.0875rem 1.45rem",
         "width": "100%",
       }
     }
@@ -1166,9 +1172,7 @@ exports[`Campaigns page renders correctly 1`] = `
               <small
                 data-cy="count2"
               >
-                <strong>
-                  0
-                </strong>
+                <strong />
                  Data Products
               </small>
             </div>
