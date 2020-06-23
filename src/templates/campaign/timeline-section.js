@@ -21,8 +21,8 @@ export const Milestone = ({
       style={{
         textTransform: `uppercase`,
         fontSize: `small`,
-        color: theme.color.base,
-        backgroundColor: `red`,
+        color: theme.color.primary,
+        backgroundColor: theme.color.highlight,
         position: `absolute`,
         top: `4rem`,
         left: `4rem`,
@@ -44,7 +44,7 @@ export const Milestone = ({
           {startDate} &#8212; {endDate}
         </Label>
         <h3>{name}</h3>
-        <h6>{details}</h6>
+        <p>{details}</p>
         <p>{region}</p>
       </div>
     </div>

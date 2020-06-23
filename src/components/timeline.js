@@ -17,10 +17,12 @@ const CardContent = styled.div`
 const CardTitle = styled.p`
   margin: 0;
   font-size: small;
+  text-align: start;
 `
 const CardSubTitle = styled.p`
   margin: 0;
   font-size: x-small;
+  text-align: start;
 `
 
 export default function Timeline({ events, timelineAction, activeMilestone }) {
@@ -33,7 +35,7 @@ export default function Timeline({ events, timelineAction, activeMilestone }) {
         style={{
           maxWidth: `100%`,
           padding: `8rem 0 2rem 0`,
-          transition: `all 1s`,
+          height: `200px`,
           margin: `0`,
           display: `flex`,
           overflowX: `scroll`,
@@ -46,7 +48,6 @@ export default function Timeline({ events, timelineAction, activeMilestone }) {
               position: `relative`,
               display: `flex`,
               listStyleType: `none`,
-              width: `200px`,
               height: `2px`,
               background: `#fff`,
               flex: `1 0 25%`,
@@ -58,17 +59,17 @@ export default function Timeline({ events, timelineAction, activeMilestone }) {
                 bottom: `0rem`,
                 height: `2rem`,
                 width: `1px`,
-                background: `white`,
+                background: theme.color.base,
               }}
             ></div>
-            <a
+            <button
               style={{
                 position: `absolute`,
                 bottom: `2rem`,
-                width: `200px`,
+                width: `12rem`,
                 padding: `.5rem`,
                 color: `black`,
-                background: `white`,
+                background: theme.color.base,
                 opacity: activeMilestone === event.id ? 1 : 0.7,
               }}
               onClick={() => timelineAction(event.id)}
@@ -79,7 +80,9 @@ export default function Timeline({ events, timelineAction, activeMilestone }) {
                 <div style={{ gridArea: `icon` }}>
                   <AirborneRemoteSensors
                     color={
-                      activeMilestone === event.id ? "red" : theme.color.primary
+                      activeMilestone === event.id
+                        ? theme.color.highlight
+                        : theme.color.primary
                     }
                     size="tiny"
                   />
@@ -94,14 +97,14 @@ export default function Timeline({ events, timelineAction, activeMilestone }) {
                   {`${event.flights.length} Flights` || "missing flights"}
                 </CardSubTitle>
               </CardContent>
-            </a>
+            </button>
             <p
               style={{
                 position: `absolute`,
                 width: `100%`,
                 height: `40px`,
                 top: `1rem`,
-                color: `white`,
+                color: theme.color.base,
               }}
             >
               {event.end}

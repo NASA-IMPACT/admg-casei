@@ -142,7 +142,6 @@ describe("Campaign", () => {
       cy.get("[data-cy=milestone]").first().find("img").should("exist")
       cy.get("[data-cy=milestone]").first().find("img").should("be.visible")
       cy.get("[data-cy=milestone]").first().find("h3").should("exist")
-      cy.get("[data-cy=milestone]").first().find("h6").should("exist")
       cy.get("[data-cy=milestone]").first().find("p").should("exist")
 
       cy.get("[data-cy=milestone-carousel]")

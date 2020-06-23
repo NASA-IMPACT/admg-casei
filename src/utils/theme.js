@@ -6,6 +6,7 @@ let color = {
   gray: "#9E9E9E",
   link: "#aac9ff",
   background: "#0c1520",
+  highlight: "#F93C21",
 }
 
 const type = {
