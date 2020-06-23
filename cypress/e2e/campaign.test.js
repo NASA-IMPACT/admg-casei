@@ -38,9 +38,6 @@ describe("Campaign", () => {
           expect($header[0].style["background-image"]).to.contain(
             "/styles/v1/mapbox/satellite-streets-v11/static"
           )
-          expect($header[0].style["background-image"]).to.contain(
-            "/-131.56796841447883,34,3/1280x560"
-          )
         })
     })
   })
