@@ -72,8 +72,9 @@ export default function Timeline({ events, timelineAction, activeMilestone }) {
                 opacity: activeMilestone === event.id ? 1 : 0.7,
               }}
               onClick={() => timelineAction(event.id)}
+              data-cy="milestone-timeline-card"
             >
-              <CardContent>
+              <CardContent data-cy="milestone-timeline-card-content">
                 {/* TODO: replace with the correct icon */}
                 <div style={{ gridArea: `icon` }}>
                   <AirborneRemoteSensors

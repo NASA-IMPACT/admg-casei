@@ -8,7 +8,7 @@ import SectionBlock from "../../components/section/section-block"
 import Label from "../../components/label"
 import theme from "../../utils/theme"
 
-const Milestone = ({
+export const Milestone = ({
   type = "Deployment",
   startDate,
   endDate,

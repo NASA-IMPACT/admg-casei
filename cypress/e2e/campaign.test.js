@@ -142,7 +142,8 @@ describe("Campaign", () => {
       cy.get("[data-cy=milestone]").first().find("img").should("exist")
       cy.get("[data-cy=milestone]").first().find("img").should("be.visible")
       cy.get("[data-cy=milestone]").first().find("h3").should("exist")
-      cy.get("[data-cy=milestone]").first().find("h4").should("exist")
+      cy.get("[data-cy=milestone]").first().find("h6").should("exist")
+      cy.get("[data-cy=milestone]").first().find("p").should("exist")
 
       cy.get("[data-cy=milestone-carousel]")
         .find(".slider-control-centerright > button")
@@ -152,6 +153,17 @@ describe("Campaign", () => {
     })
     it("displays a timeline of milestones", () => {
       cy.get("[data-cy=milestone-timeline]").should("exist")
+      cy.get("[data-cy=milestone-timeline]").first().find("ol").should("exist")
+      cy.get("[data-cy=milestone-timeline]").first().find("li").should("exist")
+    })
+    it("displays a card for each li item", () => {
+      cy.get("[data-cy=milestone-timeline-card]")
+        .should("exist")
+        .click({ multiple: true, force: true }) // needs to be forced in order to access the cards that exist outside of the window
+      cy.get("[data-cy=milestone-timeline-card]")
+        .first()
+        .find("svg")
+        .should("exist")
     })
   })
 
