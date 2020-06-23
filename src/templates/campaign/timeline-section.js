@@ -5,6 +5,7 @@ import Carousel from "nuka-carousel"
 
 import Timeline from "../../components/timeline"
 import SectionBlock from "../../components/section/section-block"
+import Label from "../../components/label"
 import theme from "../../utils/theme"
 
 const Milestone = ({
@@ -32,7 +33,7 @@ const Milestone = ({
         />
       </div>
       <div style={{ flex: `1.61803398875`, padding: `1rem` }}>
-        <p>{date}</p>
+        <Label>{date}</Label>
         <h3>{name}</h3>
         <h4>{details}</h4>
         <p>{region}</p>
@@ -91,7 +92,7 @@ const TimelineSection = ({ deployments }) => {
               <Milestone
                 key={deployment.id}
                 type="deployment"
-                date={`${deployment.start} - ${deployment.end}`}
+                date={`${deployment.start} -- ${deployment.end}`}
                 name={`${deployment.longname} (${deployment.shortname})`}
                 details={`${deployment.flights.length} Flights`}
                 region={deployment.region.toString()}

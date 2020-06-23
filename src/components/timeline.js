@@ -1,8 +1,26 @@
 import React from "react"
 import PropTypes from "prop-types"
+import styled from "styled-components"
 
 import { AirborneRemoteSensors } from "./icons"
 import theme from "../utils/theme"
+
+const CardContent = styled.div`
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: 30px 120px;
+  grid-template-areas:
+    "icon title"
+    "icon subTitle"
+    "icon flights";
+`
+
+const CardTitle = styled.p`
+  margin: 0;
+`
+const CardSubTitle = styled.p`
+  margin: 0;
+`
 
 export default function Timeline({ events, timelineAction, activeMilestone }) {
   console.log("events", events)
@@ -13,12 +31,12 @@ export default function Timeline({ events, timelineAction, activeMilestone }) {
     >
       <ol
         style={{
-          width: `100%`,
+          maxWidth: `100%`,
           padding: `8rem 0 2rem 0`,
           transition: `all 1s`,
           margin: `0`,
           display: `flex`,
-          flexWrap: `nowrap`,
+          overflowX: `scroll`,
         }}
       >
         {events.map(event => (
@@ -49,30 +67,32 @@ export default function Timeline({ events, timelineAction, activeMilestone }) {
                 bottom: `2rem`,
                 width: `200px`,
                 padding: `.5rem`,
-                fontSize: `1rem`,
-                whiteSpace: `normal`,
                 color: `black`,
                 background: `white`,
                 opacity: activeMilestone === event.id ? 1 : 0.7,
               }}
               onClick={() => timelineAction(event.id)}
             >
-              <div
-                style={{
-                  display: `grid`,
-                  gap: `.5rem`,
-                  gridTemplateColumns: `30px 1fr`,
-                }}
-              >
+              <CardContent>
                 {/* TODO: replace with the correct icon */}
-                <AirborneRemoteSensors
-                  color={
-                    activeMilestone === event.id ? "red" : theme.color.primary
-                  }
-                  size="tiny"
-                />
-                <p>{event.longname || event.shortname}</p>
-              </div>
+                <div style={{ gridArea: `icon` }}>
+                  <AirborneRemoteSensors
+                    color={
+                      activeMilestone === event.id ? "red" : theme.color.primary
+                    }
+                    size="tiny"
+                  />
+                </div>
+                <CardTitle style={{ gridArea: `title` }}>
+                  {event.longname || event.shortname || "missing region"}
+                </CardTitle>
+                <CardSubTitle style={{ gridArea: `subTitle` }}>
+                  {event.name || "missing details"}
+                </CardSubTitle>
+                <CardSubTitle style={{ gridArea: `flights` }}>
+                  {event.details || "missing flights"}
+                </CardSubTitle>
+              </CardContent>
             </a>
             <p
               style={{
