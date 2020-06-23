@@ -7,7 +7,6 @@ import theme from "../utils/theme"
 
 const CardContent = styled.div`
   display: grid;
-  gap: 0.5rem;
   grid-template-columns: 30px 120px;
   grid-template-areas:
     "icon title"
@@ -17,9 +16,11 @@ const CardContent = styled.div`
 
 const CardTitle = styled.p`
   margin: 0;
+  font-size: small;
 `
 const CardSubTitle = styled.p`
   margin: 0;
+  font-size: x-small;
 `
 
 export default function Timeline({ events, timelineAction, activeMilestone }) {
