@@ -24,7 +24,6 @@ const CardSubTitle = styled.p`
 `
 
 export default function Timeline({ events, timelineAction, activeMilestone }) {
-  console.log("events", events)
   return (
     <section
       data-cy="milestone-timeline"
@@ -91,7 +90,7 @@ export default function Timeline({ events, timelineAction, activeMilestone }) {
                   {event.name || "missing details"}
                 </CardSubTitle>
                 <CardSubTitle style={{ gridArea: `flights` }}>
-                  {event.details || "missing flights"}
+                  {`${event.flights.length} Flights` || "missing flights"}
                 </CardSubTitle>
               </CardContent>
             </a>
