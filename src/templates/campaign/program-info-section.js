@@ -6,7 +6,6 @@ import SectionBlock from "../../components/section/section-block"
 import ContentItem from "../../components/section/content-item"
 import ContentGroup from "../../components/section/content-group"
 import PlaceholderLogo from "../../images/placeholder-logo.svg"
-import theme from "../../utils/theme"
 
 const ProgramInfoSection = ({
   logo,

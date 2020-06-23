@@ -5,6 +5,7 @@ import Carousel from "nuka-carousel"
 
 import Timeline from "../../components/timeline"
 import SectionBlock from "../../components/section/section-block"
+import theme from "../../utils/theme"
 
 const Milestone = ({
   type = "Deployment",
@@ -73,34 +74,37 @@ const TimelineSection = ({ deployments }) => {
 
   return (
     <SectionBlock headline="Timeline" id="timeline">
-      <div data-cy="milestone-carousel">
-        <Carousel
-          renderTopCenterControls={({ currentSlide }) =>
-            setCurrentSlide(currentSlide)
-          }
-          defaultControlsConfig={{
-            nextButtonText: ">",
-            prevButtonText: "<",
-          }}
-          slideIndex={selectedMilestone}
-        >
-          {deployments.nodes.map(deployment => (
-            <Milestone
-              key={deployment.id}
-              type="deployment"
-              date={`${deployment.start} - ${deployment.end}`}
-              name={`${deployment.longname} (${deployment.shortname})`}
-              details={`${deployment.flights.length} Flights`}
-              region={deployment.region.toString()}
-            />
-          ))}
-        </Carousel>
+      <div style={{ backgroundColor: theme.color.secondary }}>
+        <div data-cy="milestone-carousel">
+          <Carousel
+            defaultControlsConfig={{
+              nextButtonText: ">",
+              prevButtonText: "<",
+              pagingDotsStyle: {
+                fill: theme.color.base,
+              },
+            }}
+            slideIndex={selectedMilestone}
+            afterSlide={slideIndex => setCurrentSlide(slideIndex)}
+          >
+            {deployments.nodes.map(deployment => (
+              <Milestone
+                key={deployment.id}
+                type="deployment"
+                date={`${deployment.start} - ${deployment.end}`}
+                name={`${deployment.longname} (${deployment.shortname})`}
+                details={`${deployment.flights.length} Flights`}
+                region={deployment.region.toString()}
+              />
+            ))}
+          </Carousel>
+        </div>
+        <Timeline
+          events={deployments.nodes}
+          timelineAction={setSelectedMilestone}
+          activeMilestone={selectedMilestoneId}
+        />
       </div>
-      <Timeline
-        events={deployments.nodes}
-        timelineAction={setSelectedMilestone}
-        activeMilestone={selectedMilestoneId}
-      />
     </SectionBlock>
   )
 }

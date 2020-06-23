@@ -1,9 +1,11 @@
 import React from "react"
 import PropTypes from "prop-types"
+
 import { AirborneRemoteSensors } from "./icons"
+import theme from "../utils/theme"
 
 export default function Timeline({ events, timelineAction, activeMilestone }) {
-  console.log("events", activeMilestone)
+  console.log("events", events)
   return (
     <section
       data-cy="milestone-timeline"
@@ -11,9 +13,12 @@ export default function Timeline({ events, timelineAction, activeMilestone }) {
     >
       <ol
         style={{
-          width: `100vw`,
-          paddingTop: `10rem`,
+          width: `100%`,
+          padding: `8rem 0 2rem 0`,
           transition: `all 1s`,
+          margin: `0`,
+          display: `flex`,
+          flexWrap: `nowrap`,
         }}
       >
         {events.map(event => (
@@ -21,11 +26,12 @@ export default function Timeline({ events, timelineAction, activeMilestone }) {
             key={event.id}
             style={{
               position: `relative`,
-              display: `inline-block`,
+              display: `flex`,
               listStyleType: `none`,
               width: `200px`,
               height: `2px`,
               background: `#fff`,
+              flex: `1 0 25%`,
             }}
           >
             <div
@@ -41,7 +47,7 @@ export default function Timeline({ events, timelineAction, activeMilestone }) {
               style={{
                 position: `absolute`,
                 bottom: `2rem`,
-                width: `90%`,
+                width: `200px`,
                 padding: `.5rem`,
                 fontSize: `1rem`,
                 whiteSpace: `normal`,
@@ -58,11 +64,14 @@ export default function Timeline({ events, timelineAction, activeMilestone }) {
                   gridTemplateColumns: `30px 1fr`,
                 }}
               >
+                {/* TODO: replace with the correct icon */}
                 <AirborneRemoteSensors
-                  color={activeMilestone === event.id ? "red" : "black"}
+                  color={
+                    activeMilestone === event.id ? "red" : theme.color.primary
+                  }
                   size="tiny"
                 />
-                <p>{event.longname}</p>
+                <p>{event.longname || event.shortname}</p>
               </div>
             </a>
             <p
