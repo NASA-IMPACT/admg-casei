@@ -18,6 +18,5 @@ export default function ContentGroup({ children }) {
 }
 
 ContentGroup.propTypes = {
-  dataCy: PropTypes.string,
   children: PropTypes.node.isRequired,
 }

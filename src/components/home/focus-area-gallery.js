@@ -49,7 +49,7 @@ const FocusArea = ({ id, caption, size }) => {
       data-cy="focus-area"
     >
       {icons[caption]}
-      <Label dataCy={"focus-area-icons"} color={theme.type.base.color}>
+      <Label id="focus-area-icons" color={theme.type.base.color}>
         {caption}
       </Label>
     </Link>

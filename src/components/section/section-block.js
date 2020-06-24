@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 
 import Image from "../image"
+import theme from "../../utils/theme"
 
 const Section = styled.section`
   position: relative;
@@ -43,7 +44,14 @@ SectionImage.propTypes = {
   alt: PropTypes.string.isRequired,
 }
 
-const SectionBlock = ({ tagline, headline, id, withImage, children }) => {
+const SectionBlock = ({
+  tagline,
+  headline,
+  id,
+  withImage,
+  withBackground,
+  children,
+}) => {
   return (
     <Section
       as={withImage ? SectionWithImage : Section}
@@ -56,8 +64,19 @@ const SectionBlock = ({ tagline, headline, id, withImage, children }) => {
         </div>
       )}
       <h2>{headline}</h2>
-
-      {children}
+      {withBackground ? (
+        <div
+          style={{
+            display: `flex`,
+            alignItems: `stretch`,
+            backgroundColor: theme.color.secondary,
+          }}
+        >
+          {children}
+        </div>
+      ) : (
+        children
+      )}
     </Section>
   )
 }
@@ -67,6 +86,7 @@ SectionBlock.propTypes = {
   headline: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
   withImage: PropTypes.bool,
+  withBackground: PropTypes.bool,
   children: PropTypes.node,
 }
 

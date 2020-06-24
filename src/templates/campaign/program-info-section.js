@@ -6,7 +6,6 @@ import SectionBlock from "../../components/section/section-block"
 import ContentItem from "../../components/section/content-item"
 import ContentGroup from "../../components/section/content-group"
 import PlaceholderLogo from "../../images/placeholder-logo.svg"
-import theme from "../../utils/theme"
 
 const ProgramInfoSection = ({
   logo,
@@ -48,42 +47,34 @@ const ProgramInfoSection = ({
   ]
 
   return (
-    <SectionBlock headline="Program Info" id="program-info">
+    <SectionBlock headline="Program Info" id="program-info" withBackground>
       <div
         style={{
+          flex: `0.618`,
           display: `flex`,
-          alignItems: `stretch`,
-          backgroundColor: theme.color.secondary,
+          justifyContent: `center`,
+          alignItems: `center`,
+          padding: `1rem`,
         }}
       >
-        <div
-          style={{
-            flex: `0.618`,
-            display: `flex`,
-            justifyContent: `center`,
-            alignItems: `center`,
-            padding: `1rem`,
-          }}
-        >
-          <img
-            src={logo || PlaceholderLogo}
-            alt="campaign-logo"
-            data-cy="campaign-logo"
-          />
-        </div>
-
-        <ContentGroup>
-          {contentList.map(item => (
-            <ContentItem
-              key={item.label}
-              dataCy="program-info-content"
-              label={item.label}
-              info={item.info}
-              type={item.type || "text"}
-            />
-          ))}
-        </ContentGroup>
+        <img
+          src={logo || PlaceholderLogo}
+          alt="campaign-logo"
+          data-cy="campaign-logo"
+        />
       </div>
+
+      <ContentGroup>
+        {contentList.map(item => (
+          <ContentItem
+            key={item.label}
+            id="program-info-content"
+            label={item.label}
+            info={item.info}
+            type={item.type || "text"}
+          />
+        ))}
+      </ContentGroup>
     </SectionBlock>
   )
 }

@@ -12,87 +12,97 @@ exports[`Focus Section displays content 1`] = `
   <div
     style={
       Object {
-        "display": "grid",
-        "flex": "2.618",
-        "gap": "1.5rem",
-        "gridTemplateColumns": "minmax(0,1fr) minmax(0,1fr) minmax(0,1fr)",
-        "padding": "2rem",
+        "alignItems": "stretch",
+        "backgroundColor": "#303641",
+        "display": "flex",
       }
     }
   >
     <div
-      data-cy="focus-content"
-    >
-      <label
-        data-cy="focus-content-label"
-        style={
-          Object {
-            "borderBottom": "1px solid #9E9E9E",
-            "color": "#9E9E9E",
-            "display": "block",
-            "fontSize": "small",
-            "textTransform": "uppercase",
-          }
+      style={
+        Object {
+          "display": "grid",
+          "flex": "2.618",
+          "gap": "1.5rem",
+          "gridTemplateColumns": "minmax(0,1fr) minmax(0,1fr) minmax(0,1fr)",
+          "padding": "2rem",
         }
-      >
-        Focus Area
-      </label>
+      }
+    >
       <div
-        style={
-          Object {
-            "display": "grid",
-            "gap": "1rem",
-            "gridTemplateColumns": "repeat(auto-fill, minmax(min(120px, 100%), 1fr))",
-            "paddingTop": "1rem",
+        data-cy="focus-content"
+      >
+        <label
+          data-cy="focus-content-label"
+          style={
+            Object {
+              "borderBottom": "1px solid #9E9E9E",
+              "color": "#9E9E9E",
+              "display": "block",
+              "fontSize": "small",
+              "textTransform": "uppercase",
+            }
           }
-        }
-      />
-    </div>
-    <div
-      data-cy="focus-content"
-    >
-      <label
-        data-cy="focus-content-label"
-        style={
-          Object {
-            "borderBottom": "1px solid #9E9E9E",
-            "color": "#9E9E9E",
-            "display": "block",
-            "fontSize": "small",
-            "textTransform": "uppercase",
+        >
+          Focus Area
+        </label>
+        <div
+          style={
+            Object {
+              "display": "grid",
+              "gap": "1rem",
+              "gridTemplateColumns": "repeat(auto-fill, minmax(min(120px, 100%), 1fr))",
+              "paddingTop": "1rem",
+            }
           }
-        }
+        />
+      </div>
+      <div
+        data-cy="focus-content"
       >
-        Geophysical Concept
-      </label>
-      <p
-        data-cy="focus-content-text"
-      >
-        test string
-      </p>
-    </div>
-    <div
-      data-cy="focus-content"
-    >
-      <label
-        data-cy="focus-content-label"
-        style={
-          Object {
-            "borderBottom": "1px solid #9E9E9E",
-            "color": "#9E9E9E",
-            "display": "block",
-            "fontSize": "small",
-            "textTransform": "uppercase",
+        <label
+          data-cy="focus-content-label"
+          style={
+            Object {
+              "borderBottom": "1px solid #9E9E9E",
+              "color": "#9E9E9E",
+              "display": "block",
+              "fontSize": "small",
+              "textTransform": "uppercase",
+            }
           }
-        }
+        >
+          Geophysical Concept
+        </label>
+        <p
+          data-cy="focus-content-text"
+        >
+          test string
+        </p>
+      </div>
+      <div
+        data-cy="focus-content"
       >
-        Focus Phenomena
-      </label>
-      <p
-        data-cy="focus-content-text"
-      >
-        test string
-      </p>
+        <label
+          data-cy="focus-content-label"
+          style={
+            Object {
+              "borderBottom": "1px solid #9E9E9E",
+              "color": "#9E9E9E",
+              "display": "block",
+              "fontSize": "small",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          Focus Phenomena
+        </label>
+        <p
+          data-cy="focus-content-text"
+        >
+          test string
+        </p>
+      </div>
     </div>
   </div>
 </section>

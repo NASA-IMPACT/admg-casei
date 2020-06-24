@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MileStone renders correctly 1`] = `
+<div
+  data-cy="milestone"
+  style={
+    Object {
+      "padding": "3rem",
+    }
+  }
+>
+  <label
+    style={
+      Object {
+        "backgroundColor": "#F93C21",
+        "color": "#0c1520",
+        "fontSize": "small",
+        "left": "4rem",
+        "padding": ".25rem",
+        "position": "absolute",
+        "textTransform": "uppercase",
+        "top": "4rem",
+      }
+    }
+  >
+    deployment
+  </label>
+  <div
+    style={
+      Object {
+        "display": "flex",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "flex": "1",
+        }
+      }
+    >
+      <img
+        alt="Milestone-image"
+        data-cy="overview-map"
+        src="https://picsum.photos/300/300"
+      />
+    </div>
+    <div
+      style={
+        Object {
+          "flex": "1.61803398875",
+          "padding": "1rem",
+        }
+      }
+    >
+      <label
+        data-cy="timeline-milestone-date-label"
+        style={
+          Object {
+            "borderBottom": "none",
+            "color": "#9E9E9E",
+            "display": "block",
+            "fontSize": "small",
+            "textTransform": "uppercase",
+          }
+        }
+      >
+        2012-10-02 — 2012-10-20
+      </label>
+      <h3>
+        Canada, Oregon Fall 2012
+      </h3>
+      <p>
+        2 Flights
+      </p>
+      <p>
+        Canada
+      </p>
+    </div>
+  </div>
+</div>
+`;

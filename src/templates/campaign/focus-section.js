@@ -22,10 +22,10 @@ const FocusSection = ({ focusAreaIds, focusPhenomena, scienceKeywords }) => {
   `)
 
   return (
-    <SectionBlock headline="Focus" id="focus">
+    <SectionBlock headline="Focus" id="focus" withBackground>
       <ContentGroup>
         <div data-cy="focus-content">
-          <Label showBorder dataCy="focus-content">
+          <Label showBorder id="focus-content">
             Focus Area
           </Label>
           <FocusAreaGallery
@@ -36,12 +36,12 @@ const FocusSection = ({ focusAreaIds, focusPhenomena, scienceKeywords }) => {
           />
         </div>
         <ContentItem
-          dataCy="focus-content"
+          id="focus-content"
           label="Geophysical Concept"
           info={scienceKeywords}
         />
         <ContentItem
-          dataCy="focus-content"
+          id="focus-content"
           label="Focus Phenomena"
           info={focusPhenomena}
         />

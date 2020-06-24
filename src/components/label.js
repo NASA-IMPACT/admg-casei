@@ -5,7 +5,7 @@ import theme from "../utils/theme"
 
 export default function Label({
   children,
-  dataCy,
+  id,
   color = theme.color.gray,
   showBorder,
 }) {
@@ -18,7 +18,7 @@ export default function Label({
         fontSize: `small`,
         display: `block`,
       }}
-      data-cy={`${dataCy}-label`}
+      data-cy={`${id}-label`}
     >
       {children}
     </label>
@@ -27,7 +27,7 @@ export default function Label({
 
 Label.propTypes = {
   children: PropTypes.string.isRequired,
-  dataCy: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
   color: PropTypes.string,
   showBorder: PropTypes.bool,
 }
