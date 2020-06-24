@@ -22,7 +22,7 @@ CloseIcon.propTypes = {
   color: PropTypes.string,
 }
 
-const Chip = ({ id, label, chipAction }) => (
+const Chip = ({ id, label, chipAction, actionId }) => (
   <div
     style={{
       display: `flex`,
@@ -33,13 +33,13 @@ const Chip = ({ id, label, chipAction }) => (
       padding: `0 0.5rem`,
       margin: `0 0.5rem`,
     }}
-    data-cy="filter-chip"
+    data-cy={`${id}chip`}
   >
     <small>{label}</small>
     {chipAction ? (
       <button
         type="button"
-        onClick={() => chipAction(id)}
+        onClick={() => chipAction(actionId)}
         style={{
           background: "none",
           border: "none",
@@ -61,6 +61,7 @@ const Chip = ({ id, label, chipAction }) => (
 
 Chip.propTypes = {
   id: PropTypes.string.isRequired,
+  actionId: PropTypes.string,
   label: PropTypes.string.isRequired,
   chipAction: PropTypes.func,
 }

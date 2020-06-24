@@ -118,7 +118,8 @@ const Searchbar = React.forwardRef(
             {selectedFilterIds.map(f => (
               <Chip
                 key={f}
-                id={f}
+                actionId={f}
+                id="filter"
                 label={getFilterLabelById(f)}
                 chipAction={removeFilter}
               />

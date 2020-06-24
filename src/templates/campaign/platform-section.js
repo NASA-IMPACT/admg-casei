@@ -5,6 +5,7 @@ import Carousel from "nuka-carousel"
 
 import SectionBlock from "../../components/section/section-block"
 import ImageCaption from "../../components/image-caption"
+// import Chip from "../../components/chip"
 
 const PlatformSection = ({ platforms }) => (
   <SectionBlock headline="Platforms & Instruments" id="platform">
@@ -22,14 +23,18 @@ const PlatformSection = ({ platforms }) => (
         >
           {platforms.nodes.map(node => (
             <div key={node.shortname} data-cy="platform">
-              <div style={{ display: `flex` }}>
+              <div style={{ position: `relative` }}>
                 <img
                   src="https://picsum.photos/300/300"
                   alt="Milestone-image"
                   data-cy="overview-map"
                 />
+                <ImageCaption id="platform-image">{node.longname}</ImageCaption>
               </div>
-              <ImageCaption id="platform-image">{node.longname}</ImageCaption>
+              <div style={{ display: `flex`, flexWrap: `wrap` }}>
+                {/* TODO: map through instrument tags */}
+                {/* <Chip id="platform" label="test chip" /> */}
+              </div>
             </div>
           ))}
         </Carousel>
