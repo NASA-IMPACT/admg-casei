@@ -86,8 +86,8 @@ const Header = ({
       style={{
         display: `flex`,
         background: `linear-gradient(90deg, rgba(12,21,32, 0.8) 0%, rgba(12,21,32, 0.7)50%, rgba(12,21,32, 0.0)66%), url("${url}") bottom center no-repeat`,
-        padding: `9rem 5rem 0 5rem`,
-        marginTop: `-7rem`,
+        padding: `11rem 5rem 0 5rem`,
+        margin: `-9rem -5rem 0`,
         height: `35rem`,
       }}
     >

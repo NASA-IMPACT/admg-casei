@@ -2,7 +2,7 @@
 
 exports[`Focus Section displays content 1`] = `
 <section
-  className="sc-AxjAm dxhynR sc-AxjAm dxhynR"
+  className="sc-AxjAm jiDcck sc-AxjAm jiDcck"
   data-cy="focus-section"
   id="focus"
 >

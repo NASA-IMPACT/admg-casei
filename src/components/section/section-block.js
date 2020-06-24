@@ -10,7 +10,6 @@ const Section = styled.section`
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box;
-  padding: 2rem 5rem;
 
   /* In case you _really_ need a border, use :before:
    * &:before {
