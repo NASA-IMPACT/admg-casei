@@ -33,7 +33,7 @@ const Chip = ({ id, label, chipAction, actionId }) => (
       padding: `0 0.5rem`,
       margin: `0 0.5rem`,
     }}
-    data-cy={`${id}chip`}
+    data-cy={`${id}-chip`}
   >
     <small>{label}</small>
     {chipAction ? (

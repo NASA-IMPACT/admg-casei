@@ -26,15 +26,15 @@ const PlatformSection = ({ platforms }) => (
               <div style={{ position: `relative` }}>
                 <img
                   src="https://picsum.photos/300/300"
-                  alt="Milestone-image"
-                  data-cy="overview-map"
+                  alt="platform-image"
+                  data-cy="platform-image"
                 />
                 <ImageCaption id="platform-image">{node.longname}</ImageCaption>
               </div>
-              <div style={{ display: `flex`, flexWrap: `wrap` }}>
-                {/* TODO: map through instrument tags */}
-                {/* <Chip id="platform" label="test chip" /> */}
-              </div>
+              {/* <div style={{ display: `flex`, flexWrap: `wrap` }}> */}
+              {/* TODO: map through instrument tags */}
+              {/* <Chip id="platform" label="test chip" /> */}
+              {/* </div> */}
             </div>
           ))}
         </Carousel>
