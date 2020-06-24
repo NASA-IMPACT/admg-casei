@@ -41,7 +41,7 @@ export const Milestone = ({
       </div>
       <div style={{ flex: `1.61803398875`, padding: `1rem` }}>
         <Label id="timeline-milestone-date">
-          {startDate} &#8212; {endDate}
+         {`${startDate} — ${endDate}`}
         </Label>
         <h3>{name}</h3>
         <p>{details}</p>
