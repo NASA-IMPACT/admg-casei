@@ -1,6 +1,7 @@
 import { createGlobalStyle, css } from "styled-components"
 import { normalize } from "polished"
 import theme from "../utils/theme"
+import nukaCarouselStyles from "./vendor/nuka-carousel"
 
 const color = theme.color
 const type = theme.type
@@ -47,5 +48,6 @@ const baseStyles = css`
 `
 export default createGlobalStyle`
   ${normalize()}
+  ${nukaCarouselStyles()}
   ${baseStyles}
 `

@@ -14,6 +14,7 @@ export default function ImageCaption({ children, id }) {
         bottom: `1rem`,
         left: `1rem`,
         fontWeight: `bold`,
+        maxWidth: `18rem`,
       }}
       data-cy={`${id}-caption`}
     >

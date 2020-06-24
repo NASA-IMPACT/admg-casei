@@ -32,7 +32,7 @@ const TimelineSection = ({ deployments }) => {
               nextButtonText: ">",
               prevButtonText: "<",
               pagingDotsStyle: {
-                fill: theme.color.base,
+                fill: "none",
               },
             }}
             slideIndex={currentSlide}
