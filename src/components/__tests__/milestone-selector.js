@@ -1,6 +1,6 @@
 import React from "react"
 import renderer from "react-test-renderer"
-import Timeline from "../filter-chip"
+import MilestoneSelector from "../timeline/milestone-selector"
 
 const testEvents = [
   {
@@ -38,7 +38,7 @@ describe("Timeline", () => {
   it("renders correctly", () => {
     const tree = renderer
       .create(
-        <Timeline
+        <MilestoneSelector
           events={testEvents}
           timelineAction={testAction}
           activeMilestone={testId}

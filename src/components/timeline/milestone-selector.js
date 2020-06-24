@@ -2,8 +2,8 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 
-import { AirborneRemoteSensors } from "./icons"
-import theme from "../utils/theme"
+import { AirborneRemoteSensors } from "../icons"
+import theme from "../../utils/theme"
 
 const CardContent = styled.div`
   display: grid;
@@ -25,7 +25,11 @@ const CardSubTitle = styled.p`
   text-align: start;
 `
 
-export default function Timeline({ events, timelineAction, activeMilestone }) {
+export default function MilestoneSelector({
+  events,
+  timelineAction,
+  activeMilestone,
+}) {
   return (
     <section
       data-cy="milestone-timeline"
@@ -116,7 +120,7 @@ export default function Timeline({ events, timelineAction, activeMilestone }) {
   )
 }
 
-Timeline.propTypes = {
+MilestoneSelector.propTypes = {
   events: PropTypes.arrayOf(
     PropTypes.shape({
       campaign: PropTypes.string,
