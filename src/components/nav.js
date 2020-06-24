@@ -36,7 +36,7 @@ ListLink.propTypes = {
 
 const Nav = () => {
   return (
-    <nav>
+    <nav style={{ zIndex: 100 }}>
       <ul
         style={{
           display: `flex`,

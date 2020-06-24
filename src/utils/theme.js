@@ -41,6 +41,7 @@ const layout = {
   border: "1px",
   min: "960px",
   max: "1280px",
+  maxWidth: 1280,
 }
 const boxShadow = {
   inset: "inset 0px 0px 3px 0px rgba(0,0,0,0.2);",

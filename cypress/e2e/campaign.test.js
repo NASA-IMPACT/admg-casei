@@ -27,15 +27,18 @@ describe("Campaign", () => {
         .should($stat => {
           expect($stat, "3 items").to.have.length(3)
           expect($stat.eq(0), "first item").to.contain("Deployments")
-          expect($stat.eq(1), "second item").to.contain("Flights")
+          expect($stat.eq(1), "second item").to.contain("Collection Periods")
           expect($stat.eq(2), "third item").to.contain("Data Products")
         })
     })
-    it("displays a map", () => {
+    it("displays a map as background image", () => {
       cy.get("main")
         .find("header")
-        .find("[data-cy=overview-map]")
-        .should("exist")
+        .then($header => {
+          expect($header[0].style["background-image"]).to.contain(
+            "/styles/v1/mapbox/satellite-streets-v11/static"
+          )
+        })
     })
   })
 

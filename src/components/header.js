@@ -3,18 +3,15 @@ import PropTypes from "prop-types"
 import React from "react"
 
 import Image from "./image"
+import theme from "../utils/theme"
 
 const Header = ({ siteTitle, children }) => (
-  <header
-    style={{
-      marginBottom: `1.45rem`,
-    }}
-  >
+  <header>
     <div
       style={{
         margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
+        maxWidth: theme.layout.maxWidth,
+        padding: `2rem 5rem`,
         display: `flex`,
         justifyContent: `space-between`,
         alignItems: `center`,
@@ -26,6 +23,7 @@ const Header = ({ siteTitle, children }) => (
           fontFamily: `'Varela Round',sans-serif`,
           fontSize: `1.5rem`,
           lineHeight: `1.5rem`,
+          zIndex: 100,
         }}
       >
         <Link
