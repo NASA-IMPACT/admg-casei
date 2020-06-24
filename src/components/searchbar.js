@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import FilterMenu from "./filter-menu"
-import FilterChip from "./filter-chip"
+import Chip from "./chip"
 import theme from "../utils/theme"
 
 // TODO: figure out how to import and use collecticons directly
@@ -116,11 +116,11 @@ const Searchbar = React.forwardRef(
           <div style={{ display: `flex`, flexWrap: `wrap`, margin: `2rem 0` }}>
             Active filters:
             {selectedFilterIds.map(f => (
-              <FilterChip
+              <Chip
                 key={f}
                 id={f}
                 label={getFilterLabelById(f)}
-                removeFilter={removeFilter}
+                chipAction={removeFilter}
               />
             ))}
           </div>

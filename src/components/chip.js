@@ -22,7 +22,7 @@ CloseIcon.propTypes = {
   color: PropTypes.string,
 }
 
-const FilterChip = ({ id, label, removeFilter }) => (
+const Chip = ({ id, label, chipAction }) => (
   <div
     style={{
       display: `flex`,
@@ -36,31 +36,33 @@ const FilterChip = ({ id, label, removeFilter }) => (
     data-cy="filter-chip"
   >
     <small>{label}</small>
-    <button
-      type="button"
-      onClick={() => removeFilter(id)}
-      style={{
-        background: "none",
-        border: "none",
-        flexGrow: 0,
-        cursor: `pointer`,
-        color: theme.type.base.color,
-        verticalAlign: `middle`,
-        marginLeft: `0.5rem`,
-      }}
-      data-cy="remove-filter"
-    >
-      <span role="img" aria-label="close-icon">
-        <CloseIcon color={theme.type.base.color} />
-      </span>
-    </button>
+    {chipAction ? (
+      <button
+        type="button"
+        onClick={() => chipAction(id)}
+        style={{
+          background: "none",
+          border: "none",
+          flexGrow: 0,
+          cursor: `pointer`,
+          color: theme.type.base.color,
+          verticalAlign: `middle`,
+          marginLeft: `0.5rem`,
+        }}
+        data-cy="remove-filter"
+      >
+        <span role="img" aria-label="close-icon">
+          <CloseIcon color={theme.type.base.color} />
+        </span>
+      </button>
+    ) : null}
   </div>
 )
 
-FilterChip.propTypes = {
+Chip.propTypes = {
   id: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
-  removeFilter: PropTypes.func.isRequired,
+  chipAction: PropTypes.func,
 }
 
-export default FilterChip
+export default Chip

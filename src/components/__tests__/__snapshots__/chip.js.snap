@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FilterChip renders correctly 1`] = `
+exports[`Chip renders with action 1`] = `
 <div
   data-cy="filter-chip"
   style={
@@ -51,5 +51,26 @@ exports[`FilterChip renders correctly 1`] = `
       </svg>
     </span>
   </button>
+</div>
+`;
+
+exports[`Chip renders without action 1`] = `
+<div
+  data-cy="filter-chip"
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#303641",
+      "borderRadius": "0.2rem",
+      "color": "hsla(0,0%,100%,0.9)",
+      "display": "flex",
+      "margin": "0 0.5rem",
+      "padding": "0 0.5rem",
+    }
+  }
+>
+  <small>
+    Weather
+  </small>
 </div>
 `;
