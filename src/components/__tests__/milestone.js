@@ -1,6 +1,6 @@
 import React from "react"
 import renderer from "react-test-renderer"
-import { Milestone } from "../../templates/campaign/timeline-section"
+import Milestone from "../timeline/milestone"
 
 describe("MileStone", () => {
   it("renders correctly", () => {
