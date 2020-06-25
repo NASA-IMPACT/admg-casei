@@ -24,7 +24,7 @@ const PlatformSection = ({ platforms }) => (
           {platforms.nodes.map(node => (
             <div
               key={node.shortname}
-              style={{ minHeight: `320px` }}
+              style={{ minHeight: `360px` }}
               data-cy="platform"
             >
               <div style={{ position: `relative` }}>

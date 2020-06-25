@@ -36,7 +36,7 @@ const Chip = ({ id, label, chipAction, actionId }) => (
     data-cy={`${id}-chip`}
   >
     <small>{label}</small>
-    {chipAction ? (
+    {chipAction && (
       <button
         type="button"
         onClick={() => chipAction(actionId)}
@@ -55,7 +55,7 @@ const Chip = ({ id, label, chipAction, actionId }) => (
           <CloseIcon color={theme.type.base.color} />
         </span>
       </button>
-    ) : null}
+    )}
   </div>
 )
 
