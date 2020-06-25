@@ -15,6 +15,7 @@ exports.sourceNodes = async ({ actions, createContentDigest }) => {
       "focus_area",
       "geographical_region",
       "geophysical_concept",
+      "instrument",
       "instrument_type",
       "partner_org",
       "platform",

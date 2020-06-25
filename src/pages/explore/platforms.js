@@ -1,14 +1,198 @@
-import React from "react"
+import React, { useState, useRef, useEffect } from "react"
+import PropTypes from "prop-types"
+import { graphql } from "gatsby"
+import Spinner from "react-spinkit"
+
+import api from "../../utils/api"
+import theme from "../../utils/theme"
 
 import Layout from "../../components/layout"
 import ExploreMenu from "../../components/explore-menu"
+import Searchbar from "../../components/searchbar"
 import ExploreSection from "../../components/explore-section"
+import PlatformCard from "../../components/platform-card"
 
-const Platforms = () => (
-  <Layout>
-    <ExploreMenu />
-    <ExploreSection category="platforms" />
-  </Layout>
-)
+export const selector = filterOptions => ({
+  getFilterLabelById: id => {
+    for (let [key, value] of Object.entries(filterOptions)) {
+      const filter = value.options.find(i => i.id === id)
+      if (filter) return `${key}: ${filter.shortname}`
+    }
+  },
+  getFilterOptionsById: id => {
+    return filterOptions[id].options
+  },
+})
+const Platforms = ({ data, location }) => {
+  const { allInstrument } = data
+
+  const { selectedFilterId } = location.state || {}
+
+  const [isLoading, setLoading] = useState(false)
+  const [sortOrder, toggleSortOrder] = useState("asc")
+  const [selectedFilterIds, setFilter] = useState([])
+  const [searchResult, setSearchResult] = useState()
+
+  useEffect(() => {
+    if (selectedFilterId) setFilter([selectedFilterId]) // applying only this one selection as filter
+    return () => {
+      // cleanup
+    }
+  }, [selectedFilterId])
+
+  const addFilter = id => setFilter([...selectedFilterIds, id])
+  const removeFilter = id => setFilter(selectedFilterIds.filter(f => f !== id))
+
+  const inputElement = useRef(null)
+
+  const submitSearch = async e => {
+    setLoading(true)
+    e.preventDefault()
+    let searchstring = inputElement.current.value
+    const result = await api.fetchSearchResult(searchstring)
+    setSearchResult(result)
+    setLoading(false)
+  }
+
+  const list = data[sortOrder].list
+    .filter(platform =>
+      selectedFilterIds.length === 0
+        ? true
+        : selectedFilterIds.every(filterId =>
+            platform.instruments.includes(filterId)
+          )
+    )
+    .filter(platform =>
+      searchResult ? searchResult.includes(platform.shortname) : true
+    )
+
+  const { getFilterLabelById, getFilterOptionsById } = selector({
+    instrument: allInstrument,
+  })
+
+  return (
+    <Layout>
+      <ExploreMenu />
+      <Searchbar
+        submitSearch={submitSearch}
+        selectedFilterIds={selectedFilterIds}
+        addFilter={addFilter}
+        getFilterLabelById={getFilterLabelById}
+        getFilterOptionsById={getFilterOptionsById}
+        removeFilter={removeFilter}
+        sortOrder={sortOrder}
+        toggleSortOrder={toggleSortOrder}
+        ref={inputElement}
+        category="platforms"
+      />
+
+      {isLoading ? (
+        <div
+          style={{ display: `flex`, justifyContent: `space-around` }}
+          data-cy="loading-indicator"
+        >
+          <Spinner name="cube-grid" color={theme.color.base} />
+        </div>
+      ) : (
+        <ExploreSection
+          category="platforms"
+          selectedFilterIds={selectedFilterIds}
+          removeFilter={removeFilter}
+          filteredCount={list.length}
+          totalCount={data.all.totalCount}
+        >
+          {list.map(platform => {
+            return (
+              <PlatformCard
+                shortname={platform.shortname}
+                longname={platform.longname}
+                key={platform.id}
+                description={platform.description}
+                collectionPeriodIds={platform.collectionPeriodIds}
+                instruments={platform.instruments}
+                stationary={platform.stationary}
+              />
+            )
+          })}
+        </ExploreSection>
+      )}
+    </Layout>
+  )
+}
+
+export const query = graphql`
+  query {
+    all: allPlatform(sort: { order: ASC, fields: short_name }) {
+      totalCount
+    }
+    asc: allPlatform(sort: { order: ASC, fields: short_name }) {
+      list: nodes {
+        ...platformFields
+      }
+    }
+    desc: allPlatform(sort: { order: DESC, fields: short_name }) {
+      list: nodes {
+        ...platformFields
+      }
+    }
+    allInstrument {
+      options: nodes {
+        id
+        shortname: short_name
+        longname: long_name
+      }
+    }
+  }
+
+  fragment platformFields on platform {
+    shortname: short_name
+    longname: long_name
+    id
+    description
+    collectionPeriodIds: collection_periods
+    campaigns
+    instruments
+    stationary
+  }
+`
+
+const platformShape = PropTypes.shape({
+  shortname: PropTypes.string.isRequired,
+  longname: PropTypes.string,
+  id: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  collectionPeriodIds: PropTypes.arrayOf(PropTypes.string),
+  campaigns: PropTypes.arrayOf(PropTypes.string),
+  instruments: PropTypes.arrayOf(PropTypes.string),
+  stationary: PropTypes.bool.isRequired,
+})
+
+Platforms.propTypes = {
+  data: PropTypes.shape({
+    all: PropTypes.shape({
+      totalCount: PropTypes.number.isRequired,
+    }),
+    asc: PropTypes.shape({
+      list: PropTypes.arrayOf(platformShape).isRequired,
+    }),
+    desc: PropTypes.shape({
+      list: PropTypes.arrayOf(platformShape).isRequired,
+    }),
+    allInstrument: PropTypes.shape({
+      options: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string.isRequired,
+          shortname: PropTypes.string.isRequired,
+          longname: PropTypes.string,
+        })
+      ).isRequired,
+    }).isRequired,
+  }),
+  location: PropTypes.shape({
+    state: PropTypes.shape({
+      selectedFilterId: PropTypes.string,
+    }),
+  }),
+}
 
 export default Platforms
