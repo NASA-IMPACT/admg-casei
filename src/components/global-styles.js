@@ -27,7 +27,7 @@ const baseStyles = css`
     );
   }
 
-  // TODO: replace all placeholder elements
+  /* TODO: replace all placeholder elements */
   .placeholder {
     box-shadow: 0 0 4px teal;
     border: 1px solid teal;

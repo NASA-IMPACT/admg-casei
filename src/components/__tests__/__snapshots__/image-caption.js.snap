@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ImageCaption renders caption on image 1`] = `
+<div
+  style={
+    Object {
+      "position": "relative",
+    }
+  }
+>
+  <img
+    alt="test-image"
+    data-cy="test-image"
+    src="https://picsum.photos/300/300"
+  />
+  <label
+    data-cy="test-image-caption"
+    style={
+      Object {
+        "bottom": "2.5rem",
+        "color": "hsla(0,0%,100%,0.9)",
+        "fontWeight": "bold",
+        "left": "1rem",
+        "maxWidth": "18rem",
+        "position": "absolute",
+        "textShadow": "1px 1px rgba(0,0,0,0.8)",
+        "textTransform": "uppercase",
+      }
+    }
+  >
+    caption
+  </label>
+</div>
+`;

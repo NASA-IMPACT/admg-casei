@@ -5,6 +5,7 @@ exports[`MileStone renders correctly 1`] = `
   data-cy="milestone"
   style={
     Object {
+      "minHeight": "400px",
       "padding": "3rem",
     }
   }

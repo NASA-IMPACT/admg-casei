@@ -180,6 +180,19 @@ describe("Campaign", () => {
         .should("have.text", "Platforms & Instruments")
     })
 
+    it("displays a platform carousel", () => {
+      cy.get("[data-cy=platform-carousel]").find(".slider").should("exist")
+
+      cy.get("[data-cy=platform]").first().find("img").should("exist")
+      cy.get("[data-cy=platform]").first().find("img").should("be.visible")
+      cy.get("[data-cy=platform]").first().find("label").should("exist")
+      cy.get("[data-cy=platform-image-caption]").should("exist")
+
+      cy.get("[data-cy=milestone-carousel]")
+        .find(".slider-control-centerright > button")
+        .click()
+    })
+
     it("displays some platforms", () => {
       cy.get("[data-cy=platform]").should($div => {
         expect($div, "2 platforms").to.have.length(2)
