@@ -1,7 +1,6 @@
 import { createGlobalStyle, css } from "styled-components"
 import { normalize } from "polished"
 import theme from "../utils/theme"
-import nukaCarouselStyles from "./vendor/nuka-carousel"
 
 const color = theme.color
 const type = theme.type
@@ -28,7 +27,7 @@ const baseStyles = css`
     );
   }
 
-  // TODO: replace all placeholder elements
+  /* TODO: replace all placeholder elements */
   .placeholder {
     box-shadow: 0 0 4px teal;
     border: 1px solid teal;
@@ -48,6 +47,5 @@ const baseStyles = css`
 `
 export default createGlobalStyle`
   ${normalize()}
-  ${nukaCarouselStyles()}
   ${baseStyles}
 `

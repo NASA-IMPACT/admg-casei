@@ -22,7 +22,11 @@ const PlatformSection = ({ platforms }) => (
           slidesToShow={3}
         >
           {platforms.nodes.map(node => (
-            <div key={node.shortname} data-cy="platform">
+            <div
+              key={node.shortname}
+              style={{ minHeight: `320px` }}
+              data-cy="platform"
+            >
               <div style={{ position: `relative` }}>
                 <img
                   src="https://picsum.photos/300/300"

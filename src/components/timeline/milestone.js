@@ -12,7 +12,7 @@ const Milestone = ({
   details = "some list of platforms, number of flights",
   region = "Alaska and Western Canada",
 }) => (
-  <div style={{ padding: `3rem` }} data-cy="milestone">
+  <div style={{ padding: `3rem`, minHeight: `400px` }} data-cy="milestone">
     <label
       style={{
         textTransform: `uppercase`,
