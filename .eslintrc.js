@@ -17,7 +17,7 @@ module.exports = {
     node: true,
     es6: true,
   },
-  plugins: ["react", "react-hooks"],
+  plugins: ["react", "react-hooks", "inclusive-language"],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -25,7 +25,9 @@ module.exports = {
     ecmaVersion: 2018, // Allows for the parsing of modern ECMAScript features
     sourceType: "module", // Allows for the use of imports
   },
-  rules: {},
+  rules: {
+    "inclusive-language/use-inclusive-words": "error",
+  },
   overrides: [
     {
       files: ["**/cypress/**"],
