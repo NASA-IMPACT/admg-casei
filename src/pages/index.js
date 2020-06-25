@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -63,17 +63,16 @@ const IndexPage = ({ data }) => {
           </p>
         </div>
         <div>
-          <button
+          <Link
+            to="/explore/platforms"
             style={{
+              border: `1px solid ${theme.color.base}`,
               padding: `1rem 5rem`,
               textTransform: `uppercase`,
-              color: theme.color.base,
-              background: `transparent`,
-              border: `1px solid ${theme.color.base}`,
             }}
           >
             Explore
-          </button>
+          </Link>
         </div>
       </SectionBlock>
 
