@@ -1,6 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Timeline renders correctly 1`] = `
+.c0 {
+  display: grid;
+  grid-template-columns: 30px 120px;
+  grid-template-areas: "icon title" "icon subTitle" "icon flights";
+}
+
+.c1 {
+  margin: 0;
+  font-size: small;
+  text-align: start;
+}
+
+.c2 {
+  margin: 0;
+  font-size: x-small;
+  text-align: start;
+}
+
 <section
   data-cy="milestone-timeline"
   style={
@@ -61,7 +79,7 @@ exports[`Timeline renders correctly 1`] = `
         }
       >
         <div
-          className="sc-AxjAm dZFNfx"
+          className="c0"
           data-cy="milestone-timeline-card-content"
         >
           <div
@@ -85,7 +103,7 @@ exports[`Timeline renders correctly 1`] = `
             </svg>
           </div>
           <p
-            className="sc-AxirZ dmQDCM"
+            className="c1"
             style={
               Object {
                 "gridArea": "title",
@@ -95,7 +113,7 @@ exports[`Timeline renders correctly 1`] = `
             Western US Fall 2012
           </p>
           <p
-            className="sc-AxiKw eTbSGh"
+            className="c2"
             style={
               Object {
                 "gridArea": "subTitle",
@@ -105,7 +123,7 @@ exports[`Timeline renders correctly 1`] = `
             missing details
           </p>
           <p
-            className="sc-AxiKw eTbSGh"
+            className="c2"
             style={
               Object {
                 "gridArea": "flights",
@@ -169,7 +187,7 @@ exports[`Timeline renders correctly 1`] = `
         }
       >
         <div
-          className="sc-AxjAm dZFNfx"
+          className="c0"
           data-cy="milestone-timeline-card-content"
         >
           <div
@@ -193,7 +211,7 @@ exports[`Timeline renders correctly 1`] = `
             </svg>
           </div>
           <p
-            className="sc-AxirZ dmQDCM"
+            className="c1"
             style={
               Object {
                 "gridArea": "title",
@@ -203,7 +221,7 @@ exports[`Timeline renders correctly 1`] = `
             Canada, Oregon Fall 2012
           </p>
           <p
-            className="sc-AxiKw eTbSGh"
+            className="c2"
             style={
               Object {
                 "gridArea": "subTitle",
@@ -213,7 +231,7 @@ exports[`Timeline renders correctly 1`] = `
             missing details
           </p>
           <p
-            className="sc-AxiKw eTbSGh"
+            className="c2"
             style={
               Object {
                 "gridArea": "flights",

@@ -18,4 +18,7 @@ module.exports = {
   },
   testURL: `http://localhost`,
   setupFiles: [`<rootDir>/test/loadershim.js`],
+
+  // The paths to modules that run some code to configure or set up the testing environment before each test.
+  setupFilesAfterEnv: ["<rootDir>/test/jest.setup.js"],
 }
