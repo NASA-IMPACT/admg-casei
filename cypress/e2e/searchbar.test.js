@@ -3,77 +3,102 @@
 import api from "../../src/utils/api"
 
 describe("Searchbar", () => {
-  beforeEach(() => {
-    cy.visit("/explore/campaigns")
-  })
-  it("renders correctly", () => {
-    cy.get("[data-cy=searchbar]")
+  ;[
+    { category: "campaigns", filterExample: "boreal winter" },
+    { category: "platforms", filterExample: "Aerolaser" },
+  ].forEach(x => {
+    describe(x.category, () => {
+      beforeEach(() => {
+        cy.visit(`/explore/${x.category}`)
+      })
+      it("renders correctly", () => {
+        cy.get("[data-cy=searchbar]")
 
-    cy.get("[data-cy=filter-select]").invoke("text").should("contain", "Filter")
+        cy.get("[data-cy=filter-select]")
+          .invoke("text")
+          .should("contain", "Filter")
 
-    cy.get("[data-cy=searchbar]")
-      .find("input")
-      .should("have.attr", "aria-label", "Enter search text")
+        cy.get("[data-cy=searchbar]")
+          .find("input")
+          .should("have.attr", "aria-label", "Enter search text")
 
-    cy.get("[data-cy=submit]").should("exist")
+        cy.get("[data-cy=submit]").should("exist")
 
-    cy.get("[data-cy=sort-select]").should("exist")
-  })
-
-  it("should not reload on button click nor type and enter", () => {
-    // mark the current window
-    cy.window().then(w => (w.beforeReload = true))
-
-    cy.window().should("have.prop", "beforeReload", true)
-
-    cy.get("[data-cy=filter-select]").select("monsoon")
-
-    cy.get("[data-cy=submit]").click()
-
-    cy.window().should("have.prop", "beforeReload", true)
-
-    cy.get("[data-cy=searchbar]")
-      .find("input")
-      .type("submitting some text")
-      .type("{enter}")
-
-    cy.window().should("have.prop", "beforeReload", true)
-  })
-
-  it("adds and removes filters", () => {
-    cy.get("[data-cy=filter-select]").select("monsoon")
-
-    cy.get("[data-cy=filter-chip]").should("exist")
-
-    cy.get("[data-cy=filter-chip]").find("button").click()
-
-    cy.get("[data-cy=filter-chip]").should("not.exist")
-  })
-
-  it("sorts the list asc or desc", () => {
-    cy.get("[data-cy=sort-select]").select("asc")
-
-    cy.get("main")
-      .find("[data-cy=explore-card]")
-      .find("big")
-      .should($big => {
-        const first = $big.first().text()
-        const last = $big.last().text()
-
-        expect(first < last).to.be.true
+        cy.get("[data-cy=sort-select]").should("exist")
       })
 
-    cy.get("[data-cy=sort-select]").select("desc")
+      it("should not reload on button click nor type and enter", () => {
+        // mark the current window
+        cy.window().then(w => (w.beforeReload = true))
 
-    cy.get("main")
-      .find("[data-cy=explore-card]")
-      .find("big")
-      .should($big => {
-        const first = $big.first().text()
-        const last = $big.last().text()
+        cy.window().should("have.prop", "beforeReload", true)
 
-        expect(first > last).to.be.true
+        cy.get("[data-cy=filter-select]").select(x.filterExample)
+
+        cy.get("[data-cy=submit]").click()
+
+        cy.window().should("have.prop", "beforeReload", true)
+
+        cy.get("[data-cy=searchbar]")
+          .find("input")
+          .type("submitting some text")
+          .type("{enter}")
+
+        cy.window().should("have.prop", "beforeReload", true)
       })
+
+      it("adds and removes filters", () => {
+        cy.get("main")
+          .find("[data-cy=explore-card]")
+          .then($cards => {
+            const numBefore = $cards.length
+
+            cy.get("[data-cy=filter-select]").select(x.filterExample)
+
+            cy.get("[data-cy=filter-chip]").should("exist")
+
+            cy.get("[data-cy=explore-card]").then($card => {
+              const numAfter = $card.length
+              expect(numAfter).to.be.lessThan(numBefore)
+            })
+
+            cy.get("[data-cy=filter-chip]").find("button").click()
+
+            cy.get("[data-cy=filter-chip]").should("not.exist")
+
+            cy.get("[data-cy=explore-card]").then($card => {
+              const numAfter = $card.length
+              expect(numAfter).to.be.equal(numBefore)
+            })
+          })
+      })
+
+      it("sorts the list asc or desc", () => {
+        cy.get("[data-cy=sort-select]").select("asc")
+
+        cy.get("main")
+          .find("[data-cy=explore-card]")
+          .find("big")
+          .should($big => {
+            const first = $big.first().text()
+            const last = $big.last().text()
+
+            expect(first < last).to.be.true
+          })
+
+        cy.get("[data-cy=sort-select]").select("desc")
+
+        cy.get("main")
+          .find("[data-cy=explore-card]")
+          .find("big")
+          .should($big => {
+            const first = $big.first().text()
+            const last = $big.last().text()
+
+            expect(first > last).to.be.true
+          })
+      })
+    })
   })
 
   let searchApiStub
