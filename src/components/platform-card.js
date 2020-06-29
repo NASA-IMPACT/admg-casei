@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import Card from "./card"
 
 const PlatformCard = ({
   shortname,
@@ -9,18 +10,7 @@ const PlatformCard = ({
   instruments,
   stationary,
 }) => (
-  <div
-    style={{
-      backgroundColor: `#303641`,
-      boxShadow: `rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px`,
-      padding: `1rem`,
-      display: `flex`,
-      flexDirection: `column`,
-      justifyContent: `space-between`,
-      height: `100%`,
-    }}
-    data-cy="explore-card"
-  >
+  <Card>
     <div style={{ marginBottom: `2rem` }}>
       <div
         style={{
@@ -70,7 +60,7 @@ const PlatformCard = ({
         <strong>{instruments.length}</strong> Instruments
       </small>
     </div>
-  </div>
+  </Card>
 )
 
 PlatformCard.propTypes = {
