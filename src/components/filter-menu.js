@@ -28,6 +28,7 @@ const FilterMenu = ({
   addFilter,
   getFilterOptionsById,
   removeFilter,
+  category,
 }) => {
   const handleSelection = value => {
     selectedFilterIds.includes(value) ? removeFilter(value) : addFilter(value)
@@ -53,21 +54,34 @@ const FilterMenu = ({
       onChange={e => handleSelection(e.target.value)}
     >
       <option value="">Filter</option>
-      <Filter
-        id="focus"
-        label="Focus Area"
-        options={getFilterOptionsById("focus")}
-      />
-      <Filter
-        id="season"
-        label="Season"
-        options={getFilterOptionsById("season")}
-      />
-      <Filter
-        id="region"
-        label="Geographical Region"
-        options={getFilterOptionsById("region")}
-      />
+      {category === "campaigns" && (
+        <>
+          <Filter
+            id="focus"
+            label="Focus Area"
+            options={getFilterOptionsById("focus")}
+          />
+          <Filter
+            id="season"
+            label="Season"
+            options={getFilterOptionsById("season")}
+          />
+          <Filter
+            id="region"
+            label="Geographical Region"
+            options={getFilterOptionsById("region")}
+          />
+        </>
+      )}
+      {category === "platforms" && (
+        <>
+          <Filter
+            id="instrument"
+            label="Instrument"
+            options={getFilterOptionsById("instrument")}
+          />
+        </>
+      )}
     </select>
   )
 }
@@ -77,6 +91,8 @@ FilterMenu.propTypes = {
   addFilter: PropTypes.func.isRequired,
   getFilterOptionsById: PropTypes.func.isRequired,
   removeFilter: PropTypes.func.isRequired,
+  category: PropTypes.oneOf(["campaigns", "platforms", "instruments"])
+    .isRequired,
 }
 
 export default FilterMenu

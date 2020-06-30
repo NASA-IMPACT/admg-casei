@@ -1,16 +1,14 @@
 import React from "react"
 import PropTypes from "prop-types"
-
 import Card from "./card"
 
-const CampaignCard = ({
-  ongoing,
+const PlatformCard = ({
   shortname,
   longname,
-  daterange,
-  region,
-  countCollectionPeriods = 0,
-  countDataProducts = 0,
+  description,
+  collectionPeriodIds,
+  instruments,
+  stationary,
 }) => (
   <Card>
     <div style={{ marginBottom: `2rem` }}>
@@ -31,16 +29,16 @@ const CampaignCard = ({
             height: `2.5rem`,
           }}
         ></div>
-        {ongoing && (
+        {stationary && (
           <div
             style={{
               textTransform: `uppercase`,
               border: `1px solid`,
               padding: `0.25rem`,
             }}
-            data-cy="ongoing-tag"
+            data-cy="stationary-tag"
           >
-            ongoing
+            stationary
           </div>
         )}
       </div>
@@ -51,33 +49,27 @@ const CampaignCard = ({
         {shortname}
       </big>
       <p data-cy="longname">{longname}</p>
-      <div>
-        <small data-cy="daterange">{daterange}</small>
-      </div>
-      <div>
-        <small data-cy="region">{region}</small>
-      </div>
+      <p data-cy="description">{description}</p>
     </div>
     <div>
       <small data-cy="count1">
-        <strong>{countCollectionPeriods}</strong> Collection Periods
+        <strong>{collectionPeriodIds.length}</strong> Collection Periods
       </small>{" "}
       ·{" "}
       <small data-cy="count2">
-        <strong>{countDataProducts}</strong> Data Products
+        <strong>{instruments.length}</strong> Instruments
       </small>
     </div>
   </Card>
 )
 
-CampaignCard.propTypes = {
-  ongoing: PropTypes.bool.isRequired,
+PlatformCard.propTypes = {
   shortname: PropTypes.string.isRequired,
-  longname: PropTypes.string.isRequired,
-  daterange: PropTypes.string.isRequired,
-  region: PropTypes.string.isRequired,
-  countCollectionPeriods: PropTypes.number,
-  countDataProducts: PropTypes.number,
+  longname: PropTypes.string,
+  description: PropTypes.string.isRequired,
+  collectionPeriodIds: PropTypes.arrayOf(PropTypes.string),
+  instruments: PropTypes.arrayOf(PropTypes.string),
+  stationary: PropTypes.bool.isRequired,
 }
 
-export default CampaignCard
+export default PlatformCard

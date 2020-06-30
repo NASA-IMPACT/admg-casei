@@ -104,6 +104,7 @@ const Campaigns = ({ data, location }) => {
         sortOrder={sortOrder}
         toggleSortOrder={toggleSortOrder}
         ref={inputElement}
+        category="campaigns"
       />
 
       {isLoading ? (

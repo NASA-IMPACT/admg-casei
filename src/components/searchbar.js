@@ -31,6 +31,7 @@ const Searchbar = React.forwardRef(
       removeFilter,
       sortOrder,
       toggleSortOrder,
+      category,
     },
     ref
   ) => {
@@ -46,6 +47,7 @@ const Searchbar = React.forwardRef(
             addFilter={addFilter}
             getFilterOptionsById={getFilterOptionsById}
             removeFilter={removeFilter}
+            category={category}
           />
 
           <div
@@ -140,6 +142,8 @@ Searchbar.propTypes = {
   removeFilter: PropTypes.func.isRequired,
   sortOrder: PropTypes.string.isRequired,
   toggleSortOrder: PropTypes.func.isRequired,
+  category: PropTypes.oneOf(["campaigns", "platforms", "instruments"])
+    .isRequired,
 }
 
 // https://reactjs.org/docs/forwarding-refs.html#displaying-a-custom-name-in-devtools
