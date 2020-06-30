@@ -6,6 +6,16 @@
 const fetch = require("node-fetch")
 const path = require("path")
 
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions
+  const typeDefs = `
+    type campaign implements Node {
+      geophysical_concepts: [String!]!
+    }
+  `
+  createTypes(typeDefs)
+}
+
 exports.sourceNodes = async ({ actions, createContentDigest }) => {
   const { createNode } = actions
   try {
