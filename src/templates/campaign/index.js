@@ -30,7 +30,7 @@ const CampaignTemplate = ({ data: { campaign, deployments, platforms } }) => {
         startdate={campaign.startdate}
         enddate={campaign.enddate}
         region={campaign.region}
-        seasonIds={campaign.season}
+        season={campaign.seasons.map(x => x.shortname).join(", ")}
         bounds={campaign.bounds}
         website={campaign.website}
       />
@@ -88,7 +88,7 @@ CampaignTemplate.propTypes = {
       startdate: PropTypes.string.isRequired,
       enddate: PropTypes.string.isRequired,
       region: PropTypes.string.isRequired,
-      season: PropTypes.arrayOf(PropTypes.string).isRequired,
+      seasons: PropTypes.arrayOf(PropTypes.string).isRequired,
       bounds: PropTypes.string.isRequired,
       website: PropTypes.string.isRequired,
       focusAreaIds: PropTypes.arrayOf(PropTypes.string).isRequired,

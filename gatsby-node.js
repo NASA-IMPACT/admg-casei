@@ -11,6 +11,7 @@ exports.createSchemaCustomization = ({ actions }) => {
   const typeDefs = `
     type campaign implements Node {
       geophysical_concepts: [String!]!
+      seasons: [season] @link
     }
   `
   createTypes(typeDefs)

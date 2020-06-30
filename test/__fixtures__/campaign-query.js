@@ -9,9 +9,17 @@ export const query = {
         shortname: "ACES",
         longname: "Altus Cumulus Electrification Study",
         id: "d1a09bda-9454-4f66-be12-dafc5f4df308",
-        seasonIds: [
-          "65900eb8-fb52-4da9-98e9-190cbf1d1cbe",
-          "52b49cd7-4143-4bbd-9f09-bd8de945c837",
+        seasons: [
+          {
+            id: "65900eb8-fb52-4da9-98e9-190cbf1d1cbe",
+            shortname: "boreal summer",
+            longname: "northern hemisphere summer months",
+          },
+          {
+            id: "52b49cd7-4143-4bbd-9f09-bd8de945c837",
+            shortname: "warm",
+            longname: "warm to hot weather months",
+          },
         ],
         focusIds: [
           "23aedeee-2f83-4ca9-be30-5fda9a311421",
@@ -32,10 +40,22 @@ export const query = {
         longname:
           "Arctic Research of the Composition of the Troposphere from Aircraft and Satellites",
         id: "34a697c1-4464-4b06-9d73-a9be86c586cc",
-        seasonIds: [
-          "416a1c43-85b6-4336-80ac-6ccda1226e54",
-          "65900eb8-fb52-4da9-98e9-190cbf1d1cbe",
-          "52b49cd7-4143-4bbd-9f09-bd8de945c837",
+        seasons: [
+          {
+            id: "416a1c43-85b6-4336-80ac-6ccda1226e54",
+            shortname: "boreal spring",
+            longname: "northern hemisphere spring months",
+          },
+          {
+            id: "65900eb8-fb52-4da9-98e9-190cbf1d1cbe",
+            shortname: "boreal summer",
+            longname: "northern hemisphere summer months",
+          },
+          {
+            id: "52b49cd7-4143-4bbd-9f09-bd8de945c837",
+            shortname: "warm",
+            longname: "warm to hot weather months",
+          },
         ],
         focusIds: [
           "23aedeee-2f83-4ca9-be30-5fda9a311421",
@@ -57,7 +77,13 @@ export const query = {
         shortname: "AirMOSS",
         longname: "Airborne Microwave Observatory of Subcanopy and Subsurface",
         id: "c0dc0d63-e32a-4fdc-b1ac-4f0e8a5c7754",
-        seasonIds: ["80c1e584-8bf7-4cae-b9c1-e7f98d19a7a0"],
+        seasons: [
+          {
+            id: "80c1e584-8bf7-4cae-b9c1-e7f98d19a7a0",
+            shortname: "year round",
+            longname: "study covers all seasons",
+          },
+        ],
         focusIds: [
           "75fdf3c3-f55b-4f33-9f56-7d7af49bef97",
           "4e90e316-6d36-41b9-ae29-5125842b7b60",
@@ -109,10 +135,22 @@ export const query = {
         shortname: "CARVE",
         longname: "Carbon in Arctic Reservoirs Vulnerability Experiment",
         id: "7546673c-151c-436a-adf1-6128b2d7a515",
-        seasonIds: [
-          "416a1c43-85b6-4336-80ac-6ccda1226e54",
-          "65900eb8-fb52-4da9-98e9-190cbf1d1cbe",
-          "4ebcfcd2-1c9c-45b0-bad6-997fc3e3c904",
+        seasons: [
+          {
+            id: "416a1c43-85b6-4336-80ac-6ccda1226e54",
+            shortname: "boreal spring",
+            longname: "northern hemisphere spring months",
+          },
+          {
+            id: "65900eb8-fb52-4da9-98e9-190cbf1d1cbe",
+            shortname: "boreal summer",
+            longname: "northern hemisphere summer months",
+          },
+          {
+            id: "4ebcfcd2-1c9c-45b0-bad6-997fc3e3c904",
+            shortname: "boreal fall",
+            longname: "northern hemisphere fall months",
+          },
         ],
         focusIds: [
           "23aedeee-2f83-4ca9-be30-5fda9a311421",
@@ -136,10 +174,22 @@ export const query = {
         shortname: "DC3",
         longname: "Deep Convective Clouds & Chemistry",
         id: "2bca3f73-ee2b-4336-aed0-7454ab8cdf13",
-        seasonIds: [
-          "416a1c43-85b6-4336-80ac-6ccda1226e54",
-          "65900eb8-fb52-4da9-98e9-190cbf1d1cbe",
-          "52b49cd7-4143-4bbd-9f09-bd8de945c837",
+        seasons: [
+          {
+            id: "416a1c43-85b6-4336-80ac-6ccda1226e54",
+            shortname: "boreal spring",
+            longname: "northern hemisphere spring months",
+          },
+          {
+            id: "65900eb8-fb52-4da9-98e9-190cbf1d1cbe",
+            shortname: "boreal summer",
+            longname: "northern hemisphere summer months",
+          },
+          {
+            id: "52b49cd7-4143-4bbd-9f09-bd8de945c837",
+            shortname: "warm",
+            longname: "warm to hot weather months",
+          },
         ],
         focusIds: [
           "23aedeee-2f83-4ca9-be30-5fda9a311421",
@@ -158,7 +208,13 @@ export const query = {
         shortname: "GCPEx",
         longname: "GPM Cold Season Precipitation Experiment",
         id: "b94baa5d-3c69-4270-baf8-afc02f7132de",
-        seasonIds: ["5ae15f8c-3d9a-4061-953d-5fea2df57654"],
+        seasons: [
+          {
+            id: "5ae15f8c-3d9a-4061-953d-5fea2df57654",
+            shortname: "boreal winter",
+            longname: "northern hemisphere winter months",
+          },
+        ],
         focusIds: [
           "23aedeee-2f83-4ca9-be30-5fda9a311421",
           "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
@@ -177,9 +233,17 @@ export const query = {
         shortname: "GOES-R PLT",
         longname: "GOES-R Post Launch Test",
         id: "2ad3b8b7-5334-4fa9-af06-7a26c7b05e4c",
-        seasonIds: [
-          "416a1c43-85b6-4336-80ac-6ccda1226e54",
-          "52b49cd7-4143-4bbd-9f09-bd8de945c837",
+        seasons: [
+          {
+            id: "416a1c43-85b6-4336-80ac-6ccda1226e54",
+            shortname: "boreal spring",
+            longname: "northern hemisphere spring months",
+          },
+          {
+            id: "52b49cd7-4143-4bbd-9f09-bd8de945c837",
+            shortname: "warm",
+            longname: "warm to hot weather months",
+          },
         ],
         focusIds: [
           "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
@@ -197,9 +261,17 @@ export const query = {
         shortname: "GRIP",
         longname: "Genesis and Rapid Intensification Processes",
         id: "58160104-9c7d-4312-a1bb-7e2998bd44b7",
-        seasonIds: [
-          "65900eb8-fb52-4da9-98e9-190cbf1d1cbe",
-          "4ebcfcd2-1c9c-45b0-bad6-997fc3e3c904",
+        seasons: [
+          {
+            id: "65900eb8-fb52-4da9-98e9-190cbf1d1cbe",
+            shortname: "boreal summer",
+            longname: "northern hemisphere summer months",
+          },
+          {
+            id: "4ebcfcd2-1c9c-45b0-bad6-997fc3e3c904",
+            shortname: "boreal fall",
+            longname: "northern hemisphere fall months",
+          },
         ],
         focusIds: ["4c5e9dc3-38ed-40cb-b6ea-cacf96057b53"],
         startdate: "2010-08-15",
@@ -215,7 +287,13 @@ export const query = {
         shortname: "HS3",
         longname: "Hurricane and Severe Storm Sentinel",
         id: "ffa4a307-c055-4303-adbf-42d243ef188b",
-        seasonIds: ["4ebcfcd2-1c9c-45b0-bad6-997fc3e3c904"],
+        seasons: [
+          {
+            id: "4ebcfcd2-1c9c-45b0-bad6-997fc3e3c904",
+            shortname: "boreal fall",
+            longname: "northern hemisphere fall months",
+          },
+        ],
         focusIds: ["4c5e9dc3-38ed-40cb-b6ea-cacf96057b53"],
         startdate: "2012-09-01",
         enddate: "2014-10-31",
@@ -233,10 +311,22 @@ export const query = {
         shortname: "OLYMPEX",
         longname: "Olympic Mountains Experiment",
         id: "4d231fec-f2c0-4bb2-864c-ef4f20a88378",
-        seasonIds: [
-          "5ae15f8c-3d9a-4061-953d-5fea2df57654",
-          "081ccd03-e46f-459e-8101-b270d0266eac",
-          "d4b539c1-32d3-4089-9e08-db714704a13c",
+        seasons: [
+          {
+            id: "5ae15f8c-3d9a-4061-953d-5fea2df57654",
+            shortname: "boreal winter",
+            longname: "northern hemisphere winter months",
+          },
+          {
+            id: "081ccd03-e46f-459e-8101-b270d0266eac",
+            shortname: "wet",
+            longname: "wet season months",
+          },
+          {
+            id: "d4b539c1-32d3-4089-9e08-db714704a13c",
+            shortname: "cold",
+            longname: "cool to cold weather months",
+          },
         ],
         focusIds: [
           "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
@@ -258,10 +348,22 @@ export const query = {
         shortname: "OLYMPEX",
         longname: "Olympic Mountains Experiment",
         id: "4d231fec-f2c0-4bb2-864c-ef4f20a88378",
-        seasonIds: [
-          "5ae15f8c-3d9a-4061-953d-5fea2df57654",
-          "081ccd03-e46f-459e-8101-b270d0266eac",
-          "d4b539c1-32d3-4089-9e08-db714704a13c",
+        seasons: [
+          {
+            id: "5ae15f8c-3d9a-4061-953d-5fea2df57654",
+            shortname: "boreal winter",
+            longname: "northern hemisphere winter months",
+          },
+          {
+            id: "081ccd03-e46f-459e-8101-b270d0266eac",
+            shortname: "wet",
+            longname: "wet season months",
+          },
+          {
+            id: "d4b539c1-32d3-4089-9e08-db714704a13c",
+            shortname: "cold",
+            longname: "cool to cold weather months",
+          },
         ],
         focusIds: [
           "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
@@ -279,7 +381,13 @@ export const query = {
         shortname: "HS3",
         longname: "Hurricane and Severe Storm Sentinel",
         id: "ffa4a307-c055-4303-adbf-42d243ef188b",
-        seasonIds: ["4ebcfcd2-1c9c-45b0-bad6-997fc3e3c904"],
+        seasons: [
+          {
+            id: "4ebcfcd2-1c9c-45b0-bad6-997fc3e3c904",
+            shortname: "boreal fall",
+            longname: "northern hemisphere fall months",
+          },
+        ],
         focusIds: ["4c5e9dc3-38ed-40cb-b6ea-cacf96057b53"],
         startdate: "2012-09-01",
         enddate: "2014-10-31",
@@ -297,9 +405,17 @@ export const query = {
         shortname: "GRIP",
         longname: "Genesis and Rapid Intensification Processes",
         id: "58160104-9c7d-4312-a1bb-7e2998bd44b7",
-        seasonIds: [
-          "65900eb8-fb52-4da9-98e9-190cbf1d1cbe",
-          "4ebcfcd2-1c9c-45b0-bad6-997fc3e3c904",
+        seasons: [
+          {
+            id: "65900eb8-fb52-4da9-98e9-190cbf1d1cbe",
+            shortname: "boreal summer",
+            longname: "northern hemisphere summer months",
+          },
+          {
+            id: "4ebcfcd2-1c9c-45b0-bad6-997fc3e3c904",
+            shortname: "boreal fall",
+            longname: "northern hemisphere fall months",
+          },
         ],
         focusIds: ["4c5e9dc3-38ed-40cb-b6ea-cacf96057b53"],
         startdate: "2010-08-15",
@@ -315,9 +431,17 @@ export const query = {
         shortname: "GOES-R PLT",
         longname: "GOES-R Post Launch Test",
         id: "2ad3b8b7-5334-4fa9-af06-7a26c7b05e4c",
-        seasonIds: [
-          "416a1c43-85b6-4336-80ac-6ccda1226e54",
-          "52b49cd7-4143-4bbd-9f09-bd8de945c837",
+        seasons: [
+          {
+            id: "416a1c43-85b6-4336-80ac-6ccda1226e54",
+            shortname: "boreal spring",
+            longname: "northern hemisphere spring months",
+          },
+          {
+            id: "52b49cd7-4143-4bbd-9f09-bd8de945c837",
+            shortname: "warm",
+            longname: "warm to hot weather months",
+          },
         ],
         focusIds: [
           "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
@@ -335,7 +459,13 @@ export const query = {
         shortname: "GCPEx",
         longname: "GPM Cold Season Precipitation Experiment",
         id: "b94baa5d-3c69-4270-baf8-afc02f7132de",
-        seasonIds: ["5ae15f8c-3d9a-4061-953d-5fea2df57654"],
+        seasons: [
+          {
+            id: "5ae15f8c-3d9a-4061-953d-5fea2df57654",
+            shortname: "boreal winter",
+            longname: "northern hemisphere winter months",
+          },
+        ],
         focusIds: [
           "23aedeee-2f83-4ca9-be30-5fda9a311421",
           "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
@@ -354,10 +484,22 @@ export const query = {
         shortname: "DC3",
         longname: "Deep Convective Clouds & Chemistry",
         id: "2bca3f73-ee2b-4336-aed0-7454ab8cdf13",
-        seasonIds: [
-          "416a1c43-85b6-4336-80ac-6ccda1226e54",
-          "65900eb8-fb52-4da9-98e9-190cbf1d1cbe",
-          "52b49cd7-4143-4bbd-9f09-bd8de945c837",
+        seasons: [
+          {
+            id: "416a1c43-85b6-4336-80ac-6ccda1226e54",
+            shortname: "boreal spring",
+            longname: "northern hemisphere spring months",
+          },
+          {
+            id: "65900eb8-fb52-4da9-98e9-190cbf1d1cbe",
+            shortname: "boreal summer",
+            longname: "northern hemisphere summer months",
+          },
+          {
+            id: "52b49cd7-4143-4bbd-9f09-bd8de945c837",
+            shortname: "warm",
+            longname: "warm to hot weather months",
+          },
         ],
         focusIds: [
           "23aedeee-2f83-4ca9-be30-5fda9a311421",
@@ -376,10 +518,22 @@ export const query = {
         shortname: "CARVE",
         longname: "Carbon in Arctic Reservoirs Vulnerability Experiment",
         id: "7546673c-151c-436a-adf1-6128b2d7a515",
-        seasonIds: [
-          "416a1c43-85b6-4336-80ac-6ccda1226e54",
-          "65900eb8-fb52-4da9-98e9-190cbf1d1cbe",
-          "4ebcfcd2-1c9c-45b0-bad6-997fc3e3c904",
+        seasons: [
+          {
+            id: "416a1c43-85b6-4336-80ac-6ccda1226e54",
+            shortname: "boreal spring",
+            longname: "northern hemisphere spring months",
+          },
+          {
+            id: "65900eb8-fb52-4da9-98e9-190cbf1d1cbe",
+            shortname: "boreal summer",
+            longname: "northern hemisphere summer months",
+          },
+          {
+            id: "4ebcfcd2-1c9c-45b0-bad6-997fc3e3c904",
+            shortname: "boreal fall",
+            longname: "northern hemisphere fall months",
+          },
         ],
         focusIds: [
           "23aedeee-2f83-4ca9-be30-5fda9a311421",
@@ -403,7 +557,13 @@ export const query = {
         shortname: "AirMOSS",
         longname: "Airborne Microwave Observatory of Subcanopy and Subsurface",
         id: "c0dc0d63-e32a-4fdc-b1ac-4f0e8a5c7754",
-        seasonIds: ["80c1e584-8bf7-4cae-b9c1-e7f98d19a7a0"],
+        seasons: [
+          {
+            id: "80c1e584-8bf7-4cae-b9c1-e7f98d19a7a0",
+            shortname: "year round",
+            longname: "study covers all seasons",
+          },
+        ],
         focusIds: [
           "75fdf3c3-f55b-4f33-9f56-7d7af49bef97",
           "4e90e316-6d36-41b9-ae29-5125842b7b60",
@@ -456,10 +616,22 @@ export const query = {
         longname:
           "Arctic Research of the Composition of the Troposphere from Aircraft and Satellites",
         id: "34a697c1-4464-4b06-9d73-a9be86c586cc",
-        seasonIds: [
-          "416a1c43-85b6-4336-80ac-6ccda1226e54",
-          "65900eb8-fb52-4da9-98e9-190cbf1d1cbe",
-          "52b49cd7-4143-4bbd-9f09-bd8de945c837",
+        seasons: [
+          {
+            id: "416a1c43-85b6-4336-80ac-6ccda1226e54",
+            shortname: "boreal spring",
+            longname: "northern hemisphere spring months",
+          },
+          {
+            id: "65900eb8-fb52-4da9-98e9-190cbf1d1cbe",
+            shortname: "boreal summer",
+            longname: "northern hemisphere summer months",
+          },
+          {
+            id: "52b49cd7-4143-4bbd-9f09-bd8de945c837",
+            shortname: "warm",
+            longname: "warm to hot weather months",
+          },
         ],
         focusIds: [
           "23aedeee-2f83-4ca9-be30-5fda9a311421",
@@ -481,9 +653,17 @@ export const query = {
         shortname: "ACES",
         longname: "Altus Cumulus Electrification Study",
         id: "d1a09bda-9454-4f66-be12-dafc5f4df308",
-        seasonIds: [
-          "65900eb8-fb52-4da9-98e9-190cbf1d1cbe",
-          "52b49cd7-4143-4bbd-9f09-bd8de945c837",
+        seasons: [
+          {
+            id: "65900eb8-fb52-4da9-98e9-190cbf1d1cbe",
+            shortname: "boreal summer",
+            longname: "northern hemisphere summer months",
+          },
+          {
+            id: "52b49cd7-4143-4bbd-9f09-bd8de945c837",
+            shortname: "warm",
+            longname: "warm to hot weather months",
+          },
         ],
         focusIds: [
           "23aedeee-2f83-4ca9-be30-5fda9a311421",

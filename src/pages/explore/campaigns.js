@@ -76,7 +76,7 @@ const Campaigns = ({ data, location }) => {
         ? true
         : selectedFilterIds.every(
             filterId =>
-              campaign.seasonIds.includes(filterId) ||
+              campaign.seasons.map(x => x.id).includes(filterId) ||
               campaign.focusIds.includes(filterId) ||
               campaignHasDeploymentInRegion(campaign, filterId)
           )
@@ -193,7 +193,11 @@ export const query = graphql`
     shortname: short_name
     longname: long_name
     id
-    seasonIds: seasons
+    seasons {
+      id
+      shortname: short_name
+      longname: long_name
+    }
     focusIds: focus_areas
     startdate: start_date
     enddate: end_date
@@ -209,7 +213,13 @@ const campaignShape = PropTypes.shape({
   shortname: PropTypes.string.isRequired,
   longname: PropTypes.string,
   id: PropTypes.string.isRequired,
-  seasonIds: PropTypes.arrayOf(PropTypes.string),
+  seasons: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      shortname: PropTypes.string.isRequired,
+      longname: PropTypes.string.isRequired,
+    })
+  ).isRequired,
   focusIds: PropTypes.arrayOf(PropTypes.string),
   startdate: PropTypes.string.isRequired,
   enddate: PropTypes.string,
