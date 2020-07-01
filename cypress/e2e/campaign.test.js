@@ -64,17 +64,23 @@ describe("Campaign", () => {
     })
 
     it("navigates to the inpage section", () => {
-      cy.get("[data-cy=program-info-section]").find("h2").should("be.visible")
-      cy.get("[data-cy=program-info-section]")
-        .find("h2")
-        .should("not.be.inViewport")
+      ;[
+        "program-info",
+        "platform",
+        "overview",
+        "data",
+        "timeline",
+        "focus",
+      ].forEach(id => {
+        cy.get(`[data-cy=${id}-inpage-link]`).click()
 
-      cy.get("main").find("nav").find("a").last().click()
+        cy.url().should("include", id)
 
-      cy.url().should("include", "#program-info")
-      cy.get("[data-cy=program-info-section]")
-        .find("h2")
-        .should("be.inViewport")
+        cy.get("main")
+          .find(`[data-cy=${id}-section]`)
+          .find("h2")
+          .should("be.inViewport")
+      })
     })
   })
 

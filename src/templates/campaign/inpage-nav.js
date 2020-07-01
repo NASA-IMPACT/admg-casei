@@ -5,15 +5,18 @@ import theme from "../../utils/theme"
 
 const InpageLink = props => (
   <li style={{ margin: `0 1rem 0 0` }}>
-    <a href={props.to}>{props.children}</a>
+    <a href={props.to} data-cy={`${props.id}-inpage-link`}>
+      {props.children}
+    </a>
   </li>
 )
 
 InpageLink.propTypes = {
+  id: PropTypes.string.isRequired,
   to: function (props, propName, componentName) {
     // validate that prop `to` links to an existing section
     if (
-      !/(#overview|#focus|#platforms|#platforms|#timeline|#data|#program-info)/.test(
+      !/(#overview|#focus|#platforms|#timeline|#data|#program-info)/.test(
         props[propName]
       )
     ) {
@@ -55,13 +58,27 @@ const InpageNav = () => (
           listStyle: `none`,
         }}
       >
-        <InpageLink to="#overview">Overview</InpageLink>
-        <InpageLink to="#focus">Focus</InpageLink>
-        <InpageLink to="#platforms">Platforms</InpageLink>
-        <InpageLink to="#platforms">Instruments</InpageLink>
-        <InpageLink to="#timeline">Timeline</InpageLink>
-        <InpageLink to="#data">Data</InpageLink>
-        <InpageLink to="#program-info">Program Info</InpageLink>
+        <InpageLink id="overview" to="#overview">
+          Overview
+        </InpageLink>
+        <InpageLink id="focus" to="#focus">
+          Focus
+        </InpageLink>
+        <InpageLink id="platform" to="#platform">
+          Platforms
+        </InpageLink>
+        <InpageLink id="intruments" to="#platform">
+          Instruments
+        </InpageLink>
+        <InpageLink id="timeline" to="#timeline">
+          Timeline
+        </InpageLink>
+        <InpageLink id="data" to="#data">
+          Data
+        </InpageLink>
+        <InpageLink id="program-info" to="#program-info">
+          Program Info
+        </InpageLink>
       </ul>
     </nav>
     <div style={{ display: `flex` }}>
