@@ -19,7 +19,7 @@ const CampaignTemplate = ({ data: { campaign, deployments } }) => {
         bounds={campaign.bounds}
         shortname={campaign.shortname}
         longname={campaign.longname}
-        focusIds={campaign.focus}
+        focusListing={campaign.focus.map(x => x.shortname).join(", ")}
         countDeployments={campaign.countDeployments}
         countCollectionPeriods={campaign.countCollectionPeriods}
         countDataProducts={campaign.countDataProducts}
@@ -30,12 +30,12 @@ const CampaignTemplate = ({ data: { campaign, deployments } }) => {
         startdate={campaign.startdate}
         enddate={campaign.enddate}
         region={campaign.region}
-        season={campaign.seasons.map(x => x.shortname).join(", ")}
+        seasonListing={campaign.seasons.map(x => x.shortname).join(", ")}
         bounds={campaign.bounds}
         website={campaign.website}
       />
       <FocusSection
-        focusAreaIds={campaign.focusAreaIds}
+        focus={campaign.focus}
         focusPhenomena={campaign.focusPhenomena}
         scienceKeywords={campaign.scienceKeywords}
       />
@@ -78,7 +78,12 @@ CampaignTemplate.propTypes = {
     campaign: PropTypes.shape({
       shortname: PropTypes.string.isRequired,
       longname: PropTypes.string.isRequired,
-      focus: PropTypes.arrayOf(PropTypes.string).isRequired,
+      focus: PropTypes.arrayOf(
+        PropTypes.shape({
+          shortname: PropTypes.string.isRequired,
+          longname: PropTypes.string.isRequired,
+        })
+      ).isRequired,
       countDeployments: PropTypes.number,
       countCollectionPeriods: PropTypes.number.isRequired,
       countDataProducts: PropTypes.number.isRequired,

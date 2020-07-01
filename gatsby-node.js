@@ -10,7 +10,8 @@ exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions
   const typeDefs = `
     type campaign implements Node {
-      geophysical_concepts: [String!]!
+      focus_areas: [focus_area] @link
+      geophysical_concepts: [geophysical_concept] @link
       platforms: [platform] @link
       seasons: [season] @link
     }

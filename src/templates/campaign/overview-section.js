@@ -38,7 +38,7 @@ const OverviewSection = ({
   startdate,
   enddate,
   region,
-  season,
+  seasonListing,
   bounds,
   website,
 }) => (
@@ -57,7 +57,7 @@ const OverviewSection = ({
         >
           <FactItem label="Study dates" fact={`${startdate} – ${enddate}`} />
           <FactItem label="Region" fact={region} />
-          <FactItem label="Season of Study" fact={season} />
+          <FactItem label="Season of Study" fact={seasonListing} />
           <FactItem label="Spatial bounds" fact={bounds} />
         </div>
       </div>
@@ -110,7 +110,7 @@ OverviewSection.propTypes = {
   startdate: PropTypes.string.isRequired,
   enddate: PropTypes.string.isRequired,
   region: PropTypes.string.isRequired,
-  season: PropTypes.string.isRequired,
+  seasonListing: PropTypes.string.isRequired,
   bounds: PropTypes.string.isRequired,
   website: PropTypes.string.isRequired,
 }

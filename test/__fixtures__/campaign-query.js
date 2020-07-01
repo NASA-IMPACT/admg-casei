@@ -17,11 +17,19 @@ export const query = {
             id: "52b49cd7-4143-4bbd-9f09-bd8de945c837",
           },
         ],
-        focusIds: [
-          "23aedeee-2f83-4ca9-be30-5fda9a311421",
-          "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
-          "2a132687-f5a1-4bbc-b45a-97228c310cd8",
-          "a187959e-4132-4c2c-950d-7055bc5082b9",
+        focus: [
+          {
+            id: "23aedeee-2f83-4ca9-be30-5fda9a311421",
+          },
+          {
+            id: "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
+          },
+          {
+            id: "2a132687-f5a1-4bbc-b45a-97228c310cd8",
+          },
+          {
+            id: "a187959e-4132-4c2c-950d-7055bc5082b9",
+          },
         ],
         startdate: "2002-08-02",
         enddate: "2002-08-30",
@@ -52,9 +60,13 @@ export const query = {
             id: "52b49cd7-4143-4bbd-9f09-bd8de945c837",
           },
         ],
-        focusIds: [
-          "23aedeee-2f83-4ca9-be30-5fda9a311421",
-          "2a132687-f5a1-4bbc-b45a-97228c310cd8",
+        focus: [
+          {
+            id: "23aedeee-2f83-4ca9-be30-5fda9a311421",
+          },
+          {
+            id: "2a132687-f5a1-4bbc-b45a-97228c310cd8",
+          },
         ],
         startdate: "2008-04-01",
         enddate: "2008-07-14",
@@ -88,9 +100,13 @@ export const query = {
             id: "80c1e584-8bf7-4cae-b9c1-e7f98d19a7a0",
           },
         ],
-        focusIds: [
-          "75fdf3c3-f55b-4f33-9f56-7d7af49bef97",
-          "4e90e316-6d36-41b9-ae29-5125842b7b60",
+        focus: [
+          {
+            id: "75fdf3c3-f55b-4f33-9f56-7d7af49bef97",
+          },
+          {
+            id: "4e90e316-6d36-41b9-ae29-5125842b7b60",
+          },
         ],
         startdate: "2012-09-18",
         enddate: "2015-09-29",
@@ -158,10 +174,16 @@ export const query = {
             id: "4ebcfcd2-1c9c-45b0-bad6-997fc3e3c904",
           },
         ],
-        focusIds: [
-          "23aedeee-2f83-4ca9-be30-5fda9a311421",
-          "2a132687-f5a1-4bbc-b45a-97228c310cd8",
-          "75fdf3c3-f55b-4f33-9f56-7d7af49bef97",
+        focus: [
+          {
+            id: "23aedeee-2f83-4ca9-be30-5fda9a311421",
+          },
+          {
+            id: "2a132687-f5a1-4bbc-b45a-97228c310cd8",
+          },
+          {
+            id: "75fdf3c3-f55b-4f33-9f56-7d7af49bef97",
+          },
         ],
         startdate: "2012-05-23",
         enddate: "2015-11-12",
@@ -196,9 +218,13 @@ export const query = {
             id: "52b49cd7-4143-4bbd-9f09-bd8de945c837",
           },
         ],
-        focusIds: [
-          "23aedeee-2f83-4ca9-be30-5fda9a311421",
-          "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
+        focus: [
+          {
+            id: "23aedeee-2f83-4ca9-be30-5fda9a311421",
+          },
+          {
+            id: "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
+          },
         ],
         startdate: "2012-05-18",
         enddate: "2012-06-30",
@@ -229,10 +255,16 @@ export const query = {
             id: "5ae15f8c-3d9a-4061-953d-5fea2df57654",
           },
         ],
-        focusIds: [
-          "23aedeee-2f83-4ca9-be30-5fda9a311421",
-          "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
-          "a187959e-4132-4c2c-950d-7055bc5082b9",
+        focus: [
+          {
+            id: "23aedeee-2f83-4ca9-be30-5fda9a311421",
+          },
+          {
+            id: "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
+          },
+          {
+            id: "a187959e-4132-4c2c-950d-7055bc5082b9",
+          },
         ],
         startdate: "2012-01-15",
         enddate: "2012-03-04",
@@ -266,9 +298,13 @@ export const query = {
             id: "52b49cd7-4143-4bbd-9f09-bd8de945c837",
           },
         ],
-        focusIds: [
-          "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
-          "a187959e-4132-4c2c-950d-7055bc5082b9",
+        focus: [
+          {
+            id: "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
+          },
+          {
+            id: "a187959e-4132-4c2c-950d-7055bc5082b9",
+          },
         ],
         startdate: "2017-03-21",
         enddate: "2017-05-17",
@@ -295,7 +331,11 @@ export const query = {
             id: "4ebcfcd2-1c9c-45b0-bad6-997fc3e3c904",
           },
         ],
-        focusIds: ["4c5e9dc3-38ed-40cb-b6ea-cacf96057b53"],
+        focus: [
+          {
+            id: "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
+          },
+        ],
         startdate: "2010-08-15",
         enddate: "2010-09-25",
         region:
@@ -325,7 +365,11 @@ export const query = {
             id: "4ebcfcd2-1c9c-45b0-bad6-997fc3e3c904",
           },
         ],
-        focusIds: ["4c5e9dc3-38ed-40cb-b6ea-cacf96057b53"],
+        focus: [
+          {
+            id: "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
+          },
+        ],
         startdate: "2012-09-01",
         enddate: "2014-10-31",
         region: "Subtropical Atlantic Ocean and Gulf of Mexico",
@@ -361,9 +405,13 @@ export const query = {
             id: "d4b539c1-32d3-4089-9e08-db714704a13c",
           },
         ],
-        focusIds: [
-          "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
-          "a187959e-4132-4c2c-950d-7055bc5082b9",
+        focus: [
+          {
+            id: "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
+          },
+          {
+            id: "a187959e-4132-4c2c-950d-7055bc5082b9",
+          },
         ],
         startdate: "2015-11-01",
         enddate: "2016-05-01",
@@ -393,9 +441,13 @@ export const query = {
             id: "d4b539c1-32d3-4089-9e08-db714704a13c",
           },
         ],
-        focusIds: [
-          "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
-          "a187959e-4132-4c2c-950d-7055bc5082b9",
+        focus: [
+          {
+            id: "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
+          },
+          {
+            id: "a187959e-4132-4c2c-950d-7055bc5082b9",
+          },
         ],
         startdate: "2015-11-01",
         enddate: "2016-05-01",
@@ -415,7 +467,11 @@ export const query = {
             id: "4ebcfcd2-1c9c-45b0-bad6-997fc3e3c904",
           },
         ],
-        focusIds: ["4c5e9dc3-38ed-40cb-b6ea-cacf96057b53"],
+        focus: [
+          {
+            id: "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
+          },
+        ],
         startdate: "2012-09-01",
         enddate: "2014-10-31",
         region: "Subtropical Atlantic Ocean and Gulf of Mexico",
@@ -448,7 +504,11 @@ export const query = {
             id: "4ebcfcd2-1c9c-45b0-bad6-997fc3e3c904",
           },
         ],
-        focusIds: ["4c5e9dc3-38ed-40cb-b6ea-cacf96057b53"],
+        focus: [
+          {
+            id: "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
+          },
+        ],
         startdate: "2010-08-15",
         enddate: "2010-09-25",
         region:
@@ -481,9 +541,13 @@ export const query = {
             id: "52b49cd7-4143-4bbd-9f09-bd8de945c837",
           },
         ],
-        focusIds: [
-          "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
-          "a187959e-4132-4c2c-950d-7055bc5082b9",
+        focus: [
+          {
+            id: "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
+          },
+          {
+            id: "a187959e-4132-4c2c-950d-7055bc5082b9",
+          },
         ],
         startdate: "2017-03-21",
         enddate: "2017-05-17",
@@ -507,10 +571,16 @@ export const query = {
             id: "5ae15f8c-3d9a-4061-953d-5fea2df57654",
           },
         ],
-        focusIds: [
-          "23aedeee-2f83-4ca9-be30-5fda9a311421",
-          "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
-          "a187959e-4132-4c2c-950d-7055bc5082b9",
+        focus: [
+          {
+            id: "23aedeee-2f83-4ca9-be30-5fda9a311421",
+          },
+          {
+            id: "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
+          },
+          {
+            id: "a187959e-4132-4c2c-950d-7055bc5082b9",
+          },
         ],
         startdate: "2012-01-15",
         enddate: "2012-03-04",
@@ -547,9 +617,13 @@ export const query = {
             id: "52b49cd7-4143-4bbd-9f09-bd8de945c837",
           },
         ],
-        focusIds: [
-          "23aedeee-2f83-4ca9-be30-5fda9a311421",
-          "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
+        focus: [
+          {
+            id: "23aedeee-2f83-4ca9-be30-5fda9a311421",
+          },
+          {
+            id: "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
+          },
         ],
         startdate: "2012-05-18",
         enddate: "2012-06-30",
@@ -586,10 +660,16 @@ export const query = {
             id: "4ebcfcd2-1c9c-45b0-bad6-997fc3e3c904",
           },
         ],
-        focusIds: [
-          "23aedeee-2f83-4ca9-be30-5fda9a311421",
-          "2a132687-f5a1-4bbc-b45a-97228c310cd8",
-          "75fdf3c3-f55b-4f33-9f56-7d7af49bef97",
+        focus: [
+          {
+            id: "23aedeee-2f83-4ca9-be30-5fda9a311421",
+          },
+          {
+            id: "2a132687-f5a1-4bbc-b45a-97228c310cd8",
+          },
+          {
+            id: "75fdf3c3-f55b-4f33-9f56-7d7af49bef97",
+          },
         ],
         startdate: "2012-05-23",
         enddate: "2015-11-12",
@@ -618,9 +698,13 @@ export const query = {
             id: "80c1e584-8bf7-4cae-b9c1-e7f98d19a7a0",
           },
         ],
-        focusIds: [
-          "75fdf3c3-f55b-4f33-9f56-7d7af49bef97",
-          "4e90e316-6d36-41b9-ae29-5125842b7b60",
+        focus: [
+          {
+            id: "75fdf3c3-f55b-4f33-9f56-7d7af49bef97",
+          },
+          {
+            id: "4e90e316-6d36-41b9-ae29-5125842b7b60",
+          },
         ],
         startdate: "2012-09-18",
         enddate: "2015-09-29",
@@ -689,9 +773,13 @@ export const query = {
             id: "52b49cd7-4143-4bbd-9f09-bd8de945c837",
           },
         ],
-        focusIds: [
-          "23aedeee-2f83-4ca9-be30-5fda9a311421",
-          "2a132687-f5a1-4bbc-b45a-97228c310cd8",
+        focus: [
+          {
+            id: "23aedeee-2f83-4ca9-be30-5fda9a311421",
+          },
+          {
+            id: "2a132687-f5a1-4bbc-b45a-97228c310cd8",
+          },
         ],
         startdate: "2008-04-01",
         enddate: "2008-07-14",
@@ -728,11 +816,19 @@ export const query = {
             id: "52b49cd7-4143-4bbd-9f09-bd8de945c837",
           },
         ],
-        focusIds: [
-          "23aedeee-2f83-4ca9-be30-5fda9a311421",
-          "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
-          "2a132687-f5a1-4bbc-b45a-97228c310cd8",
-          "a187959e-4132-4c2c-950d-7055bc5082b9",
+        focus: [
+          {
+            id: "23aedeee-2f83-4ca9-be30-5fda9a311421",
+          },
+          {
+            id: "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
+          },
+          {
+            id: "2a132687-f5a1-4bbc-b45a-97228c310cd8",
+          },
+          {
+            id: "a187959e-4132-4c2c-950d-7055bc5082b9",
+          },
         ],
         startdate: "2002-08-02",
         enddate: "2002-08-30",
