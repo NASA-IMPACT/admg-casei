@@ -948,6 +948,85 @@ export const query = {
       },
     ],
   },
+  allPlatform: {
+    options: [
+      {
+        id: "fea8651b-9d6e-49cf-9433-f1c6685ec0dc",
+        shortname: "ALAR",
+        longname: "Airborne Laboratory for Atmospheric Research",
+      },
+      {
+        id: "32242d25-0152-4d98-a3a2-d1f874597cd6",
+        shortname: "ALTUS II",
+        longname: "ALTUS II",
+      },
+      {
+        id: "99bbbba6-7de4-43a0-9483-1175cec6b93f",
+        shortname: "ASO",
+        longname: "Airborne Snow Observatory",
+      },
+      {
+        id: "1b607095-4f6d-4e70-8e16-798bc59a2d59",
+        shortname: "B-200",
+        longname: "Beechcraft King Air B-200",
+      },
+      {
+        id: "900208da-3cb2-44b6-9f27-20209433f190",
+        shortname: "C-23 Sherpa",
+        longname: "",
+      },
+      {
+        id: "0cdd2d06-ba97-469d-96eb-0e0865c7c4c9",
+        shortname: "Citation",
+        longname: "Cessna Citation II",
+      },
+      {
+        id: "af872351-1e39-43dc-bdb5-3f4fb7def20b",
+        shortname: "CV-580",
+        longname: "Convair CV-580",
+      },
+      {
+        id: "d59b3d7e-f782-4e25-a8eb-ceec91c0331e",
+        shortname: "DC-8",
+        longname: "Douglas DC-8",
+      },
+      {
+        id: "cc0f103e-e537-4437-8d2b-f7ea5ca617de",
+        shortname: "ER-2",
+        longname: "NASA Earth Resources-2 aircraft",
+      },
+      {
+        id: "1c57a92e-a6db-4e7e-9d56-704705acc192",
+        shortname: "Falcon",
+        longname: "Dassault Falcon 20-E5",
+      },
+      {
+        id: "a67e9128-f25f-4bb8-97c1-5d89005111a8",
+        shortname: "G-III",
+        longname: "Gulfstream III",
+      },
+      {
+        id: "2a3a99ee-1ea0-4ac9-9e52-6e733a0eda23",
+        shortname: "G-V",
+        longname: "Gulfstream-V",
+      },
+      {
+        id: "5cde9f2a-10cb-47d6-b095-3b61d1e8b1e2",
+        shortname: "GH",
+        longname: "Global Hawk UAV",
+      },
+      {
+        id: "2084ab0c-4f18-4aa6-ad7b-70bc861d2d80",
+        shortname: "P-3",
+        longname: "P-3 Orion",
+      },
+      {
+        id: "5baa4bc5-ad5a-43f8-9ed3-cf7d0dbdae36",
+        shortname: "WB-57",
+        longname: "NASA WB-57",
+      },
+    ],
+  },
   allDeployment: {
     nodes: [
       {
