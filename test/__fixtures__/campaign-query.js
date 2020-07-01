@@ -12,13 +12,9 @@ export const query = {
         seasons: [
           {
             id: "65900eb8-fb52-4da9-98e9-190cbf1d1cbe",
-            shortname: "boreal summer",
-            longname: "northern hemisphere summer months",
           },
           {
             id: "52b49cd7-4143-4bbd-9f09-bd8de945c837",
-            shortname: "warm",
-            longname: "warm to hot weather months",
           },
         ],
         focusIds: [
@@ -33,6 +29,11 @@ export const query = {
         deploymentIds: ["ddc8ce9e-d4db-4b39-8041-06b272902544"],
         countCollectionPeriods: 0,
         countDataProducts: 0,
+        platforms: [
+          {
+            id: "32242d25-0152-4d98-a3a2-d1f874597cd6",
+          },
+        ],
       },
       {
         ongoing: false,
@@ -43,18 +44,12 @@ export const query = {
         seasons: [
           {
             id: "416a1c43-85b6-4336-80ac-6ccda1226e54",
-            shortname: "boreal spring",
-            longname: "northern hemisphere spring months",
           },
           {
             id: "65900eb8-fb52-4da9-98e9-190cbf1d1cbe",
-            shortname: "boreal summer",
-            longname: "northern hemisphere summer months",
           },
           {
             id: "52b49cd7-4143-4bbd-9f09-bd8de945c837",
-            shortname: "warm",
-            longname: "warm to hot weather months",
           },
         ],
         focusIds: [
@@ -71,6 +66,17 @@ export const query = {
         ],
         countCollectionPeriods: 0,
         countDataProducts: 0,
+        platforms: [
+          {
+            id: "d59b3d7e-f782-4e25-a8eb-ceec91c0331e",
+          },
+          {
+            id: "1b607095-4f6d-4e70-8e16-798bc59a2d59",
+          },
+          {
+            id: "2084ab0c-4f18-4aa6-ad7b-70bc861d2d80",
+          },
+        ],
       },
       {
         ongoing: false,
@@ -80,8 +86,6 @@ export const query = {
         seasons: [
           {
             id: "80c1e584-8bf7-4cae-b9c1-e7f98d19a7a0",
-            shortname: "year round",
-            longname: "study covers all seasons",
           },
         ],
         focusIds: [
@@ -129,6 +133,14 @@ export const query = {
         ],
         countCollectionPeriods: 0,
         countDataProducts: 0,
+        platforms: [
+          {
+            id: "fea8651b-9d6e-49cf-9433-f1c6685ec0dc",
+          },
+          {
+            id: "a67e9128-f25f-4bb8-97c1-5d89005111a8",
+          },
+        ],
       },
       {
         ongoing: false,
@@ -138,18 +150,12 @@ export const query = {
         seasons: [
           {
             id: "416a1c43-85b6-4336-80ac-6ccda1226e54",
-            shortname: "boreal spring",
-            longname: "northern hemisphere spring months",
           },
           {
             id: "65900eb8-fb52-4da9-98e9-190cbf1d1cbe",
-            shortname: "boreal summer",
-            longname: "northern hemisphere summer months",
           },
           {
             id: "4ebcfcd2-1c9c-45b0-bad6-997fc3e3c904",
-            shortname: "boreal fall",
-            longname: "northern hemisphere fall months",
           },
         ],
         focusIds: [
@@ -168,6 +174,11 @@ export const query = {
         ],
         countCollectionPeriods: 0,
         countDataProducts: 0,
+        platforms: [
+          {
+            id: "900208da-3cb2-44b6-9f27-20209433f190",
+          },
+        ],
       },
       {
         ongoing: false,
@@ -177,18 +188,12 @@ export const query = {
         seasons: [
           {
             id: "416a1c43-85b6-4336-80ac-6ccda1226e54",
-            shortname: "boreal spring",
-            longname: "northern hemisphere spring months",
           },
           {
             id: "65900eb8-fb52-4da9-98e9-190cbf1d1cbe",
-            shortname: "boreal summer",
-            longname: "northern hemisphere summer months",
           },
           {
             id: "52b49cd7-4143-4bbd-9f09-bd8de945c837",
-            shortname: "warm",
-            longname: "warm to hot weather months",
           },
         ],
         focusIds: [
@@ -202,6 +207,17 @@ export const query = {
         deploymentIds: ["dc2fa7b2-3143-4ca8-9e5a-ee07e807e712"],
         countCollectionPeriods: 0,
         countDataProducts: null,
+        platforms: [
+          {
+            id: "d59b3d7e-f782-4e25-a8eb-ceec91c0331e",
+          },
+          {
+            id: "2a3a99ee-1ea0-4ac9-9e52-6e733a0eda23",
+          },
+          {
+            id: "1c57a92e-a6db-4e7e-9d56-704705acc192",
+          },
+        ],
       },
       {
         ongoing: false,
@@ -211,8 +227,6 @@ export const query = {
         seasons: [
           {
             id: "5ae15f8c-3d9a-4061-953d-5fea2df57654",
-            shortname: "boreal winter",
-            longname: "northern hemisphere winter months",
           },
         ],
         focusIds: [
@@ -227,6 +241,17 @@ export const query = {
         deploymentIds: ["9cfa5b55-7378-48af-9018-ba2d82afe2eb"],
         countCollectionPeriods: 0,
         countDataProducts: 0,
+        platforms: [
+          {
+            id: "0cdd2d06-ba97-469d-96eb-0e0865c7c4c9",
+          },
+          {
+            id: "af872351-1e39-43dc-bdb5-3f4fb7def20b",
+          },
+          {
+            id: "d59b3d7e-f782-4e25-a8eb-ceec91c0331e",
+          },
+        ],
       },
       {
         ongoing: false,
@@ -236,13 +261,9 @@ export const query = {
         seasons: [
           {
             id: "416a1c43-85b6-4336-80ac-6ccda1226e54",
-            shortname: "boreal spring",
-            longname: "northern hemisphere spring months",
           },
           {
             id: "52b49cd7-4143-4bbd-9f09-bd8de945c837",
-            shortname: "warm",
-            longname: "warm to hot weather months",
           },
         ],
         focusIds: [
@@ -255,6 +276,11 @@ export const query = {
         deploymentIds: ["2e0877ea-d96e-4f8d-ae6f-3ec531812b6c"],
         countCollectionPeriods: 0,
         countDataProducts: 0,
+        platforms: [
+          {
+            id: "cc0f103e-e537-4437-8d2b-f7ea5ca617de",
+          },
+        ],
       },
       {
         ongoing: false,
@@ -264,13 +290,9 @@ export const query = {
         seasons: [
           {
             id: "65900eb8-fb52-4da9-98e9-190cbf1d1cbe",
-            shortname: "boreal summer",
-            longname: "northern hemisphere summer months",
           },
           {
             id: "4ebcfcd2-1c9c-45b0-bad6-997fc3e3c904",
-            shortname: "boreal fall",
-            longname: "northern hemisphere fall months",
           },
         ],
         focusIds: ["4c5e9dc3-38ed-40cb-b6ea-cacf96057b53"],
@@ -281,6 +303,17 @@ export const query = {
         deploymentIds: ["1a7c31aa-85ff-4aab-8d43-caf0fa0cf4be"],
         countCollectionPeriods: 0,
         countDataProducts: 0,
+        platforms: [
+          {
+            id: "d59b3d7e-f782-4e25-a8eb-ceec91c0331e",
+          },
+          {
+            id: "5baa4bc5-ad5a-43f8-9ed3-cf7d0dbdae36",
+          },
+          {
+            id: "5cde9f2a-10cb-47d6-b095-3b61d1e8b1e2",
+          },
+        ],
       },
       {
         ongoing: false,
@@ -290,8 +323,6 @@ export const query = {
         seasons: [
           {
             id: "4ebcfcd2-1c9c-45b0-bad6-997fc3e3c904",
-            shortname: "boreal fall",
-            longname: "northern hemisphere fall months",
           },
         ],
         focusIds: ["4c5e9dc3-38ed-40cb-b6ea-cacf96057b53"],
@@ -305,6 +336,14 @@ export const query = {
         ],
         countCollectionPeriods: 0,
         countDataProducts: 0,
+        platforms: [
+          {
+            id: "5baa4bc5-ad5a-43f8-9ed3-cf7d0dbdae36",
+          },
+          {
+            id: "5cde9f2a-10cb-47d6-b095-3b61d1e8b1e2",
+          },
+        ],
       },
       {
         ongoing: false,
@@ -314,18 +353,12 @@ export const query = {
         seasons: [
           {
             id: "5ae15f8c-3d9a-4061-953d-5fea2df57654",
-            shortname: "boreal winter",
-            longname: "northern hemisphere winter months",
           },
           {
             id: "081ccd03-e46f-459e-8101-b270d0266eac",
-            shortname: "wet",
-            longname: "wet season months",
           },
           {
             id: "d4b539c1-32d3-4089-9e08-db714704a13c",
-            shortname: "cold",
-            longname: "cool to cold weather months",
           },
         ],
         focusIds: [
@@ -338,6 +371,7 @@ export const query = {
         deploymentIds: ["04f5d90a-b356-42ea-9c17-1c8d3b46722b"],
         countCollectionPeriods: 0,
         countDataProducts: 0,
+        platforms: [],
       },
     ],
   },
@@ -351,18 +385,12 @@ export const query = {
         seasons: [
           {
             id: "5ae15f8c-3d9a-4061-953d-5fea2df57654",
-            shortname: "boreal winter",
-            longname: "northern hemisphere winter months",
           },
           {
             id: "081ccd03-e46f-459e-8101-b270d0266eac",
-            shortname: "wet",
-            longname: "wet season months",
           },
           {
             id: "d4b539c1-32d3-4089-9e08-db714704a13c",
-            shortname: "cold",
-            longname: "cool to cold weather months",
           },
         ],
         focusIds: [
@@ -375,6 +403,7 @@ export const query = {
         deploymentIds: ["04f5d90a-b356-42ea-9c17-1c8d3b46722b"],
         countCollectionPeriods: 0,
         countDataProducts: 0,
+        platforms: [],
       },
       {
         ongoing: false,
@@ -384,8 +413,6 @@ export const query = {
         seasons: [
           {
             id: "4ebcfcd2-1c9c-45b0-bad6-997fc3e3c904",
-            shortname: "boreal fall",
-            longname: "northern hemisphere fall months",
           },
         ],
         focusIds: ["4c5e9dc3-38ed-40cb-b6ea-cacf96057b53"],
@@ -399,6 +426,14 @@ export const query = {
         ],
         countCollectionPeriods: 0,
         countDataProducts: 0,
+        platforms: [
+          {
+            id: "5baa4bc5-ad5a-43f8-9ed3-cf7d0dbdae36",
+          },
+          {
+            id: "5cde9f2a-10cb-47d6-b095-3b61d1e8b1e2",
+          },
+        ],
       },
       {
         ongoing: false,
@@ -408,13 +443,9 @@ export const query = {
         seasons: [
           {
             id: "65900eb8-fb52-4da9-98e9-190cbf1d1cbe",
-            shortname: "boreal summer",
-            longname: "northern hemisphere summer months",
           },
           {
             id: "4ebcfcd2-1c9c-45b0-bad6-997fc3e3c904",
-            shortname: "boreal fall",
-            longname: "northern hemisphere fall months",
           },
         ],
         focusIds: ["4c5e9dc3-38ed-40cb-b6ea-cacf96057b53"],
@@ -425,6 +456,17 @@ export const query = {
         deploymentIds: ["1a7c31aa-85ff-4aab-8d43-caf0fa0cf4be"],
         countCollectionPeriods: 0,
         countDataProducts: 0,
+        platforms: [
+          {
+            id: "d59b3d7e-f782-4e25-a8eb-ceec91c0331e",
+          },
+          {
+            id: "5baa4bc5-ad5a-43f8-9ed3-cf7d0dbdae36",
+          },
+          {
+            id: "5cde9f2a-10cb-47d6-b095-3b61d1e8b1e2",
+          },
+        ],
       },
       {
         ongoing: false,
@@ -434,13 +476,9 @@ export const query = {
         seasons: [
           {
             id: "416a1c43-85b6-4336-80ac-6ccda1226e54",
-            shortname: "boreal spring",
-            longname: "northern hemisphere spring months",
           },
           {
             id: "52b49cd7-4143-4bbd-9f09-bd8de945c837",
-            shortname: "warm",
-            longname: "warm to hot weather months",
           },
         ],
         focusIds: [
@@ -453,6 +491,11 @@ export const query = {
         deploymentIds: ["2e0877ea-d96e-4f8d-ae6f-3ec531812b6c"],
         countCollectionPeriods: 0,
         countDataProducts: 0,
+        platforms: [
+          {
+            id: "cc0f103e-e537-4437-8d2b-f7ea5ca617de",
+          },
+        ],
       },
       {
         ongoing: false,
@@ -462,8 +505,6 @@ export const query = {
         seasons: [
           {
             id: "5ae15f8c-3d9a-4061-953d-5fea2df57654",
-            shortname: "boreal winter",
-            longname: "northern hemisphere winter months",
           },
         ],
         focusIds: [
@@ -478,6 +519,17 @@ export const query = {
         deploymentIds: ["9cfa5b55-7378-48af-9018-ba2d82afe2eb"],
         countCollectionPeriods: 0,
         countDataProducts: 0,
+        platforms: [
+          {
+            id: "0cdd2d06-ba97-469d-96eb-0e0865c7c4c9",
+          },
+          {
+            id: "af872351-1e39-43dc-bdb5-3f4fb7def20b",
+          },
+          {
+            id: "d59b3d7e-f782-4e25-a8eb-ceec91c0331e",
+          },
+        ],
       },
       {
         ongoing: false,
@@ -487,18 +539,12 @@ export const query = {
         seasons: [
           {
             id: "416a1c43-85b6-4336-80ac-6ccda1226e54",
-            shortname: "boreal spring",
-            longname: "northern hemisphere spring months",
           },
           {
             id: "65900eb8-fb52-4da9-98e9-190cbf1d1cbe",
-            shortname: "boreal summer",
-            longname: "northern hemisphere summer months",
           },
           {
             id: "52b49cd7-4143-4bbd-9f09-bd8de945c837",
-            shortname: "warm",
-            longname: "warm to hot weather months",
           },
         ],
         focusIds: [
@@ -512,6 +558,17 @@ export const query = {
         deploymentIds: ["dc2fa7b2-3143-4ca8-9e5a-ee07e807e712"],
         countCollectionPeriods: 0,
         countDataProducts: null,
+        platforms: [
+          {
+            id: "d59b3d7e-f782-4e25-a8eb-ceec91c0331e",
+          },
+          {
+            id: "2a3a99ee-1ea0-4ac9-9e52-6e733a0eda23",
+          },
+          {
+            id: "1c57a92e-a6db-4e7e-9d56-704705acc192",
+          },
+        ],
       },
       {
         ongoing: false,
@@ -521,18 +578,12 @@ export const query = {
         seasons: [
           {
             id: "416a1c43-85b6-4336-80ac-6ccda1226e54",
-            shortname: "boreal spring",
-            longname: "northern hemisphere spring months",
           },
           {
             id: "65900eb8-fb52-4da9-98e9-190cbf1d1cbe",
-            shortname: "boreal summer",
-            longname: "northern hemisphere summer months",
           },
           {
             id: "4ebcfcd2-1c9c-45b0-bad6-997fc3e3c904",
-            shortname: "boreal fall",
-            longname: "northern hemisphere fall months",
           },
         ],
         focusIds: [
@@ -551,6 +602,11 @@ export const query = {
         ],
         countCollectionPeriods: 0,
         countDataProducts: 0,
+        platforms: [
+          {
+            id: "900208da-3cb2-44b6-9f27-20209433f190",
+          },
+        ],
       },
       {
         ongoing: false,
@@ -560,8 +616,6 @@ export const query = {
         seasons: [
           {
             id: "80c1e584-8bf7-4cae-b9c1-e7f98d19a7a0",
-            shortname: "year round",
-            longname: "study covers all seasons",
           },
         ],
         focusIds: [
@@ -609,6 +663,14 @@ export const query = {
         ],
         countCollectionPeriods: 0,
         countDataProducts: 0,
+        platforms: [
+          {
+            id: "fea8651b-9d6e-49cf-9433-f1c6685ec0dc",
+          },
+          {
+            id: "a67e9128-f25f-4bb8-97c1-5d89005111a8",
+          },
+        ],
       },
       {
         ongoing: false,
@@ -619,18 +681,12 @@ export const query = {
         seasons: [
           {
             id: "416a1c43-85b6-4336-80ac-6ccda1226e54",
-            shortname: "boreal spring",
-            longname: "northern hemisphere spring months",
           },
           {
             id: "65900eb8-fb52-4da9-98e9-190cbf1d1cbe",
-            shortname: "boreal summer",
-            longname: "northern hemisphere summer months",
           },
           {
             id: "52b49cd7-4143-4bbd-9f09-bd8de945c837",
-            shortname: "warm",
-            longname: "warm to hot weather months",
           },
         ],
         focusIds: [
@@ -647,6 +703,17 @@ export const query = {
         ],
         countCollectionPeriods: 0,
         countDataProducts: 0,
+        platforms: [
+          {
+            id: "d59b3d7e-f782-4e25-a8eb-ceec91c0331e",
+          },
+          {
+            id: "1b607095-4f6d-4e70-8e16-798bc59a2d59",
+          },
+          {
+            id: "2084ab0c-4f18-4aa6-ad7b-70bc861d2d80",
+          },
+        ],
       },
       {
         ongoing: false,
@@ -656,13 +723,9 @@ export const query = {
         seasons: [
           {
             id: "65900eb8-fb52-4da9-98e9-190cbf1d1cbe",
-            shortname: "boreal summer",
-            longname: "northern hemisphere summer months",
           },
           {
             id: "52b49cd7-4143-4bbd-9f09-bd8de945c837",
-            shortname: "warm",
-            longname: "warm to hot weather months",
           },
         ],
         focusIds: [
@@ -677,6 +740,11 @@ export const query = {
         deploymentIds: ["ddc8ce9e-d4db-4b39-8041-06b272902544"],
         countCollectionPeriods: 0,
         countDataProducts: 0,
+        platforms: [
+          {
+            id: "32242d25-0152-4d98-a3a2-d1f874597cd6",
+          },
+        ],
       },
     ],
   },

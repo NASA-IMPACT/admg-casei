@@ -11,6 +11,7 @@ exports.createSchemaCustomization = ({ actions }) => {
   const typeDefs = `
     type campaign implements Node {
       geophysical_concepts: [String!]!
+      platforms: [platform] @link
       seasons: [season] @link
     }
   `
@@ -86,7 +87,6 @@ exports.createPages = async ({ graphql, actions }) => {
       allCampaign {
         nodes {
           id
-          platforms: platforms
         }
       }
     }
@@ -98,7 +98,6 @@ exports.createPages = async ({ graphql, actions }) => {
       component: path.resolve(`./src/templates/campaign/index.js`),
       context: {
         slug: node.id,
-        platforms: node.platforms,
       },
     })
   })

@@ -12,7 +12,7 @@ import ProgramInfoSection from "./program-info-section"
 import FocusSection from "./focus-section"
 import SectionBlock from "../../components/section/section-block"
 
-const CampaignTemplate = ({ data: { campaign, deployments, platforms } }) => {
+const CampaignTemplate = ({ data: { campaign, deployments } }) => {
   return (
     <Layout>
       <Header
@@ -39,7 +39,7 @@ const CampaignTemplate = ({ data: { campaign, deployments, platforms } }) => {
         focusPhenomena={campaign.focusPhenomena}
         scienceKeywords={campaign.scienceKeywords}
       />
-      <PlatformSection platforms={platforms} />
+      <PlatformSection platforms={campaign.platforms} />
       <TimelineSection deployments={deployments} />
       <SectionBlock headline="Data" id="data" />
       <ProgramInfoSection
@@ -59,18 +59,16 @@ const CampaignTemplate = ({ data: { campaign, deployments, platforms } }) => {
 }
 
 export const query = graphql`
-  query($slug: String!, $platforms: [String!]) {
+  query($slug: String!) {
     campaign: campaign(id: { eq: $slug }) {
       ...headerFields
       ...overviewFields
       ...focusFields
+      ...platformFields
       ...fundingFields
     }
     deployments: allDeployment(filter: { campaign: { eq: $slug } }) {
       ...deploymentFragment
-    }
-    platforms: allPlatform(filter: { id: { in: $platforms } }) {
-      ...platformFragment
     }
   }
 `
@@ -88,12 +86,23 @@ CampaignTemplate.propTypes = {
       startdate: PropTypes.string.isRequired,
       enddate: PropTypes.string.isRequired,
       region: PropTypes.string.isRequired,
-      seasons: PropTypes.arrayOf(PropTypes.string).isRequired,
+      seasons: PropTypes.arrayOf(
+        PropTypes.shape({
+          shortname: PropTypes.string.isRequired,
+          longname: PropTypes.string.isRequired,
+        })
+      ).isRequired,
       bounds: PropTypes.string.isRequired,
       website: PropTypes.string.isRequired,
       focusAreaIds: PropTypes.arrayOf(PropTypes.string).isRequired,
       focusPhenomena: PropTypes.string.isRequired,
       scienceKeywords: PropTypes.string,
+      platforms: PropTypes.arrayOf(
+        PropTypes.shape({
+          shortname: PropTypes.string.isRequired,
+          longname: PropTypes.string.isRequired,
+        })
+      ).isRequired,
       logo: PropTypes.string,
       fundingAgency: PropTypes.string.isRequired,
       fundingProgram: PropTypes.string.isRequired,
@@ -118,14 +127,6 @@ CampaignTemplate.propTypes = {
           start: PropTypes.string.isRequired,
         })
       ),
-    }).isRequired,
-    platforms: PropTypes.shape({
-      nodes: PropTypes.arrayOf(
-        PropTypes.shape({
-          shortname: PropTypes.string,
-          longname: PropTypes.string,
-        }).isRequired
-      ).isRequired,
     }).isRequired,
   }).isRequired,
 }

@@ -10,7 +10,7 @@ import ImageCaption from "../../components/image-caption"
 const PlatformSection = ({ platforms }) => (
   <SectionBlock headline="Platforms & Instruments" id="platform">
     <div data-cy="platform-carousel">
-      {platforms.nodes.length > 0 ? (
+      {platforms.length > 0 ? (
         <Carousel
           defaultControlsConfig={{
             nextButtonText: ">",
@@ -21,9 +21,9 @@ const PlatformSection = ({ platforms }) => (
           }}
           slidesToShow={3}
         >
-          {platforms.nodes.map(node => (
+          {platforms.map(platform => (
             <div
-              key={node.shortname}
+              key={platform.id}
               style={{ minHeight: `360px` }}
               data-cy="platform"
             >
@@ -33,7 +33,9 @@ const PlatformSection = ({ platforms }) => (
                   alt="platform-image"
                   data-cy="platform-image"
                 />
-                <ImageCaption id="platform-image">{node.longname}</ImageCaption>
+                <ImageCaption id="platform-image">
+                  {platform.longname || platform.shortname}
+                </ImageCaption>
               </div>
               {/* <div style={{ display: `flex`, flexWrap: `wrap` }}> */}
               {/* TODO: map through instrument tags */}
@@ -49,9 +51,10 @@ const PlatformSection = ({ platforms }) => (
   </SectionBlock>
 )
 
-export const platforms = graphql`
-  fragment platformFragment on platformConnection {
-    nodes {
+export const platformFields = graphql`
+  fragment platformFields on campaign {
+    platforms {
+      id
       shortname: short_name
       longname: long_name
     }
@@ -59,14 +62,12 @@ export const platforms = graphql`
 `
 
 PlatformSection.propTypes = {
-  platforms: PropTypes.shape({
-    nodes: PropTypes.arrayOf(
-      PropTypes.shape({
-        shortname: PropTypes.string.isRequired,
-        longname: PropTypes.string.isRequired,
-      }).isRequired
-    ).isRequired,
-  }).isRequired,
+  platforms: PropTypes.arrayOf(
+    PropTypes.shape({
+      shortname: PropTypes.string.isRequired,
+      longname: PropTypes.string.isRequired,
+    }).isRequired
+  ).isRequired,
 }
 
 export default PlatformSection

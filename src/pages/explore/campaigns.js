@@ -195,8 +195,6 @@ export const query = graphql`
     id
     seasons {
       id
-      shortname: short_name
-      longname: long_name
     }
     focusIds: focus_areas
     startdate: start_date
@@ -205,6 +203,9 @@ export const query = graphql`
     deploymentIds: deployments
     countCollectionPeriods: number_collection_periods
     countDataProducts: number_data_products
+    platforms {
+      id
+    }
   }
 `
 
@@ -216,8 +217,6 @@ const campaignShape = PropTypes.shape({
   seasons: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
-      shortname: PropTypes.string.isRequired,
-      longname: PropTypes.string.isRequired,
     })
   ).isRequired,
   focusIds: PropTypes.arrayOf(PropTypes.string),
@@ -227,6 +226,11 @@ const campaignShape = PropTypes.shape({
   deploymentIds: PropTypes.arrayOf(PropTypes.string),
   countCollectionPeriods: PropTypes.number,
   countDataProducts: PropTypes.number,
+  platforms: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+    })
+  ).isRequired,
 })
 
 Campaigns.propTypes = {
