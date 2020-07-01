@@ -50,7 +50,9 @@ const CampaignTemplate = ({ data: { campaign, deployments } }) => {
         leadInvestigator={campaign.leadInvestigator}
         dataManager={campaign.dataManager}
         archive={campaign.archive}
-        partnerOrgIds={campaign.partnerOrg}
+        partnerOrgListing={campaign.partnerOrgs
+          .map(x => x.shortname)
+          .join(", ")}
         partnerWebsite={campaign.partnerWebsite}
         tertiaryWebsite={campaign.tertiaryWebsite}
       />
@@ -115,7 +117,11 @@ CampaignTemplate.propTypes = {
       leadInvestigator: PropTypes.string.isRequired,
       dataManager: PropTypes.string.isRequired,
       archive: PropTypes.string.isRequired,
-      partnerOrg: PropTypes.arrayOf(PropTypes.string).isRequired,
+      partnerOrgs: PropTypes.arrayOf(
+        PropTypes.shape({
+          shortname: PropTypes.string.isRequired,
+        })
+      ).isRequired,
       partnerWebsite: PropTypes.string,
       tertiaryWebsite: PropTypes.string.isRequired,
     }).isRequired,

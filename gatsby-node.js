@@ -12,6 +12,7 @@ exports.createSchemaCustomization = ({ actions }) => {
     type campaign implements Node {
       focus_areas: [focus_area] @link
       geophysical_concepts: [geophysical_concept] @link
+      partner_orgs: [partner_org] @link
       platforms: [platform] @link
       seasons: [season] @link
     }
