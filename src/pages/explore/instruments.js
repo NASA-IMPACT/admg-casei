@@ -154,7 +154,7 @@ const instrumentShape = PropTypes.shape({
   shortname: PropTypes.string.isRequired,
   longname: PropTypes.string,
   id: PropTypes.string.isRequired,
-  instrumentTypes: PropTypes.string.isRequired,
+  instrumentTypes: PropTypes.arrayOf(PropTypes.string),
   description: PropTypes.string.isRequired,
   collectionPeriodIds: PropTypes.arrayOf(PropTypes.string),
   campaigns: PropTypes.arrayOf(PropTypes.string),

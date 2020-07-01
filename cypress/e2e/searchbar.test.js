@@ -6,6 +6,7 @@ describe("Searchbar", () => {
   ;[
     { category: "campaigns", filterExample: "boreal winter" },
     { category: "platforms", filterExample: "Aerolaser" },
+    { category: "instruments", filterExample: "Remote - Active" },
   ].forEach(x => {
     describe(x.category, () => {
       beforeEach(() => {
