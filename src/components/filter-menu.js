@@ -82,6 +82,15 @@ const FilterMenu = ({
           />
         </>
       )}
+      {category === "instruments" && (
+        <>
+          <Filter
+            id="instrument-types"
+            label="Instrument Types"
+            options={getFilterOptionsById("type")}
+          />
+        </>
+      )}
     </select>
   )
 }

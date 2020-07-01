@@ -46,19 +46,19 @@ export default function Instruments({ data, location }) {
   }
 
   const list = data[sortOrder].list
-    .filter(platform =>
-      selectedFilterIds.length === 0
+    .filter(instrument => {
+      return selectedFilterIds.length === 0
         ? true
         : selectedFilterIds.every(filterId =>
-            platform.instruments.includes(filterId)
+            instrument.instrumentTypes.includes(filterId)
           )
-    )
-    .filter(platform =>
-      searchResult ? searchResult.includes(platform.shortname) : true
+    })
+    .filter(instrument =>
+      searchResult ? searchResult.includes(instrument.shortname) : true
     )
 
   const { getFilterLabelById, getFilterOptionsById } = selector({
-    instrument: allInstrumentType,
+    type: allInstrumentType,
   })
   return (
     <Layout>
@@ -99,8 +99,7 @@ export default function Instruments({ data, location }) {
                 key={instrument.id}
                 description={instrument.description}
                 collectionPeriodIds={instrument.collectionPeriodIds}
-                instruments={instrument.instruments}
-                stationary={instrument.stationary}
+                campaigns={instrument.campaigns}
               />
             )
           })}
@@ -128,8 +127,8 @@ export const query = graphql`
     allInstrumentType {
       options: nodes {
         id
-        short_name
-        long_name
+        shortname: short_name
+        longname: long_name
       }
     }
     allDeployment {
@@ -144,6 +143,7 @@ export const query = graphql`
     shortname: short_name
     longname: long_name
     id
+    instrumentTypes: instrument_types
     description
     collectionPeriodIds: collection_periods
     campaigns
@@ -154,6 +154,7 @@ const instrumentShape = PropTypes.shape({
   shortname: PropTypes.string.isRequired,
   longname: PropTypes.string,
   id: PropTypes.string.isRequired,
+  instrumentTypes: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   collectionPeriodIds: PropTypes.arrayOf(PropTypes.string),
   campaigns: PropTypes.arrayOf(PropTypes.string),
@@ -176,14 +177,6 @@ Instruments.propTypes = {
           id: PropTypes.string.isRequired,
           shortname: PropTypes.string.isRequired,
           longname: PropTypes.string,
-        })
-      ).isRequired,
-    }).isRequired,
-    allDeployment: PropTypes.shape({
-      nodes: PropTypes.arrayOf(
-        PropTypes.shape({
-          id: PropTypes.string.isRequired,
-          geographical_regions: PropTypes.arrayOf(PropTypes.string),
         })
       ).isRequired,
     }).isRequired,

@@ -7,6 +7,7 @@ const InstrumentCard = ({
   longname,
   description,
   collectionPeriodIds,
+  campaigns,
 }) => (
   <Card>
     <div style={{ marginBottom: `2rem` }}>
@@ -40,6 +41,10 @@ const InstrumentCard = ({
     <div>
       <small data-cy="count1">
         <strong>{collectionPeriodIds.length}</strong> Collection Periods
+      </small>{" "}
+      ·{" "}
+      <small data-cy="count2">
+        <strong>{campaigns.length}</strong> Campaigns
       </small>
     </div>
   </Card>
@@ -50,6 +55,7 @@ InstrumentCard.propTypes = {
   longname: PropTypes.string,
   description: PropTypes.string.isRequired,
   collectionPeriodIds: PropTypes.arrayOf(PropTypes.string),
+  campaigns: PropTypes.arrayOf(PropTypes.string),
 }
 
 export default InstrumentCard
