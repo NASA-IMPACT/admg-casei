@@ -10,7 +10,7 @@ import Layout from "../../components/layout"
 import ExploreMenu from "../../components/explore-menu"
 import Searchbar from "../../components/searchbar"
 import ExploreSection from "../../components/explore-section"
-import PlatformCard from "../../components/platform-card"
+import PlatformCard from "../../components/cards/platform-card"
 
 export const selector = filterOptions => ({
   getFilterLabelById: id => {
