@@ -6,6 +6,20 @@
 const fetch = require("node-fetch")
 const path = require("path")
 
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions
+  const typeDefs = `
+    type campaign implements Node {
+      focus_areas: [focus_area] @link
+      geophysical_concepts: [geophysical_concept] @link
+      partner_orgs: [partner_org] @link
+      platforms: [platform] @link
+      seasons: [season] @link
+    }
+  `
+  createTypes(typeDefs)
+}
+
 exports.sourceNodes = async ({ actions, createContentDigest }) => {
   const { createNode } = actions
   try {
@@ -75,7 +89,6 @@ exports.createPages = async ({ graphql, actions }) => {
       allCampaign {
         nodes {
           id
-          platforms: platforms
         }
       }
     }
@@ -87,7 +100,6 @@ exports.createPages = async ({ graphql, actions }) => {
       component: path.resolve(`./src/templates/campaign/index.js`),
       context: {
         slug: node.id,
-        platforms: node.platforms,
       },
     })
   })
