@@ -116,7 +116,7 @@ Header.propTypes = {
   focusListing: PropTypes.string.isRequired,
   countDeployments: PropTypes.number.isRequired,
   countCollectionPeriods: PropTypes.number.isRequired,
-  countDataProducts: PropTypes.number.isRequired,
+  countDataProducts: PropTypes.number,
 }
 
 export default Header

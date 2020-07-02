@@ -78,6 +78,7 @@ export const query = graphql`
 CampaignTemplate.propTypes = {
   data: PropTypes.shape({
     campaign: PropTypes.shape({
+      bounds: PropTypes.string.isRequired,
       shortname: PropTypes.string.isRequired,
       longname: PropTypes.string.isRequired,
       focus: PropTypes.arrayOf(
@@ -88,7 +89,7 @@ CampaignTemplate.propTypes = {
       ).isRequired,
       countDeployments: PropTypes.number,
       countCollectionPeriods: PropTypes.number.isRequired,
-      countDataProducts: PropTypes.number.isRequired,
+      countDataProducts: PropTypes.number,
       description: PropTypes.string.isRequired,
       startdate: PropTypes.string.isRequired,
       enddate: PropTypes.string.isRequired,
@@ -99,9 +100,7 @@ CampaignTemplate.propTypes = {
           longname: PropTypes.string.isRequired,
         })
       ).isRequired,
-      bounds: PropTypes.string.isRequired,
       website: PropTypes.string.isRequired,
-      focusAreaIds: PropTypes.arrayOf(PropTypes.string).isRequired,
       focusPhenomena: PropTypes.string.isRequired,
       scienceKeywords: PropTypes.string,
       platforms: PropTypes.arrayOf(

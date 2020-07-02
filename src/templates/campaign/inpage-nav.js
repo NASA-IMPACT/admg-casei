@@ -16,7 +16,7 @@ InpageLink.propTypes = {
   to: function (props, propName, componentName) {
     // validate that prop `to` links to an existing section
     if (
-      !/(#overview|#focus|#platforms|#timeline|#data|#program-info)/.test(
+      !/(#overview|#focus|#platform|#timeline|#data|#program-info)/.test(
         props[propName]
       )
     ) {
