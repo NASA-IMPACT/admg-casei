@@ -4,14 +4,14 @@ import PropTypes from "prop-types"
 import Label from "../label"
 import ExternalLink from "../external-link"
 
-export default function ContentItem({ label, info, type = "text", id }) {
+export default function ContentItem({ id, label, info = "N/A", link }) {
   return (
     <div data-cy={id}>
       <Label id={id} showBorder>
         {label}
       </Label>
-      {type === "link" && info ? (
-        <ExternalLink id={id} label={info} url={info} />
+      {link ? (
+        <ExternalLink id={id} label={info} url={link} />
       ) : (
         <p data-cy={`${id}-text`}>{info || "N/A"}</p>
       )}
@@ -20,8 +20,8 @@ export default function ContentItem({ label, info, type = "text", id }) {
 }
 
 ContentItem.propTypes = {
+  id: PropTypes.string,
   label: PropTypes.string.isRequired,
   info: PropTypes.string,
-  type: PropTypes.string,
-  id: PropTypes.string,
+  link: PropTypes.string,
 }
