@@ -1,35 +1,26 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
+
 import { SectionBlock, ContentItem } from "../../components/section"
-
-const FactItem = ({ label, fact }) => (
-  <div data-cy="overview-fact">
-    <label
-      style={{
-        textTransform: `uppercase`,
-        color: `#6B6B6B`,
-      }}
-    >
-      {label}
-    </label>
-    <p style={{ margin: 0 }}>{fact}</p>
-  </div>
-)
-
-FactItem.propTypes = {
-  label: PropTypes.string.isRequired,
-  fact: PropTypes.string.isRequired,
-}
+import ExternalLink from "../../components/external-link"
+import theme from "../../utils/theme"
+import { isUrl, PropTypeIsUrl } from "../../utils/helpers"
 
 const ListLink = props => (
-  <li style={{ padding: `1rem`, borderBottom: `1px solid` }}>
-    <a href={props.to}>{props.children}</a>
+  <li
+    style={{ padding: `1rem`, borderBottom: `1px solid ${theme.color.gray}` }}
+  >
+    {isUrl(props.to) ? (
+      <ExternalLink label={props.children} url={props.to} id={props.children} />
+    ) : (
+      <p className="placeholder">{props.children}</p> // fallback for invalid url
+    )}
   </li>
 )
 
 ListLink.propTypes = {
-  to: PropTypes.string.isRequired,
+  to: PropTypeIsUrl,
   children: PropTypes.string.isRequired,
 }
 
@@ -40,49 +31,67 @@ const OverviewSection = ({
   region,
   seasonListing,
   bounds,
-  website,
+  projectWebsite,
+  repositoryWebsite,
+  tertiaryWebsite,
+  publicationLink,
 }) => (
   <SectionBlock headline="Overview" id="overview">
-    <div style={{ display: `flex` }}>
-      <div style={{ flex: `1.61803398875` }}>
+    <div
+      style={{
+        display: `grid`,
+        gap: `1rem`,
+        gridTemplateColumns: `repeat(12, 1fr)`,
+      }}
+    >
+      <div style={{ gridColumn: `1 / span 8` }}>
         <p data-cy="description">{description}</p>
         <div
           style={{
             display: `grid`,
             gap: `0.5rem`,
             gridAutoFlow: `column`,
-            gridTemplateColumns: ` 1fr 1fr`,
+            gridTemplateColumns: `1fr 1fr`,
             gridTemplateRows: ` 1fr 1fr`,
           }}
         >
-          <FactItem label="Study dates" fact={`${startdate} – ${enddate}`} />
-          <FactItem label="Region" fact={region} />
-          <FactItem label="Season of Study" fact={seasonListing} />
-          <FactItem label="Spatial bounds" fact={bounds} />
+          <ContentItem
+            id="overview-content"
+            label="Study dates"
+            info={`${startdate} — ${enddate || "ongoing"}`}
+          />
+          <ContentItem id="overview-content" label="Region" info={region} />
+          <ContentItem
+            id="overview-content"
+            label="Season of Study"
+            info={seasonListing}
+          />
+          <ContentItem
+            id="overview-content"
+            label="Spatial bounds (WKT)"
+            info={bounds}
+          />
         </div>
       </div>
       <div
         style={{
-          flex: `1`,
-          marginLeft: `2rem`,
-          padding: `1rem`,
+          gridColumn: `10 / span 3`,
         }}
         data-cy="link-list"
       >
-        <label
-          style={{
-            textTransform: `uppercase`,
-            color: `#6B6B6B`,
-          }}
-        >
-          Relevant Links
-        </label>
         <ul style={{ margin: 0, listStyle: `none` }}>
-          <ListLink to={website}>Primary website</ListLink>
-          <ListLink to={website}>Secondary website</ListLink>
-          <ListLink to={website}>Tertiary website</ListLink>
-          <ListLink to={website}>Data Products</ListLink>
-          <ListLink to={website}>Campaign Publications</ListLink>
+          {projectWebsite && (
+            <ListLink to={projectWebsite}>Project website</ListLink>
+          )}
+          {repositoryWebsite && (
+            <ListLink to={repositoryWebsite}>Repository website</ListLink>
+          )}
+          {tertiaryWebsite && (
+            <ListLink to={tertiaryWebsite}>Tertiary website</ListLink>
+          )}
+          {publicationLink && (
+            <ListLink to={publicationLink}>Publication links</ListLink>
+          )}
         </ul>
       </div>
     </div>
@@ -101,7 +110,10 @@ export const overviewFields = graphql`
       longname: long_name
     }
     bounds: spatial_bounds
-    website: project_website
+    projectWebsite: project_website
+    repositoryWebsite: repository_website
+    tertiaryWebsite: tertiary_website
+    publicationLink: publication_links
   }
 `
 
@@ -112,7 +124,10 @@ OverviewSection.propTypes = {
   region: PropTypes.string.isRequired,
   seasonListing: PropTypes.string.isRequired,
   bounds: PropTypes.string.isRequired,
-  website: PropTypes.string.isRequired,
+  projectWebsite: PropTypes.string.isRequired,
+  repositoryWebsite: PropTypes.string.isRequired,
+  tertiaryWebsite: PropTypes.string.isRequired,
+  publicationLink: PropTypes.string.isRequired,
 }
 
 export default OverviewSection
