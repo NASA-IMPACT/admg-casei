@@ -5,7 +5,7 @@ import Carousel from "nuka-carousel"
 
 import MilestoneSelector from "../../components/timeline/milestone-selector"
 import Milestone from "../../components/timeline/milestone"
-import SectionBlock from "../../components/section/section-block"
+import { SectionBlock } from "../../components/section"
 import theme from "../../utils/theme"
 
 const TimelineSection = ({ deployments }) => {

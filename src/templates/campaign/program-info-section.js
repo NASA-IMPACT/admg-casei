@@ -2,9 +2,11 @@ import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
-import SectionBlock from "../../components/section/section-block"
-import ContentItem from "../../components/section/content-item"
-import ContentGroup from "../../components/section/content-group"
+import {
+  SectionBlock,
+  ContentItem,
+  ContentGroup,
+} from "../../components/section"
 import PlaceholderLogo from "../../images/placeholder-logo.svg"
 
 const ProgramInfoSection = ({

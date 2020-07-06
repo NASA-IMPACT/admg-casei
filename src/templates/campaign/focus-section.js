@@ -2,10 +2,12 @@ import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
-import SectionBlock from "../../components/section/section-block"
-import ContentGroup from "../../components/section/content-group"
+import {
+  SectionBlock,
+  ContentGroup,
+  ContentItem,
+} from "../../components/section"
 import Label from "../../components/label"
-import ContentItem from "../../components/section/content-item"
 import FocusAreaGallery from "../../components/home/focus-area-gallery"
 
 const FocusSection = ({ focus, focusPhenomena, scienceKeywords }) => {

@@ -10,7 +10,7 @@ import TimelineSection from "./timeline-section"
 import PlatformSection from "./platform-section"
 import ProgramInfoSection from "./program-info-section"
 import FocusSection from "./focus-section"
-import SectionBlock from "../../components/section/section-block"
+import { SectionBlock } from "../../components/section"
 
 const CampaignTemplate = ({ data: { campaign, deployments } }) => {
   return (

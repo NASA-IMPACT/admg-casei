@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
-import SectionBlock from "../../components/section/section-block"
+import { SectionBlock, ContentItem } from "../../components/section"
 
 const FactItem = ({ label, fact }) => (
   <div data-cy="overview-fact">
