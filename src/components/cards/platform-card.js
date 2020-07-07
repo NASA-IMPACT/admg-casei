@@ -1,7 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Card from "./card"
-import FooterList from "./footer-list"
 
 const PlatformCard = ({
   shortname,
@@ -11,7 +10,13 @@ const PlatformCard = ({
   instruments,
   stationary,
 }) => (
-  <Card tag={stationary && "Stationary"}>
+  <Card
+    tag={stationary && "Stationary"}
+    footerList={[
+      { count: collectionPeriodIds.length, title: "Collection Periods" },
+      { count: instruments.length, title: "Instruments" },
+    ]}
+  >
     <big
       style={{ fontWeight: `bold`, marginTop: `0.5rem` }}
       data-cy="shortname"
@@ -20,12 +25,6 @@ const PlatformCard = ({
     </big>
     <p data-cy="longname">{longname}</p>
     <p data-cy="description">{description}</p>
-    <FooterList
-      list={[
-        { count: collectionPeriodIds.length, title: "Collection Periods" },
-        { count: instruments.length, title: "Instruments" },
-      ]}
-    />
   </Card>
 )
 

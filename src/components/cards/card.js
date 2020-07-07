@@ -2,9 +2,11 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import Tag from "./tag"
+import FooterList from "./footer-list"
+
 import theme from "../../utils/theme"
 
-const Card = ({ children, tag }) => (
+const Card = ({ children, tag, footerList }) => (
   <div
     style={{
       backgroundColor: theme.color.secondary,
@@ -39,6 +41,7 @@ const Card = ({ children, tag }) => (
       </div>
       {children}
     </div>
+    {footerList && <FooterList list={footerList} />}
   </div>
 )
 
@@ -48,6 +51,9 @@ Card.propTypes = {
     PropTypes.arrayOf(PropTypes.element),
   ]),
   tag: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+  footerList: PropTypes.arrayOf(
+    PropTypes.shape({ count: PropTypes.number, title: PropTypes.string })
+  ),
 }
 
 export default Card

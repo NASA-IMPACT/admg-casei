@@ -2,7 +2,6 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import Card from "./card"
-import FooterList from "./footer-list"
 
 const CampaignCard = ({
   ongoing,
@@ -13,7 +12,13 @@ const CampaignCard = ({
   countCollectionPeriods = 0,
   countDataProducts = 0,
 }) => (
-  <Card tag={ongoing && "Ongoing"}>
+  <Card
+    tag={ongoing && "Ongoing"}
+    footerList={[
+      { count: countCollectionPeriods, title: "Collection Periods" },
+      { count: countDataProducts, title: "Data Products" },
+    ]}
+  >
     <big
       style={{ fontWeight: `bold`, marginTop: `0.5rem` }}
       data-cy="shortname"
@@ -27,12 +32,6 @@ const CampaignCard = ({
     <div>
       <small data-cy="region">{region}</small>
     </div>
-    <FooterList
-      list={[
-        { count: countCollectionPeriods, title: "Collection Periods" },
-        { count: countDataProducts, title: "Data Products" },
-      ]}
-    />
   </Card>
 )
 
