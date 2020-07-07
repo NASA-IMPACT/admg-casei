@@ -120,4 +120,60 @@ describe("Homepage", () => {
       cy.get("main").find("[data-cy=explore-card]").should("have.length", 1)
     })
   })
+  describe("geophysical concepts", () => {
+    it("renders the correct section header", () => {
+      cy.get("[data-cy=geophysical-concepts-section]")
+        .find("h2")
+        .should($h2 => {
+          expect($h2).to.have.length(1)
+        })
+        .then($h2 => {
+          expect($h2, "text content").to.have.text("Geophysical Concepts")
+        })
+    })
+  })
+  describe("platforms", () => {
+    it("renders the correct section header", () => {
+      cy.get("[data-cy=platforms-section]")
+        .find("h2")
+        .should($h2 => {
+          expect($h2).to.have.length(1)
+        })
+        .then($h2 => {
+          expect($h2, "text content").to.have.text("Platforms")
+        })
+    })
+  })
+  describe("instruments", () => {
+    it("renders the correct section header", () => {
+      cy.get("[data-cy=instruments-section]")
+        .find("h2")
+        .should($h2 => {
+          expect($h2).to.have.length(1)
+        })
+        .then($h2 => {
+          expect($h2, "text content").to.have.text("Instruments")
+        })
+    })
+    it("navigates to the instrument list with the instrument type as filter applied", () => {
+      cy.get("[data-cy=instruments-section]")
+        .find("[data-cy=instrument]")
+        .contains(/Remote/i)
+        .should("be.visible")
+
+      cy.get("[data-cy=instrument]")
+        .findByText(/Remote/i)
+        .as("link")
+        .click()
+
+      cy.url().should("include", "/explore/instruments")
+
+      cy.get("main")
+        .find("[data-cy=filter-chip]")
+        .should("have.length", 1)
+        .and("have.text", "type: Remote")
+
+      cy.get("main").find("[data-cy=explore-card]").should("have.length", 0)
+    })
+  })
 })
