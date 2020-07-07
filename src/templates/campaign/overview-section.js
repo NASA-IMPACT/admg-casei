@@ -49,7 +49,7 @@ const OverviewSection = ({
         <div
           style={{
             display: `grid`,
-            gap: `0.5rem`,
+            gap: `2rem`,
             gridAutoFlow: `column`,
             gridTemplateColumns: `1fr 1fr`,
             gridTemplateRows: ` 1fr 1fr`,
