@@ -188,7 +188,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
         </label>
         <a
           data-cy="program-info-content-link"
-          href="test string"
+          href="https://www.test-campaign.io"
           rel="noopener noreferrer"
           style={
             Object {
@@ -197,7 +197,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
           }
           target="_blank"
         >
-          test string
+          https://www.test-campaign.io
         </a>
       </div>
       <div
@@ -242,7 +242,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
         </label>
         <a
           data-cy="program-info-content-link"
-          href="test string"
+          href="https://www.test-campaign.io"
           rel="noopener noreferrer"
           style={
             Object {
@@ -251,7 +251,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
           }
           target="_blank"
         >
-          test string
+          https://www.test-campaign.io
         </a>
       </div>
     </div>
@@ -447,7 +447,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
         </label>
         <a
           data-cy="program-info-content-link"
-          href="test string"
+          href="https://www.test-campaign.io"
           rel="noopener noreferrer"
           style={
             Object {
@@ -456,7 +456,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
           }
           target="_blank"
         >
-          test string
+          https://www.test-campaign.io
         </a>
       </div>
       <div
@@ -501,7 +501,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
         </label>
         <a
           data-cy="program-info-content-link"
-          href="test string"
+          href="https://www.test-campaign.io"
           rel="noopener noreferrer"
           style={
             Object {
@@ -510,7 +510,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
           }
           target="_blank"
         >
-          test string
+          https://www.test-campaign.io
         </a>
       </div>
     </div>

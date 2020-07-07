@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 import Carousel from "nuka-carousel"
 
-import SectionBlock from "../../components/section/section-block"
+import { SectionBlock } from "../../components/section"
 import ImageCaption from "../../components/image-caption"
 // import Chip from "../../components/chip"
 

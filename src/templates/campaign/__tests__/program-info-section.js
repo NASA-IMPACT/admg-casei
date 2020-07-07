@@ -5,6 +5,7 @@ import ProgramInfoSection from "../program-info-section"
 
 const testLogo = "https://via.placeholder.com/150"
 const testString = "test string"
+const testUrl = "https://www.test-campaign.io"
 
 describe("Program Info Section", () => {
   it("renders logo when present in props", () => {
@@ -16,10 +17,9 @@ describe("Program Info Section", () => {
         programLead={testString}
         leadInvestigator={testString}
         dataManager={testString}
-        archive={testString}
+        archive={testUrl}
         partnerOrgListing={testString}
-        partnerWebsite={testString}
-        tertiaryWebsite={testString}
+        tertiaryWebsite={testUrl}
       />
     )
     const tree = component.toJSON()
@@ -37,10 +37,9 @@ describe("Program Info Section", () => {
         programLead={testString}
         leadInvestigator={testString}
         dataManager={testString}
-        archive={testString}
+        archive={testUrl}
         partnerOrgListing={testString}
-        partnerWebsite={testString}
-        tertiaryWebsite={testString}
+        tertiaryWebsite={testUrl}
       />
     )
     const tree = component.toJSON()

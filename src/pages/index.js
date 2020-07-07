@@ -4,7 +4,7 @@ import { graphql, Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import SectionBlock, { SectionImage } from "../components/section/section-block"
+import { SectionBlock, SectionImage } from "../components/section"
 import { Hero } from "../components/home/hero"
 import FocusAreaGallery from "../components/home/focus-area-gallery"
 import { RegionCarousel } from "../components/home/region-carousel"

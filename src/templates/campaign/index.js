@@ -10,7 +10,7 @@ import TimelineSection from "./timeline-section"
 import PlatformSection from "./platform-section"
 import ProgramInfoSection from "./program-info-section"
 import FocusSection from "./focus-section"
-import SectionBlock from "../../components/section/section-block"
+import { SectionBlock } from "../../components/section"
 
 const CampaignTemplate = ({ data: { campaign, deployments } }) => {
   return (
@@ -32,7 +32,10 @@ const CampaignTemplate = ({ data: { campaign, deployments } }) => {
         region={campaign.region}
         seasonListing={campaign.seasons.map(x => x.shortname).join(", ")}
         bounds={campaign.bounds}
-        website={campaign.website}
+        projectWebsite={campaign.projectWebsite}
+        repositoryWebsite={campaign.repositoryWebsite}
+        tertiaryWebsite={campaign.tertiaryWebsite}
+        publicationLink={campaign.publicationLink}
       />
       <FocusSection
         focus={campaign.focus}
@@ -100,7 +103,10 @@ CampaignTemplate.propTypes = {
           longname: PropTypes.string.isRequired,
         })
       ).isRequired,
-      website: PropTypes.string.isRequired,
+      projectWebsite: PropTypes.string.isRequired,
+      repositoryWebsite: PropTypes.string.isRequired,
+      tertiaryWebsite: PropTypes.string.isRequired,
+      publicationLink: PropTypes.string.isRequired,
       focusPhenomena: PropTypes.string.isRequired,
       scienceKeywords: PropTypes.string,
       platforms: PropTypes.arrayOf(
@@ -122,7 +128,6 @@ CampaignTemplate.propTypes = {
         })
       ).isRequired,
       partnerWebsite: PropTypes.string,
-      tertiaryWebsite: PropTypes.string.isRequired,
     }).isRequired,
     deployments: PropTypes.shape({
       nodes: PropTypes.arrayOf(

@@ -2,9 +2,11 @@ import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
-import SectionBlock from "../../components/section/section-block"
-import ContentItem from "../../components/section/content-item"
-import ContentGroup from "../../components/section/content-group"
+import {
+  SectionBlock,
+  ContentItem,
+  ContentGroup,
+} from "../../components/section"
 import PlaceholderLogo from "../../images/placeholder-logo.svg"
 
 const ProgramInfoSection = ({
@@ -24,9 +26,9 @@ const ProgramInfoSection = ({
     { label: "Funding Program Lead", info: programLead },
     { label: "Lead Investigator", info: leadInvestigator },
     { label: "Data Manager / Technical Contact", info: dataManager },
-    { label: "Assigned Archive Repository", info: archive, type: "link" },
+    { label: "Assigned Archive Repository", info: archive, link: archive },
     { label: "Partner Organisation", info: partnerOrgListing },
-    { label: "Tertiary Website", info: tertiaryWebsite, type: "link" },
+    { label: "Tertiary Website", info: tertiaryWebsite, link: tertiaryWebsite },
   ]
 
   return (
@@ -54,7 +56,7 @@ const ProgramInfoSection = ({
             id="program-info-content"
             label={item.label}
             info={item.info}
-            type={item.type || "text"}
+            link={item.link}
           />
         ))}
       </ContentGroup>

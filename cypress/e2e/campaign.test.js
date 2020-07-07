@@ -100,7 +100,7 @@ describe("Campaign", () => {
     })
 
     it("displays some facts", () => {
-      cy.get("[data-cy=overview-fact]")
+      cy.get("[data-cy=overview-content]")
         .find("label")
         .should($label => {
           expect($label, "4 items").to.have.length(4)
@@ -114,10 +114,8 @@ describe("Campaign", () => {
 
     it("displays link list", () => {
       cy.get("[data-cy=link-list]")
-        .find("label")
-        .should("contain", "Relevant Links")
-
-      cy.get("[data-cy=link-list]").find("li").should("have.length", 5)
+        .find("li")
+        .should("have.length.within", 2, 4)
     })
   })
 
