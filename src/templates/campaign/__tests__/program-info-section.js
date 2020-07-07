@@ -1,29 +1,10 @@
 import React from "react"
 import { create } from "react-test-renderer"
-import { useStaticQuery } from "gatsby"
 
 import ProgramInfoSection from "../program-info-section"
 
 const testLogo = "https://via.placeholder.com/150"
 const testString = "test string"
-const testArray = ["a", "b"]
-
-beforeEach(() => {
-  useStaticQuery.mockImplementationOnce(() => {
-    return {
-      allPartnerOrg: {
-        nodes: [
-          {
-            id: "a",
-            website: "website a",
-            short_name: "org a",
-            long_name: "org a",
-          },
-        ],
-      },
-    }
-  })
-})
 
 describe("Program Info Section", () => {
   it("renders logo when present in props", () => {
@@ -36,7 +17,7 @@ describe("Program Info Section", () => {
         leadInvestigator={testString}
         dataManager={testString}
         archive={testString}
-        partnerOrgIds={testArray}
+        partnerOrgListing={testString}
         partnerWebsite={testString}
         tertiaryWebsite={testString}
       />
@@ -57,7 +38,7 @@ describe("Program Info Section", () => {
         leadInvestigator={testString}
         dataManager={testString}
         archive={testString}
-        partnerOrgIds={testArray}
+        partnerOrgListing={testString}
         partnerWebsite={testString}
         tertiaryWebsite={testString}
       />

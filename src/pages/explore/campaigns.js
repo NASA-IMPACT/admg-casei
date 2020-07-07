@@ -15,7 +15,13 @@ import CampaignCard from "../../components/cards/campaign-card"
 import { selector } from "../../utils/filter-utils"
 
 const Campaigns = ({ data, location }) => {
-  const { allSeason, allFocusArea, allGeographicalRegion, allDeployment } = data
+  const {
+    allSeason,
+    allFocusArea,
+    allGeographicalRegion,
+    allPlatform,
+    allDeployment,
+  } = data
   const { selectedFilterId } = location.state || {}
 
   const [isLoading, setLoading] = useState(false)
@@ -66,9 +72,10 @@ const Campaigns = ({ data, location }) => {
         ? true
         : selectedFilterIds.every(
             filterId =>
-              campaign.seasonIds.includes(filterId) ||
-              campaign.focusIds.includes(filterId) ||
-              campaignHasDeploymentInRegion(campaign, filterId)
+              campaign.seasons.map(x => x.id).includes(filterId) ||
+              campaign.focus.map(x => x.id).includes(filterId) ||
+              campaignHasDeploymentInRegion(campaign, filterId) ||
+              campaign.platforms.map(x => x.id).includes(filterId)
           )
     )
     .filter(campaign =>
@@ -79,6 +86,7 @@ const Campaigns = ({ data, location }) => {
     focus: allFocusArea,
     season: allSeason,
     region: allGeographicalRegion,
+    platform: allPlatform,
   })
 
   return (
@@ -170,6 +178,13 @@ export const query = graphql`
         shortname: short_name
       }
     }
+    allPlatform {
+      options: nodes {
+        id
+        shortname: short_name
+        longname: long_name
+      }
+    }
     allDeployment {
       nodes {
         geographical_regions
@@ -183,14 +198,21 @@ export const query = graphql`
     shortname: short_name
     longname: long_name
     id
-    seasonIds: seasons
-    focusIds: focus_areas
+    seasons {
+      id
+    }
+    focus: focus_areas {
+      id
+    }
     startdate: start_date
     enddate: end_date
     region: region_description
     deploymentIds: deployments
     countCollectionPeriods: number_collection_periods
     countDataProducts: number_data_products
+    platforms {
+      id
+    }
   }
 `
 
@@ -199,15 +221,38 @@ const campaignShape = PropTypes.shape({
   shortname: PropTypes.string.isRequired,
   longname: PropTypes.string,
   id: PropTypes.string.isRequired,
-  seasonIds: PropTypes.arrayOf(PropTypes.string),
-  focusIds: PropTypes.arrayOf(PropTypes.string),
+  seasons: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+  focus: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+    })
+  ).isRequired,
   startdate: PropTypes.string.isRequired,
   enddate: PropTypes.string,
   region: PropTypes.string.isRequired,
   deploymentIds: PropTypes.arrayOf(PropTypes.string),
   countCollectionPeriods: PropTypes.number,
   countDataProducts: PropTypes.number,
+  platforms: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+    })
+  ).isRequired,
 })
+
+const filterOptionShape = PropTypes.shape({
+  options: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      shortname: PropTypes.string.isRequired,
+      longname: PropTypes.string,
+    })
+  ).isRequired,
+}).isRequired
 
 Campaigns.propTypes = {
   data: PropTypes.shape({
@@ -220,32 +265,10 @@ Campaigns.propTypes = {
     desc: PropTypes.shape({
       list: PropTypes.arrayOf(campaignShape).isRequired,
     }),
-    allFocusArea: PropTypes.shape({
-      options: PropTypes.arrayOf(
-        PropTypes.shape({
-          id: PropTypes.string.isRequired,
-          shortname: PropTypes.string.isRequired,
-          longname: PropTypes.string,
-        })
-      ).isRequired,
-    }).isRequired,
-    allSeason: PropTypes.shape({
-      options: PropTypes.arrayOf(
-        PropTypes.shape({
-          id: PropTypes.string.isRequired,
-          shortname: PropTypes.string.isRequired,
-          longname: PropTypes.string,
-        })
-      ).isRequired,
-    }).isRequired,
-    allGeographicalRegion: PropTypes.shape({
-      options: PropTypes.arrayOf(
-        PropTypes.shape({
-          id: PropTypes.string.isRequired,
-          shortname: PropTypes.string.isRequired,
-        })
-      ).isRequired,
-    }).isRequired,
+    allFocusArea: filterOptionShape,
+    allSeason: filterOptionShape,
+    allGeographicalRegion: filterOptionShape,
+    allPlatform: filterOptionShape,
     allDeployment: PropTypes.shape({
       nodes: PropTypes.arrayOf(
         PropTypes.shape({
