@@ -844,18 +844,18 @@ exports[`Campaigns page renders correctly 1`] = `
                 <strong>
                   0
                 </strong>
-                 Collection Periods
+                 
+                Collection Periods
               </small>
-               
-              ·
-               
               <small
                 data-cy="count2"
               >
+                 · 
                 <strong>
                   0
                 </strong>
-                 Data Products
+                 
+                Data Products
               </small>
             </div>
           </div>
@@ -944,18 +944,18 @@ exports[`Campaigns page renders correctly 1`] = `
                 <strong>
                   0
                 </strong>
-                 Collection Periods
+                 
+                Collection Periods
               </small>
-               
-              ·
-               
               <small
                 data-cy="count2"
               >
+                 · 
                 <strong>
                   0
                 </strong>
-                 Data Products
+                 
+                Data Products
               </small>
             </div>
           </div>
@@ -1044,18 +1044,18 @@ exports[`Campaigns page renders correctly 1`] = `
                 <strong>
                   0
                 </strong>
-                 Collection Periods
+                 
+                Collection Periods
               </small>
-               
-              ·
-               
               <small
                 data-cy="count2"
               >
+                 · 
                 <strong>
                   0
                 </strong>
-                 Data Products
+                 
+                Data Products
               </small>
             </div>
           </div>
@@ -1144,18 +1144,18 @@ exports[`Campaigns page renders correctly 1`] = `
                 <strong>
                   0
                 </strong>
-                 Collection Periods
+                 
+                Collection Periods
               </small>
-               
-              ·
-               
               <small
                 data-cy="count2"
               >
+                 · 
                 <strong>
                   0
                 </strong>
-                 Data Products
+                 
+                Data Products
               </small>
             </div>
           </div>
@@ -1244,16 +1244,16 @@ exports[`Campaigns page renders correctly 1`] = `
                 <strong>
                   0
                 </strong>
-                 Collection Periods
+                 
+                Collection Periods
               </small>
-               
-              ·
-               
               <small
                 data-cy="count2"
               >
+                 · 
                 <strong />
-                 Data Products
+                 
+                Data Products
               </small>
             </div>
           </div>
@@ -1342,18 +1342,18 @@ exports[`Campaigns page renders correctly 1`] = `
                 <strong>
                   0
                 </strong>
-                 Collection Periods
+                 
+                Collection Periods
               </small>
-               
-              ·
-               
               <small
                 data-cy="count2"
               >
+                 · 
                 <strong>
                   0
                 </strong>
-                 Data Products
+                 
+                Data Products
               </small>
             </div>
           </div>
@@ -1442,18 +1442,18 @@ exports[`Campaigns page renders correctly 1`] = `
                 <strong>
                   0
                 </strong>
-                 Collection Periods
+                 
+                Collection Periods
               </small>
-               
-              ·
-               
               <small
                 data-cy="count2"
               >
+                 · 
                 <strong>
                   0
                 </strong>
-                 Data Products
+                 
+                Data Products
               </small>
             </div>
           </div>
@@ -1542,18 +1542,18 @@ exports[`Campaigns page renders correctly 1`] = `
                 <strong>
                   0
                 </strong>
-                 Collection Periods
+                 
+                Collection Periods
               </small>
-               
-              ·
-               
               <small
                 data-cy="count2"
               >
+                 · 
                 <strong>
                   0
                 </strong>
-                 Data Products
+                 
+                Data Products
               </small>
             </div>
           </div>
@@ -1642,18 +1642,18 @@ exports[`Campaigns page renders correctly 1`] = `
                 <strong>
                   0
                 </strong>
-                 Collection Periods
+                 
+                Collection Periods
               </small>
-               
-              ·
-               
               <small
                 data-cy="count2"
               >
+                 · 
                 <strong>
                   0
                 </strong>
-                 Data Products
+                 
+                Data Products
               </small>
             </div>
           </div>
@@ -1742,18 +1742,18 @@ exports[`Campaigns page renders correctly 1`] = `
                 <strong>
                   0
                 </strong>
-                 Collection Periods
+                 
+                Collection Periods
               </small>
-               
-              ·
-               
               <small
                 data-cy="count2"
               >
+                 · 
                 <strong>
                   0
                 </strong>
-                 Data Products
+                 
+                Data Products
               </small>
             </div>
           </div>

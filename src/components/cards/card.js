@@ -1,9 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import Tag from "./tag"
-import FooterList from "./footer-list"
-
 import theme from "../../utils/theme"
 
 const Card = ({ children, tag, footerList }) => (
@@ -37,11 +34,31 @@ const Card = ({ children, tag, footerList }) => (
             height: `2.5rem`,
           }}
         ></div>
-        {tag && <Tag tagName={tag} />}
+        {tag && (
+          <div
+            style={{
+              textTransform: `uppercase`,
+              border: `1px solid`,
+              padding: `0.25rem`,
+            }}
+            data-cy="ongoing-tag"
+          >
+            {tag}
+          </div>
+        )}
       </div>
       {children}
     </div>
-    {footerList && <FooterList list={footerList} />}
+    {footerList && (
+      <div>
+        {footerList.map((o, index) => (
+          <small key={o.title} data-cy={`count${index + 1}`}>
+            {index !== 0 && ` · `}
+            <strong>{o.count}</strong> {o.title}
+          </small>
+        ))}
+      </div>
+    )}
   </div>
 )
 
