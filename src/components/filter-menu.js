@@ -71,6 +71,11 @@ const FilterMenu = ({
             label="Geographical Region"
             options={getFilterOptionsById("region")}
           />
+          <Filter
+            id="platform"
+            label="Platform"
+            options={getFilterOptionsById("platform")}
+          />
         </>
       )}
       {category === "platforms" && (

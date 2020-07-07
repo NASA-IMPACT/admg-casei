@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import SectionBlock from "../../components/section/section-block"
 import ContentItem from "../../components/section/content-item"
@@ -15,26 +15,9 @@ const ProgramInfoSection = ({
   leadInvestigator,
   dataManager,
   archive,
-  partnerOrgIds,
+  partnerOrgListing,
   tertiaryWebsite,
 }) => {
-  const data = useStaticQuery(graphql`
-    query {
-      allPartnerOrg {
-        nodes {
-          id
-          website
-          shortname: short_name
-          longname: long_name
-        }
-      }
-    }
-  `)
-  const partnerOrg = data.allPartnerOrg.nodes
-    .filter(x => partnerOrgIds.includes(x.id))
-    .map(x => x.shortname)
-    .join(", ")
-
   const contentList = [
     { label: "Funding Agency", info: fundingAgency },
     { label: "Funding Program", info: fundingProgram },
@@ -42,7 +25,7 @@ const ProgramInfoSection = ({
     { label: "Lead Investigator", info: leadInvestigator },
     { label: "Data Manager / Technical Contact", info: dataManager },
     { label: "Assigned Archive Repository", info: archive, type: "link" },
-    { label: "Partner Organisation", info: partnerOrg },
+    { label: "Partner Organisation", info: partnerOrgListing },
     { label: "Tertiary Website", info: tertiaryWebsite, type: "link" },
   ]
 
@@ -92,7 +75,9 @@ export const fundingFields = graphql`
     dataManager: technical_contact
 
     archive: repository_website
-    partnerOrg: partner_orgs
+    partnerOrgs: partner_orgs {
+      shortname: short_name
+    }
     tertiaryWebsite: tertiary_website
   }
 `
@@ -105,7 +90,7 @@ ProgramInfoSection.propTypes = {
   leadInvestigator: PropTypes.string.isRequired,
   dataManager: PropTypes.string.isRequired,
   archive: PropTypes.string.isRequired,
-  partnerOrgIds: PropTypes.arrayOf(PropTypes.string).isRequired,
+  partnerOrgListing: PropTypes.string.isRequired,
   tertiaryWebsite: PropTypes.string.isRequired,
 }
 

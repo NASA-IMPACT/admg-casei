@@ -118,12 +118,12 @@ export const query = graphql`
     }
     asc: allPlatform(sort: { order: ASC, fields: short_name }) {
       list: nodes {
-        ...platformFields
+        ...platform
       }
     }
     desc: allPlatform(sort: { order: DESC, fields: short_name }) {
       list: nodes {
-        ...platformFields
+        ...platform
       }
     }
     allInstrument {
@@ -135,7 +135,7 @@ export const query = graphql`
     }
   }
 
-  fragment platformFields on platform {
+  fragment platform on platform {
     shortname: short_name
     longname: long_name
     id

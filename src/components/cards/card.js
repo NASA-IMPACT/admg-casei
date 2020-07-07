@@ -43,7 +43,10 @@ const Card = ({ children, tag }) => (
 )
 
 Card.propTypes = {
-  children: PropTypes.arrayOf(PropTypes.element),
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.arrayOf(PropTypes.element),
+  ]),
   tag: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
 }
 

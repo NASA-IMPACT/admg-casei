@@ -220,7 +220,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
         <p
           data-cy="program-info-content-text"
         >
-          N/A
+          test string
         </p>
       </div>
       <div
@@ -479,7 +479,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
         <p
           data-cy="program-info-content-text"
         >
-          N/A
+          test string
         </p>
       </div>
       <div

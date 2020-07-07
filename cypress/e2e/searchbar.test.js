@@ -4,9 +4,11 @@ import api from "../../src/utils/api"
 
 describe("Searchbar", () => {
   ;[
-    { category: "campaigns", filterExample: "boreal winter" },
-    { category: "platforms", filterExample: "Aerolaser" },
-    { category: "instruments", filterExample: "Remote - Active" },
+    {
+      category: "campaigns",
+      filterExamples: ["Weather", "boreal winter", "rainforest", "C-23 Sherpa"],
+    },
+    { category: "platforms", filterExamples: ["Aerolaser"] },
   ].forEach(x => {
     describe(x.category, () => {
       beforeEach(() => {
@@ -34,7 +36,7 @@ describe("Searchbar", () => {
 
         cy.window().should("have.prop", "beforeReload", true)
 
-        cy.get("[data-cy=filter-select]").select(x.filterExample)
+        cy.get("[data-cy=filter-select]").select(x.filterExamples[0])
 
         cy.get("[data-cy=submit]").click()
 
@@ -52,24 +54,26 @@ describe("Searchbar", () => {
         cy.get("main")
           .find("[data-cy=explore-card]")
           .then($cards => {
-            const numBefore = $cards.length
+            x.filterExamples.forEach(filterExample => {
+              const numBefore = $cards.length
 
-            cy.get("[data-cy=filter-select]").select(x.filterExample)
+              cy.get("[data-cy=filter-select]").select(filterExample)
 
-            cy.get("[data-cy=filter-chip]").should("exist")
+              cy.get("[data-cy=filter-chip]").should("exist")
 
-            cy.get("[data-cy=explore-card]").then($card => {
-              const numAfter = $card.length
-              expect(numAfter).to.be.lessThan(numBefore)
-            })
+              cy.get("[data-cy=explore-card]").then($card => {
+                const numAfter = $card.length
+                expect(numAfter).to.be.lessThan(numBefore)
+              })
 
-            cy.get("[data-cy=filter-chip]").find("button").click()
+              cy.get("[data-cy=filter-chip]").find("button").click()
 
-            cy.get("[data-cy=filter-chip]").should("not.exist")
+              cy.get("[data-cy=filter-chip]").should("not.exist")
 
-            cy.get("[data-cy=explore-card]").then($card => {
-              const numAfter = $card.length
-              expect(numAfter).to.be.equal(numBefore)
+              cy.get("[data-cy=explore-card]").then($card => {
+                const numAfter = $card.length
+                expect(numAfter).to.be.equal(numBefore)
+              })
             })
           })
       })
