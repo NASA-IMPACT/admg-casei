@@ -41,7 +41,7 @@ const Card = ({ children, tag, footerList }) => (
               border: `1px solid`,
               padding: `0.25rem`,
             }}
-            data-cy="ongoing-tag"
+            data-cy={`${tag.toLowerCase()}-tag`}
           >
             {tag}
           </div>
