@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Card from "./card"
+import FooterList from "./footer-list"
 
 const PlatformCard = ({
   shortname,
@@ -19,15 +20,12 @@ const PlatformCard = ({
     </big>
     <p data-cy="longname">{longname}</p>
     <p data-cy="description">{description}</p>
-    <div>
-      <small data-cy="count1">
-        <strong>{collectionPeriodIds.length}</strong> Collection Periods
-      </small>{" "}
-      ·{" "}
-      <small data-cy="count2">
-        <strong>{instruments.length}</strong> Instruments
-      </small>
-    </div>
+    <FooterList
+      list={[
+        { count: collectionPeriodIds.length, title: "Collection Periods" },
+        { count: instruments.length, title: "Instruments" },
+      ]}
+    />
   </Card>
 )
 

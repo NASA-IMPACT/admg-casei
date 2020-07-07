@@ -44,7 +44,7 @@ const Card = ({ children, tag }) => (
 
 Card.propTypes = {
   children: PropTypes.arrayOf(PropTypes.element),
-  tag: PropTypes.string,
+  tag: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
 }
 
 export default Card

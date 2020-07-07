@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import Card from "./card"
+import FooterList from "./footer-list"
 
 const CampaignCard = ({
   ongoing,
@@ -26,15 +27,12 @@ const CampaignCard = ({
     <div>
       <small data-cy="region">{region}</small>
     </div>
-    <div>
-      <small data-cy="count1">
-        <strong>{countCollectionPeriods}</strong> Collection Periods
-      </small>{" "}
-      ·{" "}
-      <small data-cy="count2">
-        <strong>{countDataProducts}</strong> Data Products
-      </small>
-    </div>
+    <FooterList
+      list={[
+        { count: countCollectionPeriods, title: "Collection Periods" },
+        { count: countDataProducts, title: "Data Products" },
+      ]}
+    />
   </Card>
 )
 
