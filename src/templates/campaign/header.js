@@ -95,8 +95,8 @@ const Header = ({
   )
 }
 
-export const headerFields = graphql`
-  fragment headerFields on campaign {
+export const campaignHeaderFields = graphql`
+  fragment campaignHeaderFields on campaign {
     bounds: spatial_bounds
     shortname: short_name
     longname: long_name

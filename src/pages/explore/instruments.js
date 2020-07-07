@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react"
 import PropTypes from "prop-types"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Spinner from "react-spinkit"
 
 import api from "../../utils/api"
@@ -93,14 +93,19 @@ export default function Instruments({ data, location }) {
         >
           {list.map(instrument => {
             return (
-              <InstrumentCard
-                shortname={instrument.shortname}
-                longname={instrument.longname}
-                key={instrument.id}
-                description={instrument.description}
-                collectionPeriodIds={instrument.collectionPeriodIds}
-                campaigns={instrument.campaigns}
-              />
+              <Link
+                to={`/instrument/${instrument.id}`}
+                key={instrument.shortname}
+              >
+                <InstrumentCard
+                  shortname={instrument.shortname}
+                  longname={instrument.longname}
+                  key={instrument.id}
+                  description={instrument.description}
+                  collectionPeriodIds={instrument.collectionPeriodIds}
+                  campaigns={instrument.campaigns}
+                />
+              </Link>
             )
           })}
         </ExploreSection>

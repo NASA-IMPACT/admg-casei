@@ -66,7 +66,7 @@ const CampaignTemplate = ({ data: { campaign, deployments } }) => {
 export const query = graphql`
   query($slug: String!) {
     campaign: campaign(id: { eq: $slug }) {
-      ...headerFields
+      ...campaignHeaderFields
       ...overviewFields
       ...focusFields
       ...platformFields

@@ -91,6 +91,11 @@ exports.createPages = async ({ graphql, actions }) => {
           id
         }
       }
+      allInstrument {
+        nodes {
+          id
+        }
+      }
     }
   `)
 
@@ -98,6 +103,15 @@ exports.createPages = async ({ graphql, actions }) => {
     createPage({
       path: `campaign/${node.id}`,
       component: path.resolve(`./src/templates/campaign/index.js`),
+      context: {
+        slug: node.id,
+      },
+    })
+  })
+  result.data.allInstrument.nodes.forEach(node => {
+    createPage({
+      path: `instrument/${node.id}`,
+      component: path.resolve(`./src/templates/instrument/index.js`),
       context: {
         slug: node.id,
       },
