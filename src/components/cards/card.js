@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import theme from "../utils/theme"
+import theme from "../../utils/theme"
 
 const Card = ({ children }) => (
   <div
@@ -21,7 +21,10 @@ const Card = ({ children }) => (
 )
 
 Card.propTypes = {
-  children: PropTypes.element,
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.arrayOf(PropTypes.element),
+  ]),
 }
 
 export default Card

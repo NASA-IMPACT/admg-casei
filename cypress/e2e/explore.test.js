@@ -100,4 +100,38 @@ describe("Explore", () => {
         })
     })
   })
+
+  describe("instruments", () => {
+    beforeEach(() => {
+      cy.get("main").find("[data-cy=tabbar]").contains("Instruments").click()
+    })
+
+    it("displays the number of items to explore", () => {
+      cy.get("main")
+        .find("[data-cy=item-count]")
+        .invoke("text")
+        .should("match", /Showing [0-9]+ instruments/i)
+    })
+
+    it("displays a list of cards presenting the available instruments", () => {
+      cy.get("main")
+        .find("[data-cy=explore-card]")
+        .find("big")
+        .contains("2D-C/P")
+        .parent()
+        .parent() // is there a better way to select the card?
+        .should($card => {
+          expect($card.find("[data-cy=shortname]")).to.have.text("2D-C/P")
+          expect($card.find("[data-cy=longname]")).to.have.text(
+            "2D-C/P Hydrometeor Imaging Probe"
+          )
+          expect($card.find("[data-cy=longname]")).to.exist
+
+          expect($card.find("[data-cy=count1]")).to.contain(
+            "Collection Periods"
+          )
+          expect($card.find("[data-cy=count2]")).to.contain("Campaigns")
+        })
+    })
+  })
 })

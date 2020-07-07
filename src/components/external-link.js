@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { PropTypeIsUrl } from "../utils/helpers"
 import theme from "../utils/theme"
 
 export default function ExternalLink({ label, url, id }) {
@@ -18,6 +19,6 @@ export default function ExternalLink({ label, url, id }) {
 
 ExternalLink.propTypes = {
   label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
-  url: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
+  url: PropTypeIsUrl,
   id: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
 }

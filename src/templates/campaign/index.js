@@ -10,16 +10,16 @@ import TimelineSection from "./timeline-section"
 import PlatformSection from "./platform-section"
 import ProgramInfoSection from "./program-info-section"
 import FocusSection from "./focus-section"
-import SectionBlock from "../../components/section/section-block"
+import { SectionBlock } from "../../components/section"
 
-const CampaignTemplate = ({ data: { campaign, deployments, platforms } }) => {
+const CampaignTemplate = ({ data: { campaign, deployments } }) => {
   return (
     <Layout>
       <Header
         bounds={campaign.bounds}
         shortname={campaign.shortname}
         longname={campaign.longname}
-        focusIds={campaign.focus}
+        focusListing={campaign.focus.map(x => x.shortname).join(", ")}
         countDeployments={campaign.countDeployments}
         countCollectionPeriods={campaign.countCollectionPeriods}
         countDataProducts={campaign.countDataProducts}
@@ -30,16 +30,19 @@ const CampaignTemplate = ({ data: { campaign, deployments, platforms } }) => {
         startdate={campaign.startdate}
         enddate={campaign.enddate}
         region={campaign.region}
-        seasonIds={campaign.season}
+        seasonListing={campaign.seasons.map(x => x.shortname).join(", ")}
         bounds={campaign.bounds}
-        website={campaign.website}
+        projectWebsite={campaign.projectWebsite}
+        repositoryWebsite={campaign.repositoryWebsite}
+        tertiaryWebsite={campaign.tertiaryWebsite}
+        publicationLink={campaign.publicationLink}
       />
       <FocusSection
-        focusAreaIds={campaign.focusAreaIds}
+        focus={campaign.focus}
         focusPhenomena={campaign.focusPhenomena}
         scienceKeywords={campaign.scienceKeywords}
       />
-      <PlatformSection platforms={platforms} />
+      <PlatformSection platforms={campaign.platforms} />
       <TimelineSection deployments={deployments} />
       <SectionBlock headline="Data" id="data" />
       <ProgramInfoSection
@@ -50,7 +53,9 @@ const CampaignTemplate = ({ data: { campaign, deployments, platforms } }) => {
         leadInvestigator={campaign.leadInvestigator}
         dataManager={campaign.dataManager}
         archive={campaign.archive}
-        partnerOrgIds={campaign.partnerOrg}
+        partnerOrgListing={campaign.partnerOrgs
+          .map(x => x.shortname)
+          .join(", ")}
         partnerWebsite={campaign.partnerWebsite}
         tertiaryWebsite={campaign.tertiaryWebsite}
       />
@@ -59,18 +64,16 @@ const CampaignTemplate = ({ data: { campaign, deployments, platforms } }) => {
 }
 
 export const query = graphql`
-  query($slug: String!, $platforms: [String!]) {
+  query($slug: String!) {
     campaign: campaign(id: { eq: $slug }) {
       ...headerFields
       ...overviewFields
       ...focusFields
+      ...platformFields
       ...fundingFields
     }
     deployments: allDeployment(filter: { campaign: { eq: $slug } }) {
       ...deploymentFragment
-    }
-    platforms: allPlatform(filter: { id: { in: $platforms } }) {
-      ...platformFragment
     }
   }
 `
@@ -78,22 +81,40 @@ export const query = graphql`
 CampaignTemplate.propTypes = {
   data: PropTypes.shape({
     campaign: PropTypes.shape({
+      bounds: PropTypes.string.isRequired,
       shortname: PropTypes.string.isRequired,
       longname: PropTypes.string.isRequired,
-      focus: PropTypes.arrayOf(PropTypes.string).isRequired,
+      focus: PropTypes.arrayOf(
+        PropTypes.shape({
+          shortname: PropTypes.string.isRequired,
+          longname: PropTypes.string.isRequired,
+        })
+      ).isRequired,
       countDeployments: PropTypes.number,
       countCollectionPeriods: PropTypes.number.isRequired,
-      countDataProducts: PropTypes.number.isRequired,
+      countDataProducts: PropTypes.number,
       description: PropTypes.string.isRequired,
       startdate: PropTypes.string.isRequired,
       enddate: PropTypes.string.isRequired,
       region: PropTypes.string.isRequired,
-      season: PropTypes.arrayOf(PropTypes.string).isRequired,
-      bounds: PropTypes.string.isRequired,
-      website: PropTypes.string.isRequired,
-      focusAreaIds: PropTypes.arrayOf(PropTypes.string).isRequired,
+      seasons: PropTypes.arrayOf(
+        PropTypes.shape({
+          shortname: PropTypes.string.isRequired,
+          longname: PropTypes.string.isRequired,
+        })
+      ).isRequired,
+      projectWebsite: PropTypes.string.isRequired,
+      repositoryWebsite: PropTypes.string.isRequired,
+      tertiaryWebsite: PropTypes.string.isRequired,
+      publicationLink: PropTypes.string.isRequired,
       focusPhenomena: PropTypes.string.isRequired,
       scienceKeywords: PropTypes.string,
+      platforms: PropTypes.arrayOf(
+        PropTypes.shape({
+          shortname: PropTypes.string.isRequired,
+          longname: PropTypes.string.isRequired,
+        })
+      ).isRequired,
       logo: PropTypes.string,
       fundingAgency: PropTypes.string.isRequired,
       fundingProgram: PropTypes.string.isRequired,
@@ -101,9 +122,12 @@ CampaignTemplate.propTypes = {
       leadInvestigator: PropTypes.string.isRequired,
       dataManager: PropTypes.string.isRequired,
       archive: PropTypes.string.isRequired,
-      partnerOrg: PropTypes.arrayOf(PropTypes.string).isRequired,
+      partnerOrgs: PropTypes.arrayOf(
+        PropTypes.shape({
+          shortname: PropTypes.string.isRequired,
+        })
+      ).isRequired,
       partnerWebsite: PropTypes.string,
-      tertiaryWebsite: PropTypes.string.isRequired,
     }).isRequired,
     deployments: PropTypes.shape({
       nodes: PropTypes.arrayOf(
@@ -118,14 +142,6 @@ CampaignTemplate.propTypes = {
           start: PropTypes.string.isRequired,
         })
       ),
-    }).isRequired,
-    platforms: PropTypes.shape({
-      nodes: PropTypes.arrayOf(
-        PropTypes.shape({
-          shortname: PropTypes.string,
-          longname: PropTypes.string,
-        }).isRequired
-      ).isRequired,
     }).isRequired,
   }).isRequired,
 }

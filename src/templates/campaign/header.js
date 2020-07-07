@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import parse from "wellknown"
 import * as turf from "@turf/turf"
 import geoViewport from "@mapbox/geo-viewport"
@@ -25,27 +25,11 @@ const Header = ({
   bounds,
   shortname,
   longname,
-  focusIds,
+  focusListing,
   countDeployments,
   countCollectionPeriods,
   countDataProducts,
 }) => {
-  const data = useStaticQuery(graphql`
-    query {
-      allFocusArea {
-        nodes {
-          id
-          shortname: short_name
-          longname: long_name
-        }
-      }
-    }
-  `)
-  const focus = data.allFocusArea.nodes
-    .filter(x => focusIds.includes(x.id))
-    .map(x => x.shortname)
-    .join(", ")
-
   const geometry = parse(bounds)
   const geojson = {
     type: "Feature",
@@ -95,7 +79,7 @@ const Header = ({
         <div>
           <p>{shortname}</p>
           <h1>{longname}</h1>
-          <p>{focus}</p>
+          <p>{focusListing}</p>
         </div>
         <dl style={{ display: `grid` }} data-cy="stats">
           <StatNumber number={countDeployments} label="Deployments" />
@@ -116,7 +100,9 @@ export const headerFields = graphql`
     bounds: spatial_bounds
     shortname: short_name
     longname: long_name
-    focus: focus_areas
+    focus: focus_areas {
+      shortname: short_name
+    }
     countCollectionPeriods: number_collection_periods
     countDataProducts: number_data_products
     countDeployments: number_deployments
@@ -127,10 +113,10 @@ Header.propTypes = {
   bounds: PropTypes.string.isRequired,
   shortname: PropTypes.string.isRequired,
   longname: PropTypes.string.isRequired,
-  focusIds: PropTypes.arrayOf(PropTypes.string).isRequired,
+  focusListing: PropTypes.string.isRequired,
   countDeployments: PropTypes.number.isRequired,
   countCollectionPeriods: PropTypes.number.isRequired,
-  countDataProducts: PropTypes.number.isRequired,
+  countDataProducts: PropTypes.number,
 }
 
 export default Header

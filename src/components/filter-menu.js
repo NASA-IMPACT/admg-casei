@@ -71,6 +71,11 @@ const FilterMenu = ({
             label="Geographical Region"
             options={getFilterOptionsById("region")}
           />
+          <Filter
+            id="platform"
+            label="Platform"
+            options={getFilterOptionsById("platform")}
+          />
         </>
       )}
       {category === "platforms" && (
@@ -79,6 +84,15 @@ const FilterMenu = ({
             id="instrument"
             label="Instrument"
             options={getFilterOptionsById("instrument")}
+          />
+        </>
+      )}
+      {category === "instruments" && (
+        <>
+          <Filter
+            id="instrument-types"
+            label="Instrument Types"
+            options={getFilterOptionsById("type")}
           />
         </>
       )}

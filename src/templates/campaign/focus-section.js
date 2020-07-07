@@ -1,26 +1,16 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
-import SectionBlock from "../../components/section/section-block"
-import ContentGroup from "../../components/section/content-group"
+import {
+  SectionBlock,
+  ContentGroup,
+  ContentItem,
+} from "../../components/section"
 import Label from "../../components/label"
-import ContentItem from "../../components/section/content-item"
 import FocusAreaGallery from "../../components/home/focus-area-gallery"
 
-const FocusSection = ({ focusAreaIds, focusPhenomena, scienceKeywords }) => {
-  const data = useStaticQuery(graphql`
-    query {
-      allFocusArea {
-        nodes {
-          id
-          shortname: short_name
-          longname: long_name
-        }
-      }
-    }
-  `)
-
+const FocusSection = ({ focus, focusPhenomena, scienceKeywords }) => {
   return (
     <SectionBlock headline="Focus" id="focus" withBackground>
       <ContentGroup>
@@ -28,12 +18,7 @@ const FocusSection = ({ focusAreaIds, focusPhenomena, scienceKeywords }) => {
           <Label showBorder id="focus-content">
             Focus Area
           </Label>
-          <FocusAreaGallery
-            focusAreas={data.allFocusArea.nodes.filter(x =>
-              focusAreaIds.includes(x.id)
-            )}
-            size="small"
-          />
+          <FocusAreaGallery focusAreas={focus} size="small" />
         </div>
         <ContentItem
           id="focus-content"
@@ -52,13 +37,23 @@ const FocusSection = ({ focusAreaIds, focusPhenomena, scienceKeywords }) => {
 
 export const focus = graphql`
   fragment focusFields on campaign {
-    focusAreaIds: focus_areas
+    focus: focus_areas {
+      id
+      shortname: short_name
+      longname: long_name
+    }
     focusPhenomena: focus_phenomena
   }
 `
 
 FocusSection.propTypes = {
-  focusAreaIds: PropTypes.arrayOf(PropTypes.string).isRequired,
+  focus: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      shortname: PropTypes.string.isRequired,
+      longname: PropTypes.string,
+    })
+  ).isRequired,
   focusPhenomena: PropTypes.string.isRequired,
   scienceKeywords: PropTypes.string,
 }

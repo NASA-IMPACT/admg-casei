@@ -9,15 +9,27 @@ export const query = {
         shortname: "ACES",
         longname: "Altus Cumulus Electrification Study",
         id: "d1a09bda-9454-4f66-be12-dafc5f4df308",
-        seasonIds: [
-          "65900eb8-fb52-4da9-98e9-190cbf1d1cbe",
-          "52b49cd7-4143-4bbd-9f09-bd8de945c837",
+        seasons: [
+          {
+            id: "65900eb8-fb52-4da9-98e9-190cbf1d1cbe",
+          },
+          {
+            id: "52b49cd7-4143-4bbd-9f09-bd8de945c837",
+          },
         ],
-        focusIds: [
-          "23aedeee-2f83-4ca9-be30-5fda9a311421",
-          "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
-          "2a132687-f5a1-4bbc-b45a-97228c310cd8",
-          "a187959e-4132-4c2c-950d-7055bc5082b9",
+        focus: [
+          {
+            id: "23aedeee-2f83-4ca9-be30-5fda9a311421",
+          },
+          {
+            id: "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
+          },
+          {
+            id: "2a132687-f5a1-4bbc-b45a-97228c310cd8",
+          },
+          {
+            id: "a187959e-4132-4c2c-950d-7055bc5082b9",
+          },
         ],
         startdate: "2002-08-02",
         enddate: "2002-08-30",
@@ -25,6 +37,11 @@ export const query = {
         deploymentIds: ["ddc8ce9e-d4db-4b39-8041-06b272902544"],
         countCollectionPeriods: 0,
         countDataProducts: 0,
+        platforms: [
+          {
+            id: "32242d25-0152-4d98-a3a2-d1f874597cd6",
+          },
+        ],
       },
       {
         ongoing: false,
@@ -32,14 +49,24 @@ export const query = {
         longname:
           "Arctic Research of the Composition of the Troposphere from Aircraft and Satellites",
         id: "34a697c1-4464-4b06-9d73-a9be86c586cc",
-        seasonIds: [
-          "416a1c43-85b6-4336-80ac-6ccda1226e54",
-          "65900eb8-fb52-4da9-98e9-190cbf1d1cbe",
-          "52b49cd7-4143-4bbd-9f09-bd8de945c837",
+        seasons: [
+          {
+            id: "416a1c43-85b6-4336-80ac-6ccda1226e54",
+          },
+          {
+            id: "65900eb8-fb52-4da9-98e9-190cbf1d1cbe",
+          },
+          {
+            id: "52b49cd7-4143-4bbd-9f09-bd8de945c837",
+          },
         ],
-        focusIds: [
-          "23aedeee-2f83-4ca9-be30-5fda9a311421",
-          "2a132687-f5a1-4bbc-b45a-97228c310cd8",
+        focus: [
+          {
+            id: "23aedeee-2f83-4ca9-be30-5fda9a311421",
+          },
+          {
+            id: "2a132687-f5a1-4bbc-b45a-97228c310cd8",
+          },
         ],
         startdate: "2008-04-01",
         enddate: "2008-07-14",
@@ -51,16 +78,35 @@ export const query = {
         ],
         countCollectionPeriods: 0,
         countDataProducts: 0,
+        platforms: [
+          {
+            id: "d59b3d7e-f782-4e25-a8eb-ceec91c0331e",
+          },
+          {
+            id: "1b607095-4f6d-4e70-8e16-798bc59a2d59",
+          },
+          {
+            id: "2084ab0c-4f18-4aa6-ad7b-70bc861d2d80",
+          },
+        ],
       },
       {
         ongoing: false,
         shortname: "AirMOSS",
         longname: "Airborne Microwave Observatory of Subcanopy and Subsurface",
         id: "c0dc0d63-e32a-4fdc-b1ac-4f0e8a5c7754",
-        seasonIds: ["80c1e584-8bf7-4cae-b9c1-e7f98d19a7a0"],
-        focusIds: [
-          "75fdf3c3-f55b-4f33-9f56-7d7af49bef97",
-          "4e90e316-6d36-41b9-ae29-5125842b7b60",
+        seasons: [
+          {
+            id: "80c1e584-8bf7-4cae-b9c1-e7f98d19a7a0",
+          },
+        ],
+        focus: [
+          {
+            id: "75fdf3c3-f55b-4f33-9f56-7d7af49bef97",
+          },
+          {
+            id: "4e90e316-6d36-41b9-ae29-5125842b7b60",
+          },
         ],
         startdate: "2012-09-18",
         enddate: "2015-09-29",
@@ -103,21 +149,41 @@ export const query = {
         ],
         countCollectionPeriods: 0,
         countDataProducts: 0,
+        platforms: [
+          {
+            id: "fea8651b-9d6e-49cf-9433-f1c6685ec0dc",
+          },
+          {
+            id: "a67e9128-f25f-4bb8-97c1-5d89005111a8",
+          },
+        ],
       },
       {
         ongoing: false,
         shortname: "CARVE",
         longname: "Carbon in Arctic Reservoirs Vulnerability Experiment",
         id: "7546673c-151c-436a-adf1-6128b2d7a515",
-        seasonIds: [
-          "416a1c43-85b6-4336-80ac-6ccda1226e54",
-          "65900eb8-fb52-4da9-98e9-190cbf1d1cbe",
-          "4ebcfcd2-1c9c-45b0-bad6-997fc3e3c904",
+        seasons: [
+          {
+            id: "416a1c43-85b6-4336-80ac-6ccda1226e54",
+          },
+          {
+            id: "65900eb8-fb52-4da9-98e9-190cbf1d1cbe",
+          },
+          {
+            id: "4ebcfcd2-1c9c-45b0-bad6-997fc3e3c904",
+          },
         ],
-        focusIds: [
-          "23aedeee-2f83-4ca9-be30-5fda9a311421",
-          "2a132687-f5a1-4bbc-b45a-97228c310cd8",
-          "75fdf3c3-f55b-4f33-9f56-7d7af49bef97",
+        focus: [
+          {
+            id: "23aedeee-2f83-4ca9-be30-5fda9a311421",
+          },
+          {
+            id: "2a132687-f5a1-4bbc-b45a-97228c310cd8",
+          },
+          {
+            id: "75fdf3c3-f55b-4f33-9f56-7d7af49bef97",
+          },
         ],
         startdate: "2012-05-23",
         enddate: "2015-11-12",
@@ -130,20 +196,35 @@ export const query = {
         ],
         countCollectionPeriods: 0,
         countDataProducts: 0,
+        platforms: [
+          {
+            id: "900208da-3cb2-44b6-9f27-20209433f190",
+          },
+        ],
       },
       {
         ongoing: false,
         shortname: "DC3",
         longname: "Deep Convective Clouds & Chemistry",
         id: "2bca3f73-ee2b-4336-aed0-7454ab8cdf13",
-        seasonIds: [
-          "416a1c43-85b6-4336-80ac-6ccda1226e54",
-          "65900eb8-fb52-4da9-98e9-190cbf1d1cbe",
-          "52b49cd7-4143-4bbd-9f09-bd8de945c837",
+        seasons: [
+          {
+            id: "416a1c43-85b6-4336-80ac-6ccda1226e54",
+          },
+          {
+            id: "65900eb8-fb52-4da9-98e9-190cbf1d1cbe",
+          },
+          {
+            id: "52b49cd7-4143-4bbd-9f09-bd8de945c837",
+          },
         ],
-        focusIds: [
-          "23aedeee-2f83-4ca9-be30-5fda9a311421",
-          "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
+        focus: [
+          {
+            id: "23aedeee-2f83-4ca9-be30-5fda9a311421",
+          },
+          {
+            id: "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
+          },
         ],
         startdate: "2012-05-18",
         enddate: "2012-06-30",
@@ -152,17 +233,38 @@ export const query = {
         deploymentIds: ["dc2fa7b2-3143-4ca8-9e5a-ee07e807e712"],
         countCollectionPeriods: 0,
         countDataProducts: null,
+        platforms: [
+          {
+            id: "d59b3d7e-f782-4e25-a8eb-ceec91c0331e",
+          },
+          {
+            id: "2a3a99ee-1ea0-4ac9-9e52-6e733a0eda23",
+          },
+          {
+            id: "1c57a92e-a6db-4e7e-9d56-704705acc192",
+          },
+        ],
       },
       {
         ongoing: false,
         shortname: "GCPEx",
         longname: "GPM Cold Season Precipitation Experiment",
         id: "b94baa5d-3c69-4270-baf8-afc02f7132de",
-        seasonIds: ["5ae15f8c-3d9a-4061-953d-5fea2df57654"],
-        focusIds: [
-          "23aedeee-2f83-4ca9-be30-5fda9a311421",
-          "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
-          "a187959e-4132-4c2c-950d-7055bc5082b9",
+        seasons: [
+          {
+            id: "5ae15f8c-3d9a-4061-953d-5fea2df57654",
+          },
+        ],
+        focus: [
+          {
+            id: "23aedeee-2f83-4ca9-be30-5fda9a311421",
+          },
+          {
+            id: "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
+          },
+          {
+            id: "a187959e-4132-4c2c-950d-7055bc5082b9",
+          },
         ],
         startdate: "2012-01-15",
         enddate: "2012-03-04",
@@ -171,19 +273,38 @@ export const query = {
         deploymentIds: ["9cfa5b55-7378-48af-9018-ba2d82afe2eb"],
         countCollectionPeriods: 0,
         countDataProducts: 0,
+        platforms: [
+          {
+            id: "0cdd2d06-ba97-469d-96eb-0e0865c7c4c9",
+          },
+          {
+            id: "af872351-1e39-43dc-bdb5-3f4fb7def20b",
+          },
+          {
+            id: "d59b3d7e-f782-4e25-a8eb-ceec91c0331e",
+          },
+        ],
       },
       {
         ongoing: false,
         shortname: "GOES-R PLT",
         longname: "GOES-R Post Launch Test",
         id: "2ad3b8b7-5334-4fa9-af06-7a26c7b05e4c",
-        seasonIds: [
-          "416a1c43-85b6-4336-80ac-6ccda1226e54",
-          "52b49cd7-4143-4bbd-9f09-bd8de945c837",
+        seasons: [
+          {
+            id: "416a1c43-85b6-4336-80ac-6ccda1226e54",
+          },
+          {
+            id: "52b49cd7-4143-4bbd-9f09-bd8de945c837",
+          },
         ],
-        focusIds: [
-          "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
-          "a187959e-4132-4c2c-950d-7055bc5082b9",
+        focus: [
+          {
+            id: "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
+          },
+          {
+            id: "a187959e-4132-4c2c-950d-7055bc5082b9",
+          },
         ],
         startdate: "2017-03-21",
         enddate: "2017-05-17",
@@ -191,17 +312,30 @@ export const query = {
         deploymentIds: ["2e0877ea-d96e-4f8d-ae6f-3ec531812b6c"],
         countCollectionPeriods: 0,
         countDataProducts: 0,
+        platforms: [
+          {
+            id: "cc0f103e-e537-4437-8d2b-f7ea5ca617de",
+          },
+        ],
       },
       {
         ongoing: false,
         shortname: "GRIP",
         longname: "Genesis and Rapid Intensification Processes",
         id: "58160104-9c7d-4312-a1bb-7e2998bd44b7",
-        seasonIds: [
-          "65900eb8-fb52-4da9-98e9-190cbf1d1cbe",
-          "4ebcfcd2-1c9c-45b0-bad6-997fc3e3c904",
+        seasons: [
+          {
+            id: "65900eb8-fb52-4da9-98e9-190cbf1d1cbe",
+          },
+          {
+            id: "4ebcfcd2-1c9c-45b0-bad6-997fc3e3c904",
+          },
         ],
-        focusIds: ["4c5e9dc3-38ed-40cb-b6ea-cacf96057b53"],
+        focus: [
+          {
+            id: "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
+          },
+        ],
         startdate: "2010-08-15",
         enddate: "2010-09-25",
         region:
@@ -209,14 +343,33 @@ export const query = {
         deploymentIds: ["1a7c31aa-85ff-4aab-8d43-caf0fa0cf4be"],
         countCollectionPeriods: 0,
         countDataProducts: 0,
+        platforms: [
+          {
+            id: "d59b3d7e-f782-4e25-a8eb-ceec91c0331e",
+          },
+          {
+            id: "5baa4bc5-ad5a-43f8-9ed3-cf7d0dbdae36",
+          },
+          {
+            id: "5cde9f2a-10cb-47d6-b095-3b61d1e8b1e2",
+          },
+        ],
       },
       {
         ongoing: false,
         shortname: "HS3",
         longname: "Hurricane and Severe Storm Sentinel",
         id: "ffa4a307-c055-4303-adbf-42d243ef188b",
-        seasonIds: ["4ebcfcd2-1c9c-45b0-bad6-997fc3e3c904"],
-        focusIds: ["4c5e9dc3-38ed-40cb-b6ea-cacf96057b53"],
+        seasons: [
+          {
+            id: "4ebcfcd2-1c9c-45b0-bad6-997fc3e3c904",
+          },
+        ],
+        focus: [
+          {
+            id: "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
+          },
+        ],
         startdate: "2012-09-01",
         enddate: "2014-10-31",
         region: "Subtropical Atlantic Ocean and Gulf of Mexico",
@@ -227,20 +380,38 @@ export const query = {
         ],
         countCollectionPeriods: 0,
         countDataProducts: 0,
+        platforms: [
+          {
+            id: "5baa4bc5-ad5a-43f8-9ed3-cf7d0dbdae36",
+          },
+          {
+            id: "5cde9f2a-10cb-47d6-b095-3b61d1e8b1e2",
+          },
+        ],
       },
       {
         ongoing: false,
         shortname: "OLYMPEX",
         longname: "Olympic Mountains Experiment",
         id: "4d231fec-f2c0-4bb2-864c-ef4f20a88378",
-        seasonIds: [
-          "5ae15f8c-3d9a-4061-953d-5fea2df57654",
-          "081ccd03-e46f-459e-8101-b270d0266eac",
-          "d4b539c1-32d3-4089-9e08-db714704a13c",
+        seasons: [
+          {
+            id: "5ae15f8c-3d9a-4061-953d-5fea2df57654",
+          },
+          {
+            id: "081ccd03-e46f-459e-8101-b270d0266eac",
+          },
+          {
+            id: "d4b539c1-32d3-4089-9e08-db714704a13c",
+          },
         ],
-        focusIds: [
-          "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
-          "a187959e-4132-4c2c-950d-7055bc5082b9",
+        focus: [
+          {
+            id: "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
+          },
+          {
+            id: "a187959e-4132-4c2c-950d-7055bc5082b9",
+          },
         ],
         startdate: "2015-11-01",
         enddate: "2016-05-01",
@@ -248,6 +419,7 @@ export const query = {
         deploymentIds: ["04f5d90a-b356-42ea-9c17-1c8d3b46722b"],
         countCollectionPeriods: 0,
         countDataProducts: 0,
+        platforms: [],
       },
     ],
   },
@@ -258,14 +430,24 @@ export const query = {
         shortname: "OLYMPEX",
         longname: "Olympic Mountains Experiment",
         id: "4d231fec-f2c0-4bb2-864c-ef4f20a88378",
-        seasonIds: [
-          "5ae15f8c-3d9a-4061-953d-5fea2df57654",
-          "081ccd03-e46f-459e-8101-b270d0266eac",
-          "d4b539c1-32d3-4089-9e08-db714704a13c",
+        seasons: [
+          {
+            id: "5ae15f8c-3d9a-4061-953d-5fea2df57654",
+          },
+          {
+            id: "081ccd03-e46f-459e-8101-b270d0266eac",
+          },
+          {
+            id: "d4b539c1-32d3-4089-9e08-db714704a13c",
+          },
         ],
-        focusIds: [
-          "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
-          "a187959e-4132-4c2c-950d-7055bc5082b9",
+        focus: [
+          {
+            id: "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
+          },
+          {
+            id: "a187959e-4132-4c2c-950d-7055bc5082b9",
+          },
         ],
         startdate: "2015-11-01",
         enddate: "2016-05-01",
@@ -273,14 +455,23 @@ export const query = {
         deploymentIds: ["04f5d90a-b356-42ea-9c17-1c8d3b46722b"],
         countCollectionPeriods: 0,
         countDataProducts: 0,
+        platforms: [],
       },
       {
         ongoing: false,
         shortname: "HS3",
         longname: "Hurricane and Severe Storm Sentinel",
         id: "ffa4a307-c055-4303-adbf-42d243ef188b",
-        seasonIds: ["4ebcfcd2-1c9c-45b0-bad6-997fc3e3c904"],
-        focusIds: ["4c5e9dc3-38ed-40cb-b6ea-cacf96057b53"],
+        seasons: [
+          {
+            id: "4ebcfcd2-1c9c-45b0-bad6-997fc3e3c904",
+          },
+        ],
+        focus: [
+          {
+            id: "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
+          },
+        ],
         startdate: "2012-09-01",
         enddate: "2014-10-31",
         region: "Subtropical Atlantic Ocean and Gulf of Mexico",
@@ -291,17 +482,33 @@ export const query = {
         ],
         countCollectionPeriods: 0,
         countDataProducts: 0,
+        platforms: [
+          {
+            id: "5baa4bc5-ad5a-43f8-9ed3-cf7d0dbdae36",
+          },
+          {
+            id: "5cde9f2a-10cb-47d6-b095-3b61d1e8b1e2",
+          },
+        ],
       },
       {
         ongoing: false,
         shortname: "GRIP",
         longname: "Genesis and Rapid Intensification Processes",
         id: "58160104-9c7d-4312-a1bb-7e2998bd44b7",
-        seasonIds: [
-          "65900eb8-fb52-4da9-98e9-190cbf1d1cbe",
-          "4ebcfcd2-1c9c-45b0-bad6-997fc3e3c904",
+        seasons: [
+          {
+            id: "65900eb8-fb52-4da9-98e9-190cbf1d1cbe",
+          },
+          {
+            id: "4ebcfcd2-1c9c-45b0-bad6-997fc3e3c904",
+          },
         ],
-        focusIds: ["4c5e9dc3-38ed-40cb-b6ea-cacf96057b53"],
+        focus: [
+          {
+            id: "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
+          },
+        ],
         startdate: "2010-08-15",
         enddate: "2010-09-25",
         region:
@@ -309,19 +516,38 @@ export const query = {
         deploymentIds: ["1a7c31aa-85ff-4aab-8d43-caf0fa0cf4be"],
         countCollectionPeriods: 0,
         countDataProducts: 0,
+        platforms: [
+          {
+            id: "d59b3d7e-f782-4e25-a8eb-ceec91c0331e",
+          },
+          {
+            id: "5baa4bc5-ad5a-43f8-9ed3-cf7d0dbdae36",
+          },
+          {
+            id: "5cde9f2a-10cb-47d6-b095-3b61d1e8b1e2",
+          },
+        ],
       },
       {
         ongoing: false,
         shortname: "GOES-R PLT",
         longname: "GOES-R Post Launch Test",
         id: "2ad3b8b7-5334-4fa9-af06-7a26c7b05e4c",
-        seasonIds: [
-          "416a1c43-85b6-4336-80ac-6ccda1226e54",
-          "52b49cd7-4143-4bbd-9f09-bd8de945c837",
+        seasons: [
+          {
+            id: "416a1c43-85b6-4336-80ac-6ccda1226e54",
+          },
+          {
+            id: "52b49cd7-4143-4bbd-9f09-bd8de945c837",
+          },
         ],
-        focusIds: [
-          "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
-          "a187959e-4132-4c2c-950d-7055bc5082b9",
+        focus: [
+          {
+            id: "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
+          },
+          {
+            id: "a187959e-4132-4c2c-950d-7055bc5082b9",
+          },
         ],
         startdate: "2017-03-21",
         enddate: "2017-05-17",
@@ -329,17 +555,32 @@ export const query = {
         deploymentIds: ["2e0877ea-d96e-4f8d-ae6f-3ec531812b6c"],
         countCollectionPeriods: 0,
         countDataProducts: 0,
+        platforms: [
+          {
+            id: "cc0f103e-e537-4437-8d2b-f7ea5ca617de",
+          },
+        ],
       },
       {
         ongoing: false,
         shortname: "GCPEx",
         longname: "GPM Cold Season Precipitation Experiment",
         id: "b94baa5d-3c69-4270-baf8-afc02f7132de",
-        seasonIds: ["5ae15f8c-3d9a-4061-953d-5fea2df57654"],
-        focusIds: [
-          "23aedeee-2f83-4ca9-be30-5fda9a311421",
-          "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
-          "a187959e-4132-4c2c-950d-7055bc5082b9",
+        seasons: [
+          {
+            id: "5ae15f8c-3d9a-4061-953d-5fea2df57654",
+          },
+        ],
+        focus: [
+          {
+            id: "23aedeee-2f83-4ca9-be30-5fda9a311421",
+          },
+          {
+            id: "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
+          },
+          {
+            id: "a187959e-4132-4c2c-950d-7055bc5082b9",
+          },
         ],
         startdate: "2012-01-15",
         enddate: "2012-03-04",
@@ -348,20 +589,41 @@ export const query = {
         deploymentIds: ["9cfa5b55-7378-48af-9018-ba2d82afe2eb"],
         countCollectionPeriods: 0,
         countDataProducts: 0,
+        platforms: [
+          {
+            id: "0cdd2d06-ba97-469d-96eb-0e0865c7c4c9",
+          },
+          {
+            id: "af872351-1e39-43dc-bdb5-3f4fb7def20b",
+          },
+          {
+            id: "d59b3d7e-f782-4e25-a8eb-ceec91c0331e",
+          },
+        ],
       },
       {
         ongoing: false,
         shortname: "DC3",
         longname: "Deep Convective Clouds & Chemistry",
         id: "2bca3f73-ee2b-4336-aed0-7454ab8cdf13",
-        seasonIds: [
-          "416a1c43-85b6-4336-80ac-6ccda1226e54",
-          "65900eb8-fb52-4da9-98e9-190cbf1d1cbe",
-          "52b49cd7-4143-4bbd-9f09-bd8de945c837",
+        seasons: [
+          {
+            id: "416a1c43-85b6-4336-80ac-6ccda1226e54",
+          },
+          {
+            id: "65900eb8-fb52-4da9-98e9-190cbf1d1cbe",
+          },
+          {
+            id: "52b49cd7-4143-4bbd-9f09-bd8de945c837",
+          },
         ],
-        focusIds: [
-          "23aedeee-2f83-4ca9-be30-5fda9a311421",
-          "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
+        focus: [
+          {
+            id: "23aedeee-2f83-4ca9-be30-5fda9a311421",
+          },
+          {
+            id: "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
+          },
         ],
         startdate: "2012-05-18",
         enddate: "2012-06-30",
@@ -370,21 +632,44 @@ export const query = {
         deploymentIds: ["dc2fa7b2-3143-4ca8-9e5a-ee07e807e712"],
         countCollectionPeriods: 0,
         countDataProducts: null,
+        platforms: [
+          {
+            id: "d59b3d7e-f782-4e25-a8eb-ceec91c0331e",
+          },
+          {
+            id: "2a3a99ee-1ea0-4ac9-9e52-6e733a0eda23",
+          },
+          {
+            id: "1c57a92e-a6db-4e7e-9d56-704705acc192",
+          },
+        ],
       },
       {
         ongoing: false,
         shortname: "CARVE",
         longname: "Carbon in Arctic Reservoirs Vulnerability Experiment",
         id: "7546673c-151c-436a-adf1-6128b2d7a515",
-        seasonIds: [
-          "416a1c43-85b6-4336-80ac-6ccda1226e54",
-          "65900eb8-fb52-4da9-98e9-190cbf1d1cbe",
-          "4ebcfcd2-1c9c-45b0-bad6-997fc3e3c904",
+        seasons: [
+          {
+            id: "416a1c43-85b6-4336-80ac-6ccda1226e54",
+          },
+          {
+            id: "65900eb8-fb52-4da9-98e9-190cbf1d1cbe",
+          },
+          {
+            id: "4ebcfcd2-1c9c-45b0-bad6-997fc3e3c904",
+          },
         ],
-        focusIds: [
-          "23aedeee-2f83-4ca9-be30-5fda9a311421",
-          "2a132687-f5a1-4bbc-b45a-97228c310cd8",
-          "75fdf3c3-f55b-4f33-9f56-7d7af49bef97",
+        focus: [
+          {
+            id: "23aedeee-2f83-4ca9-be30-5fda9a311421",
+          },
+          {
+            id: "2a132687-f5a1-4bbc-b45a-97228c310cd8",
+          },
+          {
+            id: "75fdf3c3-f55b-4f33-9f56-7d7af49bef97",
+          },
         ],
         startdate: "2012-05-23",
         enddate: "2015-11-12",
@@ -397,16 +682,29 @@ export const query = {
         ],
         countCollectionPeriods: 0,
         countDataProducts: 0,
+        platforms: [
+          {
+            id: "900208da-3cb2-44b6-9f27-20209433f190",
+          },
+        ],
       },
       {
         ongoing: false,
         shortname: "AirMOSS",
         longname: "Airborne Microwave Observatory of Subcanopy and Subsurface",
         id: "c0dc0d63-e32a-4fdc-b1ac-4f0e8a5c7754",
-        seasonIds: ["80c1e584-8bf7-4cae-b9c1-e7f98d19a7a0"],
-        focusIds: [
-          "75fdf3c3-f55b-4f33-9f56-7d7af49bef97",
-          "4e90e316-6d36-41b9-ae29-5125842b7b60",
+        seasons: [
+          {
+            id: "80c1e584-8bf7-4cae-b9c1-e7f98d19a7a0",
+          },
+        ],
+        focus: [
+          {
+            id: "75fdf3c3-f55b-4f33-9f56-7d7af49bef97",
+          },
+          {
+            id: "4e90e316-6d36-41b9-ae29-5125842b7b60",
+          },
         ],
         startdate: "2012-09-18",
         enddate: "2015-09-29",
@@ -449,6 +747,14 @@ export const query = {
         ],
         countCollectionPeriods: 0,
         countDataProducts: 0,
+        platforms: [
+          {
+            id: "fea8651b-9d6e-49cf-9433-f1c6685ec0dc",
+          },
+          {
+            id: "a67e9128-f25f-4bb8-97c1-5d89005111a8",
+          },
+        ],
       },
       {
         ongoing: false,
@@ -456,14 +762,24 @@ export const query = {
         longname:
           "Arctic Research of the Composition of the Troposphere from Aircraft and Satellites",
         id: "34a697c1-4464-4b06-9d73-a9be86c586cc",
-        seasonIds: [
-          "416a1c43-85b6-4336-80ac-6ccda1226e54",
-          "65900eb8-fb52-4da9-98e9-190cbf1d1cbe",
-          "52b49cd7-4143-4bbd-9f09-bd8de945c837",
+        seasons: [
+          {
+            id: "416a1c43-85b6-4336-80ac-6ccda1226e54",
+          },
+          {
+            id: "65900eb8-fb52-4da9-98e9-190cbf1d1cbe",
+          },
+          {
+            id: "52b49cd7-4143-4bbd-9f09-bd8de945c837",
+          },
         ],
-        focusIds: [
-          "23aedeee-2f83-4ca9-be30-5fda9a311421",
-          "2a132687-f5a1-4bbc-b45a-97228c310cd8",
+        focus: [
+          {
+            id: "23aedeee-2f83-4ca9-be30-5fda9a311421",
+          },
+          {
+            id: "2a132687-f5a1-4bbc-b45a-97228c310cd8",
+          },
         ],
         startdate: "2008-04-01",
         enddate: "2008-07-14",
@@ -475,21 +791,44 @@ export const query = {
         ],
         countCollectionPeriods: 0,
         countDataProducts: 0,
+        platforms: [
+          {
+            id: "d59b3d7e-f782-4e25-a8eb-ceec91c0331e",
+          },
+          {
+            id: "1b607095-4f6d-4e70-8e16-798bc59a2d59",
+          },
+          {
+            id: "2084ab0c-4f18-4aa6-ad7b-70bc861d2d80",
+          },
+        ],
       },
       {
         ongoing: false,
         shortname: "ACES",
         longname: "Altus Cumulus Electrification Study",
         id: "d1a09bda-9454-4f66-be12-dafc5f4df308",
-        seasonIds: [
-          "65900eb8-fb52-4da9-98e9-190cbf1d1cbe",
-          "52b49cd7-4143-4bbd-9f09-bd8de945c837",
+        seasons: [
+          {
+            id: "65900eb8-fb52-4da9-98e9-190cbf1d1cbe",
+          },
+          {
+            id: "52b49cd7-4143-4bbd-9f09-bd8de945c837",
+          },
         ],
-        focusIds: [
-          "23aedeee-2f83-4ca9-be30-5fda9a311421",
-          "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
-          "2a132687-f5a1-4bbc-b45a-97228c310cd8",
-          "a187959e-4132-4c2c-950d-7055bc5082b9",
+        focus: [
+          {
+            id: "23aedeee-2f83-4ca9-be30-5fda9a311421",
+          },
+          {
+            id: "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
+          },
+          {
+            id: "2a132687-f5a1-4bbc-b45a-97228c310cd8",
+          },
+          {
+            id: "a187959e-4132-4c2c-950d-7055bc5082b9",
+          },
         ],
         startdate: "2002-08-02",
         enddate: "2002-08-30",
@@ -497,6 +836,11 @@ export const query = {
         deploymentIds: ["ddc8ce9e-d4db-4b39-8041-06b272902544"],
         countCollectionPeriods: 0,
         countDataProducts: 0,
+        platforms: [
+          {
+            id: "32242d25-0152-4d98-a3a2-d1f874597cd6",
+          },
+        ],
       },
     ],
   },
@@ -697,6 +1041,85 @@ export const query = {
       {
         id: "6ef85571-d903-458b-980a-273bbace62bc",
         shortname: "NID",
+      },
+    ],
+  },
+  allPlatform: {
+    options: [
+      {
+        id: "fea8651b-9d6e-49cf-9433-f1c6685ec0dc",
+        shortname: "ALAR",
+        longname: "Airborne Laboratory for Atmospheric Research",
+      },
+      {
+        id: "32242d25-0152-4d98-a3a2-d1f874597cd6",
+        shortname: "ALTUS II",
+        longname: "ALTUS II",
+      },
+      {
+        id: "99bbbba6-7de4-43a0-9483-1175cec6b93f",
+        shortname: "ASO",
+        longname: "Airborne Snow Observatory",
+      },
+      {
+        id: "1b607095-4f6d-4e70-8e16-798bc59a2d59",
+        shortname: "B-200",
+        longname: "Beechcraft King Air B-200",
+      },
+      {
+        id: "900208da-3cb2-44b6-9f27-20209433f190",
+        shortname: "C-23 Sherpa",
+        longname: "",
+      },
+      {
+        id: "0cdd2d06-ba97-469d-96eb-0e0865c7c4c9",
+        shortname: "Citation",
+        longname: "Cessna Citation II",
+      },
+      {
+        id: "af872351-1e39-43dc-bdb5-3f4fb7def20b",
+        shortname: "CV-580",
+        longname: "Convair CV-580",
+      },
+      {
+        id: "d59b3d7e-f782-4e25-a8eb-ceec91c0331e",
+        shortname: "DC-8",
+        longname: "Douglas DC-8",
+      },
+      {
+        id: "cc0f103e-e537-4437-8d2b-f7ea5ca617de",
+        shortname: "ER-2",
+        longname: "NASA Earth Resources-2 aircraft",
+      },
+      {
+        id: "1c57a92e-a6db-4e7e-9d56-704705acc192",
+        shortname: "Falcon",
+        longname: "Dassault Falcon 20-E5",
+      },
+      {
+        id: "a67e9128-f25f-4bb8-97c1-5d89005111a8",
+        shortname: "G-III",
+        longname: "Gulfstream III",
+      },
+      {
+        id: "2a3a99ee-1ea0-4ac9-9e52-6e733a0eda23",
+        shortname: "G-V",
+        longname: "Gulfstream-V",
+      },
+      {
+        id: "5cde9f2a-10cb-47d6-b095-3b61d1e8b1e2",
+        shortname: "GH",
+        longname: "Global Hawk UAV",
+      },
+      {
+        id: "2084ab0c-4f18-4aa6-ad7b-70bc861d2d80",
+        shortname: "P-3",
+        longname: "P-3 Orion",
+      },
+      {
+        id: "5baa4bc5-ad5a-43f8-9ed3-cf7d0dbdae36",
+        shortname: "WB-57",
+        longname: "NASA WB-57",
       },
     ],
   },

@@ -64,17 +64,23 @@ describe("Campaign", () => {
     })
 
     it("navigates to the inpage section", () => {
-      cy.get("[data-cy=program-info-section]").find("h2").should("be.visible")
-      cy.get("[data-cy=program-info-section]")
-        .find("h2")
-        .should("not.be.inViewport")
+      ;[
+        "program-info",
+        "platform",
+        "overview",
+        "data",
+        "timeline",
+        "focus",
+      ].forEach(id => {
+        cy.get(`[data-cy=${id}-inpage-link]`).click()
 
-      cy.get("main").find("nav").find("a").last().click()
+        cy.url().should("include", id)
 
-      cy.url().should("include", "#program-info")
-      cy.get("[data-cy=program-info-section]")
-        .find("h2")
-        .should("be.inViewport")
+        cy.get("main")
+          .find(`[data-cy=${id}-section]`)
+          .find("h2")
+          .should("be.inViewport")
+      })
     })
   })
 
@@ -94,7 +100,7 @@ describe("Campaign", () => {
     })
 
     it("displays some facts", () => {
-      cy.get("[data-cy=overview-fact]")
+      cy.get("[data-cy=overview-content]")
         .find("label")
         .should($label => {
           expect($label, "4 items").to.have.length(4)
@@ -108,10 +114,8 @@ describe("Campaign", () => {
 
     it("displays link list", () => {
       cy.get("[data-cy=link-list]")
-        .find("label")
-        .should("contain", "Relevant Links")
-
-      cy.get("[data-cy=link-list]").find("li").should("have.length", 5)
+        .find("li")
+        .should("have.length.within", 2, 4)
     })
   })
 

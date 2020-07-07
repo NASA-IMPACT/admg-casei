@@ -1,29 +1,11 @@
 import React from "react"
 import { create } from "react-test-renderer"
-import { useStaticQuery } from "gatsby"
 
 import ProgramInfoSection from "../program-info-section"
 
 const testLogo = "https://via.placeholder.com/150"
 const testString = "test string"
-const testArray = ["a", "b"]
-
-beforeEach(() => {
-  useStaticQuery.mockImplementationOnce(() => {
-    return {
-      allPartnerOrg: {
-        nodes: [
-          {
-            id: "a",
-            website: "website a",
-            short_name: "org a",
-            long_name: "org a",
-          },
-        ],
-      },
-    }
-  })
-})
+const testUrl = "https://www.test-campaign.io"
 
 describe("Program Info Section", () => {
   it("renders logo when present in props", () => {
@@ -35,10 +17,9 @@ describe("Program Info Section", () => {
         programLead={testString}
         leadInvestigator={testString}
         dataManager={testString}
-        archive={testString}
-        partnerOrgIds={testArray}
-        partnerWebsite={testString}
-        tertiaryWebsite={testString}
+        archive={testUrl}
+        partnerOrgListing={testString}
+        tertiaryWebsite={testUrl}
       />
     )
     const tree = component.toJSON()
@@ -56,10 +37,9 @@ describe("Program Info Section", () => {
         programLead={testString}
         leadInvestigator={testString}
         dataManager={testString}
-        archive={testString}
-        partnerOrgIds={testArray}
-        partnerWebsite={testString}
-        tertiaryWebsite={testString}
+        archive={testUrl}
+        partnerOrgListing={testString}
+        tertiaryWebsite={testUrl}
       />
     )
     const tree = component.toJSON()

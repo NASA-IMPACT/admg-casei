@@ -553,6 +553,85 @@ exports[`Campaigns page renders correctly 1`] = `
             NID
           </option>
         </optgroup>
+        <optgroup
+          label="Platform"
+        >
+          <option
+            value="fea8651b-9d6e-49cf-9433-f1c6685ec0dc"
+          >
+            ALAR
+          </option>
+          <option
+            value="32242d25-0152-4d98-a3a2-d1f874597cd6"
+          >
+            ALTUS II
+          </option>
+          <option
+            value="99bbbba6-7de4-43a0-9483-1175cec6b93f"
+          >
+            ASO
+          </option>
+          <option
+            value="1b607095-4f6d-4e70-8e16-798bc59a2d59"
+          >
+            B-200
+          </option>
+          <option
+            value="900208da-3cb2-44b6-9f27-20209433f190"
+          >
+            C-23 Sherpa
+          </option>
+          <option
+            value="0cdd2d06-ba97-469d-96eb-0e0865c7c4c9"
+          >
+            Citation
+          </option>
+          <option
+            value="af872351-1e39-43dc-bdb5-3f4fb7def20b"
+          >
+            CV-580
+          </option>
+          <option
+            value="d59b3d7e-f782-4e25-a8eb-ceec91c0331e"
+          >
+            DC-8
+          </option>
+          <option
+            value="cc0f103e-e537-4437-8d2b-f7ea5ca617de"
+          >
+            ER-2
+          </option>
+          <option
+            value="1c57a92e-a6db-4e7e-9d56-704705acc192"
+          >
+            Falcon
+          </option>
+          <option
+            value="a67e9128-f25f-4bb8-97c1-5d89005111a8"
+          >
+            G-III
+          </option>
+          <option
+            value="2a3a99ee-1ea0-4ac9-9e52-6e733a0eda23"
+          >
+            G-V
+          </option>
+          <option
+            value="5cde9f2a-10cb-47d6-b095-3b61d1e8b1e2"
+          >
+            GH
+          </option>
+          <option
+            value="2084ab0c-4f18-4aa6-ad7b-70bc861d2d80"
+          >
+            P-3
+          </option>
+          <option
+            value="5baa4bc5-ad5a-43f8-9ed3-cf7d0dbdae36"
+          >
+            WB-57
+          </option>
+        </optgroup>
       </select>
       <div
         style={
