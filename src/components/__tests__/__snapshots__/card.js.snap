@@ -44,7 +44,7 @@ exports[`Card renders card with tag 1`] = `
         }
       />
       <div
-        data-cy="ongoing-tag"
+        data-cy="stationary-tag"
         style={
           Object {
             "border": "1px solid",
