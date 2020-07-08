@@ -5,7 +5,8 @@ import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { SectionBlock, SectionImage } from "../components/section"
-import { Hero } from "../components/home/hero"
+import Hero from "../components/hero"
+import Image from "../components/image"
 import FocusAreaGallery from "../components/home/focus-area-gallery"
 import { RegionCarousel } from "../components/home/region-carousel"
 import { GeophysicsGrid } from "../components/home/geophysics-grid"
@@ -17,7 +18,16 @@ const IndexPage = ({ data }) => {
     <Layout>
       <SEO title="Home" />
 
-      <Hero siteMetadata={data.site.siteMetadata} />
+      <Hero
+        tagTitle="Nasa"
+        title={data.site.siteMetadata.title}
+        description={data.site.siteMetadata.description}
+      >
+        <Image
+          filename="globe.png"
+          alt="a globe displaying natural features and slight cloud coverage"
+        />
+      </Hero>
 
       <SectionBlock
         tagline="explore nasa earth science"
