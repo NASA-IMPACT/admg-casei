@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 import Table from "../../components/table"
 import Label from "../../components/label"
+import { SectionBlock } from "../../components/section"
 
 export function About({
   id,
@@ -11,32 +12,33 @@ export function About({
   spatialResolution,
 }) {
   return (
-    <Table
-      heading="About the instrument"
-      tableData={[
-        {
-          title: "Radiometric Frequency of Measurement",
-          content: radiometricFrequency || "unavailable",
-        },
-        {
-          title: "Temporal Resolution",
-          content: temporalResolution || "unavailable",
-        },
-        {
-          title: "Spatial Resolution",
-          content: spatialResolution || "unavailable",
-        },
-        { title: "Instrument ID", content: id || "unavailable" },
-      ]}
-    />
+    <SectionBlock headline="About the Instrument" id="instrument-details">
+      <Table
+        tableData={[
+          {
+            title: "Radiometric Frequency of Measurement",
+            content: radiometricFrequency || "unavailable",
+          },
+          {
+            title: "Temporal Resolution",
+            content: temporalResolution || "unavailable",
+          },
+          {
+            title: "Spatial Resolution",
+            content: spatialResolution || "unavailable",
+          },
+          { title: "Instrument ID", content: id || "unavailable" },
+        ]}
+      />
+    </SectionBlock>
   )
 }
 
 About.propTypes = {
-  id: PropTypes.string.isRequired,
-  radiometricFrequency: PropTypes.string.isRequired,
-  temporalResolution: PropTypes.string.isRequired,
-  spatialResolution: PropTypes.string.isRequired,
+  id: PropTypes.string,
+  radiometricFrequency: PropTypes.string,
+  temporalResolution: PropTypes.string,
+  spatialResolution: PropTypes.string,
 }
 
 export function Background({ instrumentManufacturer, fundingSource }) {
@@ -59,12 +61,12 @@ export function Background({ instrumentManufacturer, fundingSource }) {
 }
 
 Background.propTypes = {
-  id: PropTypes.string.isRequired,
-  radiometricFrequency: PropTypes.string.isRequired,
-  temporalResolution: PropTypes.string.isRequired,
-  spatialResolution: PropTypes.string.isRequired,
-  instrumentManufacturer: PropTypes.string.isRequired,
-  fundingSource: PropTypes.string.isRequired,
+  id: PropTypes.string,
+  radiometricFrequency: PropTypes.string,
+  temporalResolution: PropTypes.string,
+  spatialResolution: PropTypes.string,
+  instrumentManufacturer: PropTypes.string,
+  fundingSource: PropTypes.string,
 }
 
 export const instrumentDetailFields = graphql`

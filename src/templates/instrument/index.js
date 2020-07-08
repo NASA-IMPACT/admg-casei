@@ -75,28 +75,28 @@ InstrumentTemplate.propTypes = {
       longname: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
       id: PropTypes.string.isRequired,
-      radiometricFrequency: PropTypes.string.isRequired,
-      temporalResolution: PropTypes.string.isRequired,
-      spatialResolution: PropTypes.string.isRequired,
-      instrumentManufacturer: PropTypes.string.isRequired,
-      fundingSource: PropTypes.string.isRequired,
-      onlineInformation: PropTypes.string.isRequired,
+      radiometricFrequency: PropTypes.string,
+      temporalResolution: PropTypes.string,
+      spatialResolution: PropTypes.string,
+      instrumentManufacturer: PropTypes.string,
+      fundingSource: PropTypes.string,
+      onlineInformation: PropTypes.string,
     }).isRequired,
     campaigns: PropTypes.shape({
       edges: PropTypes.arrayOf(
         PropTypes.shape({
-          shortname: PropTypes.string.isRequired,
+          shortname: PropTypes.string,
         })
-      ).isRequired,
-    }).isRequired,
+      ),
+    }),
     platforms: PropTypes.shape({
       nodes: PropTypes.arrayOf(
         PropTypes.shape({
-          shortname: PropTypes.string.isRequired,
-          id: PropTypes.string.isRequired,
+          shortname: PropTypes.string,
+          id: PropTypes.string,
         })
-      ).isRequired,
-    }).isRequired,
+      ),
+    }),
   }).isRequired,
 }
 
