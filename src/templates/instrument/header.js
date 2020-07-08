@@ -1,23 +1,34 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
+import Hero from "../../components/hero"
+import Image from "../../components/image"
 
-export default function Header({ shortname, longname }) {
-  return <div>header</div>
+export default function Header({ shortname, longname, description }) {
+  return (
+    <Hero
+      tagTitle="Instrument"
+      title={shortname}
+      subTitle={longname}
+      description={description}
+    >
+      <Image
+        filename="platform.png" // TODO: replace with instrument image
+        alt="an aircraft transporting a spacecraft"
+      />
+    </Hero>
+  )
 }
 export const instrumentHeaderFields = graphql`
   fragment instrumentHeaderFields on instrument {
     shortname: short_name
     longname: long_name
+    description
   }
 `
 
 Header.propTypes = {
-  bounds: PropTypes.string.isRequired,
   shortname: PropTypes.string.isRequired,
   longname: PropTypes.string.isRequired,
-  focusListing: PropTypes.string.isRequired,
-  countDeployments: PropTypes.number.isRequired,
-  countCollectionPeriods: PropTypes.number.isRequired,
-  countDataProducts: PropTypes.number,
+  description: PropTypes.string.isRequired,
 }

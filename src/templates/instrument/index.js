@@ -3,16 +3,16 @@ import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
 import Layout from "../../components/layout"
-import InpageNav from "./inpage-nav"
 import Header from "./header"
-import SectionBlock from "../../components/section/section-block"
 
 const InstrumentTemplate = ({ data: { instrument } }) => {
-  console.log("data", data, instrument)
   return (
     <Layout>
-      <InpageNav />
-      <Header shortname={instrument.shortname} longname={instrument.longname} />
+      <Header
+        shortname={instrument.shortname}
+        longname={instrument.longname}
+        description={instrument.description}
+      />
     </Layout>
   )
 }
@@ -24,5 +24,14 @@ export const query = graphql`
     }
   }
 `
+InstrumentTemplate.propTypes = {
+  data: PropTypes.shape({
+    instrument: PropTypes.shape({
+      shortname: PropTypes.string.isRequired,
+      longname: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
+    }).isRequired,
+  }).isRequired,
+}
 
 export default InstrumentTemplate
