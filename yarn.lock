@@ -1102,7 +1102,7 @@
     debug "^3.1.0"
     lodash.once "^4.1.1"
 
-"@devseed-ui/base@2.2.0", "@devseed-ui/base@^2.1.2":
+"@devseed-ui/base@2.2.0", "@devseed-ui/base@^2.1.2", "@devseed-ui/base@^2.2.0":
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/@devseed-ui/base/-/base-2.2.0.tgz#191e9a5cb6f068716a5b00ee175514e2ebd15e78"
   integrity sha512-n/PluIDo8oyAfP5Tyl/R14vE9a3AAR+v1f8Oo+sdIIST3zkqORuq0/8qO+Y9UAxXOT0yzJgZb3RG5XrM+gNJ/A==
@@ -1119,6 +1119,14 @@
     "@devseed-ui/theme" "^2.2.0"
     polished "^3.4.2"
     styled-components "^4.4.1"
+
+"@devseed-ui/heading@^2.3.0":
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/@devseed-ui/heading/-/heading-2.3.0.tgz#619062535e69d89ceb7d129da05d64b0fc67e67b"
+  integrity sha512-khm8y28twubxrifTuQtFurHbJ61MkgMQdqBj4ERxb3ANYkTudbqfXgu2B7UM8mXPzWnO/mtcC1CcOGqV+4I68Q==
+  dependencies:
+    "@devseed-ui/base" "^2.2.0"
+    "@devseed-ui/helpers" "^2.3.0"
 
 "@devseed-ui/helpers@^2.2.1", "@devseed-ui/helpers@^2.3.0":
   version "2.3.0"

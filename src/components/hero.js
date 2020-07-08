@@ -8,12 +8,13 @@ export default function Hero({
   description,
   stats,
   children,
+  textToImageRatio = [3, 5],
 }) {
   return (
     <div
       style={{
         display: `grid`,
-        gridTemplateColumns: `3fr 5fr`,
+        gridTemplateColumns: `${textToImageRatio[0]}fr ${textToImageRatio[1]}fr`,
         columnGap: `2rem`,
       }}
     >
@@ -55,4 +56,5 @@ Hero.propTypes = {
     PropTypes.shape({ number: PropTypes.number, label: PropTypes.string })
   ),
   children: PropTypes.node,
+  textToImageRatio: PropTypes.arrayOf(PropTypes.number),
 }

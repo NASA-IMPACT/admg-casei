@@ -8,7 +8,9 @@
     "Alice Rühl <alice@developmentseed.org>"
   ],
   "dependencies": {
+    "@devseed-ui/base": "^2.2.0",
     "@devseed-ui/button": "2.3.2",
+    "@devseed-ui/heading": "^2.3.0",
     "@devseed-ui/helpers": "^2.3.0",
     "@mapbox/geo-viewport": "^0.4.0",
     "@turf/turf": "^5.1.6",
