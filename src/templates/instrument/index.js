@@ -5,6 +5,7 @@ import { graphql } from "gatsby"
 import Layout from "../../components/layout"
 import Header from "./header"
 import Entities from "./entities"
+import Resources from "./resources"
 import { About, Background } from "./detail"
 
 const InstrumentTemplate = ({ data: { instrument, platforms, campaigns } }) => {
@@ -30,6 +31,7 @@ const InstrumentTemplate = ({ data: { instrument, platforms, campaigns } }) => {
             spatialResolution={instrument.spatialResolution}
           />
           <Entities platforms={platforms.nodes} campaigns={campaigns.edges} />
+          <Resources onlineInformation={instrument.onlineInformation} />
         </div>
         <Background
           instrumentManufacturer={instrument.instrumentManufacturer}
@@ -46,6 +48,7 @@ export const query = graphql`
       ...instrumentHeaderFields
       ...instrumentDetailFields
       ...instrumentEntitiesFields
+      ...instrumentResourcesFields
     }
     platforms: allPlatform(filter: { instruments: { eq: $slug } }) {
       ...instrumentPlatformFields
@@ -77,6 +80,7 @@ InstrumentTemplate.propTypes = {
       spatialResolution: PropTypes.string.isRequired,
       instrumentManufacturer: PropTypes.string.isRequired,
       fundingSource: PropTypes.string.isRequired,
+      onlineInformation: PropTypes.string.isRequired,
     }).isRequired,
     campaigns: PropTypes.shape({
       edges: PropTypes.arrayOf(
