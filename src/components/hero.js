@@ -11,7 +11,7 @@ export default function Hero({
   textToImageRatio = [3, 5],
 }) {
   return (
-    <div
+    <header
       style={{
         display: `grid`,
         gridTemplateColumns: `${textToImageRatio[0]}fr ${textToImageRatio[1]}fr`,
@@ -19,7 +19,7 @@ export default function Hero({
       }}
     >
       <div style={{ alignSelf: `end` }}>
-        <div style={{ textTransform: `uppercase` }}>{tagTitle}</div>
+        <p style={{ textTransform: `uppercase` }}>{tagTitle}</p>
         <h1 style={{ marginBottom: `0` }}>{title}</h1>
         {subTitle && <p style={{ fontSize: `x-large` }}>{subTitle}</p>}
       </div>
@@ -43,7 +43,7 @@ export default function Hero({
           ))}
         </dl>
       )}
-    </div>
+    </header>
   )
 }
 
