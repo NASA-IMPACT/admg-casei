@@ -1,0 +1,226 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card renders card with tag 1`] = `
+<div
+  data-cy="explore-card"
+  style={
+    Object {
+      "backgroundColor": "#303641",
+      "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
+      "display": "flex",
+      "flexDirection": "column",
+      "height": "100%",
+      "justifyContent": "space-between",
+      "padding": "1rem",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "marginBottom": "2rem",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "justifyContent": "space-between",
+          "margin": "0.5rem 0 2rem 0",
+        }
+      }
+    >
+      <div
+        className="placeholder"
+        style={
+          Object {
+            "backgroundColor": "#9E9E9E",
+            "borderRadius": "2.5rem",
+            "height": "2.5rem",
+            "width": "2.5rem",
+          }
+        }
+      />
+      <div
+        data-cy="stationary-tag"
+        style={
+          Object {
+            "border": "1px solid",
+            "padding": "0.25rem",
+            "textTransform": "uppercase",
+          }
+        }
+      >
+        Stationary
+      </div>
+    </div>
+    <div>
+      <big
+        data-cy="shortname"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginTop": "0.5rem",
+          }
+        }
+      >
+        GCPEx
+      </big>
+      <p
+        data-cy="longname"
+      >
+        GPM Cold Season Precipitation Experiment
+      </p>
+      <p
+        data-cy="description"
+      >
+        description....
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Card renders plain card 1`] = `
+<div
+  data-cy="explore-card"
+  style={
+    Object {
+      "backgroundColor": "#303641",
+      "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
+      "display": "flex",
+      "flexDirection": "column",
+      "height": "100%",
+      "justifyContent": "space-between",
+      "padding": "1rem",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "marginBottom": "2rem",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "justifyContent": "space-between",
+          "margin": "0.5rem 0 2rem 0",
+        }
+      }
+    >
+      <div
+        className="placeholder"
+        style={
+          Object {
+            "backgroundColor": "#9E9E9E",
+            "borderRadius": "2.5rem",
+            "height": "2.5rem",
+            "width": "2.5rem",
+          }
+        }
+      />
+    </div>
+    <div>
+      <big
+        data-cy="shortname"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginTop": "0.5rem",
+          }
+        }
+      >
+        GCPEx
+      </big>
+      <p
+        data-cy="longname"
+      >
+        GPM Cold Season Precipitation Experiment
+      </p>
+      <p
+        data-cy="description"
+      >
+        description....
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Card renders with footer list 1`] = `
+<div
+  data-cy="explore-card"
+  style={
+    Object {
+      "backgroundColor": "#303641",
+      "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
+      "display": "flex",
+      "flexDirection": "column",
+      "height": "100%",
+      "justifyContent": "space-between",
+      "padding": "1rem",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "marginBottom": "2rem",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "justifyContent": "space-between",
+          "margin": "0.5rem 0 2rem 0",
+        }
+      }
+    >
+      <div
+        className="placeholder"
+        style={
+          Object {
+            "backgroundColor": "#9E9E9E",
+            "borderRadius": "2.5rem",
+            "height": "2.5rem",
+            "width": "2.5rem",
+          }
+        }
+      />
+    </div>
+    <div>
+      <big
+        data-cy="shortname"
+        style={
+          Object {
+            "fontWeight": "bold",
+            "marginTop": "0.5rem",
+          }
+        }
+      >
+        GCPEx
+      </big>
+      <p
+        data-cy="longname"
+      >
+        GPM Cold Season Precipitation Experiment
+      </p>
+      <p
+        data-cy="description"
+      >
+        description....
+      </p>
+    </div>
+  </div>
+</div>
+`;
