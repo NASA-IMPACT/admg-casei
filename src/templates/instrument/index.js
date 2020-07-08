@@ -7,7 +7,7 @@ import Header from "./header"
 import Entities from "./entities"
 import { About, Background } from "./detail"
 
-const InstrumentTemplate = ({ data: { instrument, platformNames } }) => {
+const InstrumentTemplate = ({ data: { instrument, platforms, campaigns } }) => {
   return (
     <Layout>
       <Header
@@ -29,10 +29,7 @@ const InstrumentTemplate = ({ data: { instrument, platformNames } }) => {
             temporalResolution={instrument.temporalResolution}
             spatialResolution={instrument.spatialResolution}
           />
-          <Entities
-            platforms={platformNames.nodes}
-            // campaigns={campaignNames.nodes}
-          />
+          <Entities platforms={platforms.nodes} campaigns={campaigns.edges} />
         </div>
         <Background
           instrumentManufacturer={instrument.instrumentManufacturer}
@@ -50,8 +47,21 @@ export const query = graphql`
       ...instrumentDetailFields
       ...instrumentEntitiesFields
     }
-    platformNames: allPlatform(filter: { instruments: { eq: $slug } }) {
+    platforms: allPlatform(filter: { instruments: { eq: $slug } }) {
       ...instrumentPlatformFields
+    }
+    campaigns: allCampaign(
+      filter: {
+        platforms: {
+          elemMatch: { id: { eq: "d59b3d7e-f782-4e25-a8eb-ceec91c0331e" } }
+        }
+      }
+    ) {
+      edges {
+        node {
+          shortname: short_name
+        }
+      }
     }
   }
 `
@@ -67,16 +77,19 @@ InstrumentTemplate.propTypes = {
       spatialResolution: PropTypes.string.isRequired,
       instrumentManufacturer: PropTypes.string.isRequired,
       fundingSource: PropTypes.string.isRequired,
-      campaigns: PropTypes.arrayOf(
+    }).isRequired,
+    campaigns: PropTypes.shape({
+      edges: PropTypes.arrayOf(
         PropTypes.shape({
           shortname: PropTypes.string.isRequired,
-          longname: PropTypes.string.isRequired,
         })
       ).isRequired,
-      platforms: PropTypes.arrayOf(
+    }).isRequired,
+    platforms: PropTypes.shape({
+      nodes: PropTypes.arrayOf(
         PropTypes.shape({
           shortname: PropTypes.string.isRequired,
-          longname: PropTypes.string.isRequired,
+          id: PropTypes.string.isRequired,
         })
       ).isRequired,
     }).isRequired,
