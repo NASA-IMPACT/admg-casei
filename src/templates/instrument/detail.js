@@ -16,14 +16,17 @@ export function About({
       tableData={[
         {
           title: "Radiometric Frequency of Measurement",
-          content: radiometricFrequency,
+          content: radiometricFrequency || "unavailable",
         },
         {
           title: "Temporal Resolution",
-          content: temporalResolution,
+          content: temporalResolution || "unavailable",
         },
-        { title: "Spatial Resolution", content: spatialResolution },
-        { title: "Instrument ID", content: id },
+        {
+          title: "Spatial Resolution",
+          content: spatialResolution || "unavailable",
+        },
+        { title: "Instrument ID", content: id || "unavailable" },
       ]}
     />
   )
@@ -43,13 +46,13 @@ export function Background({ instrumentManufacturer, fundingSource }) {
         <Label id={"instrument-manufacturer"} showBorder>
           Maker of Instrument
         </Label>
-        {instrumentManufacturer}
+        {instrumentManufacturer || "N/A"}
       </div>
       <div style={{ padding: `1rem 0` }}>
         <Label id={"funding-source"} showBorder>
           Funding Program Lead
         </Label>
-        {fundingSource}
+        {fundingSource || "N/A"}
       </div>
     </div>
   )
