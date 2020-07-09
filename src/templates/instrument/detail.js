@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
-import Table from "../../components/table"
+import DefinitionTable from "../../components/tables/definitionTable"
 import Label from "../../components/label"
 import { SectionBlock } from "../../components/section"
 
@@ -13,7 +13,7 @@ export function About({
 }) {
   return (
     <SectionBlock headline="About the Instrument" id="instrument-details">
-      <Table
+      <DefinitionTable
         tableData={[
           {
             title: "Radiometric Frequency of Measurement",

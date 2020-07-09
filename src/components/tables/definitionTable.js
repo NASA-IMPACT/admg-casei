@@ -4,9 +4,9 @@ import PropTypes from "prop-types"
 import { headingAlt } from "@devseed-ui/heading"
 import { glsp } from "@devseed-ui/base"
 
-import theme from "../utils/theme"
+import theme from "../../utils/theme"
 
-const SimpleTable = styled.dl`
+const Table = styled.dl`
   display: grid;
   grid-gap: ${glsp(1 / 2)};
   grid-template-columns: min-content 1fr;
@@ -27,23 +27,23 @@ const SimpleTable = styled.dl`
   }
 `
 
-export default function FieldInfo({ heading, tableData }) {
+export default function DefinitionTable({ heading, tableData }) {
   return (
     <section style={{ padding: `1rem` }}>
-      <h1>{heading}</h1>
-      <SimpleTable>
+      {heading && <h1>{heading}</h1>}
+      <Table>
         {tableData.map(row => (
           <React.Fragment key={row.title}>
             <dt>{row.title}</dt>
             <dd>{row.content}</dd>
           </React.Fragment>
         ))}
-      </SimpleTable>
+      </Table>
     </section>
   )
 }
 
-FieldInfo.propTypes = {
+DefinitionTable.propTypes = {
   heading: PropTypes.string,
   tableData: PropTypes.arrayOf(
     PropTypes.shape({

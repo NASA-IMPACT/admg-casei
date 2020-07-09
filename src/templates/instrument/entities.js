@@ -2,22 +2,22 @@ import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
-import Table from "../../components/table"
+import SimpleTable from "../../components/tables/simpleTable"
 import { SectionBlock } from "../../components/section"
 
 export default function Entities({ platforms }) {
+  console.log("pl", platforms)
   return (
     <SectionBlock
       headline="Related Airborne Entities"
       id="instrument-airborne-entities"
     >
-      <Table
-        tableData={platforms.map(platform => {
-          return {
-            title: platform.shortname,
-            content: platform.campaigns.map(x => x.shortname).join(", "),
-          }
-        })}
+      <SimpleTable
+        tableHeaders={["Platform", "Campaigns"]}
+        tableRows={platforms.map(platform => [
+          platform.shortname,
+          platform.campaigns.map(x => x.shortname).join(", "),
+        ])}
       />
     </SectionBlock>
   )
