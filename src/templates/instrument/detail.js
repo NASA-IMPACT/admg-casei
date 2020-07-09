@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
-import DefinitionTable from "../../components/tables/definitionTable"
+import DefinitionList from "../../components/tables/definitionList"
 import Label from "../../components/label"
 import { SectionBlock } from "../../components/section"
 
@@ -12,9 +12,10 @@ export function About({
   spatialResolution,
 }) {
   return (
-    <SectionBlock headline="About the Instrument" id="instrument-details">
-      <DefinitionTable
-        tableData={[
+    <SectionBlock headline="About the Instrument" id="about-instrument">
+      <DefinitionList
+        id="instrument"
+        list={[
           {
             title: "Radiometric Frequency of Measurement",
             content: radiometricFrequency || "unavailable",
@@ -43,7 +44,7 @@ About.propTypes = {
 
 export function Background({ instrumentManufacturer, fundingSource }) {
   return (
-    <div style={{ marginTop: `2rem` }}>
+    <div style={{ marginTop: `2rem` }} data-cy="instrument-background">
       <div style={{ padding: `1rem 0` }}>
         <Label id={"instrument-manufacturer"} showBorder>
           Maker of Instrument

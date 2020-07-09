@@ -26,29 +26,32 @@ const Table = styled.table`
   }
 `
 
-export default function SimpleTable({ heading, tableHeaders, tableRows }) {
+export default function SimpleTable({ id, heading, tableHeaders, tableRows }) {
   return (
     <section style={{ padding: `1rem` }}>
       {heading && <h1>{heading}</h1>}
-      <Table>
-        <tr style={{ borderBottom: `2px solid ${theme.color.gray}` }}>
-          {tableHeaders.map((header, i) => (
-            <th key={i}>{header}</th>
-          ))}
-        </tr>
-        {tableRows.map((row, i) => (
-          <tr key={i}>
-            {row.map((col, i) => (
-              <td key={i}>{col}</td>
+      <Table data-cy={`${id}-table`}>
+        <tbody>
+          <tr style={{ borderBottom: `2px solid ${theme.color.gray}` }}>
+            {tableHeaders.map((header, i) => (
+              <th key={i}>{header}</th>
             ))}
           </tr>
-        ))}
+          {tableRows.map((row, i) => (
+            <tr key={i}>
+              {row.map((col, i) => (
+                <td key={i}>{col}</td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
       </Table>
     </section>
   )
 }
 
 SimpleTable.propTypes = {
+  id: PropTypes.string,
   heading: PropTypes.string,
   tableHeaders: PropTypes.arrayOf(PropTypes.string),
   tableRows: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string)),

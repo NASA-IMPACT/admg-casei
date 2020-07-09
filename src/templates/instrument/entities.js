@@ -6,13 +6,13 @@ import SimpleTable from "../../components/tables/simpleTable"
 import { SectionBlock } from "../../components/section"
 
 export default function Entities({ platforms }) {
-  console.log("pl", platforms)
   return (
     <SectionBlock
       headline="Related Airborne Entities"
       id="instrument-airborne-entities"
     >
       <SimpleTable
+        id="instrument-airborne-entities"
         tableHeaders={["Platform", "Campaigns"]}
         tableRows={platforms.map(platform => [
           platform.shortname,

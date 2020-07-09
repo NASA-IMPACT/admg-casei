@@ -6,7 +6,7 @@ import { glsp } from "@devseed-ui/base"
 
 import theme from "../../utils/theme"
 
-const Table = styled.dl`
+const List = styled.dl`
   display: grid;
   grid-gap: ${glsp(1 / 2)};
   grid-template-columns: min-content 1fr;
@@ -27,25 +27,26 @@ const Table = styled.dl`
   }
 `
 
-export default function DefinitionTable({ heading, tableData }) {
+export default function DefinitionList({ id, heading, list }) {
   return (
-    <section style={{ padding: `1rem` }}>
+    <section style={{ padding: `1rem` }} data-cy={`${id}-definition-list`}>
       {heading && <h1>{heading}</h1>}
-      <Table>
-        {tableData.map(row => (
+      <List>
+        {list.map(row => (
           <React.Fragment key={row.title}>
             <dt>{row.title}</dt>
             <dd>{row.content}</dd>
           </React.Fragment>
         ))}
-      </Table>
+      </List>
     </section>
   )
 }
 
-DefinitionTable.propTypes = {
+DefinitionList.propTypes = {
+  id: PropTypes.string,
   heading: PropTypes.string,
-  tableData: PropTypes.arrayOf(
+  list: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string,
       content: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
