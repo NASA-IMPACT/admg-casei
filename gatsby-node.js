@@ -19,7 +19,7 @@ exports.createSchemaCustomization = ({ actions }) => {
     type instrument implements Node {
       platforms: [platform] @link
     }
-    type platforms implements Node {
+    type platform implements Node {
       campaigns: [campaign] @link
     }
   `

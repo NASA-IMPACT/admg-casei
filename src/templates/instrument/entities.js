@@ -15,7 +15,7 @@ export default function Entities({ platforms }) {
         tableData={platforms.map(platform => {
           return {
             title: platform.shortname,
-            content: platform.campaigns.map(x => x).join(", "), // TODO: add type def that will link campaigns to each platform
+            content: platform.campaigns.map(x => x.shortname).join(", "),
           }
         })}
       />
@@ -26,7 +26,9 @@ export default function Entities({ platforms }) {
 export const instrumentEntitiesFields = graphql`
   fragment instrumentEntitiesFields on instrument {
     platforms {
-      campaigns
+      campaigns {
+        shortname: short_name
+      }
       shortname: short_name
     }
   }
@@ -36,7 +38,9 @@ Entities.propTypes = {
   platforms: PropTypes.arrayOf(
     PropTypes.shape({
       shortname: PropTypes.string.isRequired,
-      campaigns: PropTypes.arrayOf(PropTypes.string),
+      campaigns: PropTypes.arrayOf(
+        PropTypes.shape({ shortname: PropTypes.string })
+      ),
     })
   ),
 }

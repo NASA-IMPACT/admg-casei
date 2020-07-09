@@ -68,7 +68,9 @@ InstrumentTemplate.propTypes = {
       platforms: PropTypes.arrayOf(
         PropTypes.shape({
           shortname: PropTypes.string,
-          campaigns: PropTypes.arrayOf(PropTypes.string),
+          campaigns: PropTypes.arrayOf(
+            PropTypes.shape({ shortname: PropTypes.string })
+          ),
         })
       ),
     }).isRequired,
