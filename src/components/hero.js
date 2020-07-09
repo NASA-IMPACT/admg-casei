@@ -9,6 +9,7 @@ export default function Hero({
   stats,
   children,
   textToImageRatio = [3, 5],
+  id,
 }) {
   return (
     <header
@@ -17,6 +18,7 @@ export default function Hero({
         gridTemplateColumns: `${textToImageRatio[0]}fr ${textToImageRatio[1]}fr`,
         columnGap: `2rem`,
       }}
+      data-cy={`${id}-hero`}
     >
       <div style={{ alignSelf: `end` }}>
         <p style={{ textTransform: `uppercase` }}>{tagTitle}</p>
@@ -57,4 +59,5 @@ Hero.propTypes = {
   ),
   children: PropTypes.node,
   textToImageRatio: PropTypes.arrayOf(PropTypes.number),
+  id: PropTypes.string,
 }

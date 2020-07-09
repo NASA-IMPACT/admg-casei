@@ -7,17 +7,19 @@ describe("Instrument", () => {
   })
 
   describe("the header", () => {
-    it("displays the short name", () => {
-      cy.get("main").find("header").find("p").should("exist")
+    it("displays the category label", () => {
+      cy.get("main").find("header").find("p").contains("instruments")
     })
 
-    it("displays the long name as title", () => {
-      cy.get("main").find("h1").should("exist")
-      cy.get("h1").should("have.length", 3)
+    it("displays the short name as title", () => {
+      cy.get("main").find("h1").contains("2D-C/P")
     })
 
     it("displays the long name as subtitle", () => {
-      cy.get("main").find("header").find("p").should("exist")
+      cy.get("main")
+        .find("header")
+        .find("p")
+        .contains("2D-C/P Hydrometeor Imaging Probe")
     })
     it("displays the description", () => {
       cy.get("main").find("header").find("p").should("exist")

@@ -22,6 +22,7 @@ const IndexPage = ({ data }) => {
         tagTitle="Nasa"
         title={data.site.siteMetadata.title}
         description={data.site.siteMetadata.description}
+        id="home"
       >
         <Image
           filename="globe.png"

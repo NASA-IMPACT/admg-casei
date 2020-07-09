@@ -7,6 +7,7 @@ const testTitle = "2D-C/P"
 const testSubTitle = "2D-C/P Hydrometeor Imaging Probe"
 const testDescription = "The 2DC probe records images of hydrometeors..."
 const testTextToImageRatio = [5, 3]
+const testId = "test"
 
 describe("Header", () => {
   it("renders correctly", () => {
@@ -17,6 +18,7 @@ describe("Header", () => {
           title={testTitle}
           subTitle={testSubTitle}
           description={testDescription}
+          id={testId}
         >
           <div>children</div>
         </Hero>

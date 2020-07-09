@@ -12,6 +12,7 @@ export default function Header({ shortname, longname, description }) {
       subTitle={longname}
       description={description}
       textToImageRatio={[5, 3]}
+      id="instrument"
     >
       <Image
         filename="platform.png" // TODO: replace with instrument image

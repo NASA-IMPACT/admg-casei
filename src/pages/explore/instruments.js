@@ -93,10 +93,7 @@ export default function Instruments({ data, location }) {
         >
           {list.map(instrument => {
             return (
-              <Link
-                to={`/instrument/${instrument.id}`}
-                key={instrument.shortname}
-              >
+              <Link to={`/instrument/${instrument.id}`} key={instrument.id}>
                 <InstrumentCard
                   shortname={instrument.shortname}
                   longname={instrument.longname}

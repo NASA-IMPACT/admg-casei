@@ -2,6 +2,7 @@
 
 exports[`Header renders correctly 1`] = `
 <header
+  data-cy="test-hero"
   style={
     Object {
       "columnGap": "2rem",
@@ -17,7 +18,7 @@ exports[`Header renders correctly 1`] = `
       }
     }
   >
-    <div
+    <p
       style={
         Object {
           "textTransform": "uppercase",
@@ -25,7 +26,7 @@ exports[`Header renders correctly 1`] = `
       }
     >
       Instrument
-    </div>
+    </p>
     <h1
       style={
         Object {
@@ -72,6 +73,7 @@ exports[`Header renders correctly 1`] = `
 
 exports[`Header renders with adjust ratios 1`] = `
 <header
+  data-cy="undefined-hero"
   style={
     Object {
       "columnGap": "2rem",
@@ -87,7 +89,7 @@ exports[`Header renders with adjust ratios 1`] = `
       }
     }
   >
-    <div
+    <p
       style={
         Object {
           "textTransform": "uppercase",
@@ -95,7 +97,7 @@ exports[`Header renders with adjust ratios 1`] = `
       }
     >
       Instrument
-    </div>
+    </p>
     <h1
       style={
         Object {

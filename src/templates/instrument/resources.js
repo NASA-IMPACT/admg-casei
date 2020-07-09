@@ -13,7 +13,6 @@ export default function Resources({ onlineInformation }) {
       <ol>
         {links.map(link => (
           <li key={link}>
-            <ExternalLink />
             {isUrl(link) ? (
               <ExternalLink label={link} url={link} id="instrument-resource" />
             ) : (
