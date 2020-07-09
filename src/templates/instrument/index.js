@@ -8,7 +8,7 @@ import Entities from "./entities"
 import Resources from "./resources"
 import { About, Background } from "./detail"
 
-const InstrumentTemplate = ({ data: { instrument, platforms, campaigns } }) => {
+const InstrumentTemplate = ({ data: { instrument } }) => {
   return (
     <Layout>
       <Header
@@ -30,7 +30,7 @@ const InstrumentTemplate = ({ data: { instrument, platforms, campaigns } }) => {
             temporalResolution={instrument.temporalResolution}
             spatialResolution={instrument.spatialResolution}
           />
-          <Entities platforms={platforms.nodes} campaigns={campaigns.edges} />
+          <Entities platforms={instrument.platforms} />
           <Resources onlineInformation={instrument.onlineInformation} />
         </div>
         <Background
@@ -50,22 +50,6 @@ export const query = graphql`
       ...instrumentEntitiesFields
       ...instrumentResourcesFields
     }
-    platforms: allPlatform(filter: { instruments: { eq: $slug } }) {
-      ...instrumentPlatformFields
-    }
-    campaigns: allCampaign(
-      filter: {
-        platforms: {
-          elemMatch: { id: { eq: "d59b3d7e-f782-4e25-a8eb-ceec91c0331e" } }
-        }
-      }
-    ) {
-      edges {
-        node {
-          shortname: short_name
-        }
-      }
-    }
   }
 `
 InstrumentTemplate.propTypes = {
@@ -81,22 +65,13 @@ InstrumentTemplate.propTypes = {
       instrumentManufacturer: PropTypes.string,
       fundingSource: PropTypes.string,
       onlineInformation: PropTypes.string,
+      platforms: PropTypes.arrayOf(
+        PropTypes.shape({
+          shortname: PropTypes.string,
+          campaigns: PropTypes.arrayOf(PropTypes.string),
+        })
+      ),
     }).isRequired,
-    campaigns: PropTypes.shape({
-      edges: PropTypes.arrayOf(
-        PropTypes.shape({
-          shortname: PropTypes.string,
-        })
-      ),
-    }),
-    platforms: PropTypes.shape({
-      nodes: PropTypes.arrayOf(
-        PropTypes.shape({
-          shortname: PropTypes.string,
-          id: PropTypes.string,
-        })
-      ),
-    }),
   }).isRequired,
 }
 

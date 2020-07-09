@@ -5,7 +5,7 @@ import { graphql } from "gatsby"
 import Table from "../../components/table"
 import { SectionBlock } from "../../components/section"
 
-export default function Entities({ platforms, campaigns }) {
+export default function Entities({ platforms }) {
   return (
     <SectionBlock
       headline="Related Airborne Entities"
@@ -15,7 +15,7 @@ export default function Entities({ platforms, campaigns }) {
         tableData={platforms.map(platform => {
           return {
             title: platform.shortname,
-            content: campaigns.map(x => x.node.shortname).join(", "),
+            content: platform.campaigns.map(x => x).join(", "), // TODO: add type def that will link campaigns to each platform
           }
         })}
       />
@@ -25,13 +25,9 @@ export default function Entities({ platforms, campaigns }) {
 
 export const instrumentEntitiesFields = graphql`
   fragment instrumentEntitiesFields on instrument {
-    platforms
-  }
-  fragment instrumentPlatformFields on platformConnection {
-    nodes {
-      id
+    platforms {
+      campaigns
       shortname: short_name
-      longname: long_name
     }
   }
 `
@@ -40,10 +36,7 @@ Entities.propTypes = {
   platforms: PropTypes.arrayOf(
     PropTypes.shape({
       shortname: PropTypes.string.isRequired,
-      longname: PropTypes.string.isRequired,
+      campaigns: PropTypes.arrayOf(PropTypes.string),
     })
-  ),
-  campaigns: PropTypes.arrayOf(
-    PropTypes.shape({ node: PropTypes.shape({ shortname: PropTypes.string }) })
   ),
 }
