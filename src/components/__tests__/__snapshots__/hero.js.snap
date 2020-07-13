@@ -1,0 +1,143 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders correctly 1`] = `
+<header
+  data-cy="test-hero"
+  style={
+    Object {
+      "columnGap": "2rem",
+      "display": "grid",
+      "gridTemplateColumns": "3fr 5fr",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "alignSelf": "end",
+      }
+    }
+  >
+    <p
+      style={
+        Object {
+          "textTransform": "uppercase",
+        }
+      }
+    >
+      Instrument
+    </p>
+    <h1
+      style={
+        Object {
+          "marginBottom": "0",
+        }
+      }
+    >
+      2D-C/P
+    </h1>
+    <p
+      style={
+        Object {
+          "fontSize": "x-large",
+        }
+      }
+    >
+      2D-C/P Hydrometeor Imaging Probe
+    </p>
+  </div>
+  <div
+    style={
+      Object {
+        "alignSelf": "start",
+      }
+    }
+  >
+    <p>
+      The 2DC probe records images of hydrometeors...
+    </p>
+  </div>
+  <div
+    style={
+      Object {
+        "gridArea": "1 / 2 / 3 / 3",
+      }
+    }
+  >
+    <div>
+      children
+    </div>
+  </div>
+</header>
+`;
+
+exports[`Header renders with adjust ratios 1`] = `
+<header
+  data-cy="undefined-hero"
+  style={
+    Object {
+      "columnGap": "2rem",
+      "display": "grid",
+      "gridTemplateColumns": "5fr 3fr",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "alignSelf": "end",
+      }
+    }
+  >
+    <p
+      style={
+        Object {
+          "textTransform": "uppercase",
+        }
+      }
+    >
+      Instrument
+    </p>
+    <h1
+      style={
+        Object {
+          "marginBottom": "0",
+        }
+      }
+    >
+      2D-C/P
+    </h1>
+    <p
+      style={
+        Object {
+          "fontSize": "x-large",
+        }
+      }
+    >
+      2D-C/P Hydrometeor Imaging Probe
+    </p>
+  </div>
+  <div
+    style={
+      Object {
+        "alignSelf": "start",
+      }
+    }
+  >
+    <p>
+      The 2DC probe records images of hydrometeors...
+    </p>
+  </div>
+  <div
+    style={
+      Object {
+        "gridArea": "1 / 2 / 3 / 3",
+      }
+    }
+  >
+    <div>
+      children
+    </div>
+  </div>
+</header>
+`;
