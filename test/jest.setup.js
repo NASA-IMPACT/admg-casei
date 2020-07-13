@@ -7,7 +7,7 @@ import "jest-styled-components"
 /* eslint-disable */
 jest.mock("nuka-carousel", () => ({
   __esModule: true,
-  ...require.requireActual("nuka-carousel"),
+  ...jest.requireActual("nuka-carousel"),
   default: ({ children }) => (
     <div data-test="mocked-nuka-carousel">{children}</div>
   ),
