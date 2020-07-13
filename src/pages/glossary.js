@@ -5,7 +5,6 @@ import DefinitionList from "../components/tables/definitionList"
 import glossary from "../utils/glossary.json"
 
 export default function Glossary() {
-  console.log("glossary", glossary)
   const { terms } = glossary
   return (
     <Layout>
@@ -14,7 +13,25 @@ export default function Glossary() {
         id="glossary"
         list={terms.map(x => ({
           title: x.term,
-          content: x.definition,
+          content: (
+            <div>
+              <p>{x.definition}</p>
+              {x.listOptions && (
+                <ul>
+                  {x.listOptions.map(listItem => (
+                    <li key={listItem} style={{ listStyleType: `circle` }}>
+                      {listItem}
+                    </li>
+                  ))}
+                </ul>
+              )}
+              {x.note && (
+                <p style={{ fontStyle: `italic`, marginTop: `1rem` }}>
+                  Note: {x.note}
+                </p>
+              )}
+            </div>
+          ),
         }))}
       />
     </Layout>
