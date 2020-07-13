@@ -70,7 +70,9 @@ const Footer = () => {
             <Link to="/resources">Resources</Link>
           </div>
           <ul style={style.ul}>
-            <li className="placeholder">Glossary</li>
+            <li>
+              <Link to="/glossary/">Glossary</Link>
+            </li>
             <li className="placeholder">Tools</li>
             <li className="placeholder">Funding Organizations</li>
           </ul>
