@@ -24,5 +24,13 @@ describe("About", () => {
           })
       })
     })
+    it("should display a list in defintion", () => {
+      cy.get("[data-cy=glossary-definition-options").should($li => {
+        expect($li, "list item").to.have.length.of.at.least(1)
+      })
+    })
+    it("should display a note", () => {
+      cy.get("[data-cy=glossary-definition-note").should("exist")
+    })
   })
 })

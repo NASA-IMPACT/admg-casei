@@ -1888,10 +1888,12 @@ exports[`Campaigns page renders correctly 1`] = `
             }
           }
         >
-          <li
-            className="placeholder"
-          >
-            Glossary
+          <li>
+            <a
+              href="/glossary/"
+            >
+              Glossary
+            </a>
           </li>
           <li
             className="placeholder"

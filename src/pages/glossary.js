@@ -17,7 +17,7 @@ export default function Glossary() {
             <div>
               <p>{x.definition}</p>
               {x.listOptions && (
-                <ul>
+                <ul data-cy="glossary-definition-options">
                   {x.listOptions.map(listItem => (
                     <li key={listItem} style={{ listStyleType: `circle` }}>
                       {listItem}
@@ -26,7 +26,10 @@ export default function Glossary() {
                 </ul>
               )}
               {x.note && (
-                <p style={{ fontStyle: `italic`, marginTop: `1rem` }}>
+                <p
+                  data-cy="glossary-definition-note"
+                  style={{ fontStyle: `italic`, marginTop: `1rem` }}
+                >
                   Note: {x.note}
                 </p>
               )}
