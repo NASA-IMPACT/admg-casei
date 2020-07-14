@@ -49,9 +49,7 @@ const Footer = () => {
         </div>
 
         <div style={{ gridColumn: `5 / span 2` }}>
-          <div className="placeholder" style={style.headline}>
-            Explore
-          </div>
+          <p style={style.headline}>Explore</p>
           <ul style={style.ul}>
             <li>
               <Link to="/explore/campaigns">Campaigns</Link>
@@ -66,9 +64,7 @@ const Footer = () => {
         </div>
 
         <div style={{ gridColumn: `7 / span 2` }}>
-          <div style={style.headline}>
-            <Link to="/resources">Resources</Link>
-          </div>
+          <p style={style.headline}>Resources</p>
           <ul style={style.ul}>
             <li>
               <Link to="/glossary/">Glossary</Link>
@@ -79,9 +75,7 @@ const Footer = () => {
         </div>
 
         <div style={{ gridColumn: `9 / span 2` }}>
-          <div className="placeholder" style={style.headline}>
-            Quick Links
-          </div>
+          <p style={style.headline}>Quick Links</p>
           <ul style={style.ul}>
             <li>
               <Link to="/about/">About</Link>
@@ -93,9 +87,7 @@ const Footer = () => {
         </div>
 
         <div style={{ gridColumn: `11 / span 2` }}>
-          <div className="placeholder" style={style.headline}>
-            Organizations
-          </div>
+          <p style={style.headline}>Organizations</p>
           <ul style={style.ul}>
             <li className="placeholder">ADMG Website</li>
             <li className="placeholder">Impact Team Website</li>

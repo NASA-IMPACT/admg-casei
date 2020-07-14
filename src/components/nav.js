@@ -1,6 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
+import { Link, navigate } from "gatsby"
+
+import theme from "../utils/theme"
 
 const ListLink = props => (
   <li style={{ margin: `0 1rem 0 0` }}>
@@ -47,7 +49,23 @@ const Nav = () => {
         }}
       >
         <ListLink to="/explore/campaigns">Explore</ListLink>
-        <ListLink to="/resources">Resources</ListLink>
+        <select
+          aria-label="Select Resource"
+          name="nav"
+          id="nav-select"
+          onChange={e => navigate(`/${e.target.value}`)}
+          style={{
+            WebkitAppearance: `none`,
+            background: `transparent`,
+            border: `none`,
+            color: theme.type.base.color,
+            marginRight: `1rem`,
+          }}
+          data-cy="nav-select"
+        >
+          <option value="">Resources</option>
+          <option value="glossary">Glossary</option>
+        </select>
         <ListLink to="/about">About</ListLink>
         <ListLink to="/contact">Contact</ListLink>
       </ul>

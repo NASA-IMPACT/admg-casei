@@ -187,19 +187,33 @@ exports[`Campaigns page renders correctly 1`] = `
               Explore
             </a>
           </li>
-          <li
+          <select
+            aria-label="Select Resource"
+            data-cy="nav-select"
+            id="nav-select"
+            name="nav"
+            onChange={[Function]}
             style={
               Object {
-                "margin": "0 1rem 0 0",
+                "WebkitAppearance": "none",
+                "background": "transparent",
+                "border": "none",
+                "color": "hsla(0,0%,100%,0.9)",
+                "marginRight": "1rem",
               }
             }
           >
-            <a
-              href="/resources"
+            <option
+              value=""
             >
               Resources
-            </a>
-          </li>
+            </option>
+            <option
+              value="glossary"
+            >
+              Glossary
+            </option>
+          </select>
           <li
             style={
               Object {
@@ -1815,8 +1829,7 @@ exports[`Campaigns page renders correctly 1`] = `
           }
         }
       >
-        <div
-          className="placeholder"
+        <p
           style={
             Object {
               "fontWeight": "bold",
@@ -1826,7 +1839,7 @@ exports[`Campaigns page renders correctly 1`] = `
           }
         >
           Explore
-        </div>
+        </p>
         <ul
           style={
             Object {
@@ -1865,7 +1878,7 @@ exports[`Campaigns page renders correctly 1`] = `
           }
         }
       >
-        <div
+        <p
           style={
             Object {
               "fontWeight": "bold",
@@ -1874,12 +1887,8 @@ exports[`Campaigns page renders correctly 1`] = `
             }
           }
         >
-          <a
-            href="/resources"
-          >
-            Resources
-          </a>
-        </div>
+          Resources
+        </p>
         <ul
           style={
             Object {
@@ -1914,8 +1923,7 @@ exports[`Campaigns page renders correctly 1`] = `
           }
         }
       >
-        <div
-          className="placeholder"
+        <p
           style={
             Object {
               "fontWeight": "bold",
@@ -1925,7 +1933,7 @@ exports[`Campaigns page renders correctly 1`] = `
           }
         >
           Quick Links
-        </div>
+        </p>
         <ul
           style={
             Object {
@@ -1957,8 +1965,7 @@ exports[`Campaigns page renders correctly 1`] = `
           }
         }
       >
-        <div
-          className="placeholder"
+        <p
           style={
             Object {
               "fontWeight": "bold",
@@ -1968,7 +1975,7 @@ exports[`Campaigns page renders correctly 1`] = `
           }
         >
           Organizations
-        </div>
+        </p>
         <ul
           style={
             Object {
