@@ -6,7 +6,7 @@ import { isLoggedIn, handleLogin, logout } from "../utils/auth"
 
 const Login = () => {
   const [buttonText, setButtonText] = useState("Log in")
-  const [user, setUser] = useState({})
+  const [user, setUser] = useState({ username: "", password: "" })
   const [isModalOpen, setModal] = useState(false)
 
   const onSubmit = async e => {
