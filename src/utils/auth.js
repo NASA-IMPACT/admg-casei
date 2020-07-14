@@ -25,7 +25,7 @@ export const handleLogin = async (username, password) => {
     const json = await response.json()
     if (json.access_token) {
       console.log(`Credentials match! Setting the active user.`)
-      return sessionStorage.setItem("token", JSON.stringify(json.access_token))
+      sessionStorage.setItem("token", JSON.stringify(json.access_token))
     }
 
     return json

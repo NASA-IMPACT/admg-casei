@@ -2060,7 +2060,7 @@ exports[`Campaigns page renders correctly 1`] = `
               type="button"
             >
               <span>
-                Log In
+                Log in
               </span>
             </button>
           </li>

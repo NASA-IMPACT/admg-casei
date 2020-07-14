@@ -5,17 +5,20 @@ import { Modal } from "@devseed-ui/modal"
 import { isLoggedIn, handleLogin, logout } from "../utils/auth"
 
 const Login = () => {
-  const [buttonText, setButtonText] = useState("Log In")
+  const [buttonText, setButtonText] = useState("Log in")
   const [user, setUser] = useState({})
   const [isModalOpen, setModal] = useState(false)
 
-  const onSubmit = e => {
+  const onSubmit = async e => {
     e.preventDefault()
-    handleLogin(user.username, user.password)
-
-    // TODO: indicate error state in form
-    setModal(false)
-    setButtonText("Log out")
+    const response = await handleLogin(user.username, user.password)
+    if (response.access_token) {
+      setModal(false)
+      setButtonText("Log out")
+    } else {
+      // TODO: indicate error state in form
+      console.log(response.error_description || "Did not recieve a response")
+    }
   }
 
   const handleLogout = () => {
@@ -35,7 +38,7 @@ const Login = () => {
         onOverlayClick={() => setModal(false)}
         renderHeader={() => null}
         content={
-          <form onSubmit={onSubmit}>
+          <form onSubmit={onSubmit} data-cy="login-form">
             <h3>Log In</h3>
             <label htmlFor="username">Username</label>
             <input

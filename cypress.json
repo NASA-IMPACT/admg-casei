@@ -1,4 +1,8 @@
 {
   "baseUrl": "http://localhost:8000/",
-  "integrationFolder": "cypress/e2e"
+  "integrationFolder": "cypress/e2e",
+  "env": {
+    "username": "alice",
+    "password": ""
+  }
 }
