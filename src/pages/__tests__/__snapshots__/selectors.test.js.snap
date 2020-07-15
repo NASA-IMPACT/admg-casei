@@ -187,33 +187,40 @@ exports[`Campaigns page renders correctly 1`] = `
               Explore
             </a>
           </li>
-          <select
-            aria-label="Select Resource"
-            data-cy="nav-select"
-            id="nav-select"
-            name="nav"
-            onChange={[Function]}
+          <li
             style={
               Object {
-                "WebkitAppearance": "none",
-                "background": "transparent",
-                "border": "none",
-                "color": "hsla(0,0%,100%,0.9)",
-                "marginRight": "1rem",
+                "margin": "0 1rem 0 0",
               }
             }
           >
-            <option
-              value=""
+            <select
+              aria-label="Select Resource"
+              data-cy="nav-select"
+              id="nav-select"
+              name="nav"
+              onChange={[Function]}
+              style={
+                Object {
+                  "WebkitAppearance": "none",
+                  "background": "transparent",
+                  "border": "none",
+                  "color": "hsla(0,0%,100%,0.9)",
+                }
+              }
             >
-              Resources
-            </option>
-            <option
-              value="glossary"
-            >
-              Glossary
-            </option>
-          </select>
+              <option
+                value=""
+              >
+                Resources
+              </option>
+              <option
+                value="glossary"
+              >
+                Glossary
+              </option>
+            </select>
+          </li>
           <li
             style={
               Object {
