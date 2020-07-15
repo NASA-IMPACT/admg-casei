@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { Link } from "gatsby"
 
 import {
   AirborneInsitu,
@@ -11,7 +12,7 @@ import {
 } from "../icons"
 import theme from "../../utils/theme"
 
-const Instrument = ({ id, caption }) => {
+const Instrument = ({ id, shortname, caption }) => {
   // TODO: This mapping is more or less random
   // we don't have icons for the existing instrument types.
   const icons = {
@@ -27,22 +28,25 @@ const Instrument = ({ id, caption }) => {
     "Data Analyses": <FacilityInstruments color={theme.type.base.color} />,
   }
 
-  if (!icons[id]) return null
+  if (!icons[shortname]) return null
 
   return (
-    <div
+    <Link
       style={{ textAlign: `center` }}
       data-cy="instrument"
       className="placeholder"
+      to="/explore/instruments"
+      state={{ selectedFilterId: id }}
     >
-      {icons[id]}
+      {icons[shortname]}
       <div>{caption}</div>
-    </div>
+    </Link>
   )
 }
 
 Instrument.propTypes = {
   id: PropTypes.string.isRequired,
+  shortname: PropTypes.string.isRequired,
   caption: PropTypes.string.isRequired,
 }
 
@@ -57,7 +61,8 @@ export const InstrumentsGallery = ({ instruments }) => (
     {instruments.map(instrument => (
       <Instrument
         key={instrument.id}
-        id={instrument.shortname}
+        id={instrument.id}
+        shortname={instrument.shortname}
         caption={instrument.longname}
       />
     ))}

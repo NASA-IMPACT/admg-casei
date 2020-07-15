@@ -43,7 +43,7 @@ const Header = ({ siteTitle, children }) => (
           <b>{siteTitle}</b>
         </Link>
       </div>
-      {children}
+      <div style={{ display: `flex` }}>{children}</div>
     </div>
   </header>
 )

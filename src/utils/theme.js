@@ -9,6 +9,12 @@ let color = {
   highlight: "#F93C21",
 }
 
+color = {
+  ...color,
+  surface: color.tertiary,
+  smoke: "hsla(0,0%,100%,0.3)",
+}
+
 const type = {
   base: {
     root: "16px",

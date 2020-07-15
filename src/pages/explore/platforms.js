@@ -141,7 +141,9 @@ export const query = graphql`
     id
     description
     collectionPeriodIds: collection_periods
-    campaigns
+    campaigns {
+      id
+    }
     instruments
     stationary
   }
@@ -153,7 +155,7 @@ const platformShape = PropTypes.shape({
   id: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   collectionPeriodIds: PropTypes.arrayOf(PropTypes.string),
-  campaigns: PropTypes.arrayOf(PropTypes.string),
+  campaigns: PropTypes.arrayOf(PropTypes.shape({ id: PropTypes.string })),
   instruments: PropTypes.arrayOf(PropTypes.string),
   stationary: PropTypes.bool.isRequired,
 })
