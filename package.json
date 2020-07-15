@@ -12,6 +12,7 @@
     "@devseed-ui/button": "^2.4.2",
     "@devseed-ui/heading": "^2.3.0",
     "@devseed-ui/helpers": "^2.3.0",
+    "@devseed-ui/modal": "^1.0.3",
     "@mapbox/geo-viewport": "^0.4.0",
     "@turf/turf": "^5.1.6",
     "gatsby": "^2.24.2",

@@ -36,6 +36,20 @@ _To learn more about the goals and ideas of this project, [have a look at the Us
     yarn install
     ```
 
+1.  **Add the environment variables**
+
+    Copy the `.env.example` file and add the secrets.
+
+    ```shell
+    # for use within yarn develop
+    cp .env.example .env.development
+
+    # for use within yarn build
+    cp .env.example .env.production
+    ```
+
+    The `ADMG_ACCESS_TOKEN` is needed for the api authentication, it currently needs to be retrieved from the api manually and added to the .env.development - it expires after 10 hours. `ADMG_CLIENT_ID` and `ADMG_CLIENT_SECRET` are used for the login via UI, they do not expire.
+
 1.  **Start developing.**
 
     ```shell
@@ -147,6 +161,8 @@ To run the tests locally, start the development server and run `yarn cy:open`, w
 ```
 yarn cy:open
 ```
+
+**Note:** The login test requires a password. To keep it secure, it can't be hardcoded in the test suite and needs to be passed to cypress by running `CYPRESS_password=<password> yarn cy:open`, this will include it in the cypress env vars. When the tests run on circle ci, they get this password _automagically_ from the env vars added in the web interface.
 
 You can watch tests run in real time as you develop your applications. TDD FTW 🤩!
 It is also possible to run the tests and get the results in the command line only with `yarn cy:run`.
