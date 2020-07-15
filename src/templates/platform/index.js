@@ -3,25 +3,50 @@ import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
 import Layout from "../../components/layout"
-import InpageNav from "./inpage-nav"
-import SectionBlock from "../../components/section/section-block"
+import Header from "./header"
+import Overview from "./overview"
+import Resources from "./resources"
 
-const PlatformTemplate = ({ data: { platform } }) => {
-  console.log("data", data, platform)
+export default function PlatformTemplate({ data: { platform } }) {
+  console.log("data", platform)
   return (
     <Layout>
-      <InpageNav />
-      <SectionBlock headline="Data" id="data" />
+      <Header
+        shortname={platform.shortname}
+        longname={platform.longname}
+        textToImageRatio={[3, 5]}
+      />
+      <div
+        style={{
+          display: `grid`,
+          gridTemplateColumns: `5fr 3fr`,
+          columnGap: `2rem`,
+        }}
+      >
+        <div>
+          <Overview description={platform.description} />
+        </div>
+        <Resources shortname={platform.shortname} />
+      </div>
     </Layout>
   )
 }
 
-// export const query = graphql`
-//   query($slug: String!, $platforms: [String!]) {
-//     platform: platform(id: { eq: $slug }) {
-//       ...?
-//     }
-//   }
-// `
+export const query = graphql`
+  query($slug: String!) {
+    platform: platform(id: { eq: $slug }) {
+      ...platformHeaderFields
+      ...platformOverviewFields
+    }
+  }
+`
 
-export default PlatformTemplate
+PlatformTemplate.propTypes = {
+  data: PropTypes.shape({
+    platform: PropTypes.shape({
+      shortname: PropTypes.string.isRequired,
+      longname: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
+    }),
+  }),
+}
