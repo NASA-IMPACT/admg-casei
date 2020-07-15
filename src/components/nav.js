@@ -49,23 +49,24 @@ const Nav = () => {
         }}
       >
         <ListLink to="/explore/campaigns">Explore</ListLink>
-        <select
-          aria-label="Select Resource"
-          name="nav"
-          id="nav-select"
-          onChange={e => navigate(`/${e.target.value}`)}
-          style={{
-            WebkitAppearance: `none`,
-            background: `transparent`,
-            border: `none`,
-            color: theme.type.base.color,
-            marginRight: `1rem`,
-          }}
-          data-cy="nav-select"
-        >
-          <option value="">Resources</option>
-          <option value="glossary">Glossary</option>
-        </select>
+        <li style={{ margin: `0 1rem 0 0` }}>
+          <select
+            aria-label="Select Resource"
+            name="nav"
+            id="nav-select"
+            onChange={e => navigate(`/${e.target.value}`)}
+            style={{
+              WebkitAppearance: `none`,
+              background: `transparent`,
+              border: `none`,
+              color: theme.type.base.color,
+            }}
+            data-cy="nav-select"
+          >
+            <option value="">Resources</option>
+            <option value="glossary">Glossary</option>
+          </select>
+        </li>
         <ListLink to="/about">About</ListLink>
         <ListLink to="/contact">Contact</ListLink>
       </ul>
