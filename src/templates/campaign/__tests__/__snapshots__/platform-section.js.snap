@@ -2,8 +2,12 @@
 
 exports[`Platform Section displays content 1`] = `
 .c0 {
-  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header" "content";
+  margin-top: 5rem;
   border-top: 55px solid transparent;
+  position: relative;
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box;
@@ -14,130 +18,148 @@ exports[`Platform Section displays content 1`] = `
   data-cy="platform-section"
   id="platform"
 >
-  <h2>
-    Platforms & Instruments
-  </h2>
   <div
-    data-cy="platform-carousel"
+    style={
+      Object {
+        "alignSelf": "end",
+        "gridArea": "header",
+      }
+    }
+  >
+    <h2>
+      Platforms & Instruments
+    </h2>
+  </div>
+  <div
+    style={
+      Object {
+        "backgroundColor": "inherit",
+        "gridArea": "content",
+      }
+    }
   >
     <div
-      data-test="mocked-nuka-carousel"
+      data-cy="platform-carousel"
     >
       <div
-        data-cy="platform"
-        style={
-          Object {
-            "minHeight": "360px",
-          }
-        }
+        data-test="mocked-nuka-carousel"
       >
         <div
+          data-cy="platform"
           style={
             Object {
-              "position": "relative",
+              "minHeight": "360px",
             }
           }
         >
-          <img
-            alt="platform-image"
-            data-cy="platform-image"
-            src="https://picsum.photos/300/300"
-          />
-          <label
-            data-cy="platform-image-caption"
+          <div
             style={
               Object {
-                "bottom": "2.5rem",
-                "color": "hsla(0,0%,100%,0.9)",
-                "fontWeight": "bold",
-                "left": "1rem",
-                "maxWidth": "18rem",
-                "position": "absolute",
-                "textShadow": "1px 1px rgba(0,0,0,0.8)",
-                "textTransform": "uppercase",
+                "position": "relative",
               }
             }
           >
-            Douglas DC-8
-          </label>
+            <img
+              alt="platform-image"
+              data-cy="platform-image"
+              src="https://picsum.photos/300/300"
+            />
+            <label
+              data-cy="platform-image-caption"
+              style={
+                Object {
+                  "bottom": "2.5rem",
+                  "color": "hsla(0,0%,100%,0.9)",
+                  "fontWeight": "bold",
+                  "left": "1rem",
+                  "maxWidth": "18rem",
+                  "position": "absolute",
+                  "textShadow": "1px 1px rgba(0,0,0,0.8)",
+                  "textTransform": "uppercase",
+                }
+              }
+            >
+              Douglas DC-8
+            </label>
+          </div>
         </div>
-      </div>
-      <div
-        data-cy="platform"
-        style={
-          Object {
-            "minHeight": "360px",
-          }
-        }
-      >
         <div
+          data-cy="platform"
           style={
             Object {
-              "position": "relative",
+              "minHeight": "360px",
             }
           }
         >
-          <img
-            alt="platform-image"
-            data-cy="platform-image"
-            src="https://picsum.photos/300/300"
-          />
-          <label
-            data-cy="platform-image-caption"
+          <div
             style={
               Object {
-                "bottom": "2.5rem",
-                "color": "hsla(0,0%,100%,0.9)",
-                "fontWeight": "bold",
-                "left": "1rem",
-                "maxWidth": "18rem",
-                "position": "absolute",
-                "textShadow": "1px 1px rgba(0,0,0,0.8)",
-                "textTransform": "uppercase",
+                "position": "relative",
               }
             }
           >
-            Beechcraft King Air B-200
-          </label>
+            <img
+              alt="platform-image"
+              data-cy="platform-image"
+              src="https://picsum.photos/300/300"
+            />
+            <label
+              data-cy="platform-image-caption"
+              style={
+                Object {
+                  "bottom": "2.5rem",
+                  "color": "hsla(0,0%,100%,0.9)",
+                  "fontWeight": "bold",
+                  "left": "1rem",
+                  "maxWidth": "18rem",
+                  "position": "absolute",
+                  "textShadow": "1px 1px rgba(0,0,0,0.8)",
+                  "textTransform": "uppercase",
+                }
+              }
+            >
+              Beechcraft King Air B-200
+            </label>
+          </div>
         </div>
-      </div>
-      <div
-        data-cy="platform"
-        style={
-          Object {
-            "minHeight": "360px",
-          }
-        }
-      >
         <div
+          data-cy="platform"
           style={
             Object {
-              "position": "relative",
+              "minHeight": "360px",
             }
           }
         >
-          <img
-            alt="platform-image"
-            data-cy="platform-image"
-            src="https://picsum.photos/300/300"
-          />
-          <label
-            data-cy="platform-image-caption"
+          <div
             style={
               Object {
-                "bottom": "2.5rem",
-                "color": "hsla(0,0%,100%,0.9)",
-                "fontWeight": "bold",
-                "left": "1rem",
-                "maxWidth": "18rem",
-                "position": "absolute",
-                "textShadow": "1px 1px rgba(0,0,0,0.8)",
-                "textTransform": "uppercase",
+                "position": "relative",
               }
             }
           >
-            P-3 Orion
-          </label>
+            <img
+              alt="platform-image"
+              data-cy="platform-image"
+              src="https://picsum.photos/300/300"
+            />
+            <label
+              data-cy="platform-image-caption"
+              style={
+                Object {
+                  "bottom": "2.5rem",
+                  "color": "hsla(0,0%,100%,0.9)",
+                  "fontWeight": "bold",
+                  "left": "1rem",
+                  "maxWidth": "18rem",
+                  "position": "absolute",
+                  "textShadow": "1px 1px rgba(0,0,0,0.8)",
+                  "textTransform": "uppercase",
+                }
+              }
+            >
+              P-3 Orion
+            </label>
+          </div>
         </div>
       </div>
     </div>

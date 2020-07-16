@@ -2,8 +2,12 @@
 
 exports[`Focus Section displays content 1`] = `
 .c0 {
-  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header" "content";
+  margin-top: 5rem;
   border-top: 55px solid transparent;
+  position: relative;
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box;
@@ -14,15 +18,23 @@ exports[`Focus Section displays content 1`] = `
   data-cy="focus-section"
   id="focus"
 >
-  <h2>
-    Focus
-  </h2>
   <div
     style={
       Object {
-        "alignItems": "stretch",
+        "alignSelf": "end",
+        "gridArea": "header",
+      }
+    }
+  >
+    <h2>
+      Focus
+    </h2>
+  </div>
+  <div
+    style={
+      Object {
         "backgroundColor": "#303641",
-        "display": "flex",
+        "gridArea": "content",
       }
     }
   >

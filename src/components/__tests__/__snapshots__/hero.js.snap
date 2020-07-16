@@ -8,6 +8,7 @@ exports[`Header renders correctly 1`] = `
       "columnGap": "2rem",
       "display": "grid",
       "gridTemplateColumns": "3fr 5fr",
+      "minHeight": "35rem",
     }
   }
 >
@@ -79,6 +80,7 @@ exports[`Header renders with adjust ratios 1`] = `
       "columnGap": "2rem",
       "display": "grid",
       "gridTemplateColumns": "5fr 3fr",
+      "minHeight": "35rem",
     }
   }
 >
