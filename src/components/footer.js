@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 import theme from "../utils/theme"
+import Login from "./login"
 
 const Footer = () => {
   const style = {
@@ -82,6 +83,9 @@ const Footer = () => {
             </li>
             <li>
               <Link to="/contact/">Contact us</Link>
+            </li>
+            <li className="placeholder">
+              <Login />
             </li>
           </ul>
         </div>

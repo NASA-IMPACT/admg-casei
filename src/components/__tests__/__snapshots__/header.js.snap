@@ -52,6 +52,13 @@ exports[`Header renders correctly 1`] = `
         </b>
       </a>
     </div>
+    <div
+      style={
+        Object {
+          "display": "flex",
+        }
+      }
+    />
   </div>
 </header>
 `;
