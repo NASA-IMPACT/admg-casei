@@ -5,21 +5,9 @@ import parse from "wellknown"
 import * as turf from "@turf/turf"
 import geoViewport from "@mapbox/geo-viewport"
 
+import HeaderStat from "../../components/header-stat"
+
 import theme from "../../utils/theme"
-
-const StatNumber = ({ number, label }) => (
-  <>
-    <dt style={{ fontSize: `3rem` }}>
-      {!number && number !== 0 ? "--" : number}
-    </dt>
-    <dd style={{ gridRowStart: 2, textTransform: `uppercase` }}>{label}</dd>
-  </>
-)
-
-StatNumber.propTypes = {
-  number: PropTypes.number,
-  label: PropTypes.string.isRequired,
-}
 
 const Header = ({
   bounds,
@@ -82,12 +70,12 @@ const Header = ({
           <p>{focusListing}</p>
         </div>
         <dl style={{ display: `grid` }} data-cy="stats">
-          <StatNumber number={countDeployments} label="Deployments" />
-          <StatNumber
+          <HeaderStat number={countDeployments} label="Deployments" />
+          <HeaderStat
             number={countCollectionPeriods}
             label="Collection Periods"
           />
-          <StatNumber number={countDataProducts} label="Data Products" />
+          <HeaderStat number={countDataProducts} label="Data Products" />
         </dl>
       </div>
       <div style={{ flex: `1` }}></div>
