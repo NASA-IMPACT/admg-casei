@@ -1224,7 +1224,7 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.10.3", "@babel/runtime@^7.5.5", "@babel/runtime@^7.8.7":
+"@babel/runtime@^7.10.3", "@babel/runtime@^7.8.7":
   version "7.10.4"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.10.4.tgz#a6724f1a6b8d2f6ea5236dbfe58c7d7ea9c5eb99"
   integrity sha512-UpTN5yUJr9b4EX2CnGNWIvER7Ab83ibv0pcvvHc4UOdrBI5jb8bj+32cCwPX6xu0mt2daFNjYhoi+X7beH0RSw==
@@ -1422,31 +1422,6 @@
   dependencies:
     lodash.get "^4.4.2"
 
-"@devseed-ui/button@2.4.0":
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/@devseed-ui/button/-/button-2.4.0.tgz#f0e90f2efb7f3e976b725384070bd9799a22206d"
-  integrity sha512-yBxmXU5M0ltqjk+2lRf5egTk51skMvrAy7m/wYnzmOWiNfC/W7dgh7EqAvSnzKdGFr+deP9QHo9WilYiteXfQw==
-  dependencies:
-    "@devseed-ui/base" "^2.2.0"
-    "@devseed-ui/collecticons" "0.12.0"
-    "@devseed-ui/helpers" "^2.3.0"
-
-"@devseed-ui/button@^2.4.2":
-  version "2.4.2"
-  resolved "https://registry.yarnpkg.com/@devseed-ui/button/-/button-2.4.2.tgz#62c1156340d54f3a94541f9902163fda977a14a8"
-  integrity sha512-Zr48lcpCtU9h4zSF7pNJ/YSXoXK6oh+k0/Ubr252ZZaadV3Regkqd725zYoT3q9/AhDn6SUczOHcQ8FKTe7mww==
-  dependencies:
-    "@devseed-ui/base" "^2.2.0"
-    "@devseed-ui/collecticons" "0.12.0"
-    "@devseed-ui/helpers" "^2.3.0"
-
-"@devseed-ui/collecticons@0.12.0":
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/@devseed-ui/collecticons/-/collecticons-0.12.0.tgz#c7b70fc6cf0fd48b318645cfb9a89a167eb7610b"
-  integrity sha512-/hZ59PIPpMnc19B+Qltxh/fSPkj3DjrSffOtWdaZlAK9tX1l37r/ZvwJlom+EUJrwJjTDTXgXFrOFKzWJF1j2w==
-  dependencies:
-    collecticons-lib "^2.1.0"
-
 "@devseed-ui/heading@^2.3.0":
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/@devseed-ui/heading/-/heading-2.3.0.tgz#619062535e69d89ceb7d129da05d64b0fc67e67b"
@@ -1455,23 +1430,13 @@
     "@devseed-ui/base" "^2.2.0"
     "@devseed-ui/helpers" "^2.3.0"
 
-"@devseed-ui/helpers@2.3.0", "@devseed-ui/helpers@^2.3.0":
+"@devseed-ui/helpers@^2.3.0":
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/@devseed-ui/helpers/-/helpers-2.3.0.tgz#f8e622a4184c6663b8c30adcdebb443500afbf65"
   integrity sha512-e0HjzsBQlU3ZPC8ARIGPp4SayOzYXajpdixxkqXvkdQxuFxB2l3fMGQh1AjP18MmJNxCx6lwXi4CnZ/A3+xWYQ==
   dependencies:
     "@devseed-ui/base" "2.2.0"
     "@devseed-ui/theme" "2.3.0"
-
-"@devseed-ui/modal@^1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@devseed-ui/modal/-/modal-1.0.3.tgz#394f48e0025743729de8af6325a85bb3510d2045"
-  integrity sha512-IWLiXJXCwFK/kYu7ZJcjFXwoJWrThlpWI3rKt4RyJVq6sfcU7klTx2/OTz69JnrQDhbV+0AkykulpLW1WldJ+A==
-  dependencies:
-    "@devseed-ui/base" "2.2.0"
-    "@devseed-ui/button" "2.4.0"
-    "@devseed-ui/helpers" "2.3.0"
-    react-transition-group "^4.3.0"
 
 "@devseed-ui/theme@2.3.0":
   version "2.3.0"
@@ -5656,11 +5621,6 @@ collect-v8-coverage@^1.0.0:
   resolved "https://registry.yarnpkg.com/collect-v8-coverage/-/collect-v8-coverage-1.0.1.tgz#cc2c8e94fc18bbdffe64d6534570c8a673b27f59"
   integrity sha512-iBPtljfCNcTKNAto0KEtDfZ3qzjJvqE3aTGZsbhjSBlorqpXJlaWWtPO35D+ZImoC3KWejX64o+yPGxhWSTzfg==
 
-collecticons-lib@^2.1.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/collecticons-lib/-/collecticons-lib-2.2.0.tgz#030ccbd5548f9524322f07c2db2fffc546f8abff"
-  integrity sha512-CZMlA74WOxOF0aqaZa3XLhV+mrY0mueNHf4FgBxGikRT/tp3/iEwISx+B709uZ51g27HHJDNvk/cfO5V1aa7kA==
-
 collection-visit@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/collection-visit/-/collection-visit-1.0.0.tgz#4bc0373c164bc3291b4d368c829cf1a80a59dca0"
@@ -6402,11 +6362,6 @@ csstype@^2.2.0, csstype@^2.6.6:
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.6.10.tgz#e63af50e66d7c266edb6b32909cfd0aabe03928b"
   integrity sha512-D34BqZU4cIlMCY93rZHbrq9pjTAQJ3U8S8rfBqjwHxkGPThWFjzZDQpgMJY0QViLxth6ZKYiwFBo14RdN44U/w==
 
-csstype@^2.6.7:
-  version "2.6.11"
-  resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.6.11.tgz#452f4d024149ecf260a852b025e36562a253ffc5"
-  integrity sha512-l8YyEC9NBkSm783PFTvh0FmJy7s5pFKrDp49ZL7zBGX3fWkO+N4EEyan1qqp8cwPLDcD0OSdyY6hAMoxp34JFw==
-
 currently-unhandled@^0.4.1:
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/currently-unhandled/-/currently-unhandled-0.4.1.tgz#988df33feab191ef799a61369dd76c17adf957ea"
@@ -6956,14 +6911,6 @@ dom-converter@^0.2:
   integrity sha512-gd3ypIPfOMr9h5jIKq8E3sHOTCjeirnl0WK5ZdS1AW0Odt0b1PaWaHdJ4Qk4klv+YB9aJBS7mESXjFoDQPu6DA==
   dependencies:
     utila "~0.4"
-
-dom-helpers@^5.0.1:
-  version "5.1.4"
-  resolved "https://registry.yarnpkg.com/dom-helpers/-/dom-helpers-5.1.4.tgz#4609680ab5c79a45f2531441f1949b79d6587f4b"
-  integrity sha512-TjMyeVUvNEnOnhzs6uAn9Ya47GmMo3qq7m+Lr/3ON0Rs5kHvb8I+SQYjLUSYn7qhEm0QjW0yrBkvz9yOrwwz1A==
-  dependencies:
-    "@babel/runtime" "^7.8.7"
-    csstype "^2.6.7"
 
 dom-serializer@0:
   version "0.2.2"
@@ -14537,16 +14484,6 @@ react-test-renderer@^16.13.1:
     prop-types "^15.6.2"
     react-is "^16.8.6"
     scheduler "^0.19.1"
-
-react-transition-group@^4.3.0:
-  version "4.4.1"
-  resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-4.4.1.tgz#63868f9325a38ea5ee9535d828327f85773345c9"
-  integrity sha512-Djqr7OQ2aPUiYurhPalTrVy9ddmFCCzwhqQmtN+J3+3DzLO209Fdr70QrN8Z3DsglWql6iY1lDWAfpFiBtuKGw==
-  dependencies:
-    "@babel/runtime" "^7.5.5"
-    dom-helpers "^5.0.1"
-    loose-envify "^1.4.0"
-    prop-types "^15.6.2"
 
 react-typography@^0.16.19:
   version "0.16.19"

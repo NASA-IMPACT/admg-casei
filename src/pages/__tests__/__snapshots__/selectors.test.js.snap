@@ -2,97 +2,34 @@
 
 exports[`Campaigns page renders correctly 1`] = `
 .c0 {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  display: inline-block;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  line-height: 1.5rem;
-  font-size: 1rem;
-  padding: 0.25rem 0.75rem;
-  min-width: 2rem;
-  background: none;
-  text-shadow: none;
-  border: 0;
-  font-family: "Titillium Web",sans-serif;
-  font-weight: 700;
-  cursor: pointer;
-  -webkit-transition: background-color 0.24s ease 0s;
-  transition: background-color 0.24s ease 0s;
-  background-color: rgba(255,255,255,0);
-  line-height: 1.5rem;
-  font-size: 1rem;
-  padding: 0.25rem 0.75rem;
-  min-width: 2rem;
-  border-radius: 0.2rem;
-  display: inline-block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.5);
+  z-index: 9999;
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
 }
 
-.c0,
-.c0:focus {
-  outline: none;
-}
-
-.c0:hover {
-  opacity: 1;
-}
-
-.c0::before,
-.c0::after {
-  font-size: 1rem;
-}
-
-.c0::before {
-  margin-right: 0.375rem;
-}
-
-.c0::after {
-  margin-left: 0.375rem;
-}
-
-.c0::before,
-.c0::after,
-.c0 > * {
-  vertical-align: top;
-  display: inline-block;
-  line-height: inherit !important;
-}
-
-.c0 > input[type=checkbox],
-.c0 > input[type=radio] {
-  border: 0 none;
-  -webkit-clip: rect(0,0,0,0);
-  clip: rect(0,0,0,0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-
-.c0,
-.c0:visited {
-  color: hsla(0,0%,100%,0.9);
-}
-
-.c0:hover {
-  background-color: rgba(255,255,255,0.08);
-}
-
-.c0.active,
-.c0.active:hover,
-.c0:active {
-  z-index: 2;
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
-  background-color: rgba(255,255,255,0.16);
+.c1 {
+  width: 400px;
+  position: relative;
+  padding: 32px;
+  border-radius: 3px;
+  background: #303641;
+  pointer-events: auto;
 }
 
 <div
@@ -303,22 +240,38 @@ exports[`Campaigns page renders correctly 1`] = `
                 }
               }
             >
-              <option
-                value=""
+              <select
+                aria-label="Select Resource"
+                data-cy="nav-select"
+                id="nav-select"
+                name="nav"
+                onChange={[Function]}
+                style={
+                  Object {
+                    "WebkitAppearance": "none",
+                    "background": "transparent",
+                    "border": "none",
+                    "color": "hsla(0,0%,100%,0.9)",
+                  }
+                }
               >
-                Resources
-              </option>
-              <option
-                value="glossary"
-              >
-                Glossary
-              </option>
-            </select>
-          </li>
-          <li
-            style={
-              Object {
-                "margin": "0 1rem 0 0",
+                <option
+                  value=""
+                >
+                  Resources
+                </option>
+                <option
+                  value="glossary"
+                >
+                  Glossary
+                </option>
+              </select>
+            </li>
+            <li
+              style={
+                Object {
+                  "margin": "0 1rem 0 0",
+                }
               }
             >
               <a
@@ -1930,8 +1883,7 @@ exports[`Campaigns page renders correctly 1`] = `
           }
         }
       >
-        <div
-          className="placeholder"
+        <p
           style={
             Object {
               "fontWeight": "bold",
@@ -1941,7 +1893,7 @@ exports[`Campaigns page renders correctly 1`] = `
           }
         >
           Explore
-        </div>
+        </p>
         <ul
           style={
             Object {
@@ -1980,7 +1932,7 @@ exports[`Campaigns page renders correctly 1`] = `
           }
         }
       >
-        <div
+        <p
           style={
             Object {
               "fontWeight": "bold",
@@ -1989,12 +1941,8 @@ exports[`Campaigns page renders correctly 1`] = `
             }
           }
         >
-          <a
-            href="/resources"
-          >
-            Resources
-          </a>
-        </div>
+          Resources
+        </p>
         <ul
           style={
             Object {
@@ -2003,10 +1951,12 @@ exports[`Campaigns page renders correctly 1`] = `
             }
           }
         >
-          <li
-            className="placeholder"
-          >
-            Glossary
+          <li>
+            <a
+              href="/glossary/"
+            >
+              Glossary
+            </a>
           </li>
           <li
             className="placeholder"
@@ -2027,8 +1977,7 @@ exports[`Campaigns page renders correctly 1`] = `
           }
         }
       >
-        <div
-          className="placeholder"
+        <p
           style={
             Object {
               "fontWeight": "bold",
@@ -2038,7 +1987,7 @@ exports[`Campaigns page renders correctly 1`] = `
           }
         >
           Quick Links
-        </div>
+        </p>
         <ul
           style={
             Object {
@@ -2065,17 +2014,52 @@ exports[`Campaigns page renders correctly 1`] = `
             className="placeholder"
           >
             <button
-              className="c0"
-              disabled={false}
               onClick={[Function]}
-              radius={null}
-              size="medium"
-              type="button"
             >
-              <span>
-                Log in
-              </span>
+              Log in
             </button>
+            <div
+              className="c0"
+              onClick={[Function]}
+            >
+              <div
+                className="c1"
+              >
+                <form
+                  data-cy="login-form"
+                  onSubmit={[Function]}
+                >
+                  <h3>
+                    Log In
+                  </h3>
+                  <label
+                    htmlFor="username"
+                  >
+                    Username
+                  </label>
+                  <input
+                    name="username"
+                    onChange={[Function]}
+                    type="text"
+                    value=""
+                  />
+                  <label
+                    htmlFor="password"
+                  >
+                    Password
+                  </label>
+                  <input
+                    name="password"
+                    onChange={[Function]}
+                    type="password"
+                    value=""
+                  />
+                  <input
+                    type="submit"
+                  />
+                </form>
+              </div>
+            </div>
           </li>
         </ul>
       </div>
@@ -2086,8 +2070,7 @@ exports[`Campaigns page renders correctly 1`] = `
           }
         }
       >
-        <div
-          className="placeholder"
+        <p
           style={
             Object {
               "fontWeight": "bold",
@@ -2097,7 +2080,7 @@ exports[`Campaigns page renders correctly 1`] = `
           }
         >
           Organizations
-        </div>
+        </p>
         <ul
           style={
             Object {

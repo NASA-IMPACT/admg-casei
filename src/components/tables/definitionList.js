@@ -49,7 +49,11 @@ DefinitionList.propTypes = {
   list: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string,
-      content: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+      content: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number,
+        PropTypes.node,
+      ]),
     })
   ),
 }
