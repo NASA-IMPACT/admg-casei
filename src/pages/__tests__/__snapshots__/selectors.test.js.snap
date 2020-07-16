@@ -212,31 +212,23 @@ exports[`Campaigns page renders correctly 1`] = `
               }
             }
           >
-            <a
-              href="/explore/campaigns"
-            >
-              Explore
-            </a>
-          </li>
-          <li
-            style={
-              Object {
-                "margin": "0 1rem 0 0",
-              }
-            }
-          >
-            <select
-              aria-label="Select Resource"
-              data-cy="nav-select"
-              id="nav-select"
-              name="nav"
-              onChange={[Function]}
+            <li
               style={
                 Object {
-                  "WebkitAppearance": "none",
-                  "background": "transparent",
-                  "border": "none",
-                  "color": "hsla(0,0%,100%,0.9)",
+                  "margin": "0 1rem 0 0",
+                }
+              }
+            >
+              <a
+                href="/explore/campaigns"
+              >
+                Explore
+              </a>
+            </li>
+            <li
+              style={
+                Object {
+                  "margin": "0 1rem 0 0",
                 }
               }
             >
