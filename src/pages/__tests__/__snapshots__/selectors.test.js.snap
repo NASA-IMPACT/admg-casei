@@ -295,11 +295,32 @@ exports[`Campaigns page renders correctly 1`] = `
                 }
               }
             >
-              <a
-                href="/resources"
+              <select
+                aria-label="Select Resource"
+                data-cy="nav-select"
+                id="nav-select"
+                name="nav"
+                onChange={[Function]}
+                style={
+                  Object {
+                    "WebkitAppearance": "none",
+                    "background": "transparent",
+                    "border": "none",
+                    "color": "hsla(0,0%,100%,0.9)",
+                  }
+                }
               >
-                Resources
-              </a>
+                <option
+                  value=""
+                >
+                  Resources
+                </option>
+                <option
+                  value="glossary"
+                >
+                  Glossary
+                </option>
+              </select>
             </li>
             <li
               style={
@@ -1917,8 +1938,7 @@ exports[`Campaigns page renders correctly 1`] = `
           }
         }
       >
-        <div
-          className="placeholder"
+        <p
           style={
             Object {
               "fontWeight": "bold",
@@ -1928,7 +1948,7 @@ exports[`Campaigns page renders correctly 1`] = `
           }
         >
           Explore
-        </div>
+        </p>
         <ul
           style={
             Object {
@@ -1967,7 +1987,7 @@ exports[`Campaigns page renders correctly 1`] = `
           }
         }
       >
-        <div
+        <p
           style={
             Object {
               "fontWeight": "bold",
@@ -1976,12 +1996,8 @@ exports[`Campaigns page renders correctly 1`] = `
             }
           }
         >
-          <a
-            href="/resources"
-          >
-            Resources
-          </a>
-        </div>
+          Resources
+        </p>
         <ul
           style={
             Object {
@@ -1990,10 +2006,12 @@ exports[`Campaigns page renders correctly 1`] = `
             }
           }
         >
-          <li
-            className="placeholder"
-          >
-            Glossary
+          <li>
+            <a
+              href="/glossary/"
+            >
+              Glossary
+            </a>
           </li>
           <li
             className="placeholder"
@@ -2014,8 +2032,7 @@ exports[`Campaigns page renders correctly 1`] = `
           }
         }
       >
-        <div
-          className="placeholder"
+        <p
           style={
             Object {
               "fontWeight": "bold",
@@ -2025,7 +2042,7 @@ exports[`Campaigns page renders correctly 1`] = `
           }
         >
           Quick Links
-        </div>
+        </p>
         <ul
           style={
             Object {
@@ -2073,8 +2090,7 @@ exports[`Campaigns page renders correctly 1`] = `
           }
         }
       >
-        <div
-          className="placeholder"
+        <p
           style={
             Object {
               "fontWeight": "bold",
@@ -2084,7 +2100,7 @@ exports[`Campaigns page renders correctly 1`] = `
           }
         >
           Organizations
-        </div>
+        </p>
         <ul
           style={
             Object {

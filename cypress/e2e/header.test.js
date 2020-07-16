@@ -14,7 +14,7 @@ describe("Header", () => {
       })
       .then($li => {
         expect($li[0], "text content").to.have.text("Explore")
-        expect($li[1], "text content").to.have.text("Resources")
+        expect($li[1], "text content").to.contain("Resources")
         expect($li[2], "text content").to.have.text("About")
         expect($li[3], "text content").to.have.text("Contact")
       })
