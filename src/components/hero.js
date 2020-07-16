@@ -36,7 +36,7 @@ export default function Hero({
 
       <div style={{ gridArea: `1 / 2 / 3 / 3` }}>{children}</div>
       {stats && (
-        <dl style={{ display: `grid` }} data-cy="stats">
+        <dl style={{ display: `grid`, maxHeight: `6rem` }} data-cy="stats">
           {stats.map(stat => (
             <HeaderStat
               key={stat.label}

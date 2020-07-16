@@ -5,7 +5,6 @@ import { graphql } from "gatsby"
 import Layout from "../../components/layout"
 import Header from "./header"
 import Overview from "./overview"
-import Resources from "./resources"
 import RelatedCampaigns from "./related-campaigns"
 
 export default function PlatformTemplate({ data: { platform } }) {
@@ -19,19 +18,11 @@ export default function PlatformTemplate({ data: { platform } }) {
         collectionPeriods={platform.collectionPeriods.length}
         textToImageRatio={[3, 5]}
       />
-      <div
-        style={{
-          display: `grid`,
-          gridTemplateColumns: `5fr 3fr`,
-          columnGap: `2rem`,
-        }}
-      >
-        <div>
-          <Overview description={platform.description} />
-          <RelatedCampaigns campaigns={platform.campaigns} />
-        </div>
-        <Resources shortname={platform.shortname} />
-      </div>
+      <Overview
+        description={platform.description}
+        shortname={platform.shortname}
+      />
+      <RelatedCampaigns campaigns={platform.campaigns} />
     </Layout>
   )
 }
@@ -51,7 +42,7 @@ PlatformTemplate.propTypes = {
     platform: PropTypes.shape({
       shortname: PropTypes.string.isRequired,
       longname: PropTypes.string.isRequired,
-      description: PropTypes.string.isRequired,
+      description: PropTypes.string,
       campaigns: PropTypes.arrayOf(
         PropTypes.shape({
           ongoing: PropTypes.bool,

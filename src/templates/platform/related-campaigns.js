@@ -22,17 +22,23 @@ const RelatedCampaigns = ({ campaigns }) => {
             slidesToShow={3}
           >
             {campaigns.map(campaign => (
-              <Link to={`/campaign/${campaign.id}`} key={campaign.shortname}>
-                <CampaignCard
-                  ongoing={campaign.ongoing}
-                  shortname={campaign.shortname}
-                  longname={campaign.longname}
-                  // daterange={`${campaign.startdate.getFullYear()}—${campaign.enddate.getFullYear()}`}
-                  region={campaign.region}
-                  countCollectionPeriods={campaign.countCollectionPeriods}
-                  countDataProducts={campaign.countDataProducts}
-                />
-              </Link>
+              <div key={campaign.id} style={{ width: `16rem` }}>
+                <Link to={`/campaign/${campaign.id}`}>
+                  <CampaignCard
+                    ongoing={campaign.ongoing}
+                    shortname={campaign.shortname}
+                    longname={campaign.longname}
+                    daterange={`${new Date(
+                      campaign.startdate
+                    ).getFullYear()}—${new Date(
+                      campaign.enddate
+                    ).getFullYear()}`}
+                    region={campaign.region}
+                    countCollectionPeriods={campaign.countCollectionPeriods}
+                    countDataProducts={campaign.countDataProducts}
+                  />
+                </Link>
+              </div>
             ))}
           </Carousel>
         ) : (
