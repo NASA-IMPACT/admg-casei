@@ -1,7 +1,6 @@
 import React, { useState } from "react"
-import { Button } from "@devseed-ui/button"
-import { Modal } from "@devseed-ui/modal"
 
+import { Modal } from "./modal"
 import { isLoggedIn, handleLogin, logout } from "../utils/auth"
 
 const Login = () => {
@@ -28,40 +27,38 @@ const Login = () => {
 
   return (
     <>
-      <Button onClick={() => (isLoggedIn() ? handleLogout() : setModal(true))}>
+      <button onClick={() => (isLoggedIn() ? handleLogout() : setModal(true))}>
         {buttonText}
-      </Button>
+      </button>
+
       <Modal
         id="modal"
-        size="small"
-        revealed={isModalOpen}
-        onOverlayClick={() => setModal(false)}
-        renderHeader={() => null}
-        content={
-          <form onSubmit={onSubmit} data-cy="login-form">
-            <h3>Log In</h3>
-            <label htmlFor="username">Username</label>
-            <input
-              type="text"
-              name="username"
-              value={user.username}
-              onChange={e =>
-                setUser({ ...user, [e.target.name]: e.target.value })
-              }
-            />
-            <label htmlFor="password">Password</label>
-            <input
-              type="password"
-              name="password"
-              value={user.password}
-              onChange={e =>
-                setUser({ ...user, [e.target.name]: e.target.value })
-              }
-            />
-            <input type="submit" />
-          </form>
-        }
-      />
+        isOpen={isModalOpen}
+        handleClose={() => setModal(false)}
+      >
+        <form onSubmit={onSubmit} data-cy="login-form">
+          <h3>Log In</h3>
+          <label htmlFor="username">Username</label>
+          <input
+            type="text"
+            name="username"
+            value={user.username}
+            onChange={e =>
+              setUser({ ...user, [e.target.name]: e.target.value })
+            }
+          />
+          <label htmlFor="password">Password</label>
+          <input
+            type="password"
+            name="password"
+            value={user.password}
+            onChange={e =>
+              setUser({ ...user, [e.target.name]: e.target.value })
+            }
+          />
+          <input type="submit" />
+        </form>
+      </Modal>
     </>
   )
 }
