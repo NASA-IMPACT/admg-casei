@@ -14,6 +14,8 @@ export default function PlatformTemplate({ data: { platform } }) {
       <Header
         shortname={platform.shortname}
         longname={platform.longname}
+        campaigns={platform.campaigns.length}
+        collectionPeriods={platform.collectionPeriods.length}
         textToImageRatio={[3, 5]}
       />
       <div
@@ -47,6 +49,8 @@ PlatformTemplate.propTypes = {
       shortname: PropTypes.string.isRequired,
       longname: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
+      campaigns: PropTypes.arrayOf(PropTypes.shape({ id: PropTypes.string })),
+      collectionPeriods: PropTypes.arrayOf(PropTypes.string),
     }),
   }),
 }

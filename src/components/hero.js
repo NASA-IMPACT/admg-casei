@@ -1,6 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 
+import HeaderStat from "./header-stat"
+
 export default function Hero({
   tagTitle,
   title,
@@ -34,14 +36,11 @@ export default function Hero({
       {stats && (
         <dl style={{ display: `grid` }} data-cy="stats">
           {stats.map(stat => (
-            <>
-              <dt style={{ fontSize: `3rem` }}>
-                {!stat.number && stat.number !== 0 ? "--" : stat.number}
-              </dt>
-              <dd style={{ gridRowStart: 2, textTransform: `uppercase` }}>
-                {stat.label}
-              </dd>
-            </>
+            <HeaderStat
+              key={stat.label}
+              number={stat.number}
+              label={stat.label}
+            />
           ))}
         </dl>
       )}
