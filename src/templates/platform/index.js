@@ -6,6 +6,7 @@ import Layout from "../../components/layout"
 import Header from "./header"
 import Overview from "./overview"
 import Resources from "./resources"
+import RelatedCampaigns from "./related-campaigns"
 
 export default function PlatformTemplate({ data: { platform } }) {
   console.log("data", platform)
@@ -27,6 +28,7 @@ export default function PlatformTemplate({ data: { platform } }) {
       >
         <div>
           <Overview description={platform.description} />
+          <RelatedCampaigns campaigns={platform.campaigns} />
         </div>
         <Resources shortname={platform.shortname} />
       </div>
@@ -39,6 +41,7 @@ export const query = graphql`
     platform: platform(id: { eq: $slug }) {
       ...platformHeaderFields
       ...platformOverviewFields
+      ...platformCampaignFields
     }
   }
 `
@@ -49,7 +52,30 @@ PlatformTemplate.propTypes = {
       shortname: PropTypes.string.isRequired,
       longname: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
-      campaigns: PropTypes.arrayOf(PropTypes.shape({ id: PropTypes.string })),
+      campaigns: PropTypes.arrayOf(
+        PropTypes.shape({
+          ongoing: PropTypes.bool,
+          shortname: PropTypes.string.isRequired,
+          longname: PropTypes.string,
+          id: PropTypes.string.isRequired,
+          seasons: PropTypes.arrayOf(
+            PropTypes.shape({
+              id: PropTypes.string.isRequired,
+            })
+          ).isRequired,
+          focus: PropTypes.arrayOf(
+            PropTypes.shape({
+              id: PropTypes.string.isRequired,
+            })
+          ).isRequired,
+          startdate: PropTypes.string.isRequired,
+          enddate: PropTypes.string,
+          region: PropTypes.string.isRequired,
+          deploymentIds: PropTypes.arrayOf(PropTypes.string),
+          countCollectionPeriods: PropTypes.number,
+          countDataProducts: PropTypes.number,
+        })
+      ),
       collectionPeriods: PropTypes.arrayOf(PropTypes.string),
     }),
   }),

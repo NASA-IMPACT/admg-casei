@@ -28,9 +28,11 @@ export default function Hero({
         {subTitle && <p style={{ fontSize: `x-large` }}>{subTitle}</p>}
       </div>
 
-      <div style={{ alignSelf: `start` }}>
-        <p>{description}</p>
-      </div>
+      {description && (
+        <div style={{ alignSelf: `start` }}>
+          <p>{description}</p>
+        </div>
+      )}
 
       <div style={{ gridArea: `1 / 2 / 3 / 3` }}>{children}</div>
       {stats && (
