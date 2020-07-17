@@ -2,7 +2,6 @@ import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
-import Label from "../../components/label"
 import { SectionBlock } from "../../components/section"
 
 export default function Overview({ description, shortname }) {
@@ -18,18 +17,14 @@ export default function Overview({ description, shortname }) {
         <div>
           <p>{description}</p>
         </div>
-        <div data-cy="link-list">
-          <Label id={"instrument-manufacturer"} showBorder>
-            {`${shortname} Primary Website`}
-          </Label>
-          {"N/A"}
-          <div style={{ padding: `1rem 0` }}>
-            <Label id={"funding-source"} showBorder>
-              {`${shortname} Secondary Website`}
-            </Label>
-            {"N/A"}
-          </div>
-        </div>
+        {/* <ul data-cy="platform-link-list"> // TODO: add in when we get website info
+          {primaryWebsite && (
+            <ListLink to={primaryWebsite}>{`${shortname} Primary Website`}</ListLink>
+          )}
+          {secondary && (
+            <ListLink to={secondary}>{`${shortname} Secondary Website`}</ListLink>
+          )}
+        </ul> */}
       </div>
     </SectionBlock>
   )

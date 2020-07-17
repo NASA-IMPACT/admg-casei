@@ -8,7 +8,7 @@ describe("Platfrom", () => {
 
   describe("the header", () => {
     it("displays the category label", () => {
-      cy.get("[data-cy=platfrom-hero]").first().find("p").contains("DC-8")
+      cy.get("[data-cy=platform-hero]").first().find("p").contains("DC-8")
     })
 
     it("displays the long name as title", () => {
@@ -46,6 +46,32 @@ describe("Platfrom", () => {
         .first()
         .find("p")
         .should("exist")
+    })
+  })
+
+  describe("the related campaign section", () => {
+    it("exists", () => {
+      cy.get("[data-cy=platform-related-campaigns-section]").should("exist")
+    })
+
+    it("has a heading", () => {
+      cy.get("[data-cy=platform-related-campaigns-section]")
+        .find("h2")
+        .should("have.text", "Related Campaigns")
+    })
+
+    it("displays a carousel", () => {
+      cy.get("[data-cy=related-campaign-carousel]")
+        .find(".slider")
+        .should("exist")
+
+      cy.get("[data-cy=related-campaign]").within(() => {
+        cy.get("[data-cy=explore-card]").should("exist")
+      })
+
+      cy.get("[data-cy=related-campaign-carousel]")
+        .find(".slider-control-centerright > button")
+        .click()
     })
   })
 })

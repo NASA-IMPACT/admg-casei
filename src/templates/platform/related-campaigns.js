@@ -22,7 +22,11 @@ const RelatedCampaigns = ({ campaigns }) => {
             slidesToShow={3}
           >
             {campaigns.map(campaign => (
-              <div key={campaign.id} style={{ width: `16rem` }}>
+              <div
+                key={campaign.id}
+                style={{ width: `16rem` }}
+                data-cy="related-campaign"
+              >
                 <Link to={`/campaign/${campaign.id}`}>
                   <CampaignCard
                     ongoing={campaign.ongoing}
