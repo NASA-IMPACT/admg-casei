@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 
 import { SectionBlock } from "../../components/section"
 
-export default function Overview({ description, shortname }) {
+export default function Overview({ description }) {
   return (
     <SectionBlock headline="Overview" id="platform-overview">
       <div
@@ -37,5 +37,5 @@ export const platformOverviewFields = graphql`
 
 Overview.propTypes = {
   description: PropTypes.string.isRequired,
-  shortname: PropTypes.string.isRequired,
+  // shortname: PropTypes.string.isRequired,
 }

@@ -8,7 +8,6 @@ import Overview from "./overview"
 import RelatedCampaigns from "./related-campaigns"
 
 export default function PlatformTemplate({ data: { platform } }) {
-  console.log("data", platform)
   return (
     <Layout>
       <Header
