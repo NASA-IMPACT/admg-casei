@@ -5,6 +5,8 @@ import Carousel from "nuka-carousel"
 
 import { SectionBlock } from "../../components/section"
 import ImageCaption from "../../components/image-caption"
+import Image from "../../components/image"
+
 // import Chip from "../../components/chip"
 
 const PlatformSection = ({ platforms }) => (
@@ -28,11 +30,10 @@ const PlatformSection = ({ platforms }) => (
               data-cy="platform"
             >
               <Link to={`/platform/${platform.id}`} key={platform.id}>
-                <div style={{ position: `relative` }}>
-                  <img
-                    src="https://picsum.photos/300/300"
-                    alt="platform-image"
-                    data-cy="platform-image"
+                <div style={{ position: `relative`, marginRight: `1rem` }}>
+                  <Image
+                    filename="platform.png" // TODO: replace with platform image
+                    alt="an aircraft transporting a spacecraft"
                   />
                   <ImageCaption id="platform-image">
                     {platform.longname || platform.shortname}
