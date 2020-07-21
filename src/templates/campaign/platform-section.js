@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Carousel from "nuka-carousel"
 
 import { SectionBlock } from "../../components/section"
@@ -27,16 +27,18 @@ const PlatformSection = ({ platforms }) => (
               style={{ minHeight: `360px` }}
               data-cy="platform"
             >
-              <div style={{ position: `relative` }}>
-                <img
-                  src="https://picsum.photos/300/300"
-                  alt="platform-image"
-                  data-cy="platform-image"
-                />
-                <ImageCaption id="platform-image">
-                  {platform.longname || platform.shortname}
-                </ImageCaption>
-              </div>
+              <Link to={`/platform/${platform.id}`} key={platform.id}>
+                <div style={{ position: `relative` }}>
+                  <img
+                    src="https://picsum.photos/300/300"
+                    alt="platform-image"
+                    data-cy="platform-image"
+                  />
+                  <ImageCaption id="platform-image">
+                    {platform.longname || platform.shortname}
+                  </ImageCaption>
+                </div>
+              </Link>
               {/* <div style={{ display: `flex`, flexWrap: `wrap` }}> */}
               {/* TODO: map through instrument tags */}
               {/* <Chip id="platform" label="test chip" /> */}
