@@ -7,7 +7,7 @@ import theme from "../../utils/theme"
 
 const Section = styled.section`
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
   grid-template-areas: "header" "content";
   margin-top: 5rem;
 
