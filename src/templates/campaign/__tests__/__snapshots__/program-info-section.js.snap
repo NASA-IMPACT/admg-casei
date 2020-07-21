@@ -3,7 +3,7 @@
 exports[`Program Info Section renders logo when present in props 1`] = `
 .c0 {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0,1fr);
   grid-template-areas: "header" "content";
   margin-top: 5rem;
   border-top: 55px solid transparent;
@@ -282,7 +282,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
 exports[`Program Info Section renders placeholder when no logo is available 1`] = `
 .c0 {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0,1fr);
   grid-template-areas: "header" "content";
   margin-top: 5rem;
   border-top: 55px solid transparent;

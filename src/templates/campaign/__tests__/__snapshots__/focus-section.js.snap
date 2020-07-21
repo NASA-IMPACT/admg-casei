@@ -3,7 +3,7 @@
 exports[`Focus Section displays content 1`] = `
 .c0 {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0,1fr);
   grid-template-areas: "header" "content";
   margin-top: 5rem;
   border-top: 55px solid transparent;

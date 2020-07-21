@@ -15,6 +15,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       partner_orgs: [partner_org] @link
       platforms: [platform] @link
       seasons: [season] @link
+      instruments: [instrument] @link
     }
     type instrument implements Node {
       platforms: [platform] @link
@@ -103,6 +104,11 @@ exports.createPages = async ({ graphql, actions }) => {
           id
         }
       }
+      allPlatform {
+        nodes {
+          id
+        }
+      }
     }
   `)
 
@@ -119,6 +125,15 @@ exports.createPages = async ({ graphql, actions }) => {
     createPage({
       path: `instrument/${node.id}`,
       component: path.resolve(`./src/templates/instrument/index.js`),
+      context: {
+        slug: node.id,
+      },
+    })
+  })
+  result.data.allPlatform.nodes.forEach(node => {
+    createPage({
+      path: `platform/${node.id}`,
+      component: path.resolve(`./src/templates/platform/index.js`),
       context: {
         slug: node.id,
       },

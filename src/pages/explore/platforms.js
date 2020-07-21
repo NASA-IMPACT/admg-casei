@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react"
 import PropTypes from "prop-types"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Spinner from "react-spinkit"
 
 import api from "../../utils/api"
@@ -94,15 +94,17 @@ const Platforms = ({ data, location }) => {
         >
           {list.map(platform => {
             return (
-              <PlatformCard
-                shortname={platform.shortname}
-                longname={platform.longname}
-                key={platform.id}
-                description={platform.description}
-                collectionPeriodIds={platform.collectionPeriodIds}
-                instruments={platform.instruments}
-                stationary={platform.stationary}
-              />
+              <Link to={`/platform/${platform.id}`} key={platform.id}>
+                <PlatformCard
+                  shortname={platform.shortname}
+                  longname={platform.longname}
+                  key={platform.id}
+                  description={platform.description}
+                  collectionPeriodIds={platform.collectionPeriodIds}
+                  instruments={platform.instruments}
+                  stationary={platform.stationary}
+                />
+              </Link>
             )
           })}
         </ExploreSection>
