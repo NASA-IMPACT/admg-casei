@@ -2,6 +2,10 @@ import React from "react"
 import { create } from "react-test-renderer"
 
 import PlatformSection from "../platform-section"
+jest.mock("../../../components/image", () => {
+  const mockImage = () => <img />
+  return mockImage
+})
 
 const testArray = [
   {
