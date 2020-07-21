@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import HeaderStat from "./header-stat"
+import HeaderStats from "./header-stats"
 
 export default function Hero({
   tagTitle,
@@ -35,17 +35,7 @@ export default function Hero({
       )}
 
       <div style={{ gridArea: `1 / 2 / 3 / 3` }}>{children}</div>
-      {stats && (
-        <dl style={{ display: `grid`, maxHeight: `6rem` }} data-cy="stats">
-          {stats.map(stat => (
-            <HeaderStat
-              key={stat.label}
-              number={stat.number}
-              label={stat.label}
-            />
-          ))}
-        </dl>
-      )}
+      {stats && <HeaderStats statList={stats} />}
     </header>
   )
 }
