@@ -19,6 +19,7 @@ const Campaigns = ({ data, location }) => {
   const {
     allSeason,
     allFocusArea,
+    allGeophysicalConcept,
     allGeographicalRegion,
     allPlatform,
     allDeployment,
@@ -75,6 +76,7 @@ const Campaigns = ({ data, location }) => {
             filterId =>
               campaign.seasons.map(x => x.id).includes(filterId) ||
               campaign.focus.map(x => x.id).includes(filterId) ||
+              campaign.geophysical.map(x => x.id).includes(filterId) ||
               campaignHasDeploymentInRegion(campaign, filterId) ||
               campaign.platforms.map(x => x.id).includes(filterId)
           )
@@ -85,6 +87,7 @@ const Campaigns = ({ data, location }) => {
 
   const { getFilterLabelById, getFilterOptionsById } = selector({
     focus: allFocusArea,
+    geophysical: allGeophysicalConcept,
     season: allSeason,
     region: allGeographicalRegion,
     platform: allPlatform,
@@ -174,6 +177,13 @@ export const query = graphql`
         longname: long_name
       }
     }
+    allGeophysicalConcept {
+      options: nodes {
+        id
+        shortname: short_name
+        longname: long_name
+      }
+    }
     allGeographicalRegion {
       options: nodes {
         id
@@ -206,6 +216,9 @@ export const query = graphql`
     focus: focus_areas {
       id
     }
+    geophysical: geophysical_concepts {
+      id
+    }
     startdate: start_date
     enddate: end_date
     region: region_description
@@ -229,6 +242,11 @@ const campaignShape = PropTypes.shape({
     })
   ).isRequired,
   focus: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+  geophysical: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
     })
@@ -269,6 +287,7 @@ Campaigns.propTypes = {
     }),
     allFocusArea: filterOptionShape,
     allSeason: filterOptionShape,
+    allGeophysicalConcept: filterOptionShape,
     allGeographicalRegion: filterOptionShape,
     allPlatform: filterOptionShape,
     allDeployment: PropTypes.shape({

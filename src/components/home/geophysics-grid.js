@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { Link } from "gatsby"
 
 import theme from "../../utils/theme"
 
@@ -12,17 +13,23 @@ export const GeophysicsGrid = ({ geophysicalConcepts }) => (
     }}
   >
     {geophysicalConcepts.map(concept => (
-      <div
+      <Link
+        to="/explore/campaigns"
+        state={{ selectedFilterId: concept.id }} // Pass state as props to the linked page
+        style={{ flexGrow: 1 }}
+        data-cy="geophysical-concept"
         key={concept.id}
-        style={{
-          border: `1px solid ${theme.color.base}`,
-          padding: `1rem`,
-          flexGrow: 1,
-          textAlign: `center`,
-        }}
       >
-        {concept.shortname}
-      </div>
+        <div
+          style={{
+            border: `1px solid ${theme.color.base}`,
+            padding: `1rem`,
+            textAlign: `center`,
+          }}
+        >
+          {concept.shortname}
+        </div>
+      </Link>
     ))}
   </div>
 )

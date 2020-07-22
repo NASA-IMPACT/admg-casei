@@ -6,7 +6,13 @@ describe("Searchbar", () => {
   ;[
     {
       category: "campaigns",
-      filterExamples: ["Weather", "boreal winter", "rainforest", "C-23 Sherpa"],
+      filterExamples: [
+        "Weather",
+        "Tectonic Processes",
+        "boreal winter",
+        "rainforest",
+        "C-23 Sherpa",
+      ],
     },
     { category: "platforms", filterExamples: ["Aerolaser"] },
   ].forEach(x => {

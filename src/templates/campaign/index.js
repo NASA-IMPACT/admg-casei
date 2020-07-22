@@ -39,8 +39,8 @@ const CampaignTemplate = ({ data: { campaign, deployments } }) => {
       />
       <FocusSection
         focus={campaign.focus}
+        geophysical={campaign.geophysical}
         focusPhenomena={campaign.focusPhenomena}
-        scienceKeywords={campaign.scienceKeywords}
       />
       <PlatformSection platforms={campaign.platforms} />
       <TimelineSection deployments={deployments} />
@@ -90,6 +90,12 @@ CampaignTemplate.propTypes = {
           longname: PropTypes.string.isRequired,
         })
       ).isRequired,
+      geophysical: PropTypes.arrayOf(
+        PropTypes.shape({
+          shortname: PropTypes.string.isRequired,
+          longname: PropTypes.string.isRequired,
+        })
+      ).isRequired,
       countDeployments: PropTypes.number,
       countCollectionPeriods: PropTypes.number.isRequired,
       countDataProducts: PropTypes.number,
@@ -108,7 +114,6 @@ CampaignTemplate.propTypes = {
       tertiaryWebsite: PropTypes.string.isRequired,
       publicationLink: PropTypes.string.isRequired,
       focusPhenomena: PropTypes.string.isRequired,
-      scienceKeywords: PropTypes.string,
       platforms: PropTypes.arrayOf(
         PropTypes.shape({
           shortname: PropTypes.string.isRequired,

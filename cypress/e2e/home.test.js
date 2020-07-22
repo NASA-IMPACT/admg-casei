@@ -134,6 +134,30 @@ describe("Homepage", () => {
           expect($h2, "text content").to.have.text("Geophysical Concepts")
         })
     })
+    it("renders a box per geophysical concept", () => {
+      cy.get("[data-cy=geophysical-concepts-section]")
+        .find("[data-cy=geophysical-concept]")
+        .each($el => {
+          cy.get($el).find("div").should("exist")
+          cy.get($el).find("div").should("have.text", $el[0].textContent)
+        })
+    })
+
+    it("navigates to the campaign list with the geophysical concept as filter applied", () => {
+      cy.get("[data-cy=geophysical-concepts-section]")
+        .find("[data-cy=geophysical-concept]")
+        .contains("Biodiversity")
+        .click()
+
+      cy.url().should("include", "/explore/campaigns")
+
+      cy.get("main")
+        .find("[data-cy=filter-chip]")
+        .should("have.length", 1)
+        .and("have.text", "geophysical: Biodiversity")
+
+      cy.get("main").find("[data-cy=explore-card]").should("have.length", 0)
+    })
   })
   describe("platforms", () => {
     it("renders the correct section header", () => {
