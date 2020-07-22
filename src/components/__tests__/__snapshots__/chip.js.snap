@@ -146,7 +146,6 @@ exports[`Chip renders with action 1`] = `
   </small>
   <button
     className="c0"
-    data-cy="remove-filter"
     disabled={false}
     id="close-icon"
     onClick={[Function]}

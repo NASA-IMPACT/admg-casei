@@ -1,10 +1,11 @@
 import React, { useState } from "react"
+import { Button } from "@devseed-ui/button"
 
 import { Modal } from "./modal"
 import { isLoggedIn, handleLogin, logout } from "../utils/auth"
 
 const Login = () => {
-  const [buttonText, setButtonText] = useState("Maintenance login")
+  const [buttonText, setButtonText] = useState("Maintenance Login")
   const [user, setUser] = useState({ username: "", password: "" })
   const [isModalOpen, setModal] = useState(false)
 
@@ -22,14 +23,17 @@ const Login = () => {
 
   const handleLogout = () => {
     logout()
-    setButtonText("Maintenance login")
+    setButtonText("Maintenance Login")
   }
 
   return (
     <>
-      <button onClick={() => (isLoggedIn() ? handleLogout() : setModal(true))}>
+      <Button
+        variation="achromic-glass"
+        onClick={() => (isLoggedIn() ? handleLogout() : setModal(true))}
+      >
         {buttonText}
-      </button>
+      </Button>
 
       <Modal
         id="modal"
