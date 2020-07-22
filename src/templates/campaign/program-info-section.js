@@ -33,33 +33,35 @@ const ProgramInfoSection = ({
 
   return (
     <SectionBlock headline="Program Info" id="program-info" withBackground>
-      <div
-        style={{
-          flex: `0.618`,
-          display: `flex`,
-          justifyContent: `center`,
-          alignItems: `center`,
-          padding: `1rem`,
-        }}
-      >
-        <img
-          src={logo || PlaceholderLogo}
-          alt="campaign-logo"
-          data-cy="campaign-logo"
-        />
-      </div>
-
-      <ContentGroup>
-        {contentList.map(item => (
-          <ContentItem
-            key={item.label}
-            id="program-info-content"
-            label={item.label}
-            info={item.info}
-            link={item.link}
+      <div style={{ display: `flex` }}>
+        <div
+          style={{
+            flex: `0.618`,
+            display: `flex`,
+            justifyContent: `center`,
+            alignItems: `center`,
+            padding: `1rem`,
+          }}
+        >
+          <img
+            src={logo || PlaceholderLogo}
+            alt="campaign-logo"
+            data-cy="campaign-logo"
           />
-        ))}
-      </ContentGroup>
+        </div>
+
+        <ContentGroup>
+          {contentList.map(item => (
+            <ContentItem
+              key={item.label}
+              id="program-info-content"
+              label={item.label}
+              info={item.info}
+              link={item.link}
+            />
+          ))}
+        </ContentGroup>
+      </div>
     </SectionBlock>
   )
 }

@@ -6,8 +6,14 @@ import Image from "../image"
 import theme from "../../utils/theme"
 
 const Section = styled.section`
-  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: "header" "content";
+  margin-top: 5rem;
+
+  /* This invisible border pushes the section below the nav bar when using inpage navigation */
   border-top: 55px solid transparent;
+  position: relative;
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box;
@@ -25,12 +31,15 @@ const Section = styled.section`
 `
 
 const SectionWithImage = styled(Section)`
-  display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-    "image header" "image header" "image content"
-    "image content";
+  grid-template-areas: "image header" "image content" "image content";
   column-gap: 5rem;
+`
+
+const SectionWithText = styled(Section)`
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-areas: "header header header header header header header . . . . ." ". . . . . content content content content content content content";
+  column-gap: 1rem;
 `
 
 export const SectionImage = ({ filename, alt }) => (
@@ -50,32 +59,34 @@ const SectionBlock = ({
   id,
   withImage,
   withBackground,
+  withText,
   children,
 }) => {
   return (
     <Section
-      as={withImage ? SectionWithImage : Section}
+      as={withImage ? SectionWithImage : withText ? SectionWithText : Section}
       id={id}
       data-cy={`${id}-section`}
     >
-      {tagline && (
-        <div style={{ textTransform: `uppercase`, alignSelf: `end` }}>
-          {tagline}
-        </div>
-      )}
-      <h2>{headline}</h2>
-      {withBackground ? (
+      <div style={{ gridArea: `header`, alignSelf: `end` }}>
+        {tagline && (
+          <div style={{ textTransform: `uppercase` }} data-cy="section-tagline">
+            {tagline}
+          </div>
+        )}
+        <h2>{headline}</h2>
+      </div>
+      {withImage ? (
+        children
+      ) : (
         <div
           style={{
-            display: `flex`,
-            alignItems: `stretch`,
-            backgroundColor: theme.color.secondary,
+            backgroundColor: withBackground ? theme.color.secondary : `inherit`,
+            gridArea: `content`,
           }}
         >
           {children}
         </div>
-      ) : (
-        children
       )}
     </Section>
   )
@@ -87,6 +98,7 @@ SectionBlock.propTypes = {
   id: PropTypes.string.isRequired,
   withImage: PropTypes.bool,
   withBackground: PropTypes.bool,
+  withText: PropTypes.bool,
   children: PropTypes.node,
 }
 

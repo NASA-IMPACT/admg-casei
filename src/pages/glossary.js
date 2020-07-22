@@ -2,7 +2,7 @@ import React from "react"
 
 import Layout from "../components/layout"
 import DefinitionList from "../components/tables/definitionList"
-import glossary from "../utils/glossary.json"
+import glossary from "../content/glossary.json"
 
 export default function Glossary() {
   const { terms } = glossary
