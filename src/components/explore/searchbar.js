@@ -2,8 +2,8 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import FilterMenu from "./filter-menu"
-import Chip from "./chip"
-import theme from "../utils/theme"
+import Chip from "../chip"
+import theme from "../../utils/theme"
 
 // TODO: figure out how to import and use collecticons directly
 const SearchIcon = ({ color = "#FFF" }) => (
