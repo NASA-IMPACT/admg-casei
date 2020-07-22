@@ -1,12 +1,14 @@
 /// <reference types="Cypress" />
 
+import { site } from "../../test/__fixtures__"
+
 describe("Header", () => {
   beforeEach(() => {
     cy.visit("/")
   })
   it("renders correctly", () => {
-    cy.get("header").contains("NASA")
-    cy.get("header").contains("Sub-orbital catalog")
+    cy.get("header").contains(site.siteMetadata.shortname)
+    cy.get("header").contains(site.siteMetadata.title)
     cy.get("nav")
       .find("li")
       .should($li => {

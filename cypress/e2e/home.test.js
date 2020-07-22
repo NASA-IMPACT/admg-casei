@@ -1,12 +1,15 @@
 /// <reference types="Cypress" />
 
+import { site } from "../../test/__fixtures__"
+
 describe("Homepage", () => {
   beforeEach(() => {
     cy.visit("/")
   })
   it("renders correctly", () => {
-    cy.get("main").find("h1").contains("Sub-orbital catalog")
-    cy.get("main").find("p").contains("airborne, field stationary")
+    cy.get("main").find("p").contains(site.siteMetadata.shortname)
+    cy.get("main").find("h1").contains(site.siteMetadata.title)
+    cy.get("main").find("p").contains(site.siteMetadata.description)
     cy.get("main").find("section").should("have.length", 5)
   })
 

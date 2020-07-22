@@ -4,7 +4,8 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Sub-orbital catalog`,
+    title: `Catalog of Archived Sub-orbital Earth Science Investigations`,
+    shortname: `NASA | CASEI`,
     description: `Explore NASA’s catalog of airborne, field stationary and fixed
     campaigns.`,
     author: `@developmentseed`,
@@ -23,8 +24,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Sub-orbital catalog`,
-        short_name: `Sub-orbital catalog`,
+        name: `Catalog of Archived Sub-orbital Earth Science Investigations`,
+        short_name: `NASA | CASEI`,
         start_url: `/`,
         background_color: `#008888`,
         theme_color: `#008888`,

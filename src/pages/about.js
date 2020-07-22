@@ -1,12 +1,15 @@
 import React from "react"
 
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 import Hero from "../components/hero"
 import { SectionBlock } from "../components/section"
 import about from "../content/about.json"
 
 const About = () => (
   <Layout>
+    <SEO title="About" />
+
     <Hero
       tagTitle="About"
       title="NASA airborne campaigns use the vantage point of space to explore critical questions to increase our understanding of planet earth."

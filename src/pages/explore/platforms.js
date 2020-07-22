@@ -10,6 +10,7 @@ import Layout from "../../components/layout"
 import ExploreMenu from "../../components/explore-menu"
 import Searchbar from "../../components/searchbar"
 import ExploreSection from "../../components/explore-section"
+import SEO from "../../components/seo"
 import PlatformCard from "../../components/cards/platform-card"
 
 import { selector } from "../../utils/filter-utils"
@@ -63,6 +64,7 @@ const Platforms = ({ data, location }) => {
 
   return (
     <Layout>
+      <SEO title="Platforms" />
       <ExploreMenu />
       <Searchbar
         submitSearch={submitSearch}

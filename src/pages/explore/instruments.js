@@ -10,6 +10,7 @@ import Layout from "../../components/layout"
 import ExploreMenu from "../../components/explore-menu"
 import ExploreSection from "../../components/explore-section"
 import Searchbar from "../../components/searchbar"
+import SEO from "../../components/seo"
 import InstrumentCard from "../../components/cards/instrument-card"
 
 import { selector } from "../../utils/filter-utils"
@@ -62,6 +63,7 @@ export default function Instruments({ data, location }) {
   })
   return (
     <Layout>
+      <SEO title="Instruments" />
       <ExploreMenu />
       <Searchbar
         submitSearch={submitSearch}

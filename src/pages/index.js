@@ -19,7 +19,7 @@ const IndexPage = ({ data }) => {
       <SEO title="Home" />
 
       <Hero
-        tagTitle="Nasa"
+        tagTitle={data.site.siteMetadata.shortname}
         title={data.site.siteMetadata.title}
         description={data.site.siteMetadata.description}
         id="home"
@@ -99,6 +99,7 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+        shortname
         description
       }
     }
@@ -136,6 +137,7 @@ IndexPage.propTypes = {
     site: PropTypes.shape({
       siteMetadata: PropTypes.shape({
         title: PropTypes.string.isRequired,
+        shortname: PropTypes.string.isRequired,
         description: PropTypes.string.isRequired,
       }),
     }),
