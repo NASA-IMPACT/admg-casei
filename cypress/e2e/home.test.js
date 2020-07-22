@@ -45,7 +45,17 @@ describe("Homepage", () => {
       cy.get("main")
         .find("[data-cy=filter-chip]")
         .should("have.length", 1)
-        .and("have.text", "focus: Weather")
+        .find("small")
+        .then($small => {
+          expect($small, "text content").to.have.text("focus: Weather")
+        })
+
+      cy.get("main")
+        .find("[data-cy=filter-chip]")
+        .find("button")
+        .then($button => {
+          expect($button, "text content").to.have.text("close icon")
+        })
 
       cy.get("main").find("[data-cy=explore-card]").should("have.length", 7)
     })
@@ -118,7 +128,17 @@ describe("Homepage", () => {
       cy.get("main")
         .find("[data-cy=filter-chip]")
         .should("have.length", 1)
-        .and("have.text", "region: mountains")
+        .find("small")
+        .then($small => {
+          expect($small, "text content").to.have.text("region: mountains")
+        })
+
+      cy.get("main")
+        .find("[data-cy=filter-chip]")
+        .find("button")
+        .then($button => {
+          expect($button, "text content").to.have.text("close icon")
+        })
 
       cy.get("main").find("[data-cy=explore-card]").should("have.length", 1)
     })
@@ -174,7 +194,17 @@ describe("Homepage", () => {
       cy.get("main")
         .find("[data-cy=filter-chip]")
         .should("have.length", 1)
-        .and("have.text", "type: Remote")
+        .find("small")
+        .then($small => {
+          expect($small, "text content").to.have.text("type: Remote")
+        })
+
+      cy.get("main")
+        .find("[data-cy=filter-chip]")
+        .find("button")
+        .then($button => {
+          expect($button, "text content").to.have.text("close icon")
+        })
 
       cy.get("main").find("[data-cy=explore-card]").should("have.length", 0)
     })
