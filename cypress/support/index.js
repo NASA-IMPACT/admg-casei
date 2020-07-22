@@ -20,5 +20,6 @@ import "./assertions"
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 
+import "@cypress/code-coverage/support"
 import "cypress-axe"
 import "@testing-library/cypress/add-commands"

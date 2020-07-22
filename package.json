@@ -36,10 +36,12 @@
     "wellknown": "^0.5.0"
   },
   "devDependencies": {
+    "@cypress/code-coverage": "^3.8.1",
     "@testing-library/cypress": "^6.0.0",
     "axe-core": "^3.5.5",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.1.0",
+    "babel-plugin-istanbul": "^6.0.0",
     "babel-plugin-styled-components": "^1.10.7",
     "babel-preset-gatsby": "^0.5.2",
     "cypress": "^4.10.0",
@@ -76,7 +78,9 @@
     "cy:open": "cypress open",
     "cy:run": "cypress run",
     "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open",
-    "test:e2e:ci": "start-server-and-test develop http://localhost:8000 cy:run"
+    "test:e2e:ci": "start-server-and-test develop http://localhost:8000 cy:run",
+    "test:cov": "nyc report --reporter=lcov --reporter=text",
+    "test:cov:summary": "nyc report --reporter=text-summary"
   },
   "repository": {
     "type": "git",
