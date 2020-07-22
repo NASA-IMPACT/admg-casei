@@ -1,8 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 import PropTypes from "prop-types"
-import { headingAlt } from "@devseed-ui/heading"
-import { glsp } from "@devseed-ui/base"
+import { headingAlt } from "@devseed-ui/typography"
+import { glsp } from "@devseed-ui/theme-provider"
 
 import theme from "../../utils/theme"
 

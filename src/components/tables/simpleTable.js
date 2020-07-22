@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import PropTypes from "prop-types"
-import { headingAlt } from "@devseed-ui/heading"
+import { headingAlt } from "@devseed-ui/typography"
 
 import theme from "../../utils/theme"
 
