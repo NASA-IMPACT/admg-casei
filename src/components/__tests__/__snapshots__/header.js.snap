@@ -17,7 +17,6 @@ exports[`Header renders correctly 1`] = `
     <div
       style={
         Object {
-          "fontFamily": "'Varela Round',sans-serif",
           "fontSize": "1.5rem",
           "lineHeight": "1.5rem",
           "margin": 0,
@@ -46,7 +45,7 @@ exports[`Header renders correctly 1`] = `
         >
           <img />
         </div>
-        NASA
+        Shortname from props
         <b>
           Site title from props
         </b>

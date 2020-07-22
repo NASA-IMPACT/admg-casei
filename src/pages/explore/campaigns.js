@@ -7,9 +7,10 @@ import api from "../../utils/api"
 import theme from "../../utils/theme"
 
 import Layout from "../../components/layout"
-import ExploreMenu from "../../components/explore-menu"
-import Searchbar from "../../components/searchbar"
-import ExploreSection from "../../components/explore-section"
+import SEO from "../../components/seo"
+import ExploreMenu from "../../components/explore/explore-menu"
+import Searchbar from "../../components/explore/searchbar"
+import ExploreSection from "../../components/explore/explore-section"
 import CampaignCard from "../../components/cards/campaign-card"
 
 import { selector } from "../../utils/filter-utils"
@@ -91,6 +92,7 @@ const Campaigns = ({ data, location }) => {
 
   return (
     <Layout>
+      <SEO title="Campaigns" />
       <ExploreMenu />
       <Searchbar
         submitSearch={submitSearch}

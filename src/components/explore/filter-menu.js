@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import theme from "../utils/theme"
+import theme from "../../utils/theme"
 
 const Filter = ({ label, options }) => (
   <optgroup label={label}>

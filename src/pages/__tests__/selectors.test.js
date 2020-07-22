@@ -11,8 +11,8 @@ import { query, location, site, images } from "../../../test/__fixtures__"
 
 const useStaticQuery = jest.spyOn(Gatsby, "useStaticQuery")
 useStaticQuery.mockImplementation(() => ({
-  ...site,
-  ...images,
+  site,
+  images,
 }))
 
 describe("Campaigns page", () => {

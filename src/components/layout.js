@@ -21,6 +21,7 @@ const Layout = ({ children }) => {
       site {
         siteMetadata {
           title
+          shortname
         }
       }
     }
@@ -34,7 +35,10 @@ const Layout = ({ children }) => {
         flexDirection: `column`,
       }}
     >
-      <Header siteTitle={data.site.siteMetadata.title}>
+      <Header
+        siteTitle={data.site.siteMetadata.title}
+        shortname={data.site.siteMetadata.shortname}
+      >
         <Nav />
       </Header>
       <main
@@ -48,7 +52,7 @@ const Layout = ({ children }) => {
       >
         {children}
       </main>
-      <Footer />
+      <Footer shortname={data.site.siteMetadata.shortname} />
     </div>
   )
 }

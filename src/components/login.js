@@ -4,7 +4,7 @@ import { Modal } from "./modal"
 import { isLoggedIn, handleLogin, logout } from "../utils/auth"
 
 const Login = () => {
-  const [buttonText, setButtonText] = useState("Log in")
+  const [buttonText, setButtonText] = useState("Maintenance login")
   const [user, setUser] = useState({ username: "", password: "" })
   const [isModalOpen, setModal] = useState(false)
 
@@ -22,7 +22,7 @@ const Login = () => {
 
   const handleLogout = () => {
     logout()
-    setButtonText("Log in")
+    setButtonText("Maintenance login")
   }
 
   return (

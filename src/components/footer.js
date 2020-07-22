@@ -1,10 +1,12 @@
 import React from "react"
+import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
 import theme from "../utils/theme"
 import Login from "./login"
+import ExternalLink from "./external-link"
 
-const Footer = () => {
+const Footer = ({ shortname }) => {
   const style = {
     ul: {
       listStyle: `none`,
@@ -40,12 +42,12 @@ const Footer = () => {
               marginBottom: `0.5rem`,
             }}
           >
-            suborbital
+            {shortname}
           </div>
           <p>
-            Suborbital is a comprehensive inventory containing information about
-            all airborne, field stationary and fixed earth science campaigns as
-            well as aircrafts, instruments, and data products.
+            {shortname} is a comprehensive inventory containing information
+            about all airborne, field stationary and fixed earth science
+            campaigns as well as aircrafts, instruments, and data products.
           </p>
         </div>
 
@@ -70,8 +72,9 @@ const Footer = () => {
             <li>
               <Link to="/glossary/">Glossary</Link>
             </li>
-            <li className="placeholder">Tools</li>
-            <li className="placeholder">Funding Organizations</li>
+            <li>
+              <Login />
+            </li>
           </ul>
         </div>
 
@@ -84,17 +87,26 @@ const Footer = () => {
             <li>
               <Link to="/contact/">Contact us</Link>
             </li>
-            <li className="placeholder">
-              <Login />
-            </li>
           </ul>
         </div>
 
         <div style={{ gridColumn: `11 / span 2` }}>
           <p style={style.headline}>Organizations</p>
           <ul style={style.ul}>
-            <li className="placeholder">ADMG Website</li>
-            <li className="placeholder">Impact Team Website</li>
+            <li>
+              <ExternalLink
+                label="ADMG Website"
+                url="https://earthdata.nasa.gov/esds/impact/admg"
+                id="admg-website"
+              />
+            </li>
+            <li>
+              <ExternalLink
+                label="Impact Website"
+                url="https://earthdata.nasa.gov/esds/impact"
+                id="impact-website"
+              />
+            </li>
           </ul>
         </div>
 
@@ -162,12 +174,21 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="placeholder" style={{ textAlign: `end` }}>
+      <div style={{ textAlign: `center` }}>
         © {new Date().getFullYear()}, Built by{" "}
-        <a href="https://www.developmentseed.org">Development Seed</a>.
+        <ExternalLink
+          label="Development Seed"
+          url="https://www.developmentseed.org"
+          id="devseed-website"
+        />
+        .
       </div>
     </footer>
   )
+}
+
+Footer.propTypes = {
+  shortname: PropTypes.string.isRequired,
 }
 
 export default Footer
