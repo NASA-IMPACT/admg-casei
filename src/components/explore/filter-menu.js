@@ -62,6 +62,11 @@ const FilterMenu = ({
             options={getFilterOptionsById("focus")}
           />
           <Filter
+            id="geophysical"
+            label="Geophysical Concept"
+            options={getFilterOptionsById("geophysical")}
+          />
+          <Filter
             id="season"
             label="Season"
             options={getFilterOptionsById("season")}

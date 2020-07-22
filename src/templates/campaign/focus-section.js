@@ -10,7 +10,7 @@ import {
 import Label from "../../components/label"
 import FocusAreaGallery from "../../components/home/focus-area-gallery"
 
-const FocusSection = ({ focus, focusPhenomena, scienceKeywords }) => {
+const FocusSection = ({ focus, geophysical, focusPhenomena }) => {
   return (
     <SectionBlock headline="Focus" id="focus" withBackground>
       <ContentGroup>
@@ -22,8 +22,8 @@ const FocusSection = ({ focus, focusPhenomena, scienceKeywords }) => {
         </div>
         <ContentItem
           id="focus-content"
-          label="Geophysical Concept"
-          info={scienceKeywords}
+          label={`Geophysical Concept${geophysical.length > 1 ? "s" : ""}`}
+          info={geophysical.map(x => x.shortname).join(", ")}
         />
         <ContentItem
           id="focus-content"
@@ -42,6 +42,11 @@ export const focus = graphql`
       shortname: short_name
       longname: long_name
     }
+    geophysical: geophysical_concepts {
+      id
+      shortname: short_name
+      longname: long_name
+    }
     focusPhenomena: focus_phenomena
   }
 `
@@ -54,8 +59,14 @@ FocusSection.propTypes = {
       longname: PropTypes.string,
     })
   ).isRequired,
+  geophysical: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      shortname: PropTypes.string.isRequired,
+      longname: PropTypes.string,
+    })
+  ).isRequired,
   focusPhenomena: PropTypes.string.isRequired,
-  scienceKeywords: PropTypes.string,
 }
 
 export default FocusSection

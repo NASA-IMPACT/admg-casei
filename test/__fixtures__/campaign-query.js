@@ -972,6 +972,140 @@ export const query = {
       },
     ],
   },
+  allGeophysicalConcept: {
+    options: [
+      {
+        id: "9e52d6cf-5a81-4b53-a942-653baeb1fdc1",
+        shortname: "Aerosols",
+        longname: "Atmospheric Chemistry - Aerosols",
+      },
+      {
+        id: "cef614bb-0bac-4f62-85af-8a0295b76034",
+        shortname: "Air Quality (AirQual)",
+        longname: "Atmospheric Chemistry - Air Quality",
+      },
+      {
+        id: "b306795c-557f-4603-b813-56d39fb00c76",
+        shortname: "Atmospheric Chemicals & Trace Gases",
+        longname: "Atmospheric Chemistry - Chemical Composition & Trace Gases",
+      },
+      {
+        id: "e30bf13d-4abc-4851-b699-d49bf67c4ad6",
+        shortname: "Upper Atmospheric Chemistry",
+        longname: "Atmospheric Chemistry - Upper Atmosphere",
+      },
+      {
+        id: "a5d259cd-0b6c-441e-9cda-237a991d30ab",
+        shortname: "Radiation & Energy Budget",
+        longname: "Water/Energy Cycle - Radiation & Energy Budget",
+      },
+      {
+        id: "2f4c11cd-2e66-424b-a164-d5e5a1ded727",
+        shortname: "Clouds-Properties & Processes & Dynamics",
+        longname: "Weather - Cloud Properties, Processes, & Dynamics",
+      },
+      {
+        id: "20c5cc69-f86b-46eb-850c-094ff8d8c104",
+        shortname: "Boundary Layer Processes",
+        longname: "Weather - Boundary Layer Processes",
+      },
+      {
+        id: "4a716efb-76ed-4707-9842-a290d07d2410",
+        shortname: "Atmospheric Electricity & Lightning",
+        longname: "Weather - Atmospheric Electricity & Lightning",
+      },
+      {
+        id: "cf2628cd-325e-4485-95f1-4f7c7f24df84",
+        shortname: "Tropical Cyclones",
+        longname: "Weather - Tropical Cyclones",
+      },
+      {
+        id: "2b6b475c-444c-4e66-9dec-61da55cd46da",
+        shortname: "Mesoscale Convection & Severe Weather",
+        longname: "Weather - Mesoscale Convection & Severe Weather",
+      },
+      {
+        id: "04b29f58-f0a5-4b84-82d8-56c9f826e2c3",
+        shortname: "Mid-latitude Cyclones",
+        longname: "Weather - Mid-latitude Cyclones",
+      },
+      {
+        id: "360e94b2-fc1a-4d2e-9715-dc2060be3d5f",
+        shortname: "Precipitation (Precip)",
+        longname: "Water/Energy Cycle - Precipitation",
+      },
+      {
+        id: "390e1e0d-3d2c-46df-a00b-c65b4d7151a5",
+        shortname: "Terrestrial Hydrology (TerrHydrol)",
+        longname: "Water/Energy Cycle - Terrestrial Hydrology",
+      },
+      {
+        id: "1cf782c7-8a10-479c-9a57-b29fe17746ac",
+        shortname: "Ice and Glacial Properties & Processes",
+        longname: "Climate - Ice and Glacial Properties & Processes",
+      },
+      {
+        id: "ad26de91-23d9-4e3d-b27e-978c81afe3df",
+        shortname: "Ocean Properties & Processes",
+        longname: "",
+      },
+      {
+        id: "0053a024-2ccd-4b31-bdf1-eafe6b48e314",
+        shortname: "Ecosystems/Biogeochemistry",
+        longname: "Carbon/Ecosystems - Biogeochemical Interactions",
+      },
+      {
+        id: "96e8e86f-2b16-4bb1-99ee-8020b8984602",
+        shortname: "Biodiversity",
+        longname: "Carbon/Ecosystems - Biodiversity",
+      },
+      {
+        id: "64f7434e-63a1-405f-b3c9-875ee282fa4b",
+        shortname: "Carbon Storage & Processes",
+        longname: "Carbon/Ecosystems - Carbon Storage & Processes",
+      },
+      {
+        id: "6490e743-061e-4cd7-adb6-3344ff1e87bf",
+        shortname: "Soil Properties  (SoilProp)",
+        longname: "",
+      },
+      {
+        id: "dd8f913b-2fc4-4a1d-b3da-4c76afbf068e",
+        shortname: "Land Characteristics",
+        longname: "",
+      },
+      {
+        id: "3103a214-1df3-4fa9-8f7e-e9dcf49a0401",
+        shortname: "Tectonic Processes",
+        longname: "Solid Earth - Tectonic Processes",
+      },
+      {
+        id: "9de5d9f2-0d0f-4c2c-aa74-4cc0594f41c3",
+        shortname: "Volcanic Processes",
+        longname: "Solid Earth - Volcanic Processes",
+      },
+      {
+        id: "ca948668-50c0-4f52-885a-ab6ed3e1ab30",
+        shortname: "Earth's Magnetic Field (MagField)",
+        longname: "Solid Earth - Magnetic Field",
+      },
+      {
+        id: "b8d7c54e-4678-40ad-a572-3b7fa6ac4213",
+        shortname: "Earth's Interior (EarthInt)",
+        longname: "Solid Earth - Deep Interior Dynamics",
+      },
+      {
+        id: "42de25d7-97b8-4cd1-9288-7a85dd906489",
+        shortname: "Earth-Climate Interactions",
+        longname: "Solid Earth - Climate-driven Earth Processes",
+      },
+      {
+        id: "fb74f5e0-398d-44e6-9087-cf5e8f445562",
+        shortname: "Geodesy",
+        longname: "Solid Earth - Geodesy",
+      },
+    ],
+  },
   allGeographicalRegion: {
     options: [
       {

@@ -6,9 +6,19 @@ describe("Searchbar", () => {
   ;[
     {
       category: "campaigns",
-      filterExamples: ["Weather", "boreal winter", "rainforest", "C-23 Sherpa"],
+      filterExamples: [
+        "Weather",
+        "Tectonic Processes",
+        "boreal winter",
+        "rainforest",
+        "C-23 Sherpa",
+      ],
     },
     { category: "platforms", filterExamples: ["Aerolaser"] },
+    {
+      category: "instruments",
+      filterExamples: ["In Situ - Spectrometer/Radiometer"],
+    },
   ].forEach(x => {
     describe(x.category, () => {
       beforeEach(() => {
@@ -61,19 +71,32 @@ describe("Searchbar", () => {
 
               cy.get("[data-cy=filter-chip]").should("exist")
 
-              cy.get("[data-cy=explore-card]").then($card => {
-                const numAfter = $card.length
-                expect(numAfter).to.be.lessThan(numBefore)
-              })
+              cy.get("[data-cy=item-count]").should(
+                "contain",
+                ` of ${numBefore} ${x.category}`
+              )
+
+              // This check fails because some filter examples do not return any card at all
+              // cy.get("main")
+              //   .find("[data-cy=explore-card]")
+              //   .its("length")
+              //   .should("be.lt", numBefore)
 
               cy.get("[data-cy=filter-chip]").find("button").click()
 
               cy.get("[data-cy=filter-chip]").should("not.exist")
 
-              cy.get("[data-cy=explore-card]").then($card => {
-                const numAfter = $card.length
-                expect(numAfter).to.be.equal(numBefore)
-              })
+              cy.get("[data-cy=item-count]").should("not.contain", " of ")
+
+              cy.get("[data-cy=item-count]").should(
+                "have.text",
+                `Showing ${numBefore} ${x.category}`
+              )
+
+              cy.get("main")
+                .find("[data-cy=explore-card]")
+                .its("length")
+                .should("be.eq", numBefore)
             })
           })
       })

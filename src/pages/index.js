@@ -47,7 +47,7 @@ const IndexPage = ({ data }) => {
       </SectionBlock>
 
       <SectionBlock
-        tagline="explore instruments by"
+        tagline="explore campaigns by"
         headline="Geophysical Concepts"
         id="geophysical-concepts"
       >

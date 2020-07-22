@@ -17,8 +17,8 @@ describe("Focus Section", () => {
     const tree = create(
       <FocusSection
         focus={testArray}
+        geophysical={testArray}
         focusPhenomena={testString}
-        scienceKeywords={testString}
       />
     ).toJSON()
     expect(tree).toMatchSnapshot()

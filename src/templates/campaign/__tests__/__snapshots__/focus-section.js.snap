@@ -97,7 +97,7 @@ exports[`Focus Section displays content 1`] = `
         <p
           data-cy="focus-content-text"
         >
-          test string
+          area a
         </p>
       </div>
       <div
