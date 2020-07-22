@@ -52,7 +52,7 @@ const Layout = ({ children }) => {
       >
         {children}
       </main>
-      <Footer />
+      <Footer shortname={data.site.siteMetadata.shortname} />
     </div>
   )
 }

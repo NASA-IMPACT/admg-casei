@@ -1861,10 +1861,11 @@ exports[`Campaigns page renders correctly 1`] = `
             }
           }
         >
-          suborbital
+          NASA | CASEI
         </div>
         <p>
-          Suborbital is a comprehensive inventory containing information about all airborne, field stationary and fixed earth science campaigns as well as aircrafts, instruments, and data products.
+          NASA | CASEI
+           is a comprehensive inventory containing information about all airborne, field stationary and fixed earth science campaigns as well as aircrafts, instruments, and data products.
         </p>
       </div>
       <div
@@ -1949,65 +1950,11 @@ exports[`Campaigns page renders correctly 1`] = `
               Glossary
             </a>
           </li>
-          <li
-            className="placeholder"
-          >
-            Tools
-          </li>
-          <li
-            className="placeholder"
-          >
-            Funding Organizations
-          </li>
-        </ul>
-      </div>
-      <div
-        style={
-          Object {
-            "gridColumn": "9 / span 2",
-          }
-        }
-      >
-        <p
-          style={
-            Object {
-              "fontWeight": "bold",
-              "lineHeight": "3rem",
-              "margin": "0 0 1.5rem 0",
-            }
-          }
-        >
-          Quick Links
-        </p>
-        <ul
-          style={
-            Object {
-              "listStyle": "none",
-              "margin": 0,
-            }
-          }
-        >
           <li>
-            <a
-              href="/about/"
-            >
-              About
-            </a>
-          </li>
-          <li>
-            <a
-              href="/contact/"
-            >
-              Contact us
-            </a>
-          </li>
-          <li
-            className="placeholder"
-          >
             <button
               onClick={[Function]}
             >
-              Log in
+              Maintenance login
             </button>
             <div
               className="c0"
@@ -2057,6 +2004,48 @@ exports[`Campaigns page renders correctly 1`] = `
       <div
         style={
           Object {
+            "gridColumn": "9 / span 2",
+          }
+        }
+      >
+        <p
+          style={
+            Object {
+              "fontWeight": "bold",
+              "lineHeight": "3rem",
+              "margin": "0 0 1.5rem 0",
+            }
+          }
+        >
+          Quick Links
+        </p>
+        <ul
+          style={
+            Object {
+              "listStyle": "none",
+              "margin": 0,
+            }
+          }
+        >
+          <li>
+            <a
+              href="/about/"
+            >
+              About
+            </a>
+          </li>
+          <li>
+            <a
+              href="/contact/"
+            >
+              Contact us
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div
+        style={
+          Object {
             "gridColumn": "11 / span 2",
           }
         }
@@ -2080,15 +2069,35 @@ exports[`Campaigns page renders correctly 1`] = `
             }
           }
         >
-          <li
-            className="placeholder"
-          >
-            ADMG Website
+          <li>
+            <a
+              data-cy="admg-website-link"
+              href="https://earthdata.nasa.gov/esds/impact/admg"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "#aac9ff",
+                }
+              }
+              target="_blank"
+            >
+              ADMG Website
+            </a>
           </li>
-          <li
-            className="placeholder"
-          >
-            Impact Team Website
+          <li>
+            <a
+              data-cy="impact-website-link"
+              href="https://earthdata.nasa.gov/esds/impact"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "#aac9ff",
+                }
+              }
+              target="_blank"
+            >
+              Impact Website
+            </a>
           </li>
         </ul>
       </div>
@@ -2184,10 +2193,9 @@ exports[`Campaigns page renders correctly 1`] = `
       </div>
     </div>
     <div
-      className="placeholder"
       style={
         Object {
-          "textAlign": "end",
+          "textAlign": "center",
         }
       }
     >
@@ -2196,7 +2204,15 @@ exports[`Campaigns page renders correctly 1`] = `
       , Built by
        
       <a
+        data-cy="devseed-website-link"
         href="https://www.developmentseed.org"
+        rel="noopener noreferrer"
+        style={
+          Object {
+            "color": "#aac9ff",
+          }
+        }
+        target="_blank"
       >
         Development Seed
       </a>
