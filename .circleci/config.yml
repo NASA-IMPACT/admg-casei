@@ -56,6 +56,9 @@ jobs:
       - checkout
       - run: yarn install
       - run: yarn test:e2e:ci
+      - run: yarn test:cov && yarn test:cov:summary
+      - store_artifacts:
+          path: coverage
   build-and-deploy:
     <<: *base_def
     steps:
