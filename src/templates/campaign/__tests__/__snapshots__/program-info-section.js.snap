@@ -3,8 +3,9 @@
 exports[`Program Info Section renders logo when present in props 1`] = `
 .c0 {
   display: grid;
-  grid-template-columns: minmax(0,1fr);
-  grid-template-areas: "header" "content";
+  grid-template-columns: repeat(12,1fr);
+  -webkit-column-gap: 1rem;
+  column-gap: 1rem;
   margin-top: 5rem;
   border-top: 55px solid transparent;
   position: relative;
@@ -13,8 +14,13 @@ exports[`Program Info Section renders logo when present in props 1`] = `
   background-clip: padding-box;
 }
 
+.c1 {
+  grid-column: 1 / span 12;
+  background-color: #303641;
+}
+
 <section
-  className="c0 sc-AxjAm c0"
+  className="c0"
   data-cy="program-info-section"
   id="program-info"
 >
@@ -22,7 +28,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
     style={
       Object {
         "alignSelf": "end",
-        "gridArea": "header",
+        "gridColumn": "1 / span 7",
       }
     }
   >
@@ -31,12 +37,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
     </h2>
   </div>
   <div
-    style={
-      Object {
-        "backgroundColor": "#303641",
-        "gridArea": "content",
-      }
-    }
+    className="c1"
   >
     <div
       style={
@@ -282,8 +283,9 @@ exports[`Program Info Section renders logo when present in props 1`] = `
 exports[`Program Info Section renders placeholder when no logo is available 1`] = `
 .c0 {
   display: grid;
-  grid-template-columns: minmax(0,1fr);
-  grid-template-areas: "header" "content";
+  grid-template-columns: repeat(12,1fr);
+  -webkit-column-gap: 1rem;
+  column-gap: 1rem;
   margin-top: 5rem;
   border-top: 55px solid transparent;
   position: relative;
@@ -292,8 +294,13 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
   background-clip: padding-box;
 }
 
+.c1 {
+  grid-column: 1 / span 12;
+  background-color: #303641;
+}
+
 <section
-  className="c0 sc-AxjAm c0"
+  className="c0"
   data-cy="program-info-section"
   id="program-info"
 >
@@ -301,7 +308,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
     style={
       Object {
         "alignSelf": "end",
-        "gridArea": "header",
+        "gridColumn": "1 / span 7",
       }
     }
   >
@@ -310,12 +317,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
     </h2>
   </div>
   <div
-    style={
-      Object {
-        "backgroundColor": "#303641",
-        "gridArea": "content",
-      }
-    }
+    className="c1"
   >
     <div
       style={

@@ -2,30 +2,34 @@ import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
-import { SectionBlock } from "../../components/section"
+import {
+  SectionBlock,
+  SectionHeader,
+  SectionContent,
+} from "../../components/section"
 
 export default function Overview({ description }) {
   return (
-    <SectionBlock headline="Overview" id="platform-overview">
-      <div
-        style={{
-          display: `grid`,
-          gridTemplateColumns: `5fr 3fr`,
-          columnGap: `2rem`,
-        }}
-      >
-        <div>
-          <p>{description}</p>
-        </div>
-        {/* <ul data-cy="platform-link-list"> // TODO: add in when we get website info
+    <SectionBlock id="platform-overview">
+      <SectionHeader headline="Overview" />
+      <SectionContent columns={[1, 7]}>
+        <p>{description}</p>
+      </SectionContent>
+      {/* <SectionContent columns={[8, 4]}>
+        <ul data-cy="platform-link-list">
+          // TODO: add in when we get website info
           {primaryWebsite && (
-            <ListLink to={primaryWebsite}>{`${shortname} Primary Website`}</ListLink>
+            <ListLink
+              to={primaryWebsite}
+            >{`${shortname} Primary Website`}</ListLink>
           )}
           {secondary && (
-            <ListLink to={secondary}>{`${shortname} Secondary Website`}</ListLink>
+            <ListLink
+              to={secondary}
+            >{`${shortname} Secondary Website`}</ListLink>
           )}
-        </ul> */}
-      </div>
+        </ul>
+      </SectionContent> */}
     </SectionBlock>
   )
 }

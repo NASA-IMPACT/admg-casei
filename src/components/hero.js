@@ -20,6 +20,7 @@ export default function Hero({
         gridTemplateColumns: `${textToImageRatio[0]}fr ${textToImageRatio[1]}fr`,
         columnGap: `2rem`,
         minHeight: `35rem`,
+        alignContent: `center`,
       }}
       data-cy={`${id}-hero`}
     >

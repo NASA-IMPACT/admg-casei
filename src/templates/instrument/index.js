@@ -4,9 +4,9 @@ import { graphql } from "gatsby"
 
 import Layout from "../../components/layout"
 import Header from "./header"
+import About from "./about"
 import Entities from "./entities"
 import Resources from "./resources"
-import { About, Background } from "./detail"
 
 const InstrumentTemplate = ({ data: { instrument } }) => {
   return (
@@ -16,28 +16,16 @@ const InstrumentTemplate = ({ data: { instrument } }) => {
         longname={instrument.longname}
         description={instrument.description}
       />
-      <div
-        style={{
-          display: `grid`,
-          gridTemplateColumns: `5fr 3fr`,
-          columnGap: `2rem`,
-        }}
-      >
-        <div>
-          <About
-            id={instrument.id}
-            radiometricFrequency={instrument.radiometricFrequency}
-            temporalResolution={instrument.temporalResolution}
-            spatialResolution={instrument.spatialResolution}
-          />
-          <Entities platforms={instrument.platforms} />
-          <Resources onlineInformation={instrument.onlineInformation} />
-        </div>
-        <Background
-          instrumentManufacturer={instrument.instrumentManufacturer}
-          fundingSource={instrument.fundingSource}
-        />
-      </div>
+      <About
+        id={instrument.id}
+        radiometricFrequency={instrument.radiometricFrequency}
+        temporalResolution={instrument.temporalResolution}
+        spatialResolution={instrument.spatialResolution}
+        instrumentManufacturer={instrument.instrumentManufacturer}
+        fundingSource={instrument.fundingSource}
+      />
+      <Entities platforms={instrument.platforms} />
+      <Resources onlineInformation={instrument.onlineInformation} />
     </Layout>
   )
 }

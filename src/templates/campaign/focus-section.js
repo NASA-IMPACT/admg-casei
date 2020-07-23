@@ -4,6 +4,8 @@ import { graphql } from "gatsby"
 
 import {
   SectionBlock,
+  SectionHeader,
+  SectionContent,
   ContentGroup,
   ContentItem,
 } from "../../components/section"
@@ -12,25 +14,28 @@ import FocusAreaGallery from "../../components/home/focus-area-gallery"
 
 const FocusSection = ({ focus, geophysical, focusPhenomena }) => {
   return (
-    <SectionBlock headline="Focus" id="focus" withBackground>
-      <ContentGroup>
-        <div data-cy="focus-content">
-          <Label showBorder id="focus-content">
-            Focus Area
-          </Label>
-          <FocusAreaGallery focusAreas={focus} size="small" />
-        </div>
-        <ContentItem
-          id="focus-content"
-          label={`Geophysical Concept${geophysical.length > 1 ? "s" : ""}`}
-          info={geophysical.map(x => x.shortname).join(", ")}
-        />
-        <ContentItem
-          id="focus-content"
-          label="Focus Phenomena"
-          info={focusPhenomena}
-        />
-      </ContentGroup>
+    <SectionBlock id="focus">
+      <SectionHeader headline="Focus" />
+      <SectionContent withBackground>
+        <ContentGroup>
+          <div data-cy="focus-content">
+            <Label showBorder id="focus-content">
+              Focus Area
+            </Label>
+            <FocusAreaGallery focusAreas={focus} size="small" />
+          </div>
+          <ContentItem
+            id="focus-content"
+            label={`Geophysical Concept${geophysical.length > 1 ? "s" : ""}`}
+            info={geophysical.map(x => x.shortname).join(", ")}
+          />
+          <ContentItem
+            id="focus-content"
+            label="Focus Phenomena"
+            info={focusPhenomena}
+          />
+        </ContentGroup>
+      </SectionContent>
     </SectionBlock>
   )
 }

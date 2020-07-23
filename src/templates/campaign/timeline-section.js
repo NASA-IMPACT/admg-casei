@@ -5,8 +5,11 @@ import Carousel from "nuka-carousel"
 
 import MilestoneSelector from "../../components/timeline/milestone-selector"
 import Milestone from "../../components/timeline/milestone"
-import { SectionBlock } from "../../components/section"
-import theme from "../../utils/theme"
+import {
+  SectionBlock,
+  SectionHeader,
+  SectionContent,
+} from "../../components/section"
 
 const TimelineSection = ({ deployments }) => {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -24,8 +27,9 @@ const TimelineSection = ({ deployments }) => {
   const selectedMilestoneId = deployments.nodes[currentSlide].id
 
   return (
-    <SectionBlock headline="Timeline" id="timeline">
-      <div style={{ backgroundColor: theme.color.secondary }}>
+    <SectionBlock id="timeline">
+      <SectionHeader headline="Timeline" />
+      <SectionContent withBackground>
         <div data-cy="milestone-carousel">
           <Carousel
             defaultControlsConfig={{
@@ -56,7 +60,7 @@ const TimelineSection = ({ deployments }) => {
           timelineAction={setSelectedMilestone}
           activeMilestone={selectedMilestoneId}
         />
-      </div>
+      </SectionContent>
     </SectionBlock>
   )
 }
