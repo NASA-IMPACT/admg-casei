@@ -68,21 +68,32 @@ const IndexPage = ({ data }) => {
           <Image filename="platform.png" alt="aircraft flying over ground" />
         </SectionContent>
         <SectionContent columns={[7, 6]}>
-          <SectionHeader tagline="explore" headline="Platforms" />
-          <p>
-            From aircrafts to balloons, from sensors to plaftorms, it takes a
-            lot to understand earth.
-          </p>
-          <Link
-            to="/explore/platforms"
+          <div
             style={{
-              border: `1px solid ${theme.color.base}`,
-              padding: `1rem 5rem`,
-              textTransform: `uppercase`,
+              height: `100%`,
+              display: `grid`,
+              alignContent: `center`,
+              padding: `1rem`,
             }}
           >
-            Explore
-          </Link>
+            <SectionHeader tagline="explore" headline="Platforms" />
+            <div>
+              <p>
+                From aircrafts to balloons, from sensors to plaftorms, it takes
+                a lot to understand earth.
+              </p>
+              <Link
+                to="/explore/platforms"
+                style={{
+                  border: `1px solid ${theme.color.base}`,
+                  padding: `1rem 5rem`,
+                  textTransform: `uppercase`,
+                }}
+              >
+                Explore
+              </Link>
+            </div>
+          </div>
         </SectionContent>
       </SectionBlock>
 
