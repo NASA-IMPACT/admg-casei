@@ -101,7 +101,6 @@ export default function Instruments({ data, location }) {
                   longname={instrument.longname}
                   key={instrument.id}
                   description={instrument.description}
-                  collectionPeriodIds={instrument.collectionPeriodIds}
                   campaigns={instrument.campaigns}
                 />
               </Link>
@@ -149,7 +148,6 @@ export const query = graphql`
     id
     instrumentTypes: instrument_types
     description
-    collectionPeriodIds: collection_periods
     campaigns
   }
 `
@@ -160,7 +158,6 @@ const instrumentShape = PropTypes.shape({
   id: PropTypes.string.isRequired,
   instrumentTypes: PropTypes.arrayOf(PropTypes.string),
   description: PropTypes.string.isRequired,
-  collectionPeriodIds: PropTypes.arrayOf(PropTypes.string),
   campaigns: PropTypes.arrayOf(PropTypes.string),
 })
 
