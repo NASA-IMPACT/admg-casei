@@ -28,7 +28,7 @@ const About = () => (
             tagline={section.tagline}
             headline={section.headline}
           />
-          <SectionContent variant="last7">
+          <SectionContent columns={[6, 10]}>
             {section.paragraphs &&
               section.paragraphs.map((text, i) => <p key={i}>{text}</p>)}
             {section.bulleted && (
