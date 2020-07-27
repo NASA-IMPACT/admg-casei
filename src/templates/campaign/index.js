@@ -1,7 +1,8 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
+import AuthProvider from "../../components/auth-provider"
 import Layout from "../../components/layout"
 import Header from "./header"
 import InpageNav from "./inpage-nav"
@@ -11,57 +12,69 @@ import PlatformSection from "./platform-section"
 import ProgramInfoSection from "./program-info-section"
 import FocusSection from "./focus-section"
 import { SectionBlock, SectionHeader } from "../../components/section"
+import MaintenanceSection from "../../components/maintenance-section"
 
 const CampaignTemplate = ({ data: { campaign, deployments } }) => {
+  const [isClient, setIsClient] = useState(false)
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+
   return (
-    <Layout>
-      <Header
-        bounds={campaign.bounds}
-        shortname={campaign.shortname}
-        longname={campaign.longname}
-        focusListing={campaign.focus.map(x => x.shortname).join(", ")}
-        countDeployments={campaign.countDeployments}
-        countCollectionPeriods={campaign.countCollectionPeriods}
-        countDataProducts={campaign.countDataProducts}
-      />
-      <InpageNav />
-      <OverviewSection
-        description={campaign.description}
-        startdate={campaign.startdate}
-        enddate={campaign.enddate}
-        region={campaign.region}
-        seasonListing={campaign.seasons.map(x => x.shortname).join(", ")}
-        bounds={campaign.bounds}
-        projectWebsite={campaign.projectWebsite}
-        repositoryWebsite={campaign.repositoryWebsite}
-        tertiaryWebsite={campaign.tertiaryWebsite}
-        publicationLink={campaign.publicationLink}
-      />
-      <FocusSection
-        focus={campaign.focus}
-        geophysical={campaign.geophysical}
-        focusPhenomena={campaign.focusPhenomena}
-      />
-      <PlatformSection platforms={campaign.platforms} />
-      <TimelineSection deployments={deployments} />
-      <SectionBlock id="data">
-        <SectionHeader headline="Data" />
-      </SectionBlock>
-      <ProgramInfoSection
-        logo={campaign.logo}
-        fundingAgency={campaign.fundingAgency}
-        fundingProgram={campaign.fundingProgram}
-        programLead={campaign.programLead}
-        leadInvestigator={campaign.leadInvestigator}
-        dataManager={campaign.dataManager}
-        archive={campaign.archive}
-        partnerOrgListing={campaign.partnerOrgs
-          .map(x => x.shortname)
-          .join(", ")}
-        partnerWebsite={campaign.partnerWebsite}
-        tertiaryWebsite={campaign.tertiaryWebsite}
-      />
-    </Layout>
+    <AuthProvider>
+      <Layout>
+        <Header
+          bounds={campaign.bounds}
+          shortname={campaign.shortname}
+          longname={campaign.longname}
+          focusListing={campaign.focus.map(x => x.shortname).join(", ")}
+          countDeployments={campaign.countDeployments}
+          countCollectionPeriods={campaign.countCollectionPeriods}
+          countDataProducts={campaign.countDataProducts}
+        />
+        <InpageNav />
+        <OverviewSection
+          description={campaign.description}
+          startdate={campaign.startdate}
+          enddate={campaign.enddate}
+          region={campaign.region}
+          seasonListing={campaign.seasons.map(x => x.shortname).join(", ")}
+          bounds={campaign.bounds}
+          projectWebsite={campaign.projectWebsite}
+          repositoryWebsite={campaign.repositoryWebsite}
+          tertiaryWebsite={campaign.tertiaryWebsite}
+          publicationLink={campaign.publicationLink}
+        />
+        <FocusSection
+          focus={campaign.focus}
+          geophysical={campaign.geophysical}
+          focusPhenomena={campaign.focusPhenomena}
+        />
+        <PlatformSection platforms={campaign.platforms} />
+        <TimelineSection deployments={deployments} />
+        <SectionBlock id="data">
+          <SectionHeader headline="Data" />
+        </SectionBlock>
+        <ProgramInfoSection
+          logo={campaign.logo}
+          fundingAgency={campaign.fundingAgency}
+          fundingProgram={campaign.fundingProgram}
+          programLead={campaign.programLead}
+          leadInvestigator={campaign.leadInvestigator}
+          dataManager={campaign.dataManager}
+          archive={campaign.archive}
+          partnerOrgListing={campaign.partnerOrgs
+            .map(x => x.shortname)
+            .join(", ")}
+          partnerWebsite={campaign.partnerWebsite}
+          tertiaryWebsite={campaign.tertiaryWebsite}
+        />
+        {isClient && (
+          // the maintenance section is behin auth and only accessible from the browser
+          <MaintenanceSection id={campaign.uuid} />
+        )}
+      </Layout>
+    </AuthProvider>
   )
 }
 
@@ -73,6 +86,7 @@ export const query = graphql`
       ...focusFields
       ...platformFields
       ...fundingFields
+      uuid
     }
     deployments: allDeployment(filter: { campaign: { eq: $slug } }) {
       ...deploymentFragment
@@ -135,6 +149,7 @@ CampaignTemplate.propTypes = {
         })
       ).isRequired,
       partnerWebsite: PropTypes.string,
+      uuid: PropTypes.string.isRequired,
     }).isRequired,
     deployments: PropTypes.shape({
       nodes: PropTypes.arrayOf(

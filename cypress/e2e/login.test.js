@@ -1,6 +1,6 @@
 describe("Login", () => {
   beforeEach(() => {
-    cy.visit("/")
+    cy.visit("/campaign/c0dc0d63-e32a-4fdc-b1ac-4f0e8a5c7754")
   })
 
   it("opens a login modal and fills in credentials", () => {
@@ -27,6 +27,7 @@ describe("Login", () => {
         }
       })
 
+    // TODO: stub auth api
     cy.get("[type=Submit]")
       .click()
       .next()
