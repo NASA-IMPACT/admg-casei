@@ -127,10 +127,7 @@ describe("Explore", () => {
           )
           expect($card.find("[data-cy=longname]")).to.exist
 
-          expect($card.find("[data-cy=count1]")).to.contain(
-            "Collection Periods"
-          )
-          expect($card.find("[data-cy=count2]")).to.contain("Campaigns")
+          expect($card.find("[data-cy=count1]")).to.contain("Campaigns")
         })
     })
   })

@@ -1,6 +1,7 @@
 {
   "baseUrl": "http://localhost:8000/",
   "integrationFolder": "cypress/e2e",
+  "fixturesFolder": "test/__fixtures__",
   "env": {
     "username": "alice",
     "password": ""
