@@ -193,9 +193,9 @@ describe("Campaign", () => {
       cy.get("[data-cy=platform]").first().find("label").should("exist")
       cy.get("[data-cy=platform-image-caption]").should("exist")
 
-      cy.get("[data-cy=milestone-carousel]")
-        .find(".slider-control-centerright > button")
-        .click()
+      cy.get("[data-cy=platform-carousel]").find(
+        ".slider-control-centerright > button"
+      )
     })
 
     it("displays some platforms", () => {

@@ -5,6 +5,7 @@ exports[`Header renders correctly 1`] = `
   data-cy="test-hero"
   style={
     Object {
+      "alignContent": "center",
       "columnGap": "2rem",
       "display": "grid",
       "gridTemplateColumns": "3fr 5fr",
@@ -77,6 +78,7 @@ exports[`Header renders with adjust ratios 1`] = `
   data-cy="undefined-hero"
   style={
     Object {
+      "alignContent": "center",
       "columnGap": "2rem",
       "display": "grid",
       "gridTemplateColumns": "5fr 3fr",

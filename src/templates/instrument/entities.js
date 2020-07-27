@@ -3,22 +3,26 @@ import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
 import SimpleTable from "../../components/tables/simpleTable"
-import { SectionBlock } from "../../components/section"
+import {
+  SectionBlock,
+  SectionHeader,
+  SectionContent,
+} from "../../components/section"
 
 export default function Entities({ platforms }) {
   return (
-    <SectionBlock
-      headline="Related Airborne Entities"
-      id="instrument-airborne-entities"
-    >
-      <SimpleTable
-        id="instrument-airborne-entities"
-        tableHeaders={["Platform", "Campaigns"]}
-        tableRows={platforms.map(platform => [
-          platform.shortname,
-          platform.campaigns.map(x => x.shortname).join(", "),
-        ])}
-      />
+    <SectionBlock id="instrument-airborne-entities">
+      <SectionHeader headline="Related Airborne Entities" />
+      <SectionContent>
+        <SimpleTable
+          id="instrument-airborne-entities"
+          tableHeaders={["Platform", "Campaigns"]}
+          tableRows={platforms.map(platform => [
+            platform.shortname,
+            platform.campaigns.map(x => x.shortname).join(", "),
+          ])}
+        />
+      </SectionContent>
     </SectionBlock>
   )
 }

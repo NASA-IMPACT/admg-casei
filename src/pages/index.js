@@ -4,7 +4,11 @@ import { graphql, Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { SectionBlock, SectionImage } from "../components/section"
+import {
+  SectionBlock,
+  SectionHeader,
+  SectionContent,
+} from "../components/section"
 import Hero from "../components/hero"
 import Image from "../components/image"
 import FocusAreaGallery from "../components/home/focus-area-gallery"
@@ -30,65 +34,74 @@ const IndexPage = ({ data }) => {
         />
       </Hero>
 
-      <SectionBlock
-        tagline="explore nasa earth science"
-        headline="Focus Areas"
-        id="focus-area"
-      >
-        <FocusAreaGallery focusAreas={data.allFocusArea.nodes} size="large" />
-      </SectionBlock>
-
-      <SectionBlock
-        tagline="explore campaigns by"
-        headline="Region Type"
-        id="region-type"
-      >
-        <RegionCarousel regions={data.allGeographicalRegion.nodes} />
-      </SectionBlock>
-
-      <SectionBlock
-        tagline="explore campaigns by"
-        headline="Geophysical Concepts"
-        id="geophysical-concepts"
-      >
-        <GeophysicsGrid
-          geophysicalConcepts={data.allGeophysicalConcept.nodes}
+      <SectionBlock id="focus-area">
+        <SectionHeader
+          tagline="explore nasa earth science"
+          headline="Focus Areas"
         />
+        <SectionContent>
+          <FocusAreaGallery focusAreas={data.allFocusArea.nodes} size="large" />
+        </SectionContent>
       </SectionBlock>
 
-      <SectionBlock
-        tagline="explore"
-        headline="Platforms"
-        id="platforms"
-        withImage={true}
-      >
-        <SectionImage
-          filename="platform.png"
-          alt="aircraft flying over ground"
-        />
+      <SectionBlock id="region-type">
+        <SectionHeader tagline="explore campaigns by" headline="Region Type" />
+        <SectionContent>
+          <RegionCarousel regions={data.allGeographicalRegion.nodes} />
+        </SectionContent>
+      </SectionBlock>
 
-        <div>
-          <p>
-            From aircrafts to balloons, from sensors to plaftorms, it takes a
-            lot to understand earth.
-          </p>
-        </div>
-        <div>
-          <Link
-            to="/explore/platforms"
+      <SectionBlock id="geophysical-concepts">
+        <SectionHeader
+          tagline="explore instruments by"
+          headline="Geophysical Concepts"
+        />
+        <SectionContent>
+          <GeophysicsGrid
+            geophysicalConcepts={data.allGeophysicalConcept.nodes}
+          />
+        </SectionContent>
+      </SectionBlock>
+
+      <SectionBlock id="platforms">
+        <SectionContent columns={[1, 6]}>
+          <Image filename="platform.png" alt="aircraft flying over ground" />
+        </SectionContent>
+        <SectionContent columns={[7, 6]}>
+          <div
             style={{
-              border: `1px solid ${theme.color.base}`,
-              padding: `1rem 5rem`,
-              textTransform: `uppercase`,
+              height: `100%`,
+              display: `grid`,
+              alignContent: `center`,
+              padding: `1rem`,
             }}
           >
-            Explore
-          </Link>
-        </div>
+            <SectionHeader tagline="explore" headline="Platforms" />
+            <div>
+              <p>
+                From aircrafts to balloons, from sensors to plaftorms, it takes
+                a lot to understand earth.
+              </p>
+              <Link
+                to="/explore/platforms"
+                style={{
+                  border: `1px solid ${theme.color.base}`,
+                  padding: `1rem 5rem`,
+                  textTransform: `uppercase`,
+                }}
+              >
+                Explore
+              </Link>
+            </div>
+          </div>
+        </SectionContent>
       </SectionBlock>
 
-      <SectionBlock tagline="explore" headline="Instruments" id="instruments">
-        <InstrumentsGallery instruments={data.allInstrumentType.nodes} />
+      <SectionBlock id="instruments">
+        <SectionHeader tagline="explore" headline="Instruments" />
+        <SectionContent>
+          <InstrumentsGallery instruments={data.allInstrumentType.nodes} />
+        </SectionContent>
       </SectionBlock>
     </Layout>
   )
