@@ -1,11 +1,12 @@
 import React, { useContext } from "react"
+import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
 import { AuthContext } from "../components/auth-provider"
 import { SectionBlock } from "./section"
 import theme from "../utils/theme"
 
-const MaintenanceSection = () => {
+const MaintenanceSection = ({ id, data }) => {
   const context = useContext(AuthContext)
 
   return (
@@ -13,7 +14,8 @@ const MaintenanceSection = () => {
       {context.isLoggedIn && (
         // TODO: this is temporary, build out edit functionality
         <Link
-          to="/campaign/${id}/edit"
+          to={`/edit/campaign/${id}`}
+          state={{ data }}
           style={{
             border: `1px solid ${theme.color.base}`,
             padding: `1rem 5rem`,
@@ -25,6 +27,11 @@ const MaintenanceSection = () => {
       )}
     </SectionBlock>
   )
+}
+
+MaintenanceSection.propTypes = {
+  id: PropTypes.string.isRequired,
+  data: PropTypes.object,
 }
 
 export default MaintenanceSection
