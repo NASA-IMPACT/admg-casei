@@ -3,6 +3,8 @@ import PropTypes from "prop-types"
 
 import { isTokenAvailable } from "../utils/auth"
 
+// TODO: Ensure the token is valid before assuming the user is logged in.
+// (I can manually add a random token in the storage and I am in.)
 export const AuthContext = createContext({ isLoggedIn: isTokenAvailable() })
 
 function AuthProvider({ children }) {
