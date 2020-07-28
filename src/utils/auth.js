@@ -1,6 +1,6 @@
 const isBrowser = typeof window !== `undefined`
 
-export const handleLogin = async (username, password) => {
+export const login = async (username, password) => {
   if (!isBrowser) return false
 
   const headers = new Headers()

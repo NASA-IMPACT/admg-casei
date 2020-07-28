@@ -2,17 +2,16 @@ import React, { useContext, useState } from "react"
 
 import { Modal } from "./modal"
 import { AuthContext } from "../components/auth-provider"
-import { handleLogin, logout } from "../utils/auth"
+import { login, logout } from "../utils/auth"
 
 const Login = () => {
   const { isLoggedIn, setIsLoggedIn } = useContext(AuthContext)
-
   const [user, setUser] = useState({ username: "", password: "" })
   const [isModalOpen, setModal] = useState(false)
 
   const onSubmit = async e => {
     e.preventDefault()
-    const response = await handleLogin(user.username, user.password)
+    const response = await login(user.username, user.password)
     if (response.access_token) {
       setModal(false)
       setIsLoggedIn(true)
