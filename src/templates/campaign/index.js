@@ -16,6 +16,7 @@ import MaintenanceSection from "../../components/maintenance-section"
 const CampaignTemplate = ({ data: { campaign, deployments } }) => {
   const [isClient, setIsClient] = useState(false)
   useEffect(() => {
+    // useEffect only runs client-side after rehyration
     setIsClient(true)
   }, [])
 
@@ -68,7 +69,7 @@ const CampaignTemplate = ({ data: { campaign, deployments } }) => {
         tertiaryWebsite={campaign.tertiaryWebsite}
       />
       {isClient && (
-        // the maintenance section is behin auth and only accessible from the browser
+        // the maintenance section is behind authentication and only accessible from the browser
         <MaintenanceSection
           id={campaign.uuid}
           data={{ campaign, deployments }}

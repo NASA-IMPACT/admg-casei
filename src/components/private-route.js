@@ -11,7 +11,7 @@ const PrivateRoute = ({ component: Component, location }) => {
     return null
   }
 
-  // location state data comes from Link state that opens this route
+  // location state data comes from the Link state which opens this route
   return <Component data={location.state.data} />
 }
 

@@ -7,11 +7,11 @@ import { SectionBlock } from "./section"
 import theme from "../utils/theme"
 
 const MaintenanceSection = ({ id, data }) => {
-  const context = useContext(AuthContext)
+  const { isLoggedIn } = useContext(AuthContext)
 
   return (
     <SectionBlock id="maintenance">
-      {context.isLoggedIn && (
+      {isLoggedIn && (
         // TODO: this is temporary, build out edit functionality
         <Link
           to={`/edit/campaign/${id}`}
