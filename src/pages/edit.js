@@ -2,7 +2,7 @@ import React from "react"
 import { Router } from "@reach/router"
 
 import PrivateRoute from "../components/private-route"
-import Campaign from "../templates/campaign"
+import Campaign from "../templates/edit"
 import Instrument from "../templates/instrument"
 
 const Edit = () => (
