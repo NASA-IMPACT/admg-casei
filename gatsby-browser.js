@@ -8,7 +8,7 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { DevseedUiThemeProvider } from "@devseed-ui/helpers"
+import { DevseedUiThemeProvider } from "@devseed-ui/theme-provider"
 
 import theme from "./src/utils/theme"
 import GlobalStyles from "./src/components/global-styles"

@@ -2,7 +2,7 @@ import React from "react"
 import renderer from "react-test-renderer"
 import * as Gatsby from "gatsby"
 
-import { DevseedUiThemeProvider } from "@devseed-ui/helpers"
+import { DevseedUiThemeProvider } from "@devseed-ui/theme-provider"
 import theme from "../../utils/theme"
 
 import Campaigns from "../explore/campaigns"

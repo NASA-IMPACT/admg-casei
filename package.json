@@ -9,10 +9,13 @@
   ],
   "dependencies": {
     "@devseed-ui/base": "^2.2.0",
+    "@devseed-ui/form": "^0.11.2",
     "@devseed-ui/heading": "^2.3.0",
     "@devseed-ui/helpers": "^2.3.0",
+    "@devseed-ui/theme-provider": "^2.4.0",
     "@mapbox/geo-viewport": "^0.4.0",
     "@turf/turf": "^5.1.6",
+    "formik": "^2.1.5",
     "gatsby": "^2.24.2",
     "gatsby-image": "^2.4.13",
     "gatsby-plugin-create-client-paths": "^2.3.10",
