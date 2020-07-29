@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
@@ -7,6 +7,11 @@ import Login from "./login"
 import ExternalLink from "./external-link"
 
 const Footer = ({ shortname }) => {
+  const [isClient, setIsClient] = useState(false)
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+
   const style = {
     ul: {
       listStyle: `none`,
@@ -73,7 +78,10 @@ const Footer = ({ shortname }) => {
               <Link to="/glossary/">Glossary</Link>
             </li>
             <li>
-              <Login />
+              {isClient && (
+                // the login button is only visible for the client (the browser), not in ssr
+                <Login />
+              )}
             </li>
           </ul>
         </div>

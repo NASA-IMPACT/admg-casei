@@ -1,6 +1,6 @@
 const isBrowser = typeof window !== `undefined`
 
-export const handleLogin = async (username, password) => {
+export const login = async (username, password) => {
   if (!isBrowser) return false
 
   const headers = new Headers()
@@ -34,7 +34,13 @@ export const handleLogin = async (username, password) => {
   }
 }
 
-export const isLoggedIn = () => {
+export const logout = () => {
+  if (!isBrowser) return
+  console.log(`Ok, logged out.`)
+  sessionStorage.removeItem("token")
+}
+
+export const isTokenAvailable = () => {
   if (!isBrowser) return false
 
   const token = sessionStorage.getItem("token")
@@ -42,10 +48,4 @@ export const isLoggedIn = () => {
     : null
 
   return !!token
-}
-
-export const logout = () => {
-  if (!isBrowser) return
-  console.log(`Ok, logged out.`)
-  sessionStorage.removeItem("token")
 }

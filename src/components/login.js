@@ -1,19 +1,20 @@
-import React, { useState } from "react"
+import React, { useContext, useState } from "react"
 
 import { Modal } from "./modal"
-import { isLoggedIn, handleLogin, logout } from "../utils/auth"
+import { AuthContext } from "../components/auth-provider"
+import { login, logout } from "../utils/auth"
 
 const Login = () => {
-  const [buttonText, setButtonText] = useState("Maintenance login")
+  const { isLoggedIn, setIsLoggedIn } = useContext(AuthContext)
   const [user, setUser] = useState({ username: "", password: "" })
   const [isModalOpen, setModal] = useState(false)
 
   const onSubmit = async e => {
     e.preventDefault()
-    const response = await handleLogin(user.username, user.password)
+    const response = await login(user.username, user.password)
     if (response.access_token) {
       setModal(false)
-      setButtonText("Log out")
+      setIsLoggedIn(true)
     } else {
       // TODO: indicate error state in form
       console.log(response.error_description || "Did not recieve a response")
@@ -22,12 +23,14 @@ const Login = () => {
 
   const handleLogout = () => {
     logout()
-    setButtonText("Maintenance login")
+    setIsLoggedIn(false)
   }
+
+  const buttonText = isLoggedIn ? "Log out" : "Maintenance login"
 
   return (
     <>
-      <button onClick={() => (isLoggedIn() ? handleLogout() : setModal(true))}>
+      <button onClick={() => (isLoggedIn ? handleLogout() : setModal(true))}>
         {buttonText}
       </button>
 
