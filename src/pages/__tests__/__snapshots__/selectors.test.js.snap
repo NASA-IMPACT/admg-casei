@@ -1,37 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Campaigns page renders correctly 1`] = `
-.c0 {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: none;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  background: rgba(0,0,0,0.5);
-  z-index: 9999;
-  opacity: 0;
-  -webkit-transition: opacity 400ms ease-in;
-  transition: opacity 400ms ease-in;
-}
-
-.c1 {
-  width: 400px;
-  position: relative;
-  padding: 32px;
-  border-radius: 3px;
-  background: #303641;
-  pointer-events: auto;
-}
-
 <div
   style={
     Object {
@@ -182,7 +151,7 @@ exports[`Campaigns page renders correctly 1`] = `
           </div>
           NASA | CASEI
           <b>
-            Catalog of Archived Sub-orbital Earth Science Investigations
+            Catalog of Archived Suborbital Earth Science Investigations
           </b>
         </a>
       </div>
@@ -2084,55 +2053,7 @@ exports[`Campaigns page renders correctly 1`] = `
               Glossary
             </a>
           </li>
-          <li>
-            <button
-              onClick={[Function]}
-            >
-              Maintenance login
-            </button>
-            <div
-              className="c0"
-              onClick={[Function]}
-            >
-              <div
-                className="c1"
-              >
-                <form
-                  data-cy="login-form"
-                  onSubmit={[Function]}
-                >
-                  <h3>
-                    Log In
-                  </h3>
-                  <label
-                    htmlFor="username"
-                  >
-                    Username
-                  </label>
-                  <input
-                    name="username"
-                    onChange={[Function]}
-                    type="text"
-                    value=""
-                  />
-                  <label
-                    htmlFor="password"
-                  >
-                    Password
-                  </label>
-                  <input
-                    name="password"
-                    onChange={[Function]}
-                    type="password"
-                    value=""
-                  />
-                  <input
-                    type="submit"
-                  />
-                </form>
-              </div>
-            </div>
-          </li>
+          <li />
         </ul>
       </div>
       <div

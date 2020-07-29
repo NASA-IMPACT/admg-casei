@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
@@ -11,8 +11,15 @@ import PlatformSection from "./platform-section"
 import ProgramInfoSection from "./program-info-section"
 import FocusSection from "./focus-section"
 import { SectionBlock, SectionHeader } from "../../components/section"
+import MaintenanceSection from "../../components/maintenance-section"
 
 const CampaignTemplate = ({ data: { campaign, deployments } }) => {
+  const [isClient, setIsClient] = useState(false)
+  useEffect(() => {
+    // useEffect only runs client-side after rehyration
+    setIsClient(true)
+  }, [])
+
   return (
     <Layout>
       <Header
@@ -61,6 +68,13 @@ const CampaignTemplate = ({ data: { campaign, deployments } }) => {
         partnerWebsite={campaign.partnerWebsite}
         tertiaryWebsite={campaign.tertiaryWebsite}
       />
+      {isClient && (
+        // the maintenance section is behind authentication and only accessible from the browser
+        <MaintenanceSection
+          id={campaign.uuid}
+          data={{ campaign, deployments }}
+        />
+      )}
     </Layout>
   )
 }
@@ -73,6 +87,7 @@ export const query = graphql`
       ...focusFields
       ...platformFields
       ...fundingFields
+      uuid
     }
     deployments: allDeployment(filter: { campaign: { eq: $slug } }) {
       ...deploymentFragment
@@ -135,6 +150,7 @@ CampaignTemplate.propTypes = {
         })
       ).isRequired,
       partnerWebsite: PropTypes.string,
+      uuid: PropTypes.string.isRequired,
     }).isRequired,
     deployments: PropTypes.shape({
       nodes: PropTypes.arrayOf(
