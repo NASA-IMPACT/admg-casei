@@ -5,11 +5,11 @@ import parse from "wellknown"
 import * as turf from "@turf/turf"
 import geoViewport from "@mapbox/geo-viewport"
 
-import HeaderStats from "../../components/header-stats"
+import HeroStats from "../../components/hero-stats"
 
 import theme from "../../utils/theme"
 
-const Header = ({
+const CampaignHero = ({
   bounds,
   shortname,
   longname,
@@ -69,7 +69,7 @@ const Header = ({
           <h1>{longname}</h1>
           <p>{focusListing}</p>
         </div>
-        <HeaderStats
+        <HeroStats
           statList={[
             { number: countDeployments, label: "Deployments" },
             { number: countCollectionPeriods, label: "Collection Periods" },
@@ -96,7 +96,7 @@ export const heroFields = graphql`
   }
 `
 
-Header.propTypes = {
+CampaignHero.propTypes = {
   bounds: PropTypes.string.isRequired,
   shortname: PropTypes.string.isRequired,
   longname: PropTypes.string.isRequired,
@@ -106,4 +106,4 @@ Header.propTypes = {
   countDataProducts: PropTypes.number,
 }
 
-export default Header
+export default CampaignHero

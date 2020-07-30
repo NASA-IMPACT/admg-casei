@@ -3,14 +3,14 @@ import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
 import Layout, { Main } from "../../components/layout"
-import Header from "./header"
+import PlatformHeader from "./hero"
 import Overview from "./overview"
 import RelatedCampaigns from "./related-campaigns"
 
 export default function PlatformTemplate({ data: { platform } }) {
   return (
     <Layout>
-      <Header
+      <PlatformHeader
         shortname={platform.shortname}
         longname={platform.longname}
         campaigns={platform.campaigns.length}

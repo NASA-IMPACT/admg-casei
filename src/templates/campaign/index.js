@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
 import Layout, { Main } from "../../components/layout"
-import Header from "./header"
+import CampaignHero from "./hero"
 import InpageNav from "./inpage-nav"
 import OverviewSection from "./overview-section"
 import TimelineSection from "./timeline-section"
@@ -22,7 +22,7 @@ const CampaignTemplate = ({ data: { campaign, deployments } }) => {
 
   return (
     <Layout>
-      <Header
+      <CampaignHero
         bounds={campaign.bounds}
         shortname={campaign.shortname}
         longname={campaign.longname}

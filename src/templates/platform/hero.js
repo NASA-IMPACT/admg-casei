@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import Hero from "../../components/hero"
 import Image from "../../components/image"
 
-export default function Header({
+export default function PlatformHero({
   shortname,
   longname,
   campaigns,
@@ -39,7 +39,7 @@ export const platformHeroFields = graphql`
   }
 `
 
-Header.propTypes = {
+PlatformHero.propTypes = {
   shortname: PropTypes.string.isRequired,
   longname: PropTypes.string.isRequired,
   campaigns: PropTypes.number.isRequired,

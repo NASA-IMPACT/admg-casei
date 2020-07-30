@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
 import Layout, { Main } from "../../components/layout"
-import Header from "./header"
+import InstrumentHero from "./hero"
 import About from "./about"
 import Entities from "./entities"
 import Resources from "./resources"
@@ -11,7 +11,7 @@ import Resources from "./resources"
 const InstrumentTemplate = ({ data: { instrument } }) => {
   return (
     <Layout>
-      <Header
+      <InstrumentHero
         shortname={instrument.shortname}
         longname={instrument.longname}
         description={instrument.description}
