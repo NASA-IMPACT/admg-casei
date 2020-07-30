@@ -1,6 +1,6 @@
 import React from "react"
 
-import Layout, { Main } from "../components/layout"
+import Layout, { PageBody } from "../components/layout"
 import DefinitionList from "../components/tables/definitionList"
 import SEO from "../components/seo"
 import glossary from "../content/glossary.json"
@@ -10,7 +10,7 @@ export default function Glossary() {
   return (
     <Layout>
       <SEO title="Glossary" />
-      <Main>
+      <PageBody>
         <h1>Glossary</h1>
         <DefinitionList
           id="glossary"
@@ -40,7 +40,7 @@ export default function Glossary() {
             ),
           }))}
         />
-      </Main>
+      </PageBody>
     </Layout>
   )
 }

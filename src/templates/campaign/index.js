@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
-import Layout, { Main } from "../../components/layout"
+import Layout, { PageBody } from "../../components/layout"
 import CampaignHero from "./hero"
 import InpageNav from "./inpage-nav"
 import OverviewSection from "./overview-section"
@@ -31,7 +31,7 @@ const CampaignTemplate = ({ data: { campaign, deployments } }) => {
         countCollectionPeriods={campaign.countCollectionPeriods}
         countDataProducts={campaign.countDataProducts}
       />
-      <Main>
+      <PageBody>
         <InpageNav />
         <OverviewSection
           description={campaign.description}
@@ -76,7 +76,7 @@ const CampaignTemplate = ({ data: { campaign, deployments } }) => {
             data={{ campaign, deployments }}
           />
         )}
-      </Main>
+      </PageBody>
     </Layout>
   )
 }

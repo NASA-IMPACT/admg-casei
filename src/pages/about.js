@@ -1,6 +1,6 @@
 import React from "react"
 
-import Layout, { Main } from "../components/layout"
+import Layout, { PageBody } from "../components/layout"
 import SEO from "../components/seo"
 import Hero from "../components/hero"
 import {
@@ -21,7 +21,7 @@ const About = () => (
       id="about"
     />
 
-    <Main>
+    <PageBody>
       {Object.entries(about).map(([id, section]) => {
         return (
           <SectionBlock id={id} key={id}>
@@ -46,7 +46,7 @@ const About = () => (
           </SectionBlock>
         )
       })}
-    </Main>
+    </PageBody>
   </Layout>
 )
 

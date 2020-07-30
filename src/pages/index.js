@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { graphql, Link } from "gatsby"
 
-import Layout, { Main } from "../components/layout"
+import Layout, { PageBody } from "../components/layout"
 import SEO from "../components/seo"
 import {
   SectionBlock,
@@ -33,7 +33,7 @@ const IndexPage = ({ data }) => {
           alt="a globe displaying natural features and slight cloud coverage"
         />
       </Hero>
-      <Main>
+      <PageBody>
         <SectionBlock id="focus-area">
           <SectionHeader
             tagline="explore nasa earth science"
@@ -109,7 +109,7 @@ const IndexPage = ({ data }) => {
             <InstrumentsGallery instruments={data.allInstrumentType.nodes} />
           </SectionContent>
         </SectionBlock>
-      </Main>
+      </PageBody>
     </Layout>
   )
 }

@@ -6,7 +6,7 @@ import Spinner from "react-spinkit"
 import api from "../../utils/api"
 import theme from "../../utils/theme"
 
-import Layout, { Main } from "../../components/layout"
+import Layout, { PageBody } from "../../components/layout"
 import SEO from "../../components/seo"
 import ExploreMenu from "../../components/explore/explore-menu"
 import Searchbar from "../../components/explore/searchbar"
@@ -96,7 +96,7 @@ const Campaigns = ({ data, location }) => {
   return (
     <Layout>
       <SEO title="Campaigns" />
-      <Main>
+      <PageBody>
         <ExploreMenu />
         <Searchbar
           submitSearch={submitSearch}
@@ -145,7 +145,7 @@ const Campaigns = ({ data, location }) => {
             })}
           </ExploreSection>
         )}
-      </Main>
+      </PageBody>
     </Layout>
   )
 }

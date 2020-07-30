@@ -6,7 +6,7 @@ import Spinner from "react-spinkit"
 import api from "../../utils/api"
 import theme from "../../utils/theme"
 
-import Layout, { Main } from "../../components/layout"
+import Layout, { PageBody } from "../../components/layout"
 import SEO from "../../components/seo"
 import ExploreMenu from "../../components/explore/explore-menu"
 import ExploreSection from "../../components/explore/explore-section"
@@ -64,7 +64,7 @@ export default function Instruments({ data, location }) {
   return (
     <Layout>
       <SEO title="Instruments" />
-      <Main>
+      <PageBody>
         <ExploreMenu />
         <Searchbar
           submitSearch={submitSearch}
@@ -109,7 +109,7 @@ export default function Instruments({ data, location }) {
             })}
           </ExploreSection>
         )}
-      </Main>
+      </PageBody>
     </Layout>
   )
 }

@@ -15,8 +15,8 @@ import Footer from "./footer"
 
 import theme from "../utils/theme"
 
-export const Main = ({ children }) => (
-  <main
+export const PageBody = ({ children }) => (
+  <section
     style={{
       margin: `0 auto`,
       width: `100%`,
@@ -26,10 +26,10 @@ export const Main = ({ children }) => (
     }}
   >
     {children}
-  </main>
+  </section>
 )
 
-Main.propTypes = {
+PageBody.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
@@ -59,7 +59,7 @@ const Layout = ({ children }) => {
       >
         <Nav />
       </Header>
-      {children}
+      <main>{children}</main>
       <Footer shortname={data.site.siteMetadata.shortname} />
     </div>
   )
