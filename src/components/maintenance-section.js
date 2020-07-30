@@ -14,6 +14,7 @@ const MaintenanceSection = ({ id, data }) => {
       {isLoggedIn && (
         // TODO: this is temporary, build out edit functionality
         <Link
+          data-cy="edit-btn"
           to={`/edit/campaign/${id}`}
           state={{ data }}
           style={{

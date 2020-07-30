@@ -17,7 +17,7 @@ import {
 import theme from "../../../utils/theme"
 
 const InputGroup = ({ id, label, placeholder, helperMessage }) => (
-  <FormGroup>
+  <FormGroup data-cy="edit-input-group">
     <FormGroupHeader>
       <FormLabel htmlFor={id}>{label}</FormLabel>
     </FormGroupHeader>
@@ -56,8 +56,8 @@ const HeaderForm = ({
   countDataProducts,
 }) => {
   return (
-    <>
-      <h2>Header Data</h2>
+    <div data-cy="edit-section">
+      <h2 data-cy="edit-section-header">Header Data</h2>
       <Formik
         initialValues={{
           bounds,
@@ -72,7 +72,7 @@ const HeaderForm = ({
           console.log("submitting", values, actions)
         }}
       >
-        <Form>
+        <Form data-cy="edit-section-form">
           <FormFieldset>
             <FormFieldsetBody>
               <InputGroup
@@ -117,12 +117,6 @@ const HeaderForm = ({
                 placeholder="Number of data products"
                 helperMessage="number of data products"
               />
-              <InputGroup
-                id="countDataProducts"
-                label="Data Product Count"
-                placeholder="Number of data products"
-                helperMessage="number of data products"
-              />
               <button
                 type="submit"
                 style={{
@@ -140,7 +134,7 @@ const HeaderForm = ({
           </FormFieldset>
         </Form>
       </Formik>
-    </>
+    </div>
   )
 }
 
