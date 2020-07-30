@@ -3,25 +3,31 @@
 describe("Campaign", () => {
   before(() => {
     cy.visit("/explore/campaigns")
-    cy.get("main").find("[data-cy=explore-card]").contains("AirMOSS").click()
+    cy.get("[data-cy=explore-card]").contains("AirMOSS").click()
   })
 
-  describe("the header", () => {
+  describe("the hero", () => {
     it("displays the short name", () => {
-      cy.get("main").find("header").find("p").should("exist")
+      cy.get("[data-cy=campaign-hero]")
+        // .find("section")
+        .find("p")
+        .should("exist")
     })
 
     it("displays the long name as title", () => {
-      cy.get("main").find("h1").should("exist")
+      cy.get("[data-cy=campaign-hero]").find("h1").should("exist")
       cy.get("h1").should("have.length", 1)
     })
 
     it("displays the focus area as subtitle", () => {
-      cy.get("main").find("header").find("p").should("exist")
+      cy.get("[data-cy=campaign-hero]")
+        // .find("section")
+        .find("p")
+        .should("exist")
     })
     it("displays 3 big numbers", () => {
-      cy.get("main")
-        .find("header")
+      cy.get("[data-cy=campaign-hero]")
+        // .find("section")
         .find("[data-cy=stats]")
         .find("dd")
         .should($stat => {
@@ -32,10 +38,10 @@ describe("Campaign", () => {
         })
     })
     it("displays a map as background image", () => {
-      cy.get("main")
-        .find("header")
-        .then($header => {
-          expect($header[0].style["background-image"]).to.contain(
+      cy.get("[data-cy=campaign-hero]")
+        // .find("section")
+        .then($section => {
+          expect($section[0].style["background-image"]).to.contain(
             "/styles/v1/mapbox/satellite-streets-v11/static"
           )
         })

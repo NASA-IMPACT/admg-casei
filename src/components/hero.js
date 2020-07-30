@@ -21,7 +21,7 @@ export default function Hero({
         columnGap: `2rem`,
         minHeight: `35rem`,
         alignContent: `center`,
-        padding: `0 4rem`,
+        padding: `0 5rem`,
       }}
       data-cy={`${id}-hero`}
     >

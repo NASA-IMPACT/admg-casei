@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header renders correctly 1`] = `
-<header
+<section
   data-cy="test-hero"
   style={
     Object {
@@ -10,6 +10,7 @@ exports[`Header renders correctly 1`] = `
       "display": "grid",
       "gridTemplateColumns": "3fr 5fr",
       "minHeight": "35rem",
+      "padding": "0 5rem",
     }
   }
 >
@@ -70,11 +71,11 @@ exports[`Header renders correctly 1`] = `
       children
     </div>
   </div>
-</header>
+</section>
 `;
 
 exports[`Header renders with adjust ratios 1`] = `
-<header
+<section
   data-cy="undefined-hero"
   style={
     Object {
@@ -83,6 +84,7 @@ exports[`Header renders with adjust ratios 1`] = `
       "display": "grid",
       "gridTemplateColumns": "5fr 3fr",
       "minHeight": "35rem",
+      "padding": "0 5rem",
     }
   }
 >
@@ -143,5 +145,5 @@ exports[`Header renders with adjust ratios 1`] = `
       children
     </div>
   </div>
-</header>
+</section>
 `;

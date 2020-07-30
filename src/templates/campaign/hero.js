@@ -55,6 +55,7 @@ const CampaignHero = ({
 
   return (
     <section
+      data-cy="campaign-hero"
       style={{
         display: `flex`,
         background: `linear-gradient(90deg, rgba(12,21,32, 0.8) 0%, rgba(12,21,32, 0.7)50%, rgba(12,21,32, 0.0)66%), url("${url}") bottom center no-repeat`,
@@ -63,7 +64,7 @@ const CampaignHero = ({
         height: `35rem`,
       }}
     >
-      <div style={{ flex: `2`, padding: `0 4rem` }}>
+      <div style={{ flex: `2`, padding: `0 5rem` }}>
         <div>
           <p>{shortname}</p>
           <h1>{longname}</h1>
