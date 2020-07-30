@@ -1,6 +1,6 @@
 import React from "react"
 
-import Layout from "../components/layout"
+import Layout, { Main } from "../components/layout"
 import SEO from "../components/seo"
 import Hero from "../components/hero"
 import {
@@ -21,30 +21,32 @@ const About = () => (
       id="about"
     />
 
-    {Object.entries(about).map(([id, section]) => {
-      return (
-        <SectionBlock id={id} key={id}>
-          <SectionHeader
-            tagline={section.tagline}
-            headline={section.headline}
-          />
-          <SectionContent columns={[6, 10]}>
-            {section.paragraphs &&
-              section.paragraphs.map((text, i) => <p key={i}>{text}</p>)}
-            {section.bulleted && (
-              <div>
-                {section.bulleted.map((point, i) => (
-                  <React.Fragment key={i}>
-                    <h3>{point.header}</h3>
-                    <p>{point.content}</p>
-                  </React.Fragment>
-                ))}
-              </div>
-            )}
-          </SectionContent>
-        </SectionBlock>
-      )
-    })}
+    <Main>
+      {Object.entries(about).map(([id, section]) => {
+        return (
+          <SectionBlock id={id} key={id}>
+            <SectionHeader
+              tagline={section.tagline}
+              headline={section.headline}
+            />
+            <SectionContent columns={[6, 10]}>
+              {section.paragraphs &&
+                section.paragraphs.map((text, i) => <p key={i}>{text}</p>)}
+              {section.bulleted && (
+                <div>
+                  {section.bulleted.map((point, i) => (
+                    <React.Fragment key={i}>
+                      <h3>{point.header}</h3>
+                      <p>{point.content}</p>
+                    </React.Fragment>
+                  ))}
+                </div>
+              )}
+            </SectionContent>
+          </SectionBlock>
+        )
+      })}
+    </Main>
   </Layout>
 )
 

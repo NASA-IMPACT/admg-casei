@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
-import Layout from "../../components/layout"
+import Layout, { Main } from "../../components/layout"
 import Header from "./header"
 import InpageNav from "./inpage-nav"
 import OverviewSection from "./overview-section"
@@ -31,50 +31,52 @@ const CampaignTemplate = ({ data: { campaign, deployments } }) => {
         countCollectionPeriods={campaign.countCollectionPeriods}
         countDataProducts={campaign.countDataProducts}
       />
-      <InpageNav />
-      <OverviewSection
-        description={campaign.description}
-        startdate={campaign.startdate}
-        enddate={campaign.enddate}
-        region={campaign.region}
-        seasonListing={campaign.seasons.map(x => x.shortname).join(", ")}
-        bounds={campaign.bounds}
-        projectWebsite={campaign.projectWebsite}
-        repositoryWebsite={campaign.repositoryWebsite}
-        tertiaryWebsite={campaign.tertiaryWebsite}
-        publicationLink={campaign.publicationLink}
-      />
-      <FocusSection
-        focus={campaign.focus}
-        geophysical={campaign.geophysical}
-        focusPhenomena={campaign.focusPhenomena}
-      />
-      <PlatformSection platforms={campaign.platforms} />
-      <TimelineSection deployments={deployments} />
-      <SectionBlock id="data">
-        <SectionHeader headline="Data" />
-      </SectionBlock>
-      <ProgramInfoSection
-        logo={campaign.logo}
-        fundingAgency={campaign.fundingAgency}
-        fundingProgram={campaign.fundingProgram}
-        programLead={campaign.programLead}
-        leadInvestigator={campaign.leadInvestigator}
-        dataManager={campaign.dataManager}
-        archive={campaign.archive}
-        partnerOrgListing={campaign.partnerOrgs
-          .map(x => x.shortname)
-          .join(", ")}
-        partnerWebsite={campaign.partnerWebsite}
-        tertiaryWebsite={campaign.tertiaryWebsite}
-      />
-      {isClient && (
-        // the maintenance section is behind authentication and only accessible from the browser
-        <MaintenanceSection
-          id={campaign.uuid}
-          data={{ campaign, deployments }}
+      <Main>
+        <InpageNav />
+        <OverviewSection
+          description={campaign.description}
+          startdate={campaign.startdate}
+          enddate={campaign.enddate}
+          region={campaign.region}
+          seasonListing={campaign.seasons.map(x => x.shortname).join(", ")}
+          bounds={campaign.bounds}
+          projectWebsite={campaign.projectWebsite}
+          repositoryWebsite={campaign.repositoryWebsite}
+          tertiaryWebsite={campaign.tertiaryWebsite}
+          publicationLink={campaign.publicationLink}
         />
-      )}
+        <FocusSection
+          focus={campaign.focus}
+          geophysical={campaign.geophysical}
+          focusPhenomena={campaign.focusPhenomena}
+        />
+        <PlatformSection platforms={campaign.platforms} />
+        <TimelineSection deployments={deployments} />
+        <SectionBlock id="data">
+          <SectionHeader headline="Data" />
+        </SectionBlock>
+        <ProgramInfoSection
+          logo={campaign.logo}
+          fundingAgency={campaign.fundingAgency}
+          fundingProgram={campaign.fundingProgram}
+          programLead={campaign.programLead}
+          leadInvestigator={campaign.leadInvestigator}
+          dataManager={campaign.dataManager}
+          archive={campaign.archive}
+          partnerOrgListing={campaign.partnerOrgs
+            .map(x => x.shortname)
+            .join(", ")}
+          partnerWebsite={campaign.partnerWebsite}
+          tertiaryWebsite={campaign.tertiaryWebsite}
+        />
+        {isClient && (
+          // the maintenance section is behind authentication and only accessible from the browser
+          <MaintenanceSection
+            id={campaign.uuid}
+            data={{ campaign, deployments }}
+          />
+        )}
+      </Main>
     </Layout>
   )
 }

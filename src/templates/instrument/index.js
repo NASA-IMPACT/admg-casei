@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
-import Layout from "../../components/layout"
+import Layout, { Main } from "../../components/layout"
 import Header from "./header"
 import About from "./about"
 import Entities from "./entities"
@@ -16,16 +16,18 @@ const InstrumentTemplate = ({ data: { instrument } }) => {
         longname={instrument.longname}
         description={instrument.description}
       />
-      <About
-        id={instrument.id}
-        radiometricFrequency={instrument.radiometricFrequency}
-        temporalResolution={instrument.temporalResolution}
-        spatialResolution={instrument.spatialResolution}
-        instrumentManufacturer={instrument.instrumentManufacturer}
-        fundingSource={instrument.fundingSource}
-      />
-      <Entities platforms={instrument.platforms} />
-      <Resources onlineInformation={instrument.onlineInformation} />
+      <Main>
+        <About
+          id={instrument.id}
+          radiometricFrequency={instrument.radiometricFrequency}
+          temporalResolution={instrument.temporalResolution}
+          spatialResolution={instrument.spatialResolution}
+          instrumentManufacturer={instrument.instrumentManufacturer}
+          fundingSource={instrument.fundingSource}
+        />
+        <Entities platforms={instrument.platforms} />
+        <Resources onlineInformation={instrument.onlineInformation} />
+      </Main>
     </Layout>
   )
 }

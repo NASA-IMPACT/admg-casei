@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
-import Layout from "../../components/layout"
+import Layout, { Main } from "../../components/layout"
 import Header from "./header"
 import Overview from "./overview"
 import RelatedCampaigns from "./related-campaigns"
@@ -17,11 +17,13 @@ export default function PlatformTemplate({ data: { platform } }) {
         collectionPeriods={platform.collectionPeriods.length}
         textToImageRatio={[3, 5]}
       />
-      <Overview
-        description={platform.description}
-        shortname={platform.shortname}
-      />
-      <RelatedCampaigns campaigns={platform.campaigns} />
+      <Main>
+        <Overview
+          description={platform.description}
+          shortname={platform.shortname}
+        />
+        <RelatedCampaigns campaigns={platform.campaigns} />
+      </Main>
     </Layout>
   )
 }

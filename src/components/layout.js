@@ -15,6 +15,24 @@ import Footer from "./footer"
 
 import theme from "../utils/theme"
 
+export const Main = ({ children }) => (
+  <main
+    style={{
+      margin: `0 auto`,
+      width: `100%`,
+      maxWidth: theme.layout.maxWidth,
+      padding: `0 5rem`,
+      flexGrow: 1,
+    }}
+  >
+    {children}
+  </main>
+)
+
+Main.propTypes = {
+  children: PropTypes.node.isRequired,
+}
+
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -41,17 +59,7 @@ const Layout = ({ children }) => {
       >
         <Nav />
       </Header>
-      <main
-        style={{
-          margin: `0 auto`,
-          width: `100%`,
-          maxWidth: theme.layout.maxWidth,
-          padding: `0 5rem`,
-          flexGrow: 1,
-        }}
-      >
-        {children}
-      </main>
+      {children}
       <Footer shortname={data.site.siteMetadata.shortname} />
     </div>
   )
