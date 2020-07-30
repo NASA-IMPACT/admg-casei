@@ -14,13 +14,14 @@ export default function Hero({
   id,
 }) {
   return (
-    <header
+    <section
       style={{
         display: `grid`,
         gridTemplateColumns: `${textToImageRatio[0]}fr ${textToImageRatio[1]}fr`,
         columnGap: `2rem`,
         minHeight: `35rem`,
         alignContent: `center`,
+        padding: `0 4rem`,
       }}
       data-cy={`${id}-hero`}
     >
@@ -38,7 +39,7 @@ export default function Hero({
 
       <div style={{ gridArea: `1 / 2 / 3 / 3` }}>{children}</div>
       {stats && <HeaderStats statList={stats} />}
-    </header>
+    </section>
   )
 }
 
