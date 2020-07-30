@@ -21,8 +21,8 @@ export default function Header({ shortname, longname, description }) {
     </Hero>
   )
 }
-export const instrumentHeaderFields = graphql`
-  fragment instrumentHeaderFields on instrument {
+export const instrumentHeroFields = graphql`
+  fragment instrumentHeroFields on instrument {
     shortname: short_name
     longname: long_name
     description

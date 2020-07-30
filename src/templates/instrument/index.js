@@ -35,7 +35,7 @@ const InstrumentTemplate = ({ data: { instrument } }) => {
 export const query = graphql`
   query($slug: String!) {
     instrument: instrument(id: { eq: $slug }) {
-      ...instrumentHeaderFields
+      ...instrumentHeroFields
       ...instrumentDetailFields
       ...instrumentEntitiesFields
       ...instrumentResourcesFields

@@ -28,8 +28,8 @@ export default function Header({
     </Hero>
   )
 }
-export const platformHeaderFields = graphql`
-  fragment platformHeaderFields on platform {
+export const platformHeroFields = graphql`
+  fragment platformHeroFields on platform {
     shortname: short_name
     longname: long_name
     campaigns {
