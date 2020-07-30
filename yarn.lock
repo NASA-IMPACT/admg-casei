@@ -1711,10 +1711,10 @@
   dependencies:
     collecticons-lib "^2.1.0"
 
-"@devseed-ui/form@^0.11.4":
-  version "0.11.4"
-  resolved "https://registry.yarnpkg.com/@devseed-ui/form/-/form-0.11.4.tgz#94037e3fd47d44f07901da1eb8910a8bc5f17f12"
-  integrity sha512-k/tXlHXYtOpILoHTVweb/mVfCPiyr4uIEU7oaWj4t+EL0MTpeALJaM7GygyYrGAuKXmx/mrWFQ8KOF0w0DpHxg==
+"@devseed-ui/form@^0.11.5":
+  version "0.11.5"
+  resolved "https://registry.yarnpkg.com/@devseed-ui/form/-/form-0.11.5.tgz#a81905c093bb310b77c70728aed19f923e7f51a1"
+  integrity sha512-rvkPNphpRZ5YHSQovnfzWKbnNIwoc9SmjVLj1clCY9QkhGvNCmEVWL49G9NVolzkzmFVJ3yvw7XBiJs6UJJJ6w==
   dependencies:
     "@devseed-ui/animation" "^0.9.2"
     "@devseed-ui/button" "2.4.3"

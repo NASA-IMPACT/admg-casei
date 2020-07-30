@@ -2,14 +2,14 @@ import React from "react"
 import { Router } from "@reach/router"
 
 import PrivateRoute from "../components/private-route"
-import Campaign from "../templates/edit"
-import Instrument from "../templates/instrument"
+import Campaign from "../templates/edit/campaign"
+// import Instrument from "../templates/edit/instrument"
 
 const Edit = () => (
   <Router>
     {/* TODO: Build out components that should be displayed on edit */}
     <PrivateRoute path="/edit/campaign/*" component={Campaign} />
-    <PrivateRoute path="/edit/instrument/*" component={Instrument} />
+    {/* <PrivateRoute path="/edit/instrument/*" component={Instrument} /> */}
   </Router>
 )
 
