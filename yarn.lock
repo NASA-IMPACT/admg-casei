@@ -1696,7 +1696,7 @@
   dependencies:
     lodash.get "^4.4.2"
 
-"@devseed-ui/button@2.4.3", "@devseed-ui/button@^2.4.3":
+"@devseed-ui/button@2.4.3":
   version "2.4.3"
   resolved "https://registry.yarnpkg.com/@devseed-ui/button/-/button-2.4.3.tgz#f9a18ed310f22b2622d6aa347c7dfef6027847ef"
   integrity sha512-po5EdpPBVjH0nb124FezciJ1c4AXTPVzb1CfyVGq/lTbtbrSz9a3SYhagHfvaBEn23PfQsX3w2bfIF2gNDrb9g==
@@ -15287,7 +15287,7 @@ react-dev-utils@^4.2.3:
     strip-ansi "3.0.1"
     text-table "0.2.0"
 
-react-dom@^16.13.1:
+react-dom@^16.12.0:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.13.1.tgz#c1bd37331a0486c078ee54c4740720993b2e0e7f"
   integrity sha512-81PIMmVLnCNLO/fFOQxdQkvEq/+Hfpv24XNJfpyZhTRfO0QcmQIF/PgCa1zCOj2w1hrn12MFLyaJ/G0+Mxtfag==
@@ -15410,7 +15410,7 @@ react-typography@^0.16.19:
   resolved "https://registry.yarnpkg.com/react-typography/-/react-typography-0.16.19.tgz#5736b47961dcf6b9605b6fa38d41980db2588e28"
   integrity sha512-kV2qLEsdm0x9P4YXQEDVc88tDb4Vg0h/vdVZGgbqaRn8ERvNzV76JHUeOby3vvcUYU5MPd5Kz5DPH9Bhp4I/iw==
 
-react@^16.13.1, react@^16.8.0:
+react@^16.12.0, react@^16.8.0:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react/-/react-16.13.1.tgz#2e818822f1a9743122c063d6410d85c1e3afe48e"
   integrity sha512-YMZQQq32xHLX0bz5Mnibv1/LHb3Sqzngu7xstSM+vrkE5Kzr9xE0yMByK5kMoTK30YVJE61WfbxIFFvfeDKT1w==
