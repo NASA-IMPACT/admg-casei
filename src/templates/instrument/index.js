@@ -16,7 +16,7 @@ const InstrumentTemplate = ({ data: { instrument } }) => {
         longname={instrument.longname}
         description={instrument.description}
       />
-      <PageBody>
+      <PageBody id="instrument">
         <About
           id={instrument.id}
           radiometricFrequency={instrument.radiometricFrequency}

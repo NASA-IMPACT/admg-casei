@@ -5,8 +5,8 @@ describe("Glossary", () => {
     cy.visit("/glossary")
   })
   it("it renders correctly", () => {
-    cy.get("main").find("h1").contains("Glossary")
-    cy.get("main").find("section").should("have.length", 1)
+    cy.get("[data-cy=main-glossary-section]").find("h1").contains("Glossary")
+    cy.get("[data-cy=main-glossary-section]").should("have.length", 1)
   })
   describe("the glossary", () => {
     it("should display terms and definitions", () => {

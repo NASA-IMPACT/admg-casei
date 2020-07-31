@@ -33,7 +33,7 @@ const IndexPage = ({ data }) => {
           alt="a globe displaying natural features and slight cloud coverage"
         />
       </Hero>
-      <PageBody>
+      <PageBody id="home">
         <SectionBlock id="focus-area">
           <SectionHeader
             tagline="explore nasa earth science"

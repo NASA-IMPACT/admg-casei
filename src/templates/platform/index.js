@@ -17,7 +17,7 @@ export default function PlatformTemplate({ data: { platform } }) {
         collectionPeriods={platform.collectionPeriods.length}
         textToImageRatio={[3, 5]}
       />
-      <PageBody>
+      <PageBody id="platform">
         <Overview
           description={platform.description}
           shortname={platform.shortname}

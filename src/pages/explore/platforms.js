@@ -65,7 +65,7 @@ const Platforms = ({ data, location }) => {
   return (
     <Layout>
       <SEO title="Platforms" />
-      <PageBody>
+      <PageBody id="platforms">
         <ExploreMenu />
         <Searchbar
           submitSearch={submitSearch}

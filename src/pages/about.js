@@ -21,7 +21,7 @@ const About = () => (
       id="about"
     />
 
-    <PageBody>
+    <PageBody id="about">
       {Object.entries(about).map(([id, section]) => {
         return (
           <SectionBlock id={id} key={id}>

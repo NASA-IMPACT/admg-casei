@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 const Contact = () => (
   <Layout>
     <SEO title="Contact" />
-    <PageBody>
+    <PageBody id="contact">
       <h1>We would love to hear your feedback</h1>
       <p>
         Contact us at{" "}

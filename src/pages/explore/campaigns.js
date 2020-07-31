@@ -96,7 +96,7 @@ const Campaigns = ({ data, location }) => {
   return (
     <Layout>
       <SEO title="Campaigns" />
-      <PageBody>
+      <PageBody id="campaigns">
         <ExploreMenu />
         <Searchbar
           submitSearch={submitSearch}

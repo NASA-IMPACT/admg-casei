@@ -10,7 +10,7 @@ export default function Glossary() {
   return (
     <Layout>
       <SEO title="Glossary" />
-      <PageBody>
+      <PageBody id="glossary">
         <h1>Glossary</h1>
         <DefinitionList
           id="glossary"

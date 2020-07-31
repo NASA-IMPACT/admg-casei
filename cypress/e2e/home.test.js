@@ -14,7 +14,7 @@ describe("Homepage", () => {
     cy.get("[data-cy=home-hero]")
       .find("p")
       .contains(site.siteMetadata.description)
-    cy.get("[data-cy=home-hero]").should("have.length", 5)
+    cy.get("[data-cy=home-hero]").should("have.length", 1)
   })
 
   describe("focus areas", () => {

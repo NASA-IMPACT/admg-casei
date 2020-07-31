@@ -64,7 +64,7 @@ export default function Instruments({ data, location }) {
   return (
     <Layout>
       <SEO title="Instruments" />
-      <PageBody>
+      <PageBody id="instruments">
         <ExploreMenu />
         <Searchbar
           submitSearch={submitSearch}

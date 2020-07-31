@@ -15,7 +15,7 @@ import Footer from "./footer"
 
 import theme from "../utils/theme"
 
-export const PageBody = ({ children }) => (
+export const PageBody = ({ children, id }) => (
   <section
     style={{
       margin: `0 auto`,
@@ -24,6 +24,7 @@ export const PageBody = ({ children }) => (
       padding: `0 5rem`,
       flexGrow: 1,
     }}
+    data-cy={`main-${id}-section`}
   >
     {children}
   </section>
@@ -31,6 +32,7 @@ export const PageBody = ({ children }) => (
 
 PageBody.propTypes = {
   children: PropTypes.node.isRequired,
+  id: PropTypes.string.isRequired,
 }
 
 const Layout = ({ children }) => {
