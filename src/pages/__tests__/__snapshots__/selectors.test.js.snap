@@ -258,1671 +258,1674 @@ exports[`Campaigns page renders correctly 1`] = `
       </div>
     </div>
   </header>
-  <main
-    style={
-      Object {
-        "flexGrow": 1,
-        "margin": "0 auto",
-        "maxWidth": 1280,
-        "padding": "0 5rem",
-        "width": "100%",
-      }
-    }
-  >
-    <div
+  <main>
+    <section
+      data-cy="main-campaigns-section"
       style={
         Object {
-          "display": "flex",
-          "justifyContent": "space-around",
-          "marginBottom": "2rem",
+          "flexGrow": 1,
+          "margin": "0 auto",
+          "maxWidth": 1280,
+          "padding": "0 5rem",
+          "width": "100%",
         }
       }
     >
-      <ul
-        data-cy="tabbar"
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flexDirection": "row",
-            "listStyle": "none",
-            "margin": 0,
-          }
-        }
-      >
-        <li
-          style={
-            Object {
-              "margin": "0 1rem 0 0",
-            }
-          }
-        >
-          <a
-            href="/explore/campaigns"
-          >
-            Campaigns
-          </a>
-        </li>
-        <li
-          style={
-            Object {
-              "margin": "0 1rem 0 0",
-            }
-          }
-        >
-          <a
-            href="/explore/platforms"
-          >
-            Platforms
-          </a>
-        </li>
-        <li
-          style={
-            Object {
-              "margin": "0 1rem 0 0",
-            }
-          }
-        >
-          <a
-            href="/explore/instruments"
-          >
-            Instruments
-          </a>
-        </li>
-      </ul>
-    </div>
-    <form
-      data-cy="searchbar"
-      onSubmit={[Function]}
-      style={
-        Object {
-          "display": "flex",
-          "margin": "2rem 0",
-        }
-      }
-    >
-      <select
-        aria-label="Select filters"
-        data-cy="filter-select"
-        id="filter-select"
-        name="filter"
-        onChange={[Function]}
-        style={
-          Object {
-            "WebkitAppearance": "none",
-            "background": "transparent",
-            "border": "1px solid hsla(0,0%,100%,0.9)",
-            "borderRadius": "0.2rem 0 0 0.2rem",
-            "color": "hsla(0,0%,100%,0.9)",
-            "flexGrow": 0,
-            "height": "2.5rem",
-            "maxWidth": "5rem",
-            "padding": "0.5rem",
-          }
-        }
-      >
-        <option
-          value=""
-        >
-          Filter
-        </option>
-        <optgroup
-          label="Focus Area"
-        >
-          <option
-            value="23aedeee-2f83-4ca9-be30-5fda9a311421"
-          >
-            Atmospheric Composition
-          </option>
-          <option
-            value="4c5e9dc3-38ed-40cb-b6ea-cacf96057b53"
-          >
-            Weather
-          </option>
-          <option
-            value="2a132687-f5a1-4bbc-b45a-97228c310cd8"
-          >
-            Climate Variability & Change
-          </option>
-          <option
-            value="a187959e-4132-4c2c-950d-7055bc5082b9"
-          >
-            Global Water & Energy Cycle
-          </option>
-          <option
-            value="75fdf3c3-f55b-4f33-9f56-7d7af49bef97"
-          >
-            Carbon Cycle & Ecosystems
-          </option>
-          <option
-            value="4e90e316-6d36-41b9-ae29-5125842b7b60"
-          >
-            Earth Surface & Interior
-          </option>
-          <option
-            value="e1b07238-763d-4836-a290-fba2eab0b1b8"
-          >
-            NID
-          </option>
-        </optgroup>
-        <optgroup
-          label="Geophysical Concept"
-        >
-          <option
-            value="9e52d6cf-5a81-4b53-a942-653baeb1fdc1"
-          >
-            Aerosols
-          </option>
-          <option
-            value="cef614bb-0bac-4f62-85af-8a0295b76034"
-          >
-            Air Quality (AirQual)
-          </option>
-          <option
-            value="b306795c-557f-4603-b813-56d39fb00c76"
-          >
-            Atmospheric Chemicals & Trace Gases
-          </option>
-          <option
-            value="e30bf13d-4abc-4851-b699-d49bf67c4ad6"
-          >
-            Upper Atmospheric Chemistry
-          </option>
-          <option
-            value="a5d259cd-0b6c-441e-9cda-237a991d30ab"
-          >
-            Radiation & Energy Budget
-          </option>
-          <option
-            value="2f4c11cd-2e66-424b-a164-d5e5a1ded727"
-          >
-            Clouds-Properties & Processes & Dynamics
-          </option>
-          <option
-            value="20c5cc69-f86b-46eb-850c-094ff8d8c104"
-          >
-            Boundary Layer Processes
-          </option>
-          <option
-            value="4a716efb-76ed-4707-9842-a290d07d2410"
-          >
-            Atmospheric Electricity & Lightning
-          </option>
-          <option
-            value="cf2628cd-325e-4485-95f1-4f7c7f24df84"
-          >
-            Tropical Cyclones
-          </option>
-          <option
-            value="2b6b475c-444c-4e66-9dec-61da55cd46da"
-          >
-            Mesoscale Convection & Severe Weather
-          </option>
-          <option
-            value="04b29f58-f0a5-4b84-82d8-56c9f826e2c3"
-          >
-            Mid-latitude Cyclones
-          </option>
-          <option
-            value="360e94b2-fc1a-4d2e-9715-dc2060be3d5f"
-          >
-            Precipitation (Precip)
-          </option>
-          <option
-            value="390e1e0d-3d2c-46df-a00b-c65b4d7151a5"
-          >
-            Terrestrial Hydrology (TerrHydrol)
-          </option>
-          <option
-            value="1cf782c7-8a10-479c-9a57-b29fe17746ac"
-          >
-            Ice and Glacial Properties & Processes
-          </option>
-          <option
-            value="ad26de91-23d9-4e3d-b27e-978c81afe3df"
-          >
-            Ocean Properties & Processes
-          </option>
-          <option
-            value="0053a024-2ccd-4b31-bdf1-eafe6b48e314"
-          >
-            Ecosystems/Biogeochemistry
-          </option>
-          <option
-            value="96e8e86f-2b16-4bb1-99ee-8020b8984602"
-          >
-            Biodiversity
-          </option>
-          <option
-            value="64f7434e-63a1-405f-b3c9-875ee282fa4b"
-          >
-            Carbon Storage & Processes
-          </option>
-          <option
-            value="6490e743-061e-4cd7-adb6-3344ff1e87bf"
-          >
-            Soil Properties  (SoilProp)
-          </option>
-          <option
-            value="dd8f913b-2fc4-4a1d-b3da-4c76afbf068e"
-          >
-            Land Characteristics
-          </option>
-          <option
-            value="3103a214-1df3-4fa9-8f7e-e9dcf49a0401"
-          >
-            Tectonic Processes
-          </option>
-          <option
-            value="9de5d9f2-0d0f-4c2c-aa74-4cc0594f41c3"
-          >
-            Volcanic Processes
-          </option>
-          <option
-            value="ca948668-50c0-4f52-885a-ab6ed3e1ab30"
-          >
-            Earth's Magnetic Field (MagField)
-          </option>
-          <option
-            value="b8d7c54e-4678-40ad-a572-3b7fa6ac4213"
-          >
-            Earth's Interior (EarthInt)
-          </option>
-          <option
-            value="42de25d7-97b8-4cd1-9288-7a85dd906489"
-          >
-            Earth-Climate Interactions
-          </option>
-          <option
-            value="fb74f5e0-398d-44e6-9087-cf5e8f445562"
-          >
-            Geodesy
-          </option>
-        </optgroup>
-        <optgroup
-          label="Season"
-        >
-          <option
-            value="5ae15f8c-3d9a-4061-953d-5fea2df57654"
-          >
-            boreal winter
-          </option>
-          <option
-            value="416a1c43-85b6-4336-80ac-6ccda1226e54"
-          >
-            boreal spring
-          </option>
-          <option
-            value="65900eb8-fb52-4da9-98e9-190cbf1d1cbe"
-          >
-            boreal summer
-          </option>
-          <option
-            value="4ebcfcd2-1c9c-45b0-bad6-997fc3e3c904"
-          >
-            boreal fall
-          </option>
-          <option
-            value="f5b65f38-162a-473b-869b-0094799b202e"
-          >
-            austral winter
-          </option>
-          <option
-            value="5462d618-6f14-43d1-a9c7-19e7fef9a84b"
-          >
-            austral spring
-          </option>
-          <option
-            value="a27c0f4a-1bab-4f64-a666-0f08ba3c874a"
-          >
-            austral summer
-          </option>
-          <option
-            value="108eb86b-1139-4ae6-859c-bfaaf0acc709"
-          >
-            austral fall
-          </option>
-          <option
-            value="cad0fb1f-bdfa-48af-a17d-9a87f1ecfa49"
-          >
-            monsoon
-          </option>
-          <option
-            value="12b3f425-fbb9-4dcd-9c3a-84fda116e8c5"
-          >
-            break
-          </option>
-          <option
-            value="c29c7993-71a9-423e-bbaf-2646585669b1"
-          >
-            dry
-          </option>
-          <option
-            value="081ccd03-e46f-459e-8101-b270d0266eac"
-          >
-            wet
-          </option>
-          <option
-            value="52b49cd7-4143-4bbd-9f09-bd8de945c837"
-          >
-            warm
-          </option>
-          <option
-            value="d4b539c1-32d3-4089-9e08-db714704a13c"
-          >
-            cold
-          </option>
-          <option
-            value="824e5caa-dc94-4927-aba5-b8e8d8d6273d"
-          >
-            equatorial
-          </option>
-          <option
-            value="80c1e584-8bf7-4cae-b9c1-e7f98d19a7a0"
-          >
-            year round
-          </option>
-          <option
-            value="d3c6d320-e3cf-42e0-b729-b4477da17422"
-          >
-            NID
-          </option>
-        </optgroup>
-        <optgroup
-          label="Geographical Region"
-        >
-          <option
-            value="a9b86ec6-cb57-4ef5-9a13-c5a767195782"
-          >
-            continental
-          </option>
-          <option
-            value="6ad9e3d8-81c0-4c7c-9db8-888988ab677e"
-          >
-            maritime
-          </option>
-          <option
-            value="292950c5-e5df-4cea-9778-b0dc6c011294"
-          >
-            coastal
-          </option>
-          <option
-            value="fd9fb6ee-121e-4a44-8155-d478500599d9"
-          >
-            mountains
-          </option>
-          <option
-            value="12463bc6-32a8-45bd-bdad-d7bd7db6c51c"
-          >
-            island
-          </option>
-          <option
-            value="2567b1ed-8753-433f-b475-9bb3ef5c1bb3"
-          >
-            desert
-          </option>
-          <option
-            value="674d3da5-6bef-439f-838a-eaf79d733e42"
-          >
-            forest
-          </option>
-          <option
-            value="9ff66c70-f482-40e8-9a5e-ec45306760e0"
-          >
-            urban
-          </option>
-          <option
-            value="a95c9bd6-395a-409c-8875-586dbc0601f7"
-          >
-            agriculture
-          </option>
-          <option
-            value="5624a0f2-7b7b-4f4c-a8fd-898e9751e0e1"
-          >
-            equitorial
-          </option>
-          <option
-            value="cb25d6eb-a988-4e21-ac05-4912017415b5"
-          >
-            tropical
-          </option>
-          <option
-            value="731da6a3-04b9-4ca1-826a-388820f6fe90"
-          >
-            mid-latitude
-          </option>
-          <option
-            value="9df5be07-f7e3-4ce4-94fe-c813ad371a71"
-          >
-            polar
-          </option>
-          <option
-            value="26d0e469-de46-4f66-8722-b270e2602b70"
-          >
-            sea ice
-          </option>
-          <option
-            value="67519804-37a2-403a-8ee0-6db25d17a731"
-          >
-            coral
-          </option>
-          <option
-            value="2616378d-bf8c-41a7-b1f3-2c65dd77e759"
-          >
-            rainforest
-          </option>
-          <option
-            value="6ef85571-d903-458b-980a-273bbace62bc"
-          >
-            NID
-          </option>
-        </optgroup>
-        <optgroup
-          label="Platform"
-        >
-          <option
-            value="fea8651b-9d6e-49cf-9433-f1c6685ec0dc"
-          >
-            ALAR
-          </option>
-          <option
-            value="32242d25-0152-4d98-a3a2-d1f874597cd6"
-          >
-            ALTUS II
-          </option>
-          <option
-            value="99bbbba6-7de4-43a0-9483-1175cec6b93f"
-          >
-            ASO
-          </option>
-          <option
-            value="1b607095-4f6d-4e70-8e16-798bc59a2d59"
-          >
-            B-200
-          </option>
-          <option
-            value="900208da-3cb2-44b6-9f27-20209433f190"
-          >
-            C-23 Sherpa
-          </option>
-          <option
-            value="0cdd2d06-ba97-469d-96eb-0e0865c7c4c9"
-          >
-            Citation
-          </option>
-          <option
-            value="af872351-1e39-43dc-bdb5-3f4fb7def20b"
-          >
-            CV-580
-          </option>
-          <option
-            value="d59b3d7e-f782-4e25-a8eb-ceec91c0331e"
-          >
-            DC-8
-          </option>
-          <option
-            value="cc0f103e-e537-4437-8d2b-f7ea5ca617de"
-          >
-            ER-2
-          </option>
-          <option
-            value="1c57a92e-a6db-4e7e-9d56-704705acc192"
-          >
-            Falcon
-          </option>
-          <option
-            value="a67e9128-f25f-4bb8-97c1-5d89005111a8"
-          >
-            G-III
-          </option>
-          <option
-            value="2a3a99ee-1ea0-4ac9-9e52-6e733a0eda23"
-          >
-            G-V
-          </option>
-          <option
-            value="5cde9f2a-10cb-47d6-b095-3b61d1e8b1e2"
-          >
-            GH
-          </option>
-          <option
-            value="2084ab0c-4f18-4aa6-ad7b-70bc861d2d80"
-          >
-            P-3
-          </option>
-          <option
-            value="5baa4bc5-ad5a-43f8-9ed3-cf7d0dbdae36"
-          >
-            WB-57
-          </option>
-        </optgroup>
-      </select>
       <div
         style={
           Object {
-            "border": "1px solid hsla(0,0%,100%,0.9)",
-            "borderLeft": 0,
-            "borderRadius": "0",
-            "borderRight": 0,
             "display": "flex",
-            "flexGrow": 1,
-            "padding": "0.25rem",
+            "justifyContent": "space-around",
+            "marginBottom": "2rem",
           }
         }
       >
-        <input
-          aria-label="Enter search text"
-          autoComplete="off"
-          name="search"
-          placeholder="Enter text..."
+        <ul
+          data-cy="tabbar"
           style={
             Object {
-              "background": "transparent",
-              "border": "none",
-              "color": "hsla(0,0%,100%,0.9)",
-              "flexGrow": 1,
+              "alignItems": "center",
+              "display": "flex",
+              "flexDirection": "row",
+              "listStyle": "none",
+              "margin": 0,
             }
           }
-          type="text"
-        />
-        <button
-          data-cy="submit"
+        >
+          <li
+            style={
+              Object {
+                "margin": "0 1rem 0 0",
+              }
+            }
+          >
+            <a
+              href="/explore/campaigns"
+            >
+              Campaigns
+            </a>
+          </li>
+          <li
+            style={
+              Object {
+                "margin": "0 1rem 0 0",
+              }
+            }
+          >
+            <a
+              href="/explore/platforms"
+            >
+              Platforms
+            </a>
+          </li>
+          <li
+            style={
+              Object {
+                "margin": "0 1rem 0 0",
+              }
+            }
+          >
+            <a
+              href="/explore/instruments"
+            >
+              Instruments
+            </a>
+          </li>
+        </ul>
+      </div>
+      <form
+        data-cy="searchbar"
+        onSubmit={[Function]}
+        style={
+          Object {
+            "display": "flex",
+            "margin": "2rem 0",
+          }
+        }
+      >
+        <select
+          aria-label="Select filters"
+          data-cy="filter-select"
+          id="filter-select"
+          name="filter"
+          onChange={[Function]}
           style={
             Object {
+              "WebkitAppearance": "none",
               "background": "transparent",
-              "border": "none",
+              "border": "1px solid hsla(0,0%,100%,0.9)",
+              "borderRadius": "0.2rem 0 0 0.2rem",
               "color": "hsla(0,0%,100%,0.9)",
               "flexGrow": 0,
-              "verticalAlign": "middle",
+              "height": "2.5rem",
+              "maxWidth": "5rem",
+              "padding": "0.5rem",
             }
           }
-          type="submit"
         >
-          <span
-            aria-label="Magnifying glass icon"
-            role="img"
+          <option
+            value=""
           >
-            <svg
-              height="16"
-              width="16"
-              xmlns="http://www.w3.org/2000/svg"
+            Filter
+          </option>
+          <optgroup
+            label="Focus Area"
+          >
+            <option
+              value="23aedeee-2f83-4ca9-be30-5fda9a311421"
             >
-              <rect
-                fill="none"
-                height="16"
-                width="16"
-              />
-              <path
-                d="M15.708,13.587l-3.675-3.675C12.646,8.92,13,7.751,13,6.5C13,2.91,10.09,0,6.5,0S0,2.91,0,6.5S2.91,13,6.5,13 c1.251,0,2.42-0.354,3.412-0.967l3.675,3.675c0.389,0.389,1.025,0.389,1.414,0l0.707-0.707 C16.097,14.612,16.097,13.976,15.708,13.587z M3.318,9.682C2.468,8.832,2,7.702,2,6.5s0.468-2.332,1.318-3.182S5.298,2,6.5,2 s2.332,0.468,3.182,1.318C10.532,4.168,11,5.298,11,6.5s-0.468,2.332-1.318,3.182C8.832,10.532,7.702,11,6.5,11 S4.168,10.532,3.318,9.682z"
-                fill="hsla(0,0%,100%,0.9)"
-              />
-            </svg>
-          </span>
-        </button>
-      </div>
-      <select
-        aria-label="Select sort order"
-        data-cy="sort-select"
-        defaultValue="asc"
-        id="sort-select"
-        name="sort"
-        onChange={[Function]}
-        style={
-          Object {
-            "WebkitAppearance": "none",
-            "background": "transparent",
-            "border": "1px solid hsla(0,0%,100%,0.9)",
-            "borderRadius": "0 0.2rem 0.2rem 0",
-            "color": "hsla(0,0%,100%,0.9)",
-            "height": "2.5rem",
-            "padding": "0.5rem",
-          }
-        }
-      >
-        <option
-          value="asc"
-        >
-          A to Z
-        </option>
-        <option
-          value="desc"
-        >
-          Z to A
-        </option>
-      </select>
-    </form>
-    <section>
-      <div
-        style={
-          Object {
-            "display": "flex",
-          }
-        }
-      >
-        <h1
-          data-cy="item-count"
+              Atmospheric Composition
+            </option>
+            <option
+              value="4c5e9dc3-38ed-40cb-b6ea-cacf96057b53"
+            >
+              Weather
+            </option>
+            <option
+              value="2a132687-f5a1-4bbc-b45a-97228c310cd8"
+            >
+              Climate Variability & Change
+            </option>
+            <option
+              value="a187959e-4132-4c2c-950d-7055bc5082b9"
+            >
+              Global Water & Energy Cycle
+            </option>
+            <option
+              value="75fdf3c3-f55b-4f33-9f56-7d7af49bef97"
+            >
+              Carbon Cycle & Ecosystems
+            </option>
+            <option
+              value="4e90e316-6d36-41b9-ae29-5125842b7b60"
+            >
+              Earth Surface & Interior
+            </option>
+            <option
+              value="e1b07238-763d-4836-a290-fba2eab0b1b8"
+            >
+              NID
+            </option>
+          </optgroup>
+          <optgroup
+            label="Geophysical Concept"
+          >
+            <option
+              value="9e52d6cf-5a81-4b53-a942-653baeb1fdc1"
+            >
+              Aerosols
+            </option>
+            <option
+              value="cef614bb-0bac-4f62-85af-8a0295b76034"
+            >
+              Air Quality (AirQual)
+            </option>
+            <option
+              value="b306795c-557f-4603-b813-56d39fb00c76"
+            >
+              Atmospheric Chemicals & Trace Gases
+            </option>
+            <option
+              value="e30bf13d-4abc-4851-b699-d49bf67c4ad6"
+            >
+              Upper Atmospheric Chemistry
+            </option>
+            <option
+              value="a5d259cd-0b6c-441e-9cda-237a991d30ab"
+            >
+              Radiation & Energy Budget
+            </option>
+            <option
+              value="2f4c11cd-2e66-424b-a164-d5e5a1ded727"
+            >
+              Clouds-Properties & Processes & Dynamics
+            </option>
+            <option
+              value="20c5cc69-f86b-46eb-850c-094ff8d8c104"
+            >
+              Boundary Layer Processes
+            </option>
+            <option
+              value="4a716efb-76ed-4707-9842-a290d07d2410"
+            >
+              Atmospheric Electricity & Lightning
+            </option>
+            <option
+              value="cf2628cd-325e-4485-95f1-4f7c7f24df84"
+            >
+              Tropical Cyclones
+            </option>
+            <option
+              value="2b6b475c-444c-4e66-9dec-61da55cd46da"
+            >
+              Mesoscale Convection & Severe Weather
+            </option>
+            <option
+              value="04b29f58-f0a5-4b84-82d8-56c9f826e2c3"
+            >
+              Mid-latitude Cyclones
+            </option>
+            <option
+              value="360e94b2-fc1a-4d2e-9715-dc2060be3d5f"
+            >
+              Precipitation (Precip)
+            </option>
+            <option
+              value="390e1e0d-3d2c-46df-a00b-c65b4d7151a5"
+            >
+              Terrestrial Hydrology (TerrHydrol)
+            </option>
+            <option
+              value="1cf782c7-8a10-479c-9a57-b29fe17746ac"
+            >
+              Ice and Glacial Properties & Processes
+            </option>
+            <option
+              value="ad26de91-23d9-4e3d-b27e-978c81afe3df"
+            >
+              Ocean Properties & Processes
+            </option>
+            <option
+              value="0053a024-2ccd-4b31-bdf1-eafe6b48e314"
+            >
+              Ecosystems/Biogeochemistry
+            </option>
+            <option
+              value="96e8e86f-2b16-4bb1-99ee-8020b8984602"
+            >
+              Biodiversity
+            </option>
+            <option
+              value="64f7434e-63a1-405f-b3c9-875ee282fa4b"
+            >
+              Carbon Storage & Processes
+            </option>
+            <option
+              value="6490e743-061e-4cd7-adb6-3344ff1e87bf"
+            >
+              Soil Properties  (SoilProp)
+            </option>
+            <option
+              value="dd8f913b-2fc4-4a1d-b3da-4c76afbf068e"
+            >
+              Land Characteristics
+            </option>
+            <option
+              value="3103a214-1df3-4fa9-8f7e-e9dcf49a0401"
+            >
+              Tectonic Processes
+            </option>
+            <option
+              value="9de5d9f2-0d0f-4c2c-aa74-4cc0594f41c3"
+            >
+              Volcanic Processes
+            </option>
+            <option
+              value="ca948668-50c0-4f52-885a-ab6ed3e1ab30"
+            >
+              Earth's Magnetic Field (MagField)
+            </option>
+            <option
+              value="b8d7c54e-4678-40ad-a572-3b7fa6ac4213"
+            >
+              Earth's Interior (EarthInt)
+            </option>
+            <option
+              value="42de25d7-97b8-4cd1-9288-7a85dd906489"
+            >
+              Earth-Climate Interactions
+            </option>
+            <option
+              value="fb74f5e0-398d-44e6-9087-cf5e8f445562"
+            >
+              Geodesy
+            </option>
+          </optgroup>
+          <optgroup
+            label="Season"
+          >
+            <option
+              value="5ae15f8c-3d9a-4061-953d-5fea2df57654"
+            >
+              boreal winter
+            </option>
+            <option
+              value="416a1c43-85b6-4336-80ac-6ccda1226e54"
+            >
+              boreal spring
+            </option>
+            <option
+              value="65900eb8-fb52-4da9-98e9-190cbf1d1cbe"
+            >
+              boreal summer
+            </option>
+            <option
+              value="4ebcfcd2-1c9c-45b0-bad6-997fc3e3c904"
+            >
+              boreal fall
+            </option>
+            <option
+              value="f5b65f38-162a-473b-869b-0094799b202e"
+            >
+              austral winter
+            </option>
+            <option
+              value="5462d618-6f14-43d1-a9c7-19e7fef9a84b"
+            >
+              austral spring
+            </option>
+            <option
+              value="a27c0f4a-1bab-4f64-a666-0f08ba3c874a"
+            >
+              austral summer
+            </option>
+            <option
+              value="108eb86b-1139-4ae6-859c-bfaaf0acc709"
+            >
+              austral fall
+            </option>
+            <option
+              value="cad0fb1f-bdfa-48af-a17d-9a87f1ecfa49"
+            >
+              monsoon
+            </option>
+            <option
+              value="12b3f425-fbb9-4dcd-9c3a-84fda116e8c5"
+            >
+              break
+            </option>
+            <option
+              value="c29c7993-71a9-423e-bbaf-2646585669b1"
+            >
+              dry
+            </option>
+            <option
+              value="081ccd03-e46f-459e-8101-b270d0266eac"
+            >
+              wet
+            </option>
+            <option
+              value="52b49cd7-4143-4bbd-9f09-bd8de945c837"
+            >
+              warm
+            </option>
+            <option
+              value="d4b539c1-32d3-4089-9e08-db714704a13c"
+            >
+              cold
+            </option>
+            <option
+              value="824e5caa-dc94-4927-aba5-b8e8d8d6273d"
+            >
+              equatorial
+            </option>
+            <option
+              value="80c1e584-8bf7-4cae-b9c1-e7f98d19a7a0"
+            >
+              year round
+            </option>
+            <option
+              value="d3c6d320-e3cf-42e0-b729-b4477da17422"
+            >
+              NID
+            </option>
+          </optgroup>
+          <optgroup
+            label="Geographical Region"
+          >
+            <option
+              value="a9b86ec6-cb57-4ef5-9a13-c5a767195782"
+            >
+              continental
+            </option>
+            <option
+              value="6ad9e3d8-81c0-4c7c-9db8-888988ab677e"
+            >
+              maritime
+            </option>
+            <option
+              value="292950c5-e5df-4cea-9778-b0dc6c011294"
+            >
+              coastal
+            </option>
+            <option
+              value="fd9fb6ee-121e-4a44-8155-d478500599d9"
+            >
+              mountains
+            </option>
+            <option
+              value="12463bc6-32a8-45bd-bdad-d7bd7db6c51c"
+            >
+              island
+            </option>
+            <option
+              value="2567b1ed-8753-433f-b475-9bb3ef5c1bb3"
+            >
+              desert
+            </option>
+            <option
+              value="674d3da5-6bef-439f-838a-eaf79d733e42"
+            >
+              forest
+            </option>
+            <option
+              value="9ff66c70-f482-40e8-9a5e-ec45306760e0"
+            >
+              urban
+            </option>
+            <option
+              value="a95c9bd6-395a-409c-8875-586dbc0601f7"
+            >
+              agriculture
+            </option>
+            <option
+              value="5624a0f2-7b7b-4f4c-a8fd-898e9751e0e1"
+            >
+              equitorial
+            </option>
+            <option
+              value="cb25d6eb-a988-4e21-ac05-4912017415b5"
+            >
+              tropical
+            </option>
+            <option
+              value="731da6a3-04b9-4ca1-826a-388820f6fe90"
+            >
+              mid-latitude
+            </option>
+            <option
+              value="9df5be07-f7e3-4ce4-94fe-c813ad371a71"
+            >
+              polar
+            </option>
+            <option
+              value="26d0e469-de46-4f66-8722-b270e2602b70"
+            >
+              sea ice
+            </option>
+            <option
+              value="67519804-37a2-403a-8ee0-6db25d17a731"
+            >
+              coral
+            </option>
+            <option
+              value="2616378d-bf8c-41a7-b1f3-2c65dd77e759"
+            >
+              rainforest
+            </option>
+            <option
+              value="6ef85571-d903-458b-980a-273bbace62bc"
+            >
+              NID
+            </option>
+          </optgroup>
+          <optgroup
+            label="Platform"
+          >
+            <option
+              value="fea8651b-9d6e-49cf-9433-f1c6685ec0dc"
+            >
+              ALAR
+            </option>
+            <option
+              value="32242d25-0152-4d98-a3a2-d1f874597cd6"
+            >
+              ALTUS II
+            </option>
+            <option
+              value="99bbbba6-7de4-43a0-9483-1175cec6b93f"
+            >
+              ASO
+            </option>
+            <option
+              value="1b607095-4f6d-4e70-8e16-798bc59a2d59"
+            >
+              B-200
+            </option>
+            <option
+              value="900208da-3cb2-44b6-9f27-20209433f190"
+            >
+              C-23 Sherpa
+            </option>
+            <option
+              value="0cdd2d06-ba97-469d-96eb-0e0865c7c4c9"
+            >
+              Citation
+            </option>
+            <option
+              value="af872351-1e39-43dc-bdb5-3f4fb7def20b"
+            >
+              CV-580
+            </option>
+            <option
+              value="d59b3d7e-f782-4e25-a8eb-ceec91c0331e"
+            >
+              DC-8
+            </option>
+            <option
+              value="cc0f103e-e537-4437-8d2b-f7ea5ca617de"
+            >
+              ER-2
+            </option>
+            <option
+              value="1c57a92e-a6db-4e7e-9d56-704705acc192"
+            >
+              Falcon
+            </option>
+            <option
+              value="a67e9128-f25f-4bb8-97c1-5d89005111a8"
+            >
+              G-III
+            </option>
+            <option
+              value="2a3a99ee-1ea0-4ac9-9e52-6e733a0eda23"
+            >
+              G-V
+            </option>
+            <option
+              value="5cde9f2a-10cb-47d6-b095-3b61d1e8b1e2"
+            >
+              GH
+            </option>
+            <option
+              value="2084ab0c-4f18-4aa6-ad7b-70bc861d2d80"
+            >
+              P-3
+            </option>
+            <option
+              value="5baa4bc5-ad5a-43f8-9ed3-cf7d0dbdae36"
+            >
+              WB-57
+            </option>
+          </optgroup>
+        </select>
+        <div
           style={
             Object {
-              "fontSize": "small",
-              "whiteSpace": "nowrap",
+              "border": "1px solid hsla(0,0%,100%,0.9)",
+              "borderLeft": 0,
+              "borderRadius": "0",
+              "borderRight": 0,
+              "display": "flex",
+              "flexGrow": 1,
+              "padding": "0.25rem",
             }
           }
         >
-          Showing
-           
-          10
-           
-          campaigns
-        </h1>
-      </div>
-      <div
-        style={
-          Object {
-            "display": "grid",
-            "gap": "1rem",
-            "gridTemplateColumns": "repeat(auto-fill, minmax(270px, 1fr))",
+          <input
+            aria-label="Enter search text"
+            autoComplete="off"
+            name="search"
+            placeholder="Enter text..."
+            style={
+              Object {
+                "background": "transparent",
+                "border": "none",
+                "color": "hsla(0,0%,100%,0.9)",
+                "flexGrow": 1,
+              }
+            }
+            type="text"
+          />
+          <button
+            data-cy="submit"
+            style={
+              Object {
+                "background": "transparent",
+                "border": "none",
+                "color": "hsla(0,0%,100%,0.9)",
+                "flexGrow": 0,
+                "verticalAlign": "middle",
+              }
+            }
+            type="submit"
+          >
+            <span
+              aria-label="Magnifying glass icon"
+              role="img"
+            >
+              <svg
+                height="16"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  fill="none"
+                  height="16"
+                  width="16"
+                />
+                <path
+                  d="M15.708,13.587l-3.675-3.675C12.646,8.92,13,7.751,13,6.5C13,2.91,10.09,0,6.5,0S0,2.91,0,6.5S2.91,13,6.5,13 c1.251,0,2.42-0.354,3.412-0.967l3.675,3.675c0.389,0.389,1.025,0.389,1.414,0l0.707-0.707 C16.097,14.612,16.097,13.976,15.708,13.587z M3.318,9.682C2.468,8.832,2,7.702,2,6.5s0.468-2.332,1.318-3.182S5.298,2,6.5,2 s2.332,0.468,3.182,1.318C10.532,4.168,11,5.298,11,6.5s-0.468,2.332-1.318,3.182C8.832,10.532,7.702,11,6.5,11 S4.168,10.532,3.318,9.682z"
+                  fill="hsla(0,0%,100%,0.9)"
+                />
+              </svg>
+            </span>
+          </button>
+        </div>
+        <select
+          aria-label="Select sort order"
+          data-cy="sort-select"
+          defaultValue="asc"
+          id="sort-select"
+          name="sort"
+          onChange={[Function]}
+          style={
+            Object {
+              "WebkitAppearance": "none",
+              "background": "transparent",
+              "border": "1px solid hsla(0,0%,100%,0.9)",
+              "borderRadius": "0 0.2rem 0.2rem 0",
+              "color": "hsla(0,0%,100%,0.9)",
+              "height": "2.5rem",
+              "padding": "0.5rem",
+            }
           }
-        }
-      >
-        <a
-          href="/campaign/d1a09bda-9454-4f66-be12-dafc5f4df308"
         >
-          <div
-            data-cy="explore-card"
+          <option
+            value="asc"
+          >
+            A to Z
+          </option>
+          <option
+            value="desc"
+          >
+            Z to A
+          </option>
+        </select>
+      </form>
+      <section>
+        <div
+          style={
+            Object {
+              "display": "flex",
+            }
+          }
+        >
+          <h1
+            data-cy="item-count"
             style={
               Object {
-                "backgroundColor": "#303641",
-                "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                "display": "flex",
-                "flexDirection": "column",
-                "height": "100%",
-                "justifyContent": "space-between",
-                "padding": "1rem",
+                "fontSize": "small",
+                "whiteSpace": "nowrap",
               }
             }
           >
+            Showing
+             
+            10
+             
+            campaigns
+          </h1>
+        </div>
+        <div
+          style={
+            Object {
+              "display": "grid",
+              "gap": "1rem",
+              "gridTemplateColumns": "repeat(auto-fill, minmax(270px, 1fr))",
+            }
+          }
+        >
+          <a
+            href="/campaign/d1a09bda-9454-4f66-be12-dafc5f4df308"
+          >
             <div
+              data-cy="explore-card"
               style={
                 Object {
-                  "marginBottom": "2rem",
+                  "backgroundColor": "#303641",
+                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "height": "100%",
+                  "justifyContent": "space-between",
+                  "padding": "1rem",
                 }
               }
             >
               <div
                 style={
                   Object {
-                    "alignItems": "center",
-                    "display": "flex",
-                    "justifyContent": "space-between",
-                    "margin": "0.5rem 0 2rem 0",
+                    "marginBottom": "2rem",
                   }
                 }
               >
                 <div
-                  className="placeholder"
                   style={
                     Object {
-                      "backgroundColor": "#9E9E9E",
-                      "borderRadius": "2.5rem",
-                      "height": "2.5rem",
-                      "width": "2.5rem",
+                      "alignItems": "center",
+                      "display": "flex",
+                      "justifyContent": "space-between",
+                      "margin": "0.5rem 0 2rem 0",
                     }
                   }
-                />
-              </div>
-              <big
-                data-cy="shortname"
-                style={
-                  Object {
-                    "fontWeight": "bold",
-                    "marginTop": "0.5rem",
+                >
+                  <div
+                    className="placeholder"
+                    style={
+                      Object {
+                        "backgroundColor": "#9E9E9E",
+                        "borderRadius": "2.5rem",
+                        "height": "2.5rem",
+                        "width": "2.5rem",
+                      }
+                    }
+                  />
+                </div>
+                <big
+                  data-cy="shortname"
+                  style={
+                    Object {
+                      "fontWeight": "bold",
+                      "marginTop": "0.5rem",
+                    }
                   }
-                }
-              >
-                ACES
-              </big>
-              <p
-                data-cy="longname"
-              >
-                Altus Cumulus Electrification Study
-              </p>
-              <div>
-                <small
-                  data-cy="daterange"
                 >
-                  2002—2002
-                </small>
+                  ACES
+                </big>
+                <p
+                  data-cy="longname"
+                >
+                  Altus Cumulus Electrification Study
+                </p>
+                <div>
+                  <small
+                    data-cy="daterange"
+                  >
+                    2002—2002
+                  </small>
+                </div>
+                <div>
+                  <small
+                    data-cy="region"
+                  >
+                    Florida Everglades
+                  </small>
+                </div>
               </div>
               <div>
                 <small
-                  data-cy="region"
+                  data-cy="count1"
                 >
-                  Florida Everglades
+                  <strong>
+                    0
+                  </strong>
+                   
+                  Collection Periods
+                </small>
+                <small
+                  data-cy="count2"
+                >
+                   · 
+                  <strong>
+                    0
+                  </strong>
+                   
+                  Data Products
                 </small>
               </div>
             </div>
-            <div>
-              <small
-                data-cy="count1"
-              >
-                <strong>
-                  0
-                </strong>
-                 
-                Collection Periods
-              </small>
-              <small
-                data-cy="count2"
-              >
-                 · 
-                <strong>
-                  0
-                </strong>
-                 
-                Data Products
-              </small>
-            </div>
-          </div>
-        </a>
-        <a
-          href="/campaign/34a697c1-4464-4b06-9d73-a9be86c586cc"
-        >
-          <div
-            data-cy="explore-card"
-            style={
-              Object {
-                "backgroundColor": "#303641",
-                "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                "display": "flex",
-                "flexDirection": "column",
-                "height": "100%",
-                "justifyContent": "space-between",
-                "padding": "1rem",
-              }
-            }
+          </a>
+          <a
+            href="/campaign/34a697c1-4464-4b06-9d73-a9be86c586cc"
           >
             <div
+              data-cy="explore-card"
               style={
                 Object {
-                  "marginBottom": "2rem",
+                  "backgroundColor": "#303641",
+                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "height": "100%",
+                  "justifyContent": "space-between",
+                  "padding": "1rem",
                 }
               }
             >
               <div
                 style={
                   Object {
-                    "alignItems": "center",
-                    "display": "flex",
-                    "justifyContent": "space-between",
-                    "margin": "0.5rem 0 2rem 0",
+                    "marginBottom": "2rem",
                   }
                 }
               >
                 <div
-                  className="placeholder"
                   style={
                     Object {
-                      "backgroundColor": "#9E9E9E",
-                      "borderRadius": "2.5rem",
-                      "height": "2.5rem",
-                      "width": "2.5rem",
+                      "alignItems": "center",
+                      "display": "flex",
+                      "justifyContent": "space-between",
+                      "margin": "0.5rem 0 2rem 0",
                     }
                   }
-                />
-              </div>
-              <big
-                data-cy="shortname"
-                style={
-                  Object {
-                    "fontWeight": "bold",
-                    "marginTop": "0.5rem",
+                >
+                  <div
+                    className="placeholder"
+                    style={
+                      Object {
+                        "backgroundColor": "#9E9E9E",
+                        "borderRadius": "2.5rem",
+                        "height": "2.5rem",
+                        "width": "2.5rem",
+                      }
+                    }
+                  />
+                </div>
+                <big
+                  data-cy="shortname"
+                  style={
+                    Object {
+                      "fontWeight": "bold",
+                      "marginTop": "0.5rem",
+                    }
                   }
-                }
-              >
-                ARCTAS
-              </big>
-              <p
-                data-cy="longname"
-              >
-                Arctic Research of the Composition of the Troposphere from Aircraft and Satellites
-              </p>
-              <div>
-                <small
-                  data-cy="daterange"
                 >
-                  2008—2008
-                </small>
+                  ARCTAS
+                </big>
+                <p
+                  data-cy="longname"
+                >
+                  Arctic Research of the Composition of the Troposphere from Aircraft and Satellites
+                </p>
+                <div>
+                  <small
+                    data-cy="daterange"
+                  >
+                    2008—2008
+                  </small>
+                </div>
+                <div>
+                  <small
+                    data-cy="region"
+                  >
+                    Alaska, Western Canada, California
+                  </small>
+                </div>
               </div>
               <div>
                 <small
-                  data-cy="region"
+                  data-cy="count1"
                 >
-                  Alaska, Western Canada, California
+                  <strong>
+                    0
+                  </strong>
+                   
+                  Collection Periods
+                </small>
+                <small
+                  data-cy="count2"
+                >
+                   · 
+                  <strong>
+                    0
+                  </strong>
+                   
+                  Data Products
                 </small>
               </div>
             </div>
-            <div>
-              <small
-                data-cy="count1"
-              >
-                <strong>
-                  0
-                </strong>
-                 
-                Collection Periods
-              </small>
-              <small
-                data-cy="count2"
-              >
-                 · 
-                <strong>
-                  0
-                </strong>
-                 
-                Data Products
-              </small>
-            </div>
-          </div>
-        </a>
-        <a
-          href="/campaign/c0dc0d63-e32a-4fdc-b1ac-4f0e8a5c7754"
-        >
-          <div
-            data-cy="explore-card"
-            style={
-              Object {
-                "backgroundColor": "#303641",
-                "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                "display": "flex",
-                "flexDirection": "column",
-                "height": "100%",
-                "justifyContent": "space-between",
-                "padding": "1rem",
-              }
-            }
+          </a>
+          <a
+            href="/campaign/c0dc0d63-e32a-4fdc-b1ac-4f0e8a5c7754"
           >
             <div
+              data-cy="explore-card"
               style={
                 Object {
-                  "marginBottom": "2rem",
+                  "backgroundColor": "#303641",
+                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "height": "100%",
+                  "justifyContent": "space-between",
+                  "padding": "1rem",
                 }
               }
             >
               <div
                 style={
                   Object {
-                    "alignItems": "center",
-                    "display": "flex",
-                    "justifyContent": "space-between",
-                    "margin": "0.5rem 0 2rem 0",
+                    "marginBottom": "2rem",
                   }
                 }
               >
                 <div
-                  className="placeholder"
                   style={
                     Object {
-                      "backgroundColor": "#9E9E9E",
-                      "borderRadius": "2.5rem",
-                      "height": "2.5rem",
-                      "width": "2.5rem",
+                      "alignItems": "center",
+                      "display": "flex",
+                      "justifyContent": "space-between",
+                      "margin": "0.5rem 0 2rem 0",
                     }
                   }
-                />
-              </div>
-              <big
-                data-cy="shortname"
-                style={
-                  Object {
-                    "fontWeight": "bold",
-                    "marginTop": "0.5rem",
+                >
+                  <div
+                    className="placeholder"
+                    style={
+                      Object {
+                        "backgroundColor": "#9E9E9E",
+                        "borderRadius": "2.5rem",
+                        "height": "2.5rem",
+                        "width": "2.5rem",
+                      }
+                    }
+                  />
+                </div>
+                <big
+                  data-cy="shortname"
+                  style={
+                    Object {
+                      "fontWeight": "bold",
+                      "marginTop": "0.5rem",
+                    }
                   }
-                }
-              >
-                AirMOSS
-              </big>
-              <p
-                data-cy="longname"
-              >
-                Airborne Microwave Observatory of Subcanopy and Subsurface
-              </p>
-              <div>
-                <small
-                  data-cy="daterange"
                 >
-                  2012—2015
-                </small>
+                  AirMOSS
+                </big>
+                <p
+                  data-cy="longname"
+                >
+                  Airborne Microwave Observatory of Subcanopy and Subsurface
+                </p>
+                <div>
+                  <small
+                    data-cy="daterange"
+                  >
+                    2012—2015
+                  </small>
+                </div>
+                <div>
+                  <small
+                    data-cy="region"
+                  >
+                    North America
+                  </small>
+                </div>
               </div>
               <div>
                 <small
-                  data-cy="region"
+                  data-cy="count1"
                 >
-                  North America
+                  <strong>
+                    0
+                  </strong>
+                   
+                  Collection Periods
+                </small>
+                <small
+                  data-cy="count2"
+                >
+                   · 
+                  <strong>
+                    0
+                  </strong>
+                   
+                  Data Products
                 </small>
               </div>
             </div>
-            <div>
-              <small
-                data-cy="count1"
-              >
-                <strong>
-                  0
-                </strong>
-                 
-                Collection Periods
-              </small>
-              <small
-                data-cy="count2"
-              >
-                 · 
-                <strong>
-                  0
-                </strong>
-                 
-                Data Products
-              </small>
-            </div>
-          </div>
-        </a>
-        <a
-          href="/campaign/7546673c-151c-436a-adf1-6128b2d7a515"
-        >
-          <div
-            data-cy="explore-card"
-            style={
-              Object {
-                "backgroundColor": "#303641",
-                "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                "display": "flex",
-                "flexDirection": "column",
-                "height": "100%",
-                "justifyContent": "space-between",
-                "padding": "1rem",
-              }
-            }
+          </a>
+          <a
+            href="/campaign/7546673c-151c-436a-adf1-6128b2d7a515"
           >
             <div
+              data-cy="explore-card"
               style={
                 Object {
-                  "marginBottom": "2rem",
+                  "backgroundColor": "#303641",
+                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "height": "100%",
+                  "justifyContent": "space-between",
+                  "padding": "1rem",
                 }
               }
             >
               <div
                 style={
                   Object {
-                    "alignItems": "center",
-                    "display": "flex",
-                    "justifyContent": "space-between",
-                    "margin": "0.5rem 0 2rem 0",
+                    "marginBottom": "2rem",
                   }
                 }
               >
                 <div
-                  className="placeholder"
                   style={
                     Object {
-                      "backgroundColor": "#9E9E9E",
-                      "borderRadius": "2.5rem",
-                      "height": "2.5rem",
-                      "width": "2.5rem",
+                      "alignItems": "center",
+                      "display": "flex",
+                      "justifyContent": "space-between",
+                      "margin": "0.5rem 0 2rem 0",
                     }
                   }
-                />
-              </div>
-              <big
-                data-cy="shortname"
-                style={
-                  Object {
-                    "fontWeight": "bold",
-                    "marginTop": "0.5rem",
+                >
+                  <div
+                    className="placeholder"
+                    style={
+                      Object {
+                        "backgroundColor": "#9E9E9E",
+                        "borderRadius": "2.5rem",
+                        "height": "2.5rem",
+                        "width": "2.5rem",
+                      }
+                    }
+                  />
+                </div>
+                <big
+                  data-cy="shortname"
+                  style={
+                    Object {
+                      "fontWeight": "bold",
+                      "marginTop": "0.5rem",
+                    }
                   }
-                }
-              >
-                CARVE
-              </big>
-              <p
-                data-cy="longname"
-              >
-                Carbon in Arctic Reservoirs Vulnerability Experiment
-              </p>
-              <div>
-                <small
-                  data-cy="daterange"
                 >
-                  2012—2015
-                </small>
+                  CARVE
+                </big>
+                <p
+                  data-cy="longname"
+                >
+                  Carbon in Arctic Reservoirs Vulnerability Experiment
+                </p>
+                <div>
+                  <small
+                    data-cy="daterange"
+                  >
+                    2012—2015
+                  </small>
+                </div>
+                <div>
+                  <small
+                    data-cy="region"
+                  >
+                    Alaska
+                  </small>
+                </div>
               </div>
               <div>
                 <small
-                  data-cy="region"
+                  data-cy="count1"
                 >
-                  Alaska
+                  <strong>
+                    0
+                  </strong>
+                   
+                  Collection Periods
+                </small>
+                <small
+                  data-cy="count2"
+                >
+                   · 
+                  <strong>
+                    0
+                  </strong>
+                   
+                  Data Products
                 </small>
               </div>
             </div>
-            <div>
-              <small
-                data-cy="count1"
-              >
-                <strong>
-                  0
-                </strong>
-                 
-                Collection Periods
-              </small>
-              <small
-                data-cy="count2"
-              >
-                 · 
-                <strong>
-                  0
-                </strong>
-                 
-                Data Products
-              </small>
-            </div>
-          </div>
-        </a>
-        <a
-          href="/campaign/2bca3f73-ee2b-4336-aed0-7454ab8cdf13"
-        >
-          <div
-            data-cy="explore-card"
-            style={
-              Object {
-                "backgroundColor": "#303641",
-                "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                "display": "flex",
-                "flexDirection": "column",
-                "height": "100%",
-                "justifyContent": "space-between",
-                "padding": "1rem",
-              }
-            }
+          </a>
+          <a
+            href="/campaign/2bca3f73-ee2b-4336-aed0-7454ab8cdf13"
           >
             <div
+              data-cy="explore-card"
               style={
                 Object {
-                  "marginBottom": "2rem",
+                  "backgroundColor": "#303641",
+                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "height": "100%",
+                  "justifyContent": "space-between",
+                  "padding": "1rem",
                 }
               }
             >
               <div
                 style={
                   Object {
-                    "alignItems": "center",
-                    "display": "flex",
-                    "justifyContent": "space-between",
-                    "margin": "0.5rem 0 2rem 0",
+                    "marginBottom": "2rem",
                   }
                 }
               >
                 <div
-                  className="placeholder"
                   style={
                     Object {
-                      "backgroundColor": "#9E9E9E",
-                      "borderRadius": "2.5rem",
-                      "height": "2.5rem",
-                      "width": "2.5rem",
+                      "alignItems": "center",
+                      "display": "flex",
+                      "justifyContent": "space-between",
+                      "margin": "0.5rem 0 2rem 0",
                     }
                   }
-                />
-              </div>
-              <big
-                data-cy="shortname"
-                style={
-                  Object {
-                    "fontWeight": "bold",
-                    "marginTop": "0.5rem",
+                >
+                  <div
+                    className="placeholder"
+                    style={
+                      Object {
+                        "backgroundColor": "#9E9E9E",
+                        "borderRadius": "2.5rem",
+                        "height": "2.5rem",
+                        "width": "2.5rem",
+                      }
+                    }
+                  />
+                </div>
+                <big
+                  data-cy="shortname"
+                  style={
+                    Object {
+                      "fontWeight": "bold",
+                      "marginTop": "0.5rem",
+                    }
                   }
-                }
-              >
-                DC3
-              </big>
-              <p
-                data-cy="longname"
-              >
-                Deep Convective Clouds & Chemistry
-              </p>
-              <div>
-                <small
-                  data-cy="daterange"
                 >
-                  2012—2012
-                </small>
+                  DC3
+                </big>
+                <p
+                  data-cy="longname"
+                >
+                  Deep Convective Clouds & Chemistry
+                </p>
+                <div>
+                  <small
+                    data-cy="daterange"
+                  >
+                    2012—2012
+                  </small>
+                </div>
+                <div>
+                  <small
+                    data-cy="region"
+                  >
+                    Northeastern Colorado, West Texas to Central Oklahoma, Northern Alabama
+                  </small>
+                </div>
               </div>
               <div>
                 <small
-                  data-cy="region"
+                  data-cy="count1"
                 >
-                  Northeastern Colorado, West Texas to Central Oklahoma, Northern Alabama
+                  <strong>
+                    0
+                  </strong>
+                   
+                  Collection Periods
+                </small>
+                <small
+                  data-cy="count2"
+                >
+                   · 
+                  <strong />
+                   
+                  Data Products
                 </small>
               </div>
             </div>
-            <div>
-              <small
-                data-cy="count1"
-              >
-                <strong>
-                  0
-                </strong>
-                 
-                Collection Periods
-              </small>
-              <small
-                data-cy="count2"
-              >
-                 · 
-                <strong />
-                 
-                Data Products
-              </small>
-            </div>
-          </div>
-        </a>
-        <a
-          href="/campaign/b94baa5d-3c69-4270-baf8-afc02f7132de"
-        >
-          <div
-            data-cy="explore-card"
-            style={
-              Object {
-                "backgroundColor": "#303641",
-                "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                "display": "flex",
-                "flexDirection": "column",
-                "height": "100%",
-                "justifyContent": "space-between",
-                "padding": "1rem",
-              }
-            }
+          </a>
+          <a
+            href="/campaign/b94baa5d-3c69-4270-baf8-afc02f7132de"
           >
             <div
+              data-cy="explore-card"
               style={
                 Object {
-                  "marginBottom": "2rem",
+                  "backgroundColor": "#303641",
+                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "height": "100%",
+                  "justifyContent": "space-between",
+                  "padding": "1rem",
                 }
               }
             >
               <div
                 style={
                   Object {
-                    "alignItems": "center",
-                    "display": "flex",
-                    "justifyContent": "space-between",
-                    "margin": "0.5rem 0 2rem 0",
+                    "marginBottom": "2rem",
                   }
                 }
               >
                 <div
-                  className="placeholder"
                   style={
                     Object {
-                      "backgroundColor": "#9E9E9E",
-                      "borderRadius": "2.5rem",
-                      "height": "2.5rem",
-                      "width": "2.5rem",
+                      "alignItems": "center",
+                      "display": "flex",
+                      "justifyContent": "space-between",
+                      "margin": "0.5rem 0 2rem 0",
                     }
                   }
-                />
-              </div>
-              <big
-                data-cy="shortname"
-                style={
-                  Object {
-                    "fontWeight": "bold",
-                    "marginTop": "0.5rem",
+                >
+                  <div
+                    className="placeholder"
+                    style={
+                      Object {
+                        "backgroundColor": "#9E9E9E",
+                        "borderRadius": "2.5rem",
+                        "height": "2.5rem",
+                        "width": "2.5rem",
+                      }
+                    }
+                  />
+                </div>
+                <big
+                  data-cy="shortname"
+                  style={
+                    Object {
+                      "fontWeight": "bold",
+                      "marginTop": "0.5rem",
+                    }
                   }
-                }
-              >
-                GCPEx
-              </big>
-              <p
-                data-cy="longname"
-              >
-                GPM Cold Season Precipitation Experiment
-              </p>
-              <div>
-                <small
-                  data-cy="daterange"
                 >
-                  2012—2012
-                </small>
+                  GCPEx
+                </big>
+                <p
+                  data-cy="longname"
+                >
+                  GPM Cold Season Precipitation Experiment
+                </p>
+                <div>
+                  <small
+                    data-cy="daterange"
+                  >
+                    2012—2012
+                  </small>
+                </div>
+                <div>
+                  <small
+                    data-cy="region"
+                  >
+                    Ontario, Canada and northern portions of the United States (e.g., New York state, the New England area, etc.)
+                  </small>
+                </div>
               </div>
               <div>
                 <small
-                  data-cy="region"
+                  data-cy="count1"
                 >
-                  Ontario, Canada and northern portions of the United States (e.g., New York state, the New England area, etc.)
+                  <strong>
+                    0
+                  </strong>
+                   
+                  Collection Periods
+                </small>
+                <small
+                  data-cy="count2"
+                >
+                   · 
+                  <strong>
+                    0
+                  </strong>
+                   
+                  Data Products
                 </small>
               </div>
             </div>
-            <div>
-              <small
-                data-cy="count1"
-              >
-                <strong>
-                  0
-                </strong>
-                 
-                Collection Periods
-              </small>
-              <small
-                data-cy="count2"
-              >
-                 · 
-                <strong>
-                  0
-                </strong>
-                 
-                Data Products
-              </small>
-            </div>
-          </div>
-        </a>
-        <a
-          href="/campaign/2ad3b8b7-5334-4fa9-af06-7a26c7b05e4c"
-        >
-          <div
-            data-cy="explore-card"
-            style={
-              Object {
-                "backgroundColor": "#303641",
-                "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                "display": "flex",
-                "flexDirection": "column",
-                "height": "100%",
-                "justifyContent": "space-between",
-                "padding": "1rem",
-              }
-            }
+          </a>
+          <a
+            href="/campaign/2ad3b8b7-5334-4fa9-af06-7a26c7b05e4c"
           >
             <div
+              data-cy="explore-card"
               style={
                 Object {
-                  "marginBottom": "2rem",
+                  "backgroundColor": "#303641",
+                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "height": "100%",
+                  "justifyContent": "space-between",
+                  "padding": "1rem",
                 }
               }
             >
               <div
                 style={
                   Object {
-                    "alignItems": "center",
-                    "display": "flex",
-                    "justifyContent": "space-between",
-                    "margin": "0.5rem 0 2rem 0",
+                    "marginBottom": "2rem",
                   }
                 }
               >
                 <div
-                  className="placeholder"
                   style={
                     Object {
-                      "backgroundColor": "#9E9E9E",
-                      "borderRadius": "2.5rem",
-                      "height": "2.5rem",
-                      "width": "2.5rem",
+                      "alignItems": "center",
+                      "display": "flex",
+                      "justifyContent": "space-between",
+                      "margin": "0.5rem 0 2rem 0",
                     }
                   }
-                />
-              </div>
-              <big
-                data-cy="shortname"
-                style={
-                  Object {
-                    "fontWeight": "bold",
-                    "marginTop": "0.5rem",
+                >
+                  <div
+                    className="placeholder"
+                    style={
+                      Object {
+                        "backgroundColor": "#9E9E9E",
+                        "borderRadius": "2.5rem",
+                        "height": "2.5rem",
+                        "width": "2.5rem",
+                      }
+                    }
+                  />
+                </div>
+                <big
+                  data-cy="shortname"
+                  style={
+                    Object {
+                      "fontWeight": "bold",
+                      "marginTop": "0.5rem",
+                    }
                   }
-                }
-              >
-                GOES-R PLT
-              </big>
-              <p
-                data-cy="longname"
-              >
-                GOES-R Post Launch Test
-              </p>
-              <div>
-                <small
-                  data-cy="daterange"
                 >
-                  2017—2017
-                </small>
+                  GOES-R PLT
+                </big>
+                <p
+                  data-cy="longname"
+                >
+                  GOES-R Post Launch Test
+                </p>
+                <div>
+                  <small
+                    data-cy="daterange"
+                  >
+                    2017—2017
+                  </small>
+                </div>
+                <div>
+                  <small
+                    data-cy="region"
+                  >
+                    Continental United States
+                  </small>
+                </div>
               </div>
               <div>
                 <small
-                  data-cy="region"
+                  data-cy="count1"
                 >
-                  Continental United States
+                  <strong>
+                    0
+                  </strong>
+                   
+                  Collection Periods
+                </small>
+                <small
+                  data-cy="count2"
+                >
+                   · 
+                  <strong>
+                    0
+                  </strong>
+                   
+                  Data Products
                 </small>
               </div>
             </div>
-            <div>
-              <small
-                data-cy="count1"
-              >
-                <strong>
-                  0
-                </strong>
-                 
-                Collection Periods
-              </small>
-              <small
-                data-cy="count2"
-              >
-                 · 
-                <strong>
-                  0
-                </strong>
-                 
-                Data Products
-              </small>
-            </div>
-          </div>
-        </a>
-        <a
-          href="/campaign/58160104-9c7d-4312-a1bb-7e2998bd44b7"
-        >
-          <div
-            data-cy="explore-card"
-            style={
-              Object {
-                "backgroundColor": "#303641",
-                "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                "display": "flex",
-                "flexDirection": "column",
-                "height": "100%",
-                "justifyContent": "space-between",
-                "padding": "1rem",
-              }
-            }
+          </a>
+          <a
+            href="/campaign/58160104-9c7d-4312-a1bb-7e2998bd44b7"
           >
             <div
+              data-cy="explore-card"
               style={
                 Object {
-                  "marginBottom": "2rem",
+                  "backgroundColor": "#303641",
+                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "height": "100%",
+                  "justifyContent": "space-between",
+                  "padding": "1rem",
                 }
               }
             >
               <div
                 style={
                   Object {
-                    "alignItems": "center",
-                    "display": "flex",
-                    "justifyContent": "space-between",
-                    "margin": "0.5rem 0 2rem 0",
+                    "marginBottom": "2rem",
                   }
                 }
               >
                 <div
-                  className="placeholder"
                   style={
                     Object {
-                      "backgroundColor": "#9E9E9E",
-                      "borderRadius": "2.5rem",
-                      "height": "2.5rem",
-                      "width": "2.5rem",
+                      "alignItems": "center",
+                      "display": "flex",
+                      "justifyContent": "space-between",
+                      "margin": "0.5rem 0 2rem 0",
                     }
                   }
-                />
-              </div>
-              <big
-                data-cy="shortname"
-                style={
-                  Object {
-                    "fontWeight": "bold",
-                    "marginTop": "0.5rem",
+                >
+                  <div
+                    className="placeholder"
+                    style={
+                      Object {
+                        "backgroundColor": "#9E9E9E",
+                        "borderRadius": "2.5rem",
+                        "height": "2.5rem",
+                        "width": "2.5rem",
+                      }
+                    }
+                  />
+                </div>
+                <big
+                  data-cy="shortname"
+                  style={
+                    Object {
+                      "fontWeight": "bold",
+                      "marginTop": "0.5rem",
+                    }
                   }
-                }
-              >
-                GRIP
-              </big>
-              <p
-                data-cy="longname"
-              >
-                Genesis and Rapid Intensification Processes
-              </p>
-              <div>
-                <small
-                  data-cy="daterange"
                 >
-                  2010—2010
-                </small>
+                  GRIP
+                </big>
+                <p
+                  data-cy="longname"
+                >
+                  Genesis and Rapid Intensification Processes
+                </p>
+                <div>
+                  <small
+                    data-cy="daterange"
+                  >
+                    2010—2010
+                  </small>
+                </div>
+                <div>
+                  <small
+                    data-cy="region"
+                  >
+                    Tropical Atlantic, Gulf of Mexico, Eastern North Pacific, Caribbean Sea
+                  </small>
+                </div>
               </div>
               <div>
                 <small
-                  data-cy="region"
+                  data-cy="count1"
                 >
-                  Tropical Atlantic, Gulf of Mexico, Eastern North Pacific, Caribbean Sea
+                  <strong>
+                    0
+                  </strong>
+                   
+                  Collection Periods
+                </small>
+                <small
+                  data-cy="count2"
+                >
+                   · 
+                  <strong>
+                    0
+                  </strong>
+                   
+                  Data Products
                 </small>
               </div>
             </div>
-            <div>
-              <small
-                data-cy="count1"
-              >
-                <strong>
-                  0
-                </strong>
-                 
-                Collection Periods
-              </small>
-              <small
-                data-cy="count2"
-              >
-                 · 
-                <strong>
-                  0
-                </strong>
-                 
-                Data Products
-              </small>
-            </div>
-          </div>
-        </a>
-        <a
-          href="/campaign/ffa4a307-c055-4303-adbf-42d243ef188b"
-        >
-          <div
-            data-cy="explore-card"
-            style={
-              Object {
-                "backgroundColor": "#303641",
-                "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                "display": "flex",
-                "flexDirection": "column",
-                "height": "100%",
-                "justifyContent": "space-between",
-                "padding": "1rem",
-              }
-            }
+          </a>
+          <a
+            href="/campaign/ffa4a307-c055-4303-adbf-42d243ef188b"
           >
             <div
+              data-cy="explore-card"
               style={
                 Object {
-                  "marginBottom": "2rem",
+                  "backgroundColor": "#303641",
+                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "height": "100%",
+                  "justifyContent": "space-between",
+                  "padding": "1rem",
                 }
               }
             >
               <div
                 style={
                   Object {
-                    "alignItems": "center",
-                    "display": "flex",
-                    "justifyContent": "space-between",
-                    "margin": "0.5rem 0 2rem 0",
+                    "marginBottom": "2rem",
                   }
                 }
               >
                 <div
-                  className="placeholder"
                   style={
                     Object {
-                      "backgroundColor": "#9E9E9E",
-                      "borderRadius": "2.5rem",
-                      "height": "2.5rem",
-                      "width": "2.5rem",
+                      "alignItems": "center",
+                      "display": "flex",
+                      "justifyContent": "space-between",
+                      "margin": "0.5rem 0 2rem 0",
                     }
                   }
-                />
-              </div>
-              <big
-                data-cy="shortname"
-                style={
-                  Object {
-                    "fontWeight": "bold",
-                    "marginTop": "0.5rem",
+                >
+                  <div
+                    className="placeholder"
+                    style={
+                      Object {
+                        "backgroundColor": "#9E9E9E",
+                        "borderRadius": "2.5rem",
+                        "height": "2.5rem",
+                        "width": "2.5rem",
+                      }
+                    }
+                  />
+                </div>
+                <big
+                  data-cy="shortname"
+                  style={
+                    Object {
+                      "fontWeight": "bold",
+                      "marginTop": "0.5rem",
+                    }
                   }
-                }
-              >
-                HS3
-              </big>
-              <p
-                data-cy="longname"
-              >
-                Hurricane and Severe Storm Sentinel
-              </p>
-              <div>
-                <small
-                  data-cy="daterange"
                 >
-                  2012—2014
-                </small>
+                  HS3
+                </big>
+                <p
+                  data-cy="longname"
+                >
+                  Hurricane and Severe Storm Sentinel
+                </p>
+                <div>
+                  <small
+                    data-cy="daterange"
+                  >
+                    2012—2014
+                  </small>
+                </div>
+                <div>
+                  <small
+                    data-cy="region"
+                  >
+                    Subtropical Atlantic Ocean and Gulf of Mexico
+                  </small>
+                </div>
               </div>
               <div>
                 <small
-                  data-cy="region"
+                  data-cy="count1"
                 >
-                  Subtropical Atlantic Ocean and Gulf of Mexico
+                  <strong>
+                    0
+                  </strong>
+                   
+                  Collection Periods
+                </small>
+                <small
+                  data-cy="count2"
+                >
+                   · 
+                  <strong>
+                    0
+                  </strong>
+                   
+                  Data Products
                 </small>
               </div>
             </div>
-            <div>
-              <small
-                data-cy="count1"
-              >
-                <strong>
-                  0
-                </strong>
-                 
-                Collection Periods
-              </small>
-              <small
-                data-cy="count2"
-              >
-                 · 
-                <strong>
-                  0
-                </strong>
-                 
-                Data Products
-              </small>
-            </div>
-          </div>
-        </a>
-        <a
-          href="/campaign/4d231fec-f2c0-4bb2-864c-ef4f20a88378"
-        >
-          <div
-            data-cy="explore-card"
-            style={
-              Object {
-                "backgroundColor": "#303641",
-                "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                "display": "flex",
-                "flexDirection": "column",
-                "height": "100%",
-                "justifyContent": "space-between",
-                "padding": "1rem",
-              }
-            }
+          </a>
+          <a
+            href="/campaign/4d231fec-f2c0-4bb2-864c-ef4f20a88378"
           >
             <div
+              data-cy="explore-card"
               style={
                 Object {
-                  "marginBottom": "2rem",
+                  "backgroundColor": "#303641",
+                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "height": "100%",
+                  "justifyContent": "space-between",
+                  "padding": "1rem",
                 }
               }
             >
               <div
                 style={
                   Object {
-                    "alignItems": "center",
-                    "display": "flex",
-                    "justifyContent": "space-between",
-                    "margin": "0.5rem 0 2rem 0",
+                    "marginBottom": "2rem",
                   }
                 }
               >
                 <div
-                  className="placeholder"
                   style={
                     Object {
-                      "backgroundColor": "#9E9E9E",
-                      "borderRadius": "2.5rem",
-                      "height": "2.5rem",
-                      "width": "2.5rem",
+                      "alignItems": "center",
+                      "display": "flex",
+                      "justifyContent": "space-between",
+                      "margin": "0.5rem 0 2rem 0",
                     }
                   }
-                />
-              </div>
-              <big
-                data-cy="shortname"
-                style={
-                  Object {
-                    "fontWeight": "bold",
-                    "marginTop": "0.5rem",
+                >
+                  <div
+                    className="placeholder"
+                    style={
+                      Object {
+                        "backgroundColor": "#9E9E9E",
+                        "borderRadius": "2.5rem",
+                        "height": "2.5rem",
+                        "width": "2.5rem",
+                      }
+                    }
+                  />
+                </div>
+                <big
+                  data-cy="shortname"
+                  style={
+                    Object {
+                      "fontWeight": "bold",
+                      "marginTop": "0.5rem",
+                    }
                   }
-                }
-              >
-                OLYMPEX
-              </big>
-              <p
-                data-cy="longname"
-              >
-                Olympic Mountains Experiment
-              </p>
-              <div>
-                <small
-                  data-cy="daterange"
                 >
-                  2015—2016
-                </small>
+                  OLYMPEX
+                </big>
+                <p
+                  data-cy="longname"
+                >
+                  Olympic Mountains Experiment
+                </p>
+                <div>
+                  <small
+                    data-cy="daterange"
+                  >
+                    2015—2016
+                  </small>
+                </div>
+                <div>
+                  <small
+                    data-cy="region"
+                  >
+                    Olympic Peninsula in U.S. Washington State
+                  </small>
+                </div>
               </div>
               <div>
                 <small
-                  data-cy="region"
+                  data-cy="count1"
                 >
-                  Olympic Peninsula in U.S. Washington State
+                  <strong>
+                    0
+                  </strong>
+                   
+                  Collection Periods
+                </small>
+                <small
+                  data-cy="count2"
+                >
+                   · 
+                  <strong>
+                    0
+                  </strong>
+                   
+                  Data Products
                 </small>
               </div>
             </div>
-            <div>
-              <small
-                data-cy="count1"
-              >
-                <strong>
-                  0
-                </strong>
-                 
-                Collection Periods
-              </small>
-              <small
-                data-cy="count2"
-              >
-                 · 
-                <strong>
-                  0
-                </strong>
-                 
-                Data Products
-              </small>
-            </div>
-          </div>
-        </a>
-      </div>
+          </a>
+        </div>
+      </section>
     </section>
   </main>
   <footer
