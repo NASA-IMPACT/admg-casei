@@ -5,7 +5,6 @@ describe("Accessibility tests", () => {
     cy.visit("/")
 
     cy.get("header").injectAxe()
-    cy.get("section").injectAxe()
     cy.get("main").injectAxe()
     cy.get("footer").injectAxe()
   })
