@@ -5,6 +5,7 @@ import Carousel from "nuka-carousel"
 import styled from "styled-components"
 
 import theme from "../../utils/theme"
+import images from "../../content/images.json"
 
 const ControlTextButton = styled.button`
   margin: 0.2rem 0.5rem;
@@ -112,24 +113,26 @@ export const RegionCarousel = ({ regions }) => {
         }}
       >
         {regions.map(region => (
-          <CarouselImage
-            key={region.id}
-            to="/explore/campaigns"
-            state={{ selectedFilterId: region.id }}
-            url="https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e001600/GSFC_20171208_Archive_e001600~orig.jpg"
-            data-cy="region-type"
-            className="placeholder"
-          >
-            <div
-              style={{
-                fontSize: `xxx-large`,
-                fontWeight: `bold`,
-                textTransform: `uppercase`,
-              }}
+          <React.Fragment key={region.id}>
+            <CarouselImage
+              to="/explore/campaigns"
+              state={{ selectedFilterId: region.id }}
+              url={images[region.shortname].url}
+              data-cy="region-type"
             >
-              {region.shortname}
-            </div>
-          </CarouselImage>
+              <div
+                style={{
+                  fontSize: `xxx-large`,
+                  fontWeight: `bold`,
+                  textTransform: `uppercase`,
+                  textShadow: `3px 3px 10px #333`,
+                }}
+              >
+                {region.shortname}
+              </div>
+            </CarouselImage>
+            <span>{images[region.shortname].description}</span>
+          </React.Fragment>
         ))}
       </Carousel>
     </>
