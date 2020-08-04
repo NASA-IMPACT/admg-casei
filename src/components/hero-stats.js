@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-const HeaderStats = ({ statList }) => (
+const HeroStats = ({ statList }) => (
   <dl style={{ display: `grid`, maxHeight: `6rem` }} data-cy="stats">
     {statList.map(stat => (
       <React.Fragment key={stat.label}>
@@ -16,7 +16,7 @@ const HeaderStats = ({ statList }) => (
   </dl>
 )
 
-HeaderStats.propTypes = {
+HeroStats.propTypes = {
   statList: PropTypes.arrayOf(
     PropTypes.shape({
       number: PropTypes.number,
@@ -25,4 +25,4 @@ HeaderStats.propTypes = {
   ).isRequired,
 }
 
-export default HeaderStats
+export default HeroStats

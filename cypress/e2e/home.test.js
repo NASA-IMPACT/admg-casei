@@ -7,10 +7,14 @@ describe("Homepage", () => {
     cy.visit("/")
   })
   it("renders correctly", () => {
-    cy.get("main").find("p").contains(site.siteMetadata.shortname)
-    cy.get("main").find("h1").contains(site.siteMetadata.title)
-    cy.get("main").find("p").contains(site.siteMetadata.description)
-    cy.get("main").find("section").should("have.length", 5)
+    cy.get("[data-cy=home-hero]")
+      .find("p")
+      .contains(site.siteMetadata.shortname)
+    cy.get("[data-cy=home-hero]").find("h1").contains(site.siteMetadata.title)
+    cy.get("[data-cy=home-hero]")
+      .find("p")
+      .contains(site.siteMetadata.description)
+    cy.get("[data-cy=home-hero]").should("have.length", 1)
   })
 
   describe("focus areas", () => {

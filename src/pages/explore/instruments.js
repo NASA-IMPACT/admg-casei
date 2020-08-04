@@ -6,7 +6,7 @@ import Spinner from "react-spinkit"
 import api from "../../utils/api"
 import theme from "../../utils/theme"
 
-import Layout from "../../components/layout"
+import Layout, { PageBody } from "../../components/layout"
 import SEO from "../../components/seo"
 import ExploreMenu from "../../components/explore/explore-menu"
 import ExploreSection from "../../components/explore/explore-section"
@@ -64,50 +64,52 @@ export default function Instruments({ data, location }) {
   return (
     <Layout>
       <SEO title="Instruments" />
-      <ExploreMenu />
-      <Searchbar
-        submitSearch={submitSearch}
-        selectedFilterIds={selectedFilterIds}
-        addFilter={addFilter}
-        getFilterLabelById={getFilterLabelById}
-        getFilterOptionsById={getFilterOptionsById}
-        removeFilter={removeFilter}
-        sortOrder={sortOrder}
-        toggleSortOrder={toggleSortOrder}
-        ref={inputElement}
-        category="instruments"
-      />
-
-      {isLoading ? (
-        <div
-          style={{ display: `flex`, justifyContent: `space-around` }}
-          data-cy="loading-indicator"
-        >
-          <Spinner name="cube-grid" color={theme.color.base} />
-        </div>
-      ) : (
-        <ExploreSection
-          category="instruments"
+      <PageBody id="instruments">
+        <ExploreMenu />
+        <Searchbar
+          submitSearch={submitSearch}
           selectedFilterIds={selectedFilterIds}
+          addFilter={addFilter}
+          getFilterLabelById={getFilterLabelById}
+          getFilterOptionsById={getFilterOptionsById}
           removeFilter={removeFilter}
-          filteredCount={list.length}
-          totalCount={data.all.totalCount}
-        >
-          {list.map(instrument => {
-            return (
-              <Link to={`/instrument/${instrument.id}`} key={instrument.id}>
-                <InstrumentCard
-                  shortname={instrument.shortname}
-                  longname={instrument.longname}
-                  key={instrument.id}
-                  description={instrument.description}
-                  campaigns={instrument.campaigns}
-                />
-              </Link>
-            )
-          })}
-        </ExploreSection>
-      )}
+          sortOrder={sortOrder}
+          toggleSortOrder={toggleSortOrder}
+          ref={inputElement}
+          category="instruments"
+        />
+
+        {isLoading ? (
+          <div
+            style={{ display: `flex`, justifyContent: `space-around` }}
+            data-cy="loading-indicator"
+          >
+            <Spinner name="cube-grid" color={theme.color.base} />
+          </div>
+        ) : (
+          <ExploreSection
+            category="instruments"
+            selectedFilterIds={selectedFilterIds}
+            removeFilter={removeFilter}
+            filteredCount={list.length}
+            totalCount={data.all.totalCount}
+          >
+            {list.map(instrument => {
+              return (
+                <Link to={`/instrument/${instrument.id}`} key={instrument.id}>
+                  <InstrumentCard
+                    shortname={instrument.shortname}
+                    longname={instrument.longname}
+                    key={instrument.id}
+                    description={instrument.description}
+                    campaigns={instrument.campaigns}
+                  />
+                </Link>
+              )
+            })}
+          </ExploreSection>
+        )}
+      </PageBody>
     </Layout>
   )
 }

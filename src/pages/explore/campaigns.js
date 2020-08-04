@@ -6,7 +6,7 @@ import Spinner from "react-spinkit"
 import api from "../../utils/api"
 import theme from "../../utils/theme"
 
-import Layout from "../../components/layout"
+import Layout, { PageBody } from "../../components/layout"
 import SEO from "../../components/seo"
 import ExploreMenu from "../../components/explore/explore-menu"
 import Searchbar from "../../components/explore/searchbar"
@@ -96,54 +96,56 @@ const Campaigns = ({ data, location }) => {
   return (
     <Layout>
       <SEO title="Campaigns" />
-      <ExploreMenu />
-      <Searchbar
-        submitSearch={submitSearch}
-        selectedFilterIds={selectedFilterIds}
-        addFilter={addFilter}
-        getFilterLabelById={getFilterLabelById}
-        getFilterOptionsById={getFilterOptionsById}
-        removeFilter={removeFilter}
-        sortOrder={sortOrder}
-        toggleSortOrder={toggleSortOrder}
-        ref={inputElement}
-        category="campaigns"
-      />
-
-      {isLoading ? (
-        <div
-          style={{ display: `flex`, justifyContent: `space-around` }}
-          data-cy="loading-indicator"
-        >
-          <Spinner name="cube-grid" color={theme.color.base} />
-        </div>
-      ) : (
-        <ExploreSection
-          category="campaigns"
+      <PageBody id="campaigns">
+        <ExploreMenu />
+        <Searchbar
+          submitSearch={submitSearch}
           selectedFilterIds={selectedFilterIds}
+          addFilter={addFilter}
+          getFilterLabelById={getFilterLabelById}
+          getFilterOptionsById={getFilterOptionsById}
           removeFilter={removeFilter}
-          filteredCount={list.length}
-          totalCount={data.all.totalCount}
-        >
-          {list.map(campaign => {
-            const startdate = new Date(campaign.startdate)
-            const enddate = new Date(campaign.enddate)
-            return (
-              <Link to={`/campaign/${campaign.id}`} key={campaign.shortname}>
-                <CampaignCard
-                  ongoing={campaign.ongoing}
-                  shortname={campaign.shortname}
-                  longname={campaign.longname}
-                  daterange={`${startdate.getFullYear()}—${enddate.getFullYear()}`}
-                  region={campaign.region}
-                  countCollectionPeriods={campaign.countCollectionPeriods}
-                  countDataProducts={campaign.countDataProducts}
-                />
-              </Link>
-            )
-          })}
-        </ExploreSection>
-      )}
+          sortOrder={sortOrder}
+          toggleSortOrder={toggleSortOrder}
+          ref={inputElement}
+          category="campaigns"
+        />
+
+        {isLoading ? (
+          <div
+            style={{ display: `flex`, justifyContent: `space-around` }}
+            data-cy="loading-indicator"
+          >
+            <Spinner name="cube-grid" color={theme.color.base} />
+          </div>
+        ) : (
+          <ExploreSection
+            category="campaigns"
+            selectedFilterIds={selectedFilterIds}
+            removeFilter={removeFilter}
+            filteredCount={list.length}
+            totalCount={data.all.totalCount}
+          >
+            {list.map(campaign => {
+              const startdate = new Date(campaign.startdate)
+              const enddate = new Date(campaign.enddate)
+              return (
+                <Link to={`/campaign/${campaign.id}`} key={campaign.shortname}>
+                  <CampaignCard
+                    ongoing={campaign.ongoing}
+                    shortname={campaign.shortname}
+                    longname={campaign.longname}
+                    daterange={`${startdate.getFullYear()}—${enddate.getFullYear()}`}
+                    region={campaign.region}
+                    countCollectionPeriods={campaign.countCollectionPeriods}
+                    countDataProducts={campaign.countDataProducts}
+                  />
+                </Link>
+              )
+            })}
+          </ExploreSection>
+        )}
+      </PageBody>
     </Layout>
   )
 }

@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import HeaderStats from "./header-stats"
+import HeroStats from "./hero-stats"
 
 export default function Hero({
   tagTitle,
@@ -14,13 +14,14 @@ export default function Hero({
   id,
 }) {
   return (
-    <header
+    <section
       style={{
         display: `grid`,
         gridTemplateColumns: `${textToImageRatio[0]}fr ${textToImageRatio[1]}fr`,
         columnGap: `2rem`,
         minHeight: `35rem`,
         alignContent: `center`,
+        padding: `0 5rem`,
       }}
       data-cy={`${id}-hero`}
     >
@@ -37,8 +38,8 @@ export default function Hero({
       )}
 
       <div style={{ gridArea: `1 / 2 / 3 / 3` }}>{children}</div>
-      {stats && <HeaderStats statList={stats} />}
-    </header>
+      {stats && <HeroStats statList={stats} />}
+    </section>
   )
 }
 

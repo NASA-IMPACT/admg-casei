@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import Hero from "../../components/hero"
 import Image from "../../components/image"
 
-export default function Header({ shortname, longname, description }) {
+export default function InstrumentHero({ shortname, longname, description }) {
   return (
     <Hero
       tagTitle="Instrument"
@@ -21,15 +21,15 @@ export default function Header({ shortname, longname, description }) {
     </Hero>
   )
 }
-export const instrumentHeaderFields = graphql`
-  fragment instrumentHeaderFields on instrument {
+export const instrumentHeroFields = graphql`
+  fragment instrumentHeroFields on instrument {
     shortname: short_name
     longname: long_name
     description
   }
 `
 
-Header.propTypes = {
+InstrumentHero.propTypes = {
   shortname: PropTypes.string.isRequired,
   longname: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,

@@ -24,8 +24,7 @@ describe("Platfrom", () => {
     })
 
     it("displays 2 big numbers", () => {
-      cy.get("main")
-        .find("header")
+      cy.get("[data-cy=platform-hero]")
         .find("[data-cy=stats]")
         .find("dd")
         .should($stat => {

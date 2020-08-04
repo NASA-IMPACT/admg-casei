@@ -6,7 +6,7 @@ import Spinner from "react-spinkit"
 import api from "../../utils/api"
 import theme from "../../utils/theme"
 
-import Layout from "../../components/layout"
+import Layout, { PageBody } from "../../components/layout"
 import SEO from "../../components/seo"
 import ExploreMenu from "../../components/explore/explore-menu"
 import Searchbar from "../../components/explore/searchbar"
@@ -65,52 +65,54 @@ const Platforms = ({ data, location }) => {
   return (
     <Layout>
       <SEO title="Platforms" />
-      <ExploreMenu />
-      <Searchbar
-        submitSearch={submitSearch}
-        selectedFilterIds={selectedFilterIds}
-        addFilter={addFilter}
-        getFilterLabelById={getFilterLabelById}
-        getFilterOptionsById={getFilterOptionsById}
-        removeFilter={removeFilter}
-        sortOrder={sortOrder}
-        toggleSortOrder={toggleSortOrder}
-        ref={inputElement}
-        category="platforms"
-      />
-
-      {isLoading ? (
-        <div
-          style={{ display: `flex`, justifyContent: `space-around` }}
-          data-cy="loading-indicator"
-        >
-          <Spinner name="cube-grid" color={theme.color.base} />
-        </div>
-      ) : (
-        <ExploreSection
-          category="platforms"
+      <PageBody id="platforms">
+        <ExploreMenu />
+        <Searchbar
+          submitSearch={submitSearch}
           selectedFilterIds={selectedFilterIds}
+          addFilter={addFilter}
+          getFilterLabelById={getFilterLabelById}
+          getFilterOptionsById={getFilterOptionsById}
           removeFilter={removeFilter}
-          filteredCount={list.length}
-          totalCount={data.all.totalCount}
-        >
-          {list.map(platform => {
-            return (
-              <Link to={`/platform/${platform.id}`} key={platform.id}>
-                <PlatformCard
-                  shortname={platform.shortname}
-                  longname={platform.longname}
-                  key={platform.id}
-                  description={platform.description}
-                  collectionPeriodIds={platform.collectionPeriodIds}
-                  instruments={platform.instruments}
-                  stationary={platform.stationary}
-                />
-              </Link>
-            )
-          })}
-        </ExploreSection>
-      )}
+          sortOrder={sortOrder}
+          toggleSortOrder={toggleSortOrder}
+          ref={inputElement}
+          category="platforms"
+        />
+
+        {isLoading ? (
+          <div
+            style={{ display: `flex`, justifyContent: `space-around` }}
+            data-cy="loading-indicator"
+          >
+            <Spinner name="cube-grid" color={theme.color.base} />
+          </div>
+        ) : (
+          <ExploreSection
+            category="platforms"
+            selectedFilterIds={selectedFilterIds}
+            removeFilter={removeFilter}
+            filteredCount={list.length}
+            totalCount={data.all.totalCount}
+          >
+            {list.map(platform => {
+              return (
+                <Link to={`/platform/${platform.id}`} key={platform.id}>
+                  <PlatformCard
+                    shortname={platform.shortname}
+                    longname={platform.longname}
+                    key={platform.id}
+                    description={platform.description}
+                    collectionPeriodIds={platform.collectionPeriodIds}
+                    instruments={platform.instruments}
+                    stationary={platform.stationary}
+                  />
+                </Link>
+              )
+            })}
+          </ExploreSection>
+        )}
+      </PageBody>
     </Layout>
   )
 }

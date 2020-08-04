@@ -2,8 +2,8 @@ import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
-import Layout from "../../components/layout"
-import Header from "./header"
+import Layout, { PageBody } from "../../components/layout"
+import InstrumentHero from "./hero"
 import About from "./about"
 import Entities from "./entities"
 import Resources from "./resources"
@@ -11,21 +11,23 @@ import Resources from "./resources"
 const InstrumentTemplate = ({ data: { instrument } }) => {
   return (
     <Layout>
-      <Header
+      <InstrumentHero
         shortname={instrument.shortname}
         longname={instrument.longname}
         description={instrument.description}
       />
-      <About
-        id={instrument.id}
-        radiometricFrequency={instrument.radiometricFrequency}
-        temporalResolution={instrument.temporalResolution}
-        spatialResolution={instrument.spatialResolution}
-        instrumentManufacturer={instrument.instrumentManufacturer}
-        fundingSource={instrument.fundingSource}
-      />
-      <Entities platforms={instrument.platforms} />
-      <Resources onlineInformation={instrument.onlineInformation} />
+      <PageBody id="instrument">
+        <About
+          id={instrument.id}
+          radiometricFrequency={instrument.radiometricFrequency}
+          temporalResolution={instrument.temporalResolution}
+          spatialResolution={instrument.spatialResolution}
+          instrumentManufacturer={instrument.instrumentManufacturer}
+          fundingSource={instrument.fundingSource}
+        />
+        <Entities platforms={instrument.platforms} />
+        <Resources onlineInformation={instrument.onlineInformation} />
+      </PageBody>
     </Layout>
   )
 }
@@ -33,7 +35,7 @@ const InstrumentTemplate = ({ data: { instrument } }) => {
 export const query = graphql`
   query($slug: String!) {
     instrument: instrument(id: { eq: $slug }) {
-      ...instrumentHeaderFields
+      ...instrumentHeroFields
       ...instrumentDetailFields
       ...instrumentEntitiesFields
       ...instrumentResourcesFields

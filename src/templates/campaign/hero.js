@@ -5,11 +5,11 @@ import parse from "wellknown"
 import * as turf from "@turf/turf"
 import geoViewport from "@mapbox/geo-viewport"
 
-import HeaderStats from "../../components/header-stats"
+import HeroStats from "../../components/hero-stats"
 
 import theme from "../../utils/theme"
 
-const Header = ({
+const CampaignHero = ({
   bounds,
   shortname,
   longname,
@@ -54,22 +54,23 @@ const Header = ({
   )},${viewport.zoom}/${size.join("x")}?access_token=${accessToken}`
 
   return (
-    <header
+    <section
+      data-cy="campaign-hero"
       style={{
         display: `flex`,
         background: `linear-gradient(90deg, rgba(12,21,32, 0.8) 0%, rgba(12,21,32, 0.7)50%, rgba(12,21,32, 0.0)66%), url("${url}") bottom center no-repeat`,
         padding: `11rem 5rem 0 5rem`,
-        margin: `0 -5rem`,
         height: `35rem`,
+        backgroundSize: `cover`,
       }}
     >
-      <div style={{ flex: `2` }}>
+      <div style={{ flex: `2`, padding: `0 5rem` }}>
         <div>
           <p>{shortname}</p>
           <h1>{longname}</h1>
           <p>{focusListing}</p>
         </div>
-        <HeaderStats
+        <HeroStats
           statList={[
             { number: countDeployments, label: "Deployments" },
             { number: countCollectionPeriods, label: "Collection Periods" },
@@ -78,12 +79,12 @@ const Header = ({
         />
       </div>
       <div style={{ flex: `1` }}></div>
-    </header>
+    </section>
   )
 }
 
-export const headerFields = graphql`
-  fragment headerFields on campaign {
+export const heroFields = graphql`
+  fragment heroFields on campaign {
     bounds: spatial_bounds
     shortname: short_name
     longname: long_name
@@ -96,7 +97,7 @@ export const headerFields = graphql`
   }
 `
 
-Header.propTypes = {
+CampaignHero.propTypes = {
   bounds: PropTypes.string.isRequired,
   shortname: PropTypes.string.isRequired,
   longname: PropTypes.string.isRequired,
@@ -106,4 +107,4 @@ Header.propTypes = {
   countDataProducts: PropTypes.number,
 }
 
-export default Header
+export default CampaignHero

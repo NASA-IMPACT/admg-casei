@@ -1,17 +1,18 @@
 import React from "react"
 
-import Layout from "../components/layout"
+import Layout, { PageBody } from "../components/layout"
 import SEO from "../components/seo"
 
 const Contact = () => (
   <Layout>
     <SEO title="Contact" />
-
-    <h1>We would love to hear your feedback</h1>
-    <p>
-      Contact us at{" "}
-      <a href="mailto:info@developmentseed.org">info@developmentseed.org</a>
-    </p>
+    <PageBody id="contact">
+      <h1>We would love to hear your feedback</h1>
+      <p>
+        Contact us at{" "}
+        <a href="mailto:info@developmentseed.org">info@developmentseed.org</a>
+      </p>
+    </PageBody>
   </Layout>
 )
 

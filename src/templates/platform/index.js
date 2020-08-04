@@ -2,26 +2,28 @@ import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
-import Layout from "../../components/layout"
-import Header from "./header"
+import Layout, { PageBody } from "../../components/layout"
+import PlatformHeader from "./hero"
 import Overview from "./overview"
 import RelatedCampaigns from "./related-campaigns"
 
 export default function PlatformTemplate({ data: { platform } }) {
   return (
     <Layout>
-      <Header
+      <PlatformHeader
         shortname={platform.shortname}
         longname={platform.longname}
         campaigns={platform.campaigns.length}
         collectionPeriods={platform.collectionPeriods.length}
         textToImageRatio={[3, 5]}
       />
-      <Overview
-        description={platform.description}
-        shortname={platform.shortname}
-      />
-      <RelatedCampaigns campaigns={platform.campaigns} />
+      <PageBody id="platform">
+        <Overview
+          description={platform.description}
+          shortname={platform.shortname}
+        />
+        <RelatedCampaigns campaigns={platform.campaigns} />
+      </PageBody>
     </Layout>
   )
 }
@@ -29,7 +31,7 @@ export default function PlatformTemplate({ data: { platform } }) {
 export const query = graphql`
   query($slug: String!) {
     platform: platform(id: { eq: $slug }) {
-      ...platformHeaderFields
+      ...platformHeroFields
       ...platformOverviewFields
       ...platformCampaignFields
     }
