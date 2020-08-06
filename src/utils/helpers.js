@@ -25,6 +25,15 @@ export function PropTypeIsUrl(props, propName, componentName) {
   }
 }
 
+export function formatDateRange(start, end) {
+  const startdate = new Date(start)
+  const enddate = new Date(end)
+  const startyear = startdate.getFullYear()
+  const endyear = enddate.getFullYear()
+
+  return startyear === endyear ? `${startyear}` : `${startyear}—${endyear}`
+}
+
 export const useContainerDimensions = containerRef => {
   const getDimensions = () => ({
     width: containerRef.current.offsetWidth,

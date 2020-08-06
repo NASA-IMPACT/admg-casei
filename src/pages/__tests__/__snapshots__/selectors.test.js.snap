@@ -990,7 +990,7 @@ exports[`Campaigns page renders correctly 1`] = `
                   <small
                     data-cy="daterange"
                   >
-                    2002—2002
+                    2002
                   </small>
                 </div>
                 <div>
@@ -1090,7 +1090,7 @@ exports[`Campaigns page renders correctly 1`] = `
                   <small
                     data-cy="daterange"
                   >
-                    2008—2008
+                    2008
                   </small>
                 </div>
                 <div>
@@ -1390,7 +1390,7 @@ exports[`Campaigns page renders correctly 1`] = `
                   <small
                     data-cy="daterange"
                   >
-                    2012—2012
+                    2012
                   </small>
                 </div>
                 <div>
@@ -1488,7 +1488,7 @@ exports[`Campaigns page renders correctly 1`] = `
                   <small
                     data-cy="daterange"
                   >
-                    2012—2012
+                    2012
                   </small>
                 </div>
                 <div>
@@ -1588,7 +1588,7 @@ exports[`Campaigns page renders correctly 1`] = `
                   <small
                     data-cy="daterange"
                   >
-                    2017—2017
+                    2017
                   </small>
                 </div>
                 <div>
@@ -1688,7 +1688,7 @@ exports[`Campaigns page renders correctly 1`] = `
                   <small
                     data-cy="daterange"
                   >
-                    2010—2010
+                    2010
                   </small>
                 </div>
                 <div>
