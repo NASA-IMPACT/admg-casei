@@ -117,7 +117,7 @@ export const RegionCarousel = ({ regions }) => {
             <CarouselImage
               to="/explore/campaigns"
               state={{ selectedFilterId: region.id }}
-              url={images[region.shortname] && images[region.shortname].url}
+              url={images[region.shortname].url}
               data-cy="region-type"
             >
               <div
@@ -131,9 +131,7 @@ export const RegionCarousel = ({ regions }) => {
                 {region.shortname}
               </div>
             </CarouselImage>
-            <span>
-              {images[region.shortname] && images[region.shortname].description}
-            </span>
+            <span>{images[region.shortname].description}</span>
           </React.Fragment>
         ))}
       </Carousel>
