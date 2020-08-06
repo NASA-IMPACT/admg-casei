@@ -18,7 +18,6 @@ exports[`Campaigns page renders correctly 1`] = `
           "display": "flex",
           "justifyContent": "space-between",
           "margin": "0 auto",
-          "maxWidth": 1280,
           "padding": "2rem 5rem",
         }
       }
@@ -265,7 +264,6 @@ exports[`Campaigns page renders correctly 1`] = `
         Object {
           "flexGrow": 1,
           "margin": "0 auto",
-          "maxWidth": 1280,
           "padding": "0 5rem",
           "width": "100%",
         }
@@ -1944,7 +1942,6 @@ exports[`Campaigns page renders correctly 1`] = `
           "gap": "1rem",
           "gridTemplateColumns": "repeat(12, 1fr)",
           "margin": "5rem auto",
-          "maxWidth": 1280,
           "padding": "2rem 5rem",
         }
       }

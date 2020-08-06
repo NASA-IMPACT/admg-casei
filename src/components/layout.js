@@ -20,8 +20,7 @@ export const PageBody = ({ children, id }) => (
     style={{
       margin: `0 auto`,
       width: `100%`,
-      maxWidth: theme.layout.maxWidth,
-      padding: `0 5rem`,
+      padding: `0 ${theme.layout.pageMargin}`,
       flexGrow: 1,
     }}
     data-cy={`main-${id}-section`}
