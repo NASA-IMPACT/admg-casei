@@ -29,7 +29,7 @@ const ProgramInfoSection = ({
     { label: "Lead Investigator", info: leadInvestigator },
     { label: "Data Manager / Technical Contact", info: dataManager },
     { label: "Assigned Archive Repository", info: archive, link: archive },
-    { label: "Partner Organisation", info: partnerOrgListing },
+    { label: "Partner Organization", info: partnerOrgListing },
     { label: "Tertiary Website", info: tertiaryWebsite, link: tertiaryWebsite },
   ]
 
