@@ -71,7 +71,7 @@ describe("Homepage", () => {
       // alias the $btn.text() as 'text'
       cy.get("[data-cy=region-text-control]")
         .find("button")
-        .should("have.length", 17)
+        .should("have.length", 16)
         .invoke("text")
         .as("text")
     })
@@ -80,7 +80,7 @@ describe("Homepage", () => {
     it("renders same text in text control and image", function () {
       cy.get("[data-cy=region-type-section]")
         .find("[data-cy=region-type]")
-        .should("have.length", 17)
+        .should("have.length", 16)
         .invoke("text")
         .then(text => {
           expect(text).to.equal(this.text)
@@ -160,7 +160,7 @@ describe("Homepage", () => {
         .should("have.length", 1)
         .and("have.text", "geophysical: Biodiversity")
 
-      cy.get("main").find("[data-cy=explore-card]").should("have.length", 0)
+      cy.get("main").find("[data-cy=explore-card]").should("have.length", 1)
     })
   })
   describe("platforms", () => {

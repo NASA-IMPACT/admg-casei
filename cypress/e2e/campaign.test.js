@@ -197,7 +197,7 @@ describe("Campaign", () => {
 
     it("displays some platforms", () => {
       cy.get("[data-cy=platform]").should($div => {
-        expect($div, "2 platforms").to.have.length(2)
+        expect($div, "3 platforms").to.have.length(3)
       })
     })
   })

@@ -8,7 +8,7 @@ describe("Searchbar", () => {
       category: "campaigns",
       filterExamples: [
         "Weather",
-        "Tectonic Processes",
+        "Clouds",
         "boreal winter",
         "rainforest",
         "C-23 Sherpa",
