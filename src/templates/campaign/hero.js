@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useRef } from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 import parse from "wellknown"
@@ -7,6 +7,7 @@ import geoViewport from "@mapbox/geo-viewport"
 
 import HeroStats from "../../components/hero-stats"
 
+import { useContainerDimensions } from "../../utils/helpers"
 import theme from "../../utils/theme"
 
 const CampaignHero = ({
@@ -43,28 +44,37 @@ const CampaignHero = ({
   const scaledCoords = turf.bbox(
     turf.transformScale(offsetCoords, 1.4, options)
   )
-  const size = [theme.layout.maxWidth, 560]
+
+  const containerRef = useRef()
+  const { width } = useContainerDimensions(containerRef)
+
+  const size = [Math.min(width, 1280), 560]
   const viewport = geoViewport.viewport(scaledCoords, size)
   const overlay = encodeURIComponent(JSON.stringify(geojson))
   const accessToken =
     "pk.eyJ1IjoiZGV2c2VlZCIsImEiOiJja2JxbjJhbGQybnpnMnJwdnk0NXloMmt1In0.5ciMNUW3yaadjwmlDLTugw"
 
-  const url = `https://api.mapbox.com/styles/v1/mapbox/satellite-streets-v11/static/geojson(${overlay})/${viewport.center.join(
-    ","
-  )},${viewport.zoom}/${size.join("x")}?access_token=${accessToken}`
+  const url = width
+    ? `https://api.mapbox.com/styles/v1/mapbox/satellite-streets-v11/static/geojson(${overlay})/${viewport.center.join(
+        ","
+      )},${viewport.zoom}/${size.join("x")}?access_token=${accessToken}`
+    : null // skip while width is to be determinded
 
   return (
     <section
       data-cy="campaign-hero"
+      ref={containerRef}
       style={{
         display: `flex`,
-        background: `linear-gradient(90deg, rgba(12,21,32, 0.8) 0%, rgba(12,21,32, 0.7)50%, rgba(12,21,32, 0.0)66%), url("${url}") bottom center no-repeat`,
-        padding: `11rem 5rem 0 5rem`,
-        height: `35rem`,
+        backgroundImage: `linear-gradient(90deg, rgba(12,21,32, 0.8) 0%, rgba(12,21,32, 0.7)50%, rgba(12,21,32, 0.0)66%), url("${url}")`,
+        backgroundPosition: `center`,
         backgroundSize: `cover`,
+        backgroundRepeat: `no-repeat`,
+        paddingTop: `11rem`,
+        height: `35rem`,
       }}
     >
-      <div style={{ flex: `2`, padding: `0 5rem` }}>
+      <div style={{ flex: `2`, padding: `0 ${theme.layout.pageMargin}` }}>
         <div>
           <p>{shortname}</p>
           <h1>{longname}</h1>

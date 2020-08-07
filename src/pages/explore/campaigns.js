@@ -4,6 +4,8 @@ import { graphql, Link } from "gatsby"
 import Spinner from "react-spinkit"
 
 import api from "../../utils/api"
+import { selector } from "../../utils/filter-utils"
+import { formatDateRange } from "../../utils/helpers"
 import theme from "../../utils/theme"
 
 import Layout, { PageBody } from "../../components/layout"
@@ -12,8 +14,6 @@ import ExploreMenu from "../../components/explore/explore-menu"
 import Searchbar from "../../components/explore/searchbar"
 import ExploreSection from "../../components/explore/explore-section"
 import CampaignCard from "../../components/cards/campaign-card"
-
-import { selector } from "../../utils/filter-utils"
 
 const Campaigns = ({ data, location }) => {
   const {
@@ -127,15 +127,16 @@ const Campaigns = ({ data, location }) => {
             totalCount={data.all.totalCount}
           >
             {list.map(campaign => {
-              const startdate = new Date(campaign.startdate)
-              const enddate = new Date(campaign.enddate)
               return (
                 <Link to={`/campaign/${campaign.id}`} key={campaign.shortname}>
                   <CampaignCard
                     ongoing={campaign.ongoing}
                     shortname={campaign.shortname}
                     longname={campaign.longname}
-                    daterange={`${startdate.getFullYear()}—${enddate.getFullYear()}`}
+                    daterange={formatDateRange(
+                      campaign.startdate,
+                      campaign.enddate
+                    )}
                     region={campaign.region}
                     countCollectionPeriods={campaign.countCollectionPeriods}
                     countDataProducts={campaign.countDataProducts}

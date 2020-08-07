@@ -19,16 +19,16 @@ describe("About", () => {
       .should("exist")
       .and("contain", "Why it Matters")
 
-    cy.get("[data-cy=about-organisation-section]")
+    cy.get("[data-cy=about-organization-section]")
       .should("exist")
-      .and("contain", "Responsible Organisation")
+      .and("contain", "Responsible Organization")
 
     cy.get("[data-cy=section-tagline]").should($tagline => {
       expect($tagline, "3 items").to.have.length(3)
       expect($tagline.eq(0), "first item").to.contain("Airborne Inventory")
       expect($tagline.eq(1), "second item").to.contain("Why it Matters")
       expect($tagline.eq(2), "third item").to.contain(
-        "Responsible Organisation"
+        "Responsible Organization"
       )
     })
   })

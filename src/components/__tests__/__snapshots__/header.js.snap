@@ -9,7 +9,6 @@ exports[`Header renders correctly 1`] = `
         "display": "flex",
         "justifyContent": "space-between",
         "margin": "0 auto",
-        "maxWidth": 1280,
         "padding": "2rem 5rem",
       }
     }

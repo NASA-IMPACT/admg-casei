@@ -3,7 +3,7 @@
 describe("Instrument", () => {
   before(() => {
     cy.visit("/explore/instruments")
-    cy.get("main").find("[data-cy=explore-card]").contains("2D-C/P").click()
+    cy.get("main").find("[data-cy=explore-card]").contains("AMS").click()
   })
 
   describe("the header", () => {
@@ -15,14 +15,14 @@ describe("Instrument", () => {
     })
 
     it("displays the short name as title", () => {
-      cy.get("[data-cy=instrument-hero]").first().find("h1").contains("2D-C/P")
+      cy.get("[data-cy=instrument-hero]").first().find("h1").contains("AMS")
     })
 
     it("displays the long name as subtitle", () => {
       cy.get("[data-cy=instrument-hero]")
         .first()
         .find("p")
-        .contains("2D-C/P Hydrometeor Imaging Probe")
+        .contains("Aerosol Mass Spectrometer")
     })
 
     it("displays the description", () => {

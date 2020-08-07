@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import HeroStats from "./hero-stats"
+import theme from "../utils/theme"
 
 export default function Hero({
   tagTitle,
@@ -21,7 +22,7 @@ export default function Hero({
         columnGap: `2rem`,
         minHeight: `35rem`,
         alignContent: `center`,
-        padding: `0 5rem`,
+        padding: `0 ${theme.layout.pageMargin}`,
       }}
       data-cy={`${id}-hero`}
     >

@@ -117,13 +117,13 @@ describe("Explore", () => {
       cy.get("main")
         .find("[data-cy=explore-card]")
         .find("big")
-        .contains("2D-C/P")
+        .contains("AMS")
         .parent()
         .parent() // is there a better way to select the card?
         .should($card => {
-          expect($card.find("[data-cy=shortname]")).to.have.text("2D-C/P")
+          expect($card.find("[data-cy=shortname]")).to.have.text("AMS")
           expect($card.find("[data-cy=longname]")).to.have.text(
-            "2D-C/P Hydrometeor Imaging Probe"
+            "Aerosol Mass Spectrometer"
           )
           expect($card.find("[data-cy=longname]")).to.exist
 
