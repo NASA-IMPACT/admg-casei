@@ -15,9 +15,15 @@ export default function Hero({
   backgroundImage,
   id,
 }) {
+  const ratioInPercent =
+    (100 / (textToImageRatio[0] + textToImageRatio[1])) * textToImageRatio[0]
   const imageStyle = backgroundImage
     ? {
-        backgroundImage: `linear-gradient(90deg, rgba(12,21,32, 0.8) 0%, rgba(12,21,32, 0.7)30%, rgba(12,21,32, 0.0)66%), url("${backgroundImage}")`,
+        backgroundImage: `linear-gradient(90deg, rgba(12,21,32, 0.8) 0%, rgba(12,21,32, 0.7)${
+          ratioInPercent - 20
+        }%, rgba(12,21,32, 0.0)${
+          ratioInPercent + 20
+        }%), url("${backgroundImage}")`,
         backgroundPosition: `center`,
         backgroundSize: `cover`,
         backgroundRepeat: `no-repeat`,

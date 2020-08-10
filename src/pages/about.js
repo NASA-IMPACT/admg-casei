@@ -18,6 +18,7 @@ const About = () => (
       tagTitle="About"
       title="NASA airborne campaigns use the vantage point of space to explore critical questions to increase our understanding of planet earth."
       textToImageRatio={[8, 3]}
+      backgroundImage="https://images-assets.nasa.gov/image/GRC-2020-C-00100/GRC-2020-C-00100~orig.jpg"
       id="about"
     />
 
