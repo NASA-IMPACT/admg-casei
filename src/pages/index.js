@@ -26,13 +26,9 @@ const IndexPage = ({ data }) => {
         tagTitle={data.site.siteMetadata.shortname}
         title={data.site.siteMetadata.title}
         description={data.site.siteMetadata.description}
+        backgroundImage="https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e000980/GSFC_20171208_Archive_e000980~orig.jpg"
         id="home"
-      >
-        <Image
-          filename="globe.png"
-          alt="a globe displaying natural features and slight cloud coverage"
-        />
-      </Hero>
+      />
       <PageBody id="home">
         <SectionBlock id="focus-area">
           <SectionHeader
