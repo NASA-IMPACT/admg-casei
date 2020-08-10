@@ -12,11 +12,27 @@ export default function Hero({
   stats,
   children,
   textToImageRatio = [3, 5],
+  backgroundImage,
   id,
 }) {
+  const ratioInPercent =
+    (100 / (textToImageRatio[0] + textToImageRatio[1])) * textToImageRatio[0]
+  const imageStyle = backgroundImage
+    ? {
+        backgroundImage: `linear-gradient(90deg, rgba(12,21,32, 0.8) 0%, rgba(12,21,32, 0.7)${
+          ratioInPercent - 20
+        }%, rgba(12,21,32, 0.0)${
+          ratioInPercent + 20
+        }%), url("${backgroundImage}")`,
+        backgroundPosition: `center`,
+        backgroundSize: `cover`,
+        backgroundRepeat: `no-repeat`,
+      }
+    : null
   return (
     <section
       style={{
+        ...imageStyle,
         display: `grid`,
         gridTemplateColumns: `${textToImageRatio[0]}fr ${textToImageRatio[1]}fr`,
         columnGap: `2rem`,
@@ -54,5 +70,6 @@ Hero.propTypes = {
   ),
   children: PropTypes.node,
   textToImageRatio: PropTypes.arrayOf(PropTypes.number),
+  backgroundImage: PropTypes.string,
   id: PropTypes.string,
 }
