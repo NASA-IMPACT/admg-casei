@@ -63,7 +63,11 @@ PlatformTemplate.propTypes = {
           startdate: PropTypes.string.isRequired,
           enddate: PropTypes.string,
           region: PropTypes.string.isRequired,
-          deploymentIds: PropTypes.arrayOf(PropTypes.string),
+          deployments: PropTypes.arrayOf(
+            PropTypes.shape({
+              id: PropTypes.string.isRequired,
+            })
+          ),
           countCollectionPeriods: PropTypes.number,
           countDataProducts: PropTypes.number,
         })

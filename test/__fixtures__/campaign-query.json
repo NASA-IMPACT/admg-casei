@@ -8,41 +8,77 @@
         "ongoing": false,
         "shortname": "ACES",
         "longname": "Altus Cumulus Electrification Study",
-        "id": "d1a09bda-9454-4f66-be12-dafc5f4df308",
+        "id": "951482fa-5748-46ba-aed5-aab8b106b103",
         "seasons": [
           {
-            "id": "65900eb8-fb52-4da9-98e9-190cbf1d1cbe"
+            "id": "abde509c-8f19-4f12-af69-ed3d41ba09f9"
           },
           {
-            "id": "52b49cd7-4143-4bbd-9f09-bd8de945c837"
+            "id": "87a8463c-b2f4-4315-84cc-cb8d20024247"
           }
         ],
         "focus": [
           {
-            "id": "23aedeee-2f83-4ca9-be30-5fda9a311421"
+            "id": "e42c7970-1913-44b4-822b-8d620eef8df8"
           },
           {
-            "id": "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53"
+            "id": "0ba119ec-7851-4546-8708-5ea3883e0a54"
           },
           {
-            "id": "2a132687-f5a1-4bbc-b45a-97228c310cd8"
+            "id": "43bc862a-ece2-427c-ad5f-368466d3bc98"
           },
           {
-            "id": "a187959e-4132-4c2c-950d-7055bc5082b9"
+            "id": "2a9bec35-4fe5-4177-8443-d11f441310b3"
           }
         ],
-        "geophysical": [],
+        "geophysical": [
+          {
+            "id": "830fe73e-7102-4b97-bc14-c31d70de1ad3"
+          },
+          {
+            "id": "4438798c-bdb9-4498-acac-e169eb0da849"
+          },
+          {
+            "id": "80687b08-ae0d-4bc0-9401-dfca1053bd0c"
+          },
+          {
+            "id": "14803ce9-bb33-4ffd-ad2c-0f4be356764a"
+          },
+          {
+            "id": "6b5dac3e-cd6a-4f40-b9d8-86dc6da79131"
+          }
+        ],
         "startdate": "2002-08-02",
         "enddate": "2002-08-30",
         "region": "Florida Everglades",
-        "deploymentIds": [
-          "ddc8ce9e-d4db-4b39-8041-06b272902544"
+        "deployments": [
+          {
+            "id": "e6e65f44-a3e6-4ad5-99db-167a2c7b27af",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          }
         ],
         "countCollectionPeriods": 0,
         "countDataProducts": 0,
         "platforms": [
           {
-            "id": "32242d25-0152-4d98-a3a2-d1f874597cd6"
+            "id": "5f6a2a1a-2a4b-4a42-9fff-04f1c2af6f5c"
+          },
+          {
+            "id": "c94db25b-1b48-47fe-90e3-47e8c16f0a92"
+          },
+          {
+            "id": "c63849f7-ea91-4525-9029-940a9c53ed36"
+          },
+          {
+            "id": "87650e20-ecf3-4703-aeed-49c8affc6059"
+          },
+          {
+            "id": "7d58f61f-a73a-435a-9c9a-d4389e052aab"
           }
         ]
       },
@@ -50,46 +86,89 @@
         "ongoing": false,
         "shortname": "ARCTAS",
         "longname": "Arctic Research of the Composition of the Troposphere from Aircraft and Satellites",
-        "id": "34a697c1-4464-4b06-9d73-a9be86c586cc",
+        "id": "e48c2d79-822b-4c9e-9f72-2776d5d1eac6",
         "seasons": [
           {
-            "id": "416a1c43-85b6-4336-80ac-6ccda1226e54"
+            "id": "7394cb29-fa27-45d0-b4f3-7132b9e5bd52"
           },
           {
-            "id": "65900eb8-fb52-4da9-98e9-190cbf1d1cbe"
+            "id": "abde509c-8f19-4f12-af69-ed3d41ba09f9"
           },
           {
-            "id": "52b49cd7-4143-4bbd-9f09-bd8de945c837"
+            "id": "87a8463c-b2f4-4315-84cc-cb8d20024247"
           }
         ],
         "focus": [
           {
-            "id": "23aedeee-2f83-4ca9-be30-5fda9a311421"
+            "id": "e42c7970-1913-44b4-822b-8d620eef8df8"
           },
           {
-            "id": "2a132687-f5a1-4bbc-b45a-97228c310cd8"
+            "id": "43bc862a-ece2-427c-ad5f-368466d3bc98"
           }
         ],
-        "geophysical": [],
+        "geophysical": [
+          {
+            "id": "4c19e4b9-b47d-4550-bf1b-fb5daf1fdeb2"
+          },
+          {
+            "id": "e8041eba-37e9-4c38-8f62-5119c7dde4b1"
+          },
+          {
+            "id": "458c5a19-17dd-48c1-bc12-c22ab69afd10"
+          },
+          {
+            "id": "1ffeed03-f578-4e23-8d7a-3fb59ca23321"
+          },
+          {
+            "id": "830fe73e-7102-4b97-bc14-c31d70de1ad3"
+          }
+        ],
         "startdate": "2008-04-01",
         "enddate": "2008-07-14",
         "region": "Alaska, Western Canada, California",
-        "deploymentIds": [
-          "4dbbbedf-d945-41e4-b9d9-160c92cc5b51",
-          "eff7ad7f-d0ce-4391-a34c-71d72cc4040d",
-          "d1b6132c-96f6-4f5c-9c47-7d9544339452"
+        "deployments": [
+          {
+            "id": "e71e8fbd-9f1a-4b91-9187-4b71109c25ff",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "2de3c9cf-bff5-4d87-ab03-2b9690ec10c8",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "683bfce3-f70e-49fa-8f87-74151327db19",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          }
         ],
         "countCollectionPeriods": 0,
         "countDataProducts": 0,
         "platforms": [
           {
-            "id": "d59b3d7e-f782-4e25-a8eb-ceec91c0331e"
+            "id": "715351b2-1126-4c0d-8130-5caa9f044f6d"
           },
           {
-            "id": "1b607095-4f6d-4e70-8e16-798bc59a2d59"
+            "id": "a0dea5de-aa33-4f13-a8a4-34729e3de5fd"
           },
           {
-            "id": "2084ab0c-4f18-4aa6-ad7b-70bc861d2d80"
+            "id": "6fc94f62-d4f2-4a08-9511-2234d91b0665"
+          },
+          {
+            "id": "7d58f61f-a73a-435a-9c9a-d4389e052aab"
           }
         ]
       },
@@ -97,68 +176,362 @@
         "ongoing": false,
         "shortname": "AirMOSS",
         "longname": "Airborne Microwave Observatory of Subcanopy and Subsurface",
-        "id": "c0dc0d63-e32a-4fdc-b1ac-4f0e8a5c7754",
+        "id": "0c68f350-b544-4b52-9f46-2aceb6aa1b7d",
         "seasons": [
           {
-            "id": "80c1e584-8bf7-4cae-b9c1-e7f98d19a7a0"
+            "id": "2e373516-e075-44c5-8fe3-a23049f2acf5"
           }
         ],
         "focus": [
           {
-            "id": "75fdf3c3-f55b-4f33-9f56-7d7af49bef97"
+            "id": "b31b1fd0-d090-480a-ac8b-3d48175d2a00"
           },
           {
-            "id": "4e90e316-6d36-41b9-ae29-5125842b7b60"
+            "id": "e6a41072-65fc-411b-8e51-1dd01cd7dd17"
           }
         ],
-        "geophysical": [],
+        "geophysical": [
+          {
+            "id": "695ea5c2-e3f8-42d4-baef-fc48c2b4ff39"
+          },
+          {
+            "id": "c3c9b7d2-d555-41ea-bd20-831654a1694f"
+          },
+          {
+            "id": "c1f1d7d5-2b80-4987-be9f-ab39101ffe65"
+          },
+          {
+            "id": "a595708b-267f-489f-aecf-42ce98f64819"
+          },
+          {
+            "id": "43380dac-8364-44f1-86b8-48b8b9673cb4"
+          },
+          {
+            "id": "7d377a91-33db-43d4-ae3e-a510ec32cb0a"
+          }
+        ],
         "startdate": "2012-09-18",
         "enddate": "2015-09-29",
         "region": "North America",
-        "deploymentIds": [
-          "f2c42b8a-2c06-407c-9345-aa9824ac65f5",
-          "9f98f6f9-ea1b-4ef7-a891-8fb175bf1df5",
-          "11a38ed6-6786-4303-aaa5-ace5d00d35a4",
-          "9b6aae1c-c102-4efe-9e07-286ce3343b9b",
-          "5629c17a-8dae-49d7-a797-95e006b0a5fd",
-          "d0757945-9802-48d6-8a00-3f7d5af2e57e",
-          "7841fbdd-34a6-4128-bc55-9d0355cc565a",
-          "b2127707-2112-4627-b2b5-636283182864",
-          "506a50a7-7edb-405f-b327-e5dff9cf049e",
-          "d30699a9-a492-431e-92a3-bc452ff61ee2",
-          "fd3dacb3-8ce3-4b02-b2a7-9a8c827048de",
-          "ef0c65e2-4abb-439c-a81d-5d78f52cb1b4",
-          "84b59cc2-1b5e-4439-8c41-039a194a7664",
-          "ead3b8c9-798b-4614-9c9f-952d6922c635",
-          "c00c3e85-a3e7-4274-908a-2863517f6901",
-          "4bc70279-e51d-4ca8-8ec3-6dd6e6e94247",
-          "d9e5d99f-dc95-41a8-9b77-80edd2222e4b",
-          "a0f6e369-d6fc-4eab-916a-ff7a9277c834",
-          "7525cebb-228a-44e8-8bba-da2fa621aa55",
-          "aedaf11d-cbea-4650-b29c-985829185c89",
-          "42704907-a7f1-4163-8ea7-c011c72b1802",
-          "c133f358-85f6-446f-940a-0efcc10180dd",
-          "c66857d0-bb1a-450b-a741-e618013be3d8",
-          "341480a1-270f-4478-b173-83672806279c",
-          "de73b8b2-7d8d-45d8-80c3-abe9a6ef3968",
-          "0ee5f0c2-1136-4128-bc8c-5eca585b7b46",
-          "09379419-e2f0-4411-8a76-5a670bd3b75e",
-          "e15c3181-1c76-41d2-abb3-7b2ef56800a5",
-          "604c5412-55df-4cd1-b60e-f3c8b38ed935",
-          "ba5b8b97-f036-460b-bc99-2cedf732dc01",
-          "ce621f9f-6e0a-45bc-a31f-878482420389",
-          "b2b5eab1-1d22-4f3f-b3fd-1757b447c92a",
-          "62eaeb18-1a0f-4e89-aaaa-f7c5d46231d6",
-          "83c4522a-641b-405a-85e7-90878e797db0"
+        "deployments": [
+          {
+            "id": "e2cf75e3-45c3-4cf4-9223-017ceeb97c7c",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "8f4614ba-3f14-4b35-81bf-0f5261d62a2d",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "715a1591-5539-4680-aced-31d8c11502ae",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "f81db555-a65f-42e4-92a6-9f21d63e9eb7",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "c5e9bace-0fc4-49f3-9e8e-f48cc7b4abb5",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "52dd3846-2ed6-4ba0-b213-7e0608c5752a",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "3204a519-b70d-4302-83e5-8dd1392c693b",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "a899997c-397f-456a-953b-374ca35109df",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "e85810b4-e8fe-47fa-9c04-e8263ddc87a4",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "6ce1e9e8-f1ab-4a0d-aa10-545a3a7ff95b",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "cfb057a7-837b-4de1-ad5b-82b04b6a8850",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "30181d09-844d-42f4-9386-0297a3e7b250",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "79b8e8cd-36f0-41c5-85d4-70b648c208b6",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "065ec451-ad99-4821-9f52-a7eb7d8cc1a3",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "215a0931-e502-4f01-a312-5b86ebd81f83",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "1000d601-c308-4769-acfd-8b044f01322a",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "3ec061ea-b93e-4797-a472-d99d4e06f770",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "7e303985-5799-44a2-b9db-d5e1584aeb28",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "73b1d9dd-73dd-488b-98e0-429f2694a69e",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "d23eae66-15c9-40b5-8dbe-acd1b7372cf0",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "408ed306-89cb-4451-ae60-da4088ffa9a4",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "94ae469e-bfef-4ac1-8190-cdd65bfa9cb4",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "71a90032-6149-4719-bae0-135d52a2acce",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "11e8f9bb-6416-430b-97bd-87838c1d44a6",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "8b55cb2c-ea4b-4ef8-8824-4079e0937d8f",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "5818dceb-b6f2-4f5c-bb22-58a2b7062c28",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "ccd3471d-8453-4b26-88c5-bb103e9ca9d1",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "e89cb7da-bd0a-43df-8f63-5db3a89e668e",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "cc6492f2-fa18-4d1f-ac65-41f04d39e932",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "17624350-b93d-4342-931d-f79b1187f93b",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "3ab6f6df-3d92-487d-b161-0b77c69fa0d9",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "0b9e567b-537f-486d-b21b-8d2a0d87544a",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "b264cb0e-c9ee-4f32-adc1-905f2ff0c337",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "93da11a3-e55b-4673-af4c-d9e2bd135471",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          }
         ],
         "countCollectionPeriods": 0,
         "countDataProducts": 0,
         "platforms": [
           {
-            "id": "fea8651b-9d6e-49cf-9433-f1c6685ec0dc"
+            "id": "96b56413-2068-4fc4-a093-4780a02744e9"
           },
           {
-            "id": "a67e9128-f25f-4bb8-97c1-5d89005111a8"
+            "id": "5a5ffdbe-0eae-48b1-a7ad-d63dfebffb9a"
+          },
+          {
+            "id": "7d58f61f-a73a-435a-9c9a-d4389e052aab"
           }
         ]
       },
@@ -166,44 +539,117 @@
         "ongoing": false,
         "shortname": "CARVE",
         "longname": "Carbon in Arctic Reservoirs Vulnerability Experiment",
-        "id": "7546673c-151c-436a-adf1-6128b2d7a515",
+        "id": "03b728ae-2235-488c-80ee-570dcf602f3b",
         "seasons": [
           {
-            "id": "416a1c43-85b6-4336-80ac-6ccda1226e54"
+            "id": "7394cb29-fa27-45d0-b4f3-7132b9e5bd52"
           },
           {
-            "id": "65900eb8-fb52-4da9-98e9-190cbf1d1cbe"
+            "id": "abde509c-8f19-4f12-af69-ed3d41ba09f9"
           },
           {
-            "id": "4ebcfcd2-1c9c-45b0-bad6-997fc3e3c904"
+            "id": "8ca7da19-8691-47ca-876b-029cfc2bdefa"
           }
         ],
         "focus": [
           {
-            "id": "23aedeee-2f83-4ca9-be30-5fda9a311421"
+            "id": "e42c7970-1913-44b4-822b-8d620eef8df8"
           },
           {
-            "id": "2a132687-f5a1-4bbc-b45a-97228c310cd8"
+            "id": "43bc862a-ece2-427c-ad5f-368466d3bc98"
           },
           {
-            "id": "75fdf3c3-f55b-4f33-9f56-7d7af49bef97"
+            "id": "b31b1fd0-d090-480a-ac8b-3d48175d2a00"
           }
         ],
-        "geophysical": [],
+        "geophysical": [
+          {
+            "id": "e8041eba-37e9-4c38-8f62-5119c7dde4b1"
+          },
+          {
+            "id": "458c5a19-17dd-48c1-bc12-c22ab69afd10"
+          },
+          {
+            "id": "1ffeed03-f578-4e23-8d7a-3fb59ca23321"
+          },
+          {
+            "id": "6b5dac3e-cd6a-4f40-b9d8-86dc6da79131"
+          },
+          {
+            "id": "b25df6ec-27d8-4dd3-9c8b-b87f3c34c83e"
+          },
+          {
+            "id": "c3c9b7d2-d555-41ea-bd20-831654a1694f"
+          },
+          {
+            "id": "a595708b-267f-489f-aecf-42ce98f64819"
+          }
+        ],
         "startdate": "2012-05-23",
         "enddate": "2015-11-12",
         "region": "Alaska",
-        "deploymentIds": [
-          "4dbdaadd-0a4a-469c-bf06-3210b404e436",
-          "98753f94-dbae-4b43-87dd-80b658ddc9a7",
-          "4b830da6-dc7a-4b06-a478-a3fc90bc3dbb",
-          "458e6f74-3827-4b7b-8f85-416fe010918b"
+        "deployments": [
+          {
+            "id": "d94bc68f-21f1-4353-9c0d-c3711a457025",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              },
+              {
+                "id": "517750b5-ff60-4267-97ff-0aa09255860e",
+                "shortname": "polar"
+              }
+            ]
+          },
+          {
+            "id": "6c5dda3a-e09b-4b07-980a-8a89abdde249",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              },
+              {
+                "id": "517750b5-ff60-4267-97ff-0aa09255860e",
+                "shortname": "polar"
+              }
+            ]
+          },
+          {
+            "id": "b028f92c-df6d-460b-a7d9-1680acb98e0e",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              },
+              {
+                "id": "517750b5-ff60-4267-97ff-0aa09255860e",
+                "shortname": "polar"
+              }
+            ]
+          },
+          {
+            "id": "103912fc-1761-4ed2-b8ff-fca2226579c2",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              },
+              {
+                "id": "517750b5-ff60-4267-97ff-0aa09255860e",
+                "shortname": "polar"
+              }
+            ]
+          }
         ],
         "countCollectionPeriods": 0,
         "countDataProducts": 0,
         "platforms": [
           {
-            "id": "900208da-3cb2-44b6-9f27-20209433f190"
+            "id": "fa7f2693-c9b1-4d89-b14c-0672487dc049"
+          },
+          {
+            "id": "7d58f61f-a73a-435a-9c9a-d4389e052aab"
           }
         ]
       },
@@ -211,44 +657,87 @@
         "ongoing": false,
         "shortname": "DC3",
         "longname": "Deep Convective Clouds & Chemistry",
-        "id": "2bca3f73-ee2b-4336-aed0-7454ab8cdf13",
+        "id": "6d8b649b-e0b9-4adf-94bb-f5defc7ba930",
         "seasons": [
           {
-            "id": "416a1c43-85b6-4336-80ac-6ccda1226e54"
+            "id": "7394cb29-fa27-45d0-b4f3-7132b9e5bd52"
           },
           {
-            "id": "65900eb8-fb52-4da9-98e9-190cbf1d1cbe"
+            "id": "abde509c-8f19-4f12-af69-ed3d41ba09f9"
           },
           {
-            "id": "52b49cd7-4143-4bbd-9f09-bd8de945c837"
+            "id": "87a8463c-b2f4-4315-84cc-cb8d20024247"
           }
         ],
         "focus": [
           {
-            "id": "23aedeee-2f83-4ca9-be30-5fda9a311421"
+            "id": "e42c7970-1913-44b4-822b-8d620eef8df8"
           },
           {
-            "id": "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53"
+            "id": "0ba119ec-7851-4546-8708-5ea3883e0a54"
           }
         ],
-        "geophysical": [],
+        "geophysical": [
+          {
+            "id": "4c19e4b9-b47d-4550-bf1b-fb5daf1fdeb2"
+          },
+          {
+            "id": "458c5a19-17dd-48c1-bc12-c22ab69afd10"
+          },
+          {
+            "id": "1ffeed03-f578-4e23-8d7a-3fb59ca23321"
+          },
+          {
+            "id": "830fe73e-7102-4b97-bc14-c31d70de1ad3"
+          },
+          {
+            "id": "4438798c-bdb9-4498-acac-e169eb0da849"
+          },
+          {
+            "id": "80687b08-ae0d-4bc0-9401-dfca1053bd0c"
+          },
+          {
+            "id": "14803ce9-bb33-4ffd-ad2c-0f4be356764a"
+          },
+          {
+            "id": "6b5dac3e-cd6a-4f40-b9d8-86dc6da79131"
+          }
+        ],
         "startdate": "2012-05-18",
         "enddate": "2012-06-30",
         "region": "Northeastern Colorado, West Texas to Central Oklahoma, Northern Alabama",
-        "deploymentIds": [
-          "dc2fa7b2-3143-4ca8-9e5a-ee07e807e712"
+        "deployments": [
+          {
+            "id": "4025e078-74c9-4ec8-b697-af9132425c8e",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              },
+              {
+                "id": "7787b7dc-eafa-433c-ac57-72a8224a530d",
+                "shortname": "mid-latitude"
+              }
+            ]
+          }
         ],
         "countCollectionPeriods": 0,
         "countDataProducts": null,
         "platforms": [
           {
-            "id": "d59b3d7e-f782-4e25-a8eb-ceec91c0331e"
+            "id": "0493498f-f092-425e-bcd0-9fc807c77c0a"
           },
           {
-            "id": "2a3a99ee-1ea0-4ac9-9e52-6e733a0eda23"
+            "id": "6fc94f62-d4f2-4a08-9511-2234d91b0665"
           },
           {
-            "id": "1c57a92e-a6db-4e7e-9d56-704705acc192"
+            "id": "aa382cdc-d5f0-46eb-b980-48431af523c6"
+          },
+          {
+            "id": "63ef5aa5-2f57-4af6-8adf-2769f3e51c24"
+          },
+          {
+            "id": "c94db25b-1b48-47fe-90e3-47e8c16f0a92"
           }
         ]
       },
@@ -256,41 +745,54 @@
         "ongoing": false,
         "shortname": "GCPEx",
         "longname": "GPM Cold Season Precipitation Experiment",
-        "id": "b94baa5d-3c69-4270-baf8-afc02f7132de",
+        "id": "61616a26-fc33-450e-bd53-a7690d03e6b6",
         "seasons": [
           {
-            "id": "5ae15f8c-3d9a-4061-953d-5fea2df57654"
+            "id": "ee919d06-2e3d-49a4-8dc3-b2b035cb5f2f"
           }
         ],
         "focus": [
           {
-            "id": "23aedeee-2f83-4ca9-be30-5fda9a311421"
+            "id": "e42c7970-1913-44b4-822b-8d620eef8df8"
           },
           {
-            "id": "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53"
+            "id": "0ba119ec-7851-4546-8708-5ea3883e0a54"
           },
           {
-            "id": "a187959e-4132-4c2c-950d-7055bc5082b9"
+            "id": "2a9bec35-4fe5-4177-8443-d11f441310b3"
           }
         ],
-        "geophysical": [],
+        "geophysical": [
+          {
+            "id": "4438798c-bdb9-4498-acac-e169eb0da849"
+          },
+          {
+            "id": "5ed630d3-3e9d-4949-b677-e2a364752b21"
+          },
+          {
+            "id": "6b5dac3e-cd6a-4f40-b9d8-86dc6da79131"
+          }
+        ],
         "startdate": "2012-01-15",
         "enddate": "2012-03-04",
         "region": "Ontario, Canada and northern portions of the United States (e.g., New York state, the New England area, etc.)",
-        "deploymentIds": [
-          "9cfa5b55-7378-48af-9018-ba2d82afe2eb"
+        "deployments": [
+          {
+            "id": "1bac4b0f-de68-4c6b-a9bc-a084873b0f7d",
+            "regions": []
+          }
         ],
         "countCollectionPeriods": 0,
         "countDataProducts": 0,
         "platforms": [
           {
-            "id": "0cdd2d06-ba97-469d-96eb-0e0865c7c4c9"
+            "id": "d363dbac-d440-492b-99b4-5d617bf8aa38"
           },
           {
-            "id": "af872351-1e39-43dc-bdb5-3f4fb7def20b"
+            "id": "6fc94f62-d4f2-4a08-9511-2234d91b0665"
           },
           {
-            "id": "d59b3d7e-f782-4e25-a8eb-ceec91c0331e"
+            "id": "732c68d8-124b-45be-b2d2-dbc2d305d855"
           }
         ]
       },
@@ -298,35 +800,59 @@
         "ongoing": false,
         "shortname": "GOES-R PLT",
         "longname": "GOES-R Post Launch Test",
-        "id": "2ad3b8b7-5334-4fa9-af06-7a26c7b05e4c",
+        "id": "be798dc9-dccb-4dc2-8e6b-d395c1bcbeb6",
         "seasons": [
           {
-            "id": "416a1c43-85b6-4336-80ac-6ccda1226e54"
+            "id": "7394cb29-fa27-45d0-b4f3-7132b9e5bd52"
           },
           {
-            "id": "52b49cd7-4143-4bbd-9f09-bd8de945c837"
+            "id": "87a8463c-b2f4-4315-84cc-cb8d20024247"
           }
         ],
         "focus": [
           {
-            "id": "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53"
+            "id": "0ba119ec-7851-4546-8708-5ea3883e0a54"
           },
           {
-            "id": "a187959e-4132-4c2c-950d-7055bc5082b9"
+            "id": "2a9bec35-4fe5-4177-8443-d11f441310b3"
           }
         ],
-        "geophysical": [],
+        "geophysical": [
+          {
+            "id": "830fe73e-7102-4b97-bc14-c31d70de1ad3"
+          },
+          {
+            "id": "4438798c-bdb9-4498-acac-e169eb0da849"
+          },
+          {
+            "id": "80687b08-ae0d-4bc0-9401-dfca1053bd0c"
+          },
+          {
+            "id": "6b5dac3e-cd6a-4f40-b9d8-86dc6da79131"
+          }
+        ],
         "startdate": "2017-03-21",
         "enddate": "2017-05-17",
         "region": "Continental United States",
-        "deploymentIds": [
-          "2e0877ea-d96e-4f8d-ae6f-3ec531812b6c"
+        "deployments": [
+          {
+            "id": "d69fb349-0147-418a-8e26-1414fc7ddc14",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          }
         ],
         "countCollectionPeriods": 0,
         "countDataProducts": 0,
         "platforms": [
           {
-            "id": "cc0f103e-e537-4437-8d2b-f7ea5ca617de"
+            "id": "c94db25b-1b48-47fe-90e3-47e8c16f0a92"
+          },
+          {
+            "id": "bb761da6-1606-444c-92d1-e6d30954f2d7"
           }
         ]
       },
@@ -334,38 +860,66 @@
         "ongoing": false,
         "shortname": "GRIP",
         "longname": "Genesis and Rapid Intensification Processes",
-        "id": "58160104-9c7d-4312-a1bb-7e2998bd44b7",
+        "id": "7739c801-46e6-4ddd-ad30-351626dcccdb",
         "seasons": [
           {
-            "id": "65900eb8-fb52-4da9-98e9-190cbf1d1cbe"
+            "id": "abde509c-8f19-4f12-af69-ed3d41ba09f9"
           },
           {
-            "id": "4ebcfcd2-1c9c-45b0-bad6-997fc3e3c904"
+            "id": "8ca7da19-8691-47ca-876b-029cfc2bdefa"
           }
         ],
         "focus": [
           {
-            "id": "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53"
+            "id": "0ba119ec-7851-4546-8708-5ea3883e0a54"
           }
         ],
-        "geophysical": [],
+        "geophysical": [
+          {
+            "id": "830fe73e-7102-4b97-bc14-c31d70de1ad3"
+          },
+          {
+            "id": "80687b08-ae0d-4bc0-9401-dfca1053bd0c"
+          },
+          {
+            "id": "d3815227-f7e1-45f0-8db0-ff203142c99f"
+          },
+          {
+            "id": "6b5dac3e-cd6a-4f40-b9d8-86dc6da79131"
+          },
+          {
+            "id": "3bd4c052-5c6c-4da1-934d-6cfd9f01d527"
+          }
+        ],
         "startdate": "2010-08-15",
         "enddate": "2010-09-25",
         "region": "Tropical Atlantic, Gulf of Mexico, Eastern North Pacific, Caribbean Sea",
-        "deploymentIds": [
-          "1a7c31aa-85ff-4aab-8d43-caf0fa0cf4be"
+        "deployments": [
+          {
+            "id": "4183334c-70e1-4e4c-b1a6-391a6113863d",
+            "regions": [
+              {
+                "id": "2ee04b8b-1d14-4a3d-be41-ec096a4c0404",
+                "shortname": "maritime"
+              },
+              {
+                "id": "1b40de01-2163-40f9-a5ce-f999c923b30b",
+                "shortname": "tropical"
+              }
+            ]
+          }
         ],
         "countCollectionPeriods": 0,
         "countDataProducts": 0,
         "platforms": [
           {
-            "id": "d59b3d7e-f782-4e25-a8eb-ceec91c0331e"
+            "id": "ad8a0ce5-8aae-4fe5-8b46-7586c267efdb"
           },
           {
-            "id": "5baa4bc5-ad5a-43f8-9ed3-cf7d0dbdae36"
+            "id": "6fc94f62-d4f2-4a08-9511-2234d91b0665"
           },
           {
-            "id": "5cde9f2a-10cb-47d6-b095-3b61d1e8b1e2"
+            "id": "2cbc931a-6f47-45f0-bff6-659ef2efc68d"
           }
         ]
       },
@@ -373,34 +927,101 @@
         "ongoing": false,
         "shortname": "HS3",
         "longname": "Hurricane and Severe Storm Sentinel",
-        "id": "ffa4a307-c055-4303-adbf-42d243ef188b",
+        "id": "c1e56561-6726-4832-8dbe-0453b10ff36c",
         "seasons": [
           {
-            "id": "4ebcfcd2-1c9c-45b0-bad6-997fc3e3c904"
+            "id": "abde509c-8f19-4f12-af69-ed3d41ba09f9"
+          },
+          {
+            "id": "8ca7da19-8691-47ca-876b-029cfc2bdefa"
           }
         ],
         "focus": [
           {
-            "id": "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53"
+            "id": "0ba119ec-7851-4546-8708-5ea3883e0a54"
+          },
+          {
+            "id": "2a9bec35-4fe5-4177-8443-d11f441310b3"
           }
         ],
-        "geophysical": [],
-        "startdate": "2012-09-01",
-        "enddate": "2014-10-31",
+        "geophysical": [
+          {
+            "id": "830fe73e-7102-4b97-bc14-c31d70de1ad3"
+          },
+          {
+            "id": "80687b08-ae0d-4bc0-9401-dfca1053bd0c"
+          },
+          {
+            "id": "d3815227-f7e1-45f0-8db0-ff203142c99f"
+          }
+        ],
+        "startdate": "2012-08-28",
+        "enddate": "2014-10-20",
         "region": "Subtropical Atlantic Ocean and Gulf of Mexico",
-        "deploymentIds": [
-          "3dceae4f-5e4c-4bcb-87af-19abb4b473a1",
-          "ce3a574b-ea82-4257-bacb-1a518b76e4e9",
-          "dbe8a890-33e2-46b1-92ea-bcf2d6a3a026"
+        "deployments": [
+          {
+            "id": "3a09cded-e13e-41fc-915c-0b9aec4bcbc1",
+            "regions": [
+              {
+                "id": "2ee04b8b-1d14-4a3d-be41-ec096a4c0404",
+                "shortname": "maritime"
+              },
+              {
+                "id": "1b40de01-2163-40f9-a5ce-f999c923b30b",
+                "shortname": "tropical"
+              },
+              {
+                "id": "7787b7dc-eafa-433c-ac57-72a8224a530d",
+                "shortname": "mid-latitude"
+              }
+            ]
+          },
+          {
+            "id": "7f6e122d-7161-4c64-a37d-943131688cee",
+            "regions": [
+              {
+                "id": "2ee04b8b-1d14-4a3d-be41-ec096a4c0404",
+                "shortname": "maritime"
+              },
+              {
+                "id": "1b40de01-2163-40f9-a5ce-f999c923b30b",
+                "shortname": "tropical"
+              },
+              {
+                "id": "7787b7dc-eafa-433c-ac57-72a8224a530d",
+                "shortname": "mid-latitude"
+              }
+            ]
+          },
+          {
+            "id": "8726699a-a04c-4835-93b4-bf7918c79346",
+            "regions": [
+              {
+                "id": "2ee04b8b-1d14-4a3d-be41-ec096a4c0404",
+                "shortname": "maritime"
+              },
+              {
+                "id": "1b40de01-2163-40f9-a5ce-f999c923b30b",
+                "shortname": "tropical"
+              },
+              {
+                "id": "7787b7dc-eafa-433c-ac57-72a8224a530d",
+                "shortname": "mid-latitude"
+              }
+            ]
+          }
         ],
         "countCollectionPeriods": 0,
         "countDataProducts": 0,
         "platforms": [
           {
-            "id": "5baa4bc5-ad5a-43f8-9ed3-cf7d0dbdae36"
+            "id": "c94db25b-1b48-47fe-90e3-47e8c16f0a92"
           },
           {
-            "id": "5cde9f2a-10cb-47d6-b095-3b61d1e8b1e2"
+            "id": "ad8a0ce5-8aae-4fe5-8b46-7586c267efdb"
+          },
+          {
+            "id": "2cbc931a-6f47-45f0-bff6-659ef2efc68d"
           }
         ]
       },
@@ -408,36 +1029,88 @@
         "ongoing": false,
         "shortname": "OLYMPEX",
         "longname": "Olympic Mountains Experiment",
-        "id": "4d231fec-f2c0-4bb2-864c-ef4f20a88378",
+        "id": "c438c053-3708-4f53-83d8-8c57990c6bec",
         "seasons": [
           {
-            "id": "5ae15f8c-3d9a-4061-953d-5fea2df57654"
+            "id": "ee919d06-2e3d-49a4-8dc3-b2b035cb5f2f"
           },
           {
-            "id": "081ccd03-e46f-459e-8101-b270d0266eac"
+            "id": "0e7fa0e9-97b4-4a26-a148-325a6fd80a96"
           },
           {
-            "id": "d4b539c1-32d3-4089-9e08-db714704a13c"
+            "id": "fafe2bed-972d-4cbf-9d10-4d258e6ccd26"
           }
         ],
         "focus": [
           {
-            "id": "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53"
+            "id": "0ba119ec-7851-4546-8708-5ea3883e0a54"
           },
           {
-            "id": "a187959e-4132-4c2c-950d-7055bc5082b9"
+            "id": "2a9bec35-4fe5-4177-8443-d11f441310b3"
           }
         ],
-        "geophysical": [],
+        "geophysical": [
+          {
+            "id": "830fe73e-7102-4b97-bc14-c31d70de1ad3"
+          },
+          {
+            "id": "5ed630d3-3e9d-4949-b677-e2a364752b21"
+          },
+          {
+            "id": "6b5dac3e-cd6a-4f40-b9d8-86dc6da79131"
+          },
+          {
+            "id": "695ea5c2-e3f8-42d4-baef-fc48c2b4ff39"
+          }
+        ],
         "startdate": "2015-11-01",
         "enddate": "2016-05-01",
         "region": "Olympic Peninsula in U.S. Washington State",
-        "deploymentIds": [
-          "04f5d90a-b356-42ea-9c17-1c8d3b46722b"
+        "deployments": [
+          {
+            "id": "6ad85c46-93e9-4f20-b3e9-b719ceb75068",
+            "regions": [
+              {
+                "id": "2ee04b8b-1d14-4a3d-be41-ec096a4c0404",
+                "shortname": "maritime"
+              },
+              {
+                "id": "1ec8559a-ebd5-4cf3-ae1d-186f2dc5bd7d",
+                "shortname": "mountains"
+              },
+              {
+                "id": "7787b7dc-eafa-433c-ac57-72a8224a530d",
+                "shortname": "mid-latitude"
+              },
+              {
+                "id": "b61569ec-59f7-413e-9c89-64c581c4b367",
+                "shortname": "rainforest"
+              }
+            ]
+          }
         ],
         "countCollectionPeriods": 0,
         "countDataProducts": 0,
-        "platforms": []
+        "platforms": [
+          {
+            "id": "6fc94f62-d4f2-4a08-9511-2234d91b0665"
+          },
+          {
+            "id": "732c68d8-124b-45be-b2d2-dbc2d305d855"
+          },
+          {
+            "id": "bb761da6-1606-444c-92d1-e6d30954f2d7"
+          },
+          {
+            "id": "aa382cdc-d5f0-46eb-b980-48431af523c6"
+          },
+          {
+            "id": "c94db25b-1b48-47fe-90e3-47e8c16f0a92"
+          },
+          {
+            "id": "7d58f61f-a73a-435a-9c9a-d4389e052aab"
+          }
+        ]
       }
     ]
   },
@@ -447,69 +1120,188 @@
         "ongoing": false,
         "shortname": "OLYMPEX",
         "longname": "Olympic Mountains Experiment",
-        "id": "4d231fec-f2c0-4bb2-864c-ef4f20a88378",
+        "id": "c438c053-3708-4f53-83d8-8c57990c6bec",
         "seasons": [
           {
-            "id": "5ae15f8c-3d9a-4061-953d-5fea2df57654"
+            "id": "ee919d06-2e3d-49a4-8dc3-b2b035cb5f2f"
           },
           {
-            "id": "081ccd03-e46f-459e-8101-b270d0266eac"
+            "id": "0e7fa0e9-97b4-4a26-a148-325a6fd80a96"
           },
           {
-            "id": "d4b539c1-32d3-4089-9e08-db714704a13c"
+            "id": "fafe2bed-972d-4cbf-9d10-4d258e6ccd26"
           }
         ],
         "focus": [
           {
-            "id": "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53"
+            "id": "0ba119ec-7851-4546-8708-5ea3883e0a54"
           },
           {
-            "id": "a187959e-4132-4c2c-950d-7055bc5082b9"
+            "id": "2a9bec35-4fe5-4177-8443-d11f441310b3"
           }
         ],
-        "geophysical": [],
+        "geophysical": [
+          {
+            "id": "830fe73e-7102-4b97-bc14-c31d70de1ad3"
+          },
+          {
+            "id": "5ed630d3-3e9d-4949-b677-e2a364752b21"
+          },
+          {
+            "id": "6b5dac3e-cd6a-4f40-b9d8-86dc6da79131"
+          },
+          {
+            "id": "695ea5c2-e3f8-42d4-baef-fc48c2b4ff39"
+          }
+        ],
         "startdate": "2015-11-01",
         "enddate": "2016-05-01",
         "region": "Olympic Peninsula in U.S. Washington State",
-        "deploymentIds": [
-          "04f5d90a-b356-42ea-9c17-1c8d3b46722b"
-        ],
-        "countCollectionPeriods": 0,
-        "countDataProducts": 0,
-        "platforms": []
-      },
-      {
-        "ongoing": false,
-        "shortname": "HS3",
-        "longname": "Hurricane and Severe Storm Sentinel",
-        "id": "ffa4a307-c055-4303-adbf-42d243ef188b",
-        "seasons": [
+        "deployments": [
           {
-            "id": "4ebcfcd2-1c9c-45b0-bad6-997fc3e3c904"
+            "id": "6ad85c46-93e9-4f20-b3e9-b719ceb75068",
+            "regions": [
+              {
+                "id": "2ee04b8b-1d14-4a3d-be41-ec096a4c0404",
+                "shortname": "maritime"
+              },
+              {
+                "id": "1ec8559a-ebd5-4cf3-ae1d-186f2dc5bd7d",
+                "shortname": "mountains"
+              },
+              {
+                "id": "7787b7dc-eafa-433c-ac57-72a8224a530d",
+                "shortname": "mid-latitude"
+              },
+              {
+                "id": "b61569ec-59f7-413e-9c89-64c581c4b367",
+                "shortname": "rainforest"
+              }
+            ]
           }
-        ],
-        "focus": [
-          {
-            "id": "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53"
-          }
-        ],
-        "geophysical": [],
-        "startdate": "2012-09-01",
-        "enddate": "2014-10-31",
-        "region": "Subtropical Atlantic Ocean and Gulf of Mexico",
-        "deploymentIds": [
-          "3dceae4f-5e4c-4bcb-87af-19abb4b473a1",
-          "ce3a574b-ea82-4257-bacb-1a518b76e4e9",
-          "dbe8a890-33e2-46b1-92ea-bcf2d6a3a026"
         ],
         "countCollectionPeriods": 0,
         "countDataProducts": 0,
         "platforms": [
           {
-            "id": "5baa4bc5-ad5a-43f8-9ed3-cf7d0dbdae36"
+            "id": "6fc94f62-d4f2-4a08-9511-2234d91b0665"
           },
           {
-            "id": "5cde9f2a-10cb-47d6-b095-3b61d1e8b1e2"
+            "id": "732c68d8-124b-45be-b2d2-dbc2d305d855"
+          },
+          {
+            "id": "bb761da6-1606-444c-92d1-e6d30954f2d7"
+          },
+          {
+            "id": "aa382cdc-d5f0-46eb-b980-48431af523c6"
+          },
+          {
+            "id": "c94db25b-1b48-47fe-90e3-47e8c16f0a92"
+          },
+          {
+            "id": "7d58f61f-a73a-435a-9c9a-d4389e052aab"
+          }
+        ]
+      },
+      {
+        "ongoing": false,
+        "shortname": "HS3",
+        "longname": "Hurricane and Severe Storm Sentinel",
+        "id": "c1e56561-6726-4832-8dbe-0453b10ff36c",
+        "seasons": [
+          {
+            "id": "abde509c-8f19-4f12-af69-ed3d41ba09f9"
+          },
+          {
+            "id": "8ca7da19-8691-47ca-876b-029cfc2bdefa"
+          }
+        ],
+        "focus": [
+          {
+            "id": "0ba119ec-7851-4546-8708-5ea3883e0a54"
+          },
+          {
+            "id": "2a9bec35-4fe5-4177-8443-d11f441310b3"
+          }
+        ],
+        "geophysical": [
+          {
+            "id": "830fe73e-7102-4b97-bc14-c31d70de1ad3"
+          },
+          {
+            "id": "80687b08-ae0d-4bc0-9401-dfca1053bd0c"
+          },
+          {
+            "id": "d3815227-f7e1-45f0-8db0-ff203142c99f"
+          }
+        ],
+        "startdate": "2012-08-28",
+        "enddate": "2014-10-20",
+        "region": "Subtropical Atlantic Ocean and Gulf of Mexico",
+        "deployments": [
+          {
+            "id": "3a09cded-e13e-41fc-915c-0b9aec4bcbc1",
+            "regions": [
+              {
+                "id": "2ee04b8b-1d14-4a3d-be41-ec096a4c0404",
+                "shortname": "maritime"
+              },
+              {
+                "id": "1b40de01-2163-40f9-a5ce-f999c923b30b",
+                "shortname": "tropical"
+              },
+              {
+                "id": "7787b7dc-eafa-433c-ac57-72a8224a530d",
+                "shortname": "mid-latitude"
+              }
+            ]
+          },
+          {
+            "id": "7f6e122d-7161-4c64-a37d-943131688cee",
+            "regions": [
+              {
+                "id": "2ee04b8b-1d14-4a3d-be41-ec096a4c0404",
+                "shortname": "maritime"
+              },
+              {
+                "id": "1b40de01-2163-40f9-a5ce-f999c923b30b",
+                "shortname": "tropical"
+              },
+              {
+                "id": "7787b7dc-eafa-433c-ac57-72a8224a530d",
+                "shortname": "mid-latitude"
+              }
+            ]
+          },
+          {
+            "id": "8726699a-a04c-4835-93b4-bf7918c79346",
+            "regions": [
+              {
+                "id": "2ee04b8b-1d14-4a3d-be41-ec096a4c0404",
+                "shortname": "maritime"
+              },
+              {
+                "id": "1b40de01-2163-40f9-a5ce-f999c923b30b",
+                "shortname": "tropical"
+              },
+              {
+                "id": "7787b7dc-eafa-433c-ac57-72a8224a530d",
+                "shortname": "mid-latitude"
+              }
+            ]
+          }
+        ],
+        "countCollectionPeriods": 0,
+        "countDataProducts": 0,
+        "platforms": [
+          {
+            "id": "c94db25b-1b48-47fe-90e3-47e8c16f0a92"
+          },
+          {
+            "id": "ad8a0ce5-8aae-4fe5-8b46-7586c267efdb"
+          },
+          {
+            "id": "2cbc931a-6f47-45f0-bff6-659ef2efc68d"
           }
         ]
       },
@@ -517,38 +1309,66 @@
         "ongoing": false,
         "shortname": "GRIP",
         "longname": "Genesis and Rapid Intensification Processes",
-        "id": "58160104-9c7d-4312-a1bb-7e2998bd44b7",
+        "id": "7739c801-46e6-4ddd-ad30-351626dcccdb",
         "seasons": [
           {
-            "id": "65900eb8-fb52-4da9-98e9-190cbf1d1cbe"
+            "id": "abde509c-8f19-4f12-af69-ed3d41ba09f9"
           },
           {
-            "id": "4ebcfcd2-1c9c-45b0-bad6-997fc3e3c904"
+            "id": "8ca7da19-8691-47ca-876b-029cfc2bdefa"
           }
         ],
         "focus": [
           {
-            "id": "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53"
+            "id": "0ba119ec-7851-4546-8708-5ea3883e0a54"
           }
         ],
-        "geophysical": [],
+        "geophysical": [
+          {
+            "id": "830fe73e-7102-4b97-bc14-c31d70de1ad3"
+          },
+          {
+            "id": "80687b08-ae0d-4bc0-9401-dfca1053bd0c"
+          },
+          {
+            "id": "d3815227-f7e1-45f0-8db0-ff203142c99f"
+          },
+          {
+            "id": "6b5dac3e-cd6a-4f40-b9d8-86dc6da79131"
+          },
+          {
+            "id": "3bd4c052-5c6c-4da1-934d-6cfd9f01d527"
+          }
+        ],
         "startdate": "2010-08-15",
         "enddate": "2010-09-25",
         "region": "Tropical Atlantic, Gulf of Mexico, Eastern North Pacific, Caribbean Sea",
-        "deploymentIds": [
-          "1a7c31aa-85ff-4aab-8d43-caf0fa0cf4be"
+        "deployments": [
+          {
+            "id": "4183334c-70e1-4e4c-b1a6-391a6113863d",
+            "regions": [
+              {
+                "id": "2ee04b8b-1d14-4a3d-be41-ec096a4c0404",
+                "shortname": "maritime"
+              },
+              {
+                "id": "1b40de01-2163-40f9-a5ce-f999c923b30b",
+                "shortname": "tropical"
+              }
+            ]
+          }
         ],
         "countCollectionPeriods": 0,
         "countDataProducts": 0,
         "platforms": [
           {
-            "id": "d59b3d7e-f782-4e25-a8eb-ceec91c0331e"
+            "id": "ad8a0ce5-8aae-4fe5-8b46-7586c267efdb"
           },
           {
-            "id": "5baa4bc5-ad5a-43f8-9ed3-cf7d0dbdae36"
+            "id": "6fc94f62-d4f2-4a08-9511-2234d91b0665"
           },
           {
-            "id": "5cde9f2a-10cb-47d6-b095-3b61d1e8b1e2"
+            "id": "2cbc931a-6f47-45f0-bff6-659ef2efc68d"
           }
         ]
       },
@@ -556,35 +1376,59 @@
         "ongoing": false,
         "shortname": "GOES-R PLT",
         "longname": "GOES-R Post Launch Test",
-        "id": "2ad3b8b7-5334-4fa9-af06-7a26c7b05e4c",
+        "id": "be798dc9-dccb-4dc2-8e6b-d395c1bcbeb6",
         "seasons": [
           {
-            "id": "416a1c43-85b6-4336-80ac-6ccda1226e54"
+            "id": "7394cb29-fa27-45d0-b4f3-7132b9e5bd52"
           },
           {
-            "id": "52b49cd7-4143-4bbd-9f09-bd8de945c837"
+            "id": "87a8463c-b2f4-4315-84cc-cb8d20024247"
           }
         ],
         "focus": [
           {
-            "id": "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53"
+            "id": "0ba119ec-7851-4546-8708-5ea3883e0a54"
           },
           {
-            "id": "a187959e-4132-4c2c-950d-7055bc5082b9"
+            "id": "2a9bec35-4fe5-4177-8443-d11f441310b3"
           }
         ],
-        "geophysical": [],
+        "geophysical": [
+          {
+            "id": "830fe73e-7102-4b97-bc14-c31d70de1ad3"
+          },
+          {
+            "id": "4438798c-bdb9-4498-acac-e169eb0da849"
+          },
+          {
+            "id": "80687b08-ae0d-4bc0-9401-dfca1053bd0c"
+          },
+          {
+            "id": "6b5dac3e-cd6a-4f40-b9d8-86dc6da79131"
+          }
+        ],
         "startdate": "2017-03-21",
         "enddate": "2017-05-17",
         "region": "Continental United States",
-        "deploymentIds": [
-          "2e0877ea-d96e-4f8d-ae6f-3ec531812b6c"
+        "deployments": [
+          {
+            "id": "d69fb349-0147-418a-8e26-1414fc7ddc14",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          }
         ],
         "countCollectionPeriods": 0,
         "countDataProducts": 0,
         "platforms": [
           {
-            "id": "cc0f103e-e537-4437-8d2b-f7ea5ca617de"
+            "id": "c94db25b-1b48-47fe-90e3-47e8c16f0a92"
+          },
+          {
+            "id": "bb761da6-1606-444c-92d1-e6d30954f2d7"
           }
         ]
       },
@@ -592,41 +1436,54 @@
         "ongoing": false,
         "shortname": "GCPEx",
         "longname": "GPM Cold Season Precipitation Experiment",
-        "id": "b94baa5d-3c69-4270-baf8-afc02f7132de",
+        "id": "61616a26-fc33-450e-bd53-a7690d03e6b6",
         "seasons": [
           {
-            "id": "5ae15f8c-3d9a-4061-953d-5fea2df57654"
+            "id": "ee919d06-2e3d-49a4-8dc3-b2b035cb5f2f"
           }
         ],
         "focus": [
           {
-            "id": "23aedeee-2f83-4ca9-be30-5fda9a311421"
+            "id": "e42c7970-1913-44b4-822b-8d620eef8df8"
           },
           {
-            "id": "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53"
+            "id": "0ba119ec-7851-4546-8708-5ea3883e0a54"
           },
           {
-            "id": "a187959e-4132-4c2c-950d-7055bc5082b9"
+            "id": "2a9bec35-4fe5-4177-8443-d11f441310b3"
           }
         ],
-        "geophysical": [],
+        "geophysical": [
+          {
+            "id": "4438798c-bdb9-4498-acac-e169eb0da849"
+          },
+          {
+            "id": "5ed630d3-3e9d-4949-b677-e2a364752b21"
+          },
+          {
+            "id": "6b5dac3e-cd6a-4f40-b9d8-86dc6da79131"
+          }
+        ],
         "startdate": "2012-01-15",
         "enddate": "2012-03-04",
         "region": "Ontario, Canada and northern portions of the United States (e.g., New York state, the New England area, etc.)",
-        "deploymentIds": [
-          "9cfa5b55-7378-48af-9018-ba2d82afe2eb"
+        "deployments": [
+          {
+            "id": "1bac4b0f-de68-4c6b-a9bc-a084873b0f7d",
+            "regions": []
+          }
         ],
         "countCollectionPeriods": 0,
         "countDataProducts": 0,
         "platforms": [
           {
-            "id": "0cdd2d06-ba97-469d-96eb-0e0865c7c4c9"
+            "id": "d363dbac-d440-492b-99b4-5d617bf8aa38"
           },
           {
-            "id": "af872351-1e39-43dc-bdb5-3f4fb7def20b"
+            "id": "6fc94f62-d4f2-4a08-9511-2234d91b0665"
           },
           {
-            "id": "d59b3d7e-f782-4e25-a8eb-ceec91c0331e"
+            "id": "732c68d8-124b-45be-b2d2-dbc2d305d855"
           }
         ]
       },
@@ -634,44 +1491,87 @@
         "ongoing": false,
         "shortname": "DC3",
         "longname": "Deep Convective Clouds & Chemistry",
-        "id": "2bca3f73-ee2b-4336-aed0-7454ab8cdf13",
+        "id": "6d8b649b-e0b9-4adf-94bb-f5defc7ba930",
         "seasons": [
           {
-            "id": "416a1c43-85b6-4336-80ac-6ccda1226e54"
+            "id": "7394cb29-fa27-45d0-b4f3-7132b9e5bd52"
           },
           {
-            "id": "65900eb8-fb52-4da9-98e9-190cbf1d1cbe"
+            "id": "abde509c-8f19-4f12-af69-ed3d41ba09f9"
           },
           {
-            "id": "52b49cd7-4143-4bbd-9f09-bd8de945c837"
+            "id": "87a8463c-b2f4-4315-84cc-cb8d20024247"
           }
         ],
         "focus": [
           {
-            "id": "23aedeee-2f83-4ca9-be30-5fda9a311421"
+            "id": "e42c7970-1913-44b4-822b-8d620eef8df8"
           },
           {
-            "id": "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53"
+            "id": "0ba119ec-7851-4546-8708-5ea3883e0a54"
           }
         ],
-        "geophysical": [],
+        "geophysical": [
+          {
+            "id": "4c19e4b9-b47d-4550-bf1b-fb5daf1fdeb2"
+          },
+          {
+            "id": "458c5a19-17dd-48c1-bc12-c22ab69afd10"
+          },
+          {
+            "id": "1ffeed03-f578-4e23-8d7a-3fb59ca23321"
+          },
+          {
+            "id": "830fe73e-7102-4b97-bc14-c31d70de1ad3"
+          },
+          {
+            "id": "4438798c-bdb9-4498-acac-e169eb0da849"
+          },
+          {
+            "id": "80687b08-ae0d-4bc0-9401-dfca1053bd0c"
+          },
+          {
+            "id": "14803ce9-bb33-4ffd-ad2c-0f4be356764a"
+          },
+          {
+            "id": "6b5dac3e-cd6a-4f40-b9d8-86dc6da79131"
+          }
+        ],
         "startdate": "2012-05-18",
         "enddate": "2012-06-30",
         "region": "Northeastern Colorado, West Texas to Central Oklahoma, Northern Alabama",
-        "deploymentIds": [
-          "dc2fa7b2-3143-4ca8-9e5a-ee07e807e712"
+        "deployments": [
+          {
+            "id": "4025e078-74c9-4ec8-b697-af9132425c8e",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              },
+              {
+                "id": "7787b7dc-eafa-433c-ac57-72a8224a530d",
+                "shortname": "mid-latitude"
+              }
+            ]
+          }
         ],
         "countCollectionPeriods": 0,
         "countDataProducts": null,
         "platforms": [
           {
-            "id": "d59b3d7e-f782-4e25-a8eb-ceec91c0331e"
+            "id": "0493498f-f092-425e-bcd0-9fc807c77c0a"
           },
           {
-            "id": "2a3a99ee-1ea0-4ac9-9e52-6e733a0eda23"
+            "id": "6fc94f62-d4f2-4a08-9511-2234d91b0665"
           },
           {
-            "id": "1c57a92e-a6db-4e7e-9d56-704705acc192"
+            "id": "aa382cdc-d5f0-46eb-b980-48431af523c6"
+          },
+          {
+            "id": "63ef5aa5-2f57-4af6-8adf-2769f3e51c24"
+          },
+          {
+            "id": "c94db25b-1b48-47fe-90e3-47e8c16f0a92"
           }
         ]
       },
@@ -679,44 +1579,117 @@
         "ongoing": false,
         "shortname": "CARVE",
         "longname": "Carbon in Arctic Reservoirs Vulnerability Experiment",
-        "id": "7546673c-151c-436a-adf1-6128b2d7a515",
+        "id": "03b728ae-2235-488c-80ee-570dcf602f3b",
         "seasons": [
           {
-            "id": "416a1c43-85b6-4336-80ac-6ccda1226e54"
+            "id": "7394cb29-fa27-45d0-b4f3-7132b9e5bd52"
           },
           {
-            "id": "65900eb8-fb52-4da9-98e9-190cbf1d1cbe"
+            "id": "abde509c-8f19-4f12-af69-ed3d41ba09f9"
           },
           {
-            "id": "4ebcfcd2-1c9c-45b0-bad6-997fc3e3c904"
+            "id": "8ca7da19-8691-47ca-876b-029cfc2bdefa"
           }
         ],
         "focus": [
           {
-            "id": "23aedeee-2f83-4ca9-be30-5fda9a311421"
+            "id": "e42c7970-1913-44b4-822b-8d620eef8df8"
           },
           {
-            "id": "2a132687-f5a1-4bbc-b45a-97228c310cd8"
+            "id": "43bc862a-ece2-427c-ad5f-368466d3bc98"
           },
           {
-            "id": "75fdf3c3-f55b-4f33-9f56-7d7af49bef97"
+            "id": "b31b1fd0-d090-480a-ac8b-3d48175d2a00"
           }
         ],
-        "geophysical": [],
+        "geophysical": [
+          {
+            "id": "e8041eba-37e9-4c38-8f62-5119c7dde4b1"
+          },
+          {
+            "id": "458c5a19-17dd-48c1-bc12-c22ab69afd10"
+          },
+          {
+            "id": "1ffeed03-f578-4e23-8d7a-3fb59ca23321"
+          },
+          {
+            "id": "6b5dac3e-cd6a-4f40-b9d8-86dc6da79131"
+          },
+          {
+            "id": "b25df6ec-27d8-4dd3-9c8b-b87f3c34c83e"
+          },
+          {
+            "id": "c3c9b7d2-d555-41ea-bd20-831654a1694f"
+          },
+          {
+            "id": "a595708b-267f-489f-aecf-42ce98f64819"
+          }
+        ],
         "startdate": "2012-05-23",
         "enddate": "2015-11-12",
         "region": "Alaska",
-        "deploymentIds": [
-          "4dbdaadd-0a4a-469c-bf06-3210b404e436",
-          "98753f94-dbae-4b43-87dd-80b658ddc9a7",
-          "4b830da6-dc7a-4b06-a478-a3fc90bc3dbb",
-          "458e6f74-3827-4b7b-8f85-416fe010918b"
+        "deployments": [
+          {
+            "id": "d94bc68f-21f1-4353-9c0d-c3711a457025",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              },
+              {
+                "id": "517750b5-ff60-4267-97ff-0aa09255860e",
+                "shortname": "polar"
+              }
+            ]
+          },
+          {
+            "id": "6c5dda3a-e09b-4b07-980a-8a89abdde249",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              },
+              {
+                "id": "517750b5-ff60-4267-97ff-0aa09255860e",
+                "shortname": "polar"
+              }
+            ]
+          },
+          {
+            "id": "b028f92c-df6d-460b-a7d9-1680acb98e0e",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              },
+              {
+                "id": "517750b5-ff60-4267-97ff-0aa09255860e",
+                "shortname": "polar"
+              }
+            ]
+          },
+          {
+            "id": "103912fc-1761-4ed2-b8ff-fca2226579c2",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              },
+              {
+                "id": "517750b5-ff60-4267-97ff-0aa09255860e",
+                "shortname": "polar"
+              }
+            ]
+          }
         ],
         "countCollectionPeriods": 0,
         "countDataProducts": 0,
         "platforms": [
           {
-            "id": "900208da-3cb2-44b6-9f27-20209433f190"
+            "id": "fa7f2693-c9b1-4d89-b14c-0672487dc049"
+          },
+          {
+            "id": "7d58f61f-a73a-435a-9c9a-d4389e052aab"
           }
         ]
       },
@@ -724,68 +1697,362 @@
         "ongoing": false,
         "shortname": "AirMOSS",
         "longname": "Airborne Microwave Observatory of Subcanopy and Subsurface",
-        "id": "c0dc0d63-e32a-4fdc-b1ac-4f0e8a5c7754",
+        "id": "0c68f350-b544-4b52-9f46-2aceb6aa1b7d",
         "seasons": [
           {
-            "id": "80c1e584-8bf7-4cae-b9c1-e7f98d19a7a0"
+            "id": "2e373516-e075-44c5-8fe3-a23049f2acf5"
           }
         ],
         "focus": [
           {
-            "id": "75fdf3c3-f55b-4f33-9f56-7d7af49bef97"
+            "id": "b31b1fd0-d090-480a-ac8b-3d48175d2a00"
           },
           {
-            "id": "4e90e316-6d36-41b9-ae29-5125842b7b60"
+            "id": "e6a41072-65fc-411b-8e51-1dd01cd7dd17"
           }
         ],
-        "geophysical": [],
+        "geophysical": [
+          {
+            "id": "695ea5c2-e3f8-42d4-baef-fc48c2b4ff39"
+          },
+          {
+            "id": "c3c9b7d2-d555-41ea-bd20-831654a1694f"
+          },
+          {
+            "id": "c1f1d7d5-2b80-4987-be9f-ab39101ffe65"
+          },
+          {
+            "id": "a595708b-267f-489f-aecf-42ce98f64819"
+          },
+          {
+            "id": "43380dac-8364-44f1-86b8-48b8b9673cb4"
+          },
+          {
+            "id": "7d377a91-33db-43d4-ae3e-a510ec32cb0a"
+          }
+        ],
         "startdate": "2012-09-18",
         "enddate": "2015-09-29",
         "region": "North America",
-        "deploymentIds": [
-          "f2c42b8a-2c06-407c-9345-aa9824ac65f5",
-          "9f98f6f9-ea1b-4ef7-a891-8fb175bf1df5",
-          "11a38ed6-6786-4303-aaa5-ace5d00d35a4",
-          "9b6aae1c-c102-4efe-9e07-286ce3343b9b",
-          "5629c17a-8dae-49d7-a797-95e006b0a5fd",
-          "d0757945-9802-48d6-8a00-3f7d5af2e57e",
-          "7841fbdd-34a6-4128-bc55-9d0355cc565a",
-          "b2127707-2112-4627-b2b5-636283182864",
-          "506a50a7-7edb-405f-b327-e5dff9cf049e",
-          "d30699a9-a492-431e-92a3-bc452ff61ee2",
-          "fd3dacb3-8ce3-4b02-b2a7-9a8c827048de",
-          "ef0c65e2-4abb-439c-a81d-5d78f52cb1b4",
-          "84b59cc2-1b5e-4439-8c41-039a194a7664",
-          "ead3b8c9-798b-4614-9c9f-952d6922c635",
-          "c00c3e85-a3e7-4274-908a-2863517f6901",
-          "4bc70279-e51d-4ca8-8ec3-6dd6e6e94247",
-          "d9e5d99f-dc95-41a8-9b77-80edd2222e4b",
-          "a0f6e369-d6fc-4eab-916a-ff7a9277c834",
-          "7525cebb-228a-44e8-8bba-da2fa621aa55",
-          "aedaf11d-cbea-4650-b29c-985829185c89",
-          "42704907-a7f1-4163-8ea7-c011c72b1802",
-          "c133f358-85f6-446f-940a-0efcc10180dd",
-          "c66857d0-bb1a-450b-a741-e618013be3d8",
-          "341480a1-270f-4478-b173-83672806279c",
-          "de73b8b2-7d8d-45d8-80c3-abe9a6ef3968",
-          "0ee5f0c2-1136-4128-bc8c-5eca585b7b46",
-          "09379419-e2f0-4411-8a76-5a670bd3b75e",
-          "e15c3181-1c76-41d2-abb3-7b2ef56800a5",
-          "604c5412-55df-4cd1-b60e-f3c8b38ed935",
-          "ba5b8b97-f036-460b-bc99-2cedf732dc01",
-          "ce621f9f-6e0a-45bc-a31f-878482420389",
-          "b2b5eab1-1d22-4f3f-b3fd-1757b447c92a",
-          "62eaeb18-1a0f-4e89-aaaa-f7c5d46231d6",
-          "83c4522a-641b-405a-85e7-90878e797db0"
+        "deployments": [
+          {
+            "id": "e2cf75e3-45c3-4cf4-9223-017ceeb97c7c",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "8f4614ba-3f14-4b35-81bf-0f5261d62a2d",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "715a1591-5539-4680-aced-31d8c11502ae",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "f81db555-a65f-42e4-92a6-9f21d63e9eb7",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "c5e9bace-0fc4-49f3-9e8e-f48cc7b4abb5",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "52dd3846-2ed6-4ba0-b213-7e0608c5752a",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "3204a519-b70d-4302-83e5-8dd1392c693b",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "a899997c-397f-456a-953b-374ca35109df",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "e85810b4-e8fe-47fa-9c04-e8263ddc87a4",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "6ce1e9e8-f1ab-4a0d-aa10-545a3a7ff95b",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "cfb057a7-837b-4de1-ad5b-82b04b6a8850",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "30181d09-844d-42f4-9386-0297a3e7b250",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "79b8e8cd-36f0-41c5-85d4-70b648c208b6",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "065ec451-ad99-4821-9f52-a7eb7d8cc1a3",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "215a0931-e502-4f01-a312-5b86ebd81f83",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "1000d601-c308-4769-acfd-8b044f01322a",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "3ec061ea-b93e-4797-a472-d99d4e06f770",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "7e303985-5799-44a2-b9db-d5e1584aeb28",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "73b1d9dd-73dd-488b-98e0-429f2694a69e",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "d23eae66-15c9-40b5-8dbe-acd1b7372cf0",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "408ed306-89cb-4451-ae60-da4088ffa9a4",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "94ae469e-bfef-4ac1-8190-cdd65bfa9cb4",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "71a90032-6149-4719-bae0-135d52a2acce",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "11e8f9bb-6416-430b-97bd-87838c1d44a6",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "8b55cb2c-ea4b-4ef8-8824-4079e0937d8f",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "5818dceb-b6f2-4f5c-bb22-58a2b7062c28",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "ccd3471d-8453-4b26-88c5-bb103e9ca9d1",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "e89cb7da-bd0a-43df-8f63-5db3a89e668e",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "cc6492f2-fa18-4d1f-ac65-41f04d39e932",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "17624350-b93d-4342-931d-f79b1187f93b",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "3ab6f6df-3d92-487d-b161-0b77c69fa0d9",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "0b9e567b-537f-486d-b21b-8d2a0d87544a",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "b264cb0e-c9ee-4f32-adc1-905f2ff0c337",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "93da11a3-e55b-4673-af4c-d9e2bd135471",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          }
         ],
         "countCollectionPeriods": 0,
         "countDataProducts": 0,
         "platforms": [
           {
-            "id": "fea8651b-9d6e-49cf-9433-f1c6685ec0dc"
+            "id": "96b56413-2068-4fc4-a093-4780a02744e9"
           },
           {
-            "id": "a67e9128-f25f-4bb8-97c1-5d89005111a8"
+            "id": "5a5ffdbe-0eae-48b1-a7ad-d63dfebffb9a"
+          },
+          {
+            "id": "7d58f61f-a73a-435a-9c9a-d4389e052aab"
           }
         ]
       },
@@ -793,46 +2060,89 @@
         "ongoing": false,
         "shortname": "ARCTAS",
         "longname": "Arctic Research of the Composition of the Troposphere from Aircraft and Satellites",
-        "id": "34a697c1-4464-4b06-9d73-a9be86c586cc",
+        "id": "e48c2d79-822b-4c9e-9f72-2776d5d1eac6",
         "seasons": [
           {
-            "id": "416a1c43-85b6-4336-80ac-6ccda1226e54"
+            "id": "7394cb29-fa27-45d0-b4f3-7132b9e5bd52"
           },
           {
-            "id": "65900eb8-fb52-4da9-98e9-190cbf1d1cbe"
+            "id": "abde509c-8f19-4f12-af69-ed3d41ba09f9"
           },
           {
-            "id": "52b49cd7-4143-4bbd-9f09-bd8de945c837"
+            "id": "87a8463c-b2f4-4315-84cc-cb8d20024247"
           }
         ],
         "focus": [
           {
-            "id": "23aedeee-2f83-4ca9-be30-5fda9a311421"
+            "id": "e42c7970-1913-44b4-822b-8d620eef8df8"
           },
           {
-            "id": "2a132687-f5a1-4bbc-b45a-97228c310cd8"
+            "id": "43bc862a-ece2-427c-ad5f-368466d3bc98"
           }
         ],
-        "geophysical": [],
+        "geophysical": [
+          {
+            "id": "4c19e4b9-b47d-4550-bf1b-fb5daf1fdeb2"
+          },
+          {
+            "id": "e8041eba-37e9-4c38-8f62-5119c7dde4b1"
+          },
+          {
+            "id": "458c5a19-17dd-48c1-bc12-c22ab69afd10"
+          },
+          {
+            "id": "1ffeed03-f578-4e23-8d7a-3fb59ca23321"
+          },
+          {
+            "id": "830fe73e-7102-4b97-bc14-c31d70de1ad3"
+          }
+        ],
         "startdate": "2008-04-01",
         "enddate": "2008-07-14",
         "region": "Alaska, Western Canada, California",
-        "deploymentIds": [
-          "4dbbbedf-d945-41e4-b9d9-160c92cc5b51",
-          "eff7ad7f-d0ce-4391-a34c-71d72cc4040d",
-          "d1b6132c-96f6-4f5c-9c47-7d9544339452"
+        "deployments": [
+          {
+            "id": "e71e8fbd-9f1a-4b91-9187-4b71109c25ff",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "2de3c9cf-bff5-4d87-ab03-2b9690ec10c8",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          },
+          {
+            "id": "683bfce3-f70e-49fa-8f87-74151327db19",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          }
         ],
         "countCollectionPeriods": 0,
         "countDataProducts": 0,
         "platforms": [
           {
-            "id": "d59b3d7e-f782-4e25-a8eb-ceec91c0331e"
+            "id": "715351b2-1126-4c0d-8130-5caa9f044f6d"
           },
           {
-            "id": "1b607095-4f6d-4e70-8e16-798bc59a2d59"
+            "id": "a0dea5de-aa33-4f13-a8a4-34729e3de5fd"
           },
           {
-            "id": "2084ab0c-4f18-4aa6-ad7b-70bc861d2d80"
+            "id": "6fc94f62-d4f2-4a08-9511-2234d91b0665"
+          },
+          {
+            "id": "7d58f61f-a73a-435a-9c9a-d4389e052aab"
           }
         ]
       },
@@ -840,41 +2150,77 @@
         "ongoing": false,
         "shortname": "ACES",
         "longname": "Altus Cumulus Electrification Study",
-        "id": "d1a09bda-9454-4f66-be12-dafc5f4df308",
+        "id": "951482fa-5748-46ba-aed5-aab8b106b103",
         "seasons": [
           {
-            "id": "65900eb8-fb52-4da9-98e9-190cbf1d1cbe"
+            "id": "abde509c-8f19-4f12-af69-ed3d41ba09f9"
           },
           {
-            "id": "52b49cd7-4143-4bbd-9f09-bd8de945c837"
+            "id": "87a8463c-b2f4-4315-84cc-cb8d20024247"
           }
         ],
         "focus": [
           {
-            "id": "23aedeee-2f83-4ca9-be30-5fda9a311421"
+            "id": "e42c7970-1913-44b4-822b-8d620eef8df8"
           },
           {
-            "id": "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53"
+            "id": "0ba119ec-7851-4546-8708-5ea3883e0a54"
           },
           {
-            "id": "2a132687-f5a1-4bbc-b45a-97228c310cd8"
+            "id": "43bc862a-ece2-427c-ad5f-368466d3bc98"
           },
           {
-            "id": "a187959e-4132-4c2c-950d-7055bc5082b9"
+            "id": "2a9bec35-4fe5-4177-8443-d11f441310b3"
           }
         ],
-        "geophysical": [],
+        "geophysical": [
+          {
+            "id": "830fe73e-7102-4b97-bc14-c31d70de1ad3"
+          },
+          {
+            "id": "4438798c-bdb9-4498-acac-e169eb0da849"
+          },
+          {
+            "id": "80687b08-ae0d-4bc0-9401-dfca1053bd0c"
+          },
+          {
+            "id": "14803ce9-bb33-4ffd-ad2c-0f4be356764a"
+          },
+          {
+            "id": "6b5dac3e-cd6a-4f40-b9d8-86dc6da79131"
+          }
+        ],
         "startdate": "2002-08-02",
         "enddate": "2002-08-30",
         "region": "Florida Everglades",
-        "deploymentIds": [
-          "ddc8ce9e-d4db-4b39-8041-06b272902544"
+        "deployments": [
+          {
+            "id": "e6e65f44-a3e6-4ad5-99db-167a2c7b27af",
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
+                "shortname": "continental"
+              }
+            ]
+          }
         ],
         "countCollectionPeriods": 0,
         "countDataProducts": 0,
         "platforms": [
           {
-            "id": "32242d25-0152-4d98-a3a2-d1f874597cd6"
+            "id": "5f6a2a1a-2a4b-4a42-9fff-04f1c2af6f5c"
+          },
+          {
+            "id": "c94db25b-1b48-47fe-90e3-47e8c16f0a92"
+          },
+          {
+            "id": "c63849f7-ea91-4525-9029-940a9c53ed36"
+          },
+          {
+            "id": "87650e20-ecf3-4703-aeed-49c8affc6059"
+          },
+          {
+            "id": "7d58f61f-a73a-435a-9c9a-d4389e052aab"
           }
         ]
       }
@@ -883,622 +2229,424 @@
   "allSeason": {
     "options": [
       {
-        "id": "5ae15f8c-3d9a-4061-953d-5fea2df57654",
+        "id": "ee919d06-2e3d-49a4-8dc3-b2b035cb5f2f",
         "shortname": "boreal winter",
         "longname": "northern hemisphere winter months"
       },
       {
-        "id": "416a1c43-85b6-4336-80ac-6ccda1226e54",
+        "id": "7394cb29-fa27-45d0-b4f3-7132b9e5bd52",
         "shortname": "boreal spring",
         "longname": "northern hemisphere spring months"
       },
       {
-        "id": "65900eb8-fb52-4da9-98e9-190cbf1d1cbe",
+        "id": "abde509c-8f19-4f12-af69-ed3d41ba09f9",
         "shortname": "boreal summer",
         "longname": "northern hemisphere summer months"
       },
       {
-        "id": "4ebcfcd2-1c9c-45b0-bad6-997fc3e3c904",
+        "id": "8ca7da19-8691-47ca-876b-029cfc2bdefa",
         "shortname": "boreal fall",
         "longname": "northern hemisphere fall months"
       },
       {
-        "id": "f5b65f38-162a-473b-869b-0094799b202e",
+        "id": "b445e9ad-47d1-4d2d-baa1-9ade44870377",
         "shortname": "austral winter",
         "longname": "southern hemisphere winter months"
       },
       {
-        "id": "5462d618-6f14-43d1-a9c7-19e7fef9a84b",
+        "id": "0730b0a1-480b-487f-a11a-d40a50f33b49",
         "shortname": "austral spring",
         "longname": "southern hemisphere spring months"
       },
       {
-        "id": "a27c0f4a-1bab-4f64-a666-0f08ba3c874a",
+        "id": "0929665a-00c0-40f3-9a5e-7abd42348bcd",
         "shortname": "austral summer",
         "longname": "southern hemisphere summer months"
       },
       {
-        "id": "108eb86b-1139-4ae6-859c-bfaaf0acc709",
+        "id": "37f01622-83bb-443e-9e5f-d0bc14289d2f",
         "shortname": "austral fall",
         "longname": "southern hemisphere fall months"
       },
       {
-        "id": "cad0fb1f-bdfa-48af-a17d-9a87f1ecfa49",
+        "id": "cbf95f91-ead5-43b4-aa64-c046f98838ee",
         "shortname": "monsoon",
         "longname": "monsoon period"
       },
       {
-        "id": "12b3f425-fbb9-4dcd-9c3a-84fda116e8c5",
+        "id": "2ee66491-f6fd-4f0a-9b35-bccf0e349e9a",
         "shortname": "break",
         "longname": "non-monsoon period"
       },
       {
-        "id": "c29c7993-71a9-423e-bbaf-2646585669b1",
+        "id": "e490cd29-53b5-4a22-ae4b-584865560519",
         "shortname": "dry",
         "longname": "dry season months"
       },
       {
-        "id": "081ccd03-e46f-459e-8101-b270d0266eac",
+        "id": "0e7fa0e9-97b4-4a26-a148-325a6fd80a96",
         "shortname": "wet",
         "longname": "wet season months"
       },
       {
-        "id": "52b49cd7-4143-4bbd-9f09-bd8de945c837",
+        "id": "87a8463c-b2f4-4315-84cc-cb8d20024247",
         "shortname": "warm",
         "longname": "warm to hot weather months"
       },
       {
-        "id": "d4b539c1-32d3-4089-9e08-db714704a13c",
+        "id": "fafe2bed-972d-4cbf-9d10-4d258e6ccd26",
         "shortname": "cold",
         "longname": "cool to cold weather months"
       },
       {
-        "id": "824e5caa-dc94-4927-aba5-b8e8d8d6273d",
+        "id": "ed1af124-797b-4585-8cd3-14116daf916e",
         "shortname": "equatorial",
         "longname": "equatorial region with no seasonal pattern"
       },
       {
-        "id": "80c1e584-8bf7-4cae-b9c1-e7f98d19a7a0",
+        "id": "2e373516-e075-44c5-8fe3-a23049f2acf5",
         "shortname": "year round",
         "longname": "study covers all seasons"
-      },
-      {
-        "id": "d3c6d320-e3cf-42e0-b729-b4477da17422",
-        "shortname": "NID",
-        "longname": "Information not Identified"
       }
     ]
   },
   "allFocusArea": {
     "options": [
       {
-        "id": "23aedeee-2f83-4ca9-be30-5fda9a311421",
+        "id": "e42c7970-1913-44b4-822b-8d620eef8df8",
         "shortname": "Atmospheric Composition",
         "longname": "NASA Atmospheric Composition Focus Area"
       },
       {
-        "id": "4c5e9dc3-38ed-40cb-b6ea-cacf96057b53",
+        "id": "0ba119ec-7851-4546-8708-5ea3883e0a54",
         "shortname": "Weather",
         "longname": "NASA Weather and Atmospheric Dynamics Focus Area"
       },
       {
-        "id": "2a132687-f5a1-4bbc-b45a-97228c310cd8",
+        "id": "43bc862a-ece2-427c-ad5f-368466d3bc98",
         "shortname": "Climate Variability & Change",
         "longname": "NASA Climate Variability and Change Focus Area"
       },
       {
-        "id": "a187959e-4132-4c2c-950d-7055bc5082b9",
+        "id": "2a9bec35-4fe5-4177-8443-d11f441310b3",
         "shortname": "Global Water & Energy Cycle",
         "longname": "NASA Global Water and Energy Cycle Focus Area"
       },
       {
-        "id": "75fdf3c3-f55b-4f33-9f56-7d7af49bef97",
+        "id": "b31b1fd0-d090-480a-ac8b-3d48175d2a00",
         "shortname": "Carbon Cycle & Ecosystems",
         "longname": "NASA Carbon Cycle and Ecosystems Focus Area"
       },
       {
-        "id": "4e90e316-6d36-41b9-ae29-5125842b7b60",
+        "id": "e6a41072-65fc-411b-8e51-1dd01cd7dd17",
         "shortname": "Earth Surface & Interior",
         "longname": "NASA Earth Surface and Interior Focus Area"
-      },
-      {
-        "id": "e1b07238-763d-4836-a290-fba2eab0b1b8",
-        "shortname": "NID",
-        "longname": "Information not Identified"
       }
     ]
   },
   "allGeophysicalConcept": {
     "options": [
       {
-        "id": "9e52d6cf-5a81-4b53-a942-653baeb1fdc1",
+        "id": "4c19e4b9-b47d-4550-bf1b-fb5daf1fdeb2",
         "shortname": "Aerosols",
-        "longname": "Atmospheric Chemistry - Aerosols"
+        "longname": "Aerosols"
       },
       {
-        "id": "cef614bb-0bac-4f62-85af-8a0295b76034",
-        "shortname": "Air Quality (AirQual)",
-        "longname": "Atmospheric Chemistry - Air Quality"
+        "id": "e8041eba-37e9-4c38-8f62-5119c7dde4b1",
+        "shortname": "Air Qual",
+        "longname": "Air Quality"
       },
       {
-        "id": "b306795c-557f-4603-b813-56d39fb00c76",
-        "shortname": "Atmospheric Chemicals & Trace Gases",
-        "longname": "Atmospheric Chemistry - Chemical Composition & Trace Gases"
+        "id": "458c5a19-17dd-48c1-bc12-c22ab69afd10",
+        "shortname": "Atms Chem",
+        "longname": "Atmospheric Chemicals & Trace Gases"
       },
       {
-        "id": "e30bf13d-4abc-4851-b699-d49bf67c4ad6",
-        "shortname": "Upper Atmospheric Chemistry",
-        "longname": "Atmospheric Chemistry - Upper Atmosphere"
+        "id": "1ffeed03-f578-4e23-8d7a-3fb59ca23321",
+        "shortname": "Upper Atms Chem",
+        "longname": "Upper Atmospheric Chemistry"
       },
       {
-        "id": "a5d259cd-0b6c-441e-9cda-237a991d30ab",
-        "shortname": "Radiation & Energy Budget",
-        "longname": "Water/Energy Cycle - Radiation & Energy Budget"
+        "id": "830fe73e-7102-4b97-bc14-c31d70de1ad3",
+        "shortname": "Radiation & Energy",
+        "longname": "Radiation & Energy Budget"
       },
       {
-        "id": "2f4c11cd-2e66-424b-a164-d5e5a1ded727",
-        "shortname": "Clouds-Properties & Processes & Dynamics",
-        "longname": "Weather - Cloud Properties, Processes, & Dynamics"
+        "id": "4438798c-bdb9-4498-acac-e169eb0da849",
+        "shortname": "Clouds",
+        "longname": "Clouds-Properties & Processes & Dynamics"
       },
       {
-        "id": "20c5cc69-f86b-46eb-850c-094ff8d8c104",
-        "shortname": "Boundary Layer Processes",
-        "longname": "Weather - Boundary Layer Processes"
+        "id": "cfe2a5ff-9fe3-4285-8355-b4410aa44986",
+        "shortname": "BL Pros",
+        "longname": "Boundary Layer Processes"
       },
       {
-        "id": "4a716efb-76ed-4707-9842-a290d07d2410",
-        "shortname": "Atmospheric Electricity & Lightning",
-        "longname": "Weather - Atmospheric Electricity & Lightning"
+        "id": "80687b08-ae0d-4bc0-9401-dfca1053bd0c",
+        "shortname": "Atms Elec",
+        "longname": "Atmospheric Electricity & Lightning"
       },
       {
-        "id": "cf2628cd-325e-4485-95f1-4f7c7f24df84",
-        "shortname": "Tropical Cyclones",
-        "longname": "Weather - Tropical Cyclones"
+        "id": "d3815227-f7e1-45f0-8db0-ff203142c99f",
+        "shortname": "TCs",
+        "longname": "Tropical Cyclones"
       },
       {
-        "id": "2b6b475c-444c-4e66-9dec-61da55cd46da",
-        "shortname": "Mesoscale Convection & Severe Weather",
-        "longname": "Weather - Mesoscale Convection & Severe Weather"
+        "id": "14803ce9-bb33-4ffd-ad2c-0f4be356764a",
+        "shortname": "Meso & Svr Wx",
+        "longname": "Mesoscale Convection & Severe Weather"
       },
       {
-        "id": "04b29f58-f0a5-4b84-82d8-56c9f826e2c3",
-        "shortname": "Mid-latitude Cyclones",
-        "longname": "Weather - Mid-latitude Cyclones"
+        "id": "5ed630d3-3e9d-4949-b677-e2a364752b21",
+        "shortname": "Mid-lat Cyclones",
+        "longname": "Mid-latitude Cyclones"
       },
       {
-        "id": "360e94b2-fc1a-4d2e-9715-dc2060be3d5f",
-        "shortname": "Precipitation (Precip)",
-        "longname": "Water/Energy Cycle - Precipitation"
+        "id": "6b5dac3e-cd6a-4f40-b9d8-86dc6da79131",
+        "shortname": "Precip",
+        "longname": "Precipitation"
       },
       {
-        "id": "390e1e0d-3d2c-46df-a00b-c65b4d7151a5",
-        "shortname": "Terrestrial Hydrology (TerrHydrol)",
-        "longname": "Water/Energy Cycle - Terrestrial Hydrology"
+        "id": "695ea5c2-e3f8-42d4-baef-fc48c2b4ff39",
+        "shortname": "Terr Hydro",
+        "longname": "Terrestrial Hydrology"
       },
       {
-        "id": "1cf782c7-8a10-479c-9a57-b29fe17746ac",
-        "shortname": "Ice and Glacial Properties & Processes",
-        "longname": "Climate - Ice and Glacial Properties & Processes"
+        "id": "b25df6ec-27d8-4dd3-9c8b-b87f3c34c83e",
+        "shortname": "Ice & Glacial",
+        "longname": "Ice and Glacial Properties & Processes"
       },
       {
-        "id": "ad26de91-23d9-4e3d-b27e-978c81afe3df",
-        "shortname": "Ocean Properties & Processes",
-        "longname": ""
+        "id": "3bd4c052-5c6c-4da1-934d-6cfd9f01d527",
+        "shortname": "Oceans",
+        "longname": "Ocean Properties & Processes"
       },
       {
-        "id": "0053a024-2ccd-4b31-bdf1-eafe6b48e314",
-        "shortname": "Ecosystems/Biogeochemistry",
-        "longname": "Carbon/Ecosystems - Biogeochemical Interactions"
+        "id": "c3c9b7d2-d555-41ea-bd20-831654a1694f",
+        "shortname": "Biogeochem",
+        "longname": "Ecosystems/Biogeochemical Interactions"
       },
       {
-        "id": "96e8e86f-2b16-4bb1-99ee-8020b8984602",
+        "id": "c1f1d7d5-2b80-4987-be9f-ab39101ffe65",
         "shortname": "Biodiversity",
-        "longname": "Carbon/Ecosystems - Biodiversity"
+        "longname": "Biodiversity"
       },
       {
-        "id": "64f7434e-63a1-405f-b3c9-875ee282fa4b",
-        "shortname": "Carbon Storage & Processes",
-        "longname": "Carbon/Ecosystems - Carbon Storage & Processes"
+        "id": "a595708b-267f-489f-aecf-42ce98f64819",
+        "shortname": "Carbon Storage",
+        "longname": "Carbon Storage & Processes"
       },
       {
-        "id": "6490e743-061e-4cd7-adb6-3344ff1e87bf",
-        "shortname": "Soil Properties  (SoilProp)",
-        "longname": ""
+        "id": "43380dac-8364-44f1-86b8-48b8b9673cb4",
+        "shortname": "Soils",
+        "longname": "Soil Properties"
       },
       {
-        "id": "dd8f913b-2fc4-4a1d-b3da-4c76afbf068e",
-        "shortname": "Land Characteristics",
-        "longname": ""
+        "id": "7d377a91-33db-43d4-ae3e-a510ec32cb0a",
+        "shortname": "Land Chars",
+        "longname": "Land Characteristics"
       },
       {
-        "id": "3103a214-1df3-4fa9-8f7e-e9dcf49a0401",
-        "shortname": "Tectonic Processes",
-        "longname": "Solid Earth - Tectonic Processes"
+        "id": "b88a321e-ead5-4b83-8bf6-6b4bbb7541eb",
+        "shortname": "Tectonics",
+        "longname": "Tectonic Processes"
       },
       {
-        "id": "9de5d9f2-0d0f-4c2c-aa74-4cc0594f41c3",
-        "shortname": "Volcanic Processes",
-        "longname": "Solid Earth - Volcanic Processes"
+        "id": "83047381-6b3d-4c63-9cd7-62e20abb89f5",
+        "shortname": "Volcanics",
+        "longname": "Volcanic Processes"
       },
       {
-        "id": "ca948668-50c0-4f52-885a-ab6ed3e1ab30",
-        "shortname": "Earth's Magnetic Field (MagField)",
-        "longname": "Solid Earth - Magnetic Field"
+        "id": "0510f5eb-7303-43c5-8a72-5778e5ac84d8",
+        "shortname": "Earth Mag Field",
+        "longname": "Earth's Magnetic Field"
       },
       {
-        "id": "b8d7c54e-4678-40ad-a572-3b7fa6ac4213",
-        "shortname": "Earth's Interior (EarthInt)",
-        "longname": "Solid Earth - Deep Interior Dynamics"
+        "id": "99e3c1cd-c6f9-417d-aeea-18eb302fd62a",
+        "shortname": "Earth Int",
+        "longname": "Earth's Interior"
       },
       {
-        "id": "42de25d7-97b8-4cd1-9288-7a85dd906489",
-        "shortname": "Earth-Climate Interactions",
-        "longname": "Solid Earth - Climate-driven Earth Processes"
+        "id": "18d0f620-15b4-4c9c-aba1-129a3037b614",
+        "shortname": "Earth/Clim",
+        "longname": "Earth/Climate Interactions"
       },
       {
-        "id": "fb74f5e0-398d-44e6-9087-cf5e8f445562",
+        "id": "bb159ac7-19ab-4242-8db5-ba25ec3a817f",
         "shortname": "Geodesy",
-        "longname": "Solid Earth - Geodesy"
+        "longname": "Geodesy"
       }
     ]
   },
   "allGeographicalRegion": {
     "options": [
       {
-        "id": "a9b86ec6-cb57-4ef5-9a13-c5a767195782",
+        "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
         "shortname": "continental"
       },
       {
-        "id": "6ad9e3d8-81c0-4c7c-9db8-888988ab677e",
+        "id": "2ee04b8b-1d14-4a3d-be41-ec096a4c0404",
         "shortname": "maritime"
       },
       {
-        "id": "292950c5-e5df-4cea-9778-b0dc6c011294",
+        "id": "9bf6df49-705e-49fc-abe8-73d9cd9b1e3e",
         "shortname": "coastal"
       },
       {
-        "id": "fd9fb6ee-121e-4a44-8155-d478500599d9",
+        "id": "1ec8559a-ebd5-4cf3-ae1d-186f2dc5bd7d",
         "shortname": "mountains"
       },
       {
-        "id": "12463bc6-32a8-45bd-bdad-d7bd7db6c51c",
+        "id": "6e8ed1f4-b2ae-4b46-8b75-0d4b1a54027c",
         "shortname": "island"
       },
       {
-        "id": "2567b1ed-8753-433f-b475-9bb3ef5c1bb3",
+        "id": "5596e259-a589-40a5-b729-13c42f5ee3ac",
         "shortname": "desert"
       },
       {
-        "id": "674d3da5-6bef-439f-838a-eaf79d733e42",
+        "id": "84f174f5-bac9-4aef-afdd-28a65a9a9355",
         "shortname": "forest"
       },
       {
-        "id": "9ff66c70-f482-40e8-9a5e-ec45306760e0",
+        "id": "07c98971-c267-4ce3-a732-fb55c6cd7415",
         "shortname": "urban"
       },
       {
-        "id": "a95c9bd6-395a-409c-8875-586dbc0601f7",
-        "shortname": "agriculture"
+        "id": "0b56b3f6-a4b4-4aa1-9b84-a9f3cfd9b53c",
+        "shortname": "agricultural"
       },
       {
-        "id": "5624a0f2-7b7b-4f4c-a8fd-898e9751e0e1",
+        "id": "cf8a5cdd-9ab3-435b-ac27-c619b55a2c79",
         "shortname": "equitorial"
       },
       {
-        "id": "cb25d6eb-a988-4e21-ac05-4912017415b5",
+        "id": "1b40de01-2163-40f9-a5ce-f999c923b30b",
         "shortname": "tropical"
       },
       {
-        "id": "731da6a3-04b9-4ca1-826a-388820f6fe90",
+        "id": "7787b7dc-eafa-433c-ac57-72a8224a530d",
         "shortname": "mid-latitude"
       },
       {
-        "id": "9df5be07-f7e3-4ce4-94fe-c813ad371a71",
+        "id": "517750b5-ff60-4267-97ff-0aa09255860e",
         "shortname": "polar"
       },
       {
-        "id": "26d0e469-de46-4f66-8722-b270e2602b70",
+        "id": "4237ed6e-213f-42bf-865e-6dbbb8ae7f82",
         "shortname": "sea ice"
       },
       {
-        "id": "67519804-37a2-403a-8ee0-6db25d17a731",
+        "id": "1e456bf9-58ba-41d2-85c5-cd7980bc015d",
         "shortname": "coral"
       },
       {
-        "id": "2616378d-bf8c-41a7-b1f3-2c65dd77e759",
+        "id": "b61569ec-59f7-413e-9c89-64c581c4b367",
         "shortname": "rainforest"
-      },
-      {
-        "id": "6ef85571-d903-458b-980a-273bbace62bc",
-        "shortname": "NID"
       }
     ]
   },
   "allPlatform": {
     "options": [
       {
-        "id": "fea8651b-9d6e-49cf-9433-f1c6685ec0dc",
+        "id": "96b56413-2068-4fc4-a093-4780a02744e9",
         "shortname": "ALAR",
         "longname": "Airborne Laboratory for Atmospheric Research"
       },
       {
-        "id": "32242d25-0152-4d98-a3a2-d1f874597cd6",
+        "id": "c63849f7-ea91-4525-9029-940a9c53ed36",
         "shortname": "ALTUS II",
         "longname": "ALTUS II"
       },
       {
-        "id": "99bbbba6-7de4-43a0-9483-1175cec6b93f",
+        "id": "28154c07-d35b-4e13-982c-63b69e1fe57c",
         "shortname": "ASO",
         "longname": "Airborne Snow Observatory"
       },
       {
-        "id": "1b607095-4f6d-4e70-8e16-798bc59a2d59",
+        "id": "a0dea5de-aa33-4f13-a8a4-34729e3de5fd",
         "shortname": "B-200",
         "longname": "Beechcraft King Air B-200"
       },
       {
-        "id": "900208da-3cb2-44b6-9f27-20209433f190",
+        "id": "fa7f2693-c9b1-4d89-b14c-0672487dc049",
         "shortname": "C-23 Sherpa",
         "longname": ""
       },
       {
-        "id": "0cdd2d06-ba97-469d-96eb-0e0865c7c4c9",
+        "id": "732c68d8-124b-45be-b2d2-dbc2d305d855",
         "shortname": "Citation",
         "longname": "Cessna Citation II"
       },
       {
-        "id": "af872351-1e39-43dc-bdb5-3f4fb7def20b",
+        "id": "d363dbac-d440-492b-99b4-5d617bf8aa38",
         "shortname": "CV-580",
         "longname": "Convair CV-580"
       },
       {
-        "id": "d59b3d7e-f782-4e25-a8eb-ceec91c0331e",
+        "id": "6fc94f62-d4f2-4a08-9511-2234d91b0665",
         "shortname": "DC-8",
         "longname": "Douglas DC-8"
       },
       {
-        "id": "cc0f103e-e537-4437-8d2b-f7ea5ca617de",
+        "id": "bb761da6-1606-444c-92d1-e6d30954f2d7",
         "shortname": "ER-2",
         "longname": "NASA Earth Resources-2 aircraft"
       },
       {
-        "id": "1c57a92e-a6db-4e7e-9d56-704705acc192",
+        "id": "63ef5aa5-2f57-4af6-8adf-2769f3e51c24",
         "shortname": "Falcon",
         "longname": "Dassault Falcon 20-E5"
       },
       {
-        "id": "a67e9128-f25f-4bb8-97c1-5d89005111a8",
+        "id": "5a5ffdbe-0eae-48b1-a7ad-d63dfebffb9a",
         "shortname": "G-III",
         "longname": "Gulfstream III"
       },
       {
-        "id": "2a3a99ee-1ea0-4ac9-9e52-6e733a0eda23",
+        "id": "0493498f-f092-425e-bcd0-9fc807c77c0a",
         "shortname": "G-V",
         "longname": "Gulfstream-V"
       },
       {
-        "id": "5cde9f2a-10cb-47d6-b095-3b61d1e8b1e2",
+        "id": "ad8a0ce5-8aae-4fe5-8b46-7586c267efdb",
         "shortname": "GH",
         "longname": "Global Hawk UAV"
       },
       {
-        "id": "2084ab0c-4f18-4aa6-ad7b-70bc861d2d80",
+        "id": "715351b2-1126-4c0d-8130-5caa9f044f6d",
         "shortname": "P-3",
         "longname": "P-3 Orion"
       },
       {
-        "id": "5baa4bc5-ad5a-43f8-9ed3-cf7d0dbdae36",
+        "id": "2cbc931a-6f47-45f0-bff6-659ef2efc68d",
         "shortname": "WB-57",
         "longname": "NASA WB-57"
-      }
-    ]
-  },
-  "allDeployment": {
-    "nodes": [
-      {
-        "geographical_regions": [],
-        "id": "3dceae4f-5e4c-4bcb-87af-19abb4b473a1"
       },
       {
-        "geographical_regions": [],
-        "id": "ce3a574b-ea82-4257-bacb-1a518b76e4e9"
+        "id": "7d58f61f-a73a-435a-9c9a-d4389e052aab",
+        "shortname": "Campaign FS",
+        "longname": "Field Sites deployed for a campaign"
       },
       {
-        "geographical_regions": [],
-        "id": "dbe8a890-33e2-46b1-92ea-bcf2d6a3a026"
+        "id": "aa382cdc-d5f0-46eb-b980-48431af523c6",
+        "shortname": "Campaign V",
+        "longname": "Insrumentation on Vehicles moved to a study area"
       },
       {
-        "geographical_regions": [
-          "2616378d-bf8c-41a7-b1f3-2c65dd77e759",
-          "fd9fb6ee-121e-4a44-8155-d478500599d9",
-          "6ad9e3d8-81c0-4c7c-9db8-888988ab677e",
-          "731da6a3-04b9-4ca1-826a-388820f6fe90"
-        ],
-        "id": "04f5d90a-b356-42ea-9c17-1c8d3b46722b"
+        "id": "c94db25b-1b48-47fe-90e3-47e8c16f0a92",
+        "shortname": "Campaign PL",
+        "longname": "Maintained/Operational Permanent Land Sites"
       },
       {
-        "geographical_regions": [],
-        "id": "4dbdaadd-0a4a-469c-bf06-3210b404e436"
+        "id": "87650e20-ecf3-4703-aeed-49c8affc6059",
+        "shortname": "Campaign B",
+        "longname": "Balloons launched with instrument packages (e.g., radiosondes) during a campaign"
       },
       {
-        "geographical_regions": [],
-        "id": "98753f94-dbae-4b43-87dd-80b658ddc9a7"
-      },
-      {
-        "geographical_regions": [],
-        "id": "4b830da6-dc7a-4b06-a478-a3fc90bc3dbb"
-      },
-      {
-        "geographical_regions": [],
-        "id": "458e6f74-3827-4b7b-8f85-416fe010918b"
-      },
-      {
-        "geographical_regions": [],
-        "id": "dc2fa7b2-3143-4ca8-9e5a-ee07e807e712"
-      },
-      {
-        "geographical_regions": [],
-        "id": "9cfa5b55-7378-48af-9018-ba2d82afe2eb"
-      },
-      {
-        "geographical_regions": [],
-        "id": "ddc8ce9e-d4db-4b39-8041-06b272902544"
-      },
-      {
-        "geographical_regions": [],
-        "id": "f2c42b8a-2c06-407c-9345-aa9824ac65f5"
-      },
-      {
-        "geographical_regions": [],
-        "id": "9f98f6f9-ea1b-4ef7-a891-8fb175bf1df5"
-      },
-      {
-        "geographical_regions": [],
-        "id": "11a38ed6-6786-4303-aaa5-ace5d00d35a4"
-      },
-      {
-        "geographical_regions": [],
-        "id": "9b6aae1c-c102-4efe-9e07-286ce3343b9b"
-      },
-      {
-        "geographical_regions": [],
-        "id": "5629c17a-8dae-49d7-a797-95e006b0a5fd"
-      },
-      {
-        "geographical_regions": [],
-        "id": "d0757945-9802-48d6-8a00-3f7d5af2e57e"
-      },
-      {
-        "geographical_regions": [],
-        "id": "7841fbdd-34a6-4128-bc55-9d0355cc565a"
-      },
-      {
-        "geographical_regions": [],
-        "id": "b2127707-2112-4627-b2b5-636283182864"
-      },
-      {
-        "geographical_regions": [],
-        "id": "506a50a7-7edb-405f-b327-e5dff9cf049e"
-      },
-      {
-        "geographical_regions": [],
-        "id": "d30699a9-a492-431e-92a3-bc452ff61ee2"
-      },
-      {
-        "geographical_regions": [],
-        "id": "fd3dacb3-8ce3-4b02-b2a7-9a8c827048de"
-      },
-      {
-        "geographical_regions": [],
-        "id": "ef0c65e2-4abb-439c-a81d-5d78f52cb1b4"
-      },
-      {
-        "geographical_regions": [],
-        "id": "84b59cc2-1b5e-4439-8c41-039a194a7664"
-      },
-      {
-        "geographical_regions": [],
-        "id": "ead3b8c9-798b-4614-9c9f-952d6922c635"
-      },
-      {
-        "geographical_regions": [],
-        "id": "c00c3e85-a3e7-4274-908a-2863517f6901"
-      },
-      {
-        "geographical_regions": [],
-        "id": "4bc70279-e51d-4ca8-8ec3-6dd6e6e94247"
-      },
-      {
-        "geographical_regions": [],
-        "id": "d9e5d99f-dc95-41a8-9b77-80edd2222e4b"
-      },
-      {
-        "geographical_regions": [],
-        "id": "a0f6e369-d6fc-4eab-916a-ff7a9277c834"
-      },
-      {
-        "geographical_regions": [],
-        "id": "7525cebb-228a-44e8-8bba-da2fa621aa55"
-      },
-      {
-        "geographical_regions": [],
-        "id": "aedaf11d-cbea-4650-b29c-985829185c89"
-      },
-      {
-        "geographical_regions": [],
-        "id": "42704907-a7f1-4163-8ea7-c011c72b1802"
-      },
-      {
-        "geographical_regions": [],
-        "id": "c133f358-85f6-446f-940a-0efcc10180dd"
-      },
-      {
-        "geographical_regions": [],
-        "id": "c66857d0-bb1a-450b-a741-e618013be3d8"
-      },
-      {
-        "geographical_regions": [],
-        "id": "341480a1-270f-4478-b173-83672806279c"
-      },
-      {
-        "geographical_regions": [],
-        "id": "de73b8b2-7d8d-45d8-80c3-abe9a6ef3968"
-      },
-      {
-        "geographical_regions": [],
-        "id": "0ee5f0c2-1136-4128-bc8c-5eca585b7b46"
-      },
-      {
-        "geographical_regions": [],
-        "id": "09379419-e2f0-4411-8a76-5a670bd3b75e"
-      },
-      {
-        "geographical_regions": [],
-        "id": "e15c3181-1c76-41d2-abb3-7b2ef56800a5"
-      },
-      {
-        "geographical_regions": [],
-        "id": "604c5412-55df-4cd1-b60e-f3c8b38ed935"
-      },
-      {
-        "geographical_regions": [],
-        "id": "ba5b8b97-f036-460b-bc99-2cedf732dc01"
-      },
-      {
-        "geographical_regions": [],
-        "id": "ce621f9f-6e0a-45bc-a31f-878482420389"
-      },
-      {
-        "geographical_regions": [],
-        "id": "b2b5eab1-1d22-4f3f-b3fd-1757b447c92a"
-      },
-      {
-        "geographical_regions": [],
-        "id": "62eaeb18-1a0f-4e89-aaaa-f7c5d46231d6"
-      },
-      {
-        "geographical_regions": [],
-        "id": "83c4522a-641b-405a-85e7-90878e797db0"
-      },
-      {
-        "geographical_regions": [],
-        "id": "2e0877ea-d96e-4f8d-ae6f-3ec531812b6c"
-      },
-      {
-        "geographical_regions": [],
-        "id": "1a7c31aa-85ff-4aab-8d43-caf0fa0cf4be"
-      },
-      {
-        "geographical_regions": [],
-        "id": "4dbbbedf-d945-41e4-b9d9-160c92cc5b51"
-      },
-      {
-        "geographical_regions": [],
-        "id": "eff7ad7f-d0ce-4391-a34c-71d72cc4040d"
-      },
-      {
-        "geographical_regions": [],
-        "id": "d1b6132c-96f6-4f5c-9c47-7d9544339452"
+        "id": "5f6a2a1a-2a4b-4a42-9fff-04f1c2af6f5c",
+        "shortname": "Campaign R",
+        "longname": "Rockets launched with instrument packages (e.g., rocketsondes) during a campaign"
       }
     ]
   }

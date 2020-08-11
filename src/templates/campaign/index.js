@@ -13,7 +13,7 @@ import FocusSection from "./focus-section"
 import { SectionBlock, SectionHeader } from "../../components/section"
 import MaintenanceSection from "../../components/maintenance-section"
 
-const CampaignTemplate = ({ data: { campaign, deployments } }) => {
+const CampaignTemplate = ({ data: { campaign } }) => {
   const [isClient, setIsClient] = useState(false)
   useEffect(() => {
     // useEffect only runs client-side after rehyration
@@ -51,7 +51,7 @@ const CampaignTemplate = ({ data: { campaign, deployments } }) => {
           focusPhenomena={campaign.focusPhenomena}
         />
         <PlatformSection platforms={campaign.platforms} />
-        <TimelineSection deployments={deployments} />
+        <TimelineSection deployments={campaign.deployments} />
         <SectionBlock id="data">
           <SectionHeader headline="Data" />
         </SectionBlock>
@@ -71,10 +71,7 @@ const CampaignTemplate = ({ data: { campaign, deployments } }) => {
         />
         {isClient && (
           // the maintenance section is behind authentication and only accessible from the browser
-          <MaintenanceSection
-            id={campaign.uuid}
-            data={{ campaign, deployments }}
-          />
+          <MaintenanceSection id={campaign.uuid} data={{ campaign }} />
         )}
       </PageBody>
     </Layout>
@@ -88,11 +85,9 @@ export const query = graphql`
       ...overviewFields
       ...focusFields
       ...platformFields
+      ...deploymentFields
       ...fundingFields
       uuid
-    }
-    deployments: allDeployment(filter: { campaign: { eq: $slug } }) {
-      ...deploymentFragment
     }
   }
 `
@@ -139,6 +134,22 @@ CampaignTemplate.propTypes = {
           longname: PropTypes.string.isRequired,
         })
       ).isRequired,
+      deployments: PropTypes.arrayOf(
+        PropTypes.shape({
+          nodes: PropTypes.arrayOf(
+            PropTypes.shape({
+              id: PropTypes.string.isRequired,
+              shortname: PropTypes.string.isRequired,
+              flights: PropTypes.array.isRequired,
+              region: PropTypes.array.isRequired,
+              campaign: PropTypes.string.isRequired,
+              longname: PropTypes.string.isRequired,
+              end: PropTypes.string.isRequired,
+              start: PropTypes.string.isRequired,
+            })
+          ),
+        })
+      ).isRequired,
       logo: PropTypes.string,
       fundingAgency: PropTypes.string.isRequired,
       fundingProgram: PropTypes.string.isRequired,
@@ -153,20 +164,6 @@ CampaignTemplate.propTypes = {
       ).isRequired,
       partnerWebsite: PropTypes.string,
       uuid: PropTypes.string.isRequired,
-    }).isRequired,
-    deployments: PropTypes.shape({
-      nodes: PropTypes.arrayOf(
-        PropTypes.shape({
-          id: PropTypes.string.isRequired,
-          shortname: PropTypes.string.isRequired,
-          flights: PropTypes.array.isRequired,
-          region: PropTypes.array.isRequired,
-          campaign: PropTypes.string.isRequired,
-          longname: PropTypes.string.isRequired,
-          end: PropTypes.string.isRequired,
-          start: PropTypes.string.isRequired,
-        })
-      ),
     }).isRequired,
   }).isRequired,
 }

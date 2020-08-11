@@ -10,12 +10,17 @@ exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions
   const typeDefs = `
     type campaign implements Node {
+      deployments: [deployment] @link
       focus_areas: [focus_area] @link
       geophysical_concepts: [geophysical_concept] @link
+      instruments: [instrument] @link
       partner_orgs: [partner_org] @link
+      platform_types: [platform_type] @link
       platforms: [platform] @link
       seasons: [season] @link
-      instruments: [instrument] @link
+    }
+    type deployment implements Node {
+      geographical_regions: [geographical_region] @link
     }
     type instrument implements Node {
       platforms: [platform] @link
@@ -41,6 +46,7 @@ exports.sourceNodes = async ({ actions, createContentDigest }) => {
       "instrument_type",
       "partner_org",
       "platform",
+      "platform_type",
       "season",
     ]
 
