@@ -1,87 +1,66 @@
 {
   "continental": {
-    "uuid": "a9b86ec6-cb57-4ef5-9a13-c5a767195782",
     "url": "https://eoimages.gsfc.nasa.gov/images/imagerecords/145000/145932/iss060e035401_lrg.jpg",
     "description": "A network of farms and ranches surrounds the cities and small towns near the Nebraska–Iowa border."
   },
   "maritime": {
-    "uuid": "6ad9e3d8-81c0-4c7c-9db8-888988ab677e",
     "url": "https://climate.nasa.gov/system/resources/detail_files/170_gulfoffinland_full.jpg",
     "description": "Phytoplankton blooms across the northern basins of the North Atlantic and Arctic Oceans."
   },
   "coastal": {
-    "uuid": "292950c5-e5df-4cea-9778-b0dc6c011294",
     "url": "https://images-assets.nasa.gov/image/KSC-04pd1634/KSC-04pd1634~orig.jpg",
     "description": "The pristine sand dunes near the launch pads at KSC are gently washed by the calm blue Atlantic Ocean."
   },
   "mountains": {
-    "uuid": "fd9fb6ee-121e-4a44-8155-d478500599d9",
     "url": "https://images-assets.nasa.gov/image/ED04-0056-099/ED04-0056-099~orig.jpg",
     "description": "The Cuernos del Paine mountains in Torres del Paine National Park, Chile, during NASA's AirSAR 2004 campaign."
   },
   "island": {
-    "uuid": "12463bc6-32a8-45bd-bdad-d7bd7db6c51c",
     "url": "https://climate.nasa.gov/system/resources/detail_files/218_PIA21166_hires-768px-v2.jpg",
     "description": "The Republic of Maldives with its twenty-six atolls, and 1192 coral islands, with an average ground elevation of 1.5 meters (about 5 feet)."
   },
   "desert": {
-    "uuid": "2567b1ed-8753-433f-b475-9bb3ef5c1bb3",
     "url": "https://earthobservatory.nasa.gov/blogs/fromthefield/wp-content/uploads/sites/2/2018/01/desert-plant-and-lidar.jpg",
     "description": "The lidar on its tripod. NASA/GSFC"
   },
   "forest": {
-    "uuid": "674d3da5-6bef-439f-838a-eaf79d733e42",
     "url": "https://earthobservatory.nasa.gov/ContentFeature/ForestCarbon/images/gabon_forest.jpg",
     "description": "Tropical forests, such as those in Gabon, Africa, are an important reservoir of carbon. (Photography courtesy Sassan Saatchi, NASA/JPL-Caltech.)"
   },
   "urban": {
-    "uuid": "9ff66c70-f482-40e8-9a5e-ec45306760e0",
     "url": "https://eoimages.gsfc.nasa.gov/images/imagerecords/83000/83828/ISS039-E-018538_lrg.jpg",
     "description": "The narrow island of Manhattan, located between the Hudson River and the East River."
   },
   "agricultural": {
-    "uuid": "a95c9bd6-395a-409c-8875-586dbc0601f7",
     "url": "https://eoimages.gsfc.nasa.gov/images/imagerecords/5000/5772/kansas_AST_2001175_lrg.jpg",
     "description": "Variegated green crop circles cover what was once shortgrass prairie in southwestern Kansas."
   },
   "equitorial": {
-    "uuid": "5624a0f2-7b7b-4f4c-a8fd-898e9751e0e1",
     "url": "https://images-assets.nasa.gov/image/sts054-95-042/sts054-95-042~orig.jpg",
     "description": "Equatorial Wave Line, Pacific Ocean."
   },
   "tropical": {
-    "uuid": "cb25d6eb-a988-4e21-ac05-4912017415b5",
     "url": "",
     "description": ""
   },
   "mid-latitude": {
-    "uuid": "731da6a3-04b9-4ca1-826a-388820f6fe90",
     "url": "",
     "description": ""
   },
   "polar": {
-    "uuid": "9df5be07-f7e3-4ce4-94fe-c813ad371a71",
     "url": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e001793/GSFC_20171208_Archive_e001793~orig.jpg",
     "description": "A NASA scientific balloon awaits launch in McMurdo, Antarctica."
   },
   "sea ice": {
-    "uuid": "26d0e469-de46-4f66-8722-b270e2602b70",
     "url": "https://eoimages.gsfc.nasa.gov/images/imagerecords/146000/146974/greenlandseaice_amo_2020184_lrg.jpg",
     "description": "Sea ice hugging the coast of East Greenland."
   },
   "coral": {
-    "uuid": "67519804-37a2-403a-8ee0-6db25d17a731",
     "url": "https://eoimages.gsfc.nasa.gov/images/imagerecords/88000/88109/iss045e056257_lrg.jpg",
     "description": "Great Barrier Reef near Whitsunday Islands."
   },
   "rainforest": {
-    "uuid": "2616378d-bf8c-41a7-b1f3-2c65dd77e759",
     "url": "https://images-assets.nasa.gov/image/ED04-0056-057/ED04-0056-057~orig.jpg",
     "description": "A stream in the La Selva region of the Costa Rican rain forest, taken during NASA's AirSAR 2004 campaign."
-  },
-  "NID": {
-    "uuid": "6ef85571-d903-458b-980a-273bbace62bc",
-    "url": "",
-    "description": ""
   }
 }

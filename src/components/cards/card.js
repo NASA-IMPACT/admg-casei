@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 
 import theme from "../../utils/theme"
 
-const Card = ({ children, tag, footerList }) => (
+const Card = ({ children, image, tag, footerList }) => (
   <div
     style={{
       backgroundColor: theme.color.secondary,
@@ -25,15 +25,19 @@ const Card = ({ children, tag, footerList }) => (
           margin: `0.5rem 0 2rem 0`,
         }}
       >
-        <div
-          className="placeholder"
-          style={{
-            borderRadius: `2.5rem`,
-            backgroundColor: `#9E9E9E`,
-            width: `2.5rem`,
-            height: `2.5rem`,
-          }}
-        ></div>
+        {image ? (
+          <img src={image.url} alt={image.description} width="45" height="45" />
+        ) : (
+          <div
+            className="placeholder"
+            style={{
+              borderRadius: `2.5rem`,
+              backgroundColor: `#9E9E9E`,
+              width: `2.5rem`,
+              height: `2.5rem`,
+            }}
+          ></div>
+        )}
         {tag && (
           <div
             style={{
@@ -67,6 +71,10 @@ Card.propTypes = {
     PropTypes.element,
     PropTypes.arrayOf(PropTypes.element),
   ]),
+  image: PropTypes.shape({
+    url: PropTypes.string,
+    description: PropTypes.string,
+  }),
   tag: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   footerList: PropTypes.arrayOf(
     PropTypes.shape({ count: PropTypes.number, title: PropTypes.string })

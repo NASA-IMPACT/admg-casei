@@ -1,0 +1,42 @@
+{
+  "ACES": {
+    "url": "https://ghrc.nsstc.nasa.gov/home/sites/default/files/aces_logo.png#overlay-context=field-campaigns/aces",
+    "description": "logo"
+  },
+  "AirMOSS": {
+    "url": "https://airbornescience.jpl.nasa.gov/sites/default/files/airmossLogo.png",
+    "description": "logo"
+  },
+  "ARCTAS": {
+    "url": "https://cloud1.arc.nasa.gov/arctas/images/arctas_spring.jpg",
+    "description": "logo"
+  },
+  "CARVE": {
+    "url": "https://carve.jpl.nasa.gov/images/carve/carve_logo_update.jpg",
+    "description": "logo"
+  },
+  "DC3": {
+    "url": "https://www-air.larc.nasa.gov/missions/dc3-seac4rs/img/dc3-logo.png",
+    "description": "logo"
+  },
+  "GCPEx": {
+    "url": "https://airbornescience.nasa.gov/sites/default/files/styles/200wide/public/current_activities/gcpexlogo.png?itok=Z1MVjjPB",
+    "description": "logo"
+  },
+  "GOES-R PLT": {
+    "url": "",
+    "description": "logo"
+  },
+  "GRIP": {
+    "url": "https://www.nasa.gov/images/content/464732main_grip_graphic_med.jpg",
+    "description": "logo"
+  },
+  "HS3": {
+    "url": "https://espo.nasa.gov/sites/default/files/images/HS3_logo.png",
+    "description": "logo"
+  },
+  "OLYMPEX": {
+    "url": "https://wallops-prf.gsfc.nasa.gov/Field_Campaigns/Olympex/img/logo_image2.png",
+    "description": "logo"
+  }
+}

@@ -958,16 +958,11 @@ exports[`Campaigns page renders correctly 1`] = `
                     }
                   }
                 >
-                  <div
-                    className="placeholder"
-                    style={
-                      Object {
-                        "backgroundColor": "#9E9E9E",
-                        "borderRadius": "2.5rem",
-                        "height": "2.5rem",
-                        "width": "2.5rem",
-                      }
-                    }
+                  <img
+                    alt="logo"
+                    height="45"
+                    src="https://ghrc.nsstc.nasa.gov/home/sites/default/files/aces_logo.png#overlay-context=field-campaigns/aces"
+                    width="45"
                   />
                 </div>
                 <big
@@ -1058,16 +1053,11 @@ exports[`Campaigns page renders correctly 1`] = `
                     }
                   }
                 >
-                  <div
-                    className="placeholder"
-                    style={
-                      Object {
-                        "backgroundColor": "#9E9E9E",
-                        "borderRadius": "2.5rem",
-                        "height": "2.5rem",
-                        "width": "2.5rem",
-                      }
-                    }
+                  <img
+                    alt="logo"
+                    height="45"
+                    src="https://cloud1.arc.nasa.gov/arctas/images/arctas_spring.jpg"
+                    width="45"
                   />
                 </div>
                 <big
@@ -1158,16 +1148,11 @@ exports[`Campaigns page renders correctly 1`] = `
                     }
                   }
                 >
-                  <div
-                    className="placeholder"
-                    style={
-                      Object {
-                        "backgroundColor": "#9E9E9E",
-                        "borderRadius": "2.5rem",
-                        "height": "2.5rem",
-                        "width": "2.5rem",
-                      }
-                    }
+                  <img
+                    alt="logo"
+                    height="45"
+                    src="https://airbornescience.jpl.nasa.gov/sites/default/files/airmossLogo.png"
+                    width="45"
                   />
                 </div>
                 <big
@@ -1258,16 +1243,11 @@ exports[`Campaigns page renders correctly 1`] = `
                     }
                   }
                 >
-                  <div
-                    className="placeholder"
-                    style={
-                      Object {
-                        "backgroundColor": "#9E9E9E",
-                        "borderRadius": "2.5rem",
-                        "height": "2.5rem",
-                        "width": "2.5rem",
-                      }
-                    }
+                  <img
+                    alt="logo"
+                    height="45"
+                    src="https://carve.jpl.nasa.gov/images/carve/carve_logo_update.jpg"
+                    width="45"
                   />
                 </div>
                 <big
@@ -1358,16 +1338,11 @@ exports[`Campaigns page renders correctly 1`] = `
                     }
                   }
                 >
-                  <div
-                    className="placeholder"
-                    style={
-                      Object {
-                        "backgroundColor": "#9E9E9E",
-                        "borderRadius": "2.5rem",
-                        "height": "2.5rem",
-                        "width": "2.5rem",
-                      }
-                    }
+                  <img
+                    alt="logo"
+                    height="45"
+                    src="https://www-air.larc.nasa.gov/missions/dc3-seac4rs/img/dc3-logo.png"
+                    width="45"
                   />
                 </div>
                 <big
@@ -1456,16 +1431,11 @@ exports[`Campaigns page renders correctly 1`] = `
                     }
                   }
                 >
-                  <div
-                    className="placeholder"
-                    style={
-                      Object {
-                        "backgroundColor": "#9E9E9E",
-                        "borderRadius": "2.5rem",
-                        "height": "2.5rem",
-                        "width": "2.5rem",
-                      }
-                    }
+                  <img
+                    alt="logo"
+                    height="45"
+                    src="https://airbornescience.nasa.gov/sites/default/files/styles/200wide/public/current_activities/gcpexlogo.png?itok=Z1MVjjPB"
+                    width="45"
                   />
                 </div>
                 <big
@@ -1556,16 +1526,11 @@ exports[`Campaigns page renders correctly 1`] = `
                     }
                   }
                 >
-                  <div
-                    className="placeholder"
-                    style={
-                      Object {
-                        "backgroundColor": "#9E9E9E",
-                        "borderRadius": "2.5rem",
-                        "height": "2.5rem",
-                        "width": "2.5rem",
-                      }
-                    }
+                  <img
+                    alt="logo"
+                    height="45"
+                    src=""
+                    width="45"
                   />
                 </div>
                 <big
@@ -1656,16 +1621,11 @@ exports[`Campaigns page renders correctly 1`] = `
                     }
                   }
                 >
-                  <div
-                    className="placeholder"
-                    style={
-                      Object {
-                        "backgroundColor": "#9E9E9E",
-                        "borderRadius": "2.5rem",
-                        "height": "2.5rem",
-                        "width": "2.5rem",
-                      }
-                    }
+                  <img
+                    alt="logo"
+                    height="45"
+                    src="https://www.nasa.gov/images/content/464732main_grip_graphic_med.jpg"
+                    width="45"
                   />
                 </div>
                 <big
@@ -1756,16 +1716,11 @@ exports[`Campaigns page renders correctly 1`] = `
                     }
                   }
                 >
-                  <div
-                    className="placeholder"
-                    style={
-                      Object {
-                        "backgroundColor": "#9E9E9E",
-                        "borderRadius": "2.5rem",
-                        "height": "2.5rem",
-                        "width": "2.5rem",
-                      }
-                    }
+                  <img
+                    alt="logo"
+                    height="45"
+                    src="https://espo.nasa.gov/sites/default/files/images/HS3_logo.png"
+                    width="45"
                   />
                 </div>
                 <big
@@ -1856,16 +1811,11 @@ exports[`Campaigns page renders correctly 1`] = `
                     }
                   }
                 >
-                  <div
-                    className="placeholder"
-                    style={
-                      Object {
-                        "backgroundColor": "#9E9E9E",
-                        "borderRadius": "2.5rem",
-                        "height": "2.5rem",
-                        "width": "2.5rem",
-                      }
-                    }
+                  <img
+                    alt="logo"
+                    height="45"
+                    src="https://wallops-prf.gsfc.nasa.gov/Field_Campaigns/Olympex/img/logo_image2.png"
+                    width="45"
                   />
                 </div>
                 <big

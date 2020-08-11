@@ -56,7 +56,7 @@ const CampaignTemplate = ({ data: { campaign, deployments } }) => {
           <SectionHeader headline="Data" />
         </SectionBlock>
         <ProgramInfoSection
-          logo={campaign.logo}
+          shortname={campaign.shortname}
           fundingAgency={campaign.fundingAgency}
           fundingProgram={campaign.fundingProgram}
           programLead={campaign.programLead}
