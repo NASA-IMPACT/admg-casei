@@ -200,6 +200,15 @@ describe("Campaign", () => {
         expect($div, "3 platforms").to.have.length(3)
       })
     })
+
+    it("displays the instruments per platform", () => {
+      cy.get("[data-cy=platform]")
+        .first()
+        .find("[data-cy=instrument-chip]")
+        .should($div => {
+          expect($div, "2 instruments").to.have.length(2)
+        })
+    })
   })
 
   describe("the program info section", () => {

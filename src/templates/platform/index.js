@@ -50,24 +50,9 @@ PlatformTemplate.propTypes = {
           shortname: PropTypes.string.isRequired,
           longname: PropTypes.string,
           id: PropTypes.string.isRequired,
-          seasons: PropTypes.arrayOf(
-            PropTypes.shape({
-              id: PropTypes.string.isRequired,
-            })
-          ).isRequired,
-          focus: PropTypes.arrayOf(
-            PropTypes.shape({
-              id: PropTypes.string.isRequired,
-            })
-          ).isRequired,
           startdate: PropTypes.string.isRequired,
           enddate: PropTypes.string,
           region: PropTypes.string.isRequired,
-          deployments: PropTypes.arrayOf(
-            PropTypes.shape({
-              id: PropTypes.string.isRequired,
-            })
-          ),
           countCollectionPeriods: PropTypes.number,
           countDataProducts: PropTypes.number,
         })

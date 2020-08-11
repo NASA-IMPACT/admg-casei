@@ -31,7 +31,7 @@ const Chip = ({ id, label, chipAction, actionId }) => (
       color: theme.type.base.color,
       borderRadius: theme.shape.rounded,
       padding: `0 0.5rem`,
-      margin: `0 0.5rem`,
+      margin: `0.25rem 0.5rem`,
     }}
     data-cy={`${id}-chip`}
   >
