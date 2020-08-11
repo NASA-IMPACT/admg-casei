@@ -106,7 +106,7 @@ CampaignTemplate.propTypes = {
       ).isRequired,
       geophysical: PropTypes.arrayOf(
         PropTypes.shape({
-          shortname: PropTypes.string.isRequired,
+          id: PropTypes.string.isRequired,
           longname: PropTypes.string.isRequired,
         })
       ).isRequired,

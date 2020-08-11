@@ -134,8 +134,44 @@ describe("Campaign", () => {
         expect($label, "3 labels").to.have.length(3)
       })
       cy.get("[data-cy=focus-content-text]").should($p => {
-        expect($p, "2 text entries").to.have.length(2)
+        expect($p, "2 text entries").to.have.length(1)
       })
+    })
+
+    it("navigates to the campaign list with the focus area as filter applied", () => {
+      cy.get("[data-cy=focus-section]")
+        .find("[data-cy=focus-area]")
+        .contains("Carbon Cycle & Ecosystems")
+        .click()
+
+      cy.url().should("include", "/explore/campaigns")
+
+      cy.get("main")
+        .find("[data-cy=filter-chip]")
+        .should("have.length", 1)
+        .and("have.text", "focus: Carbon Cycle & Ecosystems")
+
+      cy.get("main").find("[data-cy=explore-card]").should("have.length", 2)
+
+      cy.go("back")
+    })
+
+    it("navigates to the campaign list with the geophysical concept as filter applied", () => {
+      cy.get("[data-cy=focus-section]")
+        .find("[data-cy=geophysical-concept]")
+        .contains("Hydrology")
+        .click()
+
+      cy.url().should("include", "/explore/campaigns")
+
+      cy.get("main")
+        .find("[data-cy=filter-chip]")
+        .should("have.length", 1)
+        .and("have.text", "geophysical: Terr Hydro")
+
+      cy.get("main").find("[data-cy=explore-card]").should("have.length", 2)
+
+      cy.go("back")
     })
   })
 
