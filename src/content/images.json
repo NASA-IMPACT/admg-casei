@@ -83,5 +83,59 @@
     "uuid": "6ef85571-d903-458b-980a-273bbace62bc",
     "url": "",
     "description": ""
+  },
+  "ALAR": {
+    "uuid": "96b56413-2068-4fc4-a093-4780a02744e9",
+    "url": "images-assets.nasa.gov/image/ED08-0064-13/ED08-0064-13~orig.jpg",
+    "description": "A scientist of the National Center for Atmospheric Research checks out the NOxyO3 instrument on NASA's DC-8 flying laboratory before the ARCTAS mission"
+  },
+  "Altus-II": {
+    "uuid": "c63849f7-ea91-4525-9029-940a9c53ed36",
+    "url": "images-assets.nasa.gov/image/0201928/0201928~orig.jpg",
+    "description": "A remotely-piloted aircraft that study thunderstorms flies through the sky"
+  },
+  "ASO": {
+    "uuid": "28154c07-d35b-4e13-982c-63b69e1fe57c",
+    "url": "images-assets.nasa.gov/image/PIA17771/PIA17771~orig.jpg",
+    "description": "Tuolumne River Basin seen by NASA Airborne Snow Observatory"
+  },
+  "B-200": {
+    "uuid": "a0dea5de-aa33-4f13-a8a4-34729e3de5fd",
+    "url": "images-assets.nasa.gov/image/AFRC2018-0038-015/AFRC2018-0038-015~orig.jpg",
+    "description": "NASA’s B200 taking off for an eight-hour science flight"
+  },
+  "C-130": {
+    "url": "images-assets.nasa.gov/image/GSFC_20171208_Archive_e000324/GSFC_20171208_Archive_e000324~orig.jpg",
+    "description": "The C130 makes a low altitude turn over its designated research coordinates in the North Atlantic"
+  },
+  "campaign-b": {
+    "uuid": "87650e20-ecf3-4703-aeed-49c8affc6059",
+    "url": "images-assets.nasa.gov/image/KSC-07PD-0425/KSC-07PD-0425~orig.jpg",
+    "description": "A weather balloon takes flight equipped with a radiosonde."
+  },
+  "DC-8": {
+    "uuid": "6fc94f62-d4f2-4a08-9511-2234d91b0665",
+    "url": "images-assets.nasa.gov/image/ED04-0056-072/ED04-0056-072~orig.jpg",
+    "description": "NASA's DC-8 flying laboratory seen at sunset after a flight supporting the AirSAR 2004 Mesoamerica campaign"
+  },
+  "ER-2": {
+    "uuid": "bb761da6-1606-444c-92d1-e6d30954f2d7",
+    "url": "images-assets.nasa.gov/image/ED05-0149-1/ED05-0149-1~orig.jpg",
+    "description": "The NASA ER-2 airplane flies over hurricane Dennis as part of the Tropical Cloud Systems and Processes TSCP Mission"
+  },
+  "G-III": {
+    "uuid": "5a5ffdbe-0eae-48b1-a7ad-d63dfebffb9a",
+    "url": "https://www.nasa.gov/sites/default/files/thumbnails/image/uavsar20200219-16.jpg",
+    "description": "Gulfstream III aircraft equipped with NASA's UAVSAR instrument on a tarmack"
+  },
+  "GH": {
+    "uuid": "ad8a0ce5-8aae-4fe5-8b46-7586c267efdb",
+    "url": "images-assets.nasa.gov/image/ED13-0399-02/ED13-0399-02~orig.jpg",
+    "description": "NASA's Global Hawk 872 lifting off the runway at Edwards Air Force Base"
+  },
+  "WB-57": {
+    "uuid": "2cbc931a-6f47-45f0-bff6-659ef2efc68d",
+    "url": "images-assets.nasa.gov/image/KSC-06pd2466/KSC-06pd2466~orig.jpg",
+    "description": "A view of the launch of Space Shuttle Atlantis, taken from NASA's WB-57 aircraft"
   }
 }
