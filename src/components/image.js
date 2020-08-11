@@ -43,6 +43,13 @@ const Image = props => {
           }
         }
       }
+      allContentJson {
+        nodes {
+          ${props.uuid} {
+            url
+          }
+        }
+      }
     }
   `)
 
@@ -59,6 +66,7 @@ const Image = props => {
 
 Image.propTypes = {
   filename: PropTypes.string.isRequired,
+  uuid: PropTypes.string,
   alt: PropTypes.string.isRequired,
 }
 
