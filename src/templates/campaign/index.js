@@ -40,6 +40,7 @@ const CampaignTemplate = ({ data: { campaign } }) => {
           region={campaign.region}
           seasonListing={campaign.seasons.map(x => x.shortname).join(", ")}
           bounds={campaign.bounds}
+          doi={campaign.doi}
           projectWebsite={campaign.projectWebsite}
           repositoryWebsite={campaign.repositoryWebsite}
           tertiaryWebsite={campaign.tertiaryWebsite}
@@ -123,6 +124,7 @@ CampaignTemplate.propTypes = {
           longname: PropTypes.string.isRequired,
         })
       ).isRequired,
+      doi: PropTypes.string.isRequired,
       projectWebsite: PropTypes.string.isRequired,
       repositoryWebsite: PropTypes.string.isRequired,
       tertiaryWebsite: PropTypes.string.isRequired,

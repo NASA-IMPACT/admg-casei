@@ -113,7 +113,14 @@ describe("Campaign", () => {
     it("displays link list", () => {
       cy.get("[data-cy=link-list]")
         .find("li")
-        .should("have.length.within", 2, 4)
+        .should("have.length.within", 2, 5)
+    })
+
+    it("displays the DOI", () => {
+      cy.get("[data-cy=link-list]")
+        .find("[data-cy=doi-link]")
+        .should("exist")
+        .and("have.text", "DOI: not available")
     })
   })
 
