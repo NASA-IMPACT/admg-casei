@@ -16,7 +16,7 @@ InpageLink.propTypes = {
   to: function (props, propName, componentName) {
     // validate that prop `to` links to an existing section
     if (
-      !/(#overview|#focus|#platform|#timeline|#data|#program-info)/.test(
+      !/(#overview|#focus|#platform|#timeline|#program-info)/.test(
         props[propName]
       )
     ) {
@@ -72,9 +72,6 @@ const InpageNav = () => (
         </InpageLink>
         <InpageLink id="timeline" to="#timeline">
           Timeline
-        </InpageLink>
-        <InpageLink id="data" to="#data">
-          Data
         </InpageLink>
         <InpageLink id="program-info" to="#program-info">
           Program Info

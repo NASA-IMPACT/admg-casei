@@ -44,41 +44,35 @@ describe("Campaign", () => {
       cy.get("main").find("nav").should("exist")
     })
 
-    it("has 5 items", () => {
+    it("has 6 items", () => {
       cy.get("main")
         .find("nav")
         .find("a")
         .should($anchor => {
-          expect($anchor, "7 items").to.have.length(7)
+          expect($anchor, "6 items").to.have.length(6)
           expect($anchor.eq(0), "first item").to.contain("Overview")
           expect($anchor.eq(1), "second item").to.contain("Focus")
           expect($anchor.eq(2), "third item").to.contain("Platforms")
           expect($anchor.eq(3), "fourth item").to.contain("Instruments")
           expect($anchor.eq(4), "fifth item").to.contain("Timeline")
-          expect($anchor.eq(5), "sixth item").to.contain("Data")
-          expect($anchor.eq(6), "last item").to.contain("Program Info")
+          expect($anchor.eq(5), "last item").to.contain("Program Info")
         })
     })
 
     it("navigates to the inpage section", () => {
-      ;[
-        "program-info",
-        "platform",
-        "overview",
-        "data",
-        "timeline",
-        "focus",
-      ].forEach(id => {
-        cy.get(`[data-cy=${id}-inpage-link]`).click()
+      ;["program-info", "platform", "overview", "timeline", "focus"].forEach(
+        id => {
+          cy.get(`[data-cy=${id}-inpage-link]`).click()
 
-        cy.url().should("include", id)
+          cy.url().should("include", id)
 
-        // TODO: figure out how to properly test the inpage scroll
-        // cy.get("main")
-        //   .find(`[data-cy=${id}-section]`)
-        //   .find("h2")
-        //   .should("be.inViewport")
-      })
+          // TODO: figure out how to properly test the inpage scroll
+          // cy.get("main")
+          //   .find(`[data-cy=${id}-section]`)
+          //   .find("h2")
+          //   .should("be.inViewport")
+        }
+      )
     })
   })
 

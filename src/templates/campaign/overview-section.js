@@ -133,6 +133,7 @@ OverviewSection.propTypes = {
   region: PropTypes.string.isRequired,
   seasonListing: PropTypes.string.isRequired,
   bounds: PropTypes.string.isRequired,
+  doi: PropTypes.string,
   projectWebsite: PropTypes.string.isRequired,
   repositoryWebsite: PropTypes.string.isRequired,
   tertiaryWebsite: PropTypes.string.isRequired,
