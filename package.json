@@ -23,6 +23,7 @@
     "gatsby-plugin-styled-components": "^3.3.10",
     "gatsby-plugin-typography": "^2.5.10",
     "gatsby-source-filesystem": "^2.3.19",
+    "gatsby-transformer-json": "^2.4.11",
     "gatsby-transformer-sharp": "^2.5.11",
     "lodash.debounce": "^4.0.8",
     "nuka-carousel": "^4.7.0",
