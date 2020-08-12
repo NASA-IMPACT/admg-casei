@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 import Hero from "../../components/hero"
-import Image from "../../components/image"
+import images from "../../content/platform-images.json"
 
 export default function PlatformHero({
   shortname,
@@ -21,10 +21,7 @@ export default function PlatformHero({
       ]}
       id="platform"
     >
-      <Image
-        filename="platform.png" // TODO: replace with platform image
-        alt="an aircraft transporting a spacecraft"
-      />
+      <img src={images[shortname].url} alt={images[shortname].alt} />
     </Hero>
   )
 }
