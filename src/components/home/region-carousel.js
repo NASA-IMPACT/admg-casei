@@ -5,7 +5,7 @@ import Carousel from "nuka-carousel"
 import styled from "styled-components"
 
 import theme from "../../utils/theme"
-import images from "../../content/platform-images.json"
+import images from "../../content/nasa-images.json"
 
 const ControlTextButton = styled.button`
   margin: 0.2rem 0.5rem;
