@@ -75,6 +75,7 @@ export default function MilestoneSelector({
                 color: `black`,
                 background: theme.color.base,
                 opacity: activeMilestone === event.id ? 1 : 0.7,
+                border: `none`,
               }}
               onClick={() => timelineAction(event.id)}
               data-cy="milestone-timeline-card"
