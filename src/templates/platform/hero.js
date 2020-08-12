@@ -9,6 +9,8 @@ export default function PlatformHero({
   longname,
   campaigns,
   collectionPeriods,
+  imgName,
+  imgAlt,
 }) {
   return (
     <Hero
@@ -21,10 +23,7 @@ export default function PlatformHero({
       ]}
       id="platform"
     >
-      <Image
-        filename="platform.png" // TODO: replace with platform image
-        alt="an aircraft transporting a spacecraft"
-      />
+      <Image filename={imgName} alt={imgAlt} />
     </Hero>
   )
 }
@@ -44,4 +43,6 @@ PlatformHero.propTypes = {
   longname: PropTypes.string.isRequired,
   campaigns: PropTypes.number.isRequired,
   collectionPeriods: PropTypes.number.isRequired,
+  imgName: PropTypes.string.isRequired,
+  imgAlt: PropTypes.string.isRequired,
 }

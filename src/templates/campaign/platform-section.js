@@ -37,10 +37,7 @@ const PlatformSection = ({ platforms }) => (
               >
                 <Link to={`/platform/${platform.id}`} key={platform.id}>
                   <div style={{ position: `relative`, marginRight: `1rem` }}>
-                    <Image
-                      filename={platform.imgName} // TODO: replace with platform image
-                      alt={platform.imgAlt}
-                    />
+                    <Image filename={platform.imgName} alt={platform.imgAlt} />
                     <ImageCaption id="platform-image">
                       {platform.longname || platform.shortname}
                     </ImageCaption>

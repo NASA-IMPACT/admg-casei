@@ -6,8 +6,15 @@ import Layout, { PageBody } from "../../components/layout"
 import PlatformHeader from "./hero"
 import Overview from "./overview"
 import RelatedCampaigns from "./related-campaigns"
+import { getOriginalImgName } from "../../utils/helpers"
 
-export default function PlatformTemplate({ data: { platform } }) {
+export default function PlatformTemplate({
+  data: { platform, allNasaImagesJson },
+}) {
+  const platformImage = allNasaImagesJson.nodes.find(
+    img => img.shortname === platform.shortname
+  )
+
   return (
     <Layout>
       <PlatformHeader
@@ -16,6 +23,8 @@ export default function PlatformTemplate({ data: { platform } }) {
         campaigns={platform.campaigns.length}
         collectionPeriods={platform.collectionPeriods.length}
         textToImageRatio={[3, 5]}
+        imgName={getOriginalImgName(platformImage.nasaImgUrl)}
+        imgAlt={platformImage.nasaImgAlt}
       />
       <PageBody id="platform">
         <Overview
@@ -34,6 +43,13 @@ export const query = graphql`
       ...platformHeroFields
       ...platformOverviewFields
       ...platformCampaignFields
+    }
+    allNasaImagesJson(filter: { category: { eq: "platform" } }) {
+      nodes {
+        shortname
+        nasaImgUrl
+        nasaImgAlt
+      }
     }
   }
 `
@@ -70,5 +86,14 @@ PlatformTemplate.propTypes = {
       ),
       collectionPeriods: PropTypes.arrayOf(PropTypes.string),
     }),
+    allNasaImagesJson: PropTypes.shape({
+      nodes: PropTypes.arrayOf(
+        PropTypes.shape({
+          shortname: PropTypes.string.isRequired,
+          nasaImgUrl: PropTypes.string.isRequired,
+          nasaImgAlt: PropTypes.string.isRequired,
+        }).isRequired
+      ),
+    }).isRequired,
   }),
 }
