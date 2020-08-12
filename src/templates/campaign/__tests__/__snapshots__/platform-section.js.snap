@@ -68,7 +68,7 @@ exports[`Platform Section displays content 1`] = `
                 data-cy="platform-image-caption"
                 style={
                   Object {
-                    "bottom": "2.5rem",
+                    "bottom": ".5rem",
                     "color": "hsla(0,0%,100%,0.9)",
                     "fontWeight": "bold",
                     "left": "1rem",
@@ -108,7 +108,7 @@ exports[`Platform Section displays content 1`] = `
                 data-cy="platform-image-caption"
                 style={
                   Object {
-                    "bottom": "2.5rem",
+                    "bottom": ".5rem",
                     "color": "hsla(0,0%,100%,0.9)",
                     "fontWeight": "bold",
                     "left": "1rem",
@@ -148,7 +148,7 @@ exports[`Platform Section displays content 1`] = `
                 data-cy="platform-image-caption"
                 style={
                   Object {
-                    "bottom": "2.5rem",
+                    "bottom": ".5rem",
                     "color": "hsla(0,0%,100%,0.9)",
                     "fontWeight": "bold",
                     "left": "1rem",

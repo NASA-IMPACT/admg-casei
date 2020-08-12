@@ -83,7 +83,11 @@ export const useContainerDimensions = containerRef => {
   return dimensions
 }
 
+/**
+ * A method to extract the image name referenced in `sharp image` from the image url.
+ * @param {string} imgUrl - image url
+ * @return {string} image name
+ */
 export function getOriginalImgName(imgUrl) {
-  const originalName = "ED04-0056-057~orig.jpg"
-  return originalName
+  return imgUrl.split("/").pop()
 }

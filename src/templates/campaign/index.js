@@ -12,6 +12,7 @@ import ProgramInfoSection from "./program-info-section"
 import FocusSection from "./focus-section"
 import { SectionBlock, SectionHeader } from "../../components/section"
 import MaintenanceSection from "../../components/maintenance-section"
+import { getOriginalImgName } from "../../utils/helpers"
 
 const CampaignTemplate = ({
   data: { campaign, deployments, allNasaImagesJson },
@@ -27,8 +28,11 @@ const CampaignTemplate = ({
       const platformImg = allNasaImagesJson.nodes.find(
         img => img.shortname === platform.shortname
       )
-      const imgName = platformImg.nasaImgUrl.split("/").pop()
-      return { ...platform, imgName: imgName, imgAlt: platformImg.nasaImgAlt }
+      return {
+        ...platform,
+        imgName: getOriginalImgName(platformImg.nasaImgUrl),
+        imgAlt: platformImg.nasaImgAlt,
+      }
     })
     return updatedPlatforms
   }
