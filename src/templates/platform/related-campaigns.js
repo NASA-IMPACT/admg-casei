@@ -9,7 +9,7 @@ import {
   SectionContent,
 } from "../../components/section"
 import CampaignCard from "../../components/cards/campaign-card"
-import { formatDateRange } from "../../utils/helpers"
+import { formatYearRange } from "../../utils/helpers"
 
 const RelatedCampaigns = ({ campaigns }) => {
   return (
@@ -39,7 +39,7 @@ const RelatedCampaigns = ({ campaigns }) => {
                       ongoing={campaign.ongoing}
                       shortname={campaign.shortname}
                       longname={campaign.longname}
-                      daterange={formatDateRange(
+                      daterange={formatYearRange(
                         campaign.startdate,
                         campaign.enddate
                       )}

@@ -5,7 +5,7 @@ import Spinner from "react-spinkit"
 
 import api from "../../utils/api"
 import { selector } from "../../utils/filter-utils"
-import { formatDateRange } from "../../utils/helpers"
+import { formatYearRange } from "../../utils/helpers"
 import theme from "../../utils/theme"
 
 import Layout, { PageBody } from "../../components/layout"
@@ -133,7 +133,7 @@ const Campaigns = ({ data, location }) => {
                     ongoing={campaign.ongoing}
                     shortname={campaign.shortname}
                     longname={campaign.longname}
-                    daterange={formatDateRange(
+                    daterange={formatYearRange(
                       campaign.startdate,
                       campaign.enddate
                     )}

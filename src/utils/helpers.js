@@ -40,13 +40,29 @@ export function PropTypeIsUrl(props, propName, componentName) {
  * @param {string} end - a date-like value
  * @return {string} A string representing the time range as year-only, e.g. `2018` (if start and end within the same year), or `2012-2014`.
  */
-export function formatDateRange(start, end) {
+export function formatYearRange(start, end) {
   const startdate = new Date(start)
   const enddate = new Date(end)
   const startyear = startdate.getFullYear()
   const endyear = enddate.getFullYear()
 
   return startyear === endyear ? `${startyear}` : `${startyear}—${endyear}`
+}
+
+/**
+ * A function to format two dates into a mm/dd/yyyy -- mm/dd/yyyy format.
+ * @param {string} start - a date-like value
+ * @param {string} end - a date-like value
+ * @return {string} A string representing the date range.
+ */
+export function formatDateRange(start, end) {
+  const startdate = new Date(start)
+  const enddate = new Date(end)
+  function formatDateString(date) {
+    return `${date.getMonth() + 1} / ${date.getDate()} / ${date.getFullYear()}`
+  }
+
+  return `${formatDateString(startdate)} — ${formatDateString(enddate)}`
 }
 
 /**

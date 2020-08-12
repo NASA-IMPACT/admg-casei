@@ -1,6 +1,5 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { graphql } from "gatsby"
 
 import Label from "../../components/label"
 import theme from "../../utils/theme"
@@ -8,8 +7,7 @@ import Image from "../image"
 
 export default function Milestone({
   type,
-  startDate,
-  endDate,
+  daterange,
   name,
   details,
   region,
@@ -38,9 +36,7 @@ export default function Milestone({
           <Image filename={placeholderImageUrl} alt={placeholderImageAlt} />
         </div>
         <div style={{ flex: `1.61803398875`, padding: `1rem` }}>
-          <Label id="timeline-milestone-date">
-            {`${startDate} — ${endDate}`}
-          </Label>
+          <Label id="timeline-milestone-date">{daterange}</Label>
           <h3>{name}</h3>
           <p>{details}</p>
           <p>{region}</p>
@@ -52,8 +48,7 @@ export default function Milestone({
 
 Milestone.propTypes = {
   type: PropTypes.string.isRequired,
-  startDate: PropTypes.string.isRequired,
-  endDate: PropTypes.string.isRequired,
+  daterange: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   details: PropTypes.string.isRequired,
   region: PropTypes.string.isRequired,

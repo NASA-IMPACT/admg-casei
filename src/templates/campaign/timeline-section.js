@@ -10,6 +10,7 @@ import {
   SectionHeader,
   SectionContent,
 } from "../../components/section"
+import { formatDateRange } from "../../utils/helpers"
 
 const TimelineSection = ({
   deployments,
@@ -17,7 +18,6 @@ const TimelineSection = ({
   placeholderImageAlt,
 }) => {
   const [currentSlide, setCurrentSlide] = useState(0)
-  console.log("placeholderImageUrl", placeholderImageUrl)
   /**
    * Finds the index of the milestone given the id.
    * @param {string} id - of milestone
@@ -50,6 +50,7 @@ const TimelineSection = ({
               <Milestone
                 key={deployment.id}
                 type="deployment"
+                daterange={formatDateRange(deployment.start, deployment.end)}
                 startDate={deployment.start}
                 endDate={deployment.end}
                 name={`${deployment.longname} (${deployment.shortname})`}
