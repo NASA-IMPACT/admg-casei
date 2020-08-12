@@ -11,7 +11,7 @@ export default function ImageCaption({ children, id }) {
         color: theme.color.base,
         textShadow: `1px 1px rgba(0,0,0,0.8)`,
         position: `absolute`,
-        bottom: `2.5rem`,
+        bottom: `.5rem`,
         left: `1rem`,
         fontWeight: `bold`,
         maxWidth: `18rem`,

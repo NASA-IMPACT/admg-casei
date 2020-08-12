@@ -29,7 +29,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       nasaImg: File @link(from: "nasaImg___NODE")
     }
     type imageJson {
-      shortName: String!
+      shortname: String!
       category: String
       nasaImgUrl: String
       nasaImgAlt: String

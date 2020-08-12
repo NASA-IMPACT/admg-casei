@@ -82,3 +82,8 @@ export const useContainerDimensions = containerRef => {
 
   return dimensions
 }
+
+export function getOriginalImgName(imgUrl) {
+  const originalName = "ED04-0056-057~orig.jpg"
+  return originalName
+}

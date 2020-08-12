@@ -13,12 +13,25 @@ import FocusSection from "./focus-section"
 import { SectionBlock, SectionHeader } from "../../components/section"
 import MaintenanceSection from "../../components/maintenance-section"
 
-const CampaignTemplate = ({ data: { campaign, deployments } }) => {
+const CampaignTemplate = ({
+  data: { campaign, deployments, allNasaImagesJson },
+}) => {
   const [isClient, setIsClient] = useState(false)
   useEffect(() => {
     // useEffect only runs client-side after rehyration
     setIsClient(true)
   }, [])
+
+  const platformsWithImages = () => {
+    const updatedPlatforms = campaign.platforms.map(platform => {
+      const platformImg = allNasaImagesJson.nodes.find(
+        img => img.shortname === platform.shortname
+      )
+      const imgName = platformImg.nasaImgUrl.split("/").pop()
+      return { ...platform, imgName: imgName, imgAlt: platformImg.nasaImgAlt }
+    })
+    return updatedPlatforms
+  }
 
   return (
     <Layout>
@@ -50,7 +63,7 @@ const CampaignTemplate = ({ data: { campaign, deployments } }) => {
           geophysical={campaign.geophysical}
           focusPhenomena={campaign.focusPhenomena}
         />
-        <PlatformSection platforms={campaign.platforms} />
+        <PlatformSection platforms={platformsWithImages()} />
         <TimelineSection deployments={deployments} />
         <SectionBlock id="data">
           <SectionHeader headline="Data" />
@@ -93,6 +106,14 @@ export const query = graphql`
     }
     deployments: allDeployment(filter: { campaign: { eq: $slug } }) {
       ...deploymentFragment
+    }
+    allNasaImagesJson(filter: { category: { eq: "platform" } }) {
+      nodes {
+        shortname
+        nasaImgUrl
+        nasaImgAlt
+        category
+      }
     }
   }
 `
@@ -166,6 +187,16 @@ CampaignTemplate.propTypes = {
           end: PropTypes.string.isRequired,
           start: PropTypes.string.isRequired,
         })
+      ),
+    }).isRequired,
+    allNasaImagesJson: PropTypes.shape({
+      nodes: PropTypes.arrayOf(
+        PropTypes.shape({
+          shortname: PropTypes.string.isRequired,
+          nasaImgUrl: PropTypes.string.isRequired,
+          nasaImgAlt: PropTypes.string.isRequired,
+          category: PropTypes.string.isRequired,
+        }).isRequired
       ),
     }).isRequired,
   }).isRequired,
