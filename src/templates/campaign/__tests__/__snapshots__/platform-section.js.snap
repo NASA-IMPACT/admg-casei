@@ -63,12 +63,23 @@ exports[`Platform Section displays content 1`] = `
                 }
               }
             >
-              <img />
+              <img
+                alt="NASA's DC-8 flying laboratory seen at sunset after a flight supporting the AirSAR 2004 Mesoamerica campaign"
+                src="https://images-assets.nasa.gov/image/ED04-0056-072/ED04-0056-072~orig.jpg"
+                style={
+                  Object {
+                    "display": "block",
+                    "height": "16rem",
+                    "margin": "0 auto",
+                    "width": "auto",
+                  }
+                }
+              />
               <label
                 data-cy="platform-image-caption"
                 style={
                   Object {
-                    "bottom": "2.5rem",
+                    "bottom": ".5rem",
                     "color": "hsla(0,0%,100%,0.9)",
                     "fontWeight": "bold",
                     "left": "1rem",
@@ -103,12 +114,23 @@ exports[`Platform Section displays content 1`] = `
                 }
               }
             >
-              <img />
+              <img
+                alt="NASA’s B200 taking off for an eight-hour science flight"
+                src="https://images-assets.nasa.gov/image/AFRC2018-0038-015/AFRC2018-0038-015~orig.jpg"
+                style={
+                  Object {
+                    "display": "block",
+                    "height": "16rem",
+                    "margin": "0 auto",
+                    "width": "auto",
+                  }
+                }
+              />
               <label
                 data-cy="platform-image-caption"
                 style={
                   Object {
-                    "bottom": "2.5rem",
+                    "bottom": ".5rem",
                     "color": "hsla(0,0%,100%,0.9)",
                     "fontWeight": "bold",
                     "left": "1rem",
@@ -143,12 +165,23 @@ exports[`Platform Section displays content 1`] = `
                 }
               }
             >
-              <img />
+              <img
+                alt="sample"
+                src="https://images-assets.nasa.gov/image/EC94-42742-7/EC94-42742-7~orig.jpg"
+                style={
+                  Object {
+                    "display": "block",
+                    "height": "16rem",
+                    "margin": "0 auto",
+                    "width": "auto",
+                  }
+                }
+              />
               <label
                 data-cy="platform-image-caption"
                 style={
                   Object {
-                    "bottom": "2.5rem",
+                    "bottom": ".5rem",
                     "color": "hsla(0,0%,100%,0.9)",
                     "fontWeight": "bold",
                     "left": "1rem",
