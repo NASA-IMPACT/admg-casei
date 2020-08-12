@@ -1,9 +1,22 @@
 import React from "react"
 import PropTypes from "prop-types"
+import styled from "styled-components"
 
 import theme from "../../utils/theme"
+import PlaceholderLogo from "../../images/placeholder-logo.svg"
 
-const Card = ({ children, tag, footerList }) => (
+const CardHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem 0 2rem 0;
+  min-height: 2rem;
+  & div:only-child {
+    margin-left: auto;
+  }
+`
+
+const Card = ({ children, image, tag, footerList }) => (
   <div
     style={{
       backgroundColor: theme.color.secondary,
@@ -17,23 +30,15 @@ const Card = ({ children, tag, footerList }) => (
     data-cy="explore-card"
   >
     <div style={{ marginBottom: `2rem` }}>
-      <div
-        style={{
-          display: `flex`,
-          justifyContent: `space-between`,
-          alignItems: `center`,
-          margin: `0.5rem 0 2rem 0`,
-        }}
-      >
-        <div
-          className="placeholder"
-          style={{
-            borderRadius: `2.5rem`,
-            backgroundColor: `#9E9E9E`,
-            width: `2.5rem`,
-            height: `2.5rem`,
-          }}
-        ></div>
+      <CardHeader>
+        {image && (
+          <img
+            src={image.url || PlaceholderLogo}
+            alt={image.description}
+            width="45"
+            height="45"
+          />
+        )}
         {tag && (
           <div
             style={{
@@ -46,7 +51,7 @@ const Card = ({ children, tag, footerList }) => (
             {tag}
           </div>
         )}
-      </div>
+      </CardHeader>
       {children}
     </div>
     {footerList && (
@@ -67,6 +72,10 @@ Card.propTypes = {
     PropTypes.element,
     PropTypes.arrayOf(PropTypes.element),
   ]),
+  image: PropTypes.shape({
+    url: PropTypes.string,
+    description: PropTypes.string,
+  }),
   tag: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   footerList: PropTypes.arrayOf(
     PropTypes.shape({ count: PropTypes.number, title: PropTypes.string })

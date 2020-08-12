@@ -1,6 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Card renders card with tag 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0.5rem 0 2rem 0;
+  min-height: 2rem;
+}
+
+.c0 div:only-child {
+  margin-left: auto;
+}
+
 <div
   data-cy="explore-card"
   style={
@@ -23,26 +44,8 @@ exports[`Card renders card with tag 1`] = `
     }
   >
     <div
-      style={
-        Object {
-          "alignItems": "center",
-          "display": "flex",
-          "justifyContent": "space-between",
-          "margin": "0.5rem 0 2rem 0",
-        }
-      }
+      className="c0"
     >
-      <div
-        className="placeholder"
-        style={
-          Object {
-            "backgroundColor": "#9E9E9E",
-            "borderRadius": "2.5rem",
-            "height": "2.5rem",
-            "width": "2.5rem",
-          }
-        }
-      />
       <div
         data-cy="stationary-tag"
         style={
@@ -84,6 +87,27 @@ exports[`Card renders card with tag 1`] = `
 `;
 
 exports[`Card renders plain card 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0.5rem 0 2rem 0;
+  min-height: 2rem;
+}
+
+.c0 div:only-child {
+  margin-left: auto;
+}
+
 <div
   data-cy="explore-card"
   style={
@@ -106,27 +130,8 @@ exports[`Card renders plain card 1`] = `
     }
   >
     <div
-      style={
-        Object {
-          "alignItems": "center",
-          "display": "flex",
-          "justifyContent": "space-between",
-          "margin": "0.5rem 0 2rem 0",
-        }
-      }
-    >
-      <div
-        className="placeholder"
-        style={
-          Object {
-            "backgroundColor": "#9E9E9E",
-            "borderRadius": "2.5rem",
-            "height": "2.5rem",
-            "width": "2.5rem",
-          }
-        }
-      />
-    </div>
+      className="c0"
+    />
     <div>
       <big
         data-cy="shortname"
@@ -155,6 +160,27 @@ exports[`Card renders plain card 1`] = `
 `;
 
 exports[`Card renders with footer list 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0.5rem 0 2rem 0;
+  min-height: 2rem;
+}
+
+.c0 div:only-child {
+  margin-left: auto;
+}
+
 <div
   data-cy="explore-card"
   style={
@@ -177,27 +203,8 @@ exports[`Card renders with footer list 1`] = `
     }
   >
     <div
-      style={
-        Object {
-          "alignItems": "center",
-          "display": "flex",
-          "justifyContent": "space-between",
-          "margin": "0.5rem 0 2rem 0",
-        }
-      }
-    >
-      <div
-        className="placeholder"
-        style={
-          Object {
-            "backgroundColor": "#9E9E9E",
-            "borderRadius": "2.5rem",
-            "height": "2.5rem",
-            "width": "2.5rem",
-          }
-        }
-      />
-    </div>
+      className="c0"
+    />
     <div>
       <big
         data-cy="shortname"
