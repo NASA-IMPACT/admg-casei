@@ -217,52 +217,62 @@
   },
   {
     "shortname": "ACES",
+    "category": "logo",
     "nasaImgUrl": "https://ghrc.nsstc.nasa.gov/home/sites/default/files/aces_logo.png#overlay-context=field-campaigns/aces",
     "nasaImgAlt": "logo"
   },
   {
     "shortname": "AirMOSS",
+    "category": "logo",
     "nasaImgUrl": "https://airbornescience.jpl.nasa.gov/sites/default/files/airmossLogo.png",
-    "nasaImgAlt": "logo"
+    "nasaImgAlt": "AirMOSS logo"
   },
   {
     "shortname": "ARCTAS",
+    "category": "logo",
     "nasaImgUrl": "https://cloud1.arc.nasa.gov/arctas/images/arctas_spring.jpg",
-    "nasaImgAlt": "logo"
+    "nasaImgAlt": "ARCTAS logo"
   },
   {
     "shortname": "CARVE",
+    "category": "logo",
     "nasaImgUrl": "https://carve.jpl.nasa.gov/images/carve/carve_logo_update.jpg",
-    "nasaImgAlt": "logo"
+    "nasaImgAlt": "CARVE logo"
   },
   {
     "shortname": "DC3",
+    "category": "logo",
     "nasaImgUrl": "https://www-air.larc.nasa.gov/missions/dc3-seac4rs/img/dc3-logo.png",
-    "nasaImgAlt": "logo"
+    "nasaImgAlt": "DC3 logo"
   },
   {
     "shortname": "GCPEx",
+    "category": "logo",
     "nasaImgUrl": "https://airbornescience.nasa.gov/sites/default/files/styles/200wide/public/current_activities/gcpexlogo.png?itok=Z1MVjjPB",
-    "nasaImgAlt": "logo"
+    "nasaImgAlt": "GCPEx logo"
   },
   {
     "shortname": "GOES-R PLT",
+    "category": "logo",
     "nasaImgUrl": "",
-    "nasaImgAlt": "logo"
+    "nasaImgAlt": "GOES-R PLT logo"
   },
   {
     "shortname": "GRIP",
+    "category": "logo",
     "nasaImgUrl": "https://www.nasa.gov/images/content/464732main_grip_graphic_med.jpg",
-    "nasaImgAlt": "logo"
+    "nasaImgAlt": "GRIP logo"
   },
   {
     "shortname": "HS3",
+    "category": "logo",
     "nasaImgUrl": "https://espo.nasa.gov/sites/default/files/images/HS3_logo.png",
-    "nasaImgAlt": "logo"
+    "nasaImgAlt": "HS3 logo"
   },
   {
     "shortname": "OLYMPEX",
+    "category": "logo",
     "nasaImgUrl": "https://wallops-prf.gsfc.nasa.gov/Field_Campaigns/Olympex/img/logo_image2.png",
-    "nasaImgAlt": "logo"
+    "nasaImgAlt": "OLYMPEX logo"
   }
 ]
