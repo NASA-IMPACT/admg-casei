@@ -24,15 +24,14 @@ exports.createSchemaCustomization = ({ actions }) => {
     type platform implements Node {
       campaigns: [campaign] @link
     }
-    type allContentJson implements Node {
-      imageList: ImageList
-      featuredImg: File @link(from: "featuredImg___NODE")
+    type contentJson implements Node {
+      platformJson: imageJson
+      platformImg: File @link(from: "platformImg___NODE")
     }
-    type ImageList {
+    type imageJson {
       title: String!
-      uuid: String
-      featuredImgUrl: String
-      featuredImgAlt: String
+      platformImgUrl: String
+      platformImgAlt: String
     }
   `
 
@@ -46,9 +45,12 @@ exports.onCreateNode = async ({
   cache,
   createNodeId,
 }) => {
-  if (node.internal.type === "JSON" && node.imageList.url !== null) {
+  if (
+    node.internal.type === "PlatformImagesJson" &&
+    node.platformImgUrl !== null
+  ) {
     let fileNode = await createRemoteFileNode({
-      url: node.imageList.featuredImgUrl, // string that points to the URL of the image
+      url: node.platformImgUrl, // string that points to the URL of the image
       parentNodeId: node.id, // id of the parent node of the fileNode you are going to create
       createNode, // helper function in gatsby-node to generate the node
       createNodeId, // helper function in gatsby-node to generate the node id
@@ -58,7 +60,7 @@ exports.onCreateNode = async ({
 
     // if the file was created, attach the new node to the parent node
     if (fileNode) {
-      node.featuredImg___NODE = fileNode.id
+      node.platformImg___NODE = fileNode.id
     }
   }
 }
