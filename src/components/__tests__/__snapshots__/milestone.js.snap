@@ -21,6 +21,7 @@ exports[`MileStone renders correctly 1`] = `
         "position": "absolute",
         "textTransform": "uppercase",
         "top": "4rem",
+        "zIndex": "1",
       }
     }
   >
@@ -40,11 +41,7 @@ exports[`MileStone renders correctly 1`] = `
         }
       }
     >
-      <img
-        alt="Milestone-image"
-        data-cy="overview-map"
-        src="https://picsum.photos/300/300"
-      />
+      <img />
     </div>
     <div
       style={
@@ -66,7 +63,7 @@ exports[`MileStone renders correctly 1`] = `
           }
         }
       >
-        2012-10-02 — 2012-10-20
+        10/02/2012 - 10/20/2012
       </label>
       <h3>
         Canada, Oregon Fall 2012
