@@ -9,7 +9,8 @@ import {
   SectionContent,
 } from "../../components/section"
 import ImageCaption from "../../components/image-caption"
-import Image from "../../components/image"
+// import Image from "../../components/image"
+import images from "../../content/platform-images.json"
 
 // import Chip from "../../components/chip"
 
@@ -37,9 +38,9 @@ const PlatformSection = ({ platforms }) => (
               >
                 <Link to={`/platform/${platform.id}`} key={platform.id}>
                   <div style={{ position: `relative`, marginRight: `1rem` }}>
-                    <Image
-                      filename="platform.png" // TODO: replace with platform image
-                      alt="an aircraft transporting a spacecraft"
+                    <img
+                      src={images[platform.shortname].url}
+                      alt={images[platform.shortname].alt}
                     />
                     <ImageCaption id="platform-image">
                       {platform.longname || platform.shortname}

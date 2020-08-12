@@ -5,7 +5,6 @@
  */
 const fetch = require("node-fetch")
 const path = require("path")
-const { createRemoteFileNode } = require("gatsby-source-filesystem")
 
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions
@@ -24,43 +23,9 @@ exports.createSchemaCustomization = ({ actions }) => {
     type platform implements Node {
       campaigns: [campaign] @link
     }
-    type allContentJson implements Node {
-      imageList: ImageList
-      featuredImg: File @link(from: "featuredImg___NODE")
-    }
-    type ImageList {
-      title: String!
-      uuid: String
-      featuredImgUrl: String
-      featuredImgAlt: String
-    }
   `
 
   createTypes(typeDefs)
-}
-
-exports.onCreateNode = async ({
-  node,
-  actions: { createNode },
-  store,
-  cache,
-  createNodeId,
-}) => {
-  if (node.internal.type === "JSON" && node.imageList.url !== null) {
-    let fileNode = await createRemoteFileNode({
-      url: node.imageList.featuredImgUrl, // string that points to the URL of the image
-      parentNodeId: node.id, // id of the parent node of the fileNode you are going to create
-      createNode, // helper function in gatsby-node to generate the node
-      createNodeId, // helper function in gatsby-node to generate the node id
-      cache, // Gatsby's cache
-      store, // Gatsby's redux store
-    })
-
-    // if the file was created, attach the new node to the parent node
-    if (fileNode) {
-      node.featuredImg___NODE = fileNode.id
-    }
-  }
 }
 
 exports.sourceNodes = async ({ actions, createContentDigest }) => {
