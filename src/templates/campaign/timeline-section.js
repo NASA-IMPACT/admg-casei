@@ -11,9 +11,13 @@ import {
   SectionContent,
 } from "../../components/section"
 
-const TimelineSection = ({ deployments }) => {
+const TimelineSection = ({
+  deployments,
+  placeholderImageUrl,
+  placeholderImageAlt,
+}) => {
   const [currentSlide, setCurrentSlide] = useState(0)
-
+  console.log("placeholderImageUrl", placeholderImageUrl)
   /**
    * Finds the index of the milestone given the id.
    * @param {string} id - of milestone
@@ -51,6 +55,8 @@ const TimelineSection = ({ deployments }) => {
                 name={`${deployment.longname} (${deployment.shortname})`}
                 details={`${deployment.flights.length} Flights`}
                 region={deployment.region.toString()}
+                placeholderImageUrl={placeholderImageUrl}
+                placeholderImageAlt={placeholderImageAlt}
               />
             ))}
           </Carousel>
@@ -95,6 +101,8 @@ TimelineSection.propTypes = {
       })
     ),
   }),
+  placeholderImageUrl: PropTypes.string.isRequired,
+  placeholderImageAlt: PropTypes.string.isRequired,
 }
 
 export default TimelineSection

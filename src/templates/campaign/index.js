@@ -15,7 +15,7 @@ import MaintenanceSection from "../../components/maintenance-section"
 import { getOriginalImgName } from "../../utils/helpers"
 
 const CampaignTemplate = ({
-  data: { campaign, deployments, allNasaImagesJson },
+  data: { campaign, deployments, platformImgs, deploymentImgs },
 }) => {
   const [isClient, setIsClient] = useState(false)
   useEffect(() => {
@@ -25,7 +25,7 @@ const CampaignTemplate = ({
 
   const platformsWithImages = () => {
     const updatedPlatforms = campaign.platforms.map(platform => {
-      const platformImg = allNasaImagesJson.nodes.find(
+      const platformImg = platformImgs.nodes.find(
         img => img.shortname === platform.shortname
       )
       return {
@@ -68,7 +68,13 @@ const CampaignTemplate = ({
           focusPhenomena={campaign.focusPhenomena}
         />
         <PlatformSection platforms={platformsWithImages()} />
-        <TimelineSection deployments={deployments} />
+        <TimelineSection
+          deployments={deployments}
+          placeholderImageUrl={getOriginalImgName(
+            deploymentImgs.nodes[0].nasaImgUrl
+          )}
+          placeholderImageAlt={deploymentImgs.nodes[0].nasaImgAlt}
+        />
         <SectionBlock id="data">
           <SectionHeader headline="Data" />
         </SectionBlock>
@@ -111,12 +117,20 @@ export const query = graphql`
     deployments: allDeployment(filter: { campaign: { eq: $slug } }) {
       ...deploymentFragment
     }
-    allNasaImagesJson(filter: { category: { eq: "platform" } }) {
+    platformImgs: allNasaImagesJson(filter: { category: { eq: "platform" } }) {
       nodes {
         shortname
         nasaImgUrl
         nasaImgAlt
         category
+      }
+    }
+    deploymentImgs: allNasaImagesJson(
+      filter: { category: { eq: "deployment" } }
+    ) {
+      nodes {
+        nasaImgUrl
+        nasaImgAlt
       }
     }
   }
@@ -193,13 +207,21 @@ CampaignTemplate.propTypes = {
         })
       ),
     }).isRequired,
-    allNasaImagesJson: PropTypes.shape({
+    platformImgs: PropTypes.shape({
       nodes: PropTypes.arrayOf(
         PropTypes.shape({
           shortname: PropTypes.string.isRequired,
           nasaImgUrl: PropTypes.string.isRequired,
           nasaImgAlt: PropTypes.string.isRequired,
           category: PropTypes.string.isRequired,
+        }).isRequired
+      ),
+    }).isRequired,
+    deploymentImgs: PropTypes.shape({
+      nodes: PropTypes.arrayOf(
+        PropTypes.shape({
+          nasaImgUrl: PropTypes.string.isRequired,
+          nasaImgAlt: PropTypes.string.isRequired,
         }).isRequired
       ),
     }).isRequired,
