@@ -43,13 +43,6 @@ const Image = props => {
           }
         }
       }
-      allContentJson {
-        nodes {
-          ${props.uuid} {
-            url
-          }
-        }
-      }
     }
   `)
 
