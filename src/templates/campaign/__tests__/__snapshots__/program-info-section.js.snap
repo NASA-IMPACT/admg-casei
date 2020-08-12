@@ -58,9 +58,9 @@ exports[`Program Info Section renders logo when present in props 1`] = `
         }
       >
         <img
-          alt="campaign-logo"
+          alt="logo"
           data-cy="campaign-logo"
-          src="https://via.placeholder.com/150"
+          src="https://airbornescience.jpl.nasa.gov/sites/default/files/airmossLogo.png"
         />
       </div>
       <div
@@ -338,7 +338,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
         }
       >
         <img
-          alt="campaign-logo"
+          alt="placeholder-logo"
           data-cy="campaign-logo"
           src="test-file-stub"
         />

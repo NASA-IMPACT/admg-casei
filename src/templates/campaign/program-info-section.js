@@ -10,9 +10,10 @@ import {
   ContentGroup,
 } from "../../components/section"
 import PlaceholderLogo from "../../images/placeholder-logo.svg"
+import logos from "../../content/nasa-images.json"
 
 const ProgramInfoSection = ({
-  logo,
+  shortname,
   fundingAgency,
   fundingProgram,
   programLead,
@@ -32,6 +33,7 @@ const ProgramInfoSection = ({
     { label: "Partner Organization", info: partnerOrgListing },
     { label: "Tertiary Website", info: tertiaryWebsite, link: tertiaryWebsite },
   ]
+  const logo = logos.find(logo => logo.shortname === shortname)
 
   return (
     <SectionBlock id="program-info">
@@ -47,11 +49,19 @@ const ProgramInfoSection = ({
               padding: `1rem`,
             }}
           >
-            <img
-              src={logo || PlaceholderLogo}
-              alt="campaign-logo"
-              data-cy="campaign-logo"
-            />
+            {logo && logo.nasaImgUrl ? (
+              <img
+                src={logo.nasaImgUrl}
+                alt={logo.nasaImgAlt}
+                data-cy="campaign-logo"
+              />
+            ) : (
+              <img
+                src={PlaceholderLogo}
+                alt="placeholder-logo"
+                data-cy="campaign-logo"
+              />
+            )}
           </div>
 
           <ContentGroup>
@@ -92,7 +102,7 @@ export const fundingFields = graphql`
 `
 
 ProgramInfoSection.propTypes = {
-  logo: PropTypes.string,
+  shortname: PropTypes.string.isRequired,
   fundingAgency: PropTypes.string.isRequired,
   fundingProgram: PropTypes.string.isRequired,
   programLead: PropTypes.string.isRequired,

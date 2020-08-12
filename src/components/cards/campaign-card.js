@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import Card from "./card"
+import logos from "../../content/nasa-images.json"
 
 const CampaignCard = ({
   ongoing,
@@ -13,6 +14,7 @@ const CampaignCard = ({
   countDataProducts = 0,
 }) => (
   <Card
+    image={logos.find(logo => logo.shortname === shortname)}
     tag={ongoing && "Ongoing"}
     footerList={[
       { count: countCollectionPeriods, title: "Collection Periods" },
