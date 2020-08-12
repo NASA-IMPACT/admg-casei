@@ -9,7 +9,6 @@ import {
   SectionContent,
 } from "../../components/section"
 import ImageCaption from "../../components/image-caption"
-// import Image from "../../components/image"
 import images from "../../content/platform-images.json"
 
 // import Chip from "../../components/chip"
