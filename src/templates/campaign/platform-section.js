@@ -41,6 +41,12 @@ const PlatformSection = ({ platforms }) => (
                     <img
                       src={images[platform.shortname].url}
                       alt={images[platform.shortname].alt}
+                      style={{
+                        display: `block`,
+                        margin: `0 auto`,
+                        width: `auto`,
+                        height: `16rem`,
+                      }}
                     />
                     <ImageCaption id="platform-image">
                       {platform.longname || platform.shortname}
