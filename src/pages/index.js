@@ -26,7 +26,7 @@ const IndexPage = ({ data }) => {
         tagTitle={data.site.siteMetadata.shortname}
         title={data.site.siteMetadata.title}
         description={data.site.siteMetadata.description}
-        backgroundImage="https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e000980/GSFC_20171208_Archive_e000980~orig.jpg"
+        backgroundImage="https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e000980/GSFC_20171208_Archive_e000980~orig.jpg" // TODO: add to nasa-images and query with gatsby
         id="home"
       />
       <PageBody id="home">
@@ -130,6 +130,10 @@ export const query = graphql`
         id
         shortname: short_name
         example
+        image {
+          nasaImgUrl
+          nasaImgAlt
+        }
       }
     }
     allGeophysicalConcept {
@@ -171,6 +175,10 @@ IndexPage.propTypes = {
           id: PropTypes.string.isRequired,
           shortname: PropTypes.string.isRequired,
           example: PropTypes.string.isRequired,
+          image: PropTypes.shape({
+            nasaImgUrl: PropTypes.string.isRequired,
+            nasaImgAlt: PropTypes.string.isRequired,
+          }).isRequired,
         })
       ),
     }),
