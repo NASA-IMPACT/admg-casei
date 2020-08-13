@@ -30,9 +30,9 @@ const Milestone = ({
     <div style={{ display: `flex` }}>
       <div style={{ flex: `1` }}>
         <img
-          src="https://picsum.photos/300/300"
-          alt="Milestone-image"
-          data-cy="overview-map"
+          src="https://images-assets.nasa.gov/image/AFRC2016-0292-08/AFRC2016-0292-08~medium.jpg"
+          alt="Global Hawk prepping for deployment"
+          data-cy="deployment-img"
         />
       </div>
       <div style={{ flex: `1.61803398875`, padding: `1rem` }}>
