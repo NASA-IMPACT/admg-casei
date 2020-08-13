@@ -982,12 +982,49 @@ exports[`Campaigns page renders correctly 1`] = `
                 <div
                   className="c0"
                 >
-                  <img
-                    alt="logo"
-                    height="45"
-                    src="https://ghrc.nsstc.nasa.gov/home/sites/default/files/aces_logo.png#overlay-context=field-campaigns/aces"
-                    width="45"
-                  />
+                  <div
+                    className=" gatsby-image-wrapper"
+                    style={
+                      Object {
+                        "display": "inline-block",
+                        "height": undefined,
+                        "margin": "0",
+                        "overflow": "hidden",
+                        "position": "relative",
+                        "width": undefined,
+                      }
+                    }
+                  >
+                    <picture>
+                      <source />
+                      <img
+                        alt="logo"
+                        loading="lazy"
+                        onLoad={[Function]}
+                        src="/static/070840eb6299020cd65fd46e27c54400/ad39b/aces_logo.png"
+                        style={
+                          Object {
+                            "height": "100%",
+                            "left": 0,
+                            "objectFit": "cover",
+                            "objectPosition": "center",
+                            "opacity": 0,
+                            "position": "absolute",
+                            "top": 0,
+                            "transition": "opacity 500ms",
+                            "width": "100%",
+                          }
+                        }
+                      />
+                    </picture>
+                    <noscript
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "<picture><source srcset=\\"undefined\\" /><img loading=\\"lazy\\" src=\\"/static/070840eb6299020cd65fd46e27c54400/ad39b/aces_logo.png\\" alt=\\"logo\\" style=\\"position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\\"/></picture>",
+                        }
+                      }
+                    />
+                  </div>
                 </div>
                 <big
                   data-cy="shortname"
@@ -1070,12 +1107,49 @@ exports[`Campaigns page renders correctly 1`] = `
                 <div
                   className="c0"
                 >
-                  <img
-                    alt="ARCTAS logo"
-                    height="45"
-                    src="https://cloud1.arc.nasa.gov/arctas/images/arctas_spring.jpg"
-                    width="45"
-                  />
+                  <div
+                    className=" gatsby-image-wrapper"
+                    style={
+                      Object {
+                        "display": "inline-block",
+                        "height": undefined,
+                        "margin": "0",
+                        "overflow": "hidden",
+                        "position": "relative",
+                        "width": undefined,
+                      }
+                    }
+                  >
+                    <picture>
+                      <source />
+                      <img
+                        alt="ARCTAS logo"
+                        loading="lazy"
+                        onLoad={[Function]}
+                        src="/static/2bd234de67183d020fabe8584d7713ff/f8771/arctas_spring.jpg"
+                        style={
+                          Object {
+                            "height": "100%",
+                            "left": 0,
+                            "objectFit": "cover",
+                            "objectPosition": "center",
+                            "opacity": 0,
+                            "position": "absolute",
+                            "top": 0,
+                            "transition": "opacity 500ms",
+                            "width": "100%",
+                          }
+                        }
+                      />
+                    </picture>
+                    <noscript
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "<picture><source srcset=\\"undefined\\" /><img loading=\\"lazy\\" src=\\"/static/2bd234de67183d020fabe8584d7713ff/f8771/arctas_spring.jpg\\" alt=\\"ARCTAS logo\\" style=\\"position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\\"/></picture>",
+                        }
+                      }
+                    />
+                  </div>
                 </div>
                 <big
                   data-cy="shortname"
@@ -1158,12 +1232,49 @@ exports[`Campaigns page renders correctly 1`] = `
                 <div
                   className="c0"
                 >
-                  <img
-                    alt="AirMOSS logo"
-                    height="45"
-                    src="https://airbornescience.jpl.nasa.gov/sites/default/files/airmossLogo.png"
-                    width="45"
-                  />
+                  <div
+                    className=" gatsby-image-wrapper"
+                    style={
+                      Object {
+                        "display": "inline-block",
+                        "height": undefined,
+                        "margin": "0",
+                        "overflow": "hidden",
+                        "position": "relative",
+                        "width": undefined,
+                      }
+                    }
+                  >
+                    <picture>
+                      <source />
+                      <img
+                        alt="AirMOSS logo"
+                        loading="lazy"
+                        onLoad={[Function]}
+                        src="/static/6cac19092a1bce4be3f0a8b6e564adb3/ad39b/airmossLogo.png"
+                        style={
+                          Object {
+                            "height": "100%",
+                            "left": 0,
+                            "objectFit": "cover",
+                            "objectPosition": "center",
+                            "opacity": 0,
+                            "position": "absolute",
+                            "top": 0,
+                            "transition": "opacity 500ms",
+                            "width": "100%",
+                          }
+                        }
+                      />
+                    </picture>
+                    <noscript
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "<picture><source srcset=\\"undefined\\" /><img loading=\\"lazy\\" src=\\"/static/6cac19092a1bce4be3f0a8b6e564adb3/ad39b/airmossLogo.png\\" alt=\\"AirMOSS logo\\" style=\\"position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\\"/></picture>",
+                        }
+                      }
+                    />
+                  </div>
                 </div>
                 <big
                   data-cy="shortname"
@@ -1246,12 +1357,49 @@ exports[`Campaigns page renders correctly 1`] = `
                 <div
                   className="c0"
                 >
-                  <img
-                    alt="CARVE logo"
-                    height="45"
-                    src="https://carve.jpl.nasa.gov/images/carve/carve_logo_update.jpg"
-                    width="45"
-                  />
+                  <div
+                    className=" gatsby-image-wrapper"
+                    style={
+                      Object {
+                        "display": "inline-block",
+                        "height": undefined,
+                        "margin": "0",
+                        "overflow": "hidden",
+                        "position": "relative",
+                        "width": undefined,
+                      }
+                    }
+                  >
+                    <picture>
+                      <source />
+                      <img
+                        alt="CARVE logo"
+                        loading="lazy"
+                        onLoad={[Function]}
+                        src="/static/3dec137acafa7ac0c3a74368b2cb56b3/f8771/carve_logo_update.jpg"
+                        style={
+                          Object {
+                            "height": "100%",
+                            "left": 0,
+                            "objectFit": "cover",
+                            "objectPosition": "center",
+                            "opacity": 0,
+                            "position": "absolute",
+                            "top": 0,
+                            "transition": "opacity 500ms",
+                            "width": "100%",
+                          }
+                        }
+                      />
+                    </picture>
+                    <noscript
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "<picture><source srcset=\\"undefined\\" /><img loading=\\"lazy\\" src=\\"/static/3dec137acafa7ac0c3a74368b2cb56b3/f8771/carve_logo_update.jpg\\" alt=\\"CARVE logo\\" style=\\"position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\\"/></picture>",
+                        }
+                      }
+                    />
+                  </div>
                 </div>
                 <big
                   data-cy="shortname"
@@ -1334,12 +1482,49 @@ exports[`Campaigns page renders correctly 1`] = `
                 <div
                   className="c0"
                 >
-                  <img
-                    alt="DC3 logo"
-                    height="45"
-                    src="https://www-air.larc.nasa.gov/missions/dc3-seac4rs/img/dc3-logo.png"
-                    width="45"
-                  />
+                  <div
+                    className=" gatsby-image-wrapper"
+                    style={
+                      Object {
+                        "display": "inline-block",
+                        "height": undefined,
+                        "margin": "0",
+                        "overflow": "hidden",
+                        "position": "relative",
+                        "width": undefined,
+                      }
+                    }
+                  >
+                    <picture>
+                      <source />
+                      <img
+                        alt="DC3 logo"
+                        loading="lazy"
+                        onLoad={[Function]}
+                        src="/static/c4b36cb85ef25d65d08739c329b04e52/ad39b/dc3-logo.png"
+                        style={
+                          Object {
+                            "height": "100%",
+                            "left": 0,
+                            "objectFit": "cover",
+                            "objectPosition": "center",
+                            "opacity": 0,
+                            "position": "absolute",
+                            "top": 0,
+                            "transition": "opacity 500ms",
+                            "width": "100%",
+                          }
+                        }
+                      />
+                    </picture>
+                    <noscript
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "<picture><source srcset=\\"undefined\\" /><img loading=\\"lazy\\" src=\\"/static/c4b36cb85ef25d65d08739c329b04e52/ad39b/dc3-logo.png\\" alt=\\"DC3 logo\\" style=\\"position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\\"/></picture>",
+                        }
+                      }
+                    />
+                  </div>
                 </div>
                 <big
                   data-cy="shortname"
@@ -1420,12 +1605,49 @@ exports[`Campaigns page renders correctly 1`] = `
                 <div
                   className="c0"
                 >
-                  <img
-                    alt="GCPEx logo"
-                    height="45"
-                    src="https://airbornescience.nasa.gov/sites/default/files/styles/200wide/public/current_activities/gcpexlogo.png?itok=Z1MVjjPB"
-                    width="45"
-                  />
+                  <div
+                    className=" gatsby-image-wrapper"
+                    style={
+                      Object {
+                        "display": "inline-block",
+                        "height": undefined,
+                        "margin": "0",
+                        "overflow": "hidden",
+                        "position": "relative",
+                        "width": undefined,
+                      }
+                    }
+                  >
+                    <picture>
+                      <source />
+                      <img
+                        alt="GCPEx logo"
+                        loading="lazy"
+                        onLoad={[Function]}
+                        src="/static/4e1cc27c28411e8c942f140039bb625b/ad39b/gcpexlogo.png"
+                        style={
+                          Object {
+                            "height": "100%",
+                            "left": 0,
+                            "objectFit": "cover",
+                            "objectPosition": "center",
+                            "opacity": 0,
+                            "position": "absolute",
+                            "top": 0,
+                            "transition": "opacity 500ms",
+                            "width": "100%",
+                          }
+                        }
+                      />
+                    </picture>
+                    <noscript
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "<picture><source srcset=\\"undefined\\" /><img loading=\\"lazy\\" src=\\"/static/4e1cc27c28411e8c942f140039bb625b/ad39b/gcpexlogo.png\\" alt=\\"GCPEx logo\\" style=\\"position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\\"/></picture>",
+                        }
+                      }
+                    />
+                  </div>
                 </div>
                 <big
                   data-cy="shortname"
@@ -1596,12 +1818,49 @@ exports[`Campaigns page renders correctly 1`] = `
                 <div
                   className="c0"
                 >
-                  <img
-                    alt="GRIP logo"
-                    height="45"
-                    src="https://www.nasa.gov/images/content/464732main_grip_graphic_med.jpg"
-                    width="45"
-                  />
+                  <div
+                    className=" gatsby-image-wrapper"
+                    style={
+                      Object {
+                        "display": "inline-block",
+                        "height": undefined,
+                        "margin": "0",
+                        "overflow": "hidden",
+                        "position": "relative",
+                        "width": undefined,
+                      }
+                    }
+                  >
+                    <picture>
+                      <source />
+                      <img
+                        alt="GRIP logo"
+                        loading="lazy"
+                        onLoad={[Function]}
+                        src="/static/2803312240ff21bec233dee65f422031/f8771/464732main_grip_graphic_med.jpg"
+                        style={
+                          Object {
+                            "height": "100%",
+                            "left": 0,
+                            "objectFit": "cover",
+                            "objectPosition": "center",
+                            "opacity": 0,
+                            "position": "absolute",
+                            "top": 0,
+                            "transition": "opacity 500ms",
+                            "width": "100%",
+                          }
+                        }
+                      />
+                    </picture>
+                    <noscript
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "<picture><source srcset=\\"undefined\\" /><img loading=\\"lazy\\" src=\\"/static/2803312240ff21bec233dee65f422031/f8771/464732main_grip_graphic_med.jpg\\" alt=\\"GRIP logo\\" style=\\"position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\\"/></picture>",
+                        }
+                      }
+                    />
+                  </div>
                 </div>
                 <big
                   data-cy="shortname"
@@ -1684,12 +1943,49 @@ exports[`Campaigns page renders correctly 1`] = `
                 <div
                   className="c0"
                 >
-                  <img
-                    alt="HS3 logo"
-                    height="45"
-                    src="https://espo.nasa.gov/sites/default/files/images/HS3_logo.png"
-                    width="45"
-                  />
+                  <div
+                    className=" gatsby-image-wrapper"
+                    style={
+                      Object {
+                        "display": "inline-block",
+                        "height": undefined,
+                        "margin": "0",
+                        "overflow": "hidden",
+                        "position": "relative",
+                        "width": undefined,
+                      }
+                    }
+                  >
+                    <picture>
+                      <source />
+                      <img
+                        alt="HS3 logo"
+                        loading="lazy"
+                        onLoad={[Function]}
+                        src="/static/3d520693bc11c953f22f86f860ffd08a/ad39b/HS3_logo.png"
+                        style={
+                          Object {
+                            "height": "100%",
+                            "left": 0,
+                            "objectFit": "cover",
+                            "objectPosition": "center",
+                            "opacity": 0,
+                            "position": "absolute",
+                            "top": 0,
+                            "transition": "opacity 500ms",
+                            "width": "100%",
+                          }
+                        }
+                      />
+                    </picture>
+                    <noscript
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "<picture><source srcset=\\"undefined\\" /><img loading=\\"lazy\\" src=\\"/static/3d520693bc11c953f22f86f860ffd08a/ad39b/HS3_logo.png\\" alt=\\"HS3 logo\\" style=\\"position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\\"/></picture>",
+                        }
+                      }
+                    />
+                  </div>
                 </div>
                 <big
                   data-cy="shortname"
@@ -1772,12 +2068,49 @@ exports[`Campaigns page renders correctly 1`] = `
                 <div
                   className="c0"
                 >
-                  <img
-                    alt="OLYMPEX logo"
-                    height="45"
-                    src="https://wallops-prf.gsfc.nasa.gov/Field_Campaigns/Olympex/img/logo_image2.png"
-                    width="45"
-                  />
+                  <div
+                    className=" gatsby-image-wrapper"
+                    style={
+                      Object {
+                        "display": "inline-block",
+                        "height": undefined,
+                        "margin": "0",
+                        "overflow": "hidden",
+                        "position": "relative",
+                        "width": undefined,
+                      }
+                    }
+                  >
+                    <picture>
+                      <source />
+                      <img
+                        alt="OLYMPEX logo"
+                        loading="lazy"
+                        onLoad={[Function]}
+                        src="/static/6b1df71a80ace65c6ad8ea8294fcaa5f/ad39b/logo_image2.png"
+                        style={
+                          Object {
+                            "height": "100%",
+                            "left": 0,
+                            "objectFit": "cover",
+                            "objectPosition": "center",
+                            "opacity": 0,
+                            "position": "absolute",
+                            "top": 0,
+                            "transition": "opacity 500ms",
+                            "width": "100%",
+                          }
+                        }
+                      />
+                    </picture>
+                    <noscript
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "<picture><source srcset=\\"undefined\\" /><img loading=\\"lazy\\" src=\\"/static/6b1df71a80ace65c6ad8ea8294fcaa5f/ad39b/logo_image2.png\\" alt=\\"OLYMPEX logo\\" style=\\"position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\\"/></picture>",
+                        }
+                      }
+                    />
+                  </div>
                 </div>
                 <big
                   data-cy="shortname"
