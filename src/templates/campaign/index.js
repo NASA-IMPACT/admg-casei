@@ -11,28 +11,13 @@ import PlatformSection from "./platform-section"
 import ProgramInfoSection from "./program-info-section"
 import FocusSection from "./focus-section"
 import MaintenanceSection from "../../components/maintenance-section"
-import { getOriginalImgName } from "../../utils/helpers"
 
-const CampaignTemplate = ({ data: { campaign, allNasaImagesJson } }) => {
+const CampaignTemplate = ({ data: { campaign } }) => {
   const [isClient, setIsClient] = useState(false)
   useEffect(() => {
     // useEffect only runs client-side after rehyration
     setIsClient(true)
   }, [])
-
-  const platformsWithImages = () => {
-    const updatedPlatforms = campaign.platforms.map(platform => {
-      const platformImg = allNasaImagesJson.nodes.find(
-        img => img.shortname === platform.shortname
-      )
-      return {
-        ...platform,
-        imgName: getOriginalImgName(platformImg.nasaImgUrl),
-        imgAlt: platformImg.nasaImgAlt,
-      }
-    })
-    return updatedPlatforms
-  }
 
   return (
     <Layout>
@@ -65,7 +50,7 @@ const CampaignTemplate = ({ data: { campaign, allNasaImagesJson } }) => {
           geophysical={campaign.geophysical}
           focusPhenomena={campaign.focusPhenomena}
         />
-        <PlatformSection platforms={platformsWithImages()} />
+        <PlatformSection platforms={campaign.platforms} />
         <TimelineSection deployments={campaign.deployments} />
         <ProgramInfoSection
           shortname={campaign.shortname}
@@ -100,14 +85,6 @@ export const query = graphql`
       ...deploymentFields
       ...fundingFields
       uuid
-    }
-    allNasaImagesJson(filter: { category: { eq: "platform" } }) {
-      nodes {
-        shortname
-        nasaImgUrl
-        nasaImgAlt
-        category
-      }
     }
   }
 `
@@ -151,9 +128,22 @@ CampaignTemplate.propTypes = {
       focusPhenomena: PropTypes.string.isRequired,
       platforms: PropTypes.arrayOf(
         PropTypes.shape({
+          id: PropTypes.string.isRequired,
+          image: PropTypes.shape({
+            nasaImgAlt: PropTypes.string.isRequired,
+            nasaImg: PropTypes.shape({
+              childImageSharp: PropTypes.object.isRequired,
+            }).isRequired,
+          }).isRequired,
           shortname: PropTypes.string.isRequired,
           longname: PropTypes.string.isRequired,
-        })
+          instruments: PropTypes.arrayOf(
+            PropTypes.shape({
+              id: PropTypes.string.isRequired,
+              shortname: PropTypes.string.isRequired,
+            }).isRequired
+          ).isRequired,
+        }).isRequired
       ).isRequired,
       deployments: PropTypes.arrayOf(
         PropTypes.shape({
@@ -185,16 +175,6 @@ CampaignTemplate.propTypes = {
       ).isRequired,
       partnerWebsite: PropTypes.string,
       uuid: PropTypes.string.isRequired,
-    }).isRequired,
-    allNasaImagesJson: PropTypes.shape({
-      nodes: PropTypes.arrayOf(
-        PropTypes.shape({
-          shortname: PropTypes.string.isRequired,
-          nasaImgUrl: PropTypes.string.isRequired,
-          nasaImgAlt: PropTypes.string.isRequired,
-          category: PropTypes.string.isRequired,
-        }).isRequired
-      ),
     }).isRequired,
   }).isRequired,
 }

@@ -9,7 +9,7 @@ import {
   SectionContent,
 } from "../../components/section"
 import ImageCaption from "../../components/image-caption"
-import Image from "../../components/image"
+import Image from "gatsby-image"
 
 import Chip from "../../components/chip"
 
@@ -37,7 +37,10 @@ const PlatformSection = ({ platforms }) => (
               >
                 <Link to={`/platform/${platform.id}`}>
                   <div style={{ position: `relative`, marginRight: `1rem` }}>
-                    <Image filename={platform.imgName} alt={platform.imgAlt} />
+                    <Image
+                      alt={platform.image.nasaImgAlt}
+                      fluid={platform.image.nasaImg.childImageSharp.fluid}
+                    />
                     <ImageCaption id="platform-image">
                       {platform.longname || platform.shortname}
                     </ImageCaption>
@@ -68,6 +71,16 @@ export const platformFields = graphql`
   fragment platformFields on campaign {
     platforms {
       id
+      image {
+        nasaImgAlt
+        nasaImg {
+          childImageSharp {
+            fluid(maxWidth: 600) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
       shortname: short_name
       longname: long_name
       instruments {
@@ -81,6 +94,13 @@ export const platformFields = graphql`
 PlatformSection.propTypes = {
   platforms: PropTypes.arrayOf(
     PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      image: PropTypes.shape({
+        nasaImgAlt: PropTypes.string.isRequired,
+        nasaImg: PropTypes.shape({
+          childImageSharp: PropTypes.object.isRequired,
+        }).isRequired,
+      }).isRequired,
       shortname: PropTypes.string.isRequired,
       longname: PropTypes.string.isRequired,
       instruments: PropTypes.arrayOf(

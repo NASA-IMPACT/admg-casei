@@ -29,6 +29,7 @@ exports.createSchemaCustomization = ({ actions }) => {
     type platform implements Node {
       campaigns: [campaign] @link
       instruments: [instrument] @link
+      image: NasaImagesJson @link(by: "shortname", from: "short_name")
     }
     type NasaImagesJson implements Node {
       nasaImg: File @link(from: "nasaImg___NODE")
