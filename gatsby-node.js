@@ -37,6 +37,9 @@ exports.createSchemaCustomization = ({ actions }) => {
     type NasaImagesJson implements Node {
       nasaImg: File @link(from: "nasaImg___NODE")
     }
+    type PlaceHolderJson implements Node {
+      placeholderImg: File @link(from: "placeholderImg___NODE")
+    }
   `
 
   createTypes(typeDefs)
@@ -62,6 +65,25 @@ exports.onCreateNode = async ({
     // if the file was created, attach the new node (=File) to the parent node (=NasaImagesJson)
     if (fileNode) {
       node.nasaImg___NODE = fileNode.id
+    }
+  }
+
+  if (
+    node.internal.type === "PlaceholderImagesJson" &&
+    !!node.placeholderImgUrl
+  ) {
+    let fileNode = await createRemoteFileNode({
+      url: node.placeholderImgUrl, // string that points to the URL of the image
+      parentNodeId: node.id, // id of the parent node of the fileNode you are going to create
+      createNode, // helper function in gatsby-node to generate the node
+      createNodeId, // helper function in gatsby-node to generate the node id
+      cache, // Gatsby's cache
+      store, // Gatsby's redux store
+    })
+
+    // if the file was created, attach the new node (=File) to the parent node (=NasaImagesJson)
+    if (fileNode) {
+      node.placeholderImg___NODE = fileNode.id
     }
   }
 }

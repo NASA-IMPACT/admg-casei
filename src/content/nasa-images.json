@@ -268,11 +268,5 @@
     "category": "logo",
     "nasaImgUrl": "https://wallops-prf.gsfc.nasa.gov/Field_Campaigns/Olympex/img/logo_image2.png",
     "nasaImgAlt": "OLYMPEX logo"
-  },
-  {
-    "shortname": "placeholder",
-    "category": "deployment",
-    "nasaImgUrl": "https://images-assets.nasa.gov/image/AFRC2016-0292-08/AFRC2016-0292-08~orig.jpg",
-    "nasaImgAlt": "NASA’s Global Hawk aircraft being deployed to Florida from Armstrong Flight Research Center"
   }
 ]

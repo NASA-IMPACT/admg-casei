@@ -18,7 +18,6 @@ const CampaignTemplate = ({ data: { campaign } }) => {
     // useEffect only runs client-side after rehyration
     setIsClient(true)
   }, [])
-
   return (
     <Layout>
       <CampaignHero

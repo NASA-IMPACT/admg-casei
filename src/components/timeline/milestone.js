@@ -1,19 +1,17 @@
 import React from "react"
 import PropTypes from "prop-types"
-
+import { useStaticQuery, graphql } from "gatsby"
 import Label from "../../components/label"
 import theme from "../../utils/theme"
-import Image from "../image"
+import Image from "gatsby-image"
 
-export default function Milestone({
-  type,
-  daterange,
-  name,
-  details,
-  region,
-  placeholderImageUrl,
-  placeholderImageAlt,
-}) {
+export default function Milestone({ type, daterange, name, details, region }) {
+  const deploylmentImage = usePlaceholderImageQuery().deploymentPlaceholderImage.nodes.shift()
+  console.log(
+    "why is this called twice and why is this empty the second time?",
+    deploylmentImage
+  )
+
   return (
     <div style={{ padding: `3rem`, minHeight: `400px` }} data-cy="milestone">
       <label
@@ -33,7 +31,10 @@ export default function Milestone({
       </label>
       <div style={{ display: `flex` }}>
         <div style={{ flex: `1` }}>
-          <Image filename={placeholderImageUrl} alt={placeholderImageAlt} />
+          <Image
+            alt={deploylmentImage.placeholderImgAlt}
+            fluid={deploylmentImage.placeholderImg.childImageSharp.fluid}
+          />
         </div>
         <div style={{ flex: `1.61803398875`, padding: `1rem` }}>
           <Label id="timeline-milestone-date">{daterange}</Label>
@@ -54,4 +55,26 @@ Milestone.propTypes = {
   region: PropTypes.string.isRequired,
   placeholderImageUrl: PropTypes.string,
   placeholderImageAlt: PropTypes.string,
+}
+
+const usePlaceholderImageQuery = () => {
+  const placeholderImage = useStaticQuery(graphql`
+    query {
+      deploymentPlaceholderImage: allPlaceholderImagesJson(
+        filter: { category: { eq: "deployment" } }
+      ) {
+        nodes {
+          placeholderImgAlt
+          placeholderImg {
+            childImageSharp {
+              fluid(maxWidth: 600) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+  return placeholderImage
 }

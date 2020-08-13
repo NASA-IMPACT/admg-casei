@@ -12,11 +12,7 @@ import {
 } from "../../components/section"
 import { formatDateRange } from "../../utils/helpers"
 
-const TimelineSection = ({
-  deployments,
-  placeholderImageUrl,
-  placeholderImageAlt,
-}) => {
+const TimelineSection = ({ deployments }) => {
   const [currentSlide, setCurrentSlide] = useState(0)
   /**
    * Finds the index of the milestone given the id.
