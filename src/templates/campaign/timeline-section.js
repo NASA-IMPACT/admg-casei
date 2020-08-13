@@ -47,7 +47,7 @@ const TimelineSection = ({ deployments }) => {
                 type="deployment"
                 daterange={formatDateRange(deployment.start, deployment.end)}
                 name={`${deployment.longname} (${deployment.shortname})`}
-                details={`${deployment.flights.length} Flights`}
+                details={`${deployment.flights.length} CDCPs`}
                 region={deployment.regions.map(x => x.longname).join(", ")}
               />
             ))}
