@@ -41,7 +41,7 @@ const Platforms = ({ data, location }) => {
     setLoading(true)
     e.preventDefault()
     let searchstring = inputElement.current.value
-    const result = await api.fetchSearchResult(searchstring)
+    const result = await api.fetchSearchResult("platform", searchstring)
     setSearchResult(result)
     setLoading(false)
   }

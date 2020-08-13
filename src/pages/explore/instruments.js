@@ -41,7 +41,7 @@ export default function Instruments({ data, location }) {
     setLoading(true)
     e.preventDefault()
     let searchstring = inputElement.current.value
-    const result = await api.fetchSearchResult(searchstring)
+    const result = await api.fetchSearchResult("instrument", searchstring)
     setSearchResult(result)
     setLoading(false)
   }
