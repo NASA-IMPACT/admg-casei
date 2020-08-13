@@ -1,0 +1,12 @@
+[
+  {
+    "category": "deployment",
+    "nasaImgUrl": "https://images-assets.nasa.gov/image/AFRC2016-0292-08/AFRC2016-0292-08~orig.jpg",
+    "nasaImgAlt": "NASA’s Global Hawk aircraft being deployed to Florida from Armstrong Flight Research Center"
+  },
+  {
+    "category": "platform",
+    "nasaImgUrl": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e002096/GSFC_20171208_Archive_e002096~orig.jpg",
+    "nasaImgAlt": "NASA’s Global Hawk aircraft flying over arid land"
+  }
+]
