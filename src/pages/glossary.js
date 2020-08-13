@@ -6,7 +6,6 @@ import SEO from "../components/seo"
 import glossary from "../content/glossary.json"
 
 export default function Glossary() {
-  const { terms } = glossary
   return (
     <Layout>
       <SEO title="Glossary" />
@@ -14,7 +13,7 @@ export default function Glossary() {
         <h1>Glossary</h1>
         <DefinitionList
           id="glossary"
-          list={terms.map(x => ({
+          list={glossary.map(x => ({
             title: x.term,
             content: (
               <div>

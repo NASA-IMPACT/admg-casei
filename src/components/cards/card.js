@@ -33,8 +33,8 @@ const Card = ({ children, image, tag, footerList }) => (
       <CardHeader>
         {image && (
           <img
-            src={image.url || PlaceholderLogo}
-            alt={image.description}
+            src={image.nasaImgUrl || PlaceholderLogo}
+            alt={image.nasaImgAlt}
             width="45"
             height="45"
           />
@@ -73,8 +73,8 @@ Card.propTypes = {
     PropTypes.arrayOf(PropTypes.element),
   ]),
   image: PropTypes.shape({
-    url: PropTypes.string,
-    description: PropTypes.string,
+    nasaImgUrl: PropTypes.string,
+    nasaImgAlt: PropTypes.string,
   }),
   tag: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   footerList: PropTypes.arrayOf(

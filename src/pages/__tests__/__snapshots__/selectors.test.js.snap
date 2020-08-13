@@ -1071,7 +1071,7 @@ exports[`Campaigns page renders correctly 1`] = `
                   className="c0"
                 >
                   <img
-                    alt="logo"
+                    alt="ARCTAS logo"
                     height="45"
                     src="https://cloud1.arc.nasa.gov/arctas/images/arctas_spring.jpg"
                     width="45"
@@ -1159,7 +1159,7 @@ exports[`Campaigns page renders correctly 1`] = `
                   className="c0"
                 >
                   <img
-                    alt="logo"
+                    alt="AirMOSS logo"
                     height="45"
                     src="https://airbornescience.jpl.nasa.gov/sites/default/files/airmossLogo.png"
                     width="45"
@@ -1247,7 +1247,7 @@ exports[`Campaigns page renders correctly 1`] = `
                   className="c0"
                 >
                   <img
-                    alt="logo"
+                    alt="CARVE logo"
                     height="45"
                     src="https://carve.jpl.nasa.gov/images/carve/carve_logo_update.jpg"
                     width="45"
@@ -1335,7 +1335,7 @@ exports[`Campaigns page renders correctly 1`] = `
                   className="c0"
                 >
                   <img
-                    alt="logo"
+                    alt="DC3 logo"
                     height="45"
                     src="https://www-air.larc.nasa.gov/missions/dc3-seac4rs/img/dc3-logo.png"
                     width="45"
@@ -1421,7 +1421,7 @@ exports[`Campaigns page renders correctly 1`] = `
                   className="c0"
                 >
                   <img
-                    alt="logo"
+                    alt="GCPEx logo"
                     height="45"
                     src="https://airbornescience.nasa.gov/sites/default/files/styles/200wide/public/current_activities/gcpexlogo.png?itok=Z1MVjjPB"
                     width="45"
@@ -1509,7 +1509,7 @@ exports[`Campaigns page renders correctly 1`] = `
                   className="c0"
                 >
                   <img
-                    alt="logo"
+                    alt="GOES-R PLT logo"
                     height="45"
                     src="test-file-stub"
                     width="45"
@@ -1597,7 +1597,7 @@ exports[`Campaigns page renders correctly 1`] = `
                   className="c0"
                 >
                   <img
-                    alt="logo"
+                    alt="GRIP logo"
                     height="45"
                     src="https://www.nasa.gov/images/content/464732main_grip_graphic_med.jpg"
                     width="45"
@@ -1685,7 +1685,7 @@ exports[`Campaigns page renders correctly 1`] = `
                   className="c0"
                 >
                   <img
-                    alt="logo"
+                    alt="HS3 logo"
                     height="45"
                     src="https://espo.nasa.gov/sites/default/files/images/HS3_logo.png"
                     width="45"
@@ -1773,7 +1773,7 @@ exports[`Campaigns page renders correctly 1`] = `
                   className="c0"
                 >
                   <img
-                    alt="logo"
+                    alt="OLYMPEX logo"
                     height="45"
                     src="https://wallops-prf.gsfc.nasa.gov/Field_Campaigns/Olympex/img/logo_image2.png"
                     width="45"

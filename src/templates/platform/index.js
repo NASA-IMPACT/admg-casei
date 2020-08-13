@@ -3,19 +3,20 @@ import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
 import Layout, { PageBody } from "../../components/layout"
-import PlatformHeader from "./hero"
+import PlatformHero from "./hero"
 import Overview from "./overview"
 import RelatedCampaigns from "./related-campaigns"
 
 export default function PlatformTemplate({ data: { platform } }) {
   return (
     <Layout>
-      <PlatformHeader
+      <PlatformHero
         shortname={platform.shortname}
         longname={platform.longname}
         campaigns={platform.campaigns.length}
         collectionPeriods={platform.collectionPeriods.length}
         textToImageRatio={[3, 5]}
+        image={platform.image}
       />
       <PageBody id="platform">
         <Overview
@@ -58,6 +59,12 @@ PlatformTemplate.propTypes = {
         })
       ),
       collectionPeriods: PropTypes.arrayOf(PropTypes.string),
+      image: PropTypes.shape({
+        nasaImgAlt: PropTypes.string.isRequired,
+        nasaImg: PropTypes.shape({
+          childImageSharp: PropTypes.object.isRequired,
+        }).isRequired,
+      }).isRequired,
     }),
   }),
 }

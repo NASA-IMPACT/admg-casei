@@ -58,7 +58,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
         }
       >
         <img
-          alt="logo"
+          alt="AirMOSS logo"
           data-cy="campaign-logo"
           src="https://airbornescience.jpl.nasa.gov/sites/default/files/airmossLogo.png"
         />

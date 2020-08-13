@@ -5,6 +5,7 @@
  */
 const fetch = require("node-fetch")
 const path = require("path")
+const { createRemoteFileNode } = require("gatsby-source-filesystem")
 
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions
@@ -22,16 +23,47 @@ exports.createSchemaCustomization = ({ actions }) => {
     type deployment implements Node {
       geographical_regions: [geographical_region] @link
     }
+    type geographical_region implements Node {
+      image: NasaImagesJson @link(by: "shortname", from: "short_name")
+    }
     type instrument implements Node {
       platforms: [platform] @link
     }
     type platform implements Node {
       campaigns: [campaign] @link
       instruments: [instrument] @link
+      image: NasaImagesJson @link(by: "shortname", from: "short_name")
+    }
+    type NasaImagesJson implements Node {
+      nasaImg: File @link(from: "nasaImg___NODE")
     }
   `
 
   createTypes(typeDefs)
+}
+
+exports.onCreateNode = async ({
+  node,
+  actions: { createNode },
+  store,
+  cache,
+  createNodeId,
+}) => {
+  if (node.internal.type === "NasaImagesJson" && !!node.nasaImgUrl) {
+    let fileNode = await createRemoteFileNode({
+      url: node.nasaImgUrl, // string that points to the URL of the image
+      parentNodeId: node.id, // id of the parent node of the fileNode you are going to create
+      createNode, // helper function in gatsby-node to generate the node
+      createNodeId, // helper function in gatsby-node to generate the node id
+      cache, // Gatsby's cache
+      store, // Gatsby's redux store
+    })
+
+    // if the file was created, attach the new node (=File) to the parent node (=NasaImagesJson)
+    if (fileNode) {
+      node.nasaImg___NODE = fileNode.id
+    }
+  }
 }
 
 exports.sourceNodes = async ({ actions, createContentDigest }) => {

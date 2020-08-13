@@ -2,13 +2,14 @@ import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 import Hero from "../../components/hero"
-import Image from "../../components/image"
+import Image from "gatsby-image"
 
 export default function PlatformHero({
   shortname,
   longname,
   campaigns,
   collectionPeriods,
+  image,
 }) {
   return (
     <Hero
@@ -22,8 +23,8 @@ export default function PlatformHero({
       id="platform"
     >
       <Image
-        filename="platform.png" // TODO: replace with platform image
-        alt="an aircraft transporting a spacecraft"
+        alt={image.nasaImgAlt}
+        fluid={image.nasaImg.childImageSharp.fluid}
       />
     </Hero>
   )
@@ -36,6 +37,16 @@ export const platformHeroFields = graphql`
       id
     }
     collectionPeriods: collection_periods
+    image {
+      nasaImgAlt
+      nasaImg {
+        childImageSharp {
+          fluid(maxWidth: 600) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
   }
 `
 
@@ -44,4 +55,10 @@ PlatformHero.propTypes = {
   longname: PropTypes.string.isRequired,
   campaigns: PropTypes.number.isRequired,
   collectionPeriods: PropTypes.number.isRequired,
+  image: PropTypes.shape({
+    nasaImgAlt: PropTypes.string.isRequired,
+    nasaImg: PropTypes.shape({
+      childImageSharp: PropTypes.object.isRequired,
+    }).isRequired,
+  }).isRequired,
 }

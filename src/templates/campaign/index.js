@@ -128,9 +128,22 @@ CampaignTemplate.propTypes = {
       focusPhenomena: PropTypes.string.isRequired,
       platforms: PropTypes.arrayOf(
         PropTypes.shape({
+          id: PropTypes.string.isRequired,
+          image: PropTypes.shape({
+            nasaImgAlt: PropTypes.string.isRequired,
+            nasaImg: PropTypes.shape({
+              childImageSharp: PropTypes.object.isRequired,
+            }).isRequired,
+          }).isRequired,
           shortname: PropTypes.string.isRequired,
           longname: PropTypes.string.isRequired,
-        })
+          instruments: PropTypes.arrayOf(
+            PropTypes.shape({
+              id: PropTypes.string.isRequired,
+              shortname: PropTypes.string.isRequired,
+            }).isRequired
+          ).isRequired,
+        }).isRequired
       ).isRequired,
       deployments: PropTypes.arrayOf(
         PropTypes.shape({

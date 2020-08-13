@@ -10,7 +10,7 @@ import {
   ContentGroup,
 } from "../../components/section"
 import PlaceholderLogo from "../../images/placeholder-logo.svg"
-import logos from "../../content/campaign-logos.json"
+import logos from "../../content/nasa-images.json"
 
 const ProgramInfoSection = ({
   shortname,
@@ -33,6 +33,7 @@ const ProgramInfoSection = ({
     { label: "Partner Organization", info: partnerOrgListing },
     { label: "Tertiary Website", info: tertiaryWebsite, link: tertiaryWebsite },
   ]
+  const logo = logos.find(logo => logo.shortname === shortname)
 
   return (
     <SectionBlock id="program-info">
@@ -48,10 +49,10 @@ const ProgramInfoSection = ({
               padding: `1rem`,
             }}
           >
-            {logos[shortname] && logos[shortname].url ? (
+            {logo && logo.nasaImgUrl ? (
               <img
-                src={logos[shortname].url}
-                alt={logos[shortname].description}
+                src={logo.nasaImgUrl}
+                alt={logo.nasaImgAlt}
                 data-cy="campaign-logo"
               />
             ) : (

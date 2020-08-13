@@ -1,0 +1,272 @@
+[
+  {
+    "shortname": "ALAR",
+    "category": "platform",
+    "nasaImgUrl": "https://images-assets.nasa.gov/image/ED08-0064-13/ED08-0064-13~orig.jpg",
+    "nasaImgAlt": "A scientist of the National Center for Atmospheric Research checks out the NOxyO3 instrument on NASA's DC-8 flying laboratory before the ARCTAS mission"
+  },
+  {
+    "shortname": "ALTUS II",
+    "category": "platform",
+    "nasaImgUrl": "https://images-assets.nasa.gov/image/0201928/0201928~orig.jpg",
+    "nasaImgAlt": "A remotely-piloted aircraft that study thunderstorms flies through the sky"
+  },
+  {
+    "shortname": "ASO",
+    "category": "platform",
+    "nasaImgUrl": "https://images-assets.nasa.gov/image/PIA17771/PIA17771~orig.jpg",
+    "nasaImgAlt": "Tuolumne River Basin seen by NASA Airborne Snow Observatory"
+  },
+  {
+    "shortname": "B-200",
+    "category": "platform",
+    "nasaImgUrl": "https://images-assets.nasa.gov/image/AFRC2018-0038-015/AFRC2018-0038-015~orig.jpg",
+    "nasaImgAlt": "NASA’s B200 taking off for an eight-hour science flight"
+  },
+  {
+    "shortname": "C-23 Sherpa",
+    "category": "platform",
+    "nasaImgUrl": "https://images-assets.nasa.gov/image/EC94-42742-7/EC94-42742-7~orig.jpg",
+    "nasaImgAlt": "sample"
+  },
+  {
+    "shortname": "Citation",
+    "category": "platform",
+    "nasaImgUrl": "https://images-assets.nasa.gov/image/EC94-42742-7/EC94-42742-7~orig.jpg",
+    "nasaImgAlt": "sample"
+  },
+  {
+    "shortname": "CV-580",
+    "category": "platform",
+    "nasaImgUrl": "https://images-assets.nasa.gov/image/EC94-42742-7/EC94-42742-7~orig.jpg",
+    "nasaImgAlt": "sample"
+  },
+  {
+    "shortname": "Campaign B",
+    "category": "platform",
+    "nasaImgUrl": "https://images-assets.nasa.gov/image/KSC-07PD-0425/KSC-07PD-0425~orig.jpg",
+    "nasaImgAlt": "A weather balloon takes flight equipped with a radiosonde."
+  },
+  {
+    "shortname": "Campaign FS",
+    "category": "platform",
+    "nasaImgUrl": "https://images-assets.nasa.gov/image/EC94-42742-7/EC94-42742-7~orig.jpg",
+    "nasaImgAlt": "sample"
+  },
+  {
+    "shortname": "Campaign V",
+    "category": "platform",
+    "nasaImgUrl": "https://images-assets.nasa.gov/image/EC94-42742-7/EC94-42742-7~orig.jpg",
+    "nasaImgAlt": "sample"
+  },
+  {
+    "shortname": "Campaign PL",
+    "category": "platform",
+    "nasaImgUrl": "https://images-assets.nasa.gov/image/EC94-42742-7/EC94-42742-7~orig.jpg",
+    "nasaImgAlt": "sample"
+  },
+  {
+    "shortname": "Campaign R",
+    "category": "platform",
+    "nasaImgUrl": "https://images-assets.nasa.gov/image/EC94-42742-7/EC94-42742-7~orig.jpg",
+    "nasaImgAlt": "sample"
+  },
+  {
+    "shortname": "DC-8",
+    "category": "platform",
+    "nasaImgUrl": "https://images-assets.nasa.gov/image/ED04-0056-072/ED04-0056-072~orig.jpg",
+    "nasaImgAlt": "NASA's DC-8 flying laboratory seen at sunset after a flight supporting the AirSAR 2004 Mesoamerica campaign"
+  },
+  {
+    "shortname": "ER-2",
+    "category": "platform",
+    "nasaImgUrl": "https://images-assets.nasa.gov/image/ED05-0149-1/ED05-0149-1~orig.jpg",
+    "nasaImgAlt": "The NASA ER-2 airplane flies over hurricane Dennis as part of the Tropical Cloud Systems and Processes TSCP Mission"
+  },
+  {
+    "shortname": "Falcon",
+    "category": "platform",
+    "nasaImgUrl": "https://images-assets.nasa.gov/image/EC94-42742-7/EC94-42742-7~orig.jpg",
+    "nasaImgAlt": "sample"
+  },
+  {
+    "shortname": "G-III",
+    "category": "platform",
+    "nasaImgUrl": "https://www.nasa.gov/sites/default/files/thumbnails/image/uavsar20200219-16.jpg",
+    "nasaImgAlt": "Gulfstream III aircraft equipped with NASA's UAVSAR instrument on a tarmack"
+  },
+  {
+    "shortname": "GH",
+    "category": "platform",
+    "nasaImgUrl": "https://images-assets.nasa.gov/image/ED13-0399-02/ED13-0399-02~orig.jpg",
+    "nasaImgAlt": "NASA's Global Hawk 872 lifting off the runway at Edwards Air Force Base"
+  },
+  {
+    "shortname": "P-3",
+    "category": "platform",
+    "nasaImgUrl": "https://images-assets.nasa.gov/image/EC94-42742-7/EC94-42742-7~orig.jpg",
+    "nasaImgAlt": "sample"
+  },
+  {
+    "shortname": "WB-57",
+    "category": "platform",
+    "nasaImgUrl": "https://images-assets.nasa.gov/image/KSC-06pd2466/KSC-06pd2466~orig.jpg",
+    "nasaImgAlt": "A view of the launch of Space Shuttle Atlantis, taken from NASA's WB-57 aircraft"
+  },
+  {
+    "shortname": "continental",
+    "category": "region",
+    "nasaImgUrl": "https://eoimages.gsfc.nasa.gov/images/imagerecords/145000/145932/iss060e035401_lrg.jpg",
+    "nasaImgAlt": "A network of farms and ranches surrounds the cities and small towns near the Nebraska–Iowa border."
+  },
+  {
+    "shortname": "maritime",
+    "category": "region",
+    "nasaImgUrl": "https://climate.nasa.gov/system/resources/detail_files/170_gulfoffinland_full.jpg",
+    "nasaImgAlt": "Phytoplankton blooms across the northern basins of the North Atlantic and Arctic Oceans."
+  },
+  {
+    "shortname": "coastal",
+    "category": "region",
+    "nasaImgUrl": "https://images-assets.nasa.gov/image/KSC-04pd1634/KSC-04pd1634~orig.jpg",
+    "nasaImgAlt": "The pristine sand dunes near the launch pads at KSC are gently washed by the calm blue Atlantic Ocean."
+  },
+  {
+    "shortname": "mountains",
+    "category": "region",
+    "nasaImgUrl": "https://images-assets.nasa.gov/image/ED04-0056-099/ED04-0056-099~orig.jpg",
+    "nasaImgAlt": "The Cuernos del Paine mountains in Torres del Paine National Park, Chile, during NASA's AirSAR 2004 campaign."
+  },
+  {
+    "shortname": "island",
+    "category": "region",
+    "nasaImgUrl": "https://climate.nasa.gov/system/resources/detail_files/218_PIA21166_hires-768px-v2.jpg",
+    "nasaImgAlt": "The Republic of Maldives with its twenty-six atolls, and 1192 coral islands, with an average ground elevation of 1.5 meters (about 5 feet)."
+  },
+  {
+    "shortname": "desert",
+    "category": "region",
+    "nasaImgUrl": "https://earthobservatory.nasa.gov/blogs/fromthefield/wp-content/uploads/sites/2/2018/01/desert-plant-and-lidar.jpg",
+    "nasaImgAlt": "The lidar on its tripod. NASA/GSFC"
+  },
+  {
+    "shortname": "forest",
+    "category": "region",
+    "nasaImgUrl": "https://earthobservatory.nasa.gov/ContentFeature/ForestCarbon/images/gabon_forest.jpg",
+    "nasaImgAlt": "Tropical forests, such as those in Gabon, Africa, are an important reservoir of carbon. (Photography courtesy Sassan Saatchi, NASA/JPL-Caltech.)"
+  },
+  {
+    "shortname": "urban",
+    "category": "region",
+    "nasaImgUrl": "https://eoimages.gsfc.nasa.gov/images/imagerecords/83000/83828/ISS039-E-018538_lrg.jpg",
+    "nasaImgAlt": "The narrow island of Manhattan, located between the Hudson River and the East River."
+  },
+  {
+    "shortname": "agricultural",
+    "category": "region",
+    "nasaImgUrl": "https://eoimages.gsfc.nasa.gov/images/imagerecords/5000/5772/kansas_AST_2001175_lrg.jpg",
+    "nasaImgAlt": "Variegated green crop circles cover what was once shortgrass prairie in southwestern Kansas."
+  },
+  {
+    "shortname": "equitorial",
+    "category": "region",
+    "nasaImgUrl": "https://images-assets.nasa.gov/image/sts054-95-042/sts054-95-042~orig.jpg",
+    "nasaImgAlt": "Equatorial Wave Line, Pacific Ocean."
+  },
+  {
+    "shortname": "tropical",
+    "category": "region",
+    "nasaImgUrl": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e001630/GSFC_20171208_Archive_e001630~orig.jpg",
+    "nasaImgAlt": "An archipelago in the Andaman Sea surrounded by extensive coral reefs"
+  },
+  {
+    "shortname": "mid-latitude",
+    "category": "region",
+    "nasaImgUrl": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e000236/GSFC_20171208_Archive_e000236~orig.jpg",
+    "nasaImgAlt": "Yosemite Valley"
+  },
+  {
+    "shortname": "polar",
+    "category": "region",
+    "nasaImgUrl": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e001793/GSFC_20171208_Archive_e001793~orig.jpg",
+    "nasaImgAlt": "A NASA scientific balloon awaits launch in McMurdo, Antarctica."
+  },
+  {
+    "shortname": "sea ice",
+    "category": "region",
+    "nasaImgUrl": "https://eoimages.gsfc.nasa.gov/images/imagerecords/146000/146974/greenlandseaice_amo_2020184_lrg.jpg",
+    "nasaImgAlt": "Sea ice hugging the coast of East Greenland."
+  },
+  {
+    "shortname": "coral",
+    "category": "region",
+    "nasaImgUrl": "https://eoimages.gsfc.nasa.gov/images/imagerecords/88000/88109/iss045e056257_lrg.jpg",
+    "nasaImgAlt": "Great Barrier Reef near Whitsunday Islands."
+  },
+  {
+    "shortname": "rainforest",
+    "category": "region",
+    "nasaImgUrl": "https://images-assets.nasa.gov/image/ED04-0056-057/ED04-0056-057~orig.jpg",
+    "nasaImgAlt": "A stream in the La Selva region of the Costa Rican rain forest, taken during NASA's AirSAR 2004 campaign."
+  },
+  {
+    "shortname": "ACES",
+    "category": "logo",
+    "nasaImgUrl": "https://ghrc.nsstc.nasa.gov/home/sites/default/files/aces_logo.png#overlay-context=field-campaigns/aces",
+    "nasaImgAlt": "logo"
+  },
+  {
+    "shortname": "AirMOSS",
+    "category": "logo",
+    "nasaImgUrl": "https://airbornescience.jpl.nasa.gov/sites/default/files/airmossLogo.png",
+    "nasaImgAlt": "AirMOSS logo"
+  },
+  {
+    "shortname": "ARCTAS",
+    "category": "logo",
+    "nasaImgUrl": "https://cloud1.arc.nasa.gov/arctas/images/arctas_spring.jpg",
+    "nasaImgAlt": "ARCTAS logo"
+  },
+  {
+    "shortname": "CARVE",
+    "category": "logo",
+    "nasaImgUrl": "https://carve.jpl.nasa.gov/images/carve/carve_logo_update.jpg",
+    "nasaImgAlt": "CARVE logo"
+  },
+  {
+    "shortname": "DC3",
+    "category": "logo",
+    "nasaImgUrl": "https://www-air.larc.nasa.gov/missions/dc3-seac4rs/img/dc3-logo.png",
+    "nasaImgAlt": "DC3 logo"
+  },
+  {
+    "shortname": "GCPEx",
+    "category": "logo",
+    "nasaImgUrl": "https://airbornescience.nasa.gov/sites/default/files/styles/200wide/public/current_activities/gcpexlogo.png?itok=Z1MVjjPB",
+    "nasaImgAlt": "GCPEx logo"
+  },
+  {
+    "shortname": "GOES-R PLT",
+    "category": "logo",
+    "nasaImgUrl": "",
+    "nasaImgAlt": "GOES-R PLT logo"
+  },
+  {
+    "shortname": "GRIP",
+    "category": "logo",
+    "nasaImgUrl": "https://www.nasa.gov/images/content/464732main_grip_graphic_med.jpg",
+    "nasaImgAlt": "GRIP logo"
+  },
+  {
+    "shortname": "HS3",
+    "category": "logo",
+    "nasaImgUrl": "https://espo.nasa.gov/sites/default/files/images/HS3_logo.png",
+    "nasaImgAlt": "HS3 logo"
+  },
+  {
+    "shortname": "OLYMPEX",
+    "category": "logo",
+    "nasaImgUrl": "https://wallops-prf.gsfc.nasa.gov/Field_Campaigns/Olympex/img/logo_image2.png",
+    "nasaImgAlt": "OLYMPEX logo"
+  }
+]

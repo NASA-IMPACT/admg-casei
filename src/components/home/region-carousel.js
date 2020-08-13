@@ -5,7 +5,6 @@ import Carousel from "nuka-carousel"
 import styled from "styled-components"
 
 import theme from "../../utils/theme"
-import images from "../../content/region-images.json"
 
 const ControlTextButton = styled.button`
   margin: 0.2rem 0.5rem;
@@ -117,7 +116,7 @@ export const RegionCarousel = ({ regions }) => {
             <CarouselImage
               to="/explore/campaigns"
               state={{ selectedFilterId: region.id }}
-              url={images[region.shortname].url}
+              url={region.image.nasaImgUrl}
               data-cy="region-type"
             >
               <div
@@ -131,7 +130,7 @@ export const RegionCarousel = ({ regions }) => {
                 {region.shortname}
               </div>
             </CarouselImage>
-            <span>{images[region.shortname].description}</span>
+            <span>{region.image.nasaImgAlt}</span>
           </React.Fragment>
         ))}
       </Carousel>
@@ -144,6 +143,10 @@ RegionCarousel.propTypes = {
     PropTypes.shape({
       id: PropTypes.string,
       shortname: PropTypes.string,
-    })
+      image: PropTypes.shape({
+        nasaImgUrl: PropTypes.string.isRequired,
+        nasaImgAlt: PropTypes.string.isRequired,
+      }).isRequired,
+    }).isRequired
   ),
 }
