@@ -4,14 +4,7 @@ import PropTypes from "prop-types"
 import Label from "../../components/label"
 import theme from "../../utils/theme"
 
-const Milestone = ({
-  type = "Deployment",
-  startDate,
-  endDate,
-  name = "ABoVE Deploymeny (L-band)",
-  details = "some list of platforms, number of flights",
-  region = "Alaska and Western Canada",
-}) => (
+const Milestone = ({ type, daterange, name, details, region }) => (
   <div style={{ padding: `3rem`, minHeight: `400px` }} data-cy="milestone">
     <label
       style={{
@@ -36,9 +29,7 @@ const Milestone = ({
         />
       </div>
       <div style={{ flex: `1.61803398875`, padding: `1rem` }}>
-        <Label id="timeline-milestone-date">
-          {`${startDate} — ${endDate}`}
-        </Label>
+        <Label id="timeline-milestone-date">{daterange}</Label>
         <h3>{name}</h3>
         <p>{details}</p>
         <p>{region}</p>
@@ -51,8 +42,7 @@ export default Milestone
 
 Milestone.propTypes = {
   type: PropTypes.string.isRequired,
-  startDate: PropTypes.string.isRequired,
-  endDate: PropTypes.string.isRequired,
+  daterange: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   details: PropTypes.string.isRequired,
   region: PropTypes.string.isRequired,
