@@ -116,6 +116,7 @@ const Campaigns = ({ data, location }) => {
               return (
                 <Link to={`/campaign/${campaign.id}`} key={campaign.shortname}>
                   <CampaignCard
+                    logo={campaign.logo}
                     ongoing={campaign.ongoing}
                     shortname={campaign.shortname}
                     longname={campaign.longname}
@@ -189,6 +190,17 @@ export const query = graphql`
   }
 
   fragment campaignFields on campaign {
+    logo {
+      nasaImgAlt
+      nasaImgUrl
+      nasaImg {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
     ongoing
     shortname: short_name
     longname: long_name
@@ -221,6 +233,12 @@ export const query = graphql`
 `
 
 const campaignShape = PropTypes.shape({
+  logo: PropTypes.shape({
+    nasaImgAlt: PropTypes.string.isRequired,
+    nasaImg: PropTypes.shape({
+      childImageSharp: PropTypes.object,
+    }),
+  }).isRequired,
   ongoing: PropTypes.bool,
   shortname: PropTypes.string.isRequired,
   longname: PropTypes.string,

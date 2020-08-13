@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
+import Image from "gatsby-image"
 
 import {
   SectionBlock,
@@ -10,10 +11,9 @@ import {
   ContentGroup,
 } from "../../components/section"
 import PlaceholderLogo from "../../images/placeholder-logo.svg"
-import logos from "../../content/nasa-images.json"
 
 const ProgramInfoSection = ({
-  shortname,
+  logo,
   fundingAgency,
   fundingProgram,
   programLead,
@@ -33,7 +33,6 @@ const ProgramInfoSection = ({
     { label: "Partner Organization", info: partnerOrgListing },
     { label: "Tertiary Website", info: tertiaryWebsite, link: tertiaryWebsite },
   ]
-  const logo = logos.find(logo => logo.shortname === shortname)
 
   return (
     <SectionBlock id="program-info">
@@ -49,12 +48,18 @@ const ProgramInfoSection = ({
               padding: `1rem`,
             }}
           >
-            {logo && logo.nasaImgUrl ? (
-              <img
-                src={logo.nasaImgUrl}
-                alt={logo.nasaImgAlt}
+            {logo.nasaImg ? (
+              <div
+                style={{
+                  width: `100%` /* gatsby-image wants width, for it to be visible */,
+                }}
                 data-cy="campaign-logo"
-              />
+              >
+                <Image
+                  alt={logo.nasaImgAlt}
+                  fluid={logo.nasaImg.childImageSharp.fluid}
+                />
+              </div>
             ) : (
               <img
                 src={PlaceholderLogo}
@@ -83,7 +88,17 @@ const ProgramInfoSection = ({
 
 export const fundingFields = graphql`
   fragment fundingFields on campaign {
-    # logo: Campaign_Logo___Image_Location__URL_
+    logo {
+      nasaImgAlt
+      nasaImgUrl
+      nasaImg {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
 
     fundingAgency: funding_agency
     fundingProgram: funding_program
@@ -102,7 +117,12 @@ export const fundingFields = graphql`
 `
 
 ProgramInfoSection.propTypes = {
-  shortname: PropTypes.string.isRequired,
+  logo: PropTypes.shape({
+    nasaImgAlt: PropTypes.string.isRequired,
+    nasaImg: PropTypes.shape({
+      childImageSharp: PropTypes.object,
+    }),
+  }).isRequired,
   fundingAgency: PropTypes.string.isRequired,
   fundingProgram: PropTypes.string.isRequired,
   programLead: PropTypes.string.isRequired,
