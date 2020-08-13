@@ -41,9 +41,9 @@ exports[`MileStone renders correctly 1`] = `
       }
     >
       <img
-        alt="Milestone-image"
-        data-cy="overview-map"
-        src="https://picsum.photos/300/300"
+        alt="Global Hawk prepping for deployment"
+        data-cy="deployment-img"
+        src="https://images-assets.nasa.gov/image/AFRC2016-0292-08/AFRC2016-0292-08~medium.jpg"
       />
     </div>
     <div
@@ -66,7 +66,7 @@ exports[`MileStone renders correctly 1`] = `
           }
         }
       >
-        2012-10-02 — 2012-10-20
+        10/02/2012 - 10/20/2012
       </label>
       <h3>
         Canada, Oregon Fall 2012
