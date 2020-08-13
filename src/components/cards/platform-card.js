@@ -33,7 +33,11 @@ PlatformCard.propTypes = {
   longname: PropTypes.string,
   description: PropTypes.string.isRequired,
   collectionPeriodIds: PropTypes.arrayOf(PropTypes.string),
-  instruments: PropTypes.arrayOf(PropTypes.string),
+  instruments: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+    }).isRequired
+  ).isRequired,
   stationary: PropTypes.bool.isRequired,
 }
 

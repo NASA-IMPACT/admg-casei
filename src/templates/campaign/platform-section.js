@@ -11,7 +11,7 @@ import {
 import ImageCaption from "../../components/image-caption"
 import Image from "../../components/image"
 
-// import Chip from "../../components/chip"
+import Chip from "../../components/chip"
 
 const PlatformSection = ({ platforms }) => (
   <SectionBlock id="platform">
@@ -35,7 +35,7 @@ const PlatformSection = ({ platforms }) => (
                 style={{ minHeight: `360px` }}
                 data-cy="platform"
               >
-                <Link to={`/platform/${platform.id}`} key={platform.id}>
+                <Link to={`/platform/${platform.id}`}>
                   <div style={{ position: `relative`, marginRight: `1rem` }}>
                     <Image filename={platform.imgName} alt={platform.imgAlt} />
                     <ImageCaption id="platform-image">
@@ -43,10 +43,16 @@ const PlatformSection = ({ platforms }) => (
                     </ImageCaption>
                   </div>
                 </Link>
-                {/* <div style={{ display: `flex`, flexWrap: `wrap` }}> */}
-                {/* TODO: map through instrument tags */}
-                {/* <Chip id="platform" label="test chip" /> */}
-                {/* </div> */}
+                <div style={{ display: `flex`, flexWrap: `wrap` }}>
+                  {platform.instruments.map(instrument => (
+                    <Link
+                      to={`/instrument/${instrument.id}`}
+                      key={instrument.id}
+                    >
+                      <Chip id="instrument" label={instrument.shortname} />
+                    </Link>
+                  ))}
+                </div>
               </div>
             ))}
           </Carousel>
@@ -64,6 +70,10 @@ export const platformFields = graphql`
       id
       shortname: short_name
       longname: long_name
+      instruments {
+        id
+        shortname: short_name
+      }
     }
   }
 `
@@ -73,6 +83,12 @@ PlatformSection.propTypes = {
     PropTypes.shape({
       shortname: PropTypes.string.isRequired,
       longname: PropTypes.string.isRequired,
+      instruments: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string.isRequired,
+          shortname: PropTypes.string.isRequired,
+        }).isRequired
+      ).isRequired,
     }).isRequired
   ).isRequired,
 }

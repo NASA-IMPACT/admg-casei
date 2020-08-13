@@ -76,7 +76,9 @@ export const platformCampaignFields = graphql`
       startdate: start_date
       enddate: end_date
       region: region_description
-      deploymentIds: deployments
+      deployments {
+        id
+      }
       countCollectionPeriods: number_collection_periods
       countDataProducts: number_data_products
     }
