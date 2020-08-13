@@ -26,19 +26,19 @@
   {
     "shortname": "C-23 Sherpa",
     "category": "platform",
-    "nasaImgUrl": "https://images-assets.nasa.gov/image/EC94-42742-7/EC94-42742-7~orig.jpg",
+    "nasaImgUrl": "https://images-assets.nasa.gov/image/EC98-44805-16/EC98-44805-16~orig.jpg",
     "nasaImgAlt": "sample"
   },
   {
     "shortname": "Citation",
     "category": "platform",
-    "nasaImgUrl": "https://images-assets.nasa.gov/image/EC94-42742-7/EC94-42742-7~orig.jpg",
+    "nasaImgUrl": "https://images-assets.nasa.gov/image/EC98-44805-16/EC98-44805-16~orig.jpg",
     "nasaImgAlt": "sample"
   },
   {
     "shortname": "CV-580",
     "category": "platform",
-    "nasaImgUrl": "https://images-assets.nasa.gov/image/EC94-42742-7/EC94-42742-7~orig.jpg",
+    "nasaImgUrl": "https://images-assets.nasa.gov/image/EC98-44805-16/EC98-44805-16~orig.jpg",
     "nasaImgAlt": "sample"
   },
   {
@@ -50,25 +50,25 @@
   {
     "shortname": "Campaign FS",
     "category": "platform",
-    "nasaImgUrl": "https://images-assets.nasa.gov/image/EC94-42742-7/EC94-42742-7~orig.jpg",
+    "nasaImgUrl": "https://images-assets.nasa.gov/image/EC98-44805-16/EC98-44805-16~orig.jpg",
     "nasaImgAlt": "sample"
   },
   {
     "shortname": "Campaign V",
     "category": "platform",
-    "nasaImgUrl": "https://images-assets.nasa.gov/image/EC94-42742-7/EC94-42742-7~orig.jpg",
+    "nasaImgUrl": "https://images-assets.nasa.gov/image/EC98-44805-16/EC98-44805-16~orig.jpg",
     "nasaImgAlt": "sample"
   },
   {
     "shortname": "Campaign PL",
     "category": "platform",
-    "nasaImgUrl": "https://images-assets.nasa.gov/image/EC94-42742-7/EC94-42742-7~orig.jpg",
+    "nasaImgUrl": "https://images-assets.nasa.gov/image/EC98-44805-16/EC98-44805-16~orig.jpg",
     "nasaImgAlt": "sample"
   },
   {
     "shortname": "Campaign R",
     "category": "platform",
-    "nasaImgUrl": "https://images-assets.nasa.gov/image/EC94-42742-7/EC94-42742-7~orig.jpg",
+    "nasaImgUrl": "https://images-assets.nasa.gov/image/EC98-44805-16/EC98-44805-16~orig.jpg",
     "nasaImgAlt": "sample"
   },
   {
@@ -86,7 +86,7 @@
   {
     "shortname": "Falcon",
     "category": "platform",
-    "nasaImgUrl": "https://images-assets.nasa.gov/image/EC94-42742-7/EC94-42742-7~orig.jpg",
+    "nasaImgUrl": "https://images-assets.nasa.gov/image/EC98-44805-16/EC98-44805-16~orig.jpg",
     "nasaImgAlt": "sample"
   },
   {
@@ -102,9 +102,15 @@
     "nasaImgAlt": "NASA's Global Hawk 872 lifting off the runway at Edwards Air Force Base"
   },
   {
+    "shortname": "G-V",
+    "category": "platform",
+    "nasaImgUrl": "https://images-assets.nasa.gov/image/EC98-44805-16/EC98-44805-16~orig.jpg",
+    "nasaImgAlt": "sample"
+  },
+  {
     "shortname": "P-3",
     "category": "platform",
-    "nasaImgUrl": "https://images-assets.nasa.gov/image/EC94-42742-7/EC94-42742-7~orig.jpg",
+    "nasaImgUrl": "https://images-assets.nasa.gov/image/EC98-44805-16/EC98-44805-16~orig.jpg",
     "nasaImgAlt": "sample"
   },
   {
