@@ -24,15 +24,8 @@ exports.createSchemaCustomization = ({ actions }) => {
     type platform implements Node {
       campaigns: [campaign] @link
     }
-    type contentJson implements Node {
-      nasaJson: imageJson
+    type NasaImagesJson implements Node {
       nasaImg: File @link(from: "nasaImg___NODE")
-    }
-    type imageJson {
-      shortname: String!
-      category: String
-      nasaImgUrl: String
-      nasaImgAlt: String
     }
   `
 
@@ -56,7 +49,7 @@ exports.onCreateNode = async ({
       store, // Gatsby's redux store
     })
 
-    // if the file was created, attach the new node to the parent node
+    // if the file was created, attach the new node (=File) to the parent node (=NasaImagesJson)
     if (fileNode) {
       node.nasaImg___NODE = fileNode.id
     }
