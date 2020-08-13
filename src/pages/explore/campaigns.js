@@ -195,8 +195,8 @@ export const query = graphql`
       nasaImgUrl
       nasaImg {
         childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
+          fixed(width: 45, height: 45) {
+            ...GatsbyImageSharpFixed
           }
         }
       }

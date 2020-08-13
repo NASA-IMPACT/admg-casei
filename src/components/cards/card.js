@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
+import Image from "gatsby-image"
 
 import theme from "../../utils/theme"
 import PlaceholderLogo from "../../images/placeholder-logo.svg"
@@ -34,7 +35,8 @@ const Card = ({ children, image, tag, footerList }) => (
         {image && image.nasaImg ? (
           <Image
             alt={image.nasaImgAlt}
-            fluid={image.nasaImg.childImageSharp.fluid}
+            fixed={image.nasaImg.childImageSharp.fixed}
+            style={{ margin: `0` }}
           />
         ) : (
           image && (
