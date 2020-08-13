@@ -210,12 +210,6 @@
     "nasaImgAlt": "A stream in the La Selva region of the Costa Rican rain forest, taken during NASA's AirSAR 2004 campaign."
   },
   {
-    "shortname": "NID",
-    "category": "region",
-    "nasaImgUrl": "",
-    "nasaImgAlt": ""
-  },
-  {
     "shortname": "ACES",
     "category": "logo",
     "nasaImgUrl": "https://ghrc.nsstc.nasa.gov/home/sites/default/files/aces_logo.png#overlay-context=field-campaigns/aces",

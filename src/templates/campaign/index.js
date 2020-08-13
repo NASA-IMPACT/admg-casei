@@ -10,32 +10,14 @@ import TimelineSection from "./timeline-section"
 import PlatformSection from "./platform-section"
 import ProgramInfoSection from "./program-info-section"
 import FocusSection from "./focus-section"
-import { SectionBlock, SectionHeader } from "../../components/section"
 import MaintenanceSection from "../../components/maintenance-section"
-import { getOriginalImgName } from "../../utils/helpers"
 
-const CampaignTemplate = ({
-  data: { campaign, deployments, platformImgs, deploymentImgs },
-}) => {
+const CampaignTemplate = ({ data: { campaign } }) => {
   const [isClient, setIsClient] = useState(false)
   useEffect(() => {
     // useEffect only runs client-side after rehyration
     setIsClient(true)
   }, [])
-
-  const platformsWithImages = () => {
-    const updatedPlatforms = campaign.platforms.map(platform => {
-      const platformImg = platformImgs.nodes.find(
-        img => img.shortname === platform.shortname
-      )
-      return {
-        ...platform,
-        imgName: getOriginalImgName(platformImg.nasaImgUrl),
-        imgAlt: platformImg.nasaImgAlt,
-      }
-    })
-    return updatedPlatforms
-  }
 
   return (
     <Layout>
@@ -57,6 +39,7 @@ const CampaignTemplate = ({
           region={campaign.region}
           seasonListing={campaign.seasons.map(x => x.shortname).join(", ")}
           bounds={campaign.bounds}
+          doi={campaign.doi}
           projectWebsite={campaign.projectWebsite}
           repositoryWebsite={campaign.repositoryWebsite}
           tertiaryWebsite={campaign.tertiaryWebsite}
@@ -67,17 +50,8 @@ const CampaignTemplate = ({
           geophysical={campaign.geophysical}
           focusPhenomena={campaign.focusPhenomena}
         />
-        <PlatformSection platforms={platformsWithImages()} />
-        <TimelineSection
-          deployments={deployments}
-          placeholderImageUrl={getOriginalImgName(
-            deploymentImgs.nodes[0].nasaImgUrl
-          )}
-          placeholderImageAlt={deploymentImgs.nodes[0].nasaImgAlt}
-        />
-        <SectionBlock id="data">
-          <SectionHeader headline="Data" />
-        </SectionBlock>
+        <PlatformSection platforms={campaign.platforms} />
+        <TimelineSection deployments={campaign.deployments} />
         <ProgramInfoSection
           shortname={campaign.shortname}
           fundingAgency={campaign.fundingAgency}
@@ -94,10 +68,7 @@ const CampaignTemplate = ({
         />
         {isClient && (
           // the maintenance section is behind authentication and only accessible from the browser
-          <MaintenanceSection
-            id={campaign.uuid}
-            data={{ campaign, deployments }}
-          />
+          <MaintenanceSection id={campaign.uuid} data={{ campaign }} />
         )}
       </PageBody>
     </Layout>
@@ -111,27 +82,9 @@ export const query = graphql`
       ...overviewFields
       ...focusFields
       ...platformFields
+      ...deploymentFields
       ...fundingFields
       uuid
-    }
-    deployments: allDeployment(filter: { campaign: { eq: $slug } }) {
-      ...deploymentFragment
-    }
-    platformImgs: allNasaImagesJson(filter: { category: { eq: "platform" } }) {
-      nodes {
-        shortname
-        nasaImgUrl
-        nasaImgAlt
-        category
-      }
-    }
-    deploymentImgs: allNasaImagesJson(
-      filter: { category: { eq: "deployment" } }
-    ) {
-      nodes {
-        nasaImgUrl
-        nasaImgAlt
-      }
     }
   }
 `
@@ -150,7 +103,7 @@ CampaignTemplate.propTypes = {
       ).isRequired,
       geophysical: PropTypes.arrayOf(
         PropTypes.shape({
-          shortname: PropTypes.string.isRequired,
+          id: PropTypes.string.isRequired,
           longname: PropTypes.string.isRequired,
         })
       ).isRequired,
@@ -167,6 +120,7 @@ CampaignTemplate.propTypes = {
           longname: PropTypes.string.isRequired,
         })
       ).isRequired,
+      doi: PropTypes.string.isRequired,
       projectWebsite: PropTypes.string.isRequired,
       repositoryWebsite: PropTypes.string.isRequired,
       tertiaryWebsite: PropTypes.string.isRequired,
@@ -174,8 +128,37 @@ CampaignTemplate.propTypes = {
       focusPhenomena: PropTypes.string.isRequired,
       platforms: PropTypes.arrayOf(
         PropTypes.shape({
+          id: PropTypes.string.isRequired,
+          image: PropTypes.shape({
+            nasaImgAlt: PropTypes.string.isRequired,
+            nasaImg: PropTypes.shape({
+              childImageSharp: PropTypes.object.isRequired,
+            }).isRequired,
+          }).isRequired,
           shortname: PropTypes.string.isRequired,
           longname: PropTypes.string.isRequired,
+          instruments: PropTypes.arrayOf(
+            PropTypes.shape({
+              id: PropTypes.string.isRequired,
+              shortname: PropTypes.string.isRequired,
+            }).isRequired
+          ).isRequired,
+        }).isRequired
+      ).isRequired,
+      deployments: PropTypes.arrayOf(
+        PropTypes.shape({
+          nodes: PropTypes.arrayOf(
+            PropTypes.shape({
+              id: PropTypes.string.isRequired,
+              shortname: PropTypes.string.isRequired,
+              flights: PropTypes.array.isRequired,
+              region: PropTypes.array.isRequired,
+              campaign: PropTypes.string.isRequired,
+              longname: PropTypes.string.isRequired,
+              end: PropTypes.string.isRequired,
+              start: PropTypes.string.isRequired,
+            })
+          ),
         })
       ).isRequired,
       logo: PropTypes.string,
@@ -192,38 +175,6 @@ CampaignTemplate.propTypes = {
       ).isRequired,
       partnerWebsite: PropTypes.string,
       uuid: PropTypes.string.isRequired,
-    }).isRequired,
-    deployments: PropTypes.shape({
-      nodes: PropTypes.arrayOf(
-        PropTypes.shape({
-          id: PropTypes.string.isRequired,
-          shortname: PropTypes.string.isRequired,
-          flights: PropTypes.array.isRequired,
-          region: PropTypes.array.isRequired,
-          campaign: PropTypes.string.isRequired,
-          longname: PropTypes.string.isRequired,
-          end: PropTypes.string.isRequired,
-          start: PropTypes.string.isRequired,
-        })
-      ),
-    }).isRequired,
-    platformImgs: PropTypes.shape({
-      nodes: PropTypes.arrayOf(
-        PropTypes.shape({
-          shortname: PropTypes.string.isRequired,
-          nasaImgUrl: PropTypes.string.isRequired,
-          nasaImgAlt: PropTypes.string.isRequired,
-          category: PropTypes.string.isRequired,
-        }).isRequired
-      ),
-    }).isRequired,
-    deploymentImgs: PropTypes.shape({
-      nodes: PropTypes.arrayOf(
-        PropTypes.shape({
-          nasaImgUrl: PropTypes.string.isRequired,
-          nasaImgAlt: PropTypes.string.isRequired,
-        }).isRequired
-      ),
     }).isRequired,
   }).isRequired,
 }

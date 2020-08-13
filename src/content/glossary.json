@@ -1,81 +1,79 @@
-{
-  "terms": [
-    {
-      "term": "Mission",
-      "definition": "A NASA-funded program containing one or more satellites and/or field investigation projects. Missions target a relatively broad set of science requirements, while supporting projects each tend to investigate a more narrow set of mission-supporting objectives and/or specific research questions.  Examples include the Aqua mission, the Precipitation Measurement mission, and the Earth Venture-Suborbital program."
-    },
-    {
-      "term": "Field Investigation",
-      "definition": "An observational study during which individuals/programs/agencies/institutions utilize preselected, specific sensors or sets of sensors to acquire targeted observations in a natural, non-laboratory setting in support of common, clearly defined, science or research objectives.  Field investigations usually occur over a designated geographical space and/or period of time.  Sensors can include in-situ and/or remote sensing instruments operating on airborne, ground-based, and/or other non-satellite platform(s).  Satellite-based observations may be included in, but are not collected specifically as part of, a field investigation.",
-      "note": "Field investigations may also be referred to as airborne investigations, airborne campaigns, field campaigns, campaigns, projects, field missions, deployments, or IOPs.  ADMG uses the terms field investigation and campaign interchangeably.  See ADMG’s definitions for mission, deployment, and IOP."
-    },
-    {
-      "term": "Deployment",
-      "definition": "A previously scheduled, continuous time period during which a field investigation’s platforms and/or sensors are dedicated for use in support of the science objective(s).  The deployment time frame typically consists of the calendar date range during which there are mission and/or instrument scientists and/or NASA ESPO personnel stationed on-site for the field investigation.  There may be time periods within a deployment during which individual platforms and/or instruments do not operate due to unfavorable environmental conditions, mechanical issues/maintenance, and/or prescribed personnel rest time.  There may be one or more deployments within a single field investigation."
-    },
-    {
-      "term": "IOP - Intensive Operation Period",
-      "definition": "An individual time frame, within a deployment, during which all or a subset of the field investigation’s instrument(s) and platform(s) are operated with the goal of observing phenomena in support of the field investigation’s science or research objective(s).  IOPs are the primary measurement periods within a single deployment and typically signify a highly focused effort by investigation scientists and staff.  A single IOP may contain observations of one or more events or cases, and these may or may not be considered significant events or golden cases.  There may be one or more IOPs within a single deployment."
-    },
-    {
-      "term": "Significant Event",
-      "definition": "An event observed during a deployment that is notable for the occurrence of a great example of one or more specific phenomena relating to the field investigation science or research objective(s).  Significant events may occur within or outside of an IOP."
-    },
-    {
-      "term": "Golden Case",
-      "definition": "An event or short time period during an IOP that is notable for having all or nearly all of a field investigation’s selected instrument(s) or platform(s) operating successfully, and/or a significant event which has data available from most of the deployed instruments/platforms.  It is possible for a significant event to also be a golden case."
-    },
-    {
-      "term": "Partner Organization",
-      "definition": "An institution that participates in a field investigation with non-NASA separate funding resources allocated specifically for the field investigation. Includes any organization that provided specific platforms or instruments without NASA funding, including co-participating/ cooperating field campaigns. Also, if investigation data are archived by a non-NASA entity, the archiving organization is a partner organization, regardless of the funding pathway. For example,University X coordinates with NASA during a field investigation to collect data that University X is willing to share with NASA as part of the field investigation, despite University X not receiving any funding from NASA for this effort.  University Y also participates in the field investigation, but is receiving NASA funding, and thus is not considered a partner organization, but rather is an investigation participant.  The $ for University Y's participation is coming from NASA, the /$ for University X's participation is not.",
-      "note": "Partner organizations are not limited to universities and may include, for example, other government agencies or departments, organizations from other countries, or private companies."
-    },
-    {
-      "term": "Significant Participant",
-      "definition": "The following requirements must be met for NASA to be considered a significant participant: At least one aircraft or instrument (not a satellite instrument), is funded by NASA to participate in the field investigation and one of the following conditions is true",
-      "listOptions": [
-        "One NASA aircraft is flown with at least one NASA instrument onboard",
-        "Multiple NASA instruments participate on either airborne, ground, or water platforms",
-        "NASA is listed as one of the funders and NASA-funded PIs participated"
-      ],
-      "note": "Field investigations led by non-NASA organizations (such as NOAA, NSF, ESA, regional organizations) are only included in the ADMG inventory when NASA is a significant participant in the campaign."
-    },
-    {
-      "term": "Platform",
-      "definition": "A structure, item, or surface on which an instrument and/or instrument package can be placed for operation. Platforms can be moving or stationary; permanent or temporary; and airborne, land-/ground-, or water-based. ADMG has identified platform types, guided largely by GCMD’s Platform keywords’ Category level. Examples of platforms include: individual aircraft, balloons, field sites, vehicles, ships, and buoys. In order to provide a consistent method of organizing field investigation metadata, the following are also considered platforms:  satellites, models, and visuals (maps, photographs, etc).  These are included so that data from any of these sources, if specifically pertinent for the field investigation and archived in concert with other field investigation data, are properly accounted for in the Inventory."
-    },
-    {
-      "term": "Instrument Package",
-      "definition": "All instruments operating on a platform.  This may consist of a single or multiple individual instruments and all their associated technology.  The instrument package used on a given platform can change over time, by deployment, or by field investigation, to support specific science/research objectives or due to individual instrument failure.",
-      "note": "For airborne platforms, the instrument package is also often referred to as the instrument payload."
-    },
-    {
-      "term": "Continuous Data Collection Period (CDCP)",
-      "definition": "A continuous period of data collection by a platform during which the instrument package is operated.  Continuous Data Collection Periods (CDCPs) are based on the activity or operation of a platform, not on individual instruments comprising the instrument package on the platform.  For airborne platforms, CDCPs are also often referred to as flights.  For water-based platforms, including ships, CDCPs may also often be referred to as cruises or voyages.  For fixed, stationary platforms, such as land-based field sites, CDCPs are sometimes colloquially referred to as deployments, which is somewhat inconsistent with the ADMG definition of deployment used in this inventory (see above).  CDCPs fall within a deployment.",
-      "note": "There may be instances of individual instrument problems/missing data within a CDCP; this does NOT negate the fact that a single CDCP occured.  Example:  A sensor component of an aircraft’s instrument package may not operate for one of the aircraft’s flights during a deployment.  The flight is still considered an individual, complete CDCP."
-    },
-    {
-      "term": "Facility Instrument",
-      "definition": "NASA uses the term facility instrument for airborne instruments or instrument/platform combinations that operate out of a NASA research center and support multiple science disciplines, field investigations, and NASA science objectives.  Facility instruments are typically supported by NASA’s Earth Science Division Research and Analysis program and/or the Earth Observing System Project Science Office and are available to the NASA science research community via a request system.  Investigators must include the cost for facility instrument operation in their funded field investigation budgets.  The NASA Airborne Science Program typically coordinates requests for use of these instruments to participate.  In many cases, all data from a facility instrument are archived together at one NASA DAAC.  Facility instruments are included in the ADMG inventory, both as contributing instruments to field investigations and as an instrument-named “campaign” entry that includes all flights not associated with any specific field investigation(s)."
-    },
-    {
-      "term": "Calibration/Validation (Cal/Val) Campaigns",
-      "definition": "Some field investigations operate primarily to collect data for calibrating and/or validating NASA satellite instruments.  These are referred to as Calibration/Validation (Cal/Val) campaigns and collect observations required to calibrate the instrument’s measurements, algorithm(s) used for data product creation, instrument engineering data, and/or spacecraft engineering data. Cal/Val campaign observations can include pre-flight and in-flight calibration measurements, calibration equation coefficients derived from software routines or empirical data, and ground truth data used in data calibration processing routines. "
-    },
-    {
-      "term": "Data Product",
-      "definition": "A logically meaningful group of data with the same basic characteristics (instrument source or class of source, processing level, resolution, etc.) but may have multiple different independent variables.  A data product, as used in the ADMG inventory, represents each item that would be listed in Earthdata Search for a given field investigation.  Data products can consist of raw data, higher level/processed data, or may be composed of output from a merging of observations from several similar instruments or from a model. In the context of NASA Earth Science data preservation, a data product includes the data and the associated information (metadata).",
-      "note": "Data products may also be referred to as data sets, datasets, or derived products."
-    },
-    {
-      "term": "Investigation Data Collection",
-      "definition": "The group of all the data products generated by observations from airborne and other instruments/sensors during a field investigation.  Thus, the investigation data collection consists of multiple data products.  Note that a DOI can be obtained to identify an entire investigation data collection.",
-      "note": "An investigation data collection may also be referred to as a campaign collection, dataset series, data set series, or data product group."
-    },
-    {
-      "term": "Parameter",
-      "definition": "A quantity or value observed or diagnosed from measurements made with an instrument.  For example, a radar measures the amount of power and phase received due to returned electromagnetic waves, and through signal processing and retrieval techniques provides several parameters, including reflectivity, radial velocity, and spectrum width.  As another example, tipping bucket-type rain gauges measure the number of bucket tips that occur with time in order to provide the parameters of rain amount and rain rate.  By utilizing the GCMD Science Keywords for the Earth Science Category, the ADMG inventory tracks parameters collected by individual instruments or instrument packages.",
-      "note": "A parameter may also be commonly referred to as a variable, observation, or measurement."
-    }
-  ]
-}
+[
+  {
+    "term": "Mission",
+    "definition": "A NASA-funded program containing one or more satellites and/or field investigation projects. Missions target a relatively broad set of science requirements, while supporting projects each tend to investigate a more narrow set of mission-supporting objectives and/or specific research questions.  Examples include the Aqua mission, the Precipitation Measurement mission, and the Earth Venture-Suborbital program."
+  },
+  {
+    "term": "Field Investigation",
+    "definition": "An observational study during which individuals/programs/agencies/institutions utilize preselected, specific sensors or sets of sensors to acquire targeted observations in a natural, non-laboratory setting in support of common, clearly defined, science or research objectives.  Field investigations usually occur over a designated geographical space and/or period of time.  Sensors can include in-situ and/or remote sensing instruments operating on airborne, ground-based, and/or other non-satellite platform(s).  Satellite-based observations may be included in, but are not collected specifically as part of, a field investigation.",
+    "note": "Field investigations may also be referred to as airborne investigations, airborne campaigns, field campaigns, campaigns, projects, field missions, deployments, or IOPs.  ADMG uses the terms field investigation and campaign interchangeably.  See ADMG’s definitions for mission, deployment, and IOP."
+  },
+  {
+    "term": "Deployment",
+    "definition": "A previously scheduled, continuous time period during which a field investigation’s platforms and/or sensors are dedicated for use in support of the science objective(s).  The deployment time frame typically consists of the calendar date range during which there are mission and/or instrument scientists and/or NASA ESPO personnel stationed on-site for the field investigation.  There may be time periods within a deployment during which individual platforms and/or instruments do not operate due to unfavorable environmental conditions, mechanical issues/maintenance, and/or prescribed personnel rest time.  There may be one or more deployments within a single field investigation."
+  },
+  {
+    "term": "IOP - Intensive Operation Period",
+    "definition": "An individual time frame, within a deployment, during which all or a subset of the field investigation’s instrument(s) and platform(s) are operated with the goal of observing phenomena in support of the field investigation’s science or research objective(s).  IOPs are the primary measurement periods within a single deployment and typically signify a highly focused effort by investigation scientists and staff.  A single IOP may contain observations of one or more events or cases, and these may or may not be considered significant events or golden cases.  There may be one or more IOPs within a single deployment."
+  },
+  {
+    "term": "Significant Event",
+    "definition": "An event observed during a deployment that is notable for the occurrence of a great example of one or more specific phenomena relating to the field investigation science or research objective(s).  Significant events may occur within or outside of an IOP."
+  },
+  {
+    "term": "Golden Case",
+    "definition": "An event or short time period during an IOP that is notable for having all or nearly all of a field investigation’s selected instrument(s) or platform(s) operating successfully, and/or a significant event which has data available from most of the deployed instruments/platforms.  It is possible for a significant event to also be a golden case."
+  },
+  {
+    "term": "Partner Organization",
+    "definition": "An institution that participates in a field investigation with non-NASA separate funding resources allocated specifically for the field investigation. Includes any organization that provided specific platforms or instruments without NASA funding, including co-participating/ cooperating field campaigns. Also, if investigation data are archived by a non-NASA entity, the archiving organization is a partner organization, regardless of the funding pathway. For example,University X coordinates with NASA during a field investigation to collect data that University X is willing to share with NASA as part of the field investigation, despite University X not receiving any funding from NASA for this effort.  University Y also participates in the field investigation, but is receiving NASA funding, and thus is not considered a partner organization, but rather is an investigation participant.  The $ for University Y's participation is coming from NASA, the /$ for University X's participation is not.",
+    "note": "Partner organizations are not limited to universities and may include, for example, other government agencies or departments, organizations from other countries, or private companies."
+  },
+  {
+    "term": "Significant Participant",
+    "definition": "The following requirements must be met for NASA to be considered a significant participant: At least one aircraft or instrument (not a satellite instrument), is funded by NASA to participate in the field investigation and one of the following conditions is true",
+    "listOptions": [
+      "One NASA aircraft is flown with at least one NASA instrument onboard",
+      "Multiple NASA instruments participate on either airborne, ground, or water platforms",
+      "NASA is listed as one of the funders and NASA-funded PIs participated"
+    ],
+    "note": "Field investigations led by non-NASA organizations (such as NOAA, NSF, ESA, regional organizations) are only included in the ADMG inventory when NASA is a significant participant in the campaign."
+  },
+  {
+    "term": "Platform",
+    "definition": "A structure, item, or surface on which an instrument and/or instrument package can be placed for operation. Platforms can be moving or stationary; permanent or temporary; and airborne, land-/ground-, or water-based. ADMG has identified platform types, guided largely by GCMD’s Platform keywords’ Category level. Examples of platforms include: individual aircraft, balloons, field sites, vehicles, ships, and buoys. In order to provide a consistent method of organizing field investigation metadata, the following are also considered platforms:  satellites, models, and visuals (maps, photographs, etc).  These are included so that data from any of these sources, if specifically pertinent for the field investigation and archived in concert with other field investigation data, are properly accounted for in the Inventory."
+  },
+  {
+    "term": "Instrument Package",
+    "definition": "All instruments operating on a platform.  This may consist of a single or multiple individual instruments and all their associated technology.  The instrument package used on a given platform can change over time, by deployment, or by field investigation, to support specific science/research objectives or due to individual instrument failure.",
+    "note": "For airborne platforms, the instrument package is also often referred to as the instrument payload."
+  },
+  {
+    "term": "Continuous Data Collection Period (CDCP)",
+    "definition": "A continuous period of data collection by a platform during which the instrument package is operated.  Continuous Data Collection Periods (CDCPs) are based on the activity or operation of a platform, not on individual instruments comprising the instrument package on the platform.  For airborne platforms, CDCPs are also often referred to as flights.  For water-based platforms, including ships, CDCPs may also often be referred to as cruises or voyages.  For fixed, stationary platforms, such as land-based field sites, CDCPs are sometimes colloquially referred to as deployments, which is somewhat inconsistent with the ADMG definition of deployment used in this inventory (see above).  CDCPs fall within a deployment.",
+    "note": "There may be instances of individual instrument problems/missing data within a CDCP; this does NOT negate the fact that a single CDCP occured.  Example:  A sensor component of an aircraft’s instrument package may not operate for one of the aircraft’s flights during a deployment.  The flight is still considered an individual, complete CDCP."
+  },
+  {
+    "term": "Facility Instrument",
+    "definition": "NASA uses the term facility instrument for airborne instruments or instrument/platform combinations that operate out of a NASA research center and support multiple science disciplines, field investigations, and NASA science objectives.  Facility instruments are typically supported by NASA’s Earth Science Division Research and Analysis program and/or the Earth Observing System Project Science Office and are available to the NASA science research community via a request system.  Investigators must include the cost for facility instrument operation in their funded field investigation budgets.  The NASA Airborne Science Program typically coordinates requests for use of these instruments to participate.  In many cases, all data from a facility instrument are archived together at one NASA DAAC.  Facility instruments are included in the ADMG inventory, both as contributing instruments to field investigations and as an instrument-named “campaign” entry that includes all flights not associated with any specific field investigation(s)."
+  },
+  {
+    "term": "Calibration/Validation (Cal/Val) Campaigns",
+    "definition": "Some field investigations operate primarily to collect data for calibrating and/or validating NASA satellite instruments.  These are referred to as Calibration/Validation (Cal/Val) campaigns and collect observations required to calibrate the instrument’s measurements, algorithm(s) used for data product creation, instrument engineering data, and/or spacecraft engineering data. Cal/Val campaign observations can include pre-flight and in-flight calibration measurements, calibration equation coefficients derived from software routines or empirical data, and ground truth data used in data calibration processing routines. "
+  },
+  {
+    "term": "Data Product",
+    "definition": "A logically meaningful group of data with the same basic characteristics (instrument source or class of source, processing level, resolution, etc.) but may have multiple different independent variables.  A data product, as used in the ADMG inventory, represents each item that would be listed in Earthdata Search for a given field investigation.  Data products can consist of raw data, higher level/processed data, or may be composed of output from a merging of observations from several similar instruments or from a model. In the context of NASA Earth Science data preservation, a data product includes the data and the associated information (metadata).",
+    "note": "Data products may also be referred to as data sets, datasets, or derived products."
+  },
+  {
+    "term": "Investigation Data Collection",
+    "definition": "The group of all the data products generated by observations from airborne and other instruments/sensors during a field investigation.  Thus, the investigation data collection consists of multiple data products.  Note that a DOI can be obtained to identify an entire investigation data collection.",
+    "note": "An investigation data collection may also be referred to as a campaign collection, dataset series, data set series, or data product group."
+  },
+  {
+    "term": "Parameter",
+    "definition": "A quantity or value observed or diagnosed from measurements made with an instrument.  For example, a radar measures the amount of power and phase received due to returned electromagnetic waves, and through signal processing and retrieval techniques provides several parameters, including reflectivity, radial velocity, and spectrum width.  As another example, tipping bucket-type rain gauges measure the number of bucket tips that occur with time in order to provide the parameters of rain amount and rain rate.  By utilizing the GCMD Science Keywords for the Earth Science Category, the ADMG inventory tracks parameters collected by individual instruments or instrument packages.",
+    "note": "A parameter may also be commonly referred to as a variable, observation, or measurement."
+  }
+]

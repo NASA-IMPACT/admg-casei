@@ -136,12 +136,6 @@ export const query = graphql`
         longname: long_name
       }
     }
-    allDeployment {
-      nodes {
-        geographical_regions
-        id
-      }
-    }
   }
 
   fragment instrumentFields on instrument {

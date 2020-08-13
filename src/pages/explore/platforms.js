@@ -51,7 +51,7 @@ const Platforms = ({ data, location }) => {
       selectedFilterIds.length === 0
         ? true
         : selectedFilterIds.every(filterId =>
-            platform.instruments.includes(filterId)
+            platform.instruments.map(x => x.id).includes(filterId)
           )
     )
     .filter(platform =>
@@ -150,7 +150,9 @@ export const query = graphql`
     campaigns {
       id
     }
-    instruments
+    instruments {
+      id
+    }
     stationary
   }
 `
@@ -162,7 +164,7 @@ const platformShape = PropTypes.shape({
   description: PropTypes.string.isRequired,
   collectionPeriodIds: PropTypes.arrayOf(PropTypes.string),
   campaigns: PropTypes.arrayOf(PropTypes.shape({ id: PropTypes.string })),
-  instruments: PropTypes.arrayOf(PropTypes.string),
+  instruments: PropTypes.arrayOf(PropTypes.shape({ id: PropTypes.string })),
   stationary: PropTypes.bool.isRequired,
 })
 

@@ -10,7 +10,7 @@ exports[`Chip renders with action 1`] = `
       "borderRadius": "0.2rem",
       "color": "hsla(0,0%,100%,0.9)",
       "display": "flex",
-      "margin": "0 0.5rem",
+      "margin": "0.25rem 0.5rem",
       "padding": "0 0.5rem",
     }
   }
@@ -64,7 +64,7 @@ exports[`Chip renders without action 1`] = `
       "borderRadius": "0.2rem",
       "color": "hsla(0,0%,100%,0.9)",
       "display": "flex",
-      "margin": "0 0.5rem",
+      "margin": "0.25rem 0.5rem",
       "padding": "0 0.5rem",
     }
   }

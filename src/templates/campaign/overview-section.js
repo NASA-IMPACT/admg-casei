@@ -36,6 +36,7 @@ const OverviewSection = ({
   region,
   seasonListing,
   bounds,
+  doi,
   projectWebsite,
   repositoryWebsite,
   tertiaryWebsite,
@@ -74,6 +75,26 @@ const OverviewSection = ({
     </SectionContent>
     <SectionContent columns={[10, 3]}>
       <ul style={{ margin: 0, listStyle: `none` }} data-cy="link-list">
+        <li
+          style={{
+            padding: `1rem`,
+            border: `1px solid ${theme.color.base}`,
+          }}
+        >
+          {doi ? (
+            <p
+              style={{
+                whiteSpace: `nowrap`,
+                overflow: `hidden`,
+                textOverflow: `ellipsis`,
+              }}
+            >
+              DOI: <ExternalLink label={doi} url={doi} id="doi" />
+            </p>
+          ) : (
+            <p data-cy="doi-link">DOI: not available</p>
+          )}
+        </li>
         {projectWebsite && (
           <ListLink to={projectWebsite}>Project website</ListLink>
         )}
@@ -84,7 +105,7 @@ const OverviewSection = ({
           <ListLink to={tertiaryWebsite}>Tertiary website</ListLink>
         )}
         {publicationLink && (
-          <ListLink to={publicationLink}>Publication links</ListLink>
+          <ListLink to={publicationLink}>Publication link</ListLink>
         )}
       </ul>
     </SectionContent>
@@ -103,6 +124,7 @@ export const overviewFields = graphql`
       longname: long_name
     }
     bounds: spatial_bounds
+    doi
     projectWebsite: project_website
     repositoryWebsite: repository_website
     tertiaryWebsite: tertiary_website
@@ -117,6 +139,7 @@ OverviewSection.propTypes = {
   region: PropTypes.string.isRequired,
   seasonListing: PropTypes.string.isRequired,
   bounds: PropTypes.string.isRequired,
+  doi: PropTypes.string,
   projectWebsite: PropTypes.string.isRequired,
   repositoryWebsite: PropTypes.string.isRequired,
   tertiaryWebsite: PropTypes.string.isRequired,

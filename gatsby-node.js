@@ -11,28 +11,31 @@ exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions
   const typeDefs = `
     type campaign implements Node {
+      deployments: [deployment] @link
       focus_areas: [focus_area] @link
       geophysical_concepts: [geophysical_concept] @link
+      instruments: [instrument] @link
       partner_orgs: [partner_org] @link
+      platform_types: [platform_type] @link
       platforms: [platform] @link
       seasons: [season] @link
-      instruments: [instrument] @link
+    }
+    type deployment implements Node {
+      geographical_regions: [geographical_region] @link
+    }
+    type geographical_region implements Node {
+      image: NasaImagesJson @link(by: "shortname", from: "short_name")
     }
     type instrument implements Node {
       platforms: [platform] @link
     }
     type platform implements Node {
       campaigns: [campaign] @link
+      instruments: [instrument] @link
+      image: NasaImagesJson @link(by: "shortname", from: "short_name")
     }
-    type contentJson implements Node {
-      nasaJson: imageJson
+    type NasaImagesJson implements Node {
       nasaImg: File @link(from: "nasaImg___NODE")
-    }
-    type imageJson {
-      shortname: String!
-      category: String
-      nasaImgUrl: String
-      nasaImgAlt: String
     }
   `
 
@@ -46,7 +49,7 @@ exports.onCreateNode = async ({
   cache,
   createNodeId,
 }) => {
-  if (node.internal.type === "NasaImagesJson" && node.nasaImgUrl !== null) {
+  if (node.internal.type === "NasaImagesJson" && !!node.nasaImgUrl) {
     let fileNode = await createRemoteFileNode({
       url: node.nasaImgUrl, // string that points to the URL of the image
       parentNodeId: node.id, // id of the parent node of the fileNode you are going to create
@@ -56,7 +59,7 @@ exports.onCreateNode = async ({
       store, // Gatsby's redux store
     })
 
-    // if the file was created, attach the new node to the parent node
+    // if the file was created, attach the new node (=File) to the parent node (=NasaImagesJson)
     if (fileNode) {
       node.nasaImg___NODE = fileNode.id
     }
@@ -76,6 +79,7 @@ exports.sourceNodes = async ({ actions, createContentDigest }) => {
       "instrument_type",
       "partner_org",
       "platform",
+      "platform_type",
       "season",
     ]
 

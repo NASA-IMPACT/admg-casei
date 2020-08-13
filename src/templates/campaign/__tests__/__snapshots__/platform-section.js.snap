@@ -63,7 +63,55 @@ exports[`Platform Section displays content 1`] = `
                 }
               }
             >
-              <img />
+              <div
+                className=" gatsby-image-wrapper"
+                style={
+                  Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
+                    "overflow": "hidden",
+                    "position": "relative",
+                  }
+                }
+              >
+                <div
+                  aria-hidden={true}
+                  style={
+                    Object {
+                      "paddingBottom": "NaN%",
+                      "width": "100%",
+                    }
+                  }
+                />
+                <picture>
+                  <source />
+                  <img
+                    alt="alt-text"
+                    loading="lazy"
+                    onLoad={[Function]}
+                    style={
+                      Object {
+                        "height": "100%",
+                        "left": 0,
+                        "objectFit": "cover",
+                        "objectPosition": "center",
+                        "opacity": 0,
+                        "position": "absolute",
+                        "top": 0,
+                        "transition": "opacity 500ms",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </picture>
+                <noscript
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "<picture><source srcset=\\"undefined\\" /><img loading=\\"lazy\\" src=\\"\\" alt=\\"alt-text\\" style=\\"position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\\"/></picture>",
+                    }
+                  }
+                />
+              </div>
               <label
                 data-cy="platform-image-caption"
                 style={
@@ -83,6 +131,147 @@ exports[`Platform Section displays content 1`] = `
               </label>
             </div>
           </a>
+          <div
+            style={
+              Object {
+                "display": "flex",
+                "flexWrap": "wrap",
+              }
+            }
+          >
+            <a
+              href="/instrument/a1f41f4d-2233-49be-a3d3-6eda1ded6be4"
+            >
+              <div
+                data-cy="instrument-chip"
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#303641",
+                    "borderRadius": "0.2rem",
+                    "color": "hsla(0,0%,100%,0.9)",
+                    "display": "flex",
+                    "margin": "0.25rem 0.5rem",
+                    "padding": "0 0.5rem",
+                  }
+                }
+              >
+                <small>
+                  Gen-Chemistry
+                </small>
+              </div>
+            </a>
+            <a
+              href="/instrument/d5e31d80-a0d9-4d5b-95e1-e10714ec7970"
+            >
+              <div
+                data-cy="instrument-chip"
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#303641",
+                    "borderRadius": "0.2rem",
+                    "color": "hsla(0,0%,100%,0.9)",
+                    "display": "flex",
+                    "margin": "0.25rem 0.5rem",
+                    "padding": "0 0.5rem",
+                  }
+                }
+              >
+                <small>
+                  DAWN
+                </small>
+              </div>
+            </a>
+            <a
+              href="/instrument/c40cc568-c4eb-4605-a3bc-f9027ad538a6"
+            >
+              <div
+                data-cy="instrument-chip"
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#303641",
+                    "borderRadius": "0.2rem",
+                    "color": "hsla(0,0%,100%,0.9)",
+                    "display": "flex",
+                    "margin": "0.25rem 0.5rem",
+                    "padding": "0 0.5rem",
+                  }
+                }
+              >
+                <small>
+                  PTR-MS
+                </small>
+              </div>
+            </a>
+            <a
+              href="/instrument/f095abde-d0eb-4d00-b33b-549b37c28dca"
+            >
+              <div
+                data-cy="instrument-chip"
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#303641",
+                    "borderRadius": "0.2rem",
+                    "color": "hsla(0,0%,100%,0.9)",
+                    "display": "flex",
+                    "margin": "0.25rem 0.5rem",
+                    "padding": "0 0.5rem",
+                  }
+                }
+              >
+                <small>
+                  CIT-CIMS
+                </small>
+              </div>
+            </a>
+            <a
+              href="/instrument/fdec9678-fd19-48b9-a30f-b0c2d8503c82"
+            >
+              <div
+                data-cy="instrument-chip"
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#303641",
+                    "borderRadius": "0.2rem",
+                    "color": "hsla(0,0%,100%,0.9)",
+                    "display": "flex",
+                    "margin": "0.25rem 0.5rem",
+                    "padding": "0 0.5rem",
+                  }
+                }
+              >
+                <small>
+                  AVOCET
+                </small>
+              </div>
+            </a>
+            <a
+              href="/instrument/eaabd936-b6ae-4136-b160-90ef5f629da4"
+            >
+              <div
+                data-cy="instrument-chip"
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#303641",
+                    "borderRadius": "0.2rem",
+                    "color": "hsla(0,0%,100%,0.9)",
+                    "display": "flex",
+                    "margin": "0.25rem 0.5rem",
+                    "padding": "0 0.5rem",
+                  }
+                }
+              >
+                <small>
+                  Nephelometer
+                </small>
+              </div>
+            </a>
+          </div>
         </div>
         <div
           data-cy="platform"
@@ -103,7 +292,55 @@ exports[`Platform Section displays content 1`] = `
                 }
               }
             >
-              <img />
+              <div
+                className=" gatsby-image-wrapper"
+                style={
+                  Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
+                    "overflow": "hidden",
+                    "position": "relative",
+                  }
+                }
+              >
+                <div
+                  aria-hidden={true}
+                  style={
+                    Object {
+                      "paddingBottom": "NaN%",
+                      "width": "100%",
+                    }
+                  }
+                />
+                <picture>
+                  <source />
+                  <img
+                    alt="alt-text"
+                    loading="lazy"
+                    onLoad={[Function]}
+                    style={
+                      Object {
+                        "height": "100%",
+                        "left": 0,
+                        "objectFit": "cover",
+                        "objectPosition": "center",
+                        "opacity": 0,
+                        "position": "absolute",
+                        "top": 0,
+                        "transition": "opacity 500ms",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </picture>
+                <noscript
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "<picture><source srcset=\\"undefined\\" /><img loading=\\"lazy\\" src=\\"\\" alt=\\"alt-text\\" style=\\"position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\\"/></picture>",
+                    }
+                  }
+                />
+              </div>
               <label
                 data-cy="platform-image-caption"
                 style={
@@ -123,6 +360,59 @@ exports[`Platform Section displays content 1`] = `
               </label>
             </div>
           </a>
+          <div
+            style={
+              Object {
+                "display": "flex",
+                "flexWrap": "wrap",
+              }
+            }
+          >
+            <a
+              href="/instrument/aa6e3d99-17ca-4b4e-9130-c6e0b0864fd9"
+            >
+              <div
+                data-cy="instrument-chip"
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#303641",
+                    "borderRadius": "0.2rem",
+                    "color": "hsla(0,0%,100%,0.9)",
+                    "display": "flex",
+                    "margin": "0.25rem 0.5rem",
+                    "padding": "0 0.5rem",
+                  }
+                }
+              >
+                <small>
+                  HSRL
+                </small>
+              </div>
+            </a>
+            <a
+              href="/instrument/7c2a6034-9983-4308-a81b-e9fd538c3dd3"
+            >
+              <div
+                data-cy="instrument-chip"
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#303641",
+                    "borderRadius": "0.2rem",
+                    "color": "hsla(0,0%,100%,0.9)",
+                    "display": "flex",
+                    "margin": "0.25rem 0.5rem",
+                    "padding": "0 0.5rem",
+                  }
+                }
+              >
+                <small>
+                  RSP
+                </small>
+              </div>
+            </a>
+          </div>
         </div>
         <div
           data-cy="platform"
@@ -143,7 +433,55 @@ exports[`Platform Section displays content 1`] = `
                 }
               }
             >
-              <img />
+              <div
+                className=" gatsby-image-wrapper"
+                style={
+                  Object {
+                    "maxHeight": null,
+                    "maxWidth": null,
+                    "overflow": "hidden",
+                    "position": "relative",
+                  }
+                }
+              >
+                <div
+                  aria-hidden={true}
+                  style={
+                    Object {
+                      "paddingBottom": "NaN%",
+                      "width": "100%",
+                    }
+                  }
+                />
+                <picture>
+                  <source />
+                  <img
+                    alt="alt-text"
+                    loading="lazy"
+                    onLoad={[Function]}
+                    style={
+                      Object {
+                        "height": "100%",
+                        "left": 0,
+                        "objectFit": "cover",
+                        "objectPosition": "center",
+                        "opacity": 0,
+                        "position": "absolute",
+                        "top": 0,
+                        "transition": "opacity 500ms",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </picture>
+                <noscript
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "<picture><source srcset=\\"undefined\\" /><img loading=\\"lazy\\" src=\\"\\" alt=\\"alt-text\\" style=\\"position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\\"/></picture>",
+                    }
+                  }
+                />
+              </div>
               <label
                 data-cy="platform-image-caption"
                 style={
@@ -163,6 +501,81 @@ exports[`Platform Section displays content 1`] = `
               </label>
             </div>
           </a>
+          <div
+            style={
+              Object {
+                "display": "flex",
+                "flexWrap": "wrap",
+              }
+            }
+          >
+            <a
+              href="/instrument/a1f41f4d-2233-49be-a3d3-6eda1ded6be4"
+            >
+              <div
+                data-cy="instrument-chip"
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#303641",
+                    "borderRadius": "0.2rem",
+                    "color": "hsla(0,0%,100%,0.9)",
+                    "display": "flex",
+                    "margin": "0.25rem 0.5rem",
+                    "padding": "0 0.5rem",
+                  }
+                }
+              >
+                <small>
+                  Gen-Chemistry
+                </small>
+              </div>
+            </a>
+            <a
+              href="/instrument/edf760b9-d2b4-4ce5-8524-31268e6532fc"
+            >
+              <div
+                data-cy="instrument-chip"
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#303641",
+                    "borderRadius": "0.2rem",
+                    "color": "hsla(0,0%,100%,0.9)",
+                    "display": "flex",
+                    "margin": "0.25rem 0.5rem",
+                    "padding": "0 0.5rem",
+                  }
+                }
+              >
+                <small>
+                  PSAP
+                </small>
+              </div>
+            </a>
+            <a
+              href="/instrument/3e5c6687-3a1c-40f5-95ed-49eb3248aea7"
+            >
+              <div
+                data-cy="instrument-chip"
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#303641",
+                    "borderRadius": "0.2rem",
+                    "color": "hsla(0,0%,100%,0.9)",
+                    "display": "flex",
+                    "margin": "0.25rem 0.5rem",
+                    "padding": "0 0.5rem",
+                  }
+                }
+              >
+                <small>
+                  TE49C
+                </small>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     </div>
