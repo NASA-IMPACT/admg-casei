@@ -46,7 +46,7 @@ const Campaigns = ({ data, location }) => {
     setLoading(true)
     e.preventDefault()
     let searchstring = inputElement.current.value
-    const result = await api.fetchSearchResult(searchstring)
+    const result = await api.fetchSearchResult("campaign", searchstring)
     setSearchResult(result)
     setLoading(false)
   }
