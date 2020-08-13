@@ -27,7 +27,7 @@ export const GeophysicsGrid = ({ geophysicalConcepts }) => (
             textAlign: `center`,
           }}
         >
-          {concept.shortname}
+          {concept.longname}
         </div>
       </Link>
     ))}
@@ -38,7 +38,7 @@ GeophysicsGrid.propTypes = {
   geophysicalConcepts: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,
-      shortname: PropTypes.string,
+      longname: PropTypes.string,
     })
   ),
 }

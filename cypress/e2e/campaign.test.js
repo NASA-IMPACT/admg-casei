@@ -44,41 +44,35 @@ describe("Campaign", () => {
       cy.get("main").find("nav").should("exist")
     })
 
-    it("has 5 items", () => {
+    it("has 6 items", () => {
       cy.get("main")
         .find("nav")
         .find("a")
         .should($anchor => {
-          expect($anchor, "7 items").to.have.length(7)
+          expect($anchor, "6 items").to.have.length(6)
           expect($anchor.eq(0), "first item").to.contain("Overview")
           expect($anchor.eq(1), "second item").to.contain("Focus")
           expect($anchor.eq(2), "third item").to.contain("Platforms")
           expect($anchor.eq(3), "fourth item").to.contain("Instruments")
           expect($anchor.eq(4), "fifth item").to.contain("Timeline")
-          expect($anchor.eq(5), "sixth item").to.contain("Data")
-          expect($anchor.eq(6), "last item").to.contain("Program Info")
+          expect($anchor.eq(5), "last item").to.contain("Program Info")
         })
     })
 
     it("navigates to the inpage section", () => {
-      ;[
-        "program-info",
-        "platform",
-        "overview",
-        "data",
-        "timeline",
-        "focus",
-      ].forEach(id => {
-        cy.get(`[data-cy=${id}-inpage-link]`).click()
+      ;["program-info", "platform", "overview", "timeline", "focus"].forEach(
+        id => {
+          cy.get(`[data-cy=${id}-inpage-link]`).click()
 
-        cy.url().should("include", id)
+          cy.url().should("include", id)
 
-        // TODO: figure out how to properly test the inpage scroll
-        // cy.get("main")
-        //   .find(`[data-cy=${id}-section]`)
-        //   .find("h2")
-        //   .should("be.inViewport")
-      })
+          // TODO: figure out how to properly test the inpage scroll
+          // cy.get("main")
+          //   .find(`[data-cy=${id}-section]`)
+          //   .find("h2")
+          //   .should("be.inViewport")
+        }
+      )
     })
   })
 
@@ -113,7 +107,14 @@ describe("Campaign", () => {
     it("displays link list", () => {
       cy.get("[data-cy=link-list]")
         .find("li")
-        .should("have.length.within", 2, 4)
+        .should("have.length.within", 2, 5)
+    })
+
+    it("displays the DOI", () => {
+      cy.get("[data-cy=link-list]")
+        .find("[data-cy=doi-link]")
+        .should("exist")
+        .and("have.text", "DOI: not available")
     })
   })
 
@@ -134,8 +135,44 @@ describe("Campaign", () => {
         expect($label, "3 labels").to.have.length(3)
       })
       cy.get("[data-cy=focus-content-text]").should($p => {
-        expect($p, "2 text entries").to.have.length(2)
+        expect($p, "2 text entries").to.have.length(1)
       })
+    })
+
+    it("navigates to the campaign list with the focus area as filter applied", () => {
+      cy.get("[data-cy=focus-section]")
+        .find("[data-cy=focus-area]")
+        .contains("Carbon Cycle & Ecosystems")
+        .click()
+
+      cy.url().should("include", "/explore/campaigns")
+
+      cy.get("main")
+        .find("[data-cy=filter-chip]")
+        .should("have.length", 1)
+        .and("have.text", "focus: Carbon Cycle & Ecosystems")
+
+      cy.get("main").find("[data-cy=explore-card]").should("have.length", 2)
+
+      cy.go("back")
+    })
+
+    it("navigates to the campaign list with the geophysical concept as filter applied", () => {
+      cy.get("[data-cy=focus-section]")
+        .find("[data-cy=geophysical-concept]")
+        .contains("Hydrology")
+        .click()
+
+      cy.url().should("include", "/explore/campaigns")
+
+      cy.get("main")
+        .find("[data-cy=filter-chip]")
+        .should("have.length", 1)
+        .and("have.text", "geophysical: Terr Hydro")
+
+      cy.get("main").find("[data-cy=explore-card]").should("have.length", 2)
+
+      cy.go("back")
     })
   })
 
@@ -199,6 +236,15 @@ describe("Campaign", () => {
       cy.get("[data-cy=platform]").should($div => {
         expect($div, "3 platforms").to.have.length(3)
       })
+    })
+
+    it("displays the instruments per platform", () => {
+      cy.get("[data-cy=platform]")
+        .first()
+        .find("[data-cy=instrument-chip]")
+        .should($div => {
+          expect($div, "2 instruments").to.have.length(2)
+        })
     })
   })
 

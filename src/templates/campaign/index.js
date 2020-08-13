@@ -10,10 +10,9 @@ import TimelineSection from "./timeline-section"
 import PlatformSection from "./platform-section"
 import ProgramInfoSection from "./program-info-section"
 import FocusSection from "./focus-section"
-import { SectionBlock, SectionHeader } from "../../components/section"
 import MaintenanceSection from "../../components/maintenance-section"
 
-const CampaignTemplate = ({ data: { campaign, deployments } }) => {
+const CampaignTemplate = ({ data: { campaign } }) => {
   const [isClient, setIsClient] = useState(false)
   useEffect(() => {
     // useEffect only runs client-side after rehyration
@@ -40,6 +39,7 @@ const CampaignTemplate = ({ data: { campaign, deployments } }) => {
           region={campaign.region}
           seasonListing={campaign.seasons.map(x => x.shortname).join(", ")}
           bounds={campaign.bounds}
+          doi={campaign.doi}
           projectWebsite={campaign.projectWebsite}
           repositoryWebsite={campaign.repositoryWebsite}
           tertiaryWebsite={campaign.tertiaryWebsite}
@@ -51,10 +51,7 @@ const CampaignTemplate = ({ data: { campaign, deployments } }) => {
           focusPhenomena={campaign.focusPhenomena}
         />
         <PlatformSection platforms={campaign.platforms} />
-        <TimelineSection deployments={deployments} />
-        <SectionBlock id="data">
-          <SectionHeader headline="Data" />
-        </SectionBlock>
+        <TimelineSection deployments={campaign.deployments} />
         <ProgramInfoSection
           shortname={campaign.shortname}
           fundingAgency={campaign.fundingAgency}
@@ -71,10 +68,7 @@ const CampaignTemplate = ({ data: { campaign, deployments } }) => {
         />
         {isClient && (
           // the maintenance section is behind authentication and only accessible from the browser
-          <MaintenanceSection
-            id={campaign.uuid}
-            data={{ campaign, deployments }}
-          />
+          <MaintenanceSection id={campaign.uuid} data={{ campaign }} />
         )}
       </PageBody>
     </Layout>
@@ -88,11 +82,9 @@ export const query = graphql`
       ...overviewFields
       ...focusFields
       ...platformFields
+      ...deploymentFields
       ...fundingFields
       uuid
-    }
-    deployments: allDeployment(filter: { campaign: { eq: $slug } }) {
-      ...deploymentFragment
     }
   }
 `
@@ -111,7 +103,7 @@ CampaignTemplate.propTypes = {
       ).isRequired,
       geophysical: PropTypes.arrayOf(
         PropTypes.shape({
-          shortname: PropTypes.string.isRequired,
+          id: PropTypes.string.isRequired,
           longname: PropTypes.string.isRequired,
         })
       ).isRequired,
@@ -128,6 +120,7 @@ CampaignTemplate.propTypes = {
           longname: PropTypes.string.isRequired,
         })
       ).isRequired,
+      doi: PropTypes.string.isRequired,
       projectWebsite: PropTypes.string.isRequired,
       repositoryWebsite: PropTypes.string.isRequired,
       tertiaryWebsite: PropTypes.string.isRequired,
@@ -137,6 +130,22 @@ CampaignTemplate.propTypes = {
         PropTypes.shape({
           shortname: PropTypes.string.isRequired,
           longname: PropTypes.string.isRequired,
+        })
+      ).isRequired,
+      deployments: PropTypes.arrayOf(
+        PropTypes.shape({
+          nodes: PropTypes.arrayOf(
+            PropTypes.shape({
+              id: PropTypes.string.isRequired,
+              shortname: PropTypes.string.isRequired,
+              flights: PropTypes.array.isRequired,
+              region: PropTypes.array.isRequired,
+              campaign: PropTypes.string.isRequired,
+              longname: PropTypes.string.isRequired,
+              end: PropTypes.string.isRequired,
+              start: PropTypes.string.isRequired,
+            })
+          ),
         })
       ).isRequired,
       logo: PropTypes.string,
@@ -153,20 +162,6 @@ CampaignTemplate.propTypes = {
       ).isRequired,
       partnerWebsite: PropTypes.string,
       uuid: PropTypes.string.isRequired,
-    }).isRequired,
-    deployments: PropTypes.shape({
-      nodes: PropTypes.arrayOf(
-        PropTypes.shape({
-          id: PropTypes.string.isRequired,
-          shortname: PropTypes.string.isRequired,
-          flights: PropTypes.array.isRequired,
-          region: PropTypes.array.isRequired,
-          campaign: PropTypes.string.isRequired,
-          longname: PropTypes.string.isRequired,
-          end: PropTypes.string.isRequired,
-          start: PropTypes.string.isRequired,
-        })
-      ),
     }).isRequired,
   }).isRequired,
 }

@@ -20,11 +20,9 @@ const TimelineSection = ({ deployments }) => {
    */
   const setSelectedMilestone = id =>
     // TODO: replace deployments array with the new array that will combine deployments with other carousel data
-    setCurrentSlide(
-      deployments.nodes.findIndex(deployment => deployment.id == id)
-    )
+    setCurrentSlide(deployments.findIndex(deployment => deployment.id == id))
 
-  const selectedMilestoneId = deployments.nodes[currentSlide].id
+  const selectedMilestoneId = deployments[currentSlide].id
 
   return (
     <SectionBlock id="timeline">
@@ -42,7 +40,7 @@ const TimelineSection = ({ deployments }) => {
             slideIndex={currentSlide}
             afterSlide={slideIndex => setCurrentSlide(slideIndex)}
           >
-            {deployments.nodes.map(deployment => (
+            {deployments.map(deployment => (
               <Milestone
                 key={deployment.id}
                 type="deployment"
@@ -50,13 +48,13 @@ const TimelineSection = ({ deployments }) => {
                 endDate={deployment.end}
                 name={`${deployment.longname} (${deployment.shortname})`}
                 details={`${deployment.flights.length} Flights`}
-                region={deployment.region.toString()}
+                region={deployment.regions.map(x => x.longname).join(", ")}
               />
             ))}
           </Carousel>
         </div>
         <MilestoneSelector
-          events={deployments.nodes}
+          events={deployments}
           timelineAction={setSelectedMilestone}
           activeMilestone={selectedMilestoneId}
         />
@@ -65,14 +63,16 @@ const TimelineSection = ({ deployments }) => {
   )
 }
 
-export const deployments = graphql`
-  fragment deploymentFragment on deploymentConnection {
-    nodes {
+export const deploymentFields = graphql`
+  fragment deploymentFields on campaign {
+    deployments {
       id: uuid
       shortname: short_name
       flights: collection_periods
-      region: geographical_regions
-      campaign: campaign
+      regions: geographical_regions {
+        longname: long_name
+      }
+      campaign
       longname: long_name
       end: end_date
       start: start_date
@@ -81,20 +81,18 @@ export const deployments = graphql`
 `
 
 TimelineSection.propTypes = {
-  deployments: PropTypes.shape({
-    nodes: PropTypes.arrayOf(
-      PropTypes.shape({
-        id: PropTypes.string.isRequired,
-        shortname: PropTypes.string.isRequired,
-        flights: PropTypes.array.isRequired,
-        region: PropTypes.array.isRequired,
-        campaign: PropTypes.string.isRequired,
-        longname: PropTypes.string.isRequired,
-        end: PropTypes.string.isRequired,
-        start: PropTypes.string.isRequired,
-      })
-    ),
-  }),
+  deployments: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      shortname: PropTypes.string.isRequired,
+      flights: PropTypes.array.isRequired,
+      regions: PropTypes.array.isRequired,
+      campaign: PropTypes.string.isRequired,
+      longname: PropTypes.string.isRequired,
+      end: PropTypes.string.isRequired,
+      start: PropTypes.string.isRequired,
+    })
+  ),
 }
 
 export default TimelineSection

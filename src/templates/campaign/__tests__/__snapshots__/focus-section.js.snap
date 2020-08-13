@@ -95,11 +95,17 @@ exports[`Focus Section displays content 1`] = `
         >
           Geophysical Concept
         </label>
-        <p
-          data-cy="focus-content-text"
+        <a
+          data-cy="geophysical-concept"
+          href="/explore/campaigns"
+          state={
+            Object {
+              "selectedFilterId": "a",
+            }
+          }
         >
           area a
-        </p>
+        </a>
       </div>
       <div
         data-cy="focus-content"

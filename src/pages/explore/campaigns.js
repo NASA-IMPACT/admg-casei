@@ -22,7 +22,6 @@ const Campaigns = ({ data, location }) => {
     allGeophysicalConcept,
     allGeographicalRegion,
     allPlatform,
-    allDeployment,
   } = data
   const { selectedFilterId } = location.state || {}
 
@@ -52,22 +51,6 @@ const Campaigns = ({ data, location }) => {
     setLoading(false)
   }
 
-  /**
-   * Check if the campaign has deployments in a given region.
-   * @param {object} campaign - The campaign data object.
-   * @param {string} filterId - The id of the item to search for, represents a region.
-   * @returns {boolean} - Returns `true` if the campaign has deployments in a given region.
-   */
-  const campaignHasDeploymentInRegion = (campaign, filterId) => {
-    const deployments = allDeployment.nodes
-    const filteredDeploymentIds = deployments
-      .filter(deployment => deployment.geographical_regions.includes(filterId))
-      .map(d => d.id)
-    return campaign.deploymentIds.some(deploymentId =>
-      filteredDeploymentIds.includes(deploymentId)
-    )
-  }
-
   const list = data[sortOrder].list
     .filter(campaign =>
       selectedFilterIds.length === 0
@@ -77,7 +60,10 @@ const Campaigns = ({ data, location }) => {
               campaign.seasons.map(x => x.id).includes(filterId) ||
               campaign.focus.map(x => x.id).includes(filterId) ||
               campaign.geophysical.map(x => x.id).includes(filterId) ||
-              campaignHasDeploymentInRegion(campaign, filterId) ||
+              campaign.deployments
+                .map(x => x.regions.map(y => y.id))
+                .flat()
+                .includes(filterId) ||
               campaign.platforms.map(x => x.id).includes(filterId)
           )
     )
@@ -200,12 +186,6 @@ export const query = graphql`
         longname: long_name
       }
     }
-    allDeployment {
-      nodes {
-        geographical_regions
-        id
-      }
-    }
   }
 
   fragment campaignFields on campaign {
@@ -225,7 +205,13 @@ export const query = graphql`
     startdate: start_date
     enddate: end_date
     region: region_description
-    deploymentIds: deployments
+    deployments {
+      id
+      regions: geographical_regions {
+        id
+        shortname: short_name
+      }
+    }
     countCollectionPeriods: number_collection_periods
     countDataProducts: number_data_products
     platforms {
@@ -257,7 +243,17 @@ const campaignShape = PropTypes.shape({
   startdate: PropTypes.string.isRequired,
   enddate: PropTypes.string,
   region: PropTypes.string.isRequired,
-  deploymentIds: PropTypes.arrayOf(PropTypes.string),
+  deployments: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      regions: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string.isRequired,
+          shortname: PropTypes.string.isRequired,
+        })
+      ),
+    })
+  ),
   countCollectionPeriods: PropTypes.number,
   countDataProducts: PropTypes.number,
   platforms: PropTypes.arrayOf(
@@ -293,14 +289,6 @@ Campaigns.propTypes = {
     allGeophysicalConcept: filterOptionShape,
     allGeographicalRegion: filterOptionShape,
     allPlatform: filterOptionShape,
-    allDeployment: PropTypes.shape({
-      nodes: PropTypes.arrayOf(
-        PropTypes.shape({
-          id: PropTypes.string.isRequired,
-          geographical_regions: PropTypes.arrayOf(PropTypes.string),
-        })
-      ).isRequired,
-    }).isRequired,
   }).isRequired,
   location: PropTypes.shape({
     state: PropTypes.shape({

@@ -135,7 +135,7 @@ export const query = graphql`
     allGeophysicalConcept {
       nodes {
         id
-        shortname: short_name
+        longname: long_name
       }
     }
     allInstrumentType {
@@ -178,7 +178,7 @@ IndexPage.propTypes = {
       nodes: PropTypes.arrayOf(
         PropTypes.shape({
           id: PropTypes.string.isRequired,
-          shortname: PropTypes.string.isRequired,
+          longname: PropTypes.string.isRequired,
         })
       ),
     }),

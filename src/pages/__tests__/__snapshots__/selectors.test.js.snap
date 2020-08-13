@@ -391,171 +391,166 @@ exports[`Campaigns page renders correctly 1`] = `
             label="Focus Area"
           >
             <option
-              value="23aedeee-2f83-4ca9-be30-5fda9a311421"
+              value="e42c7970-1913-44b4-822b-8d620eef8df8"
             >
               Atmospheric Composition
             </option>
             <option
-              value="4c5e9dc3-38ed-40cb-b6ea-cacf96057b53"
+              value="0ba119ec-7851-4546-8708-5ea3883e0a54"
             >
               Weather
             </option>
             <option
-              value="2a132687-f5a1-4bbc-b45a-97228c310cd8"
+              value="43bc862a-ece2-427c-ad5f-368466d3bc98"
             >
               Climate Variability & Change
             </option>
             <option
-              value="a187959e-4132-4c2c-950d-7055bc5082b9"
+              value="2a9bec35-4fe5-4177-8443-d11f441310b3"
             >
               Global Water & Energy Cycle
             </option>
             <option
-              value="75fdf3c3-f55b-4f33-9f56-7d7af49bef97"
+              value="b31b1fd0-d090-480a-ac8b-3d48175d2a00"
             >
               Carbon Cycle & Ecosystems
             </option>
             <option
-              value="4e90e316-6d36-41b9-ae29-5125842b7b60"
+              value="e6a41072-65fc-411b-8e51-1dd01cd7dd17"
             >
               Earth Surface & Interior
-            </option>
-            <option
-              value="e1b07238-763d-4836-a290-fba2eab0b1b8"
-            >
-              NID
             </option>
           </optgroup>
           <optgroup
             label="Geophysical Concept"
           >
             <option
-              value="9e52d6cf-5a81-4b53-a942-653baeb1fdc1"
+              value="4c19e4b9-b47d-4550-bf1b-fb5daf1fdeb2"
             >
               Aerosols
             </option>
             <option
-              value="cef614bb-0bac-4f62-85af-8a0295b76034"
+              value="e8041eba-37e9-4c38-8f62-5119c7dde4b1"
             >
-              Air Quality (AirQual)
+              Air Qual
             </option>
             <option
-              value="b306795c-557f-4603-b813-56d39fb00c76"
+              value="458c5a19-17dd-48c1-bc12-c22ab69afd10"
             >
-              Atmospheric Chemicals & Trace Gases
+              Atms Chem
             </option>
             <option
-              value="e30bf13d-4abc-4851-b699-d49bf67c4ad6"
+              value="1ffeed03-f578-4e23-8d7a-3fb59ca23321"
             >
-              Upper Atmospheric Chemistry
+              Upper Atms Chem
             </option>
             <option
-              value="a5d259cd-0b6c-441e-9cda-237a991d30ab"
+              value="830fe73e-7102-4b97-bc14-c31d70de1ad3"
             >
-              Radiation & Energy Budget
+              Radiation & Energy
             </option>
             <option
-              value="2f4c11cd-2e66-424b-a164-d5e5a1ded727"
+              value="4438798c-bdb9-4498-acac-e169eb0da849"
             >
-              Clouds-Properties & Processes & Dynamics
+              Clouds
             </option>
             <option
-              value="20c5cc69-f86b-46eb-850c-094ff8d8c104"
+              value="cfe2a5ff-9fe3-4285-8355-b4410aa44986"
             >
-              Boundary Layer Processes
+              BL Pros
             </option>
             <option
-              value="4a716efb-76ed-4707-9842-a290d07d2410"
+              value="80687b08-ae0d-4bc0-9401-dfca1053bd0c"
             >
-              Atmospheric Electricity & Lightning
+              Atms Elec
             </option>
             <option
-              value="cf2628cd-325e-4485-95f1-4f7c7f24df84"
+              value="d3815227-f7e1-45f0-8db0-ff203142c99f"
             >
-              Tropical Cyclones
+              TCs
             </option>
             <option
-              value="2b6b475c-444c-4e66-9dec-61da55cd46da"
+              value="14803ce9-bb33-4ffd-ad2c-0f4be356764a"
             >
-              Mesoscale Convection & Severe Weather
+              Meso & Svr Wx
             </option>
             <option
-              value="04b29f58-f0a5-4b84-82d8-56c9f826e2c3"
+              value="5ed630d3-3e9d-4949-b677-e2a364752b21"
             >
-              Mid-latitude Cyclones
+              Mid-lat Cyclones
             </option>
             <option
-              value="360e94b2-fc1a-4d2e-9715-dc2060be3d5f"
+              value="6b5dac3e-cd6a-4f40-b9d8-86dc6da79131"
             >
-              Precipitation (Precip)
+              Precip
             </option>
             <option
-              value="390e1e0d-3d2c-46df-a00b-c65b4d7151a5"
+              value="695ea5c2-e3f8-42d4-baef-fc48c2b4ff39"
             >
-              Terrestrial Hydrology (TerrHydrol)
+              Terr Hydro
             </option>
             <option
-              value="1cf782c7-8a10-479c-9a57-b29fe17746ac"
+              value="b25df6ec-27d8-4dd3-9c8b-b87f3c34c83e"
             >
-              Ice and Glacial Properties & Processes
+              Ice & Glacial
             </option>
             <option
-              value="ad26de91-23d9-4e3d-b27e-978c81afe3df"
+              value="3bd4c052-5c6c-4da1-934d-6cfd9f01d527"
             >
-              Ocean Properties & Processes
+              Oceans
             </option>
             <option
-              value="0053a024-2ccd-4b31-bdf1-eafe6b48e314"
+              value="c3c9b7d2-d555-41ea-bd20-831654a1694f"
             >
-              Ecosystems/Biogeochemistry
+              Biogeochem
             </option>
             <option
-              value="96e8e86f-2b16-4bb1-99ee-8020b8984602"
+              value="c1f1d7d5-2b80-4987-be9f-ab39101ffe65"
             >
               Biodiversity
             </option>
             <option
-              value="64f7434e-63a1-405f-b3c9-875ee282fa4b"
+              value="a595708b-267f-489f-aecf-42ce98f64819"
             >
-              Carbon Storage & Processes
+              Carbon Storage
             </option>
             <option
-              value="6490e743-061e-4cd7-adb6-3344ff1e87bf"
+              value="43380dac-8364-44f1-86b8-48b8b9673cb4"
             >
-              Soil Properties  (SoilProp)
+              Soils
             </option>
             <option
-              value="dd8f913b-2fc4-4a1d-b3da-4c76afbf068e"
+              value="7d377a91-33db-43d4-ae3e-a510ec32cb0a"
             >
-              Land Characteristics
+              Land Chars
             </option>
             <option
-              value="3103a214-1df3-4fa9-8f7e-e9dcf49a0401"
+              value="b88a321e-ead5-4b83-8bf6-6b4bbb7541eb"
             >
-              Tectonic Processes
+              Tectonics
             </option>
             <option
-              value="9de5d9f2-0d0f-4c2c-aa74-4cc0594f41c3"
+              value="83047381-6b3d-4c63-9cd7-62e20abb89f5"
             >
-              Volcanic Processes
+              Volcanics
             </option>
             <option
-              value="ca948668-50c0-4f52-885a-ab6ed3e1ab30"
+              value="0510f5eb-7303-43c5-8a72-5778e5ac84d8"
             >
-              Earth's Magnetic Field (MagField)
+              Earth Mag Field
             </option>
             <option
-              value="b8d7c54e-4678-40ad-a572-3b7fa6ac4213"
+              value="99e3c1cd-c6f9-417d-aeea-18eb302fd62a"
             >
-              Earth's Interior (EarthInt)
+              Earth Int
             </option>
             <option
-              value="42de25d7-97b8-4cd1-9288-7a85dd906489"
+              value="18d0f620-15b4-4c9c-aba1-129a3037b614"
             >
-              Earth-Climate Interactions
+              Earth/Clim
             </option>
             <option
-              value="fb74f5e0-398d-44e6-9087-cf5e8f445562"
+              value="bb159ac7-19ab-4242-8db5-ba25ec3a817f"
             >
               Geodesy
             </option>
@@ -564,257 +559,272 @@ exports[`Campaigns page renders correctly 1`] = `
             label="Season"
           >
             <option
-              value="5ae15f8c-3d9a-4061-953d-5fea2df57654"
+              value="ee919d06-2e3d-49a4-8dc3-b2b035cb5f2f"
             >
               boreal winter
             </option>
             <option
-              value="416a1c43-85b6-4336-80ac-6ccda1226e54"
+              value="7394cb29-fa27-45d0-b4f3-7132b9e5bd52"
             >
               boreal spring
             </option>
             <option
-              value="65900eb8-fb52-4da9-98e9-190cbf1d1cbe"
+              value="abde509c-8f19-4f12-af69-ed3d41ba09f9"
             >
               boreal summer
             </option>
             <option
-              value="4ebcfcd2-1c9c-45b0-bad6-997fc3e3c904"
+              value="8ca7da19-8691-47ca-876b-029cfc2bdefa"
             >
               boreal fall
             </option>
             <option
-              value="f5b65f38-162a-473b-869b-0094799b202e"
+              value="b445e9ad-47d1-4d2d-baa1-9ade44870377"
             >
               austral winter
             </option>
             <option
-              value="5462d618-6f14-43d1-a9c7-19e7fef9a84b"
+              value="0730b0a1-480b-487f-a11a-d40a50f33b49"
             >
               austral spring
             </option>
             <option
-              value="a27c0f4a-1bab-4f64-a666-0f08ba3c874a"
+              value="0929665a-00c0-40f3-9a5e-7abd42348bcd"
             >
               austral summer
             </option>
             <option
-              value="108eb86b-1139-4ae6-859c-bfaaf0acc709"
+              value="37f01622-83bb-443e-9e5f-d0bc14289d2f"
             >
               austral fall
             </option>
             <option
-              value="cad0fb1f-bdfa-48af-a17d-9a87f1ecfa49"
+              value="cbf95f91-ead5-43b4-aa64-c046f98838ee"
             >
               monsoon
             </option>
             <option
-              value="12b3f425-fbb9-4dcd-9c3a-84fda116e8c5"
+              value="2ee66491-f6fd-4f0a-9b35-bccf0e349e9a"
             >
               break
             </option>
             <option
-              value="c29c7993-71a9-423e-bbaf-2646585669b1"
+              value="e490cd29-53b5-4a22-ae4b-584865560519"
             >
               dry
             </option>
             <option
-              value="081ccd03-e46f-459e-8101-b270d0266eac"
+              value="0e7fa0e9-97b4-4a26-a148-325a6fd80a96"
             >
               wet
             </option>
             <option
-              value="52b49cd7-4143-4bbd-9f09-bd8de945c837"
+              value="87a8463c-b2f4-4315-84cc-cb8d20024247"
             >
               warm
             </option>
             <option
-              value="d4b539c1-32d3-4089-9e08-db714704a13c"
+              value="fafe2bed-972d-4cbf-9d10-4d258e6ccd26"
             >
               cold
             </option>
             <option
-              value="824e5caa-dc94-4927-aba5-b8e8d8d6273d"
+              value="ed1af124-797b-4585-8cd3-14116daf916e"
             >
               equatorial
             </option>
             <option
-              value="80c1e584-8bf7-4cae-b9c1-e7f98d19a7a0"
+              value="2e373516-e075-44c5-8fe3-a23049f2acf5"
             >
               year round
-            </option>
-            <option
-              value="d3c6d320-e3cf-42e0-b729-b4477da17422"
-            >
-              NID
             </option>
           </optgroup>
           <optgroup
             label="Geographical Region"
           >
             <option
-              value="a9b86ec6-cb57-4ef5-9a13-c5a767195782"
+              value="eb28c912-b2eb-41fe-9469-a24a3a096357"
             >
               continental
             </option>
             <option
-              value="6ad9e3d8-81c0-4c7c-9db8-888988ab677e"
+              value="2ee04b8b-1d14-4a3d-be41-ec096a4c0404"
             >
               maritime
             </option>
             <option
-              value="292950c5-e5df-4cea-9778-b0dc6c011294"
+              value="9bf6df49-705e-49fc-abe8-73d9cd9b1e3e"
             >
               coastal
             </option>
             <option
-              value="fd9fb6ee-121e-4a44-8155-d478500599d9"
+              value="1ec8559a-ebd5-4cf3-ae1d-186f2dc5bd7d"
             >
               mountains
             </option>
             <option
-              value="12463bc6-32a8-45bd-bdad-d7bd7db6c51c"
+              value="6e8ed1f4-b2ae-4b46-8b75-0d4b1a54027c"
             >
               island
             </option>
             <option
-              value="2567b1ed-8753-433f-b475-9bb3ef5c1bb3"
+              value="5596e259-a589-40a5-b729-13c42f5ee3ac"
             >
               desert
             </option>
             <option
-              value="674d3da5-6bef-439f-838a-eaf79d733e42"
+              value="84f174f5-bac9-4aef-afdd-28a65a9a9355"
             >
               forest
             </option>
             <option
-              value="9ff66c70-f482-40e8-9a5e-ec45306760e0"
+              value="07c98971-c267-4ce3-a732-fb55c6cd7415"
             >
               urban
             </option>
             <option
-              value="a95c9bd6-395a-409c-8875-586dbc0601f7"
+              value="0b56b3f6-a4b4-4aa1-9b84-a9f3cfd9b53c"
             >
-              agriculture
+              agricultural
             </option>
             <option
-              value="5624a0f2-7b7b-4f4c-a8fd-898e9751e0e1"
+              value="cf8a5cdd-9ab3-435b-ac27-c619b55a2c79"
             >
               equitorial
             </option>
             <option
-              value="cb25d6eb-a988-4e21-ac05-4912017415b5"
+              value="1b40de01-2163-40f9-a5ce-f999c923b30b"
             >
               tropical
             </option>
             <option
-              value="731da6a3-04b9-4ca1-826a-388820f6fe90"
+              value="7787b7dc-eafa-433c-ac57-72a8224a530d"
             >
               mid-latitude
             </option>
             <option
-              value="9df5be07-f7e3-4ce4-94fe-c813ad371a71"
+              value="517750b5-ff60-4267-97ff-0aa09255860e"
             >
               polar
             </option>
             <option
-              value="26d0e469-de46-4f66-8722-b270e2602b70"
+              value="4237ed6e-213f-42bf-865e-6dbbb8ae7f82"
             >
               sea ice
             </option>
             <option
-              value="67519804-37a2-403a-8ee0-6db25d17a731"
+              value="1e456bf9-58ba-41d2-85c5-cd7980bc015d"
             >
               coral
             </option>
             <option
-              value="2616378d-bf8c-41a7-b1f3-2c65dd77e759"
+              value="b61569ec-59f7-413e-9c89-64c581c4b367"
             >
               rainforest
-            </option>
-            <option
-              value="6ef85571-d903-458b-980a-273bbace62bc"
-            >
-              NID
             </option>
           </optgroup>
           <optgroup
             label="Platform"
           >
             <option
-              value="fea8651b-9d6e-49cf-9433-f1c6685ec0dc"
+              value="96b56413-2068-4fc4-a093-4780a02744e9"
             >
               ALAR
             </option>
             <option
-              value="32242d25-0152-4d98-a3a2-d1f874597cd6"
+              value="c63849f7-ea91-4525-9029-940a9c53ed36"
             >
               ALTUS II
             </option>
             <option
-              value="99bbbba6-7de4-43a0-9483-1175cec6b93f"
+              value="28154c07-d35b-4e13-982c-63b69e1fe57c"
             >
               ASO
             </option>
             <option
-              value="1b607095-4f6d-4e70-8e16-798bc59a2d59"
+              value="a0dea5de-aa33-4f13-a8a4-34729e3de5fd"
             >
               B-200
             </option>
             <option
-              value="900208da-3cb2-44b6-9f27-20209433f190"
+              value="fa7f2693-c9b1-4d89-b14c-0672487dc049"
             >
               C-23 Sherpa
             </option>
             <option
-              value="0cdd2d06-ba97-469d-96eb-0e0865c7c4c9"
+              value="732c68d8-124b-45be-b2d2-dbc2d305d855"
             >
               Citation
             </option>
             <option
-              value="af872351-1e39-43dc-bdb5-3f4fb7def20b"
+              value="d363dbac-d440-492b-99b4-5d617bf8aa38"
             >
               CV-580
             </option>
             <option
-              value="d59b3d7e-f782-4e25-a8eb-ceec91c0331e"
+              value="6fc94f62-d4f2-4a08-9511-2234d91b0665"
             >
               DC-8
             </option>
             <option
-              value="cc0f103e-e537-4437-8d2b-f7ea5ca617de"
+              value="bb761da6-1606-444c-92d1-e6d30954f2d7"
             >
               ER-2
             </option>
             <option
-              value="1c57a92e-a6db-4e7e-9d56-704705acc192"
+              value="63ef5aa5-2f57-4af6-8adf-2769f3e51c24"
             >
               Falcon
             </option>
             <option
-              value="a67e9128-f25f-4bb8-97c1-5d89005111a8"
+              value="5a5ffdbe-0eae-48b1-a7ad-d63dfebffb9a"
             >
               G-III
             </option>
             <option
-              value="2a3a99ee-1ea0-4ac9-9e52-6e733a0eda23"
+              value="0493498f-f092-425e-bcd0-9fc807c77c0a"
             >
               G-V
             </option>
             <option
-              value="5cde9f2a-10cb-47d6-b095-3b61d1e8b1e2"
+              value="ad8a0ce5-8aae-4fe5-8b46-7586c267efdb"
             >
               GH
             </option>
             <option
-              value="2084ab0c-4f18-4aa6-ad7b-70bc861d2d80"
+              value="715351b2-1126-4c0d-8130-5caa9f044f6d"
             >
               P-3
             </option>
             <option
-              value="5baa4bc5-ad5a-43f8-9ed3-cf7d0dbdae36"
+              value="2cbc931a-6f47-45f0-bff6-659ef2efc68d"
             >
               WB-57
+            </option>
+            <option
+              value="7d58f61f-a73a-435a-9c9a-d4389e052aab"
+            >
+              Campaign FS
+            </option>
+            <option
+              value="aa382cdc-d5f0-46eb-b980-48431af523c6"
+            >
+              Campaign V
+            </option>
+            <option
+              value="c94db25b-1b48-47fe-90e3-47e8c16f0a92"
+            >
+              Campaign PL
+            </option>
+            <option
+              value="87650e20-ecf3-4703-aeed-49c8affc6059"
+            >
+              Campaign B
+            </option>
+            <option
+              value="5f6a2a1a-2a4b-4a42-9fff-04f1c2af6f5c"
+            >
+              Campaign R
             </option>
           </optgroup>
         </select>
@@ -946,7 +956,7 @@ exports[`Campaigns page renders correctly 1`] = `
           }
         >
           <a
-            href="/campaign/d1a09bda-9454-4f66-be12-dafc5f4df308"
+            href="/campaign/951482fa-5748-46ba-aed5-aab8b106b103"
           >
             <div
               data-cy="explore-card"
@@ -1034,7 +1044,7 @@ exports[`Campaigns page renders correctly 1`] = `
             </div>
           </a>
           <a
-            href="/campaign/34a697c1-4464-4b06-9d73-a9be86c586cc"
+            href="/campaign/e48c2d79-822b-4c9e-9f72-2776d5d1eac6"
           >
             <div
               data-cy="explore-card"
@@ -1122,7 +1132,7 @@ exports[`Campaigns page renders correctly 1`] = `
             </div>
           </a>
           <a
-            href="/campaign/c0dc0d63-e32a-4fdc-b1ac-4f0e8a5c7754"
+            href="/campaign/0c68f350-b544-4b52-9f46-2aceb6aa1b7d"
           >
             <div
               data-cy="explore-card"
@@ -1210,7 +1220,7 @@ exports[`Campaigns page renders correctly 1`] = `
             </div>
           </a>
           <a
-            href="/campaign/7546673c-151c-436a-adf1-6128b2d7a515"
+            href="/campaign/03b728ae-2235-488c-80ee-570dcf602f3b"
           >
             <div
               data-cy="explore-card"
@@ -1298,7 +1308,7 @@ exports[`Campaigns page renders correctly 1`] = `
             </div>
           </a>
           <a
-            href="/campaign/2bca3f73-ee2b-4336-aed0-7454ab8cdf13"
+            href="/campaign/6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
           >
             <div
               data-cy="explore-card"
@@ -1384,7 +1394,7 @@ exports[`Campaigns page renders correctly 1`] = `
             </div>
           </a>
           <a
-            href="/campaign/b94baa5d-3c69-4270-baf8-afc02f7132de"
+            href="/campaign/61616a26-fc33-450e-bd53-a7690d03e6b6"
           >
             <div
               data-cy="explore-card"
@@ -1472,7 +1482,7 @@ exports[`Campaigns page renders correctly 1`] = `
             </div>
           </a>
           <a
-            href="/campaign/2ad3b8b7-5334-4fa9-af06-7a26c7b05e4c"
+            href="/campaign/be798dc9-dccb-4dc2-8e6b-d395c1bcbeb6"
           >
             <div
               data-cy="explore-card"
@@ -1560,7 +1570,7 @@ exports[`Campaigns page renders correctly 1`] = `
             </div>
           </a>
           <a
-            href="/campaign/58160104-9c7d-4312-a1bb-7e2998bd44b7"
+            href="/campaign/7739c801-46e6-4ddd-ad30-351626dcccdb"
           >
             <div
               data-cy="explore-card"
@@ -1648,7 +1658,7 @@ exports[`Campaigns page renders correctly 1`] = `
             </div>
           </a>
           <a
-            href="/campaign/ffa4a307-c055-4303-adbf-42d243ef188b"
+            href="/campaign/c1e56561-6726-4832-8dbe-0453b10ff36c"
           >
             <div
               data-cy="explore-card"
@@ -1736,7 +1746,7 @@ exports[`Campaigns page renders correctly 1`] = `
             </div>
           </a>
           <a
-            href="/campaign/4d231fec-f2c0-4bb2-864c-ef4f20a88378"
+            href="/campaign/c438c053-3708-4f53-83d8-8c57990c6bec"
           >
             <div
               data-cy="explore-card"
