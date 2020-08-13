@@ -82,7 +82,13 @@ const OverviewSection = ({
           }}
         >
           {doi ? (
-            <p style={{ overflowWrap: `normal` }}>
+            <p
+              style={{
+                whiteSpace: `nowrap`,
+                overflow: `hidden`,
+                textOverflow: `ellipsis`,
+              }}
+            >
               DOI: <ExternalLink label={doi} url={doi} id="doi" />
             </p>
           ) : (
