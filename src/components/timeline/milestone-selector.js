@@ -75,6 +75,7 @@ export default function MilestoneSelector({
                 color: `black`,
                 background: theme.color.base,
                 opacity: activeMilestone === event.id ? 1 : 0.7,
+                border: `none`,
               }}
               onClick={() => timelineAction(event.id)}
               data-cy="milestone-timeline-card"
@@ -98,7 +99,7 @@ export default function MilestoneSelector({
                   {event.name || "missing details"}
                 </CardSubTitle>
                 <CardSubTitle style={{ gridArea: `flights` }}>
-                  {`${event.flights.length} Flights` || "missing flights"}
+                  {`${event.flights.length} CDCPs` || "missing CDCPs"}
                 </CardSubTitle>
               </CardContent>
             </button>

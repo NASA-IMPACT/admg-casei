@@ -10,6 +10,7 @@ import {
   SectionHeader,
   SectionContent,
 } from "../../components/section"
+import { formatDateRange } from "../../utils/helpers"
 
 const TimelineSection = ({ deployments }) => {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -44,10 +45,9 @@ const TimelineSection = ({ deployments }) => {
               <Milestone
                 key={deployment.id}
                 type="deployment"
-                startDate={deployment.start}
-                endDate={deployment.end}
+                daterange={formatDateRange(deployment.start, deployment.end)}
                 name={`${deployment.longname} (${deployment.shortname})`}
-                details={`${deployment.flights.length} Flights`}
+                details={`${deployment.flights.length} CDCPs`}
                 region={deployment.regions.map(x => x.longname).join(", ")}
               />
             ))}
