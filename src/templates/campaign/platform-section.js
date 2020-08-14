@@ -75,7 +75,7 @@ export const platformFields = graphql`
         nasaImgAlt
         nasaImg {
           childImageSharp {
-            fluid(maxWidth: 600) {
+            fluid(maxWidth: 600, maxHeight: 400) {
               ...GatsbyImageSharpFluid
             }
           }
