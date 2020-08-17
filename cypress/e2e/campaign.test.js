@@ -3,7 +3,7 @@
 describe("Campaign", () => {
   before(() => {
     cy.visit("/explore/campaigns")
-    cy.get("[data-cy=explore-card]").contains("AirMOSS").click()
+    cy.get("[data-cy=explore-card]").find("big").contains("AirMOSS").click()
   })
 
   describe("the hero", () => {
@@ -147,12 +147,11 @@ describe("Campaign", () => {
 
       cy.url().should("include", "/explore/campaigns")
 
-      cy.get("main")
-        .find("[data-cy=filter-chip]")
+      cy.get("[data-cy=filter-chip]")
         .should("have.length", 1)
         .and("have.text", "focus: Carbon Cycle & Ecosystems")
 
-      cy.get("main").find("[data-cy=explore-card]").should("have.length", 2)
+      cy.get("[data-cy=explore-card]").should("have.length", 2)
 
       cy.go("back")
     })
@@ -165,8 +164,7 @@ describe("Campaign", () => {
 
       cy.url().should("include", "/explore/campaigns")
 
-      cy.get("main")
-        .find("[data-cy=filter-chip]")
+      cy.get("[data-cy=filter-chip]")
         .should("have.length", 1)
         .and("have.text", "geophysical: Terr Hydro")
 
