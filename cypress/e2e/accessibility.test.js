@@ -19,11 +19,63 @@ describe("Accessibility tests", () => {
       .checkA11y()
   })
 
-  it("Navigates to page for a /campaign and checks for accessibility violations", () => {
+  it("Navigates to all /campaign pages and checks for accessibility violations", () => {
     cy.get("nav")
       .findByText(/Explore/i)
       .click()
-    cy.get("[data-cy=explore-card]").first().click().checkA11y()
+
+    cy.url().should("include", "/campaigns")
+
+    // run a11y tests on each campaign page
+    // TODO: figure out how each test can be its own 'it', in order to proceed after failure
+    cy.get("[data-cy=explore-card]").each(($card, index) => {
+      cy.get("[data-cy=explore-card]").eq(index).click().checkA11y()
+      cy.go("back")
+      cy.url().should("include", "/campaigns")
+      cy.get("[data-cy=tabbar]") // ensure we went back to /explore
+    })
+  })
+
+  it("Navigates to all /platform pages and checks for accessibility violations", () => {
+    cy.get("nav")
+      .findByText(/Explore/i)
+      .click()
+
+    cy.get("[data-cy=tabbar]")
+      .findByText(/Platforms/i)
+      .click()
+
+    cy.url().should("include", "/platforms")
+
+    // run a11y tests on each platform page
+    // TODO: figure out how each test can be its own 'it', in order to proceed after failure
+    cy.get("[data-cy=explore-card]").each(($card, i) => {
+      cy.get("[data-cy=explore-card]").eq(i).click().checkA11y()
+      cy.go("back")
+      cy.url().should("include", "/platforms")
+      cy.get("[data-cy=tabbar]") // ensure we went back to /explore
+    })
+  })
+
+  it("Navigates to all /instrument pages and checks for accessibility violations", () => {
+    cy.get("nav")
+      .findByText(/Explore/i)
+      .click()
+
+    cy.get("[data-cy=tabbar]")
+      .findByText(/Instruments/i)
+      .click()
+
+    cy.url().should("include", "/instruments")
+
+    // run a11y tests on each instrument page
+    // TODO: figure out how each test can be its own 'it', in order to proceed after failure
+    cy.get("[data-cy=explore-card]").each(($card, i) => {
+      cy.get("[data-cy=explore-card]").eq(i).click().checkA11y()
+      cy.go("back")
+      cy.url().should("include", "/instruments")
+      cy.get("[data-cy=tabbar]") // ensure we went back to /explore
+    })
   })
 
   it("Navigates to page /resources and checks for accessibility violations", () => {
