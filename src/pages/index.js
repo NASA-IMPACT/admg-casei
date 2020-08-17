@@ -26,7 +26,7 @@ const IndexPage = ({ data }) => {
         tagTitle={data.site.siteMetadata.shortname}
         title={data.site.siteMetadata.title}
         description={data.site.siteMetadata.description}
-        backgroundImage="https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e000980/GSFC_20171208_Archive_e000980~orig.jpg" // TODO: add to nasa-images and query with gatsby
+        backgroundImage={data.heroImage}
         id="home"
       />
       <PageBody id="home">
@@ -119,6 +119,16 @@ export const query = graphql`
         description
       }
     }
+    heroImage: nasaImagesJson(shortname: { eq: "Home" }) {
+      nasaImgAlt
+      nasaImg {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
     allFocusArea {
       nodes {
         id
@@ -161,6 +171,12 @@ IndexPage.propTypes = {
         description: PropTypes.string.isRequired,
       }),
     }),
+    heroImage: PropTypes.shape({
+      nasaImgAlt: PropTypes.string.isRequired,
+      nasaImg: PropTypes.shape({
+        childImageSharp: PropTypes.object.isRequired,
+      }).isRequired,
+    }).isRequired,
     allFocusArea: PropTypes.shape({
       nodes: PropTypes.arrayOf(
         PropTypes.shape({
