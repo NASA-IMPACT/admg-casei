@@ -2,6 +2,11 @@ import React from "react"
 import renderer from "react-test-renderer"
 import Milestone from "../timeline/milestone"
 
+jest.mock("../image.js", () => {
+  const mockImage = () => <img />
+  return mockImage
+})
+
 describe("MileStone", () => {
   it("renders correctly", () => {
     const tree = renderer
