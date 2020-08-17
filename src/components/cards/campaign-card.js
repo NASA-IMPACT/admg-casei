@@ -2,9 +2,9 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import Card from "./card"
-import logos from "../../content/nasa-images.json"
 
 const CampaignCard = ({
+  logo,
   ongoing,
   shortname,
   longname,
@@ -14,7 +14,7 @@ const CampaignCard = ({
   countDataProducts = 0,
 }) => (
   <Card
-    image={logos.find(logo => logo.shortname === shortname)}
+    image={logo}
     tag={ongoing && "Ongoing"}
     footerList={[
       { count: countCollectionPeriods, title: "Collection Periods" },
@@ -38,6 +38,12 @@ const CampaignCard = ({
 )
 
 CampaignCard.propTypes = {
+  logo: PropTypes.shape({
+    nasaImgAlt: PropTypes.string.isRequired,
+    nasaImg: PropTypes.shape({
+      childImageSharp: PropTypes.object,
+    }),
+  }).isRequired,
   ongoing: PropTypes.bool.isRequired,
   shortname: PropTypes.string.isRequired,
   longname: PropTypes.string.isRequired,

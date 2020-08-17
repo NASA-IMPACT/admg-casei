@@ -19,6 +19,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       platform_types: [platform_type] @link
       platforms: [platform] @link
       seasons: [season] @link
+      logo: NasaImagesJson @link(by: "shortname", from: "short_name")
     }
     type deployment implements Node {
       geographical_regions: [geographical_region] @link

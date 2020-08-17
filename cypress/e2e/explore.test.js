@@ -5,8 +5,7 @@ describe("Explore", () => {
     cy.visit("/explore/campaigns")
   })
   it("renders correctly", () => {
-    cy.get("main")
-      .find("[data-cy=tabbar]")
+    cy.get("[data-cy=tabbar]")
       .find("li")
       .should($li => {
         expect($li).to.have.length(3)
@@ -17,22 +16,21 @@ describe("Explore", () => {
         expect($li[2], "text content").to.have.text("Instruments")
       })
 
-    cy.get("main").find("[data-cy=searchbar]").should("exist")
-    cy.get("main").find("[data-cy=item-count]").should("exist")
-    cy.get("main").find("[data-cy=explore-card]").should("exist")
+    cy.get("[data-cy=searchbar]").should("exist")
+    cy.get("[data-cy=item-count]").should("exist")
+    cy.get("[data-cy=explore-card]").should("exist")
   })
 
   describe("campaigns", () => {
     it("displays the number of items to explore", () => {
-      cy.get("main")
-        .find("[data-cy=item-count]")
+      cy.get("[data-cy=item-count]")
         .invoke("text")
         .should("match", /Showing [0-9]+ campaigns/i)
     })
 
     it("displays a list of cards presenting the available campaigns", () => {
-      cy.get("main")
-        .find("[data-cy=explore-card]")
+      cy.get("[data-cy=explore-card]")
+        .find("big")
         .contains("AirMOSS")
         .parent()
         .parent() // is there a better way to select the AirMOSS card?
@@ -53,7 +51,7 @@ describe("Explore", () => {
     })
 
     it("navigates to the campaign page", () => {
-      cy.get("main").find("[data-cy=explore-card]").contains("AirMOSS").click()
+      cy.get("[data-cy=explore-card]").find("big").contains("AirMOSS").click()
 
       cy.url().should("include", "/campaign/")
 
@@ -68,19 +66,17 @@ describe("Explore", () => {
 
   describe("platforms", () => {
     beforeEach(() => {
-      cy.get("main").find("[data-cy=tabbar]").contains("Platforms").click()
+      cy.get("[data-cy=tabbar]").contains("Platforms").click()
     })
 
     it("displays the number of items to explore", () => {
-      cy.get("main")
-        .find("[data-cy=item-count]")
+      cy.get("[data-cy=item-count]")
         .invoke("text")
         .should("match", /Showing [0-9]+ platforms/i)
     })
 
     it("displays a list of cards presenting the available platforms", () => {
-      cy.get("main")
-        .find("[data-cy=explore-card]")
+      cy.get("[data-cy=explore-card]")
         .find("big")
         .contains("B-200")
         .parent()
@@ -103,19 +99,17 @@ describe("Explore", () => {
 
   describe("instruments", () => {
     beforeEach(() => {
-      cy.get("main").find("[data-cy=tabbar]").contains("Instruments").click()
+      cy.get("[data-cy=tabbar]").contains("Instruments").click()
     })
 
     it("displays the number of items to explore", () => {
-      cy.get("main")
-        .find("[data-cy=item-count]")
+      cy.get("[data-cy=item-count]")
         .invoke("text")
         .should("match", /Showing [0-9]+ instruments/i)
     })
 
     it("displays a list of cards presenting the available instruments", () => {
-      cy.get("main")
-        .find("[data-cy=explore-card]")
+      cy.get("[data-cy=explore-card]")
         .find("big")
         .contains("AMS")
         .parent()

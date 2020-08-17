@@ -5,6 +5,17 @@
   "asc": {
     "list": [
       {
+        "logo": {
+          "nasaImgAlt": "logo",
+          "nasaImgUrl": "https://ghrc.nsstc.nasa.gov/home/sites/default/files/aces_logo.png#overlay-context=field-campaigns/aces",
+          "nasaImg": {
+            "childImageSharp": {
+              "fixed": {
+                "src": "/static/070840eb6299020cd65fd46e27c54400/ad39b/aces_logo.png"
+              }
+            }
+          }
+        },
         "ongoing": false,
         "shortname": "ACES",
         "longname": "Altus Cumulus Electrification Study",
@@ -83,6 +94,17 @@
         ]
       },
       {
+        "logo": {
+          "nasaImgAlt": "ARCTAS logo",
+          "nasaImgUrl": "https://cloud1.arc.nasa.gov/arctas/images/arctas_spring.jpg",
+          "nasaImg": {
+            "childImageSharp": {
+              "fixed": {
+                "src": "/static/2bd234de67183d020fabe8584d7713ff/f8771/arctas_spring.jpg"
+              }
+            }
+          }
+        },
         "ongoing": false,
         "shortname": "ARCTAS",
         "longname": "Arctic Research of the Composition of the Troposphere from Aircraft and Satellites",
@@ -173,6 +195,17 @@
         ]
       },
       {
+        "logo": {
+          "nasaImgAlt": "AirMOSS logo",
+          "nasaImgUrl": "https://airbornescience.jpl.nasa.gov/sites/default/files/airmossLogo.png",
+          "nasaImg": {
+            "childImageSharp": {
+              "fixed": {
+                "src": "/static/6cac19092a1bce4be3f0a8b6e564adb3/ad39b/airmossLogo.png"
+              }
+            }
+          }
+        },
         "ongoing": false,
         "shortname": "AirMOSS",
         "longname": "Airborne Microwave Observatory of Subcanopy and Subsurface",
@@ -536,6 +569,17 @@
         ]
       },
       {
+        "logo": {
+          "nasaImgAlt": "CARVE logo",
+          "nasaImgUrl": "https://carve.jpl.nasa.gov/images/carve/carve_logo_update.jpg",
+          "nasaImg": {
+            "childImageSharp": {
+              "fixed": {
+                "src": "/static/3dec137acafa7ac0c3a74368b2cb56b3/f8771/carve_logo_update.jpg"
+              }
+            }
+          }
+        },
         "ongoing": false,
         "shortname": "CARVE",
         "longname": "Carbon in Arctic Reservoirs Vulnerability Experiment",
@@ -654,6 +698,17 @@
         ]
       },
       {
+        "logo": {
+          "nasaImgAlt": "DC3 logo",
+          "nasaImgUrl": "https://www-air.larc.nasa.gov/missions/dc3-seac4rs/img/dc3-logo.png",
+          "nasaImg": {
+            "childImageSharp": {
+              "fixed": {
+                "src": "/static/c4b36cb85ef25d65d08739c329b04e52/ad39b/dc3-logo.png"
+              }
+            }
+          }
+        },
         "ongoing": false,
         "shortname": "DC3",
         "longname": "Deep Convective Clouds & Chemistry",
@@ -742,6 +797,17 @@
         ]
       },
       {
+        "logo": {
+          "nasaImgAlt": "GCPEx logo",
+          "nasaImgUrl": "https://airbornescience.nasa.gov/sites/default/files/styles/200wide/public/current_activities/gcpexlogo.png?itok=Z1MVjjPB",
+          "nasaImg": {
+            "childImageSharp": {
+              "fixed": {
+                "src": "/static/4e1cc27c28411e8c942f140039bb625b/ad39b/gcpexlogo.png"
+              }
+            }
+          }
+        },
         "ongoing": false,
         "shortname": "GCPEx",
         "longname": "GPM Cold Season Precipitation Experiment",
@@ -797,6 +863,11 @@
         ]
       },
       {
+        "logo": {
+          "nasaImgAlt": "GOES-R PLT logo",
+          "nasaImgUrl": "",
+          "nasaImg": null
+        },
         "ongoing": false,
         "shortname": "GOES-R PLT",
         "longname": "GOES-R Post Launch Test",
@@ -857,6 +928,17 @@
         ]
       },
       {
+        "logo": {
+          "nasaImgAlt": "GRIP logo",
+          "nasaImgUrl": "https://www.nasa.gov/images/content/464732main_grip_graphic_med.jpg",
+          "nasaImg": {
+            "childImageSharp": {
+              "fixed": {
+                "src": "/static/2803312240ff21bec233dee65f422031/f8771/464732main_grip_graphic_med.jpg"
+              }
+            }
+          }
+        },
         "ongoing": false,
         "shortname": "GRIP",
         "longname": "Genesis and Rapid Intensification Processes",
@@ -924,6 +1006,17 @@
         ]
       },
       {
+        "logo": {
+          "nasaImgAlt": "HS3 logo",
+          "nasaImgUrl": "https://espo.nasa.gov/sites/default/files/images/HS3_logo.png",
+          "nasaImg": {
+            "childImageSharp": {
+              "fixed": {
+                "src": "/static/3d520693bc11c953f22f86f860ffd08a/ad39b/HS3_logo.png"
+              }
+            }
+          }
+        },
         "ongoing": false,
         "shortname": "HS3",
         "longname": "Hurricane and Severe Storm Sentinel",
@@ -1026,6 +1119,17 @@
         ]
       },
       {
+        "logo": {
+          "nasaImgAlt": "OLYMPEX logo",
+          "nasaImgUrl": "https://wallops-prf.gsfc.nasa.gov/Field_Campaigns/Olympex/img/logo_image2.png",
+          "nasaImg": {
+            "childImageSharp": {
+              "fixed": {
+                "src": "/static/6b1df71a80ace65c6ad8ea8294fcaa5f/ad39b/logo_image2.png"
+              }
+            }
+          }
+        },
         "ongoing": false,
         "shortname": "OLYMPEX",
         "longname": "Olympic Mountains Experiment",
@@ -1117,6 +1221,17 @@
   "desc": {
     "list": [
       {
+        "logo": {
+          "nasaImgAlt": "OLYMPEX logo",
+          "nasaImgUrl": "https://wallops-prf.gsfc.nasa.gov/Field_Campaigns/Olympex/img/logo_image2.png",
+          "nasaImg": {
+            "childImageSharp": {
+              "fixed": {
+                "src": "/static/6b1df71a80ace65c6ad8ea8294fcaa5f/ad39b/logo_image2.png"
+              }
+            }
+          }
+        },
         "ongoing": false,
         "shortname": "OLYMPEX",
         "longname": "Olympic Mountains Experiment",
@@ -1204,6 +1319,17 @@
         ]
       },
       {
+        "logo": {
+          "nasaImgAlt": "HS3 logo",
+          "nasaImgUrl": "https://espo.nasa.gov/sites/default/files/images/HS3_logo.png",
+          "nasaImg": {
+            "childImageSharp": {
+              "fixed": {
+                "src": "/static/3d520693bc11c953f22f86f860ffd08a/ad39b/HS3_logo.png"
+              }
+            }
+          }
+        },
         "ongoing": false,
         "shortname": "HS3",
         "longname": "Hurricane and Severe Storm Sentinel",
@@ -1306,6 +1432,17 @@
         ]
       },
       {
+        "logo": {
+          "nasaImgAlt": "GRIP logo",
+          "nasaImgUrl": "https://www.nasa.gov/images/content/464732main_grip_graphic_med.jpg",
+          "nasaImg": {
+            "childImageSharp": {
+              "fixed": {
+                "src": "/static/2803312240ff21bec233dee65f422031/f8771/464732main_grip_graphic_med.jpg"
+              }
+            }
+          }
+        },
         "ongoing": false,
         "shortname": "GRIP",
         "longname": "Genesis and Rapid Intensification Processes",
@@ -1373,6 +1510,11 @@
         ]
       },
       {
+        "logo": {
+          "nasaImgAlt": "GOES-R PLT logo",
+          "nasaImgUrl": "",
+          "nasaImg": null
+        },
         "ongoing": false,
         "shortname": "GOES-R PLT",
         "longname": "GOES-R Post Launch Test",
@@ -1433,6 +1575,17 @@
         ]
       },
       {
+        "logo": {
+          "nasaImgAlt": "GCPEx logo",
+          "nasaImgUrl": "https://airbornescience.nasa.gov/sites/default/files/styles/200wide/public/current_activities/gcpexlogo.png?itok=Z1MVjjPB",
+          "nasaImg": {
+            "childImageSharp": {
+              "fixed": {
+                "src": "/static/4e1cc27c28411e8c942f140039bb625b/ad39b/gcpexlogo.png"
+              }
+            }
+          }
+        },
         "ongoing": false,
         "shortname": "GCPEx",
         "longname": "GPM Cold Season Precipitation Experiment",
@@ -1488,6 +1641,17 @@
         ]
       },
       {
+        "logo": {
+          "nasaImgAlt": "DC3 logo",
+          "nasaImgUrl": "https://www-air.larc.nasa.gov/missions/dc3-seac4rs/img/dc3-logo.png",
+          "nasaImg": {
+            "childImageSharp": {
+              "fixed": {
+                "src": "/static/c4b36cb85ef25d65d08739c329b04e52/ad39b/dc3-logo.png"
+              }
+            }
+          }
+        },
         "ongoing": false,
         "shortname": "DC3",
         "longname": "Deep Convective Clouds & Chemistry",
@@ -1576,6 +1740,17 @@
         ]
       },
       {
+        "logo": {
+          "nasaImgAlt": "CARVE logo",
+          "nasaImgUrl": "https://carve.jpl.nasa.gov/images/carve/carve_logo_update.jpg",
+          "nasaImg": {
+            "childImageSharp": {
+              "fixed": {
+                "src": "/static/3dec137acafa7ac0c3a74368b2cb56b3/f8771/carve_logo_update.jpg"
+              }
+            }
+          }
+        },
         "ongoing": false,
         "shortname": "CARVE",
         "longname": "Carbon in Arctic Reservoirs Vulnerability Experiment",
@@ -1694,6 +1869,17 @@
         ]
       },
       {
+        "logo": {
+          "nasaImgAlt": "AirMOSS logo",
+          "nasaImgUrl": "https://airbornescience.jpl.nasa.gov/sites/default/files/airmossLogo.png",
+          "nasaImg": {
+            "childImageSharp": {
+              "fixed": {
+                "src": "/static/6cac19092a1bce4be3f0a8b6e564adb3/ad39b/airmossLogo.png"
+              }
+            }
+          }
+        },
         "ongoing": false,
         "shortname": "AirMOSS",
         "longname": "Airborne Microwave Observatory of Subcanopy and Subsurface",
@@ -2057,6 +2243,17 @@
         ]
       },
       {
+        "logo": {
+          "nasaImgAlt": "ARCTAS logo",
+          "nasaImgUrl": "https://cloud1.arc.nasa.gov/arctas/images/arctas_spring.jpg",
+          "nasaImg": {
+            "childImageSharp": {
+              "fixed": {
+                "src": "/static/2bd234de67183d020fabe8584d7713ff/f8771/arctas_spring.jpg"
+              }
+            }
+          }
+        },
         "ongoing": false,
         "shortname": "ARCTAS",
         "longname": "Arctic Research of the Composition of the Troposphere from Aircraft and Satellites",
@@ -2147,6 +2344,17 @@
         ]
       },
       {
+        "logo": {
+          "nasaImgAlt": "logo",
+          "nasaImgUrl": "https://ghrc.nsstc.nasa.gov/home/sites/default/files/aces_logo.png#overlay-context=field-campaigns/aces",
+          "nasaImg": {
+            "childImageSharp": {
+              "fixed": {
+                "src": "/static/070840eb6299020cd65fd46e27c54400/ad39b/aces_logo.png"
+              }
+            }
+          }
+        },
         "ongoing": false,
         "shortname": "ACES",
         "longname": "Altus Cumulus Electrification Study",

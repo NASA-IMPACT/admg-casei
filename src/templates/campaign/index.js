@@ -53,7 +53,7 @@ const CampaignTemplate = ({ data: { campaign } }) => {
         <PlatformSection platforms={campaign.platforms} />
         <TimelineSection deployments={campaign.deployments} />
         <ProgramInfoSection
-          shortname={campaign.shortname}
+          logo={campaign.logo}
           fundingAgency={campaign.fundingAgency}
           fundingProgram={campaign.fundingProgram}
           programLead={campaign.programLead}
@@ -161,7 +161,12 @@ CampaignTemplate.propTypes = {
           ),
         })
       ).isRequired,
-      logo: PropTypes.string,
+      logo: PropTypes.shape({
+        nasaImgAlt: PropTypes.string.isRequired,
+        nasaImg: PropTypes.shape({
+          childImageSharp: PropTypes.object,
+        }),
+      }).isRequired,
       fundingAgency: PropTypes.string.isRequired,
       fundingProgram: PropTypes.string.isRequired,
       programLead: PropTypes.string.isRequired,

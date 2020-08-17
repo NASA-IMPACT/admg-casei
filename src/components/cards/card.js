@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
+import Image from "gatsby-image"
 
 import theme from "../../utils/theme"
 import PlaceholderLogo from "../../images/placeholder-logo.svg"
@@ -31,13 +32,21 @@ const Card = ({ children, image, tag, footerList }) => (
   >
     <div style={{ marginBottom: `2rem` }}>
       <CardHeader>
-        {image && (
-          <img
-            src={image.nasaImgUrl || PlaceholderLogo}
+        {image && image.nasaImg ? (
+          <Image
             alt={image.nasaImgAlt}
-            width="45"
-            height="45"
+            fixed={image.nasaImg.childImageSharp.fixed}
+            style={{ margin: `0` }}
           />
+        ) : (
+          image && (
+            <img
+              src={PlaceholderLogo}
+              alt={image.nasaImgAlt}
+              width="45"
+              height="45"
+            />
+          )
         )}
         {tag && (
           <div
@@ -73,8 +82,10 @@ Card.propTypes = {
     PropTypes.arrayOf(PropTypes.element),
   ]),
   image: PropTypes.shape({
-    nasaImgUrl: PropTypes.string,
-    nasaImgAlt: PropTypes.string,
+    nasaImgAlt: PropTypes.string.isRequired,
+    nasaImg: PropTypes.shape({
+      childImageSharp: PropTypes.object,
+    }),
   }),
   tag: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   footerList: PropTypes.arrayOf(
