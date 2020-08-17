@@ -18,6 +18,7 @@ exports[`Header renders correctly 1`] = `
     style={
       Object {
         "alignSelf": "end",
+        "gridArea": "1 / 1 / 1 / 1",
       }
     }
   >
@@ -53,6 +54,7 @@ exports[`Header renders correctly 1`] = `
     style={
       Object {
         "alignSelf": "start",
+        "gridArea": "2 / 1 / 2 / 1",
       }
     }
   >
@@ -92,6 +94,7 @@ exports[`Header renders with adjust ratios 1`] = `
     style={
       Object {
         "alignSelf": "end",
+        "gridArea": "1 / 1 / 1 / 1",
       }
     }
   >
@@ -127,6 +130,7 @@ exports[`Header renders with adjust ratios 1`] = `
     style={
       Object {
         "alignSelf": "start",
+        "gridArea": "2 / 1 / 2 / 1",
       }
     }
   >
