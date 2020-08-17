@@ -1,4 +1,6 @@
 import React from "react"
+import PropTypes from "prop-types"
+import { graphql } from "gatsby"
 
 import Layout, { PageBody } from "../components/layout"
 import SEO from "../components/seo"
@@ -10,7 +12,7 @@ import {
 } from "../components/section"
 import about from "../content/about.json"
 
-const About = () => (
+const About = ({ data }) => (
   <Layout>
     <SEO title="About" />
 
@@ -18,7 +20,7 @@ const About = () => (
       tagTitle="About"
       title="NASA airborne campaigns use the vantage point of space to explore critical questions to increase our understanding of planet earth."
       textToImageRatio={[8, 3]}
-      backgroundImage="https://images-assets.nasa.gov/image/GRC-2020-C-00100/GRC-2020-C-00100~orig.jpg"
+      backgroundImage={data.heroImage}
       id="about"
     />
 
@@ -50,5 +52,31 @@ const About = () => (
     </PageBody>
   </Layout>
 )
+
+export const query = graphql`
+  query {
+    heroImage: nasaImagesJson(shortname: { eq: "About" }) {
+      nasaImgAlt
+      nasaImg {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  }
+`
+
+About.propTypes = {
+  data: PropTypes.shape({
+    heroImage: PropTypes.shape({
+      nasaImgAlt: PropTypes.string.isRequired,
+      nasaImg: PropTypes.shape({
+        childImageSharp: PropTypes.object.isRequired,
+      }).isRequired,
+    }).isRequired,
+  }),
+}
 
 export default About

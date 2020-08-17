@@ -286,5 +286,17 @@
     "category": "placeholder",
     "nasaImgUrl": "https://images-assets.nasa.gov/image/AFRC2016-0292-08/AFRC2016-0292-08~orig.jpg",
     "nasaImgAlt": "NASA’s Global Hawk aircraft being deployed to Florida from Armstrong Flight Research Center"
+  },
+  {
+    "shortname": "Home",
+    "category": "layout",
+    "nasaImgUrl": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e000980/GSFC_20171208_Archive_e000980~orig.jpg",
+    "nasaImgAlt": "View from a Chase Plane; HS3 Science Flight 8 Wraps Up The chase plane accompanying NASA's Global Hawk No. 872 captured this picture on Sept. 19 after the Global Hawk completed science flight #8 where it gathered data from a weakening Tropical Storm Edouard over the North Atlantic Ocean. Credit: NASA "
+  },
+  {
+    "shortname": "About",
+    "category": "layout",
+    "nasaImgUrl": "https://images-assets.nasa.gov/image/GRC-2020-C-00100/GRC-2020-C-00100~orig.jpg",
+    "nasaImgAlt": "Glenn Research Center, Lockheed S-3 Viking Research Aircraft, N601NA at Sunrise"
   }
 ]
