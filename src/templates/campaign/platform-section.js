@@ -37,10 +37,12 @@ const PlatformSection = ({ platforms }) => (
               >
                 <Link to={`/platform/${platform.id}`}>
                   <div style={{ position: `relative`, marginRight: `1rem` }}>
-                    <Image
-                      alt={platform.image.nasaImgAlt}
-                      fluid={platform.image.nasaImg.childImageSharp.fluid}
-                    />
+                    {platform.image.nasaImg && (
+                      <Image
+                        alt={platform.image.nasaImgAlt}
+                        fluid={platform.image.nasaImg.childImageSharp.fluid}
+                      />
+                    )}
                     <ImageCaption id="platform-image">
                       {platform.longname || platform.shortname}
                     </ImageCaption>

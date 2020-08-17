@@ -14,7 +14,7 @@ export default function PlatformHero({
   return (
     <Hero
       tagTitle={shortname}
-      title={longname}
+      title={longname || "[Name missing]"}
       textToImageRatio={[5, 3]}
       stats={[
         { label: "Campaigns", number: campaigns },
@@ -22,10 +22,12 @@ export default function PlatformHero({
       ]}
       id="platform"
     >
-      <Image
-        alt={image.nasaImgAlt}
-        fluid={image.nasaImg.childImageSharp.fluid}
-      />
+      {image && image.nasaImg && (
+        <Image
+          alt={image.nasaImgAlt}
+          fluid={image.nasaImg.childImageSharp.fluid}
+        />
+      )}
     </Hero>
   )
 }
