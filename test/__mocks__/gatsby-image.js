@@ -4,5 +4,7 @@ const gatsbyImage = jest.requireActual("gatsby-image")
 
 module.exports = {
   ...gatsbyImage,
-  default: props => <img alt="test-image" src="test-image.png" {...props} />,
+  default: function Image(props) {
+    return <img alt="test-image" src="test-image.png" {...props} />
+  },
 }
