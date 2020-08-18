@@ -21,6 +21,7 @@ exports[`MileStone renders correctly 1`] = `
         "position": "absolute",
         "textTransform": "uppercase",
         "top": "4rem",
+        "zIndex": "1",
       }
     }
   >
@@ -41,9 +42,13 @@ exports[`MileStone renders correctly 1`] = `
       }
     >
       <img
-        alt="Global Hawk prepping for deployment"
-        data-cy="deployment-img"
-        src="https://images-assets.nasa.gov/image/AFRC2016-0292-08/AFRC2016-0292-08~medium.jpg"
+        alt="NASA’s Global Hawk aircraft being deployed to Florida from Armstrong Flight Research Center"
+        fluid={
+          Object {
+            "base64": "data:image/jpeg;base64,/9j/2wBDABALDA4M",
+          }
+        }
+        src="test-image.png"
       />
     </div>
     <div
