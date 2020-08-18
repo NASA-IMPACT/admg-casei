@@ -7,7 +7,7 @@ import Label from "../../components/label"
 import theme from "../../utils/theme"
 
 const Milestone = ({ type, daterange, name, details, region }) => {
-  const deploymentImage = usePlaceholderImageQuery().deploymentPlaceholder
+  const { deploymentPlaceholder: deploymentImage } = usePlaceholderImageQuery()
   return (
     <div style={{ padding: `3rem`, minHeight: `400px` }} data-cy="milestone">
       <label
