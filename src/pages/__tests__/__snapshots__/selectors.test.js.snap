@@ -2129,28 +2129,7 @@ exports[`Campaigns page renders correctly 1`] = `
               "textTransform": "uppercase",
             }
           }
-        >
-          <div
-            className="placeholder"
-            style={
-              Object {
-                "marginLeft": "3rem",
-              }
-            }
-          >
-            Privacy
-          </div>
-          <div
-            className="placeholder"
-            style={
-              Object {
-                "marginLeft": "3rem",
-              }
-            }
-          >
-            Contact NASA
-          </div>
-        </div>
+        />
       </div>
     </div>
     <div
