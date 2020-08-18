@@ -43,9 +43,7 @@ describe("Explore", () => {
           expect($card.find("[data-cy=daterange]")).to.have.text("2012—2015")
           expect($card.find("[data-cy=region]")).to.have.text("North America")
 
-          expect($card.find("[data-cy=count1]")).to.contain(
-            "Collection Periods"
-          )
+          expect($card.find("[data-cy=count1]")).to.contain("Deployments")
           expect($card.find("[data-cy=count2]")).to.contain("Data Products")
         })
     })

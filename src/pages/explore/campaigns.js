@@ -125,7 +125,7 @@ const Campaigns = ({ data, location }) => {
                       campaign.enddate
                     )}
                     region={campaign.region}
-                    countCollectionPeriods={campaign.countCollectionPeriods}
+                    deployments={campaign.deployments.length}
                     countDataProducts={campaign.countDataProducts}
                   />
                 </Link>
@@ -195,7 +195,7 @@ export const query = graphql`
       nasaImgUrl
       nasaImg {
         childImageSharp {
-          fixed(width: 45, height: 45) {
+          fixed(height: 85) {
             ...GatsbyImageSharpFixed
           }
         }
