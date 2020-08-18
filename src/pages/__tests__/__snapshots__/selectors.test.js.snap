@@ -1732,9 +1732,8 @@ exports[`Campaigns page renders correctly 1`] = `
                 >
                   <img
                     alt="GOES-R PLT logo"
-                    height="45"
+                    height="85"
                     src="test-file-stub"
-                    width="45"
                   />
                 </div>
                 <big
