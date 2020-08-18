@@ -2445,14 +2445,13 @@ exports[`Campaigns page renders correctly 1`] = `
               NASA Official:
                
               <span
-                className="placeholder"
                 style={
                   Object {
                     "fontWeight": "normal",
                   }
                 }
               >
-                Name of Official
+                Rahul Ramachandran
               </span>
             </div>
           </div>
