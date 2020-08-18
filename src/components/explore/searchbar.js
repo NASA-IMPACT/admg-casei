@@ -1,8 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import FilterMenu from "./filter-menu"
-import Chip from "../chip"
 import theme from "../../utils/theme"
 
 // TODO: figure out how to import and use collecticons directly
@@ -20,131 +18,49 @@ SearchIcon.propTypes = {
   color: PropTypes.string,
 }
 
-const Searchbar = React.forwardRef(
-  (
-    {
-      submitSearch,
-      selectedFilterIds,
-      addFilter,
-      getFilterLabelById,
-      getFilterOptionsById,
-      removeFilter,
-      sortOrder,
-      toggleSortOrder,
-      category,
-    },
-    ref
-  ) => {
-    return (
-      <>
-        <form
-          onSubmit={submitSearch}
-          style={{ display: `flex`, margin: `2rem 0` }}
-          data-cy="searchbar"
-        >
-          <FilterMenu
-            selectedFilterIds={selectedFilterIds}
-            addFilter={addFilter}
-            getFilterOptionsById={getFilterOptionsById}
-            removeFilter={removeFilter}
-            category={category}
-          />
-
-          <div
-            style={{
-              display: "flex",
-              flexGrow: 1,
-              border: `1px solid ${theme.type.base.color}`,
-              borderLeft: 0,
-              borderRight: 0,
-              borderRadius: `0`,
-              padding: "0.25rem",
-            }}
-          >
-            <input
-              autoComplete="off"
-              aria-label="Enter search text"
-              name="search"
-              placeholder="Enter text..."
-              style={{
-                border: "none",
-                flexGrow: 1,
-                background: `transparent`,
-                color: theme.type.base.color,
-              }}
-              type="text"
-              ref={ref}
-            />
-            <button
-              type="submit"
-              style={{
-                border: "none",
-                flexGrow: 0,
-                background: `transparent`,
-                color: theme.type.base.color,
-                verticalAlign: `middle`,
-              }}
-              data-cy="submit"
-            >
-              <span role="img" aria-label="Magnifying glass icon">
-                <SearchIcon color={theme.type.base.color} />
-              </span>
-            </button>
-          </div>
-
-          <select
-            defaultValue={sortOrder}
-            aria-label="Select sort order"
-            name="sort"
-            id="sort-select"
-            onChange={e => toggleSortOrder(e.target.value)}
-            style={{
-              height: `2.5rem`,
-              WebkitAppearance: `none`,
-              background: `transparent`,
-              border: `1px solid ${theme.type.base.color}`,
-              borderRadius: `0 ${theme.shape.rounded} ${theme.shape.rounded} 0`,
-              color: theme.type.base.color,
-              padding: `0.5rem`,
-            }}
-            data-cy="sort-select"
-          >
-            <option value="asc">A to Z</option>
-            <option value="desc">Z to A</option>
-          </select>
-        </form>
-
-        {selectedFilterIds.length > 0 && (
-          <div style={{ display: `flex`, flexWrap: `wrap`, margin: `2rem 0` }}>
-            Active filters:
-            {selectedFilterIds.map(f => (
-              <Chip
-                key={f}
-                actionId={f}
-                id="filter"
-                label={getFilterLabelById(f)}
-                chipAction={removeFilter}
-              />
-            ))}
-          </div>
-        )}
-      </>
-    )
-  }
-)
-
-Searchbar.propTypes = {
-  submitSearch: PropTypes.func.isRequired,
-  selectedFilterIds: PropTypes.arrayOf(PropTypes.string),
-  addFilter: PropTypes.func.isRequired,
-  getFilterLabelById: PropTypes.func.isRequired,
-  getFilterOptionsById: PropTypes.func.isRequired,
-  removeFilter: PropTypes.func.isRequired,
-  sortOrder: PropTypes.string.isRequired,
-  toggleSortOrder: PropTypes.func.isRequired,
-  category: PropTypes.oneOf(["campaigns", "platforms", "instruments"])
-    .isRequired,
-}
+const Searchbar = React.forwardRef((_props, ref) => (
+  <div
+    style={{
+      display: "flex",
+      flexGrow: 1,
+      border: `1px solid ${theme.type.base.color}`,
+      borderLeft: 0,
+      borderRight: 0,
+      borderRadius: `0`,
+      padding: "0.25rem",
+    }}
+  >
+    <input
+      autoComplete="off"
+      aria-label="Enter search text"
+      name="search"
+      placeholder="Enter text..."
+      style={{
+        border: "none",
+        flexGrow: 1,
+        background: `transparent`,
+        color: theme.type.base.color,
+      }}
+      type="text"
+      ref={ref}
+    />
+    <button
+      type="submit"
+      style={{
+        border: "none",
+        flexGrow: 0,
+        background: `transparent`,
+        color: theme.type.base.color,
+        verticalAlign: `middle`,
+      }}
+      data-cy="submit"
+    >
+      <span role="img" aria-label="Magnifying glass icon">
+        <SearchIcon color={theme.type.base.color} />
+      </span>
+    </button>
+  </div>
+))
 
 // https://reactjs.org/docs/forwarding-refs.html#displaying-a-custom-name-in-devtools
 Searchbar.displayName = "Searchbar"

@@ -9,7 +9,7 @@ import theme from "../../utils/theme"
 import Layout, { PageBody } from "../../components/layout"
 import SEO from "../../components/seo"
 import ExploreMenu from "../../components/explore/explore-menu"
-import Searchbar from "../../components/explore/searchbar"
+import ExploreTools from "../../components/explore/explore-tools"
 import ExploreSection from "../../components/explore/explore-section"
 import PlatformCard from "../../components/cards/platform-card"
 
@@ -67,7 +67,7 @@ const Platforms = ({ data, location }) => {
       <SEO title="Platforms" />
       <PageBody id="platforms">
         <ExploreMenu />
-        <Searchbar
+        <ExploreTools
           submitSearch={submitSearch}
           selectedFilterIds={selectedFilterIds}
           addFilter={addFilter}

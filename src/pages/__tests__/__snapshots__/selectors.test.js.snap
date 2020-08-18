@@ -353,7 +353,7 @@ exports[`Campaigns page renders correctly 1`] = `
         </ul>
       </div>
       <form
-        data-cy="searchbar"
+        data-cy="explore-tools"
         onSubmit={[Function]}
         style={
           Object {

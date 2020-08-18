@@ -2,7 +2,7 @@
 
 import api from "../../src/utils/api"
 
-describe("Searchbar", () => {
+describe("Explore Tools", () => {
   ;[
     {
       category: "campaigns",
@@ -25,13 +25,13 @@ describe("Searchbar", () => {
         cy.visit(`/explore/${x.category}`)
       })
       it("renders correctly", () => {
-        cy.get("[data-cy=searchbar]")
+        cy.get("[data-cy=explore-tools]")
 
         cy.get("[data-cy=filter-select]")
           .invoke("text")
           .should("contain", "Filter")
 
-        cy.get("[data-cy=searchbar]")
+        cy.get("[data-cy=explore-tools]")
           .find("input")
           .should("have.attr", "aria-label", "Enter search text")
 
@@ -52,7 +52,7 @@ describe("Searchbar", () => {
 
         cy.window().should("have.prop", "beforeReload", true)
 
-        cy.get("[data-cy=searchbar]")
+        cy.get("[data-cy=explore-tools]")
           .find("input")
           .type("submitting some text")
           .type("{enter}")
@@ -76,11 +76,10 @@ describe("Searchbar", () => {
                 ` of ${numBefore} ${x.category}`
               )
 
-              // This check fails because some filter examples do not return any card at all
-              // cy.get("main")
-              //   .find("[data-cy=explore-card]")
-              //   .its("length")
-              //   .should("be.lt", numBefore)
+              cy.get("main")
+                .find("[data-cy=explore-card]")
+                .its("length")
+                .should("be.lt", numBefore)
 
               cy.get("[data-cy=filter-chip]").find("button").click()
 
@@ -138,7 +137,7 @@ describe("Searchbar", () => {
         .stub(api, "fetchSearchResult")
         .as("fetchSearchResultStub")
 
-      cy.get("[data-cy=searchbar]").find("input").type("arctic")
+      cy.get("[data-cy=explore-tools]").find("input").type("arctic")
 
       cy.get("[data-cy=submit]").click()
     })
@@ -162,7 +161,7 @@ describe("Searchbar", () => {
       })
 
       it("filters the campaigns based on api response", () => {
-        cy.get("[data-cy=searchbar]")
+        cy.get("[data-cy=explore-tools]")
           .find("input")
           .should("have.value", "arctic")
 

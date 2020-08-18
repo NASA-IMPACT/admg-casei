@@ -11,7 +11,7 @@ import theme from "../../utils/theme"
 import Layout, { PageBody } from "../../components/layout"
 import SEO from "../../components/seo"
 import ExploreMenu from "../../components/explore/explore-menu"
-import Searchbar from "../../components/explore/searchbar"
+import ExploreTools from "../../components/explore/explore-tools"
 import ExploreSection from "../../components/explore/explore-section"
 import CampaignCard from "../../components/cards/campaign-card"
 
@@ -34,6 +34,7 @@ const Campaigns = ({ data, location }) => {
     if (selectedFilterId) setFilter([selectedFilterId]) // applying only this one selection as filter
     return () => {
       // cleanup
+      setFilter([])
     }
   }, [selectedFilterId])
 
@@ -84,7 +85,7 @@ const Campaigns = ({ data, location }) => {
       <SEO title="Campaigns" />
       <PageBody id="campaigns">
         <ExploreMenu />
-        <Searchbar
+        <ExploreTools
           submitSearch={submitSearch}
           selectedFilterIds={selectedFilterIds}
           addFilter={addFilter}

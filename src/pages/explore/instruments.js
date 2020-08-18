@@ -10,7 +10,7 @@ import Layout, { PageBody } from "../../components/layout"
 import SEO from "../../components/seo"
 import ExploreMenu from "../../components/explore/explore-menu"
 import ExploreSection from "../../components/explore/explore-section"
-import Searchbar from "../../components/explore/searchbar"
+import ExploreTools from "../../components/explore/explore-tools"
 import InstrumentCard from "../../components/cards/instrument-card"
 
 import { selector } from "../../utils/filter-utils"
@@ -66,7 +66,7 @@ export default function Instruments({ data, location }) {
       <SEO title="Instruments" />
       <PageBody id="instruments">
         <ExploreMenu />
-        <Searchbar
+        <ExploreTools
           submitSearch={submitSearch}
           selectedFilterIds={selectedFilterIds}
           addFilter={addFilter}
