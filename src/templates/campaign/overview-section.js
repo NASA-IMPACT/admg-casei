@@ -89,10 +89,10 @@ const OverviewSection = ({
                 textOverflow: `ellipsis`,
               }}
             >
-              DOI: <ExternalLink label={doi} url={doi} id="doi" />
+              Campaign DOI: <ExternalLink label={doi} url={doi} id="doi" />
             </p>
           ) : (
-            <p data-cy="doi-link">DOI: not available</p>
+            <p data-cy="doi-link">Campaign DOI: not available</p>
           )}
         </li>
         {projectWebsite && (
