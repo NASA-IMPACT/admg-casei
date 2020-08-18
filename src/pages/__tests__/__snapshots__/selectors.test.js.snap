@@ -894,7 +894,7 @@ exports[`Campaigns page renders correctly 1`] = `
         <select
           aria-label="Select sort order"
           data-cy="sort-select"
-          defaultValue="asc"
+          defaultValue="latest"
           id="sort-select"
           name="sort"
           onChange={[Function]}
@@ -910,6 +910,16 @@ exports[`Campaigns page renders correctly 1`] = `
             }
           }
         >
+          <option
+            value="latest"
+          >
+            Latest
+          </option>
+          <option
+            value="oldest"
+          >
+            Oldest
+          </option>
           <option
             value="asc"
           >
@@ -956,7 +966,7 @@ exports[`Campaigns page renders correctly 1`] = `
           }
         >
           <a
-            href="/campaign/951482fa-5748-46ba-aed5-aab8b106b103"
+            href="/campaign/be798dc9-dccb-4dc2-8e6b-d395c1bcbeb6"
           >
             <div
               data-cy="explore-card"
@@ -982,49 +992,12 @@ exports[`Campaigns page renders correctly 1`] = `
                 <div
                   className="c0"
                 >
-                  <div
-                    className=" gatsby-image-wrapper"
-                    style={
-                      Object {
-                        "display": "inline-block",
-                        "height": undefined,
-                        "margin": "0",
-                        "overflow": "hidden",
-                        "position": "relative",
-                        "width": undefined,
-                      }
-                    }
-                  >
-                    <picture>
-                      <source />
-                      <img
-                        alt="logo"
-                        loading="lazy"
-                        onLoad={[Function]}
-                        src="/static/070840eb6299020cd65fd46e27c54400/ad39b/aces_logo.png"
-                        style={
-                          Object {
-                            "height": "100%",
-                            "left": 0,
-                            "objectFit": "cover",
-                            "objectPosition": "center",
-                            "opacity": 0,
-                            "position": "absolute",
-                            "top": 0,
-                            "transition": "opacity 500ms",
-                            "width": "100%",
-                          }
-                        }
-                      />
-                    </picture>
-                    <noscript
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "<picture><source srcset=\\"undefined\\" /><img loading=\\"lazy\\" src=\\"/static/070840eb6299020cd65fd46e27c54400/ad39b/aces_logo.png\\" alt=\\"logo\\" style=\\"position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\\"/></picture>",
-                        }
-                      }
-                    />
-                  </div>
+                  <img
+                    alt="GOES-R PLT logo"
+                    height="45"
+                    src="test-file-stub"
+                    width="45"
+                  />
                 </div>
                 <big
                   data-cy="shortname"
@@ -1035,25 +1008,25 @@ exports[`Campaigns page renders correctly 1`] = `
                     }
                   }
                 >
-                  ACES
+                  GOES-R PLT
                 </big>
                 <p
                   data-cy="longname"
                 >
-                  Altus Cumulus Electrification Study
+                  GOES-R Post Launch Test
                 </p>
                 <div>
                   <small
                     data-cy="daterange"
                   >
-                    2002
+                    2017
                   </small>
                 </div>
                 <div>
                   <small
                     data-cy="region"
                   >
-                    Florida Everglades
+                    Continental United States
                   </small>
                 </div>
               </div>
@@ -1081,7 +1054,7 @@ exports[`Campaigns page renders correctly 1`] = `
             </div>
           </a>
           <a
-            href="/campaign/e48c2d79-822b-4c9e-9f72-2776d5d1eac6"
+            href="/campaign/c438c053-3708-4f53-83d8-8c57990c6bec"
           >
             <div
               data-cy="explore-card"
@@ -1123,10 +1096,10 @@ exports[`Campaigns page renders correctly 1`] = `
                     <picture>
                       <source />
                       <img
-                        alt="ARCTAS logo"
+                        alt="OLYMPEX logo"
                         loading="lazy"
                         onLoad={[Function]}
-                        src="/static/2bd234de67183d020fabe8584d7713ff/f8771/arctas_spring.jpg"
+                        src="/static/6b1df71a80ace65c6ad8ea8294fcaa5f/ad39b/logo_image2.png"
                         style={
                           Object {
                             "height": "100%",
@@ -1145,7 +1118,7 @@ exports[`Campaigns page renders correctly 1`] = `
                     <noscript
                       dangerouslySetInnerHTML={
                         Object {
-                          "__html": "<picture><source srcset=\\"undefined\\" /><img loading=\\"lazy\\" src=\\"/static/2bd234de67183d020fabe8584d7713ff/f8771/arctas_spring.jpg\\" alt=\\"ARCTAS logo\\" style=\\"position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\\"/></picture>",
+                          "__html": "<picture><source srcset=\\"undefined\\" /><img loading=\\"lazy\\" src=\\"/static/6b1df71a80ace65c6ad8ea8294fcaa5f/ad39b/logo_image2.png\\" alt=\\"OLYMPEX logo\\" style=\\"position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\\"/></picture>",
                         }
                       }
                     />
@@ -1160,25 +1133,150 @@ exports[`Campaigns page renders correctly 1`] = `
                     }
                   }
                 >
-                  ARCTAS
+                  OLYMPEX
                 </big>
                 <p
                   data-cy="longname"
                 >
-                  Arctic Research of the Composition of the Troposphere from Aircraft and Satellites
+                  Olympic Mountains Experiment
                 </p>
                 <div>
                   <small
                     data-cy="daterange"
                   >
-                    2008
+                    2015—2016
                   </small>
                 </div>
                 <div>
                   <small
                     data-cy="region"
                   >
-                    Alaska, Western Canada, California
+                    Olympic Peninsula in U.S. Washington State
+                  </small>
+                </div>
+              </div>
+              <div>
+                <small
+                  data-cy="count1"
+                >
+                  <strong>
+                    0
+                  </strong>
+                   
+                  Collection Periods
+                </small>
+                <small
+                  data-cy="count2"
+                >
+                   · 
+                  <strong>
+                    0
+                  </strong>
+                   
+                  Data Products
+                </small>
+              </div>
+            </div>
+          </a>
+          <a
+            href="/campaign/03b728ae-2235-488c-80ee-570dcf602f3b"
+          >
+            <div
+              data-cy="explore-card"
+              style={
+                Object {
+                  "backgroundColor": "#303641",
+                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "height": "100%",
+                  "justifyContent": "space-between",
+                  "padding": "1rem",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "marginBottom": "2rem",
+                  }
+                }
+              >
+                <div
+                  className="c0"
+                >
+                  <div
+                    className=" gatsby-image-wrapper"
+                    style={
+                      Object {
+                        "display": "inline-block",
+                        "height": undefined,
+                        "margin": "0",
+                        "overflow": "hidden",
+                        "position": "relative",
+                        "width": undefined,
+                      }
+                    }
+                  >
+                    <picture>
+                      <source />
+                      <img
+                        alt="CARVE logo"
+                        loading="lazy"
+                        onLoad={[Function]}
+                        src="/static/3dec137acafa7ac0c3a74368b2cb56b3/f8771/carve_logo_update.jpg"
+                        style={
+                          Object {
+                            "height": "100%",
+                            "left": 0,
+                            "objectFit": "cover",
+                            "objectPosition": "center",
+                            "opacity": 0,
+                            "position": "absolute",
+                            "top": 0,
+                            "transition": "opacity 500ms",
+                            "width": "100%",
+                          }
+                        }
+                      />
+                    </picture>
+                    <noscript
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "<picture><source srcset=\\"undefined\\" /><img loading=\\"lazy\\" src=\\"/static/3dec137acafa7ac0c3a74368b2cb56b3/f8771/carve_logo_update.jpg\\" alt=\\"CARVE logo\\" style=\\"position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\\"/></picture>",
+                        }
+                      }
+                    />
+                  </div>
+                </div>
+                <big
+                  data-cy="shortname"
+                  style={
+                    Object {
+                      "fontWeight": "bold",
+                      "marginTop": "0.5rem",
+                    }
+                  }
+                >
+                  CARVE
+                </big>
+                <p
+                  data-cy="longname"
+                >
+                  Carbon in Arctic Reservoirs Vulnerability Experiment
+                </p>
+                <div>
+                  <small
+                    data-cy="daterange"
+                  >
+                    2012—2015
+                  </small>
+                </div>
+                <div>
+                  <small
+                    data-cy="region"
+                  >
+                    Alaska
                   </small>
                 </div>
               </div>
@@ -1331,7 +1429,7 @@ exports[`Campaigns page renders correctly 1`] = `
             </div>
           </a>
           <a
-            href="/campaign/03b728ae-2235-488c-80ee-570dcf602f3b"
+            href="/campaign/c1e56561-6726-4832-8dbe-0453b10ff36c"
           >
             <div
               data-cy="explore-card"
@@ -1373,10 +1471,10 @@ exports[`Campaigns page renders correctly 1`] = `
                     <picture>
                       <source />
                       <img
-                        alt="CARVE logo"
+                        alt="HS3 logo"
                         loading="lazy"
                         onLoad={[Function]}
-                        src="/static/3dec137acafa7ac0c3a74368b2cb56b3/f8771/carve_logo_update.jpg"
+                        src="/static/3d520693bc11c953f22f86f860ffd08a/ad39b/HS3_logo.png"
                         style={
                           Object {
                             "height": "100%",
@@ -1395,7 +1493,7 @@ exports[`Campaigns page renders correctly 1`] = `
                     <noscript
                       dangerouslySetInnerHTML={
                         Object {
-                          "__html": "<picture><source srcset=\\"undefined\\" /><img loading=\\"lazy\\" src=\\"/static/3dec137acafa7ac0c3a74368b2cb56b3/f8771/carve_logo_update.jpg\\" alt=\\"CARVE logo\\" style=\\"position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\\"/></picture>",
+                          "__html": "<picture><source srcset=\\"undefined\\" /><img loading=\\"lazy\\" src=\\"/static/3d520693bc11c953f22f86f860ffd08a/ad39b/HS3_logo.png\\" alt=\\"HS3 logo\\" style=\\"position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\\"/></picture>",
                         }
                       }
                     />
@@ -1410,25 +1508,25 @@ exports[`Campaigns page renders correctly 1`] = `
                     }
                   }
                 >
-                  CARVE
+                  HS3
                 </big>
                 <p
                   data-cy="longname"
                 >
-                  Carbon in Arctic Reservoirs Vulnerability Experiment
+                  Hurricane and Severe Storm Sentinel
                 </p>
                 <div>
                   <small
                     data-cy="daterange"
                   >
-                    2012—2015
+                    2012—2014
                   </small>
                 </div>
                 <div>
                   <small
                     data-cy="region"
                   >
-                    Alaska
+                    Subtropical Atlantic Ocean and Gulf of Mexico
                   </small>
                 </div>
               </div>
@@ -1704,94 +1802,6 @@ exports[`Campaigns page renders correctly 1`] = `
             </div>
           </a>
           <a
-            href="/campaign/be798dc9-dccb-4dc2-8e6b-d395c1bcbeb6"
-          >
-            <div
-              data-cy="explore-card"
-              style={
-                Object {
-                  "backgroundColor": "#303641",
-                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "height": "100%",
-                  "justifyContent": "space-between",
-                  "padding": "1rem",
-                }
-              }
-            >
-              <div
-                style={
-                  Object {
-                    "marginBottom": "2rem",
-                  }
-                }
-              >
-                <div
-                  className="c0"
-                >
-                  <img
-                    alt="GOES-R PLT logo"
-                    height="45"
-                    src="test-file-stub"
-                    width="45"
-                  />
-                </div>
-                <big
-                  data-cy="shortname"
-                  style={
-                    Object {
-                      "fontWeight": "bold",
-                      "marginTop": "0.5rem",
-                    }
-                  }
-                >
-                  GOES-R PLT
-                </big>
-                <p
-                  data-cy="longname"
-                >
-                  GOES-R Post Launch Test
-                </p>
-                <div>
-                  <small
-                    data-cy="daterange"
-                  >
-                    2017
-                  </small>
-                </div>
-                <div>
-                  <small
-                    data-cy="region"
-                  >
-                    Continental United States
-                  </small>
-                </div>
-              </div>
-              <div>
-                <small
-                  data-cy="count1"
-                >
-                  <strong>
-                    0
-                  </strong>
-                   
-                  Collection Periods
-                </small>
-                <small
-                  data-cy="count2"
-                >
-                   · 
-                  <strong>
-                    0
-                  </strong>
-                   
-                  Data Products
-                </small>
-              </div>
-            </div>
-          </a>
-          <a
             href="/campaign/7739c801-46e6-4ddd-ad30-351626dcccdb"
           >
             <div
@@ -1917,7 +1927,7 @@ exports[`Campaigns page renders correctly 1`] = `
             </div>
           </a>
           <a
-            href="/campaign/c1e56561-6726-4832-8dbe-0453b10ff36c"
+            href="/campaign/e48c2d79-822b-4c9e-9f72-2776d5d1eac6"
           >
             <div
               data-cy="explore-card"
@@ -1959,10 +1969,10 @@ exports[`Campaigns page renders correctly 1`] = `
                     <picture>
                       <source />
                       <img
-                        alt="HS3 logo"
+                        alt="ARCTAS logo"
                         loading="lazy"
                         onLoad={[Function]}
-                        src="/static/3d520693bc11c953f22f86f860ffd08a/ad39b/HS3_logo.png"
+                        src="/static/2bd234de67183d020fabe8584d7713ff/f8771/arctas_spring.jpg"
                         style={
                           Object {
                             "height": "100%",
@@ -1981,7 +1991,7 @@ exports[`Campaigns page renders correctly 1`] = `
                     <noscript
                       dangerouslySetInnerHTML={
                         Object {
-                          "__html": "<picture><source srcset=\\"undefined\\" /><img loading=\\"lazy\\" src=\\"/static/3d520693bc11c953f22f86f860ffd08a/ad39b/HS3_logo.png\\" alt=\\"HS3 logo\\" style=\\"position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\\"/></picture>",
+                          "__html": "<picture><source srcset=\\"undefined\\" /><img loading=\\"lazy\\" src=\\"/static/2bd234de67183d020fabe8584d7713ff/f8771/arctas_spring.jpg\\" alt=\\"ARCTAS logo\\" style=\\"position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\\"/></picture>",
                         }
                       }
                     />
@@ -1996,25 +2006,25 @@ exports[`Campaigns page renders correctly 1`] = `
                     }
                   }
                 >
-                  HS3
+                  ARCTAS
                 </big>
                 <p
                   data-cy="longname"
                 >
-                  Hurricane and Severe Storm Sentinel
+                  Arctic Research of the Composition of the Troposphere from Aircraft and Satellites
                 </p>
                 <div>
                   <small
                     data-cy="daterange"
                   >
-                    2012—2014
+                    2008
                   </small>
                 </div>
                 <div>
                   <small
                     data-cy="region"
                   >
-                    Subtropical Atlantic Ocean and Gulf of Mexico
+                    Alaska, Western Canada, California
                   </small>
                 </div>
               </div>
@@ -2042,7 +2052,7 @@ exports[`Campaigns page renders correctly 1`] = `
             </div>
           </a>
           <a
-            href="/campaign/c438c053-3708-4f53-83d8-8c57990c6bec"
+            href="/campaign/951482fa-5748-46ba-aed5-aab8b106b103"
           >
             <div
               data-cy="explore-card"
@@ -2084,10 +2094,10 @@ exports[`Campaigns page renders correctly 1`] = `
                     <picture>
                       <source />
                       <img
-                        alt="OLYMPEX logo"
+                        alt="logo"
                         loading="lazy"
                         onLoad={[Function]}
-                        src="/static/6b1df71a80ace65c6ad8ea8294fcaa5f/ad39b/logo_image2.png"
+                        src="/static/070840eb6299020cd65fd46e27c54400/ad39b/aces_logo.png"
                         style={
                           Object {
                             "height": "100%",
@@ -2106,7 +2116,7 @@ exports[`Campaigns page renders correctly 1`] = `
                     <noscript
                       dangerouslySetInnerHTML={
                         Object {
-                          "__html": "<picture><source srcset=\\"undefined\\" /><img loading=\\"lazy\\" src=\\"/static/6b1df71a80ace65c6ad8ea8294fcaa5f/ad39b/logo_image2.png\\" alt=\\"OLYMPEX logo\\" style=\\"position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\\"/></picture>",
+                          "__html": "<picture><source srcset=\\"undefined\\" /><img loading=\\"lazy\\" src=\\"/static/070840eb6299020cd65fd46e27c54400/ad39b/aces_logo.png\\" alt=\\"logo\\" style=\\"position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\\"/></picture>",
                         }
                       }
                     />
@@ -2121,25 +2131,25 @@ exports[`Campaigns page renders correctly 1`] = `
                     }
                   }
                 >
-                  OLYMPEX
+                  ACES
                 </big>
                 <p
                   data-cy="longname"
                 >
-                  Olympic Mountains Experiment
+                  Altus Cumulus Electrification Study
                 </p>
                 <div>
                   <small
                     data-cy="daterange"
                   >
-                    2015—2016
+                    2002
                   </small>
                 </div>
                 <div>
                   <small
                     data-cy="region"
                   >
-                    Olympic Peninsula in U.S. Washington State
+                    Florida Everglades
                   </small>
                 </div>
               </div>

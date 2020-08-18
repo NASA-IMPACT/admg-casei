@@ -15,13 +15,20 @@ import PlatformCard from "../../components/cards/platform-card"
 
 import { selector } from "../../utils/filter-utils"
 
+const sortFunctions = {
+  asc: (a, b) => a.shortname.localeCompare(b.shortname),
+  desc: (a, b) => b.shortname.localeCompare(a.shortname),
+  oldest: (a, b) => new Date(a.enddate) - new Date(b.enddate), // TODO: customize options for platforms
+  latest: (a, b) => new Date(b.enddate) - new Date(a.enddate),
+}
+
 const Platforms = ({ data, location }) => {
-  const { allInstrument } = data
+  const { allPlatform, allInstrument } = data
 
   const { selectedFilterId } = location.state || {}
 
   const [isLoading, setLoading] = useState(false)
-  const [sortOrder, toggleSortOrder] = useState("asc")
+  const [sortOrder, setSortOrder] = useState("asc")
   const [selectedFilterIds, setFilter] = useState([])
   const [searchResult, setSearchResult] = useState()
 
@@ -29,6 +36,7 @@ const Platforms = ({ data, location }) => {
     if (selectedFilterId) setFilter([selectedFilterId]) // applying only this one selection as filter
     return () => {
       // cleanup
+      setFilter([])
     }
   }, [selectedFilterId])
 
@@ -46,7 +54,8 @@ const Platforms = ({ data, location }) => {
     setLoading(false)
   }
 
-  const list = data[sortOrder].list
+  const list = allPlatform.list
+    .sort(sortFunctions[sortOrder])
     .filter(platform =>
       selectedFilterIds.length === 0
         ? true
@@ -75,7 +84,7 @@ const Platforms = ({ data, location }) => {
           getFilterOptionsById={getFilterOptionsById}
           removeFilter={removeFilter}
           sortOrder={sortOrder}
-          toggleSortOrder={toggleSortOrder}
+          setSortOrder={setSortOrder}
           ref={inputElement}
           category="platforms"
         />
@@ -93,7 +102,7 @@ const Platforms = ({ data, location }) => {
             selectedFilterIds={selectedFilterIds}
             removeFilter={removeFilter}
             filteredCount={list.length}
-            totalCount={data.all.totalCount}
+            totalCount={allPlatform.totalCount}
           >
             {list.map(platform => {
               return (
@@ -119,15 +128,8 @@ const Platforms = ({ data, location }) => {
 
 export const query = graphql`
   query {
-    all: allPlatform(sort: { order: ASC, fields: short_name }) {
+    allPlatform {
       totalCount
-    }
-    asc: allPlatform(sort: { order: ASC, fields: short_name }) {
-      list: nodes {
-        ...platform
-      }
-    }
-    desc: allPlatform(sort: { order: DESC, fields: short_name }) {
       list: nodes {
         ...platform
       }
@@ -170,13 +172,8 @@ const platformShape = PropTypes.shape({
 
 Platforms.propTypes = {
   data: PropTypes.shape({
-    all: PropTypes.shape({
+    allPlatform: PropTypes.shape({
       totalCount: PropTypes.number.isRequired,
-    }),
-    asc: PropTypes.shape({
-      list: PropTypes.arrayOf(platformShape).isRequired,
-    }),
-    desc: PropTypes.shape({
       list: PropTypes.arrayOf(platformShape).isRequired,
     }),
     allInstrument: PropTypes.shape({

@@ -15,13 +15,20 @@ import InstrumentCard from "../../components/cards/instrument-card"
 
 import { selector } from "../../utils/filter-utils"
 
+const sortFunctions = {
+  asc: (a, b) => a.shortname.localeCompare(b.shortname),
+  desc: (a, b) => b.shortname.localeCompare(a.shortname),
+  oldest: (a, b) => new Date(a.enddate) - new Date(b.enddate), // TODO: customize options for instruments
+  latest: (a, b) => new Date(b.enddate) - new Date(a.enddate),
+}
+
 export default function Instruments({ data, location }) {
-  const { allInstrumentType } = data
+  const { allInstrument, allInstrumentType } = data
 
   const { selectedFilterId } = location.state || {}
 
   const [isLoading, setLoading] = useState(false)
-  const [sortOrder, toggleSortOrder] = useState("asc")
+  const [sortOrder, setSortOrder] = useState("asc")
   const [selectedFilterIds, setFilter] = useState([])
   const [searchResult, setSearchResult] = useState()
 
@@ -29,6 +36,7 @@ export default function Instruments({ data, location }) {
     if (selectedFilterId) setFilter([selectedFilterId]) // applying only this one selection as filter
     return () => {
       // cleanup
+      setFilter([])
     }
   }, [selectedFilterId])
 
@@ -46,7 +54,8 @@ export default function Instruments({ data, location }) {
     setLoading(false)
   }
 
-  const list = data[sortOrder].list
+  const list = allInstrument.list
+    .sort(sortFunctions[sortOrder])
     .filter(instrument => {
       return selectedFilterIds.length === 0
         ? true
@@ -74,7 +83,7 @@ export default function Instruments({ data, location }) {
           getFilterOptionsById={getFilterOptionsById}
           removeFilter={removeFilter}
           sortOrder={sortOrder}
-          toggleSortOrder={toggleSortOrder}
+          setSortOrder={setSortOrder}
           ref={inputElement}
           category="instruments"
         />
@@ -92,7 +101,7 @@ export default function Instruments({ data, location }) {
             selectedFilterIds={selectedFilterIds}
             removeFilter={removeFilter}
             filteredCount={list.length}
-            totalCount={data.all.totalCount}
+            totalCount={allInstrument.totalCount}
           >
             {list.map(instrument => {
               return (
@@ -116,15 +125,8 @@ export default function Instruments({ data, location }) {
 
 export const query = graphql`
   query {
-    all: allInstrument(sort: { order: ASC, fields: short_name }) {
+    allInstrument {
       totalCount
-    }
-    asc: allInstrument(sort: { order: ASC, fields: short_name }) {
-      list: nodes {
-        ...instrumentFields
-      }
-    }
-    desc: allInstrument(sort: { order: DESC, fields: short_name }) {
       list: nodes {
         ...instrumentFields
       }
@@ -159,13 +161,8 @@ const instrumentShape = PropTypes.shape({
 
 Instruments.propTypes = {
   data: PropTypes.shape({
-    all: PropTypes.shape({
+    allInstrument: PropTypes.shape({
       totalCount: PropTypes.number.isRequired,
-    }),
-    asc: PropTypes.shape({
-      list: PropTypes.arrayOf(instrumentShape).isRequired,
-    }),
-    desc: PropTypes.shape({
       list: PropTypes.arrayOf(instrumentShape).isRequired,
     }),
     allInstrumentType: PropTypes.shape({

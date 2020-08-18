@@ -16,7 +16,7 @@ const ExploreTools = React.forwardRef(
       getFilterOptionsById,
       removeFilter,
       sortOrder,
-      toggleSortOrder,
+      setSortOrder,
       category,
     },
     ref
@@ -38,7 +38,7 @@ const ExploreTools = React.forwardRef(
 
           <Searchbar ref={ref} />
 
-          <SortMenu sortOrder={sortOrder} toggleSortOrder={toggleSortOrder} />
+          <SortMenu sortOrder={sortOrder} setSortOrder={setSortOrder} />
         </form>
 
         {selectedFilterIds.length > 0 && (
@@ -68,7 +68,7 @@ ExploreTools.propTypes = {
   getFilterOptionsById: PropTypes.func.isRequired,
   removeFilter: PropTypes.func.isRequired,
   sortOrder: PropTypes.string.isRequired,
-  toggleSortOrder: PropTypes.func.isRequired,
+  setSortOrder: PropTypes.func.isRequired,
   category: PropTypes.oneOf(["campaigns", "platforms", "instruments"])
     .isRequired,
 }
