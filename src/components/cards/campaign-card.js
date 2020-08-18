@@ -10,14 +10,14 @@ const CampaignCard = ({
   longname,
   daterange,
   region,
-  countCollectionPeriods = 0,
+  deployments = 0,
   countDataProducts = 0,
 }) => (
   <Card
     image={logo}
     tag={ongoing && "Ongoing"}
     footerList={[
-      { count: countCollectionPeriods, title: "Collection Periods" },
+      { count: deployments, title: "Deployments" },
       { count: countDataProducts, title: "Data Products" },
     ]}
   >
@@ -49,7 +49,7 @@ CampaignCard.propTypes = {
   longname: PropTypes.string.isRequired,
   daterange: PropTypes.string.isRequired,
   region: PropTypes.string.isRequired,
-  countCollectionPeriods: PropTypes.number,
+  deployments: PropTypes.number,
   countDataProducts: PropTypes.number,
 }
 

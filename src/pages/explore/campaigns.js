@@ -125,7 +125,7 @@ const Campaigns = ({ data, location }) => {
                       campaign.enddate
                     )}
                     region={campaign.region}
-                    countCollectionPeriods={campaign.countCollectionPeriods}
+                    deployments={campaign.deployments.length}
                     countDataProducts={campaign.countDataProducts}
                   />
                 </Link>

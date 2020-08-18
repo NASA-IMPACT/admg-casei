@@ -1062,10 +1062,10 @@ exports[`Campaigns page renders correctly 1`] = `
                   data-cy="count1"
                 >
                   <strong>
-                    0
+                    1
                   </strong>
                    
-                  Collection Periods
+                  Deployments
                 </small>
                 <small
                   data-cy="count2"
@@ -1187,10 +1187,10 @@ exports[`Campaigns page renders correctly 1`] = `
                   data-cy="count1"
                 >
                   <strong>
-                    0
+                    3
                   </strong>
                    
-                  Collection Periods
+                  Deployments
                 </small>
                 <small
                   data-cy="count2"
@@ -1312,10 +1312,10 @@ exports[`Campaigns page renders correctly 1`] = `
                   data-cy="count1"
                 >
                   <strong>
-                    0
+                    34
                   </strong>
                    
-                  Collection Periods
+                  Deployments
                 </small>
                 <small
                   data-cy="count2"
@@ -1437,10 +1437,10 @@ exports[`Campaigns page renders correctly 1`] = `
                   data-cy="count1"
                 >
                   <strong>
-                    0
+                    4
                   </strong>
                    
-                  Collection Periods
+                  Deployments
                 </small>
                 <small
                   data-cy="count2"
@@ -1562,10 +1562,10 @@ exports[`Campaigns page renders correctly 1`] = `
                   data-cy="count1"
                 >
                   <strong>
-                    0
+                    1
                   </strong>
                    
-                  Collection Periods
+                  Deployments
                 </small>
                 <small
                   data-cy="count2"
@@ -1685,10 +1685,10 @@ exports[`Campaigns page renders correctly 1`] = `
                   data-cy="count1"
                 >
                   <strong>
-                    0
+                    1
                   </strong>
                    
-                  Collection Periods
+                  Deployments
                 </small>
                 <small
                   data-cy="count2"
@@ -1772,10 +1772,10 @@ exports[`Campaigns page renders correctly 1`] = `
                   data-cy="count1"
                 >
                   <strong>
-                    0
+                    1
                   </strong>
                    
-                  Collection Periods
+                  Deployments
                 </small>
                 <small
                   data-cy="count2"
@@ -1897,10 +1897,10 @@ exports[`Campaigns page renders correctly 1`] = `
                   data-cy="count1"
                 >
                   <strong>
-                    0
+                    1
                   </strong>
                    
-                  Collection Periods
+                  Deployments
                 </small>
                 <small
                   data-cy="count2"
@@ -2022,10 +2022,10 @@ exports[`Campaigns page renders correctly 1`] = `
                   data-cy="count1"
                 >
                   <strong>
-                    0
+                    3
                   </strong>
                    
-                  Collection Periods
+                  Deployments
                 </small>
                 <small
                   data-cy="count2"
@@ -2147,10 +2147,10 @@ exports[`Campaigns page renders correctly 1`] = `
                   data-cy="count1"
                 >
                   <strong>
-                    0
+                    1
                   </strong>
                    
-                  Collection Periods
+                  Deployments
                 </small>
                 <small
                   data-cy="count2"
