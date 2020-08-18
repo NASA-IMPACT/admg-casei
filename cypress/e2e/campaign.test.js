@@ -114,7 +114,7 @@ describe("Campaign", () => {
       cy.get("[data-cy=link-list]")
         .find("[data-cy=doi-link]")
         .should("exist")
-        .and("have.text", "DOI: not available")
+        .and("have.text", "no campaign DOI available")
     })
   })
 

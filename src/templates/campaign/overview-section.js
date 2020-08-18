@@ -92,7 +92,7 @@ const OverviewSection = ({
               DOI: <ExternalLink label={doi} url={doi} id="doi" />
             </p>
           ) : (
-            <p data-cy="doi-link">DOI: not available</p>
+            <p data-cy="doi-link">no campaign DOI available</p>
           )}
         </li>
         {projectWebsite && (
