@@ -152,12 +152,11 @@ const Footer = ({ shortname }) => {
               <div>
                 NASA Official:{" "}
                 <span
-                  className="placeholder"
                   style={{
                     fontWeight: `normal`,
                   }}
                 >
-                  Name of Official
+                  Rahul Ramachandran
                 </span>
               </div>
             </div>
