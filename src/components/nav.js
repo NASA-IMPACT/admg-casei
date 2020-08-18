@@ -1,8 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Link, navigate } from "gatsby"
-
-import theme from "../utils/theme"
+import { Link } from "gatsby"
 
 const ListLink = props => (
   <li style={{ margin: `0 1rem 0 0` }}>
