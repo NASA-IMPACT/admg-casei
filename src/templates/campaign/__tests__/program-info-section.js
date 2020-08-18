@@ -54,8 +54,8 @@ describe("Program Info Section", () => {
     )
     const tree = component.toJSON()
     const instance = component.root
-    expect(instance.findAllByType("img")[0].props.src).toBe(
-      testImage.nasaImg.childImageSharp.fluid.base64
+    expect(instance.findAllByType("img")[0].props.alt).toBe(
+      testImage.nasaImgAlt
     )
     expect(tree).toMatchSnapshot()
   })

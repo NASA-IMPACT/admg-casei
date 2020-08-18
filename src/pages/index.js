@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { graphql, Link } from "gatsby"
+import Image from "gatsby-image"
 
 import Layout, { PageBody } from "../components/layout"
 import SEO from "../components/seo"
@@ -10,7 +11,6 @@ import {
   SectionContent,
 } from "../components/section"
 import Hero from "../components/hero"
-import Image from "../components/image"
 import FocusAreaGallery from "../components/home/focus-area-gallery"
 import { RegionCarousel } from "../components/home/region-carousel"
 import { GeophysicsGrid } from "../components/home/geophysics-grid"
@@ -67,7 +67,10 @@ const IndexPage = ({ data }) => {
 
         <SectionBlock id="platforms">
           <SectionContent columns={[1, 6]}>
-            <Image filename="platform.png" alt="aircraft flying over ground" />
+            <Image
+              alt={data.platformPlaceholder.nasaImgAlt}
+              fluid={data.platformPlaceholder.nasaImg.childImageSharp.fluid}
+            />
           </SectionContent>
           <SectionContent columns={[7, 6]}>
             <div
@@ -159,6 +162,18 @@ export const query = graphql`
         longname: long_name
       }
     }
+    platformPlaceholder: nasaImagesJson(
+      shortname: { eq: "placeholder-platform" }
+    ) {
+      nasaImgAlt
+      nasaImg {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
   }
 `
 
@@ -215,6 +230,12 @@ IndexPage.propTypes = {
         })
       ),
     }),
+    platformPlaceholder: PropTypes.shape({
+      nasaImgAlt: PropTypes.string.isRequired,
+      nasaImg: PropTypes.shape({
+        childImageSharp: PropTypes.object.isRequired,
+      }).isRequired,
+    }).isRequired,
   }).isRequired,
 }
 
