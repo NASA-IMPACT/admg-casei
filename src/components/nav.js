@@ -22,7 +22,7 @@ const ListLink = props => (
 ListLink.propTypes = {
   to: function (props, propName, componentName) {
     // validate that prop `to` links to an existing page
-    if (!/(\/explore|\/resources|\/about|\/contact)/.test(props[propName])) {
+    if (!/(\/explore|\/glossary|\/about|\/contact)/.test(props[propName])) {
       return new Error(
         "Invalid prop `" +
           propName +
