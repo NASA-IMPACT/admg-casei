@@ -220,32 +220,11 @@ exports[`Campaigns page renders correctly 1`] = `
                 }
               }
             >
-              <select
-                aria-label="Select Resource"
-                data-cy="nav-select"
-                id="nav-select"
-                name="nav"
-                onChange={[Function]}
-                style={
-                  Object {
-                    "WebkitAppearance": "none",
-                    "background": "transparent",
-                    "border": "none",
-                    "color": "hsla(0,0%,100%,0.9)",
-                  }
-                }
+              <a
+                href="/glossary"
               >
-                <option
-                  value=""
-                >
-                  Resources
-                </option>
-                <option
-                  value="glossary"
-                >
-                  Glossary
-                </option>
-              </select>
+                Glossary
+              </a>
             </li>
             <li
               style={
