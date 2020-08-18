@@ -6,6 +6,7 @@ const PlatformCard = ({
   shortname,
   longname,
   description,
+  campaigns,
   collectionPeriodIds,
   instruments,
   stationary,
@@ -13,8 +14,9 @@ const PlatformCard = ({
   <Card
     tag={stationary && "Stationary"}
     footerList={[
-      { count: collectionPeriodIds.length, title: "Collection Periods" },
-      { count: instruments.length, title: "Instruments" },
+      { count: campaigns.length, title: "Campaign" },
+      { count: collectionPeriodIds.length, title: "Collection Period" },
+      { count: instruments.length, title: "Instrument" },
     ]}
   >
     <big
@@ -32,6 +34,7 @@ PlatformCard.propTypes = {
   shortname: PropTypes.string.isRequired,
   longname: PropTypes.string,
   description: PropTypes.string.isRequired,
+  campaigns: PropTypes.arrayOf(PropTypes.string),
   collectionPeriodIds: PropTypes.arrayOf(PropTypes.string),
   instruments: PropTypes.arrayOf(
     PropTypes.shape({

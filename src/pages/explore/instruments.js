@@ -4,6 +4,7 @@ import { graphql, Link } from "gatsby"
 import Spinner from "react-spinkit"
 
 import api from "../../utils/api"
+import { selector, sortFunctions } from "../../utils/filter-utils"
 import theme from "../../utils/theme"
 
 import Layout, { PageBody } from "../../components/layout"
@@ -13,22 +14,13 @@ import ExploreSection from "../../components/explore/explore-section"
 import ExploreTools from "../../components/explore/explore-tools"
 import InstrumentCard from "../../components/cards/instrument-card"
 
-import { selector } from "../../utils/filter-utils"
-
-const sortFunctions = {
-  asc: (a, b) => a.shortname.localeCompare(b.shortname),
-  desc: (a, b) => b.shortname.localeCompare(a.shortname),
-  oldest: (a, b) => new Date(a.enddate) - new Date(b.enddate), // TODO: customize options for instruments
-  latest: (a, b) => new Date(b.enddate) - new Date(a.enddate),
-}
-
 export default function Instruments({ data, location }) {
   const { allInstrument, allInstrumentType } = data
 
   const { selectedFilterId } = location.state || {}
 
   const [isLoading, setLoading] = useState(false)
-  const [sortOrder, setSortOrder] = useState("asc")
+  const [sortOrder, setSortOrder] = useState("popular")
   const [selectedFilterIds, setFilter] = useState([])
   const [searchResult, setSearchResult] = useState()
 
@@ -55,7 +47,7 @@ export default function Instruments({ data, location }) {
   }
 
   const list = allInstrument.list
-    .sort(sortFunctions[sortOrder])
+    .sort(sortFunctions.instruments[sortOrder])
     .filter(instrument => {
       return selectedFilterIds.length === 0
         ? true

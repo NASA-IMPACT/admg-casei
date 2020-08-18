@@ -4,7 +4,7 @@ import { graphql, Link } from "gatsby"
 import Spinner from "react-spinkit"
 
 import api from "../../utils/api"
-import { selector } from "../../utils/filter-utils"
+import { selector, sortFunctions } from "../../utils/filter-utils"
 import { formatYearRange } from "../../utils/helpers"
 import theme from "../../utils/theme"
 
@@ -14,13 +14,6 @@ import ExploreMenu from "../../components/explore/explore-menu"
 import ExploreTools from "../../components/explore/explore-tools"
 import ExploreSection from "../../components/explore/explore-section"
 import CampaignCard from "../../components/cards/campaign-card"
-
-const sortFunctions = {
-  asc: (a, b) => a.shortname.localeCompare(b.shortname),
-  desc: (a, b) => b.shortname.localeCompare(a.shortname),
-  oldest: (a, b) => new Date(a.enddate) - new Date(b.enddate),
-  latest: (a, b) => new Date(b.enddate) - new Date(a.enddate),
-}
 
 export default function Campaigns({ data, location }) {
   const {
@@ -61,7 +54,7 @@ export default function Campaigns({ data, location }) {
   }
 
   const list = allCampaign.list
-    .sort(sortFunctions[sortOrder])
+    .sort(sortFunctions.campaigns[sortOrder])
     .filter(campaign =>
       selectedFilterIds.length === 0
         ? true

@@ -911,24 +911,24 @@ exports[`Campaigns page renders correctly 1`] = `
           }
         >
           <option
-            value="latest"
-          >
-            Latest
-          </option>
-          <option
-            value="oldest"
-          >
-            Oldest
-          </option>
-          <option
             value="asc"
           >
-            A to Z
+            ASC
           </option>
           <option
             value="desc"
           >
-            Z to A
+            DESC
+          </option>
+          <option
+            value="oldest"
+          >
+            OLDEST
+          </option>
+          <option
+            value="latest"
+          >
+            LATEST
           </option>
         </select>
       </form>
@@ -1033,22 +1033,34 @@ exports[`Campaigns page renders correctly 1`] = `
               <div>
                 <small
                   data-cy="count1"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
                 >
                   <strong>
                     0
                   </strong>
                    
-                  Collection Periods
+                  Collection Period
+                  s
                 </small>
                 <small
                   data-cy="count2"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
                 >
                    · 
                   <strong>
                     0
                   </strong>
                    
-                  Data Products
+                  Data Product
+                  s
                 </small>
               </div>
             </div>
@@ -1158,22 +1170,34 @@ exports[`Campaigns page renders correctly 1`] = `
               <div>
                 <small
                   data-cy="count1"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
                 >
                   <strong>
                     0
                   </strong>
                    
-                  Collection Periods
+                  Collection Period
+                  s
                 </small>
                 <small
                   data-cy="count2"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
                 >
                    · 
                   <strong>
                     0
                   </strong>
                    
-                  Data Products
+                  Data Product
+                  s
                 </small>
               </div>
             </div>
@@ -1283,22 +1307,34 @@ exports[`Campaigns page renders correctly 1`] = `
               <div>
                 <small
                   data-cy="count1"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
                 >
                   <strong>
                     0
                   </strong>
                    
-                  Collection Periods
+                  Collection Period
+                  s
                 </small>
                 <small
                   data-cy="count2"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
                 >
                    · 
                   <strong>
                     0
                   </strong>
                    
-                  Data Products
+                  Data Product
+                  s
                 </small>
               </div>
             </div>
@@ -1408,22 +1444,34 @@ exports[`Campaigns page renders correctly 1`] = `
               <div>
                 <small
                   data-cy="count1"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
                 >
                   <strong>
                     0
                   </strong>
                    
-                  Collection Periods
+                  Collection Period
+                  s
                 </small>
                 <small
                   data-cy="count2"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
                 >
                    · 
                   <strong>
                     0
                   </strong>
                    
-                  Data Products
+                  Data Product
+                  s
                 </small>
               </div>
             </div>
@@ -1533,22 +1581,34 @@ exports[`Campaigns page renders correctly 1`] = `
               <div>
                 <small
                   data-cy="count1"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
                 >
                   <strong>
                     0
                   </strong>
                    
-                  Collection Periods
+                  Collection Period
+                  s
                 </small>
                 <small
                   data-cy="count2"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
                 >
                    · 
                   <strong>
                     0
                   </strong>
                    
-                  Data Products
+                  Data Product
+                  s
                 </small>
               </div>
             </div>
@@ -1658,20 +1718,32 @@ exports[`Campaigns page renders correctly 1`] = `
               <div>
                 <small
                   data-cy="count1"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
                 >
                   <strong>
                     0
                   </strong>
                    
-                  Collection Periods
+                  Collection Period
+                  s
                 </small>
                 <small
                   data-cy="count2"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
                 >
                    · 
                   <strong />
                    
-                  Data Products
+                  Data Product
+                  s
                 </small>
               </div>
             </div>
@@ -1781,22 +1853,34 @@ exports[`Campaigns page renders correctly 1`] = `
               <div>
                 <small
                   data-cy="count1"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
                 >
                   <strong>
                     0
                   </strong>
                    
-                  Collection Periods
+                  Collection Period
+                  s
                 </small>
                 <small
                   data-cy="count2"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
                 >
                    · 
                   <strong>
                     0
                   </strong>
                    
-                  Data Products
+                  Data Product
+                  s
                 </small>
               </div>
             </div>
@@ -1906,22 +1990,34 @@ exports[`Campaigns page renders correctly 1`] = `
               <div>
                 <small
                   data-cy="count1"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
                 >
                   <strong>
                     0
                   </strong>
                    
-                  Collection Periods
+                  Collection Period
+                  s
                 </small>
                 <small
                   data-cy="count2"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
                 >
                    · 
                   <strong>
                     0
                   </strong>
                    
-                  Data Products
+                  Data Product
+                  s
                 </small>
               </div>
             </div>
@@ -2031,22 +2127,34 @@ exports[`Campaigns page renders correctly 1`] = `
               <div>
                 <small
                   data-cy="count1"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
                 >
                   <strong>
                     0
                   </strong>
                    
-                  Collection Periods
+                  Collection Period
+                  s
                 </small>
                 <small
                   data-cy="count2"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
                 >
                    · 
                   <strong>
                     0
                   </strong>
                    
-                  Data Products
+                  Data Product
+                  s
                 </small>
               </div>
             </div>
@@ -2156,22 +2264,34 @@ exports[`Campaigns page renders correctly 1`] = `
               <div>
                 <small
                   data-cy="count1"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
                 >
                   <strong>
                     0
                   </strong>
                    
-                  Collection Periods
+                  Collection Period
+                  s
                 </small>
                 <small
                   data-cy="count2"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
                 >
                    · 
                   <strong>
                     0
                   </strong>
                    
-                  Data Products
+                  Data Product
+                  s
                 </small>
               </div>
             </div>

@@ -38,7 +38,11 @@ const ExploreTools = React.forwardRef(
 
           <Searchbar ref={ref} />
 
-          <SortMenu sortOrder={sortOrder} setSortOrder={setSortOrder} />
+          <SortMenu
+            sortOrder={sortOrder}
+            setSortOrder={setSortOrder}
+            category={category}
+          />
         </form>
 
         {selectedFilterIds.length > 0 && (

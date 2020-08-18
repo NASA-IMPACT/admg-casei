@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import Card from "./card"
 
 const InstrumentCard = ({ shortname, longname, description, campaigns }) => (
-  <Card footerList={[{ count: campaigns.length, title: "Campaigns" }]}>
+  <Card footerList={[{ count: campaigns.length, title: "Campaign" }]}>
     <big
       style={{ fontWeight: `bold`, marginTop: `0.5rem` }}
       data-cy="shortname"

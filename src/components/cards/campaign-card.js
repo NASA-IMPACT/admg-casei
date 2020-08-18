@@ -17,8 +17,8 @@ const CampaignCard = ({
     image={logo}
     tag={ongoing && "Ongoing"}
     footerList={[
-      { count: countCollectionPeriods, title: "Collection Periods" },
-      { count: countDataProducts, title: "Data Products" },
+      { count: countCollectionPeriods, title: "Collection Period" },
+      { count: countDataProducts, title: "Data Product" },
     ]}
   >
     <big
