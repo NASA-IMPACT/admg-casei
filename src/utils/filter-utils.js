@@ -9,3 +9,24 @@ export const selector = filterOptions => ({
     return filterOptions[id].options
   },
 })
+
+export const sortFunctions = {
+  campaigns: {
+    "a to z": (a, b) => a.shortname.localeCompare(b.shortname),
+    "z to a": (a, b) => b.shortname.localeCompare(a.shortname),
+    oldest: (a, b) => new Date(a.enddate) - new Date(b.enddate),
+    "most recent": (a, b) => new Date(b.enddate) - new Date(a.enddate),
+  },
+  platforms: {
+    "a to z": (a, b) => a.shortname.localeCompare(b.shortname),
+    "z to a": (a, b) => b.shortname.localeCompare(a.shortname),
+    "most used": (a, b) =>
+      b.campaigns.length - a.campaigns.length ||
+      b.collectionPeriodIds.length - a.collectionPeriodIds.length,
+  },
+  instruments: {
+    "a to z": (a, b) => a.shortname.localeCompare(b.shortname),
+    "z to a": (a, b) => b.shortname.localeCompare(a.shortname),
+    "most used": (a, b) => b.campaigns.length - a.campaigns.length,
+  },
+}

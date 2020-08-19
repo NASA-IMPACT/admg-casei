@@ -16,7 +16,7 @@ describe("Explore", () => {
         expect($li[2], "text content").to.have.text("Instruments")
       })
 
-    cy.get("[data-cy=searchbar]").should("exist")
+    cy.get("[data-cy=explore-tools]").should("exist")
     cy.get("[data-cy=item-count]").should("exist")
     cy.get("[data-cy=explore-card]").should("exist")
   })
@@ -65,6 +65,7 @@ describe("Explore", () => {
   describe("platforms", () => {
     beforeEach(() => {
       cy.get("[data-cy=tabbar]").contains("Platforms").click()
+      cy.url().should("include", "/explore/platforms")
     })
 
     it("displays the number of items to explore", () => {
@@ -87,10 +88,11 @@ describe("Explore", () => {
           )
           expect($card.find("[data-cy=longname]")).to.exist
 
-          expect($card.find("[data-cy=count1]")).to.contain(
+          expect($card.find("[data-cy=count1]")).to.contain("Campaign")
+          expect($card.find("[data-cy=count2]")).to.contain(
             "Collection Periods"
           )
-          expect($card.find("[data-cy=count2]")).to.contain("Instruments")
+          expect($card.find("[data-cy=count3]")).to.contain("Instruments")
         })
     })
   })
@@ -98,6 +100,7 @@ describe("Explore", () => {
   describe("instruments", () => {
     beforeEach(() => {
       cy.get("[data-cy=tabbar]").contains("Instruments").click()
+      cy.url().should("include", "/explore/instruments")
     })
 
     it("displays the number of items to explore", () => {

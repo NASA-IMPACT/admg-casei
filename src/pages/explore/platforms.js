@@ -4,24 +4,23 @@ import { graphql, Link } from "gatsby"
 import Spinner from "react-spinkit"
 
 import api from "../../utils/api"
+import { selector, sortFunctions } from "../../utils/filter-utils"
 import theme from "../../utils/theme"
 
 import Layout, { PageBody } from "../../components/layout"
 import SEO from "../../components/seo"
 import ExploreMenu from "../../components/explore/explore-menu"
-import Searchbar from "../../components/explore/searchbar"
+import ExploreTools from "../../components/explore/explore-tools"
 import ExploreSection from "../../components/explore/explore-section"
 import PlatformCard from "../../components/cards/platform-card"
 
-import { selector } from "../../utils/filter-utils"
-
 const Platforms = ({ data, location }) => {
-  const { allInstrument } = data
+  const { allPlatform, allInstrument } = data
 
   const { selectedFilterId } = location.state || {}
 
   const [isLoading, setLoading] = useState(false)
-  const [sortOrder, toggleSortOrder] = useState("asc")
+  const [sortOrder, setSortOrder] = useState("most used")
   const [selectedFilterIds, setFilter] = useState([])
   const [searchResult, setSearchResult] = useState()
 
@@ -29,6 +28,7 @@ const Platforms = ({ data, location }) => {
     if (selectedFilterId) setFilter([selectedFilterId]) // applying only this one selection as filter
     return () => {
       // cleanup
+      setFilter([])
     }
   }, [selectedFilterId])
 
@@ -46,7 +46,8 @@ const Platforms = ({ data, location }) => {
     setLoading(false)
   }
 
-  const list = data[sortOrder].list
+  const list = allPlatform.list
+    .sort(sortFunctions.platforms[sortOrder])
     .filter(platform =>
       selectedFilterIds.length === 0
         ? true
@@ -67,7 +68,7 @@ const Platforms = ({ data, location }) => {
       <SEO title="Platforms" />
       <PageBody id="platforms">
         <ExploreMenu />
-        <Searchbar
+        <ExploreTools
           submitSearch={submitSearch}
           selectedFilterIds={selectedFilterIds}
           addFilter={addFilter}
@@ -75,7 +76,7 @@ const Platforms = ({ data, location }) => {
           getFilterOptionsById={getFilterOptionsById}
           removeFilter={removeFilter}
           sortOrder={sortOrder}
-          toggleSortOrder={toggleSortOrder}
+          setSortOrder={setSortOrder}
           ref={inputElement}
           category="platforms"
         />
@@ -93,7 +94,7 @@ const Platforms = ({ data, location }) => {
             selectedFilterIds={selectedFilterIds}
             removeFilter={removeFilter}
             filteredCount={list.length}
-            totalCount={data.all.totalCount}
+            totalCount={allPlatform.totalCount}
           >
             {list.map(platform => {
               return (
@@ -103,6 +104,7 @@ const Platforms = ({ data, location }) => {
                     longname={platform.longname}
                     key={platform.id}
                     description={platform.description}
+                    campaigns={platform.campaigns}
                     collectionPeriodIds={platform.collectionPeriodIds}
                     instruments={platform.instruments}
                     stationary={platform.stationary}
@@ -119,15 +121,8 @@ const Platforms = ({ data, location }) => {
 
 export const query = graphql`
   query {
-    all: allPlatform(sort: { order: ASC, fields: short_name }) {
+    allPlatform {
       totalCount
-    }
-    asc: allPlatform(sort: { order: ASC, fields: short_name }) {
-      list: nodes {
-        ...platform
-      }
-    }
-    desc: allPlatform(sort: { order: DESC, fields: short_name }) {
       list: nodes {
         ...platform
       }
@@ -170,13 +165,8 @@ const platformShape = PropTypes.shape({
 
 Platforms.propTypes = {
   data: PropTypes.shape({
-    all: PropTypes.shape({
+    allPlatform: PropTypes.shape({
       totalCount: PropTypes.number.isRequired,
-    }),
-    asc: PropTypes.shape({
-      list: PropTypes.arrayOf(platformShape).isRequired,
-    }),
-    desc: PropTypes.shape({
       list: PropTypes.arrayOf(platformShape).isRequired,
     }),
     allInstrument: PropTypes.shape({

@@ -61,9 +61,14 @@ const Card = ({ children, image, tag, footerList }) => (
     {footerList && (
       <div>
         {footerList.map((o, index) => (
-          <small key={o.title} data-cy={`count${index + 1}`}>
+          <small
+            key={o.title}
+            style={{ whiteSpace: `nowrap` }}
+            data-cy={`count${index + 1}`}
+          >
             {index !== 0 && ` · `}
             <strong>{o.count}</strong> {o.title}
+            {o.count !== 1 && "s"}
           </small>
         ))}
       </div>

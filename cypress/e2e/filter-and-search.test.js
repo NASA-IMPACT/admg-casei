@@ -2,7 +2,7 @@
 
 import api from "../../src/utils/api"
 
-describe("Searchbar", () => {
+describe("Explore Tools", () => {
   ;[
     {
       category: "campaigns",
@@ -25,13 +25,13 @@ describe("Searchbar", () => {
         cy.visit(`/explore/${x.category}`)
       })
       it("renders correctly", () => {
-        cy.get("[data-cy=searchbar]")
+        cy.get("[data-cy=explore-tools]")
 
         cy.get("[data-cy=filter-select]")
           .invoke("text")
           .should("contain", "Filter")
 
-        cy.get("[data-cy=searchbar]")
+        cy.get("[data-cy=explore-tools]")
           .find("input")
           .should("have.attr", "aria-label", "Enter search text")
 
@@ -52,7 +52,7 @@ describe("Searchbar", () => {
 
         cy.window().should("have.prop", "beforeReload", true)
 
-        cy.get("[data-cy=searchbar]")
+        cy.get("[data-cy=explore-tools]")
           .find("input")
           .type("submitting some text")
           .type("{enter}")
@@ -61,51 +61,47 @@ describe("Searchbar", () => {
       })
 
       it("adds and removes filters", () => {
-        cy.get("main")
-          .find("[data-cy=explore-card]")
-          .then($cards => {
-            x.filterExamples.forEach(filterExample => {
-              const numBefore = $cards.length
+        cy.get("[data-cy=explore-card]").then($cards => {
+          x.filterExamples.forEach(filterExample => {
+            const numBefore = $cards.length
 
-              cy.get("[data-cy=filter-select]").select(filterExample)
+            cy.get("[data-cy=filter-select]").select(filterExample)
 
-              cy.get("[data-cy=filter-chip]").should("exist")
+            cy.get("[data-cy=filter-chip]").should("exist")
 
-              cy.get("[data-cy=item-count]").should(
-                "contain",
-                ` of ${numBefore} ${x.category}`
-              )
+            cy.get("[data-cy=item-count]").should(
+              "contain",
+              ` of ${numBefore} ${x.category}`
+            )
 
-              // This check fails because some filter examples do not return any card at all
-              // cy.get("main")
-              //   .find("[data-cy=explore-card]")
-              //   .its("length")
-              //   .should("be.lt", numBefore)
+            cy.get("main")
+              .find("[data-cy=explore-card]")
+              .its("length")
+              .should("be.lt", numBefore)
 
-              cy.get("[data-cy=filter-chip]").find("button").click()
+            cy.get("[data-cy=filter-chip]").find("button").click()
 
-              cy.get("[data-cy=filter-chip]").should("not.exist")
+            cy.get("[data-cy=filter-chip]").should("not.exist")
 
-              cy.get("[data-cy=item-count]").should("not.contain", " of ")
+            cy.get("[data-cy=item-count]").should("not.contain", " of ")
 
-              cy.get("[data-cy=item-count]").should(
-                "have.text",
-                `Showing ${numBefore} ${x.category}`
-              )
+            cy.get("[data-cy=item-count]").should(
+              "have.text",
+              `Showing ${numBefore} ${x.category}`
+            )
 
-              cy.get("main")
-                .find("[data-cy=explore-card]")
-                .its("length")
-                .should("be.eq", numBefore)
-            })
+            cy.get("main")
+              .find("[data-cy=explore-card]")
+              .its("length")
+              .should("be.eq", numBefore)
           })
+        })
       })
 
-      it("sorts the list asc or desc", () => {
-        cy.get("[data-cy=sort-select]").select("asc")
+      it("sorts the list 'a to z' or 'z to a'", () => {
+        cy.get("[data-cy=sort-select]").select("a to z")
 
-        cy.get("main")
-          .find("[data-cy=explore-card]")
+        cy.get("[data-cy=explore-card]")
           .find("big")
           .should($big => {
             const first = $big.first().text()
@@ -114,10 +110,9 @@ describe("Searchbar", () => {
             expect(first < last).to.be.true
           })
 
-        cy.get("[data-cy=sort-select]").select("desc")
+        cy.get("[data-cy=sort-select]").select("z to a")
 
-        cy.get("main")
-          .find("[data-cy=explore-card]")
+        cy.get("[data-cy=explore-card]")
           .find("big")
           .should($big => {
             const first = $big.first().text()
@@ -126,6 +121,49 @@ describe("Searchbar", () => {
             expect(first > last).to.be.true
           })
       })
+
+      if (x.category === "campaigns") {
+        it("sorts the list be most recent", () => {
+          cy.get("[data-cy=sort-select]").select("most recent")
+
+          cy.get("[data-cy=explore-card]")
+            .find("[data-cy=daterange]")
+            .should($small => {
+              const first = $small.first().text()
+              const last = $small.last().text()
+
+              expect(first > last).to.be.true
+            })
+        })
+
+        it("sorts the list be oldest", () => {
+          cy.get("[data-cy=sort-select]").select("oldest")
+
+          cy.get("[data-cy=explore-card]")
+            .find("[data-cy=daterange]")
+            .should($small => {
+              const first = $small.first().text()
+              const last = $small.last().text()
+
+              expect(first < last).to.be.true
+            })
+        })
+      }
+
+      if (x.category === "platforms" || x.category === "instruments") {
+        it("sorts the list be most used", () => {
+          cy.get("[data-cy=sort-select]").select("most used")
+
+          cy.get("[data-cy=explore-card]")
+            .find("[data-cy=count1]")
+            .should($small => {
+              const first = $small.first().text()
+              const last = $small.last().text()
+
+              expect(first > last).to.be.true
+            })
+        })
+      }
     })
   })
 
@@ -138,7 +176,7 @@ describe("Searchbar", () => {
         .stub(api, "fetchSearchResult")
         .as("fetchSearchResultStub")
 
-      cy.get("[data-cy=searchbar]").find("input").type("arctic")
+      cy.get("[data-cy=explore-tools]").find("input").type("arctic")
 
       cy.get("[data-cy=submit]").click()
     })
@@ -162,13 +200,11 @@ describe("Searchbar", () => {
       })
 
       it("filters the campaigns based on api response", () => {
-        cy.get("[data-cy=searchbar]")
+        cy.get("[data-cy=explore-tools]")
           .find("input")
           .should("have.value", "arctic")
 
-        cy.get("main")
-          .find("[data-cy=explore-card]")
-          .should("have.length.greaterThan", 1)
+        cy.get("[data-cy=explore-card]").should("have.length.greaterThan", 1)
       })
     })
 

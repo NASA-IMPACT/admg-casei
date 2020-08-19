@@ -4,24 +4,23 @@ import { graphql, Link } from "gatsby"
 import Spinner from "react-spinkit"
 
 import api from "../../utils/api"
+import { selector, sortFunctions } from "../../utils/filter-utils"
 import theme from "../../utils/theme"
 
 import Layout, { PageBody } from "../../components/layout"
 import SEO from "../../components/seo"
 import ExploreMenu from "../../components/explore/explore-menu"
 import ExploreSection from "../../components/explore/explore-section"
-import Searchbar from "../../components/explore/searchbar"
+import ExploreTools from "../../components/explore/explore-tools"
 import InstrumentCard from "../../components/cards/instrument-card"
 
-import { selector } from "../../utils/filter-utils"
-
 export default function Instruments({ data, location }) {
-  const { allInstrumentType } = data
+  const { allInstrument, allInstrumentType } = data
 
   const { selectedFilterId } = location.state || {}
 
   const [isLoading, setLoading] = useState(false)
-  const [sortOrder, toggleSortOrder] = useState("asc")
+  const [sortOrder, setSortOrder] = useState("most used")
   const [selectedFilterIds, setFilter] = useState([])
   const [searchResult, setSearchResult] = useState()
 
@@ -29,6 +28,7 @@ export default function Instruments({ data, location }) {
     if (selectedFilterId) setFilter([selectedFilterId]) // applying only this one selection as filter
     return () => {
       // cleanup
+      setFilter([])
     }
   }, [selectedFilterId])
 
@@ -46,7 +46,8 @@ export default function Instruments({ data, location }) {
     setLoading(false)
   }
 
-  const list = data[sortOrder].list
+  const list = allInstrument.list
+    .sort(sortFunctions.instruments[sortOrder])
     .filter(instrument => {
       return selectedFilterIds.length === 0
         ? true
@@ -66,7 +67,7 @@ export default function Instruments({ data, location }) {
       <SEO title="Instruments" />
       <PageBody id="instruments">
         <ExploreMenu />
-        <Searchbar
+        <ExploreTools
           submitSearch={submitSearch}
           selectedFilterIds={selectedFilterIds}
           addFilter={addFilter}
@@ -74,7 +75,7 @@ export default function Instruments({ data, location }) {
           getFilterOptionsById={getFilterOptionsById}
           removeFilter={removeFilter}
           sortOrder={sortOrder}
-          toggleSortOrder={toggleSortOrder}
+          setSortOrder={setSortOrder}
           ref={inputElement}
           category="instruments"
         />
@@ -92,7 +93,7 @@ export default function Instruments({ data, location }) {
             selectedFilterIds={selectedFilterIds}
             removeFilter={removeFilter}
             filteredCount={list.length}
-            totalCount={data.all.totalCount}
+            totalCount={allInstrument.totalCount}
           >
             {list.map(instrument => {
               return (
@@ -116,15 +117,8 @@ export default function Instruments({ data, location }) {
 
 export const query = graphql`
   query {
-    all: allInstrument(sort: { order: ASC, fields: short_name }) {
+    allInstrument {
       totalCount
-    }
-    asc: allInstrument(sort: { order: ASC, fields: short_name }) {
-      list: nodes {
-        ...instrumentFields
-      }
-    }
-    desc: allInstrument(sort: { order: DESC, fields: short_name }) {
       list: nodes {
         ...instrumentFields
       }
@@ -159,13 +153,8 @@ const instrumentShape = PropTypes.shape({
 
 Instruments.propTypes = {
   data: PropTypes.shape({
-    all: PropTypes.shape({
+    allInstrument: PropTypes.shape({
       totalCount: PropTypes.number.isRequired,
-    }),
-    asc: PropTypes.shape({
-      list: PropTypes.arrayOf(instrumentShape).isRequired,
-    }),
-    desc: PropTypes.shape({
       list: PropTypes.arrayOf(instrumentShape).isRequired,
     }),
     allInstrumentType: PropTypes.shape({

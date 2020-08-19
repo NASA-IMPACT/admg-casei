@@ -4,19 +4,20 @@ import { graphql, Link } from "gatsby"
 import Spinner from "react-spinkit"
 
 import api from "../../utils/api"
-import { selector } from "../../utils/filter-utils"
+import { selector, sortFunctions } from "../../utils/filter-utils"
 import { formatYearRange } from "../../utils/helpers"
 import theme from "../../utils/theme"
 
 import Layout, { PageBody } from "../../components/layout"
 import SEO from "../../components/seo"
 import ExploreMenu from "../../components/explore/explore-menu"
-import Searchbar from "../../components/explore/searchbar"
+import ExploreTools from "../../components/explore/explore-tools"
 import ExploreSection from "../../components/explore/explore-section"
 import CampaignCard from "../../components/cards/campaign-card"
 
-const Campaigns = ({ data, location }) => {
+export default function Campaigns({ data, location }) {
   const {
+    allCampaign,
     allSeason,
     allFocusArea,
     allGeophysicalConcept,
@@ -26,7 +27,7 @@ const Campaigns = ({ data, location }) => {
   const { selectedFilterId } = location.state || {}
 
   const [isLoading, setLoading] = useState(false)
-  const [sortOrder, toggleSortOrder] = useState("asc")
+  const [sortOrder, setSortOrder] = useState("most recent")
   const [selectedFilterIds, setFilter] = useState([])
   const [searchResult, setSearchResult] = useState()
 
@@ -34,6 +35,7 @@ const Campaigns = ({ data, location }) => {
     if (selectedFilterId) setFilter([selectedFilterId]) // applying only this one selection as filter
     return () => {
       // cleanup
+      setFilter([])
     }
   }, [selectedFilterId])
 
@@ -51,7 +53,8 @@ const Campaigns = ({ data, location }) => {
     setLoading(false)
   }
 
-  const list = data[sortOrder].list
+  const list = allCampaign.list
+    .sort(sortFunctions.campaigns[sortOrder])
     .filter(campaign =>
       selectedFilterIds.length === 0
         ? true
@@ -84,7 +87,7 @@ const Campaigns = ({ data, location }) => {
       <SEO title="Campaigns" />
       <PageBody id="campaigns">
         <ExploreMenu />
-        <Searchbar
+        <ExploreTools
           submitSearch={submitSearch}
           selectedFilterIds={selectedFilterIds}
           addFilter={addFilter}
@@ -92,7 +95,7 @@ const Campaigns = ({ data, location }) => {
           getFilterOptionsById={getFilterOptionsById}
           removeFilter={removeFilter}
           sortOrder={sortOrder}
-          toggleSortOrder={toggleSortOrder}
+          setSortOrder={setSortOrder}
           ref={inputElement}
           category="campaigns"
         />
@@ -110,7 +113,7 @@ const Campaigns = ({ data, location }) => {
             selectedFilterIds={selectedFilterIds}
             removeFilter={removeFilter}
             filteredCount={list.length}
-            totalCount={data.all.totalCount}
+            totalCount={allCampaign.totalCount}
           >
             {list.map(campaign => {
               return (
@@ -140,15 +143,8 @@ const Campaigns = ({ data, location }) => {
 
 export const query = graphql`
   query {
-    all: allCampaign(sort: { order: ASC, fields: short_name }) {
+    allCampaign {
       totalCount
-    }
-    asc: allCampaign(sort: { order: ASC, fields: short_name }) {
-      list: nodes {
-        ...campaignFields
-      }
-    }
-    desc: allCampaign(sort: { order: DESC, fields: short_name }) {
       list: nodes {
         ...campaignFields
       }
@@ -293,13 +289,8 @@ const filterOptionShape = PropTypes.shape({
 
 Campaigns.propTypes = {
   data: PropTypes.shape({
-    all: PropTypes.shape({
+    allCampaign: PropTypes.shape({
       totalCount: PropTypes.number.isRequired,
-    }),
-    asc: PropTypes.shape({
-      list: PropTypes.arrayOf(campaignShape).isRequired,
-    }),
-    desc: PropTypes.shape({
       list: PropTypes.arrayOf(campaignShape).isRequired,
     }),
     allFocusArea: filterOptionShape,
@@ -314,5 +305,3 @@ Campaigns.propTypes = {
     }),
   }),
 }
-
-export default Campaigns

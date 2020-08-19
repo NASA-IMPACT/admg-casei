@@ -256,7 +256,7 @@ exports[`Campaigns page renders correctly 1`] = `
         </ul>
       </div>
       <form
-        data-cy="searchbar"
+        data-cy="explore-tools"
         onSubmit={[Function]}
         style={
           Object {
@@ -797,7 +797,7 @@ exports[`Campaigns page renders correctly 1`] = `
         <select
           aria-label="Select sort order"
           data-cy="sort-select"
-          defaultValue="asc"
+          defaultValue="most recent"
           id="sort-select"
           name="sort"
           onChange={[Function]}
@@ -814,14 +814,24 @@ exports[`Campaigns page renders correctly 1`] = `
           }
         >
           <option
-            value="asc"
+            value="a to z"
           >
-            A to Z
+            A TO Z
           </option>
           <option
-            value="desc"
+            value="z to a"
           >
-            Z to A
+            Z TO A
+          </option>
+          <option
+            value="oldest"
+          >
+            OLDEST
+          </option>
+          <option
+            value="most recent"
+          >
+            MOST RECENT
           </option>
         </select>
       </form>
@@ -858,580 +868,6 @@ exports[`Campaigns page renders correctly 1`] = `
             }
           }
         >
-          <a
-            href="/campaign/951482fa-5748-46ba-aed5-aab8b106b103"
-          >
-            <div
-              data-cy="explore-card"
-              style={
-                Object {
-                  "backgroundColor": "#303641",
-                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "height": "100%",
-                  "justifyContent": "space-between",
-                  "padding": "1rem",
-                }
-              }
-            >
-              <div
-                style={
-                  Object {
-                    "marginBottom": "2rem",
-                  }
-                }
-              >
-                <div
-                  className="c0"
-                >
-                  <img
-                    alt="logo"
-                    fixed={
-                      Object {
-                        "src": "/static/070840eb6299020cd65fd46e27c54400/ad39b/aces_logo.png",
-                      }
-                    }
-                    src="test-image.png"
-                    style={
-                      Object {
-                        "margin": "0",
-                      }
-                    }
-                  />
-                </div>
-                <big
-                  data-cy="shortname"
-                  style={
-                    Object {
-                      "fontWeight": "bold",
-                      "marginTop": "0.5rem",
-                    }
-                  }
-                >
-                  ACES
-                </big>
-                <p
-                  data-cy="longname"
-                >
-                  Altus Cumulus Electrification Study
-                </p>
-                <div>
-                  <small
-                    data-cy="daterange"
-                  >
-                    2002
-                  </small>
-                </div>
-                <div>
-                  <small
-                    data-cy="region"
-                  >
-                    Florida Everglades
-                  </small>
-                </div>
-              </div>
-              <div>
-                <small
-                  data-cy="count1"
-                >
-                  <strong>
-                    1
-                  </strong>
-                   
-                  Deployments
-                </small>
-                <small
-                  data-cy="count2"
-                >
-                   · 
-                  <strong>
-                    0
-                  </strong>
-                   
-                  Data Products
-                </small>
-              </div>
-            </div>
-          </a>
-          <a
-            href="/campaign/e48c2d79-822b-4c9e-9f72-2776d5d1eac6"
-          >
-            <div
-              data-cy="explore-card"
-              style={
-                Object {
-                  "backgroundColor": "#303641",
-                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "height": "100%",
-                  "justifyContent": "space-between",
-                  "padding": "1rem",
-                }
-              }
-            >
-              <div
-                style={
-                  Object {
-                    "marginBottom": "2rem",
-                  }
-                }
-              >
-                <div
-                  className="c0"
-                >
-                  <img
-                    alt="ARCTAS logo"
-                    fixed={
-                      Object {
-                        "src": "/static/2bd234de67183d020fabe8584d7713ff/f8771/arctas_spring.jpg",
-                      }
-                    }
-                    src="test-image.png"
-                    style={
-                      Object {
-                        "margin": "0",
-                      }
-                    }
-                  />
-                </div>
-                <big
-                  data-cy="shortname"
-                  style={
-                    Object {
-                      "fontWeight": "bold",
-                      "marginTop": "0.5rem",
-                    }
-                  }
-                >
-                  ARCTAS
-                </big>
-                <p
-                  data-cy="longname"
-                >
-                  Arctic Research of the Composition of the Troposphere from Aircraft and Satellites
-                </p>
-                <div>
-                  <small
-                    data-cy="daterange"
-                  >
-                    2008
-                  </small>
-                </div>
-                <div>
-                  <small
-                    data-cy="region"
-                  >
-                    Alaska, Western Canada, California
-                  </small>
-                </div>
-              </div>
-              <div>
-                <small
-                  data-cy="count1"
-                >
-                  <strong>
-                    3
-                  </strong>
-                   
-                  Deployments
-                </small>
-                <small
-                  data-cy="count2"
-                >
-                   · 
-                  <strong>
-                    0
-                  </strong>
-                   
-                  Data Products
-                </small>
-              </div>
-            </div>
-          </a>
-          <a
-            href="/campaign/0c68f350-b544-4b52-9f46-2aceb6aa1b7d"
-          >
-            <div
-              data-cy="explore-card"
-              style={
-                Object {
-                  "backgroundColor": "#303641",
-                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "height": "100%",
-                  "justifyContent": "space-between",
-                  "padding": "1rem",
-                }
-              }
-            >
-              <div
-                style={
-                  Object {
-                    "marginBottom": "2rem",
-                  }
-                }
-              >
-                <div
-                  className="c0"
-                >
-                  <img
-                    alt="AirMOSS logo"
-                    fixed={
-                      Object {
-                        "src": "/static/6cac19092a1bce4be3f0a8b6e564adb3/ad39b/airmossLogo.png",
-                      }
-                    }
-                    src="test-image.png"
-                    style={
-                      Object {
-                        "margin": "0",
-                      }
-                    }
-                  />
-                </div>
-                <big
-                  data-cy="shortname"
-                  style={
-                    Object {
-                      "fontWeight": "bold",
-                      "marginTop": "0.5rem",
-                    }
-                  }
-                >
-                  AirMOSS
-                </big>
-                <p
-                  data-cy="longname"
-                >
-                  Airborne Microwave Observatory of Subcanopy and Subsurface
-                </p>
-                <div>
-                  <small
-                    data-cy="daterange"
-                  >
-                    2012—2015
-                  </small>
-                </div>
-                <div>
-                  <small
-                    data-cy="region"
-                  >
-                    North America
-                  </small>
-                </div>
-              </div>
-              <div>
-                <small
-                  data-cy="count1"
-                >
-                  <strong>
-                    34
-                  </strong>
-                   
-                  Deployments
-                </small>
-                <small
-                  data-cy="count2"
-                >
-                   · 
-                  <strong>
-                    0
-                  </strong>
-                   
-                  Data Products
-                </small>
-              </div>
-            </div>
-          </a>
-          <a
-            href="/campaign/03b728ae-2235-488c-80ee-570dcf602f3b"
-          >
-            <div
-              data-cy="explore-card"
-              style={
-                Object {
-                  "backgroundColor": "#303641",
-                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "height": "100%",
-                  "justifyContent": "space-between",
-                  "padding": "1rem",
-                }
-              }
-            >
-              <div
-                style={
-                  Object {
-                    "marginBottom": "2rem",
-                  }
-                }
-              >
-                <div
-                  className="c0"
-                >
-                  <img
-                    alt="CARVE logo"
-                    fixed={
-                      Object {
-                        "src": "/static/3dec137acafa7ac0c3a74368b2cb56b3/f8771/carve_logo_update.jpg",
-                      }
-                    }
-                    src="test-image.png"
-                    style={
-                      Object {
-                        "margin": "0",
-                      }
-                    }
-                  />
-                </div>
-                <big
-                  data-cy="shortname"
-                  style={
-                    Object {
-                      "fontWeight": "bold",
-                      "marginTop": "0.5rem",
-                    }
-                  }
-                >
-                  CARVE
-                </big>
-                <p
-                  data-cy="longname"
-                >
-                  Carbon in Arctic Reservoirs Vulnerability Experiment
-                </p>
-                <div>
-                  <small
-                    data-cy="daterange"
-                  >
-                    2012—2015
-                  </small>
-                </div>
-                <div>
-                  <small
-                    data-cy="region"
-                  >
-                    Alaska
-                  </small>
-                </div>
-              </div>
-              <div>
-                <small
-                  data-cy="count1"
-                >
-                  <strong>
-                    4
-                  </strong>
-                   
-                  Deployments
-                </small>
-                <small
-                  data-cy="count2"
-                >
-                   · 
-                  <strong>
-                    0
-                  </strong>
-                   
-                  Data Products
-                </small>
-              </div>
-            </div>
-          </a>
-          <a
-            href="/campaign/6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
-          >
-            <div
-              data-cy="explore-card"
-              style={
-                Object {
-                  "backgroundColor": "#303641",
-                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "height": "100%",
-                  "justifyContent": "space-between",
-                  "padding": "1rem",
-                }
-              }
-            >
-              <div
-                style={
-                  Object {
-                    "marginBottom": "2rem",
-                  }
-                }
-              >
-                <div
-                  className="c0"
-                >
-                  <img
-                    alt="DC3 logo"
-                    fixed={
-                      Object {
-                        "src": "/static/c4b36cb85ef25d65d08739c329b04e52/ad39b/dc3-logo.png",
-                      }
-                    }
-                    src="test-image.png"
-                    style={
-                      Object {
-                        "margin": "0",
-                      }
-                    }
-                  />
-                </div>
-                <big
-                  data-cy="shortname"
-                  style={
-                    Object {
-                      "fontWeight": "bold",
-                      "marginTop": "0.5rem",
-                    }
-                  }
-                >
-                  DC3
-                </big>
-                <p
-                  data-cy="longname"
-                >
-                  Deep Convective Clouds & Chemistry
-                </p>
-                <div>
-                  <small
-                    data-cy="daterange"
-                  >
-                    2012
-                  </small>
-                </div>
-                <div>
-                  <small
-                    data-cy="region"
-                  >
-                    Northeastern Colorado, West Texas to Central Oklahoma, Northern Alabama
-                  </small>
-                </div>
-              </div>
-              <div>
-                <small
-                  data-cy="count1"
-                >
-                  <strong>
-                    1
-                  </strong>
-                   
-                  Deployments
-                </small>
-                <small
-                  data-cy="count2"
-                >
-                   · 
-                  <strong />
-                   
-                  Data Products
-                </small>
-              </div>
-            </div>
-          </a>
-          <a
-            href="/campaign/61616a26-fc33-450e-bd53-a7690d03e6b6"
-          >
-            <div
-              data-cy="explore-card"
-              style={
-                Object {
-                  "backgroundColor": "#303641",
-                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "height": "100%",
-                  "justifyContent": "space-between",
-                  "padding": "1rem",
-                }
-              }
-            >
-              <div
-                style={
-                  Object {
-                    "marginBottom": "2rem",
-                  }
-                }
-              >
-                <div
-                  className="c0"
-                >
-                  <img
-                    alt="GCPEx logo"
-                    fixed={
-                      Object {
-                        "src": "/static/4e1cc27c28411e8c942f140039bb625b/ad39b/gcpexlogo.png",
-                      }
-                    }
-                    src="test-image.png"
-                    style={
-                      Object {
-                        "margin": "0",
-                      }
-                    }
-                  />
-                </div>
-                <big
-                  data-cy="shortname"
-                  style={
-                    Object {
-                      "fontWeight": "bold",
-                      "marginTop": "0.5rem",
-                    }
-                  }
-                >
-                  GCPEx
-                </big>
-                <p
-                  data-cy="longname"
-                >
-                  GPM Cold Season Precipitation Experiment
-                </p>
-                <div>
-                  <small
-                    data-cy="daterange"
-                  >
-                    2012
-                  </small>
-                </div>
-                <div>
-                  <small
-                    data-cy="region"
-                  >
-                    Ontario, Canada and northern portions of the United States (e.g., New York state, the New England area, etc.)
-                  </small>
-                </div>
-              </div>
-              <div>
-                <small
-                  data-cy="count1"
-                >
-                  <strong>
-                    1
-                  </strong>
-                   
-                  Deployments
-                </small>
-                <small
-                  data-cy="count2"
-                >
-                   · 
-                  <strong>
-                    0
-                  </strong>
-                   
-                  Data Products
-                </small>
-              </div>
-            </div>
-          </a>
           <a
             href="/campaign/be798dc9-dccb-4dc2-8e6b-d395c1bcbeb6"
           >
@@ -1499,214 +935,33 @@ exports[`Campaigns page renders correctly 1`] = `
               <div>
                 <small
                   data-cy="count1"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
                 >
                   <strong>
                     1
                   </strong>
                    
-                  Deployments
+                  Deployment
                 </small>
                 <small
                   data-cy="count2"
-                >
-                   · 
-                  <strong>
-                    0
-                  </strong>
-                   
-                  Data Products
-                </small>
-              </div>
-            </div>
-          </a>
-          <a
-            href="/campaign/7739c801-46e6-4ddd-ad30-351626dcccdb"
-          >
-            <div
-              data-cy="explore-card"
-              style={
-                Object {
-                  "backgroundColor": "#303641",
-                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "height": "100%",
-                  "justifyContent": "space-between",
-                  "padding": "1rem",
-                }
-              }
-            >
-              <div
-                style={
-                  Object {
-                    "marginBottom": "2rem",
-                  }
-                }
-              >
-                <div
-                  className="c0"
-                >
-                  <img
-                    alt="GRIP logo"
-                    fixed={
-                      Object {
-                        "src": "/static/2803312240ff21bec233dee65f422031/f8771/464732main_grip_graphic_med.jpg",
-                      }
-                    }
-                    src="test-image.png"
-                    style={
-                      Object {
-                        "margin": "0",
-                      }
-                    }
-                  />
-                </div>
-                <big
-                  data-cy="shortname"
                   style={
                     Object {
-                      "fontWeight": "bold",
-                      "marginTop": "0.5rem",
+                      "whiteSpace": "nowrap",
                     }
                   }
-                >
-                  GRIP
-                </big>
-                <p
-                  data-cy="longname"
-                >
-                  Genesis and Rapid Intensification Processes
-                </p>
-                <div>
-                  <small
-                    data-cy="daterange"
-                  >
-                    2010
-                  </small>
-                </div>
-                <div>
-                  <small
-                    data-cy="region"
-                  >
-                    Tropical Atlantic, Gulf of Mexico, Eastern North Pacific, Caribbean Sea
-                  </small>
-                </div>
-              </div>
-              <div>
-                <small
-                  data-cy="count1"
-                >
-                  <strong>
-                    1
-                  </strong>
-                   
-                  Deployments
-                </small>
-                <small
-                  data-cy="count2"
                 >
                    · 
                   <strong>
                     0
                   </strong>
                    
-                  Data Products
-                </small>
-              </div>
-            </div>
-          </a>
-          <a
-            href="/campaign/c1e56561-6726-4832-8dbe-0453b10ff36c"
-          >
-            <div
-              data-cy="explore-card"
-              style={
-                Object {
-                  "backgroundColor": "#303641",
-                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "height": "100%",
-                  "justifyContent": "space-between",
-                  "padding": "1rem",
-                }
-              }
-            >
-              <div
-                style={
-                  Object {
-                    "marginBottom": "2rem",
-                  }
-                }
-              >
-                <div
-                  className="c0"
-                >
-                  <img
-                    alt="HS3 logo"
-                    fixed={
-                      Object {
-                        "src": "/static/3d520693bc11c953f22f86f860ffd08a/ad39b/HS3_logo.png",
-                      }
-                    }
-                    src="test-image.png"
-                    style={
-                      Object {
-                        "margin": "0",
-                      }
-                    }
-                  />
-                </div>
-                <big
-                  data-cy="shortname"
-                  style={
-                    Object {
-                      "fontWeight": "bold",
-                      "marginTop": "0.5rem",
-                    }
-                  }
-                >
-                  HS3
-                </big>
-                <p
-                  data-cy="longname"
-                >
-                  Hurricane and Severe Storm Sentinel
-                </p>
-                <div>
-                  <small
-                    data-cy="daterange"
-                  >
-                    2012—2014
-                  </small>
-                </div>
-                <div>
-                  <small
-                    data-cy="region"
-                  >
-                    Subtropical Atlantic Ocean and Gulf of Mexico
-                  </small>
-                </div>
-              </div>
-              <div>
-                <small
-                  data-cy="count1"
-                >
-                  <strong>
-                    3
-                  </strong>
-                   
-                  Deployments
-                </small>
-                <small
-                  data-cy="count2"
-                >
-                   · 
-                  <strong>
-                    0
-                  </strong>
-                   
-                  Data Products
+                  Data Product
+                  s
                 </small>
               </div>
             </div>
@@ -1787,22 +1042,891 @@ exports[`Campaigns page renders correctly 1`] = `
               <div>
                 <small
                   data-cy="count1"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
                 >
                   <strong>
                     1
                   </strong>
                    
-                  Deployments
+                  Deployment
                 </small>
                 <small
                   data-cy="count2"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
                 >
                    · 
                   <strong>
                     0
                   </strong>
                    
-                  Data Products
+                  Data Product
+                  s
+                </small>
+              </div>
+            </div>
+          </a>
+          <a
+            href="/campaign/03b728ae-2235-488c-80ee-570dcf602f3b"
+          >
+            <div
+              data-cy="explore-card"
+              style={
+                Object {
+                  "backgroundColor": "#303641",
+                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "height": "100%",
+                  "justifyContent": "space-between",
+                  "padding": "1rem",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "marginBottom": "2rem",
+                  }
+                }
+              >
+                <div
+                  className="c0"
+                >
+                  <img
+                    alt="CARVE logo"
+                    fixed={
+                      Object {
+                        "src": "/static/3dec137acafa7ac0c3a74368b2cb56b3/f8771/carve_logo_update.jpg",
+                      }
+                    }
+                    src="test-image.png"
+                    style={
+                      Object {
+                        "margin": "0",
+                      }
+                    }
+                  />
+                </div>
+                <big
+                  data-cy="shortname"
+                  style={
+                    Object {
+                      "fontWeight": "bold",
+                      "marginTop": "0.5rem",
+                    }
+                  }
+                >
+                  CARVE
+                </big>
+                <p
+                  data-cy="longname"
+                >
+                  Carbon in Arctic Reservoirs Vulnerability Experiment
+                </p>
+                <div>
+                  <small
+                    data-cy="daterange"
+                  >
+                    2012—2015
+                  </small>
+                </div>
+                <div>
+                  <small
+                    data-cy="region"
+                  >
+                    Alaska
+                  </small>
+                </div>
+              </div>
+              <div>
+                <small
+                  data-cy="count1"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                  <strong>
+                    4
+                  </strong>
+                   
+                  Deployment
+                  s
+                </small>
+                <small
+                  data-cy="count2"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                   · 
+                  <strong>
+                    0
+                  </strong>
+                   
+                  Data Product
+                  s
+                </small>
+              </div>
+            </div>
+          </a>
+          <a
+            href="/campaign/0c68f350-b544-4b52-9f46-2aceb6aa1b7d"
+          >
+            <div
+              data-cy="explore-card"
+              style={
+                Object {
+                  "backgroundColor": "#303641",
+                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "height": "100%",
+                  "justifyContent": "space-between",
+                  "padding": "1rem",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "marginBottom": "2rem",
+                  }
+                }
+              >
+                <div
+                  className="c0"
+                >
+                  <img
+                    alt="AirMOSS logo"
+                    fixed={
+                      Object {
+                        "src": "/static/6cac19092a1bce4be3f0a8b6e564adb3/ad39b/airmossLogo.png",
+                      }
+                    }
+                    src="test-image.png"
+                    style={
+                      Object {
+                        "margin": "0",
+                      }
+                    }
+                  />
+                </div>
+                <big
+                  data-cy="shortname"
+                  style={
+                    Object {
+                      "fontWeight": "bold",
+                      "marginTop": "0.5rem",
+                    }
+                  }
+                >
+                  AirMOSS
+                </big>
+                <p
+                  data-cy="longname"
+                >
+                  Airborne Microwave Observatory of Subcanopy and Subsurface
+                </p>
+                <div>
+                  <small
+                    data-cy="daterange"
+                  >
+                    2012—2015
+                  </small>
+                </div>
+                <div>
+                  <small
+                    data-cy="region"
+                  >
+                    North America
+                  </small>
+                </div>
+              </div>
+              <div>
+                <small
+                  data-cy="count1"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                  <strong>
+                    34
+                  </strong>
+                   
+                  Deployment
+                  s
+                </small>
+                <small
+                  data-cy="count2"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                   · 
+                  <strong>
+                    0
+                  </strong>
+                   
+                  Data Product
+                  s
+                </small>
+              </div>
+            </div>
+          </a>
+          <a
+            href="/campaign/c1e56561-6726-4832-8dbe-0453b10ff36c"
+          >
+            <div
+              data-cy="explore-card"
+              style={
+                Object {
+                  "backgroundColor": "#303641",
+                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "height": "100%",
+                  "justifyContent": "space-between",
+                  "padding": "1rem",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "marginBottom": "2rem",
+                  }
+                }
+              >
+                <div
+                  className="c0"
+                >
+                  <img
+                    alt="HS3 logo"
+                    fixed={
+                      Object {
+                        "src": "/static/3d520693bc11c953f22f86f860ffd08a/ad39b/HS3_logo.png",
+                      }
+                    }
+                    src="test-image.png"
+                    style={
+                      Object {
+                        "margin": "0",
+                      }
+                    }
+                  />
+                </div>
+                <big
+                  data-cy="shortname"
+                  style={
+                    Object {
+                      "fontWeight": "bold",
+                      "marginTop": "0.5rem",
+                    }
+                  }
+                >
+                  HS3
+                </big>
+                <p
+                  data-cy="longname"
+                >
+                  Hurricane and Severe Storm Sentinel
+                </p>
+                <div>
+                  <small
+                    data-cy="daterange"
+                  >
+                    2012—2014
+                  </small>
+                </div>
+                <div>
+                  <small
+                    data-cy="region"
+                  >
+                    Subtropical Atlantic Ocean and Gulf of Mexico
+                  </small>
+                </div>
+              </div>
+              <div>
+                <small
+                  data-cy="count1"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                  <strong>
+                    3
+                  </strong>
+                   
+                  Deployment
+                  s
+                </small>
+                <small
+                  data-cy="count2"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                   · 
+                  <strong>
+                    0
+                  </strong>
+                   
+                  Data Product
+                  s
+                </small>
+              </div>
+            </div>
+          </a>
+          <a
+            href="/campaign/6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+          >
+            <div
+              data-cy="explore-card"
+              style={
+                Object {
+                  "backgroundColor": "#303641",
+                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "height": "100%",
+                  "justifyContent": "space-between",
+                  "padding": "1rem",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "marginBottom": "2rem",
+                  }
+                }
+              >
+                <div
+                  className="c0"
+                >
+                  <img
+                    alt="DC3 logo"
+                    fixed={
+                      Object {
+                        "src": "/static/c4b36cb85ef25d65d08739c329b04e52/ad39b/dc3-logo.png",
+                      }
+                    }
+                    src="test-image.png"
+                    style={
+                      Object {
+                        "margin": "0",
+                      }
+                    }
+                  />
+                </div>
+                <big
+                  data-cy="shortname"
+                  style={
+                    Object {
+                      "fontWeight": "bold",
+                      "marginTop": "0.5rem",
+                    }
+                  }
+                >
+                  DC3
+                </big>
+                <p
+                  data-cy="longname"
+                >
+                  Deep Convective Clouds & Chemistry
+                </p>
+                <div>
+                  <small
+                    data-cy="daterange"
+                  >
+                    2012
+                  </small>
+                </div>
+                <div>
+                  <small
+                    data-cy="region"
+                  >
+                    Northeastern Colorado, West Texas to Central Oklahoma, Northern Alabama
+                  </small>
+                </div>
+              </div>
+              <div>
+                <small
+                  data-cy="count1"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                  <strong>
+                    1
+                  </strong>
+                   
+                  Deployment
+                </small>
+                <small
+                  data-cy="count2"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                   · 
+                  <strong />
+                   
+                  Data Product
+                  s
+                </small>
+              </div>
+            </div>
+          </a>
+          <a
+            href="/campaign/61616a26-fc33-450e-bd53-a7690d03e6b6"
+          >
+            <div
+              data-cy="explore-card"
+              style={
+                Object {
+                  "backgroundColor": "#303641",
+                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "height": "100%",
+                  "justifyContent": "space-between",
+                  "padding": "1rem",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "marginBottom": "2rem",
+                  }
+                }
+              >
+                <div
+                  className="c0"
+                >
+                  <img
+                    alt="GCPEx logo"
+                    fixed={
+                      Object {
+                        "src": "/static/4e1cc27c28411e8c942f140039bb625b/ad39b/gcpexlogo.png",
+                      }
+                    }
+                    src="test-image.png"
+                    style={
+                      Object {
+                        "margin": "0",
+                      }
+                    }
+                  />
+                </div>
+                <big
+                  data-cy="shortname"
+                  style={
+                    Object {
+                      "fontWeight": "bold",
+                      "marginTop": "0.5rem",
+                    }
+                  }
+                >
+                  GCPEx
+                </big>
+                <p
+                  data-cy="longname"
+                >
+                  GPM Cold Season Precipitation Experiment
+                </p>
+                <div>
+                  <small
+                    data-cy="daterange"
+                  >
+                    2012
+                  </small>
+                </div>
+                <div>
+                  <small
+                    data-cy="region"
+                  >
+                    Ontario, Canada and northern portions of the United States (e.g., New York state, the New England area, etc.)
+                  </small>
+                </div>
+              </div>
+              <div>
+                <small
+                  data-cy="count1"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                  <strong>
+                    1
+                  </strong>
+                   
+                  Deployment
+                </small>
+                <small
+                  data-cy="count2"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                   · 
+                  <strong>
+                    0
+                  </strong>
+                   
+                  Data Product
+                  s
+                </small>
+              </div>
+            </div>
+          </a>
+          <a
+            href="/campaign/7739c801-46e6-4ddd-ad30-351626dcccdb"
+          >
+            <div
+              data-cy="explore-card"
+              style={
+                Object {
+                  "backgroundColor": "#303641",
+                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "height": "100%",
+                  "justifyContent": "space-between",
+                  "padding": "1rem",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "marginBottom": "2rem",
+                  }
+                }
+              >
+                <div
+                  className="c0"
+                >
+                  <img
+                    alt="GRIP logo"
+                    fixed={
+                      Object {
+                        "src": "/static/2803312240ff21bec233dee65f422031/f8771/464732main_grip_graphic_med.jpg",
+                      }
+                    }
+                    src="test-image.png"
+                    style={
+                      Object {
+                        "margin": "0",
+                      }
+                    }
+                  />
+                </div>
+                <big
+                  data-cy="shortname"
+                  style={
+                    Object {
+                      "fontWeight": "bold",
+                      "marginTop": "0.5rem",
+                    }
+                  }
+                >
+                  GRIP
+                </big>
+                <p
+                  data-cy="longname"
+                >
+                  Genesis and Rapid Intensification Processes
+                </p>
+                <div>
+                  <small
+                    data-cy="daterange"
+                  >
+                    2010
+                  </small>
+                </div>
+                <div>
+                  <small
+                    data-cy="region"
+                  >
+                    Tropical Atlantic, Gulf of Mexico, Eastern North Pacific, Caribbean Sea
+                  </small>
+                </div>
+              </div>
+              <div>
+                <small
+                  data-cy="count1"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                  <strong>
+                    1
+                  </strong>
+                   
+                  Deployment
+                </small>
+                <small
+                  data-cy="count2"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                   · 
+                  <strong>
+                    0
+                  </strong>
+                   
+                  Data Product
+                  s
+                </small>
+              </div>
+            </div>
+          </a>
+          <a
+            href="/campaign/e48c2d79-822b-4c9e-9f72-2776d5d1eac6"
+          >
+            <div
+              data-cy="explore-card"
+              style={
+                Object {
+                  "backgroundColor": "#303641",
+                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "height": "100%",
+                  "justifyContent": "space-between",
+                  "padding": "1rem",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "marginBottom": "2rem",
+                  }
+                }
+              >
+                <div
+                  className="c0"
+                >
+                  <img
+                    alt="ARCTAS logo"
+                    fixed={
+                      Object {
+                        "src": "/static/2bd234de67183d020fabe8584d7713ff/f8771/arctas_spring.jpg",
+                      }
+                    }
+                    src="test-image.png"
+                    style={
+                      Object {
+                        "margin": "0",
+                      }
+                    }
+                  />
+                </div>
+                <big
+                  data-cy="shortname"
+                  style={
+                    Object {
+                      "fontWeight": "bold",
+                      "marginTop": "0.5rem",
+                    }
+                  }
+                >
+                  ARCTAS
+                </big>
+                <p
+                  data-cy="longname"
+                >
+                  Arctic Research of the Composition of the Troposphere from Aircraft and Satellites
+                </p>
+                <div>
+                  <small
+                    data-cy="daterange"
+                  >
+                    2008
+                  </small>
+                </div>
+                <div>
+                  <small
+                    data-cy="region"
+                  >
+                    Alaska, Western Canada, California
+                  </small>
+                </div>
+              </div>
+              <div>
+                <small
+                  data-cy="count1"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                  <strong>
+                    3
+                  </strong>
+                   
+                  Deployment
+                  s
+                </small>
+                <small
+                  data-cy="count2"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                   · 
+                  <strong>
+                    0
+                  </strong>
+                   
+                  Data Product
+                  s
+                </small>
+              </div>
+            </div>
+          </a>
+          <a
+            href="/campaign/951482fa-5748-46ba-aed5-aab8b106b103"
+          >
+            <div
+              data-cy="explore-card"
+              style={
+                Object {
+                  "backgroundColor": "#303641",
+                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "height": "100%",
+                  "justifyContent": "space-between",
+                  "padding": "1rem",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "marginBottom": "2rem",
+                  }
+                }
+              >
+                <div
+                  className="c0"
+                >
+                  <img
+                    alt="logo"
+                    fixed={
+                      Object {
+                        "src": "/static/070840eb6299020cd65fd46e27c54400/ad39b/aces_logo.png",
+                      }
+                    }
+                    src="test-image.png"
+                    style={
+                      Object {
+                        "margin": "0",
+                      }
+                    }
+                  />
+                </div>
+                <big
+                  data-cy="shortname"
+                  style={
+                    Object {
+                      "fontWeight": "bold",
+                      "marginTop": "0.5rem",
+                    }
+                  }
+                >
+                  ACES
+                </big>
+                <p
+                  data-cy="longname"
+                >
+                  Altus Cumulus Electrification Study
+                </p>
+                <div>
+                  <small
+                    data-cy="daterange"
+                  >
+                    2002
+                  </small>
+                </div>
+                <div>
+                  <small
+                    data-cy="region"
+                  >
+                    Florida Everglades
+                  </small>
+                </div>
+              </div>
+              <div>
+                <small
+                  data-cy="count1"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                  <strong>
+                    1
+                  </strong>
+                   
+                  Deployment
+                </small>
+                <small
+                  data-cy="count2"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                   · 
+                  <strong>
+                    0
+                  </strong>
+                   
+                  Data Product
+                  s
                 </small>
               </div>
             </div>
