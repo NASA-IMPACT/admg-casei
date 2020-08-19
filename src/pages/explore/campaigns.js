@@ -27,7 +27,7 @@ export default function Campaigns({ data, location }) {
   const { selectedFilterId } = location.state || {}
 
   const [isLoading, setLoading] = useState(false)
-  const [sortOrder, setSortOrder] = useState("latest")
+  const [sortOrder, setSortOrder] = useState("most recent")
   const [selectedFilterIds, setFilter] = useState([])
   const [searchResult, setSearchResult] = useState()
 

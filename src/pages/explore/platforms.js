@@ -20,7 +20,7 @@ const Platforms = ({ data, location }) => {
   const { selectedFilterId } = location.state || {}
 
   const [isLoading, setLoading] = useState(false)
-  const [sortOrder, setSortOrder] = useState("popular")
+  const [sortOrder, setSortOrder] = useState("most used")
   const [selectedFilterIds, setFilter] = useState([])
   const [searchResult, setSearchResult] = useState()
 

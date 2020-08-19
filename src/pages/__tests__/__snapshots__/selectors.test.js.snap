@@ -894,7 +894,7 @@ exports[`Campaigns page renders correctly 1`] = `
         <select
           aria-label="Select sort order"
           data-cy="sort-select"
-          defaultValue="latest"
+          defaultValue="most recent"
           id="sort-select"
           name="sort"
           onChange={[Function]}
@@ -911,14 +911,14 @@ exports[`Campaigns page renders correctly 1`] = `
           }
         >
           <option
-            value="asc"
+            value="a to z"
           >
-            ASC
+            A TO Z
           </option>
           <option
-            value="desc"
+            value="z to a"
           >
-            DESC
+            Z TO A
           </option>
           <option
             value="oldest"
@@ -926,9 +926,9 @@ exports[`Campaigns page renders correctly 1`] = `
             OLDEST
           </option>
           <option
-            value="latest"
+            value="most recent"
           >
-            LATEST
+            MOST RECENT
           </option>
         </select>
       </form>
