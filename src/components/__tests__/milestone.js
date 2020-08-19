@@ -1,6 +1,24 @@
 import React from "react"
 import renderer from "react-test-renderer"
+import * as Gatsby from "gatsby"
+
 import Milestone from "../timeline/milestone"
+
+const useStaticQuery = jest.spyOn(Gatsby, "useStaticQuery")
+useStaticQuery.mockImplementation(() => ({
+  deploymentPlaceholder: {
+    nasaImgAlt:
+      "NASA’s Global Hawk aircraft being deployed to Florida from Armstrong Flight Research Center",
+    nasaImg: {
+      childImageSharp: {
+        fluid: {
+          base64: "data:image/jpeg;base64,/9j/2wBDABALDA4M",
+        },
+      },
+    },
+    shortname: "placeholder-deployment",
+  },
+}))
 
 describe("MileStone", () => {
   it("renders correctly", () => {

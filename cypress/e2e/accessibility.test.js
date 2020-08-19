@@ -26,8 +26,11 @@ describe("Accessibility tests", () => {
     cy.get("[data-cy=explore-card]").first().click().checkA11y()
   })
 
-  it("Navigates to page /resources and checks for accessibility violations", () => {
-    cy.get("[data-cy=nav-select]").select("glossary").checkA11y()
+  it("Navigates to page /glossary and checks for accessibility violations", () => {
+    cy.get("nav")
+      .findByText(/Glossary/i)
+      .click()
+      .checkA11y()
   })
 
   it("Navigates to page /about and checks for accessibility violations", () => {

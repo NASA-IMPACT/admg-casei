@@ -152,12 +152,11 @@ const Footer = ({ shortname }) => {
               <div>
                 NASA Official:{" "}
                 <span
-                  className="placeholder"
                   style={{
                     fontWeight: `normal`,
                   }}
                 >
-                  Name of Official
+                  Rahul Ramachandran
                 </span>
               </div>
             </div>
@@ -171,12 +170,13 @@ const Footer = ({ shortname }) => {
               fontWeight: `bold`,
             }}
           >
-            <div className="placeholder" style={{ marginLeft: `3rem` }}>
+            {/* TODO: Add back in with real links */}
+            {/* <div className="placeholder" style={{ marginLeft: `3rem` }}>
               Privacy
             </div>
             <div className="placeholder" style={{ marginLeft: `3rem` }}>
               Contact NASA
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

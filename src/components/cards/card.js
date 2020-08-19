@@ -40,12 +40,7 @@ const Card = ({ children, image, tag, footerList }) => (
           />
         ) : (
           image && (
-            <img
-              src={PlaceholderLogo}
-              alt={image.nasaImgAlt}
-              width="45"
-              height="45"
-            />
+            <img src={PlaceholderLogo} alt={image.nasaImgAlt} height="85" />
           )
         )}
         {tag && (
