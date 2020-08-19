@@ -16,16 +16,14 @@ const Instrument = ({ id, shortname, caption }) => {
   // TODO: This mapping is more or less random
   // we don't have icons for the existing instrument types.
   const icons = {
-    "In Situ - Magnetic/Electric": (
-      <AirborneInsitu color={theme.type.base.color} />
-    ),
+    "In Situ - Magnetic/Electric": <AirborneInsitu color={theme.color.base} />,
     "In Situ - Spectrometer/Radiometer": (
-      <GroundInstruments color={theme.type.base.color} />
+      <GroundInstruments color={theme.color.base} />
     ),
-    Remote: <AirborneRemoteSensors color={theme.type.base.color} />,
-    "Solar/Space": <ExperimentalInstruments color={theme.type.base.color} />,
-    NID: <OceanInstruments color={theme.type.base.color} />,
-    "Data Analyses": <FacilityInstruments color={theme.type.base.color} />,
+    Remote: <AirborneRemoteSensors color={theme.color.base} />,
+    "Solar/Space": <ExperimentalInstruments color={theme.color.base} />,
+    NID: <OceanInstruments color={theme.color.base} />,
+    "Data Analyses": <FacilityInstruments color={theme.color.base} />,
   }
 
   if (!icons[shortname]) return null

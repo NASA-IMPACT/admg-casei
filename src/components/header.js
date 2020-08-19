@@ -31,14 +31,14 @@ const Header = ({ siteTitle, shortname, children }) => (
             display: `grid`,
             gridTemplateRows: `1.5rem 1.5rem`,
             gridTemplateColumns: `3rem auto`,
-            columnGap: `0.25rem`,
+            columnGap: `1rem`,
           }}
         >
           <div style={{ gridArea: `1 / 1 / 3 / 2` }}>
             <Image filename="logo.png" alt={`${shortname} logo`} />
           </div>
           {shortname}
-          <b>{siteTitle}</b>
+          <p>{siteTitle}</p>
         </Link>
       </div>
       <div style={{ display: `flex` }}>{children}</div>

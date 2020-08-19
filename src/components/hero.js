@@ -40,7 +40,7 @@ export default function Hero({
     >
       <div style={{ alignSelf: `end`, gridArea: `1 / 1 / 1 / 1` }}>
         <p style={{ textTransform: `uppercase` }}>{tagTitle}</p>
-        <h1 style={{ marginBottom: `0` }}>{title}</h1>
+        <h1>{title}</h1>
         {subTitle && <p style={{ fontSize: `x-large` }}>{subTitle}</p>}
       </div>
 

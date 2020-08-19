@@ -15,9 +15,9 @@ const SortMenu = ({ sortOrder, setSortOrder, category }) => (
       height: `2.5rem`,
       WebkitAppearance: `none`,
       background: `transparent`,
-      border: `1px solid ${theme.type.base.color}`,
+      border: `1px solid ${theme.color.base}`,
       borderRadius: `0 ${theme.shape.rounded} ${theme.shape.rounded} 0`,
-      color: theme.type.base.color,
+      color: theme.color.base,
       padding: `0.5rem`,
     }}
     data-cy="sort-select"

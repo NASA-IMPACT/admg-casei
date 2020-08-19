@@ -29,12 +29,15 @@ const typography = new Typography({
       },
       "h1,h2,h3,h4,h5,h6": {
         fontSize: rhythm(1.5),
-        marginTop: rhythm(0.25),
-        marginBottom: rhythm(1.5),
+        marginTop: rhythm(0.5),
+        marginBottom: rhythm(0.5),
       },
       // children ol, ul
       "li>ol,li>ul": {
         marginLeft: "20px",
+        marginBottom: 0,
+      },
+      p: {
         marginBottom: 0,
       },
     }
