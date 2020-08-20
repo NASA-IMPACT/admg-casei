@@ -129,8 +129,8 @@ export const RegionCarousel = ({ regions }) => {
                 }}
               >
                 {region.shortname}
-                {/* <span>{region.image.nasaImgAlt}</span> */}
               </div>
+              <span>{region.image.nasaImgAlt}</span>
             </Link>
           </React.Fragment>
         ))}
