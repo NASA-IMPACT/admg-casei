@@ -127,6 +127,7 @@ export const RegionCarousel = ({ regions }) => {
                   textTransform: `uppercase`,
                   textShadow: `3px 3px 10px #333`,
                 }}
+                data-cy="region-type-name"
               >
                 {region.shortname}
               </div>
