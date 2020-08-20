@@ -17,15 +17,21 @@ const Instrument = ({ id, shortname, caption }) => {
   // we don't have icons for the existing instrument types.
   const icons = {
     "In Situ - Magnetic/Electric": (
-      <AirborneInsitu color={theme.type.base.color} />
+      <AirborneInsitu color={theme.type.base.color} size="fitted" />
     ),
     "In Situ - Spectrometer/Radiometer": (
-      <GroundInstruments color={theme.type.base.color} />
+      <GroundInstruments color={theme.type.base.color} size="fitted" />
     ),
-    Remote: <AirborneRemoteSensors color={theme.type.base.color} />,
-    "Solar/Space": <ExperimentalInstruments color={theme.type.base.color} />,
-    NID: <OceanInstruments color={theme.type.base.color} />,
-    "Data Analyses": <FacilityInstruments color={theme.type.base.color} />,
+    Remote: (
+      <AirborneRemoteSensors color={theme.type.base.color} size="fitted" />
+    ),
+    "Solar/Space": (
+      <ExperimentalInstruments color={theme.type.base.color} size="fitted" />
+    ),
+    NID: <OceanInstruments color={theme.type.base.color} size="fitted" />,
+    "Data Analyses": (
+      <FacilityInstruments color={theme.type.base.color} size="fitted" />
+    ),
   }
 
   if (!icons[shortname]) return null
@@ -34,7 +40,6 @@ const Instrument = ({ id, shortname, caption }) => {
     <Link
       style={{ textAlign: `center` }}
       data-cy="instrument"
-      className="placeholder"
       to="/explore/instruments"
       state={{ selectedFilterId: id }}
     >
@@ -54,7 +59,7 @@ export const InstrumentsGallery = ({ instruments }) => (
   <div
     style={{
       display: `grid`,
-      gridTemplateColumns: `repeat(auto-fill, minmax(min(120px, 100%), 1fr))`,
+      gridTemplateColumns: `repeat(5, 1fr)`,
       gap: `1rem`,
     }}
   >

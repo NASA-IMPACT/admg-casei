@@ -4,7 +4,7 @@ import { sizes } from "./utils"
 
 export const GroundInstruments = ({ color = "#FFF", size = "large" }) => (
   <svg
-    viewBox={sizes[size].viewBox}
+    viewBox="0 0 65 120"
     width={sizes[size].width}
     height={sizes[size].height}
     xmlns="http://www.w3.org/2000/svg"
