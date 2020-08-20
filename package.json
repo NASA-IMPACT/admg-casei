@@ -69,6 +69,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
+    "deploy": "surge --project ./public --domain airborne-inventory.surge.sh",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "lint": "eslint --ignore-path .gitignore \"**/*.{js,jsx}\"",
