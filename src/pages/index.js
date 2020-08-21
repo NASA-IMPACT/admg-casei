@@ -83,7 +83,7 @@ const IndexPage = ({ data }) => {
             >
               <SectionHeader tagline="explore" headline="Platforms" />
               <div>
-                <p>
+                <p style={{ marginBottom: `2rem` }}>
                   From aircrafts to balloons, from sensors to plaftorms, it
                   takes a lot to understand earth.
                 </p>
