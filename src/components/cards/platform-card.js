@@ -26,7 +26,7 @@ const PlatformCard = ({
       {shortname}
     </big>
     <p data-cy="longname">{longname}</p>
-    <p data-cy="description">{description}</p>
+    {/* <p data-cy="description">{description}</p> */}
   </Card>
 )
 
