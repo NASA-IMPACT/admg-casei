@@ -72,7 +72,7 @@ exports[`Focus Section displays content 1`] = `
             Object {
               "display": "grid",
               "gap": "1rem",
-              "gridTemplateColumns": "repeat(auto-fill, minmax(min(120px, 100%), 1fr))",
+              "gridTemplateColumns": "repeat(6, 1fr)",
               "paddingTop": "1rem",
             }
           }

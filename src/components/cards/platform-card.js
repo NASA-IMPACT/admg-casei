@@ -5,7 +5,7 @@ import Card from "./card"
 const PlatformCard = ({
   shortname,
   longname,
-  description,
+  // description,
   campaigns,
   collectionPeriodIds,
   instruments,
@@ -26,14 +26,14 @@ const PlatformCard = ({
       {shortname}
     </big>
     <p data-cy="longname">{longname}</p>
-    <p data-cy="description">{description}</p>
+    {/* <p data-cy="description">{description}</p> */}
   </Card>
 )
 
 PlatformCard.propTypes = {
   shortname: PropTypes.string.isRequired,
   longname: PropTypes.string,
-  description: PropTypes.string.isRequired,
+  // description: PropTypes.string.isRequired,
   campaigns: PropTypes.arrayOf(PropTypes.string),
   collectionPeriodIds: PropTypes.arrayOf(PropTypes.string),
   instruments: PropTypes.arrayOf(

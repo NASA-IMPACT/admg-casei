@@ -67,7 +67,7 @@ const FocusAreaGallery = ({ focusAreas, size = "large" }) => {
     <div
       style={{
         display: `grid`,
-        gridTemplateColumns: `repeat(auto-fill, minmax(min(120px, 100%), 1fr))`,
+        gridTemplateColumns: `repeat(6, 1fr)`,
         gap: `1rem`,
         paddingTop: `1rem`,
       }}
