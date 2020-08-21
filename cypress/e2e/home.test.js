@@ -46,8 +46,7 @@ describe("Homepage", () => {
 
       cy.url().should("include", "/explore/campaigns")
 
-      cy.get("main")
-        .find("[data-cy=filter-chip]")
+      cy.get("[data-cy=filter-chip]")
         .should("have.length", 1)
         .and("have.text", "focus: Weather")
 
@@ -81,6 +80,7 @@ describe("Homepage", () => {
       cy.get("[data-cy=region-type-section]")
         .find("[data-cy=region-type]")
         .should("have.length", 16)
+        .find("[data-cy=region-type-name]")
         .invoke("text")
         .then(text => {
           expect(text).to.equal(this.text)
@@ -99,7 +99,7 @@ describe("Homepage", () => {
         .click()
 
       cy.get("[data-cy=region-type-section]")
-        .find("[data-cy=region-type]")
+        .find("[data-cy=region-type-name]")
         .contains(/Mountains/i)
         .should("be.visible")
     })
@@ -111,7 +111,7 @@ describe("Homepage", () => {
         .click()
 
       cy.get("[data-cy=region-type-section]")
-        .find("[data-cy=region-type]")
+        .find("[data-cy=region-type-name]")
         .contains(/Mountains/i)
         .should("be.visible")
 
@@ -119,8 +119,7 @@ describe("Homepage", () => {
 
       cy.url().should("include", "/explore/campaigns")
 
-      cy.get("main")
-        .find("[data-cy=filter-chip]")
+      cy.get("[data-cy=filter-chip]")
         .should("have.length", 1)
         .and("have.text", "region: mountains")
 
@@ -155,8 +154,7 @@ describe("Homepage", () => {
 
       cy.url().should("include", "/explore/campaigns")
 
-      cy.get("main")
-        .find("[data-cy=filter-chip]")
+      cy.get("[data-cy=filter-chip]")
         .should("have.length", 1)
         .and("have.text", "geophysical: Biodiversity")
 
@@ -199,8 +197,7 @@ describe("Homepage", () => {
 
       cy.url().should("include", "/explore/instruments")
 
-      cy.get("main")
-        .find("[data-cy=filter-chip]")
+      cy.get("[data-cy=filter-chip]")
         .should("have.length", 1)
         .and("have.text", "type: Remote")
 

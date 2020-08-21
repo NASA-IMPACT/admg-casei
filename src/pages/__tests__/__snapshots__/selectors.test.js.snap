@@ -57,7 +57,7 @@ exports[`Campaigns page renders correctly 1`] = `
           href="/"
           style={
             Object {
-              "columnGap": "0.25rem",
+              "columnGap": "1rem",
               "display": "grid",
               "gridTemplateColumns": "3rem auto",
               "gridTemplateRows": "1.5rem 1.5rem",
@@ -94,9 +94,9 @@ exports[`Campaigns page renders correctly 1`] = `
             />
           </div>
           NASA | CASEI
-          <b>
+          <p>
             Catalog of Archived Suborbital Earth Science Investigations
-          </b>
+          </p>
         </a>
       </div>
       <div

@@ -23,7 +23,7 @@ const Searchbar = React.forwardRef((_props, ref) => (
     style={{
       display: "flex",
       flexGrow: 1,
-      border: `1px solid ${theme.type.base.color}`,
+      border: `1px solid ${theme.color.base}`,
       borderLeft: 0,
       borderRight: 0,
       borderRadius: `0`,
@@ -39,7 +39,7 @@ const Searchbar = React.forwardRef((_props, ref) => (
         border: "none",
         flexGrow: 1,
         background: `transparent`,
-        color: theme.type.base.color,
+        color: theme.color.base,
       }}
       type="text"
       ref={ref}
@@ -50,13 +50,13 @@ const Searchbar = React.forwardRef((_props, ref) => (
         border: "none",
         flexGrow: 0,
         background: `transparent`,
-        color: theme.type.base.color,
+        color: theme.color.base,
         verticalAlign: `middle`,
       }}
       data-cy="submit"
     >
       <span role="img" aria-label="Magnifying glass icon">
-        <SearchIcon color={theme.type.base.color} />
+        <SearchIcon color={theme.color.base} />
       </span>
     </button>
   </div>

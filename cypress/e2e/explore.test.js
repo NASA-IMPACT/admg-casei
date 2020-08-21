@@ -81,7 +81,7 @@ describe("Explore", () => {
         .parent()
         .parent() // is there a better way to select the card?
         .should($card => {
-          expect($card.find("[data-cy=stationary-tag]")).to.exist
+          expect($card.find("[data-cy=stationary-tag]")).not.to.exist
           expect($card.find("[data-cy=shortname]")).to.have.text("B-200")
           expect($card.find("[data-cy=longname]")).to.have.text(
             "Beechcraft King Air B-200"
