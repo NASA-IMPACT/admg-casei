@@ -28,7 +28,7 @@ const Chip = ({ id, label, chipAction, actionId }) => (
       display: `flex`,
       alignItems: `center`,
       backgroundColor: theme.color.secondary,
-      color: theme.type.base.color,
+      color: theme.color.base,
       borderRadius: theme.shape.rounded,
       padding: `0 0.5rem`,
       margin: `0.25rem 0.5rem`,
@@ -45,14 +45,14 @@ const Chip = ({ id, label, chipAction, actionId }) => (
           border: "none",
           flexGrow: 0,
           cursor: `pointer`,
-          color: theme.type.base.color,
+          color: theme.color.base,
           verticalAlign: `middle`,
           marginLeft: `0.5rem`,
         }}
         data-cy="remove-filter"
       >
         <span role="img" aria-label="close-icon">
-          <CloseIcon color={theme.type.base.color} />
+          <CloseIcon color={theme.color.base} />
         </span>
       </button>
     )}

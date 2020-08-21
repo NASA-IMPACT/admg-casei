@@ -8,17 +8,15 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { DevseedUiThemeProvider } from "@devseed-ui/helpers"
 
-import theme from "./src/utils/theme"
 import GlobalStyles from "./src/components/global-styles"
 
 export const wrapRootElement = ({ element }) => {
   return (
-    <DevseedUiThemeProvider theme={theme}>
+    <>
       <GlobalStyles />
       {element}
-    </DevseedUiThemeProvider>
+    </>
   )
 }
 

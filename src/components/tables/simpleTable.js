@@ -1,16 +1,15 @@
 import React from "react"
 import styled from "styled-components"
 import PropTypes from "prop-types"
-import { headingAlt } from "@devseed-ui/heading"
 
 import theme from "../../utils/theme"
 
 const Table = styled.table`
   th {
-    ${headingAlt}
+    font-feature-settings: "pnum" 0; /* Use proportional numbers */
+    text-transform: uppercase;
     font-size: 0.75rem;
     line-height: 1.5rem;
-    font-weight: ${theme.type.base.bold};
     color: ${theme.color.gray};
   }
   th:first-child {

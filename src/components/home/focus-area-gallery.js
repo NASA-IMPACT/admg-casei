@@ -19,24 +19,24 @@ const FocusArea = ({ id, caption, size }) => {
   // the id yet to be stable.
   const icons = {
     "Atmospheric Composition": (
-      <AtmosphericCompositionIcon color={theme.type.base.color} size={size} />
+      <AtmosphericCompositionIcon color={theme.color.base} size={size} />
     ),
     "Atmospheric Dynamics": (
-      <AtmosphericDynamicsIcon color={theme.type.base.color} size={size} />
+      <AtmosphericDynamicsIcon color={theme.color.base} size={size} />
     ),
     "Carbon Cycle & Ecosystems": (
-      <CarbonCycleEcosystemsIcon color={theme.type.base.color} size={size} />
+      <CarbonCycleEcosystemsIcon color={theme.color.base} size={size} />
     ),
     "Climate Variability & Change": (
-      <ClimateVariabilityChangeIcon color={theme.type.base.color} size={size} />
+      <ClimateVariabilityChangeIcon color={theme.color.base} size={size} />
     ),
     "Earth Surface & Interior": (
-      <EarthSurfaceInteriorIcon color={theme.type.base.color} size={size} />
+      <EarthSurfaceInteriorIcon color={theme.color.base} size={size} />
     ),
     "Global Water & Energy Cycle": (
-      <GlobalWaterEnergyCycleIcon color={theme.type.base.color} size={size} />
+      <GlobalWaterEnergyCycleIcon color={theme.color.base} size={size} />
     ),
-    Weather: <WeatherIcon color={theme.type.base.color} size={size} />,
+    Weather: <WeatherIcon color={theme.color.base} size={size} />,
   }
 
   if (!icons[caption]) return null
@@ -49,7 +49,7 @@ const FocusArea = ({ id, caption, size }) => {
       data-cy="focus-area"
     >
       {icons[caption]}
-      <Label id="focus-area-icons" color={theme.type.base.color}>
+      <Label id="focus-area-icons" color={theme.color.base}>
         {caption}
       </Label>
     </Link>

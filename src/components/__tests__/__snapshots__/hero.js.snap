@@ -31,13 +31,7 @@ exports[`Header renders correctly 1`] = `
     >
       Instrument
     </p>
-    <h1
-      style={
-        Object {
-          "marginBottom": "0",
-        }
-      }
-    >
+    <h1>
       2D-C/P
     </h1>
     <p
@@ -107,13 +101,7 @@ exports[`Header renders with adjust ratios 1`] = `
     >
       Instrument
     </p>
-    <h1
-      style={
-        Object {
-          "marginBottom": "0",
-        }
-      }
-    >
+    <h1>
       2D-C/P
     </h1>
     <p
