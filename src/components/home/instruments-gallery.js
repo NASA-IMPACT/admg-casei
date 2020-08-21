@@ -32,7 +32,7 @@ const Instrument = ({ id, shortname, caption }) => {
     <Link
       style={{ textAlign: `center` }}
       data-cy="instrument"
-      className="placeholder"
+      // className="placeholder"
       to="/explore/instruments"
       state={{ selectedFilterId: id }}
     >
