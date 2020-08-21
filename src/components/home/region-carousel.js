@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
+import Image from "gatsby-image"
 import Carousel from "nuka-carousel"
 import styled from "styled-components"
 
@@ -16,26 +17,6 @@ const ControlTextButton = styled.button`
   background: rgba(255, 255, 255, 0);
   text-transform: uppercase;
   text-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-`
-
-const CarouselImage = styled(Link)`
-  height: 550px;
-  background: ${({ url }) => {
-    return `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),
-    url(${url}) center no-repeat`
-  }};
-  background-size: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  &:hover {
-    opacity: 1;
-    background: ${({ url }) => {
-      return `url(${url}) center no-repeat`
-    }};
-    background-size: 100%;
-  }
 `
 
 // nuka carousel expects inline styles
@@ -113,24 +94,45 @@ export const RegionCarousel = ({ regions }) => {
       >
         {regions.map(region => (
           <React.Fragment key={region.id}>
-            <CarouselImage
+            <Link
               to="/explore/campaigns"
               state={{ selectedFilterId: region.id }}
-              url={region.image.nasaImgUrl}
               data-cy="region-type"
+              style={{
+                display: `grid`,
+                gridTemplateColumns: `1fr`,
+                gridTemplateRows: `1fr`,
+                alignItems: `center`,
+              }}
             >
               <div
                 style={{
+                  gridArea: `1 / 1 / 1 / 1`,
+                  zIndex: -1,
+                }}
+              >
+                <Image
+                  alt={region.image.nasaImgAlt}
+                  fluid={region.image.nasaImg.childImageSharp.fluid}
+                  style={{ height: 550 }}
+                />
+              </div>
+
+              <div
+                style={{
+                  gridArea: `1 / 1 / 1 / 1`,
+                  justifySelf: `center`,
                   fontSize: `xxx-large`,
                   fontWeight: `bold`,
                   textTransform: `uppercase`,
                   textShadow: `3px 3px 10px #333`,
                 }}
+                data-cy="region-type-name"
               >
                 {region.shortname}
               </div>
-            </CarouselImage>
-            <span>{region.image.nasaImgAlt}</span>
+              <span>{region.image.nasaImgAlt}</span>
+            </Link>
           </React.Fragment>
         ))}
       </Carousel>

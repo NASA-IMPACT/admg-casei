@@ -146,6 +146,13 @@ export const query = graphql`
         image {
           nasaImgUrl
           nasaImgAlt
+          nasaImg {
+            childImageSharp {
+              fluid(maxHeight: 550) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
       }
     }
