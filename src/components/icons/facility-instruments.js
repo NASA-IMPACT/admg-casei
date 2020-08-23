@@ -4,7 +4,7 @@ import { sizes } from "./utils"
 
 export const FacilityInstruments = ({ color = "#FFF", size = "large" }) => (
   <svg
-    viewBox="0 0 80 120"
+    viewBox="0 0 81 79"
     width={sizes[size].width}
     height={sizes[size].height}
     xmlns="http://www.w3.org/2000/svg"

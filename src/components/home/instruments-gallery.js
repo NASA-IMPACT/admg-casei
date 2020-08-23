@@ -17,18 +17,18 @@ const Instrument = ({ id, shortname, caption }) => {
   // we don't have icons for the existing instrument types.
   const icons = {
     "In Situ - Magnetic/Electric": (
-      <AirborneInsitu color={theme.color.base} size="fitted" />
+      <AirborneInsitu color={theme.color.base} size="medium" />
     ),
     "In Situ - Spectrometer/Radiometer": (
-      <GroundInstruments color={theme.color.base} size="fitted" />
+      <GroundInstruments color={theme.color.base} size="medium" />
     ),
-    Remote: <AirborneRemoteSensors color={theme.color.base} size="fitted" />,
+    Remote: <AirborneRemoteSensors color={theme.color.base} size="medium" />,
     "Solar/Space": (
-      <ExperimentalInstruments color={theme.color.base} size="fitted" />
+      <ExperimentalInstruments color={theme.color.base} size="medium" />
     ),
-    NID: <OceanInstruments color={theme.color.base} size="fitted" />,
+    NID: <OceanInstruments color={theme.color.base} size="medium" />,
     "Data Analyses": (
-      <FacilityInstruments color={theme.color.base} size="fitted" />
+      <FacilityInstruments color={theme.color.base} size="medium" />
     ),
   }
 

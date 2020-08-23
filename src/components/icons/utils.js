@@ -1,6 +1,6 @@
 export const sizes = {
-  tiny: { width: "30", height: "30", viewBox: "0 0 145 140" },
-  small: { width: "50", height: "50", viewBox: "0 0 125 120" },
-  large: { width: "120", height: "120", viewBox: "0 0 120 120" },
-  fitted: { width: "150", height: "150" },
+  tiny: { width: "30", height: "30" },
+  small: { width: "5rem", height: "5rem" },
+  medium: { width: "8rem", height: "8rem" },
+  large: { width: "11rem", height: "11rem" },
 }

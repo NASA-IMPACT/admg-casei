@@ -7,7 +7,7 @@ export const ClimateVariabilityChange = ({
   size = "large",
 }) => (
   <svg
-    viewBox={sizes[size].viewBox}
+    viewBox="0 0 120 120"
     width={sizes[size].width}
     height={sizes[size].height}
     xmlns="http://www.w3.org/2000/svg"
