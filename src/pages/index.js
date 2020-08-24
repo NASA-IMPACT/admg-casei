@@ -14,7 +14,7 @@ import Hero from "../components/hero"
 import FocusAreaGallery from "../components/home/focus-area-gallery"
 import { RegionCarousel } from "../components/home/region-carousel"
 import { GeophysicsGrid } from "../components/home/geophysics-grid"
-import { InstrumentsGallery } from "../components/home/instruments-gallery"
+import { InstrumentsGrid } from "../components/home/instruments-grid"
 import theme from "../utils/theme"
 
 const IndexPage = ({ data }) => {
@@ -105,7 +105,7 @@ const IndexPage = ({ data }) => {
         <SectionBlock id="instruments">
           <SectionHeader tagline="explore" headline="Instruments" />
           <SectionContent>
-            <InstrumentsGallery instruments={data.allInstrumentType.nodes} />
+            <InstrumentsGrid instrumentTypes={data.allInstrumentType.nodes} />
           </SectionContent>
         </SectionBlock>
       </PageBody>

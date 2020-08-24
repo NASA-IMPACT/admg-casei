@@ -6,9 +6,4 @@ export { EarthSurfaceInterior as EarthSurfaceInteriorIcon } from "./earth-surfac
 export { GlobalWaterEnergyCycle as GlobalWaterEnergyCycleIcon } from "./global-water_energy-cycle"
 export { Weather as WeatherIcon } from "./weather"
 
-export { AirborneInsitu } from "./airborne-insitu.js"
-export { GroundInstruments } from "./ground-instruments.js"
-export { AirborneRemoteSensors } from "./airborne-remote-sensors.js"
-export { ExperimentalInstruments } from "./experimental-instruments.js"
-export { OceanInstruments } from "./ocean-instruments.js"
-export { FacilityInstruments } from "./facility-instruments.js"
+export { AirborneRemoteSensors } from "./airborne-remote-sensors"
