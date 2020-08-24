@@ -36,6 +36,7 @@ const RelatedCampaigns = ({ campaigns }) => {
                 >
                   <Link to={`/campaign/${campaign.id}`}>
                     <CampaignCard
+                      logo={campaign.logo}
                       ongoing={campaign.ongoing}
                       shortname={campaign.shortname}
                       longname={campaign.longname}
@@ -63,6 +64,16 @@ const RelatedCampaigns = ({ campaigns }) => {
 export const platformCampaignFields = graphql`
   fragment platformCampaignFields on platform {
     campaigns {
+      logo {
+        nasaImgAlt
+        nasaImg {
+          childImageSharp {
+            fixed(height: 85) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+      }
       ongoing
       shortname: short_name
       longname: long_name
@@ -88,6 +99,12 @@ export const platformCampaignFields = graphql`
 RelatedCampaigns.propTypes = {
   campaigns: PropTypes.arrayOf(
     PropTypes.shape({
+      logo: PropTypes.shape({
+        nasaImgAlt: PropTypes.string.isRequired,
+        nasaImg: PropTypes.shape({
+          childImageSharp: PropTypes.object,
+        }),
+      }).isRequired,
       ongoing: PropTypes.bool,
       shortname: PropTypes.string.isRequired,
       longname: PropTypes.string,
