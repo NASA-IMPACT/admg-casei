@@ -7,7 +7,6 @@ import {
   ListboxList,
   ListboxOption,
 } from "@reach/listbox"
-import "@reach/listbox/styles.css"
 import VisuallyHidden from "@reach/visually-hidden"
 
 import theme from "../../utils/theme"
@@ -48,7 +47,9 @@ const FilterMenu = ({
   let [value, setValue] = useState("")
   return (
     <>
-      <VisuallyHidden aria-labelledby="filter-select">Filter</VisuallyHidden>
+      <VisuallyHidden aria-labelledby="filter-select">
+        filter results by sub-categories
+      </VisuallyHidden>
       <ListboxInput
         name="filter"
         aria-labelledby="filter-select"
@@ -68,6 +69,7 @@ const FilterMenu = ({
             borderRadius: `${theme.shape.rounded} 0 0 ${theme.shape.rounded}`,
             color: theme.color.base,
             padding: `0.5rem`,
+            cursor: `pointer`,
           }}
         >
           Filter
