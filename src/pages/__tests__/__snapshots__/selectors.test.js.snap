@@ -361,6 +361,7 @@ exports[`Campaigns page renders correctly 1`] = `
           <input
             aria-label="Enter search text"
             autoComplete="off"
+            data-cy="explore-input"
             name="search"
             placeholder="Enter text..."
             style={
