@@ -38,9 +38,9 @@ const SortMenu = ({ sortOrder, setSortOrder, category }) => {
           {sortOrder.toUpperCase()}
         </ListboxButton>
         <ListboxPopover style={{ background: theme.color.primary }}>
-          <ListboxList>
+          <ListboxList data-cy="sort-options">
             {Object.keys(sortFunctions[category]).map(o => (
-              <ListboxOption key={o} value={o}>
+              <ListboxOption key={o} value={o} data-cy="sort-option">
                 {o.toUpperCase()}
               </ListboxOption>
             ))}

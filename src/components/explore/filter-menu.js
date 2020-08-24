@@ -15,7 +15,7 @@ const Filter = ({ label, options }) => (
   <>
     <strong>{label}</strong>
     {options.map(o => (
-      <ListboxOption key={o.id} value={o.id}>
+      <ListboxOption key={o.id} value={o.id} data-cy="filter-option">
         {o.shortname}
       </ListboxOption>
     ))}
@@ -81,7 +81,7 @@ const FilterMenu = ({
             overflowY: `scroll`,
           }}
         >
-          <ListboxList>
+          <ListboxList data-cy="filter-options">
             {category === "campaigns" && (
               <>
                 <Filter
