@@ -12,10 +12,8 @@ export default function Label({
   return (
     <label
       style={{
-        textTransform: `uppercase`,
         color: color,
         borderBottom: showBorder ? `1px solid ${theme.color.gray}` : `none`,
-        fontSize: `small`,
         display: `block`,
       }}
       data-cy={`${id}-label`}

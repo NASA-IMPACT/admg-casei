@@ -27,7 +27,17 @@ const typography = new Typography({
         textShadow: "none",
         backgroundImage: "none",
       },
-      "h1,h2,h3,h4,h5,h6": {
+      h1: {
+        fontSize: rhythm(2),
+        marginTop: rhythm(0.5),
+        marginBottom: rhythm(0.5),
+      },
+      h2: {
+        fontSize: rhythm(1.75),
+        marginTop: rhythm(0.5),
+        marginBottom: rhythm(2.5),
+      },
+      "h3,h4,h5,h6": {
         fontSize: rhythm(1.5),
         marginTop: rhythm(0.5),
         marginBottom: rhythm(0.5),
@@ -39,6 +49,12 @@ const typography = new Typography({
       },
       p: {
         marginBottom: 0,
+      },
+      label: {
+        fontSize: rhythm(0.6),
+        marginTop: rhythm(0.5),
+        textTransform: `uppercase`,
+        fontWeight: 600,
       },
     }
   },

@@ -12,8 +12,6 @@ const Milestone = ({ type, daterange, name, details, region }) => {
     <div style={{ padding: `3rem`, minHeight: `400px` }} data-cy="milestone">
       <label
         style={{
-          textTransform: `uppercase`,
-          fontSize: `small`,
           color: theme.color.primary,
           backgroundColor: theme.color.highlight,
           position: `absolute`,

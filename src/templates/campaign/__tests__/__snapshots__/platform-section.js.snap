@@ -6,7 +6,7 @@ exports[`Platform Section displays content 1`] = `
   grid-template-columns: repeat(12,1fr);
   -webkit-column-gap: 1rem;
   column-gap: 1rem;
-  margin-top: 5rem;
+  margin-top: 9rem;
   border-top: 55px solid transparent;
   position: relative;
   -webkit-background-clip: padding-box;
@@ -73,13 +73,10 @@ exports[`Platform Section displays content 1`] = `
                 style={
                   Object {
                     "bottom": ".5rem",
-                    "color": "hsla(0,0%,100%,0.9)",
-                    "fontWeight": "bold",
                     "left": "1rem",
                     "maxWidth": "18rem",
                     "position": "absolute",
                     "textShadow": "1px 1px rgba(0,0,0,0.8)",
-                    "textTransform": "uppercase",
                   }
                 }
               >
@@ -258,13 +255,10 @@ exports[`Platform Section displays content 1`] = `
                 style={
                   Object {
                     "bottom": ".5rem",
-                    "color": "hsla(0,0%,100%,0.9)",
-                    "fontWeight": "bold",
                     "left": "1rem",
                     "maxWidth": "18rem",
                     "position": "absolute",
                     "textShadow": "1px 1px rgba(0,0,0,0.8)",
-                    "textTransform": "uppercase",
                   }
                 }
               >
@@ -355,13 +349,10 @@ exports[`Platform Section displays content 1`] = `
                 style={
                   Object {
                     "bottom": ".5rem",
-                    "color": "hsla(0,0%,100%,0.9)",
-                    "fontWeight": "bold",
                     "left": "1rem",
                     "maxWidth": "18rem",
                     "position": "absolute",
                     "textShadow": "1px 1px rgba(0,0,0,0.8)",
-                    "textTransform": "uppercase",
                   }
                 }
               >
