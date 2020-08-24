@@ -1,4 +1,6 @@
 import { createGlobalStyle, css } from "styled-components"
+import "@reach/listbox/styles.css"
+
 import theme from "../utils/theme"
 
 const baseStyles = css`

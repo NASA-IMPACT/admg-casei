@@ -1,16 +1,25 @@
-import React from "react"
+import React, { useState } from "react"
 import PropTypes from "prop-types"
+import {
+  ListboxInput,
+  ListboxButton,
+  ListboxPopover,
+  ListboxList,
+  ListboxOption,
+} from "@reach/listbox"
+import VisuallyHidden from "@reach/visually-hidden"
 
 import theme from "../../utils/theme"
 
 const Filter = ({ label, options }) => (
-  <optgroup label={label}>
+  <>
+    <strong>{label}</strong>
     {options.map(o => (
-      <option key={o.id} value={o.id}>
+      <ListboxOption key={o.id} value={o.id} data-cy="filter-option">
         {o.shortname}
-      </option>
+      </ListboxOption>
     ))}
-  </optgroup>
+  </>
 )
 
 Filter.propTypes = {
@@ -32,76 +41,94 @@ const FilterMenu = ({
 }) => {
   const handleSelection = value => {
     selectedFilterIds.includes(value) ? removeFilter(value) : addFilter(value)
-    document.getElementById("filter-select").value = ""
+    setValue("")
   }
+
+  let [value, setValue] = useState("")
   return (
-    <select
-      aria-label="Select filters"
-      name="filter"
-      id="filter-select"
-      style={{
-        flexGrow: 0,
-        height: `2.5rem`,
-        maxWidth: `5rem`,
-        WebkitAppearance: `none`,
-        background: `transparent`,
-        border: `1px solid ${theme.color.base}`,
-        borderRadius: `${theme.shape.rounded} 0 0 ${theme.shape.rounded}`,
-        color: theme.color.base,
-        padding: `0.5rem`,
-      }}
-      data-cy="filter-select"
-      onChange={e => handleSelection(e.target.value)}
-    >
-      <option value="">Filter</option>
-      {category === "campaigns" && (
-        <>
-          <Filter
-            id="focus"
-            label="Focus Area"
-            options={getFilterOptionsById("focus")}
-          />
-          <Filter
-            id="geophysical"
-            label="Geophysical Concept"
-            options={getFilterOptionsById("geophysical")}
-          />
-          <Filter
-            id="season"
-            label="Season"
-            options={getFilterOptionsById("season")}
-          />
-          <Filter
-            id="region"
-            label="Geographical Region"
-            options={getFilterOptionsById("region")}
-          />
-          <Filter
-            id="platform"
-            label="Platform"
-            options={getFilterOptionsById("platform")}
-          />
-        </>
-      )}
-      {category === "platforms" && (
-        <>
-          <Filter
-            id="instrument"
-            label="Instrument"
-            options={getFilterOptionsById("instrument")}
-          />
-        </>
-      )}
-      {category === "instruments" && (
-        <>
-          <Filter
-            id="instrument-types"
-            label="Instrument Types"
-            options={getFilterOptionsById("type")}
-          />
-        </>
-      )}
-    </select>
+    <>
+      <VisuallyHidden aria-labelledby="filter-select">
+        filter results by sub-categories
+      </VisuallyHidden>
+      <ListboxInput
+        name="filter"
+        aria-labelledby="filter-select"
+        value={value}
+        data-cy="filter-select"
+        onChange={value => handleSelection(value)}
+      >
+        <ListboxButton
+          arrow="▼"
+          style={{
+            flexGrow: 0,
+            height: `2.5rem`,
+            maxWidth: `5rem`,
+            WebkitAppearance: `none`,
+            background: `transparent`,
+            border: `1px solid ${theme.color.base}`,
+            borderRadius: `${theme.shape.rounded} 0 0 ${theme.shape.rounded}`,
+            color: theme.color.base,
+            padding: `0.5rem`,
+            cursor: `pointer`,
+          }}
+        >
+          Filter
+        </ListboxButton>
+        <ListboxPopover
+          style={{
+            background: theme.color.primary,
+            maxHeight: `24rem`,
+            overflowY: `scroll`,
+          }}
+        >
+          <ListboxList data-cy="filter-options">
+            {category === "campaigns" && (
+              <>
+                <Filter
+                  id="focus"
+                  label="Focus Area"
+                  options={getFilterOptionsById("focus")}
+                />
+                <Filter
+                  id="geophysical"
+                  label="Geophysical Concept"
+                  options={getFilterOptionsById("geophysical")}
+                />
+                <Filter
+                  id="season"
+                  label="Season"
+                  options={getFilterOptionsById("season")}
+                />
+                <Filter
+                  id="region"
+                  label="Geographical Region"
+                  options={getFilterOptionsById("region")}
+                />
+                <Filter
+                  id="platform"
+                  label="Platform"
+                  options={getFilterOptionsById("platform")}
+                />
+              </>
+            )}
+            {category === "platforms" && (
+              <Filter
+                id="instrument"
+                label="Instrument"
+                options={getFilterOptionsById("instrument")}
+              />
+            )}
+            {category === "instruments" && (
+              <Filter
+                id="instrument-types"
+                label="Instrument Types"
+                options={getFilterOptionsById("type")}
+              />
+            )}
+          </ListboxList>
+        </ListboxPopover>
+      </ListboxInput>
+    </>
   )
 }
 

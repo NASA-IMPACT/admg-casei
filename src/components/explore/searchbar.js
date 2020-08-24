@@ -32,6 +32,7 @@ const Searchbar = React.forwardRef((_props, ref) => (
   >
     <input
       autoComplete="off"
+      data-cy="explore-input"
       aria-label="Enter search text"
       name="search"
       placeholder="Enter text..."

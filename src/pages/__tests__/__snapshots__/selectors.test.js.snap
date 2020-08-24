@@ -2,24 +2,34 @@
 
 exports[`Campaigns page renders correctly 1`] = `
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: 0.5rem 0 2rem 0;
-  min-height: 2rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.5);
+  z-index: 9999;
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
 }
 
-.c0 div:only-child {
-  margin-left: auto;
+.c1 {
+  width: 400px;
+  position: relative;
+  padding: 32px;
+  border-radius: 3px;
+  background: #303641;
+  pointer-events: auto;
 }
 
 <div
@@ -265,472 +275,76 @@ exports[`Campaigns page renders correctly 1`] = `
           }
         }
       >
-        <select
-          aria-label="Select filters"
-          data-cy="filter-select"
-          id="filter-select"
-          name="filter"
-          onChange={[Function]}
+        <span
+          aria-labelledby="filter-select"
           style={
             Object {
-              "WebkitAppearance": "none",
-              "background": "transparent",
-              "border": "1px solid hsla(0,0%,100%,0.9)",
-              "borderRadius": "0.2rem 0 0 0.2rem",
-              "color": "hsla(0,0%,100%,0.9)",
-              "flexGrow": 0,
-              "height": "2.5rem",
-              "maxWidth": "5rem",
-              "padding": "0.5rem",
+              "border": 0,
+              "clip": "rect(0 0 0 0)",
+              "height": "1px",
+              "margin": "-1px",
+              "overflow": "hidden",
+              "padding": 0,
+              "position": "absolute",
+              "whiteSpace": "nowrap",
+              "width": "1px",
+              "wordWrap": "normal",
             }
           }
         >
-          <option
-            value=""
+          filter results by sub-categories
+        </span>
+        <div
+          data-cy="filter-select"
+          data-reach-listbox-input=""
+          data-state="closed"
+          data-value=""
+          id="listbox-input--1"
+        >
+          <span
+            aria-haspopup="listbox"
+            aria-labelledby="filter-select button--listbox-input--1"
+            data-reach-listbox-button=""
+            id="button--listbox-input--1"
+            onKeyDown={[Function]}
+            onMouseDown={[Function]}
+            onMouseUp={[Function]}
+            role="button"
+            style={
+              Object {
+                "WebkitAppearance": "none",
+                "background": "transparent",
+                "border": "1px solid hsla(0,0%,100%,0.9)",
+                "borderRadius": "0.2rem 0 0 0.2rem",
+                "color": "hsla(0,0%,100%,0.9)",
+                "cursor": "pointer",
+                "flexGrow": 0,
+                "height": "2.5rem",
+                "maxWidth": "5rem",
+                "padding": "0.5rem",
+              }
+            }
+            tabIndex={0}
           >
             Filter
-          </option>
-          <optgroup
-            label="Focus Area"
-          >
-            <option
-              value="e42c7970-1913-44b4-822b-8d620eef8df8"
-            >
-              Atmospheric Composition
-            </option>
-            <option
-              value="0ba119ec-7851-4546-8708-5ea3883e0a54"
-            >
-              Weather
-            </option>
-            <option
-              value="43bc862a-ece2-427c-ad5f-368466d3bc98"
-            >
-              Climate Variability & Change
-            </option>
-            <option
-              value="2a9bec35-4fe5-4177-8443-d11f441310b3"
-            >
-              Global Water & Energy Cycle
-            </option>
-            <option
-              value="b31b1fd0-d090-480a-ac8b-3d48175d2a00"
-            >
-              Carbon Cycle & Ecosystems
-            </option>
-            <option
-              value="e6a41072-65fc-411b-8e51-1dd01cd7dd17"
-            >
-              Earth Surface & Interior
-            </option>
-          </optgroup>
-          <optgroup
-            label="Geophysical Concept"
-          >
-            <option
-              value="4c19e4b9-b47d-4550-bf1b-fb5daf1fdeb2"
-            >
-              Aerosols
-            </option>
-            <option
-              value="e8041eba-37e9-4c38-8f62-5119c7dde4b1"
-            >
-              Air Qual
-            </option>
-            <option
-              value="458c5a19-17dd-48c1-bc12-c22ab69afd10"
-            >
-              Atms Chem
-            </option>
-            <option
-              value="1ffeed03-f578-4e23-8d7a-3fb59ca23321"
-            >
-              Upper Atms Chem
-            </option>
-            <option
-              value="830fe73e-7102-4b97-bc14-c31d70de1ad3"
-            >
-              Radiation & Energy
-            </option>
-            <option
-              value="4438798c-bdb9-4498-acac-e169eb0da849"
-            >
-              Clouds
-            </option>
-            <option
-              value="cfe2a5ff-9fe3-4285-8355-b4410aa44986"
-            >
-              BL Pros
-            </option>
-            <option
-              value="80687b08-ae0d-4bc0-9401-dfca1053bd0c"
-            >
-              Atms Elec
-            </option>
-            <option
-              value="d3815227-f7e1-45f0-8db0-ff203142c99f"
-            >
-              TCs
-            </option>
-            <option
-              value="14803ce9-bb33-4ffd-ad2c-0f4be356764a"
-            >
-              Meso & Svr Wx
-            </option>
-            <option
-              value="5ed630d3-3e9d-4949-b677-e2a364752b21"
-            >
-              Mid-lat Cyclones
-            </option>
-            <option
-              value="6b5dac3e-cd6a-4f40-b9d8-86dc6da79131"
-            >
-              Precip
-            </option>
-            <option
-              value="695ea5c2-e3f8-42d4-baef-fc48c2b4ff39"
-            >
-              Terr Hydro
-            </option>
-            <option
-              value="b25df6ec-27d8-4dd3-9c8b-b87f3c34c83e"
-            >
-              Ice & Glacial
-            </option>
-            <option
-              value="3bd4c052-5c6c-4da1-934d-6cfd9f01d527"
-            >
-              Oceans
-            </option>
-            <option
-              value="c3c9b7d2-d555-41ea-bd20-831654a1694f"
-            >
-              Biogeochem
-            </option>
-            <option
-              value="c1f1d7d5-2b80-4987-be9f-ab39101ffe65"
-            >
-              Biodiversity
-            </option>
-            <option
-              value="a595708b-267f-489f-aecf-42ce98f64819"
-            >
-              Carbon Storage
-            </option>
-            <option
-              value="43380dac-8364-44f1-86b8-48b8b9673cb4"
-            >
-              Soils
-            </option>
-            <option
-              value="7d377a91-33db-43d4-ae3e-a510ec32cb0a"
-            >
-              Land Chars
-            </option>
-            <option
-              value="b88a321e-ead5-4b83-8bf6-6b4bbb7541eb"
-            >
-              Tectonics
-            </option>
-            <option
-              value="83047381-6b3d-4c63-9cd7-62e20abb89f5"
-            >
-              Volcanics
-            </option>
-            <option
-              value="0510f5eb-7303-43c5-8a72-5778e5ac84d8"
-            >
-              Earth Mag Field
-            </option>
-            <option
-              value="99e3c1cd-c6f9-417d-aeea-18eb302fd62a"
-            >
-              Earth Int
-            </option>
-            <option
-              value="18d0f620-15b4-4c9c-aba1-129a3037b614"
-            >
-              Earth/Clim
-            </option>
-            <option
-              value="bb159ac7-19ab-4242-8db5-ba25ec3a817f"
-            >
-              Geodesy
-            </option>
-          </optgroup>
-          <optgroup
-            label="Season"
-          >
-            <option
-              value="ee919d06-2e3d-49a4-8dc3-b2b035cb5f2f"
-            >
-              boreal winter
-            </option>
-            <option
-              value="7394cb29-fa27-45d0-b4f3-7132b9e5bd52"
-            >
-              boreal spring
-            </option>
-            <option
-              value="abde509c-8f19-4f12-af69-ed3d41ba09f9"
-            >
-              boreal summer
-            </option>
-            <option
-              value="8ca7da19-8691-47ca-876b-029cfc2bdefa"
-            >
-              boreal fall
-            </option>
-            <option
-              value="b445e9ad-47d1-4d2d-baa1-9ade44870377"
-            >
-              austral winter
-            </option>
-            <option
-              value="0730b0a1-480b-487f-a11a-d40a50f33b49"
-            >
-              austral spring
-            </option>
-            <option
-              value="0929665a-00c0-40f3-9a5e-7abd42348bcd"
-            >
-              austral summer
-            </option>
-            <option
-              value="37f01622-83bb-443e-9e5f-d0bc14289d2f"
-            >
-              austral fall
-            </option>
-            <option
-              value="cbf95f91-ead5-43b4-aa64-c046f98838ee"
-            >
-              monsoon
-            </option>
-            <option
-              value="2ee66491-f6fd-4f0a-9b35-bccf0e349e9a"
-            >
-              break
-            </option>
-            <option
-              value="e490cd29-53b5-4a22-ae4b-584865560519"
-            >
-              dry
-            </option>
-            <option
-              value="0e7fa0e9-97b4-4a26-a148-325a6fd80a96"
-            >
-              wet
-            </option>
-            <option
-              value="87a8463c-b2f4-4315-84cc-cb8d20024247"
-            >
-              warm
-            </option>
-            <option
-              value="fafe2bed-972d-4cbf-9d10-4d258e6ccd26"
-            >
-              cold
-            </option>
-            <option
-              value="ed1af124-797b-4585-8cd3-14116daf916e"
-            >
-              equatorial
-            </option>
-            <option
-              value="2e373516-e075-44c5-8fe3-a23049f2acf5"
-            >
-              year round
-            </option>
-          </optgroup>
-          <optgroup
-            label="Geographical Region"
-          >
-            <option
-              value="eb28c912-b2eb-41fe-9469-a24a3a096357"
-            >
-              continental
-            </option>
-            <option
-              value="2ee04b8b-1d14-4a3d-be41-ec096a4c0404"
-            >
-              maritime
-            </option>
-            <option
-              value="9bf6df49-705e-49fc-abe8-73d9cd9b1e3e"
-            >
-              coastal
-            </option>
-            <option
-              value="1ec8559a-ebd5-4cf3-ae1d-186f2dc5bd7d"
-            >
-              mountains
-            </option>
-            <option
-              value="6e8ed1f4-b2ae-4b46-8b75-0d4b1a54027c"
-            >
-              island
-            </option>
-            <option
-              value="5596e259-a589-40a5-b729-13c42f5ee3ac"
-            >
-              desert
-            </option>
-            <option
-              value="84f174f5-bac9-4aef-afdd-28a65a9a9355"
-            >
-              forest
-            </option>
-            <option
-              value="07c98971-c267-4ce3-a732-fb55c6cd7415"
-            >
-              urban
-            </option>
-            <option
-              value="0b56b3f6-a4b4-4aa1-9b84-a9f3cfd9b53c"
-            >
-              agricultural
-            </option>
-            <option
-              value="cf8a5cdd-9ab3-435b-ac27-c619b55a2c79"
-            >
-              equitorial
-            </option>
-            <option
-              value="1b40de01-2163-40f9-a5ce-f999c923b30b"
-            >
-              tropical
-            </option>
-            <option
-              value="7787b7dc-eafa-433c-ac57-72a8224a530d"
-            >
-              mid-latitude
-            </option>
-            <option
-              value="517750b5-ff60-4267-97ff-0aa09255860e"
-            >
-              polar
-            </option>
-            <option
-              value="4237ed6e-213f-42bf-865e-6dbbb8ae7f82"
-            >
-              sea ice
-            </option>
-            <option
-              value="1e456bf9-58ba-41d2-85c5-cd7980bc015d"
-            >
-              coral
-            </option>
-            <option
-              value="b61569ec-59f7-413e-9c89-64c581c4b367"
-            >
-              rainforest
-            </option>
-          </optgroup>
-          <optgroup
-            label="Platform"
-          >
-            <option
-              value="96b56413-2068-4fc4-a093-4780a02744e9"
-            >
-              ALAR
-            </option>
-            <option
-              value="c63849f7-ea91-4525-9029-940a9c53ed36"
-            >
-              ALTUS II
-            </option>
-            <option
-              value="28154c07-d35b-4e13-982c-63b69e1fe57c"
-            >
-              ASO
-            </option>
-            <option
-              value="a0dea5de-aa33-4f13-a8a4-34729e3de5fd"
-            >
-              B-200
-            </option>
-            <option
-              value="fa7f2693-c9b1-4d89-b14c-0672487dc049"
-            >
-              C-23 Sherpa
-            </option>
-            <option
-              value="732c68d8-124b-45be-b2d2-dbc2d305d855"
-            >
-              Citation
-            </option>
-            <option
-              value="d363dbac-d440-492b-99b4-5d617bf8aa38"
-            >
-              CV-580
-            </option>
-            <option
-              value="6fc94f62-d4f2-4a08-9511-2234d91b0665"
-            >
-              DC-8
-            </option>
-            <option
-              value="bb761da6-1606-444c-92d1-e6d30954f2d7"
-            >
-              ER-2
-            </option>
-            <option
-              value="63ef5aa5-2f57-4af6-8adf-2769f3e51c24"
-            >
-              Falcon
-            </option>
-            <option
-              value="5a5ffdbe-0eae-48b1-a7ad-d63dfebffb9a"
-            >
-              G-III
-            </option>
-            <option
-              value="0493498f-f092-425e-bcd0-9fc807c77c0a"
-            >
-              G-V
-            </option>
-            <option
-              value="ad8a0ce5-8aae-4fe5-8b46-7586c267efdb"
-            >
-              GH
-            </option>
-            <option
-              value="715351b2-1126-4c0d-8130-5caa9f044f6d"
-            >
-              P-3
-            </option>
-            <option
-              value="2cbc931a-6f47-45f0-bff6-659ef2efc68d"
-            >
-              WB-57
-            </option>
-            <option
-              value="7d58f61f-a73a-435a-9c9a-d4389e052aab"
-            >
-              Campaign FS
-            </option>
-            <option
-              value="aa382cdc-d5f0-46eb-b980-48431af523c6"
-            >
-              Campaign V
-            </option>
-            <option
-              value="c94db25b-1b48-47fe-90e3-47e8c16f0a92"
-            >
-              Campaign PL
-            </option>
-            <option
-              value="87650e20-ecf3-4703-aeed-49c8affc6059"
-            >
-              Campaign B
-            </option>
-            <option
-              value="5f6a2a1a-2a4b-4a42-9fff-04f1c2af6f5c"
-            >
-              Campaign R
-            </option>
-          </optgroup>
-        </select>
+            <span
+              aria-hidden={true}
+              data-reach-listbox-arrow=""
+            >
+              ▼
+            </span>
+          </span>
+          <span />
+        </div>
+        <input
+          data-reach-listbox-hidden-input=""
+          disabled={false}
+          name="filter"
+          readOnly={true}
+          tabIndex={-1}
+          type="hidden"
+          value=""
+        />
         <div
           style={
             Object {
@@ -747,6 +361,7 @@ exports[`Campaigns page renders correctly 1`] = `
           <input
             aria-label="Enter search text"
             autoComplete="off"
+            data-cy="explore-input"
             name="search"
             placeholder="Enter text..."
             style={
@@ -794,47 +409,126 @@ exports[`Campaigns page renders correctly 1`] = `
             </span>
           </button>
         </div>
-        <select
-          aria-label="Select sort order"
-          data-cy="sort-select"
-          defaultValue="most recent"
-          id="sort-select"
-          name="sort"
-          onChange={[Function]}
+        <span
+          id="sort-order"
           style={
             Object {
-              "WebkitAppearance": "none",
-              "background": "transparent",
-              "border": "1px solid hsla(0,0%,100%,0.9)",
-              "borderRadius": "0 0.2rem 0.2rem 0",
-              "color": "hsla(0,0%,100%,0.9)",
-              "height": "2.5rem",
-              "padding": "0.5rem",
+              "border": 0,
+              "clip": "rect(0 0 0 0)",
+              "height": "1px",
+              "margin": "-1px",
+              "overflow": "hidden",
+              "padding": 0,
+              "position": "absolute",
+              "whiteSpace": "nowrap",
+              "width": "1px",
+              "wordWrap": "normal",
             }
           }
         >
-          <option
-            value="a to z"
-          >
-            A TO Z
-          </option>
-          <option
-            value="z to a"
-          >
-            Z TO A
-          </option>
-          <option
-            value="oldest"
-          >
-            OLDEST
-          </option>
-          <option
-            value="most recent"
+          Select sort order
+        </span>
+        <div
+          data-cy="sort-select"
+          data-reach-listbox-input=""
+          data-state="closed"
+          data-value="most recent"
+          id="listbox-input--2"
+        >
+          <span
+            aria-haspopup="listbox"
+            aria-labelledby="sort order button--listbox-input--2"
+            data-reach-listbox-button=""
+            id="button--listbox-input--2"
+            onKeyDown={[Function]}
+            onMouseDown={[Function]}
+            onMouseUp={[Function]}
+            role="button"
+            style={
+              Object {
+                "WebkitAppearance": "none",
+                "background": "transparent",
+                "border": "1px solid hsla(0,0%,100%,0.9)",
+                "borderRadius": "0 0.2rem 0.2rem 0",
+                "color": "hsla(0,0%,100%,0.9)",
+                "cursor": "pointer",
+                "height": "2.5rem",
+                "padding": "0.5rem",
+              }
+            }
+            tabIndex={0}
           >
             MOST RECENT
-          </option>
-        </select>
+            <span
+              aria-hidden={true}
+              data-reach-listbox-arrow=""
+            >
+              ▼
+            </span>
+          </span>
+          <span />
+        </div>
       </form>
+      <div
+        style={
+          Object {
+            "display": "flex",
+            "flexWrap": "wrap",
+            "margin": "2rem 0",
+          }
+        }
+      >
+        Active filters:
+        <div
+          data-cy="filter-chip"
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#303641",
+              "borderRadius": "0.2rem",
+              "color": "hsla(0,0%,100%,0.9)",
+              "display": "flex",
+              "margin": "0.25rem 0.5rem",
+              "padding": "0 0.5rem",
+            }
+          }
+        >
+          <small />
+          <button
+            data-cy="remove-filter"
+            onClick={[Function]}
+            style={
+              Object {
+                "background": "none",
+                "border": "none",
+                "color": "hsla(0,0%,100%,0.9)",
+                "cursor": "pointer",
+                "flexGrow": 0,
+                "marginLeft": "0.5rem",
+                "verticalAlign": "middle",
+              }
+            }
+            type="button"
+          >
+            <span
+              aria-label="close-icon"
+              role="img"
+            >
+              <svg
+                height="12px"
+                viewBox="0 0 16 16"
+                width="12px"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polygon
+                  fill="hsla(0,0%,100%,0.9)"
+                  points="13.707,3.707 12.293,2.293 8,6.586 3.707,2.293 2.293,3.707 6.586,8 2.293,12.293 3.707,13.707 8,9.414  12.293,13.707 13.707,12.293 9.414,8"
+                />
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
       <section>
         <div
           style={
@@ -854,6 +548,7 @@ exports[`Campaigns page renders correctly 1`] = `
           >
             Showing
              
+            0 of 
             10
              
             campaigns
@@ -867,1071 +562,7 @@ exports[`Campaigns page renders correctly 1`] = `
               "gridTemplateColumns": "repeat(auto-fill, minmax(270px, 1fr))",
             }
           }
-        >
-          <a
-            href="/campaign/be798dc9-dccb-4dc2-8e6b-d395c1bcbeb6"
-          >
-            <div
-              data-cy="explore-card"
-              style={
-                Object {
-                  "backgroundColor": "#303641",
-                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "height": "100%",
-                  "justifyContent": "space-between",
-                  "padding": "1rem",
-                }
-              }
-            >
-              <div
-                style={
-                  Object {
-                    "marginBottom": "2rem",
-                  }
-                }
-              >
-                <div
-                  className="c0"
-                >
-                  <img
-                    alt="GOES-R PLT logo"
-                    height="85"
-                    src="test-file-stub"
-                  />
-                </div>
-                <big
-                  data-cy="shortname"
-                  style={
-                    Object {
-                      "fontWeight": "bold",
-                      "marginTop": "0.5rem",
-                    }
-                  }
-                >
-                  GOES-R PLT
-                </big>
-                <p
-                  data-cy="longname"
-                >
-                  GOES-R Post Launch Test
-                </p>
-                <div>
-                  <small
-                    data-cy="daterange"
-                  >
-                    2017
-                  </small>
-                </div>
-                <div>
-                  <small
-                    data-cy="region"
-                  >
-                    Continental United States
-                  </small>
-                </div>
-              </div>
-              <div>
-                <small
-                  data-cy="count1"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
-                >
-                  <strong>
-                    1
-                  </strong>
-                   
-                  Deployment
-                </small>
-                <small
-                  data-cy="count2"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
-                >
-                   · 
-                  <strong>
-                    0
-                  </strong>
-                   
-                  Data Product
-                  s
-                </small>
-              </div>
-            </div>
-          </a>
-          <a
-            href="/campaign/c438c053-3708-4f53-83d8-8c57990c6bec"
-          >
-            <div
-              data-cy="explore-card"
-              style={
-                Object {
-                  "backgroundColor": "#303641",
-                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "height": "100%",
-                  "justifyContent": "space-between",
-                  "padding": "1rem",
-                }
-              }
-            >
-              <div
-                style={
-                  Object {
-                    "marginBottom": "2rem",
-                  }
-                }
-              >
-                <div
-                  className="c0"
-                >
-                  <img
-                    alt="OLYMPEX logo"
-                    fixed={
-                      Object {
-                        "src": "/static/6b1df71a80ace65c6ad8ea8294fcaa5f/ad39b/logo_image2.png",
-                      }
-                    }
-                    src="test-image.png"
-                    style={
-                      Object {
-                        "margin": "0",
-                      }
-                    }
-                  />
-                </div>
-                <big
-                  data-cy="shortname"
-                  style={
-                    Object {
-                      "fontWeight": "bold",
-                      "marginTop": "0.5rem",
-                    }
-                  }
-                >
-                  OLYMPEX
-                </big>
-                <p
-                  data-cy="longname"
-                >
-                  Olympic Mountains Experiment
-                </p>
-                <div>
-                  <small
-                    data-cy="daterange"
-                  >
-                    2015—2016
-                  </small>
-                </div>
-                <div>
-                  <small
-                    data-cy="region"
-                  >
-                    Olympic Peninsula in U.S. Washington State
-                  </small>
-                </div>
-              </div>
-              <div>
-                <small
-                  data-cy="count1"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
-                >
-                  <strong>
-                    1
-                  </strong>
-                   
-                  Deployment
-                </small>
-                <small
-                  data-cy="count2"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
-                >
-                   · 
-                  <strong>
-                    0
-                  </strong>
-                   
-                  Data Product
-                  s
-                </small>
-              </div>
-            </div>
-          </a>
-          <a
-            href="/campaign/03b728ae-2235-488c-80ee-570dcf602f3b"
-          >
-            <div
-              data-cy="explore-card"
-              style={
-                Object {
-                  "backgroundColor": "#303641",
-                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "height": "100%",
-                  "justifyContent": "space-between",
-                  "padding": "1rem",
-                }
-              }
-            >
-              <div
-                style={
-                  Object {
-                    "marginBottom": "2rem",
-                  }
-                }
-              >
-                <div
-                  className="c0"
-                >
-                  <img
-                    alt="CARVE logo"
-                    fixed={
-                      Object {
-                        "src": "/static/3dec137acafa7ac0c3a74368b2cb56b3/f8771/carve_logo_update.jpg",
-                      }
-                    }
-                    src="test-image.png"
-                    style={
-                      Object {
-                        "margin": "0",
-                      }
-                    }
-                  />
-                </div>
-                <big
-                  data-cy="shortname"
-                  style={
-                    Object {
-                      "fontWeight": "bold",
-                      "marginTop": "0.5rem",
-                    }
-                  }
-                >
-                  CARVE
-                </big>
-                <p
-                  data-cy="longname"
-                >
-                  Carbon in Arctic Reservoirs Vulnerability Experiment
-                </p>
-                <div>
-                  <small
-                    data-cy="daterange"
-                  >
-                    2012—2015
-                  </small>
-                </div>
-                <div>
-                  <small
-                    data-cy="region"
-                  >
-                    Alaska
-                  </small>
-                </div>
-              </div>
-              <div>
-                <small
-                  data-cy="count1"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
-                >
-                  <strong>
-                    4
-                  </strong>
-                   
-                  Deployment
-                  s
-                </small>
-                <small
-                  data-cy="count2"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
-                >
-                   · 
-                  <strong>
-                    0
-                  </strong>
-                   
-                  Data Product
-                  s
-                </small>
-              </div>
-            </div>
-          </a>
-          <a
-            href="/campaign/0c68f350-b544-4b52-9f46-2aceb6aa1b7d"
-          >
-            <div
-              data-cy="explore-card"
-              style={
-                Object {
-                  "backgroundColor": "#303641",
-                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "height": "100%",
-                  "justifyContent": "space-between",
-                  "padding": "1rem",
-                }
-              }
-            >
-              <div
-                style={
-                  Object {
-                    "marginBottom": "2rem",
-                  }
-                }
-              >
-                <div
-                  className="c0"
-                >
-                  <img
-                    alt="AirMOSS logo"
-                    fixed={
-                      Object {
-                        "src": "/static/6cac19092a1bce4be3f0a8b6e564adb3/ad39b/airmossLogo.png",
-                      }
-                    }
-                    src="test-image.png"
-                    style={
-                      Object {
-                        "margin": "0",
-                      }
-                    }
-                  />
-                </div>
-                <big
-                  data-cy="shortname"
-                  style={
-                    Object {
-                      "fontWeight": "bold",
-                      "marginTop": "0.5rem",
-                    }
-                  }
-                >
-                  AirMOSS
-                </big>
-                <p
-                  data-cy="longname"
-                >
-                  Airborne Microwave Observatory of Subcanopy and Subsurface
-                </p>
-                <div>
-                  <small
-                    data-cy="daterange"
-                  >
-                    2012—2015
-                  </small>
-                </div>
-                <div>
-                  <small
-                    data-cy="region"
-                  >
-                    North America
-                  </small>
-                </div>
-              </div>
-              <div>
-                <small
-                  data-cy="count1"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
-                >
-                  <strong>
-                    34
-                  </strong>
-                   
-                  Deployment
-                  s
-                </small>
-                <small
-                  data-cy="count2"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
-                >
-                   · 
-                  <strong>
-                    0
-                  </strong>
-                   
-                  Data Product
-                  s
-                </small>
-              </div>
-            </div>
-          </a>
-          <a
-            href="/campaign/c1e56561-6726-4832-8dbe-0453b10ff36c"
-          >
-            <div
-              data-cy="explore-card"
-              style={
-                Object {
-                  "backgroundColor": "#303641",
-                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "height": "100%",
-                  "justifyContent": "space-between",
-                  "padding": "1rem",
-                }
-              }
-            >
-              <div
-                style={
-                  Object {
-                    "marginBottom": "2rem",
-                  }
-                }
-              >
-                <div
-                  className="c0"
-                >
-                  <img
-                    alt="HS3 logo"
-                    fixed={
-                      Object {
-                        "src": "/static/3d520693bc11c953f22f86f860ffd08a/ad39b/HS3_logo.png",
-                      }
-                    }
-                    src="test-image.png"
-                    style={
-                      Object {
-                        "margin": "0",
-                      }
-                    }
-                  />
-                </div>
-                <big
-                  data-cy="shortname"
-                  style={
-                    Object {
-                      "fontWeight": "bold",
-                      "marginTop": "0.5rem",
-                    }
-                  }
-                >
-                  HS3
-                </big>
-                <p
-                  data-cy="longname"
-                >
-                  Hurricane and Severe Storm Sentinel
-                </p>
-                <div>
-                  <small
-                    data-cy="daterange"
-                  >
-                    2012—2014
-                  </small>
-                </div>
-                <div>
-                  <small
-                    data-cy="region"
-                  >
-                    Subtropical Atlantic Ocean and Gulf of Mexico
-                  </small>
-                </div>
-              </div>
-              <div>
-                <small
-                  data-cy="count1"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
-                >
-                  <strong>
-                    3
-                  </strong>
-                   
-                  Deployment
-                  s
-                </small>
-                <small
-                  data-cy="count2"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
-                >
-                   · 
-                  <strong>
-                    0
-                  </strong>
-                   
-                  Data Product
-                  s
-                </small>
-              </div>
-            </div>
-          </a>
-          <a
-            href="/campaign/6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
-          >
-            <div
-              data-cy="explore-card"
-              style={
-                Object {
-                  "backgroundColor": "#303641",
-                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "height": "100%",
-                  "justifyContent": "space-between",
-                  "padding": "1rem",
-                }
-              }
-            >
-              <div
-                style={
-                  Object {
-                    "marginBottom": "2rem",
-                  }
-                }
-              >
-                <div
-                  className="c0"
-                >
-                  <img
-                    alt="DC3 logo"
-                    fixed={
-                      Object {
-                        "src": "/static/c4b36cb85ef25d65d08739c329b04e52/ad39b/dc3-logo.png",
-                      }
-                    }
-                    src="test-image.png"
-                    style={
-                      Object {
-                        "margin": "0",
-                      }
-                    }
-                  />
-                </div>
-                <big
-                  data-cy="shortname"
-                  style={
-                    Object {
-                      "fontWeight": "bold",
-                      "marginTop": "0.5rem",
-                    }
-                  }
-                >
-                  DC3
-                </big>
-                <p
-                  data-cy="longname"
-                >
-                  Deep Convective Clouds & Chemistry
-                </p>
-                <div>
-                  <small
-                    data-cy="daterange"
-                  >
-                    2012
-                  </small>
-                </div>
-                <div>
-                  <small
-                    data-cy="region"
-                  >
-                    Northeastern Colorado, West Texas to Central Oklahoma, Northern Alabama
-                  </small>
-                </div>
-              </div>
-              <div>
-                <small
-                  data-cy="count1"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
-                >
-                  <strong>
-                    1
-                  </strong>
-                   
-                  Deployment
-                </small>
-                <small
-                  data-cy="count2"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
-                >
-                   · 
-                  <strong />
-                   
-                  Data Product
-                  s
-                </small>
-              </div>
-            </div>
-          </a>
-          <a
-            href="/campaign/61616a26-fc33-450e-bd53-a7690d03e6b6"
-          >
-            <div
-              data-cy="explore-card"
-              style={
-                Object {
-                  "backgroundColor": "#303641",
-                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "height": "100%",
-                  "justifyContent": "space-between",
-                  "padding": "1rem",
-                }
-              }
-            >
-              <div
-                style={
-                  Object {
-                    "marginBottom": "2rem",
-                  }
-                }
-              >
-                <div
-                  className="c0"
-                >
-                  <img
-                    alt="GCPEx logo"
-                    fixed={
-                      Object {
-                        "src": "/static/4e1cc27c28411e8c942f140039bb625b/ad39b/gcpexlogo.png",
-                      }
-                    }
-                    src="test-image.png"
-                    style={
-                      Object {
-                        "margin": "0",
-                      }
-                    }
-                  />
-                </div>
-                <big
-                  data-cy="shortname"
-                  style={
-                    Object {
-                      "fontWeight": "bold",
-                      "marginTop": "0.5rem",
-                    }
-                  }
-                >
-                  GCPEx
-                </big>
-                <p
-                  data-cy="longname"
-                >
-                  GPM Cold Season Precipitation Experiment
-                </p>
-                <div>
-                  <small
-                    data-cy="daterange"
-                  >
-                    2012
-                  </small>
-                </div>
-                <div>
-                  <small
-                    data-cy="region"
-                  >
-                    Ontario, Canada and northern portions of the United States (e.g., New York state, the New England area, etc.)
-                  </small>
-                </div>
-              </div>
-              <div>
-                <small
-                  data-cy="count1"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
-                >
-                  <strong>
-                    1
-                  </strong>
-                   
-                  Deployment
-                </small>
-                <small
-                  data-cy="count2"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
-                >
-                   · 
-                  <strong>
-                    0
-                  </strong>
-                   
-                  Data Product
-                  s
-                </small>
-              </div>
-            </div>
-          </a>
-          <a
-            href="/campaign/7739c801-46e6-4ddd-ad30-351626dcccdb"
-          >
-            <div
-              data-cy="explore-card"
-              style={
-                Object {
-                  "backgroundColor": "#303641",
-                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "height": "100%",
-                  "justifyContent": "space-between",
-                  "padding": "1rem",
-                }
-              }
-            >
-              <div
-                style={
-                  Object {
-                    "marginBottom": "2rem",
-                  }
-                }
-              >
-                <div
-                  className="c0"
-                >
-                  <img
-                    alt="GRIP logo"
-                    fixed={
-                      Object {
-                        "src": "/static/2803312240ff21bec233dee65f422031/f8771/464732main_grip_graphic_med.jpg",
-                      }
-                    }
-                    src="test-image.png"
-                    style={
-                      Object {
-                        "margin": "0",
-                      }
-                    }
-                  />
-                </div>
-                <big
-                  data-cy="shortname"
-                  style={
-                    Object {
-                      "fontWeight": "bold",
-                      "marginTop": "0.5rem",
-                    }
-                  }
-                >
-                  GRIP
-                </big>
-                <p
-                  data-cy="longname"
-                >
-                  Genesis and Rapid Intensification Processes
-                </p>
-                <div>
-                  <small
-                    data-cy="daterange"
-                  >
-                    2010
-                  </small>
-                </div>
-                <div>
-                  <small
-                    data-cy="region"
-                  >
-                    Tropical Atlantic, Gulf of Mexico, Eastern North Pacific, Caribbean Sea
-                  </small>
-                </div>
-              </div>
-              <div>
-                <small
-                  data-cy="count1"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
-                >
-                  <strong>
-                    1
-                  </strong>
-                   
-                  Deployment
-                </small>
-                <small
-                  data-cy="count2"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
-                >
-                   · 
-                  <strong>
-                    0
-                  </strong>
-                   
-                  Data Product
-                  s
-                </small>
-              </div>
-            </div>
-          </a>
-          <a
-            href="/campaign/e48c2d79-822b-4c9e-9f72-2776d5d1eac6"
-          >
-            <div
-              data-cy="explore-card"
-              style={
-                Object {
-                  "backgroundColor": "#303641",
-                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "height": "100%",
-                  "justifyContent": "space-between",
-                  "padding": "1rem",
-                }
-              }
-            >
-              <div
-                style={
-                  Object {
-                    "marginBottom": "2rem",
-                  }
-                }
-              >
-                <div
-                  className="c0"
-                >
-                  <img
-                    alt="ARCTAS logo"
-                    fixed={
-                      Object {
-                        "src": "/static/2bd234de67183d020fabe8584d7713ff/f8771/arctas_spring.jpg",
-                      }
-                    }
-                    src="test-image.png"
-                    style={
-                      Object {
-                        "margin": "0",
-                      }
-                    }
-                  />
-                </div>
-                <big
-                  data-cy="shortname"
-                  style={
-                    Object {
-                      "fontWeight": "bold",
-                      "marginTop": "0.5rem",
-                    }
-                  }
-                >
-                  ARCTAS
-                </big>
-                <p
-                  data-cy="longname"
-                >
-                  Arctic Research of the Composition of the Troposphere from Aircraft and Satellites
-                </p>
-                <div>
-                  <small
-                    data-cy="daterange"
-                  >
-                    2008
-                  </small>
-                </div>
-                <div>
-                  <small
-                    data-cy="region"
-                  >
-                    Alaska, Western Canada, California
-                  </small>
-                </div>
-              </div>
-              <div>
-                <small
-                  data-cy="count1"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
-                >
-                  <strong>
-                    3
-                  </strong>
-                   
-                  Deployment
-                  s
-                </small>
-                <small
-                  data-cy="count2"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
-                >
-                   · 
-                  <strong>
-                    0
-                  </strong>
-                   
-                  Data Product
-                  s
-                </small>
-              </div>
-            </div>
-          </a>
-          <a
-            href="/campaign/951482fa-5748-46ba-aed5-aab8b106b103"
-          >
-            <div
-              data-cy="explore-card"
-              style={
-                Object {
-                  "backgroundColor": "#303641",
-                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "height": "100%",
-                  "justifyContent": "space-between",
-                  "padding": "1rem",
-                }
-              }
-            >
-              <div
-                style={
-                  Object {
-                    "marginBottom": "2rem",
-                  }
-                }
-              >
-                <div
-                  className="c0"
-                >
-                  <img
-                    alt="logo"
-                    fixed={
-                      Object {
-                        "src": "/static/070840eb6299020cd65fd46e27c54400/ad39b/aces_logo.png",
-                      }
-                    }
-                    src="test-image.png"
-                    style={
-                      Object {
-                        "margin": "0",
-                      }
-                    }
-                  />
-                </div>
-                <big
-                  data-cy="shortname"
-                  style={
-                    Object {
-                      "fontWeight": "bold",
-                      "marginTop": "0.5rem",
-                    }
-                  }
-                >
-                  ACES
-                </big>
-                <p
-                  data-cy="longname"
-                >
-                  Altus Cumulus Electrification Study
-                </p>
-                <div>
-                  <small
-                    data-cy="daterange"
-                  >
-                    2002
-                  </small>
-                </div>
-                <div>
-                  <small
-                    data-cy="region"
-                  >
-                    Florida Everglades
-                  </small>
-                </div>
-              </div>
-              <div>
-                <small
-                  data-cy="count1"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
-                >
-                  <strong>
-                    1
-                  </strong>
-                   
-                  Deployment
-                </small>
-                <small
-                  data-cy="count2"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
-                >
-                   · 
-                  <strong>
-                    0
-                  </strong>
-                   
-                  Data Product
-                  s
-                </small>
-              </div>
-            </div>
-          </a>
-        </div>
+        />
       </section>
     </section>
   </main>
@@ -2062,7 +693,55 @@ exports[`Campaigns page renders correctly 1`] = `
               Glossary
             </a>
           </li>
-          <li />
+          <li>
+            <button
+              onClick={[Function]}
+            >
+              Maintenance login
+            </button>
+            <div
+              className="c0"
+              onClick={[Function]}
+            >
+              <div
+                className="c1"
+              >
+                <form
+                  data-cy="login-form"
+                  onSubmit={[Function]}
+                >
+                  <h3>
+                    Log In
+                  </h3>
+                  <label
+                    htmlFor="username"
+                  >
+                    Username
+                  </label>
+                  <input
+                    name="username"
+                    onChange={[Function]}
+                    type="text"
+                    value=""
+                  />
+                  <label
+                    htmlFor="password"
+                  >
+                    Password
+                  </label>
+                  <input
+                    name="password"
+                    onChange={[Function]}
+                    type="password"
+                    value=""
+                  />
+                  <input
+                    type="submit"
+                  />
+                </form>
+              </div>
+            </div>
+          </li>
         </ul>
       </div>
       <div

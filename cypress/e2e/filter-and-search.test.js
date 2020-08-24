@@ -32,7 +32,7 @@ describe("Explore Tools", () => {
           .should("contain", "Filter")
 
         cy.get("[data-cy=explore-tools]")
-          .find("input")
+          .find("[data-cy=explore-input]")
           .should("have.attr", "aria-label", "Enter search text")
 
         cy.get("[data-cy=submit]").should("exist")
@@ -46,14 +46,19 @@ describe("Explore Tools", () => {
 
         cy.window().should("have.prop", "beforeReload", true)
 
-        cy.get("[data-cy=filter-select]").select(x.filterExamples[0])
+        cy.get("[data-cy=filter-select]").click()
+
+        cy.get("[data-cy=filter-options]")
+          .find("[data-cy=filter-option]")
+          .contains(x.filterExamples[0])
+          .click()
 
         cy.get("[data-cy=submit]").click()
 
         cy.window().should("have.prop", "beforeReload", true)
 
         cy.get("[data-cy=explore-tools]")
-          .find("input")
+          .find("[data-cy=explore-input]")
           .type("submitting some text")
           .type("{enter}")
 
@@ -65,7 +70,11 @@ describe("Explore Tools", () => {
           x.filterExamples.forEach(filterExample => {
             const numBefore = $cards.length
 
-            cy.get("[data-cy=filter-select]").select(filterExample)
+            cy.get("[data-cy=filter-select]").click()
+            cy.get("[data-cy=filter-options]")
+              .find("[data-cy=filter-option]")
+              .contains(filterExample)
+              .click({ force: true }) // neccessary due to css from library that labels the parent div with visibility:none
 
             cy.get("[data-cy=filter-chip]").should("exist")
 
@@ -99,7 +108,11 @@ describe("Explore Tools", () => {
       })
 
       it("sorts the list 'a to z' or 'z to a'", () => {
-        cy.get("[data-cy=sort-select]").select("a to z")
+        cy.get("[data-cy=sort-select]").click()
+        cy.get("[data-cy=sort-options]")
+          .find("li")
+          .contains("A TO Z")
+          .click({ force: true })
 
         cy.get("[data-cy=explore-card]")
           .find("big")
@@ -110,7 +123,11 @@ describe("Explore Tools", () => {
             expect(first < last).to.be.true
           })
 
-        cy.get("[data-cy=sort-select]").select("z to a")
+        cy.get("[data-cy=sort-select]").click()
+        cy.get("[data-cy=sort-options]")
+          .find("[data-cy=sort-option]")
+          .contains("Z TO A")
+          .click({ force: true })
 
         cy.get("[data-cy=explore-card]")
           .find("big")
@@ -124,7 +141,11 @@ describe("Explore Tools", () => {
 
       if (x.category === "campaigns") {
         it("sorts the list be most recent", () => {
-          cy.get("[data-cy=sort-select]").select("most recent")
+          cy.get("[data-cy=sort-select]").click()
+          cy.get("[data-cy=sort-options]")
+            .find("[data-cy=sort-option]")
+            .contains("MOST RECENT")
+            .click({ force: true })
 
           cy.get("[data-cy=explore-card]")
             .find("[data-cy=daterange]")
@@ -137,7 +158,11 @@ describe("Explore Tools", () => {
         })
 
         it("sorts the list be oldest", () => {
-          cy.get("[data-cy=sort-select]").select("oldest")
+          cy.get("[data-cy=sort-select]").click()
+          cy.get("[data-cy=sort-options]")
+            .find("[data-cy=sort-option]")
+            .contains("OLDEST")
+            .click({ force: true })
 
           cy.get("[data-cy=explore-card]")
             .find("[data-cy=daterange]")
@@ -152,7 +177,11 @@ describe("Explore Tools", () => {
 
       if (x.category === "platforms" || x.category === "instruments") {
         it("sorts the list be most used", () => {
-          cy.get("[data-cy=sort-select]").select("most used")
+          cy.get("[data-cy=sort-select]").click()
+          cy.get("[data-cy=sort-options]")
+            .find("[data-cy=sort-option]")
+            .contains("MOST USED")
+            .click({ force: true })
 
           cy.get("[data-cy=explore-card]")
             .find("[data-cy=count1]")

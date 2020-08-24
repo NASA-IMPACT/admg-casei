@@ -1,34 +1,55 @@
 import React from "react"
 import PropTypes from "prop-types"
+import {
+  ListboxInput,
+  ListboxButton,
+  ListboxPopover,
+  ListboxList,
+  ListboxOption,
+} from "@reach/listbox"
+import VisuallyHidden from "@reach/visually-hidden"
 
 import theme from "../../utils/theme"
 import { sortFunctions } from "../../utils/filter-utils"
 
-const SortMenu = ({ sortOrder, setSortOrder, category }) => (
-  <select
-    defaultValue={sortOrder}
-    aria-label="Select sort order"
-    name="sort"
-    id="sort-select"
-    onChange={e => setSortOrder(e.target.value)}
-    style={{
-      height: `2.5rem`,
-      WebkitAppearance: `none`,
-      background: `transparent`,
-      border: `1px solid ${theme.color.base}`,
-      borderRadius: `0 ${theme.shape.rounded} ${theme.shape.rounded} 0`,
-      color: theme.color.base,
-      padding: `0.5rem`,
-    }}
-    data-cy="sort-select"
-  >
-    {Object.keys(sortFunctions[category]).map(o => (
-      <option key={o} value={o}>
-        {o.toUpperCase()}
-      </option>
-    ))}
-  </select>
-)
+const SortMenu = ({ sortOrder, setSortOrder, category }) => {
+  return (
+    <>
+      <VisuallyHidden id="sort-order">Select sort order</VisuallyHidden>
+      <ListboxInput
+        aria-labelledby="sort order"
+        defaultValue={sortOrder}
+        onChange={value => setSortOrder(value)}
+        data-cy="sort-select"
+      >
+        <ListboxButton
+          arrow="▼"
+          style={{
+            height: `2.5rem`,
+            WebkitAppearance: `none`,
+            background: `transparent`,
+            border: `1px solid ${theme.color.base}`,
+            borderRadius: `0 ${theme.shape.rounded} ${theme.shape.rounded} 0`,
+            color: theme.color.base,
+            padding: `0.5rem`,
+            cursor: `pointer`,
+          }}
+        >
+          {sortOrder.toUpperCase()}
+        </ListboxButton>
+        <ListboxPopover style={{ background: theme.color.primary }}>
+          <ListboxList data-cy="sort-options">
+            {Object.keys(sortFunctions[category]).map(o => (
+              <ListboxOption key={o} value={o} data-cy="sort-option">
+                {o.toUpperCase()}
+              </ListboxOption>
+            ))}
+          </ListboxList>
+        </ListboxPopover>
+      </ListboxInput>
+    </>
+  )
+}
 
 SortMenu.propTypes = {
   sortOrder: PropTypes.string.isRequired,
