@@ -276,7 +276,7 @@ exports[`Campaigns page renders correctly 1`] = `
         }
       >
         <span
-          aria-labelledby="filter-select"
+          id="filter-select"
           style={
             Object {
               "border": 0,

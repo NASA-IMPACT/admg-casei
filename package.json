@@ -79,8 +79,8 @@
     "tdd": "jest --watch",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
-    "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open",
-    "test:e2e:ci": "start-server-and-test develop http://localhost:8000 cy:run",
+    "test:e2e": "start-server-and-test 'yarn develop' http://localhost:8000 'yarn cy:open'",
+    "test:e2e:ci": "start-server-and-test 'yarn serve -p 8000' http://localhost:8000 'yarn cy:run'",
     "test:cov": "nyc report --reporter=lcov --reporter=text",
     "test:cov:summary": "nyc report --reporter=text-summary"
   },

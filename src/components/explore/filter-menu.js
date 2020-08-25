@@ -47,7 +47,7 @@ const FilterMenu = ({
   let [value, setValue] = useState("")
   return (
     <>
-      <VisuallyHidden aria-labelledby="filter-select">
+      <VisuallyHidden id="filter-select">
         filter results by sub-categories
       </VisuallyHidden>
       <ListboxInput

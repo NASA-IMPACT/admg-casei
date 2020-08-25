@@ -9,8 +9,9 @@ base_def: &base_def
 
 restore_cache_def: &restore_cache_def # Download and cache dependencies
   keys:
-    - v1-dependencies-{{ checksum "package.json" }}
-    - v1-dependencies- # fallback if checksum fails
+    - v1-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
+    - v1-deps-{{ .Branch }}
+    - v1-deps # fallback if checksum fails
 
 ##
 ## START Circle CI configuration
@@ -26,9 +27,10 @@ jobs:
           <<: *restore_cache_def
       - run: yarn install
       - save_cache:
+          key: v1-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+            - ~/.cache
   lint:
     <<: *base_def
     steps:
@@ -45,6 +47,13 @@ jobs:
           <<: *restore_cache_def
       - run: yarn install
       - run: yarn test
+  build:
+    <<: *base_def
+    steps:
+      - checkout
+      - restore_cache:
+          <<: *restore_cache_def
+      - run: yarn build
   test-end-to-end:
     docker:
       # the Docker image with Cypress dependencies
@@ -54,7 +63,19 @@ jobs:
           TERM: xterm
     steps:
       - checkout
+      - restore_cache:
+          keys:
+            - v1-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
+            - v1-deps-{{ .Branch }}
+            - v1-deps # fallback if checksum fails
       - run: yarn install
+      - run: yarn build
+      - save_cache:
+          key: v1-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
+          paths:
+            - node_modules
+            - ~/.cache ## cache both yarn and Cypress!
+            - ~/.public ## cache build
       - run: yarn test:e2e:ci
       - run: yarn test:cov && yarn test:cov:summary
       - store_artifacts:
@@ -79,16 +100,19 @@ workflows:
       - test:
           requires:
             - prepare
-      - test-end-to-end:
+      - build:
           requires:
-            - prepare
             - lint
             - test
+      - test-end-to-end:
+          requires:
+            - build
       - build-and-deploy:
           requires:
             - prepare
             - lint
             - test
+            - build
             - test-end-to-end
           filters:
             branches:
