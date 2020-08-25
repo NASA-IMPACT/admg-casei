@@ -186,22 +186,21 @@ describe("Homepage", () => {
     })
     it("navigates to the instrument list with the instrument type as filter applied", () => {
       cy.get("[data-cy=instruments-section]")
-        .find("[data-cy=instrument]")
-        .contains(/Remote/i)
+        .find("[data-cy=instrument-type]")
+        .contains(/Active Remote Sensors/i)
         .should("be.visible")
 
-      cy.get("[data-cy=instrument]")
-        .findByText(/Remote/i)
-        .as("link")
+      cy.get("[data-cy=instrument-type]")
+        .contains(/Active Remote Sensors/i)
         .click()
 
       cy.url().should("include", "/explore/instruments")
 
       cy.get("[data-cy=filter-chip]")
         .should("have.length", 1)
-        .and("have.text", "type: Remote")
+        .and("have.text", "type: Remote - Active")
 
-      cy.get("main").find("[data-cy=explore-card]").should("have.length", 0)
+      cy.get("main").find("[data-cy=explore-card]").should("have.length", 12)
     })
   })
 })
