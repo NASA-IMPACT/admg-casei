@@ -9,8 +9,9 @@ base_def: &base_def
 
 restore_cache_def: &restore_cache_def # Download and cache dependencies
   keys:
-    - v1-dependencies-{{ checksum "package.json" }}
-    - v1-dependencies- # fallback if checksum fails
+    - v1-deps-{{ .Branch }}-{{ checksum "package.json" }}
+    - v1-deps-{{ .Branch }}
+    - v1-deps # fallback if checksum fails
 
 ##
 ## START Circle CI configuration
@@ -26,9 +27,10 @@ jobs:
           <<: *restore_cache_def
       - run: yarn install
       - save_cache:
+          key: v1-deps-{{ .Branch }}-{{ checksum "package.json" }}
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+            - ~/.cache
   lint:
     <<: *base_def
     steps:
@@ -54,7 +56,13 @@ jobs:
           TERM: xterm
     steps:
       - checkout
+      - restore_cache:
+          <<: *restore_cache_def
       - run: yarn install
+      - save_cache:
+          key: v1-deps-{{ .Branch }}-{{ checksum "package.json" }}
+          paths:
+            - ~/.cache ## cache both yarn and Cypress!
       - run: yarn test:e2e:ci
       - run: yarn test:cov && yarn test:cov:summary
       - store_artifacts:
