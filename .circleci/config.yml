@@ -47,6 +47,13 @@ jobs:
           <<: *restore_cache_def
       - run: yarn install
       - run: yarn test
+  build:
+    <<: *base_def
+    steps:
+      - checkout
+      - restore_cache:
+          <<: *restore_cache_def
+      - run: yarn build
   test-end-to-end:
     docker:
       # the Docker image with Cypress dependencies
@@ -59,6 +66,7 @@ jobs:
       - restore_cache:
           <<: *restore_cache_def
       - run: yarn install
+      - run: yarn build
       - save_cache:
           key: v1-deps-{{ .Branch }}-{{ checksum "package.json" }}
           paths:
@@ -87,16 +95,23 @@ workflows:
       - test:
           requires:
             - prepare
+      - build:
+          requires:
+            - prepare
+            - lint
+            - test
       - test-end-to-end:
           requires:
             - prepare
             - lint
             - test
+            - build
       - build-and-deploy:
           requires:
             - prepare
             - lint
             - test
+            - build
             - test-end-to-end
           filters:
             branches:
