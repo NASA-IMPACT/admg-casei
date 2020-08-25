@@ -65,13 +65,13 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - cy-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
-            - cy-deps-{{ .Branch }}
-            - cy-deps # fallback if checksum fails
+            - v1-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
+            - v1-deps-{{ .Branch }}
+            - v1-deps # fallback if checksum fails
       - run: yarn install
       - run: yarn build
       - save_cache:
-          key: cy-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
+          key: v1-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
           paths:
             - node_modules
             - ~/.cache ## cache both yarn and Cypress!
