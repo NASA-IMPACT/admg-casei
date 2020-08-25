@@ -1,27 +1,41 @@
 /// <reference types="Cypress" />
 
 describe("Explore", () => {
-  beforeEach(() => {
-    cy.visit("/explore/campaigns")
-  })
-  it("renders correctly", () => {
-    cy.get("[data-cy=tabbar]")
-      .find("li")
-      .should($li => {
-        expect($li).to.have.length(3)
-      })
-      .then($li => {
-        expect($li[0], "text content").to.have.text("Campaigns")
-        expect($li[1], "text content").to.have.text("Platforms")
-        expect($li[2], "text content").to.have.text("Instruments")
-      })
-
-    cy.get("[data-cy=explore-tools]").should("exist")
-    cy.get("[data-cy=item-count]").should("exist")
-    cy.get("[data-cy=explore-card]").should("exist")
-  })
-
   describe("campaigns", () => {
+    beforeEach(() => {
+      cy.visit("/explore/campaigns")
+    })
+
+    it("renders correctly", () => {
+      cy.get("[data-cy=tabbar]")
+        .find("li")
+        .should($li => {
+          expect($li).to.have.length(3)
+        })
+        .then($li => {
+          expect($li[0], "text content").to.have.text("Campaigns")
+          expect($li[0].firstChild, "active link").to.have.css(
+            "color",
+            "rgb(170, 201, 255)"
+          )
+          expect($li[1], "text content").to.have.text("Platforms")
+          expect($li[1].firstChild, "other link").not.to.have.css(
+            "color",
+            "rgb(170, 201, 255)"
+          )
+          expect($li[2], "text content").to.have.text("Instruments")
+
+          expect($li[2].firstChild, "other link").not.to.have.css(
+            "color",
+            "rgb(170, 201, 255)"
+          )
+        })
+
+      cy.get("[data-cy=explore-tools]").should("exist")
+      cy.get("[data-cy=item-count]").should("exist")
+      cy.get("[data-cy=explore-card]").should("exist")
+    })
+
     it("displays the number of items to explore", () => {
       cy.get("[data-cy=item-count]")
         .invoke("text")
@@ -64,8 +78,37 @@ describe("Explore", () => {
 
   describe("platforms", () => {
     beforeEach(() => {
-      cy.get("[data-cy=tabbar]").contains("Platforms").click()
-      cy.url().should("include", "/explore/platforms")
+      cy.visit("/explore/platforms")
+    })
+
+    it("renders correctly", () => {
+      cy.get("[data-cy=tabbar]")
+        .find("li")
+        .should($li => {
+          expect($li).to.have.length(3)
+        })
+        .then($li => {
+          expect($li[0], "text content").to.have.text("Campaigns")
+          expect($li[0].firstChild, "other link").not.to.have.css(
+            "color",
+            "rgb(170, 201, 255)"
+          )
+          expect($li[1], "text content").to.have.text("Platforms")
+          expect($li[1].firstChild, "active link").to.have.css(
+            "color",
+            "rgb(170, 201, 255)"
+          )
+          expect($li[2], "text content").to.have.text("Instruments")
+
+          expect($li[2].firstChild, "other link").not.to.have.css(
+            "color",
+            "rgb(170, 201, 255)"
+          )
+        })
+
+      cy.get("[data-cy=explore-tools]").should("exist")
+      cy.get("[data-cy=item-count]").should("exist")
+      cy.get("[data-cy=explore-card]").should("exist")
     })
 
     it("displays the number of items to explore", () => {
@@ -99,8 +142,37 @@ describe("Explore", () => {
 
   describe("instruments", () => {
     beforeEach(() => {
-      cy.get("[data-cy=tabbar]").contains("Instruments").click()
-      cy.url().should("include", "/explore/instruments")
+      cy.visit("/explore/instruments")
+    })
+
+    it("renders correctly", () => {
+      cy.get("[data-cy=tabbar]")
+        .find("li")
+        .should($li => {
+          expect($li).to.have.length(3)
+        })
+        .then($li => {
+          expect($li[0], "text content").to.have.text("Campaigns")
+          expect($li[0].firstChild, "other link").not.to.have.css(
+            "color",
+            "rgb(170, 201, 255)"
+          )
+          expect($li[1], "text content").to.have.text("Platforms")
+          expect($li[1].firstChild, "other link").not.to.have.css(
+            "color",
+            "rgb(170, 201, 255)"
+          )
+          expect($li[2], "text content").to.have.text("Instruments")
+
+          expect($li[2].firstChild, "active link").to.have.css(
+            "color",
+            "rgb(170, 201, 255)"
+          )
+        })
+
+      cy.get("[data-cy=explore-tools]").should("exist")
+      cy.get("[data-cy=item-count]").should("exist")
+      cy.get("[data-cy=explore-card]").should("exist")
     })
 
     it("displays the number of items to explore", () => {
