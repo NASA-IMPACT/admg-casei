@@ -4,7 +4,7 @@ export default {
   async fetchSearchResult(type, searchstring) {
     try {
       const response = await fetch(
-        `http://ec2-3-85-33-46.compute-1.amazonaws.com/api/${type}?search=${searchstring}`,
+        `https://admg.nasa-impact.net/api/${type}?search=${searchstring}`,
         {
           method: "GET",
         }
