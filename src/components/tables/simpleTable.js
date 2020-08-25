@@ -6,10 +6,6 @@ import theme from "../../utils/theme"
 
 const Table = styled.table`
   th {
-    font-feature-settings: "pnum" 0; /* Use proportional numbers */
-    text-transform: uppercase;
-    font-size: 0.75rem;
-    line-height: 1.5rem;
     color: ${theme.color.gray};
   }
   th:first-child {
@@ -17,7 +13,6 @@ const Table = styled.table`
   }
 
   td {
-    font-size: 0.875rem;
     line-height: 1.5rem;
   }
   td:first-child {
@@ -33,7 +28,9 @@ export default function SimpleTable({ id, heading, tableHeaders, tableRows }) {
         <tbody>
           <tr style={{ borderBottom: `2px solid ${theme.color.gray}` }}>
             {tableHeaders.map((header, i) => (
-              <th key={i}>{header}</th>
+              <th key={i}>
+                <label>{header}</label>
+              </th>
             ))}
           </tr>
           {tableRows.map((row, i) => (

@@ -6,7 +6,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
   grid-template-columns: repeat(12,1fr);
   -webkit-column-gap: 1rem;
   column-gap: 1rem;
-  margin-top: 5rem;
+  margin-top: 9rem;
   border-top: 55px solid transparent;
   position: relative;
   -webkit-background-clip: padding-box;
@@ -108,8 +108,6 @@ exports[`Program Info Section renders logo when present in props 1`] = `
                 "borderBottom": "1px solid #9E9E9E",
                 "color": "#9E9E9E",
                 "display": "block",
-                "fontSize": "small",
-                "textTransform": "uppercase",
               }
             }
           >
@@ -131,8 +129,6 @@ exports[`Program Info Section renders logo when present in props 1`] = `
                 "borderBottom": "1px solid #9E9E9E",
                 "color": "#9E9E9E",
                 "display": "block",
-                "fontSize": "small",
-                "textTransform": "uppercase",
               }
             }
           >
@@ -154,8 +150,6 @@ exports[`Program Info Section renders logo when present in props 1`] = `
                 "borderBottom": "1px solid #9E9E9E",
                 "color": "#9E9E9E",
                 "display": "block",
-                "fontSize": "small",
-                "textTransform": "uppercase",
               }
             }
           >
@@ -177,8 +171,6 @@ exports[`Program Info Section renders logo when present in props 1`] = `
                 "borderBottom": "1px solid #9E9E9E",
                 "color": "#9E9E9E",
                 "display": "block",
-                "fontSize": "small",
-                "textTransform": "uppercase",
               }
             }
           >
@@ -200,8 +192,6 @@ exports[`Program Info Section renders logo when present in props 1`] = `
                 "borderBottom": "1px solid #9E9E9E",
                 "color": "#9E9E9E",
                 "display": "block",
-                "fontSize": "small",
-                "textTransform": "uppercase",
               }
             }
           >
@@ -223,8 +213,6 @@ exports[`Program Info Section renders logo when present in props 1`] = `
                 "borderBottom": "1px solid #9E9E9E",
                 "color": "#9E9E9E",
                 "display": "block",
-                "fontSize": "small",
-                "textTransform": "uppercase",
               }
             }
           >
@@ -254,8 +242,6 @@ exports[`Program Info Section renders logo when present in props 1`] = `
                 "borderBottom": "1px solid #9E9E9E",
                 "color": "#9E9E9E",
                 "display": "block",
-                "fontSize": "small",
-                "textTransform": "uppercase",
               }
             }
           >
@@ -277,8 +263,6 @@ exports[`Program Info Section renders logo when present in props 1`] = `
                 "borderBottom": "1px solid #9E9E9E",
                 "color": "#9E9E9E",
                 "display": "block",
-                "fontSize": "small",
-                "textTransform": "uppercase",
               }
             }
           >
@@ -310,7 +294,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
   grid-template-columns: repeat(12,1fr);
   -webkit-column-gap: 1rem;
   column-gap: 1rem;
-  margin-top: 5rem;
+  margin-top: 9rem;
   border-top: 55px solid transparent;
   position: relative;
   -webkit-background-clip: padding-box;
@@ -388,8 +372,6 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
                 "borderBottom": "1px solid #9E9E9E",
                 "color": "#9E9E9E",
                 "display": "block",
-                "fontSize": "small",
-                "textTransform": "uppercase",
               }
             }
           >
@@ -411,8 +393,6 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
                 "borderBottom": "1px solid #9E9E9E",
                 "color": "#9E9E9E",
                 "display": "block",
-                "fontSize": "small",
-                "textTransform": "uppercase",
               }
             }
           >
@@ -434,8 +414,6 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
                 "borderBottom": "1px solid #9E9E9E",
                 "color": "#9E9E9E",
                 "display": "block",
-                "fontSize": "small",
-                "textTransform": "uppercase",
               }
             }
           >
@@ -457,8 +435,6 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
                 "borderBottom": "1px solid #9E9E9E",
                 "color": "#9E9E9E",
                 "display": "block",
-                "fontSize": "small",
-                "textTransform": "uppercase",
               }
             }
           >
@@ -480,8 +456,6 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
                 "borderBottom": "1px solid #9E9E9E",
                 "color": "#9E9E9E",
                 "display": "block",
-                "fontSize": "small",
-                "textTransform": "uppercase",
               }
             }
           >
@@ -503,8 +477,6 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
                 "borderBottom": "1px solid #9E9E9E",
                 "color": "#9E9E9E",
                 "display": "block",
-                "fontSize": "small",
-                "textTransform": "uppercase",
               }
             }
           >
@@ -534,8 +506,6 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
                 "borderBottom": "1px solid #9E9E9E",
                 "color": "#9E9E9E",
                 "display": "block",
-                "fontSize": "small",
-                "textTransform": "uppercase",
               }
             }
           >
@@ -557,8 +527,6 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
                 "borderBottom": "1px solid #9E9E9E",
                 "color": "#9E9E9E",
                 "display": "block",
-                "fontSize": "small",
-                "textTransform": "uppercase",
               }
             }
           >

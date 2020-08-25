@@ -15,11 +15,9 @@ exports[`MileStone renders correctly 1`] = `
       Object {
         "backgroundColor": "#F93C21",
         "color": "#0c1520",
-        "fontSize": "small",
         "left": "4rem",
         "padding": ".25rem",
         "position": "absolute",
-        "textTransform": "uppercase",
         "top": "4rem",
         "zIndex": "1",
       }
@@ -66,8 +64,6 @@ exports[`MileStone renders correctly 1`] = `
             "borderBottom": "none",
             "color": "#9E9E9E",
             "display": "block",
-            "fontSize": "small",
-            "textTransform": "uppercase",
           }
         }
       >
