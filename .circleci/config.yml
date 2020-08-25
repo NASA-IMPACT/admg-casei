@@ -73,7 +73,9 @@ jobs:
       - save_cache:
           key: cy-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
           paths:
+            - node_modules
             - ~/.cache ## cache both yarn and Cypress!
+            - ~/.public ## cache build
       - run: yarn test:e2e:ci
       - run: yarn test:cov && yarn test:cov:summary
       - store_artifacts:
