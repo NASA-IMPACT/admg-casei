@@ -14,7 +14,7 @@ export const login = async (username, password) => {
   body.append("client_secret", process.env.ADMG_CLIENT_SECRET)
   try {
     const response = await fetch(
-      "http://admg.nasa-impact.net/authenticate/token/",
+      "https://admg.nasa-impact.net/authenticate/token/",
       {
         method: "POST",
         headers,

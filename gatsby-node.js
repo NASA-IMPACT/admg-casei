@@ -117,7 +117,7 @@ exports.sourceNodes = async ({ actions, createContentDigest }) => {
 }
 
 const fetchData = async endpoint => {
-  const response = await fetch(`http://admg.nasa-impact.net/api/${endpoint}`, {
+  const response = await fetch(`https://admg.nasa-impact.net/api/${endpoint}`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
