@@ -9,7 +9,7 @@ base_def: &base_def
 
 restore_cache_def: &restore_cache_def # Download and cache dependencies
   keys:
-    - v1-deps-{{ .Branch }}-{{ checksum "package.json" }}
+    - v1-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
     - v1-deps-{{ .Branch }}
     - v1-deps # fallback if checksum fails
 
@@ -27,7 +27,7 @@ jobs:
           <<: *restore_cache_def
       - run: yarn install
       - save_cache:
-          key: v1-deps-{{ .Branch }}-{{ checksum "package.json" }}
+          key: v1-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
           paths:
             - node_modules
             - ~/.cache
@@ -65,13 +65,13 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - cy-deps-{{ .Branch }}-{{ checksum "package.json" }}
+            - cy-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
             - cy-deps-{{ .Branch }}
             - cy-deps # fallback if checksum fails
       - run: yarn install
       - run: yarn build
       - save_cache:
-          key: cy-deps-{{ .Branch }}-{{ checksum "package.json" }}
+          key: cy-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache ## cache both yarn and Cypress!
       - run: yarn test:e2e:ci
