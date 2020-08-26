@@ -30,7 +30,7 @@ jobs:
           key: v1-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
           paths:
             - node_modules
-            - ~/.cache
+            - .cache
   lint:
     <<: *base_def
     steps:
@@ -55,7 +55,7 @@ jobs:
       - save_cache:
           key: v1-build-{{ .Branch }}
           paths:
-            - ~/.public ## cache build
+            - public ## cache build
   test-end-to-end:
     docker:
       # the Docker image with Cypress dependencies
@@ -67,10 +67,9 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          <<: *restore_cache_def
           keys:
-            - v1-build-{{ .Branch }}
-
+            - v1-build-{{ .Branch }} # the previously build /public
+            - v1-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
       - run: yarn test:e2e:ci
       - run: yarn test:cov && yarn test:cov:summary
       - store_artifacts:
