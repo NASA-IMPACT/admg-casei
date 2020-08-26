@@ -53,7 +53,7 @@ jobs:
           <<: *restore_cache_def
       - run: yarn build
       - save_cache:
-          key: v1-build-{{ .Branch }}
+          key: v2-build-{{ .Branch }}
           paths:
             - public ## cache build
   test-end-to-end:
@@ -71,7 +71,7 @@ jobs:
             - v1-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
       - restore_cache:
           keys:
-            - v1-build-{{ .Branch }} # the previously build /public
+            - v2-build-{{ .Branch }} # the previously build /public
       - run: yarn test:e2e:ci
       - run: yarn test:cov && yarn test:cov:summary
       - store_artifacts:
