@@ -68,8 +68,10 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - v1-build-{{ .Branch }} # the previously build /public
             - v1-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
+      - restore_cache:
+          keys:
+            - v1-build-{{ .Branch }} # the previously build /public
       - run: yarn test:e2e:ci
       - run: yarn test:cov && yarn test:cov:summary
       - store_artifacts:
