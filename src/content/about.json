@@ -1,35 +1,34 @@
 {
   "about-inventory": {
     "tagline": "Airborne Inventory",
-    "headline": "CASEI is a comprehensive inventory containing  information about all past and present airborne campaigns, platforms, instruments, geophysical concepts and data products.",
+    "headline": "CASEI is a comprehensive inventory containing information about past and present airborne and field campaigns, platforms, instruments, geophysical concepts and data products.",
+    "bulletTitle": "CASEI Objectives:",
     "bulleted": [
       {
-        "header": "Comprehensive Archive",
-        "content": "To locate and catalog historical NASA airborne Earth science campaigns and data products."
+        "header": "Detailed Accounting",
+        "content": "Catalog and locate historical and current NASA airborne and field Earth Science field investigations/campaigns and data products"
       },
       {
         "header": "Enhanced Metadata",
-        "content": "To identify and enhance metadata for improved information and discovery."
+        "content": "Identify and curate enhanced metadata for improved information and data contextualization"
       },
       {
         "header": "Improve Discovery",
-        "content": "To make searching for airborne data more intuitive and complete no matter where data are archived."
+        "content": "Facilitate efficient, intuitive searching of NASA’s airborne and field observations, regardless of where the data are archived"
       }
     ]
   },
   "about-motivation": {
     "tagline": "Why it Matters",
-    "headline": "A centralized data discovery tool that aims to provide a simple and consistent interface for important research, applications, and decision making.",
+    "headline": "A centralized data discovery tool to provide a simple, consistent interface for researchers, data scientists, decision makers, and application-driven users.",
     "paragraphs": [
-      "The traditional paradigm of NASA’s field investigations consists of a targeted collection of specific geophysical observations aimed at answering key science questions stemming from the investigation’s primary research objectives. Historically, investigation data have been stored at various NASA Distributed Active Archive Centers (DAACs), NASA Airborne Science facilities, field archives, or even individual researchers’ hard drives. Users of investigation data have typically been those involved in the investigation or in similar investigations. Over time, these knowledgeable researchers retire or move on to other studies, leaving the data isolated and inadequately described or utilized.",
-      "With the increasing volume of multi-parameter field investigation data, NASA recognizes the value of measurements collected during previous campaigns both for answering new science questions and for studying changes to Earth’s systems and processes over time. CASEI exists to expedite discovery, access, and utilization of archived investigation data, maximizing the return NASA’s investments."
+      "The traditional paradigm of NASA’s field investigations consists of a targeted collection of specific geophysical observations aimed at answering key science questions stemming from the investigation’s primary research objectives. Historically, investigation data have been stored at various NASA Distributed Active Archive Centers (DAACs), NASA Airborne Science facilities, field archives, or even individual researchers’ hard drives. Users of investigation data have typically been those involved in the investigation or in similar investigations. Over time, these knowledgeable researchers retire or move on to other studies, often leaving data isolated and/or inadequately documented, prohibiting reuse.",
+      "With the increasing volume of multi-parameter field investigation data, NASA recognizes the value of measurements collected during previous campaigns both for answering new science questions and for studying changes to Earth’s systems and processes over time. CASEI exists to expedite discovery, access, and utilization of archived NASA field investigation data, maximizing the return on the Agency’s investments in their collection and preservation."
     ]
   },
   "about-organization": {
     "tagline": "Responsible Organization",
-    "headline": "Airborne Data Management Group (ADMG) primary goal is to make sure that NASA airborne science data are discoverable and usable by the broader research community.",
-    "paragraphs": [
-      " NASA’s Airborne Data Management Group (ADMG) operates within the Interagency Implementation and Advanced Concepts Team (IMPACT) at Marshall Space Flight Center, under the direction of NASA’s Earth Science Data Systems (ESDS). The primary responsibility of ADMG is to support data producers and archivers with the task of ensuring NASA’s airborne and field investigation science data are discoverable and usable by various research communities. Additionally, the ADMG serves the airborne data user communities by providing resource access and key contextual information for past and current NASA airborne field investigations."
-    ]
+    "headline": "ADMG’s primary goal is to ensure NASA airborne and field Earth Science data are discoverable and usable by broad research communities.",
+    "paragraphLinks": true
   }
 }
