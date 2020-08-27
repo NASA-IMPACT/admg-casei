@@ -18,8 +18,8 @@ const About = ({ data }) => (
 
     <Hero
       tagTitle="About"
-      title="NASA airborne campaigns use the vantage point of space to explore critical questions to increase our understanding of planet earth."
-      textToImageRatio={[8, 3]}
+      title="NASA conducts and supports Earth Science field investigations, including airborne campaigns, to supplement space-borne observations and advance scientific understanding and predictive capability of our home planet’s natural processes."
+      textToImageRatio={[12, 0]}
       backgroundImage={data.heroImage}
       id="about"
     />

@@ -7,7 +7,7 @@ describe("About", () => {
   it("renders correctly", () => {
     cy.get("[data-cy=about-hero]")
       .find("h1")
-      .contains("NASA airborne campaigns")
+      .contains("NASA conducts and supports")
 
     cy.get("[data-cy=about-hero]").should("exist").and("contain", "About")
 
