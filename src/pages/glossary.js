@@ -14,7 +14,7 @@ export default function Glossary({ data }) {
   return (
     <Layout>
       <SEO title="Glossary" />
-      <Hero title="Glossary" textToImageRatio={[3, 3]} id="glossary">
+      <Hero title="Glossary" textToImageRatio={[5, 3]} id="glossary">
         <Image
           alt={data.flowchart.nasaImgAlt}
           fixed={data.flowchart.nasaImg.childImageSharp.fixed}

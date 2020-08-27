@@ -4,11 +4,17 @@ describe("Glossary", () => {
   beforeEach(() => {
     cy.visit("/glossary")
   })
-  it("it renders correctly", () => {
-    cy.get("[data-cy=main-glossary-section]").find("h1").contains("Glossary")
-    cy.get("[data-cy=main-glossary-section]").should("have.length", 1)
+  describe("the header", () => {
+    it("displays the long name as title", () => {
+      cy.get("[data-cy=glossary-hero]").first().find("h1").contains("Glossary")
+    })
+
+    it("displays glossary chart", () => {
+      cy.get("[data-cy=glossary-hero]").first().find("img").should("exist")
+      cy.get("[data-cy=glossary-hero]").first().find("img").should("be.visible")
+    })
   })
-  describe("the glossary", () => {
+  describe("the glossary table", () => {
     it("should display terms and definitions", () => {
       cy.get("[data-cy=glossary-definition-list]").each($el => {
         cy.get($el).find("dl").should("exist")
