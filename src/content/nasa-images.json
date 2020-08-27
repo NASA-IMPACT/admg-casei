@@ -298,5 +298,11 @@
     "category": "layout",
     "nasaImgUrl": "https://images-assets.nasa.gov/image/GRC-2020-C-00100/GRC-2020-C-00100~orig.jpg",
     "nasaImgAlt": "Glenn Research Center, Lockheed S-3 Viking Research Aircraft, N601NA at Sunrise"
+  },
+  {
+    "shortname": "Glossary",
+    "category": "layout",
+    "nasaImgUrl": "https://cdn.earthdata.nasa.gov/conduit/upload/14882/DataInvRel.png",
+    "nasaImgAlt": "Definition flowchart"
   }
 ]

@@ -608,7 +608,7 @@ exports[`Campaigns page renders correctly 1`] = `
         </div>
         <p>
           NASA | CASEI
-           is a comprehensive inventory containing information about all airborne, field stationary and fixed earth science campaigns as well as aircrafts, instruments, and data products.
+           is a comprehensive inventory containing information about all airborne and field campaigns as well as aircrafts, instruments, and data products.
         </p>
       </div>
       <div
