@@ -2,6 +2,7 @@
 base_def: &base_def
   docker:
     - image: node:12
+  working_directory: ~/.
   environment:
     - DEVELOPMENT_BRANCH: develop
 
@@ -59,6 +60,7 @@ jobs:
     docker:
       # the Docker image with Cypress dependencies
       - image: cypress/base:12
+    working_directory: ~/.
     environment:
       ## this enables colors in the output
       TERM: xterm
