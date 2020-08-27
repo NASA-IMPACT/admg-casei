@@ -3,12 +3,12 @@
 context("Navigation", () => {
   beforeEach(() => {
     cy.visit("/")
-    cy.get("nav").contains("Contact").click()
   })
 
   it("going back or forward in the browser's history is possible", () => {
     // https://on.cypress.io/go
 
+    cy.get("nav").contains("Contact").click()
     cy.location("pathname").should("include", "contact")
 
     cy.go("back")
@@ -28,6 +28,10 @@ context("Navigation", () => {
 
   it("reloading the page maintains the url", () => {
     // https://on.cypress.io/reload
+
+    cy.get("nav").contains("Contact").click()
+    cy.location("pathname").should("include", "contact")
+
     cy.reload()
     cy.location("pathname").should("include", "contact")
 
