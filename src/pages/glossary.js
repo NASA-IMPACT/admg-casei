@@ -1,16 +1,27 @@
 import React from "react"
+import PropTypes from "prop-types"
+import { graphql } from "gatsby"
+import Image from "gatsby-image"
 
 import Layout, { PageBody } from "../components/layout"
+import Hero from "../components/hero"
 import DefinitionList from "../components/tables/definitionList"
 import SEO from "../components/seo"
 import glossary from "../content/glossary.json"
+import theme from "../utils/theme"
 
-export default function Glossary() {
+export default function Glossary({ data }) {
   return (
     <Layout>
       <SEO title="Glossary" />
+      <Hero title="Glossary" textToImageRatio={[5, 3]} id="glossary">
+        <Image
+          alt={data.flowchart.nasaImgAlt}
+          fixed={data.flowchart.nasaImg.childImageSharp.fixed}
+          style={{ backgroundColor: theme.color.base }}
+        />
+      </Hero>
       <PageBody id="glossary">
-        <h1>Glossary</h1>
         <DefinitionList
           id="glossary"
           list={glossary.map(x => ({
@@ -42,4 +53,30 @@ export default function Glossary() {
       </PageBody>
     </Layout>
   )
+}
+
+export const query = graphql`
+  query {
+    flowchart: nasaImagesJson(shortname: { eq: "Glossary" }) {
+      nasaImgAlt
+      nasaImg {
+        childImageSharp {
+          fixed(height: 550) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+    }
+  }
+`
+
+Glossary.propTypes = {
+  data: PropTypes.shape({
+    flowchart: PropTypes.shape({
+      nasaImgAlt: PropTypes.string.isRequired,
+      nasaImg: PropTypes.shape({
+        childImageSharp: PropTypes.object.isRequired,
+      }).isRequired,
+    }).isRequired,
+  }),
 }

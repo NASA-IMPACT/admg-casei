@@ -50,8 +50,8 @@ const Footer = ({ shortname }) => {
           </div>
           <p>
             {shortname} is a comprehensive inventory containing information
-            about all airborne, field stationary and fixed earth science
-            campaigns as well as aircrafts, instruments, and data products.
+            about all airborne and field campaigns as well as aircrafts,
+            instruments, and data products.
           </p>
         </div>
 
