@@ -18,10 +18,10 @@ import theme from "../utils/theme"
 export const PageBody = ({ children, id }) => (
   <section
     style={{
-      margin: `0 auto`,
       width: `100%`,
+      maxWidth: theme.layout.maxWidth,
+      margin: `0 auto`,
       padding: `0 ${theme.layout.pageMargin}`,
-      flexGrow: 1,
     }}
     data-cy={`main-${id}-section`}
   >
@@ -60,7 +60,7 @@ const Layout = ({ children }) => {
       >
         <Nav />
       </Header>
-      <main>{children}</main>
+      <main style={{ flexGrow: 1 }}>{children}</main>
       <Footer shortname={data.site.siteMetadata.shortname} />
     </div>
   )
