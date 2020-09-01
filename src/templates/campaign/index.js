@@ -30,8 +30,8 @@ const CampaignTemplate = ({ data: { campaign } }) => {
         countCollectionPeriods={campaign.countCollectionPeriods}
         countDataProducts={campaign.countDataProducts}
       />
+      <InpageNav shortname={campaign.shortname} />
       <PageBody id="campaign">
-        <InpageNav shortname={campaign.shortname} />
         <OverviewSection
           description={campaign.description}
           startdate={campaign.startdate}

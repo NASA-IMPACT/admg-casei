@@ -65,30 +65,37 @@ const CampaignHero = ({
       data-cy="campaign-hero"
       ref={containerRef}
       style={{
-        display: `flex`,
         backgroundImage: `linear-gradient(90deg, rgba(12,21,32, 0.8) 0%, rgba(12,21,32, 0.7)50%, rgba(12,21,32, 0.0)66%), url("${url}")`,
         backgroundPosition: `center`,
         backgroundSize: `cover`,
         backgroundRepeat: `no-repeat`,
-        paddingTop: `11rem`,
         height: `35rem`,
       }}
     >
-      <div style={{ flex: `2`, padding: `0 ${theme.layout.pageMargin}` }}>
-        <div>
-          <p>{shortname}</p>
-          <h1>{longname}</h1>
-          <p>{focusListing}</p>
+      <div
+        style={{
+          display: `flex`,
+          maxWidth: theme.layout.maxWidth,
+          margin: `0 auto`,
+          paddingTop: `11rem`,
+        }}
+      >
+        <div style={{ flex: `2`, padding: `0 ${theme.layout.pageMargin}` }}>
+          <div>
+            <p>{shortname}</p>
+            <h1>{longname}</h1>
+            <p>{focusListing}</p>
+          </div>
+          <HeroStats
+            statList={[
+              { number: countDeployments, label: "Deployments" },
+              { number: countCollectionPeriods, label: "Collection Periods" },
+              { number: countDataProducts, label: "Data Products" },
+            ]}
+          />
         </div>
-        <HeroStats
-          statList={[
-            { number: countDeployments, label: "Deployments" },
-            { number: countCollectionPeriods, label: "Collection Periods" },
-            { number: countDataProducts, label: "Data Products" },
-          ]}
-        />
+        <div style={{ flex: `1` }}></div>
       </div>
-      <div style={{ flex: `1` }}></div>
     </section>
   )
 }
