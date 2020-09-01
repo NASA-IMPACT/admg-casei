@@ -55,8 +55,15 @@ export default function Hero({
           {description && <p>{description}</p>}
         </div>
 
-        <div style={{ gridArea: `1 / 2 / 3 / 3` }}>{children}</div>
-        {stats && <HeroStats statList={stats} />}
+        {children && (
+          <div style={{ gridArea: `1 / 2 / 3 / 3` }}>{children}</div>
+        )}
+
+        {stats && (
+          <div style={{ gridArea: `2 / 1 / 2 / 1` }}>
+            <HeroStats statList={stats} />
+          </div>
+        )}
       </div>
 
       {backgroundImage && (
