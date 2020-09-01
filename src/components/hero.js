@@ -30,32 +30,47 @@ export default function Hero({
       style={{
         ...imageStyle,
         display: `grid`,
-        gridTemplateColumns: `${textToImageRatio[0]}fr ${textToImageRatio[1]}fr`,
-        columnGap: `2rem`,
+        gridTemplateColumns: `1fr minmax(auto,  ${theme.layout.maxWidth}) 1fr`,
+        width: `100vw`,
         minHeight: `35rem`,
         alignContent: `center`,
-        padding: `0 ${theme.layout.pageMargin}`,
       }}
       data-cy={`${id}-hero`}
     >
-      <div style={{ alignSelf: `end`, gridArea: `1 / 1 / 1 / 1` }}>
-        <p style={{ textTransform: `uppercase` }}>{tagTitle}</p>
-        <h1>{title}</h1>
-        {subTitle && <p style={{ fontSize: `x-large` }}>{subTitle}</p>}
-      </div>
+      <div
+        style={{
+          gridArea: `1 / 2 / 1 / 2`,
+          display: `grid`,
+          gridTemplateColumns: `${textToImageRatio[0]}fr ${textToImageRatio[1]}fr`,
+          padding: `0 ${theme.layout.pageMargin}`,
+        }}
+      >
+        <div style={{ alignSelf: `end`, gridArea: `1 / 1 / 1 / 1` }}>
+          <p style={{ textTransform: `uppercase` }}>{tagTitle}</p>
+          <h1>{title}</h1>
+          {subTitle && <p style={{ fontSize: `x-large` }}>{subTitle}</p>}
+        </div>
 
-      <div style={{ alignSelf: `start`, gridArea: `2 / 1 / 2 / 1` }}>
-        {description && <p>{description}</p>}
-      </div>
+        <div style={{ alignSelf: `start`, gridArea: `2 / 1 / 2 / 1` }}>
+          {description && <p>{description}</p>}
+        </div>
 
-      <div style={{ gridArea: `1 / 2 / 3 / 3` }}>{children}</div>
-      {stats && <HeroStats statList={stats} />}
+        {children && (
+          <div style={{ gridArea: `1 / 2 / 3 / 3` }}>{children}</div>
+        )}
+
+        {stats && (
+          <div style={{ gridArea: `2 / 1 / 2 / 1` }}>
+            <HeroStats statList={stats} />
+          </div>
+        )}
+      </div>
 
       {backgroundImage && (
         <div
           style={{
-            gridRow: `1 / span 2`,
-            gridColumn: `1 / span 2`,
+            gridRow: `1 / span 1`,
+            gridColumn: `1 / span 3`,
             zIndex: -1,
           }}
         >
@@ -64,7 +79,6 @@ export default function Hero({
             fluid={backgroundImage.nasaImg.childImageSharp.fluid}
             style={{
               maxHeight: `35rem`,
-              margin: `0 -${theme.layout.pageMargin}`,
             }}
           />
         </div>

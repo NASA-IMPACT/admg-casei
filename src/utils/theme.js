@@ -14,6 +14,7 @@ const shape = {
 
 const layout = {
   pageMargin: "5rem",
+  maxWidth: "1280px",
 }
 
 export default {

@@ -29,6 +29,7 @@ const Footer = ({ shortname }) => {
       <div
         style={{
           margin: `5rem auto`,
+          maxWidth: theme.layout.maxWidth,
           padding: `2rem ${theme.layout.pageMargin}`,
           flexShrink: 0,
           display: `grid`,

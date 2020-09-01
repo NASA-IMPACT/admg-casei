@@ -10,6 +10,7 @@ const Header = ({ siteTitle, shortname, children }) => (
     <div
       style={{
         margin: `0 auto`,
+        maxWidth: theme.layout.maxWidth,
         padding: `2rem ${theme.layout.pageMargin}`,
         display: `flex`,
         justifyContent: `space-between`,

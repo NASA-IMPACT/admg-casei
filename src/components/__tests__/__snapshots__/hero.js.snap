@@ -6,65 +6,75 @@ exports[`Header renders correctly 1`] = `
   style={
     Object {
       "alignContent": "center",
-      "columnGap": "2rem",
       "display": "grid",
-      "gridTemplateColumns": "3fr 5fr",
+      "gridTemplateColumns": "1fr minmax(auto,  1280px) 1fr",
       "minHeight": "35rem",
-      "padding": "0 5rem",
+      "width": "100vw",
     }
   }
 >
   <div
     style={
       Object {
-        "alignSelf": "end",
-        "gridArea": "1 / 1 / 1 / 1",
+        "display": "grid",
+        "gridArea": "1 / 2 / 1 / 2",
+        "gridTemplateColumns": "3fr 5fr",
+        "padding": "0 5rem",
       }
     }
   >
-    <p
+    <div
       style={
         Object {
-          "textTransform": "uppercase",
+          "alignSelf": "end",
+          "gridArea": "1 / 1 / 1 / 1",
         }
       }
     >
-      Instrument
-    </p>
-    <h1>
-      2D-C/P
-    </h1>
-    <p
+      <p
+        style={
+          Object {
+            "textTransform": "uppercase",
+          }
+        }
+      >
+        Instrument
+      </p>
+      <h1>
+        2D-C/P
+      </h1>
+      <p
+        style={
+          Object {
+            "fontSize": "x-large",
+          }
+        }
+      >
+        2D-C/P Hydrometeor Imaging Probe
+      </p>
+    </div>
+    <div
       style={
         Object {
-          "fontSize": "x-large",
+          "alignSelf": "start",
+          "gridArea": "2 / 1 / 2 / 1",
         }
       }
     >
-      2D-C/P Hydrometeor Imaging Probe
-    </p>
-  </div>
-  <div
-    style={
-      Object {
-        "alignSelf": "start",
-        "gridArea": "2 / 1 / 2 / 1",
+      <p>
+        The 2DC probe records images of hydrometeors...
+      </p>
+    </div>
+    <div
+      style={
+        Object {
+          "gridArea": "1 / 2 / 3 / 3",
+        }
       }
-    }
-  >
-    <p>
-      The 2DC probe records images of hydrometeors...
-    </p>
-  </div>
-  <div
-    style={
-      Object {
-        "gridArea": "1 / 2 / 3 / 3",
-      }
-    }
-  >
-    <div>
-      children
+    >
+      <div>
+        children
+      </div>
     </div>
   </div>
 </section>
@@ -76,65 +86,75 @@ exports[`Header renders with adjust ratios 1`] = `
   style={
     Object {
       "alignContent": "center",
-      "columnGap": "2rem",
       "display": "grid",
-      "gridTemplateColumns": "5fr 3fr",
+      "gridTemplateColumns": "1fr minmax(auto,  1280px) 1fr",
       "minHeight": "35rem",
-      "padding": "0 5rem",
+      "width": "100vw",
     }
   }
 >
   <div
     style={
       Object {
-        "alignSelf": "end",
-        "gridArea": "1 / 1 / 1 / 1",
+        "display": "grid",
+        "gridArea": "1 / 2 / 1 / 2",
+        "gridTemplateColumns": "5fr 3fr",
+        "padding": "0 5rem",
       }
     }
   >
-    <p
+    <div
       style={
         Object {
-          "textTransform": "uppercase",
+          "alignSelf": "end",
+          "gridArea": "1 / 1 / 1 / 1",
         }
       }
     >
-      Instrument
-    </p>
-    <h1>
-      2D-C/P
-    </h1>
-    <p
+      <p
+        style={
+          Object {
+            "textTransform": "uppercase",
+          }
+        }
+      >
+        Instrument
+      </p>
+      <h1>
+        2D-C/P
+      </h1>
+      <p
+        style={
+          Object {
+            "fontSize": "x-large",
+          }
+        }
+      >
+        2D-C/P Hydrometeor Imaging Probe
+      </p>
+    </div>
+    <div
       style={
         Object {
-          "fontSize": "x-large",
+          "alignSelf": "start",
+          "gridArea": "2 / 1 / 2 / 1",
         }
       }
     >
-      2D-C/P Hydrometeor Imaging Probe
-    </p>
-  </div>
-  <div
-    style={
-      Object {
-        "alignSelf": "start",
-        "gridArea": "2 / 1 / 2 / 1",
+      <p>
+        The 2DC probe records images of hydrometeors...
+      </p>
+    </div>
+    <div
+      style={
+        Object {
+          "gridArea": "1 / 2 / 3 / 3",
+        }
       }
-    }
-  >
-    <p>
-      The 2DC probe records images of hydrometeors...
-    </p>
-  </div>
-  <div
-    style={
-      Object {
-        "gridArea": "1 / 2 / 3 / 3",
-      }
-    }
-  >
-    <div>
-      children
+    >
+      <div>
+        children
+      </div>
     </div>
   </div>
 </section>
