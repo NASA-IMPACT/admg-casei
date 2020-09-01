@@ -33,7 +33,7 @@ InpageLink.propTypes = {
   children: PropTypes.string.isRequired,
 }
 
-const InpageNav = () => (
+const InpageNav = ({ shortname }) => (
   <div
     style={{
       position: `sticky`,
@@ -54,10 +54,12 @@ const InpageNav = () => (
           display: `flex`,
           flexDirection: `row`,
           justifyContent: `flex-start`,
+          alignItems: `center`,
           margin: 0,
           listStyle: `none`,
         }}
       >
+        <h3 style={{ paddingRight: `1rem` }}>{shortname}</h3>
         <InpageLink id="overview" to="#overview">
           Overview
         </InpageLink>
@@ -88,5 +90,9 @@ const InpageNav = () => (
     </div>
   </div>
 )
+
+InpageNav.propTypes = {
+  shortname: PropTypes.string.isRequired,
+}
 
 export default InpageNav
