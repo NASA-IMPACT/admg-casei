@@ -67,12 +67,7 @@ describe("Explore", () => {
 
       cy.url().should("include", "/campaign/")
 
-      cy.get("h1")
-        .should("exist")
-        .and(
-          "include",
-          "Airborne Microwave Observatory of Subcanopy and Subsurface"
-        )
+      cy.get("h1").should("have.length", 2)
     })
   })
 
