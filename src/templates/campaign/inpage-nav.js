@@ -54,9 +54,10 @@ const InpageNav = ({ shortname }) => (
       }}
     >
       <div style={{ display: `flex`, alignItems: `center` }}>
-        <h3 style={{ paddingRight: `1rem` }}>
+        <h1 style={{ paddingRight: `1rem` }}>
           <a href="#top">{shortname}</a>
-        </h3>
+        </h1>
+
         <nav aria-label="inpage-scroll">
           <ul
             style={{
