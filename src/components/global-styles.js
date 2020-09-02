@@ -4,6 +4,9 @@ import "@reach/listbox/styles.css"
 import theme from "../utils/theme"
 
 const baseStyles = css`
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     margin: 0;
     -webkit-font-smoothing: antialiased;
