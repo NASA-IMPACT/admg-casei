@@ -47,43 +47,45 @@ const InpageNav = ({ shortname }) => (
       style={{
         margin: `0 auto`,
         maxWidth: theme.layout.maxWidth,
-        padding: `1rem ${theme.layout.pageMargin}`,
+        padding: `0 ${theme.layout.pageMargin}`,
         display: `flex`,
         justifyContent: `space-between`,
         alignItems: `center`,
       }}
     >
-      <nav aria-label="inpage-scroll">
-        <ul
-          style={{
-            display: `flex`,
-            flexDirection: `row`,
-            justifyContent: `flex-start`,
-            margin: 0,
-            listStyle: `none`,
-          }}
-        >
-          <h3 style={{ paddingRight: `1rem` }}>{shortname}</h3>
-          <InpageLink id="overview" to="#overview">
-            Overview
-          </InpageLink>
-          <InpageLink id="focus" to="#focus">
-            Focus
-          </InpageLink>
-          <InpageLink id="platform" to="#platform">
-            Platforms
-          </InpageLink>
-          <InpageLink id="intruments" to="#platform">
-            Instruments
-          </InpageLink>
-          <InpageLink id="timeline" to="#timeline">
-            Timeline
-          </InpageLink>
-          <InpageLink id="program-info" to="#program-info">
-            Program Info
-          </InpageLink>
-        </ul>
-      </nav>
+      <div style={{ display: `flex`, alignItems: `center` }}>
+        <h3 style={{ paddingRight: `1rem` }}>{shortname}</h3>
+        <nav aria-label="inpage-scroll">
+          <ul
+            style={{
+              display: `flex`,
+              flexDirection: `row`,
+              justifyContent: `flex-start`,
+              margin: 0,
+              listStyle: `none`,
+            }}
+          >
+            <InpageLink id="overview" to="#overview">
+              Overview
+            </InpageLink>
+            <InpageLink id="focus" to="#focus">
+              Focus
+            </InpageLink>
+            <InpageLink id="platform" to="#platform">
+              Platforms
+            </InpageLink>
+            <InpageLink id="intruments" to="#platform">
+              Instruments
+            </InpageLink>
+            <InpageLink id="timeline" to="#timeline">
+              Timeline
+            </InpageLink>
+            <InpageLink id="program-info" to="#program-info">
+              Program Info
+            </InpageLink>
+          </ul>
+        </nav>
+      </div>
       <div style={{ display: `flex` }}>
         <div style={{ padding: `0 1rem` }}>
           <a>💬 Submit Feedback</a>
