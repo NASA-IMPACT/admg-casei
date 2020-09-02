@@ -10,8 +10,8 @@ export const login = async (username, password) => {
   body.append("grant_type", "password")
   body.append("username", username)
   body.append("password", password)
-  body.append("client_id", process.env.ADMG_CLIENT_ID)
-  body.append("client_secret", process.env.ADMG_CLIENT_SECRET)
+  body.append("client_id", process.env.GATSBY_ADMG_CLIENT_ID)
+  body.append("client_secret", process.env.GATSBY_ADMG_CLIENT_SECRET)
   try {
     const response = await fetch(
       "https://admg.nasa-impact.net/authenticate/token/",
