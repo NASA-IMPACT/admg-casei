@@ -15,7 +15,7 @@ import Chip from "../../components/chip"
 
 const PlatformSection = ({ platforms }) => (
   <SectionBlock id="platform">
-    <SectionHeader headline="Platforms & Instruments" />
+    <SectionHeader headline="Platforms & Instruments" to="#platform" />
     <SectionContent>
       <div data-cy="platform-carousel">
         {platforms.length > 0 ? (

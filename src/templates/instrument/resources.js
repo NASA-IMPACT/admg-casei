@@ -14,7 +14,10 @@ export default function Resources({ onlineInformation }) {
   const links = onlineInformation.split("\n")
   return (
     <SectionBlock id="instrument-resources">
-      <SectionHeader headline="Related Information" />
+      <SectionHeader
+        headline="Related Information"
+        to="#instrument-resources"
+      />
       <SectionContent>
         <ol>
           {links.map(link => (

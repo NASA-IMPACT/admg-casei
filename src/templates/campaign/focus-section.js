@@ -15,7 +15,7 @@ import FocusAreaGallery from "../../components/home/focus-area-gallery"
 const FocusSection = ({ focus, geophysical, focusPhenomena }) => {
   return (
     <SectionBlock id="focus">
-      <SectionHeader headline="Focus" />
+      <SectionHeader headline="Focus" to="#focus" />
       <SectionContent withBackground>
         <ContentGroup>
           <div data-cy="focus-content">

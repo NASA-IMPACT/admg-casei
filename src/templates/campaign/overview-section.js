@@ -43,7 +43,7 @@ const OverviewSection = ({
   publicationLink,
 }) => (
   <SectionBlock id="overview">
-    <SectionHeader headline="Overview" />
+    <SectionHeader headline="Overview" to="#overview" />
     <SectionContent columns={[1, 8]}>
       <p data-cy="description">{description}</p>
       <div

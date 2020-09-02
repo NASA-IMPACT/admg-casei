@@ -27,7 +27,7 @@ const TimelineSection = ({ deployments }) => {
 
   return (
     <SectionBlock id="timeline">
-      <SectionHeader headline="Timeline" />
+      <SectionHeader headline="Timeline" to="#timeline" />
       <SectionContent withBackground>
         <div data-cy="milestone-carousel">
           <Carousel

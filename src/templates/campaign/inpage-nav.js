@@ -5,14 +5,14 @@ import theme from "../../utils/theme"
 
 const InpageLink = props => (
   <li style={{ margin: `0 1rem 0 0` }}>
-    <a href={props.to} data-cy={`${props.id}-inpage-link`}>
+    <a href={props.to} data-cy={`${props.dataCy}-inpage-link`}>
       {props.children}
     </a>
   </li>
 )
 
 InpageLink.propTypes = {
-  id: PropTypes.string.isRequired,
+  dataCy: PropTypes.string.isRequired,
   to: function (props, propName, componentName) {
     // validate that prop `to` links to an existing section
     if (
@@ -54,7 +54,9 @@ const InpageNav = ({ shortname }) => (
       }}
     >
       <div style={{ display: `flex`, alignItems: `center` }}>
-        <h3 style={{ paddingRight: `1rem` }}>{shortname}</h3>
+        <h3 style={{ paddingRight: `1rem` }}>
+          <a href="#top">{shortname}</a>
+        </h3>
         <nav aria-label="inpage-scroll">
           <ul
             style={{
@@ -65,22 +67,22 @@ const InpageNav = ({ shortname }) => (
               listStyle: `none`,
             }}
           >
-            <InpageLink id="overview" to="#overview">
+            <InpageLink dataCy="overview" to="#overview">
               Overview
             </InpageLink>
-            <InpageLink id="focus" to="#focus">
+            <InpageLink dataCy="focus" to="#focus">
               Focus
             </InpageLink>
-            <InpageLink id="platform" to="#platform">
+            <InpageLink dataCy="platform" to="#platform">
               Platforms
             </InpageLink>
-            <InpageLink id="intruments" to="#platform">
+            <InpageLink dataCy="intruments" to="#platform">
               Instruments
             </InpageLink>
-            <InpageLink id="timeline" to="#timeline">
+            <InpageLink dataCy="timeline" to="#timeline">
               Timeline
             </InpageLink>
-            <InpageLink id="program-info" to="#program-info">
+            <InpageLink dataCy="program-info" to="#program-info">
               Program Info
             </InpageLink>
           </ul>

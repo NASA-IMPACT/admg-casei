@@ -12,7 +12,10 @@ import {
 export default function Entities({ platforms }) {
   return (
     <SectionBlock id="instrument-airborne-entities">
-      <SectionHeader headline="Related Airborne Entities" />
+      <SectionHeader
+        headline="Related Airborne Entities"
+        to="#instrument-airborne-entities"
+      />
       <SectionContent>
         <SimpleTable
           id="instrument-airborne-entities"

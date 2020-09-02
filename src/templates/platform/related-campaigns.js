@@ -14,7 +14,10 @@ import { formatYearRange } from "../../utils/helpers"
 const RelatedCampaigns = ({ campaigns }) => {
   return (
     <SectionBlock id="platform-related-campaigns">
-      <SectionHeader headline="Related Campaigns" />
+      <SectionHeader
+        headline="Related Campaigns"
+        to="#platform-related-campaigns"
+      />
       <SectionContent>
         {campaigns.length > 0 ? (
           <div data-cy="related-campaign-carousel">
