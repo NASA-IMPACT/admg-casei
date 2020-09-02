@@ -55,6 +55,7 @@ const Login = () => {
             type="password"
             name="password"
             value={user.password}
+            autoComplete="on"
             onChange={e =>
               setUser({ ...user, [e.target.name]: e.target.value })
             }
