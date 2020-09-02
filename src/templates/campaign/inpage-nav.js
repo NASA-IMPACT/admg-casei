@@ -1,7 +1,11 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { FeedbackForm } from "feedback-fish"
 
 import theme from "../../utils/theme"
+// Note: the triggerComponent can be any component you want!
+// Don't forget to spread the passed props though: {...props}
+const Button = props => <button {...props}>Feedback</button>
 
 const InpageLink = props => (
   <li style={{ margin: `0 1rem 0 0` }}>
@@ -93,14 +97,7 @@ const InpageNav = ({ shortname }) => (
           </ul>
         </nav>
       </div>
-      <div style={{ display: `flex` }}>
-        <div style={{ padding: `0 1rem` }}>
-          <a>💬 Submit Feedback</a>
-        </div>
-        <div style={{ padding: `0 1rem` }}>
-          <a>📤 Share</a>
-        </div>
-      </div>
+      <FeedbackForm projectId="29092c37ced46e" triggerComponent={Button} />
     </div>
   </div>
 )
