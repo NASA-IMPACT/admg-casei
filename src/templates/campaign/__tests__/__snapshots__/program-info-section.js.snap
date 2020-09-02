@@ -32,9 +32,13 @@ exports[`Program Info Section renders logo when present in props 1`] = `
       }
     }
   >
-    <h2>
-      Program Info
-    </h2>
+    <a
+      href="#program-info"
+    >
+      <h2>
+        Program Info
+      </h2>
+    </a>
   </div>
   <div
     className="c1"
@@ -320,9 +324,13 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
       }
     }
   >
-    <h2>
-      Program Info
-    </h2>
+    <a
+      href="#program-info"
+    >
+      <h2>
+        Program Info
+      </h2>
+    </a>
   </div>
   <div
     className="c1"

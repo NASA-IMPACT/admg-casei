@@ -83,7 +83,7 @@ const CampaignHero = ({
         <div style={{ flex: `2`, padding: `0 ${theme.layout.pageMargin}` }}>
           <div>
             <p>{shortname}</p>
-            <h1>{longname}</h1>
+            <h1 data-cy="campaign-hero-header">{longname}</h1>
             <p>{focusListing}</p>
           </div>
           <HeroStats

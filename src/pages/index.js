@@ -34,6 +34,7 @@ const IndexPage = ({ data }) => {
           <SectionHeader
             tagline="explore nasa earth science"
             headline="Focus Areas"
+            to="#focus"
           />
           <SectionContent>
             <FocusAreaGallery
@@ -47,6 +48,7 @@ const IndexPage = ({ data }) => {
           <SectionHeader
             tagline="explore campaigns by"
             headline="Region Type"
+            to="#region-type"
           />
           <SectionContent>
             <RegionCarousel regions={data.allGeographicalRegion.nodes} />
@@ -57,6 +59,7 @@ const IndexPage = ({ data }) => {
           <SectionHeader
             tagline="explore campaigns by"
             headline="Geophysical Concepts"
+            to="#geophysical-concepts"
           />
           <SectionContent>
             <GeophysicsGrid
@@ -81,7 +84,11 @@ const IndexPage = ({ data }) => {
                 padding: `1rem`,
               }}
             >
-              <SectionHeader tagline="explore" headline="Platforms" />
+              <SectionHeader
+                tagline="explore"
+                headline="Platforms"
+                to="#platforms"
+              />
               <div>
                 <p style={{ marginBottom: `2rem` }}>
                   From aircrafts to balloons, from sensors to plaftorms, it
@@ -103,7 +110,11 @@ const IndexPage = ({ data }) => {
         </SectionBlock>
 
         <SectionBlock id="instruments">
-          <SectionHeader tagline="explore" headline="Instruments" />
+          <SectionHeader
+            tagline="explore"
+            headline="Instruments"
+            to="#instruments"
+          />
           <SectionContent>
             <InstrumentsGrid instrumentTypes={data.allInstrumentType.nodes} />
           </SectionContent>

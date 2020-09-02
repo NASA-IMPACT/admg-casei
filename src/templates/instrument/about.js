@@ -43,7 +43,7 @@ function About({
 }) {
   return (
     <SectionBlock id="about-instrument">
-      <SectionHeader headline="About the Instrument" />
+      <SectionHeader headline="About the Instrument" to="#about-instrument" />
       <SectionContent columns={[1, 8]}>
         <DefinitionList
           id="instrument"

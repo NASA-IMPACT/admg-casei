@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-describe("Platfrom", () => {
+describe("Platform", () => {
   before(() => {
     cy.visit("/explore/platforms")
     cy.get("main").find("[data-cy=explore-card]").contains("DC-8").click()

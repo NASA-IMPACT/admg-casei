@@ -5,14 +5,14 @@ import theme from "../../utils/theme"
 
 const InpageLink = props => (
   <li style={{ margin: `0 1rem 0 0` }}>
-    <a href={props.to} data-cy={`${props.id}-inpage-link`}>
+    <a href={props.to} data-cy={`${props.dataCy}-inpage-link`}>
       {props.children}
     </a>
   </li>
 )
 
 InpageLink.propTypes = {
-  id: PropTypes.string.isRequired,
+  dataCy: PropTypes.string.isRequired,
   to: function (props, propName, componentName) {
     // validate that prop `to` links to an existing section
     if (
@@ -33,7 +33,7 @@ InpageLink.propTypes = {
   children: PropTypes.string.isRequired,
 }
 
-const InpageNav = () => (
+const InpageNav = ({ shortname }) => (
   <div
     style={{
       position: `sticky`,
@@ -47,42 +47,52 @@ const InpageNav = () => (
       style={{
         margin: `0 auto`,
         maxWidth: theme.layout.maxWidth,
-        padding: `1rem ${theme.layout.pageMargin}`,
+        padding: `0 ${theme.layout.pageMargin}`,
         display: `flex`,
         justifyContent: `space-between`,
         alignItems: `center`,
       }}
     >
-      <nav aria-label="inpage-scroll">
-        <ul
-          style={{
-            display: `flex`,
-            flexDirection: `row`,
-            justifyContent: `flex-start`,
-            margin: 0,
-            listStyle: `none`,
-          }}
-        >
-          <InpageLink id="overview" to="#overview">
-            Overview
-          </InpageLink>
-          <InpageLink id="focus" to="#focus">
-            Focus
-          </InpageLink>
-          <InpageLink id="platform" to="#platform">
-            Platforms
-          </InpageLink>
-          <InpageLink id="intruments" to="#platform">
-            Instruments
-          </InpageLink>
-          <InpageLink id="timeline" to="#timeline">
-            Timeline
-          </InpageLink>
-          <InpageLink id="program-info" to="#program-info">
-            Program Info
-          </InpageLink>
-        </ul>
-      </nav>
+      <div style={{ display: `flex`, alignItems: `center` }}>
+        <nav aria-label="inpage-scroll">
+          <ul
+            style={{
+              display: `flex`,
+              flexDirection: `row`,
+              justifyContent: `flex-start`,
+              alignItems: `center`,
+              margin: 0,
+              listStyle: `none`,
+            }}
+          >
+            <li>
+              <h1 style={{ paddingRight: `1rem` }}>
+                <a href="#top" data-cy={`top-inpage-link`}>
+                  {shortname}
+                </a>
+              </h1>
+            </li>
+            <InpageLink dataCy="overview" to="#overview">
+              Overview
+            </InpageLink>
+            <InpageLink dataCy="focus" to="#focus">
+              Focus
+            </InpageLink>
+            <InpageLink dataCy="platform" to="#platform">
+              Platforms
+            </InpageLink>
+            <InpageLink dataCy="intruments" to="#platform">
+              Instruments
+            </InpageLink>
+            <InpageLink dataCy="timeline" to="#timeline">
+              Timeline
+            </InpageLink>
+            <InpageLink dataCy="program-info" to="#program-info">
+              Program Info
+            </InpageLink>
+          </ul>
+        </nav>
+      </div>
       <div style={{ display: `flex` }}>
         <div style={{ padding: `0 1rem` }}>
           <a>💬 Submit Feedback</a>
@@ -94,5 +104,9 @@ const InpageNav = () => (
     </div>
   </div>
 )
+
+InpageNav.propTypes = {
+  shortname: PropTypes.string.isRequired,
+}
 
 export default InpageNav

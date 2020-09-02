@@ -12,6 +12,14 @@ import PropTypes from "prop-types"
 import GlobalStyles from "./src/components/global-styles"
 import AuthProvider from "./src/components/auth-provider"
 
+export const shouldUpdateScroll = ({ routerProps: { location } }) => {
+  if (location.hash) {
+    return false
+  }
+
+  return true
+}
+
 export const wrapRootElement = ({ element }) => {
   return (
     <AuthProvider>

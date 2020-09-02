@@ -31,9 +31,13 @@ exports[`Platform Section displays content 1`] = `
       }
     }
   >
-    <h2>
-      Platforms & Instruments
-    </h2>
+    <a
+      href="#platform"
+    >
+      <h2>
+        Platforms & Instruments
+      </h2>
+    </a>
   </div>
   <div
     className="c1"

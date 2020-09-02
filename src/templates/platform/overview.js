@@ -11,7 +11,7 @@ import {
 export default function Overview({ description }) {
   return (
     <SectionBlock id="platform-overview">
-      <SectionHeader headline="Overview" />
+      <SectionHeader headline="Overview" to="#platform-overview" />
       <SectionContent columns={[1, 7]}>
         <p>{description}</p>
       </SectionContent>

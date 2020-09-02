@@ -53,6 +53,7 @@ const Layout = ({ children }) => {
         minHeight: `100vh`,
         flexDirection: `column`,
       }}
+      id="top"
     >
       <Header
         siteTitle={data.site.siteMetadata.title}

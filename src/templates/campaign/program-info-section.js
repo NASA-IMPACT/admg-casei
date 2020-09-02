@@ -36,7 +36,7 @@ const ProgramInfoSection = ({
 
   return (
     <SectionBlock id="program-info">
-      <SectionHeader headline="Program Info" />
+      <SectionHeader headline="Program Info" to="#program-info" />
       <SectionContent withBackground>
         <div style={{ display: `flex` }}>
           <div

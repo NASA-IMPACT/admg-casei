@@ -33,6 +33,7 @@ exports[`Campaigns page renders correctly 1`] = `
 }
 
 <div
+  id="top"
   style={
     Object {
       "display": "flex",
@@ -738,6 +739,7 @@ exports[`Campaigns page renders correctly 1`] = `
                     Password
                   </label>
                   <input
+                    autoComplete="on"
                     name="password"
                     onChange={[Function]}
                     type="password"
