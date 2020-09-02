@@ -47,13 +47,13 @@ const InpageNav = ({ shortname }) => (
       style={{
         margin: `0 auto`,
         maxWidth: theme.layout.maxWidth,
-        padding: `1rem ${theme.layout.pageMargin}`,
+        padding: `0 ${theme.layout.pageMargin}`,
         display: `flex`,
         justifyContent: `space-between`,
         alignItems: `center`,
       }}
     >
-      <div style={{ display: `flex` }}>
+      <div style={{ display: `flex`, alignItems: `center` }}>
         <h3 style={{ paddingRight: `1rem` }}>{shortname}</h3>
         <nav aria-label="inpage-scroll">
           <ul
