@@ -21,10 +21,7 @@ describe("Login", () => {
   })
 
   it("opens a login modal and fills in credentials", () => {
-    cy.get("footer")
-      .find("button")
-      .contains("Maintenance login")
-      .click({ force: true })
+    cy.get("footer").find("button").contains("Maintenance login").click()
     cy.get("[data-cy=login-form]").should("be.visible")
 
     const username = Cypress.env("username")

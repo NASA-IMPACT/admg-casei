@@ -70,7 +70,7 @@ describe("Platform", () => {
 
       cy.get("[data-cy=related-campaign-carousel]")
         .find(".slider-control-centerright > button")
-        .click({ force: true })
+        .click()
     })
   })
 })

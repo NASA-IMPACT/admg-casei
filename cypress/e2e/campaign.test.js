@@ -3,10 +3,7 @@
 describe("Campaign", () => {
   before(() => {
     cy.visit("/explore/campaigns")
-    cy.get("[data-cy=explore-card]")
-      .find("big")
-      .contains("AirMOSS")
-      .click({ force: true })
+    cy.get("[data-cy=explore-card]").find("big").contains("AirMOSS").click()
   })
 
   describe("the hero", () => {
@@ -66,7 +63,7 @@ describe("Campaign", () => {
     it("navigates to the inpage section", () => {
       ;["program-info", "platform", "overview", "timeline", "focus"].forEach(
         id => {
-          cy.get(`[data-cy=${id}-inpage-link]`).click({ force: true })
+          cy.get(`[data-cy=${id}-inpage-link]`).click()
 
           cy.url().should("include", id)
 
@@ -147,7 +144,7 @@ describe("Campaign", () => {
       cy.get("[data-cy=focus-section]")
         .find("[data-cy=focus-area]")
         .contains("Carbon Cycle & Ecosystems")
-        .click({ force: true })
+        .click()
 
       cy.url().should("include", "/explore/campaigns")
 
@@ -164,7 +161,7 @@ describe("Campaign", () => {
       cy.get("[data-cy=focus-section]")
         .find("[data-cy=geophysical-concept]")
         .contains("Hydrology")
-        .click({ force: true })
+        .click()
 
       cy.url().should("include", "/explore/campaigns")
 
@@ -190,7 +187,7 @@ describe("Campaign", () => {
 
       cy.get("[data-cy=milestone-carousel]")
         .find(".slider-control-centerright > button")
-        .click({ force: true })
+        .click()
 
       cy.get("[data-cy=milestone]").first().find("img").should("not.be.visible")
     })
