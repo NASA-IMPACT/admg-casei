@@ -54,20 +54,24 @@ const InpageNav = ({ shortname }) => (
       }}
     >
       <div style={{ display: `flex`, alignItems: `center` }}>
-        <h1 style={{ paddingRight: `1rem` }}>
-          <a href="#top">{shortname}</a>
-        </h1>
-
         <nav aria-label="inpage-scroll">
           <ul
             style={{
               display: `flex`,
               flexDirection: `row`,
               justifyContent: `flex-start`,
+              alignItems: `center`,
               margin: 0,
               listStyle: `none`,
             }}
           >
+            <li>
+              <h1 style={{ paddingRight: `1rem` }}>
+                <a href="#top" data-cy={`top-inpage-link`}>
+                  {shortname}
+                </a>
+              </h1>
+            </li>
             <InpageLink dataCy="overview" to="#overview">
               Overview
             </InpageLink>

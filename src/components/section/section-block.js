@@ -33,10 +33,12 @@ export const SectionHeader = ({ tagline, headline, to }) => (
   <div style={{ gridColumn: `1 / span 7`, alignSelf: `end` }}>
     {tagline && (
       <div style={{ textTransform: `uppercase` }} data-cy="section-tagline">
-        <a href={to}>{tagline}</a>
+        {tagline}
       </div>
     )}
-    <h2>{headline}</h2>
+    <a href={to}>
+      <h2>{headline}</h2>
+    </a>
   </div>
 )
 
