@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-describe("Platfrom", () => {
+describe("Platform", () => {
   before(() => {
     cy.visit("/explore/platforms")
     cy.get("main").find("[data-cy=explore-card]").contains("DC-8").click()
@@ -70,7 +70,7 @@ describe("Platfrom", () => {
 
       cy.get("[data-cy=related-campaign-carousel]")
         .find(".slider-control-centerright > button")
-        .click()
+        .click({ force: true })
     })
   })
 })

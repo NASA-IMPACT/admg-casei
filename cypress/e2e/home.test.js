@@ -108,7 +108,7 @@ describe("Homepage", () => {
       cy.get("[data-cy=region-text-control]")
         .findByText(/Mountains/i)
         .as("btn")
-        .click()
+        .click({ force: true })
 
       cy.get("[data-cy=region-type-section]")
         .find("[data-cy=region-type-name]")

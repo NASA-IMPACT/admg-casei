@@ -46,7 +46,7 @@ describe("Explore Tools", () => {
 
         cy.window().should("have.prop", "beforeReload", true)
 
-        cy.get("[data-cy=filter-select]").click()
+        cy.get("[data-cy=filter-select]").click({ force: true })
 
         cy.get("[data-cy=filter-options]")
           .find("[data-cy=filter-option]")

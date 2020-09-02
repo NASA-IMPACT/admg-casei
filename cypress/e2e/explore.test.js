@@ -70,7 +70,7 @@ describe("Explore", () => {
       cy.get("h1")
         .should("exist")
         .and(
-          "have.text",
+          "include",
           "Airborne Microwave Observatory of Subcanopy and Subsurface"
         )
     })
