@@ -1050,6 +1050,24 @@ exports[`Campaigns page renders correctly 1`] = `
           <li>
             <button
               onClick={[Function]}
+              style={
+                Object {
+                  "background": "none",
+                  "backgroundColor": "#294060",
+                  "border": 0,
+                  "borderRadius": "0.2rem",
+                  "color": "white",
+                  "cursor": "pointer",
+                  "display": "inline-block",
+                  "fontWeight": "bold",
+                  "minWidth": "2rem",
+                  "padding": "0.25rem 0.75rem",
+                  "textAlign": "center",
+                  "textShadow": "none",
+                  "userSelect": "none",
+                  "verticalAlign": "middle",
+                }
+              }
             >
               Maintenance login
             </button>

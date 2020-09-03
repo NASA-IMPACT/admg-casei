@@ -3,10 +3,14 @@ import PropTypes from "prop-types"
 import { FeedbackForm } from "feedback-fish"
 
 import theme from "../utils/theme"
+import Button from "../components/button"
 
 // Note: the triggerComponent can be any component you want!
-// Don't forget to spread the passed props though: {...props}
-const Button = props => <button {...props}>Feedback</button>
+const FishButton = props => <Button action={props.onClick}>Feedback</Button>
+
+FishButton.propTypes = {
+  onClick: PropTypes.func.isRequired,
+}
 
 const InpageLink = props => (
   <li style={{ margin: `0 1rem 0 0` }}>
@@ -68,7 +72,7 @@ const InpageNav = ({ shortname, items, path }) => (
       </nav>
       <FeedbackForm
         projectId="29092c37ced46e"
-        triggerComponent={Button}
+        triggerComponent={FishButton}
         metadata={{ path }}
       />
     </div>
