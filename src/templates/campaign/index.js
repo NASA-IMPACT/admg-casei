@@ -12,7 +12,7 @@ import ProgramInfoSection from "./program-info-section"
 import FocusSection from "./focus-section"
 import MaintenanceSection from "../../components/maintenance-section"
 
-const CampaignTemplate = ({ data: { campaign } }) => {
+const CampaignTemplate = ({ data: { campaign }, path }) => {
   const [isClient, setIsClient] = useState(false)
   useEffect(() => {
     // useEffect only runs client-side after rehyration
@@ -97,6 +97,7 @@ const CampaignTemplate = ({ data: { campaign } }) => {
           id,
           label: section.nav,
         }))}
+        path={path}
       />
       <PageBody id="campaign">
         {Object.entries(sections).map(([id, section]) => (
@@ -218,6 +219,7 @@ CampaignTemplate.propTypes = {
       uuid: PropTypes.string.isRequired,
     }).isRequired,
   }).isRequired,
+  path: PropTypes.string.isRequired,
 }
 
 export default CampaignTemplate

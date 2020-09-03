@@ -9,7 +9,7 @@ import About from "./about"
 import Entities from "./entities"
 import Resources from "./resources"
 
-const InstrumentTemplate = ({ data: { instrument } }) => {
+const InstrumentTemplate = ({ data: { instrument }, path }) => {
   const sections = {
     about: {
       nav: "About",
@@ -51,6 +51,7 @@ const InstrumentTemplate = ({ data: { instrument } }) => {
           id,
           label: section.nav,
         }))}
+        path={path}
       />
       <PageBody id="instrument">
         {Object.entries(sections).map(([id, section]) => (
@@ -94,6 +95,7 @@ InstrumentTemplate.propTypes = {
       ),
     }).isRequired,
   }).isRequired,
+  path: PropTypes.string.isRequired,
 }
 
 export default InstrumentTemplate

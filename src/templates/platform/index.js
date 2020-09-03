@@ -8,7 +8,7 @@ import InpageNav from "../../components/inpage-nav"
 import Overview from "./overview"
 import RelatedCampaigns from "./related-campaigns"
 
-export default function PlatformTemplate({ data: { platform } }) {
+export default function PlatformTemplate({ data: { platform }, path }) {
   const sections = {
     overview: {
       nav: "Overview",
@@ -43,6 +43,7 @@ export default function PlatformTemplate({ data: { platform } }) {
           id,
           label: section.nav,
         }))}
+        path={path}
       />
       <PageBody id="platform">
         {Object.entries(sections).map(([id, section]) => (
@@ -91,4 +92,5 @@ PlatformTemplate.propTypes = {
       }).isRequired,
     }),
   }),
+  path: PropTypes.string.isRequired,
 }

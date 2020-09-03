@@ -21,7 +21,7 @@ InpageLink.propTypes = {
   children: PropTypes.string.isRequired,
 }
 
-const InpageNav = ({ shortname, items }) => (
+const InpageNav = ({ shortname, items, path }) => (
   <div
     style={{
       position: `sticky`,
@@ -66,7 +66,11 @@ const InpageNav = ({ shortname, items }) => (
           ))}
         </ul>
       </nav>
-      <FeedbackForm projectId="29092c37ced46e" triggerComponent={Button} />
+      <FeedbackForm
+        projectId="29092c37ced46e"
+        triggerComponent={Button}
+        metadata={{ path }}
+      />
     </div>
   </div>
 )
@@ -79,6 +83,7 @@ InpageNav.propTypes = {
       label: PropTypes.string.isRequired,
     }).isRequired
   ).isRequired,
+  path: PropTypes.string.isRequired,
 }
 
 export default InpageNav
