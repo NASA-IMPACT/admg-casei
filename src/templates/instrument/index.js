@@ -4,11 +4,40 @@ import { graphql } from "gatsby"
 
 import Layout, { PageBody } from "../../components/layout"
 import InstrumentHero from "./hero"
+import InpageNav from "../../components/inpage-nav"
 import About from "./about"
 import Entities from "./entities"
 import Resources from "./resources"
 
 const InstrumentTemplate = ({ data: { instrument } }) => {
+  const sections = {
+    about: {
+      nav: "About",
+      component: About,
+      props: {
+        radiometricFrequency: instrument.radiometricFrequency,
+        temporalResolution: instrument.temporalResolution,
+        spatialResolution: instrument.spatialResolution,
+        instrumentManufacturer: instrument.instrumentManufacturer,
+        fundingSource: instrument.fundingSource,
+        instrumentId: instrument.id,
+      },
+    },
+    entities: {
+      nav: "Related Entities",
+      component: Entities,
+      props: {
+        platforms: instrument.platforms,
+      },
+    },
+    resources: {
+      nav: "Related Information",
+      component: Resources,
+      props: {
+        onlineInformation: instrument.onlineInformation,
+      },
+    },
+  }
   return (
     <Layout>
       <InstrumentHero
@@ -16,17 +45,17 @@ const InstrumentTemplate = ({ data: { instrument } }) => {
         longname={instrument.longname}
         description={instrument.description}
       />
+      <InpageNav
+        shortname={instrument.shortname}
+        items={Object.entries(sections).map(([id, section]) => ({
+          id,
+          label: section.nav,
+        }))}
+      />
       <PageBody id="instrument">
-        <About
-          id={instrument.id}
-          radiometricFrequency={instrument.radiometricFrequency}
-          temporalResolution={instrument.temporalResolution}
-          spatialResolution={instrument.spatialResolution}
-          instrumentManufacturer={instrument.instrumentManufacturer}
-          fundingSource={instrument.fundingSource}
-        />
-        <Entities platforms={instrument.platforms} />
-        <Resources onlineInformation={instrument.onlineInformation} />
+        {Object.entries(sections).map(([id, section]) => (
+          <section.component key={id} id={id} {...section.props} />
+        ))}
       </PageBody>
     </Layout>
   )

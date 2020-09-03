@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 
 import Layout, { PageBody } from "../../components/layout"
 import CampaignHero from "./hero"
-import InpageNav from "./inpage-nav"
+import InpageNav from "../../components/inpage-nav"
 import OverviewSection from "./overview-section"
 import TimelineSection from "./timeline-section"
 import PlatformSection from "./platform-section"
@@ -19,6 +19,67 @@ const CampaignTemplate = ({ data: { campaign } }) => {
     setIsClient(true)
   }, [])
 
+  const sections = {
+    overview: {
+      nav: "Overview",
+      component: OverviewSection,
+      props: {
+        description: campaign.description,
+        startdate: campaign.startdate,
+        enddate: campaign.enddate,
+        region: campaign.region,
+        seasonListing: campaign.seasons.map(x => x.shortname).join(", "),
+        bounds: campaign.bounds,
+        doi: campaign.doi,
+        projectWebsite: campaign.projectWebsite,
+        repositoryWebsite: campaign.repositoryWebsite,
+        tertiaryWebsite: campaign.tertiaryWebsite,
+        publicationLink: campaign.publicationLink,
+      },
+    },
+    focus: {
+      nav: "Focus",
+      component: FocusSection,
+      props: {
+        focus: campaign.focus,
+        geophysical: campaign.geophysical,
+        focusPhenomena: campaign.focusPhenomena,
+      },
+    },
+    platform: {
+      nav: "Platforms & Instruments",
+      component: PlatformSection,
+      props: {
+        platforms: campaign.platforms,
+      },
+    },
+    timeline: {
+      nav: "Timeline",
+      component: TimelineSection,
+      props: {
+        deployments: campaign.deployments,
+      },
+    },
+    "program-info": {
+      nav: "Program Info",
+      component: ProgramInfoSection,
+      props: {
+        logo: campaign.logo,
+        fundingAgency: campaign.fundingAgency,
+        fundingProgram: campaign.fundingProgram,
+        programLead: campaign.programLead,
+        leadInvestigator: campaign.leadInvestigator,
+        dataManager: campaign.dataManager,
+        archive: campaign.archive,
+        partnerOrgListing: campaign.partnerOrgs
+          .map(x => x.shortname)
+          .join(", "),
+        partnerWebsite: campaign.partnerWebsite,
+        tertiaryWebsite: campaign.tertiaryWebsite,
+      },
+    },
+  }
+
   return (
     <Layout>
       <CampaignHero
@@ -30,42 +91,17 @@ const CampaignTemplate = ({ data: { campaign } }) => {
         countCollectionPeriods={campaign.countCollectionPeriods}
         countDataProducts={campaign.countDataProducts}
       />
-      <InpageNav shortname={campaign.shortname} />
+      <InpageNav
+        shortname={campaign.shortname}
+        items={Object.entries(sections).map(([id, section]) => ({
+          id,
+          label: section.nav,
+        }))}
+      />
       <PageBody id="campaign">
-        <OverviewSection
-          description={campaign.description}
-          startdate={campaign.startdate}
-          enddate={campaign.enddate}
-          region={campaign.region}
-          seasonListing={campaign.seasons.map(x => x.shortname).join(", ")}
-          bounds={campaign.bounds}
-          doi={campaign.doi}
-          projectWebsite={campaign.projectWebsite}
-          repositoryWebsite={campaign.repositoryWebsite}
-          tertiaryWebsite={campaign.tertiaryWebsite}
-          publicationLink={campaign.publicationLink}
-        />
-        <FocusSection
-          focus={campaign.focus}
-          geophysical={campaign.geophysical}
-          focusPhenomena={campaign.focusPhenomena}
-        />
-        <PlatformSection platforms={campaign.platforms} />
-        <TimelineSection deployments={campaign.deployments} />
-        <ProgramInfoSection
-          logo={campaign.logo}
-          fundingAgency={campaign.fundingAgency}
-          fundingProgram={campaign.fundingProgram}
-          programLead={campaign.programLead}
-          leadInvestigator={campaign.leadInvestigator}
-          dataManager={campaign.dataManager}
-          archive={campaign.archive}
-          partnerOrgListing={campaign.partnerOrgs
-            .map(x => x.shortname)
-            .join(", ")}
-          partnerWebsite={campaign.partnerWebsite}
-          tertiaryWebsite={campaign.tertiaryWebsite}
-        />
+        {Object.entries(sections).map(([id, section]) => (
+          <section.component key={id} id={id} {...section.props} />
+        ))}
         {isClient && (
           // the maintenance section is behind authentication and only accessible from the browser
           <MaintenanceSection id={campaign.uuid} data={{ campaign }} />

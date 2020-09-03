@@ -40,6 +40,7 @@ describe("Program Info Section", () => {
   it("renders logo when present in props", () => {
     const component = create(
       <ProgramInfoSection
+        id="program-info"
         logo={testImage}
         shortname="AirMOSS"
         fundingAgency={testString}
@@ -62,6 +63,7 @@ describe("Program Info Section", () => {
   it("renders placeholder when no logo is available", () => {
     const component = create(
       <ProgramInfoSection
+        id="program-info"
         logo={{
           shortname: "GOES-R PLT",
           nasaImgUrl: "",

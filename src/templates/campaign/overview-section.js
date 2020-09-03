@@ -30,6 +30,7 @@ ListLink.propTypes = {
 }
 
 const OverviewSection = ({
+  id,
   description,
   startdate,
   enddate,
@@ -42,8 +43,8 @@ const OverviewSection = ({
   tertiaryWebsite,
   publicationLink,
 }) => (
-  <SectionBlock id="overview">
-    <SectionHeader headline="Overview" to="#overview" />
+  <SectionBlock id={id}>
+    <SectionHeader headline="Overview" id={id} />
     <SectionContent columns={[1, 8]}>
       <p data-cy="description">{description}</p>
       <div
@@ -133,6 +134,7 @@ export const overviewFields = graphql`
 `
 
 OverviewSection.propTypes = {
+  id: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   startdate: PropTypes.string.isRequired,
   enddate: PropTypes.string.isRequired,

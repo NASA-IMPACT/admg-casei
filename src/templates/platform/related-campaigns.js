@@ -11,13 +11,10 @@ import {
 import CampaignCard from "../../components/cards/campaign-card"
 import { formatYearRange } from "../../utils/helpers"
 
-const RelatedCampaigns = ({ campaigns }) => {
+const RelatedCampaigns = ({ id, campaigns }) => {
   return (
-    <SectionBlock id="platform-related-campaigns">
-      <SectionHeader
-        headline="Related Campaigns"
-        to="#platform-related-campaigns"
-      />
+    <SectionBlock id={id}>
+      <SectionHeader headline="Related Campaigns" id={id} />
       <SectionContent>
         {campaigns.length > 0 ? (
           <div data-cy="related-campaign-carousel">
@@ -100,6 +97,7 @@ export const platformCampaignFields = graphql`
 `
 
 RelatedCampaigns.propTypes = {
+  id: PropTypes.string.isRequired,
   campaigns: PropTypes.arrayOf(
     PropTypes.shape({
       logo: PropTypes.shape({

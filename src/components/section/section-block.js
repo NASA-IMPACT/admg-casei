@@ -29,14 +29,14 @@ const Section = styled.section`
   */
 `
 
-export const SectionHeader = ({ tagline, headline, to }) => (
+export const SectionHeader = ({ tagline, headline, id }) => (
   <div style={{ gridColumn: `1 / span 7`, alignSelf: `end` }}>
     {tagline && (
       <div style={{ textTransform: `uppercase` }} data-cy="section-tagline">
         {tagline}
       </div>
     )}
-    <a href={to}>
+    <a href={`#${id}`}>
       <h2>{headline}</h2>
     </a>
   </div>
@@ -44,7 +44,7 @@ export const SectionHeader = ({ tagline, headline, to }) => (
 
 SectionHeader.propTypes = {
   tagline: PropTypes.string,
-  to: PropTypes.string,
+  id: PropTypes.string.isRequired,
   headline: PropTypes.string.isRequired,
 }
 

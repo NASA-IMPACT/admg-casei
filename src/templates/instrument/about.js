@@ -33,17 +33,18 @@ Background.propTypes = {
   fundingSource: PropTypes.string,
 }
 
-function About({
+export default function About({
   id,
   radiometricFrequency,
   temporalResolution,
   spatialResolution,
   instrumentManufacturer,
   fundingSource,
+  instrumentId,
 }) {
   return (
-    <SectionBlock id="about-instrument">
-      <SectionHeader headline="About the Instrument" to="#about-instrument" />
+    <SectionBlock id={id}>
+      <SectionHeader headline="About the Instrument" id={id} />
       <SectionContent columns={[1, 8]}>
         <DefinitionList
           id="instrument"
@@ -60,7 +61,7 @@ function About({
               title: "Spatial Resolution",
               content: spatialResolution || "unavailable",
             },
-            { title: "Instrument ID", content: id || "unavailable" },
+            { title: "Instrument ID", content: instrumentId || "unavailable" },
           ]}
         />
       </SectionContent>
@@ -81,9 +82,8 @@ About.propTypes = {
   spatialResolution: PropTypes.string,
   instrumentManufacturer: PropTypes.string,
   fundingSource: PropTypes.string,
+  instrumentId: PropTypes.string,
 }
-
-export default About
 
 export const instrumentDetailFields = graphql`
   fragment instrumentDetailFields on instrument {

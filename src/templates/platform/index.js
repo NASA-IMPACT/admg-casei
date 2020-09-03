@@ -4,10 +4,29 @@ import { graphql } from "gatsby"
 
 import Layout, { PageBody } from "../../components/layout"
 import PlatformHero from "./hero"
+import InpageNav from "../../components/inpage-nav"
 import Overview from "./overview"
 import RelatedCampaigns from "./related-campaigns"
 
 export default function PlatformTemplate({ data: { platform } }) {
+  const sections = {
+    overview: {
+      nav: "Overview",
+      component: Overview,
+      props: {
+        description: platform.description,
+        shortname: platform.shortname,
+      },
+    },
+    "related-campaigns": {
+      nav: "Related Campaigns",
+      component: RelatedCampaigns,
+      props: {
+        campaigns: platform.campaigns,
+      },
+    },
+  }
+
   return (
     <Layout>
       <PlatformHero
@@ -18,12 +37,17 @@ export default function PlatformTemplate({ data: { platform } }) {
         textToImageRatio={[3, 5]}
         image={platform.image}
       />
+      <InpageNav
+        shortname={platform.shortname}
+        items={Object.entries(sections).map(([id, section]) => ({
+          id,
+          label: section.nav,
+        }))}
+      />
       <PageBody id="platform">
-        <Overview
-          description={platform.description}
-          shortname={platform.shortname}
-        />
-        <RelatedCampaigns campaigns={platform.campaigns} />
+        {Object.entries(sections).map(([id, section]) => (
+          <section.component key={id} id={id} {...section.props} />
+        ))}
       </PageBody>
     </Layout>
   )

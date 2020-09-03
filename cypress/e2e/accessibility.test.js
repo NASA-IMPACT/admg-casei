@@ -26,6 +26,30 @@ describe("Accessibility tests", () => {
     cy.get("[data-cy=explore-card]").first().click().checkA11y()
   })
 
+  it("Navigates to page for a /platform and checks for accessibility violations", () => {
+    cy.get("nav")
+      .findByText(/Explore/i)
+      .click()
+
+    cy.get("[data-cy=tabbar]")
+      .findByText(/Platforms/i)
+      .click()
+
+    cy.get("[data-cy=explore-card]").first().click().checkA11y()
+  })
+
+  it("Navigates to page for a /instrument and checks for accessibility violations", () => {
+    cy.get("nav")
+      .findByText(/Explore/i)
+      .click()
+
+    cy.get("[data-cy=tabbar]")
+      .findByText(/Instruments/i)
+      .click()
+
+    cy.get("[data-cy=explore-card]").first().click().checkA11y()
+  })
+
   it("Navigates to page /glossary and checks for accessibility violations", () => {
     cy.get("nav")
       .findByText(/Glossary/i)

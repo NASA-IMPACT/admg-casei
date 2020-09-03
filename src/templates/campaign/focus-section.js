@@ -12,10 +12,10 @@ import {
 import Label from "../../components/label"
 import FocusAreaGallery from "../../components/home/focus-area-gallery"
 
-const FocusSection = ({ focus, geophysical, focusPhenomena }) => {
+const FocusSection = ({ id, focus, geophysical, focusPhenomena }) => {
   return (
-    <SectionBlock id="focus">
-      <SectionHeader headline="Focus" to="#focus" />
+    <SectionBlock id={id}>
+      <SectionHeader headline="Focus" id={id} />
       <SectionContent withBackground>
         <ContentGroup>
           <div data-cy="focus-content">
@@ -69,6 +69,7 @@ export const focus = graphql`
 `
 
 FocusSection.propTypes = {
+  id: PropTypes.string.isRequired,
   focus: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
