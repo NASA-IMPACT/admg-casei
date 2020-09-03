@@ -34,7 +34,11 @@ PlatformCard.propTypes = {
   shortname: PropTypes.string.isRequired,
   longname: PropTypes.string,
   // description: PropTypes.string.isRequired,
-  campaigns: PropTypes.arrayOf(PropTypes.string),
+  campaigns: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+    })
+  ),
   collectionPeriodIds: PropTypes.arrayOf(PropTypes.string),
   instruments: PropTypes.arrayOf(
     PropTypes.shape({
