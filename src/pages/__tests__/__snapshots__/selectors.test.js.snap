@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Campaigns page renders correctly 1`] = `
-.c0 {
+.c1 {
   position: fixed;
   top: 0;
   right: 0;
@@ -23,13 +23,34 @@ exports[`Campaigns page renders correctly 1`] = `
   transition: opacity 400ms ease-in;
 }
 
-.c1 {
+.c2 {
   width: 400px;
   position: relative;
   padding: 32px;
   border-radius: 3px;
   background: #303641;
   pointer-events: auto;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0.5rem 0 2rem 0;
+  min-height: 2rem;
+}
+
+.c0 div:only-child {
+  margin-left: auto;
 }
 
 <div
@@ -501,7 +522,9 @@ exports[`Campaigns page renders correctly 1`] = `
             }
           }
         >
-          <small />
+          <small>
+            geophysical: Upper Atms Chem
+          </small>
           <button
             data-cy="remove-filter"
             onClick={[Function]}
@@ -556,7 +579,7 @@ exports[`Campaigns page renders correctly 1`] = `
           >
             Showing
              
-            0 of 
+            3 of 
             10
              
             campaigns
@@ -570,7 +593,329 @@ exports[`Campaigns page renders correctly 1`] = `
               "gridTemplateColumns": "repeat(auto-fill, minmax(270px, 1fr))",
             }
           }
-        />
+        >
+          <a
+            href="/campaign/03b728ae-2235-488c-80ee-570dcf602f3b"
+          >
+            <div
+              data-cy="explore-card"
+              style={
+                Object {
+                  "backgroundColor": "#303641",
+                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "height": "100%",
+                  "justifyContent": "space-between",
+                  "padding": "1rem",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "marginBottom": "2rem",
+                  }
+                }
+              >
+                <div
+                  className="c0"
+                >
+                  <img
+                    alt="CARVE logo"
+                    fixed={
+                      Object {
+                        "src": "/static/3dec137acafa7ac0c3a74368b2cb56b3/f8771/carve_logo_update.jpg",
+                      }
+                    }
+                    src="test-image.png"
+                    style={
+                      Object {
+                        "margin": "0",
+                      }
+                    }
+                  />
+                </div>
+                <big
+                  data-cy="shortname"
+                  style={
+                    Object {
+                      "fontWeight": "bold",
+                      "marginTop": "0.5rem",
+                    }
+                  }
+                >
+                  CARVE
+                </big>
+                <p
+                  data-cy="longname"
+                >
+                  Carbon in Arctic Reservoirs Vulnerability Experiment
+                </p>
+                <div>
+                  <small
+                    data-cy="daterange"
+                  >
+                    2012—2015
+                  </small>
+                </div>
+                <div>
+                  <small
+                    data-cy="region"
+                  >
+                    Alaska
+                  </small>
+                </div>
+              </div>
+              <div>
+                <small
+                  data-cy="count1"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                  <strong>
+                    4
+                  </strong>
+                   
+                  Deployment
+                  s
+                </small>
+                <small
+                  data-cy="count2"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                   · 
+                  <strong>
+                    0
+                  </strong>
+                   
+                  Data Product
+                  s
+                </small>
+              </div>
+            </div>
+          </a>
+          <a
+            href="/campaign/6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+          >
+            <div
+              data-cy="explore-card"
+              style={
+                Object {
+                  "backgroundColor": "#303641",
+                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "height": "100%",
+                  "justifyContent": "space-between",
+                  "padding": "1rem",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "marginBottom": "2rem",
+                  }
+                }
+              >
+                <div
+                  className="c0"
+                >
+                  <img
+                    alt="DC3 logo"
+                    fixed={
+                      Object {
+                        "src": "/static/c4b36cb85ef25d65d08739c329b04e52/ad39b/dc3-logo.png",
+                      }
+                    }
+                    src="test-image.png"
+                    style={
+                      Object {
+                        "margin": "0",
+                      }
+                    }
+                  />
+                </div>
+                <big
+                  data-cy="shortname"
+                  style={
+                    Object {
+                      "fontWeight": "bold",
+                      "marginTop": "0.5rem",
+                    }
+                  }
+                >
+                  DC3
+                </big>
+                <p
+                  data-cy="longname"
+                >
+                  Deep Convective Clouds & Chemistry
+                </p>
+                <div>
+                  <small
+                    data-cy="daterange"
+                  >
+                    2012
+                  </small>
+                </div>
+                <div>
+                  <small
+                    data-cy="region"
+                  >
+                    Northeastern Colorado, West Texas to Central Oklahoma, Northern Alabama
+                  </small>
+                </div>
+              </div>
+              <div>
+                <small
+                  data-cy="count1"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                  <strong>
+                    1
+                  </strong>
+                   
+                  Deployment
+                </small>
+                <small
+                  data-cy="count2"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                   · 
+                  <strong />
+                   
+                  Data Product
+                  s
+                </small>
+              </div>
+            </div>
+          </a>
+          <a
+            href="/campaign/e48c2d79-822b-4c9e-9f72-2776d5d1eac6"
+          >
+            <div
+              data-cy="explore-card"
+              style={
+                Object {
+                  "backgroundColor": "#303641",
+                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "height": "100%",
+                  "justifyContent": "space-between",
+                  "padding": "1rem",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "marginBottom": "2rem",
+                  }
+                }
+              >
+                <div
+                  className="c0"
+                >
+                  <img
+                    alt="ARCTAS logo"
+                    fixed={
+                      Object {
+                        "src": "/static/2bd234de67183d020fabe8584d7713ff/f8771/arctas_spring.jpg",
+                      }
+                    }
+                    src="test-image.png"
+                    style={
+                      Object {
+                        "margin": "0",
+                      }
+                    }
+                  />
+                </div>
+                <big
+                  data-cy="shortname"
+                  style={
+                    Object {
+                      "fontWeight": "bold",
+                      "marginTop": "0.5rem",
+                    }
+                  }
+                >
+                  ARCTAS
+                </big>
+                <p
+                  data-cy="longname"
+                >
+                  Arctic Research of the Composition of the Troposphere from Aircraft and Satellites
+                </p>
+                <div>
+                  <small
+                    data-cy="daterange"
+                  >
+                    2008
+                  </small>
+                </div>
+                <div>
+                  <small
+                    data-cy="region"
+                  >
+                    Alaska, Western Canada, California
+                  </small>
+                </div>
+              </div>
+              <div>
+                <small
+                  data-cy="count1"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                  <strong>
+                    3
+                  </strong>
+                   
+                  Deployment
+                  s
+                </small>
+                <small
+                  data-cy="count2"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                   · 
+                  <strong>
+                    0
+                  </strong>
+                   
+                  Data Product
+                  s
+                </small>
+              </div>
+            </div>
+          </a>
+        </div>
       </section>
     </section>
   </main>
@@ -709,11 +1054,11 @@ exports[`Campaigns page renders correctly 1`] = `
               Maintenance login
             </button>
             <div
-              className="c0"
+              className="c1"
               onClick={[Function]}
             >
               <div
-                className="c1"
+                className="c2"
               >
                 <form
                   data-cy="login-form"
