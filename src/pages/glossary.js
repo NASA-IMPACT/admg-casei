@@ -1,13 +1,14 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { graphql } from "gatsby"
+import Image from "gatsby-image"
+
 import Layout, { PageBody } from "../components/layout"
 import DefinitionList from "../components/tables/definitionList"
 import SEO from "../components/seo"
 import glossary from "../content/glossary.json"
 
-export default function Glossary() {
+export default function Glossary({ data }) {
   return (
     <Layout>
       <SEO title="Glossary" />
@@ -47,7 +48,10 @@ export default function Glossary() {
             {
               title: "terminology map",
               content: (
-                <Image filename="glossary-map.png" alt="terminology map" />
+                <Image
+                  alt="terminology map"
+                  fixed={data.image.childImageSharp.fixed}
+                />
               ),
             },
           ]}
@@ -57,36 +61,22 @@ export default function Glossary() {
   )
 }
 
-const Image = props => {
-  const data = useStaticQuery(graphql`
-    query {
-      images: allFile {
-        edges {
-          node {
-            relativePath
-            name
-            childImageSharp {
-              fixed(width: 400) {
-                ...GatsbyImageSharpFixed
-              }
-            }
-          }
+export const query = graphql`
+  query {
+    image: file(relativePath: { eq: "glossary-map.png" }) {
+      childImageSharp {
+        fixed(width: 400) {
+          ...GatsbyImageSharpFixed
         }
       }
     }
-  `)
-  const image = data.images.edges.find(n => {
-    return n.node.relativePath.includes(props.filename)
-  })
-  if (!image) {
-    return null
   }
+`
 
-  const imageFixed = image.node.childImageSharp.fixed
-  return <Img alt={props.alt} fixed={imageFixed} />
-}
-
-Image.propTypes = {
-  filename: PropTypes.string.isRequired,
-  alt: PropTypes.string.isRequired,
+Glossary.propTypes = {
+  data: PropTypes.shape({
+    image: PropTypes.shape({
+      childImageSharp: PropTypes.object.isRequired,
+    }).isRequired,
+  }),
 }
