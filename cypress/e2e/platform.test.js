@@ -37,24 +37,21 @@ describe("Platform", () => {
 
   describe("the overview section", () => {
     it("exists", () => {
-      cy.get("[data-cy=platform-overview-section]").should("exist")
+      cy.get("[data-cy=overview-section]").should("exist")
     })
 
     it("displays a description", () => {
-      cy.get("[data-cy=platform-overview-section]")
-        .first()
-        .find("p")
-        .should("exist")
+      cy.get("[data-cy=overview-section]").first().find("p").should("exist")
     })
   })
 
   describe("the related campaign section", () => {
     it("exists", () => {
-      cy.get("[data-cy=platform-related-campaigns-section]").should("exist")
+      cy.get("[data-cy=related-campaigns-section]").should("exist")
     })
 
     it("has a heading", () => {
-      cy.get("[data-cy=platform-related-campaigns-section]")
+      cy.get("[data-cy=related-campaigns-section]")
         .find("h2")
         .should("have.text", "Related Campaigns")
     })

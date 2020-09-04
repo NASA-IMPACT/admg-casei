@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react"
 
+import Button from "./button"
 import { Modal } from "./modal"
 import { AuthContext } from "../components/auth-provider"
 import { login, logout } from "../utils/auth"
@@ -30,9 +31,9 @@ const Login = () => {
 
   return (
     <>
-      <button onClick={() => (isLoggedIn ? handleLogout() : setModal(true))}>
+      <Button action={() => (isLoggedIn ? handleLogout() : setModal(true))}>
         {buttonText}
-      </button>
+      </Button>
 
       <Modal
         id="modal"

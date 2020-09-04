@@ -44,19 +44,20 @@ describe("Campaign", () => {
       cy.get("main").find("nav").should("exist")
     })
 
-    it("has 7 items", () => {
+    it("has 6 items", () => {
       cy.get("main")
         .find("nav")
         .find("a")
         .should($anchor => {
-          expect($anchor, "7 items").to.have.length(7)
+          expect($anchor, "6 items").to.have.length(6)
           expect($anchor.eq(0), "first item").to.exist
           expect($anchor.eq(1), "second item").to.contain("Overview")
           expect($anchor.eq(2), "third item").to.contain("Focus")
-          expect($anchor.eq(3), "fourth item").to.contain("Platforms")
-          expect($anchor.eq(4), "fifth item").to.contain("Instruments")
-          expect($anchor.eq(5), "sixth item").to.contain("Timeline")
-          expect($anchor.eq(6), "last item").to.contain("Program Info")
+          expect($anchor.eq(3), "fourth item").to.contain(
+            "Platforms & Instruments"
+          )
+          expect($anchor.eq(4), "fifth item").to.contain("Timeline")
+          expect($anchor.eq(5), "sixth item").to.contain("Program Info")
         })
     })
 

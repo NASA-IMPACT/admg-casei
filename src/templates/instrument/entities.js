@@ -9,13 +9,10 @@ import {
   SectionContent,
 } from "../../components/section"
 
-export default function Entities({ platforms }) {
+export default function Entities({ id, platforms }) {
   return (
-    <SectionBlock id="instrument-airborne-entities">
-      <SectionHeader
-        headline="Related Airborne Entities"
-        to="#instrument-airborne-entities"
-      />
+    <SectionBlock id={id}>
+      <SectionHeader headline="Related Airborne Entities" id={id} />
       <SectionContent>
         <SimpleTable
           id="instrument-airborne-entities"
@@ -42,6 +39,7 @@ export const instrumentEntitiesFields = graphql`
 `
 
 Entities.propTypes = {
+  id: PropTypes.string.isRequired,
   platforms: PropTypes.arrayOf(
     PropTypes.shape({
       shortname: PropTypes.string.isRequired,

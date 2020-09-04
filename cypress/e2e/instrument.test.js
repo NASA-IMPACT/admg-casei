@@ -40,11 +40,11 @@ describe("Instrument", () => {
 
   describe("the about section", () => {
     it("exists", () => {
-      cy.get("[data-cy=about-instrument-section]").should("exist")
+      cy.get("[data-cy=about-section]").should("exist")
     })
 
     it("has a heading", () => {
-      cy.get("[data-cy=about-instrument-section]")
+      cy.get("[data-cy=about-section]")
         .find("h2")
         .should("have.text", "About the Instrument")
     })
@@ -74,11 +74,11 @@ describe("Instrument", () => {
 
     describe("the related entities section", () => {
       it("exists", () => {
-        cy.get("[data-cy=instrument-airborne-entities-section]").should("exist")
+        cy.get("[data-cy=entities-section]").should("exist")
       })
 
       it("has a heading", () => {
-        cy.get("[data-cy=instrument-airborne-entities-section]")
+        cy.get("[data-cy=entities-section]")
           .find("h2")
           .should("have.text", "Related Airborne Entities")
       })
@@ -96,11 +96,11 @@ describe("Instrument", () => {
 
     describe("the related information section", () => {
       it("exists", () => {
-        cy.get("[data-cy=instrument-resources-section]").should("exist")
+        cy.get("[data-cy=resources-section]").should("exist")
       })
 
       it("has a heading", () => {
-        cy.get("[data-cy=instrument-resources-section]")
+        cy.get("[data-cy=resources-section]")
           .find("h2")
           .should("have.text", "Related Information")
       })

@@ -16,6 +16,7 @@ describe("Focus Section", () => {
   it("displays content", () => {
     const tree = create(
       <FocusSection
+        id="focus"
         focus={testArray}
         geophysical={testArray}
         focusPhenomena={testString}

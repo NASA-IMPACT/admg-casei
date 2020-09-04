@@ -13,6 +13,7 @@ import {
 import PlaceholderLogo from "../../images/placeholder-logo.svg"
 
 const ProgramInfoSection = ({
+  id,
   logo,
   fundingAgency,
   fundingProgram,
@@ -35,8 +36,8 @@ const ProgramInfoSection = ({
   ]
 
   return (
-    <SectionBlock id="program-info">
-      <SectionHeader headline="Program Info" to="#program-info" />
+    <SectionBlock id={id}>
+      <SectionHeader headline="Program Info" id={id} />
       <SectionContent withBackground>
         <div style={{ display: `flex` }}>
           <div
@@ -73,7 +74,7 @@ const ProgramInfoSection = ({
             {contentList.map(item => (
               <ContentItem
                 key={item.label}
-                id="program-info-content"
+                id={`${id}-content`}
                 label={item.label}
                 info={item.info}
                 link={item.link}
@@ -117,6 +118,7 @@ export const fundingFields = graphql`
 `
 
 ProgramInfoSection.propTypes = {
+  id: PropTypes.string.isRequired,
   logo: PropTypes.shape({
     nasaImgAlt: PropTypes.string.isRequired,
     nasaImg: PropTypes.shape({

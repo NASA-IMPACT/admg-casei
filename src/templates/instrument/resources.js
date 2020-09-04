@@ -10,14 +10,11 @@ import {
   SectionContent,
 } from "../../components/section"
 
-export default function Resources({ onlineInformation }) {
+export default function Resources({ id, onlineInformation }) {
   const links = onlineInformation.split("\n")
   return (
-    <SectionBlock id="instrument-resources">
-      <SectionHeader
-        headline="Related Information"
-        to="#instrument-resources"
-      />
+    <SectionBlock id={id}>
+      <SectionHeader headline="Related Information" id={id} />
       <SectionContent>
         <ol>
           {links.map(link => (
@@ -45,5 +42,6 @@ export const instrumentResourcesFields = graphql`
 `
 
 Resources.propTypes = {
+  id: PropTypes.string.isRequired,
   onlineInformation: PropTypes.string.isRequired,
 }
