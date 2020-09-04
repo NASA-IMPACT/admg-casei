@@ -1,27 +1,18 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { graphql } from "gatsby"
-import Image from "gatsby-image"
-
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 import Layout, { PageBody } from "../components/layout"
-import Hero from "../components/hero"
 import DefinitionList from "../components/tables/definitionList"
 import SEO from "../components/seo"
 import glossary from "../content/glossary.json"
-import theme from "../utils/theme"
 
-export default function Glossary({ data }) {
+export default function Glossary() {
   return (
     <Layout>
       <SEO title="Glossary" />
-      <Hero title="Glossary" textToImageRatio={[5, 3]} id="glossary">
-        <Image
-          alt={data.flowchart.nasaImgAlt}
-          fixed={data.flowchart.nasaImg.childImageSharp.fixed}
-          style={{ backgroundColor: theme.color.base }}
-        />
-      </Hero>
       <PageBody id="glossary">
+        <h1>Glossary</h1>
         <DefinitionList
           id="glossary"
           list={glossary.map(x => ({
@@ -50,33 +41,52 @@ export default function Glossary({ data }) {
             ),
           }))}
         />
+        <DefinitionList
+          id="glossary-img"
+          list={[
+            {
+              title: "terminology map",
+              content: (
+                <Image filename="glossary-map.png" alt="terminology map" />
+              ),
+            },
+          ]}
+        />
       </PageBody>
     </Layout>
   )
 }
 
-export const query = graphql`
-  query {
-    flowchart: nasaImagesJson(shortname: { eq: "Glossary" }) {
-      nasaImgAlt
-      nasaImg {
-        childImageSharp {
-          fixed(height: 550) {
-            ...GatsbyImageSharpFixed
+const Image = props => {
+  const data = useStaticQuery(graphql`
+    query {
+      images: allFile {
+        edges {
+          node {
+            relativePath
+            name
+            childImageSharp {
+              fixed(width: 400) {
+                ...GatsbyImageSharpFixed
+              }
+            }
           }
         }
       }
     }
+  `)
+  const image = data.images.edges.find(n => {
+    return n.node.relativePath.includes(props.filename)
+  })
+  if (!image) {
+    return null
   }
-`
 
-Glossary.propTypes = {
-  data: PropTypes.shape({
-    flowchart: PropTypes.shape({
-      nasaImgAlt: PropTypes.string.isRequired,
-      nasaImg: PropTypes.shape({
-        childImageSharp: PropTypes.object.isRequired,
-      }).isRequired,
-    }).isRequired,
-  }),
+  const imageFixed = image.node.childImageSharp.fixed
+  return <Img alt={props.alt} fixed={imageFixed} />
+}
+
+Image.propTypes = {
+  filename: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
 }
