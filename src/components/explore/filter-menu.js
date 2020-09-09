@@ -109,6 +109,11 @@ const FilterMenu = ({
                   label="Platform"
                   options={getFilterOptionsById("platform")}
                 />
+                <Filter
+                  id="funding"
+                  label="Funding Agency"
+                  options={getFilterOptionsById("funding")}
+                />
               </>
             )}
             {category === "platforms" && (
