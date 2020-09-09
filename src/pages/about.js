@@ -63,7 +63,7 @@ const About = ({ data }) => {
               <SectionHeader
                 tagline={section.tagline}
                 headline={section.headline}
-                to={`#${id}`}
+                id={id}
               />
               <SectionContent columns={[6, 10]}>
                 {section.paragraphs &&

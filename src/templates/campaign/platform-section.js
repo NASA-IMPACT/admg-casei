@@ -13,9 +13,9 @@ import Image from "gatsby-image"
 
 import Chip from "../../components/chip"
 
-const PlatformSection = ({ platforms }) => (
-  <SectionBlock id="platform">
-    <SectionHeader headline="Platforms & Instruments" to="#platform" />
+const PlatformSection = ({ id, platforms }) => (
+  <SectionBlock id={id}>
+    <SectionHeader headline="Platforms & Instruments" id={id} />
     <SectionContent>
       <div data-cy="platform-carousel">
         {platforms.length > 0 ? (
@@ -92,6 +92,7 @@ export const platformFields = graphql`
 `
 
 PlatformSection.propTypes = {
+  id: PropTypes.string.isRequired,
   platforms: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,

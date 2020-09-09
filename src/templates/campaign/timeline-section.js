@@ -12,22 +12,24 @@ import {
 } from "../../components/section"
 import { formatDateRange } from "../../utils/helpers"
 
-const TimelineSection = ({ deployments }) => {
+const TimelineSection = ({ id, deployments }) => {
   const [currentSlide, setCurrentSlide] = useState(0)
 
   /**
    * Finds the index of the milestone given the id.
    * @param {string} id - of milestone
    */
-  const setSelectedMilestone = id =>
+  const setSelectedMilestone = deploymentId =>
     // TODO: replace deployments array with the new array that will combine deployments with other carousel data
-    setCurrentSlide(deployments.findIndex(deployment => deployment.id == id))
+    setCurrentSlide(
+      deployments.findIndex(deployment => deployment.id == deploymentId)
+    )
 
   const selectedMilestoneId = deployments[currentSlide].id
 
   return (
-    <SectionBlock id="timeline">
-      <SectionHeader headline="Timeline" to="#timeline" />
+    <SectionBlock id={id}>
+      <SectionHeader headline="Timeline" id={id} />
       <SectionContent withBackground>
         <div data-cy="milestone-carousel">
           <Carousel
@@ -81,6 +83,7 @@ export const deploymentFields = graphql`
 `
 
 TimelineSection.propTypes = {
+  id: PropTypes.string.isRequired,
   deployments: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,

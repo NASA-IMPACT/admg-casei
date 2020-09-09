@@ -8,10 +8,10 @@ import {
   SectionContent,
 } from "../../components/section"
 
-export default function Overview({ description }) {
+export default function Overview({ id, description }) {
   return (
-    <SectionBlock id="platform-overview">
-      <SectionHeader headline="Overview" to="#platform-overview" />
+    <SectionBlock id={id}>
+      <SectionHeader headline="Overview" id={id} />
       <SectionContent columns={[1, 7]}>
         <p>{description}</p>
       </SectionContent>
@@ -40,6 +40,7 @@ export const platformOverviewFields = graphql`
 `
 
 Overview.propTypes = {
+  id: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   // shortname: PropTypes.string.isRequired,
 }

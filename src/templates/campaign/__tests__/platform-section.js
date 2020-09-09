@@ -101,7 +101,9 @@ const testArray = [
 
 describe("Platform Section", () => {
   it("displays content", () => {
-    const tree = create(<PlatformSection platforms={testArray} />).toJSON()
+    const tree = create(
+      <PlatformSection id="platform" platforms={testArray} />
+    ).toJSON()
     expect(tree).toMatchSnapshot()
   })
 })
