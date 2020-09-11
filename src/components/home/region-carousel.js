@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react"
+import React, { useState, useRef } from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import Image from "gatsby-image"
@@ -30,22 +30,11 @@ const controlButtonLRStyle = {
   fontWeight: `bold`,
   fontSize: `large`,
 }
-let isInitialRender = true
 
 export const RegionCarousel = ({ regions }) => {
-  const element = useRef(null)
+  const controlTextRef = useRef(null)
 
   const [slideIndex, setSlideIndex] = useState(0)
-
-  useEffect(() => {
-    if (element && !isInitialRender)
-      element.current.scrollIntoView({
-        behavior: "smooth",
-        block: "nearest",
-        inline: "nearest",
-      })
-    isInitialRender = false
-  }, [slideIndex])
 
   return (
     <>
@@ -59,7 +48,7 @@ export const RegionCarousel = ({ regions }) => {
         {regions.map((region, index) => (
           <ControlTextButton
             key={region.id}
-            ref={index === slideIndex ? element : null}
+            ref={index === slideIndex ? controlTextRef : null}
             selected={index === slideIndex}
             onClick={() => setSlideIndex(index)}
           >
@@ -70,7 +59,14 @@ export const RegionCarousel = ({ regions }) => {
 
       <Carousel
         slideIndex={slideIndex}
-        afterSlide={slideIndex => setSlideIndex(slideIndex)}
+        afterSlide={slideIndex => {
+          setSlideIndex(slideIndex)
+          controlTextRef.current.scrollIntoView({
+            behavior: "smooth",
+            block: "nearest",
+            inline: "nearest",
+          })
+        }}
         renderBottomCenterControls={null}
         defaultControlsConfig={{
           nextButtonText: `⦊`,
