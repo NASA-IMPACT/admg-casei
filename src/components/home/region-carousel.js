@@ -30,6 +30,7 @@ const controlButtonLRStyle = {
   fontWeight: `bold`,
   fontSize: `large`,
 }
+let isInitialRender = true
 
 export const RegionCarousel = ({ regions }) => {
   const element = useRef(null)
@@ -37,16 +38,13 @@ export const RegionCarousel = ({ regions }) => {
   const [slideIndex, setSlideIndex] = useState(0)
 
   useEffect(() => {
-    if (element)
+    if (element && !isInitialRender)
       element.current.scrollIntoView({
         behavior: "smooth",
         block: "nearest",
         inline: "nearest",
       })
-
-    return () => {
-      // cleanup
-    }
+    isInitialRender = false
   }, [slideIndex])
 
   return (
