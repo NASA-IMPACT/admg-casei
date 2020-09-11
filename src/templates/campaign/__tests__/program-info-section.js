@@ -48,9 +48,9 @@ describe("Program Info Section", () => {
         programLead={testString}
         leadInvestigator={testString}
         dataManager={testString}
-        archive={testUrl}
+        repositoryWebsite={testUrl}
         partnerOrgListing={testString}
-        tertiaryWebsite={testUrl}
+        publicationLink={testUrl}
       />
     )
     const tree = component.toJSON()
@@ -77,9 +77,9 @@ describe("Program Info Section", () => {
         programLead={testString}
         leadInvestigator={testString}
         dataManager={testString}
-        archive={testUrl}
+        repositoryWebsite={testUrl}
         partnerOrgListing={testString}
-        tertiaryWebsite={testUrl}
+        publicationLink={testUrl}
       />
     )
     const tree = component.toJSON()

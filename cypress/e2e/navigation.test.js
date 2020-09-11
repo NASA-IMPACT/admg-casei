@@ -59,6 +59,6 @@ context("Navigation", () => {
     })
 
     cy.location("pathname").should("include", "contact")
-    cy.get("main").contains("Contact us")
+    cy.get("main").contains("feedback")
   })
 })
