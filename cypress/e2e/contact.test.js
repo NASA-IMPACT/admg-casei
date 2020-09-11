@@ -6,6 +6,6 @@ describe("Contact", () => {
   })
   it("renders correctly", () => {
     cy.get("main").find("h1").contains("feedback")
-    cy.get("main").find("p").contains("Contact us")
+    cy.get("main").find("p").contains("NASA inventory")
   })
 })

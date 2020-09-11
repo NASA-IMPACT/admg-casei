@@ -4,11 +4,7 @@ import { FeedbackForm } from "feedback-fish"
 
 import Layout, { PageBody, Paragraph } from "../components/layout"
 import SEO from "../components/seo"
-import {
-  SectionBlock,
-  SectionHeader,
-  SectionContent,
-} from "../components/section"
+import { SectionBlock, SectionContent } from "../components/section"
 import ExternalLink from "../components/external-link"
 import Button from "../components/button"
 
@@ -23,7 +19,7 @@ const Contact = () => (
     <SEO title="Contact" />
     <PageBody id="contact">
       <SectionBlock id="contact">
-        <SectionHeader headline="We appreciate your feedback!" id="contact" />
+        <h1>We appreciate your feedback!</h1>
         <SectionContent columns={[1, 8]}>
           <Paragraph>
             The Airborne Data Management Group (ADMG) has gathered the content
