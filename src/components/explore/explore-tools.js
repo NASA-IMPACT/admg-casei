@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import TrashIcon from "../icons/trash-icon"
+import IconButton from "../icon-button"
 import FilterMenu from "./filter-menu"
 import Searchbar from "./searchbar"
 import Chip from "../chip"
@@ -59,23 +60,13 @@ const ExploreTools = React.forwardRef(
                 chipAction={removeFilter}
               />
             ))}
-            <button
-              type="button"
-              onClick={() => clearFilters()}
-              style={{
-                background: "none",
-                border: "none",
-                flexGrow: 0,
-                cursor: `pointer`,
-                verticalAlign: `middle`,
-                marginLeft: `0.5rem`,
-              }}
-              data-cy="remove-filter"
-            >
-              <span role="img" aria-label="clear-icon">
-                <TrashIcon />
-              </span>
-            </button>
+            {selectedFilterIds.length > 1 && (
+              <IconButton
+                id="clear-filters"
+                action={() => clearFilters()}
+                icon={<TrashIcon />}
+              />
+            )}
           </div>
         )}
       </>

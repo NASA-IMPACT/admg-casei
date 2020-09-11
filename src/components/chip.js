@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import CloseIcon from "./icons/close-icon"
+import IconButton from "./icon-button"
 import theme from "../utils/theme"
 
 const Chip = ({ id, label, chipAction, actionId }) => (
@@ -19,24 +20,11 @@ const Chip = ({ id, label, chipAction, actionId }) => (
   >
     <small>{label}</small>
     {chipAction && (
-      <button
-        type="button"
-        onClick={() => chipAction(actionId)}
-        style={{
-          background: "none",
-          border: "none",
-          flexGrow: 0,
-          cursor: `pointer`,
-          color: theme.color.base,
-          verticalAlign: `middle`,
-          marginLeft: `0.5rem`,
-        }}
-        data-cy="remove-filter"
-      >
-        <span role="img" aria-label="close-icon">
-          <CloseIcon color={theme.color.base} />
-        </span>
-      </button>
+      <IconButton
+        id="remove-filter"
+        action={() => chipAction(actionId)}
+        icon={<CloseIcon color={theme.color.base} />}
+      />
     )}
   </div>
 )
