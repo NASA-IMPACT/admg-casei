@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import debounce from "lodash.debounce"
 
 const urlRegex = /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{2,256}\.[a-z]{2,4}/s
+const mailtoRegex = /^mailto:(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i
 
 /**
  * A funtion to validate that a prop contains a link to an external page
@@ -22,7 +23,7 @@ export function isUrl(url) {
  * @param {string} componentName the name of the component, to be logged in Error message
  */
 export function PropTypeIsUrl(props, propName, componentName) {
-  if (!urlRegex.test(props[propName])) {
+  if (!urlRegex.test(props[propName]) && !mailtoRegex.test(props[propName])) {
     return new Error(
       "Invalid url `" +
         propName +

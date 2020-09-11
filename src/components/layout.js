@@ -14,6 +14,11 @@ import Nav from "./nav"
 import Footer from "./footer"
 
 import theme from "../utils/theme"
+import styled from "styled-components"
+
+export const Paragraph = styled.p`
+  margin-bottom: 1rem;
+`
 
 export const PageBody = ({ children, id }) => (
   <section
