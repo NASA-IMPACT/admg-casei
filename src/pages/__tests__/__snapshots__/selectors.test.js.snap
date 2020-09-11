@@ -625,7 +625,7 @@ exports[`Campaigns page renders correctly 1`] = `
                     alt="CARVE logo"
                     fixed={
                       Object {
-                        "src": "/static/3dec137acafa7ac0c3a74368b2cb56b3/f8771/carve_logo_update.jpg",
+                        "src": "/static/3dec137acafa7ac0c3a74368b2cb56b3/9dd03/carve_logo_update.jpg",
                       }
                     }
                     src="test-image.png"
@@ -733,7 +733,7 @@ exports[`Campaigns page renders correctly 1`] = `
                     alt="DC3 logo"
                     fixed={
                       Object {
-                        "src": "/static/c4b36cb85ef25d65d08739c329b04e52/ad39b/dc3-logo.png",
+                        "src": "/static/c4b36cb85ef25d65d08739c329b04e52/7f3c0/dc3-logo.png",
                       }
                     }
                     src="test-image.png"
@@ -838,7 +838,7 @@ exports[`Campaigns page renders correctly 1`] = `
                     alt="ARCTAS logo"
                     fixed={
                       Object {
-                        "src": "/static/2bd234de67183d020fabe8584d7713ff/f8771/arctas_spring.jpg",
+                        "src": "/static/2bd234de67183d020fabe8584d7713ff/9dd03/arctas_spring.jpg",
                       }
                     }
                     src="test-image.png"

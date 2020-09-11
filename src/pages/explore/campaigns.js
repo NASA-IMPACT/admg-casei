@@ -67,7 +67,8 @@ export default function Campaigns({ data, location }) {
                 .map(x => x.regions.map(y => y.id))
                 .flat()
                 .includes(filterId) ||
-              campaign.platforms.map(x => x.id).includes(filterId)
+              campaign.platforms.map(x => x.id).includes(filterId) ||
+              campaign.fundingAgency.includes(filterId)
           )
     )
     .filter(campaign =>
@@ -80,6 +81,17 @@ export default function Campaigns({ data, location }) {
     season: allSeason,
     region: allGeographicalRegion,
     platform: allPlatform,
+    funding: {
+      // This transforms the query results from the distinct `funding_agency`
+      // field into the filter format { id, shortname }.
+      // - split() is used to separate the fields entry (e.g. "NOAA, NASA" to "NOAA" and "NASA")
+      // - flat() is used to flatten the array after splitting
+      // - Set() is used to remove duplicate elements from the array
+      //   (see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set)
+      options: [
+        ...new Set(allCampaign.options.map(x => x.split(/\s*,\s*/)).flat()),
+      ].map(x => ({ id: x, shortname: x })),
+    },
   })
 
   return (
@@ -148,6 +160,7 @@ export const query = graphql`
       list: nodes {
         ...campaignFields
       }
+      options: distinct(field: funding_agency)
     }
     allSeason {
       options: nodes {
@@ -225,6 +238,7 @@ export const query = graphql`
     platforms {
       id
     }
+    fundingAgency: funding_agency
   }
 `
 
@@ -275,6 +289,7 @@ const campaignShape = PropTypes.shape({
       id: PropTypes.string.isRequired,
     })
   ).isRequired,
+  fundingAgency: PropTypes.string.isRequired,
 })
 
 const filterOptionShape = PropTypes.shape({
@@ -292,6 +307,7 @@ Campaigns.propTypes = {
     allCampaign: PropTypes.shape({
       totalCount: PropTypes.number.isRequired,
       list: PropTypes.arrayOf(campaignShape).isRequired,
+      options: PropTypes.arrayOf(PropTypes.string).isRequired,
     }),
     allFocusArea: filterOptionShape,
     allSeason: filterOptionShape,
