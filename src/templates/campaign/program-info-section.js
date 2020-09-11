@@ -20,19 +20,27 @@ const ProgramInfoSection = ({
   programLead,
   leadInvestigator,
   dataManager,
-  archive,
+  repositoryWebsite,
   partnerOrgListing,
-  tertiaryWebsite,
+  publicationLink,
 }) => {
   const contentList = [
     { label: "Funding Agency", info: fundingAgency },
     { label: "Funding Program", info: fundingProgram },
     { label: "Funding Program Lead", info: programLead },
-    { label: "Lead Investigator", info: leadInvestigator },
+    { label: "Principle Investigator(s)", info: leadInvestigator },
     { label: "Data Manager / Technical Contact", info: dataManager },
-    { label: "Assigned Archive Repository", info: archive, link: archive },
-    { label: "Partner Organization", info: partnerOrgListing },
-    { label: "Tertiary Website", info: tertiaryWebsite, link: tertiaryWebsite },
+    {
+      label: "NASA Data Repository",
+      info: repositoryWebsite,
+      link: repositoryWebsite,
+    },
+    { label: "Partner Organizations", info: partnerOrgListing },
+    {
+      label: "Publication Overview",
+      info: publicationLink,
+      link: publicationLink,
+    },
   ]
 
   return (
@@ -109,11 +117,11 @@ export const fundingFields = graphql`
     leadInvestigator: lead_investigator
     dataManager: technical_contact
 
-    archive: repository_website
+    repositoryWebsite: repository_website
     partnerOrgs: partner_orgs {
       shortname: short_name
     }
-    tertiaryWebsite: tertiary_website
+    publicationLink: publication_links
   }
 `
 
@@ -130,9 +138,9 @@ ProgramInfoSection.propTypes = {
   programLead: PropTypes.string.isRequired,
   leadInvestigator: PropTypes.string.isRequired,
   dataManager: PropTypes.string.isRequired,
-  archive: PropTypes.string.isRequired,
+  repositoryWebsite: PropTypes.string.isRequired,
   partnerOrgListing: PropTypes.string.isRequired,
-  tertiaryWebsite: PropTypes.string.isRequired,
+  publicationLink: PropTypes.string.isRequired,
 }
 
 export default ProgramInfoSection

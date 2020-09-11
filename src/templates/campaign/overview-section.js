@@ -96,17 +96,17 @@ const OverviewSection = ({
             <p data-cy="doi-link">no campaign DOI available</p>
           )}
         </li>
-        {projectWebsite && (
-          <ListLink to={projectWebsite}>Project website</ListLink>
-        )}
         {repositoryWebsite && (
           <ListLink to={repositoryWebsite}>Repository website</ListLink>
+        )}
+        {projectWebsite && (
+          <ListLink to={projectWebsite}>Project website</ListLink>
         )}
         {tertiaryWebsite && (
           <ListLink to={tertiaryWebsite}>Tertiary website</ListLink>
         )}
         {publicationLink && (
-          <ListLink to={publicationLink}>Publication link</ListLink>
+          <ListLink to={publicationLink}>Overview Publication</ListLink>
         )}
       </ul>
     </SectionContent>

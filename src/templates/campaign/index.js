@@ -70,12 +70,12 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
         programLead: campaign.programLead,
         leadInvestigator: campaign.leadInvestigator,
         dataManager: campaign.dataManager,
-        archive: campaign.archive,
+        repositoryWebsite: campaign.repositoryWebsite,
         partnerOrgListing: campaign.partnerOrgs
           .map(x => x.shortname)
           .join(", "),
         partnerWebsite: campaign.partnerWebsite,
-        tertiaryWebsite: campaign.tertiaryWebsite,
+        publicationLink: campaign.publicationLink,
       },
     },
   }
@@ -209,7 +209,7 @@ CampaignTemplate.propTypes = {
       programLead: PropTypes.string.isRequired,
       leadInvestigator: PropTypes.string.isRequired,
       dataManager: PropTypes.string.isRequired,
-      archive: PropTypes.string.isRequired,
+      repositoryWebsite: PropTypes.string.isRequired,
       partnerOrgs: PropTypes.arrayOf(
         PropTypes.shape({
           shortname: PropTypes.string.isRequired,
