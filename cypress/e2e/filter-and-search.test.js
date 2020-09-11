@@ -14,10 +14,13 @@ describe("Explore Tools", () => {
         "C-23 Sherpa",
       ],
     },
-    { category: "platforms", filterExamples: ["Aerolaser"] },
+    { category: "platforms", filterExamples: ["Aerolaser", "CPC"] },
     {
       category: "instruments",
-      filterExamples: ["In Situ - Spectrometer/Radiometer"],
+      filterExamples: [
+        "In Situ - Spectrometer/Radiometer",
+        "In Situ - Sampler",
+      ],
     },
   ].forEach(x => {
     describe(x.category, () => {
@@ -105,6 +108,19 @@ describe("Explore Tools", () => {
               .should("be.eq", numBefore)
           })
         })
+      })
+
+      it("clears all filters", () => {
+        x.filterExamples.forEach(filterExample => {
+          cy.get("[data-cy=filter-select]").click()
+          cy.get("[data-cy=filter-options]")
+            .find("[data-cy=filter-option]")
+            .contains(filterExample)
+            .click({ force: true })
+        })
+        cy.get("[data-cy=clear-filters]").should("exist")
+        cy.get("[data-cy=clear-filters]").click()
+        cy.get("[data-cy=filter-chip]").should("not.exist")
       })
 
       it("sorts the list 'a to z' or 'z to a'", () => {
