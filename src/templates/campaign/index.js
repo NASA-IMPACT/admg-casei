@@ -209,7 +209,6 @@ CampaignTemplate.propTypes = {
       programLead: PropTypes.string.isRequired,
       leadInvestigator: PropTypes.string.isRequired,
       dataManager: PropTypes.string.isRequired,
-      repositoryWebsite: PropTypes.string.isRequired,
       partnerOrgs: PropTypes.arrayOf(
         PropTypes.shape({
           shortname: PropTypes.string.isRequired,
