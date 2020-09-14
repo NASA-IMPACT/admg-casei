@@ -34,6 +34,7 @@ export default function Instruments({ data, location }) {
 
   const addFilter = id => setFilter([...selectedFilterIds, id])
   const removeFilter = id => setFilter(selectedFilterIds.filter(f => f !== id))
+  const clearFilters = () => setFilter([])
 
   const inputElement = useRef(null)
 
@@ -70,6 +71,7 @@ export default function Instruments({ data, location }) {
         <ExploreTools
           submitSearch={submitSearch}
           selectedFilterIds={selectedFilterIds}
+          clearFilters={clearFilters}
           addFilter={addFilter}
           getFilterLabelById={getFilterLabelById}
           getFilterOptionsById={getFilterOptionsById}
@@ -91,6 +93,7 @@ export default function Instruments({ data, location }) {
           <ExploreSection
             category="instruments"
             selectedFilterIds={selectedFilterIds}
+            clearFilters={clearFilters}
             removeFilter={removeFilter}
             filteredCount={list.length}
             totalCount={allInstrument.totalCount}

@@ -41,6 +41,7 @@ export default function Campaigns({ data, location }) {
 
   const addFilter = id => setFilter([...selectedFilterIds, id])
   const removeFilter = id => setFilter(selectedFilterIds.filter(f => f !== id))
+  const clearFilters = () => setFilter([])
 
   const inputElement = useRef(null)
 
@@ -102,6 +103,7 @@ export default function Campaigns({ data, location }) {
         <ExploreTools
           submitSearch={submitSearch}
           selectedFilterIds={selectedFilterIds}
+          clearFilters={clearFilters}
           addFilter={addFilter}
           getFilterLabelById={getFilterLabelById}
           getFilterOptionsById={getFilterOptionsById}
@@ -124,6 +126,7 @@ export default function Campaigns({ data, location }) {
             category="campaigns"
             selectedFilterIds={selectedFilterIds}
             removeFilter={removeFilter}
+            clearFilters={clearFilters}
             filteredCount={list.length}
             totalCount={allCampaign.totalCount}
           >

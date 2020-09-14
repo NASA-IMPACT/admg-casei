@@ -1,6 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 
+import TrashIcon from "../icons/trash-icon"
+import IconButton from "../icon-button"
 import FilterMenu from "./filter-menu"
 import Searchbar from "./searchbar"
 import Chip from "../chip"
@@ -15,6 +17,7 @@ const ExploreTools = React.forwardRef(
       getFilterLabelById,
       getFilterOptionsById,
       removeFilter,
+      clearFilters,
       sortOrder,
       setSortOrder,
       category,
@@ -57,6 +60,13 @@ const ExploreTools = React.forwardRef(
                 chipAction={removeFilter}
               />
             ))}
+            {selectedFilterIds.length > 1 && (
+              <IconButton
+                id="clear-filters"
+                action={() => clearFilters()}
+                icon={<TrashIcon />}
+              />
+            )}
           </div>
         )}
       </>
@@ -71,6 +81,7 @@ ExploreTools.propTypes = {
   getFilterLabelById: PropTypes.func.isRequired,
   getFilterOptionsById: PropTypes.func.isRequired,
   removeFilter: PropTypes.func.isRequired,
+  clearFilters: PropTypes.func.isRequired,
   sortOrder: PropTypes.string.isRequired,
   setSortOrder: PropTypes.func.isRequired,
   category: PropTypes.oneOf(["campaigns", "platforms", "instruments"])

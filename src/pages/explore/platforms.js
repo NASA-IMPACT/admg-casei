@@ -34,6 +34,7 @@ const Platforms = ({ data, location }) => {
 
   const addFilter = id => setFilter([...selectedFilterIds, id])
   const removeFilter = id => setFilter(selectedFilterIds.filter(f => f !== id))
+  const clearFilters = () => setFilter([])
 
   const inputElement = useRef(null)
 
@@ -72,6 +73,7 @@ const Platforms = ({ data, location }) => {
           submitSearch={submitSearch}
           selectedFilterIds={selectedFilterIds}
           addFilter={addFilter}
+          clearFilters={clearFilters}
           getFilterLabelById={getFilterLabelById}
           getFilterOptionsById={getFilterOptionsById}
           removeFilter={removeFilter}

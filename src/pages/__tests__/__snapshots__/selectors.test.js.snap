@@ -542,7 +542,7 @@ exports[`Campaigns page renders correctly 1`] = `
             type="button"
           >
             <span
-              aria-label="close-icon"
+              aria-label="remove-filter-icon"
               role="img"
             >
               <svg
