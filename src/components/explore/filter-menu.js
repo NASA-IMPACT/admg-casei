@@ -161,5 +161,8 @@ FilterMenu.propTypes = {
   category: PropTypes.oneOf(["campaigns", "platforms", "instruments"])
     .isRequired,
 }
+FilterMenu.defaultProps = {
+  selectedFilterIds: [],
+}
 
 export default FilterMenu
