@@ -20,9 +20,10 @@ const Filter = ({ label, options, selectedFilterIds }) => (
         value={o.id}
         data-cy="filter-option"
         style={{
-          backgroundColor: selectedFilterIds.includes(o.id)
-            ? theme.color.secondary
-            : theme.color.primary,
+          backgroundColor:
+            selectedFilterIds && selectedFilterIds.includes(o.id)
+              ? theme.color.secondary
+              : theme.color.primary,
         }}
       >
         {o.shortname}
