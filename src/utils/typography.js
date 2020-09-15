@@ -27,6 +27,9 @@ const typography = new Typography({
         textShadow: "none",
         backgroundImage: "none",
       },
+      "a:hover": {
+        color: theme.color.link,
+      },
       h1: {
         fontSize: rhythm(2),
         marginTop: rhythm(0.5),
