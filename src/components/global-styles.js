@@ -20,18 +20,6 @@ const baseStyles = css`
     box-shadow: 0 0 4px teal;
     border: 1px solid teal;
   }
-
-  /* Links
-   ========================================================================== */
-  a {
-    cursor: pointer;
-    color: ${theme.color.base};
-    text-decoration: none;
-    transition: opacity 0.24s ease 0s;
-  }
-  a:visited {
-    color: ${theme.color.base};
-  }
 `
 export default createGlobalStyle`
   ${baseStyles}
