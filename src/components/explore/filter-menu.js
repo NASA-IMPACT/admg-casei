@@ -20,10 +20,9 @@ const Filter = ({ label, options, selectedFilterIds }) => (
         value={o.id}
         data-cy="filter-option"
         style={{
-          backgroundColor:
-            selectedFilterIds && selectedFilterIds.includes(o.id)
-              ? theme.color.secondary
-              : theme.color.primary,
+          backgroundColor: selectedFilterIds.includes(o.id)
+            ? theme.color.secondary
+            : theme.color.primary,
         }}
       >
         {o.shortname}
@@ -138,6 +137,7 @@ const FilterMenu = ({
                 id="instrument"
                 label="Instrument"
                 options={getFilterOptionsById("instrument")}
+                selectedFilterIds={selectedFilterIds}
               />
             )}
             {category === "instruments" && (
@@ -145,6 +145,7 @@ const FilterMenu = ({
                 id="instrument-types"
                 label="Instrument Types"
                 options={getFilterOptionsById("type")}
+                selectedFilterIds={selectedFilterIds}
               />
             )}
           </ListboxList>
