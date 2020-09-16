@@ -26,13 +26,9 @@ const typography = new Typography({
         transition: "opacity 0.24s ease 0s",
       },
       "a:active": {
-        textShadow: "none",
-        backgroundImage: "none",
         transform: "translate(0, 1px)",
       },
       "a:hover": {
-        textShadow: "none",
-        backgroundImage: "none",
         opacity: 0.64,
       },
       "a:visited": {
