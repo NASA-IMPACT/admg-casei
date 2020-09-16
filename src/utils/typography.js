@@ -20,15 +20,23 @@ const typography = new Typography({
   overrideStyles: ({ rhythm }) => {
     return {
       a: {
-        color: "inherit",
         textDecoration: "none",
+        cursor: "pointer",
+        color: theme.color.base,
+        transition: "opacity 0.24s ease 0s",
       },
-      "a:hover,a:active": {
+      "a:active": {
         textShadow: "none",
         backgroundImage: "none",
+        transform: "translate(0, 1px)",
       },
       "a:hover": {
-        color: theme.color.link,
+        textShadow: "none",
+        backgroundImage: "none",
+        opacity: 0.64,
+      },
+      "a:visited": {
+        color: theme.color.base,
       },
       h1: {
         fontSize: rhythm(2),
