@@ -49,7 +49,14 @@ const ExploreTools = React.forwardRef(
         </form>
 
         {selectedFilterIds.length > 0 && (
-          <div style={{ display: `flex`, flexWrap: `wrap`, margin: `2rem 0` }}>
+          <div
+            style={{
+              display: `flex`,
+              flexWrap: `wrap`,
+              margin: `2rem 0`,
+              alignItems: `center`,
+            }}
+          >
             Active filters:
             {selectedFilterIds.map(f => (
               <Chip

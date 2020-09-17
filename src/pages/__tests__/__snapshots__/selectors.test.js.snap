@@ -501,6 +501,7 @@ exports[`Campaigns page renders correctly 1`] = `
       <div
         style={
           Object {
+            "alignItems": "center",
             "display": "flex",
             "flexWrap": "wrap",
             "margin": "2rem 0",
