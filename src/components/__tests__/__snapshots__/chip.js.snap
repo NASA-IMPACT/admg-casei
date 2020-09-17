@@ -1,6 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Chip renders with action 1`] = `
+.c0:hover {
+  opacity: 0.64;
+}
+
+.c0:active {
+  -webkit-transform: translate(0,1px);
+  -ms-transform: translate(0,1px);
+  transform: translate(0,1px);
+}
+
 <div
   data-cy="filter-chip"
   style={
@@ -19,6 +29,7 @@ exports[`Chip renders with action 1`] = `
     Weather
   </small>
   <button
+    className="c0"
     data-cy="remove-filter"
     onClick={[Function]}
     style={

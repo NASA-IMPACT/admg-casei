@@ -1,7 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Campaigns page renders correctly 1`] = `
-.c1 {
+.c0:hover {
+  opacity: 0.64;
+}
+
+.c0:active {
+  -webkit-transform: translate(0,1px);
+  -ms-transform: translate(0,1px);
+  transform: translate(0,1px);
+}
+
+.c2 {
   position: fixed;
   top: 0;
   right: 0;
@@ -23,7 +33,7 @@ exports[`Campaigns page renders correctly 1`] = `
   transition: opacity 400ms ease-in;
 }
 
-.c2 {
+.c3 {
   width: 400px;
   position: relative;
   padding: 32px;
@@ -32,7 +42,7 @@ exports[`Campaigns page renders correctly 1`] = `
   pointer-events: auto;
 }
 
-.c0 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -49,7 +59,7 @@ exports[`Campaigns page renders correctly 1`] = `
   min-height: 2rem;
 }
 
-.c0 div:only-child {
+.c1 div:only-child {
   margin-left: auto;
 }
 
@@ -527,6 +537,7 @@ exports[`Campaigns page renders correctly 1`] = `
             geophysical: Upper Atms Chem
           </small>
           <button
+            className="c0"
             data-cy="remove-filter"
             onClick={[Function]}
             style={
@@ -620,7 +631,7 @@ exports[`Campaigns page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c0"
+                  className="c1"
                 >
                   <img
                     alt="CARVE logo"
@@ -728,7 +739,7 @@ exports[`Campaigns page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c0"
+                  className="c1"
                 >
                   <img
                     alt="DC3 logo"
@@ -833,7 +844,7 @@ exports[`Campaigns page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c0"
+                  className="c1"
                 >
                   <img
                     alt="ARCTAS logo"
@@ -1050,6 +1061,7 @@ exports[`Campaigns page renders correctly 1`] = `
           </li>
           <li>
             <button
+              className="c0"
               onClick={[Function]}
               style={
                 Object {
@@ -1073,11 +1085,11 @@ exports[`Campaigns page renders correctly 1`] = `
               Maintenance login
             </button>
             <div
-              className="c1"
+              className="c2"
               onClick={[Function]}
             >
               <div
-                className="c2"
+                className="c3"
               >
                 <form
                   data-cy="login-form"

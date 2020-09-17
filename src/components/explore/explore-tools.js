@@ -1,8 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import TrashIcon from "../icons/trash-icon"
-import IconButton from "../icon-button"
+import { TrashIcon } from "../icons"
+import { IconButton } from "../button"
 import FilterMenu from "./filter-menu"
 import Searchbar from "./searchbar"
 import Chip from "../chip"
