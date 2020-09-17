@@ -1,8 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import CloseIcon from "./icons/close-icon"
-import IconButton from "./icon-button"
+import { CloseIcon } from "./icons"
+import { IconButton } from "./button"
 import theme from "../utils/theme"
 
 const Chip = ({ id, label, chipAction, actionId }) => (

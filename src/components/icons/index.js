@@ -1,3 +1,8 @@
+import CloseIcon from "./close-icon"
+import TrashIcon from "./trash-icon"
+
+export { CloseIcon, TrashIcon }
+
 export { AtmosphericComposition as AtmosphericCompositionIcon } from "./atmospheric-composition"
 export { AtmosphericDynamics as AtmosphericDynamicsIcon } from "./atmospheric-dynamics"
 export { CarbonCycleEcosystems as CarbonCycleEcosystemsIcon } from "./carbon-cycle_ecosystems"

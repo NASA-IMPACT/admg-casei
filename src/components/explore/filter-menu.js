@@ -8,25 +8,42 @@ import {
   ListboxOption,
 } from "@reach/listbox"
 import VisuallyHidden from "@reach/visually-hidden"
+import styled from "styled-components"
 
+import { CloseIcon } from "../icons"
+import { IconButton } from "../button"
 import theme from "../../utils/theme"
+
+const FilterItem = styled(ListboxOption)`
+  display: flex;
+  justify-content: space-between;
+  background-color: ${props =>
+    props.selected ? theme.color.secondary : theme.color.primary};
+
+  &[data-reach-listbox-option][aria-selected="true"] {
+    background: ${theme.color.secondary};
+    opacity: 0.64;
+  }
+`
 
 const Filter = ({ label, options, selectedFilterIds }) => (
   <>
     <strong>{label}</strong>
     {options.map(o => (
-      <ListboxOption
+      <FilterItem
         key={o.id}
         value={o.id}
         data-cy="filter-option"
-        style={{
-          backgroundColor: selectedFilterIds.includes(o.id)
-            ? theme.color.secondary
-            : theme.color.primary,
-        }}
+        selected={!!selectedFilterIds.includes(o.id)}
       >
         {o.shortname}
-      </ListboxOption>
+        {selectedFilterIds.includes(o.id) && (
+          <IconButton
+            id="remove-filter"
+            icon={<CloseIcon color={theme.color.base} />}
+          />
+        )}
+      </FilterItem>
     ))}
   </>
 )
@@ -162,9 +179,6 @@ FilterMenu.propTypes = {
   removeFilter: PropTypes.func.isRequired,
   category: PropTypes.oneOf(["campaigns", "platforms", "instruments"])
     .isRequired,
-}
-FilterMenu.defaultProps = {
-  selectedFilterIds: [],
 }
 
 export default FilterMenu
