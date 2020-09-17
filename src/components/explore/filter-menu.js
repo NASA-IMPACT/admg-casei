@@ -8,7 +8,6 @@ import {
   ListboxOption,
 } from "@reach/listbox"
 import VisuallyHidden from "@reach/visually-hidden"
-import CloseIcon from "../icons/close-icon"
 
 import theme from "../../utils/theme"
 
@@ -26,7 +25,7 @@ const Filter = ({ label, options, selectedFilterIds }) => (
             : theme.color.primary,
         }}
       >
-        {o.shortname} {selectedFilterIds.includes(o.id) && <CloseIcon />}
+        {o.shortname}
       </ListboxOption>
     ))}
   </>
