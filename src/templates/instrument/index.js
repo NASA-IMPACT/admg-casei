@@ -28,6 +28,7 @@ const InstrumentTemplate = ({ data: { instrument }, path }) => {
       component: Entities,
       props: {
         platforms: instrument.platforms,
+        campaignIds: instrument.campaignIds,
       },
     },
     resources: {
@@ -93,6 +94,7 @@ InstrumentTemplate.propTypes = {
           ),
         })
       ),
+      campaignIds: PropTypes.arrayOf(PropTypes.string).isRequired,
     }).isRequired,
   }).isRequired,
   path: PropTypes.string.isRequired,

@@ -80,17 +80,27 @@ describe("Instrument", () => {
       it("has a heading", () => {
         cy.get("[data-cy=entities-section]")
           .find("h2")
-          .should("have.text", "Related Airborne Entities")
+          .should("have.text", "Related Entities")
       })
 
       it("displays a table", () => {
-        cy.get("[data-cy=instrument-airborne-entities-table]")
+        cy.get("[data-cy=instrument-related-entities-table]")
           .find("th")
           .should($th => {
             expect($th, "2 items").to.have.length(2)
             expect($th.eq(0), "first item").to.contain("Platform")
             expect($th.eq(1), "second item").to.contain("Campaigns")
           })
+
+        cy.get("[data-cy=related-platform]")
+          .find("big")
+          .first()
+          .should("have.text", "P-3")
+
+        cy.get("[data-cy=related-campaign]")
+          .find("big")
+          .first()
+          .should("have.text", "ARCTAS")
       })
     })
 
