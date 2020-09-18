@@ -11,26 +11,31 @@ import {
 } from "../../components/section"
 
 export default function Resources({ id, onlineInformation }) {
-  const links = onlineInformation.split("\n")
+  const links = onlineInformation ? onlineInformation.split("\n") : null
+
   return (
     <SectionBlock id={id}>
       <SectionHeader headline="Related Information" id={id} />
       <SectionContent>
-        <ol>
-          {links.map(link => (
-            <li key={link}>
-              {isUrl(link) ? (
-                <ExternalLink
-                  label={link}
-                  url={link}
-                  id="instrument-resource"
-                />
-              ) : (
-                <p className="placeholder">{link}</p> // fallback for invalid url
-              )}
-            </li>
-          ))}
-        </ol>
+        {links ? (
+          <ol>
+            {links.map(link => (
+              <li key={link}>
+                {isUrl(link) ? (
+                  <ExternalLink
+                    label={link}
+                    url={link}
+                    id="instrument-resource"
+                  />
+                ) : (
+                  <p className="placeholder">{link}</p> // fallback for invalid url
+                )}
+              </li>
+            ))}
+          </ol>
+        ) : (
+          <p>No information available</p>
+        )}
       </SectionContent>
     </SectionBlock>
   )
