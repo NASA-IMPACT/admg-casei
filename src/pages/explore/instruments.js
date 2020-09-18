@@ -53,7 +53,7 @@ export default function Instruments({ data, location }) {
       return selectedFilterIds.length === 0
         ? true
         : selectedFilterIds.every(filterId =>
-            instrument.instrumentTypes.includes(filterId)
+            instrument.instrumentTypes.map(x => x.id).includes(filterId)
           )
     })
     .filter(instrument =>
@@ -119,8 +119,12 @@ export const query = graphql`
       list: nodes {
         shortname: short_name # required for sort
         id
-        instrumentTypes: instrument_types # required for filter
-        campaigns # required for sort
+        instrumentTypes: instrument_types {
+          id # required for filter
+        }
+        campaigns {
+          id # required for sort
+        }
       }
     }
     allInstrumentType {
@@ -136,8 +140,16 @@ export const query = graphql`
 const instrumentShape = PropTypes.shape({
   shortname: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
-  instrumentTypes: PropTypes.arrayOf(PropTypes.string),
-  campaigns: PropTypes.arrayOf(PropTypes.string),
+  instrumentTypes: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+    }).isRequired
+  ).isRequired,
+  campaigns: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+    }).isRequired
+  ).isRequired,
 })
 
 Instruments.propTypes = {

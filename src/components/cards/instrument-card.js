@@ -25,7 +25,9 @@ export default function InstrumentCard(props) {
           longname: long_name
           id
           description
-          campaigns
+          campaigns {
+            id
+          }
         }
       }
     }

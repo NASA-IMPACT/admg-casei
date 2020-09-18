@@ -21,7 +21,7 @@ const Table = styled.table`
   }
 `
 
-export default function Entities({ id, campaignIds, platforms }) {
+export default function Entities({ id, campaigns, platforms }) {
   return (
     <SectionBlock id={id}>
       <SectionHeader headline="Related Entities" id={id} />
@@ -55,7 +55,7 @@ export default function Entities({ id, campaignIds, platforms }) {
                   }}
                 >
                   {platform.campaigns
-                    .filter(x => campaignIds.includes(x.id))
+                    .filter(x => campaigns.map(x => x.id).includes(x.id))
                     .map(campaign => (
                       <div key={campaign.id} data-cy="related-campaign">
                         <Link to={`/campaign/${campaign.id}`}>
@@ -81,13 +81,19 @@ export const instrumentEntitiesFields = graphql`
         id
       }
     }
-    campaignIds: campaigns
+    campaigns {
+      id
+    }
   }
 `
 
 Entities.propTypes = {
   id: PropTypes.string.isRequired,
-  campaignIds: PropTypes.arrayOf(PropTypes.string),
+  campaigns: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+    })
+  ).isRequired,
   platforms: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,

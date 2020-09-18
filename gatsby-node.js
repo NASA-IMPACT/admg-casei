@@ -28,7 +28,12 @@ exports.createSchemaCustomization = ({ actions }) => {
       image: NasaImagesJson @link(by: "shortname", from: "short_name")
     }
     type instrument implements Node {
+      campaigns: [campaign] @link
+      gcmd_phenomenas: [gcmd_phenomena] @link
+      instrument_types: [instrument_type] @link
+      measurement_regions: [measurement_region] @link
       platforms: [platform] @link
+      repositories: [repository] @link
     }
     type platform implements Node {
       campaigns: [campaign] @link
@@ -74,13 +79,16 @@ exports.sourceNodes = async ({ actions, createContentDigest }) => {
       "campaign",
       "deployment",
       "focus_area",
+      "gcmd_phenomena",
       "geographical_region",
       "geophysical_concept",
       "instrument",
       "instrument_type",
+      "measurement_region",
       "partner_org",
       "platform",
       "platform_type",
+      "repository",
       "season",
     ]
 

@@ -15,13 +15,20 @@ const InstrumentTemplate = ({ data: { instrument }, path }) => {
       nav: "About",
       component: About,
       props: {
+        instrumentTypes: instrument.instrumentTypes,
         radiometricFrequency: instrument.radiometricFrequency,
         temporalResolution: instrument.temporalResolution,
         spatialResolution: instrument.spatialResolution,
+        calibration: instrument.calibration,
+        measurementRegions: instrument.measurementRegions,
+        gcmdPhenomenas: instrument.gcmdPhenomenas,
         instrumentDoi: instrument.instrumentDoi,
         instrumentManufacturer: instrument.instrumentManufacturer,
         fundingSource: instrument.fundingSource,
         instrumentId: instrument.id,
+        leadInvestigator: instrument.leadInvestigator,
+        technicalContact: instrument.technicalContact,
+        facility: instrument.facility,
       },
     },
     entities: {
@@ -29,7 +36,7 @@ const InstrumentTemplate = ({ data: { instrument }, path }) => {
       component: Entities,
       props: {
         platforms: instrument.platforms,
-        campaignIds: instrument.campaignIds,
+        campaigns: instrument.campaigns,
       },
     },
     resources: {
@@ -37,6 +44,8 @@ const InstrumentTemplate = ({ data: { instrument }, path }) => {
       component: Resources,
       props: {
         onlineInformation: instrument.onlineInformation,
+        overviewPublication: instrument.overviewPublication,
+        repositories: instrument.repositories,
       },
     },
   }
@@ -77,17 +86,53 @@ export const query = graphql`
 InstrumentTemplate.propTypes = {
   data: PropTypes.shape({
     instrument: PropTypes.shape({
+      id: PropTypes.string,
       shortname: PropTypes.string.isRequired,
       longname: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
-      id: PropTypes.string.isRequired,
+
+      collectionPeriods: PropTypes.arrayOf(PropTypes.string),
+      instrumentTypes: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string.isRequired,
+          longname: PropTypes.string.isRequired,
+        }).isRequired
+      ).isRequired,
       radiometricFrequency: PropTypes.string,
       temporalResolution: PropTypes.string,
       spatialResolution: PropTypes.string,
+      calibration: PropTypes.string,
+      measurementRegions: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string.isRequired,
+          longname: PropTypes.string.isRequired,
+        }).isRequired
+      ).isRequired,
+      gcmdPhenomenas: PropTypes.arrayOf(
+        PropTypes.shape({
+          term: PropTypes.string,
+          topic: PropTypes.string,
+          variable_1: PropTypes.string,
+          variable_2: PropTypes.string,
+          variable_3: PropTypes.string,
+        }).isRequired
+      ).isRequired,
+      instrumentId: PropTypes.string,
       instrumentDoi: PropTypes.string,
       instrumentManufacturer: PropTypes.string,
       fundingSource: PropTypes.string,
+      leadInvestigator: PropTypes.string,
+      technicalContact: PropTypes.string,
+      facility: PropTypes.string,
+
       onlineInformation: PropTypes.string,
+      overviewPublication: PropTypes.string,
+      repositories: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string.isRequired,
+          longname: PropTypes.string.isRequired,
+        })
+      ),
       platforms: PropTypes.arrayOf(
         PropTypes.shape({
           shortname: PropTypes.string,
@@ -96,7 +141,11 @@ InstrumentTemplate.propTypes = {
           ),
         })
       ),
-      campaignIds: PropTypes.arrayOf(PropTypes.string).isRequired,
+      campaigns: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string,
+        })
+      ).isRequired,
     }).isRequired,
   }).isRequired,
   path: PropTypes.string.isRequired,
