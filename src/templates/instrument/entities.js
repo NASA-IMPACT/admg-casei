@@ -1,27 +1,73 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
+import styled from "styled-components"
 
-import SimpleTable from "../../components/tables/simpleTable"
 import {
   SectionBlock,
   SectionHeader,
   SectionContent,
 } from "../../components/section"
+import PlatformCard from "../../components/cards/platform-card"
+import CampaignCard from "../../components/cards/campaign-card"
+import theme from "../../utils/theme"
 
-export default function Entities({ id, platforms }) {
+const Table = styled.table`
+  th:first-child {
+    max-width: 9rem;
+  }
+  td:first-child {
+    max-width: 9rem;
+  }
+`
+
+export default function Entities({ id, campaigns, platforms }) {
   return (
     <SectionBlock id={id}>
-      <SectionHeader headline="Related Airborne Entities" id={id} />
+      <SectionHeader headline="Related Entities" id={id} />
       <SectionContent>
-        <SimpleTable
-          id="instrument-airborne-entities"
-          tableHeaders={["Platform", "Campaigns"]}
-          tableRows={platforms.map(platform => [
-            platform.shortname,
-            platform.campaigns.map(x => x.shortname).join(", "),
-          ])}
-        />
+        <Table data-cy={`instrument-related-entities-table`}>
+          <tbody>
+            <tr style={{ borderBottom: `2px solid ${theme.color.gray}` }}>
+              <th>
+                <label>Platform</label>
+              </th>
+              <th>
+                <label>
+                  Campaigns, where the platform was used with this instrument
+                </label>
+              </th>
+            </tr>
+            {platforms.map(platform => (
+              <tr key={platform.id}>
+                <td style={{ verticalAlign: `top` }}>
+                  <div data-cy="related-platform">
+                    <Link to={`/platform/${platform.id}`}>
+                      <PlatformCard id={platform.id} />
+                    </Link>
+                  </div>
+                </td>
+                <td
+                  style={{
+                    display: `grid`,
+                    gridTemplateColumns: `repeat(auto-fill, minmax(13rem, 1fr))`,
+                    gap: `1rem`,
+                  }}
+                >
+                  {platform.campaigns
+                    .filter(x => campaigns.map(x => x.id).includes(x.id))
+                    .map(campaign => (
+                      <div key={campaign.id} data-cy="related-campaign">
+                        <Link to={`/campaign/${campaign.id}`}>
+                          <CampaignCard id={campaign.id} />
+                        </Link>
+                      </div>
+                    ))}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </Table>
       </SectionContent>
     </SectionBlock>
   )
@@ -30,22 +76,28 @@ export default function Entities({ id, platforms }) {
 export const instrumentEntitiesFields = graphql`
   fragment instrumentEntitiesFields on instrument {
     platforms {
+      id
       campaigns {
-        shortname: short_name
+        id
       }
-      shortname: short_name
+    }
+    campaigns {
+      id
     }
   }
 `
 
 Entities.propTypes = {
   id: PropTypes.string.isRequired,
+  campaigns: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+    })
+  ).isRequired,
   platforms: PropTypes.arrayOf(
     PropTypes.shape({
-      shortname: PropTypes.string.isRequired,
-      campaigns: PropTypes.arrayOf(
-        PropTypes.shape({ shortname: PropTypes.string })
-      ),
+      id: PropTypes.string.isRequired,
+      campaigns: PropTypes.arrayOf(PropTypes.shape({ id: PropTypes.string })),
     })
   ),
 }

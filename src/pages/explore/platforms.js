@@ -101,16 +101,7 @@ const Platforms = ({ data, location }) => {
             {list.map(platform => {
               return (
                 <Link to={`/platform/${platform.id}`} key={platform.id}>
-                  <PlatformCard
-                    shortname={platform.shortname}
-                    longname={platform.longname}
-                    key={platform.id}
-                    description={platform.description}
-                    campaigns={platform.campaigns}
-                    collectionPeriodIds={platform.collectionPeriodIds}
-                    instruments={platform.instruments}
-                    stationary={platform.stationary}
-                  />
+                  <PlatformCard id={platform.id} />
                 </Link>
               )
             })}
@@ -126,7 +117,15 @@ export const query = graphql`
     allPlatform {
       totalCount
       list: nodes {
-        ...platform
+        shortname: short_name # required for sort
+        id
+        collectionPeriodIds: collection_periods # required for sort
+        campaigns {
+          id # required for sort
+        }
+        instruments {
+          id # required for filter
+        }
       }
     }
     allInstrument {
@@ -137,32 +136,14 @@ export const query = graphql`
       }
     }
   }
-
-  fragment platform on platform {
-    shortname: short_name
-    longname: long_name
-    id
-    description
-    collectionPeriodIds: collection_periods
-    campaigns {
-      id
-    }
-    instruments {
-      id
-    }
-    stationary
-  }
 `
 
 const platformShape = PropTypes.shape({
   shortname: PropTypes.string.isRequired,
-  longname: PropTypes.string,
   id: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
   collectionPeriodIds: PropTypes.arrayOf(PropTypes.string),
   campaigns: PropTypes.arrayOf(PropTypes.shape({ id: PropTypes.string })),
   instruments: PropTypes.arrayOf(PropTypes.shape({ id: PropTypes.string })),
-  stationary: PropTypes.bool.isRequired,
 })
 
 Platforms.propTypes = {

@@ -1,6 +1,7 @@
-import query from "./campaign-query"
+import campaignsQuery from "./campaign-query"
 import location from "./location"
 import site from "./site"
 import images from "./images"
+import staticQueries from "./static-queries.json"
 
-export { query, location, site, images }
+export { campaignsQuery, location, site, images, staticQueries }

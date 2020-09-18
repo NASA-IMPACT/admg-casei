@@ -848,17 +848,8 @@ exports[`Campaigns page renders correctly 1`] = `
                 >
                   <img
                     alt="ARCTAS logo"
-                    fixed={
-                      Object {
-                        "src": "/static/2bd234de67183d020fabe8584d7713ff/9dd03/arctas_spring.jpg",
-                      }
-                    }
-                    src="test-image.png"
-                    style={
-                      Object {
-                        "margin": "0",
-                      }
-                    }
+                    height="85"
+                    src="test-file-stub"
                   />
                 </div>
                 <big

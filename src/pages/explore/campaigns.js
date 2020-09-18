@@ -5,7 +5,6 @@ import Spinner from "react-spinkit"
 
 import api from "../../utils/api"
 import { selector, sortFunctions } from "../../utils/filter-utils"
-import { formatYearRange } from "../../utils/helpers"
 import theme from "../../utils/theme"
 
 import Layout, { PageBody } from "../../components/layout"
@@ -132,20 +131,8 @@ export default function Campaigns({ data, location }) {
           >
             {list.map(campaign => {
               return (
-                <Link to={`/campaign/${campaign.id}`} key={campaign.shortname}>
-                  <CampaignCard
-                    logo={campaign.logo}
-                    ongoing={campaign.ongoing}
-                    shortname={campaign.shortname}
-                    longname={campaign.longname}
-                    daterange={formatYearRange(
-                      campaign.startdate,
-                      campaign.enddate
-                    )}
-                    region={campaign.region}
-                    deployments={campaign.deployments.length}
-                    countDataProducts={campaign.countDataProducts}
-                  />
+                <Link to={`/campaign/${campaign.id}`} key={campaign.id}>
+                  <CampaignCard id={campaign.id} />
                 </Link>
               )
             })}
@@ -202,60 +189,34 @@ export const query = graphql`
   }
 
   fragment campaignFields on campaign {
-    logo {
-      nasaImgAlt
-      nasaImgUrl
-      nasaImg {
-        childImageSharp {
-          fixed(height: 85) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-    }
-    ongoing
-    shortname: short_name
-    longname: long_name
     id
+    shortname: short_name # required for sort
     seasons {
-      id
+      id # required for filter
     }
     focus: focus_areas {
-      id
+      id # required for filter
     }
     geophysical: geophysical_concepts {
-      id
+      id # required for filter
     }
-    startdate: start_date
-    enddate: end_date
-    region: region_description
+    enddate: end_date # required for sort
     deployments {
-      id
       regions: geographical_regions {
-        id
-        shortname: short_name
+        id # required for filter
+        # shortname: short_name
       }
     }
-    countCollectionPeriods: number_collection_periods
-    countDataProducts: number_data_products
     platforms {
-      id
+      id # required for filter
     }
-    fundingAgency: funding_agency
+    fundingAgency: funding_agency # required for filter
   }
 `
 
 const campaignShape = PropTypes.shape({
-  logo: PropTypes.shape({
-    nasaImgAlt: PropTypes.string.isRequired,
-    nasaImg: PropTypes.shape({
-      childImageSharp: PropTypes.object,
-    }),
-  }).isRequired,
-  ongoing: PropTypes.bool,
-  shortname: PropTypes.string.isRequired,
-  longname: PropTypes.string,
   id: PropTypes.string.isRequired,
+  shortname: PropTypes.string.isRequired,
   seasons: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
@@ -271,22 +232,16 @@ const campaignShape = PropTypes.shape({
       id: PropTypes.string.isRequired,
     })
   ).isRequired,
-  startdate: PropTypes.string.isRequired,
   enddate: PropTypes.string,
-  region: PropTypes.string.isRequired,
   deployments: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string.isRequired,
       regions: PropTypes.arrayOf(
         PropTypes.shape({
           id: PropTypes.string.isRequired,
-          shortname: PropTypes.string.isRequired,
         })
       ),
     })
   ),
-  countCollectionPeriods: PropTypes.number,
-  countDataProducts: PropTypes.number,
   platforms: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,

@@ -3,7 +3,7 @@
 describe("Instrument", () => {
   before(() => {
     cy.visit("/explore/instruments")
-    cy.get("main").find("[data-cy=explore-card]").contains("AMS").click()
+    cy.get("main").find("[data-cy=explore-card]").contains("ATSP").click()
   })
 
   describe("the header", () => {
@@ -15,14 +15,14 @@ describe("Instrument", () => {
     })
 
     it("displays the short name as title", () => {
-      cy.get("[data-cy=instrument-hero]").first().find("h1").contains("AMS")
+      cy.get("[data-cy=instrument-hero]").first().find("h1").contains("ATSP")
     })
 
     it("displays the long name as subtitle", () => {
       cy.get("[data-cy=instrument-hero]")
         .first()
         .find("p")
-        .contains("Aerosol Mass Spectrometer")
+        .contains("Airborne Tracking Sun Photometer")
     })
 
     it("displays the description", () => {
@@ -57,7 +57,7 @@ describe("Instrument", () => {
       cy.get("[data-cy=instrument-definition-list]")
         .find("dt")
         .should($dt => {
-          expect($dt, "4 items").to.have.length(4)
+          expect($dt, "8 items").to.have.length(8)
         })
     })
 
@@ -80,17 +80,27 @@ describe("Instrument", () => {
       it("has a heading", () => {
         cy.get("[data-cy=entities-section]")
           .find("h2")
-          .should("have.text", "Related Airborne Entities")
+          .should("have.text", "Related Entities")
       })
 
       it("displays a table", () => {
-        cy.get("[data-cy=instrument-airborne-entities-table]")
+        cy.get("[data-cy=instrument-related-entities-table]")
           .find("th")
           .should($th => {
             expect($th, "2 items").to.have.length(2)
             expect($th.eq(0), "first item").to.contain("Platform")
             expect($th.eq(1), "second item").to.contain("Campaigns")
           })
+
+        cy.get("[data-cy=related-platform]")
+          .find("big")
+          .first()
+          .should("have.text", "P-3")
+
+        cy.get("[data-cy=related-campaign]")
+          .find("big")
+          .first()
+          .should("have.text", "ARCTAS")
       })
     })
 
@@ -105,9 +115,31 @@ describe("Instrument", () => {
           .should("have.text", "Related Information")
       })
 
-      it("displays link list", () => {
-        cy.get("[data-cy=instrument-resource-link]").should($a => {
-          expect($a, "inks").to.have.length.of.at.least(1)
+      it("displays online resources", () => {
+        cy.get("[data-cy=online-information-label]")
+          .should("exist")
+          .and("have.text", "Online Information")
+
+        cy.get("[data-cy=online-information-link]").should($a => {
+          expect($a, "links").to.have.length.of.at.least(1)
+        })
+
+        it("displays overview publication", () => {
+          cy.get("[data-cy=overview-publication-label]")
+            .should("exist")
+            .and("have.text", "Overview Publication")
+
+          cy.get("[data-cy=overview-publication-link]").should("not.exist")
+        })
+
+        it("displays repositories", () => {
+          cy.get("[data-cy=repositories-label]")
+            .should("exist")
+            .and("have.text", "Repositories")
+
+          cy.get("[data-cy=repository]").should($li => {
+            expect($li, "item").to.have.length.of.at.least(1)
+          })
         })
       })
     })
