@@ -1,0 +1,3156 @@
+{
+  "allCampaign": {
+    "nodes": [
+      {
+        "id": "951482fa-5748-46ba-aed5-aab8b106b103",
+        "logo": {
+          "nasaImgAlt": "logo",
+          "nasaImg": {
+            "childImageSharp": {
+              "fixed": {
+                "src": "/static/070840eb6299020cd65fd46e27c54400/7f3c0/aces_logo.png"
+              }
+            }
+          }
+        },
+        "ongoing": false,
+        "shortname": "ACES",
+        "longname": "Altus Cumulus Electrification Study",
+        "startdate": "2002-08-02",
+        "enddate": "2002-08-30",
+        "region": "Florida Everglades",
+        "deployments": [
+          {
+            "id": "e6e65f44-a3e6-4ad5-99db-167a2c7b27af"
+          }
+        ],
+        "countDataProducts": 0
+      },
+      {
+        "id": "0c68f350-b544-4b52-9f46-2aceb6aa1b7d",
+        "logo": {
+          "nasaImgAlt": "AirMOSS logo",
+          "nasaImg": {
+            "childImageSharp": {
+              "fixed": {
+                "src": "/static/6cac19092a1bce4be3f0a8b6e564adb3/7f3c0/airmossLogo.png"
+              }
+            }
+          }
+        },
+        "ongoing": false,
+        "shortname": "AirMOSS",
+        "longname": "Airborne Microwave Observatory of Subcanopy and Subsurface",
+        "startdate": "2012-09-18",
+        "enddate": "2015-09-29",
+        "region": "North America",
+        "deployments": [
+          {
+            "id": "e2cf75e3-45c3-4cf4-9223-017ceeb97c7c"
+          },
+          {
+            "id": "8f4614ba-3f14-4b35-81bf-0f5261d62a2d"
+          },
+          {
+            "id": "715a1591-5539-4680-aced-31d8c11502ae"
+          },
+          {
+            "id": "f81db555-a65f-42e4-92a6-9f21d63e9eb7"
+          },
+          {
+            "id": "c5e9bace-0fc4-49f3-9e8e-f48cc7b4abb5"
+          },
+          {
+            "id": "52dd3846-2ed6-4ba0-b213-7e0608c5752a"
+          },
+          {
+            "id": "3204a519-b70d-4302-83e5-8dd1392c693b"
+          },
+          {
+            "id": "a899997c-397f-456a-953b-374ca35109df"
+          },
+          {
+            "id": "e85810b4-e8fe-47fa-9c04-e8263ddc87a4"
+          },
+          {
+            "id": "6ce1e9e8-f1ab-4a0d-aa10-545a3a7ff95b"
+          },
+          {
+            "id": "cfb057a7-837b-4de1-ad5b-82b04b6a8850"
+          },
+          {
+            "id": "30181d09-844d-42f4-9386-0297a3e7b250"
+          },
+          {
+            "id": "79b8e8cd-36f0-41c5-85d4-70b648c208b6"
+          },
+          {
+            "id": "065ec451-ad99-4821-9f52-a7eb7d8cc1a3"
+          },
+          {
+            "id": "215a0931-e502-4f01-a312-5b86ebd81f83"
+          },
+          {
+            "id": "1000d601-c308-4769-acfd-8b044f01322a"
+          },
+          {
+            "id": "3ec061ea-b93e-4797-a472-d99d4e06f770"
+          },
+          {
+            "id": "7e303985-5799-44a2-b9db-d5e1584aeb28"
+          },
+          {
+            "id": "73b1d9dd-73dd-488b-98e0-429f2694a69e"
+          },
+          {
+            "id": "d23eae66-15c9-40b5-8dbe-acd1b7372cf0"
+          },
+          {
+            "id": "408ed306-89cb-4451-ae60-da4088ffa9a4"
+          },
+          {
+            "id": "94ae469e-bfef-4ac1-8190-cdd65bfa9cb4"
+          },
+          {
+            "id": "71a90032-6149-4719-bae0-135d52a2acce"
+          },
+          {
+            "id": "11e8f9bb-6416-430b-97bd-87838c1d44a6"
+          },
+          {
+            "id": "8b55cb2c-ea4b-4ef8-8824-4079e0937d8f"
+          },
+          {
+            "id": "5818dceb-b6f2-4f5c-bb22-58a2b7062c28"
+          },
+          {
+            "id": "ccd3471d-8453-4b26-88c5-bb103e9ca9d1"
+          },
+          {
+            "id": "e89cb7da-bd0a-43df-8f63-5db3a89e668e"
+          },
+          {
+            "id": "cc6492f2-fa18-4d1f-ac65-41f04d39e932"
+          },
+          {
+            "id": "17624350-b93d-4342-931d-f79b1187f93b"
+          },
+          {
+            "id": "3ab6f6df-3d92-487d-b161-0b77c69fa0d9"
+          },
+          {
+            "id": "0b9e567b-537f-486d-b21b-8d2a0d87544a"
+          },
+          {
+            "id": "b264cb0e-c9ee-4f32-adc1-905f2ff0c337"
+          },
+          {
+            "id": "93da11a3-e55b-4673-af4c-d9e2bd135471"
+          }
+        ],
+        "countDataProducts": 0
+      },
+      {
+        "id": "03b728ae-2235-488c-80ee-570dcf602f3b",
+        "logo": {
+          "nasaImgAlt": "CARVE logo",
+          "nasaImg": {
+            "childImageSharp": {
+              "fixed": {
+                "src": "/static/3dec137acafa7ac0c3a74368b2cb56b3/9dd03/carve_logo_update.jpg"
+              }
+            }
+          }
+        },
+        "ongoing": false,
+        "shortname": "CARVE",
+        "longname": "Carbon in Arctic Reservoirs Vulnerability Experiment",
+        "startdate": "2012-05-23",
+        "enddate": "2015-11-12",
+        "region": "Alaska",
+        "deployments": [
+          {
+            "id": "d94bc68f-21f1-4353-9c0d-c3711a457025"
+          },
+          {
+            "id": "6c5dda3a-e09b-4b07-980a-8a89abdde249"
+          },
+          {
+            "id": "b028f92c-df6d-460b-a7d9-1680acb98e0e"
+          },
+          {
+            "id": "103912fc-1761-4ed2-b8ff-fca2226579c2"
+          }
+        ],
+        "countDataProducts": 0
+      },
+      {
+        "id": "6d8b649b-e0b9-4adf-94bb-f5defc7ba930",
+        "logo": {
+          "nasaImgAlt": "DC3 logo",
+          "nasaImg": {
+            "childImageSharp": {
+              "fixed": {
+                "src": "/static/c4b36cb85ef25d65d08739c329b04e52/7f3c0/dc3-logo.png"
+              }
+            }
+          }
+        },
+        "ongoing": false,
+        "shortname": "DC3",
+        "longname": "Deep Convective Clouds & Chemistry",
+        "startdate": "2012-05-18",
+        "enddate": "2012-06-30",
+        "region": "Northeastern Colorado, West Texas to Central Oklahoma, Northern Alabama",
+        "deployments": [
+          {
+            "id": "4025e078-74c9-4ec8-b697-af9132425c8e"
+          }
+        ],
+        "countDataProducts": null
+      },
+      {
+        "id": "61616a26-fc33-450e-bd53-a7690d03e6b6",
+        "logo": {
+          "nasaImgAlt": "GCPEx logo",
+          "nasaImg": {
+            "childImageSharp": {
+              "fixed": {
+                "src": "/static/4e1cc27c28411e8c942f140039bb625b/7f3c0/gcpexlogo.png"
+              }
+            }
+          }
+        },
+        "ongoing": false,
+        "shortname": "GCPEx",
+        "longname": "GPM Cold Season Precipitation Experiment",
+        "startdate": "2012-01-15",
+        "enddate": "2012-03-04",
+        "region": "Ontario, Canada and northern portions of the United States (e.g., New York state, the New England area, etc.)",
+        "deployments": [
+          {
+            "id": "1bac4b0f-de68-4c6b-a9bc-a084873b0f7d"
+          }
+        ],
+        "countDataProducts": 0
+      },
+      {
+        "id": "be798dc9-dccb-4dc2-8e6b-d395c1bcbeb6",
+        "logo": {
+          "nasaImgAlt": "GOES-R PLT logo",
+          "nasaImg": null
+        },
+        "ongoing": false,
+        "shortname": "GOES-R PLT",
+        "longname": "GOES-R Post Launch Test",
+        "startdate": "2017-03-21",
+        "enddate": "2017-05-17",
+        "region": "Continental United States",
+        "deployments": [
+          {
+            "id": "d69fb349-0147-418a-8e26-1414fc7ddc14"
+          }
+        ],
+        "countDataProducts": 0
+      },
+      {
+        "id": "7739c801-46e6-4ddd-ad30-351626dcccdb",
+        "logo": {
+          "nasaImgAlt": "GRIP logo",
+          "nasaImg": {
+            "childImageSharp": {
+              "fixed": {
+                "src": "/static/2803312240ff21bec233dee65f422031/9dd03/464732main_grip_graphic_med.jpg"
+              }
+            }
+          }
+        },
+        "ongoing": false,
+        "shortname": "GRIP",
+        "longname": "Genesis and Rapid Intensification Processes",
+        "startdate": "2010-08-15",
+        "enddate": "2010-09-25",
+        "region": "Tropical Atlantic, Gulf of Mexico, Eastern North Pacific, Caribbean Sea",
+        "deployments": [
+          {
+            "id": "4183334c-70e1-4e4c-b1a6-391a6113863d"
+          }
+        ],
+        "countDataProducts": 0
+      },
+      {
+        "id": "c1e56561-6726-4832-8dbe-0453b10ff36c",
+        "logo": {
+          "nasaImgAlt": "HS3 logo",
+          "nasaImg": {
+            "childImageSharp": {
+              "fixed": {
+                "src": "/static/3d520693bc11c953f22f86f860ffd08a/7f3c0/HS3_logo.png"
+              }
+            }
+          }
+        },
+        "ongoing": false,
+        "shortname": "HS3",
+        "longname": "Hurricane and Severe Storm Sentinel",
+        "startdate": "2012-08-28",
+        "enddate": "2014-10-20",
+        "region": "Subtropical Atlantic Ocean and Gulf of Mexico",
+        "deployments": [
+          {
+            "id": "3a09cded-e13e-41fc-915c-0b9aec4bcbc1"
+          },
+          {
+            "id": "7f6e122d-7161-4c64-a37d-943131688cee"
+          },
+          {
+            "id": "8726699a-a04c-4835-93b4-bf7918c79346"
+          }
+        ],
+        "countDataProducts": 0
+      },
+      {
+        "id": "c438c053-3708-4f53-83d8-8c57990c6bec",
+        "logo": {
+          "nasaImgAlt": "OLYMPEX logo",
+          "nasaImg": {
+            "childImageSharp": {
+              "fixed": {
+                "src": "/static/6b1df71a80ace65c6ad8ea8294fcaa5f/7f3c0/logo_image2.png"
+              }
+            }
+          }
+        },
+        "ongoing": false,
+        "shortname": "OLYMPEX",
+        "longname": "Olympic Mountains Experiment",
+        "startdate": "2015-11-01",
+        "enddate": "2016-05-01",
+        "region": "Olympic Peninsula in U.S. Washington State",
+        "deployments": [
+          {
+            "id": "6ad85c46-93e9-4f20-b3e9-b719ceb75068"
+          }
+        ],
+        "countDataProducts": 0
+      },
+      {
+        "id": "e48c2d79-822b-4c9e-9f72-2776d5d1eac6",
+        "logo": {
+          "nasaImgAlt": "ARCTAS logo",
+          "nasaImg": null
+        },
+        "ongoing": false,
+        "shortname": "ARCTAS",
+        "longname": "Arctic Research of the Composition of the Troposphere from Aircraft and Satellites",
+        "startdate": "2008-04-01",
+        "enddate": "2008-07-14",
+        "region": "Alaska, Western Canada, California",
+        "deployments": [
+          {
+            "id": "e71e8fbd-9f1a-4b91-9187-4b71109c25ff"
+          },
+          {
+            "id": "2de3c9cf-bff5-4d87-ab03-2b9690ec10c8"
+          },
+          {
+            "id": "683bfce3-f70e-49fa-8f87-74151327db19"
+          }
+        ],
+        "countDataProducts": 0
+      }
+    ]
+  },
+  "allPlatform": {
+    "nodes": [
+      {
+        "shortname": "ASO",
+        "longname": "Airborne Snow Observatory",
+        "id": "28154c07-d35b-4e13-982c-63b69e1fe57c",
+        "description": "ASO is considered a platform/instrument combination. Over the operational period of the NASA/JPL Airborne Snow Observatory (ASO), there have been two aircraft used, the Riegl Q1560 and the B-200 King Air.  Scientists refer to combination only (ASO= aircraft and lidar and imaging spectrometer instruments).",
+        "collectionPeriodIds": [],
+        "campaigns": [],
+        "instruments": [],
+        "stationary": false
+      },
+      {
+        "shortname": "C-23 Sherpa",
+        "longname": "",
+        "id": "fa7f2693-c9b1-4d89-b14c-0672487dc049",
+        "description": "two-engine turboprop aircraft which is owned and operated by GSFC/WFF. primarily used for airborne science research, providing logistics support for various NASA missions and is sometimes used as a technology test bed for new airborne instrumentation",
+        "collectionPeriodIds": [
+          "3c0bda21-14ca-452e-bca6-6b5ec6811e4b",
+          "984ec935-8a7d-453a-a15c-307fc64ab065",
+          "f872e964-a46e-4d91-a714-2116ca434e1d",
+          "43883fd9-45a3-41b2-ba37-20b4ba14f735",
+          "ab5c0e76-7d29-4f95-bec0-cb226a7934f2",
+          "2eef52da-9354-4cce-9906-8c9df642cec6",
+          "424ce756-cdd7-4f18-a452-279ffad4443c",
+          "b8d1434d-83cd-451e-93d6-617b9debc6ac",
+          "2610aff1-48f4-42d3-bd4e-af0f7387c3ba",
+          "1f3ba714-e6ae-420a-9100-3d0ecdc589f1",
+          "ec574817-ace7-4a64-9740-9e0d8ca55ff1",
+          "0bb66bc8-2ca0-4619-98a5-e8c56352d071",
+          "af8842e6-b12c-4946-be43-f7d1dd234728",
+          "9d6c71bf-25bb-441b-92b9-f396f013446b",
+          "05ddc7ea-842e-432a-a467-20a53dede77f",
+          "13edb691-1b51-49fc-bc33-73e8d2d8c0e1",
+          "4b25904c-78ec-4568-a8d0-0f03ffcd588c",
+          "5b538bb4-1cf1-42e3-892f-e98dac7e68fc",
+          "7e18f405-6198-4ca3-8403-1c3320b45f91",
+          "36851218-6b5a-4371-bd4b-68e427d10599",
+          "ae7ea8aa-08ac-4687-973d-129b7bc2c780",
+          "8eb53ca2-04ad-445f-9468-c033cdb43e1a",
+          "e46a599d-df62-4da4-b86d-2809e38664e0",
+          "9d4b09af-d723-4016-ab31-b868323e4f24"
+        ],
+        "campaigns": [
+          {
+            "id": "03b728ae-2235-488c-80ee-570dcf602f3b"
+          }
+        ],
+        "instruments": [
+          {
+            "id": "68c08e50-3fc9-489e-ab41-2309f18c3551"
+          },
+          {
+            "id": "bbc7f6b3-6f18-478c-87b9-1e714c1885b1"
+          },
+          {
+            "id": "23b00206-fc64-4a84-872a-09696e7dd258"
+          },
+          {
+            "id": "b0a5f5db-399b-48c9-a35e-722b4bb8e1fb"
+          },
+          {
+            "id": "bef52325-d1eb-4a40-bb98-f7bb85c72029"
+          },
+          {
+            "id": "a9f1db68-d2d3-42e5-a8f5-9cfabd1691c8"
+          }
+        ],
+        "stationary": false
+      },
+      {
+        "shortname": "Citation",
+        "longname": "Cessna Citation II",
+        "id": "732c68d8-124b-45be-b2d2-dbc2d305d855",
+        "description": "Twin-engine jet aircraft modified for atmospheric research, with space for up to two pilots and multiple equipment operators and passengers.  Side-by-side sensor ports allow multiple instruments to collect data simultaneously.",
+        "collectionPeriodIds": [
+          "445727ec-838e-4fe6-b546-2f10207b2bc8",
+          "30129582-2ba7-4e56-b28f-ec4e25b19b30",
+          "48e54a15-9984-4a21-9933-aa02453df0e7",
+          "7cb9311a-e3e7-48d6-b030-c0e02cb56ba5",
+          "4148a18e-6616-45e3-813a-ead5472b4494",
+          "5bc566cd-52ff-4381-879a-35a8e58da160",
+          "fe9eda55-8fe9-42ac-a1dc-c5950fcae3a3",
+          "f7c612ca-b46c-48bc-816c-db01dd109fe0",
+          "cb82fea8-e9d5-4124-bbbf-06c32b2288b7",
+          "02c4b8a2-467f-4b56-844a-f383fffc2bc3",
+          "dba689e5-3a03-4de1-a252-166044aff95a",
+          "8aa03704-b85d-46c7-b6d8-b84a837cd8cc",
+          "c29256c8-31e4-4afc-80fe-e1ca4816d297",
+          "8eb00662-40b4-432d-a58b-667a852a6c19"
+        ],
+        "campaigns": [
+          {
+            "id": "c438c053-3708-4f53-83d8-8c57990c6bec"
+          },
+          {
+            "id": "61616a26-fc33-450e-bd53-a7690d03e6b6"
+          }
+        ],
+        "instruments": [
+          {
+            "id": "59cfbc00-c172-4525-9c79-652e3e8d731d"
+          },
+          {
+            "id": "7be02e97-1d88-41fd-bf65-3c559ef322b9"
+          },
+          {
+            "id": "b631238c-5432-4503-8e97-d143b69e653c"
+          },
+          {
+            "id": "73a6a113-376f-4147-97c3-2a31138638b3"
+          },
+          {
+            "id": "32043b52-5c32-4dd1-b959-8945c92c6073"
+          },
+          {
+            "id": "c30e14df-674b-4356-a041-c94f1d473909"
+          },
+          {
+            "id": "697069da-870a-490a-88e7-ad5ac4ae2282"
+          },
+          {
+            "id": "ae22f399-7b48-4166-88b4-09759d4f29b3"
+          },
+          {
+            "id": "a13f0050-1383-4196-a97c-003e369707d9"
+          }
+        ],
+        "stationary": false
+      },
+      {
+        "shortname": "CV-580",
+        "longname": "Convair CV-580",
+        "id": "d363dbac-d440-492b-99b4-5d617bf8aa38",
+        "description": "twin engine turbo prop",
+        "collectionPeriodIds": [
+          "57ea18fd-ccca-40cf-808e-0219d80bcb2d",
+          "ee30c8c7-ff7a-4785-92c7-64d3bd404e0f",
+          "d35dbdba-2bef-4077-aca0-f9ae676f5e42",
+          "3f7d99d6-6ecc-4d34-bd33-c6650185aac3",
+          "31c754a0-429b-440b-b91f-f48649381806",
+          "540567eb-f9c1-4631-bed3-957067a0609f",
+          "09618f49-0fc3-43cc-9c47-969477119e0d"
+        ],
+        "campaigns": [
+          {
+            "id": "61616a26-fc33-450e-bd53-a7690d03e6b6"
+          }
+        ],
+        "instruments": [
+          {
+            "id": "6ca3a3e8-5557-41da-a9d0-edc8f7ffc6b8"
+          },
+          {
+            "id": "cd51864d-cd24-43d5-a59f-26326f8b090d"
+          },
+          {
+            "id": "c30e14df-674b-4356-a041-c94f1d473909"
+          },
+          {
+            "id": "3d682fdd-9579-43e0-8691-7339b116233c"
+          },
+          {
+            "id": "32043b52-5c32-4dd1-b959-8945c92c6073"
+          },
+          {
+            "id": "ae22f399-7b48-4166-88b4-09759d4f29b3"
+          },
+          {
+            "id": "6a2ebc11-3718-4fbd-aa96-9c21f4d36a97"
+          }
+        ],
+        "stationary": false
+      },
+      {
+        "shortname": "DC-8",
+        "longname": "Douglas DC-8",
+        "id": "6fc94f62-d4f2-4a08-9511-2234d91b0665",
+        "description": "The DC-8 is a four-engine jet aircraft with a range in excess of 5,000 nmi (9,200 km), a ceiling of 41,000 ft (12,500 m), and an experiment payload of 30,000 lb. It is outfitted atmospheric and surface study instruments and reporting electronics.",
+        "collectionPeriodIds": [
+          "027abe9a-ca2f-4f48-846b-918493ca6435",
+          "dde478ef-9ab9-4072-9b28-8a9af5ab67f5",
+          "e27c4134-f3f8-4761-8bc5-a2c63c143ba6",
+          "d55f472b-0076-4f20-a552-56bfde498d64",
+          "369a3537-2645-4ae2-b0f7-abab78ff3b9b",
+          "d9e00f61-a8ce-4cdc-a88a-4e92edfe2506",
+          "8e1e25d0-18f8-4679-8aed-51b821025317",
+          "6fb8861c-68ae-4dbb-88bf-40138c454d43",
+          "6b0da18a-98b8-42d5-a85c-4e7cfc1a9636",
+          "0ebc6692-4ecc-4d0b-bd80-6a913c73ea51",
+          "99431016-5e8a-4a11-b250-26703d6fceea",
+          "c0e6d93c-cd0b-478a-8657-c1cd958e68ab",
+          "cbc3cdc6-201a-47c7-b20e-c4ddd041f181",
+          "e4186d4c-cc78-4df6-abef-ad02eb47d458",
+          "74db2ecb-8a81-46a3-b5b5-0fe8edd23bec",
+          "57187b99-584a-43ca-8c2f-193b50775754",
+          "24328b3d-27df-4948-beb1-d31e14912848",
+          "fabb39a5-65f1-4c18-b75d-d6b3fd0fbba5",
+          "343ad4eb-ea2f-4052-95ad-c9f7ef819f98",
+          "48330c53-1bcc-42c3-baa5-2d92d26ab334",
+          "4c7908d7-42e9-4cb7-92bf-81f083c3973a",
+          "0b474601-6eb9-4a47-a12d-461b1ca6ad22",
+          "5cc2211e-fd27-4a8b-834e-27f5541da967",
+          "f761ddd3-57d4-4dd4-940f-1477ce440b6b",
+          "483d3ebd-8c7b-4d1d-a8d0-827c5447ade6",
+          "6aae1939-169a-4b8b-bd7b-4625e32a5e5e",
+          "9ed80777-f517-46a2-a12e-63484d02d177",
+          "d6f937ce-9be0-4bb5-a03c-b2293503ef38",
+          "0b1bfd8a-8733-4c83-bad7-50687c2db3d0",
+          "6f5c6a20-1de2-46cc-8be3-675453a77ae0",
+          "6374a756-6afd-48f4-9423-0cfac0c7221c",
+          "68ea3705-83ca-4260-87bd-fcc6011e8ec6",
+          "09c20ad6-dcee-4359-af6d-d815c3249b86",
+          "f2393989-0a09-462b-802d-a0b2e99167ff",
+          "b807c2a3-8ec4-4baf-857a-2a2beab3bad7",
+          "a5b0fbcc-0ee4-4adb-ada3-64beeee8a478",
+          "e242e2ab-7fe6-4b21-b1bd-080bf7028853",
+          "8620722c-0d0c-42fd-b694-9284ae82d188",
+          "8b55bb06-815f-437c-ae09-49123a920e3f",
+          "a5f0da3f-d5bc-44f7-8f8e-263a52fb8bde",
+          "ac318cda-43ed-4440-bc68-65b3a1d0bab7",
+          "be8fd2e6-26e1-46a9-af71-4e4ed20c890e",
+          "0444d829-592e-490f-8ef3-b69cba81c8a6",
+          "7e7405bf-879d-4c1d-af22-fa04fb580947",
+          "e33db5c5-f975-465d-a16e-1dff847873e9",
+          "3ae48763-8b6c-4fb3-a080-8eded242abc4",
+          "726445de-6a33-44fa-a628-4af8ace99a6b",
+          "5f5a0d29-609f-4c12-8432-c920545377a7",
+          "8ca34f3f-5bf6-4917-bcbe-eaa922658773",
+          "0a7f268e-7600-4d92-850a-0000bfb24513",
+          "c4ec4ca8-b739-4c78-896d-0ad865e08230",
+          "c84e394e-b379-4f1a-80a9-e3cd2c99449b",
+          "94852233-dacb-4ad6-a463-d0fa8f404e77",
+          "895fbfaa-8044-4ca8-b519-d4895c47cd58",
+          "6d7ad34d-8b68-45fa-8582-c74fc6dae565",
+          "c6a1792b-dd72-446b-bc72-0eda3d23c03c",
+          "bfbe6d86-8ff9-4463-9906-67c6e59e0cd5",
+          "671ce588-9331-4344-a319-175208559bb9",
+          "e39e1901-5ace-4eb3-a28f-6c1043a762e2",
+          "5796454f-dd28-4c71-8911-a2b3e02bed3a",
+          "650c6358-f060-400c-926e-7ef10097ee7b",
+          "aad71154-0484-4ea9-8614-9ba852fbad02",
+          "cd946793-525c-4918-b080-ea7f54c41260",
+          "2752a28a-c70e-4713-850e-373d2e1822d2",
+          "9807ee98-51f5-499e-8d61-2a59f884e755",
+          "68ddc124-2b30-44b2-bbc6-060626ccf779",
+          "3869e712-9c5a-4c4e-ad0f-7159a642588c",
+          "619a0dac-1570-4559-97d7-b0f97e311170",
+          "f0626db1-f4c2-4b36-b282-b82183b359be",
+          "8f338243-44b3-42b4-9037-807c5bfceb69",
+          "1572e799-1caf-4d7c-962a-cafe9daf33d1",
+          "03063bdc-1b25-433b-9463-4481688bf11e",
+          "9f679aea-8fb7-49cd-9d4a-cf82adff7990",
+          "bc41e402-41e9-4e16-9bdc-859c4c045c65",
+          "fbfdb6f3-2c0e-4248-acfe-5f3c206e5022",
+          "e36a9f51-9d89-4a44-b83e-ffa94a7bac3a",
+          "0a439b8f-9318-4cd8-80a3-4676763ec0d2",
+          "dda8524b-be02-4f41-9c97-3d165269143c",
+          "7574ebe7-588f-4079-b8fb-7c6f1d3b4795",
+          "9d39b5ea-cfe8-41a9-b050-4c8da3297f36",
+          "f2b15713-53e3-468e-8992-9e9b308b2a9e",
+          "4a3ea442-0a7e-4cc3-9b72-f6a5d0284108",
+          "c51dd646-eccb-4e05-8689-4750cc6431cf",
+          "4f42d482-258e-47f7-826e-01bc8f80b147",
+          "4ebf2f0b-5f34-4036-a2f9-5d58ea694fd9",
+          "e7ce8cf9-3aad-439b-9449-45afdfca8fc8",
+          "e0dda798-cae3-489e-8772-8376d7d2f306",
+          "69ddcaa8-e696-4c8e-86a7-6b8101a45512",
+          "b9b5c646-71d2-4f7a-aee1-89976f3f1eff"
+        ],
+        "campaigns": [
+          {
+            "id": "61616a26-fc33-450e-bd53-a7690d03e6b6"
+          },
+          {
+            "id": "7739c801-46e6-4ddd-ad30-351626dcccdb"
+          },
+          {
+            "id": "6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+          },
+          {
+            "id": "e48c2d79-822b-4c9e-9f72-2776d5d1eac6"
+          },
+          {
+            "id": "c438c053-3708-4f53-83d8-8c57990c6bec"
+          }
+        ],
+        "instruments": [
+          {
+            "id": "a1f41f4d-2233-49be-a3d3-6eda1ded6be4"
+          },
+          {
+            "id": "d5e31d80-a0d9-4d5b-95e1-e10714ec7970"
+          },
+          {
+            "id": "c40cc568-c4eb-4605-a3bc-f9027ad538a6"
+          },
+          {
+            "id": "f095abde-d0eb-4d00-b33b-549b37c28dca"
+          },
+          {
+            "id": "fdec9678-fd19-48b9-a30f-b0c2d8503c82"
+          },
+          {
+            "id": "eaabd936-b6ae-4136-b160-90ef5f629da4"
+          },
+          {
+            "id": "2abacda8-20fc-4128-a908-0aee03ec3946"
+          },
+          {
+            "id": "6a4d682d-4671-42fc-ab4d-c73831b85217"
+          },
+          {
+            "id": "b4444ce1-cd96-438f-b858-cb2ef04d0c6c"
+          },
+          {
+            "id": "e18a8b74-3bc0-4982-ad96-26c41f2eb9c7"
+          },
+          {
+            "id": "5d9c2051-d594-4806-a008-5539f5ca95cf"
+          },
+          {
+            "id": "eac3e790-6d94-4d1f-a97b-455f780bcd72"
+          },
+          {
+            "id": "9cb21783-08d5-40ec-bbdb-ecdeb081b122"
+          },
+          {
+            "id": "2ee722ae-6721-421c-b153-8e58d06c83c0"
+          },
+          {
+            "id": "405881c9-0a90-4e4b-bdc1-4263b640e3c5"
+          },
+          {
+            "id": "e0e4d0dd-c90d-4a23-9744-85cd3dbc4be0"
+          },
+          {
+            "id": "5babb9af-ea28-4c0a-8f4c-52d9da780a4b"
+          },
+          {
+            "id": "67778fe4-7ec5-4c85-9ee7-f55de1b22475"
+          },
+          {
+            "id": "1b0aeb19-0e55-432a-8e8d-2ba5278d1d64"
+          },
+          {
+            "id": "bf37fb0a-9c1f-44c9-84e7-25e56dab8547"
+          },
+          {
+            "id": "0ff5e333-d376-4feb-b12c-6c337d6e67e5"
+          },
+          {
+            "id": "07229c6d-a3bb-44b1-b9ed-6ae25b68e7ba"
+          },
+          {
+            "id": "944a98ca-9593-4b55-aa53-905ab963c0fa"
+          },
+          {
+            "id": "31ac509c-07ca-42bb-b84a-f58b209e9be3"
+          },
+          {
+            "id": "dd5bd385-fc39-46e2-8ab4-d61e89832e83"
+          },
+          {
+            "id": "a4ef7cb3-d80d-4983-bf94-3d957d9e4007"
+          },
+          {
+            "id": "ddc07c20-fbf6-4a9c-b509-61ac7dbd2ab2"
+          },
+          {
+            "id": "19e47b07-f51a-49c7-a6ef-b605b56d480e"
+          },
+          {
+            "id": "95b5f0c2-2b8f-45ac-bd9c-4fcedcd75bc7"
+          },
+          {
+            "id": "b5147694-b468-4665-af90-6b8eea51a679"
+          },
+          {
+            "id": "e15948bb-6402-43aa-93f9-170f231cf3c8"
+          },
+          {
+            "id": "7056bc6b-2986-4ea1-a8bf-c09a16d453ab"
+          },
+          {
+            "id": "0099d3ea-2854-4e50-a362-d0e20c69b04e"
+          },
+          {
+            "id": "12838503-2241-4de6-b66e-569eb983609d"
+          },
+          {
+            "id": "b5b084cb-4df7-4ea5-867b-ac5b574a1381"
+          },
+          {
+            "id": "5338159c-7efe-47ee-95cf-02b9219de9d3"
+          },
+          {
+            "id": "0cc4f471-c0cf-4c43-8c13-e1beb16214bf"
+          },
+          {
+            "id": "6a53d8a1-caa2-4294-aaa4-1baec7a2f09f"
+          },
+          {
+            "id": "76b7c4d5-5674-400f-8e00-57447a81a747"
+          },
+          {
+            "id": "ce4e9aad-82c0-40b0-a1fc-9a70de2c6bad"
+          },
+          {
+            "id": "05c3aa4c-b540-4a28-9dd5-8e3620d49da5"
+          },
+          {
+            "id": "a1d7fe21-c130-44e8-aa50-f786694d2c00"
+          },
+          {
+            "id": "0994c1d2-5d0a-4d07-a6c1-a38d5f4a982f"
+          },
+          {
+            "id": "23d9bd42-197d-40fe-940e-022b484109f2"
+          },
+          {
+            "id": "697069da-870a-490a-88e7-ad5ac4ae2282"
+          },
+          {
+            "id": "eb89b1ad-4e4e-4b04-866f-468801e97b16"
+          },
+          {
+            "id": "4a60fb7e-16ad-4bbc-aabe-e0ea7f0e4502"
+          },
+          {
+            "id": "bdc98701-c863-4f46-968d-6580a53ebf97"
+          },
+          {
+            "id": "dc23fea9-3102-4fe4-ac72-01c7dce14d22"
+          }
+        ],
+        "stationary": false
+      },
+      {
+        "shortname": "ER-2",
+        "longname": "NASA Earth Resources-2 aircraft",
+        "id": "bb761da6-1606-444c-92d1-e6d30954f2d7",
+        "description": "High altitude civilian version of a United States Air Force U2-S reconnaissance aircraft.  The ER-2 is used for investigations that require flight level up to the lower stratosphere.  he aircraft also are used for electronic sensor research and development, satellite calibration and satellite data validation. Operating at 70,000 feet (21.3 km) the ER-2 acquires data above ninety-five percent of the earth’s atmosphere. The aircraft also yields an effective horizon of 300 miles (480 km) or greater at altitudes of 70,000 feet.",
+        "collectionPeriodIds": [
+          "24b70f20-cabb-47db-bdcb-5959be5920b1",
+          "120e8ca6-f080-4b04-ad3e-bb491d50743c",
+          "d12c9f6d-19b5-41d6-9ac9-15a2ceb097cc",
+          "dbe60310-9bd9-4b29-83f0-528b5fc83e6d",
+          "d7b62cef-cec0-4efb-a3bd-514626ef0cf4",
+          "b939c96b-fd20-4c19-84a2-44aec6b44333",
+          "891aed05-7bb2-49ab-9657-823c76752b89",
+          "d8725e79-1714-4fad-bcb7-6b20ccedef2e",
+          "b35cb61f-1650-4185-a1e4-3a9581ff4832",
+          "b2835465-7e26-455b-8398-d73d3428ed00",
+          "4c7ed156-47b1-4403-9757-ab5481388d2f",
+          "779d3b1f-3bc3-416e-b073-25f186278eb8",
+          "8b40682e-c34b-4bcb-9233-7c036a6d60be",
+          "61e45388-3ec7-4184-8182-ade8210e2e7c",
+          "9c1159c9-69ef-470a-a98e-0f2b24caf99a"
+        ],
+        "campaigns": [
+          {
+            "id": "c438c053-3708-4f53-83d8-8c57990c6bec"
+          },
+          {
+            "id": "be798dc9-dccb-4dc2-8e6b-d395c1bcbeb6"
+          }
+        ],
+        "instruments": [
+          {
+            "id": "16ee8179-1021-4b2b-abe9-a700e32eaadf"
+          },
+          {
+            "id": "21024dc0-5e24-4900-a6b4-6bbc49114737"
+          },
+          {
+            "id": "522face6-1564-4b2b-a01b-44e077c27af6"
+          },
+          {
+            "id": "b104b619-a99d-479d-857a-8d903acd20b0"
+          },
+          {
+            "id": "f84764d4-586c-439d-8f45-1eab954c621f"
+          },
+          {
+            "id": "cd3ccab7-9fbb-4931-b479-9cc58c8db90e"
+          },
+          {
+            "id": "48238eb2-3964-4fab-ac58-3a47306caa5f"
+          },
+          {
+            "id": "67064c65-b27a-49fe-a2c9-d2e396c827c1"
+          },
+          {
+            "id": "2b9bec28-2900-43af-8521-8e671b44530c"
+          },
+          {
+            "id": "106b9f7e-982c-413a-b5b2-b7abfa308cfe"
+          },
+          {
+            "id": "153ea332-8639-4fc0-a5b4-f8e43d86cf0e"
+          },
+          {
+            "id": "d05eb1e2-104b-4c87-9240-8dfcbaeec44d"
+          }
+        ],
+        "stationary": false
+      },
+      {
+        "shortname": "Falcon",
+        "longname": "Dassault Falcon 20-E5",
+        "id": "63ef5aa5-2f57-4af6-8adf-2769f3e51c24",
+        "description": "is a Twin Jet aircraft with a pressurized cabin. Due to its unique modifications and features the DLR Falcon is qualified to serve as an ideal multipurpose platform for scientific instrumentation",
+        "collectionPeriodIds": [
+          "6651aa9f-cea8-41a9-aeab-821726c0f397",
+          "8edba01f-b7d6-49a4-8920-b2944c02f8db",
+          "5a65116e-fb41-4cbc-9c8c-327b68ada2d7",
+          "0389ecca-4392-4262-bf68-6e936ac5fe0d",
+          "44dca3d4-1b28-454a-8a13-2036e050672b",
+          "5a67e038-72cf-4a1e-a323-a19ffc9e5fc5",
+          "3302d51c-fe29-44b7-bec3-d932f46e6576",
+          "51509c0f-fe52-4498-b083-6bc8ccc201e2",
+          "739adf26-3fa0-4822-a660-9b2bc0d69e28",
+          "2668aff9-8b45-40e4-b882-8bb5aded54ba",
+          "c7ed2711-d1bf-4e08-8e4b-bc36c9d639b4",
+          "c863b15b-0df6-4ad4-abb7-cd6dbf9269ce"
+        ],
+        "campaigns": [
+          {
+            "id": "6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+          }
+        ],
+        "instruments": [
+          {
+            "id": "3d8fc104-5bc8-48dc-a8a5-e0bbf09feaac"
+          },
+          {
+            "id": "8d5c3af8-f81b-4418-9ec2-4a6752434179"
+          },
+          {
+            "id": "3e5c6687-3a1c-40f5-95ed-49eb3248aea7"
+          },
+          {
+            "id": "bbc7f6b3-6f18-478c-87b9-1e714c1885b1"
+          },
+          {
+            "id": "8b70ff0b-ef8d-4869-83d5-3604121ebf78"
+          },
+          {
+            "id": "a0299cb5-8444-474c-b595-b1bb0178223b"
+          },
+          {
+            "id": "11c697e2-67d8-4992-8539-f1762596b567"
+          },
+          {
+            "id": "7bf842a5-8d66-4a3a-928f-89a439e17a1b"
+          },
+          {
+            "id": "3d682fdd-9579-43e0-8691-7339b116233c"
+          },
+          {
+            "id": "f61faffa-b06d-4436-9fb7-8867f4679da7"
+          },
+          {
+            "id": "a994b0a9-9f20-42b3-9d0d-9bec26b12894"
+          },
+          {
+            "id": "f8a0477e-29b6-45f6-b3f3-dacfa934f28c"
+          }
+        ],
+        "stationary": false
+      },
+      {
+        "shortname": "G-III",
+        "longname": "Gulfstream III",
+        "id": "5a5ffdbe-0eae-48b1-a7ad-d63dfebffb9a",
+        "description": "a business jet that was obtained from the US Air Force and is now primarily used as a multi-role research platform for earth science research purposes",
+        "collectionPeriodIds": [
+          "67d66b30-ed4b-4975-867c-dd11a8dd6f8a",
+          "256b4cd5-4824-434c-9a7b-749e326aa729",
+          "758f25e5-e585-43da-b050-a6605ede53d3",
+          "1e4a7cb1-93f8-4f46-8ec9-f909a3d022ec",
+          "057abd10-1f4e-43cc-a828-9bd1376f207e",
+          "114cd24c-cc55-4971-aa00-3349b8d19faf",
+          "a34e6f73-0c51-46ae-90d7-03693dbb0002",
+          "d9e3689f-ba6b-4cf3-8eaa-f121eaf05c76",
+          "dea4c944-60c0-428e-b99e-8c329dfef61d",
+          "175cc034-dd3d-4b4e-8360-1f49431cda26",
+          "63917e0e-cf57-4e92-9b1d-2632437206cd",
+          "771674c8-5300-4f99-88bc-ef107106f700",
+          "de1d42bf-7165-41b6-88df-be87055b0570",
+          "30cdea62-bcc5-4585-a322-aead4fff4e03",
+          "73c753a7-0124-42ec-9820-b9484cfc841d",
+          "76b09602-c554-451a-aac4-6f5b2d3ff978",
+          "c10a0d4f-569e-4060-9026-583234f31ea1",
+          "2b65ae8e-52e4-44ea-aeca-508ba2645a02",
+          "a141336f-af74-4d38-bdb4-3f16956712af",
+          "29c2b7eb-a37e-4cd5-8f96-7a2b55f35b68",
+          "7cf20690-551b-43d7-a5f9-232cbb6301cf",
+          "92977af2-08b7-4663-bec0-b766903f38c1",
+          "af9e7db6-0fea-4d29-9831-77a337198a20",
+          "80d321cf-19c1-4525-add6-78231fe2bd67",
+          "253f2679-3bf8-403b-af19-93c10c1aa5c3",
+          "70fb3546-02c2-442e-9974-c0ab83f9af40",
+          "5b1a67fb-cf01-4a6b-93c1-219578fd2d01",
+          "74a93009-1c3e-4e8a-90e1-01bcd8eaa344",
+          "1db6a9c1-5e58-45e8-a8ce-f585b6dd2922",
+          "4a8668ee-b424-4942-9c34-9bd135a5cda1",
+          "31f5a973-4a22-44c8-90c4-bc0f3cfa3403",
+          "a0d67de2-9467-4a8f-bf63-b097db6fe847",
+          "298a8901-10e0-4cec-974d-69b6ebd35b9f",
+          "51a965b3-0899-4677-85a1-9f91fd82e305"
+        ],
+        "campaigns": [
+          {
+            "id": "0c68f350-b544-4b52-9f46-2aceb6aa1b7d"
+          }
+        ],
+        "instruments": [
+          {
+            "id": "8c9a61ae-8a47-4774-be05-c335ab000e93"
+          }
+        ],
+        "stationary": false
+      },
+      {
+        "shortname": "G-V",
+        "longname": "Gulfstream-V",
+        "id": "0493498f-f092-425e-bcd0-9fc807c77c0a",
+        "description": "The NSF/NCAR Gulfstream-V High-performance Instrumented Airborne Platform for Environmental Research (GV HIAPER) aircraft is a cutting-edge observational platform that meets the scientific needs of researchers who study many different aspects of the earth's environment, such as atmospheric Chemistry and Climate, Chemical Cycles, Clouds and Aerosols, Solar and Terrestrial Radiative Fluxes, Upper Troposphere Lower Stratosphere Processes, Mountain Waves and Turbulence, Air Quality, and Mesoscale Weather.",
+        "collectionPeriodIds": [
+          "6461ac69-46a7-44be-b38e-113c0d7973a8",
+          "19f21834-f689-4607-b0ee-73dba92789ad",
+          "371bbda0-9877-4492-a24e-28176c512108",
+          "3ac621f6-5693-4a80-abe0-f1b0348f5c41",
+          "2680ca43-fdeb-4eb6-9954-d080b605b1ed",
+          "18f27c3f-4f07-4e1a-9a3b-f0c97458ae4b",
+          "46f27ee3-78fa-4259-9f19-abb613b19e40",
+          "e76a51f4-b21c-4e11-bc8f-871416faab7a",
+          "b53bb3d1-249a-4311-8aeb-7088791f6493",
+          "d6abdaae-5b6e-41d5-9300-be3c0261cd34",
+          "1843f031-3653-4d40-83f7-acc9d4a0d6ac",
+          "7337f75f-b09e-40bf-b323-d2410f87e08a",
+          "297c9018-1517-495f-9465-590e07a80093",
+          "ecc6f19f-c054-48ee-b534-ba5348442e91"
+        ],
+        "campaigns": [
+          {
+            "id": "6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+          }
+        ],
+        "instruments": [
+          {
+            "id": "28bcfeb6-bb82-48c5-a6bf-0a78f12dab6a"
+          },
+          {
+            "id": "bbc7f6b3-6f18-478c-87b9-1e714c1885b1"
+          },
+          {
+            "id": "357d5740-e9e6-456b-81e3-1f319b55e8bd"
+          },
+          {
+            "id": "1700b3b0-f81b-4916-a7be-bcf80b7d128c"
+          },
+          {
+            "id": "b631238c-5432-4503-8e97-d143b69e653c"
+          },
+          {
+            "id": "7f7897fd-dd81-4a51-8229-fa7ed83d74bf"
+          },
+          {
+            "id": "43d257f9-82b8-4729-9f1b-1ef4677d3ccf"
+          },
+          {
+            "id": "842912bc-d7ec-410a-ad8d-5d5b23cab976"
+          },
+          {
+            "id": "eb24373c-eaf0-4059-bee0-f07d41132270"
+          },
+          {
+            "id": "a57e2efd-d18a-4bb4-ba73-1c45f0b0046a"
+          },
+          {
+            "id": "b3b926d2-a668-4783-ac67-890d458950d0"
+          },
+          {
+            "id": "67778fe4-7ec5-4c85-9ee7-f55de1b22475"
+          },
+          {
+            "id": "540d2e04-1b8c-4266-b4eb-8c1dd15de272"
+          },
+          {
+            "id": "11c697e2-67d8-4992-8539-f1762596b567"
+          }
+        ],
+        "stationary": false
+      },
+      {
+        "shortname": "GH",
+        "longname": "Global Hawk UAV",
+        "id": "ad8a0ce5-8aae-4fe5-8b46-7586c267efdb",
+        "description": "fixed wing unmanned aerial vehicle used by NASA for important field campaigns studying hurricanes and other weather events.",
+        "collectionPeriodIds": [
+          "65c484bb-fc09-488a-9f4b-0b166837cb87",
+          "31fba60a-3d0a-43b9-adbc-ecf188a7aebd",
+          "7e50bab5-54fb-4670-a51f-7976db65987a",
+          "19192df9-8aea-41a8-9f14-dbd6582371fd",
+          "46d04149-794b-4ed7-abbf-5c8cfc909582",
+          "9bcb2ee6-3c0a-4957-8b7f-7146479f05af",
+          "b2bac869-3997-4e4b-8114-4535a944d578",
+          "cf439932-f0fa-4d75-8be0-f3eeaa011ec8",
+          "6d3db7b9-fad0-4259-937d-4fe85ee161e7",
+          "f8e3c3e3-1139-4c08-96f7-11ce607cba77",
+          "33ef58a5-398c-4ef8-9c22-2fe8a5db262f",
+          "2efe31bd-5d5e-4612-b225-efe5e1915556",
+          "986ea494-24f8-4e1b-803a-729c5f559d15"
+        ],
+        "campaigns": [
+          {
+            "id": "c1e56561-6726-4832-8dbe-0453b10ff36c"
+          },
+          {
+            "id": "7739c801-46e6-4ddd-ad30-351626dcccdb"
+          }
+        ],
+        "instruments": [
+          {
+            "id": "522face6-1564-4b2b-a01b-44e077c27af6"
+          },
+          {
+            "id": "03ccc159-cc12-4705-b9e5-093d8153021f"
+          },
+          {
+            "id": "48238eb2-3964-4fab-ac58-3a47306caa5f"
+          },
+          {
+            "id": "23d9bd42-197d-40fe-940e-022b484109f2"
+          },
+          {
+            "id": "106b9f7e-982c-413a-b5b2-b7abfa308cfe"
+          },
+          {
+            "id": "153ea332-8639-4fc0-a5b4-f8e43d86cf0e"
+          },
+          {
+            "id": "fab1e4cd-dd5b-4c48-b731-6238e974c656"
+          }
+        ],
+        "stationary": false
+      },
+      {
+        "shortname": "P-3",
+        "longname": "P-3 Orion",
+        "id": "715351b2-1126-4c0d-8130-5caa9f044f6d",
+        "description": "The P-3 is a four-engine turboprop aircraft designed for endurance and range and is capable of long duration flights. The P-3 has been extensively modified to support airborne science related activities. Aircraft features include zenith ports, three nadir ports (aft of the wings), and seven P-3 and DC-8 style windows to mount experiments, a tail cone, nose radome and ten mounting locations on the wings. NASA operates a P-3 (built in 1966) out of the NASA GSFC Wallops Flight Facility, and NOAA operates the WP-3D Orion aircraft.",
+        "collectionPeriodIds": [
+          "f6e489b4-1807-4110-9f49-9561dc97009d",
+          "e73987c9-af31-4a01-a974-467d058cab6e",
+          "cb526280-457e-452a-8440-f071679b1107",
+          "98207f6f-b7f1-4fd3-b57a-d62c8225dc74",
+          "faca3459-41c4-43ce-bc2d-13f63fcecfc2",
+          "12c66615-a8d6-4dea-809e-7cef9fef585a",
+          "c2661aca-5833-4e5b-bb0f-ca012b0c5499",
+          "038c6c99-0cc4-4b6d-9482-83ced689e93e",
+          "cf019205-a6d0-4458-9d2d-a9c740cea1bc",
+          "90491e1d-81ef-456d-a239-4cab6d320976",
+          "76a51eb1-a956-4082-8ef1-2852df025c12",
+          "10113731-c7e8-4d81-820e-ceeac190ea3a",
+          "f467a9b5-28c3-4c57-8b6a-ca5a4871c45d",
+          "f3ebb03b-c2fd-4559-8bd4-051b6c97d734",
+          "d56d2177-250f-422a-861c-efb15f787291",
+          "4487c508-4d2f-467f-8a75-d7f0361ca365",
+          "33dadf78-579c-416a-a9b8-e6576cc0f836",
+          "12ca4706-a717-4bcc-8173-805c4bfc7e36",
+          "e42e6111-2695-42d4-b271-05b04c3741cd",
+          "a9c19761-5a5b-4a8d-8f2e-98cf813f9690",
+          "dde72546-0c01-4bf1-bd00-d01b928431ea",
+          "70af8aaa-1c49-48c4-b01b-4c3bf19bc1bd",
+          "9b9d3847-eaf5-4062-9e2d-22c5ffaffca8",
+          "815ff689-863e-4b3f-aae5-1d75128825ba",
+          "47ccbb07-8f85-4654-a0ab-eade9349fed4",
+          "c68faa00-910d-4a24-b3aa-4e72a28b4123",
+          "ddc0e749-8ef0-4c72-9e69-2f083fb37508",
+          "d393d649-db9a-4ab4-b2b9-7c4c7099130a",
+          "5d55261f-f14a-4ea7-a3e5-5436f52234cf",
+          "17bfb568-d11f-485b-a81a-b97717a0099d",
+          "a5678482-61ee-40c7-9d5a-22b1c7b64149",
+          "bf51c59c-de78-4e79-85a5-a2b68482eb11",
+          "5892a7fa-e820-4b03-b600-bfbd079a1f0f",
+          "0a31742a-1fa7-4c4d-a8e1-45449dad7227",
+          "c77acedb-1b05-46ec-9d1c-8711e8e70c1a",
+          "2e24b110-dd13-4f94-bffb-d35042151b02",
+          "ba0d388d-41fd-4aba-853f-8daeb03d40b2",
+          "ee418b21-4579-442e-9e27-4c7a80bcc7dd",
+          "d60056e4-d899-43d2-8592-38dba4e862e8",
+          "491c1c76-4190-453f-a8d5-0bc6229bc6d0",
+          "ab6bd302-244b-4f47-8274-b8a7872d437b",
+          "0f962ed6-3652-4cf9-9433-7fb04c9ed054"
+        ],
+        "campaigns": [
+          {
+            "id": "e48c2d79-822b-4c9e-9f72-2776d5d1eac6"
+          }
+        ],
+        "instruments": [
+          {
+            "id": "a1f41f4d-2233-49be-a3d3-6eda1ded6be4"
+          },
+          {
+            "id": "edf760b9-d2b4-4ce5-8524-31268e6532fc"
+          },
+          {
+            "id": "3e5c6687-3a1c-40f5-95ed-49eb3248aea7"
+          },
+          {
+            "id": "11ca0c5b-4fd6-4a60-b015-20ef954a8715"
+          },
+          {
+            "id": "a0299cb5-8444-474c-b595-b1bb0178223b"
+          },
+          {
+            "id": "eac3e790-6d94-4d1f-a97b-455f780bcd72"
+          },
+          {
+            "id": "377e2f9b-6a8c-428b-9907-fbb27b9a8861"
+          },
+          {
+            "id": "0cc4f471-c0cf-4c43-8c13-e1beb16214bf"
+          },
+          {
+            "id": "ddc07c20-fbf6-4a9c-b509-61ac7dbd2ab2"
+          },
+          {
+            "id": "2ee722ae-6721-421c-b153-8e58d06c83c0"
+          },
+          {
+            "id": "91407c07-97ff-4862-944b-3c2bdc49073a"
+          },
+          {
+            "id": "eaabd936-b6ae-4136-b160-90ef5f629da4"
+          },
+          {
+            "id": "847d3381-fa31-4b73-97e8-3d1d3894391f"
+          },
+          {
+            "id": "dc23fea9-3102-4fe4-ac72-01c7dce14d22"
+          }
+        ],
+        "stationary": false
+      },
+      {
+        "shortname": "WB-57",
+        "longname": "NASA WB-57",
+        "id": "2cbc931a-6f47-45f0-bff6-659ef2efc68d",
+        "description": "a mid-wing, long-range aircraft capable of operation for extended periods of time from sea level to altitudes in excess of 60,000 feet. The WB-57 can fly for approximately 6.5 hours, has a range of approximately 2500 miles, and can carry up to 8,800 lbs of payload.",
+        "collectionPeriodIds": [
+          "7666075e-84bf-4614-86ba-673f83f4b32d",
+          "0740bae1-d907-402a-9880-fcf2c09e25c8"
+        ],
+        "campaigns": [
+          {
+            "id": "c1e56561-6726-4832-8dbe-0453b10ff36c"
+          },
+          {
+            "id": "7739c801-46e6-4ddd-ad30-351626dcccdb"
+          }
+        ],
+        "instruments": [
+          {
+            "id": "fab1e4cd-dd5b-4c48-b731-6238e974c656"
+          }
+        ],
+        "stationary": false
+      },
+      {
+        "shortname": "ALAR",
+        "longname": "Airborne Laboratory for Atmospheric Research",
+        "id": "96b56413-2068-4fc4-a093-4780a02744e9",
+        "description": "a light twin engine aircraft used primarily for obtaining airborne flux measurements",
+        "collectionPeriodIds": [
+          "972be5a5-5e19-4c74-9ff1-197a380b626f",
+          "5a1774dd-7bb9-467d-83c0-cf79684731df",
+          "bba7ab5d-daec-422a-ab53-a9841a0539f2",
+          "0e821114-a835-41bc-aa48-be5142f19bb1",
+          "363339e0-4923-40d8-abc2-798d71820c9b",
+          "e0c1c4f8-84c5-46a8-a417-be336ac527c6",
+          "933f8985-9ae5-4982-8e77-dc15f5dcd7b0",
+          "94aaa4e3-39b2-4287-b700-6f20a281b4da",
+          "80304861-cb65-4d08-9ed9-3a9a1f666826",
+          "3ee07594-d3b0-4c42-963b-92429615af90",
+          "61b3013b-79a9-4e05-a5e6-bec5e70ade3a",
+          "1dd6e50f-c36e-4bcf-8969-9aff2869d7f8",
+          "c92a7249-6c2b-409b-9495-fa0475816fcd",
+          "1073b3a2-f1ca-4a91-9d8e-4e4cb955d5a5",
+          "99b20f01-85a1-436e-b1ed-412e5e3e3a08",
+          "4fd1cc96-8e3a-4ee4-8fc8-3189fe2e6fca",
+          "a0b804ae-e07d-4af6-b77e-aa62852413c9",
+          "0a9b9e83-2068-4d20-b698-2d81bd8baec3",
+          "b875a229-17f1-421c-9aac-c6a08d8af8d7",
+          "565ec767-8a26-4c21-ad8a-9405fcb5dd64",
+          "f726310b-913f-48e9-8d4a-31e720a7d60e",
+          "f60248f1-5b59-4bb5-9b3e-3925cb4b1693",
+          "92266bc8-0be6-4f77-bc70-2fc8dd066c4a",
+          "0156f0ff-ce98-49e8-92d6-b75a8d1834ea",
+          "e7a77126-9d8c-4401-8e4a-6d1c104a0834",
+          "d32539ea-5161-4f0f-a2c7-b1a67cb5291d",
+          "018c7281-364c-4d5d-8325-db793429f0bd",
+          "428d77ce-6580-444f-baa5-89df41fe99e5",
+          "a60d7393-f213-44d1-9214-7564757f30ea",
+          "c6816132-637d-44d1-8b40-edbf6f1fcdd2",
+          "4df16603-0bb4-42e7-bda7-297eab61c217",
+          "8b6cd315-efde-4e11-bbdc-c12ead88209a",
+          "564e50ff-3019-4e2f-b610-a45e445b87c7",
+          "9edf9c4c-c1e4-49ef-a4ab-317024d28665",
+          "3fa61856-0ac9-4750-ab36-a1e07e298266",
+          "5815ea91-e2b2-4019-ac51-57a60bdb9b50",
+          "d7299529-3ae0-4b6c-b08c-3ff730f3a4f4",
+          "a1ad0d96-b89d-403a-a8a9-573b41305b4d",
+          "3d7063e6-564c-4b19-b60a-612f317a4930",
+          "9cc871dd-cd9d-4fcc-9a4a-559f2884b9ab",
+          "a3491aca-d253-45fb-a947-85b560e9637f",
+          "bb0d776f-65ef-41f9-8d6d-420573684ec6",
+          "f28c74d3-b62f-4f1b-83f3-dded706609f0",
+          "f37af7a8-22cf-44d3-a0ed-5c319a144ed5",
+          "e5d89571-73ba-48d9-9fa2-807f771f54f4",
+          "475b834f-f30e-4f2e-8d7c-cca16423805b",
+          "2e2da54a-894d-4ce7-98c2-fd855c70da4d",
+          "cca71354-8cb2-4eec-a4b5-9a0860601ca8",
+          "e2cfa534-2180-41e7-951b-5d9d3e849591",
+          "7eedee58-edc9-4814-ad81-7e7512ac497f",
+          "b4c3667d-9291-4e46-a508-75e879d5de18",
+          "28a13b91-e6c1-41fd-8a3c-acfb75183cce",
+          "62ee6887-ee4b-42c9-a40c-0bc5c1b4e4c3",
+          "94128c15-91b6-4ac4-b395-ad999103ac5c",
+          "318121b0-6218-4231-bcab-2ab5789bb989",
+          "f6246b10-d20a-4f31-9cde-f5bfaaad08bb",
+          "cd0c62b9-b47f-40eb-afab-4aaddac0ed64",
+          "0e54d25e-2d0c-4772-8ca5-c4315081b129",
+          "b756c5ad-45e4-4135-9cc4-6d880766951b",
+          "e7ddd78d-6da0-4987-adc5-145f00c57727",
+          "f57d4373-76aa-410d-8cef-d621449ad361",
+          "1cd5e020-656f-4761-b53c-803d687c9bab",
+          "163e156c-8914-4de1-8222-2917d615d757",
+          "d6dc8e6c-085c-4e8c-8295-6933061bf0b4",
+          "c834acec-947c-4ed7-8e00-8f03bf33c8cb",
+          "428a4582-80f8-4344-afea-017b8c504ed8",
+          "9c4db89e-f101-45c6-90e4-19f7f63dafc7",
+          "6b4c43f5-8a8b-44f3-996d-c0b6141d85a3"
+        ],
+        "campaigns": [
+          {
+            "id": "0c68f350-b544-4b52-9f46-2aceb6aa1b7d"
+          }
+        ],
+        "instruments": [
+          {
+            "id": "067c21b3-9ef6-4da7-8dfb-0a84c33b41da"
+          },
+          {
+            "id": "47274772-3efd-4db0-918e-66809e85bf81"
+          }
+        ],
+        "stationary": false
+      },
+      {
+        "shortname": "ALTUS II",
+        "longname": "ALTUS II",
+        "id": "c63849f7-ea91-4525-9029-940a9c53ed36",
+        "description": "The Altus II is an unmanned aerial vehicle that was built by General Atomics Aeronautical Systems, Inc. and is equipped with a two-stage turbo charger along with more fuel storage and intercooling capacity than its counterpart, the Altus I. The ALTUS fleet were designed to carry a variety of instruments including probes used atmospheric sampling.",
+        "collectionPeriodIds": [
+          "392ea937-935d-41ed-9a48-28d651c4f2e0",
+          "c1138531-8edc-4bdf-88c5-98bc87d6e61c",
+          "a5952cf8-6249-4659-8125-f3926fe9da8b",
+          "b5b011bb-a124-486e-8bfe-123cac1a2209",
+          "2d1eec1a-9acb-4d8b-861d-e9e25b926570",
+          "f90f6d29-9da3-4162-8421-0370cc615eef",
+          "0013f259-f6f1-4305-99bf-c9792528dfc4",
+          "33a1156b-0477-4b05-8323-984ede7e2607"
+        ],
+        "campaigns": [
+          {
+            "id": "951482fa-5748-46ba-aed5-aab8b106b103"
+          }
+        ],
+        "instruments": [
+          {
+            "id": "552dc566-a5f0-4cf3-816b-bf5a1ba2a04f"
+          },
+          {
+            "id": "f474d768-1f61-44f7-b8d6-7ad98237f9eb"
+          },
+          {
+            "id": "e7328b58-e54f-4512-8e3e-ac5f15d2ec65"
+          },
+          {
+            "id": "af383cbd-78bd-4d48-a60a-4b42c3d16d4e"
+          },
+          {
+            "id": "1e78aa2b-3954-440a-9df5-2a5877c7c5f9"
+          },
+          {
+            "id": "67f1894a-193e-4627-baea-08326f1383e3"
+          },
+          {
+            "id": "31e2bb6c-64dd-4ca0-85f7-5494d7402a2d"
+          },
+          {
+            "id": "c6ac562a-99c7-498b-a4f3-45dc55448890"
+          }
+        ],
+        "stationary": false
+      },
+      {
+        "shortname": "B-200",
+        "longname": "Beechcraft King Air B-200",
+        "id": "a0dea5de-aa33-4f13-a8a4-34729e3de5fd",
+        "description": "a common general aviation family of twin turboprop aircraft with many uses developed in the 1970s.  The B200 Super King Air has better performance than the original King Air 200 (upgraded engines)  NASA has two Super King Air aircraft TN:7 and TN:801, as well as a military-style UC-12B Huron version of this plane. The B200 can carry two pilots and a payload of up to 839 kg (1,850 lbs).  The top altitude is ~30,000 feet, top air speed is ~300 mph with a maximum range up to 1300 miles.  100 series was the original king air with 200 and 300 series labeled as super king air until 1990s, though common to still use this term.",
+        "collectionPeriodIds": [
+          "86b55031-5dc2-46fb-882d-f2c666abd185",
+          "25f8e662-318e-4872-bc46-627000154e26",
+          "ad17bd91-6baa-4849-b154-0a81a2cb0fc7",
+          "52197c9e-80ed-40fd-a4cd-8d85a9c9c575"
+        ],
+        "campaigns": [
+          {
+            "id": "e48c2d79-822b-4c9e-9f72-2776d5d1eac6"
+          }
+        ],
+        "instruments": [
+          {
+            "id": "aa6e3d99-17ca-4b4e-9130-c6e0b0864fd9"
+          },
+          {
+            "id": "7c2a6034-9983-4308-a81b-e9fd538c3dd3"
+          }
+        ],
+        "stationary": false
+      },
+      {
+        "shortname": "Campaign FS",
+        "longname": "Field Sites deployed for a campaign",
+        "id": "7d58f61f-a73a-435a-9c9a-d4389e052aab",
+        "description": "fake description",
+        "collectionPeriodIds": [
+          "a824123d-860b-4f7d-94af-987bd6b584b5",
+          "d6cf9a44-c8bd-4a18-82f0-ad8caf83fed0",
+          "00a6433b-c41f-43a1-b895-8e1dc7be91e3",
+          "a4a21a39-8344-45ca-9c6e-959a731b7bc7",
+          "3aa54c40-3b98-401b-8b91-59786dd4c85e",
+          "2152d438-c4d7-4399-ad09-5396cb6ebfe8",
+          "95ce550e-c8e8-49dd-a7b7-6c754c598a80",
+          "903bc69c-84cb-47b9-a8bd-580d0aedfa57",
+          "f820fbdd-d980-4918-9986-139f49e11394",
+          "0f4e88c5-77d8-4539-80e4-3c4f069a56c5",
+          "e4d5699b-09a4-4875-90dc-fffe88e5c98d",
+          "86d37c09-4d78-423f-b807-c423512a7579",
+          "010d390e-a670-45c0-b6df-b7ca73fc3d88",
+          "cafde949-362a-43bb-b6ed-b208baf840fa",
+          "b502d098-cdc5-44a9-b058-617f5407067c",
+          "f0f3c0c8-d90d-4500-bd15-49001258ea6c",
+          "fbc24ba1-d7ad-4b8c-ab74-bd416f852be0",
+          "b75320e6-5626-4484-8aa6-9ab0e4c3da43",
+          "11dfe92f-8f99-4ad7-981b-174baf9b214e",
+          "896767a2-38b8-4b77-886a-da3a92cf4e83",
+          "3d8023fb-3f2c-4aa5-8472-e93d43533e6a",
+          "197b29ad-8a01-453b-a9a5-432fe2756504",
+          "5c52e6dc-22be-4fc2-814e-8143dc3a3b11",
+          "91da6ddf-2793-4126-b88e-1d062eac6884",
+          "0045b8fa-33fc-4079-a13a-da6989ed189d",
+          "0ed80fcb-472a-4add-aa38-39e7fd3ae237",
+          "cdb8467a-48aa-4181-9c42-24f98fc8b046",
+          "e978d189-ba9d-46a4-8614-09f334bc9222",
+          "04fa4f34-cf38-4e49-9f4d-cf4941475c5e",
+          "001c916c-58dd-4175-9f56-1f2207bd2491",
+          "15aefe07-9197-4edc-9baf-daa2c88b70f6",
+          "8991a71d-dc91-4ead-b75d-d71e95a374b6",
+          "699b6b3e-ac8d-4950-8e0c-1efbe4b1a33d",
+          "7c5a5aa7-33a5-4328-9711-aae44bad927b",
+          "a34f104e-0a7f-488c-9bb4-a316854be50d",
+          "c219aa93-33da-4437-bc58-a4c97e2cb62b",
+          "2b8f5733-b216-4160-a621-b565f2576a7b",
+          "4deea27d-26cd-45dc-a1ae-148214a8f30c",
+          "1f05d6b2-6f82-4c1d-a94d-6d93c07c0839",
+          "db35e46c-b8d8-4a5e-913a-64a4ff6e028d",
+          "21610fcb-e8ed-4287-b91b-2dd9068d7caa",
+          "09b42cfc-86a8-4d58-b96d-4c70f2383ba9",
+          "8f9ff92e-8511-46cf-85a4-75b34a9a319d",
+          "ab4a4af8-da85-4e72-9963-17a0ab785720",
+          "dd37feef-5211-4ad2-8841-b8abcc9157c1",
+          "e9ed0fcf-6eb2-4d29-8a56-fe7256d651a6",
+          "77284822-97bb-489b-a065-21113d3ba850",
+          "9c0c11ce-d5fe-43d0-bb02-939b690cbf07",
+          "41cf093d-0cf5-41a9-be45-147cb94fb918",
+          "79c94ec2-35a0-4dd8-abeb-ac8f40c1a0be",
+          "d72e83a8-64ba-4e67-bde6-324b17145445",
+          "6e5b8661-7c19-4fb7-b20b-735d76bdc037",
+          "3f8474f8-ac4d-45e3-82ee-f249918119aa",
+          "ceefab49-a8a9-40c0-ba81-3fe7b813db52",
+          "ce904157-8323-4867-90ae-234eab6d80c9",
+          "9b25f332-7bc4-4ff2-a0e8-52a3a9fb9ad4",
+          "a7491ec5-0333-4177-b281-98d9a7830c40",
+          "141da136-2319-420c-bb9d-bfefdf378160",
+          "56c73543-c756-427c-80ba-259be41d5cd5",
+          "f8fdabb6-bb86-47de-9993-dd8b80ffff8f",
+          "61a493e4-0c02-4a71-afbe-b746b19c717c",
+          "bcdfbf22-a78f-4102-97fc-ed3e0cb8068c",
+          "7e716b50-3c9b-40db-accb-0a1b4e8be28f",
+          "18aef61c-a8c6-4b65-926f-25ab0202679d",
+          "7cab98e5-9200-4cd6-ba2a-9b2d39f76104",
+          "f00cfb0f-06e6-4799-988b-556f546c017a",
+          "18c756fb-9b7a-4438-a644-ef946aa8969b",
+          "d0a13fd1-5979-4852-a109-6d2ba092f149",
+          "13cf6687-f18a-402d-b129-b30baea658fb",
+          "88d8a58c-14ed-4dde-a199-f48bc5eba26f",
+          "36bdb702-5958-49cc-834b-c1ea26c7f499",
+          "f7f2ddde-8ff7-4337-a08d-215b947d14ab",
+          "519f6ec1-fb9c-44b6-997a-103044b56042",
+          "ec952862-6b8f-4121-ba34-9fadaced7bc1",
+          "6dd4e59f-5158-4573-8f45-c61b4110f32c",
+          "4dc09c59-b496-428c-9f81-e16c4030cb43",
+          "5be31c25-3f10-468a-aa9a-b9be4da9d797",
+          "830711c7-a757-4cae-9d34-9981ae2ee34b",
+          "03979e50-f7b8-4fa3-98c3-5f00806b62de",
+          "2c0ca16d-12cd-4895-951c-b3d600bcde1f",
+          "e2335ba5-3c29-4c44-9786-a81bf4d28a30",
+          "5bb9c9ef-3d66-42c0-971d-d39d4dd896f6",
+          "cc099049-7232-4766-b18c-09488c08052c",
+          "11aae328-0c5d-4b20-849a-95e4c36b6b84",
+          "d2de7f42-843c-420d-a132-4318a3e64a29",
+          "8a849cf2-0ddd-4979-9474-77acfc744bfc",
+          "ac821853-2944-473b-beee-50df74c57b54",
+          "9537735e-cbc7-42f2-96ea-fb056459a5b8",
+          "4cffe3a4-1e7f-48a7-bdc9-79606d8db4d4",
+          "8afebd79-af77-4ed1-b990-050a157d021d",
+          "58a9a946-5254-4375-9341-fe634d6498a3"
+        ],
+        "campaigns": [
+          {
+            "id": "e48c2d79-822b-4c9e-9f72-2776d5d1eac6"
+          },
+          {
+            "id": "0c68f350-b544-4b52-9f46-2aceb6aa1b7d"
+          },
+          {
+            "id": "c438c053-3708-4f53-83d8-8c57990c6bec"
+          },
+          {
+            "id": "951482fa-5748-46ba-aed5-aab8b106b103"
+          },
+          {
+            "id": "03b728ae-2235-488c-80ee-570dcf602f3b"
+          }
+        ],
+        "instruments": [
+          {
+            "id": "74c3fec1-d102-42b7-9db6-dc5ed5928286"
+          },
+          {
+            "id": "bbc7f6b3-6f18-478c-87b9-1e714c1885b1"
+          },
+          {
+            "id": "23b00206-fc64-4a84-872a-09696e7dd258"
+          },
+          {
+            "id": "eb6e7251-80e9-499a-a29e-2783f3db4875"
+          },
+          {
+            "id": "47034308-4168-4609-81de-b1887b052709"
+          },
+          {
+            "id": "9160ca62-ffc8-426b-9d09-042ce5219468"
+          },
+          {
+            "id": "4adfc2fb-fb94-441f-a849-744f5d0404db"
+          },
+          {
+            "id": "a07df6b8-f8ae-4152-9392-0ef84aceeaef"
+          },
+          {
+            "id": "c4e7d85d-141e-431a-8d8e-b464d210c4a7"
+          },
+          {
+            "id": "755d8e30-bcea-4957-8c8d-edf092ee1c65"
+          },
+          {
+            "id": "8f0dc936-48de-42e4-932f-ab0d6b750e8d"
+          },
+          {
+            "id": "a07f9939-aae6-4415-ad42-123bf42c33c2"
+          },
+          {
+            "id": "659e5570-a948-46e5-bc31-c83800558314"
+          },
+          {
+            "id": "89f86d4f-2809-4bd5-9998-ff50b24ccb8f"
+          }
+        ],
+        "stationary": true
+      },
+      {
+        "shortname": "Campaign V",
+        "longname": "Insrumentation on Vehicles moved to a study area",
+        "id": "aa382cdc-d5f0-46eb-b980-48431af523c6",
+        "description": "catch-all platform that includes radars mounted on trucks, air quality instruments on vans",
+        "collectionPeriodIds": [
+          "cc80dabb-3c47-4c6c-aa30-0d4a5366777f",
+          "2bf60429-1892-4d9f-ad76-4ed2b8d282a8",
+          "557becd2-e186-4406-8ba4-6fc378533d1e",
+          "b2c3f735-0bbf-400c-b206-3014ee57701d",
+          "7fe2a30d-a01d-4776-ab25-af74f32ed30c",
+          "d1956bae-7d57-46bf-b67d-c7102d73d688"
+        ],
+        "campaigns": [
+          {
+            "id": "6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+          },
+          {
+            "id": "c438c053-3708-4f53-83d8-8c57990c6bec"
+          }
+        ],
+        "instruments": [
+          {
+            "id": "146ee261-2b74-49ca-9b13-ec3594de8b8b"
+          },
+          {
+            "id": "8d5bc1c7-c53c-4ac7-986f-f159b6da438c"
+          },
+          {
+            "id": "2bc35c82-1d76-4943-a2f1-db1d8ae0b367"
+          },
+          {
+            "id": "d1ee2ade-46cf-421b-bb63-a7ca140ce4c4"
+          },
+          {
+            "id": "ed8c0ec9-da9f-4a82-aba2-bff40598fde8"
+          },
+          {
+            "id": "40249ae4-cfed-40cd-b581-a9b3410f0c1c"
+          }
+        ],
+        "stationary": false
+      },
+      {
+        "shortname": "Campaign PL",
+        "longname": "Maintained/Operational Permanent Land Sites",
+        "id": "c94db25b-1b48-47fe-90e3-47e8c16f0a92",
+        "description": "catch-all platform that includes permanent towers (FLUXNET), NEXRAD radar sites, airbort observation stations, ARM",
+        "collectionPeriodIds": [
+          "6b8193d2-0e46-46b6-a09b-722cdc3d1963",
+          "4361b86c-9662-4bf9-9e9e-d930a2e033fc",
+          "56a8d5a2-be18-42bb-b573-94f1d2162906",
+          "9879e575-8163-4ac9-9f18-6126ce8496a0",
+          "08203dd8-5ae0-44ba-93df-436fd346d941",
+          "b08daebd-d0dd-471a-95f4-8b38f5d36b83",
+          "5c0154e1-7fcd-4689-bab2-1f1e82a7359e",
+          "2e0cca7c-894a-4857-915c-699defebaef5",
+          "43adc756-fbda-45b7-b446-518b172f9ba3",
+          "a118c92d-4a07-424b-bbfc-a27f8fdf38f4",
+          "d34b9ac2-1582-4fe7-88b8-38bdea973a85",
+          "0a92b261-9ed5-4996-b3d4-20be0ce179ec",
+          "b83bf98c-8de1-4eab-b278-cfca4fff37e7",
+          "f1de6834-6b3a-4682-8840-b21c254907b1",
+          "806b9bc8-a705-42d5-9159-a4cfc7736b5f",
+          "a7d6878f-269a-4217-943a-e6c2c6d60a53",
+          "96db819b-179a-4107-9b63-55736d189dfa",
+          "901a50fa-2131-4721-b1a3-65252303f084"
+        ],
+        "campaigns": [
+          {
+            "id": "6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+          },
+          {
+            "id": "c1e56561-6726-4832-8dbe-0453b10ff36c"
+          },
+          {
+            "id": "c438c053-3708-4f53-83d8-8c57990c6bec"
+          },
+          {
+            "id": "be798dc9-dccb-4dc2-8e6b-d395c1bcbeb6"
+          },
+          {
+            "id": "951482fa-5748-46ba-aed5-aab8b106b103"
+          }
+        ],
+        "instruments": [
+          {
+            "id": "155b75d6-8c2a-47c3-8d2e-28468424d8c2"
+          },
+          {
+            "id": "59830156-3c2f-430f-b57a-4258a95d2e90"
+          },
+          {
+            "id": "6ba708be-21b0-407f-bc62-33cd3d0e546d"
+          },
+          {
+            "id": "4ecc78b9-838f-4b39-9436-f2a699c82204"
+          },
+          {
+            "id": "433c363b-19f4-4db5-9de2-c125fdbae648"
+          },
+          {
+            "id": "48238eb2-3964-4fab-ac58-3a47306caa5f"
+          },
+          {
+            "id": "00fcef5b-696f-4c7d-acbf-7e81d81c95c3"
+          },
+          {
+            "id": "1cb273c1-eaa1-4019-900a-033d0da97fbf"
+          },
+          {
+            "id": "2d29a114-4a68-45eb-9797-3604b05741ea"
+          },
+          {
+            "id": "09718073-0e7e-4275-91c1-957ac530e326"
+          },
+          {
+            "id": "a2cbd0bc-3f72-4177-9a7e-5385044950f2"
+          },
+          {
+            "id": "b7a422b0-b70c-46c3-b012-7664de84b74d"
+          },
+          {
+            "id": "68218fa4-6a17-45c8-b2bf-72521165b89f"
+          },
+          {
+            "id": "7322c135-c6d1-4d56-8858-c9cf1a15ae4e"
+          }
+        ],
+        "stationary": true
+      },
+      {
+        "shortname": "Campaign B",
+        "longname": "Balloons launched with instrument packages (e.g., radiosondes) during a campaign",
+        "id": "87650e20-ecf3-4703-aeed-49c8affc6059",
+        "description": "fake description",
+        "collectionPeriodIds": [
+          "46efd04d-98d9-4473-aeb1-efbca919596d",
+          "e0d3714f-3c1a-46dd-9c7d-9b46cfb71290"
+        ],
+        "campaigns": [
+          {
+            "id": "951482fa-5748-46ba-aed5-aab8b106b103"
+          }
+        ],
+        "instruments": [
+          {
+            "id": "63796497-1445-471a-b7ff-048f45937a25"
+          },
+          {
+            "id": "bfe5136b-2403-4e5e-a2b7-56aef331d061"
+          }
+        ],
+        "stationary": false
+      },
+      {
+        "shortname": "Campaign R",
+        "longname": "Rockets launched with instrument packages (e.g., rocketsondes) during a campaign",
+        "id": "5f6a2a1a-2a4b-4a42-9fff-04f1c2af6f5c",
+        "description": "fake description",
+        "collectionPeriodIds": [
+          "829f8371-c6bb-499b-901e-7735dee09cca"
+        ],
+        "campaigns": [
+          {
+            "id": "951482fa-5748-46ba-aed5-aab8b106b103"
+          }
+        ],
+        "instruments": [
+          {
+            "id": "1841baec-1073-4da3-bab4-7764333a32c9"
+          }
+        ],
+        "stationary": false
+      }
+    ]
+  },
+  "allInstrument": {
+    "nodes": [
+      {
+        "shortname": "2D-S",
+        "longname": "2D-S Stereo Probe",
+        "id": "7be02e97-1d88-41fd-bf65-3c559ef322b9",
+        "description": "Fake description",
+        "campaigns": [
+          "c438c053-3708-4f53-83d8-8c57990c6bec"
+        ]
+      },
+      {
+        "shortname": "3V-CPI",
+        "longname": "Three-View Cloud Particle Imager",
+        "id": "a57e2efd-d18a-4bb4-ba73-1c45f0b0046a",
+        "description": "The Three-View Particle Imager (3V-CPI) is a spectrometer that measures the size, shape, and concentration of hydrometeors. The 3V-CPI was designed by Stratton Park Engineering Company and is a combination of two of their instruments: the 2D-S and the CPI. The 3V-CPI is currently housed at the Department of Energy’s Atmospheric Radiation Measurement (ARM) facility.",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+        ]
+      },
+      {
+        "shortname": "Accelerometer",
+        "longname": "Fake long_name",
+        "id": "af383cbd-78bd-4d48-a60a-4b42c3d16d4e",
+        "description": "Fake description",
+        "campaigns": [
+          "951482fa-5748-46ba-aed5-aab8b106b103"
+        ]
+      },
+      {
+        "shortname": "Aerolaser",
+        "longname": "Aero-Laser 5002 G-V Carbon Monoxide Instrument",
+        "id": "7bf842a5-8d66-4a3a-928f-89a439e17a1b",
+        "description": "The CO mixing ratio in ppbv is displayed on the analyzer in real-time.\nReal-time in flight data are transmitted to the Aircraft Data System (ADS) and can be\ndisplayed at any station in the aircraft or on the ground using Aeros.",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+        ]
+      },
+      {
+        "shortname": "AERONET",
+        "longname": "Aerosol Robotic Network",
+        "id": "c4e7d85d-141e-431a-8d8e-b464d210c4a7",
+        "description": "Fake description",
+        "campaigns": [
+          "e48c2d79-822b-4c9e-9f72-2776d5d1eac6"
+        ]
+      },
+      {
+        "shortname": "Aethalometer",
+        "longname": "Aethalometer",
+        "id": "e18a8b74-3bc0-4982-ad96-26c41f2eb9c7",
+        "description": "Instrument that measures soot concentrations",
+        "campaigns": [
+          "e48c2d79-822b-4c9e-9f72-2776d5d1eac6"
+        ]
+      },
+      {
+        "shortname": "AirMOSS",
+        "longname": "AirMOSS Radar",
+        "id": "8c9a61ae-8a47-4774-be05-c335ab000e93",
+        "description": "The AirMOSS radar is an adaption of JPL’s UAVSAR L-band radar. The AirMOSS radar is a P-band version of UAVSAR designed by JPL. The AirMOSS radar makes observations of root-zone soil moisture up to 1.2m below the land surface. It flies on the G-III aircraft.",
+        "campaigns": [
+          "0c68f350-b544-4b52-9f46-2aceb6aa1b7d"
+        ]
+      },
+      {
+        "shortname": "AirMSPI",
+        "longname": "Airborne Multiangle SpectroPolarimetric Imager",
+        "id": "21024dc0-5e24-4900-a6b4-6bbc49114737",
+        "description": "The Airborne Multiangle SpectroPolarimetric Imager is an 8-band (355, 380, 445, 470, 555, 660, 865, 935 nm) pushbroom camera. Bands 470, 660, 865 also can measure polarization. AirMSPI was designed for NASA’s ER-2 aircraft and had its maiden flight in October 2010. AirMSPI measures the degree and angle of linear polarization, as well as spectral intensity. It was designed by JPL for use in the Aerosol-Cloud-Ecosystem mission.",
+        "campaigns": [
+          "c438c053-3708-4f53-83d8-8c57990c6bec"
+        ]
+      },
+      {
+        "shortname": "AMPR",
+        "longname": "Advanced Microwave Precipitation Radiometer",
+        "id": "d05eb1e2-104b-4c87-9240-8dfcbaeec44d",
+        "description": "Precip, Clouds-Properties & Processes & Dynamics",
+        "campaigns": [
+          "c438c053-3708-4f53-83d8-8c57990c6bec"
+        ]
+      },
+      {
+        "shortname": "AMS",
+        "longname": "Aerosol Mass Spectrometer",
+        "id": "eac3e790-6d94-4d1f-a97b-455f780bcd72",
+        "description": "The Aerosol Mass Apectrometer (AMS) is capable of providing quantitative size and chemical mass loading information in real time for non-refractory sub-micron aerosol particles. It uses standard vacuum and mass spectrometric technologies to measure chemical composition and properties of the sampled aerosol particles.",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930",
+          "e48c2d79-822b-4c9e-9f72-2776d5d1eac6"
+        ]
+      },
+      {
+        "shortname": "AOP",
+        "longname": "Aerosol Optical Properties",
+        "id": "944a98ca-9593-4b55-aa53-905ab963c0fa",
+        "description": "The Aerosol Optical Properties (AOP) is a suite consisting of three instruments: a cavity ringdown (CRD) aerosol extinction spectrometer, a photoacoustic absorption spectrometer (PAS), and an ultra-high sensitivity aerosol size spectrometer (UHSAS). This suite measures aerosol absorption and extinction, and can also characterize black carbon optics. AOP was designed to provide quick and accurate measurements of aerosols with stability while aboard an aircraft.",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+        ]
+      },
+      {
+        "shortname": "APR-2",
+        "longname": "Airborne Second Generation Precipitation Radar",
+        "id": "9cb21783-08d5-40ec-bbdb-ecdeb081b122",
+        "description": "The Airborne Second Generation Precipitation Radar, also known as the APR-2, was built as a prototype for a future spaceborne precipitation radar. It operates at 2 frequencies (13 and 35 GHz) and its primary derived measurements are radar reflectivity and doppler velocity. It is also capable of measuring linear depolorization ratio (LDR).",
+        "campaigns": [
+          "61616a26-fc33-450e-bd53-a7690d03e6b6",
+          "7739c801-46e6-4ddd-ad30-351626dcccdb"
+        ]
+      },
+      {
+        "shortname": "APR-3",
+        "longname": "Airborne Third Generation Precipitation Radar",
+        "id": "6a4d682d-4671-42fc-ab4d-c73831b85217",
+        "description": "Fake description",
+        "campaigns": [
+          "c438c053-3708-4f53-83d8-8c57990c6bec"
+        ]
+      },
+      {
+        "shortname": "ARMOR",
+        "longname": "Advanced Radar for Meteorological and Operational Research",
+        "id": "2d29a114-4a68-45eb-9797-3604b05741ea",
+        "description": "Fake description",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+        ]
+      },
+      {
+        "shortname": "DOW",
+        "longname": "Doppler on Wheels",
+        "id": "40249ae4-cfed-40cd-b581-a9b3410f0c1c",
+        "description": "Fake description",
+        "campaigns": [
+          "c438c053-3708-4f53-83d8-8c57990c6bec"
+        ]
+      },
+      {
+        "shortname": "DRWP",
+        "longname": "Doppler Radar Wind Profiler",
+        "id": "7322c135-c6d1-4d56-8858-c9cf1a15ae4e",
+        "description": "Fake description",
+        "campaigns": [
+          "951482fa-5748-46ba-aed5-aab8b106b103"
+        ]
+      },
+      {
+        "shortname": "ATHOS",
+        "longname": "Airborne Tropospheric Hydrogen Oxides Sensor",
+        "id": "a1d7fe21-c130-44e8-aa50-f786694d2c00",
+        "description": "ATHOS uses laser-induced fluorescence (LIF) to measure OH and HO2 simultaneously. OH is both excited and detected with the A2Σ+ (v’=0) → X2π (v”=0) transition near 308 nm. HO2 is reacted with reagent NO to form OH and is then detected with LIF. The laser is tuned on and off the OH wavelength to determine the fluorescence and background signals. ATHOS can detect OH and HO2 in clear air and light clouds from Earth's surface to the lower stratosphere. The ambient air is slowed from the aircraft speed of 240 m/s to 8-40 m/s in an aerodynamic nacelle. It is then pulled by a vacuum pump through a small inlet, up a sampling tube, and into two low-pressure detection cells - the first for OH and the second for HO2. Detection occurs in each cell at the intersection of the airflow, the laser beam, and the detector field-of-view.",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+        ]
+      },
+      {
+        "shortname": "ATSP",
+        "longname": "Airborne Tracking Sun Photometer",
+        "id": "11ca0c5b-4fd6-4a60-b015-20ef954a8715",
+        "description": "The Airborne Tracking Sun Photometer (ATSP) is an instrument that measures direct solar beam transmission. ATSP instruments can measure solar beam transmission through multiple channels with a range of wavelengths. There are multiple versions of this instrument, including one developed by the NASA Ames Research Center.",
+        "campaigns": [
+          "e48c2d79-822b-4c9e-9f72-2776d5d1eac6"
+        ]
+      },
+      {
+        "shortname": "AVAPS",
+        "longname": "Airborne Vertical Atmospheric Profiling System",
+        "id": "23d9bd42-197d-40fe-940e-022b484109f2",
+        "description": "The Airborne Vertical Atmospheric Profiling System (AVAPS) uses dropwinsonde and Global Positioning System (GPS) receivers to measure the atmospheric state parameters of pressure, temperature, humidity, and wind during descent.  Data are telemetried to the research aircraft during flight. The inner electronic components of the AVAPS dropsonde consist of precision temperature, pressure and humidity sensors, a low powered telemetry transmitter, a GPS receiver and a microprocessor.",
+        "campaigns": [
+          "c1e56561-6726-4832-8dbe-0453b10ff36c",
+          "c438c053-3708-4f53-83d8-8c57990c6bec"
+        ]
+      },
+      {
+        "shortname": "AVIRIS",
+        "longname": "Airborne Visual Infrared Imaging Spectrometer",
+        "id": "16ee8179-1021-4b2b-abe9-a700e32eaadf",
+        "description": "The Airborne Visible and Infrared Imaging Spectrometer (AVIRIS) was built and is currently operated by the Jet Propulsion Laboratory (JPL). AVIRIS is a nadir-viewing whiskbroom scanner designed for use aboard NASA’s ER-2. AVIRIS measures ground radiance, which is converted to ground reflectance.",
+        "campaigns": [
+          "be798dc9-dccb-4dc2-8e6b-d395c1bcbeb6"
+        ]
+      },
+      {
+        "shortname": "AVOCET",
+        "longname": "Atmospheric Vertical Observations of CO2 in the Earth's Troposphere",
+        "id": "fdec9678-fd19-48b9-a30f-b0c2d8503c82",
+        "description": "The Atmospheric Vertical Observations of CO2 in the Earth's Troposphere (AVOCET) is a spectrometer that samples CO2 in the atmosphere. It has a rich history in field campaigns, having flown in its first during 1992. AVOCET is still being used by research scientists to study CO2 in the troposphere, and has flown as recently as 2019 for FIREX-AQ. AVOCET operated by sensing the difference in light absorption occurring in the air sample and chosen reference gases. This allows for precise measurements.",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+        ]
+      },
+      {
+        "shortname": "BAT probe",
+        "longname": "Best Air Turbulence Probe",
+        "id": "067c21b3-9ef6-4da7-8dfb-0a84c33b41da",
+        "description": "The Best Air Turbulence Probe, also known as the BAT probe, was invented in the late 1980’s by NOAA in an effort to better measure wind turbulence. The bat-shaped probe is equipped with a number of pressure sensors and a temperature sensor. Perturbations measured by those probes are then translated into wind flow measurements. Although the bat probe has been used on a number of different aircraft, it is most commonly used on the Airborne Laboratory Atmospheric Research (ALAR), which is owned and operated by Purdue University.",
+        "campaigns": [
+          "0c68f350-b544-4b52-9f46-2aceb6aa1b7d"
+        ]
+      },
+      {
+        "shortname": "BBR",
+        "longname": "BroadBand Radiometers",
+        "id": "0cc4f471-c0cf-4c43-8c13-e1beb16214bf",
+        "description": "The Broadband Radiometers (BBR) consist of modified Kipp & Zonen CM-22 pyranometers (to measure solar irradiance) and CG-4 pyrgeometers (to measure IR irradiance). The modifications to make these instruments more suitable for aircraft use include new instrument housings and amplification of the signal at the sensor. The instruments are run in current-loop mode to minimize the effects of noise in long signal cables. The housing is sealed and evacuated to prevent condensation or freezing inside the instrument.",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930",
+          "e48c2d79-822b-4c9e-9f72-2776d5d1eac6"
+        ]
+      },
+      {
+        "shortname": "CAFS",
+        "longname": "CCD Actinic Flux Spectroradiometers",
+        "id": "07229c6d-a3bb-44b1-b9ed-6ae25b68e7ba",
+        "description": "The CCD Actinic Flux Spectrometers (CAFS) is an instrument designed to measure ultraviolet and visible actinic flux between 280-650nm.It was developed by NCAR’s ARIM facility and has flown in multiple campaigns since its creation. Photolysis frequencies for many different chemical compounds can be derived from CAFS’s measurements.",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+        ]
+      },
+      {
+        "shortname": "CAMS",
+        "longname": "Compact Atmospheric Multispecies Spectrometer",
+        "id": "43d257f9-82b8-4729-9f1b-1ef4677d3ccf",
+        "description": "The CAMS instrument’s core design and operation is similar to the Difference Frequency Generation Absorption Spectrometer (DFGAS) instrument, which has been successfully deployed for fast, accurate, and sensitive airborne measurements of the important trace gas formaldehyde (CH2O). CAMS, like DFGAS, is based on tunable mid-IR (3.53-μm) absorption spectroscopy utilizing advanced fiber optically pumped difference-frequency generation (DFG) laser sources. Mid-Infrared light at 2831.6-cm-1 (3.53 μm) is generated by mixing two near-IR room temperature lasers (one at 1562 nm and the other at 1083 nm) in a non-linear crystal (periodically poled lithium niobate). The DFG laser output is directed through a multipass Herriott absorption cell (90-m pathlength in ~ 1.7 liter volume) where the laser light is selectively absorbed by a moderately strong and isolated vibrational-rotational absorption feature of CH2O. The transmitted light from the cell is directed onto an IR detector employing a number of optical elements. A portion of the IR beam is split off by a special beam splitter (BS) before the multipass cell and focused onto an Amplitude Modulation Detector (AMD) to capture and remove optical noise from various components in the difference frequency generation process. A third detection channel from light emanating out the back of the beam splitter is directed through a low pressure CH2O reference cell and onto a reference detector (RD) for locking the center of the wavelength scan to the absorption line center. The mid-IR DFG output is simultaneously scanned and modulated over the CH2O absorption feature, and the second harmonic signals at twice the modulation frequency from the 3 detectors are processed using a computer lock-in amplifier [Weibring et al., 2006].",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+        ]
+      },
+      {
+        "shortname": "Canisters",
+        "longname": "Fake long_name",
+        "id": "a994b0a9-9f20-42b3-9d0d-9bec26b12894",
+        "description": "Fake description",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+        ]
+      },
+      {
+        "shortname": "CAPS",
+        "longname": "Cloud Aerosol and Precipitation Spectrometer",
+        "id": "05c3aa4c-b540-4a28-9dd5-8e3620d49da5",
+        "description": "The Cloud Aerosol and Precipitation Spectrometer (CAPS) was developed by Droplet Measurement Technologies. It combines the Cloud Imaging Probe (CIP), the Cloud and Aerosol Spectrometer (CAS), and the Hotwire Liquid Water Content Sensor into one instrument. It is used to measure size distribution of aerosol, cloud, and liquid droplets. CAPS measures particles between the sizes of 50-1600μm.",
+        "campaigns": [
+          "7739c801-46e6-4ddd-ad30-351626dcccdb"
+        ]
+      },
+      {
+        "shortname": "CAR",
+        "longname": "Cloud Absorption Radiometer",
+        "id": "847d3381-fa31-4b73-97e8-3d1d3894391f",
+        "description": "The Cloud Absorption Radiometer (CAR) is an airborne multi-wavelength scanning radiometer that can perform several functions including determining the single scattering albedo of clouds at selected wavelengths in the visible and near-infrared; measuring the angular distribution of scattered radiation; measuring bidirectional reflectance of various surface types; and acquiring imagery of cloud and Earth surface features.",
+        "campaigns": [
+          "e48c2d79-822b-4c9e-9f72-2776d5d1eac6"
+        ]
+      },
+      {
+        "shortname": "CCN",
+        "longname": "Cloud Condensation Nuclei Counter",
+        "id": "2ee722ae-6721-421c-b153-8e58d06c83c0",
+        "description": "The Cloud Condensation Nuclei Counter measures the count and size of individual aerosol particles that can form into cloud droplets.",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930",
+          "e48c2d79-822b-4c9e-9f72-2776d5d1eac6"
+        ]
+      },
+      {
+        "shortname": "CCP",
+        "longname": "Cloud Combination Probe",
+        "id": "6ca3a3e8-5557-41da-a9d0-edc8f7ffc6b8",
+        "description": "Fake description",
+        "campaigns": [
+          "61616a26-fc33-450e-bd53-a7690d03e6b6"
+        ]
+      },
+      {
+        "shortname": "CDP",
+        "longname": "Cloud Droplet Probe",
+        "id": "b631238c-5432-4503-8e97-d143b69e653c",
+        "description": "a miniature, lightweight, low-power cloud particle spectrometer that measures droplets in the range of 2-50 Âµm in concentrations as high as 2000 particles/cm3",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930",
+          "c438c053-3708-4f53-83d8-8c57990c6bec",
+          "61616a26-fc33-450e-bd53-a7690d03e6b6"
+        ]
+      },
+      {
+        "shortname": "CGLSS",
+        "longname": "CG Lightning Surveillance System",
+        "id": "155b75d6-8c2a-47c3-8d2e-28468424d8c2",
+        "description": "Fake description",
+        "campaigns": [
+          "951482fa-5748-46ba-aed5-aab8b106b103"
+        ]
+      },
+      {
+        "shortname": "CI-ITMS",
+        "longname": "Chemical Ionization – Ion Trap Mass Spectrometer",
+        "id": "f61faffa-b06d-4436-9fb7-8867f4679da7",
+        "description": "The Chemical Ionization – Ion Trap Mass Spectrometer (CI-ITMS) is a type of CIMS instrument. Ion Trap Mass Spectrometers are highly sensitive instruments, making them useful for studying atmospheric chemistry. CI-ITMS takes measurements of nitric acid and sulfur dioxide specifically.",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+        ]
+      },
+      {
+        "shortname": "CIMS",
+        "longname": "Chemical Ionization Mass Spectrometer",
+        "id": "e0e4d0dd-c90d-4a23-9744-85cd3dbc4be0",
+        "description": "The Chemical Ionization Mass Spectrometer was developed by NOAA. This instrument can take high-precision measurements of gases such as nitric acid, water vapor, and hydrochloric acid. This instrument was designed to take measurements accurately in the boundary layer. The detection limit for CIMS is in the parts-per-trillion range, and the temporal resolution is 50s.",
+        "campaigns": [
+          "e48c2d79-822b-4c9e-9f72-2776d5d1eac6"
+        ]
+      },
+      {
+        "shortname": "CIP",
+        "longname": "Cloud Imaging Probe",
+        "id": "59cfbc00-c172-4525-9c79-652e3e8d731d",
+        "description": "The cloud imaging probe (CIP) is an optical array probe. It obtains cloudparticle images in order to create images of particles between 25-1550 μm in size. CIP takes measurements of particle size distribution as well as cloud liquid water content. The instrument was manufactured by Droplet Measurement Technologies.",
+        "campaigns": [
+          "61616a26-fc33-450e-bd53-a7690d03e6b6"
+        ]
+      },
+      {
+        "shortname": "CIT-CIMS",
+        "longname": "Chemical Ionization Mass Spectrometer",
+        "id": "f095abde-d0eb-4d00-b33b-549b37c28dca",
+        "description": "The Chemical Ionization Mass Spectrometer is an upgraded version of the S-CIMS instrument. It has flown on multiple aircraft, and was designed with rapid scan capabilities, giving it a high temporal resolution. CIT-CIMS measures the mass of multiple chemical compounds that are in the atmosphere.",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+        ]
+      },
+      {
+        "shortname": "HR-AMS",
+        "longname": "CU Aircraft High-Resolution Time-of-Flight Aerosol Mass Spectrometer",
+        "id": "0099d3ea-2854-4e50-a362-d0e20c69b04e",
+        "description": "The HR-AMS is an upgraded version of Aerodyne’s AMS instrument. HR-AMS has a high spatial resolution and a time-of-flight measurement technique. HR-AMS is a mass spectrometer that measures aerosols in the troposphere.",
+        "campaigns": [
+          "e48c2d79-822b-4c9e-9f72-2776d5d1eac6"
+        ]
+      },
+      {
+        "shortname": "CLH",
+        "longname": "Closed-path Laser Hygrometer",
+        "id": "b3b926d2-a668-4783-ac67-890d458950d0",
+        "description": "The Closed-path Laser Hygrometer (CLH) was developed by the University of Colorado along with the Jet Propulsion Laboratory (JPL). Based on the hygrometer design of R. D. May, the CLH was developed specifically for use in a research aircraft to study the water vapor in the troposphere.",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+        ]
+      },
+      {
+        "shortname": "CNC",
+        "longname": "Condensation Nuclei Counter",
+        "id": "377e2f9b-6a8c-428b-9907-fbb27b9a8861",
+        "description": "The Condensation Nuclei Counter (CNC) is optical method for\n counting atmospheric aerosol particles.",
+        "campaigns": [
+          "e48c2d79-822b-4c9e-9f72-2776d5d1eac6"
+        ]
+      },
+      {
+        "shortname": "CoSMIR",
+        "longname": "Conical Scanning Millimeter-wave Imaging Radiometer",
+        "id": "bf37fb0a-9c1f-44c9-84e7-25e56dab8547",
+        "description": "The Conical Scanning Millimeter-wave Imaging Radiometer (CoSMIR) was designed to calibrate and validate the Special Sensor Microwave/Imager/Sounder (SSMIS). CoSMIR is a 9-channel radiometer that performs both conical and cross-track scanning. CosMIR has been used to study radiation and brightwave temperature.",
+        "campaigns": [
+          "c438c053-3708-4f53-83d8-8c57990c6bec",
+          "61616a26-fc33-450e-bd53-a7690d03e6b6"
+        ]
+      },
+      {
+        "shortname": "CPC",
+        "longname": "Condensation Particle Counter",
+        "id": "8d5c3af8-f81b-4418-9ec2-4a6752434179",
+        "description": "Fake description",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+        ]
+      },
+      {
+        "shortname": "CPI",
+        "longname": "Cloud Particle Imager",
+        "id": "a13f0050-1383-4196-a97c-003e369707d9",
+        "description": "Fake description",
+        "campaigns": [
+          "c438c053-3708-4f53-83d8-8c57990c6bec",
+          "61616a26-fc33-450e-bd53-a7690d03e6b6"
+        ]
+      },
+      {
+        "shortname": "CPL",
+        "longname": "Cloud Physics LIDAR",
+        "id": "153ea332-8639-4fc0-a5b4-f8e43d86cf0e",
+        "description": "The Cloud Physics Lidar is an airborne lidar system designed specifically to provide multi-wavelength measurements of cirrus, subvisual cirrus, and aerosols with high temporal and spatial resolution.  CPL can provide a comprehensive analysis of radiative and optical properties of optically thin clouds.",
+        "campaigns": [
+          "c1e56561-6726-4832-8dbe-0453b10ff36c",
+          "c438c053-3708-4f53-83d8-8c57990c6bec",
+          "be798dc9-dccb-4dc2-8e6b-d395c1bcbeb6"
+        ]
+      },
+      {
+        "shortname": "CPSD",
+        "longname": "Cloud Particle Spectrometer with Depolarization",
+        "id": "cd51864d-cd24-43d5-a59f-26326f8b090d",
+        "description": "Fake description",
+        "campaigns": [
+          "61616a26-fc33-450e-bd53-a7690d03e6b6"
+        ]
+      },
+      {
+        "shortname": "CRS",
+        "longname": "Cloud Radar System",
+        "id": "b104b619-a99d-479d-857a-8d903acd20b0",
+        "description": "The Cloud Radar System is a W-band polarimetric Doppler radar. It has a high operating frequency (94GHz), making it well-suited for cloud observations. It can observe clouds and precipitation in more detail than most weather radars. It is used to observe cloud microphysics and dynamics, and is operated aboard the NASA ER-2.",
+        "campaigns": [
+          "c438c053-3708-4f53-83d8-8c57990c6bec",
+          "be798dc9-dccb-4dc2-8e6b-d395c1bcbeb6"
+        ]
+      },
+      {
+        "shortname": "CSD CL",
+        "longname": "NOAA NOyO3 4-channel chemiluminescence",
+        "id": "ce4e9aad-82c0-40b0-a1fc-9a70de2c6bad",
+        "description": "The NOAA NOyO3 4-channel chemiluminescence (CSD CL) instrument is an in situ instrument that measures photons. Developed by NOAA, this instrument was originally intended for the P-3 but has since flown aboard other aircrafts. CSD CL takes measurements of photons that occur when nitrogen dioxide is excited by chemiluminescence taking place.",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+        ]
+      },
+      {
+        "shortname": "CSI",
+        "longname": "Cloud Spectrometer and Impactor",
+        "id": "697069da-870a-490a-88e7-ad5ac4ae2282",
+        "description": "The Cloud Spectrometer and Impactor (CSI) combines the counterflow virtual impactor with a new lightweight cloud droplet probe to allow for detailed studies of total condensed water (TCW), liquid and ice, in clouds. The CSI can measure TCW from ~ 1 mg/m3 to several g/m3 depending on the configuration; in addition particle sizes from 2 to 50 μm are resolved with the droplet probe. The instrumentation can be mounted externally on most aircraft.",
+        "campaigns": [
+          "c438c053-3708-4f53-83d8-8c57990c6bec",
+          "7739c801-46e6-4ddd-ad30-351626dcccdb"
+        ]
+      },
+      {
+        "shortname": "CSU-CHILL",
+        "longname": "Fake long_name",
+        "id": "433c363b-19f4-4db5-9de2-c125fdbae648",
+        "description": "Fake description",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+        ]
+      },
+      {
+        "shortname": "CSU-PAWNEE",
+        "longname": "Fake long_name",
+        "id": "a2cbd0bc-3f72-4177-9a7e-5385044950f2",
+        "description": "Fake description",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+        ]
+      },
+      {
+        "shortname": "D3R",
+        "longname": "Dual-frequency Dual-polarized Doppler Radar",
+        "id": "ed8c0ec9-da9f-4a82-aba2-bff40598fde8",
+        "description": "Fake description",
+        "campaigns": [
+          "c438c053-3708-4f53-83d8-8c57990c6bec"
+        ]
+      },
+      {
+        "shortname": "Dropsonde",
+        "longname": "Dropsonde",
+        "id": "5babb9af-ea28-4c0a-8f4c-52d9da780a4b",
+        "description": "Dropsondes or Dropwinsondes are fitted with Global Positioning System (GPS) receivers to measure the atmospheric state parameters (temp, humidity, wind speed/direction pressure) and location in 3 dimensional space during the sonde's descent once each half second. Measurements are transmitted to the aircraft from the time of release until impact with the ocean's surface.",
+        "campaigns": [
+          "7739c801-46e6-4ddd-ad30-351626dcccdb"
+        ]
+      },
+      {
+        "shortname": "DV",
+        "longname": "Digital Video",
+        "id": "eb24373c-eaf0-4059-bee0-f07d41132270",
+        "description": "Fake description",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+        ]
+      },
+      {
+        "shortname": "DACOM",
+        "longname": "Differential Absorption Carbon monOxide Measurements",
+        "id": "2abacda8-20fc-4128-a908-0aee03ec3946",
+        "description": "The in‐situ diode laser spectrometer system, referred to by its historical name DACOM, includes three tunable diode lasers providing 4.7, 4.5, and 3.3 μm radiation for accessing CO, N2O, and CH4 absorption lines, respectively. The three laser beams are combined by the use of dichroic filters and are then directed through a small volume (0.3 liter) Herriott cell enclosing a 36 meter optical path. As the three coincident laser beams exit the absorption cell, they are spectrally isolated using dichroic filters and are then directed to individual detectors, one for each laser wavelength. Wavelength reference cells containing CO, CH4, and N2O are used to wavelength lock the operation of the three lasers to the appropriate absorption lines. Ambient air is continuously drawn through a Rosemount inlet probe and a permeable membrane dryer which removes water vapor before entering the Herriott cell and subsequently being exhausted via a vacuum pump to the aircraft cabin. To minimize potential spectral overlap from other atmospheric species, the Herriott cell is maintained at a reduced pressure of ~90 Torr. At 5 SLPM mass flow rate, the absorption cell volume is exchanged nominally twice per second. Frequent but short calibrations with well documented and stable reference gases are critical to achieving both high precision and accuracy. Calibration for all species is accomplished by periodically (~4 minutes) flowing calibration gas through this instrument. Measurement accuracy is closely tied to the accuracy of the reference gases obtained from NOAA/ESRL, Boulder, CO. Both CO and CH4 mixing ratios are provided in real-time to investigators aboard the DC‐8.",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+        ]
+      },
+      {
+        "shortname": "DADS",
+        "longname": "Data Acquisition and Distribution System",
+        "id": "a9f1db68-d2d3-42e5-a8f5-9cfabd1691c8",
+        "description": "DADS provides location and orientation information on the aircraft and basic meteorological data",
+        "campaigns": [
+          "03b728ae-2235-488c-80ee-570dcf602f3b"
+        ]
+      },
+      {
+        "shortname": "DASH",
+        "longname": "Fake long_name",
+        "id": "a4ef7cb3-d80d-4983-bf94-3d957d9e4007",
+        "description": "Fake description",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+        ]
+      },
+      {
+        "shortname": "DAWN",
+        "longname": "Doppler Aerosol WiNd Lidar",
+        "id": "d5e31d80-a0d9-4d5b-95e1-e10714ec7970",
+        "description": "The Doppler Aerosol WiNd Lidar (DAWN) was developed by the NASA Langley Research Center. It operates in the 2-micron wavelength range and pulses at 10 Hz. It can measure at multiple different azimuth angles due to its wedge scanner. DAWN can also provide vertical profiles of the horizontal wind occurring below the aircraft it is flying on.",
+        "campaigns": [
+          "7739c801-46e6-4ddd-ad30-351626dcccdb"
+        ]
+      },
+      {
+        "shortname": "DFGAS",
+        "longname": "Difference Frequency Generation Absorption Spectrometer",
+        "id": "0994c1d2-5d0a-4d07-a6c1-a38d5f4a982f",
+        "description": "The Difference Frequency Generation Absorption Spectrometer is an instrument designed to measure formaldehyde in the atmosphere. It measures the gas using an infrared laser. The instrument uses two lasers that operate at 1562nm and 1083nm. The instrument was used in multiple campaigns, and has since been replaced by the Compact Atmospheric Multispecies Spectrometer (CAMS).",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+        ]
+      },
+      {
+        "shortname": "DIAL",
+        "longname": "Differential Absorption Lidar",
+        "id": "7056bc6b-2986-4ea1-a8bf-c09a16d453ab",
+        "description": "The Differential Absorption LIDAR (DIAL) system is a lidar instrument that sends pulses of laser radiation at different wavelengths into the atmosphere to measure ozone and also simultaneously measure aerosols and clouds. The laser beams are pointed both upwards and downwards out of the aircraft. The UV DIAL system uses five laser (or lidar) wavelengths in three different regions of the electromagnetic spectrum: two in the UV region for ozone measurements, two in the visible region, and one in the near infrared (IR) region. IR and visible wavelengths both measure aerosols and clouds. Comparing these two wavelengths can reveal information about the size distribution of aerosols. The two UV wavelengths determine the profile of ozone by analyzing the absorption differences due to ozone between the two lidar returns. From this measurement, scientists can determine the location and amount of aerosols, clouds, and ozone along the line-of-sight of the UV DIAL system.",
+        "campaigns": [
+          "e48c2d79-822b-4c9e-9f72-2776d5d1eac6"
+        ]
+      },
+      {
+        "shortname": "DIAL-HSRL",
+        "longname": "Differential Absorption Lidar - High Spectral Resolution Lidar",
+        "id": "bdc98701-c863-4f46-968d-6580a53ebf97",
+        "description": "Differential Absorption Lidar (DIAL) - High Spectral Resolution Lidar (HSRL) implements both the DIAL and HSRL systems to measure both ozone and aerosol profiles simultaneously. The HSRL modification to the DIAL adds an additional 3-wavelength (355 nm, 532 nm, 1064 nm) narrowband laser and receiver to measure aerosol backscatter, extinction, and depolarization. The aerosol optical depth measurements along the flight track are also calculated due to the aerosol extinction profiles below and above the aircraft.",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+        ]
+      },
+      {
+        "shortname": "DLH",
+        "longname": "Diode Laser Hygrometer",
+        "id": "b4444ce1-cd96-438f-b858-cb2ef04d0c6c",
+        "description": "The NASA Langley/Ames Diode Laser Hygrometer (DLH) is an open path airborne tunable diode laser-based instrument which operates in the near-infrared spectral region at a wavelength of approximately 1.4 μm. The DLH measures the water vapor (H2O(v)) mixing ratio in the atmosphere by wavelength modulated differential absorption spectroscopy of an isolated rovibrational line.",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+        ]
+      },
+      {
+        "shortname": "DOPS",
+        "longname": "Dual Optical Pulse Sensor",
+        "id": "e7328b58-e54f-4512-8e3e-ac5f15d2ec65",
+        "description": "The Dual Optical Pulse Sensor (DOPS) is an upgraded version of the Optical Pulse Sensor (OPS). It is used to study lightning in the atmosphere. DOPS collects data on the duration, intensity, and the waveform characteristics of lightning. DOPS can be used to study lightning occurring in the near infrared and visible parts of the wavelength spectrum.",
+        "campaigns": [
+          "951482fa-5748-46ba-aed5-aab8b106b103"
+        ]
+      },
+      {
+        "shortname": "EFCM",
+        "longname": "Electric Field Change Meter",
+        "id": "1e78aa2b-3954-440a-9df5-2a5877c7c5f9",
+        "description": "The Electric Field Change Meter is an instrument that detects changes in the electric field that occur after lightning flashes. It has been used as both a field instrument and an airborne instrument. It has a high temporal resolution, making it useful for taking measurements before, during, and after lightning flashes.",
+        "campaigns": [
+          "951482fa-5748-46ba-aed5-aab8b106b103"
+        ]
+      },
+      {
+        "shortname": "EFM",
+        "longname": "Electric Field Mill",
+        "id": "f474d768-1f61-44f7-b8d6-7ad98237f9eb",
+        "description": "Electric field mills are used to measure the vertical component of the electric field as the aircraft flies in the vicinity of electrified clouds. The dynamic range of these instruments extends from the fair weather fields (a few tens of V/m) to large thunderstorm fields (thousands of V/m). Using these field mills, it is possible to detect both intracloud and cloud-to-ground lightning from the abrupt electric field changes in the data.",
+        "campaigns": [
+          "951482fa-5748-46ba-aed5-aab8b106b103"
+        ]
+      },
+      {
+        "shortname": "eMAS",
+        "longname": "Enhanced MODIS Airborne Simulator",
+        "id": "2b9bec28-2900-43af-8521-8e671b44530c",
+        "description": "Fake description",
+        "campaigns": [
+          "c438c053-3708-4f53-83d8-8c57990c6bec"
+        ]
+      },
+      {
+        "shortname": "EXRAD",
+        "longname": "ER-2 X-band Doppler Radar",
+        "id": "cd3ccab7-9fbb-4931-b479-9cc58c8db90e",
+        "description": "The EXRAD is an X-Band Doppler Radar typically flown aboard the ER-2. While originally built for the Global Hawk, it became the successor to the EDOP. The main difference between the two radars is that in addition to the fixed forward-pointing antenna that the EDOP had, the EXRAD also has a conical/cross-track scanning antenna. The EXRAD is used to study precipitation structure and air velocity.",
+        "campaigns": [
+          "c438c053-3708-4f53-83d8-8c57990c6bec",
+          "be798dc9-dccb-4dc2-8e6b-d395c1bcbeb6"
+        ]
+      },
+      {
+        "shortname": "FEGS",
+        "longname": "Fly's Eye GLM Simulator",
+        "id": "f84764d4-586c-439d-8f45-1eab954c621f",
+        "description": "The Fly’s Eye GLM Simulator (FEGS) is an instrument that was designed to provide validation for Geostationary Lightning Mapper (GLM) on the GOES-16 satellite. It was designed to fly aboard NASA’s ER-2 aircraft. The instrument measures the optical radiance emitted by lightning.",
+        "campaigns": [
+          "be798dc9-dccb-4dc2-8e6b-d395c1bcbeb6"
+        ]
+      },
+      {
+        "shortname": "FGM",
+        "longname": "Fluxgate Magnetometer",
+        "id": "552dc566-a5f0-4cf3-816b-bf5a1ba2a04f",
+        "description": "The Fluxgate Magnetometer (FGM) is a type of instrument that takes measurements of the magnetic field. There are multiple types of FGMs. FGMs operated on airborne platforms can be used to measure changes in the ambient magnetic field during flights.",
+        "campaigns": [
+          "951482fa-5748-46ba-aed5-aab8b106b103"
+        ]
+      },
+      {
+        "shortname": "FLIR",
+        "longname": "Forward Looking Infrared Imaging Camera",
+        "id": "68c08e50-3fc9-489e-ab41-2309f18c3551",
+        "description": "FLIR is an infrared camera that detects infrared radiation. It can be used to see heat signatures on land surfaces. There are multiple kinds of this camera, and its design has evolved over the past few decades.",
+        "campaigns": [
+          "03b728ae-2235-488c-80ee-570dcf602f3b"
+        ]
+      },
+      {
+        "shortname": "FLUXNET towers",
+        "longname": "Fake long_name",
+        "id": "659e5570-a948-46e5-bc31-c83800558314",
+        "description": "Fake description",
+        "campaigns": [
+          "0c68f350-b544-4b52-9f46-2aceb6aa1b7d"
+        ]
+      },
+      {
+        "shortname": "FSSP",
+        "longname": "Forward Scattering Spectrometer Probe",
+        "id": "3d682fdd-9579-43e0-8691-7339b116233c",
+        "description": "The FSSP is of that general class of instruments called optical particle\n counters (OPCs) that detect single particles and size them by measuring\n the intensity of light that the particle scatters when passing through a\n light beam.",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930",
+          "61616a26-fc33-450e-bd53-a7690d03e6b6"
+        ]
+      },
+      {
+        "shortname": "FTS",
+        "longname": "Fourier Transformation Spectrometer",
+        "id": "b0a5f5db-399b-48c9-a35e-722b4bb8e1fb",
+        "description": "The Fourier Transformation Spectrometer (FTS) is a mass spectrometer. It provides integrated column measurements of carbon monoxide, carbon dioxide, and methane in the atmosphere. The instrument can be mounted to an aircraft in order to provide in situ measurements.",
+        "campaigns": [
+          "03b728ae-2235-488c-80ee-570dcf602f3b"
+        ]
+      },
+      {
+        "shortname": "GC-MS",
+        "longname": "Gas Chromatograph/Mass Spectrometry",
+        "id": "4a60fb7e-16ad-4bbc-aabe-e0ea7f0e4502",
+        "description": "The GC-MS instrument is a combination of two instruments: a gas chromatograph and a mass spectrometer. It is used on airborne platforms to study atmospheric chemistry, specifically non-methane halocarbons and volatile organic compounds.",
+        "campaigns": [
+          "e48c2d79-822b-4c9e-9f72-2776d5d1eac6"
+        ]
+      },
+      {
+        "shortname": "GCAS",
+        "longname": "GeoCAPE Airborne Simulator",
+        "id": "67064c65-b27a-49fe-a2c9-d2e396c827c1",
+        "description": "Fake description",
+        "campaigns": [
+          "be798dc9-dccb-4dc2-8e6b-d395c1bcbeb6"
+        ]
+      },
+      {
+        "shortname": "Gen-AtmsState",
+        "longname": "Generic-Atmospheric State",
+        "id": "ae22f399-7b48-4166-88b4-09759d4f29b3",
+        "description": "If instrument model information is not available, can use this instrument entry for temperature, pressues, wind speed, wind direction, humidity",
+        "campaigns": [
+          "61616a26-fc33-450e-bd53-a7690d03e6b6"
+        ]
+      },
+      {
+        "shortname": "Gen-Chemistry",
+        "longname": "Generic-Chemistry Related Sensors",
+        "id": "a1f41f4d-2233-49be-a3d3-6eda1ded6be4",
+        "description": "If instruement name or model is not avaiable but documents show that specific chemical compounds or constituents or their properties were observed, can use instrument entry.  Examples include: CO, CO2, NO, NO2, N2O, HNO3, HNO4, OH, H2SO4, CH3CN, O3, H2O, halocarbons, VOCs, nitrates, aerosols (including CCN), aerosol optical properties, etc...",
+        "campaigns": [
+          "e48c2d79-822b-4c9e-9f72-2776d5d1eac6"
+        ]
+      },
+      {
+        "shortname": "Gerdien Probe",
+        "longname": "Gerdien Conductivity Probe",
+        "id": "67f1894a-193e-4627-baea-08326f1383e3",
+        "description": "This is a device designed to determine the electrical conductivity of the atmosphere. By using a capacitor exposed to a sample of air and measuring the time it takes for discharge, the electrical conductivity of the sample is determined. The Gerdien condenser probe has the ability to sense both positive and negative ion conductivities. The probe utilizes a concentric, cylindrical electrode geometry with the inner and outer electrodes serving as the collector/guard and return electrodes, respectively. The ion conductivity is determined by applying a voltage (V) that is swept linearly between the two electrodes over a 1-minute period, and measuring the resulting current (I). The slope of the I?V characteristic (dI/dV) provides the conductivity measurement. Special construction techniques were used at the collector input to reduce stray leakage currents and susceptibility to electromagnetic interference (EMI). The length of the collector is 6.4 cm. The inner electrode extends another 10 cm as a guard section that is used to mechanically support the center electrode and the inner electrode is recessed 3.8 cm from the leading edge of the outer cylinder. The whole assembly has a length of 20 cm and a mass of 0.286 kg. It was mounted via a 7.6 cm sidestrut to the underside of the aircraft. A separate electronics box contained the sweep and data amplifier electronics.",
+        "campaigns": [
+          "951482fa-5748-46ba-aed5-aab8b106b103"
+        ]
+      },
+      {
+        "shortname": "Ground Sensors",
+        "longname": "Fake long_name",
+        "id": "eb6e7251-80e9-499a-a29e-2783f3db4875",
+        "description": "Fake description",
+        "campaigns": [
+          "0c68f350-b544-4b52-9f46-2aceb6aa1b7d"
+        ]
+      },
+      {
+        "shortname": "GT-CIMS",
+        "longname": "Georgia Institute of Technology Chemical Ionization Mass Spectrometer",
+        "id": "67778fe4-7ec5-4c85-9ee7-f55de1b22475",
+        "description": "The Georgia Institute of Technology Chemical Ionization Mass Spectrometer (GT-CIMS) is very similar to other CIMS instruments. GT-CIMS has two different modes that can be used to measure different gases in the atmosphere. The standard mode measures nitric acid and sulfur dioxide, while the second mode measures methanol, acetaldehyde, acetonitrile and acetone.",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+        ]
+      },
+      {
+        "shortname": "HAMSR",
+        "longname": "High Altitude Monolithic Microwave integrated Circuit(MMIC) Sounding Radiometer",
+        "id": "03ccc159-cc12-4705-b9e5-093d8153021f",
+        "description": "The High Altitude monolithic microwave integrated Circuit (MMIC) Sounding Radiometer (HAMSR) is a microwave atmospheric temperature and humidity sounder developed by JPL under the NASA Instrument Incubator Program. Operating with 25 spectral channels in 3 bands ( 50-60Ghz, 118 Ghz 183 GHz region), it provides measurements that can be used to infer the 3-D distribution of temperature, water vapor, and cloud liquid water in the atmosphere, even in the presence of clouds.   HAMSR is a self-calibrating cross-track scanning instrument. HAMSR is typically, it is flown at the bottom part of an aircraft where it can look straight down from the air to the ground, right through the atmosphere.  During a 1 second scan period, HAMSR obtains a number of overlapping spatial samples of the atmospheric scene below and several views of two internal calibration targets. From an altitude of 20 km, its field of view about 40 km wide on the ground.",
+        "campaigns": [
+          "c1e56561-6726-4832-8dbe-0453b10ff36c",
+          "7739c801-46e6-4ddd-ad30-351626dcccdb"
+        ]
+      },
+      {
+        "shortname": "HARP",
+        "longname": "HIAPER Airborne Radiation Package",
+        "id": "357d5740-e9e6-456b-81e3-1f319b55e8bd",
+        "description": "The HIAPER Airborne Radiation Package (HARP) instrumentation is a comprehensive atmospheric radiation suite to measure spectrally resolved actinic flux and horizontally stabilized irradiance. HARP was developed in a collaborative effort between NCAR, the University of Colorado, the Leibniz-Institute for Tropospheric Research, Metcon, Inc and Enviscope GmbH. The package is part of the HIAPER Aircraft Instrumentation Solicitation (HAIS), funded by NSF.",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+        ]
+      },
+      {
+        "shortname": "HD-SP2",
+        "longname": "Humidified-Dual Single Particle Soot Photometer",
+        "id": "eb89b1ad-4e4e-4b04-866f-468801e97b16",
+        "description": "The Humidified-Dual Single Particle Soot Photometer (HD-SP2) is a modification of the Single Particle Soot Photometer (SP2). Two SP2 instruments are operated in parallel and one is humidified to create the HD-SP2. This instrument was developed by Droplet Measurement Technologies and has been operated by NOAA on the NASA DC-8 aircraft. This instrument measures the black carbon mass content of atmospheric particles.",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+        ]
+      },
+      {
+        "shortname": "HIRAD",
+        "longname": "Hurricane Imaging Radiometer",
+        "id": "fab1e4cd-dd5b-4c48-b731-6238e974c656",
+        "description": "HIRAD is a hurricane imaging, single-pol passive C-band radiometer with both cross-track and along-track resolution that measures strong ocean surface winds through heavy rain from an aircraft or space-based platform.  Its swath width is approximately 60 degrees in either direction. There are two products: rain rate and wind speed. HIRAD provides wide-swath measurements between ± 40 degrees in incidence angle with a spot-beam spatial resolution of approximately 1-3 km.",
+        "campaigns": [
+          "c1e56561-6726-4832-8dbe-0453b10ff36c",
+          "7739c801-46e6-4ddd-ad30-351626dcccdb"
+        ]
+      },
+      {
+        "shortname": "HIWRAP",
+        "longname": "High Altitude Wind & Rain Airborne Profiler",
+        "id": "48238eb2-3964-4fab-ac58-3a47306caa5f",
+        "description": "HIWRAP is a dual-frequency (Ka- and Ku-band), dual-beam (30 deg and 40 deg incidence angles), conical scan, solid-state transmitter-based Doppler radar system. It was designed for operation on the high-altitude (20 km) Global Hawk UAV.  HIWRAP is able to image 3-D winds from the surface to cloud top through volume backscattering from clouds and precipitation, enabling it to measure the tropospheric winds above heavy rain at high levels.  HIWRAP was completed in 2010 and it has flown test flights on the NASA WB-57 under the NASA Instrument Incubator Program, and then went on to perform science flights on the NASA Global Hawk and ER-2.",
+        "campaigns": [
+          "c1e56561-6726-4832-8dbe-0453b10ff36c",
+          "c438c053-3708-4f53-83d8-8c57990c6bec",
+          "7739c801-46e6-4ddd-ad30-351626dcccdb"
+        ]
+      },
+      {
+        "shortname": "HSRL",
+        "longname": "High Spectral Resolution Lidar",
+        "id": "aa6e3d99-17ca-4b4e-9130-c6e0b0864fd9",
+        "description": "The NASA Langley airborne High Spectral Resolution Lidar (HSRL) is used to characterize clouds and small particles in the atmosphere, called aerosols. From an airborne platform, the HSRL scientist team studies aerosol size, composition, distribution and movement.  The HSRL instrument is an innovative technology that is similar to radar; however, with lidar, radio waves are replaced with laser light. Lidar allows researchers to see the vertical dimension of the atmosphere, and the advanced HSRL makes measurements that can even distinguish among different aerosol types and their sources. The HSRL technique takes advantage of the spectral distribution of the lidar return signal to discriminate aerosol and molecular signals and thereby measure aerosol extinction and backscatter independently.  The HSRL provides measurements of aerosol extinction at 532 nm and aerosol backscatter and depolarization at 532 and 1064 nm. The HSRL measurements of aerosol extinction, backscattering, and depolarization profiles can be used to characterize and quantify aerosols properties, types, and variability.",
+        "campaigns": [
+          "e48c2d79-822b-4c9e-9f72-2776d5d1eac6"
+        ]
+      },
+      {
+        "shortname": "HVPS-3",
+        "longname": "High Volume Precipitation Spectrometer 3",
+        "id": "73a6a113-376f-4147-97c3-2a31138638b3",
+        "description": "HVPS-3 is the third version of the High Volume Precipitation Spectrometer built by SPEC. It is an in-situ spectrometer that measures different aspects of water droplets and ice crystals, such as shape, size, and concentration. It can accurately measure hydrometeors between 0.3-19.2mm. It has flown on multiple aircraft in numerous campaigns.",
+        "campaigns": [
+          "c438c053-3708-4f53-83d8-8c57990c6bec",
+          "61616a26-fc33-450e-bd53-a7690d03e6b6"
+        ]
+      },
+      {
+        "shortname": "IR-CO2",
+        "longname": "Infrared Carbon Dioxide Analyzer",
+        "id": "12838503-2241-4de6-b66e-569eb983609d",
+        "description": "Fake description",
+        "campaigns": [
+          "e48c2d79-822b-4c9e-9f72-2776d5d1eac6"
+        ]
+      },
+      {
+        "shortname": "ISAF",
+        "longname": "In Situ Airborne Formaldehyde",
+        "id": "76b7c4d5-5674-400f-8e00-57447a81a747",
+        "description": "The NASA GSFC In Situ Airborne Formaldehyde (ISAF) instrument measures formaldehyde (CH2O) on both pressurized and unpressurized (high-altitude) aircraft. Using laser induced fluorescence (LIF), ISAF possesses the high sensitivity, fast time response, and dynamic range needed to observe CH2O throughout the troposphere and lower stratosphere, where concentrations can range from 10 pptv to hundreds of ppbv.",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+        ]
+      },
+      {
+        "shortname": "Jimsphere",
+        "longname": "Fake long_name",
+        "id": "bfe5136b-2403-4e5e-a2b7-56aef331d061",
+        "description": "Fake description",
+        "campaigns": [
+          "951482fa-5748-46ba-aed5-aab8b106b103"
+        ]
+      },
+      {
+        "shortname": "King hot wire probe",
+        "longname": "King (CSIRO) Liquid Water Sensor",
+        "id": "c30e14df-674b-4356-a041-c94f1d473909",
+        "description": "The PMS/CSIRO is an instrument developed by Warren King (CSIRO) and marketed by Particle Measuring Systems (PMS Inc., Boulder, Co) for the measurement of cloud liquid water content. This sensor, commonly referred to as the \"King\" probe, is used primarily for the study of cloud microphysical processes and in icing studies.",
+        "campaigns": [
+          "c438c053-3708-4f53-83d8-8c57990c6bec",
+          "61616a26-fc33-450e-bd53-a7690d03e6b6"
+        ]
+      },
+      {
+        "shortname": "LARGE",
+        "longname": "Langley Aerosol Research Group Experiment",
+        "id": "b5147694-b468-4665-af90-6b8eea51a679",
+        "description": "The Langley Aerosol Research Group Experiment (LARGE) is a suite of instruments. It measures aerosol size distribution, number density, surface area, mass loading, extinction, and single-scattering albedo. It has been used in multiple campaigns to study aerosol and cloud properties. LARGE can measure particles between 0.003-20μm in size and can be used to take measurements both from the ground and from an aircraft.",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930",
+          "7739c801-46e6-4ddd-ad30-351626dcccdb"
+        ]
+      },
+      {
+        "shortname": "LASE",
+        "longname": "Lidar Atmospheric Sensing Experiment",
+        "id": "0ff5e333-d376-4feb-b12c-6c337d6e67e5",
+        "description": "NASA's Lidar Atmospheric Sensing Experiment (LASE) system is an airborne Differential Absorption Lidar (DIAL) system used to measure water vapor, aerosols, and clouds throughout the troposphere. The Differential Absorption Lidar uses the backscatter of four simultaneous laser wavelengths through zenith and nadir quartz windows to measure the vertical profiles of ozone (O3) and aerosols/clouds.",
+        "campaigns": [
+          "7739c801-46e6-4ddd-ad30-351626dcccdb"
+        ]
+      },
+      {
+        "shortname": "LIDAR",
+        "longname": "Riegl Q1560",
+        "id": "755d8e30-bcea-4957-8c8d-edf092ee1c65",
+        "description": "Lidar is a surveying method that measures distance to a target by illuminating the target with laser light and measuring the reflected light with a sensor. Differences in laser return times and wavelengths can then be used to make digital 3-D representations of the target.",
+        "campaigns": [
+          "e48c2d79-822b-4c9e-9f72-2776d5d1eac6"
+        ]
+      },
+      {
+        "shortname": "LIP",
+        "longname": "Lightning Instrument Package",
+        "id": "106b9f7e-982c-413a-b5b2-b7abfa308cfe",
+        "description": "The Lightning Instrument Package (LIP) is an electric field detection system. It was designed by Marshall Space Flight Center and operated aboard the NASA ER-2 aircraft. The LIP can measure the three-dimensional components of the electric field both during a thunderstorm and during calm weather. LIP has been used in numerous campaigns studying tropical cyclones.",
+        "campaigns": [
+          "be798dc9-dccb-4dc2-8e6b-d395c1bcbeb6",
+          "7739c801-46e6-4ddd-ad30-351626dcccdb"
+        ]
+      },
+      {
+        "shortname": "LDAR",
+        "longname": "Lightning Detection and Ranging",
+        "id": "b7a422b0-b70c-46c3-b012-7664de84b74d",
+        "description": "Fake description",
+        "campaigns": [
+          "951482fa-5748-46ba-aed5-aab8b106b103"
+        ]
+      },
+      {
+        "shortname": "LMA",
+        "longname": "Lightning Mapping Array",
+        "id": "1cb273c1-eaa1-4019-900a-033d0da97fbf",
+        "description": "Fake description",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930",
+          "be798dc9-dccb-4dc2-8e6b-d395c1bcbeb6"
+        ]
+      },
+      {
+        "shortname": "LPLWS",
+        "longname": "Launch Pad Lightning Warning System",
+        "id": "4ecc78b9-838f-4b39-9436-f2a699c82204",
+        "description": "Fake description",
+        "campaigns": [
+          "951482fa-5748-46ba-aed5-aab8b106b103"
+        ]
+      },
+      {
+        "shortname": "MASC",
+        "longname": "Microwave Atmospheric Sounder for CubeSat",
+        "id": "5338159c-7efe-47ee-95cf-02b9219de9d3",
+        "description": "\"Description: MASC is a recently developed cross-track scanning (30 RPM) microwave sounder with channels near the 118 GHz oxygen line and the 183 GHz water-vapor line. It has previously participated in the PECAN campaign and the OLYMPEX GPM ground validation campaign. During both of these campaigns, it was deployed on the DC-8. MASC leverages recently developed technology and is a low-cost, compact instrument that weighs only 10 lbs. It is designed to be packaged as a 6U CubeSat and serves as an engineering prototype for the TEMPEST-D EVI-2 technology demonstrator. MASC uses MMIC-based millimeter-wave radiometers developed for GeoSTAR and HAMSR. Rationale for adding: The MASC was on-board the DC-8 aircraft during the\n OLYMPEX field campaign. This collected data that were used to validate rain and snow measurements in midlatitude frontal systems moving from ocean to coast to mountains and to determine how remotely sensed measurements of precipitation by GPM can be applied to a range of hydrologic, weather forecasting and climate data.\n \n More Information: https://cpex.jpl.nasa.gov/instruments/masc.php\"",
+        "campaigns": [
+          "c438c053-3708-4f53-83d8-8c57990c6bec"
+        ]
+      },
+      {
+        "shortname": "MAX",
+        "longname": "Mobile Alabama X-Band Dual Polarization Radar",
+        "id": "146ee261-2b74-49ca-9b13-ec3594de8b8b",
+        "description": "Fake description",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+        ]
+      },
+      {
+        "shortname": "MAX-DOAS",
+        "longname": "Multi-Axis Differential Optical Absorption Spectroscopy",
+        "id": "47034308-4168-4609-81de-b1887b052709",
+        "description": "Fake description",
+        "campaigns": [
+          "e48c2d79-822b-4c9e-9f72-2776d5d1eac6"
+        ]
+      },
+      {
+        "shortname": "MIPS",
+        "longname": "Mobile Integrated Profiling System",
+        "id": "8d5bc1c7-c53c-4ac7-986f-f159b6da438c",
+        "description": "Fake description",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+        ]
+      },
+      {
+        "shortname": "MMS",
+        "longname": "Meteorological Measurement System",
+        "id": "405881c9-0a90-4e4b-bdc1-4263b640e3c5",
+        "description": "The Meteorological Measurement System (MMS) provides high-resolution and accurate meteorological parameters. MMS measures atmospheric pressure, temperature, air turbulence, and the direction and speed of winds (both horizontal and vertical) immediately around the plane. These fundamental meteorological measurements give a picture of the environment through which the plane is flying and collecting samples. These variables are intertwined with other measurements, such as relative humidity. pressure (precision of ±0.3 mb with accuracy of 0.5%), temperature (±0.3 K, 0.2%), horizontal wind (±1 m s−1, 3.3%), and vertical wind (±0.3 m s−1).  Derived parameters are potential temperature, true airspeed, turbulence dissipation rate, and Reynolds number",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930",
+          "7739c801-46e6-4ddd-ad30-351626dcccdb"
+        ]
+      },
+      {
+        "shortname": "MPAR",
+        "longname": "Multi-function Phased Array Radar",
+        "id": "09718073-0e7e-4275-91c1-957ac530e326",
+        "description": "Fake description",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+        ]
+      },
+      {
+        "shortname": "MRR",
+        "longname": "Fake long_name",
+        "id": "8f0dc936-48de-42e4-932f-ab0d6b750e8d",
+        "description": "Fake description",
+        "campaigns": [
+          "c438c053-3708-4f53-83d8-8c57990c6bec"
+        ]
+      },
+      {
+        "shortname": "MSC",
+        "longname": "Magnetic Search Coil",
+        "id": "c6ac562a-99c7-498b-a4f3-45dc55448890",
+        "description": "Fake description",
+        "campaigns": [
+          "951482fa-5748-46ba-aed5-aab8b106b103"
+        ]
+      },
+      {
+        "shortname": "NCAR MISS",
+        "longname": "NCAR Mobile Integrated Sounding System",
+        "id": "2bc35c82-1d76-4943-a2f1-db1d8ae0b367",
+        "description": "Fake description",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+        ]
+      },
+      {
+        "shortname": "Nephelometer",
+        "longname": "Nephelometer",
+        "id": "eaabd936-b6ae-4136-b160-90ef5f629da4",
+        "description": "The nephelometer is an instrument that measures aerosol light scattering. It detects scattering properties by measuring light scattered by the aerosol and subtracting light scattered by the gas, the walls of the instrument and the background noise in the detector.",
+        "campaigns": [
+          "e48c2d79-822b-4c9e-9f72-2776d5d1eac6"
+        ]
+      },
+      {
+        "shortname": "NEXRAD",
+        "longname": "Fake long_name",
+        "id": "59830156-3c2f-430f-b57a-4258a95d2e90",
+        "description": "Fake description",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930",
+          "c438c053-3708-4f53-83d8-8c57990c6bec",
+          "951482fa-5748-46ba-aed5-aab8b106b103"
+        ]
+      },
+      {
+        "shortname": "NLDN",
+        "longname": "National Lightning Detection Network",
+        "id": "68218fa4-6a17-45c8-b2bf-72521165b89f",
+        "description": "Fake description",
+        "campaigns": [
+          "951482fa-5748-46ba-aed5-aab8b106b103"
+        ]
+      },
+      {
+        "shortname": "NOXP",
+        "longname": "NOAA X-band Polarimetric Mobile Radar",
+        "id": "d1ee2ade-46cf-421b-bb63-a7ca140ce4c4",
+        "description": "Fake description",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+        ]
+      },
+      {
+        "shortname": "NPOL",
+        "longname": "S-Band Transportable Dual-Polarimetric Radar",
+        "id": "a07f9939-aae6-4415-ad42-123bf42c33c2",
+        "description": "The NASA NPOL radar is a research grade S-band, scanning dual-polarimetric radar used to make accurate volumetric measurements of precipitation including rainfall rate, particle size distributions, water contents and precipitation type",
+        "campaigns": [
+          "c438c053-3708-4f53-83d8-8c57990c6bec"
+        ]
+      },
+      {
+        "shortname": "OAP-2G-P",
+        "longname": "Optical Array Probe two-dimensional grayscale precipitation",
+        "id": "6a2ebc11-3718-4fbd-aa96-9c21f4d36a97",
+        "description": "Fake description",
+        "campaigns": [
+          "61616a26-fc33-450e-bd53-a7690d03e6b6"
+        ]
+      },
+      {
+        "shortname": "OPC",
+        "longname": "Optical Particle Counter",
+        "id": "a0299cb5-8444-474c-b595-b1bb0178223b",
+        "description": "The Optical Particle Counter is an instrument based on the principle of light scattering from particles. It is a real time instrument that is typically used to measure particles above 0.05 μm in diameter.",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930",
+          "e48c2d79-822b-4c9e-9f72-2776d5d1eac6"
+        ]
+      },
+      {
+        "shortname": "P-CIMS",
+        "longname": "Peroxide Chemical Ionization Mass Spectrometer",
+        "id": "28bcfeb6-bb82-48c5-a6bf-0a78f12dab6a",
+        "description": "The PCIMS instrument is a slightly modified CIMS instrument manufactured by THS Instruments LLC. Mechanically it consists of a differentially pumped quadrupole mass spectrometer. The instrument operates in negative ion mode and currently I- and O2- reagent ions are used to measure hydrogen peroxide and methylhydroperoxide, respectively, by the formation of cluster ions at masses 80 and 161. The reagent ions are produced by flowing a N2/CH3I/O2 mixture past a 210Po foil.",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+        ]
+      },
+      {
+        "shortname": "PALMS",
+        "longname": "Particle Analysis By Laser Mass Spectrometry",
+        "id": "95b5f0c2-2b8f-45ac-bd9c-4fcedcd75bc7",
+        "description": "The NOAA PALMS instrument measures single-particle aerosol composition using UV laser ablation to generate ions that are analyzed with a time-of-flight mass spectrometer.  The PALMS size range is approximately 150 to >3000 nm and encompasses most of the accumulation and coarse mode aerosol volume. Individual aerosol particles are classified into compositional classes.  The size-dependent composition data is combined with aerosol counting instruments from Aerosol Microphysical Properties (AMP), the Langley Aerosol Research Group Experiment (LARGE), and other groups to generate quantitative, composition-resolved aerosol concentrations.  Background tropospheric concentrations of climate-relevant aerosol including mineral dust, sea salt, and biomass burning particles are the primary foci for the ATom campaigns.  PALMS also provides a variety of compositional tracers to identify aerosol sources, probe mixing state, track particle aging, and investigate convective transport and cloud processing.",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+        ]
+      },
+      {
+        "shortname": "PALS",
+        "longname": "Passive Active L-and-S-band Sensor",
+        "id": "bef52325-d1eb-4a40-bb98-f7bb85c72029",
+        "description": "PALS is a combined polarimetric radiometer and NASA licensed radar sharing a rotating planar array antenna. The PALS instrument includes a combined L-band radiometer and scatterometer, operating at 1.413 GHz and 1.26 GHz respectively. It was designed and built to investigate the benefits of combining passive and active microwave sensors for Ocean salinity and Soil moisture remote sensing. It is the prototype for the Aquarius and SMAP missions and its flexible design is compatible with many aircraft.\n\nThe PALS radar and radiometer time share a dual pole, dual frequency planner array antenna. The antenna configuration can be fixed or rotating. It provides scalable resolution, between 3,000 and 20,000 feet AGL. It is an Aquarius and SMAP test bed.",
+        "campaigns": [
+          "03b728ae-2235-488c-80ee-570dcf602f3b"
+        ]
+      },
+      {
+        "shortname": "Parsivel",
+        "longname": "Fake long_name",
+        "id": "a07df6b8-f8ae-4152-9392-0ef84aceeaef",
+        "description": "Fake description",
+        "campaigns": [
+          "c438c053-3708-4f53-83d8-8c57990c6bec"
+        ]
+      },
+      {
+        "shortname": "PCAP",
+        "longname": "Fake long_name",
+        "id": "3d8fc104-5bc8-48dc-a8a5-e0bbf09feaac",
+        "description": "The PCAP instrument measures soot absorption through light attenuation through a filter.",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+        ]
+      },
+      {
+        "shortname": "PCASP",
+        "longname": "Passive-Cavity Aerosol Spectrometer Probe",
+        "id": "8b70ff0b-ef8d-4869-83d5-3604121ebf78",
+        "description": "The Passive-Cavity Aerosol Spectrometer (PCASP) is a wing-mounted aerosol probe that uses a standard PMS canister.  Sample air enters the forward-facing inlet and decelerates by ~10x. Side-facing skarf tube provides suction for continuous flushing of the air to provide fast time response. During cloud penetrations, the splash-breakup of cloud particles can produce large concentrations of spurious particles, and some of these can enter the PCASP air sample as a contamination. Internal diaphragm pump drives air flow through the optical cavity. Sample rate is ~1 cc/sec within a particle-free sheath flow of 15 cc/sec.",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+        ]
+      },
+      {
+        "shortname": "PFP",
+        "longname": "Programmable Flask Package Whole Air Sampler",
+        "id": "23b00206-fc64-4a84-872a-09696e7dd258",
+        "description": "The Programmable Flask Package (PFP) is a type of whole air sampler. This instrument consists of twelve glass flasks that can be filled with air. The samples collected by the PFP are sent to NOAA’s Global Monitoring Division and INSTAR’s Staple Isotope Lab where they are tested for trace gases. This instrument is used to monitor multiple types of trace gases.",
+        "campaigns": [
+          "03b728ae-2235-488c-80ee-570dcf602f3b"
+        ]
+      },
+      {
+        "shortname": "PI-Neph",
+        "longname": "Polarized Imaging Nephelometer",
+        "id": "19e47b07-f51a-49c7-a6ef-b605b56d480e",
+        "description": "The Polarized Imaging Nephelometer is an in situ instrument designed and built at the Laboratory for Aerosols, Clouds and Optics (LACO) at the University of Maryland Baltimore County for the measurement of components of the aerosol phase matrix in high angular resolution between 2 to 178 deg scattering angles. The measured phase matrix provides extensive characterization of the scattering properties of the studied aerosols allowing for a very comprehensive set of aerosol scattering parameters. These measurements are essential for the validation of the new generation of aerosol remote sensors like the APS polarimeter in the Glory satellite, and for the construction of accurate models of real aerosol particles, specially the non-spherical ones.",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+        ]
+      },
+      {
+        "shortname": "Picarro",
+        "longname": "Picarro gas concentration and/or isotope analyzer",
+        "id": "bbc7f6b3-6f18-478c-87b9-1e714c1885b1",
+        "description": "A Picarro is a gas concentration analyzer. There are multiple models of this instrument. These analyzers can measure carbon dioxide, carbon monoxide, and methane. In some models, the sensitivity is high enough to measure these gases in parts per billion. These instruments are based on the Wavelength-Scanned Cavity Ring Down Spectroscopy.",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930",
+          "03b728ae-2235-488c-80ee-570dcf602f3b"
+        ]
+      },
+      {
+        "shortname": "S-HIS",
+        "longname": "Scanning High-resolution Interferometer Sounder",
+        "id": "522face6-1564-4b2b-a01b-44e077c27af6",
+        "description": "The Scanning High-resolution Interferometer Sounder (S-HIS) is a cross-track scanning interferometer which measures emitted thermal radiation at high spectral resolution between 3.3 and 18 microns The measured emitted radiance is used to obtain temperature and water vapor profiles of the Earth's atmosphere in clear-sky conditions, determination of surface emissivity and temperature, and validation of radiative transfer models and satellite measurements.  S-HIS produces sounding data with 2 kilometer resolution (at nadir) across a 40 kilometer ground swath from a nominal altitude of 20 kilometers onboard a NASA ER-2 or Global Hawk. lidation of radiative transfer models and satellite measurements.",
+        "campaigns": [
+          "c1e56561-6726-4832-8dbe-0453b10ff36c",
+          "be798dc9-dccb-4dc2-8e6b-d395c1bcbeb6"
+        ]
+      },
+      {
+        "shortname": "PILS",
+        "longname": "Particle-Into-Liquid Sampler",
+        "id": "b5b084cb-4df7-4ea5-867b-ac5b574a1381",
+        "description": "The Particle Into Liquid Sampler (PILS) was developed for rapid automated on-line and continuous measurement of ambient aerosol bulk composition. The general approach is based on earlier devices in which ambient particles are mixed with saturated water vapor to produce droplets easily collected by inertial techniques. The resulting liquid stream is analyzed with an ion chromatograph to quantitatively measure the bulk aerosol ionic components. In this instrument, a modified version of a particle size magnifier is employed to activate and grow particles comprising the fine aerosol mass. A single jet inertial impactor is used to collect the droplets onto a vertical glass plate that is continually washed with a constant water diluent flow of nominally 0.10 ml min-1. The flow is divided and then analyzed by a dual channel ion chromatograph. In its current form, 4.3 min integrated samples were measured every 7 min. The instrument provides bulk composition measurements with a detection limit of approximately 0.1 µg m-3 for chloride, nitrate, sulfate, sodium, ammonium, calcium, and potassium.",
+        "campaigns": [
+          "e48c2d79-822b-4c9e-9f72-2776d5d1eac6"
+        ]
+      },
+      {
+        "shortname": "PIP",
+        "longname": "Precipitation and Imaging Probe",
+        "id": "4adfc2fb-fb94-441f-a849-744f5d0404db",
+        "description": "The Precipitation and Imaging Probe (PIP) measures the concentration and records images of cloud particles from approximately 500-30000 microns in diameter with a resolution of 100 microns per pixel.",
+        "campaigns": [
+          "c438c053-3708-4f53-83d8-8c57990c6bec"
+        ]
+      },
+      {
+        "shortname": "Pluvio",
+        "longname": "Fake long_name",
+        "id": "9160ca62-ffc8-426b-9d09-042ce5219468",
+        "description": "Fake description",
+        "campaigns": [
+          "c438c053-3708-4f53-83d8-8c57990c6bec"
+        ]
+      },
+      {
+        "shortname": "PSAP",
+        "longname": "Particle Soot Absorption Photometer",
+        "id": "edf760b9-d2b4-4ce5-8524-31268e6532fc",
+        "description": "The Particle Soot/Absorption Photometer (PSAP) is used to measure in near real time the light absorption coefficient. The method is based on the integrating plate technique in which the change in optical transmission of a filter caused by particle deposition on the filter is related to the light absorption coefficient of the deposited particles using Beers Law. Older versions operated at 1 wavelength (nominally 565 nm) while new versions have 3 wavelengths (467, 530 and 660 nm).",
+        "campaigns": [
+          "e48c2d79-822b-4c9e-9f72-2776d5d1eac6"
+        ]
+      },
+      {
+        "shortname": "PTR-MS",
+        "longname": "Proton Transfer Mass Spectrometer",
+        "id": "c40cc568-c4eb-4605-a3bc-f9027ad538a6",
+        "description": "The PTR-MS is a mass spectrometer designed by the University of Innsbruck in Austria. It detects volatile organic compounds quickly and is highly sensitive so it can detect compounds in the pptv range. It has flown in many campaigns studying atmospheric chemistry in the troposphere.",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930",
+          "e48c2d79-822b-4c9e-9f72-2776d5d1eac6"
+        ]
+      },
+      {
+        "shortname": "Radiosonde",
+        "longname": "Fake long_name",
+        "id": "63796497-1445-471a-b7ff-048f45937a25",
+        "description": "Fake description",
+        "campaigns": [
+          "951482fa-5748-46ba-aed5-aab8b106b103"
+        ]
+      },
+      {
+        "shortname": "Rain Gauge",
+        "longname": "Fake long_name",
+        "id": "89f86d4f-2809-4bd5-9998-ff50b24ccb8f",
+        "description": "Fake description",
+        "campaigns": [
+          "c438c053-3708-4f53-83d8-8c57990c6bec"
+        ]
+      },
+      {
+        "shortname": "RASS",
+        "longname": "Radio Acoustic Sounding System",
+        "id": "74c3fec1-d102-42b7-9db6-dc5ed5928286",
+        "description": "Fake description",
+        "campaigns": [
+          "951482fa-5748-46ba-aed5-aab8b106b103"
+        ]
+      },
+      {
+        "shortname": "RICE",
+        "longname": "Rosemount Icing Detector",
+        "id": "32043b52-5c32-4dd1-b959-8945c92c6073",
+        "description": "The Rosemount Icing Detector, or RID for short, is an instrument that measures ice accumulation on both research and commercial aircraft. The measured icing rate, along with other useful information recorded by the aircraft, then make it possible for the Liquid Water Content (LWC) of the ambient atmosphere to be derived.",
+        "campaigns": [
+          "c438c053-3708-4f53-83d8-8c57990c6bec",
+          "61616a26-fc33-450e-bd53-a7690d03e6b6"
+        ]
+      },
+      {
+        "shortname": "Rocketsonde",
+        "longname": "Fake long_name",
+        "id": "1841baec-1073-4da3-bab4-7764333a32c9",
+        "description": "Fake description",
+        "campaigns": [
+          "951482fa-5748-46ba-aed5-aab8b106b103"
+        ]
+      },
+      {
+        "shortname": "RSP",
+        "longname": "Research Scanning Polarimeter",
+        "id": "7c2a6034-9983-4308-a81b-e9fd538c3dd3",
+        "description": "In order to demonstrate the capabilities of polarimetry an instrument that can make either ground-based, or aircraft measurements, the Research Scanning Polarimeter (RSP) has been developed by SpecTIR Corporation. This instrument has similar functional capabilities to the proposed EOSP satellite instrument. The picture above shows the assembled RSP instrument with its liquid nitrogen dewar on the left side and scanner assembly on the right. Currently data acquisition is performed on a laptop, which is shown here and gives an indication of the size of the instrument. The scientific requirements for the polarimetric measurements are satisfied by the RSP through its high measurement accuracy, the wide range of viewing angles measured and by sampling of the spectrum of reflected solar radiation over most of the radiatively significant range. The RSP instrument uses a polarization compensated scan mirror assembly to scan the fields of view of six boresighted, refractive telescopes through ±60° from the normal with respect to the instrument baseplate. The refractive telescopes are paired, with each pair making measurements in three spectral bands. One telescope in each pair makes simultaneous measurements of the linear polarization components of the intensity in orthogonal planes at 0° and 90° to the meridional plane of the instrument, while the other telescope simultaneously measures equivalent intensities in orthogonal planes at 45° and 135°. This approach ensures that the polarization signal is not contaminated by uncorrelated spatial or temporal scene intensity variations during the course of the polarization measurements, which could create false polarization. These measurements in each instantaneous field of view in a scan provide the simultaneous determination of the intensity, and the degree and azimuth of linear polarization in all nine spectral bands.",
+        "campaigns": [
+          "e48c2d79-822b-4c9e-9f72-2776d5d1eac6"
+        ]
+      },
+      {
+        "shortname": "SAGA",
+        "longname": "Soluble Acidic Gases and Aerosols",
+        "id": "dd5bd385-fc39-46e2-8ab4-d61e89832e83",
+        "description": "Fake description",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+        ]
+      },
+      {
+        "shortname": "Slow Antenna",
+        "longname": "Fake long_name",
+        "id": "31e2bb6c-64dd-4ca0-85f7-5494d7402a2d",
+        "description": "Fake description",
+        "campaigns": [
+          "951482fa-5748-46ba-aed5-aab8b106b103"
+        ]
+      },
+      {
+        "shortname": "SMPS",
+        "longname": "Scanning Mobility Particle Sizer",
+        "id": "842912bc-d7ec-410a-ad8d-5d5b23cab976",
+        "description": "The Scanning Mobility Particle Sizer (SMPS) is a spectrometer that measures the size distribution of aerosols. It can measure aerosol particles between the sizes of 10-1000nm. Particles are measured by their electrical mobility and the concentration is measured by a condensation particle counter. It was developed by TSI and has since been used in multiple campaigns.",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+        ]
+      },
+      {
+        "shortname": "SP2",
+        "longname": "Single Particle Soot Photometer",
+        "id": "dc23fea9-3102-4fe4-ac72-01c7dce14d22",
+        "description": "The SP2 is a laser-induced incandescence instrument primarily used for measuring the refractory BC  (rBC) mass content of individual accumulation-mode aerosol particles. It is able to provide this data product independently of the total particle morphology and mixing state, and thus delivers detailed information not only about BC loadings, but also size distributions, even in exceptionally clean air. The instrument can also provide the optical size of individual particles containing rBC, and identify the presence of materials associated with the BC fraction (i.e. identify the rBC’s mixing state). Since its introduction in 2003, the SP2 has been substantially improved, and now can be considered a highly competent instrument for assessing BC loadings and mixing state in situ.  NOAA deploys multiple SP2s with different designs: the first was built for the WB-57F research aircraft. Two others are rack-mounted units customized at NOAA; one of the rack mounted units can be humidified, and has been deployed with a paired dry rack-mounted SP2 as the \"Humidified-Dual SP2\" (HD-SP2). The rack mounted units are suitable for in-cabin operations.",
+        "campaigns": [
+          "e48c2d79-822b-4c9e-9f72-2776d5d1eac6"
+        ]
+      },
+      {
+        "shortname": "SPEC",
+        "longname": "Fake long_name",
+        "id": "5d9c2051-d594-4806-a008-5539f5ca95cf",
+        "description": "Fake description",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+        ]
+      },
+      {
+        "shortname": "Spectrometer",
+        "longname": "Spectrometers (non-specific)",
+        "id": "ddc07c20-fbf6-4a9c-b509-61ac7dbd2ab2",
+        "description": "Fake description",
+        "campaigns": [
+          "e48c2d79-822b-4c9e-9f72-2776d5d1eac6"
+        ]
+      },
+      {
+        "shortname": "SR",
+        "longname": "Scanning Radiometer",
+        "id": "f8a0477e-29b6-45f6-b3f3-dacfa934f28c",
+        "description": "The SR instrument is a 2 or 4 channel chemiluminescence-based NO-analyzer for all applications involving the measurement of extremely low concentrations. Optimised for airborne and ground use, typically in stratospheric research programs.",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+        ]
+      },
+      {
+        "shortname": "SSFR",
+        "longname": "Solar Spectral Flux Radiometer",
+        "id": "6a53d8a1-caa2-4294-aaa4-1baec7a2f09f",
+        "description": "The Solar Spectral Flux Radiometer (SSFR) was designed to measure spectral irradiance. It has flown on numerous aircraft and numerous campaigns. It has been used to study aerosols, clouds, and gasses as well as their radiative effect on the climate.",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+        ]
+      },
+      {
+        "shortname": "TD-LIF",
+        "longname": "Thermal-Dissociation Laser Induced Fluorescence",
+        "id": "e15948bb-6402-43aa-93f9-170f231cf3c8",
+        "description": "The UC Berkeley thermal-dissociation laser-induced fluorescence (TD- LIF) instrument detects NO2 directly and detects total peroxynitrites, total alkyl- and other thermally stable organic nitrates, and HNO3 following thermal dissociation of these NOy species to NO2. The sensitivity for NO2 at 1 Hz is 30 pptv (S/N=2) with a slope uncertainty of 5%. The uncertainties for the dissociated species are 10% for ΣPNs and 15% for ΣANs and HNO3.",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930",
+          "e48c2d79-822b-4c9e-9f72-2776d5d1eac6"
+        ]
+      },
+      {
+        "shortname": "TDL",
+        "longname": "Tunable Diode Laser",
+        "id": "31ac509c-07ca-42bb-b84a-f58b209e9be3",
+        "description": "A TUNABLE DIODE LASER is a solid-state laser in which as lasing is achieved by passing an injection current through the active region of a semiconductor across the p-n junction; tunable meaning it is used with a technique based upon the measurement of light absorption upon irridating a sample using a tunable laser source.",
+        "campaigns": [
+          "e48c2d79-822b-4c9e-9f72-2776d5d1eac6"
+        ]
+      },
+      {
+        "shortname": "TDMA",
+        "longname": "Tandem Differential Mobility Analyzer",
+        "id": "91407c07-97ff-4862-944b-3c2bdc49073a",
+        "description": "The Tandem Differential Mobility Analyzer (TDMA) is an instrument that measures the physical properties of aerosol particles. It is sometimes referred to as an aerosol mobility climatograph. The TDMA can measure particles between the sizes of 0.005-0.2μm in diameter. It is sometimes combined with other instruments, such as aerodynamic particle sizers, in order to broaden the size range of detectable particles.",
+        "campaigns": [
+          "e48c2d79-822b-4c9e-9f72-2776d5d1eac6"
+        ]
+      },
+      {
+        "shortname": "TE49C",
+        "longname": "Thermo Environmental Instruments Model 49C Ozone Analyzer",
+        "id": "3e5c6687-3a1c-40f5-95ed-49eb3248aea7",
+        "description": "The Thermo Environmental Instruments Model 49C Ozone Analyzer (TE49C) measures ozone concentrations via UV absorption. The TE49C is based on the principle that ozone molecules absorb UV light at a wavelength of 254 nm.  The degree to which the UV light is absorbed is directly related to the ozone concentration as described by the Beer-Lambert Law.",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930",
+          "e48c2d79-822b-4c9e-9f72-2776d5d1eac6"
+        ]
+      },
+      {
+        "shortname": "TOGA",
+        "longname": "Trace Organic Gas Analyzer",
+        "id": "540d2e04-1b8c-4266-b4eb-8c1dd15de272",
+        "description": "TOGA measures volatile organic compounds (VOCs). Specific data will be obtained for radical precursors, tracers of anthropogenic and biogenic activities, tracers of urban and biomass combustion emissions, products of oxidative processing, precursors to aerosol formation, and compounds important for aerosol modification and transformation. TOGA measures a wide range of VOCs with high sensitivity (ppt or lower), frequency (2.0 min.), accuracy (15% or better), and precision (<3%). Over 50 species are routinely measured (see PDF for full table) throughout the full DC-8 altitude range. TOGA is contained in a standard DC-8 rack, weighs less than 200 kg and consumes ~1 kW of power. The major components of the instrument are the inlet, cryogenic preconcentrator, gas chromatograph, mass spectrometer detector, zero air/calibration system, and the control/data acquisition system. All processes and data acquisition are computer controlled.",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+        ]
+      },
+      {
+        "shortname": "UHSAS",
+        "longname": "Ultra-High Sensitivity Aerosol Spectrometer",
+        "id": "11c697e2-67d8-4992-8539-f1762596b567",
+        "description": "The UHSAS is an optical-scattering, laser-based aerosol particle spectrometer for sizing particles in the 0.06 – 1 μm range. The instrument counts particles in up to 100 user-specified sizing bins, with a resolution as fine as 1 nm/bin. This high sensitivity makes the UHSAS ideal for aerosol research and filter testing.",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+        ]
+      },
+      {
+        "shortname": "VCSEL",
+        "longname": "Vertical Cavity Surface Emitting Laser Hygrometer",
+        "id": "1700b3b0-f81b-4916-a7be-bcf80b7d128c",
+        "description": "The VCSEL hygrometer is an open-path, laser-based hygrometer that measures absolute concentration of water vapor (molecules per cm-3) at a rate of 25 Hz. The instrument is designed for operation throughout the troposphere and lower stratosphere. Two water vapor absorption lines are used: a “weak” line at 1853.37 nm for lower tropospheric mixing ratios and a “strong” line at 1854.03 nm for middle and upper tropospheric concentrations. VCSELs have a wide current tuning capability and can probe each line by changing the laser injection current with only slight adjustments to the laser temperature. Switching between the absorption lines generally occurs near a fractional absorption of 10-3, though a hysteresis is built in to prevent rapid switching near this transition (generally a factor of four in each direction). The thresholds for line switching changes slightly with temperature and pressure, but it generally is in the -15 to -25 C frost point range.",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+        ]
+      },
+      {
+        "shortname": "VLF Receiver",
+        "longname": "Fake long_name",
+        "id": "6ba708be-21b0-407f-bc62-33cd3d0e546d",
+        "description": "Fake description",
+        "campaigns": [
+          "c1e56561-6726-4832-8dbe-0453b10ff36c"
+        ]
+      },
+      {
+        "shortname": "WAS",
+        "longname": "Whole Air Sampler",
+        "id": "1b0aeb19-0e55-432a-8e8d-2ba5278d1d64",
+        "description": "The Whole Air Sampler (WAS) is a type of instrument that collects air samples for analysis of trace gases. They are used on airborne platforms, and have been part of numerous field campaigns. These instruments collect samples of trace gases such as NMHCs, Halocarbons, Alkyl Nitrates, OCS, DMS, and CS2.",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930",
+          "e48c2d79-822b-4c9e-9f72-2776d5d1eac6"
+        ]
+      },
+      {
+        "shortname": "WCN",
+        "longname": "Water-Based Condensation Nucleus Counter",
+        "id": "7f7897fd-dd81-4a51-8229-fa7ed83d74bf",
+        "description": "The primary condensation nucleus counter used on the NSF/NCAR G-V is a modified version of the TSI 3786 Ultra-Fine Water-Based Condensation Nucleus Counter, with modifications made by Aerosol Dynamics, Inc., and Quant. The modifications were primarily to lower the temperature in the region where droplets grow on condensation nuclei, which was necessary because the 60 C growth temperature of the standard 3786 is the boiling point when the pressure is about 200 mb, and the GV flies well above this altitude. Other changes were made to the flow control, flow rates, pumps, and water injection scheme to adapt to the large altitude range of the G-V. One substantial advantage of this instrument over other CN counters is that it does not depend on butanol as the operating fluid and so does not require handling of a flammable gas around the aircraft or flight with a flammable substance.The threshold particle size detected by the WCN is about 5 nm, becoming larger at low pressure but remaining below the ultra-fine size range (<10 nm) at pressures as low as 150 mb. The instrument also is relatively insensitive to coincidence losses, continuing to perform with coincidence losses <10% up to concentrations around 105 cm-3. Tubing losses can be significant for small particles, so size-dependent and pressure-dependent corrections may be needed unless the lines can be kept very short (not more than a few m).",
+        "campaigns": [
+          "6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+        ]
+      },
+      {
+        "shortname": "Weather Towers",
+        "longname": "Fake long_name",
+        "id": "00fcef5b-696f-4c7d-acbf-7e81d81c95c3",
+        "description": "Fake description",
+        "campaigns": [
+          "951482fa-5748-46ba-aed5-aab8b106b103"
+        ]
+      },
+      {
+        "shortname": "WS-CRDS",
+        "longname": "Picarro Wavelength-Scanned Cavity Ring Down Spectrometer",
+        "id": "47274772-3efd-4db0-918e-66809e85bf81",
+        "description": "Wavelength Scanned Cavity Ring Down Spectrometer (WS-CRDS) has a time-based measurement that utilizes a near-infrared laser to measure a spectral signature of the molecule. Gas is circulated in an optical measurement cavity with an effective path length of up to 20 kilometers. A patented, high-precision wavelength monitor makes certain that only the spectral feature of interest is being monitored, greatly reducing the analyzer’s sensitivity to  interfering gas species, and enabling ultra-trace gas concentration measurements even if there are other gases present. As a result, the analyzer maintains high linearity, precision, and accuracy over changing environmental conditions with minimal calibration required. Precise temperature and pressure control systems designed into the analyzer ensure accurate measurements over long periods of time with minimal use of calibration gases.",
+        "campaigns": [
+          "0c68f350-b544-4b52-9f46-2aceb6aa1b7d"
+        ]
+      }
+    ]
+  }
+}

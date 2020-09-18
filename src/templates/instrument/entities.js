@@ -10,7 +10,6 @@ import {
 } from "../../components/section"
 import PlatformCard from "../../components/cards/platform-card"
 import CampaignCard from "../../components/cards/campaign-card"
-import { formatYearRange } from "../../utils/helpers"
 import theme from "../../utils/theme"
 
 const Table = styled.table`
@@ -39,21 +38,12 @@ export default function Entities({ id, campaignIds, platforms }) {
                 </label>
               </th>
             </tr>
-            {platforms.map((platform, i) => (
-              <tr key={i}>
-                <td key={platform.id} style={{ verticalAlign: `top` }}>
-                  <div key={platform.id} data-cy="related-platform">
-                    <Link to={`/platform/${platform.id}`} key={platform.id}>
-                      <PlatformCard
-                        shortname={platform.shortname}
-                        longname={platform.longname}
-                        key={platform.id}
-                        description={platform.description}
-                        campaigns={platform.campaigns}
-                        collectionPeriodIds={platform.collectionPeriodIds}
-                        instruments={platform.instruments}
-                        stationary={platform.stationary}
-                      />
+            {platforms.map(platform => (
+              <tr key={platform.id}>
+                <td style={{ verticalAlign: `top` }}>
+                  <div data-cy="related-platform">
+                    <Link to={`/platform/${platform.id}`}>
+                      <PlatformCard id={platform.id} />
                     </Link>
                   </div>
                 </td>
@@ -69,21 +59,7 @@ export default function Entities({ id, campaignIds, platforms }) {
                     .map(campaign => (
                       <div key={campaign.id} data-cy="related-campaign">
                         <Link to={`/campaign/${campaign.id}`}>
-                          <CampaignCard
-                            logo={campaign.logo}
-                            ongoing={campaign.ongoing}
-                            shortname={campaign.shortname}
-                            longname={campaign.longname}
-                            daterange={formatYearRange(
-                              campaign.startdate,
-                              campaign.enddate
-                            )}
-                            region={campaign.region}
-                            countCollectionPeriods={
-                              campaign.countCollectionPeriods
-                            }
-                            countDataProducts={campaign.countDataProducts}
-                          />
+                          <CampaignCard id={campaign.id} />
                         </Link>
                       </div>
                     ))}
@@ -100,36 +76,10 @@ export default function Entities({ id, campaignIds, platforms }) {
 export const instrumentEntitiesFields = graphql`
   fragment instrumentEntitiesFields on instrument {
     platforms {
-      shortname: short_name
-      longname: long_name
       id
-      description
-      collectionPeriodIds: collection_periods
       campaigns {
-        logo {
-          nasaImgAlt
-          nasaImg {
-            childImageSharp {
-              fixed(height: 85) {
-                ...GatsbyImageSharpFixed
-              }
-            }
-          }
-        }
-        ongoing
-        shortname: short_name
-        longname: long_name
-        id
-        startdate: start_date
-        enddate: end_date
-        region: region_description
-        countCollectionPeriods: number_collection_periods
-        countDataProducts: number_data_products
-      }
-      instruments {
         id
       }
-      stationary
     }
     campaignIds: campaigns
   }
@@ -140,10 +90,8 @@ Entities.propTypes = {
   campaignIds: PropTypes.arrayOf(PropTypes.string),
   platforms: PropTypes.arrayOf(
     PropTypes.shape({
-      shortname: PropTypes.string.isRequired,
-      campaigns: PropTypes.arrayOf(
-        PropTypes.shape({ shortname: PropTypes.string })
-      ),
+      id: PropTypes.string.isRequired,
+      campaigns: PropTypes.arrayOf(PropTypes.shape({ id: PropTypes.string })),
     })
   ),
 }

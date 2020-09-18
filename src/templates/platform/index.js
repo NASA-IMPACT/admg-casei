@@ -59,7 +59,9 @@ export const query = graphql`
     platform: platform(id: { eq: $slug }) {
       ...platformHeroFields
       ...platformOverviewFields
-      ...platformCampaignFields
+      campaigns {
+        id
+      }
     }
   }
 `
@@ -72,15 +74,7 @@ PlatformTemplate.propTypes = {
       description: PropTypes.string,
       campaigns: PropTypes.arrayOf(
         PropTypes.shape({
-          ongoing: PropTypes.bool,
-          shortname: PropTypes.string.isRequired,
-          longname: PropTypes.string,
           id: PropTypes.string.isRequired,
-          startdate: PropTypes.string.isRequired,
-          enddate: PropTypes.string,
-          region: PropTypes.string.isRequired,
-          countCollectionPeriods: PropTypes.number,
-          countDataProducts: PropTypes.number,
         })
       ),
       collectionPeriods: PropTypes.arrayOf(PropTypes.string),

@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { graphql, Link } from "gatsby"
+import { Link } from "gatsby"
 import Carousel from "nuka-carousel"
 
 import {
@@ -9,7 +9,6 @@ import {
   SectionContent,
 } from "../../components/section"
 import CampaignCard from "../../components/cards/campaign-card"
-import { formatYearRange } from "../../utils/helpers"
 
 const RelatedCampaigns = ({ id, campaigns }) => {
   return (
@@ -35,19 +34,7 @@ const RelatedCampaigns = ({ id, campaigns }) => {
                   data-cy="related-campaign"
                 >
                   <Link to={`/campaign/${campaign.id}`}>
-                    <CampaignCard
-                      logo={campaign.logo}
-                      ongoing={campaign.ongoing}
-                      shortname={campaign.shortname}
-                      longname={campaign.longname}
-                      daterange={formatYearRange(
-                        campaign.startdate,
-                        campaign.enddate
-                      )}
-                      region={campaign.region}
-                      countCollectionPeriods={campaign.countCollectionPeriods}
-                      countDataProducts={campaign.countDataProducts}
-                    />
+                    <CampaignCard id={campaign.id} />
                   </Link>
                 </div>
               ))}
@@ -61,71 +48,11 @@ const RelatedCampaigns = ({ id, campaigns }) => {
   )
 }
 
-export const platformCampaignFields = graphql`
-  fragment platformCampaignFields on platform {
-    campaigns {
-      logo {
-        nasaImgAlt
-        nasaImg {
-          childImageSharp {
-            fixed(height: 85) {
-              ...GatsbyImageSharpFixed
-            }
-          }
-        }
-      }
-      ongoing
-      shortname: short_name
-      longname: long_name
-      id
-      seasons {
-        id
-      }
-      focus: focus_areas {
-        id
-      }
-      startdate: start_date
-      enddate: end_date
-      region: region_description
-      deployments {
-        id
-      }
-      countCollectionPeriods: number_collection_periods
-      countDataProducts: number_data_products
-    }
-  }
-`
-
 RelatedCampaigns.propTypes = {
   id: PropTypes.string.isRequired,
   campaigns: PropTypes.arrayOf(
     PropTypes.shape({
-      logo: PropTypes.shape({
-        nasaImgAlt: PropTypes.string.isRequired,
-        nasaImg: PropTypes.shape({
-          childImageSharp: PropTypes.object,
-        }),
-      }).isRequired,
-      ongoing: PropTypes.bool,
-      shortname: PropTypes.string.isRequired,
-      longname: PropTypes.string,
       id: PropTypes.string.isRequired,
-      seasons: PropTypes.arrayOf(
-        PropTypes.shape({
-          id: PropTypes.string.isRequired,
-        })
-      ).isRequired,
-      focus: PropTypes.arrayOf(
-        PropTypes.shape({
-          id: PropTypes.string.isRequired,
-        })
-      ).isRequired,
-      startdate: PropTypes.string.isRequired,
-      enddate: PropTypes.string,
-      region: PropTypes.string.isRequired,
-      deploymentIds: PropTypes.arrayOf(PropTypes.string),
-      countCollectionPeriods: PropTypes.number,
-      countDataProducts: PropTypes.number,
     }).isRequired
   ).isRequired,
 }

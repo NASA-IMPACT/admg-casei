@@ -1,51 +1,69 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { useStaticQuery, graphql } from "gatsby"
+
 import Card from "./card"
 
-const PlatformCard = ({
-  shortname,
-  longname,
-  // description,
-  campaigns,
-  collectionPeriodIds,
-  instruments,
-  stationary,
-}) => (
-  <Card
-    tag={stationary && "Stationary"}
-    footerList={[
-      { count: campaigns.length, title: "Campaign" },
-      { count: collectionPeriodIds.length, title: "Collection Period" },
-      { count: instruments.length, title: "Instrument" },
-    ]}
-  >
-    <big
-      style={{ fontWeight: `bold`, marginTop: `0.5rem` }}
-      data-cy="shortname"
-    >
-      {shortname}
-    </big>
-    <p data-cy="longname">{longname}</p>
-    {/* <p data-cy="description">{description}</p> */}
-  </Card>
-)
+export default function PlatformCard(props) {
+  /*
+   * We can not pass props directly into a static query because it is
+   * compiled and doesn't support string interpolation in its template literal.
+   * This is a workaround to still build a reuseable Image component using Gatsby's
+   * image functionalities:
+   * It first queries all the images with graphql, and then uses javascript to filter
+   * them based on the provided props.
+   *
+   * Read more here on this topic:
+   * - https://noahgilmore.com/blog/easy-gatsby-image-components/
+   * - https://spectrum.chat/gatsby-js/general/using-variables-in-a-staticquery~abee4d1d-6bc4-4202-afb2-38326d91bd05
+   */
+  const data = useStaticQuery(graphql`
+    query {
+      allPlatform {
+        nodes {
+          shortname: short_name
+          longname: long_name
+          id
+          description
+          collectionPeriodIds: collection_periods
+          campaigns {
+            id
+          }
+          instruments {
+            id
+          }
+          stationary
+        }
+      }
+    }
+  `)
 
-PlatformCard.propTypes = {
-  shortname: PropTypes.string.isRequired,
-  longname: PropTypes.string,
-  // description: PropTypes.string.isRequired,
-  campaigns: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-    })
-  ),
-  collectionPeriodIds: PropTypes.arrayOf(PropTypes.string),
-  instruments: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-    }).isRequired
-  ).isRequired,
-  stationary: PropTypes.bool.isRequired,
+  const platform = data.allPlatform.nodes.find(x => x.id === props.id)
+
+  return (
+    <Card
+      tag={platform.stationary && "Stationary"}
+      footerList={[
+        { count: platform.campaigns.length, title: "Campaign" },
+        {
+          count: platform.collectionPeriodIds.length,
+          title: "Collection Period",
+        },
+        { count: platform.instruments.length, title: "Instrument" },
+      ]}
+    >
+      <big
+        style={{ fontWeight: `bold`, marginTop: `0.5rem` }}
+        data-cy="shortname"
+      >
+        {platform.shortname}
+      </big>
+      <p data-cy="longname">{platform.longname}</p>
+      {/* <p data-cy="description">{description}</p> */}
+    </Card>
+  )
 }
 
-export default PlatformCard
+PlatformCard.propTypes = {
+  id: PropTypes.string.isRequired,
+}

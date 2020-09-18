@@ -101,13 +101,7 @@ export default function Instruments({ data, location }) {
             {list.map(instrument => {
               return (
                 <Link to={`/instrument/${instrument.id}`} key={instrument.id}>
-                  <InstrumentCard
-                    shortname={instrument.shortname}
-                    longname={instrument.longname}
-                    key={instrument.id}
-                    description={instrument.description}
-                    campaigns={instrument.campaigns}
-                  />
+                  <InstrumentCard id={instrument.id} />
                 </Link>
               )
             })}
@@ -123,7 +117,10 @@ export const query = graphql`
     allInstrument {
       totalCount
       list: nodes {
-        ...instrumentFields
+        shortname: short_name # required for sort
+        id
+        instrumentTypes: instrument_types # required for filter
+        campaigns # required for sort
       }
     }
     allInstrumentType {
@@ -134,23 +131,12 @@ export const query = graphql`
       }
     }
   }
-
-  fragment instrumentFields on instrument {
-    shortname: short_name
-    longname: long_name
-    id
-    instrumentTypes: instrument_types
-    description
-    campaigns
-  }
 `
 
 const instrumentShape = PropTypes.shape({
   shortname: PropTypes.string.isRequired,
-  longname: PropTypes.string,
   id: PropTypes.string.isRequired,
   instrumentTypes: PropTypes.arrayOf(PropTypes.string),
-  description: PropTypes.string.isRequired,
   campaigns: PropTypes.arrayOf(PropTypes.string),
 })
 
