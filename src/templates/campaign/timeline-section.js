@@ -55,11 +55,13 @@ const TimelineSection = ({ id, deployments }) => {
             ))}
           </Carousel>
         </div>
-        <MilestoneSelector
-          events={deployments}
-          timelineAction={setSelectedMilestone}
-          activeMilestone={selectedMilestoneId}
-        />
+        {deployments.length > 1 && (
+          <MilestoneSelector
+            events={deployments}
+            timelineAction={setSelectedMilestone}
+            activeMilestone={selectedMilestoneId}
+          />
+        )}
       </SectionContent>
     </SectionBlock>
   )
