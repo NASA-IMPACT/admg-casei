@@ -35,7 +35,7 @@ describe("Accessibility tests", () => {
       .findByText(/Platforms/i)
       .click()
 
-    cy.get("[data-cy=explore-card]").should("exist")
+    cy.get("[data-cy=explore-card]").first().should("exist")
 
     cy.get("[data-cy=explore-card]").first().click().checkA11y()
   })
@@ -49,7 +49,7 @@ describe("Accessibility tests", () => {
       .findByText(/Instruments/i)
       .click()
 
-    cy.get("[data-cy=explore-card]").should("exist")
+    cy.get("[data-cy=explore-card]").first().should("exist")
 
     cy.get("[data-cy=explore-card]").first().click().checkA11y()
   })
