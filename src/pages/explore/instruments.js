@@ -15,7 +15,7 @@ import ExploreTools from "../../components/explore/explore-tools"
 import InstrumentCard from "../../components/cards/instrument-card"
 
 export default function Instruments({ data, location }) {
-  const { allInstrument, allInstrumentType } = data
+  const { allInstrument, allInstrumentType, allMeasurementRegion } = data
 
   const { selectedFilterId } = location.state || {}
 
@@ -52,8 +52,10 @@ export default function Instruments({ data, location }) {
     .filter(instrument => {
       return selectedFilterIds.length === 0
         ? true
-        : selectedFilterIds.every(filterId =>
-            instrument.instrumentTypes.map(x => x.id).includes(filterId)
+        : selectedFilterIds.every(
+            filterId =>
+              instrument.instrumentTypes.map(x => x.id).includes(filterId) ||
+              instrument.measurementRegions.map(x => x.id).includes(filterId)
           )
     })
     .filter(instrument =>
@@ -62,6 +64,7 @@ export default function Instruments({ data, location }) {
 
   const { getFilterLabelById, getFilterOptionsById } = selector({
     type: allInstrumentType,
+    region: allMeasurementRegion,
   })
   return (
     <Layout>
@@ -122,12 +125,22 @@ export const query = graphql`
         instrumentTypes: instrument_types {
           id # required for filter
         }
+        measurementRegions: measurement_regions {
+          id # required for filter
+        }
         campaigns {
           id # required for sort
         }
       }
     }
     allInstrumentType {
+      options: nodes {
+        id
+        shortname: short_name
+        longname: long_name
+      }
+    }
+    allMeasurementRegion {
       options: nodes {
         id
         shortname: short_name
@@ -141,6 +154,11 @@ const instrumentShape = PropTypes.shape({
   shortname: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
   instrumentTypes: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+    }).isRequired
+  ).isRequired,
+  measurementRegions: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
     }).isRequired
@@ -159,6 +177,15 @@ Instruments.propTypes = {
       list: PropTypes.arrayOf(instrumentShape).isRequired,
     }),
     allInstrumentType: PropTypes.shape({
+      options: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string.isRequired,
+          shortname: PropTypes.string.isRequired,
+          longname: PropTypes.string,
+        })
+      ).isRequired,
+    }).isRequired,
+    allMeasurementRegion: PropTypes.shape({
       options: PropTypes.arrayOf(
         PropTypes.shape({
           id: PropTypes.string.isRequired,
