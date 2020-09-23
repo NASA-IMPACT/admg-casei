@@ -168,7 +168,7 @@ const FilterMenu = ({
                 <Filter
                   id="measurement-regions"
                   label="Measurement Regions"
-                  options={getFilterOptionsById("region")}
+                  options={getFilterOptionsById("vertical")}
                   selectedFilterIds={selectedFilterIds}
                 />
               </>
