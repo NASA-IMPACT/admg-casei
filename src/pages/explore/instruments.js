@@ -64,7 +64,7 @@ export default function Instruments({ data, location }) {
 
   const { getFilterLabelById, getFilterOptionsById } = selector({
     type: allInstrumentType,
-    region: allMeasurementRegion,
+    vertical: allMeasurementRegion,
   })
   return (
     <Layout>
