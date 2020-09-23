@@ -102,7 +102,18 @@ const testArray = [
 describe("Platform Section", () => {
   it("displays content", () => {
     const tree = create(
-      <PlatformSection id="platform" platforms={testArray} />
+      <PlatformSection
+        id="platform"
+        platforms={testArray}
+        instruments={[
+          {
+            id: "a1f41f4d-2233-49be-a3d3-6eda1ded6be4",
+          },
+          {
+            id: "aa6e3d99-17ca-4b4e-9130-c6e0b0864fd9",
+          },
+        ]}
+      />
     ).toJSON()
     expect(tree).toMatchSnapshot()
   })
