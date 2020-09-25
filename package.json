@@ -26,6 +26,7 @@
     "gatsby-transformer-json": "^2.4.11",
     "gatsby-transformer-sharp": "^2.5.11",
     "lodash.debounce": "^4.0.8",
+    "mapbox-gl": "^1.12.0",
     "nuka-carousel": "^4.7.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
