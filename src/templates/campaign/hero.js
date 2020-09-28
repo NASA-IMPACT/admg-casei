@@ -36,14 +36,11 @@ const CampaignHero = ({
   const distance = turf.distance(west, east, options)
   const offsetCoords = turf.transformTranslate(
     geometry,
-    distance * 0.5,
+    distance * 0.75,
     -90,
     options
   )
-
-  const scaledCoords = turf.bbox(
-    turf.transformScale(offsetCoords, 1.4, options)
-  )
+  const scaledCoords = turf.bbox(turf.transformScale(offsetCoords, 3, options))
 
   const containerRef = useRef()
   const { width } = useContainerDimensions(containerRef)
