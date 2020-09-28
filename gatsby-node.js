@@ -21,7 +21,11 @@ exports.createSchemaCustomization = ({ actions }) => {
       seasons: [season] @link
       logo: NasaImagesJson @link(by: "shortname", from: "short_name")
     }
+    type collection_period implements Node {
+      dois: [doi] @link
+    }
     type deployment implements Node {
+      collection_periods: [collection_period] @link
       geographical_regions: [geographical_region] @link
     }
     type geographical_region implements Node {
@@ -77,6 +81,7 @@ exports.sourceNodes = async ({ actions, createContentDigest }) => {
   try {
     const endpoints = [
       "campaign",
+      "collection_period",
       "deployment",
       "doi",
       "focus_area",

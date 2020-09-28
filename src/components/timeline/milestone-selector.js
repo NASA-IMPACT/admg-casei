@@ -99,7 +99,7 @@ export default function MilestoneSelector({
                   {event.name || "missing details"}
                 </CardSubTitle>
                 <CardSubTitle style={{ gridArea: `flights` }}>
-                  {`${event.flights.length} CDCPs` || "missing CDCPs"}
+                  {`${event.collectionPeriods.length} CDCPs` || "missing CDCPs"}
                 </CardSubTitle>
               </CardContent>
             </button>

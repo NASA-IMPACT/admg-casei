@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { graphql } from "gatsby"
 
 import {
   SectionBlock,
@@ -22,33 +23,49 @@ const DataSection = ({ id, dois }) => {
             gap: `1rem`,
           }}
         >
-          {dois.map(doi => (
-            <div
-              key={doi.id}
-              style={{
-                display: `flex`,
-                flexDirection: `column`,
-                // border: `1px solid ${theme.color.base}`,
-                backgroundColor: theme.color.secondary,
-                padding: `0 1rem 0.71rem 1rem`,
-              }}
-              data-cy="data-product"
-            >
-              <Label id="doi" color={theme.color.base}>
-                {doi.longname}
-              </Label>
-              <ExternalLink
-                label={doi.shortname}
-                url={`http://dx.doi.org/${doi.shortname}`}
-                id="doi"
-              ></ExternalLink>
-            </div>
-          ))}
+          {dois.length < 1
+            ? "No data products available."
+            : dois.map(doi => (
+                <div
+                  key={doi.id}
+                  style={{
+                    display: `flex`,
+                    flexDirection: `column`,
+                    // border: `1px solid ${theme.color.base}`,
+                    backgroundColor: theme.color.secondary,
+                    padding: `0 1rem 0.71rem 1rem`,
+                  }}
+                  data-cy="data-product"
+                >
+                  <Label id="doi" color={theme.color.base}>
+                    {doi.longname}
+                  </Label>
+                  <ExternalLink
+                    label={doi.shortname}
+                    url={`http://dx.doi.org/${doi.shortname}`}
+                    id="doi"
+                  ></ExternalLink>
+                </div>
+              ))}
         </div>
       </SectionContent>
     </SectionBlock>
   )
 }
+
+export const dataFields = graphql`
+  fragment dataFields on campaign {
+    deployments {
+      collectionPeriods: collection_periods {
+        dois {
+          shortname: short_name
+          longname: long_name
+          id
+        }
+      }
+    }
+  }
+`
 
 DataSection.propTypes = {
   id: PropTypes.string.isRequired,

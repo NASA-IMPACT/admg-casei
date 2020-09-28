@@ -3,7 +3,7 @@
 describe("Campaign", () => {
   before(() => {
     cy.visit("/explore/campaigns")
-    cy.get("[data-cy=explore-card]").find("big").contains("AirMOSS").click()
+    cy.get("[data-cy=explore-card]").find("big").contains("OLYMPEX").click()
   })
 
   describe("the hero", () => {
@@ -28,6 +28,16 @@ describe("Campaign", () => {
           expect($stat.eq(0), "first item").to.contain("Deployments")
           expect($stat.eq(1), "second item").to.contain("Collection Periods")
           expect($stat.eq(2), "third item").to.contain("Data Products")
+        })
+
+      cy.get("[data-cy=campaign-hero]")
+        .find("[data-cy=stats]")
+        .find("dt")
+        .should($stat => {
+          expect($stat, "3 items").to.have.length(3)
+          expect($stat.eq(0), "first item").to.contain("1")
+          expect($stat.eq(1), "second item").to.contain("6")
+          expect($stat.eq(2), "third item").to.contain("9")
         })
     })
     it("displays a map as background image", () => {
@@ -114,7 +124,7 @@ describe("Campaign", () => {
       cy.get("[data-cy=link-list]")
         .find("[data-cy=doi-link]")
         .should("exist")
-        .and("have.text", "no campaign DOI available")
+        .and("have.text", "http://dx.doi.org/10.5067/GPMGV/OLYMPEX/DATA101")
     })
   })
 
@@ -142,16 +152,16 @@ describe("Campaign", () => {
     it("navigates to the campaign list with the focus area as filter applied", () => {
       cy.get("[data-cy=focus-section]")
         .find("[data-cy=focus-area]")
-        .contains("Carbon Cycle & Ecosystems")
+        .contains("Weather")
         .click()
 
       cy.url().should("include", "/explore/campaigns")
 
       cy.get("[data-cy=filter-chip]")
         .should("have.length", 1)
-        .and("have.text", "focus: Carbon Cycle & Ecosystems")
+        .and("have.text", "focus: Weather")
 
-      cy.get("[data-cy=explore-card]").should("have.length", 2)
+      cy.get("[data-cy=explore-card]").should("have.length", 7)
 
       cy.go("back")
     })
@@ -175,6 +185,11 @@ describe("Campaign", () => {
   })
 
   describe("the timeline section", () => {
+    before(() => {
+      cy.visit("/explore/campaigns")
+      cy.get("[data-cy=explore-card]").find("big").contains("AirMOSS").click()
+    })
+
     it("displays a milestone carousel", () => {
       cy.get("[data-cy=milestone-carousel]").find(".slider").should("exist")
 
@@ -190,11 +205,13 @@ describe("Campaign", () => {
 
       cy.get("[data-cy=milestone]").first().find("img").should("not.be.visible")
     })
+
     it("displays a timeline of milestones", () => {
       cy.get("[data-cy=milestone-timeline]").should("exist")
       cy.get("[data-cy=milestone-timeline]").first().find("ol").should("exist")
       cy.get("[data-cy=milestone-timeline]").first().find("li").should("exist")
     })
+
     it("displays a card for each li item", () => {
       cy.get("[data-cy=milestone-timeline-card]")
         .should("exist")
@@ -247,6 +264,11 @@ describe("Campaign", () => {
   })
 
   describe("the data section", () => {
+    before(() => {
+      cy.visit("/explore/campaigns")
+      cy.get("[data-cy=explore-card]").find("big").contains("OLYMPEX").click()
+    })
+
     it("exists", () => {
       cy.get("[data-cy=data-section]").should("exist")
     })
@@ -259,19 +281,20 @@ describe("Campaign", () => {
 
     it("displays some data products", () => {
       cy.get("[data-cy=data-product]").should($div => {
-        expect($div).length.to.be.greaterThan(5)
+        expect($div).to.have.length(9)
       })
     })
 
     it("each data product has a label and a doi", () => {
       cy.get("[data-cy=data-product]")
         .first()
-        .get("[data-cy=doi-label]")
+        .find("[data-cy=doi-label]")
         .should("exist")
+        .and("have.text", "gpmamprolyx")
 
       cy.get("[data-cy=data-product]")
         .first()
-        .get("[data-cy=doi-link]")
+        .find("[data-cy=doi-link]")
         .should("exist")
     })
   })
