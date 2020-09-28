@@ -104,6 +104,7 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
         countDeployments={campaign.countDeployments}
         countCollectionPeriods={collectionPeriods.length}
         countDataProducts={dois.length}
+        logo={campaign.logo}
       />
       <InpageNav
         shortname={campaign.shortname}
