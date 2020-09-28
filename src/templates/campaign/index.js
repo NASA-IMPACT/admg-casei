@@ -102,7 +102,7 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
         longname={campaign.longname}
         focusListing={campaign.focus.map(x => x.shortname).join(", ")}
         countDeployments={campaign.countDeployments}
-        countCollectionPeriods={collectionPeriods.length}
+        countCollectionPeriods={campaign.countCollectionPeriods}
         countDataProducts={dois.length}
       />
       <InpageNav
