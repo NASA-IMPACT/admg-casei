@@ -274,5 +274,10 @@ export const instrumentDetailFields = graphql`
     fundingSource: funding_source
     leadInvestigator: lead_investigator
     technicalContact: technical_contact
+    overviewPublication: overview_publication
+    repositories {
+      id
+      longname: long_name
+    }
   }
 `

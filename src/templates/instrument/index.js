@@ -69,7 +69,6 @@ export const query = graphql`
       ...instrumentHeroFields
       ...instrumentDetailFields
       ...instrumentEntitiesFields
-      ...instrumentResourcesFields
     }
   }
 `
