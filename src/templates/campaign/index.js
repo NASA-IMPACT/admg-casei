@@ -51,6 +51,7 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
       component: PlatformSection,
       props: {
         platforms: campaign.platforms,
+        instruments: campaign.instruments,
       },
     },
     timeline: {
@@ -180,6 +181,11 @@ CampaignTemplate.propTypes = {
               shortname: PropTypes.string.isRequired,
             }).isRequired
           ).isRequired,
+        }).isRequired
+      ).isRequired,
+      instruments: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string.isRequired,
         }).isRequired
       ).isRequired,
       deployments: PropTypes.arrayOf(
