@@ -6,13 +6,14 @@ import Layout, { PageBody } from "../../components/layout"
 import CampaignHero from "./hero"
 import InpageNav from "../../components/inpage-nav"
 import OverviewSection from "./overview-section"
-import TimelineSection from "./timeline-section"
-import PlatformSection from "./platform-section"
-import ProgramInfoSection from "./program-info-section"
 import FocusSection from "./focus-section"
+import PlatformSection from "./platform-section"
+import TimelineSection from "./timeline-section"
+import DataSection from "./data-section"
+import ProgramInfoSection from "./program-info-section"
 import MaintenanceSection from "../../components/maintenance-section"
 
-const CampaignTemplate = ({ data: { campaign }, path }) => {
+const CampaignTemplate = ({ data: { campaign, allDoi }, path }) => {
   const [isClient, setIsClient] = useState(false)
   useEffect(() => {
     // useEffect only runs client-side after rehyration
@@ -59,6 +60,13 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
       component: TimelineSection,
       props: {
         deployments: campaign.deployments,
+      },
+    },
+    data: {
+      nav: "Data",
+      component: DataSection,
+      props: {
+        dois: allDoi.nodes,
       },
     },
     "program-info": {
@@ -123,6 +131,13 @@ export const query = graphql`
       ...deploymentFields
       ...fundingFields
       uuid
+    }
+    allDoi {
+      nodes {
+        id
+        shortname: short_name
+        longname: long_name
+      }
     }
   }
 `
@@ -223,6 +238,17 @@ CampaignTemplate.propTypes = {
       partnerWebsite: PropTypes.string,
       uuid: PropTypes.string.isRequired,
     }).isRequired,
+    allDoi: PropTypes.shape(
+      {
+        nodes: PropTypes.arrayOf(
+          PropTypes.shape({
+            id: PropTypes.string.isRequired,
+            shortname: PropTypes.string.isRequired,
+            longname: PropTypes.string.isRequired,
+          }).isRequired
+        ).isRequired,
+      }.isRequired
+    ),
   }).isRequired,
   path: PropTypes.string.isRequired,
 }

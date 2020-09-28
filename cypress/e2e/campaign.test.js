@@ -44,12 +44,12 @@ describe("Campaign", () => {
       cy.get("main").find("nav").should("exist")
     })
 
-    it("has 6 items", () => {
+    it("has 7 items", () => {
       cy.get("main")
         .find("nav")
         .find("a")
         .should($anchor => {
-          expect($anchor, "6 items").to.have.length(6)
+          expect($anchor, "7 items").to.have.length(7)
           expect($anchor.eq(0), "first item").to.exist
           expect($anchor.eq(1), "second item").to.contain("Overview")
           expect($anchor.eq(2), "third item").to.contain("Focus")
@@ -57,7 +57,8 @@ describe("Campaign", () => {
             "Platforms & Instruments"
           )
           expect($anchor.eq(4), "fifth item").to.contain("Timeline")
-          expect($anchor.eq(5), "sixth item").to.contain("Program Info")
+          expect($anchor.eq(5), "sixth item").to.contain("Data")
+          expect($anchor.eq(6), "seventh item").to.contain("Program Info")
         })
     })
 
@@ -69,10 +70,7 @@ describe("Campaign", () => {
           cy.url().should("include", id)
 
           // TODO: figure out how to properly test the inpage scroll
-          // cy.get("main")
-          //   .find(`[data-cy=${id}-section]`)
-          //   .find("h2")
-          //   .should("be.inViewport")
+          cy.get(`[data-cy=${id}-section]`).find("h2").should("be.inViewport")
         }
       )
     })
@@ -245,6 +243,36 @@ describe("Campaign", () => {
         .should($div => {
           expect($div, "2 instruments").to.have.length(2)
         })
+    })
+  })
+
+  describe("the data section", () => {
+    it("exists", () => {
+      cy.get("[data-cy=data-section]").should("exist")
+    })
+
+    it("has a heading", () => {
+      cy.get("[data-cy=data-section]")
+        .find("h2")
+        .should("have.text", "Data Products")
+    })
+
+    it("displays some data products", () => {
+      cy.get("[data-cy=data-product]").should($div => {
+        expect($div).length.to.be.greaterThan(5)
+      })
+    })
+
+    it("each data product has a label and a doi", () => {
+      cy.get("[data-cy=data-product]")
+        .first()
+        .get("[data-cy=doi-label]")
+        .should("exist")
+
+      cy.get("[data-cy=data-product]")
+        .first()
+        .get("[data-cy=doi-link]")
+        .should("exist")
     })
   })
 

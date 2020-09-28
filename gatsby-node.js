@@ -78,6 +78,7 @@ exports.sourceNodes = async ({ actions, createContentDigest }) => {
     const endpoints = [
       "campaign",
       "deployment",
+      "doi",
       "focus_area",
       "gcmd_phenomena",
       "geographical_region",
