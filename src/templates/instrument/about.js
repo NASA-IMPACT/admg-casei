@@ -139,9 +139,8 @@ export default function About({
   overviewPublication,
   repositories,
 }) {
-  const links = onlineInformation
-    ? onlineInformation.replaceAll(",", "").split("\n")
-    : null
+  const links = onlineInformation ? onlineInformation.split("\n") : null
+
   return (
     <SectionBlock id={id}>
       <SectionHeader headline="Instrument Details" id={id} />
@@ -197,19 +196,21 @@ export default function About({
               title: "Online Information",
               content: onlineInformation ? (
                 <ul style={{ margin: `0` }}>
-                  {links.map(link => (
-                    <li key={link} style={{ listStyle: `none` }}>
-                      {isUrl(link) ? (
-                        <ExternalLink
-                          label={link}
-                          url={link}
-                          id="online-information"
-                        />
-                      ) : (
-                        <p className="placeholder">{link}</p> // fallback for invalid url
-                      )}
-                    </li>
-                  ))}
+                  {links
+                    .map(link => link.replace(",", ""))
+                    .map(link => (
+                      <li key={link} style={{ listStyle: `none` }}>
+                        {isUrl(link) ? (
+                          <ExternalLink
+                            label={link}
+                            url={link}
+                            id="online-information"
+                          />
+                        ) : (
+                          <p className="placeholder">{link}</p> // fallback for invalid url
+                        )}
+                      </li>
+                    ))}
                 </ul>
               ) : (
                 "N/A"
