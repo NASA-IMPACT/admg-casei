@@ -635,17 +635,8 @@ exports[`Campaigns page renders correctly 1`] = `
                 >
                   <img
                     alt="CARVE logo"
-                    fixed={
-                      Object {
-                        "src": "/static/3dec137acafa7ac0c3a74368b2cb56b3/9dd03/carve_logo_update.jpg",
-                      }
-                    }
-                    src="test-image.png"
-                    style={
-                      Object {
-                        "margin": "0",
-                      }
-                    }
+                    height="85"
+                    src="test-file-stub"
                   />
                 </div>
                 <big
@@ -705,7 +696,7 @@ exports[`Campaigns page renders correctly 1`] = `
                 >
                    · 
                   <strong>
-                    0
+                    4
                   </strong>
                    
                   Data Product
@@ -811,7 +802,9 @@ exports[`Campaigns page renders correctly 1`] = `
                   }
                 >
                    · 
-                  <strong />
+                  <strong>
+                    0
+                  </strong>
                    
                   Data Product
                   s
@@ -848,8 +841,17 @@ exports[`Campaigns page renders correctly 1`] = `
                 >
                   <img
                     alt="ARCTAS logo"
-                    height="85"
-                    src="test-file-stub"
+                    fixed={
+                      Object {
+                        "src": "/static/2bd234de67183d020fabe8584d7713ff/9dd03/arctas_spring.jpg",
+                      }
+                    }
+                    src="test-image.png"
+                    style={
+                      Object {
+                        "margin": "0",
+                      }
+                    }
                   />
                 </div>
                 <big

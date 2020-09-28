@@ -21,7 +21,31 @@
         "region": "Florida Everglades",
         "deployments": [
           {
-            "id": "e6e65f44-a3e6-4ad5-99db-167a2c7b27af"
+            "id": "e6e65f44-a3e6-4ad5-99db-167a2c7b27af",
+            "collectionPeriods": [
+              {
+                "dois": [
+                  {
+                    "id": "2a4eeb7e-3aed-4e0c-908b-18559cf94d21"
+                  },
+                  {
+                    "id": "09fa7d41-3bd4-4fbe-a06a-da761de12f59"
+                  }
+                ]
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ]
           }
         ],
         "countDataProducts": 0
@@ -46,106 +70,480 @@
         "region": "North America",
         "deployments": [
           {
-            "id": "e2cf75e3-45c3-4cf4-9223-017ceeb97c7c"
+            "id": "e2cf75e3-45c3-4cf4-9223-017ceeb97c7c",
+            "collectionPeriods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ]
           },
           {
-            "id": "8f4614ba-3f14-4b35-81bf-0f5261d62a2d"
+            "id": "8f4614ba-3f14-4b35-81bf-0f5261d62a2d",
+            "collectionPeriods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ]
           },
           {
-            "id": "715a1591-5539-4680-aced-31d8c11502ae"
+            "id": "715a1591-5539-4680-aced-31d8c11502ae",
+            "collectionPeriods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ]
           },
           {
-            "id": "f81db555-a65f-42e4-92a6-9f21d63e9eb7"
+            "id": "f81db555-a65f-42e4-92a6-9f21d63e9eb7",
+            "collectionPeriods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ]
           },
           {
-            "id": "c5e9bace-0fc4-49f3-9e8e-f48cc7b4abb5"
+            "id": "c5e9bace-0fc4-49f3-9e8e-f48cc7b4abb5",
+            "collectionPeriods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ]
           },
           {
-            "id": "52dd3846-2ed6-4ba0-b213-7e0608c5752a"
+            "id": "52dd3846-2ed6-4ba0-b213-7e0608c5752a",
+            "collectionPeriods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ]
           },
           {
-            "id": "3204a519-b70d-4302-83e5-8dd1392c693b"
+            "id": "3204a519-b70d-4302-83e5-8dd1392c693b",
+            "collectionPeriods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ]
           },
           {
-            "id": "a899997c-397f-456a-953b-374ca35109df"
+            "id": "a899997c-397f-456a-953b-374ca35109df",
+            "collectionPeriods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ]
           },
           {
-            "id": "e85810b4-e8fe-47fa-9c04-e8263ddc87a4"
+            "id": "e85810b4-e8fe-47fa-9c04-e8263ddc87a4",
+            "collectionPeriods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ]
           },
           {
-            "id": "6ce1e9e8-f1ab-4a0d-aa10-545a3a7ff95b"
+            "id": "6ce1e9e8-f1ab-4a0d-aa10-545a3a7ff95b",
+            "collectionPeriods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ]
           },
           {
-            "id": "cfb057a7-837b-4de1-ad5b-82b04b6a8850"
+            "id": "cfb057a7-837b-4de1-ad5b-82b04b6a8850",
+            "collectionPeriods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ]
           },
           {
-            "id": "30181d09-844d-42f4-9386-0297a3e7b250"
+            "id": "30181d09-844d-42f4-9386-0297a3e7b250",
+            "collectionPeriods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ]
           },
           {
-            "id": "79b8e8cd-36f0-41c5-85d4-70b648c208b6"
+            "id": "79b8e8cd-36f0-41c5-85d4-70b648c208b6",
+            "collectionPeriods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ]
           },
           {
-            "id": "065ec451-ad99-4821-9f52-a7eb7d8cc1a3"
+            "id": "065ec451-ad99-4821-9f52-a7eb7d8cc1a3",
+            "collectionPeriods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ]
           },
           {
-            "id": "215a0931-e502-4f01-a312-5b86ebd81f83"
+            "id": "215a0931-e502-4f01-a312-5b86ebd81f83",
+            "collectionPeriods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ]
           },
           {
-            "id": "1000d601-c308-4769-acfd-8b044f01322a"
+            "id": "1000d601-c308-4769-acfd-8b044f01322a",
+            "collectionPeriods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ]
           },
           {
-            "id": "3ec061ea-b93e-4797-a472-d99d4e06f770"
+            "id": "3ec061ea-b93e-4797-a472-d99d4e06f770",
+            "collectionPeriods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ]
           },
           {
-            "id": "7e303985-5799-44a2-b9db-d5e1584aeb28"
+            "id": "7e303985-5799-44a2-b9db-d5e1584aeb28",
+            "collectionPeriods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ]
           },
           {
-            "id": "73b1d9dd-73dd-488b-98e0-429f2694a69e"
+            "id": "73b1d9dd-73dd-488b-98e0-429f2694a69e",
+            "collectionPeriods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ]
           },
           {
-            "id": "d23eae66-15c9-40b5-8dbe-acd1b7372cf0"
+            "id": "d23eae66-15c9-40b5-8dbe-acd1b7372cf0",
+            "collectionPeriods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ]
           },
           {
-            "id": "408ed306-89cb-4451-ae60-da4088ffa9a4"
+            "id": "408ed306-89cb-4451-ae60-da4088ffa9a4",
+            "collectionPeriods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ]
           },
           {
-            "id": "94ae469e-bfef-4ac1-8190-cdd65bfa9cb4"
+            "id": "94ae469e-bfef-4ac1-8190-cdd65bfa9cb4",
+            "collectionPeriods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ]
           },
           {
-            "id": "71a90032-6149-4719-bae0-135d52a2acce"
+            "id": "71a90032-6149-4719-bae0-135d52a2acce",
+            "collectionPeriods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ]
           },
           {
-            "id": "11e8f9bb-6416-430b-97bd-87838c1d44a6"
+            "id": "11e8f9bb-6416-430b-97bd-87838c1d44a6",
+            "collectionPeriods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ]
           },
           {
-            "id": "8b55cb2c-ea4b-4ef8-8824-4079e0937d8f"
+            "id": "8b55cb2c-ea4b-4ef8-8824-4079e0937d8f",
+            "collectionPeriods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ]
           },
           {
-            "id": "5818dceb-b6f2-4f5c-bb22-58a2b7062c28"
+            "id": "5818dceb-b6f2-4f5c-bb22-58a2b7062c28",
+            "collectionPeriods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ]
           },
           {
-            "id": "ccd3471d-8453-4b26-88c5-bb103e9ca9d1"
+            "id": "ccd3471d-8453-4b26-88c5-bb103e9ca9d1",
+            "collectionPeriods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ]
           },
           {
-            "id": "e89cb7da-bd0a-43df-8f63-5db3a89e668e"
+            "id": "e89cb7da-bd0a-43df-8f63-5db3a89e668e",
+            "collectionPeriods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ]
           },
           {
-            "id": "cc6492f2-fa18-4d1f-ac65-41f04d39e932"
+            "id": "cc6492f2-fa18-4d1f-ac65-41f04d39e932",
+            "collectionPeriods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ]
           },
           {
-            "id": "17624350-b93d-4342-931d-f79b1187f93b"
+            "id": "17624350-b93d-4342-931d-f79b1187f93b",
+            "collectionPeriods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ]
           },
           {
-            "id": "3ab6f6df-3d92-487d-b161-0b77c69fa0d9"
+            "id": "3ab6f6df-3d92-487d-b161-0b77c69fa0d9",
+            "collectionPeriods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ]
           },
           {
-            "id": "0b9e567b-537f-486d-b21b-8d2a0d87544a"
+            "id": "0b9e567b-537f-486d-b21b-8d2a0d87544a",
+            "collectionPeriods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ]
           },
           {
-            "id": "b264cb0e-c9ee-4f32-adc1-905f2ff0c337"
+            "id": "b264cb0e-c9ee-4f32-adc1-905f2ff0c337",
+            "collectionPeriods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ]
           },
           {
-            "id": "93da11a3-e55b-4673-af4c-d9e2bd135471"
+            "id": "93da11a3-e55b-4673-af4c-d9e2bd135471",
+            "collectionPeriods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ]
           }
         ],
         "countDataProducts": 0
@@ -154,13 +552,7 @@
         "id": "03b728ae-2235-488c-80ee-570dcf602f3b",
         "logo": {
           "nasaImgAlt": "CARVE logo",
-          "nasaImg": {
-            "childImageSharp": {
-              "fixed": {
-                "src": "/static/3dec137acafa7ac0c3a74368b2cb56b3/9dd03/carve_logo_update.jpg"
-              }
-            }
-          }
+          "nasaImg": null
         },
         "ongoing": false,
         "shortname": "CARVE",
@@ -170,16 +562,64 @@
         "region": "Alaska",
         "deployments": [
           {
-            "id": "d94bc68f-21f1-4353-9c0d-c3711a457025"
+            "id": "d94bc68f-21f1-4353-9c0d-c3711a457025",
+            "collectionPeriods": [
+              {
+                "dois": [
+                  {
+                    "id": "31545c67-4d00-4cfa-9f1d-b1c7a4aa9119"
+                  }
+                ]
+              },
+              {
+                "dois": []
+              }
+            ]
           },
           {
-            "id": "6c5dda3a-e09b-4b07-980a-8a89abdde249"
+            "id": "6c5dda3a-e09b-4b07-980a-8a89abdde249",
+            "collectionPeriods": [
+              {
+                "dois": [
+                  {
+                    "id": "31545c67-4d00-4cfa-9f1d-b1c7a4aa9119"
+                  }
+                ]
+              },
+              {
+                "dois": []
+              }
+            ]
           },
           {
-            "id": "b028f92c-df6d-460b-a7d9-1680acb98e0e"
+            "id": "b028f92c-df6d-460b-a7d9-1680acb98e0e",
+            "collectionPeriods": [
+              {
+                "dois": [
+                  {
+                    "id": "31545c67-4d00-4cfa-9f1d-b1c7a4aa9119"
+                  }
+                ]
+              },
+              {
+                "dois": []
+              }
+            ]
           },
           {
-            "id": "103912fc-1761-4ed2-b8ff-fca2226579c2"
+            "id": "103912fc-1761-4ed2-b8ff-fca2226579c2",
+            "collectionPeriods": [
+              {
+                "dois": [
+                  {
+                    "id": "31545c67-4d00-4cfa-9f1d-b1c7a4aa9119"
+                  }
+                ]
+              },
+              {
+                "dois": []
+              }
+            ]
           }
         ],
         "countDataProducts": 0
@@ -204,7 +644,24 @@
         "region": "Northeastern Colorado, West Texas to Central Oklahoma, Northern Alabama",
         "deployments": [
           {
-            "id": "4025e078-74c9-4ec8-b697-af9132425c8e"
+            "id": "4025e078-74c9-4ec8-b697-af9132425c8e",
+            "collectionPeriods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ]
           }
         ],
         "countDataProducts": null
@@ -229,7 +686,22 @@
         "region": "Ontario, Canada and northern portions of the United States (e.g., New York state, the New England area, etc.)",
         "deployments": [
           {
-            "id": "1bac4b0f-de68-4c6b-a9bc-a084873b0f7d"
+            "id": "1bac4b0f-de68-4c6b-a9bc-a084873b0f7d",
+            "collectionPeriods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": [
+                  {
+                    "id": "db70d319-5748-4a56-82b5-0c06eb2e051f"
+                  }
+                ]
+              },
+              {
+                "dois": []
+              }
+            ]
           }
         ],
         "countDataProducts": 0
@@ -248,7 +720,37 @@
         "region": "Continental United States",
         "deployments": [
           {
-            "id": "d69fb349-0147-418a-8e26-1414fc7ddc14"
+            "id": "d69fb349-0147-418a-8e26-1414fc7ddc14",
+            "collectionPeriods": [
+              {
+                "dois": [
+                  {
+                    "id": "bf0bc73b-8e30-4fdd-a675-6bdee8a00e06"
+                  },
+                  {
+                    "id": "15ed76ef-319b-40e4-a538-d9bb8e8b1dc2"
+                  },
+                  {
+                    "id": "3c4453ae-14a0-4892-8dfe-29265e304a87"
+                  },
+                  {
+                    "id": "160c35df-2248-469e-806b-af081c850ef7"
+                  },
+                  {
+                    "id": "06698604-c930-4beb-a918-a6285606b126"
+                  },
+                  {
+                    "id": "d2b37379-2d21-4411-8f11-92b7213753f6"
+                  },
+                  {
+                    "id": "85511d62-04bd-4e5b-8fdb-691f8ec22016"
+                  }
+                ]
+              },
+              {
+                "dois": []
+              }
+            ]
           }
         ],
         "countDataProducts": 0
@@ -273,7 +775,18 @@
         "region": "Tropical Atlantic, Gulf of Mexico, Eastern North Pacific, Caribbean Sea",
         "deployments": [
           {
-            "id": "4183334c-70e1-4e4c-b1a6-391a6113863d"
+            "id": "4183334c-70e1-4e4c-b1a6-391a6113863d",
+            "collectionPeriods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ]
           }
         ],
         "countDataProducts": 0
@@ -298,13 +811,40 @@
         "region": "Subtropical Atlantic Ocean and Gulf of Mexico",
         "deployments": [
           {
-            "id": "3a09cded-e13e-41fc-915c-0b9aec4bcbc1"
+            "id": "3a09cded-e13e-41fc-915c-0b9aec4bcbc1",
+            "collectionPeriods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ]
           },
           {
-            "id": "7f6e122d-7161-4c64-a37d-943131688cee"
+            "id": "7f6e122d-7161-4c64-a37d-943131688cee",
+            "collectionPeriods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ]
           },
           {
-            "id": "8726699a-a04c-4835-93b4-bf7918c79346"
+            "id": "8726699a-a04c-4835-93b4-bf7918c79346",
+            "collectionPeriods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ]
           }
         ],
         "countDataProducts": 0
@@ -329,7 +869,57 @@
         "region": "Olympic Peninsula in U.S. Washington State",
         "deployments": [
           {
-            "id": "6ad85c46-93e9-4f20-b3e9-b719ceb75068"
+            "id": "6ad85c46-93e9-4f20-b3e9-b719ceb75068",
+            "collectionPeriods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": [
+                  {
+                    "id": "2284a7cb-a7ca-4b16-8376-1205ed375833"
+                  },
+                  {
+                    "id": "9dcc6960-5bbf-44ef-a965-6c123e887698"
+                  },
+                  {
+                    "id": "deea0d27-234a-4b62-93a0-a00a6e9a002d"
+                  },
+                  {
+                    "id": "342de33a-123d-4444-a3d7-8f147a0c1f98"
+                  }
+                ]
+              },
+              {
+                "dois": [
+                  {
+                    "id": "66e4af67-f737-450d-bee6-d9381bf1ee5d"
+                  },
+                  {
+                    "id": "58128bf1-e8fa-4c67-b9b8-c107a9fd9a67"
+                  },
+                  {
+                    "id": "add15270-d876-4d16-8be0-04b589a41e6c"
+                  }
+                ]
+              },
+              {
+                "dois": [
+                  {
+                    "id": "e30545ab-29d4-4300-af0c-a7d8d27fcd85"
+                  },
+                  {
+                    "id": "9234dff2-e7b6-4720-8706-6d33f89a330f"
+                  }
+                ]
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ]
           }
         ],
         "countDataProducts": 0
@@ -338,7 +928,13 @@
         "id": "e48c2d79-822b-4c9e-9f72-2776d5d1eac6",
         "logo": {
           "nasaImgAlt": "ARCTAS logo",
-          "nasaImg": null
+          "nasaImg": {
+            "childImageSharp": {
+              "fixed": {
+                "src": "/static/2bd234de67183d020fabe8584d7713ff/9dd03/arctas_spring.jpg"
+              }
+            }
+          }
         },
         "ongoing": false,
         "shortname": "ARCTAS",
@@ -348,13 +944,52 @@
         "region": "Alaska, Western Canada, California",
         "deployments": [
           {
-            "id": "e71e8fbd-9f1a-4b91-9187-4b71109c25ff"
+            "id": "e71e8fbd-9f1a-4b91-9187-4b71109c25ff",
+            "collectionPeriods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ]
           },
           {
-            "id": "2de3c9cf-bff5-4d87-ab03-2b9690ec10c8"
+            "id": "2de3c9cf-bff5-4d87-ab03-2b9690ec10c8",
+            "collectionPeriods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ]
           },
           {
-            "id": "683bfce3-f70e-49fa-8f87-74151327db19"
+            "id": "683bfce3-f70e-49fa-8f87-74151327db19",
+            "collectionPeriods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ]
           }
         ],
         "countDataProducts": 0
