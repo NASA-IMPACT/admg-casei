@@ -6,10 +6,11 @@ import Layout, { PageBody } from "../../components/layout"
 import CampaignHero from "./hero"
 import InpageNav from "../../components/inpage-nav"
 import OverviewSection from "./overview-section"
-import TimelineSection from "./timeline-section"
-import PlatformSection from "./platform-section"
-import ProgramInfoSection from "./program-info-section"
 import FocusSection from "./focus-section"
+import PlatformSection from "./platform-section"
+import TimelineSection from "./timeline-section"
+import DataSection from "./data-section"
+import ProgramInfoSection from "./program-info-section"
 import MaintenanceSection from "../../components/maintenance-section"
 
 const CampaignTemplate = ({ data: { campaign }, path }) => {
@@ -18,6 +19,11 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
     // useEffect only runs client-side after rehyration
     setIsClient(true)
   }, [])
+
+  const collectionPeriods = campaign.deployments
+    .map(d => d.collectionPeriods)
+    .flat()
+  const dois = collectionPeriods.map(c => c.dois).flat()
 
   const sections = {
     overview: {
@@ -61,6 +67,13 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
         deployments: campaign.deployments,
       },
     },
+    data: {
+      nav: "Data",
+      component: DataSection,
+      props: {
+        dois,
+      },
+    },
     "program-info": {
       nav: "Program Info",
       component: ProgramInfoSection,
@@ -89,8 +102,8 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
         longname={campaign.longname}
         focusListing={campaign.focus.map(x => x.shortname).join(", ")}
         countDeployments={campaign.countDeployments}
-        countCollectionPeriods={campaign.countCollectionPeriods}
-        countDataProducts={campaign.countDataProducts}
+        countCollectionPeriods={collectionPeriods.length}
+        countDataProducts={dois.length}
       />
       <InpageNav
         shortname={campaign.shortname}
@@ -121,6 +134,7 @@ export const query = graphql`
       ...focusFields
       ...platformFields
       ...deploymentFields
+      ...dataFields
       ...fundingFields
       uuid
     }
@@ -200,6 +214,17 @@ CampaignTemplate.propTypes = {
               longname: PropTypes.string.isRequired,
               end: PropTypes.string.isRequired,
               start: PropTypes.string.isRequired,
+              collection_periods: PropTypes.shape(
+                {
+                  dois: PropTypes.arrayOf(
+                    PropTypes.shape({
+                      id: PropTypes.string.isRequired,
+                      shortname: PropTypes.string.isRequired,
+                      longname: PropTypes.string.isRequired,
+                    }).isRequired
+                  ).isRequired,
+                }.isRequired
+              ),
             })
           ),
         })
