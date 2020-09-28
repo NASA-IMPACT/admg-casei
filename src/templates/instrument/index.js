@@ -26,6 +26,7 @@ const InstrumentTemplate = ({ data: { instrument }, path }) => {
         fundingSource: instrument.fundingSource,
         leadInvestigator: instrument.leadInvestigator,
         technicalContact: instrument.technicalContact,
+        onlineInformation: instrument.onlineInformation,
         overviewPublication: instrument.overviewPublication,
         repositories: instrument.repositories,
       },
@@ -111,6 +112,7 @@ InstrumentTemplate.propTypes = {
       fundingSource: PropTypes.string,
       leadInvestigator: PropTypes.string,
       technicalContact: PropTypes.string,
+      onlineInformation: PropTypes.string,
       overviewPublication: PropTypes.string,
       repositories: PropTypes.arrayOf(
         PropTypes.shape({

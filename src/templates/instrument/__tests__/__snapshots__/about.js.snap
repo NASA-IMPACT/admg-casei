@@ -136,6 +136,14 @@ exports[`About Section displays content 1`] = `
             test
           </a>
         </dd>
+        <dt>
+          <label>
+            Online Information
+          </label>
+        </dt>
+        <dd>
+          N/A
+        </dd>
       </dl>
     </section>
   </div>
@@ -280,6 +288,18 @@ exports[`About Section displays content 1`] = `
           }
         >
           Data Locations
+        </label>
+        <label
+          data-cy="repositories-label"
+          style={
+            Object {
+              "borderBottom": "none",
+              "color": "#9E9E9E",
+              "display": "block",
+            }
+          }
+        >
+          Repositories:
         </label>
         <ul
           style={

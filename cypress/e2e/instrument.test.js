@@ -57,7 +57,7 @@ describe("Instrument", () => {
       cy.get("[data-cy=instrument-definition-list]")
         .find("dt")
         .should($dt => {
-          expect($dt, "7 items").to.have.length(7)
+          expect($dt, "8 items").to.have.length(8)
         })
     })
 

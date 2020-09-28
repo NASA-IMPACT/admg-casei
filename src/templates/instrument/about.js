@@ -83,6 +83,9 @@ function Background({
             id="overview-publication"
           />
         )}
+        <Label id="repositories">
+          {repositories.length === 1 ? "Repository:" : "Repositories:"}
+        </Label>
         {repositories.length > 0 ? (
           <ul style={{ margin: `0` }}>
             {repositories.map(repository => (
@@ -132,9 +135,13 @@ export default function About({
   fundingSource,
   leadInvestigator,
   technicalContact,
+  onlineInformation,
   overviewPublication,
   repositories,
 }) {
+  const links = onlineInformation
+    ? onlineInformation.replaceAll(",", "").split("\n")
+    : null
   return (
     <SectionBlock id={id}>
       <SectionHeader headline="Instrument Details" id={id} />
@@ -186,6 +193,28 @@ export default function About({
                 "N/A"
               ),
             },
+            {
+              title: "Online Information",
+              content: onlineInformation ? (
+                <ul style={{ margin: `0` }}>
+                  {links.map(link => (
+                    <li key={link} style={{ listStyle: `none` }}>
+                      {isUrl(link) ? (
+                        <ExternalLink
+                          label={link}
+                          url={link}
+                          id="online-information"
+                        />
+                      ) : (
+                        <p className="placeholder">{link}</p> // fallback for invalid url
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                "N/A"
+              ),
+            },
           ]}
         />
       </SectionContent>
@@ -196,6 +225,7 @@ export default function About({
           fundingSource={fundingSource}
           leadInvestigator={leadInvestigator}
           technicalContact={technicalContact}
+          onlineInformation={onlineInformation}
           overviewPublication={overviewPublication}
           repositories={repositories}
         />
@@ -237,6 +267,7 @@ About.propTypes = {
   fundingSource: PropTypes.string,
   leadInvestigator: PropTypes.string,
   technicalContact: PropTypes.string,
+  onlineInformation: PropTypes.string,
   overviewPublication: PropTypes.string,
   repositories: PropTypes.arrayOf(
     PropTypes.shape({
@@ -274,6 +305,7 @@ export const instrumentDetailFields = graphql`
     fundingSource: funding_source
     leadInvestigator: lead_investigator
     technicalContact: technical_contact
+    onlineInformation: online_information
     overviewPublication: overview_publication
     repositories {
       id
