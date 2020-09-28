@@ -16,14 +16,25 @@ describe("Accessibility tests", () => {
     cy.get("nav")
       .findByText(/Explore/i)
       .click()
-      .checkA11y()
+
+    cy.get("h1").should("exist")
+    cy.checkA11y()
   })
 
   it("Navigates to page for a /campaign and checks for accessibility violations", () => {
     cy.get("nav")
       .findByText(/Explore/i)
       .click()
-    cy.get("[data-cy=explore-card]").first().click().checkA11y()
+
+    cy.get("[data-cy=tabbar]")
+      .findByText(/Campaigns/i)
+      .click()
+
+    cy.get("[data-cy=explore-card]").first().should("exist")
+    cy.get("[data-cy=explore-card]").first().click()
+
+    cy.get("h1").should("exist")
+    cy.checkA11y()
   })
 
   it("Navigates to page for a /platform and checks for accessibility violations", () => {
@@ -36,8 +47,10 @@ describe("Accessibility tests", () => {
       .click()
 
     cy.get("[data-cy=explore-card]").first().should("exist")
+    cy.get("[data-cy=explore-card]").first().click()
 
-    cy.get("[data-cy=explore-card]").first().click().checkA11y()
+    cy.get("h1").should("exist")
+    cy.checkA11y()
   })
 
   it("Navigates to page for a /instrument and checks for accessibility violations", () => {
@@ -49,29 +62,35 @@ describe("Accessibility tests", () => {
       .findByText(/Instruments/i)
       .click()
 
-    cy.get("[data-cy=explore-card]")
-      .should("exist")
-      .first()
-      .should("exist")
-      .click()
-      .checkA11y()
+    cy.get("[data-cy=explore-card]").first().should("exist")
+    cy.get("[data-cy=explore-card]").first().click()
+
+    cy.get("h1").should("exist")
+    cy.checkA11y()
   })
 
   it("Navigates to page /glossary and checks for accessibility violations", () => {
     cy.get("nav")
       .findByText(/Glossary/i)
       .click()
-      .checkA11y()
+
+    cy.get("h1").should("exist")
+    cy.checkA11y()
   })
 
   it("Navigates to page /about and checks for accessibility violations", () => {
-    cy.get("nav").findByText(/About/i).click().checkA11y()
+    cy.get("nav").findByText(/About/i).click()
+
+    cy.get("h1").should("exist")
+    cy.checkA11y()
   })
 
   it("Navigates to page /contact and checks for accessibility violations", () => {
     cy.get("nav")
       .findByText(/Contact/i)
       .click()
-      .checkA11y()
+
+    cy.get("h1").should("exist")
+    cy.checkA11y()
   })
 })
