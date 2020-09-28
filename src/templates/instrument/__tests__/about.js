@@ -1,7 +1,7 @@
 import React from "react"
 import { create } from "react-test-renderer"
 
-import About from "./about"
+import About from "../about"
 
 const instrumentTypes = [
   {
