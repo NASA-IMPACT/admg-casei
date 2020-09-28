@@ -49,9 +49,12 @@ describe("Accessibility tests", () => {
       .findByText(/Instruments/i)
       .click()
 
-    cy.get("[data-cy=explore-card]").first().should("exist")
-
-    cy.get("[data-cy=explore-card]").first().click().checkA11y()
+    cy.get("[data-cy=explore-card]")
+      .should("exist")
+      .first()
+      .should("exist")
+      .click()
+      .checkA11y()
   })
 
   it("Navigates to page /glossary and checks for accessibility violations", () => {
