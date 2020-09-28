@@ -9,6 +9,27 @@ import {
   SectionContent,
 } from "../../components/section"
 import ExternalLink from "../../components/external-link"
+import { isUrl } from "../../utils/helpers"
+
+function BackgroundListItem({ id, label, children }) {
+  return (
+    <div style={{ padding: `1rem 0` }}>
+      <Label id={id} showBorder>
+        {label}
+      </Label>
+      {children}
+    </div>
+  )
+}
+
+BackgroundListItem.propTypes = {
+  id: PropTypes.string.isRequired,
+  label: PropTypes.string,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+}
+BackgroundListItem.defaultProps = {
+  children: "N/A",
+}
 
 function Background({
   instrumentDoi,
@@ -16,12 +37,25 @@ function Background({
   fundingSource,
   leadInvestigator,
   technicalContact,
-  facility,
+  overviewPublication,
+  repositories,
 }) {
   return (
     <div data-cy="instrument-background">
-      <div style={{ padding: `1rem 0` }}>
-        {instrumentDoi ? (
+      <BackgroundListItem id="lead-investigator" label="Lead Investigator">
+        {leadInvestigator}
+      </BackgroundListItem>
+      <BackgroundListItem id="technical-contact" label="Technical Contact">
+        {technicalContact}
+      </BackgroundListItem>
+      <BackgroundListItem id="instrument-manufacturer" label="Instrument Maker">
+        {instrumentManufacturer}
+      </BackgroundListItem>
+      <BackgroundListItem id="funding-source" label="Funding Source">
+        {fundingSource}
+      </BackgroundListItem>
+      {instrumentDoi && (
+        <div style={{ padding: `1rem 0` }}>
           <p
             style={{
               whiteSpace: `nowrap`,
@@ -36,39 +70,34 @@ function Background({
               id="instrument-doi"
             />
           </p>
-        ) : (
-          <p data-cy="doi-link">no instrument DOI available</p>
+        </div>
+      )}
+      <div style={{ padding: `1rem 0` }}>
+        <Label id="data-locations" showBorder>
+          Data Locations
+        </Label>
+        {isUrl(overviewPublication) && (
+          <ExternalLink
+            label="Overview Publication"
+            url={overviewPublication}
+            id="overview-publication"
+          />
         )}
-      </div>
-      <div style={{ padding: `1rem 0` }}>
-        <Label id={"instrument-manufacturer"} showBorder>
-          Maker of Instrument
-        </Label>
-        {instrumentManufacturer || "N/A"}
-      </div>
-      <div style={{ padding: `1rem 0` }}>
-        <Label id={"funding-source"} showBorder>
-          Funding Source
-        </Label>
-        {fundingSource || "N/A"}
-      </div>
-      <div style={{ padding: `1rem 0` }}>
-        <Label id={"lead-investigator"} showBorder>
-          Lead Investigator
-        </Label>
-        {leadInvestigator || "N/A"}
-      </div>
-      <div style={{ padding: `1rem 0` }}>
-        <Label id={"technical-contact"} showBorder>
-          Technical Contact
-        </Label>
-        {technicalContact || "N/A"}
-      </div>
-      <div style={{ padding: `1rem 0` }}>
-        <Label id={"facility"} showBorder>
-          Facility
-        </Label>
-        {facility || "N/A"}
+        {repositories.length > 0 ? (
+          <ul style={{ margin: `0` }}>
+            {repositories.map(repository => (
+              <li
+                style={{ listStyle: `none`, paddingBottom: `4px` }}
+                key={repository.id}
+                data-cy="repository"
+              >
+                <p>{repository.longname}</p>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p>No repository available</p>
+        )}
       </div>
     </div>
   )
@@ -80,7 +109,13 @@ Background.propTypes = {
   fundingSource: PropTypes.string,
   leadInvestigator: PropTypes.string,
   technicalContact: PropTypes.string,
-  facility: PropTypes.string,
+  overviewPublication: PropTypes.string,
+  repositories: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      longname: PropTypes.string,
+    })
+  ),
 }
 
 export default function About({
@@ -92,59 +127,27 @@ export default function About({
   calibration,
   measurementRegions,
   gcmdPhenomenas,
-  instrumentId,
   instrumentDoi,
   instrumentManufacturer,
   fundingSource,
   leadInvestigator,
   technicalContact,
-  facility,
+  overviewPublication,
+  repositories,
 }) {
   return (
     <SectionBlock id={id}>
-      <SectionHeader headline="About the Instrument" id={id} />
+      <SectionHeader headline="Instrument Details" id={id} />
       <SectionContent columns={[1, 8]}>
         <DefinitionList
           id="instrument"
           list={[
             {
-              title: "Type",
-              content:
-                instrumentTypes.map(x => x.longname).join(", ") ||
-                "unavailable",
+              title: "Instrument Type",
+              content: instrumentTypes.map(x => x.longname).join(", ") || "N/A",
             },
             {
-              title: "Radiometric Frequency of Measurement",
-              content: radiometricFrequency || "unavailable",
-            },
-            {
-              title: "Temporal Resolution",
-              content: temporalResolution || "unavailable",
-            },
-            {
-              title: "Spatial Resolution",
-              content: spatialResolution || "unavailable",
-            },
-            {
-              title: "Calibration Information",
-              content: calibration ? (
-                <ExternalLink
-                  label={calibration}
-                  url={calibration}
-                  id="calibration-doi"
-                />
-              ) : (
-                "unavailable"
-              ),
-            },
-            {
-              title: "Measurement Regions",
-              content:
-                measurementRegions.map(x => x.longname).join(", ") ||
-                "unavailable",
-            },
-            {
-              title: "GCMD Phenomenas",
+              title: "Measurement/Variables",
               content:
                 gcmdPhenomenas
                   .map(x =>
@@ -152,11 +155,36 @@ export default function About({
                       .filter(x => x)
                       .join(", ")
                   )
-                  .join(", ") || "unavailable",
+                  .join(", ") || "N/A",
             },
             {
-              title: "Instrument UUID",
-              content: instrumentId || "unavailable",
+              title: "Measurement Regions",
+              content:
+                measurementRegions.map(x => x.longname).join(", ") || "N/A",
+            },
+            {
+              title: "Temporal Resolution",
+              content: temporalResolution || "N/A",
+            },
+            {
+              title: "Spatial Resolution",
+              content: spatialResolution || "N/A",
+            },
+            {
+              title: "Measurement Frequency",
+              content: radiometricFrequency || "N/A",
+            },
+            {
+              title: "Calibration Details",
+              content: calibration ? (
+                <ExternalLink
+                  label={calibration}
+                  url={calibration}
+                  id="calibration-doi"
+                />
+              ) : (
+                "N/A"
+              ),
             },
           ]}
         />
@@ -168,7 +196,8 @@ export default function About({
           fundingSource={fundingSource}
           leadInvestigator={leadInvestigator}
           technicalContact={technicalContact}
-          facility={facility}
+          overviewPublication={overviewPublication}
+          repositories={repositories}
         />
       </SectionContent>
     </SectionBlock>
@@ -203,13 +232,18 @@ About.propTypes = {
       variable_3: PropTypes.string,
     }).isRequired
   ).isRequired,
-  instrumentId: PropTypes.string,
   instrumentDoi: PropTypes.string,
   instrumentManufacturer: PropTypes.string,
   fundingSource: PropTypes.string,
   leadInvestigator: PropTypes.string,
   technicalContact: PropTypes.string,
-  facility: PropTypes.string,
+  overviewPublication: PropTypes.string,
+  repositories: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      longname: PropTypes.string.isRequired,
+    })
+  ),
 }
 
 export const instrumentDetailFields = graphql`
@@ -235,12 +269,10 @@ export const instrumentDetailFields = graphql`
       variable_2
       variable_3
     }
-
     instrumentDoi: instrument_doi
     instrumentManufacturer: instrument_manufacturer
     fundingSource: funding_source
     leadInvestigator: lead_investigator
     technicalContact: technical_contact
-    facility
   }
 `
