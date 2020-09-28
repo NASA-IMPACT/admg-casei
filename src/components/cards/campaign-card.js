@@ -41,6 +41,11 @@ export default function CampaignCard(props) {
           region: region_description
           deployments {
             id
+            collectionPeriods: collection_periods {
+              dois {
+                id
+              }
+            }
           }
           countDataProducts: number_data_products
         }
@@ -50,13 +55,18 @@ export default function CampaignCard(props) {
 
   const campaign = data.allCampaign.nodes.find(x => x.id === props.id)
 
+  const collectionPeriods = campaign.deployments
+    .map(d => d.collectionPeriods)
+    .flat()
+  const dois = collectionPeriods.map(c => c.dois).flat()
+
   return (
     <Card
       image={campaign.logo}
       tag={campaign.ongoing && "Ongoing"}
       footerList={[
         { count: campaign.deployments.length, title: "Deployment" },
-        { count: campaign.countDataProducts, title: "Data Product" },
+        { count: dois.length, title: "Data Product" },
       ]}
     >
       <big
