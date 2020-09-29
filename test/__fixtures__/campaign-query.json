@@ -3,21 +3,8 @@
     "totalCount": 10,
     "list": [
       {
-        "logo": {
-          "nasaImgAlt": "logo",
-          "nasaImgUrl": "https://ghrc.nsstc.nasa.gov/home/sites/default/files/aces_logo.png#overlay-context=field-campaigns/aces",
-          "nasaImg": {
-            "childImageSharp": {
-              "fixed": {
-                "src": "/static/070840eb6299020cd65fd46e27c54400/7f3c0/aces_logo.png"
-              }
-            }
-          }
-        },
-        "ongoing": false,
-        "shortname": "ACES",
-        "longname": "Altus Cumulus Electrification Study",
         "id": "951482fa-5748-46ba-aed5-aab8b106b103",
+        "shortname": "ACES",
         "seasons": [
           {
             "id": "abde509c-8f19-4f12-af69-ed3d41ba09f9"
@@ -57,22 +44,40 @@
             "id": "6b5dac3e-cd6a-4f40-b9d8-86dc6da79131"
           }
         ],
-        "startdate": "2002-08-02",
         "enddate": "2002-08-30",
-        "region": "Florida Everglades",
         "deployments": [
           {
-            "id": "e6e65f44-a3e6-4ad5-99db-167a2c7b27af",
+            "collection_periods": [
+              {
+                "dois": [
+                  {
+                    "id": "2a4eeb7e-3aed-4e0c-908b-18559cf94d21"
+                  },
+                  {
+                    "id": "09fa7d41-3bd4-4fbe-a06a-da761de12f59"
+                  }
+                ]
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ],
             "regions": [
               {
-                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
-                "shortname": "continental"
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357"
               }
             ]
           }
         ],
-        "countCollectionPeriods": 0,
-        "countDataProducts": 0,
         "platforms": [
           {
             "id": "5f6a2a1a-2a4b-4a42-9fff-04f1c2af6f5c"
@@ -93,21 +98,8 @@
         "fundingAgency": "NASA"
       },
       {
-        "logo": {
-          "nasaImgAlt": "AirMOSS logo",
-          "nasaImgUrl": "https://airbornescience.jpl.nasa.gov/sites/default/files/airmossLogo.png",
-          "nasaImg": {
-            "childImageSharp": {
-              "fixed": {
-                "src": "/static/6cac19092a1bce4be3f0a8b6e564adb3/7f3c0/airmossLogo.png"
-              }
-            }
-          }
-        },
-        "ongoing": false,
-        "shortname": "AirMOSS",
-        "longname": "Airborne Microwave Observatory of Subcanopy and Subsurface",
         "id": "0c68f350-b544-4b52-9f46-2aceb6aa1b7d",
+        "shortname": "AirMOSS",
         "seasons": [
           {
             "id": "2e373516-e075-44c5-8fe3-a23049f2acf5"
@@ -141,319 +133,621 @@
             "id": "7d377a91-33db-43d4-ae3e-a510ec32cb0a"
           }
         ],
-        "startdate": "2012-09-18",
         "enddate": "2015-09-29",
-        "region": "North America",
         "deployments": [
           {
-            "id": "e2cf75e3-45c3-4cf4-9223-017ceeb97c7c",
+            "collection_periods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ],
             "regions": [
               {
-                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
-                "shortname": "continental"
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357"
               }
             ]
           },
           {
-            "id": "8f4614ba-3f14-4b35-81bf-0f5261d62a2d",
+            "collection_periods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ],
             "regions": [
               {
-                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
-                "shortname": "continental"
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357"
               }
             ]
           },
           {
-            "id": "715a1591-5539-4680-aced-31d8c11502ae",
+            "collection_periods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ],
             "regions": [
               {
-                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
-                "shortname": "continental"
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357"
               }
             ]
           },
           {
-            "id": "f81db555-a65f-42e4-92a6-9f21d63e9eb7",
+            "collection_periods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ],
             "regions": [
               {
-                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
-                "shortname": "continental"
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357"
               }
             ]
           },
           {
-            "id": "c5e9bace-0fc4-49f3-9e8e-f48cc7b4abb5",
+            "collection_periods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ],
             "regions": [
               {
-                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
-                "shortname": "continental"
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357"
               }
             ]
           },
           {
-            "id": "52dd3846-2ed6-4ba0-b213-7e0608c5752a",
+            "collection_periods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ],
             "regions": [
               {
-                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
-                "shortname": "continental"
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357"
               }
             ]
           },
           {
-            "id": "3204a519-b70d-4302-83e5-8dd1392c693b",
+            "collection_periods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ],
             "regions": [
               {
-                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
-                "shortname": "continental"
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357"
               }
             ]
           },
           {
-            "id": "a899997c-397f-456a-953b-374ca35109df",
+            "collection_periods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ],
             "regions": [
               {
-                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
-                "shortname": "continental"
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357"
               }
             ]
           },
           {
-            "id": "e85810b4-e8fe-47fa-9c04-e8263ddc87a4",
+            "collection_periods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ],
             "regions": [
               {
-                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
-                "shortname": "continental"
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357"
               }
             ]
           },
           {
-            "id": "6ce1e9e8-f1ab-4a0d-aa10-545a3a7ff95b",
+            "collection_periods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ],
             "regions": [
               {
-                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
-                "shortname": "continental"
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357"
               }
             ]
           },
           {
-            "id": "cfb057a7-837b-4de1-ad5b-82b04b6a8850",
+            "collection_periods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ],
             "regions": [
               {
-                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
-                "shortname": "continental"
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357"
               }
             ]
           },
           {
-            "id": "30181d09-844d-42f4-9386-0297a3e7b250",
+            "collection_periods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ],
             "regions": [
               {
-                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
-                "shortname": "continental"
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357"
               }
             ]
           },
           {
-            "id": "79b8e8cd-36f0-41c5-85d4-70b648c208b6",
+            "collection_periods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ],
             "regions": [
               {
-                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
-                "shortname": "continental"
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357"
               }
             ]
           },
           {
-            "id": "065ec451-ad99-4821-9f52-a7eb7d8cc1a3",
+            "collection_periods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ],
             "regions": [
               {
-                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
-                "shortname": "continental"
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357"
               }
             ]
           },
           {
-            "id": "215a0931-e502-4f01-a312-5b86ebd81f83",
+            "collection_periods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ],
             "regions": [
               {
-                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
-                "shortname": "continental"
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357"
               }
             ]
           },
           {
-            "id": "1000d601-c308-4769-acfd-8b044f01322a",
+            "collection_periods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ],
             "regions": [
               {
-                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
-                "shortname": "continental"
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357"
               }
             ]
           },
           {
-            "id": "3ec061ea-b93e-4797-a472-d99d4e06f770",
+            "collection_periods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ],
             "regions": [
               {
-                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
-                "shortname": "continental"
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357"
               }
             ]
           },
           {
-            "id": "7e303985-5799-44a2-b9db-d5e1584aeb28",
+            "collection_periods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ],
             "regions": [
               {
-                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
-                "shortname": "continental"
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357"
               }
             ]
           },
           {
-            "id": "73b1d9dd-73dd-488b-98e0-429f2694a69e",
+            "collection_periods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ],
             "regions": [
               {
-                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
-                "shortname": "continental"
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357"
               }
             ]
           },
           {
-            "id": "d23eae66-15c9-40b5-8dbe-acd1b7372cf0",
+            "collection_periods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ],
             "regions": [
               {
-                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
-                "shortname": "continental"
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357"
               }
             ]
           },
           {
-            "id": "408ed306-89cb-4451-ae60-da4088ffa9a4",
+            "collection_periods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ],
             "regions": [
               {
-                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
-                "shortname": "continental"
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357"
               }
             ]
           },
           {
-            "id": "94ae469e-bfef-4ac1-8190-cdd65bfa9cb4",
+            "collection_periods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ],
             "regions": [
               {
-                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
-                "shortname": "continental"
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357"
               }
             ]
           },
           {
-            "id": "71a90032-6149-4719-bae0-135d52a2acce",
+            "collection_periods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ],
             "regions": [
               {
-                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
-                "shortname": "continental"
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357"
               }
             ]
           },
           {
-            "id": "11e8f9bb-6416-430b-97bd-87838c1d44a6",
+            "collection_periods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ],
             "regions": [
               {
-                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
-                "shortname": "continental"
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357"
               }
             ]
           },
           {
-            "id": "8b55cb2c-ea4b-4ef8-8824-4079e0937d8f",
+            "collection_periods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ],
             "regions": [
               {
-                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
-                "shortname": "continental"
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357"
               }
             ]
           },
           {
-            "id": "5818dceb-b6f2-4f5c-bb22-58a2b7062c28",
+            "collection_periods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ],
             "regions": [
               {
-                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
-                "shortname": "continental"
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357"
               }
             ]
           },
           {
-            "id": "ccd3471d-8453-4b26-88c5-bb103e9ca9d1",
+            "collection_periods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ],
             "regions": [
               {
-                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
-                "shortname": "continental"
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357"
               }
             ]
           },
           {
-            "id": "e89cb7da-bd0a-43df-8f63-5db3a89e668e",
+            "collection_periods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ],
             "regions": [
               {
-                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
-                "shortname": "continental"
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357"
               }
             ]
           },
           {
-            "id": "cc6492f2-fa18-4d1f-ac65-41f04d39e932",
+            "collection_periods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ],
             "regions": [
               {
-                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
-                "shortname": "continental"
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357"
               }
             ]
           },
           {
-            "id": "17624350-b93d-4342-931d-f79b1187f93b",
+            "collection_periods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ],
             "regions": [
               {
-                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
-                "shortname": "continental"
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357"
               }
             ]
           },
           {
-            "id": "3ab6f6df-3d92-487d-b161-0b77c69fa0d9",
+            "collection_periods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ],
             "regions": [
               {
-                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
-                "shortname": "continental"
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357"
               }
             ]
           },
           {
-            "id": "0b9e567b-537f-486d-b21b-8d2a0d87544a",
+            "collection_periods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ],
             "regions": [
               {
-                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
-                "shortname": "continental"
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357"
               }
             ]
           },
           {
-            "id": "b264cb0e-c9ee-4f32-adc1-905f2ff0c337",
+            "collection_periods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ],
             "regions": [
               {
-                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
-                "shortname": "continental"
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357"
               }
             ]
           },
           {
-            "id": "93da11a3-e55b-4673-af4c-d9e2bd135471",
+            "collection_periods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ],
             "regions": [
               {
-                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
-                "shortname": "continental"
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357"
               }
             ]
           }
         ],
-        "countCollectionPeriods": 0,
-        "countDataProducts": 0,
         "platforms": [
           {
             "id": "96b56413-2068-4fc4-a093-4780a02744e9"
@@ -468,21 +762,8 @@
         "fundingAgency": "NASA"
       },
       {
-        "logo": {
-          "nasaImgAlt": "CARVE logo",
-          "nasaImgUrl": "https://carve.jpl.nasa.gov/images/carve/carve_logo_update.jpg",
-          "nasaImg": {
-            "childImageSharp": {
-              "fixed": {
-                "src": "/static/3dec137acafa7ac0c3a74368b2cb56b3/9dd03/carve_logo_update.jpg"
-              }
-            }
-          }
-        },
-        "ongoing": false,
-        "shortname": "CARVE",
-        "longname": "Carbon in Arctic Reservoirs Vulnerability Experiment",
         "id": "03b728ae-2235-488c-80ee-570dcf602f3b",
+        "shortname": "CARVE",
         "seasons": [
           {
             "id": "7394cb29-fa27-45d0-b4f3-7132b9e5bd52"
@@ -528,65 +809,97 @@
             "id": "a595708b-267f-489f-aecf-42ce98f64819"
           }
         ],
-        "startdate": "2012-05-23",
         "enddate": "2015-11-12",
-        "region": "Alaska",
         "deployments": [
           {
-            "id": "d94bc68f-21f1-4353-9c0d-c3711a457025",
-            "regions": [
+            "collection_periods": [
               {
-                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
-                "shortname": "continental"
+                "dois": [
+                  {
+                    "id": "31545c67-4d00-4cfa-9f1d-b1c7a4aa9119"
+                  }
+                ]
               },
               {
-                "id": "517750b5-ff60-4267-97ff-0aa09255860e",
-                "shortname": "polar"
+                "dois": []
+              }
+            ],
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357"
+              },
+              {
+                "id": "517750b5-ff60-4267-97ff-0aa09255860e"
               }
             ]
           },
           {
-            "id": "6c5dda3a-e09b-4b07-980a-8a89abdde249",
-            "regions": [
+            "collection_periods": [
               {
-                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
-                "shortname": "continental"
+                "dois": [
+                  {
+                    "id": "31545c67-4d00-4cfa-9f1d-b1c7a4aa9119"
+                  }
+                ]
               },
               {
-                "id": "517750b5-ff60-4267-97ff-0aa09255860e",
-                "shortname": "polar"
+                "dois": []
+              }
+            ],
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357"
+              },
+              {
+                "id": "517750b5-ff60-4267-97ff-0aa09255860e"
               }
             ]
           },
           {
-            "id": "b028f92c-df6d-460b-a7d9-1680acb98e0e",
-            "regions": [
+            "collection_periods": [
               {
-                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
-                "shortname": "continental"
+                "dois": [
+                  {
+                    "id": "31545c67-4d00-4cfa-9f1d-b1c7a4aa9119"
+                  }
+                ]
               },
               {
-                "id": "517750b5-ff60-4267-97ff-0aa09255860e",
-                "shortname": "polar"
+                "dois": []
+              }
+            ],
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357"
+              },
+              {
+                "id": "517750b5-ff60-4267-97ff-0aa09255860e"
               }
             ]
           },
           {
-            "id": "103912fc-1761-4ed2-b8ff-fca2226579c2",
-            "regions": [
+            "collection_periods": [
               {
-                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
-                "shortname": "continental"
+                "dois": [
+                  {
+                    "id": "31545c67-4d00-4cfa-9f1d-b1c7a4aa9119"
+                  }
+                ]
               },
               {
-                "id": "517750b5-ff60-4267-97ff-0aa09255860e",
-                "shortname": "polar"
+                "dois": []
+              }
+            ],
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357"
+              },
+              {
+                "id": "517750b5-ff60-4267-97ff-0aa09255860e"
               }
             ]
           }
         ],
-        "countCollectionPeriods": 0,
-        "countDataProducts": 0,
         "platforms": [
           {
             "id": "fa7f2693-c9b1-4d89-b14c-0672487dc049"
@@ -598,21 +911,8 @@
         "fundingAgency": "NASA"
       },
       {
-        "logo": {
-          "nasaImgAlt": "DC3 logo",
-          "nasaImgUrl": "https://www-air.larc.nasa.gov/missions/dc3-seac4rs/img/dc3-logo.png",
-          "nasaImg": {
-            "childImageSharp": {
-              "fixed": {
-                "src": "/static/c4b36cb85ef25d65d08739c329b04e52/7f3c0/dc3-logo.png"
-              }
-            }
-          }
-        },
-        "ongoing": false,
-        "shortname": "DC3",
-        "longname": "Deep Convective Clouds & Chemistry",
         "id": "6d8b649b-e0b9-4adf-94bb-f5defc7ba930",
+        "shortname": "DC3",
         "seasons": [
           {
             "id": "7394cb29-fa27-45d0-b4f3-7132b9e5bd52"
@@ -658,26 +958,36 @@
             "id": "6b5dac3e-cd6a-4f40-b9d8-86dc6da79131"
           }
         ],
-        "startdate": "2012-05-18",
         "enddate": "2012-06-30",
-        "region": "Northeastern Colorado, West Texas to Central Oklahoma, Northern Alabama",
         "deployments": [
           {
-            "id": "4025e078-74c9-4ec8-b697-af9132425c8e",
-            "regions": [
+            "collection_periods": [
               {
-                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
-                "shortname": "continental"
+                "dois": []
               },
               {
-                "id": "7787b7dc-eafa-433c-ac57-72a8224a530d",
-                "shortname": "mid-latitude"
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ],
+            "regions": [
+              {
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357"
+              },
+              {
+                "id": "7787b7dc-eafa-433c-ac57-72a8224a530d"
               }
             ]
           }
         ],
-        "countCollectionPeriods": 0,
-        "countDataProducts": null,
         "platforms": [
           {
             "id": "0493498f-f092-425e-bcd0-9fc807c77c0a"
@@ -698,21 +1008,8 @@
         "fundingAgency": "NASA"
       },
       {
-        "logo": {
-          "nasaImgAlt": "GCPEx logo",
-          "nasaImgUrl": "https://airbornescience.nasa.gov/sites/default/files/styles/200wide/public/current_activities/gcpexlogo.png?itok=Z1MVjjPB",
-          "nasaImg": {
-            "childImageSharp": {
-              "fixed": {
-                "src": "/static/4e1cc27c28411e8c942f140039bb625b/7f3c0/gcpexlogo.png"
-              }
-            }
-          }
-        },
-        "ongoing": false,
-        "shortname": "GCPEx",
-        "longname": "GPM Cold Season Precipitation Experiment",
         "id": "61616a26-fc33-450e-bd53-a7690d03e6b6",
+        "shortname": "GCPEx",
         "seasons": [
           {
             "id": "ee919d06-2e3d-49a4-8dc3-b2b035cb5f2f"
@@ -740,17 +1037,27 @@
             "id": "6b5dac3e-cd6a-4f40-b9d8-86dc6da79131"
           }
         ],
-        "startdate": "2012-01-15",
         "enddate": "2012-03-04",
-        "region": "Ontario, Canada and northern portions of the United States (e.g., New York state, the New England area, etc.)",
         "deployments": [
           {
-            "id": "1bac4b0f-de68-4c6b-a9bc-a084873b0f7d",
+            "collection_periods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": [
+                  {
+                    "id": "db70d319-5748-4a56-82b5-0c06eb2e051f"
+                  }
+                ]
+              },
+              {
+                "dois": []
+              }
+            ],
             "regions": []
           }
         ],
-        "countCollectionPeriods": 0,
-        "countDataProducts": 0,
         "platforms": [
           {
             "id": "d363dbac-d440-492b-99b4-5d617bf8aa38"
@@ -765,15 +1072,8 @@
         "fundingAgency": "NASA"
       },
       {
-        "logo": {
-          "nasaImgAlt": "GOES-R PLT logo",
-          "nasaImgUrl": "",
-          "nasaImg": null
-        },
-        "ongoing": false,
-        "shortname": "GOES-R PLT",
-        "longname": "GOES-R Post Launch Test",
         "id": "be798dc9-dccb-4dc2-8e6b-d395c1bcbeb6",
+        "shortname": "GOES-R PLT",
         "seasons": [
           {
             "id": "7394cb29-fa27-45d0-b4f3-7132b9e5bd52"
@@ -804,22 +1104,46 @@
             "id": "6b5dac3e-cd6a-4f40-b9d8-86dc6da79131"
           }
         ],
-        "startdate": "2017-03-21",
         "enddate": "2017-05-17",
-        "region": "Continental United States",
         "deployments": [
           {
-            "id": "d69fb349-0147-418a-8e26-1414fc7ddc14",
+            "collection_periods": [
+              {
+                "dois": [
+                  {
+                    "id": "bf0bc73b-8e30-4fdd-a675-6bdee8a00e06"
+                  },
+                  {
+                    "id": "15ed76ef-319b-40e4-a538-d9bb8e8b1dc2"
+                  },
+                  {
+                    "id": "3c4453ae-14a0-4892-8dfe-29265e304a87"
+                  },
+                  {
+                    "id": "160c35df-2248-469e-806b-af081c850ef7"
+                  },
+                  {
+                    "id": "06698604-c930-4beb-a918-a6285606b126"
+                  },
+                  {
+                    "id": "d2b37379-2d21-4411-8f11-92b7213753f6"
+                  },
+                  {
+                    "id": "85511d62-04bd-4e5b-8fdb-691f8ec22016"
+                  }
+                ]
+              },
+              {
+                "dois": []
+              }
+            ],
             "regions": [
               {
-                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
-                "shortname": "continental"
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357"
               }
             ]
           }
         ],
-        "countCollectionPeriods": 0,
-        "countDataProducts": 0,
         "platforms": [
           {
             "id": "c94db25b-1b48-47fe-90e3-47e8c16f0a92"
@@ -831,21 +1155,8 @@
         "fundingAgency": "NOAA, NASA"
       },
       {
-        "logo": {
-          "nasaImgAlt": "GRIP logo",
-          "nasaImgUrl": "https://www.nasa.gov/images/content/464732main_grip_graphic_med.jpg",
-          "nasaImg": {
-            "childImageSharp": {
-              "fixed": {
-                "src": "/static/2803312240ff21bec233dee65f422031/9dd03/464732main_grip_graphic_med.jpg"
-              }
-            }
-          }
-        },
-        "ongoing": false,
-        "shortname": "GRIP",
-        "longname": "Genesis and Rapid Intensification Processes",
         "id": "7739c801-46e6-4ddd-ad30-351626dcccdb",
+        "shortname": "GRIP",
         "seasons": [
           {
             "id": "abde509c-8f19-4f12-af69-ed3d41ba09f9"
@@ -876,26 +1187,30 @@
             "id": "3bd4c052-5c6c-4da1-934d-6cfd9f01d527"
           }
         ],
-        "startdate": "2010-08-15",
         "enddate": "2010-09-25",
-        "region": "Tropical Atlantic, Gulf of Mexico, Eastern North Pacific, Caribbean Sea",
         "deployments": [
           {
-            "id": "4183334c-70e1-4e4c-b1a6-391a6113863d",
-            "regions": [
+            "collection_periods": [
               {
-                "id": "2ee04b8b-1d14-4a3d-be41-ec096a4c0404",
-                "shortname": "maritime"
+                "dois": []
               },
               {
-                "id": "1b40de01-2163-40f9-a5ce-f999c923b30b",
-                "shortname": "tropical"
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ],
+            "regions": [
+              {
+                "id": "2ee04b8b-1d14-4a3d-be41-ec096a4c0404"
+              },
+              {
+                "id": "1b40de01-2163-40f9-a5ce-f999c923b30b"
               }
             ]
           }
         ],
-        "countCollectionPeriods": 0,
-        "countDataProducts": 0,
         "platforms": [
           {
             "id": "ad8a0ce5-8aae-4fe5-8b46-7586c267efdb"
@@ -910,21 +1225,8 @@
         "fundingAgency": "NASA"
       },
       {
-        "logo": {
-          "nasaImgAlt": "HS3 logo",
-          "nasaImgUrl": "https://espo.nasa.gov/sites/default/files/images/HS3_logo.png",
-          "nasaImg": {
-            "childImageSharp": {
-              "fixed": {
-                "src": "/static/3d520693bc11c953f22f86f860ffd08a/7f3c0/HS3_logo.png"
-              }
-            }
-          }
-        },
-        "ongoing": false,
-        "shortname": "HS3",
-        "longname": "Hurricane and Severe Storm Sentinel",
         "id": "c1e56561-6726-4832-8dbe-0453b10ff36c",
+        "shortname": "HS3",
         "seasons": [
           {
             "id": "abde509c-8f19-4f12-af69-ed3d41ba09f9"
@@ -952,64 +1254,75 @@
             "id": "d3815227-f7e1-45f0-8db0-ff203142c99f"
           }
         ],
-        "startdate": "2012-08-28",
         "enddate": "2014-10-20",
-        "region": "Subtropical Atlantic Ocean and Gulf of Mexico",
         "deployments": [
           {
-            "id": "3a09cded-e13e-41fc-915c-0b9aec4bcbc1",
+            "collection_periods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ],
             "regions": [
               {
-                "id": "2ee04b8b-1d14-4a3d-be41-ec096a4c0404",
-                "shortname": "maritime"
+                "id": "2ee04b8b-1d14-4a3d-be41-ec096a4c0404"
               },
               {
-                "id": "1b40de01-2163-40f9-a5ce-f999c923b30b",
-                "shortname": "tropical"
+                "id": "1b40de01-2163-40f9-a5ce-f999c923b30b"
               },
               {
-                "id": "7787b7dc-eafa-433c-ac57-72a8224a530d",
-                "shortname": "mid-latitude"
+                "id": "7787b7dc-eafa-433c-ac57-72a8224a530d"
               }
             ]
           },
           {
-            "id": "7f6e122d-7161-4c64-a37d-943131688cee",
+            "collection_periods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ],
             "regions": [
               {
-                "id": "2ee04b8b-1d14-4a3d-be41-ec096a4c0404",
-                "shortname": "maritime"
+                "id": "2ee04b8b-1d14-4a3d-be41-ec096a4c0404"
               },
               {
-                "id": "1b40de01-2163-40f9-a5ce-f999c923b30b",
-                "shortname": "tropical"
+                "id": "1b40de01-2163-40f9-a5ce-f999c923b30b"
               },
               {
-                "id": "7787b7dc-eafa-433c-ac57-72a8224a530d",
-                "shortname": "mid-latitude"
+                "id": "7787b7dc-eafa-433c-ac57-72a8224a530d"
               }
             ]
           },
           {
-            "id": "8726699a-a04c-4835-93b4-bf7918c79346",
+            "collection_periods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ],
             "regions": [
               {
-                "id": "2ee04b8b-1d14-4a3d-be41-ec096a4c0404",
-                "shortname": "maritime"
+                "id": "2ee04b8b-1d14-4a3d-be41-ec096a4c0404"
               },
               {
-                "id": "1b40de01-2163-40f9-a5ce-f999c923b30b",
-                "shortname": "tropical"
+                "id": "1b40de01-2163-40f9-a5ce-f999c923b30b"
               },
               {
-                "id": "7787b7dc-eafa-433c-ac57-72a8224a530d",
-                "shortname": "mid-latitude"
+                "id": "7787b7dc-eafa-433c-ac57-72a8224a530d"
               }
             ]
           }
         ],
-        "countCollectionPeriods": 0,
-        "countDataProducts": 0,
         "platforms": [
           {
             "id": "c94db25b-1b48-47fe-90e3-47e8c16f0a92"
@@ -1024,21 +1337,8 @@
         "fundingAgency": "NASA"
       },
       {
-        "logo": {
-          "nasaImgAlt": "OLYMPEX logo",
-          "nasaImgUrl": "https://wallops-prf.gsfc.nasa.gov/Field_Campaigns/Olympex/img/logo_image2.png",
-          "nasaImg": {
-            "childImageSharp": {
-              "fixed": {
-                "src": "/static/6b1df71a80ace65c6ad8ea8294fcaa5f/7f3c0/logo_image2.png"
-              }
-            }
-          }
-        },
-        "ongoing": false,
-        "shortname": "OLYMPEX",
-        "longname": "Olympic Mountains Experiment",
         "id": "c438c053-3708-4f53-83d8-8c57990c6bec",
+        "shortname": "OLYMPEX",
         "seasons": [
           {
             "id": "ee919d06-2e3d-49a4-8dc3-b2b035cb5f2f"
@@ -1072,34 +1372,75 @@
             "id": "695ea5c2-e3f8-42d4-baef-fc48c2b4ff39"
           }
         ],
-        "startdate": "2015-11-01",
         "enddate": "2016-05-01",
-        "region": "Olympic Peninsula in U.S. Washington State",
         "deployments": [
           {
-            "id": "6ad85c46-93e9-4f20-b3e9-b719ceb75068",
+            "collection_periods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": [
+                  {
+                    "id": "2284a7cb-a7ca-4b16-8376-1205ed375833"
+                  },
+                  {
+                    "id": "9dcc6960-5bbf-44ef-a965-6c123e887698"
+                  },
+                  {
+                    "id": "deea0d27-234a-4b62-93a0-a00a6e9a002d"
+                  },
+                  {
+                    "id": "342de33a-123d-4444-a3d7-8f147a0c1f98"
+                  }
+                ]
+              },
+              {
+                "dois": [
+                  {
+                    "id": "66e4af67-f737-450d-bee6-d9381bf1ee5d"
+                  },
+                  {
+                    "id": "58128bf1-e8fa-4c67-b9b8-c107a9fd9a67"
+                  },
+                  {
+                    "id": "add15270-d876-4d16-8be0-04b589a41e6c"
+                  }
+                ]
+              },
+              {
+                "dois": [
+                  {
+                    "id": "e30545ab-29d4-4300-af0c-a7d8d27fcd85"
+                  },
+                  {
+                    "id": "9234dff2-e7b6-4720-8706-6d33f89a330f"
+                  }
+                ]
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ],
             "regions": [
               {
-                "id": "2ee04b8b-1d14-4a3d-be41-ec096a4c0404",
-                "shortname": "maritime"
+                "id": "2ee04b8b-1d14-4a3d-be41-ec096a4c0404"
               },
               {
-                "id": "1ec8559a-ebd5-4cf3-ae1d-186f2dc5bd7d",
-                "shortname": "mountains"
+                "id": "1ec8559a-ebd5-4cf3-ae1d-186f2dc5bd7d"
               },
               {
-                "id": "7787b7dc-eafa-433c-ac57-72a8224a530d",
-                "shortname": "mid-latitude"
+                "id": "7787b7dc-eafa-433c-ac57-72a8224a530d"
               },
               {
-                "id": "b61569ec-59f7-413e-9c89-64c581c4b367",
-                "shortname": "rainforest"
+                "id": "b61569ec-59f7-413e-9c89-64c581c4b367"
               }
             ]
           }
         ],
-        "countCollectionPeriods": 0,
-        "countDataProducts": 0,
         "platforms": [
           {
             "id": "6fc94f62-d4f2-4a08-9511-2234d91b0665"
@@ -1123,21 +1464,8 @@
         "fundingAgency": "NASA"
       },
       {
-        "logo": {
-          "nasaImgAlt": "ARCTAS logo",
-          "nasaImgUrl": "https://cloud1.arc.nasa.gov/arctas/images/arctas_spring.jpg",
-          "nasaImg": {
-            "childImageSharp": {
-              "fixed": {
-                "src": "/static/2bd234de67183d020fabe8584d7713ff/9dd03/arctas_spring.jpg"
-              }
-            }
-          }
-        },
-        "ongoing": false,
-        "shortname": "ARCTAS",
-        "longname": "Arctic Research of the Composition of the Troposphere from Aircraft and Satellites",
         "id": "e48c2d79-822b-4c9e-9f72-2776d5d1eac6",
+        "shortname": "ARCTAS",
         "seasons": [
           {
             "id": "7394cb29-fa27-45d0-b4f3-7132b9e5bd52"
@@ -1174,40 +1502,69 @@
             "id": "830fe73e-7102-4b97-bc14-c31d70de1ad3"
           }
         ],
-        "startdate": "2008-04-01",
         "enddate": "2008-07-14",
-        "region": "Alaska, Western Canada, California",
         "deployments": [
           {
-            "id": "e71e8fbd-9f1a-4b91-9187-4b71109c25ff",
+            "collection_periods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ],
             "regions": [
               {
-                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
-                "shortname": "continental"
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357"
               }
             ]
           },
           {
-            "id": "2de3c9cf-bff5-4d87-ab03-2b9690ec10c8",
+            "collection_periods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ],
             "regions": [
               {
-                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
-                "shortname": "continental"
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357"
               }
             ]
           },
           {
-            "id": "683bfce3-f70e-49fa-8f87-74151327db19",
+            "collection_periods": [
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              },
+              {
+                "dois": []
+              }
+            ],
             "regions": [
               {
-                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357",
-                "shortname": "continental"
+                "id": "eb28c912-b2eb-41fe-9469-a24a3a096357"
               }
             ]
           }
         ],
-        "countCollectionPeriods": 0,
-        "countDataProducts": 0,
         "platforms": [
           {
             "id": "715351b2-1126-4c0d-8130-5caa9f044f6d"
@@ -1563,24 +1920,14 @@
         "longname": ""
       },
       {
-        "id": "732c68d8-124b-45be-b2d2-dbc2d305d855",
-        "shortname": "Citation",
-        "longname": "Cessna Citation II"
-      },
-      {
         "id": "d363dbac-d440-492b-99b4-5d617bf8aa38",
         "shortname": "CV-580",
         "longname": "Convair CV-580"
       },
       {
-        "id": "6fc94f62-d4f2-4a08-9511-2234d91b0665",
-        "shortname": "DC-8",
-        "longname": "Douglas DC-8"
-      },
-      {
-        "id": "bb761da6-1606-444c-92d1-e6d30954f2d7",
-        "shortname": "ER-2",
-        "longname": "NASA Earth Resources-2 aircraft"
+        "id": "2cbc931a-6f47-45f0-bff6-659ef2efc68d",
+        "shortname": "WB-57",
+        "longname": "NASA WB-57"
       },
       {
         "id": "63ef5aa5-2f57-4af6-8adf-2769f3e51c24",
@@ -1608,19 +1955,14 @@
         "longname": "P-3 Orion"
       },
       {
-        "id": "2cbc931a-6f47-45f0-bff6-659ef2efc68d",
-        "shortname": "WB-57",
-        "longname": "NASA WB-57"
+        "id": "732c68d8-124b-45be-b2d2-dbc2d305d855",
+        "shortname": "Citation",
+        "longname": "Cessna Citation II"
       },
       {
-        "id": "96b56413-2068-4fc4-a093-4780a02744e9",
-        "shortname": "ALAR",
-        "longname": "Airborne Laboratory for Atmospheric Research"
-      },
-      {
-        "id": "c63849f7-ea91-4525-9029-940a9c53ed36",
-        "shortname": "ALTUS II",
-        "longname": "ALTUS II"
+        "id": "6fc94f62-d4f2-4a08-9511-2234d91b0665",
+        "shortname": "DC-8",
+        "longname": "Douglas DC-8"
       },
       {
         "id": "a0dea5de-aa33-4f13-a8a4-34729e3de5fd",
@@ -1651,6 +1993,21 @@
         "id": "5f6a2a1a-2a4b-4a42-9fff-04f1c2af6f5c",
         "shortname": "Campaign R",
         "longname": "Rockets launched with instrument packages (e.g., rocketsondes) during a campaign"
+      },
+      {
+        "id": "bb761da6-1606-444c-92d1-e6d30954f2d7",
+        "shortname": "ER-2",
+        "longname": "NASA Earth Resources-2 aircraft"
+      },
+      {
+        "id": "96b56413-2068-4fc4-a093-4780a02744e9",
+        "shortname": "ALAR",
+        "longname": "Airborne Laboratory for Atmospheric Research"
+      },
+      {
+        "id": "c63849f7-ea91-4525-9029-940a9c53ed36",
+        "shortname": "ALTUS II",
+        "longname": "ALTUS II"
       }
     ]
   }

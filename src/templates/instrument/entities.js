@@ -55,7 +55,9 @@ export default function Entities({ id, campaigns, platforms }) {
                   }}
                 >
                   {platform.campaigns
-                    .filter(x => campaigns.map(x => x.id).includes(x.id))
+                    .filter(campaign =>
+                      campaigns.map(x => x.id).includes(campaign.id)
+                    )
                     .map(campaign => (
                       <div key={campaign.id} data-cy="related-campaign">
                         <Link to={`/campaign/${campaign.id}`}>

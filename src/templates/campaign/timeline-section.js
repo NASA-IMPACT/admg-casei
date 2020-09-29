@@ -49,7 +49,7 @@ const TimelineSection = ({ id, deployments }) => {
                 type="deployment"
                 daterange={formatDateRange(deployment.start, deployment.end)}
                 name={`${deployment.longname} (${deployment.shortname})`}
-                details={`${deployment.flights.length} CDCPs`}
+                details={`${deployment.collectionPeriods.length} CDCPs`}
                 region={deployment.regions.map(x => x.longname).join(", ")}
               />
             ))}
@@ -72,7 +72,9 @@ export const deploymentFields = graphql`
     deployments {
       id: uuid
       shortname: short_name
-      flights: collection_periods
+      collectionPeriods: collection_periods {
+        id
+      }
       regions: geographical_regions {
         longname: long_name
       }
@@ -90,7 +92,7 @@ TimelineSection.propTypes = {
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       shortname: PropTypes.string.isRequired,
-      flights: PropTypes.array.isRequired,
+      collectionPeriods: PropTypes.array.isRequired,
       regions: PropTypes.array.isRequired,
       campaign: PropTypes.string.isRequired,
       longname: PropTypes.string.isRequired,

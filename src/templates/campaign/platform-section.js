@@ -13,7 +13,7 @@ import Image from "gatsby-image"
 
 import Chip from "../../components/chip"
 
-const PlatformSection = ({ id, platforms }) => (
+const PlatformSection = ({ id, platforms, instruments }) => (
   <SectionBlock id={id}>
     <SectionHeader headline="Platforms & Instruments" id={id} />
     <SectionContent>
@@ -47,14 +47,18 @@ const PlatformSection = ({ id, platforms }) => (
                   </div>
                 </Link>
                 <div style={{ display: `flex`, flexWrap: `wrap` }}>
-                  {platform.instruments.map(instrument => (
-                    <Link
-                      to={`/instrument/${instrument.id}`}
-                      key={instrument.id}
-                    >
-                      <Chip id="instrument" label={instrument.shortname} />
-                    </Link>
-                  ))}
+                  {platform.instruments
+                    .filter(instrument =>
+                      instruments.map(x => x.id).includes(instrument.id)
+                    )
+                    .map(instrument => (
+                      <Link
+                        to={`/instrument/${instrument.id}`}
+                        key={instrument.id}
+                      >
+                        <Chip id="instrument" label={instrument.shortname} />
+                      </Link>
+                    ))}
                 </div>
               </div>
             ))}
@@ -88,6 +92,9 @@ export const platformFields = graphql`
         shortname: short_name
       }
     }
+    instruments {
+      id
+    }
   }
 `
 
@@ -110,6 +117,11 @@ PlatformSection.propTypes = {
           shortname: PropTypes.string.isRequired,
         }).isRequired
       ).isRequired,
+    }).isRequired
+  ).isRequired,
+  instruments: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
     }).isRequired
   ).isRequired,
 }

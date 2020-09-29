@@ -158,12 +158,20 @@ const FilterMenu = ({
               />
             )}
             {category === "instruments" && (
-              <Filter
-                id="instrument-types"
-                label="Instrument Types"
-                options={getFilterOptionsById("type")}
-                selectedFilterIds={selectedFilterIds}
-              />
+              <>
+                <Filter
+                  id="instrument-types"
+                  label="Instrument Types"
+                  options={getFilterOptionsById("type")}
+                  selectedFilterIds={selectedFilterIds}
+                />
+                <Filter
+                  id="measurement-regions"
+                  label="Measurement Regions"
+                  options={getFilterOptionsById("vertical")}
+                  selectedFilterIds={selectedFilterIds}
+                />
+              </>
             )}
           </ListboxList>
         </ListboxPopover>
