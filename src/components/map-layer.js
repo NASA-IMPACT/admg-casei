@@ -1,6 +1,6 @@
 import { useEffect } from "react"
 import parse from "wellknown"
-
+import * as turf from "@turf/turf"
 import theme from "../utils/theme"
 
 export default function MapLayer({ bounds, map }) {
@@ -14,6 +14,7 @@ export default function MapLayer({ bounds, map }) {
         geometry: geometry,
       },
     })
+
     const layer = map.addLayer({
       id: "campaign-bbox",
       type: "line",
@@ -26,12 +27,13 @@ export default function MapLayer({ bounds, map }) {
       },
     })
 
+    const bbox = turf.bbox(geometry)
     const { width } = map.getContainer().getBoundingClientRect()
-
-    map.fitBounds(geometry.coordinates.flat(), {
-      padding: { top: 200, bottom: 50, left: 50, right: 50 },
-      offset: [width / 5, 0],
+    const newCameraView = map.cameraForBounds(bbox, {
+      padding: { top: 200, right: 25, bottom: 25, left: width / 1.5 },
     })
+
+    map.flyTo(newCameraView)
 
     return () => {
       if (layer) {
