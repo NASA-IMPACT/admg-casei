@@ -8,7 +8,7 @@ const Section = styled.section`
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   column-gap: 1rem;
-  margin-top: 1rem;
+  margin-top: ${props => (props.isSpaced ? `4rem` : `1rem`)};
 
   /* This invisible border pushes the section below the nav bar when using inpage navigation */
   border-top: 10px solid transparent;
@@ -64,9 +64,9 @@ SectionContent.propTypes = {
   columns: PropTypes.arrayOf(PropTypes.number),
 }
 
-export const SectionBlock = ({ id, children }) => {
+export const SectionBlock = ({ id, children, isSpaced }) => {
   return (
-    <Section id={id} data-cy={`${id}-section`}>
+    <Section id={id} data-cy={`${id}-section`} isSpaced={isSpaced}>
       {children}
     </Section>
   )
@@ -76,4 +76,9 @@ SectionBlock.propTypes = {
   id: PropTypes.string.isRequired,
   withText: PropTypes.bool,
   children: PropTypes.node,
+  isSpaced: PropTypes.bool, // adds large spacing to section - ideal for home page
+}
+
+SectionBlock.defaultProps = {
+  isSpaced: false,
 }
