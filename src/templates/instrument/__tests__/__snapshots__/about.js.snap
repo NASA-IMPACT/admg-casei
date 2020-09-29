@@ -289,17 +289,26 @@ exports[`About Section displays content 1`] = `
         >
           Data Locations
         </label>
+        N/A
+      </div>
+      <div
+        style={
+          Object {
+            "padding": "1rem 0",
+          }
+        }
+      >
         <label
           data-cy="repositories-label"
           style={
             Object {
-              "borderBottom": "none",
+              "borderBottom": "1px solid #9E9E9E",
               "color": "#9E9E9E",
               "display": "block",
             }
           }
         >
-          Repositories:
+          Repositories
         </label>
         <ul
           style={
