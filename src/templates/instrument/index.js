@@ -11,7 +11,7 @@ import Entities from "./entities"
 const InstrumentTemplate = ({ data: { instrument }, path }) => {
   const sections = {
     about: {
-      nav: "About",
+      nav: "Instrument Details",
       component: About,
       props: {
         instrumentTypes: instrument.instrumentTypes,
@@ -32,7 +32,7 @@ const InstrumentTemplate = ({ data: { instrument }, path }) => {
       },
     },
     entities: {
-      nav: "Related Entities",
+      nav: "Instrument Operation",
       component: Entities,
       props: {
         platforms: instrument.platforms,
