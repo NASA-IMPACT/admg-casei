@@ -11,7 +11,6 @@
     "@mapbox/geo-viewport": "^0.4.0",
     "@reach/listbox": "^0.11.0",
     "@reach/visually-hidden": "^0.11.0",
-    "@turf/turf": "^5.1.6",
     "feedback-fish": "^0.2.0",
     "gatsby": "^2.24.2",
     "gatsby-image": "^2.4.13",
