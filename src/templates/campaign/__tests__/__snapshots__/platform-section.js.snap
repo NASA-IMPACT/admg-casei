@@ -6,8 +6,8 @@ exports[`Platform Section displays content 1`] = `
   grid-template-columns: repeat(12,1fr);
   -webkit-column-gap: 1rem;
   column-gap: 1rem;
-  margin-top: 9rem;
-  border-top: 55px solid transparent;
+  margin-top: 1rem;
+  border-top: 10px solid transparent;
   position: relative;
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
@@ -50,11 +50,6 @@ exports[`Platform Section displays content 1`] = `
       >
         <div
           data-cy="platform"
-          style={
-            Object {
-              "minHeight": "360px",
-            }
-          }
         >
           <a
             href="/platform/d59b3d7e-f782-4e25-a8eb-ceec91c0331e"
@@ -122,11 +117,6 @@ exports[`Platform Section displays content 1`] = `
         </div>
         <div
           data-cy="platform"
-          style={
-            Object {
-              "minHeight": "360px",
-            }
-          }
         >
           <a
             href="/platform/1b607095-4f6d-4e70-8e16-798bc59a2d59"
@@ -194,11 +184,6 @@ exports[`Platform Section displays content 1`] = `
         </div>
         <div
           data-cy="platform"
-          style={
-            Object {
-              "minHeight": "360px",
-            }
-          }
         >
           <a
             href="/platform/2084ab0c-4f18-4aa6-ad7b-70bc861d2d80"

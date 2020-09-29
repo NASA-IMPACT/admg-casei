@@ -18,8 +18,8 @@ exports[`About Section displays content 1`] = `
   grid-template-columns: repeat(12,1fr);
   -webkit-column-gap: 1rem;
   column-gap: 1rem;
-  margin-top: 9rem;
-  border-top: 55px solid transparent;
+  margin-top: 1rem;
+  border-top: 10px solid transparent;
   position: relative;
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
