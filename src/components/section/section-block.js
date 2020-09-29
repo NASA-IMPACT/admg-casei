@@ -8,10 +8,10 @@ const Section = styled.section`
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   column-gap: 1rem;
-  margin-top: 9rem;
+  margin-top: 1rem;
 
   /* This invisible border pushes the section below the nav bar when using inpage navigation */
-  border-top: 55px solid transparent;
+  border-top: 10px solid transparent;
   position: relative;
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
