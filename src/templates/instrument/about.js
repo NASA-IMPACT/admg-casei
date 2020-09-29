@@ -72,20 +72,21 @@ function Background({
           </p>
         </div>
       )}
-      <div style={{ padding: `1rem 0` }}>
-        <Label id="data-locations" showBorder>
-          Data Locations
-        </Label>
-        {isUrl(overviewPublication) && (
+      <BackgroundListItem id="data-locations" label="Data Locations">
+        {isUrl(overviewPublication) ? (
           <ExternalLink
             label="Overview Publication"
             url={overviewPublication}
             id="overview-publication"
           />
+        ) : (
+          "N/A"
         )}
-        <Label id="repositories">
-          {repositories.length === 1 ? "Repository:" : "Repositories:"}
-        </Label>
+      </BackgroundListItem>
+      <BackgroundListItem
+        id="repositories"
+        label={repositories.length === 1 ? "Repository" : "Repositories"}
+      >
         {repositories.length > 0 ? (
           <ul style={{ margin: `0` }}>
             {repositories.map(repository => (
@@ -101,7 +102,7 @@ function Background({
         ) : (
           <p>No repository available</p>
         )}
-      </div>
+      </BackgroundListItem>
     </div>
   )
 }
