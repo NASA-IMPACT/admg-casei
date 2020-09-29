@@ -7,12 +7,11 @@ import InstrumentHero from "./hero"
 import InpageNav from "../../components/inpage-nav"
 import About from "./about"
 import Entities from "./entities"
-import Resources from "./resources"
 
 const InstrumentTemplate = ({ data: { instrument }, path }) => {
   const sections = {
     about: {
-      nav: "About",
+      nav: "Instrument Details",
       component: About,
       props: {
         instrumentTypes: instrument.instrumentTypes,
@@ -25,27 +24,19 @@ const InstrumentTemplate = ({ data: { instrument }, path }) => {
         instrumentDoi: instrument.instrumentDoi,
         instrumentManufacturer: instrument.instrumentManufacturer,
         fundingSource: instrument.fundingSource,
-        instrumentId: instrument.id,
         leadInvestigator: instrument.leadInvestigator,
         technicalContact: instrument.technicalContact,
-        facility: instrument.facility,
+        onlineInformation: instrument.onlineInformation,
+        overviewPublication: instrument.overviewPublication,
+        repositories: instrument.repositories,
       },
     },
     entities: {
-      nav: "Related Entities",
+      nav: "Instrument Operation",
       component: Entities,
       props: {
         platforms: instrument.platforms,
         campaigns: instrument.campaigns,
-      },
-    },
-    resources: {
-      nav: "Related Information",
-      component: Resources,
-      props: {
-        onlineInformation: instrument.onlineInformation,
-        overviewPublication: instrument.overviewPublication,
-        repositories: instrument.repositories,
       },
     },
   }
@@ -79,7 +70,6 @@ export const query = graphql`
       ...instrumentHeroFields
       ...instrumentDetailFields
       ...instrumentEntitiesFields
-      ...instrumentResourcesFields
     }
   }
 `
@@ -117,14 +107,11 @@ InstrumentTemplate.propTypes = {
           variable_3: PropTypes.string,
         }).isRequired
       ).isRequired,
-      instrumentId: PropTypes.string,
       instrumentDoi: PropTypes.string,
       instrumentManufacturer: PropTypes.string,
       fundingSource: PropTypes.string,
       leadInvestigator: PropTypes.string,
       technicalContact: PropTypes.string,
-      facility: PropTypes.string,
-
       onlineInformation: PropTypes.string,
       overviewPublication: PropTypes.string,
       repositories: PropTypes.arrayOf(

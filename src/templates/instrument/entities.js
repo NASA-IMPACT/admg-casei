@@ -24,7 +24,7 @@ const Table = styled.table`
 export default function Entities({ id, campaigns, platforms }) {
   return (
     <SectionBlock id={id}>
-      <SectionHeader headline="Related Entities" id={id} />
+      <SectionHeader headline="Instrument Operation" id={id} />
       <SectionContent>
         <Table data-cy={`instrument-related-entities-table`}>
           <tbody>

@@ -46,7 +46,7 @@ describe("Instrument", () => {
     it("has a heading", () => {
       cy.get("[data-cy=about-section]")
         .find("h2")
-        .should("have.text", "About the Instrument")
+        .should("have.text", "Instrument Details")
     })
 
     it("displays a definition list", () => {
@@ -67,8 +67,14 @@ describe("Instrument", () => {
       })
 
       it("displays instrument details", () => {
+        cy.get("[data-cy=lead-investigator-label]").should("exist")
+        cy.get("[data-cy=technical-contact-label]").should("exist")
         cy.get("[data-cy=instrument-manufacturer-label]").should("exist")
         cy.get("[data-cy=funding-source-label]").should("exist")
+        cy.get("[data-cy=data-locations-label]").should("exist")
+        cy.get("[data-cy=repository]").should($li => {
+          expect($li, "item").to.have.length.of.at.least(1)
+        })
       })
     })
 
@@ -80,7 +86,7 @@ describe("Instrument", () => {
       it("has a heading", () => {
         cy.get("[data-cy=entities-section]")
           .find("h2")
-          .should("have.text", "Related Entities")
+          .should("have.text", "Instrument Operation")
       })
 
       it("displays a table", () => {
@@ -101,46 +107,6 @@ describe("Instrument", () => {
           .find("big")
           .first()
           .should("have.text", "ARCTAS")
-      })
-    })
-
-    describe("the related information section", () => {
-      it("exists", () => {
-        cy.get("[data-cy=resources-section]").should("exist")
-      })
-
-      it("has a heading", () => {
-        cy.get("[data-cy=resources-section]")
-          .find("h2")
-          .should("have.text", "Related Information")
-      })
-
-      it("displays online resources", () => {
-        cy.get("[data-cy=online-information-label]")
-          .should("exist")
-          .and("have.text", "Online Information")
-
-        cy.get("[data-cy=online-information-link]").should($a => {
-          expect($a, "links").to.have.length.of.at.least(1)
-        })
-
-        it("displays overview publication", () => {
-          cy.get("[data-cy=overview-publication-label]")
-            .should("exist")
-            .and("have.text", "Overview Publication")
-
-          cy.get("[data-cy=overview-publication-link]").should("not.exist")
-        })
-
-        it("displays repositories", () => {
-          cy.get("[data-cy=repositories-label]")
-            .should("exist")
-            .and("have.text", "Repositories")
-
-          cy.get("[data-cy=repository]").should($li => {
-            expect($li, "item").to.have.length.of.at.least(1)
-          })
-        })
       })
     })
   })
