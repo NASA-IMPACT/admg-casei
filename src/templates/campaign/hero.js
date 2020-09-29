@@ -1,12 +1,29 @@
-import React, { useRef } from "react"
+import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
-import parse from "wellknown"
+import styled from "styled-components"
 
-import Map from "../../components/map"
 import HeroStats from "../../components/hero-stats"
+import Map from "../../components/map"
+import MapLayer from "../../components/map-layer"
 
 import theme from "../../utils/theme"
+
+const BackgroundGradient = styled.div`
+  background-image: linear-gradient(
+    90deg,
+    rgba(12, 21, 32, 0.8) 0%,
+    rgba(12, 21, 32, 0.7) 50%,
+    rgba(12, 21, 32, 0) 66%
+  );
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 47rem;
+  margin-top: -12rem;
+  z-index: 0;
+  grid-area: 1 / 1 / 1 / 4;
+`
 
 const CampaignHero = ({
   bounds,
@@ -17,23 +34,11 @@ const CampaignHero = ({
   countCollectionPeriods,
   countDataProducts,
 }) => {
-  const geometry = parse(bounds)
-  const geojson = {
-    type: "Feature",
-    properties: {
-      stroke: "#f25d0d",
-      "stroke-width": 2,
-      "fill-opacity": 0,
-    },
-    geometry: geometry,
-  }
-
-  const containerRef = useRef()
+  const [map, setMap] = useState(null)
 
   return (
     <section
       data-cy="campaign-hero"
-      ref={containerRef}
       style={{
         display: `grid`,
         gridTemplateColumns: `1fr minmax(auto,  ${theme.layout.maxWidth}) 1fr`,
@@ -42,18 +47,6 @@ const CampaignHero = ({
         alignContent: `center`,
       }}
     >
-      <div
-        style={{
-          backgroundImage: `linear-gradient(90deg, rgba(12,21,32, 0.8) 0%, rgba(12,21,32, 0.7)50%, rgba(12,21,32, 0.0)66%)`,
-          backgroundPosition: `center`,
-          backgroundSize: `cover`,
-          backgroundRepeat: `no-repeat`,
-          height: `47rem`,
-          marginTop: `-12rem`,
-          zIndex: 0,
-          gridArea: `1 / 1 / 1 / 4`,
-        }}
-      ></div>
       <Map
         style={{
           height: `47rem`,
@@ -61,7 +54,14 @@ const CampaignHero = ({
           zIndex: -1,
           gridArea: `1 / 1 / 1 / 4`,
         }}
-      />
+        map={map}
+        setMap={setMap}
+      >
+        <MapLayer bounds={bounds} map={map} />
+      </Map>
+
+      <BackgroundGradient />
+
       <div
         style={{
           gridArea: `1 / 2 / 1 / 2`,

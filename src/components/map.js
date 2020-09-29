@@ -1,11 +1,11 @@
-import React, { useRef, useLayoutEffect, useState } from "react"
+import React, { useRef, useEffect } from "react"
 import mapbox from "mapbox-gl"
+import PropTypes from "prop-types"
 
-export default function Map({ style }) {
+export default function Map({ style, map, setMap, children }) {
   const containerRef = useRef()
-  const [map, setMap] = useState(null)
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     mapbox.accessToken = process.env.GATSBY_MAPBOX_TOKEN
     const m = new mapbox.Map({
       container: containerRef.current,
@@ -14,35 +14,9 @@ export default function Map({ style }) {
       center: [0, 0],
     })
 
-    // m.on("load", () => {
-    //   m.addSource("campaign-bbox", {
-    //     type: "geojson",
-    //     data: {
-    //       type: "Feature",
-    //       properties: {
-    //         stroke: "#f25d0d",
-    //         "stroke-width": 2,
-    //         "fill-opacity": 0,
-    //       },
-    //       geometry: {
-    //         type: "Polygon",
-    //         coordinates: coordinates,
-    //       },
-    //     },
-    //   })
-    //   m.addLayer({
-    //     id: "campaign-bbox",
-    //     type: "line",
-    //     source: "campaign-bbox",
-    //     layout: {},
-    //     paint: {
-    //       "line-color": "#f25d0d",
-    //       "line-opacity": 0.8,
-    //       "line-width": 2,
-    //     },
-    //   })
-    // })
-    setMap(m)
+    m.on("load", () => {
+      setMap(m)
+    })
 
     return () => {
       if (map) {
@@ -51,5 +25,16 @@ export default function Map({ style }) {
     }
   }, [])
 
-  return <div style={style} ref={containerRef} />
+  return (
+    <div style={style} ref={containerRef}>
+      {map && children}
+    </div>
+  )
+}
+
+Map.propTypes = {
+  style: PropTypes.object,
+  map: PropTypes.object,
+  setMap: PropTypes.func.isRequired,
+  children: PropTypes.element,
 }
