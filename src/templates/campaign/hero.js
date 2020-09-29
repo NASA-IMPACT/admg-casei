@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import parse from "wellknown"
 import * as turf from "@turf/turf"
 import geoViewport from "@mapbox/geo-viewport"
+import Image from "gatsby-image"
 
 import HeroStats from "../../components/hero-stats"
 
@@ -11,6 +12,7 @@ import { useContainerDimensions } from "../../utils/helpers"
 import theme from "../../utils/theme"
 
 const CampaignHero = ({
+  logo,
   bounds,
   shortname,
   longname,
@@ -79,7 +81,15 @@ const CampaignHero = ({
       >
         <div style={{ flex: `2`, padding: `0 ${theme.layout.pageMargin}` }}>
           <div>
-            <p>{shortname}</p>
+            {logo && logo.nasaImg ? (
+              <Image
+                alt={logo.nasaImgAlt}
+                fixed={logo.nasaImg.childImageSharp.fixed}
+                style={{ margin: `0` }}
+              />
+            ) : (
+              <p>{shortname}</p>
+            )}
             <h1 data-cy="campaign-hero-header">{longname}</h1>
             <p>{focusListing}</p>
           </div>
@@ -99,6 +109,16 @@ const CampaignHero = ({
 
 export const heroFields = graphql`
   fragment heroFields on campaign {
+    logo: logo {
+      nasaImgAlt
+      nasaImg {
+        childImageSharp {
+          fixed(height: 85) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+    }
     bounds: spatial_bounds
     shortname: short_name
     longname: long_name
@@ -112,6 +132,12 @@ export const heroFields = graphql`
 `
 
 CampaignHero.propTypes = {
+  logo: PropTypes.shape({
+    nasaImgAlt: PropTypes.string.isRequired,
+    nasaImg: PropTypes.shape({
+      childImageSharp: PropTypes.object,
+    }),
+  }),
   bounds: PropTypes.string.isRequired,
   shortname: PropTypes.string.isRequired,
   longname: PropTypes.string.isRequired,
