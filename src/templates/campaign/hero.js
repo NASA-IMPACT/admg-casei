@@ -1,13 +1,12 @@
-import React, { useRef, useLayoutEffect, useState } from "react"
+import React, { useRef } from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 import parse from "wellknown"
-import * as turf from "@turf/turf"
-import mapbox from "mapbox-gl"
-// import HeroStats from "../../components/hero-stats"
 
-// import { useContainerDimensions } from "../../utils/helpers"
-// import theme from "../../utils/theme"
+import Map from "../../components/map"
+import HeroStats from "../../components/hero-stats"
+
+import theme from "../../utils/theme"
 
 const CampaignHero = ({
   bounds,
@@ -18,65 +17,76 @@ const CampaignHero = ({
   countCollectionPeriods,
   countDataProducts,
 }) => {
-  const [map, setMap] = useState(null)
-  const containerRef = useRef()
-
   const geometry = parse(bounds)
-  const coordinates = geometry.coordinates.shift()
-  const features = turf.featureCollection(
-    coordinates.map(coor => turf.point(coor))
-  )
+  const geojson = {
+    type: "Feature",
+    properties: {
+      stroke: "#f25d0d",
+      "stroke-width": 2,
+      "fill-opacity": 0,
+    },
+    geometry: geometry,
+  }
 
-  useLayoutEffect(() => {
-    const m = new mapbox.Map({
-      container: containerRef.current,
-      style: `mapbox://styles/mapbox/satellite-streets-v11/`,
-      zoom: 13,
-      center: turf.center(features).geometry.coordinates,
-    })
-    m.on("load", () => {
-      m.addSource("campaign-bbox", {
-        type: "geojson",
-        data: {
-          type: "Feature",
-          properties: {
-            stroke: "#f25d0d",
-            "stroke-width": 2,
-            "fill-opacity": 0,
-          },
-          geometry: {
-            type: "Polygon",
-            coordinates: coordinates,
-          },
-        },
-      })
-      m.addLayer({
-        id: "campaign-bbox",
-        type: "line",
-        source: "campaign-bbox",
-        layout: {},
-        paint: {
-          "line-color": "#f25d0d",
-          "line-opacity": 0.8,
-          "line-width": 2,
-        },
-      })
-    })
-    setMap(m)
-
-    return () => {
-      if (map) {
-        map.remove()
-      }
-    }
-  }, [])
+  const containerRef = useRef()
 
   return (
     <section
       data-cy="campaign-hero"
       ref={containerRef}
-      style={{ height: `35rem` }}
-    ></section>
+      style={{
+        display: `grid`,
+        gridTemplateColumns: `1fr minmax(auto,  ${theme.layout.maxWidth}) 1fr`,
+        width: `100vw`,
+        minHeight: `35rem`,
+        alignContent: `center`,
+      }}
+    >
+      <div
+        style={{
+          backgroundImage: `linear-gradient(90deg, rgba(12,21,32, 0.8) 0%, rgba(12,21,32, 0.7)50%, rgba(12,21,32, 0.0)66%)`,
+          backgroundPosition: `center`,
+          backgroundSize: `cover`,
+          backgroundRepeat: `no-repeat`,
+          height: `47rem`,
+          marginTop: `-12rem`,
+          zIndex: 0,
+          gridArea: `1 / 1 / 1 / 4`,
+        }}
+      ></div>
+      <Map
+        style={{
+          height: `47rem`,
+          marginTop: `-12rem`,
+          zIndex: -1,
+          gridArea: `1 / 1 / 1 / 4`,
+        }}
+      />
+      <div
+        style={{
+          gridArea: `1 / 2 / 1 / 2`,
+          display: `flex`,
+          paddingTop: `11rem`,
+          zIndex: 1,
+        }}
+      >
+        <div style={{ flex: `2`, padding: `0 ${theme.layout.pageMargin}` }}>
+          <div>
+            <p>{shortname}</p>
+            <h1 data-cy="campaign-hero-header">{longname}</h1>
+            <p>{focusListing}</p>
+          </div>
+          <HeroStats
+            statList={[
+              { number: countDeployments, label: "Deployments" },
+              { number: countCollectionPeriods, label: "Collection Periods" },
+              { number: countDataProducts, label: "Data Products" },
+            ]}
+          />
+        </div>
+        <div style={{ flex: `1` }}></div>
+      </div>
+    </section>
   )
 }
 
