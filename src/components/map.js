@@ -26,7 +26,7 @@ export default function Map({ style, map, setMap, children }) {
   }, [])
 
   return (
-    <div style={style} ref={containerRef}>
+    <div style={style} ref={containerRef} data-cy="mapboxgl-map">
       {map && children}
     </div>
   )
