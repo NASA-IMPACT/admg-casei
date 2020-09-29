@@ -42,6 +42,7 @@ export default function Hero({
           gridArea: `1 / 2 / 1 / 2`,
           display: `grid`,
           gridTemplateColumns: `${textToImageRatio[0]}fr ${textToImageRatio[1]}fr`,
+          gridGap: `.5rem`,
           padding: `0 ${theme.layout.pageMargin}`,
         }}
       >
