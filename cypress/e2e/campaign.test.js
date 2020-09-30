@@ -40,12 +40,8 @@ describe("Campaign", () => {
           expect($stat.eq(2), "third item").to.contain("9")
         })
     })
-    it("displays a map as background image", () => {
-      cy.get("[data-cy=campaign-hero]").then($section => {
-        expect($section[0].style["background-image"]).to.contain(
-          "/styles/v1/mapbox/satellite-streets-v11/static"
-        )
-      })
+    it("displays a map", () => {
+      cy.get("[data-cy=mapboxgl-map]").should("exist")
     })
   })
 

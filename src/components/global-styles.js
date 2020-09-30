@@ -1,5 +1,6 @@
 import { createGlobalStyle, css } from "styled-components"
 import "@reach/listbox/styles.css"
+import "mapbox-gl/dist/mapbox-gl.css"
 
 import theme from "../utils/theme"
 

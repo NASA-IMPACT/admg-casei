@@ -1,15 +1,36 @@
-import React, { useRef } from "react"
+import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
-import parse from "wellknown"
-import * as turf from "@turf/turf"
-import geoViewport from "@mapbox/geo-viewport"
+import styled from "styled-components"
 import Image from "gatsby-image"
 
 import HeroStats from "../../components/hero-stats"
+import Map from "../../components/map"
+import MapLayer from "../../components/map-layer"
 
-import { useContainerDimensions } from "../../utils/helpers"
 import theme from "../../utils/theme"
+
+const BackgroundGradient = styled.div`
+  background-image: linear-gradient(
+      90deg,
+      rgba(12, 21, 32, 0.8) 0%,
+      rgba(12, 21, 32, 0.7) 50%,
+      rgba(12, 21, 32, 0) 66%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(12, 21, 32, 0.8) 0%,
+      rgba(12, 21, 32, 0.5) 25%,
+      rgba(12, 21, 32, 0) 32%
+    );
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 47rem;
+  margin-top: -12rem;
+  z-index: 0;
+  grid-area: 1 / 1 / 1 / 4;
+`
 
 const CampaignHero = ({
   logo,
@@ -21,62 +42,40 @@ const CampaignHero = ({
   countCollectionPeriods,
   countDataProducts,
 }) => {
-  const geometry = parse(bounds)
-  const geojson = {
-    type: "Feature",
-    properties: {
-      stroke: "#f25d0d",
-      "stroke-width": 2,
-      "fill-opacity": 0,
-    },
-    geometry: geometry,
-  }
-  const [w, s, e, n] = turf.bbox(geometry)
-  const west = turf.point([w, (n + s) / 2])
-  const east = turf.point([e, (n + s) / 2])
-  const options = { units: "degrees" }
-  const distance = turf.distance(west, east, options)
-  const offsetCoords = turf.transformTranslate(
-    geometry,
-    distance * 0.75,
-    -90,
-    options
-  )
-  const scaledCoords = turf.bbox(turf.transformScale(offsetCoords, 3, options))
-
-  const containerRef = useRef()
-  const { width } = useContainerDimensions(containerRef)
-
-  const size = [Math.min(width, 1280), 560]
-  const viewport = geoViewport.viewport(scaledCoords, size)
-  const overlay = encodeURIComponent(JSON.stringify(geojson))
-  const accessToken =
-    "pk.eyJ1IjoiZGV2c2VlZCIsImEiOiJja2JxbjJhbGQybnpnMnJwdnk0NXloMmt1In0.5ciMNUW3yaadjwmlDLTugw"
-
-  const url = width
-    ? `https://api.mapbox.com/styles/v1/mapbox/satellite-streets-v11/static/geojson(${overlay})/${viewport.center.join(
-        ","
-      )},${viewport.zoom}/${size.join("x")}?access_token=${accessToken}`
-    : null // skip while width is to be determinded
+  const [map, setMap] = useState(null)
 
   return (
     <section
       data-cy="campaign-hero"
-      ref={containerRef}
       style={{
-        backgroundImage: `linear-gradient(90deg, rgba(12,21,32, 0.8) 0%, rgba(12,21,32, 0.7)50%, rgba(12,21,32, 0.0)66%), url("${url}")`,
-        backgroundPosition: `center`,
-        backgroundSize: `cover`,
-        backgroundRepeat: `no-repeat`,
-        height: `35rem`,
+        display: `grid`,
+        gridTemplateColumns: `1fr minmax(auto,  ${theme.layout.maxWidth}) 1fr`,
+        width: `100vw`,
+        minHeight: `35rem`,
+        alignContent: `center`,
       }}
     >
+      <Map
+        style={{
+          height: `47rem`,
+          marginTop: `-12rem`,
+          zIndex: -1,
+          gridArea: `1 / 1 / 1 / 4`,
+        }}
+        map={map}
+        setMap={setMap}
+      >
+        <MapLayer bounds={bounds} map={map} />
+      </Map>
+
+      <BackgroundGradient />
+
       <div
         style={{
+          gridArea: `1 / 2 / 1 / 2`,
           display: `flex`,
-          maxWidth: theme.layout.maxWidth,
-          margin: `0 auto`,
           paddingTop: `11rem`,
+          zIndex: 1,
         }}
       >
         <div style={{ flex: `2`, padding: `0 ${theme.layout.pageMargin}` }}>
