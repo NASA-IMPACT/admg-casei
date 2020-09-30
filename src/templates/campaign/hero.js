@@ -12,11 +12,17 @@ import theme from "../../utils/theme"
 
 const BackgroundGradient = styled.div`
   background-image: linear-gradient(
-    90deg,
-    rgba(12, 21, 32, 0.8) 0%,
-    rgba(12, 21, 32, 0.7) 50%,
-    rgba(12, 21, 32, 0) 66%
-  );
+      90deg,
+      rgba(12, 21, 32, 0.8) 0%,
+      rgba(12, 21, 32, 0.7) 50%,
+      rgba(12, 21, 32, 0) 66%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(12, 21, 32, 0.8) 0%,
+      rgba(12, 21, 32, 0.5) 25%,
+      rgba(12, 21, 32, 0) 32%
+    );
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
