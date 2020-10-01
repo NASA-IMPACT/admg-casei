@@ -9,13 +9,7 @@ const Section = styled.section`
   grid-template-columns: repeat(12, 1fr);
   column-gap: 1rem;
   margin-top: ${props => (props.isSpaced ? `4rem` : `1rem`)};
-
-  /* This invisible border pushes the section below the nav bar when using inpage navigation */
-  border-top: 10px solid transparent;
   position: relative;
-  -webkit-background-clip: padding-box;
-  -moz-background-clip: padding;
-  background-clip: padding-box;
 
   /* In case you _really_ need a border, use :before:
    * &:before {
@@ -27,6 +21,12 @@ const Section = styled.section`
    *   border-top: 2px solid #ccc;
    * }
   */
+`
+
+/* This invisible border pushes the section below the nav bar when using inpage navigation */
+const Buffer = styled.div`
+  position: absolute;
+  top: -80px;
 `
 
 export const SectionHeader = ({ tagline, headline, id, isPrimary }) => (
@@ -66,7 +66,8 @@ SectionContent.propTypes = {
 
 export const SectionBlock = ({ id, children, isSpaced }) => {
   return (
-    <Section id={id} data-cy={`${id}-section`} isSpaced={isSpaced}>
+    <Section data-cy={`${id}-section`} isSpaced={isSpaced}>
+      <Buffer id={id} />
       {children}
     </Section>
   )
