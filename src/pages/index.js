@@ -30,7 +30,7 @@ const IndexPage = ({ data }) => {
         id="home"
       />
       <PageBody id="home">
-        <SectionBlock id="focus-area">
+        <SectionBlock id="focus-area" isSpaced>
           <SectionHeader
             tagline="explore nasa earth science"
             headline="Focus Areas"

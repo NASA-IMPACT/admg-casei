@@ -8,7 +8,7 @@ const Section = styled.section`
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   column-gap: 1rem;
-  margin-top: ${props => (props.isSpaced ? `4rem` : `1rem`)};
+  margin-top: ${props => (props.isSpaced ? `6rem` : `2rem`)};
   position: relative;
 
   /* In case you _really_ need a border, use :before:
