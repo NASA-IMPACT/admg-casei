@@ -6,23 +6,27 @@ exports[`Platform Section displays content 1`] = `
   grid-template-columns: repeat(12,1fr);
   -webkit-column-gap: 1rem;
   column-gap: 1rem;
-  margin-top: 1rem;
-  border-top: 10px solid transparent;
+  margin-top: 2rem;
   position: relative;
-  -webkit-background-clip: padding-box;
-  -moz-background-clip: padding;
-  background-clip: padding-box;
 }
 
 .c1 {
+  position: absolute;
+  top: -80px;
+}
+
+.c2 {
   grid-column: 1 / span 12;
 }
 
 <section
   className="c0"
   data-cy="platform-section"
-  id="platform"
 >
+  <div
+    className="c1"
+    id="platform"
+  />
   <div
     style={
       Object {
@@ -40,7 +44,7 @@ exports[`Platform Section displays content 1`] = `
     </a>
   </div>
   <div
-    className="c1"
+    className="c2"
   >
     <div
       data-cy="platform-carousel"
