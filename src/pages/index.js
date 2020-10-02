@@ -30,7 +30,7 @@ const IndexPage = ({ data }) => {
         id="home"
       />
       <PageBody id="home">
-        <SectionBlock id="focus-area">
+        <SectionBlock id="focus-area" isSpaced>
           <SectionHeader
             tagline="explore nasa earth science"
             headline="Focus Areas"
@@ -44,7 +44,7 @@ const IndexPage = ({ data }) => {
           </SectionContent>
         </SectionBlock>
 
-        <SectionBlock id="region-type">
+        <SectionBlock id="region-type" isSpaced>
           <SectionHeader
             tagline="explore campaigns by"
             headline="Region Type"
@@ -55,7 +55,7 @@ const IndexPage = ({ data }) => {
           </SectionContent>
         </SectionBlock>
 
-        <SectionBlock id="geophysical-concepts">
+        <SectionBlock id="geophysical-concepts" isSpaced>
           <SectionHeader
             tagline="explore campaigns by"
             headline="Geophysical Concepts"
@@ -68,7 +68,7 @@ const IndexPage = ({ data }) => {
           </SectionContent>
         </SectionBlock>
 
-        <SectionBlock id="platforms">
+        <SectionBlock id="platforms" isSpaced>
           <SectionContent columns={[1, 6]}>
             <Image
               alt={data.platformPlaceholder.nasaImgAlt}
@@ -109,7 +109,7 @@ const IndexPage = ({ data }) => {
           </SectionContent>
         </SectionBlock>
 
-        <SectionBlock id="instruments">
+        <SectionBlock id="instruments" isSpaced>
           <SectionHeader
             tagline="explore"
             headline="Instruments"

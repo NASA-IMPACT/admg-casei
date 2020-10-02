@@ -42,7 +42,7 @@ const typography = new Typography({
       h2: {
         fontSize: rhythm(1.75),
         marginTop: rhythm(0.5),
-        marginBottom: rhythm(2.5),
+        marginBottom: rhythm(1.5),
       },
       "h3,h4,h5,h6": {
         fontSize: rhythm(1.5),

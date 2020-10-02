@@ -30,11 +30,7 @@ const PlatformSection = ({ id, platforms, instruments }) => (
             slidesToShow={3}
           >
             {platforms.map(platform => (
-              <div
-                key={platform.id}
-                style={{ minHeight: `360px` }}
-                data-cy="platform"
-              >
+              <div key={platform.id} data-cy="platform">
                 <Link to={`/platform/${platform.id}`}>
                   <div style={{ position: `relative`, marginRight: `1rem` }}>
                     <Image

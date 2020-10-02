@@ -71,6 +71,7 @@ const OverviewSection = ({
           id="overview-content"
           label="Spatial bounds (WKT)"
           info={bounds}
+          shortenText
         />
       </div>
     </SectionContent>
