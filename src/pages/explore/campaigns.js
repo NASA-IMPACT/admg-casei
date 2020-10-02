@@ -13,6 +13,7 @@ import ExploreMenu from "../../components/explore/explore-menu"
 import ExploreTools from "../../components/explore/explore-tools"
 import ExploreSection from "../../components/explore/explore-section"
 import CampaignCard from "../../components/cards/campaign-card"
+import ExploreMap from "../../components/explore/explore-map"
 
 export default function Campaigns({ data, location }) {
   const {
@@ -112,6 +113,7 @@ export default function Campaigns({ data, location }) {
           ref={inputElement}
           category="campaigns"
         />
+        <ExploreMap data={allCampaign.list.map(c => c.bounds)} />
 
         {isLoading ? (
           <div
@@ -211,6 +213,7 @@ export const query = graphql`
       id # required for filter
     }
     fundingAgency: funding_agency # required for filter
+    bounds: spatial_bounds # required for map
   }
 `
 

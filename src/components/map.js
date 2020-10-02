@@ -1,9 +1,11 @@
-import React, { useRef, useEffect } from "react"
-import mapbox from "mapbox-gl"
+import React, { useRef, useState, useEffect } from "react"
 import PropTypes from "prop-types"
+import mapbox from "mapbox-gl"
 
-export default function Map({ style, map, setMap, children }) {
+export default function Map({ style, children }) {
   const containerRef = useRef()
+
+  const [map, setMap] = useState(null)
 
   useEffect(() => {
     mapbox.accessToken = process.env.GATSBY_MAPBOX_TOKEN
@@ -16,6 +18,11 @@ export default function Map({ style, map, setMap, children }) {
 
     m.on("load", () => {
       setMap(m)
+
+      if (process.env.NODE_ENV === "development") {
+        // makes map accessible in console for debugging
+        window.map = m
+      }
     })
 
     return () => {
@@ -27,14 +34,21 @@ export default function Map({ style, map, setMap, children }) {
 
   return (
     <div style={style} ref={containerRef} data-cy="mapboxgl-map">
-      {map && children}
+      {map &&
+        children &&
+        React.Children.map(children, child =>
+          React.cloneElement(child, {
+            map,
+          })
+        )}
     </div>
   )
 }
 
 Map.propTypes = {
   style: PropTypes.object,
-  map: PropTypes.object,
-  setMap: PropTypes.func.isRequired,
-  children: PropTypes.element,
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.arrayOf(PropTypes.element),
+  ]),
 }

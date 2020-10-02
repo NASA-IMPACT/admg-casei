@@ -1,12 +1,14 @@
-import React, { useState } from "react"
+import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 import styled from "styled-components"
 import Image from "gatsby-image"
+import parse from "wellknown"
 
 import HeroStats from "../../components/hero-stats"
 import Map from "../../components/map"
 import MapLayer from "../../components/map-layer"
+import MapSource from "../../components/map-source"
 
 import theme from "../../utils/theme"
 
@@ -42,8 +44,10 @@ const CampaignHero = ({
   countCollectionPeriods,
   countDataProducts,
 }) => {
-  const [map, setMap] = useState(null)
-
+  const geojson = {
+    type: "Feature",
+    geometry: parse(bounds),
+  }
   return (
     <section
       data-cy="campaign-hero"
@@ -62,10 +66,10 @@ const CampaignHero = ({
           zIndex: -1,
           gridArea: `1 / 1 / 1 / 4`,
         }}
-        map={map}
-        setMap={setMap}
       >
-        <MapLayer bounds={bounds} map={map} />
+        <MapSource geojson={geojson} id="campaign">
+          <MapLayer id="campaign" />
+        </MapSource>
       </Map>
 
       <BackgroundGradient />
