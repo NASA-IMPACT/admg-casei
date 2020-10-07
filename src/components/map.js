@@ -46,7 +46,9 @@ export default function Map({ style, children }) {
 }
 
 Map.propTypes = {
-  style: PropTypes.object,
+  style: PropTypes.shape({
+    height: PropTypes.number.isRequired,
+  }),
   children: PropTypes.oneOfType([
     PropTypes.element,
     PropTypes.arrayOf(PropTypes.element),

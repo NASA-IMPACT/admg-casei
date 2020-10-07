@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Map renders correctly 1`] = `
+<div
+  data-cy="mapboxgl-map"
+  style={
+    Object {
+      "height": 200,
+    }
+  }
+/>
+`;
