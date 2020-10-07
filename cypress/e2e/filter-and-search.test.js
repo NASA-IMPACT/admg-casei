@@ -29,7 +29,6 @@ describe("Explore Tools", () => {
       })
       it("renders correctly", () => {
         cy.get("[data-cy=explore-tools]")
-
         cy.get("[data-cy=filter-select]")
           .invoke("text")
           .should("contain", "Filter")
@@ -49,6 +48,7 @@ describe("Explore Tools", () => {
 
         cy.window().should("have.prop", "beforeReload", true)
 
+        cy.get("[data-cy=explore-tools]")
         cy.get("[data-cy=filter-select]").click()
 
         cy.get("[data-cy=filter-options]")
@@ -73,6 +73,7 @@ describe("Explore Tools", () => {
           x.filterExamples.forEach(filterExample => {
             const numBefore = $cards.length
 
+            cy.get("[data-cy=explore-tools]")
             cy.get("[data-cy=filter-select]").click()
             cy.get("[data-cy=filter-options]")
               .find("[data-cy=filter-option]")
@@ -112,6 +113,7 @@ describe("Explore Tools", () => {
 
       it("clears all filters", () => {
         x.filterExamples.forEach(filterExample => {
+          cy.get("[data-cy=explore-tools]")
           cy.get("[data-cy=filter-select]").click()
           cy.get("[data-cy=filter-options]")
             .find("[data-cy=filter-option]")
@@ -124,6 +126,7 @@ describe("Explore Tools", () => {
       })
 
       it("sorts the list 'a to z' or 'z to a'", () => {
+        cy.get("[data-cy=explore-tools]")
         cy.get("[data-cy=sort-select]").click()
         cy.get("[data-cy=sort-options]")
           .find("li")
@@ -157,6 +160,7 @@ describe("Explore Tools", () => {
 
       if (x.category === "campaigns") {
         it("sorts the list be most recent", () => {
+          cy.get("[data-cy=explore-tools]")
           cy.get("[data-cy=sort-select]").click()
           cy.get("[data-cy=sort-options]")
             .find("[data-cy=sort-option]")
@@ -174,6 +178,7 @@ describe("Explore Tools", () => {
         })
 
         it("sorts the list be oldest", () => {
+          cy.get("[data-cy=explore-tools]")
           cy.get("[data-cy=sort-select]").click()
           cy.get("[data-cy=sort-options]")
             .find("[data-cy=sort-option]")
@@ -193,6 +198,7 @@ describe("Explore Tools", () => {
 
       if (x.category === "platforms" || x.category === "instruments") {
         it("sorts the list be most used", () => {
+          cy.get("[data-cy=explore-tools]")
           cy.get("[data-cy=sort-select]").click()
           cy.get("[data-cy=sort-options]")
             .find("[data-cy=sort-option]")
