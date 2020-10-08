@@ -29,7 +29,6 @@ describe("Explore Tools", () => {
       })
       it("renders correctly", () => {
         cy.get("[data-cy=explore-tools]")
-
         cy.get("[data-cy=filter-select]")
           .invoke("text")
           .should("contain", "Filter")
@@ -49,12 +48,13 @@ describe("Explore Tools", () => {
 
         cy.window().should("have.prop", "beforeReload", true)
 
+        cy.get("[data-cy=explore-tools]")
         cy.get("[data-cy=filter-select]").click()
 
         cy.get("[data-cy=filter-options]")
           .find("[data-cy=filter-option]")
           .contains(x.filterExamples[0])
-          .click()
+          .click({ force: true }) // neccessary due to css from library that labels the parent div with visibility:none
 
         cy.get("[data-cy=submit]").click()
 
@@ -73,6 +73,7 @@ describe("Explore Tools", () => {
           x.filterExamples.forEach(filterExample => {
             const numBefore = $cards.length
 
+            cy.get("[data-cy=explore-tools]")
             cy.get("[data-cy=filter-select]").click()
             cy.get("[data-cy=filter-options]")
               .find("[data-cy=filter-option]")
@@ -112,11 +113,12 @@ describe("Explore Tools", () => {
 
       it("clears all filters", () => {
         x.filterExamples.forEach(filterExample => {
+          cy.get("[data-cy=explore-tools]")
           cy.get("[data-cy=filter-select]").click()
           cy.get("[data-cy=filter-options]")
             .find("[data-cy=filter-option]")
             .contains(filterExample)
-            .click({ force: true })
+            .click({ force: true }) // neccessary due to css from library that labels the parent div with visibility:none
         })
         cy.get("[data-cy=clear-filters]").should("exist")
         cy.get("[data-cy=clear-filters]").click()
@@ -124,11 +126,12 @@ describe("Explore Tools", () => {
       })
 
       it("sorts the list 'a to z' or 'z to a'", () => {
+        cy.get("[data-cy=explore-tools]")
         cy.get("[data-cy=sort-select]").click()
         cy.get("[data-cy=sort-options]")
           .find("li")
           .contains("A TO Z")
-          .click({ force: true })
+          .click({ force: true }) // neccessary due to css from library that labels the parent div with visibility:none
 
         cy.get("[data-cy=explore-card]")
           .find("big")
@@ -143,7 +146,7 @@ describe("Explore Tools", () => {
         cy.get("[data-cy=sort-options]")
           .find("[data-cy=sort-option]")
           .contains("Z TO A")
-          .click({ force: true })
+          .click({ force: true }) // neccessary due to css from library that labels the parent div with visibility:none
 
         cy.get("[data-cy=explore-card]")
           .find("big")
@@ -157,11 +160,12 @@ describe("Explore Tools", () => {
 
       if (x.category === "campaigns") {
         it("sorts the list be most recent", () => {
+          cy.get("[data-cy=explore-tools]")
           cy.get("[data-cy=sort-select]").click()
           cy.get("[data-cy=sort-options]")
             .find("[data-cy=sort-option]")
             .contains("MOST RECENT")
-            .click({ force: true })
+            .click({ force: true }) // neccessary due to css from library that labels the parent div with visibility:none
 
           cy.get("[data-cy=explore-card]")
             .find("[data-cy=daterange]")
@@ -174,11 +178,12 @@ describe("Explore Tools", () => {
         })
 
         it("sorts the list be oldest", () => {
+          cy.get("[data-cy=explore-tools]")
           cy.get("[data-cy=sort-select]").click()
           cy.get("[data-cy=sort-options]")
             .find("[data-cy=sort-option]")
             .contains("OLDEST")
-            .click({ force: true })
+            .click({ force: true }) // neccessary due to css from library that labels the parent div with visibility:none
 
           cy.get("[data-cy=explore-card]")
             .find("[data-cy=daterange]")
@@ -193,11 +198,12 @@ describe("Explore Tools", () => {
 
       if (x.category === "platforms" || x.category === "instruments") {
         it("sorts the list be most used", () => {
+          cy.get("[data-cy=explore-tools]")
           cy.get("[data-cy=sort-select]").click()
           cy.get("[data-cy=sort-options]")
             .find("[data-cy=sort-option]")
             .contains("MOST USED")
-            .click({ force: true })
+            .click({ force: true }) // neccessary due to css from library that labels the parent div with visibility:none
 
           cy.get("[data-cy=explore-card]")
             .find("[data-cy=count1]")

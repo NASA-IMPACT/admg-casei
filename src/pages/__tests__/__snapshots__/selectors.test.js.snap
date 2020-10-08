@@ -572,6 +572,14 @@ exports[`Campaigns page renders correctly 1`] = `
           </button>
         </div>
       </div>
+      <div
+        data-cy="mapboxgl-map"
+        style={
+          Object {
+            "height": 500,
+          }
+        }
+      />
       <section>
         <div
           style={
