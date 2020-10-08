@@ -286,7 +286,10 @@ describe("Campaign", () => {
         .first()
         .find("[data-cy=doi-label]")
         .should("exist")
-        .and("have.text", "gpmamprolyx")
+        .and(
+          "have.text",
+          "GPM Ground Validation Advanced Microwave Precipitation Radiometer (AMPR) OLYMPEX V1"
+        )
 
       cy.get("[data-cy=data-product]")
         .first()
