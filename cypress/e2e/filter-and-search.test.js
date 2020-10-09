@@ -26,16 +26,19 @@ describe("Explore Tools", () => {
     describe(x.category, () => {
       beforeEach(() => {
         cy.visit(`/explore/${x.category}`)
-      })
-      it("renders correctly", () => {
         cy.get("[data-cy=explore-tools]")
+      })
+
+      it("renders correctly", () => {
         cy.get("[data-cy=filter-select]")
           .invoke("text")
           .should("contain", "Filter")
 
-        cy.get("[data-cy=explore-tools]")
-          .find("[data-cy=explore-input]")
-          .should("have.attr", "aria-label", "Enter search text")
+        cy.get("[data-cy=explore-input]").should(
+          "have.attr",
+          "aria-label",
+          "Enter search text"
+        )
 
         cy.get("[data-cy=submit]").should("exist")
 
@@ -60,8 +63,7 @@ describe("Explore Tools", () => {
 
         cy.window().should("have.prop", "beforeReload", true)
 
-        cy.get("[data-cy=explore-tools]")
-          .find("[data-cy=explore-input]")
+        cy.get("[data-cy=explore-input]")
           .type("submitting some text")
           .type("{enter}")
 
@@ -73,7 +75,6 @@ describe("Explore Tools", () => {
           x.filterExamples.forEach(filterExample => {
             const numBefore = $cards.length
 
-            cy.get("[data-cy=explore-tools]")
             cy.get("[data-cy=filter-select]").click()
             cy.get("[data-cy=filter-options]")
               .find("[data-cy=filter-option]")
@@ -87,8 +88,7 @@ describe("Explore Tools", () => {
               ` of ${numBefore} ${x.category}`
             )
 
-            cy.get("main")
-              .find("[data-cy=explore-card]")
+            cy.get("[data-cy=explore-card]")
               .its("length")
               .should("be.lt", numBefore)
 
@@ -103,8 +103,7 @@ describe("Explore Tools", () => {
               `Showing ${numBefore} ${x.category}`
             )
 
-            cy.get("main")
-              .find("[data-cy=explore-card]")
+            cy.get("[data-cy=explore-card]")
               .its("length")
               .should("be.eq", numBefore)
           })
@@ -113,7 +112,6 @@ describe("Explore Tools", () => {
 
       it("clears all filters", () => {
         x.filterExamples.forEach(filterExample => {
-          cy.get("[data-cy=explore-tools]")
           cy.get("[data-cy=filter-select]").click()
           cy.get("[data-cy=filter-options]")
             .find("[data-cy=filter-option]")
@@ -126,7 +124,6 @@ describe("Explore Tools", () => {
       })
 
       it("sorts the list 'a to z' or 'z to a'", () => {
-        cy.get("[data-cy=explore-tools]")
         cy.get("[data-cy=sort-select]").click()
         cy.get("[data-cy=sort-options]")
           .find("li")
@@ -160,7 +157,6 @@ describe("Explore Tools", () => {
 
       if (x.category === "campaigns") {
         it("sorts the list be most recent", () => {
-          cy.get("[data-cy=explore-tools]")
           cy.get("[data-cy=sort-select]").click()
           cy.get("[data-cy=sort-options]")
             .find("[data-cy=sort-option]")
@@ -178,7 +174,6 @@ describe("Explore Tools", () => {
         })
 
         it("sorts the list be oldest", () => {
-          cy.get("[data-cy=explore-tools]")
           cy.get("[data-cy=sort-select]").click()
           cy.get("[data-cy=sort-options]")
             .find("[data-cy=sort-option]")
@@ -198,7 +193,6 @@ describe("Explore Tools", () => {
 
       if (x.category === "platforms" || x.category === "instruments") {
         it("sorts the list be most used", () => {
-          cy.get("[data-cy=explore-tools]")
           cy.get("[data-cy=sort-select]").click()
           cy.get("[data-cy=sort-options]")
             .find("[data-cy=sort-option]")
