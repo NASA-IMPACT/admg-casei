@@ -704,7 +704,7 @@ exports[`Campaigns page renders correctly 1`] = `
                 >
                    · 
                   <strong>
-                    4
+                    0
                   </strong>
                    
                   Data Product
@@ -810,9 +810,7 @@ exports[`Campaigns page renders correctly 1`] = `
                   }
                 >
                    · 
-                  <strong>
-                    0
-                  </strong>
+                  <strong />
                    
                   Data Product
                   s
