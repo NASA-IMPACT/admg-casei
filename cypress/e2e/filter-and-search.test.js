@@ -2,7 +2,7 @@
 
 import api from "../../src/utils/api"
 
-describe("Explore Tools", () => {
+describe.skip("Explore Tools", () => {
   ;[
     {
       category: "campaigns",
