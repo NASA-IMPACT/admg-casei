@@ -20,11 +20,6 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
     setIsClient(true)
   }, [])
 
-  const collectionPeriods = campaign.deployments
-    .map(d => d.collectionPeriods)
-    .flat()
-  const dois = collectionPeriods.map(c => c.dois).flat()
-
   const sections = {
     overview: {
       nav: "Overview",
@@ -71,7 +66,7 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
       nav: "Data",
       component: DataSection,
       props: {
-        dois,
+        dois: campaign.dois,
       },
     },
     "program-info": {
@@ -103,7 +98,7 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
         focusListing={campaign.focus.map(x => x.shortname).join(", ")}
         countDeployments={campaign.countDeployments}
         countCollectionPeriods={campaign.countCollectionPeriods}
-        countDataProducts={dois.length}
+        countDataProducts={campaign.countDataProducts}
         logo={campaign.logo}
       />
       <InpageNav
@@ -205,30 +200,18 @@ CampaignTemplate.propTypes = {
       ).isRequired,
       deployments: PropTypes.arrayOf(
         PropTypes.shape({
-          nodes: PropTypes.arrayOf(
-            PropTypes.shape({
-              id: PropTypes.string.isRequired,
-              shortname: PropTypes.string.isRequired,
-              flights: PropTypes.array.isRequired,
-              region: PropTypes.array.isRequired,
-              campaign: PropTypes.string.isRequired,
-              longname: PropTypes.string.isRequired,
-              end: PropTypes.string.isRequired,
-              start: PropTypes.string.isRequired,
-              collection_periods: PropTypes.shape(
-                {
-                  dois: PropTypes.arrayOf(
-                    PropTypes.shape({
-                      id: PropTypes.string.isRequired,
-                      shortname: PropTypes.string.isRequired,
-                      longname: PropTypes.string.isRequired,
-                    }).isRequired
-                  ).isRequired,
-                }.isRequired
-              ),
-            })
-          ),
-        })
+          id: PropTypes.string.isRequired,
+          shortname: PropTypes.string.isRequired,
+          flights: PropTypes.array,
+          region: PropTypes.array,
+          campaign: PropTypes.string.isRequired,
+          longname: PropTypes.string.isRequired,
+          end: PropTypes.string.isRequired,
+          start: PropTypes.string.isRequired,
+          collection_periods: PropTypes.shape({
+            id: PropTypes.string.isRequired,
+          }),
+        }).isRequired
       ).isRequired,
       logo: PropTypes.shape({
         nasaImgAlt: PropTypes.string.isRequired,
