@@ -213,6 +213,13 @@ CampaignTemplate.propTypes = {
           }),
         }).isRequired
       ).isRequired,
+      dois: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string.isRequired,
+          shortname: PropTypes.string.isRequired,
+          longname: PropTypes.string,
+        })
+      ).isRequired,
       logo: PropTypes.shape({
         nasaImgAlt: PropTypes.string.isRequired,
         nasaImg: PropTypes.shape({
