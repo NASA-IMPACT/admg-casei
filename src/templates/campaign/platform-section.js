@@ -71,6 +71,10 @@ export const platformFields = graphql`
   fragment platformFields on campaign {
     platforms {
       id
+      dois {
+        id
+        shortname: short_name
+      }
       image {
         nasaImgAlt
         nasaImg {

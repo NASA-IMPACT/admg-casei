@@ -20,6 +20,21 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
     setIsClient(true)
   }, [])
 
+  // add platform id to list of campaignDois
+  const updatedCampaignDois = campaign.dois.map(doi => {
+    const matchedPlatform = campaign.platforms.find(
+      platform =>
+        platform.dois.filter(platformDoi => platformDoi.id !== doi.id).length
+    )
+    return {
+      ...doi,
+      platformShortname: matchedPlatform.shortname,
+      platformId: matchedPlatform.id,
+    }
+  })
+
+  console.log("updatedCampaignDois", updatedCampaignDois)
+
   const sections = {
     overview: {
       nav: "Overview",
@@ -66,7 +81,7 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
       nav: "Data",
       component: DataSection,
       props: {
-        dois: campaign.dois,
+        dois: updatedCampaignDois,
       },
     },
     "program-info": {
@@ -191,6 +206,11 @@ CampaignTemplate.propTypes = {
               shortname: PropTypes.string.isRequired,
             }).isRequired
           ).isRequired,
+          dois: PropTypes.arrayOf(
+            PropTypes.shape({
+              id: PropTypes.string.isRequired,
+            }).isRequired
+          ),
         }).isRequired
       ).isRequired,
       instruments: PropTypes.arrayOf(
