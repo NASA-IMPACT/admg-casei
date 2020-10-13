@@ -73,7 +73,6 @@ export const platformFields = graphql`
       id
       dois {
         id
-        shortname: short_name
       }
       image {
         nasaImgAlt
@@ -94,6 +93,11 @@ export const platformFields = graphql`
     }
     instruments {
       id
+      shortname: short_name
+      longname: long_name
+      dois {
+        id
+      }
     }
   }
 `

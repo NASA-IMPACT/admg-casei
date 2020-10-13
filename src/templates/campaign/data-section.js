@@ -21,6 +21,7 @@ const Box = ({ children }) => (
       flexDirection: `column`,
       justifyContent: `space-between`,
       height: `100%`,
+      marginBottom: `4px`,
     }}
   >
     {children}
@@ -50,7 +51,7 @@ const DataSection = ({ id, dois }) => {
             </tr>
             {dois.map(doi => (
               <tr key={doi.id}>
-                <th style={{ maxWidth: `10rem` }}>
+                <th style={{ maxWidth: `5rem` }}>
                   <div
                     style={{
                       display: `flex`,
@@ -70,14 +71,45 @@ const DataSection = ({ id, dois }) => {
                   </div>
                 </th>
                 <th style={{ maxWidth: `5rem` }}>
-                  <Link to={`/platform/${doi.platformId}`}>
-                    <Box>
-                      <big style={{ fontWeight: `bold` }} data-cy="shortname">
-                        {doi.platformShortname}
-                      </big>
-                      <p data-cy="longname">{doi.platformLongname}</p>
-                    </Box>
-                  </Link>
+                  <div style={{ maxHeight: `15rem`, overflowY: `scroll` }}>
+                    {doi.platforms.map(platform => (
+                      <Link key={platform.id} to={`/platform/${platform.id}`}>
+                        <Box>
+                          <big
+                            style={{ fontWeight: `bold` }}
+                            data-cy="shortname"
+                          >
+                            {platform.shortname}
+                          </big>
+                          <p data-cy="longname">{platform.longname}</p>
+                        </Box>
+                      </Link>
+                    ))}
+                  </div>
+                </th>
+                <th
+                  style={{
+                    maxWidth: `5rem`,
+                  }}
+                >
+                  <div style={{ maxHeight: `15rem`, overflowY: `scroll` }}>
+                    {doi.instruments.map(instrument => (
+                      <Link
+                        key={instrument.id}
+                        to={`/instrument/${instrument.id}`}
+                      >
+                        <Box>
+                          <big
+                            style={{ fontWeight: `bold` }}
+                            data-cy="shortname"
+                          >
+                            {instrument.shortname}
+                          </big>
+                          <p data-cy="longname">{instrument.longname}</p>
+                        </Box>
+                      </Link>
+                    ))}
+                  </div>
                 </th>
               </tr>
             ))}

@@ -21,16 +21,29 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
   }, [])
 
   // add platform id to list of campaignDois
-  const updatedCampaignDois = campaign.dois.map(doi => {
-    const matchedPlatform = campaign.platforms.find(
+  const updatedCampaignDois = campaign.dois.map(campaignDoi => {
+    const matchedPlatform = campaign.platforms.filter(
       platform =>
-        platform.dois.filter(platformDoi => platformDoi !== doi).length
+        platform.dois.filter(platformDoi => platformDoi !== campaignDoi).length
+    )
+
+    const matchedInstrument = campaign.instruments.filter(
+      instrument =>
+        instrument.dois.filter(instrumentDoi => instrumentDoi !== campaignDoi)
+          .length
     )
     return {
-      ...doi,
-      platformShortname: matchedPlatform.shortname,
-      platformLongname: matchedPlatform.longname,
-      platformId: matchedPlatform.id,
+      ...campaignDoi,
+      platforms: matchedPlatform.map(platform => ({
+        id: platform.id,
+        shortname: platform.shortname,
+        longname: platform.longname,
+      })),
+      instruments: matchedInstrument.map(instrument => ({
+        id: instrument.id,
+        shortname: instrument.shortname,
+        longname: instrument.longname,
+      })),
     }
   })
 
@@ -217,6 +230,11 @@ CampaignTemplate.propTypes = {
       instruments: PropTypes.arrayOf(
         PropTypes.shape({
           id: PropTypes.string.isRequired,
+          dois: PropTypes.arrayOf(
+            PropTypes.shape({
+              id: PropTypes.string.isRequired,
+            }).isRequired
+          ),
         }).isRequired
       ).isRequired,
       deployments: PropTypes.arrayOf(
