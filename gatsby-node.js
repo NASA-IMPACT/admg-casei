@@ -12,6 +12,7 @@ exports.createSchemaCustomization = ({ actions }) => {
   const typeDefs = `
     type campaign implements Node {
       deployments: [deployment] @link
+      dois: [doi] @link
       focus_areas: [focus_area] @link
       geophysical_concepts: [geophysical_concept] @link
       instruments: [instrument] @link

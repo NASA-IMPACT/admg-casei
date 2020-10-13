@@ -37,7 +37,7 @@ describe("Campaign", () => {
           expect($stat, "3 items").to.have.length(3)
           expect($stat.eq(0), "first item").to.contain("1")
           expect($stat.eq(1), "second item").to.contain("58")
-          expect($stat.eq(2), "third item").to.contain("9")
+          expect($stat.eq(2), "third item").to.contain("36")
         })
     })
     it("displays a map", () => {
@@ -286,7 +286,10 @@ describe("Campaign", () => {
         .first()
         .find("[data-cy=doi-label]")
         .should("exist")
-        .and("have.text", "gpmamprolyx")
+        .and(
+          "have.text",
+          "GPM Ground Validation NCAR Particle Probes OLYMPEX V1"
+        )
 
       cy.get("[data-cy=data-product]")
         .first()

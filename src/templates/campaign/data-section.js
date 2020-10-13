@@ -55,14 +55,10 @@ const DataSection = ({ id, dois }) => {
 
 export const dataFields = graphql`
   fragment dataFields on campaign {
-    deployments {
-      collectionPeriods: collection_periods {
-        dois {
-          shortname: short_name
-          longname: long_name
-          id
-        }
-      }
+    dois {
+      shortname: short_name
+      longname: long_name
+      id
     }
   }
 `
