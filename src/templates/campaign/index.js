@@ -24,11 +24,12 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
   const updatedCampaignDois = campaign.dois.map(doi => {
     const matchedPlatform = campaign.platforms.find(
       platform =>
-        platform.dois.filter(platformDoi => platformDoi.id !== doi.id).length
+        platform.dois.filter(platformDoi => platformDoi !== doi).length
     )
     return {
       ...doi,
       platformShortname: matchedPlatform.shortname,
+      platformLongname: matchedPlatform.longname,
       platformId: matchedPlatform.id,
     }
   })
