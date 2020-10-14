@@ -22,7 +22,7 @@ export default function PlatformHero({
       ]}
       id="platform"
     >
-      {image && (
+      {image && image.gatsbyImg && (
         <Image
           alt={image.description}
           fluid={image.gatsbyImg.childImageSharp.fluid}
