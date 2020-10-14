@@ -75,7 +75,7 @@ const DataSection = ({ id, dois }) => {
                       padding: `.5rem`,
                     }}
                   >
-                    <div>
+                    <div data-cy="data-product-platforms">
                       <Label id="doi-platform" showBorder>
                         Platforms
                       </Label>
@@ -85,8 +85,10 @@ const DataSection = ({ id, dois }) => {
                         </Link>
                       ))}
                     </div>
-                    <div>
-                      <Label showBorder>Instruments</Label>
+                    <div data-cy="data-product-instruments">
+                      <Label id="doi-instrument" showBorder>
+                        Instruments
+                      </Label>
                       {doi.instruments.map(instrument => (
                         <Link
                           key={instrument.id}

@@ -35,8 +35,6 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
     }
   })
 
-  console.log("updatedCampaignDois", updatedCampaignDois)
-
   const sections = {
     overview: {
       nav: "Overview",
