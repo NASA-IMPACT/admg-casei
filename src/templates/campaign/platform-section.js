@@ -38,28 +38,27 @@ const PlatformSection = ({ id, platforms, instruments }) => (
                       marginRight: `1rem`,
                     }}
                   >
-                    {platform.image ? (
-                      <>
-                        <Image
-                          alt={platform.image.description}
-                          fluid={platform.image.gatsbyImg.childImageSharp.fluid}
-                        />
-                        <ImageCaption id="platform-image">
-                          {platform.longname || platform.shortname}
-                        </ImageCaption>
-                      </>
+                    {platform.image && platform.image.gatsbyImg ? (
+                      <Image
+                        alt={platform.image.description}
+                        fluid={platform.image.gatsbyImg.childImageSharp.fluid}
+                      />
                     ) : (
                       <div
                         style={{
-                          height: 100, // TO DO: make box fill space
+                          height: 150, // TO DO: make box fill space
                           backgroundColor: `#303641`,
+                          display: `flex`,
+                          alignItems: `center`,
+                          justifyContent: `center`,
                         }}
                       >
-                        <ImageCaption id="platform-image">
-                          No Image available.
-                        </ImageCaption>
+                        No Image available.
                       </div>
                     )}
+                    <ImageCaption id="platform-image">
+                      {platform.longname || platform.shortname}
+                    </ImageCaption>
                   </div>
                 </Link>
                 <div style={{ display: `flex`, flexWrap: `wrap` }}>
