@@ -103,13 +103,16 @@ export const RegionCarousel = ({ regions }) => {
                 style={{
                   gridArea: `1 / 1 / 1 / 1`,
                   zIndex: -1,
+                  height: 550,
                 }}
               >
-                <Image
-                  alt={region.image.nasaImgAlt}
-                  fluid={region.image.nasaImg.childImageSharp.fluid}
-                  style={{ height: 550 }}
-                />
+                {region.image.nasaImg && (
+                  <Image
+                    alt={region.image.nasaImgAlt}
+                    fluid={region.image.nasaImg.childImageSharp.fluid}
+                    style={{ height: 550 }}
+                  />
+                )}
               </div>
 
               <div
