@@ -80,6 +80,7 @@ exports.onCreateNode = async ({
   if (node.internal.type === "image") {
     // TODO: remove when backend team fixes the /image endpoint response
 
+    if (node.image.includes(".gif")) return // .gif format breaks gatsby build
     let fileNode = await createRemoteFileNode({
       url: node.image, // string that points to the URL of the image
       parentNodeId: node.id, // id of the parent node of the fileNode you are going to create
