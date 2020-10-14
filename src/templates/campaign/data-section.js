@@ -36,85 +36,72 @@ const DataSection = ({ id, dois }) => {
     <SectionBlock id={id}>
       <SectionHeader headline="Data Products" id={id} />
       <SectionContent>
-        <table>
-          <tbody>
-            <tr style={{ borderBottom: `2px solid ${theme.color.gray}` }}>
-              <th>
-                <label>DOI</label>
-              </th>
-              <th>
-                <label>Platforms</label>
-              </th>
-              <th>
-                <label>Instruments</label>
-              </th>
-            </tr>
-            {dois.map(doi => (
-              <tr key={doi.id}>
-                <th style={{ maxWidth: `5rem` }}>
+        <div
+          style={{
+            display: `grid`,
+            gridTemplateColumns: `repeat(auto-fit, minmax(300px, 1fr) )`,
+            gap: `1rem`,
+          }}
+        >
+          {dois.length < 1
+            ? "No data products available."
+            : dois.map(doi => (
+                <div
+                  key={doi.id}
+                  style={{
+                    display: `flex`,
+                    flexDirection: `column`,
+                    // border: `1px solid ${theme.color.base}`,
+                    backgroundColor: theme.color.secondary,
+                    padding: `0 1rem 0.71rem 1rem`,
+                  }}
+                  data-cy="data-product"
+                >
+                  <Label id="doi" color={theme.color.base}>
+                    {doi.longname}
+                  </Label>
+                  <ExternalLink
+                    label={doi.shortname}
+                    url={`http://dx.doi.org/${doi.shortname}`}
+                    id="doi"
+                  ></ExternalLink>
+
                   <div
                     style={{
-                      display: `flex`,
-                      flexDirection: `column`,
-                      backgroundColor: theme.color.secondary,
-                      padding: `0 1rem 0.71rem 1rem`,
+                      flex: `2.618`,
+                      display: `grid`,
+                      gap: `1rem`,
+                      gridTemplateColumns: `1fr 1fr`,
+                      padding: `.5rem`,
                     }}
                   >
-                    <Label id="doi" color={theme.color.base}>
-                      {doi.longname}
-                    </Label>
-                    <ExternalLink
-                      label={doi.shortname}
-                      url={`http://dx.doi.org/${doi.shortname}`}
-                      id="doi"
-                    ></ExternalLink>
+                    <div>
+                      <Label id="doi-platform" showBorder>
+                        Platforms
+                      </Label>
+                      {doi.platforms.map(platform => (
+                        <Link key={platform.id} to={`/platform/${platform.id}`}>
+                          <small>{platform.longname}</small>
+                        </Link>
+                      ))}
+                    </div>
+                    <div>
+                      <Label showBorder>Instruments</Label>
+                      {doi.instruments.map(instrument => (
+                        <Link
+                          key={instrument.id}
+                          to={`/instrument/${instrument.id}`}
+                        >
+                          <small style={{ display: `inline-block` }}>
+                            {instrument.longname}
+                          </small>
+                        </Link>
+                      ))}
+                    </div>
                   </div>
-                </th>
-                <th style={{ maxWidth: `5rem` }}>
-                  <div style={{ maxHeight: `15rem`, overflowY: `scroll` }}>
-                    {doi.platforms.map(platform => (
-                      <Link key={platform.id} to={`/platform/${platform.id}`}>
-                        <Box>
-                          <big
-                            style={{ fontWeight: `bold` }}
-                            data-cy="shortname"
-                          >
-                            {platform.shortname}
-                          </big>
-                          <p data-cy="longname">{platform.longname}</p>
-                        </Box>
-                      </Link>
-                    ))}
-                  </div>
-                </th>
-                <th
-                  style={{
-                    maxWidth: `5rem`,
-                  }}
-                >
-                  <div style={{ maxHeight: `15rem`, overflowY: `scroll` }}>
-                    {doi.instruments.map(instrument => (
-                      <Link
-                        key={instrument.id}
-                        to={`/instrument/${instrument.id}`}
-                      >
-                        <Box>
-                          <big
-                            style={{ fontWeight: `bold` }}
-                            data-cy="shortname"
-                          >
-                            {instrument.shortname}
-                          </big>
-                          <p data-cy="longname">{instrument.longname}</p>
-                        </Box>
-                      </Link>
-                    ))}
-                  </div>
-                </th>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+                </div>
+              ))}
+        </div>
       </SectionContent>
     </SectionBlock>
   )
