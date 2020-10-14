@@ -32,14 +32,34 @@ const PlatformSection = ({ id, platforms, instruments }) => (
             {platforms.map(platform => (
               <div key={platform.id} data-cy="platform">
                 <Link to={`/platform/${platform.id}`}>
-                  <div style={{ position: `relative`, marginRight: `1rem` }}>
-                    <Image
-                      alt={platform.image.nasaImgAlt}
-                      fluid={platform.image.nasaImg.childImageSharp.fluid}
-                    />
-                    <ImageCaption id="platform-image">
-                      {platform.longname || platform.shortname}
-                    </ImageCaption>
+                  <div
+                    style={{
+                      position: `relative`,
+                      marginRight: `1rem`,
+                    }}
+                  >
+                    {platform.image ? (
+                      <>
+                        <Image
+                          alt={platform.image.description}
+                          fluid={platform.image.gatsbyImg.childImageSharp.fluid}
+                        />
+                        <ImageCaption id="platform-image">
+                          {platform.longname || platform.shortname}
+                        </ImageCaption>
+                      </>
+                    ) : (
+                      <div
+                        style={{
+                          height: 100, // TO DO: make box fill space
+                          backgroundColor: `#303641`,
+                        }}
+                      >
+                        <ImageCaption id="platform-image">
+                          No Image available.
+                        </ImageCaption>
+                      </div>
+                    )}
                   </div>
                 </Link>
                 <div style={{ display: `flex`, flexWrap: `wrap` }}>
@@ -72,8 +92,8 @@ export const platformFields = graphql`
     platforms {
       id
       image {
-        nasaImgAlt
-        nasaImg {
+        description
+        gatsbyImg {
           childImageSharp {
             fluid(maxWidth: 600, maxHeight: 400) {
               ...GatsbyImageSharpFluid
@@ -100,8 +120,8 @@ PlatformSection.propTypes = {
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       image: PropTypes.shape({
-        nasaImgAlt: PropTypes.string.isRequired,
-        nasaImg: PropTypes.shape({
+        description: PropTypes.string.isRequired,
+        gatsbyImg: PropTypes.shape({
           childImageSharp: PropTypes.object.isRequired,
         }).isRequired,
       }).isRequired,
