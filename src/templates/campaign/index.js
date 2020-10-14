@@ -22,28 +22,16 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
 
   // add platform id to list of campaignDois
   const updatedCampaignDois = campaign.dois.map(campaignDoi => {
-    const matchedPlatform = campaign.platforms.filter(
-      platform =>
-        platform.dois.filter(platformDoi => platformDoi !== campaignDoi).length
+    const matchedPlatform = campaign.platforms.filter(platform =>
+      platform.dois.map(x => x.id).includes(campaignDoi.id)
     )
-
-    const matchedInstrument = campaign.instruments.filter(
-      instrument =>
-        instrument.dois.filter(instrumentDoi => instrumentDoi !== campaignDoi)
-          .length
+    const matchedInstrument = campaign.instruments.filter(instrument =>
+      instrument.dois.map(x => x.id).includes(campaignDoi.id)
     )
     return {
       ...campaignDoi,
-      platforms: matchedPlatform.map(platform => ({
-        id: platform.id,
-        shortname: platform.shortname,
-        longname: platform.longname,
-      })),
-      instruments: matchedInstrument.map(instrument => ({
-        id: instrument.id,
-        shortname: instrument.shortname,
-        longname: instrument.longname,
-      })),
+      platforms: matchedPlatform,
+      instruments: matchedInstrument,
     }
   })
 
