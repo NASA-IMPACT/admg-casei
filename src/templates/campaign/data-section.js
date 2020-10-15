@@ -19,6 +19,10 @@ import {
 import ExternalLink from "../../components/external-link"
 import Label from "../../components/label"
 import theme from "../../utils/theme"
+import { CloseIcon } from "../../components/icons"
+import { TrashIcon } from "../../components/icons"
+import { IconButton } from "../../components/button"
+import Chip from "../../components/chip"
 
 const Box = ({ children }) => (
   <div
@@ -49,10 +53,11 @@ const Filter = ({
   let [value, setValue] = useState("")
 
   const handleSelection = value => {
-    setSelectedFilterIds([...selectedFilterIds, value.id])
-    selectedFilterIds.includes(value.id)
-      ? setSelectedFilterIds(selectedFilterIds.filter(f => f !== value.id))
-      : setSelectedFilterIds([...selectedFilterIds, value.id])
+    selectedFilterIds.includes(value.longname)
+      ? setSelectedFilterIds(
+          selectedFilterIds.filter(f => f !== value.longname)
+        )
+      : setSelectedFilterIds([...selectedFilterIds, value.longname])
     setValue("")
   }
 
@@ -84,7 +89,13 @@ const Filter = ({
           <ListboxList data-cy="data-products-filter-options">
             {filterOptions.map(o => (
               <ListboxOption key={o} value={o} data-cy="sort-option">
-                {o.shortname.toUpperCase()}
+                {o.longname.toUpperCase()}
+                {selectedFilterIds.includes(o.longname) && (
+                  <IconButton
+                    id="remove-filter"
+                    icon={<CloseIcon color={theme.color.base} />}
+                  />
+                )}
               </ListboxOption>
             ))}
           </ListboxList>
@@ -92,6 +103,13 @@ const Filter = ({
       </ListboxInput>
     </>
   )
+}
+
+Filter.propTypes = {
+  filterOptions: PropTypes.array.isRequired,
+  filterName: PropTypes.string.isRequired,
+  setSelectedFilterIds: PropTypes.func.isRequired,
+  selectedFilterIds: PropTypes.array.isRequired,
 }
 
 const DataSection = ({ id, dois }) => {
@@ -103,10 +121,10 @@ const DataSection = ({ id, dois }) => {
     ? dois.filter(
         doi =>
           doi.platforms
-            .map(platform => platform.id)
+            .map(platform => platform.longname)
             .some(id => selectedFilterIds.includes(id)) ||
           doi.instruments
-            .map(instrument => instrument.id)
+            .map(instrument => instrument.longname)
             .some(id => selectedFilterIds.includes(id))
       )
     : dois
@@ -131,10 +149,40 @@ const DataSection = ({ id, dois }) => {
             selectedFilterIds={selectedFilterIds}
           />
         </>
+        {selectedFilterIds.length > 0 && (
+          <div
+            style={{
+              display: `flex`,
+              flexWrap: `wrap`,
+              margin: `2rem 0`,
+              alignItems: `center`,
+            }}
+          >
+            Active filters:
+            {selectedFilterIds.map(f => (
+              <Chip
+                key={f}
+                actionId={f}
+                id="filter"
+                label={f}
+                chipAction={() =>
+                  setSelectedFilterIds(selectedFilterIds.filter(id => id !== f))
+                }
+              />
+            ))}
+            {selectedFilterIds.length > 1 && (
+              <IconButton
+                id="clear-filters"
+                action={() => clearFilters()}
+                icon={<TrashIcon />}
+              />
+            )}
+          </div>
+        )}
         <div
           style={{
             display: `grid`,
-            gridTemplateColumns: `repeat(auto-fit, minmax(300px, 1fr) )`,
+            gridTemplateColumns: `1fr 1fr 1fr`,
             gap: `1rem`,
           }}
         >
