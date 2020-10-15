@@ -5,12 +5,12 @@ import { CloseIcon } from "./icons"
 import { IconButton } from "./button"
 import theme from "../utils/theme"
 
-const Chip = ({ id, label, chipAction, actionId }) => (
+const Chip = ({ id, label, chipAction, actionId, isDark, isInline }) => (
   <div
     style={{
-      display: `flex`,
+      display: isInline ? `inline-flex` : `flex`,
       alignItems: `center`,
-      backgroundColor: theme.color.secondary,
+      backgroundColor: isDark ? theme.color.primary : theme.color.secondary,
       color: theme.color.base,
       borderRadius: theme.shape.rounded,
       padding: `0 0.5rem`,
@@ -34,6 +34,13 @@ Chip.propTypes = {
   actionId: PropTypes.string,
   label: PropTypes.string.isRequired,
   chipAction: PropTypes.func,
+  isDark: PropTypes.bool,
+  isInline: PropTypes.bool,
+}
+
+Chip.defaultProps = {
+  isDark: false,
+  isInline: false,
 }
 
 export default Chip
