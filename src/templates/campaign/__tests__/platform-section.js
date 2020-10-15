@@ -13,8 +13,8 @@ const testArray = [
     shortname: "DC-8",
     longname: "Douglas DC-8",
     image: {
-      nasaImgAlt: "alt-text",
-      nasaImg: {
+      description: "alt-text",
+      gatsbyImg: {
         childImageSharp: {
           fluid: () => {},
         },
@@ -52,8 +52,8 @@ const testArray = [
     shortname: "B-200",
     longname: "Beechcraft King Air B-200",
     image: {
-      nasaImgAlt: "alt-text",
-      nasaImg: {
+      description: "alt-text",
+      gatsbyImg: {
         childImageSharp: {
           fluid: () => {},
         },
@@ -75,8 +75,8 @@ const testArray = [
     shortname: "P-3",
     longname: "P-3 Orion",
     image: {
-      nasaImgAlt: "alt-text",
-      nasaImg: {
+      description: "alt-text",
+      gatsbyImg: {
         childImageSharp: {
           fluid: () => {},
         },

@@ -46,6 +46,7 @@ const InstrumentTemplate = ({ data: { instrument }, path }) => {
         shortname={instrument.shortname}
         longname={instrument.longname}
         description={instrument.description}
+        image={instrument.image}
       />
       <InpageNav
         shortname={instrument.shortname}
@@ -80,6 +81,12 @@ InstrumentTemplate.propTypes = {
       shortname: PropTypes.string.isRequired,
       longname: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
+      image: PropTypes.shape({
+        description: PropTypes.string.isRequired,
+        gatsbyImg: PropTypes.shape({
+          childImageSharp: PropTypes.object.isRequired,
+        }).isRequired,
+      }).isRequired,
 
       collectionPeriods: PropTypes.arrayOf(PropTypes.string),
       instrumentTypes: PropTypes.arrayOf(

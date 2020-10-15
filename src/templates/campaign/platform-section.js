@@ -32,11 +32,30 @@ const PlatformSection = ({ id, platforms, instruments }) => (
             {platforms.map(platform => (
               <div key={platform.id} data-cy="platform">
                 <Link to={`/platform/${platform.id}`}>
-                  <div style={{ position: `relative`, marginRight: `1rem` }}>
-                    <Image
-                      alt={platform.image.nasaImgAlt}
-                      fluid={platform.image.nasaImg.childImageSharp.fluid}
-                    />
+                  <div
+                    style={{
+                      position: `relative`,
+                      marginRight: `1rem`,
+                    }}
+                  >
+                    {platform.image && platform.image.gatsbyImg ? (
+                      <Image
+                        alt={platform.image.description}
+                        fluid={platform.image.gatsbyImg.childImageSharp.fluid}
+                      />
+                    ) : (
+                      <div
+                        style={{
+                          height: 150, // TO DO: make box fill space
+                          backgroundColor: `#303641`,
+                          display: `flex`,
+                          alignItems: `center`,
+                          justifyContent: `center`,
+                        }}
+                      >
+                        No Image available.
+                      </div>
+                    )}
                     <ImageCaption id="platform-image">
                       {platform.longname || platform.shortname}
                     </ImageCaption>
@@ -72,8 +91,8 @@ export const platformFields = graphql`
     platforms {
       id
       image {
-        nasaImgAlt
-        nasaImg {
+        description
+        gatsbyImg {
           childImageSharp {
             fluid(maxWidth: 600, maxHeight: 400) {
               ...GatsbyImageSharpFluid
@@ -100,8 +119,8 @@ PlatformSection.propTypes = {
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       image: PropTypes.shape({
-        nasaImgAlt: PropTypes.string.isRequired,
-        nasaImg: PropTypes.shape({
+        description: PropTypes.string.isRequired,
+        gatsbyImg: PropTypes.shape({
           childImageSharp: PropTypes.object.isRequired,
         }).isRequired,
       }).isRequired,

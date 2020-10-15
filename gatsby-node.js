@@ -35,6 +35,7 @@ exports.createSchemaCustomization = ({ actions }) => {
     type instrument implements Node {
       campaigns: [campaign] @link
       gcmd_phenomenas: [gcmd_phenomena] @link
+      image: image @link
       instrument_types: [instrument_type] @link
       measurement_regions: [measurement_region] @link
       platforms: [platform] @link
@@ -42,8 +43,8 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
     type platform implements Node {
       campaigns: [campaign] @link
+      image: image @link
       instruments: [instrument] @link
-      image: NasaImagesJson @link(by: "shortname", from: "short_name")
     }
     type NasaImagesJson implements Node {
       nasaImg: File @link(from: "nasaImg___NODE")
@@ -75,6 +76,25 @@ exports.onCreateNode = async ({
       node.nasaImg___NODE = fileNode.id
     }
   }
+
+  if (node.internal.type === "image") {
+    // TODO: remove when backend team fixes the /image endpoint response
+
+    if (node.image.includes(".gif")) return // .gif format breaks gatsby build
+    let fileNode = await createRemoteFileNode({
+      url: node.image, // string that points to the URL of the image
+      parentNodeId: node.id, // id of the parent node of the fileNode you are going to create
+      createNode, // helper function in gatsby-node to generate the node
+      createNodeId, // helper function in gatsby-node to generate the node id
+      cache, // Gatsby's cache
+      store, // Gatsby's redux store
+    })
+
+    // if the file was created, attach the new node (=File) to the parent node (=image)
+    if (fileNode) {
+      node.gatsbyImg___NODE = fileNode.id
+    }
+  }
 }
 
 exports.sourceNodes = async ({ actions, createContentDigest }) => {
@@ -89,6 +109,7 @@ exports.sourceNodes = async ({ actions, createContentDigest }) => {
       "gcmd_phenomena",
       "geographical_region",
       "geophysical_concept",
+      "image",
       "instrument",
       "instrument_type",
       "measurement_region",
@@ -104,6 +125,24 @@ exports.sourceNodes = async ({ actions, createContentDigest }) => {
     responses.forEach(response => {
       if (response.success) {
         response.data.forEach(item => {
+          createNode({
+            // Data for the node.
+            ...item,
+
+            // Required fields.
+            id: item.uuid,
+            parent: null,
+            children: [],
+            internal: {
+              type: response.type,
+              contentDigest: createContentDigest(item),
+              description: `Creating nodes from ${response.type} endpoint`,
+            },
+          })
+        })
+      } else if (response.type === "image") {
+        Object.values(response).forEach(item => {
+          if (typeof item === "string") return
           createNode({
             // Data for the node.
             ...item,
