@@ -91,7 +91,7 @@ const OverviewSection = ({
                 textOverflow: `ellipsis`,
               }}
             >
-              DOI: <ExternalLink label={doi} url={doi} id="doi" />
+              Campaign DOI: <ExternalLink label={doi} url={doi} id="doi" />
             </p>
           ) : (
             <p data-cy="doi-link">no campaign DOI available</p>
