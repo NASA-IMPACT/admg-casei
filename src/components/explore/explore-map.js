@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import * as turf from "@turf/turf"
 import parse from "wellknown"
 
 import Map from "../map"
@@ -14,10 +15,12 @@ const ExploreMap = ({ data }) => {
       geometry: parse(b),
     })),
   }
+  const bbox = turf.bbox(geojson)
+
   return (
     <Map style={{ height: 500 }}>
       <MapSource geojson={geojson} id="explore">
-        <MapLayer id="explore" />
+        <MapLayer id="explore" bbox={bbox} />
       </MapSource>
     </Map>
   )

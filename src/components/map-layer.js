@@ -1,9 +1,8 @@
 import { useEffect } from "react"
 import PropTypes from "prop-types"
-import * as turf from "@turf/turf"
 import theme from "../utils/theme"
 
-export default function MapLayer({ id, map, sourceId, geojson }) {
+export default function MapLayer({ id, bbox, map, sourceId }) {
   useEffect(() => {
     const layer = map.addLayer({
       id: `${id}-layer`,
@@ -23,7 +22,6 @@ export default function MapLayer({ id, map, sourceId, geojson }) {
   }, [])
 
   useEffect(() => {
-    const bbox = turf.bbox(geojson)
     const { width } = map.getContainer().getBoundingClientRect()
 
     switch (id) {
@@ -47,7 +45,7 @@ export default function MapLayer({ id, map, sourceId, geojson }) {
       default:
         break
     }
-  }, [geojson])
+  }, [bbox])
 
   return null
 }
@@ -55,6 +53,6 @@ export default function MapLayer({ id, map, sourceId, geojson }) {
 MapLayer.propTypes = {
   id: PropTypes.string.isRequired,
   sourceId: PropTypes.string,
-  geojson: PropTypes.object,
+  bbox: PropTypes.arrayOf(PropTypes.number.isRequired).isRequired,
   map: PropTypes.object,
 }

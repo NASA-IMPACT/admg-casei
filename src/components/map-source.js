@@ -24,7 +24,6 @@ export default function MapSource({ geojson, id, map, children }) {
           React.cloneElement(child, {
             sourceId: `${id}-source`,
             map: map,
-            geojson: geojson,
           })
         )}
     </>

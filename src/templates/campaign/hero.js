@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 import styled from "styled-components"
 import Image from "gatsby-image"
+import * as turf from "@turf/turf"
 import parse from "wellknown"
 
 import HeroStats from "../../components/hero-stats"
@@ -48,6 +49,8 @@ const CampaignHero = ({
     type: "Feature",
     geometry: parse(bounds),
   }
+  const bbox = turf.bbox(geojson)
+
   return (
     <section
       data-cy="campaign-hero"
@@ -68,7 +71,7 @@ const CampaignHero = ({
         }}
       >
         <MapSource geojson={geojson} id="campaign">
-          <MapLayer id="campaign" />
+          <MapLayer id="campaign" bbox={bbox} />
         </MapSource>
       </Map>
 

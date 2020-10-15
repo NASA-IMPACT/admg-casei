@@ -15,7 +15,7 @@ describe("Map", () => {
       mapWrapper = renderer.create(
         <Map style={{ height: 200 }}>
           <MapSource id="test">
-            <MapLayer id="test" />
+            <MapLayer id="test" bbox={[32, 5, 35, 10]} />
           </MapSource>
         </Map>,
         {
@@ -48,6 +48,7 @@ const geojson = {
   type: "FeatureCollection",
   features: [],
 }
+const bbox = [32, 5, 35, 10]
 let sourceWrapper, layerWrapper
 
 describe("MapSource", () => {
@@ -74,9 +75,9 @@ describe("MapLayer", () => {
       layerWrapper = renderer.create(
         <MapLayer
           id={layerId}
+          bbox={bbox}
           sourceId={sourceId}
           map={mapbox.Map()}
-          geojson={geojson}
         />
       )
     })
@@ -106,9 +107,9 @@ describe("MapLayer", () => {
         layerWrapper = renderer.create(
           <MapLayer
             id="campaign"
+            bbox={bbox}
             sourceId={sourceId}
             map={mapbox.Map()}
-            geojson={geojson}
           />
         )
       })
@@ -128,9 +129,9 @@ describe("MapLayer", () => {
         layerWrapper = renderer.create(
           <MapLayer
             id="explore"
+            bbox={bbox}
             sourceId={sourceId}
             map={mapbox.Map()}
-            geojson={geojson}
           />
         )
       })
