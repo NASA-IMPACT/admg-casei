@@ -22,7 +22,7 @@ export default function InstrumentHero({
       {image && (
         <Image
           alt={image.description}
-          fluid={image.gatsbyImg.childImageSharp.fluid}
+          fixed={image.gatsbyImg.childImageSharp.fixed}
         />
       )}
     </Hero>
@@ -37,8 +37,8 @@ export const instrumentHeroFields = graphql`
       description
       gatsbyImg {
         childImageSharp {
-          fluid(maxWidth: 600) {
-            ...GatsbyImageSharpFluid
+          fixed(height: 500) {
+            ...GatsbyImageSharpFixed
           }
         }
       }
