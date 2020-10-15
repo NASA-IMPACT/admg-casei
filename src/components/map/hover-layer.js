@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react"
 import PropTypes from "prop-types"
+import { navigate } from "gatsby"
+
 import theme from "../../utils/theme"
 
 export default function HoverLayer({ id, map, sourceId }) {
@@ -53,6 +55,10 @@ export default function HoverLayer({ id, map, sourceId }) {
         )
       }
       hoveredId = null
+    })
+
+    map.on("click", `${id}-hover-layer`, function (e) {
+      navigate(`/campaign/${e.features[0].properties.id}`)
     })
 
     return () => {

@@ -19,10 +19,13 @@ const ExploreMap = ({ data }) => {
   const geojson = {
     type: "FeatureCollection",
     features: data
-      .map((b, i) => ({
+      .map((d, i) => ({
         type: "Feature",
         id: i + 1,
-        geometry: parse(b),
+        geometry: parse(d.bounds),
+        properties: {
+          id: d.id,
+        },
       }))
       .sort(sortFeaturesBySize),
   }
@@ -39,7 +42,12 @@ const ExploreMap = ({ data }) => {
 }
 
 ExploreMap.propTypes = {
-  data: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      bounds: PropTypes.string.isRequired,
+    }).isRequired
+  ).isRequired,
 }
 
 export default ExploreMap

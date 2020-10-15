@@ -113,7 +113,7 @@ export default function Campaigns({ data, location }) {
           ref={inputElement}
           category="campaigns"
         />
-        <ExploreMap data={list.map(c => c.bounds)} />
+        <ExploreMap data={list.map(c => ({ id: c.id, bounds: c.bounds }))} />
 
         {isLoading ? (
           <div
