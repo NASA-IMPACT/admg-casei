@@ -62,7 +62,7 @@ const Filter = ({
   }
 
   return (
-    <>
+    <div style={{ marginRight: `2rem` }}>
       <VisuallyHidden id="sort-order">{filterName}</VisuallyHidden>
       <ListboxInput
         aria-labelledby="sort order"
@@ -101,7 +101,7 @@ const Filter = ({
           </ListboxList>
         </ListboxPopover>
       </ListboxInput>
-    </>
+    </div>
   )
 }
 
@@ -129,66 +129,80 @@ const DataSection = ({ id, dois }) => {
       )
     : dois
 
+  const platformList = [...new Set(dois.map(doi => doi.platforms).flat())]
+  const instrumentList = [...new Set(dois.map(doi => doi.instruments).flat())]
+
   return (
     <SectionBlock id={id}>
       <SectionHeader headline="Data Products" id={id} />
       <SectionContent>
-        <>
-          <Filter
-            filterOptions={[...new Set(dois.map(doi => doi.platforms).flat())]}
-            filterName="Platforms"
-            setSelectedFilterIds={setSelectedFilterIds}
-            selectedFilterIds={selectedFilterIds}
-          />
-          <Filter
-            filterOptions={[
-              ...new Set(dois.map(doi => doi.instruments).flat()),
-            ]}
-            filterName="Instruments"
-            setSelectedFilterIds={setSelectedFilterIds}
-            selectedFilterIds={selectedFilterIds}
-          />
-        </>
-        {selectedFilterIds.length > 0 && (
-          <div
-            style={{
-              display: `flex`,
-              flexWrap: `wrap`,
-              margin: `2rem 0`,
-              alignItems: `center`,
-            }}
-          >
-            Active filters:
-            {selectedFilterIds.map(f => (
-              <Chip
-                key={f}
-                actionId={f}
-                id="filter"
-                label={f}
-                chipAction={() =>
-                  setSelectedFilterIds(selectedFilterIds.filter(id => id !== f))
-                }
-              />
-            ))}
-            {selectedFilterIds.length > 1 && (
-              <IconButton
-                id="clear-filters"
-                action={() => clearFilters()}
-                icon={<TrashIcon />}
-              />
+        {dois.length < 1 ? (
+          "No data products available."
+        ) : (
+          <>
+            {platformList.concat(instrumentList).length > 2 && (
+              <div
+                style={{
+                  display: `flex`,
+                  borderBottom: `1px solid ${theme.color.gray}`,
+                  padding: `2rem 0`,
+                  marginBottom: `2rem`,
+                }}
+              >
+                <Filter
+                  filterOptions={platformList}
+                  filterName="Platforms"
+                  setSelectedFilterIds={setSelectedFilterIds}
+                  selectedFilterIds={selectedFilterIds}
+                />
+                <Filter
+                  filterOptions={instrumentList}
+                  filterName="Instruments"
+                  setSelectedFilterIds={setSelectedFilterIds}
+                  selectedFilterIds={selectedFilterIds}
+                />
+              </div>
             )}
-          </div>
-        )}
-        <div
-          style={{
-            display: `grid`,
-            gridTemplateColumns: `1fr 1fr 1fr`,
-            gap: `1rem`,
-          }}
-        >
-          {dois.length < 1
-            ? "No data products available."
-            : filteredDois.map(doi => (
+            {selectedFilterIds.length > 0 && (
+              <div
+                style={{
+                  display: `flex`,
+                  flexWrap: `wrap`,
+                  margin: `2rem 0`,
+                  alignItems: `center`,
+                }}
+              >
+                Active filters:
+                {selectedFilterIds.map(f => (
+                  <Chip
+                    key={f}
+                    actionId={f}
+                    id="filter"
+                    label={f}
+                    chipAction={() =>
+                      setSelectedFilterIds(
+                        selectedFilterIds.filter(id => id !== f)
+                      )
+                    }
+                  />
+                ))}
+                {selectedFilterIds.length > 1 && (
+                  <IconButton
+                    id="clear-filters"
+                    action={() => clearFilters()}
+                    icon={<TrashIcon />}
+                  />
+                )}
+              </div>
+            )}
+            <div
+              style={{
+                display: `grid`,
+                gridTemplateColumns: `1fr 1fr 1fr`,
+                gap: `1rem`,
+              }}
+            >
+              {filteredDois.map(doi => (
                 <div
                   key={doi.id}
                   style={{
@@ -246,7 +260,9 @@ const DataSection = ({ id, dois }) => {
                   </div>
                 </div>
               ))}
-        </div>
+            </div>
+          </>
+        )}
       </SectionContent>
     </SectionBlock>
   )
