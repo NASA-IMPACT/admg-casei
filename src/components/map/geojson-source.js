@@ -1,20 +1,27 @@
 import React, { useEffect, useState } from "react"
 import PropTypes from "prop-types"
 
-export default function MapSource({ geojson, id, map, children }) {
+export default function GeoJsonSource({ geojson, id, map, children }) {
   const [source, setSource] = useState(null)
 
   useEffect(() => {
-    const s = map.addSource(`${id}-source`, {
-      type: "geojson",
-      data: geojson,
-    })
+    let s = map.getSource(`${id}-source`)
+    if (!s) {
+      s = map.addSource(`${id}-source`, {
+        type: "geojson",
+        data: geojson,
+      })
+    } else {
+      s.setData(geojson)
+    }
+
     setSource(s)
 
     return () => {
-      if (source) map.removeSource(`${id}-source`)
+      // TODO: Error "Source "campaign-source" cannot be removed while layer "campaign-layer" is using it."
+      // if (source) map.removeSource(`${id}-source`)
     }
-  }, [])
+  }, [geojson])
 
   return (
     <>
@@ -24,14 +31,13 @@ export default function MapSource({ geojson, id, map, children }) {
           React.cloneElement(child, {
             sourceId: `${id}-source`,
             map: map,
-            geojson: geojson,
           })
         )}
     </>
   )
 }
 
-MapSource.propTypes = {
+GeoJsonSource.propTypes = {
   id: PropTypes.string.isRequired,
   geojson: PropTypes.object,
   map: PropTypes.object,
