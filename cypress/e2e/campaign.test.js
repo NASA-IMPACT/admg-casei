@@ -124,140 +124,140 @@ describe("Campaign", () => {
     })
   })
 
-  // describe("the focus section", () => {
-  //   it("exists", () => {
-  //     cy.get("[data-cy=focus-section]").should("exist")
-  //   })
+  describe("the focus section", () => {
+    it("exists", () => {
+      cy.get("[data-cy=focus-section]").should("exist")
+    })
 
-  //   it("has a heading", () => {
-  //     cy.get("[data-cy=focus-section]").find("h2").should("have.text", "Focus")
-  //   })
+    it("has a heading", () => {
+      cy.get("[data-cy=focus-section]").find("h2").should("have.text", "Focus")
+    })
 
-  //   it("displays some infos", () => {
-  //     cy.get("[data-cy=focus-content]").should($div => {
-  //       expect($div, "3 info items").to.have.length(3)
-  //     })
-  //     cy.get("[data-cy=focus-content-label]").should($label => {
-  //       expect($label, "3 labels").to.have.length(3)
-  //     })
-  //     cy.get("[data-cy=focus-content-text]").should($p => {
-  //       expect($p, "2 text entries").to.have.length(1)
-  //     })
-  //   })
+    it("displays some infos", () => {
+      cy.get("[data-cy=focus-content]").should($div => {
+        expect($div, "3 info items").to.have.length(3)
+      })
+      cy.get("[data-cy=focus-content-label]").should($label => {
+        expect($label, "3 labels").to.have.length(3)
+      })
+      cy.get("[data-cy=focus-content-text]").should($p => {
+        expect($p, "2 text entries").to.have.length(1)
+      })
+    })
 
-  //   it("navigates to the campaign list with the focus area as filter applied", () => {
-  //     cy.get("[data-cy=focus-section]")
-  //       .find("[data-cy=focus-area]")
-  //       .contains("Weather")
-  //       .click()
+    it("navigates to the campaign list with the focus area as filter applied", () => {
+      cy.get("[data-cy=focus-section]")
+        .find("[data-cy=focus-area]")
+        .contains("Weather")
+        .click()
 
-  //     cy.url().should("include", "/explore/campaigns")
+      cy.url().should("include", "/explore/campaigns")
 
-  //     cy.get("[data-cy=filter-chip]")
-  //       .should("have.length", 1)
-  //       .and("have.text", "focus: Weather")
+      cy.get("[data-cy=filter-chip]")
+        .should("have.length", 1)
+        .and("have.text", "focus: Weather")
 
-  //     cy.get("[data-cy=explore-card]").should("have.length", 7)
+      cy.get("[data-cy=explore-card]").should("have.length", 7)
 
-  //     cy.go("back")
-  //   })
+      cy.go("back")
+    })
 
-  //   it("navigates to the campaign list with the geophysical concept as filter applied", () => {
-  //     cy.get("[data-cy=focus-section]")
-  //       .find("[data-cy=geophysical-concept]")
-  //       .contains("Hydrology")
-  //       .click()
+    it("navigates to the campaign list with the geophysical concept as filter applied", () => {
+      cy.get("[data-cy=focus-section]")
+        .find("[data-cy=geophysical-concept]")
+        .contains("Hydrology")
+        .click()
 
-  //     cy.url().should("include", "/explore/campaigns")
+      cy.url().should("include", "/explore/campaigns")
 
-  //     cy.get("[data-cy=filter-chip]")
-  //       .should("have.length", 1)
-  //       .and("have.text", "geophysical: Terr Hydro")
+      cy.get("[data-cy=filter-chip]")
+        .should("have.length", 1)
+        .and("have.text", "geophysical: Terr Hydro")
 
-  //     cy.get("main").find("[data-cy=explore-card]").should("have.length", 2)
+      cy.get("main").find("[data-cy=explore-card]").should("have.length", 2)
 
-  //     cy.go("back")
-  //   })
-  // })
+      cy.go("back")
+    })
+  })
 
-  // describe("the timeline section", () => {
-  //   before(() => {
-  //     cy.visit("/explore/campaigns")
-  //     cy.get("[data-cy=explore-card]").find("big").contains("AirMOSS").click()
-  //   })
+  describe("the timeline section", () => {
+    before(() => {
+      cy.visit("/explore/campaigns")
+      cy.get("[data-cy=explore-card]").find("big").contains("AirMOSS").click()
+    })
 
-  //   it("displays a milestone carousel", () => {
-  //     cy.get("[data-cy=milestone-carousel]").find(".slider").should("exist")
+    it("displays a milestone carousel", () => {
+      cy.get("[data-cy=milestone-carousel]").find(".slider").should("exist")
 
-  //     cy.get("[data-cy=milestone]").first().find("label").should("exist")
-  //     cy.get("[data-cy=milestone]").first().find("img").should("exist")
-  //     cy.get("[data-cy=milestone]").first().find("img").should("be.visible")
-  //     cy.get("[data-cy=milestone]").first().find("h3").should("exist")
-  //     cy.get("[data-cy=milestone]").first().find("p").should("exist")
+      cy.get("[data-cy=milestone]").first().find("label").should("exist")
+      cy.get("[data-cy=milestone]").first().find("img").should("exist")
+      cy.get("[data-cy=milestone]").first().find("img").should("be.visible")
+      cy.get("[data-cy=milestone]").first().find("h3").should("exist")
+      cy.get("[data-cy=milestone]").first().find("p").should("exist")
 
-  //     cy.get("[data-cy=milestone-carousel]")
-  //       .find(".slider-control-centerright > button")
-  //       .click()
+      cy.get("[data-cy=milestone-carousel]")
+        .find(".slider-control-centerright > button")
+        .click()
 
-  //     cy.get("[data-cy=milestone]").first().find("img").should("not.be.visible")
-  //   })
+      cy.get("[data-cy=milestone]").first().find("img").should("not.be.visible")
+    })
 
-  //   it("displays a timeline of milestones", () => {
-  //     cy.get("[data-cy=milestone-timeline]").should("exist")
-  //     cy.get("[data-cy=milestone-timeline]").first().find("ol").should("exist")
-  //     cy.get("[data-cy=milestone-timeline]").first().find("li").should("exist")
-  //   })
+    it("displays a timeline of milestones", () => {
+      cy.get("[data-cy=milestone-timeline]").should("exist")
+      cy.get("[data-cy=milestone-timeline]").first().find("ol").should("exist")
+      cy.get("[data-cy=milestone-timeline]").first().find("li").should("exist")
+    })
 
-  //   it("displays a card for each li item", () => {
-  //     cy.get("[data-cy=milestone-timeline-card]")
-  //       .should("exist")
-  //       .click({ multiple: true, force: true }) // needs to be forced in order to access the cards that exist outside of the window
-  //     cy.get("[data-cy=milestone-timeline-card]")
-  //       .first()
-  //       .find("svg")
-  //       .should("exist")
-  //   })
-  // })
+    it("displays a card for each li item", () => {
+      cy.get("[data-cy=milestone-timeline-card]")
+        .should("exist")
+        .click({ multiple: true, force: true }) // needs to be forced in order to access the cards that exist outside of the window
+      cy.get("[data-cy=milestone-timeline-card]")
+        .first()
+        .find("svg")
+        .should("exist")
+    })
+  })
 
-  // describe("the platforms section", () => {
-  //   it("exists", () => {
-  //     cy.get("[data-cy=platform-section]").should("exist")
-  //   })
+  describe("the platforms section", () => {
+    it("exists", () => {
+      cy.get("[data-cy=platform-section]").should("exist")
+    })
 
-  //   it("has a heading", () => {
-  //     cy.get("[data-cy=platform-section]")
-  //       .find("h2")
-  //       .should("have.text", "Platforms & Instruments")
-  //   })
+    it("has a heading", () => {
+      cy.get("[data-cy=platform-section]")
+        .find("h2")
+        .should("have.text", "Platforms & Instruments")
+    })
 
-  //   it("displays a platform carousel", () => {
-  //     cy.get("[data-cy=platform-carousel]").find(".slider").should("exist")
+    it("displays a platform carousel", () => {
+      cy.get("[data-cy=platform-carousel]").find(".slider").should("exist")
 
-  //     cy.get("[data-cy=platform]").first().find("img").should("exist")
-  //     cy.get("[data-cy=platform]").first().find("img").should("be.visible")
-  //     cy.get("[data-cy=platform]").first().find("label").should("exist")
-  //     cy.get("[data-cy=platform-image-caption]").should("exist")
+      cy.get("[data-cy=platform]").first().find("img").should("exist")
+      cy.get("[data-cy=platform]").first().find("img").should("be.visible")
+      cy.get("[data-cy=platform]").first().find("label").should("exist")
+      cy.get("[data-cy=platform-image-caption]").should("exist")
 
-  //     cy.get("[data-cy=platform-carousel]").find(
-  //       ".slider-control-centerright > button"
-  //     )
-  //   })
+      cy.get("[data-cy=platform-carousel]").find(
+        ".slider-control-centerright > button"
+      )
+    })
 
-  //   it("displays some platforms", () => {
-  //     cy.get("[data-cy=platform]").should($div => {
-  //       expect($div, "3 platforms").to.have.length(3)
-  //     })
-  //   })
+    it("displays some platforms", () => {
+      cy.get("[data-cy=platform]").should($div => {
+        expect($div, "3 platforms").to.have.length(3)
+      })
+    })
 
-  //   it("displays the instruments per platform", () => {
-  //     cy.get("[data-cy=platform]")
-  //       .first()
-  //       .find("[data-cy=instrument-chip]")
-  //       .should($div => {
-  //         expect($div, "2 instruments").to.have.length(2)
-  //       })
-  //   })
-  // })
+    it("displays the instruments per platform", () => {
+      cy.get("[data-cy=platform]")
+        .first()
+        .find("[data-cy=instrument-chip]")
+        .should($div => {
+          expect($div, "2 instruments").to.have.length(2)
+        })
+    })
+  })
 
   describe("the data section", () => {
     before(() => {
