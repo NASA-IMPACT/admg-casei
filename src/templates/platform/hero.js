@@ -22,10 +22,12 @@ export default function PlatformHero({
       ]}
       id="platform"
     >
-      <Image
-        alt={image.nasaImgAlt}
-        fluid={image.nasaImg.childImageSharp.fluid}
-      />
+      {image && image.gatsbyImg && (
+        <Image
+          alt={image.description}
+          fluid={image.gatsbyImg.childImageSharp.fluid}
+        />
+      )}
     </Hero>
   )
 }
@@ -38,8 +40,8 @@ export const platformHeroFields = graphql`
     }
     collectionPeriods: collection_periods
     image {
-      nasaImgAlt
-      nasaImg {
+      description
+      gatsbyImg {
         childImageSharp {
           fluid(maxWidth: 600) {
             ...GatsbyImageSharpFluid
@@ -56,8 +58,8 @@ PlatformHero.propTypes = {
   campaigns: PropTypes.number.isRequired,
   collectionPeriods: PropTypes.number.isRequired,
   image: PropTypes.shape({
-    nasaImgAlt: PropTypes.string.isRequired,
-    nasaImg: PropTypes.shape({
+    description: PropTypes.string.isRequired,
+    gatsbyImg: PropTypes.shape({
       childImageSharp: PropTypes.object.isRequired,
     }).isRequired,
   }).isRequired,
