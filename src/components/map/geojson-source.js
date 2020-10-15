@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import PropTypes from "prop-types"
 
-export default function MapSource({ geojson, id, map, children }) {
+export default function GeoJsonSource({ geojson, id, map, children }) {
   const [source, setSource] = useState(null)
 
   useEffect(() => {
@@ -37,7 +37,7 @@ export default function MapSource({ geojson, id, map, children }) {
   )
 }
 
-MapSource.propTypes = {
+GeoJsonSource.propTypes = {
   id: PropTypes.string.isRequired,
   geojson: PropTypes.object,
   map: PropTypes.object,

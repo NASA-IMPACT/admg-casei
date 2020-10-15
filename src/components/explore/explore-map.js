@@ -4,24 +4,36 @@ import * as turf from "@turf/turf"
 import parse from "wellknown"
 
 import Map from "../map"
-import MapLayer from "../map-layer"
-import MapSource from "../map-source"
+import GeoJsonSource from "../map/geojson-source"
+import HoverLayer from "../map/hover-layer"
+import BboxLayer from "../map/bbox-layer"
+
+const sortFeaturesBySize = (a, b) => {
+  // this is required by the hover effect:
+  // to be able to select small features contained within others,
+  // they need to be added to the map last
+  return turf.area(b.geometry) - turf.area(a.geometry)
+}
 
 const ExploreMap = ({ data }) => {
   const geojson = {
     type: "FeatureCollection",
-    features: data.map(b => ({
-      type: "Feature",
-      geometry: parse(b),
-    })),
+    features: data
+      .map((b, i) => ({
+        type: "Feature",
+        id: i + 1,
+        geometry: parse(b),
+      }))
+      .sort(sortFeaturesBySize),
   }
   const bbox = turf.bbox(geojson)
 
   return (
     <Map style={{ height: 500 }}>
-      <MapSource geojson={geojson} id="explore">
-        <MapLayer id="explore" bbox={bbox} />
-      </MapSource>
+      <GeoJsonSource geojson={geojson} id="explore">
+        <HoverLayer id="explore" />
+        <BboxLayer id="explore" bbox={bbox} />
+      </GeoJsonSource>
     </Map>
   )
 }

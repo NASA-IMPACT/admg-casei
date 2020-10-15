@@ -8,8 +8,8 @@ import parse from "wellknown"
 
 import HeroStats from "../../components/hero-stats"
 import Map from "../../components/map"
-import MapLayer from "../../components/map-layer"
-import MapSource from "../../components/map-source"
+import BboxLayer from "../../components/map/bbox-layer"
+import GeoJsonSource from "../../components/map/geojson-source"
 
 import theme from "../../utils/theme"
 
@@ -70,9 +70,9 @@ const CampaignHero = ({
           gridArea: `1 / 1 / 1 / 4`,
         }}
       >
-        <MapSource geojson={geojson} id="campaign">
-          <MapLayer id="campaign" bbox={bbox} />
-        </MapSource>
+        <GeoJsonSource geojson={geojson} id="campaign">
+          <BboxLayer id="campaign" bbox={bbox} />
+        </GeoJsonSource>
       </Map>
 
       <BackgroundGradient />

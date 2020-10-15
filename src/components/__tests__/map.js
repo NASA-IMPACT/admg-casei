@@ -3,8 +3,8 @@ import renderer from "react-test-renderer"
 import mapbox from "mapbox-gl"
 
 import Map from "../map"
-import MapSource from "../map-source"
-import MapLayer from "../map-layer"
+import GeoJsonSource from "../map/geojson-source"
+import BboxLayer from "../map/bbox-layer"
 
 let mapWrapper
 let container
@@ -14,9 +14,9 @@ describe("Map", () => {
     renderer.act(() => {
       mapWrapper = renderer.create(
         <Map style={{ height: 200 }}>
-          <MapSource id="test">
-            <MapLayer id="test" bbox={[32, 5, 35, 10]} />
-          </MapSource>
+          <GeoJsonSource id="test">
+            <BboxLayer id="test" bbox={[32, 5, 35, 10]} />
+          </GeoJsonSource>
         </Map>,
         {
           createNodeMock: element => {
@@ -51,11 +51,11 @@ const geojson = {
 const bbox = [32, 5, 35, 10]
 let sourceWrapper, layerWrapper
 
-describe("MapSource", () => {
+describe("GeoJsonSource", () => {
   it("adds a map source", () => {
     renderer.act(() => {
       sourceWrapper = renderer.create(
-        <MapSource id={sourceId} map={mapbox.Map()} geojson={geojson} />
+        <GeoJsonSource id={sourceId} map={mapbox.Map()} geojson={geojson} />
       )
     })
 
@@ -69,11 +69,11 @@ describe("MapSource", () => {
   })
 })
 
-describe("MapLayer", () => {
+describe("BboxLayer", () => {
   beforeEach(() => {
     renderer.act(() => {
       layerWrapper = renderer.create(
-        <MapLayer
+        <BboxLayer
           id={layerId}
           bbox={bbox}
           sourceId={sourceId}
@@ -105,7 +105,7 @@ describe("MapLayer", () => {
     it("zooms to the data", () => {
       renderer.act(() => {
         layerWrapper = renderer.create(
-          <MapLayer
+          <BboxLayer
             id="campaign"
             bbox={bbox}
             sourceId={sourceId}
@@ -127,7 +127,7 @@ describe("MapLayer", () => {
     it("zooms to the data", () => {
       renderer.act(() => {
         layerWrapper = renderer.create(
-          <MapLayer
+          <BboxLayer
             id="explore"
             bbox={bbox}
             sourceId={sourceId}

@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react"
 import PropTypes from "prop-types"
-import theme from "../utils/theme"
+import theme from "../../utils/theme"
 
-export default function MapLayer({ id, bbox, map, sourceId }) {
+export default function BboxLayer({ id, bbox, map, sourceId }) {
   const [layer, setLayer] = useState(null)
 
   useEffect(() => {
@@ -60,7 +60,7 @@ export default function MapLayer({ id, bbox, map, sourceId }) {
   return null
 }
 
-MapLayer.propTypes = {
+BboxLayer.propTypes = {
   id: PropTypes.string.isRequired,
   sourceId: PropTypes.string,
   bbox: PropTypes.arrayOf(PropTypes.number.isRequired).isRequired,
