@@ -193,11 +193,11 @@ CampaignTemplate.propTypes = {
         PropTypes.shape({
           id: PropTypes.string.isRequired,
           image: PropTypes.shape({
-            description: PropTypes.string.isRequired,
+            description: PropTypes.string,
             gatsbyImg: PropTypes.shape({
-              childImageSharp: PropTypes.object.isRequired,
-            }).isRequired,
-          }).isRequired,
+              childImageSharp: PropTypes.object,
+            }),
+          }),
           shortname: PropTypes.string.isRequired,
           longname: PropTypes.string.isRequired,
           instruments: PropTypes.arrayOf(

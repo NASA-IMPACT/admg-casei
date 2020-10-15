@@ -53,11 +53,9 @@ const Filter = ({
   let [value, setValue] = useState("")
 
   const handleSelection = value => {
-    selectedFilterIds.includes(value.longname)
-      ? setSelectedFilterIds(
-          selectedFilterIds.filter(f => f !== value.longname)
-        )
-      : setSelectedFilterIds([...selectedFilterIds, value.longname])
+    selectedFilterIds.includes(value)
+      ? setSelectedFilterIds(selectedFilterIds.filter(f => f !== value))
+      : setSelectedFilterIds([...selectedFilterIds, value])
     setValue("")
   }
 
@@ -88,7 +86,11 @@ const Filter = ({
         <ListboxPopover style={{ background: theme.color.primary }}>
           <ListboxList data-cy="data-products-filter-options">
             {filterOptions.map(o => (
-              <ListboxOption key={o} value={o} data-cy="sort-option">
+              <ListboxOption
+                key={o.id}
+                value={o.longname}
+                data-cy="sort-option"
+              >
                 {o.longname.toUpperCase()}
                 {selectedFilterIds.includes(o.longname) && (
                   <IconButton
