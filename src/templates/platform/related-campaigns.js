@@ -9,6 +9,7 @@ import {
   SectionContent,
 } from "../../components/section"
 import CampaignCard from "../../components/cards/campaign-card"
+import { controlButtonLRStyle } from "../../components/carousel-styles"
 
 const RelatedCampaigns = ({ id, campaigns }) => {
   return (
@@ -19,11 +20,10 @@ const RelatedCampaigns = ({ id, campaigns }) => {
           <div data-cy="related-campaign-carousel">
             <Carousel
               defaultControlsConfig={{
-                nextButtonText: ">",
-                prevButtonText: "<",
-                pagingDotsStyle: {
-                  fill: "none",
-                },
+                nextButtonText: `⦊`,
+                nextButtonStyle: controlButtonLRStyle,
+                prevButtonText: `⦉`,
+                prevButtonStyle: controlButtonLRStyle,
               }}
               slidesToShow={3}
             >

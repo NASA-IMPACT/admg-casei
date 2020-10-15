@@ -12,6 +12,7 @@ import ImageCaption from "../../components/image-caption"
 import Image from "gatsby-image"
 
 import Chip from "../../components/chip"
+import { controlButtonLRStyle } from "../../components/carousel-styles"
 
 const PlatformSection = ({ id, platforms, instruments }) => (
   <SectionBlock id={id}>
@@ -21,11 +22,10 @@ const PlatformSection = ({ id, platforms, instruments }) => (
         {platforms.length > 0 ? (
           <Carousel
             defaultControlsConfig={{
-              nextButtonText: ">",
-              prevButtonText: "<",
-              pagingDotsStyle: {
-                fill: "none",
-              },
+              nextButtonText: `⦊`,
+              nextButtonStyle: controlButtonLRStyle,
+              prevButtonText: `⦉`,
+              prevButtonStyle: controlButtonLRStyle,
             }}
             slidesToShow={3}
           >
