@@ -1,6 +1,15 @@
-import React from "react"
+import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { graphql, Link } from "gatsby"
+
+import {
+  ListboxInput,
+  ListboxButton,
+  ListboxPopover,
+  ListboxList,
+  ListboxOption,
+} from "@reach/listbox"
+import VisuallyHidden from "@reach/visually-hidden"
 
 import {
   SectionBlock,
@@ -31,11 +40,97 @@ Box.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
+const Filter = ({
+  filterOptions,
+  filterName,
+  setSelectedFilterIds,
+  selectedFilterIds,
+}) => {
+  let [value, setValue] = useState("")
+
+  const handleSelection = value => {
+    setSelectedFilterIds([...selectedFilterIds, value.id])
+    selectedFilterIds.includes(value.id)
+      ? setSelectedFilterIds(selectedFilterIds.filter(f => f !== value.id))
+      : setSelectedFilterIds([...selectedFilterIds, value.id])
+    setValue("")
+  }
+
+  return (
+    <>
+      <VisuallyHidden id="sort-order">{filterName}</VisuallyHidden>
+      <ListboxInput
+        aria-labelledby="sort order"
+        defaultValue={value}
+        onChange={value => handleSelection(value)}
+        data-cy="sort-select"
+      >
+        <ListboxButton
+          arrow="▼"
+          style={{
+            height: `2.5rem`,
+            WebkitAppearance: `none`,
+            background: `transparent`,
+            border: `1px solid ${theme.color.base}`,
+            borderRadius: `${theme.shape.rounded} `,
+            color: theme.color.base,
+            padding: `0.5rem`,
+            cursor: `pointer`,
+          }}
+        >
+          {filterName.toUpperCase()}
+        </ListboxButton>
+        <ListboxPopover style={{ background: theme.color.primary }}>
+          <ListboxList data-cy="data-products-filter-options">
+            {filterOptions.map(o => (
+              <ListboxOption key={o} value={o} data-cy="sort-option">
+                {o.shortname.toUpperCase()}
+              </ListboxOption>
+            ))}
+          </ListboxList>
+        </ListboxPopover>
+      </ListboxInput>
+    </>
+  )
+}
+
 const DataSection = ({ id, dois }) => {
+  let [selectedFilterIds, setSelectedFilterIds] = useState([])
+
+  const clearFilters = () => setSelectedFilterIds([])
+
+  const filteredDois = selectedFilterIds.length
+    ? dois.filter(
+        doi =>
+          doi.platforms
+            .map(platform => platform.id)
+            .some(id => selectedFilterIds.includes(id)) ||
+          doi.instruments
+            .map(instrument => instrument.id)
+            .some(id => selectedFilterIds.includes(id))
+      )
+    : dois
+
   return (
     <SectionBlock id={id}>
       <SectionHeader headline="Data Products" id={id} />
       <SectionContent>
+        <>
+          <Filter
+            filterOptions={[...new Set(dois.map(doi => doi.platforms).flat())]}
+            filterName="Platforms"
+            setSelectedFilterIds={setSelectedFilterIds}
+            selectedFilterIds={selectedFilterIds}
+          />
+          <Filter
+            filterOptions={[
+              ...new Set(dois.map(doi => doi.instruments).flat()),
+            ]}
+            filterName="Instruments"
+            setSelectedFilterIds={setSelectedFilterIds}
+            selectedFilterIds={selectedFilterIds}
+          />
+        </>
         <div
           style={{
             display: `grid`,
@@ -45,7 +140,7 @@ const DataSection = ({ id, dois }) => {
         >
           {dois.length < 1
             ? "No data products available."
-            : dois.map(doi => (
+            : filteredDois.map(doi => (
                 <div
                   key={doi.id}
                   style={{
