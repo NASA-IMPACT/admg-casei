@@ -295,6 +295,18 @@ describe("Campaign", () => {
         .first()
         .find("[data-cy=doi-link]")
         .should("exist")
+
+      cy.get("[data-cy=data-product-platforms]")
+        .first()
+        .find("[data-cy=doi-platform-label]")
+        .should("exist")
+        .and("have.text", "Platforms")
+
+      cy.get("[data-cy=data-product-instruments]")
+        .first()
+        .find("[data-cy=doi-instrument-label]")
+        .should("exist")
+        .and("have.text", "Instruments")
     })
   })
 

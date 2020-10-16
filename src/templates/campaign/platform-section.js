@@ -90,6 +90,9 @@ export const platformFields = graphql`
   fragment platformFields on campaign {
     platforms {
       id
+      dois {
+        id
+      }
       image {
         description
         gatsbyImg {
@@ -109,6 +112,11 @@ export const platformFields = graphql`
     }
     instruments {
       id
+      shortname: short_name
+      longname: long_name
+      dois {
+        id
+      }
     }
   }
 `
@@ -119,11 +127,11 @@ PlatformSection.propTypes = {
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       image: PropTypes.shape({
-        description: PropTypes.string.isRequired,
+        description: PropTypes.string,
         gatsbyImg: PropTypes.shape({
-          childImageSharp: PropTypes.object.isRequired,
-        }).isRequired,
-      }).isRequired,
+          childImageSharp: PropTypes.object,
+        }),
+      }),
       shortname: PropTypes.string.isRequired,
       longname: PropTypes.string.isRequired,
       instruments: PropTypes.arrayOf(
