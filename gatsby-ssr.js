@@ -9,15 +9,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import GlobalStyles from "./src/components/global-styles"
-
 export const wrapRootElement = ({ element }) => {
-  return (
-    <>
-      <GlobalStyles />
-      {element}
-    </>
-  )
+  return <>{element}</>
 }
 
 wrapRootElement.propTypes = {

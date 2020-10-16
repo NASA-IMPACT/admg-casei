@@ -9,7 +9,6 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import GlobalStyles from "./src/components/global-styles"
 import AuthProvider from "./src/components/auth-provider"
 
 export const shouldUpdateScroll = ({ routerProps: { location } }) => {
@@ -21,12 +20,7 @@ export const shouldUpdateScroll = ({ routerProps: { location } }) => {
 }
 
 export const wrapRootElement = ({ element }) => {
-  return (
-    <AuthProvider>
-      <GlobalStyles />
-      {element}
-    </AuthProvider>
-  )
+  return <AuthProvider>{element}</AuthProvider>
 }
 
 wrapRootElement.propTypes = {

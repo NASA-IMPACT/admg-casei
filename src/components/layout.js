@@ -9,12 +9,22 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
+import "@reach/listbox/styles.css"
+import "mapbox-gl/dist/mapbox-gl.css"
+import "./global.css"
+
 import Header from "./header"
 import Nav from "./nav"
 import Footer from "./footer"
 
 import theme from "../utils/theme"
 import styled from "styled-components"
+
+const Container = styled.div`
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+`
 
 export const Paragraph = styled.p`
   margin-bottom: 1rem;
@@ -52,14 +62,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <div
-      style={{
-        display: `flex`,
-        minHeight: `100vh`,
-        flexDirection: `column`,
-      }}
-      id="top"
-    >
+    <Container id="top">
       <Header
         siteTitle={data.site.siteMetadata.title}
         shortname={data.site.siteMetadata.shortname}
@@ -68,7 +71,7 @@ const Layout = ({ children }) => {
       </Header>
       <main style={{ flexGrow: 1 }}>{children}</main>
       <Footer shortname={data.site.siteMetadata.shortname} />
-    </div>
+    </Container>
   )
 }
 
