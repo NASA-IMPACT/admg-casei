@@ -27,7 +27,7 @@ export default function CampaignCard(props) {
             nasaImgAlt
             nasaImg {
               childImageSharp {
-                fixed(height: 85) {
+                fixed(height: 100) {
                   ...GatsbyImageSharpFixed
                 }
               }

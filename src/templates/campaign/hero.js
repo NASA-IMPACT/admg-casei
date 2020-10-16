@@ -81,7 +81,7 @@ const CampaignHero = ({
         style={{
           gridArea: `1 / 2 / 1 / 2`,
           display: `flex`,
-          paddingTop: `11rem`,
+          paddingTop: `7rem`,
           zIndex: 1,
         }}
       >
@@ -119,7 +119,7 @@ export const heroFields = graphql`
       nasaImgAlt
       nasaImg {
         childImageSharp {
-          fixed(height: 85) {
+          fixed(height: 150) {
             ...GatsbyImageSharpFixed
           }
         }
