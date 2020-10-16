@@ -11,6 +11,7 @@ import {
   SectionContent,
 } from "../../components/section"
 import { formatDateRange } from "../../utils/helpers"
+import { controlButtonLRStyle } from "../../components/carousel-styles"
 
 const TimelineSection = ({ id, deployments }) => {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -34,8 +35,10 @@ const TimelineSection = ({ id, deployments }) => {
         <div data-cy="milestone-carousel">
           <Carousel
             defaultControlsConfig={{
-              nextButtonText: ">",
-              prevButtonText: "<",
+              nextButtonText: `⦊`,
+              nextButtonStyle: controlButtonLRStyle,
+              prevButtonText: `⦉`,
+              prevButtonStyle: controlButtonLRStyle,
               pagingDotsStyle: {
                 fill: "none",
               },

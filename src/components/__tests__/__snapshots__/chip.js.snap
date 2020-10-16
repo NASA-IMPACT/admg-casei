@@ -25,7 +25,9 @@ exports[`Chip renders with action 1`] = `
     }
   }
 >
-  <small>
+  <small
+    title=""
+  >
     Weather
   </small>
   <button
@@ -80,7 +82,9 @@ exports[`Chip renders without action 1`] = `
     }
   }
 >
-  <small>
+  <small
+    title=""
+  >
     Weather
   </small>
 </div>

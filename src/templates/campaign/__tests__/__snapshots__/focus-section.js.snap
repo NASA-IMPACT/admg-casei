@@ -108,7 +108,26 @@ exports[`Focus Section displays content 1`] = `
             }
           }
         >
-          area a
+          <div
+            data-cy="geophysical-concept-chip"
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#0c1520",
+                "borderRadius": "0.2rem",
+                "color": "hsla(0,0%,100%,0.9)",
+                "display": "inline-flex",
+                "margin": "0.25rem 0.5rem",
+                "padding": "0 0.5rem",
+              }
+            }
+          >
+            <small
+              title=""
+            >
+              area a
+            </small>
+          </div>
         </a>
       </div>
       <div
@@ -126,11 +145,26 @@ exports[`Focus Section displays content 1`] = `
         >
           Focus Phenomena
         </label>
-        <p
-          data-cy="focus-content-text"
+        <div
+          data-cy="focus-phenomena-chip"
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#0c1520",
+              "borderRadius": "0.2rem",
+              "color": "hsla(0,0%,100%,0.9)",
+              "display": "inline-flex",
+              "margin": "0.25rem 0.5rem",
+              "padding": "0 0.5rem",
+            }
+          }
         >
-          test string
-        </p>
+          <small
+            title=""
+          >
+            TEST STRING
+          </small>
+        </div>
       </div>
     </div>
   </div>
