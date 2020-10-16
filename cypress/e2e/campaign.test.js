@@ -140,9 +140,8 @@ describe("Campaign", () => {
       cy.get("[data-cy=focus-content-label]").should($label => {
         expect($label, "3 labels").to.have.length(3)
       })
-      cy.get("[data-cy=focus-content-text]").should($p => {
-        expect($p, "2 text entries").to.have.length(1)
-      })
+      cy.get("[data-cy=geophysical-concept-chip]").should("exist")
+      cy.get("[data-cy=focus-phenomena-chip]").should("exist")
     })
 
     it("navigates to the campaign list with the focus area as filter applied", () => {
