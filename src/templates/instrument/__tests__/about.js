@@ -3,6 +3,7 @@ import { create } from "react-test-renderer"
 
 import About from "../about"
 
+const id = "unique-id"
 const instrumentTypes = [
   {
     id: "test",
@@ -16,7 +17,7 @@ const instrumentTypes = [
 const radiometricFrequency = "test"
 const temporalResolution = "test"
 const spatialResolution = "test"
-const calibration = "test"
+const calibration = "http://dx.doi.org/10.5067/calibration"
 const measurementRegions = [
   {
     id: "test",
@@ -36,11 +37,12 @@ const gcmdPhenomenas = [
     variable_3: "test",
   },
 ]
-const instrumentDoi = "test"
+const instrumentDoi = "http://dx.doi.org/10.5067/instrument"
 const instrumentManufacturer = "test"
 const fundingSource = "test"
 const leadInvestigator = "test"
 const technicalContact = "test"
+const onlineInformation = "http://www.example.com"
 const overviewPublication = "test"
 const repositories = [
   {
@@ -57,6 +59,7 @@ describe("About Section", () => {
   it("displays content", () => {
     const tree = create(
       <About
+        id={id}
         instrumentTypes={instrumentTypes}
         radiometricFrequency={radiometricFrequency}
         temporalResolution={temporalResolution}
@@ -69,6 +72,7 @@ describe("About Section", () => {
         fundingSource={fundingSource}
         leadInvestigator={leadInvestigator}
         technicalContact={technicalContact}
+        onlineInformation={onlineInformation}
         overviewPublication={overviewPublication}
         repositories={repositories}
       />

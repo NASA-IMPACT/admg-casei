@@ -37,10 +37,11 @@ exports[`About Section displays content 1`] = `
 
 <section
   className="c0"
-  data-cy="undefined-section"
+  data-cy="unique-id-section"
 >
   <div
     className="c1"
+    id="unique-id"
   />
   <div
     style={
@@ -51,7 +52,7 @@ exports[`About Section displays content 1`] = `
     }
   >
     <a
-      href="#undefined"
+      href="#unique-id"
     >
       <h2>
         Instrument Details
@@ -128,7 +129,7 @@ exports[`About Section displays content 1`] = `
         <dd>
           <a
             data-cy="calibration-doi-link"
-            href="test"
+            href="http://dx.doi.org/10.5067/calibration"
             rel="noopener noreferrer"
             style={
               Object {
@@ -137,7 +138,7 @@ exports[`About Section displays content 1`] = `
             }
             target="_blank"
           >
-            test
+            http://dx.doi.org/10.5067/calibration
           </a>
         </dd>
         <dt>
@@ -146,7 +147,35 @@ exports[`About Section displays content 1`] = `
           </label>
         </dt>
         <dd>
-          N/A
+          <ul
+            style={
+              Object {
+                "margin": "0",
+              }
+            }
+          >
+            <li
+              style={
+                Object {
+                  "listStyle": "none",
+                }
+              }
+            >
+              <a
+                data-cy="online-information-link"
+                href="http://www.example.com"
+                rel="noopener noreferrer"
+                style={
+                  Object {
+                    "color": "#aac9ff",
+                  }
+                }
+                target="_blank"
+              >
+                http://www.example.com
+              </a>
+            </li>
+          </ul>
         </dd>
       </dl>
     </section>
@@ -261,7 +290,7 @@ exports[`About Section displays content 1`] = `
            
           <a
             data-cy="instrument-doi-link"
-            href="test"
+            href="http://dx.doi.org/10.5067/instrument"
             rel="noopener noreferrer"
             style={
               Object {
@@ -270,7 +299,7 @@ exports[`About Section displays content 1`] = `
             }
             target="_blank"
           >
-            test
+            http://dx.doi.org/10.5067/instrument
           </a>
         </p>
       </div>
