@@ -39,6 +39,9 @@ const TimelineSection = ({ id, deployments }) => {
               nextButtonStyle: controlButtonLRStyle,
               prevButtonText: `⦉`,
               prevButtonStyle: controlButtonLRStyle,
+              pagingDotsStyle: {
+                fill: "none",
+              },
             }}
             slideIndex={currentSlide}
             afterSlide={slideIndex => setCurrentSlide(slideIndex)}

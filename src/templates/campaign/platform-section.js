@@ -26,6 +26,9 @@ const PlatformSection = ({ id, platforms, instruments }) => (
               nextButtonStyle: controlButtonLRStyle,
               prevButtonText: `⦉`,
               prevButtonStyle: controlButtonLRStyle,
+              pagingDotsStyle: {
+                fill: "none",
+              },
             }}
             slidesToShow={3}
           >

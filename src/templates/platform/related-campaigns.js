@@ -24,6 +24,9 @@ const RelatedCampaigns = ({ id, campaigns }) => {
                 nextButtonStyle: controlButtonLRStyle,
                 prevButtonText: `⦉`,
                 prevButtonStyle: controlButtonLRStyle,
+                pagingDotsStyle: {
+                  fill: "none",
+                },
               }}
               slidesToShow={3}
             >
