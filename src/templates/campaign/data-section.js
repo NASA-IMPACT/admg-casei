@@ -61,12 +61,12 @@ const Filter = ({
 
   return (
     <div style={{ marginRight: `2rem` }}>
-      <VisuallyHidden id="sort-order">{filterName}</VisuallyHidden>
+      <VisuallyHidden id={filterName}>{filterName}</VisuallyHidden>
       <ListboxInput
-        aria-labelledby="sort order"
+        aria-labelledby={filterName}
         defaultValue={value}
         onChange={value => handleSelection(value)}
-        data-cy="sort-select"
+        data-cy={`filter-by-${filterName}`}
       >
         <ListboxButton
           arrow="▼"
@@ -89,7 +89,7 @@ const Filter = ({
               <ListboxOption
                 key={o.id}
                 value={o.longname}
-                data-cy="sort-option"
+                data-cy="filter-option"
               >
                 {o.longname.toUpperCase()}
                 {selectedFilterIds.includes(o.longname) && (
