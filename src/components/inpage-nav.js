@@ -57,11 +57,11 @@ const InpageNav = ({ shortname, items, path }) => (
           }}
         >
           <li>
-            <h1 style={{ paddingRight: `1rem` }}>
+            <h2 style={{ paddingRight: `1rem` }}>
               <a href="#top" data-cy={`top-inpage-link`}>
                 {shortname}
               </a>
-            </h1>
+            </h2>
           </li>
           {items.map(item => (
             <InpageLink key={item.id} id={item.id}>

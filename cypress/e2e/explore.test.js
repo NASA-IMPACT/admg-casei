@@ -67,7 +67,7 @@ describe("Explore", () => {
 
       cy.url().should("include", "/campaign/")
 
-      cy.get("h1").should("have.length", 2)
+      cy.get("h1").should("have.length", 1)
     })
   })
 

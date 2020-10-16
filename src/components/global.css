@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: radial-gradient(
+    circle at top,
+    /*tertiary color */ #294060 0%,
+    /*primary color */ #0c1520 45%
+  );
+}

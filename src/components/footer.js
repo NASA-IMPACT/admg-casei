@@ -172,10 +172,10 @@ const Footer = ({ shortname }) => {
             }}
           >
             {/* TODO: Add back in with real links */}
-            {/* <div className="placeholder" style={{ marginLeft: `3rem` }}>
+            {/* <div style={{ marginLeft: `3rem` }}>
               Privacy
             </div>
-            <div className="placeholder" style={{ marginLeft: `3rem` }}>
+            <div style={{ marginLeft: `3rem` }}>
               Contact NASA
             </div> */}
           </div>
