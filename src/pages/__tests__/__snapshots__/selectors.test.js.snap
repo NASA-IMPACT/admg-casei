@@ -533,7 +533,9 @@ exports[`Campaigns page renders correctly 1`] = `
             }
           }
         >
-          <small>
+          <small
+            title=""
+          >
             geophysical: Upper Atms Chem
           </small>
           <button

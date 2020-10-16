@@ -112,7 +112,9 @@ exports[`Platform Section displays content 1`] = `
                   }
                 }
               >
-                <small>
+                <small
+                  title=""
+                >
                   Gen-Chemistry
                 </small>
               </div>
@@ -179,7 +181,9 @@ exports[`Platform Section displays content 1`] = `
                   }
                 }
               >
-                <small>
+                <small
+                  title=""
+                >
                   HSRL
                 </small>
               </div>
@@ -246,7 +250,9 @@ exports[`Platform Section displays content 1`] = `
                   }
                 }
               >
-                <small>
+                <small
+                  title=""
+                >
                   Gen-Chemistry
                 </small>
               </div>
