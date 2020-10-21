@@ -198,41 +198,58 @@ const DataSection = ({ id, dois }) => {
                     id="doi"
                   ></ExternalLink>
 
-                  <div
-                    style={{
-                      flex: `2.618`,
-                      display: `grid`,
-                      gap: `1rem`,
-                      gridTemplateColumns: `1fr 1fr`,
-                      padding: `.5rem`,
-                    }}
-                  >
-                    <div data-cy="data-product-platforms">
-                      <Label id="doi-campaign" showBorder>
-                        Campaigns
-                      </Label>
-                      {doi.campaigns.map(campaign => (
-                        <Link key={campaign.id} to={`/campaign/${campaign.id}`}>
-                          <small>{campaign.longname}</small>
-                        </Link>
-                      ))}
+                  {doi.campaigns.concat(doi.instruments).length ? (
+                    <div
+                      style={{
+                        flex: `2.618`,
+                        display: `grid`,
+                        gap: `1rem`,
+                        gridTemplateColumns: `1fr 1fr`,
+                        padding: `.5rem`,
+                      }}
+                    >
+                      <div data-cy="data-product-platforms">
+                        <Label id="doi-campaign" showBorder>
+                          Campaigns
+                        </Label>
+                        {doi.campaigns.map(campaign => (
+                          <Link
+                            key={campaign.id}
+                            to={`/campaign/${campaign.id}`}
+                          >
+                            <small>{campaign.longname}</small>
+                          </Link>
+                        ))}
+                      </div>
+                      <div data-cy="data-product-instruments">
+                        <Label id="doi-instrument" showBorder>
+                          Instruments
+                        </Label>
+                        {doi.instruments.map(instrument => (
+                          <Link
+                            key={instrument.id}
+                            to={`/instrument/${instrument.id}`}
+                          >
+                            <small style={{ display: `inline-block` }}>
+                              {instrument.longname}
+                            </small>
+                          </Link>
+                        ))}
+                      </div>
                     </div>
-                    <div data-cy="data-product-instruments">
-                      <Label id="doi-instrument" showBorder>
-                        Instruments
+                  ) : (
+                    <div
+                      style={{
+                        flex: `2.618`,
+                        display: `grid`,
+                        padding: `1rem .5rem`,
+                      }}
+                    >
+                      <Label id="doi-campaign">
+                        No Related Campaigns or Instruments
                       </Label>
-                      {doi.instruments.map(instrument => (
-                        <Link
-                          key={instrument.id}
-                          to={`/instrument/${instrument.id}`}
-                        >
-                          <small style={{ display: `inline-block` }}>
-                            {instrument.longname}
-                          </small>
-                        </Link>
-                      ))}
                     </div>
-                  </div>
+                  )}
                 </div>
               ))}
             </div>
