@@ -108,7 +108,7 @@ const DataSection = ({ id, dois }) => {
                         padding: `.5rem`,
                       }}
                     >
-                      <div data-cy="data-product-platforms">
+                      <div data-cy="data-product-campaigns">
                         <Label id="doi-campaign" showBorder>
                           Campaigns
                         </Label>
