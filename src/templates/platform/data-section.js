@@ -3,15 +3,6 @@ import PropTypes from "prop-types"
 import { graphql, Link } from "gatsby"
 
 import {
-  ListboxInput,
-  ListboxButton,
-  ListboxPopover,
-  ListboxList,
-  ListboxOption,
-} from "@reach/listbox"
-import VisuallyHidden from "@reach/visually-hidden"
-
-import {
   SectionBlock,
   SectionHeader,
   SectionContent,
@@ -19,80 +10,8 @@ import {
 import ExternalLink from "../../components/external-link"
 import Label from "../../components/label"
 import theme from "../../utils/theme"
-import { CloseIcon } from "../../components/icons"
-import { IconButton } from "../../components/button"
-import FilterChips from "../../components/filter-chips"
-
-
-const Filter = ({
-  filterOptions,
-  filterName,
-  setSelectedFilterIds,
-  selectedFilterIds,
-}) => {
-  let [value, setValue] = useState("")
-
-  const handleSelection = value => {
-    selectedFilterIds.includes(value)
-      ? setSelectedFilterIds(selectedFilterIds.filter(f => f !== value))
-      : setSelectedFilterIds([...selectedFilterIds, value])
-    setValue("")
-  }
-
-  return (
-    <div style={{ marginRight: `2rem` }}>
-      <VisuallyHidden id={filterName}>{filterName}</VisuallyHidden>
-      <ListboxInput
-        aria-labelledby={filterName}
-        defaultValue={value}
-        onChange={value => handleSelection(value)}
-        data-cy={`filter-by-${filterName}`}
-      >
-        <ListboxButton
-          arrow="▼"
-          style={{
-            height: `2.5rem`,
-            WebkitAppearance: `none`,
-            background: `transparent`,
-            border: `1px solid ${theme.color.base}`,
-            borderRadius: `${theme.shape.rounded} `,
-            color: theme.color.base,
-            padding: `0.5rem`,
-            cursor: `pointer`,
-          }}
-        >
-          {filterName.toUpperCase()}
-        </ListboxButton>
-        <ListboxPopover style={{ background: theme.color.primary }}>
-          <ListboxList data-cy="data-products-filter-options">
-            {filterOptions.map(o => (
-              <ListboxOption
-                key={o.id}
-                value={o.longname}
-                data-cy="filter-option"
-              >
-                {o.longname.toUpperCase()}
-                {selectedFilterIds.includes(o.longname) && (
-                  <IconButton
-                    id="remove-filter"
-                    icon={<CloseIcon color={theme.color.base} />}
-                  />
-                )}
-              </ListboxOption>
-            ))}
-          </ListboxList>
-        </ListboxPopover>
-      </ListboxInput>
-    </div>
-  )
-}
-
-Filter.propTypes = {
-  filterOptions: PropTypes.array.isRequired,
-  filterName: PropTypes.string.isRequired,
-  setSelectedFilterIds: PropTypes.func.isRequired,
-  selectedFilterIds: PropTypes.array.isRequired,
-}
+import FilterChips from "../../components/filter/filter-chips"
+import FilterBox from "../../components/filter/filter-box"
 
 const DataSection = ({ id, dois }) => {
   let [selectedFilterIds, setSelectedFilterIds] = useState([])
@@ -131,13 +50,13 @@ const DataSection = ({ id, dois }) => {
                   marginBottom: `2rem`,
                 }}
               >
-                <Filter
+                <FilterBox
                   filterOptions={campaignList}
                   filterName="Campaigns"
                   setSelectedFilterIds={setSelectedFilterIds}
                   selectedFilterIds={selectedFilterIds}
                 />
-                <Filter
+                <FilterBox
                   filterOptions={instrumentList}
                   filterName="Instruments"
                   setSelectedFilterIds={setSelectedFilterIds}
