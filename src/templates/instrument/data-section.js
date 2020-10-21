@@ -123,7 +123,7 @@ const DataSection = ({ id, dois }) => {
                       </div>
                       <div data-cy="data-product-platforms">
                         <Label id="doi-platform" showBorder>
-                          Instruments
+                          Platforms
                         </Label>
                         {doi.platforms.map(platform => (
                           <Link

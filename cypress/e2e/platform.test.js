@@ -45,6 +45,57 @@ describe("Platform", () => {
     })
   })
 
+  describe("the data section", () => {
+    before(() => {
+      cy.visit("/explore/platforms")
+      cy.get("main").find("[data-cy=explore-card]").contains("DC-8").click()
+    })
+
+    it("exists", () => {
+      cy.get("[data-cy=data-section]").should("exist")
+    })
+
+    it("has a heading", () => {
+      cy.get("[data-cy=data-section]")
+        .find("h2")
+        .should("have.text", "Data Products")
+    })
+
+    it("displays some data products", () => {
+      cy.get("[data-cy=data-product]").should($div => {
+        expect($div).to.have.length(11)
+      })
+    })
+
+    it("each data product has a label and a doi", () => {
+      cy.get("[data-cy=data-product]")
+        .first()
+        .find("[data-cy=doi-label]")
+        .should("exist")
+        .and(
+          "have.text",
+          "GPM GROUND VALIDATION AIRBORNE SECOND GENERATION PRECIPITATION RADAR (APR-2) GCPEX V1"
+        )
+
+      cy.get("[data-cy=data-product]")
+        .first()
+        .find("[data-cy=doi-link]")
+        .should("exist")
+
+      cy.get("[data-cy=data-product-campaigns]")
+        .first()
+        .find("[data-cy=doi-campaign-label]")
+        .should("exist")
+        .and("have.text", "Campaigns")
+
+      cy.get("[data-cy=data-product-instruments]")
+        .first()
+        .find("[data-cy=doi-instrument-label]")
+        .should("exist")
+        .and("have.text", "Instruments")
+    })
+  })
+
   describe("the related campaign section", () => {
     it("exists", () => {
       cy.get("[data-cy=related-campaigns-section]").should("exist")

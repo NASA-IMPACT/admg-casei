@@ -131,7 +131,7 @@ InstrumentTemplate.propTypes = {
         gatsbyImg: PropTypes.shape({
           childImageSharp: PropTypes.object.isRequired,
         }).isRequired,
-      }).isRequired,
+      }),
       collectionPeriods: PropTypes.arrayOf(PropTypes.string),
       instrumentTypes: PropTypes.arrayOf(
         PropTypes.shape({
