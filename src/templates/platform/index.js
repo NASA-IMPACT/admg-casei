@@ -19,7 +19,7 @@ export default function PlatformTemplate({ data: { platform }, path }) {
     )
     return {
       ...platformDoi,
-      campaign: matchedCampaign,
+      campaigns: matchedCampaign,
       instruments: matchedInstrument,
     }
   })
@@ -83,12 +83,16 @@ export const query = graphql`
       ...platformDataFields
       campaigns {
         id
+        shortname: short_name
+        longname: long_name
         dois {
           id
         }
       }
       instruments {
         id
+        shortname: short_name
+        longname: long_name
         dois {
           id
         }
