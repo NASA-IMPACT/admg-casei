@@ -20,9 +20,8 @@ import ExternalLink from "../../components/external-link"
 import Label from "../../components/label"
 import theme from "../../utils/theme"
 import { CloseIcon } from "../../components/icons"
-import { TrashIcon } from "../../components/icons"
 import { IconButton } from "../../components/button"
-import Chip from "../../components/chip"
+import FilterChips from "../../components/filter-chips"
 
 const Box = ({ children }) => (
   <div
@@ -166,36 +165,11 @@ const DataSection = ({ id, dois }) => {
               </div>
             )}
             {selectedFilterIds.length > 0 && (
-              <div
-                style={{
-                  display: `flex`,
-                  flexWrap: `wrap`,
-                  margin: `2rem 0`,
-                  alignItems: `center`,
-                }}
-              >
-                Active filters:
-                {selectedFilterIds.map(f => (
-                  <Chip
-                    key={f}
-                    actionId={f}
-                    id="filter"
-                    label={f}
-                    chipAction={() =>
-                      setSelectedFilterIds(
-                        selectedFilterIds.filter(id => id !== f)
-                      )
-                    }
-                  />
-                ))}
-                {selectedFilterIds.length > 1 && (
-                  <IconButton
-                    id="clear-filters"
-                    action={() => clearFilters()}
-                    icon={<TrashIcon />}
-                  />
-                )}
-              </div>
+              <FilterChips
+                selectedFilterIds={selectedFilterIds}
+                setSelectedFilterIds={selectedFilterIds}
+                clearFilters={clearFilters}
+              />
             )}
             <div
               style={{
@@ -210,7 +184,6 @@ const DataSection = ({ id, dois }) => {
                   style={{
                     display: `flex`,
                     flexDirection: `column`,
-                    // border: `1px solid ${theme.color.base}`,
                     backgroundColor: theme.color.secondary,
                     padding: `0 1rem 0.71rem 1rem`,
                   }}
