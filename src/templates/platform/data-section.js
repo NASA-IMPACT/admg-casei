@@ -23,25 +23,6 @@ import { CloseIcon } from "../../components/icons"
 import { IconButton } from "../../components/button"
 import FilterChips from "../../components/filter-chips"
 
-const Box = ({ children }) => (
-  <div
-    style={{
-      backgroundColor: theme.color.secondary,
-      boxShadow: `rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px`,
-      padding: `1rem`,
-      display: `flex`,
-      flexDirection: `column`,
-      justifyContent: `space-between`,
-      height: `100%`,
-      marginBottom: `4px`,
-    }}
-  >
-    {children}
-  </div>
-)
-Box.propTypes = {
-  children: PropTypes.node.isRequired,
-}
 
 const Filter = ({
   filterOptions,
