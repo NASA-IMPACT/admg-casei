@@ -10,7 +10,7 @@ import {
 import VisuallyHidden from "@reach/visually-hidden"
 
 import { CloseIcon } from "../icons"
-import { IconButton } from "..button"
+import { IconButton } from "../button"
 import theme from "../../utils/theme"
 
 export default function Filter({

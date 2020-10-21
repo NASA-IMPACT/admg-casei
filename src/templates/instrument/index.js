@@ -7,8 +7,22 @@ import InstrumentHero from "./hero"
 import InpageNav from "../../components/inpage-nav"
 import About from "./about"
 import Entities from "./entities"
+import DataSection from "./data-section"
 
 const InstrumentTemplate = ({ data: { instrument }, path }) => {
+  const updatedInstrumentDois = instrument.dois.map(instrumentDoi => {
+    const matchedCampaign = instrument.campaigns.filter(campaign =>
+      campaign.dois.map(x => x.id).includes(instrumentDoi.id)
+    )
+    const matchedPlatform = instrument.platforms.filter(platform =>
+      platform.dois.map(x => x.id).includes(instrumentDoi.id)
+    )
+    return {
+      ...instrumentDoi,
+      campaigns: matchedCampaign,
+      platforms: matchedPlatform,
+    }
+  })
   const sections = {
     about: {
       nav: "Instrument Details",
@@ -29,6 +43,13 @@ const InstrumentTemplate = ({ data: { instrument }, path }) => {
         onlineInformation: instrument.onlineInformation,
         overviewPublication: instrument.overviewPublication,
         repositories: instrument.repositories,
+      },
+    },
+    data: {
+      nav: "Data",
+      component: DataSection,
+      props: {
+        dois: updatedInstrumentDois,
       },
     },
     entities: {
@@ -71,6 +92,23 @@ export const query = graphql`
       ...instrumentHeroFields
       ...instrumentDetailFields
       ...instrumentEntitiesFields
+      ...instrumentDataFields
+      campaigns {
+        id
+        shortname: short_name
+        longname: long_name
+        dois {
+          id
+        }
+      }
+      platforms {
+        id
+        shortname: short_name
+        longname: long_name
+        dois {
+          id
+        }
+      }
     }
   }
 `
@@ -81,13 +119,19 @@ InstrumentTemplate.propTypes = {
       shortname: PropTypes.string.isRequired,
       longname: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
+      dois: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string.isRequired,
+          shortname: PropTypes.string.isRequired,
+          longname: PropTypes.string,
+        })
+      ).isRequired,
       image: PropTypes.shape({
         description: PropTypes.string.isRequired,
         gatsbyImg: PropTypes.shape({
           childImageSharp: PropTypes.object.isRequired,
         }).isRequired,
       }).isRequired,
-
       collectionPeriods: PropTypes.arrayOf(PropTypes.string),
       instrumentTypes: PropTypes.arrayOf(
         PropTypes.shape({
@@ -133,11 +177,21 @@ InstrumentTemplate.propTypes = {
           campaigns: PropTypes.arrayOf(
             PropTypes.shape({ shortname: PropTypes.string })
           ),
+          dois: PropTypes.arrayOf(
+            PropTypes.shape({
+              id: PropTypes.string.isRequired,
+            }).isRequired
+          ),
         })
       ),
       campaigns: PropTypes.arrayOf(
         PropTypes.shape({
           id: PropTypes.string,
+          dois: PropTypes.arrayOf(
+            PropTypes.shape({
+              id: PropTypes.string.isRequired,
+            }).isRequired
+          ),
         })
       ).isRequired,
     }).isRequired,

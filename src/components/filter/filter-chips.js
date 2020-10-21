@@ -1,8 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { TrashIcon } from "./icons"
-import { IconButton } from "./button"
-import Chip from "./chip"
+import { TrashIcon } from "../icons"
+import { IconButton } from "../button"
+import Chip from "../chip"
 
 export default function FilterChips({
   selectedFilterIds,
