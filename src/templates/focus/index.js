@@ -50,7 +50,7 @@ const FocusTemplate = ({ data }) => {
                   id="focus"
                 />
               ) : (
-                <span data-cy="focus-link">no Focus Area URL available</span>
+                <span data-cy="focus-link">No Focus Area URL Available</span>
               )}
             </div>
           </SectionContent>
