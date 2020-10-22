@@ -3,7 +3,7 @@
 describe("Instrument", () => {
   before(() => {
     cy.visit("/explore/instruments")
-    cy.get("main").find("[data-cy=explore-card]").contains("ATSP").click()
+    cy.get("main").find("[data-cy=explore-card]").contains("CPL").click()
   })
 
   describe("the header", () => {
@@ -15,14 +15,14 @@ describe("Instrument", () => {
     })
 
     it("displays the short name as title", () => {
-      cy.get("[data-cy=instrument-hero]").first().find("h1").contains("ATSP")
+      cy.get("[data-cy=instrument-hero]").first().find("h1").contains("CPL")
     })
 
     it("displays the long name as subtitle", () => {
       cy.get("[data-cy=instrument-hero]")
         .first()
         .find("p")
-        .contains("Airborne Tracking Sun Photometer")
+        .contains("Cloud Physics LIDAR")
     })
 
     it("displays the description", () => {
@@ -78,6 +78,49 @@ describe("Instrument", () => {
       })
     })
 
+    describe("the data section", () => {
+      it("exists", () => {
+        cy.get("[data-cy=data-section]").should("exist")
+      })
+
+      it("has a heading", () => {
+        cy.get("[data-cy=data-section]")
+          .find("h2")
+          .should("have.text", "Data Products")
+      })
+
+      it("displays some data products", () => {
+        cy.get("[data-cy=data-product]").should($div => {
+          expect($div).to.have.length(3)
+        })
+      })
+
+      it("each data product has a label and a doi", () => {
+        cy.get("[data-cy=data-product]")
+          .first()
+          .find("[data-cy=doi-label]")
+          .should("exist")
+          .and("have.text", "GOES-R PLT Cloud Physics LiDAR (CPL) V1")
+
+        cy.get("[data-cy=data-product]")
+          .first()
+          .find("[data-cy=doi-link]")
+          .should("exist")
+
+        cy.get("[data-cy=data-product-campaigns]")
+          .first()
+          .find("[data-cy=doi-campaign-label]")
+          .should("exist")
+          .and("have.text", "Campaigns")
+
+        cy.get("[data-cy=data-product-platforms]")
+          .first()
+          .find("[data-cy=doi-platform-label]")
+          .should("exist")
+          .and("have.text", "Platforms")
+      })
+    })
+
     describe("the related entities section", () => {
       it("exists", () => {
         cy.get("[data-cy=entities-section]").should("exist")
@@ -101,12 +144,12 @@ describe("Instrument", () => {
         cy.get("[data-cy=related-platform]")
           .find("big")
           .first()
-          .should("have.text", "P-3")
+          .should("have.text", "GH")
 
         cy.get("[data-cy=related-campaign]")
           .find("big")
           .first()
-          .should("have.text", "ARCTAS")
+          .should("have.text", "HS3")
       })
     })
   })

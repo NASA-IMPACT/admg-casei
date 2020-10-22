@@ -21,8 +21,8 @@ const DataSection = ({ id, dois }) => {
   const filteredDois = selectedFilterIds.length
     ? dois.filter(
         doi =>
-          doi.platforms
-            .map(platform => platform.longname)
+          doi.campaigns
+            .map(campaign => campaign.longname)
             .some(id => selectedFilterIds.includes(id)) ||
           doi.instruments
             .map(instrument => instrument.longname)
@@ -30,7 +30,7 @@ const DataSection = ({ id, dois }) => {
       )
     : dois
 
-  const platformList = [...new Set(dois.map(doi => doi.platforms).flat())]
+  const campaignList = [...new Set(dois.map(doi => doi.campaigns).flat())]
   const instrumentList = [...new Set(dois.map(doi => doi.instruments).flat())]
 
   return (
@@ -41,7 +41,7 @@ const DataSection = ({ id, dois }) => {
           "No data products available."
         ) : (
           <>
-            {platformList.concat(instrumentList).length > 2 && (
+            {campaignList.concat(instrumentList).length > 2 && (
               <div
                 style={{
                   display: `flex`,
@@ -51,8 +51,8 @@ const DataSection = ({ id, dois }) => {
                 }}
               >
                 <FilterBox
-                  filterOptions={platformList}
-                  filterName="Platforms"
+                  filterOptions={campaignList}
+                  filterName="Campaigns"
                   setSelectedFilterIds={setSelectedFilterIds}
                   selectedFilterIds={selectedFilterIds}
                 />
@@ -98,43 +98,60 @@ const DataSection = ({ id, dois }) => {
                     id="doi"
                   ></ExternalLink>
 
-                  <div
-                    style={{
-                      flex: `2.618`,
-                      display: `grid`,
-                      gap: `1rem`,
-                      gridTemplateColumns: `1fr 1fr`,
-                      padding: `.5rem`,
-                    }}
-                  >
-                    <div data-cy="data-product-platforms">
-                      <Label id="doi-platform" showBorder>
-                        Platforms
-                      </Label>
-                      {doi.platforms.map(platform => (
-                        <Link key={platform.id} to={`/platform/${platform.id}`}>
-                          <small style={{ display: `inline-block` }}>
-                            {platform.longname}
-                          </small>
-                        </Link>
-                      ))}
+                  {doi.campaigns.concat(doi.instruments).length ? (
+                    <div
+                      style={{
+                        flex: `2.618`,
+                        display: `grid`,
+                        gap: `1rem`,
+                        gridTemplateColumns: `1fr 1fr`,
+                        padding: `.5rem`,
+                      }}
+                    >
+                      <div data-cy="data-product-campaigns">
+                        <Label id="doi-campaign" showBorder>
+                          Campaigns
+                        </Label>
+                        {doi.campaigns.map(campaign => (
+                          <Link
+                            key={campaign.id}
+                            to={`/campaign/${campaign.id}`}
+                          >
+                            <small style={{ display: `inline-block` }}>
+                              {campaign.longname}
+                            </small>
+                          </Link>
+                        ))}
+                      </div>
+                      <div data-cy="data-product-instruments">
+                        <Label id="doi-instrument" showBorder>
+                          Instruments
+                        </Label>
+                        {doi.instruments.map(instrument => (
+                          <Link
+                            key={instrument.id}
+                            to={`/instrument/${instrument.id}`}
+                          >
+                            <small style={{ display: `inline-block` }}>
+                              {instrument.longname}
+                            </small>
+                          </Link>
+                        ))}
+                      </div>
                     </div>
-                    <div data-cy="data-product-instruments">
-                      <Label id="doi-instrument" showBorder>
-                        Instruments
+                  ) : (
+                    <div
+                      style={{
+                        flex: `2.618`,
+                        display: `grid`,
+                        padding: `1rem .5rem`,
+                      }}
+                    >
+                      <Label id="doi-campaign">
+                        No Related Campaigns or Instruments
                       </Label>
-                      {doi.instruments.map(instrument => (
-                        <Link
-                          key={instrument.id}
-                          to={`/instrument/${instrument.id}`}
-                        >
-                          <small style={{ display: `inline-block` }}>
-                            {instrument.longname}
-                          </small>
-                        </Link>
-                      ))}
                     </div>
-                  </div>
+                  )}
                 </div>
               ))}
             </div>
@@ -145,16 +162,15 @@ const DataSection = ({ id, dois }) => {
   )
 }
 
-export const dataFields = graphql`
-  fragment dataFields on campaign {
+export const platformDataFields = graphql`
+  fragment platformDataFields on platform {
     dois {
+      id
       shortname: short_name
       longname: long_name
-      id
     }
   }
 `
-
 DataSection.propTypes = {
   id: PropTypes.string.isRequired,
   dois: PropTypes.arrayOf(
