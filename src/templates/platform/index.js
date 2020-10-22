@@ -32,18 +32,18 @@ export default function PlatformTemplate({ data: { platform }, path }) {
         shortname: platform.shortname,
       },
     },
-    data: {
-      nav: "Data",
-      component: DataSection,
-      props: {
-        dois: updatedPlatformDois,
-      },
-    },
     "related-campaigns": {
       nav: "Related Campaigns",
       component: RelatedCampaigns,
       props: {
         campaigns: platform.campaigns,
+      },
+    },
+    data: {
+      nav: "Data",
+      component: DataSection,
+      props: {
+        dois: updatedPlatformDois,
       },
     },
   }

@@ -45,19 +45,19 @@ const InstrumentTemplate = ({ data: { instrument }, path }) => {
         repositories: instrument.repositories,
       },
     },
-    data: {
-      nav: "Data",
-      component: DataSection,
-      props: {
-        dois: updatedInstrumentDois,
-      },
-    },
     entities: {
       nav: "Instrument Operation",
       component: Entities,
       props: {
         platforms: instrument.platforms,
         campaigns: instrument.campaigns,
+      },
+    },
+    data: {
+      nav: "Data",
+      component: DataSection,
+      props: {
+        dois: updatedInstrumentDois,
       },
     },
   }

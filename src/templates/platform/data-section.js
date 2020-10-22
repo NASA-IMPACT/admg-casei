@@ -117,7 +117,9 @@ const DataSection = ({ id, dois }) => {
                             key={campaign.id}
                             to={`/campaign/${campaign.id}`}
                           >
-                            <small>{campaign.longname}</small>
+                            <small style={{ display: `inline-block` }}>
+                              {campaign.longname}
+                            </small>
                           </Link>
                         ))}
                       </div>

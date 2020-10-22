@@ -113,7 +113,9 @@ const DataSection = ({ id, dois }) => {
                       </Label>
                       {doi.platforms.map(platform => (
                         <Link key={platform.id} to={`/platform/${platform.id}`}>
-                          <small>{platform.longname}</small>
+                          <small style={{ display: `inline-block` }}>
+                            {platform.longname}
+                          </small>
                         </Link>
                       ))}
                     </div>
