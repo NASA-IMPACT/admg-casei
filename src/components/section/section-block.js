@@ -36,16 +36,18 @@ export const SectionHeader = ({ tagline, headline, id, isPrimary }) => (
         {tagline}
       </div>
     )}
-    <a href={`#${id}`}>
-      {isPrimary ? <h1>{headline}</h1> : <h2>{headline}</h2>}
-    </a>
+    {headline && (
+      <a href={`#${id}`}>
+        {isPrimary ? <h1>{headline}</h1> : <h2>{headline}</h2>}
+      </a>
+    )}
   </div>
 )
 
 SectionHeader.propTypes = {
   tagline: PropTypes.string,
   id: PropTypes.string.isRequired,
-  headline: PropTypes.string.isRequired,
+  headline: PropTypes.string,
   isPrimary: PropTypes.bool,
 }
 
@@ -58,6 +60,7 @@ export const SectionContent = styled.div`
     `${columns[0]} / span ${columns[1]}`};
   background-color: ${({ withBackground }) =>
     withBackground ? theme.color.secondary : null};
+  min-height: ${({ minHeight }) => (minHeight ? minHeight : null)};
 `
 
 SectionContent.propTypes = {

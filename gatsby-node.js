@@ -205,6 +205,11 @@ exports.createPages = async ({ graphql, actions }) => {
           id
         }
       }
+      allFocusArea {
+        nodes {
+          id
+        }
+      }
     }
   `)
 
@@ -230,6 +235,15 @@ exports.createPages = async ({ graphql, actions }) => {
     createPage({
       path: `platform/${node.id}`,
       component: path.resolve(`./src/templates/platform/index.js`),
+      context: {
+        slug: node.id,
+      },
+    })
+  })
+  result.data.allFocusArea.nodes.forEach(node => {
+    createPage({
+      path: `focus/${node.id}`,
+      component: path.resolve(`./src/templates/focus/index.js`),
       context: {
         slug: node.id,
       },

@@ -10,7 +10,7 @@ import {
 } from "../../components/section"
 import Label from "../../components/label"
 import Chip from "../../components/chip"
-import FocusAreaGallery from "../../components/home/focus-area-gallery"
+import FocusAreaGallery from "../../components/focus-area-gallery"
 
 const FocusSection = ({ id, focus, geophysical, focusPhenomena }) => (
   <SectionBlock id={id}>

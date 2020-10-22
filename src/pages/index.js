@@ -11,7 +11,7 @@ import {
   SectionContent,
 } from "../components/section"
 import Hero from "../components/hero"
-import FocusAreaGallery from "../components/home/focus-area-gallery"
+import FocusAreaGallery from "../components/focus-area-gallery"
 import { RegionCarousel } from "../components/home/region-carousel"
 import { GeophysicsGrid } from "../components/home/geophysics-grid"
 import { InstrumentsGrid } from "../components/home/instruments-grid"
