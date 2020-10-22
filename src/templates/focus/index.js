@@ -37,28 +37,22 @@ const FocusTemplate = ({ data }) => {
             </Paragraph>
           </SectionContent>
           <SectionContent columns={[10, 3]}>
-            <ul style={{ margin: 0, listStyle: `none` }} data-cy="link-list">
-              <li
-                style={{
-                  padding: `1rem`,
-                  border: `1px solid ${theme.color.base}`,
-                }}
-              >
-                {data.focusArea.url ? (
-                  <Paragraph>
-                    <ExternalLink
-                      label={"NASA SMD Homepage"}
-                      url={data.focusArea.url}
-                      id="focus"
-                    />
-                  </Paragraph>
-                ) : (
-                  <Paragraph data-cy="focus-link">
-                    no Focus Area url available
-                  </Paragraph>
-                )}
-              </li>
-            </ul>
+            <div
+              style={{
+                padding: `1rem`,
+                border: `1px solid ${theme.color.base}`,
+              }}
+            >
+              {data.focusArea.url ? (
+                <ExternalLink
+                  label={"NASA SMD Homepage"}
+                  url={data.focusArea.url}
+                  id="focus"
+                />
+              ) : (
+                <span data-cy="focus-link">no Focus Area URL available</span>
+              )}
+            </div>
           </SectionContent>
         </Section>
 
