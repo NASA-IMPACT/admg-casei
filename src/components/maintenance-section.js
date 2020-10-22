@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
 import { AuthContext } from "../components/auth-provider"
-import { SectionBlock } from "./section"
+import { SectionBlock } from "./layout"
 import theme from "../utils/theme"
 
 const MaintenanceSection = ({ id, data }) => {

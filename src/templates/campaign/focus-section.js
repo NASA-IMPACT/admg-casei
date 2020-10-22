@@ -7,7 +7,7 @@ import {
   SectionHeader,
   SectionContent,
   ContentGroup,
-} from "../../components/section"
+} from "../../components/layout"
 import Label from "../../components/label"
 import Chip from "../../components/chip"
 import FocusAreaGallery from "../../components/focus-area-gallery"

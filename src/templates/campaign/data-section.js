@@ -15,7 +15,7 @@ import {
   SectionBlock,
   SectionHeader,
   SectionContent,
-} from "../../components/section"
+} from "../../components/layout"
 import ExternalLink from "../../components/external-link"
 import Label from "../../components/label"
 import theme from "../../utils/theme"

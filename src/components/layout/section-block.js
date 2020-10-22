@@ -10,17 +10,6 @@ const Section = styled.section`
   column-gap: 1rem;
   margin-top: ${props => (props.isSpaced ? `6rem` : `2rem`)};
   position: relative;
-
-  /* In case you _really_ need a border, use :before:
-   * &:before {
-   *   content: "";
-   *   position: absolute;
-   *   top: -2px;
-   *   left: 0;
-   *   right: 0;
-   *   border-top: 2px solid #ccc;
-   * }
-  */
 `
 
 /* This invisible border pushes the section below the nav bar when using inpage navigation */
@@ -86,3 +75,26 @@ SectionBlock.propTypes = {
 SectionBlock.defaultProps = {
   isSpaced: false,
 }
+
+export const PageBody = ({ children, id }) => (
+  <section
+    style={{
+      width: `100%`,
+      maxWidth: theme.layout.maxWidth,
+      margin: `0 auto`,
+      padding: `0 ${theme.layout.pageMargin}`,
+    }}
+    data-cy={`main-${id}-section`}
+  >
+    {children}
+  </section>
+)
+
+PageBody.propTypes = {
+  children: PropTypes.node.isRequired,
+  id: PropTypes.string.isRequired,
+}
+
+export const Paragraph = styled.p`
+  margin-bottom: 1rem;
+`

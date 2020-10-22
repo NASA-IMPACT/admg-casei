@@ -6,7 +6,7 @@ import Image from "gatsby-image"
 import * as turf from "@turf/turf"
 import parse from "wellknown"
 
-import HeroStats from "../../components/hero-stats"
+import { HeroStats } from "../../components/hero"
 import Map from "../../components/map"
 import BboxLayer from "../../components/map/bbox-layer"
 import GeoJsonSource from "../../components/map/geojson-source"

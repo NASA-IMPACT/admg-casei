@@ -9,7 +9,7 @@ import {
   SectionBlock,
   SectionHeader,
   SectionContent,
-} from "../components/section"
+} from "../components/layout"
 import Hero from "../components/hero"
 import FocusAreaGallery from "../components/focus-area-gallery"
 import { RegionCarousel } from "../components/home/region-carousel"

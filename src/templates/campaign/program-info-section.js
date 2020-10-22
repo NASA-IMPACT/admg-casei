@@ -9,7 +9,7 @@ import {
   SectionContent,
   ContentItem,
   ContentGroup,
-} from "../../components/section"
+} from "../../components/layout"
 import PlaceholderLogo from "../../images/placeholder-logo.svg"
 
 const ProgramInfoSection = ({

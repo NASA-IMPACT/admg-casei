@@ -6,7 +6,7 @@ import {
   SectionBlock,
   SectionHeader,
   SectionContent,
-} from "../../components/section"
+} from "../../components/layout"
 
 export default function Overview({ id, description }) {
   return (

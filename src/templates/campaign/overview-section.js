@@ -7,7 +7,7 @@ import {
   SectionHeader,
   SectionContent,
   ContentItem,
-} from "../../components/section"
+} from "../../components/layout"
 import ExternalLink from "../../components/external-link"
 import theme from "../../utils/theme"
 import { isUrl, PropTypeIsUrl } from "../../utils/helpers"

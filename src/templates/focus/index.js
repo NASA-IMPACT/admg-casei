@@ -2,13 +2,14 @@ import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
-import Layout, { PageBody, Paragraph } from "../../components/layout"
-import Hero from "../../components/hero"
-import {
+import Layout, {
+  PageBody,
+  Paragraph,
   SectionBlock,
   SectionHeader,
   SectionContent,
-} from "../../components/section"
+} from "../../components/layout"
+import Hero from "../../components/hero"
 import ExternalLink from "../../components/external-link"
 import FocusAreaGallery from "../../components/focus-area-gallery"
 import theme from "../../utils/theme"

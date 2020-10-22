@@ -3,8 +3,7 @@ import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 import Image from "gatsby-image"
 
-import Layout, { PageBody } from "../components/layout"
-import DefinitionList from "../components/tables/definitionList"
+import Layout, { PageBody, DefinitionList } from "../components/layout"
 import SEO from "../components/seo"
 import glossary from "../content/glossary.json"
 

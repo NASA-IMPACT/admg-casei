@@ -1,13 +1,13 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
-import DefinitionList from "../../components/tables/definitionList"
+import DefinitionList from "../../components/layout/definition-list"
 import Label from "../../components/label"
 import {
   SectionBlock,
   SectionHeader,
   SectionContent,
-} from "../../components/section"
+} from "../../components/layout"
 import ExternalLink from "../../components/external-link"
 import { isUrl } from "../../utils/helpers"
 

@@ -2,13 +2,14 @@ import React from "react"
 import PropTypes from "prop-types"
 import { FeedbackForm } from "feedback-fish"
 
-import Layout, { PageBody, Paragraph } from "../components/layout"
-import SEO from "../components/seo"
-import {
+import Layout, {
+  PageBody,
+  Paragraph,
   SectionBlock,
   SectionContent,
   SectionHeader,
-} from "../components/section"
+} from "../components/layout"
+import SEO from "../components/seo"
 import ExternalLink from "../components/external-link"
 import Button from "../components/button"
 

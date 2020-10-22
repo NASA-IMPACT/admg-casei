@@ -7,7 +7,7 @@ import {
   SectionBlock,
   SectionHeader,
   SectionContent,
-} from "../../components/section"
+} from "../../components/layout"
 import ImageCaption from "../../components/image-caption"
 import Image from "gatsby-image"
 

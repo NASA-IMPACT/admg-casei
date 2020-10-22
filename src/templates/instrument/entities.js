@@ -7,7 +7,7 @@ import {
   SectionBlock,
   SectionHeader,
   SectionContent,
-} from "../../components/section"
+} from "../../components/layout"
 import PlatformCard from "../../components/cards/platform-card"
 import CampaignCard from "../../components/cards/campaign-card"
 import theme from "../../utils/theme"

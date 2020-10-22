@@ -7,7 +7,7 @@ import {
   SectionBlock,
   SectionHeader,
   SectionContent,
-} from "../../components/section"
+} from "../../components/layout"
 import CampaignCard from "../../components/cards/campaign-card"
 import { controlButtonLRStyle } from "../../components/carousel-styles"
 

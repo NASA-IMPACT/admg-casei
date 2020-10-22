@@ -2,14 +2,14 @@ import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
-import Layout, { PageBody } from "../components/layout"
-import SEO from "../components/seo"
-import Hero from "../components/hero"
-import {
+import Layout, {
+  PageBody,
   SectionBlock,
   SectionHeader,
   SectionContent,
-} from "../components/section"
+} from "../components/layout"
+import SEO from "../components/seo"
+import Hero from "../components/hero"
 import ExternalLink from "../components/external-link"
 import about from "../content/about.json"
 

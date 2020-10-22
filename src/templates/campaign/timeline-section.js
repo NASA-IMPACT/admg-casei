@@ -3,13 +3,13 @@ import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 import Carousel from "nuka-carousel"
 
-import MilestoneSelector from "../../components/timeline/milestone-selector"
-import Milestone from "../../components/timeline/milestone"
+import MilestoneSelector from "./milestone-selector"
+import Milestone from "./milestone"
 import {
   SectionBlock,
   SectionHeader,
   SectionContent,
-} from "../../components/section"
+} from "../../components/layout"
 import { formatDateRange } from "../../utils/helpers"
 import { controlButtonLRStyle } from "../../components/carousel-styles"
 
