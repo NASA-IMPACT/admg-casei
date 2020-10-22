@@ -3,11 +3,7 @@ import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 import DefinitionList from "../../components/layout/definition-list"
 import Label from "../../components/label"
-import {
-  SectionBlock,
-  SectionHeader,
-  SectionContent,
-} from "../../components/layout"
+import { Section, SectionHeader, SectionContent } from "../../components/layout"
 import ExternalLink from "../../components/external-link"
 import { isUrl } from "../../utils/helpers"
 
@@ -143,7 +139,7 @@ export default function About({
   const links = onlineInformation ? onlineInformation.split("\n") : null
 
   return (
-    <SectionBlock id={id}>
+    <Section id={id}>
       <SectionHeader headline="Instrument Details" id={id} />
       <SectionContent columns={[1, 8]}>
         <DefinitionList
@@ -232,7 +228,7 @@ export default function About({
           repositories={repositories}
         />
       </SectionContent>
-    </SectionBlock>
+    </Section>
   )
 }
 

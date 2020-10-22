@@ -2,15 +2,11 @@ import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
-import {
-  SectionBlock,
-  SectionHeader,
-  SectionContent,
-} from "../../components/layout"
+import { Section, SectionHeader, SectionContent } from "../../components/layout"
 
 export default function Overview({ id, description }) {
   return (
-    <SectionBlock id={id}>
+    <Section id={id}>
       <SectionHeader headline="Overview" id={id} />
       <SectionContent columns={[1, 7]}>
         <p>{description}</p>
@@ -30,7 +26,7 @@ export default function Overview({ id, description }) {
           )}
         </ul>
       </SectionContent> */}
-    </SectionBlock>
+    </Section>
   )
 }
 export const platformOverviewFields = graphql`

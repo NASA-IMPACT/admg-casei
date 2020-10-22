@@ -3,11 +3,7 @@ import PropTypes from "prop-types"
 import { graphql, Link } from "gatsby"
 import Carousel from "nuka-carousel"
 
-import {
-  SectionBlock,
-  SectionHeader,
-  SectionContent,
-} from "../../components/layout"
+import { Section, SectionHeader, SectionContent } from "../../components/layout"
 import ImageCaption from "../../components/image-caption"
 import Image from "gatsby-image"
 
@@ -15,7 +11,7 @@ import Chip from "../../components/chip"
 import { controlButtonLRStyle } from "../../components/carousel-styles"
 
 const PlatformSection = ({ id, platforms, instruments }) => (
-  <SectionBlock id={id}>
+  <Section id={id}>
     <SectionHeader headline="Platforms & Instruments" id={id} />
     <SectionContent>
       <div data-cy="platform-carousel">
@@ -90,7 +86,7 @@ const PlatformSection = ({ id, platforms, instruments }) => (
         )}
       </div>
     </SectionContent>
-  </SectionBlock>
+  </Section>
 )
 
 export const platformFields = graphql`

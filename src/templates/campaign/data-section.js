@@ -11,11 +11,7 @@ import {
 } from "@reach/listbox"
 import VisuallyHidden from "@reach/visually-hidden"
 
-import {
-  SectionBlock,
-  SectionHeader,
-  SectionContent,
-} from "../../components/layout"
+import { Section, SectionHeader, SectionContent } from "../../components/layout"
 import ExternalLink from "../../components/external-link"
 import Label from "../../components/label"
 import theme from "../../utils/theme"
@@ -135,7 +131,7 @@ const DataSection = ({ id, dois }) => {
   const instrumentList = [...new Set(dois.map(doi => doi.instruments).flat())]
 
   return (
-    <SectionBlock id={id}>
+    <Section id={id}>
       <SectionHeader headline="Data Products" id={id} />
       <SectionContent>
         {dois.length < 1 ? (
@@ -266,7 +262,7 @@ const DataSection = ({ id, dois }) => {
           </>
         )}
       </SectionContent>
-    </SectionBlock>
+    </Section>
   )
 }
 

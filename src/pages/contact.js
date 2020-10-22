@@ -5,7 +5,7 @@ import { FeedbackForm } from "feedback-fish"
 import Layout, {
   PageBody,
   Paragraph,
-  SectionBlock,
+  Section,
   SectionContent,
   SectionHeader,
 } from "../components/layout"
@@ -23,7 +23,7 @@ const Contact = () => (
   <Layout>
     <SEO title="Contact" />
     <PageBody id="contact">
-      <SectionBlock id="contact">
+      <Section id="contact">
         <SectionHeader
           headline="We appreciate your feedback!"
           id="contact"
@@ -84,7 +84,7 @@ const Contact = () => (
             .
           </Paragraph>
         </SectionContent>
-      </SectionBlock>
+      </Section>
     </PageBody>
   </Layout>
 )

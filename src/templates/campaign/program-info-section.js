@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import Image from "gatsby-image"
 
 import {
-  SectionBlock,
+  Section,
   SectionHeader,
   SectionContent,
   ContentItem,
@@ -44,7 +44,7 @@ const ProgramInfoSection = ({
   ]
 
   return (
-    <SectionBlock id={id}>
+    <Section id={id}>
       <SectionHeader headline="Program Info" id={id} />
       <SectionContent withBackground>
         <div style={{ display: `flex` }}>
@@ -91,7 +91,7 @@ const ProgramInfoSection = ({
           </ContentGroup>
         </div>
       </SectionContent>
-    </SectionBlock>
+    </Section>
   )
 }
 

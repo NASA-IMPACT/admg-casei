@@ -236,8 +236,8 @@ exports[`Campaigns page renders correctly 1`] = `
       }
     }
   >
-    <section
-      data-cy="main-campaigns-section"
+    <div
+      data-cy="main-campaigns"
       style={
         Object {
           "margin": "0 auto",
@@ -935,7 +935,7 @@ exports[`Campaigns page renders correctly 1`] = `
           </a>
         </div>
       </section>
-    </section>
+    </div>
   </main>
   <footer
     style={

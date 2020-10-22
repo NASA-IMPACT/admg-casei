@@ -3,14 +3,14 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
 import { AuthContext } from "../components/auth-provider"
-import { SectionBlock } from "./layout"
+import { Section } from "./layout"
 import theme from "../utils/theme"
 
 const MaintenanceSection = ({ id, data }) => {
   const { isLoggedIn } = useContext(AuthContext)
 
   return (
-    <SectionBlock id="maintenance">
+    <Section id="maintenance">
       {isLoggedIn && (
         // TODO: this is temporary, build out edit functionality
         <Link
@@ -25,7 +25,7 @@ const MaintenanceSection = ({ id, data }) => {
           Edit
         </Link>
       )}
-    </SectionBlock>
+    </Section>
   )
 }
 

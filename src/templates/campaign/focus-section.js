@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { graphql, Link } from "gatsby"
 
 import {
-  SectionBlock,
+  Section,
   SectionHeader,
   SectionContent,
   ContentGroup,
@@ -13,7 +13,7 @@ import Chip from "../../components/chip"
 import FocusAreaGallery from "../../components/focus-area-gallery"
 
 const FocusSection = ({ id, focus, geophysical, focusPhenomena }) => (
-  <SectionBlock id={id}>
+  <Section id={id}>
     <SectionHeader headline="Focus" id={id} />
     <SectionContent withBackground>
       <ContentGroup>
@@ -61,7 +61,7 @@ const FocusSection = ({ id, focus, geophysical, focusPhenomena }) => (
         </div>
       </ContentGroup>
     </SectionContent>
-  </SectionBlock>
+  </Section>
 )
 
 export const focus = graphql`

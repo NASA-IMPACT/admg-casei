@@ -5,7 +5,7 @@ import { graphql } from "gatsby"
 import Layout, {
   PageBody,
   Paragraph,
-  SectionBlock,
+  Section,
   SectionHeader,
   SectionContent,
 } from "../../components/layout"
@@ -29,7 +29,7 @@ const FocusTemplate = ({ data }) => {
       </Hero>
 
       <PageBody id="focus">
-        <SectionBlock id="overview">
+        <Section id="overview">
           <SectionHeader headline="Overview" id={data.focusArea.uuid} />
           <SectionContent columns={[1, 8]} minHeight={`12rem`}>
             <Paragraph data-cy="description">
@@ -60,9 +60,9 @@ const FocusTemplate = ({ data }) => {
               </li>
             </ul>
           </SectionContent>
-        </SectionBlock>
+        </Section>
 
-        <SectionBlock id="focus-areas" isSpaced>
+        <Section id="focus-areas" isSpaced>
           <SectionHeader tagline="explore nasa earth science" id="focus" />
           <SectionContent>
             <FocusAreaGallery
@@ -70,7 +70,7 @@ const FocusTemplate = ({ data }) => {
               size="large"
             />
           </SectionContent>
-        </SectionBlock>
+        </Section>
       </PageBody>
     </Layout>
   )

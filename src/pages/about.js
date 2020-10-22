@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 
 import Layout, {
   PageBody,
-  SectionBlock,
+  Section,
   SectionHeader,
   SectionContent,
 } from "../components/layout"
@@ -59,7 +59,7 @@ const About = ({ data }) => {
       <PageBody id="about">
         {Object.entries(about).map(([id, section]) => {
           return (
-            <SectionBlock id={id} key={id}>
+            <Section id={id} key={id}>
               <SectionHeader
                 tagline={section.tagline}
                 headline={section.headline}
@@ -81,7 +81,7 @@ const About = ({ data }) => {
                 )}
                 {section.paragraphLinks && <LinkedParagraph />}
               </SectionContent>
-            </SectionBlock>
+            </Section>
           )
         })}
       </PageBody>
