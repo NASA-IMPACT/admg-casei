@@ -44,14 +44,27 @@ export default function Glossary({ data }) {
         />
         <DefinitionList
           id="glossary-img"
+          isCentered
           list={[
             {
               title: "terminology map",
               content: (
-                <Image
-                  alt="terminology map"
-                  fixed={data.image.childImageSharp.fixed}
-                />
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://earthdata.nasa.gov/esds/impact/admg/admg-definitions"
+                >
+                  <figure>
+                    <Image
+                      alt="terminology map"
+                      fluid={data.image.childImageSharp.fluid}
+                    />
+                    <figcaption>
+                      Source:{" "}
+                      https://earthdata.nasa.gov/esds/impact/admg/admg-definitions
+                    </figcaption>
+                  </figure>
+                </a>
               ),
             },
           ]}
@@ -65,8 +78,8 @@ export const query = graphql`
   query {
     image: file(relativePath: { eq: "glossary-map.png" }) {
       childImageSharp {
-        fixed(width: 400) {
-          ...GatsbyImageSharpFixed
+        fluid {
+          ...GatsbyImageSharpFluid
         }
       }
     }
