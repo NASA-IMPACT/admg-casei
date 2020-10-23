@@ -144,19 +144,15 @@ describe("Campaign", () => {
       cy.get("[data-cy=focus-phenomena-chip]").should("exist")
     })
 
-    it("navigates to the campaign list with the focus area as filter applied", () => {
+    it("navigates to the focus area page", () => {
       cy.get("[data-cy=focus-section]")
         .find("[data-cy=focus-area]")
         .contains("Weather")
         .click()
 
-      cy.url().should("include", "/explore/campaigns")
+      cy.url().should("include", "/focus/")
 
-      cy.get("[data-cy=filter-chip]")
-        .should("have.length", 1)
-        .and("have.text", "focus: Weather")
-
-      cy.get("[data-cy=explore-card]").should("have.length", 7)
+      cy.get("h1").should("contain", "Weather")
 
       cy.go("back")
     })

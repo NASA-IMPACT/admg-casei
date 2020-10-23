@@ -3,11 +3,7 @@ import PropTypes from "prop-types"
 import { graphql, Link } from "gatsby"
 import styled from "styled-components"
 
-import {
-  SectionBlock,
-  SectionHeader,
-  SectionContent,
-} from "../../components/section"
+import { Section, SectionHeader, SectionContent } from "../../components/layout"
 import PlatformCard from "../../components/cards/platform-card"
 import CampaignCard from "../../components/cards/campaign-card"
 import theme from "../../utils/theme"
@@ -23,7 +19,7 @@ const Table = styled.table`
 
 export default function Entities({ id, campaigns, platforms }) {
   return (
-    <SectionBlock id={id}>
+    <Section id={id}>
       <SectionHeader headline="Instrument Operation" id={id} />
       <SectionContent>
         <Table data-cy={`instrument-related-entities-table`}>
@@ -71,7 +67,7 @@ export default function Entities({ id, campaigns, platforms }) {
           </tbody>
         </Table>
       </SectionContent>
-    </SectionBlock>
+    </Section>
   )
 }
 

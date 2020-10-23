@@ -3,13 +3,9 @@ import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 import Carousel from "nuka-carousel"
 
-import MilestoneSelector from "../../components/timeline/milestone-selector"
-import Milestone from "../../components/timeline/milestone"
-import {
-  SectionBlock,
-  SectionHeader,
-  SectionContent,
-} from "../../components/section"
+import MilestoneSelector from "./milestone-selector"
+import Milestone from "./milestone"
+import { Section, SectionHeader, SectionContent } from "../../components/layout"
 import { formatDateRange } from "../../utils/helpers"
 import { controlButtonLRStyle } from "../../components/carousel-styles"
 
@@ -29,7 +25,7 @@ const TimelineSection = ({ id, deployments }) => {
   const selectedMilestoneId = deployments[currentSlide].id
 
   return (
-    <SectionBlock id={id}>
+    <Section id={id}>
       <SectionHeader headline="Timeline" id={id} />
       <SectionContent withBackground>
         <div data-cy="milestone-carousel">
@@ -66,7 +62,7 @@ const TimelineSection = ({ id, deployments }) => {
           />
         )}
       </SectionContent>
-    </SectionBlock>
+    </Section>
   )
 }
 

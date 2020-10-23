@@ -1,8 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
-import Hero from "../../components/hero"
 import Image from "gatsby-image"
+
+import Hero from "../../components/hero"
 
 export default function InstrumentHero({
   shortname,

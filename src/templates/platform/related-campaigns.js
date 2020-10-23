@@ -3,17 +3,13 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import Carousel from "nuka-carousel"
 
-import {
-  SectionBlock,
-  SectionHeader,
-  SectionContent,
-} from "../../components/section"
+import { Section, SectionHeader, SectionContent } from "../../components/layout"
 import CampaignCard from "../../components/cards/campaign-card"
 import { controlButtonLRStyle } from "../../components/carousel-styles"
 
 const RelatedCampaigns = ({ id, campaigns }) => {
   return (
-    <SectionBlock id={id}>
+    <Section id={id}>
       <SectionHeader headline="Related Campaigns" id={id} />
       <SectionContent>
         {campaigns.length > 0 ? (
@@ -47,7 +43,7 @@ const RelatedCampaigns = ({ id, campaigns }) => {
           <p>No available platforms or instruments</p>
         )}
       </SectionContent>
-    </SectionBlock>
+    </Section>
   )
 }
 
