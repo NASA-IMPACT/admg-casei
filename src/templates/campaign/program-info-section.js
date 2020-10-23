@@ -98,9 +98,8 @@ const ProgramInfoSection = ({
 export const fundingFields = graphql`
   fragment fundingFields on campaign {
     logo {
-      nasaImgAlt
-      nasaImgUrl
-      nasaImg {
+      logoAlt
+      logoImg {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -128,7 +127,7 @@ export const fundingFields = graphql`
 ProgramInfoSection.propTypes = {
   id: PropTypes.string.isRequired,
   logo: PropTypes.shape({
-    nasaImgAlt: PropTypes.string.isRequired,
+    logoAlt: PropTypes.string.isRequired,
     nasaImg: PropTypes.shape({
       childImageSharp: PropTypes.object,
     }),

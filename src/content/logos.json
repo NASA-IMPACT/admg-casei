@@ -2,61 +2,61 @@
   {
     "shortname": "ACES",
     "category": "logo",
-    "nasaImgUrl": "../images/logos/aces.png",
-    "nasaImgAlt": "logo"
+    "logoImg": "../images/logos/aces.png",
+    "logoAlt": "logo"
   },
   {
     "shortname": "AirMOSS",
     "category": "logo",
-    "nasaImgUrl": "../images/logos/airmoss.png",
-    "nasaImgAlt": "AirMOSS logo"
+    "logoImg": "../images/logos/airmoss.png",
+    "logoAlt": "AirMOSS logo"
   },
   {
     "shortname": "ARCTAS",
     "category": "logo",
-    "nasaImgUrl": "../images/logos/arctas.png",
-    "nasaImgAlt": "ARCTAS logo"
+    "logoImg": "../images/logos/arctas.png",
+    "logoAlt": "ARCTAS logo"
   },
   {
     "shortname": "CARVE",
     "category": "logo",
-    "nasaImgUrl": "",
-    "nasaImgAlt": "CARVE logo"
+    "logoImg": "",
+    "logoAlt": "CARVE logo"
   },
   {
     "shortname": "DC3",
     "category": "logo",
-    "nasaImgUrl": "../images/logos/dc3.png",
-    "nasaImgAlt": "DC3 logo"
+    "logoImg": "../images/logos/dc3.png",
+    "logoAlt": "DC3 logo"
   },
   {
     "shortname": "GCPEx",
     "category": "logo",
-    "nasaImgUrl": "../images/logos/GCPEx.png",
-    "nasaImgAlt": "GCPEx logo"
+    "logoImg": "../images/logos/GCPEx.png",
+    "logoAlt": "GCPEx logo"
   },
   {
     "shortname": "GOES-R PLT",
     "category": "logo",
-    "nasaImgUrl": "",
-    "nasaImgAlt": "GOES-R PLT logo"
+    "logoImg": "",
+    "logoAlt": "GOES-R PLT logo"
   },
   {
     "shortname": "GRIP",
     "category": "logo",
-    "nasaImgUrl": "../images/logos/grip.png",
-    "nasaImgAlt": "GRIP logo"
+    "logoImg": "../images/logos/grip.png",
+    "logoAlt": "GRIP logo"
   },
   {
     "shortname": "HS3",
     "category": "logo",
-    "nasaImgUrl": "../images/logos/HS3.png",
-    "nasaImgAlt": "HS3 logo"
+    "logoImg": "../images/logos/HS3.png",
+    "logoAlt": "HS3 logo"
   },
   {
     "shortname": "OLYMPEX",
     "category": "logo",
-    "nasaImgUrl": "../images/logos/olympex.png",
-    "nasaImgAlt": "OLYMPEX logo"
+    "logoImg": "../images/logos/olympex.png",
+    "logoAlt": "OLYMPEX logo"
   }
 ]

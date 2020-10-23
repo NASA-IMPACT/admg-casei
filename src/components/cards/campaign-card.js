@@ -24,8 +24,8 @@ export default function CampaignCard(props) {
         nodes {
           id
           logo {
-            nasaImgAlt
-            nasaImg {
+            logoAlt
+            logoImg {
               childImageSharp {
                 fixed(height: 100) {
                   ...GatsbyImageSharpFixed

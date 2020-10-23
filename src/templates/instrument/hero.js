@@ -37,7 +37,7 @@ export const instrumentHeroFields = graphql`
       description
       gatsbyImg {
         childImageSharp {
-          fixed(height: 500) {
+          fixed(height: 200) {
             ...GatsbyImageSharpFixed
           }
         }

@@ -87,10 +87,10 @@ const CampaignHero = ({
       >
         <div style={{ flex: `2`, padding: `0 ${theme.layout.pageMargin}` }}>
           <div>
-            {logo && logo.nasaImg ? (
+            {logo && logo.logoImg ? (
               <Image
-                alt={logo.nasaImgAlt}
-                fixed={logo.nasaImg.childImageSharp.fixed}
+                alt={logo.logoAlt}
+                fixed={logo.logoImg.childImageSharp.fixed}
                 style={{ margin: `0` }}
               />
             ) : (
@@ -116,8 +116,8 @@ const CampaignHero = ({
 export const heroFields = graphql`
   fragment heroFields on campaign {
     logo: logo {
-      nasaImgAlt
-      nasaImg {
+      logoAlt
+      logoImg {
         childImageSharp {
           fixed(height: 150) {
             ...GatsbyImageSharpFixed
@@ -139,8 +139,8 @@ export const heroFields = graphql`
 
 CampaignHero.propTypes = {
   logo: PropTypes.shape({
-    nasaImgAlt: PropTypes.string.isRequired,
-    nasaImg: PropTypes.shape({
+    logoAlt: PropTypes.string.isRequired,
+    logoImg: PropTypes.shape({
       childImageSharp: PropTypes.object,
     }),
   }),
