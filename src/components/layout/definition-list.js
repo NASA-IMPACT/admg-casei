@@ -16,7 +16,7 @@ const List = styled.dl`
   }
 `
 
-export default function DefinitionList({ id, list }) {
+export default function DefinitionList({ id, list, isCentered }) {
   return (
     <section style={{ padding: `1rem` }} data-cy={`${id}-definition-list`}>
       <List>
@@ -25,7 +25,13 @@ export default function DefinitionList({ id, list }) {
             <dt>
               <label>{row.title}</label>
             </dt>
-            <dd>{row.content}</dd>
+            <dd
+              style={
+                isCentered ? { display: `flex`, justifyContent: `center` } : {}
+              }
+            >
+              {row.content}
+            </dd>
           </React.Fragment>
         ))}
       </List>
@@ -45,4 +51,9 @@ DefinitionList.propTypes = {
       ]),
     })
   ),
+  isCentered: PropTypes.bool,
+}
+
+DefinitionList.defaultProps = {
+  isCentered: false,
 }

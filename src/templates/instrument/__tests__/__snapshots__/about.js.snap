@@ -78,7 +78,9 @@ exports[`About Section displays content 1`] = `
             Instrument Type
           </label>
         </dt>
-        <dd>
+        <dd
+          style={Object {}}
+        >
           test, test2
         </dd>
         <dt>
@@ -86,7 +88,9 @@ exports[`About Section displays content 1`] = `
             Measurement/Variables
           </label>
         </dt>
-        <dd>
+        <dd
+          style={Object {}}
+        >
           test, test, test, test, test
         </dd>
         <dt>
@@ -94,7 +98,9 @@ exports[`About Section displays content 1`] = `
             Measurement Regions
           </label>
         </dt>
-        <dd>
+        <dd
+          style={Object {}}
+        >
           test, test2
         </dd>
         <dt>
@@ -102,7 +108,9 @@ exports[`About Section displays content 1`] = `
             Temporal Resolution
           </label>
         </dt>
-        <dd>
+        <dd
+          style={Object {}}
+        >
           test
         </dd>
         <dt>
@@ -110,7 +118,9 @@ exports[`About Section displays content 1`] = `
             Spatial Resolution
           </label>
         </dt>
-        <dd>
+        <dd
+          style={Object {}}
+        >
           test
         </dd>
         <dt>
@@ -118,7 +128,9 @@ exports[`About Section displays content 1`] = `
             Measurement Frequency
           </label>
         </dt>
-        <dd>
+        <dd
+          style={Object {}}
+        >
           test
         </dd>
         <dt>
@@ -126,7 +138,9 @@ exports[`About Section displays content 1`] = `
             Calibration Details
           </label>
         </dt>
-        <dd>
+        <dd
+          style={Object {}}
+        >
           <a
             data-cy="calibration-doi-link"
             href="http://dx.doi.org/10.5067/calibration"
@@ -146,7 +160,9 @@ exports[`About Section displays content 1`] = `
             Online Information
           </label>
         </dt>
-        <dd>
+        <dd
+          style={Object {}}
+        >
           <ul
             style={
               Object {

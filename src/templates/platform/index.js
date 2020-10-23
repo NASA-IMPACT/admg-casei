@@ -6,9 +6,23 @@ import Layout, { PageBody } from "../../components/layout"
 import PlatformHero from "./hero"
 import InpageNav from "../../components/inpage-nav"
 import Overview from "./overview"
+import DataSection from "./data-section"
 import RelatedCampaigns from "./related-campaigns"
 
 export default function PlatformTemplate({ data: { platform }, path }) {
+  const updatedPlatformDois = platform.dois.map(platformDoi => {
+    const matchedCampaign = platform.campaigns.filter(campaign =>
+      campaign.dois.map(x => x.id).includes(platformDoi.id)
+    )
+    const matchedInstrument = platform.instruments.filter(instrument =>
+      instrument.dois.map(x => x.id).includes(platformDoi.id)
+    )
+    return {
+      ...platformDoi,
+      campaigns: matchedCampaign,
+      instruments: matchedInstrument,
+    }
+  })
   const sections = {
     overview: {
       nav: "Overview",
@@ -23,6 +37,13 @@ export default function PlatformTemplate({ data: { platform }, path }) {
       component: RelatedCampaigns,
       props: {
         campaigns: platform.campaigns,
+      },
+    },
+    data: {
+      nav: "Data",
+      component: DataSection,
+      props: {
+        dois: updatedPlatformDois,
       },
     },
   }
@@ -59,8 +80,22 @@ export const query = graphql`
     platform: platform(id: { eq: $slug }) {
       ...platformHeroFields
       ...platformOverviewFields
+      ...platformDataFields
       campaigns {
         id
+        shortname: short_name
+        longname: long_name
+        dois {
+          id
+        }
+      }
+      instruments {
+        id
+        shortname: short_name
+        longname: long_name
+        dois {
+          id
+        }
       }
     }
   }
@@ -72,9 +107,31 @@ PlatformTemplate.propTypes = {
       shortname: PropTypes.string.isRequired,
       longname: PropTypes.string.isRequired,
       description: PropTypes.string,
+      dois: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string.isRequired,
+          shortname: PropTypes.string.isRequired,
+          longname: PropTypes.string,
+        })
+      ).isRequired,
       campaigns: PropTypes.arrayOf(
         PropTypes.shape({
           id: PropTypes.string.isRequired,
+          dois: PropTypes.arrayOf(
+            PropTypes.shape({
+              id: PropTypes.string.isRequired,
+            }).isRequired
+          ),
+        })
+      ),
+      instruments: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string.isRequired,
+          dois: PropTypes.arrayOf(
+            PropTypes.shape({
+              id: PropTypes.string.isRequired,
+            }).isRequired
+          ),
         })
       ),
       collectionPeriods: PropTypes.arrayOf(PropTypes.string),
