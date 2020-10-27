@@ -57,7 +57,7 @@ const ProgramInfoSection = ({
               padding: `1rem`,
             }}
           >
-            {logo.nasaImg ? (
+            {logo.logoImg ? (
               <div
                 style={{
                   width: `100%` /* gatsby-image wants width, for it to be visible */,
@@ -65,8 +65,8 @@ const ProgramInfoSection = ({
                 data-cy="campaign-logo"
               >
                 <Image
-                  alt={logo.nasaImgAlt}
-                  fluid={logo.nasaImg.childImageSharp.fluid}
+                  alt={logo.logoAlt}
+                  fluid={logo.logoImg.childImageSharp.fluid}
                 />
               </div>
             ) : (
@@ -107,7 +107,6 @@ export const fundingFields = graphql`
         }
       }
     }
-
     fundingAgency: funding_agency
     fundingProgram: funding_program
     # supportedMission: Supported_NASA_Mission_s_
