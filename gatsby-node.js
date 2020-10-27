@@ -52,7 +52,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       nasaImg: File @link(from: "nasaImg___NODE")
     }
     type LogosJson implements Node {
-      logoImg: File @link(from: "logoImg___NODE")
+      logoImg: File!
     }
   `
 

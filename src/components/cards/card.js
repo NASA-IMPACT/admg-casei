@@ -32,7 +32,7 @@ const Card = ({ children, image, tag, footerList }) => (
   >
     <div style={{ marginBottom: `2rem` }}>
       <CardHeader>
-        {image && image.nasaImg ? (
+        {image && image.logoImg ? (
           <Image
             alt={image.logoAlt}
             fixed={image.logoImg.childImageSharp.fixed}
