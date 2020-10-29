@@ -38,11 +38,10 @@ const Card = ({ children, image, tag, footerList }) => (
             fixed={image.logoImg.childImageSharp.fixed}
             style={{ margin: `0` }}
           />
-        ) : (
-          image && (
-            <img src={PlaceholderLogo} alt={image.logoAlt} height="85" />
+        ) :  (
+            <img src={PlaceholderLogo} alt={tag} height="85" />
           )
-        )}
+        }
         {tag && (
           <div
             style={{
@@ -82,7 +81,7 @@ Card.propTypes = {
     PropTypes.arrayOf(PropTypes.element),
   ]),
   image: PropTypes.shape({
-    logoAlt: PropTypes.string.isRequired,
+    logoAlt: PropTypes.string,
     logoImg: PropTypes.shape({
       childImageSharp: PropTypes.object,
     }),

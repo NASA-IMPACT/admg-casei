@@ -20,7 +20,7 @@
   {
     "shortname": "CARVE",
     "category": "logo",
-    "logoImg": "",
+    "logoImg": "../images/logos/CARVE.png",
     "logoAlt": "CARVE logo"
   },
   {
@@ -38,7 +38,7 @@
   {
     "shortname": "GOES-R PLT",
     "category": "logo",
-    "logoImg": "",
+    "logoImg": "../images/logos/GOES-R_PLT.png",
     "logoAlt": "GOES-R PLT logo"
   },
   {

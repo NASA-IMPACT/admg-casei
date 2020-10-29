@@ -7,11 +7,9 @@ const testString = "test string"
 const testUrl = "https://www.test-campaign.io"
 const testImage = {
   shortname: "ACES",
-  nasaImgUrl:
-    "https://ghrc.nsstc.nasa.gov/home/sites/default/files/aces_logo.png#overlay-context=field-campaigns/aces",
-  nasaImgAlt: "logo",
+  logoAlt: "logo",
   category: "logo",
-  nasaImg: {
+  logoImg: {
     childImageSharp: {
       fluid: {
         tracedSVG:
@@ -56,7 +54,7 @@ describe("Program Info Section", () => {
     const tree = component.toJSON()
     const instance = component.root
     expect(instance.findAllByType("img")[0].props.alt).toBe(
-      testImage.nasaImgAlt
+      testImage.logoAlt
     )
     expect(tree).toMatchSnapshot()
   })
@@ -66,10 +64,9 @@ describe("Program Info Section", () => {
         id="program-info"
         logo={{
           shortname: "GOES-R PLT",
-          nasaImgUrl: "",
-          nasaImgAlt: "GOES-R PLT logo",
+          logoAlt: "GOES-R PLT logo",
           category: "logo",
-          nasaImg: null,
+          logoImg: null,
         }}
         shortname={testString}
         fundingAgency={testString}

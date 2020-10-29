@@ -649,6 +649,7 @@ exports[`Campaigns page renders correctly 1`] = `
                   className="c2"
                 >
                   <img
+                    alt={false}
                     height="85"
                     src="test-file-stub"
                   />
@@ -747,6 +748,7 @@ exports[`Campaigns page renders correctly 1`] = `
                   className="c2"
                 >
                   <img
+                    alt={false}
                     height="85"
                     src="test-file-stub"
                   />
@@ -842,6 +844,7 @@ exports[`Campaigns page renders correctly 1`] = `
                   className="c2"
                 >
                   <img
+                    alt={false}
                     height="85"
                     src="test-file-stub"
                   />
