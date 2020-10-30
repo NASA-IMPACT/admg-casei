@@ -29,6 +29,9 @@ exports.createSchemaCustomization = ({ actions }) => {
       collection_periods: [collection_period] @link
       geographical_regions: [geographical_region] @link
     }
+    type focus_area implements Node {
+      campaigns: [campaign] @link
+    }
     type geographical_region implements Node {
       image: NasaImagesJson @link(by: "shortname", from: "short_name")
     }

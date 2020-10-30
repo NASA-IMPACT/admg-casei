@@ -3,11 +3,12 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import Carousel from "nuka-carousel"
 
-import { Section, SectionHeader, SectionContent } from "../../components/layout"
-import CampaignCard from "../../components/cards/campaign-card"
-import { controlButtonLRStyle } from "../../components/carousel-styles"
+import { Section, SectionHeader, SectionContent } from "./layout"
+import CampaignCard from "./cards/campaign-card"
+import { controlButtonLRStyle } from "./carousel-styles"
+import theme from "../utils/theme"
 
-const RelatedCampaigns = ({ id, campaigns }) => {
+const RelatedCampaignsSection = ({ id, campaigns }) => {
   return (
     <Section id={id}>
       <SectionHeader headline="Related Campaigns" id={id} />
@@ -21,15 +22,28 @@ const RelatedCampaigns = ({ id, campaigns }) => {
                 prevButtonText: `⦉`,
                 prevButtonStyle: controlButtonLRStyle,
                 pagingDotsStyle: {
-                  fill: "none",
+                  fill: theme.color.base,
                 },
               }}
-              slidesToShow={3}
+              getControlsContainerStyles={key => {
+                switch (key) {
+                  case "BottomCenter":
+                    return {
+                      bottom: "-42px",
+                    }
+                  default:
+                    // will apply all other keys
+                    return
+                }
+              }}
+              // renderBottomCenterControls={() => null}
+              heightMode="max"
+              slidesToShow={4}
             >
               {campaigns.map(campaign => (
                 <div
                   key={campaign.id}
-                  style={{ width: `16rem` }}
+                  style={{ width: `16rem`, height: `100%` }}
                   data-cy="related-campaign"
                 >
                   <Link to={`/campaign/${campaign.id}`}>
@@ -40,14 +54,14 @@ const RelatedCampaigns = ({ id, campaigns }) => {
             </Carousel>
           </div>
         ) : (
-          <p>No available platforms or instruments</p>
+          <p>No available related campaigns</p>
         )}
       </SectionContent>
     </Section>
   )
 }
 
-RelatedCampaigns.propTypes = {
+RelatedCampaignsSection.propTypes = {
   id: PropTypes.string.isRequired,
   campaigns: PropTypes.arrayOf(
     PropTypes.shape({
@@ -56,4 +70,4 @@ RelatedCampaigns.propTypes = {
   ).isRequired,
 }
 
-export default RelatedCampaigns
+export default RelatedCampaignsSection
