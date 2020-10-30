@@ -120,7 +120,7 @@ Background.propTypes = {
 
 export default function About({
   id,
-  instrumentTypes,
+  measurementType,
   radiometricFrequency,
   temporalResolution,
   spatialResolution,
@@ -146,8 +146,8 @@ export default function About({
           id="instrument"
           list={[
             {
-              title: "Instrument Type",
-              content: instrumentTypes.map(x => x.longname).join(", ") || "N/A",
+              title: "Measurement Type",
+              content: measurementType.longname || "N/A",
             },
             {
               title: "Measurement/Variables",
@@ -235,12 +235,10 @@ export default function About({
 About.propTypes = {
   id: PropTypes.string,
   collectionPeriods: PropTypes.arrayOf(PropTypes.string),
-  instrumentTypes: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      longname: PropTypes.string.isRequired,
-    }).isRequired
-  ).isRequired,
+  measurementType: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    longname: PropTypes.string.isRequired,
+  }).isRequired,
   radiometricFrequency: PropTypes.string,
   temporalResolution: PropTypes.string,
   spatialResolution: PropTypes.string,
@@ -279,7 +277,7 @@ export const instrumentDetailFields = graphql`
   fragment instrumentDetailFields on instrument {
     id
     collectionPeriods: collection_periods
-    instrumentTypes: instrument_types {
+    measurementType: measurement_type {
       id
       longname: long_name
     }

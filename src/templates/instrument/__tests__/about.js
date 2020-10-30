@@ -4,16 +4,10 @@ import { create } from "react-test-renderer"
 import About from "../about"
 
 const id = "unique-id"
-const instrumentTypes = [
-  {
-    id: "test",
-    longname: "test",
-  },
-  {
-    id: "test2",
-    longname: "test2",
-  },
-]
+const measurementType = {
+  id: "test",
+  longname: "test",
+}
 const radiometricFrequency = "test"
 const temporalResolution = "test"
 const spatialResolution = "test"
@@ -60,7 +54,7 @@ describe("About Section", () => {
     const tree = create(
       <About
         id={id}
-        instrumentTypes={instrumentTypes}
+        measurementType={measurementType}
         radiometricFrequency={radiometricFrequency}
         temporalResolution={temporalResolution}
         spatialResolution={spatialResolution}
