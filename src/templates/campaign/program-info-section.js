@@ -57,7 +57,7 @@ const ProgramInfoSection = ({
               padding: `1rem`,
             }}
           >
-            {logo.nasaImg ? (
+            {logo && logo.logoImg ? (
               <div
                 style={{
                   width: `100%` /* gatsby-image wants width, for it to be visible */,
@@ -65,8 +65,8 @@ const ProgramInfoSection = ({
                 data-cy="campaign-logo"
               >
                 <Image
-                  alt={logo.nasaImgAlt}
-                  fluid={logo.nasaImg.childImageSharp.fluid}
+                  alt={logo.logoAlt}
+                  fluid={logo.logoImg.childImageSharp.fluid}
                 />
               </div>
             ) : (
@@ -98,9 +98,8 @@ const ProgramInfoSection = ({
 export const fundingFields = graphql`
   fragment fundingFields on campaign {
     logo {
-      nasaImgAlt
-      nasaImgUrl
-      nasaImg {
+      logoAlt
+      logoImg {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -108,7 +107,6 @@ export const fundingFields = graphql`
         }
       }
     }
-
     fundingAgency: funding_agency
     fundingProgram: funding_program
     # supportedMission: Supported_NASA_Mission_s_
@@ -128,8 +126,8 @@ export const fundingFields = graphql`
 ProgramInfoSection.propTypes = {
   id: PropTypes.string.isRequired,
   logo: PropTypes.shape({
-    nasaImgAlt: PropTypes.string.isRequired,
-    nasaImg: PropTypes.shape({
+    logoAlt: PropTypes.string.isRequired,
+    logoImg: PropTypes.shape({
       childImageSharp: PropTypes.object,
     }),
   }).isRequired,

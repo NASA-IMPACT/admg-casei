@@ -20,7 +20,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       platform_types: [platform_type] @link
       platforms: [platform] @link
       seasons: [season] @link
-      logo: NasaImagesJson @link(by: "shortname", from: "short_name")
+      logo: LogosJson @link(by: "shortname", from: "short_name")
     }
     type collection_period implements Node {
       dois: [doi] @link
@@ -50,6 +50,9 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
     type NasaImagesJson implements Node {
       nasaImg: File @link(from: "nasaImg___NODE")
+    }
+    type LogosJson implements Node {
+      logoImg: File!
     }
   `
 

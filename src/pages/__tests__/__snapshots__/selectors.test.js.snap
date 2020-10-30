@@ -649,7 +649,7 @@ exports[`Campaigns page renders correctly 1`] = `
                   className="c2"
                 >
                   <img
-                    alt="CARVE logo"
+                    alt={false}
                     height="85"
                     src="test-file-stub"
                   />
@@ -748,18 +748,9 @@ exports[`Campaigns page renders correctly 1`] = `
                   className="c2"
                 >
                   <img
-                    alt="DC3 logo"
-                    fixed={
-                      Object {
-                        "src": "/static/c4b36cb85ef25d65d08739c329b04e52/7f3c0/dc3-logo.png",
-                      }
-                    }
-                    src="test-image.png"
-                    style={
-                      Object {
-                        "margin": "0",
-                      }
-                    }
+                    alt={false}
+                    height="85"
+                    src="test-file-stub"
                   />
                 </div>
                 <big
@@ -853,18 +844,9 @@ exports[`Campaigns page renders correctly 1`] = `
                   className="c2"
                 >
                   <img
-                    alt="ARCTAS logo"
-                    fixed={
-                      Object {
-                        "src": "/static/2bd234de67183d020fabe8584d7713ff/9dd03/arctas_spring.jpg",
-                      }
-                    }
-                    src="test-image.png"
-                    style={
-                      Object {
-                        "margin": "0",
-                      }
-                    }
+                    alt={false}
+                    height="85"
+                    src="test-file-stub"
                   />
                 </div>
                 <big
