@@ -147,7 +147,10 @@ export default function About({
           list={[
             {
               title: "Measurement Type",
-              content: measurementType.longname || "N/A",
+              content:
+                measurementType && measurementType.longname
+                  ? measurementType.longname
+                  : "N/A",
             },
             {
               title: "Measurement/Variables",
