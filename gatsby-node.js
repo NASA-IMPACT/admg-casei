@@ -20,7 +20,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       platform_types: [platform_type] @link
       platforms: [platform] @link
       seasons: [season] @link
-      logo: NasaImagesJson @link(by: "shortname", from: "short_name")
+      logo: LogosJson @link(by: "shortname", from: "short_name")
     }
     type collection_period implements Node {
       dois: [doi] @link
@@ -29,6 +29,9 @@ exports.createSchemaCustomization = ({ actions }) => {
       collection_periods: [collection_period] @link
       geographical_regions: [geographical_region] @link
     }
+    type focus_area implements Node {
+      campaigns: [campaign] @link
+    }
     type geographical_region implements Node {
       image: NasaImagesJson @link(by: "shortname", from: "short_name")
     }
@@ -36,7 +39,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       campaigns: [campaign] @link
       gcmd_phenomenas: [gcmd_phenomena] @link
       image: image @link
-      instrument_types: [instrument_type] @link
+      measurement_type: measurement_type @link
       measurement_regions: [measurement_region] @link
       platforms: [platform] @link
       repositories: [repository] @link
@@ -50,6 +53,9 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
     type NasaImagesJson implements Node {
       nasaImg: File @link(from: "nasaImg___NODE")
+    }
+    type LogosJson implements Node {
+      logoImg: File!
     }
   `
 
@@ -113,7 +119,7 @@ exports.sourceNodes = async ({ actions, createContentDigest }) => {
       "geophysical_concept",
       "image",
       "instrument",
-      "instrument_type",
+      "measurement_type",
       "measurement_region",
       "partner_org",
       "platform",

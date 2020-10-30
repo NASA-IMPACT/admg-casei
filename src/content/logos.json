@@ -1,0 +1,62 @@
+[
+  {
+    "shortname": "ACES",
+    "category": "logo",
+    "logoImg": "../images/logos/aces.png",
+    "logoAlt": "ACES logo"
+  },
+  {
+    "shortname": "AirMOSS",
+    "category": "logo",
+    "logoImg": "../images/logos/airmoss.png",
+    "logoAlt": "AirMOSS logo"
+  },
+  {
+    "shortname": "ARCTAS",
+    "category": "logo",
+    "logoImg": "../images/logos/arctas.png",
+    "logoAlt": "ARCTAS logo"
+  },
+  {
+    "shortname": "CARVE",
+    "category": "logo",
+    "logoImg": "../images/logos/CARVE.png",
+    "logoAlt": "CARVE logo"
+  },
+  {
+    "shortname": "DC3",
+    "category": "logo",
+    "logoImg": "../images/logos/dc3.png",
+    "logoAlt": "DC3 logo"
+  },
+  {
+    "shortname": "GCPEx",
+    "category": "logo",
+    "logoImg": "../images/logos/GCPEx.png",
+    "logoAlt": "GCPEx logo"
+  },
+  {
+    "shortname": "GOES-R PLT",
+    "category": "logo",
+    "logoImg": "../images/logos/GOES-R_PLT.png",
+    "logoAlt": "GOES-R PLT logo"
+  },
+  {
+    "shortname": "GRIP",
+    "category": "logo",
+    "logoImg": "../images/logos/grip.png",
+    "logoAlt": "GRIP logo"
+  },
+  {
+    "shortname": "HS3",
+    "category": "logo",
+    "logoImg": "../images/logos/HS3.png",
+    "logoAlt": "HS3 logo"
+  },
+  {
+    "shortname": "OLYMPEX",
+    "category": "logo",
+    "logoImg": "../images/logos/olympex.png",
+    "logoAlt": "OLYMPEX logo"
+  }
+]

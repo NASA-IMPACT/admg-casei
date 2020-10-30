@@ -1,6 +1,6 @@
 describe("Login", () => {
   beforeEach(() => {
-    cy.visit("/campaign/e48c2d79-822b-4c9e-9f72-2776d5d1eac6", {
+    cy.visit("/campaign/b92c47a8-448f-4718-bcaf-b1354cc510ea", {
       // using onLoad to overwrite fetch from cypress/support/index.json - is there a better way?
       onLoad: win => {
         win.fetch = () =>

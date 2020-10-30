@@ -28,7 +28,7 @@ const InstrumentTemplate = ({ data: { instrument }, path }) => {
       nav: "Instrument Details",
       component: About,
       props: {
-        instrumentTypes: instrument.instrumentTypes,
+        measurementType: instrument.measurementType,
         radiometricFrequency: instrument.radiometricFrequency,
         temporalResolution: instrument.temporalResolution,
         spatialResolution: instrument.spatialResolution,
@@ -133,12 +133,10 @@ InstrumentTemplate.propTypes = {
         }).isRequired,
       }),
       collectionPeriods: PropTypes.arrayOf(PropTypes.string),
-      instrumentTypes: PropTypes.arrayOf(
-        PropTypes.shape({
-          id: PropTypes.string.isRequired,
-          longname: PropTypes.string.isRequired,
-        }).isRequired
-      ).isRequired,
+      measurementType: PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        longname: PropTypes.string.isRequired,
+      }).isRequired,
       radiometricFrequency: PropTypes.string,
       temporalResolution: PropTypes.string,
       spatialResolution: PropTypes.string,

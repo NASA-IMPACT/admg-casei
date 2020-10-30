@@ -63,7 +63,7 @@ describe("Platform", () => {
 
     it("displays some data products", () => {
       cy.get("[data-cy=data-product]").should($div => {
-        expect($div).to.have.length(11)
+        expect($div).to.have.length(5)
       })
     })
 
@@ -98,11 +98,11 @@ describe("Platform", () => {
 
   describe("the related campaign section", () => {
     it("exists", () => {
-      cy.get("[data-cy=related-campaigns-section]").should("exist")
+      cy.get("[data-cy=platform-campaigns-section]").should("exist")
     })
 
     it("has a heading", () => {
-      cy.get("[data-cy=related-campaigns-section]")
+      cy.get("[data-cy=platform-campaigns-section]")
         .find("h2")
         .should("have.text", "Related Campaigns")
     })

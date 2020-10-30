@@ -96,66 +96,6 @@
     "nasaImgAlt": "A stream in the La Selva region of the Costa Rican rain forest, taken during NASA's AirSAR 2004 campaign."
   },
   {
-    "shortname": "ACES",
-    "category": "logo",
-    "nasaImgUrl": "https://ghrc.nsstc.nasa.gov/home/sites/default/files/aces_logo.png#overlay-context=field-campaigns/aces",
-    "nasaImgAlt": "logo"
-  },
-  {
-    "shortname": "AirMOSS",
-    "category": "logo",
-    "nasaImgUrl": "https://airbornescience.jpl.nasa.gov/sites/default/files/airmossLogo.png",
-    "nasaImgAlt": "AirMOSS logo"
-  },
-  {
-    "shortname": "ARCTAS",
-    "category": "logo",
-    "nasaImgUrl": "https://cloud1.arc.nasa.gov/arctas/images/arctas_spring.jpg",
-    "nasaImgAlt": "ARCTAS logo"
-  },
-  {
-    "shortname": "CARVE",
-    "category": "logo",
-    "nasaImgUrl": "",
-    "nasaImgAlt": "CARVE logo"
-  },
-  {
-    "shortname": "DC3",
-    "category": "logo",
-    "nasaImgUrl": "https://www-air.larc.nasa.gov/missions/dc3-seac4rs/img/dc3-logo.png",
-    "nasaImgAlt": "DC3 logo"
-  },
-  {
-    "shortname": "GCPEx",
-    "category": "logo",
-    "nasaImgUrl": "https://airbornescience.nasa.gov/sites/default/files/styles/200wide/public/current_activities/gcpexlogo.png?itok=Z1MVjjPB",
-    "nasaImgAlt": "GCPEx logo"
-  },
-  {
-    "shortname": "GOES-R PLT",
-    "category": "logo",
-    "nasaImgUrl": "",
-    "nasaImgAlt": "GOES-R PLT logo"
-  },
-  {
-    "shortname": "GRIP",
-    "category": "logo",
-    "nasaImgUrl": "https://www.nasa.gov/images/content/464732main_grip_graphic_med.jpg",
-    "nasaImgAlt": "GRIP logo"
-  },
-  {
-    "shortname": "HS3",
-    "category": "logo",
-    "nasaImgUrl": "https://espo.nasa.gov/sites/default/files/images/HS3_logo.png",
-    "nasaImgAlt": "HS3 logo"
-  },
-  {
-    "shortname": "OLYMPEX",
-    "category": "logo",
-    "nasaImgUrl": "https://wallops-prf.gsfc.nasa.gov/Field_Campaigns/Olympex/img/logo_image2.png",
-    "nasaImgAlt": "OLYMPEX logo"
-  },
-  {
     "shortname": "placeholder-platform",
     "category": "placeholder",
     "nasaImgUrl": "https://images-assets.nasa.gov/image/EC98-44435-2/EC98-44435-2~orig.jpg",

@@ -112,7 +112,7 @@ const IndexPage = ({ data }) => {
             id="instruments"
           />
           <SectionContent>
-            <InstrumentsGrid instrumentTypes={data.allInstrumentType.nodes} />
+            <InstrumentsGrid measurementTypes={data.allMeasurementType.nodes} />
           </SectionContent>
         </Section>
       </PageBody>
@@ -169,7 +169,7 @@ export const query = graphql`
         longname: long_name
       }
     }
-    allInstrumentType {
+    allMeasurementType {
       nodes {
         id
         shortname: short_name
@@ -235,7 +235,7 @@ IndexPage.propTypes = {
         })
       ),
     }),
-    allInstrumentType: PropTypes.shape({
+    allMeasurementType: PropTypes.shape({
       nodes: PropTypes.arrayOf(
         PropTypes.shape({
           id: PropTypes.string.isRequired,

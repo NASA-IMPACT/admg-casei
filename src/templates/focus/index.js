@@ -11,6 +11,7 @@ import Layout, {
 } from "../../components/layout"
 import Hero from "../../components/hero"
 import ExternalLink from "../../components/external-link"
+import RelatedCampaignsSection from "../../components/related-campaigns-section"
 import FocusAreaGallery from "../../components/focus-area-gallery"
 import theme from "../../utils/theme"
 import { getFocusIcon } from "../../components/icons/utils"
@@ -30,7 +31,7 @@ const FocusTemplate = ({ data }) => {
 
       <PageBody id="focus">
         <Section id="overview">
-          <SectionHeader headline="Overview" id={data.focusArea.uuid} />
+          <SectionHeader headline="Overview" id="overview" />
           <SectionContent columns={[1, 8]} minHeight={`12rem`}>
             <Paragraph data-cy="description">
               {data.focusArea.description}
@@ -56,6 +57,11 @@ const FocusTemplate = ({ data }) => {
           </SectionContent>
         </Section>
 
+        <RelatedCampaignsSection
+          id="focus-campaigns"
+          campaigns={data.focusArea.campaigns}
+        />
+
         <Section id="focus-areas" isSpaced>
           <SectionHeader tagline="explore nasa earth science" id="focus" />
           <SectionContent>
@@ -74,7 +80,9 @@ export const query = graphql`
   query($slug: String!) {
     focusArea(id: { eq: $slug }) {
       uuid
-      campaigns
+      campaigns {
+        id
+      }
       description: notes_public
       url
       shortname: short_name
@@ -94,7 +102,11 @@ FocusTemplate.propTypes = {
   data: PropTypes.shape({
     focusArea: PropTypes.shape({
       uuid: PropTypes.string,
-      campaigns: PropTypes.arrayOf(PropTypes.string).isRequired,
+      campaigns: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string.isRequired,
+        })
+      ).isRequired,
       description: PropTypes.string.isRequired,
       url: PropTypes.string.isRequired,
       shortname: PropTypes.string.isRequired,

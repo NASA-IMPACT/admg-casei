@@ -13,23 +13,23 @@ import {
 } from "../icons"
 
 const icons = {
-  "e42c7970-1913-44b4-822b-8d620eef8df8": ({ color, size }) => (
+  "960ac6eb-3e79-425d-998b-8b1271aa6d5e": ({ color, size }) => (
     <AtmosphericCompositionIcon color={color} size={size} />
   ),
 
-  "b31b1fd0-d090-480a-ac8b-3d48175d2a00": ({ color, size }) => (
+  "347b2275-e553-42e2-bfd5-2e077dc00a95": ({ color, size }) => (
     <CarbonCycleEcosystemsIcon color={color} size={size} />
   ),
-  "43bc862a-ece2-427c-ad5f-368466d3bc98": ({ color, size }) => (
+  "b2f74ede-ac7d-4cce-8abc-6f4af227b320": ({ color, size }) => (
     <ClimateVariabilityChangeIcon color={color} size={size} />
   ),
-  "e6a41072-65fc-411b-8e51-1dd01cd7dd17": ({ color, size }) => (
+  "1a2f4f6e-37a2-4238-95d0-123dab923322": ({ color, size }) => (
     <EarthSurfaceInteriorIcon color={color} size={size} />
   ),
-  "2a9bec35-4fe5-4177-8443-d11f441310b3": ({ color, size }) => (
+  "220c5519-e743-40d2-9d42-7c9fd15b727b": ({ color, size }) => (
     <GlobalWaterEnergyCycleIcon color={color} size={size} />
   ),
-  "0ba119ec-7851-4546-8708-5ea3883e0a54": ({ color, size }) => (
+  "9bacf069-912f-4302-95de-f15bc4a3784d": ({ color, size }) => (
     <WeatherIcon color={color} size={size} />
   ),
 }

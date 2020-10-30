@@ -6,8 +6,8 @@ import Layout, { PageBody } from "../../components/layout"
 import PlatformHero from "./hero"
 import InpageNav from "../../components/inpage-nav"
 import Overview from "./overview"
+import RelatedCampaignsSection from "../../components/related-campaigns-section"
 import DataSection from "./data-section"
-import RelatedCampaigns from "./related-campaigns"
 
 export default function PlatformTemplate({ data: { platform }, path }) {
   const updatedPlatformDois = platform.dois.map(platformDoi => {
@@ -34,8 +34,9 @@ export default function PlatformTemplate({ data: { platform }, path }) {
     },
     "related-campaigns": {
       nav: "Related Campaigns",
-      component: RelatedCampaigns,
+      component: RelatedCampaignsSection,
       props: {
+        id: "platform-campaigns",
         campaigns: platform.campaigns,
       },
     },

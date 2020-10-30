@@ -46,6 +46,11 @@ exports[`Card renders card with tag 1`] = `
     <div
       className="c0"
     >
+      <img
+        alt="placeholder logo"
+        height="85"
+        src="test-file-stub"
+      />
       <div
         data-cy="stationary-tag"
         style={
@@ -131,7 +136,13 @@ exports[`Card renders plain card 1`] = `
   >
     <div
       className="c0"
-    />
+    >
+      <img
+        alt="placeholder logo"
+        height="85"
+        src="test-file-stub"
+      />
+    </div>
     <div>
       <big
         data-cy="shortname"
@@ -204,7 +215,13 @@ exports[`Card renders with footer list 1`] = `
   >
     <div
       className="c0"
-    />
+    >
+      <img
+        alt="placeholder logo"
+        height="85"
+        src="test-file-stub"
+      />
+    </div>
     <div>
       <big
         data-cy="shortname"

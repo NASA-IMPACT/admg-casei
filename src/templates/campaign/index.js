@@ -246,8 +246,8 @@ CampaignTemplate.propTypes = {
         })
       ).isRequired,
       logo: PropTypes.shape({
-        nasaImgAlt: PropTypes.string.isRequired,
-        nasaImg: PropTypes.shape({
+        logoAlt: PropTypes.string.isRequired,
+        logoImg: PropTypes.shape({
           childImageSharp: PropTypes.object,
         }),
       }).isRequired,

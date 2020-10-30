@@ -75,13 +75,13 @@ exports[`About Section displays content 1`] = `
       >
         <dt>
           <label>
-            Instrument Type
+            Measurement Type
           </label>
         </dt>
         <dd
           style={Object {}}
         >
-          test, test2
+          test
         </dd>
         <dt>
           <label>

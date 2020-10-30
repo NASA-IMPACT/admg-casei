@@ -32,16 +32,14 @@ const Card = ({ children, image, tag, footerList }) => (
   >
     <div style={{ marginBottom: `2rem` }}>
       <CardHeader>
-        {image && image.nasaImg ? (
+        {image && image.logoImg ? (
           <Image
-            alt={image.nasaImgAlt}
-            fixed={image.nasaImg.childImageSharp.fixed}
+            alt={image.logoAlt}
+            fixed={image.logoImg.childImageSharp.fixed}
             style={{ margin: `0` }}
           />
         ) : (
-          image && (
-            <img src={PlaceholderLogo} alt={image.nasaImgAlt} height="85" />
-          )
+          <img src={PlaceholderLogo} alt="placeholder logo" height="85" />
         )}
         {tag && (
           <div
@@ -82,8 +80,8 @@ Card.propTypes = {
     PropTypes.arrayOf(PropTypes.element),
   ]),
   image: PropTypes.shape({
-    nasaImgAlt: PropTypes.string.isRequired,
-    nasaImg: PropTypes.shape({
+    logoAlt: PropTypes.string,
+    logoImg: PropTypes.shape({
       childImageSharp: PropTypes.object,
     }),
   }),
