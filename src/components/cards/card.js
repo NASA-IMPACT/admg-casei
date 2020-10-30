@@ -39,7 +39,7 @@ const Card = ({ children, image, tag, footerList }) => (
             style={{ margin: `0` }}
           />
         ) : (
-          <img src={PlaceholderLogo} alt={tag} height="85" />
+          <img src={PlaceholderLogo} alt="placeholder logo" height="85" />
         )}
         {tag && (
           <div
