@@ -41,6 +41,7 @@ const PlatformSection = ({ id, platforms, instruments }) => (
                       <Image
                         alt={platform.image.description}
                         fluid={platform.image.gatsbyImg.childImageSharp.fluid}
+                        data-cy="platform-image"
                       />
                     ) : (
                       <div
@@ -51,6 +52,7 @@ const PlatformSection = ({ id, platforms, instruments }) => (
                           alignItems: `center`,
                           justifyContent: `center`,
                         }}
+                        data-cy="platform-image"
                       >
                         No Image available.
                       </div>

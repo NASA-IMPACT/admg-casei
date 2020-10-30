@@ -179,13 +179,13 @@ describe("Explore", () => {
     it("displays a list of cards presenting the available instruments", () => {
       cy.get("[data-cy=explore-card]")
         .find("big")
-        .contains("AMS")
+        .contains("HAMSR")
         .parent()
         .parent() // is there a better way to select the card?
         .should($card => {
-          expect($card.find("[data-cy=shortname]")).to.have.text("AMS")
+          expect($card.find("[data-cy=shortname]")).to.have.text("HAMSR")
           expect($card.find("[data-cy=longname]")).to.have.text(
-            "Aerosol Mass Spectrometer"
+            "High Altitude Monolithic Microwave integrated Circuit(MMIC) Sounding Radiometer"
           )
           expect($card.find("[data-cy=longname]")).to.exist
 

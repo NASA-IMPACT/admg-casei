@@ -169,7 +169,7 @@ describe("Campaign", () => {
         .should("have.length", 1)
         .and("have.text", "geophysical: Terr Hydro")
 
-      cy.get("main").find("[data-cy=explore-card]").should("have.length", 2)
+      cy.get("main").find("[data-cy=explore-card]").should("have.length", 4)
 
       cy.go("back")
     })
@@ -228,8 +228,14 @@ describe("Campaign", () => {
     it("displays a platform carousel", () => {
       cy.get("[data-cy=platform-carousel]").find(".slider").should("exist")
 
-      cy.get("[data-cy=platform]").first().find("img").should("exist")
-      cy.get("[data-cy=platform]").first().find("img").should("be.visible")
+      cy.get("[data-cy=platform]")
+        .first()
+        .find("[data-cy=platform-image]")
+        .should("exist")
+      cy.get("[data-cy=platform]")
+        .first()
+        .find("[data-cy=platform-image]")
+        .should("be.visible")
       cy.get("[data-cy=platform]").first().find("label").should("exist")
       cy.get("[data-cy=platform-image-caption]").should("exist")
 
@@ -257,7 +263,7 @@ describe("Campaign", () => {
   describe("the data section", () => {
     before(() => {
       cy.visit("/explore/campaigns")
-      cy.get("[data-cy=explore-card]").find("big").contains("OLYMPEX").click()
+      cy.get("[data-cy=explore-card]").find("big").contains("GCPEx").click()
     })
 
     it("exists", () => {
@@ -272,7 +278,7 @@ describe("Campaign", () => {
 
     it("displays some data products", () => {
       cy.get("[data-cy=data-product]").should($div => {
-        expect($div).to.have.length(9)
+        expect($div).to.have.length(3)
       })
     })
 
@@ -283,7 +289,7 @@ describe("Campaign", () => {
         .should("exist")
         .and(
           "have.text",
-          "GPM Ground Validation NCAR Particle Probes OLYMPEX V1"
+          "GPM GROUND VALIDATION CONICAL SCANNING MILLIMETER-WAVE IMAGING RADIOMETER (COSMIR) GCPEX V1"
         )
 
       cy.get("[data-cy=data-product]")

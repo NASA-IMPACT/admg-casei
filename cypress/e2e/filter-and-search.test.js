@@ -2,7 +2,7 @@
 
 import api from "../../src/utils/api"
 
-describe.skip("Explore Tools", () => {
+describe("Explore Tools", () => {
   ;[
     {
       category: "campaigns",
@@ -17,10 +17,7 @@ describe.skip("Explore Tools", () => {
     { category: "platforms", filterExamples: ["Aerolaser", "CPC"] },
     {
       category: "instruments",
-      filterExamples: [
-        "In Situ - Spectrometer/Radiometer",
-        "In Situ - Sampler",
-      ],
+      filterExamples: ["Multi", "Stratosphere"],
     },
   ].forEach(x => {
     describe(x.category, () => {

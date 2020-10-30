@@ -91,7 +91,7 @@ describe("Instrument", () => {
 
       it("displays some data products", () => {
         cy.get("[data-cy=data-product]").should($div => {
-          expect($div).to.have.length(3)
+          expect($div).to.have.length(2)
         })
       })
 
@@ -144,12 +144,12 @@ describe("Instrument", () => {
         cy.get("[data-cy=related-platform]")
           .find("big")
           .first()
-          .should("have.text", "GH")
+          .should("have.text", "ER-2")
 
         cy.get("[data-cy=related-campaign]")
           .find("big")
           .first()
-          .should("have.text", "HS3")
+          .should("have.text", "ACEPOL")
       })
     })
   })

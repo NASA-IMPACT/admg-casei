@@ -36,7 +36,6 @@ const RelatedCampaignsSection = ({ id, campaigns }) => {
                     return
                 }
               }}
-              // renderBottomCenterControls={() => null}
               heightMode="max"
               slidesToShow={4}
             >
