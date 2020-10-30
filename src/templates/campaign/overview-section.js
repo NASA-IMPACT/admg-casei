@@ -3,11 +3,11 @@ import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
 import {
-  SectionBlock,
+  Section,
   SectionHeader,
   SectionContent,
   ContentItem,
-} from "../../components/section"
+} from "../../components/layout"
 import ExternalLink from "../../components/external-link"
 import theme from "../../utils/theme"
 import { isUrl, PropTypeIsUrl } from "../../utils/helpers"
@@ -43,7 +43,7 @@ const OverviewSection = ({
   tertiaryWebsite,
   publicationLink,
 }) => (
-  <SectionBlock id={id}>
+  <Section id={id}>
     <SectionHeader headline="Overview" id={id} />
     <SectionContent columns={[1, 8]}>
       <p data-cy="description">{description}</p>
@@ -110,7 +110,7 @@ const OverviewSection = ({
         )}
       </ul>
     </SectionContent>
-  </SectionBlock>
+  </Section>
 )
 
 export const overviewFields = graphql`

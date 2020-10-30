@@ -6,7 +6,7 @@ describe("Glossary", () => {
   })
   describe("the header", () => {
     it("displays the long name as title", () => {
-      cy.get("[data-cy=main-glossary-section]").find("h1").contains("Glossary")
+      cy.get("[data-cy=main-glossary]").find("h1").contains("Glossary")
     })
   })
   describe("the glossary table", () => {

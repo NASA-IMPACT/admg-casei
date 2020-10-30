@@ -1,13 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
-import DefinitionList from "../../components/tables/definitionList"
+import DefinitionList from "../../components/layout/definition-list"
 import Label from "../../components/label"
-import {
-  SectionBlock,
-  SectionHeader,
-  SectionContent,
-} from "../../components/section"
+import { Section, SectionHeader, SectionContent } from "../../components/layout"
 import ExternalLink from "../../components/external-link"
 import { isUrl } from "../../utils/helpers"
 
@@ -124,7 +120,7 @@ Background.propTypes = {
 
 export default function About({
   id,
-  instrumentTypes,
+  measurementType,
   radiometricFrequency,
   temporalResolution,
   spatialResolution,
@@ -143,15 +139,15 @@ export default function About({
   const links = onlineInformation ? onlineInformation.split("\n") : null
 
   return (
-    <SectionBlock id={id}>
+    <Section id={id}>
       <SectionHeader headline="Instrument Details" id={id} />
       <SectionContent columns={[1, 8]}>
         <DefinitionList
           id="instrument"
           list={[
             {
-              title: "Instrument Type",
-              content: instrumentTypes.map(x => x.longname).join(", ") || "N/A",
+              title: "Measurement Type",
+              content: measurementType.longname || "N/A",
             },
             {
               title: "Measurement/Variables",
@@ -232,19 +228,17 @@ export default function About({
           repositories={repositories}
         />
       </SectionContent>
-    </SectionBlock>
+    </Section>
   )
 }
 
 About.propTypes = {
   id: PropTypes.string,
   collectionPeriods: PropTypes.arrayOf(PropTypes.string),
-  instrumentTypes: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      longname: PropTypes.string.isRequired,
-    }).isRequired
-  ).isRequired,
+  measurementType: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    longname: PropTypes.string.isRequired,
+  }).isRequired,
   radiometricFrequency: PropTypes.string,
   temporalResolution: PropTypes.string,
   spatialResolution: PropTypes.string,
@@ -283,7 +277,7 @@ export const instrumentDetailFields = graphql`
   fragment instrumentDetailFields on instrument {
     id
     collectionPeriods: collection_periods
-    instrumentTypes: instrument_types {
+    measurementType: measurement_type {
       id
       longname: long_name
     }

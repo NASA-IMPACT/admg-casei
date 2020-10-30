@@ -5,13 +5,9 @@ import Image from "gatsby-image"
 
 import Layout, { PageBody } from "../components/layout"
 import SEO from "../components/seo"
-import {
-  SectionBlock,
-  SectionHeader,
-  SectionContent,
-} from "../components/section"
+import { Section, SectionHeader, SectionContent } from "../components/layout"
 import Hero from "../components/hero"
-import FocusAreaGallery from "../components/home/focus-area-gallery"
+import FocusAreaGallery from "../components/focus-area-gallery"
 import { RegionCarousel } from "../components/home/region-carousel"
 import { GeophysicsGrid } from "../components/home/geophysics-grid"
 import { InstrumentsGrid } from "../components/home/instruments-grid"
@@ -30,7 +26,7 @@ const IndexPage = ({ data }) => {
         id="home"
       />
       <PageBody id="home">
-        <SectionBlock id="focus-area" isSpaced>
+        <Section id="focus-area" isSpaced>
           <SectionHeader
             tagline="explore nasa earth science"
             headline="Focus Areas"
@@ -42,9 +38,9 @@ const IndexPage = ({ data }) => {
               size="large"
             />
           </SectionContent>
-        </SectionBlock>
+        </Section>
 
-        <SectionBlock id="region-type" isSpaced>
+        <Section id="region-type" isSpaced>
           <SectionHeader
             tagline="explore campaigns by"
             headline="Region Type"
@@ -53,9 +49,9 @@ const IndexPage = ({ data }) => {
           <SectionContent>
             <RegionCarousel regions={data.allGeographicalRegion.nodes} />
           </SectionContent>
-        </SectionBlock>
+        </Section>
 
-        <SectionBlock id="geophysical-concepts" isSpaced>
+        <Section id="geophysical-concepts" isSpaced>
           <SectionHeader
             tagline="explore campaigns by"
             headline="Geophysical Concepts"
@@ -66,9 +62,9 @@ const IndexPage = ({ data }) => {
               geophysicalConcepts={data.allGeophysicalConcept.nodes}
             />
           </SectionContent>
-        </SectionBlock>
+        </Section>
 
-        <SectionBlock id="platforms" isSpaced>
+        <Section id="platforms" isSpaced>
           <SectionContent columns={[1, 6]}>
             <Image
               alt={data.platformPlaceholder.nasaImgAlt}
@@ -107,18 +103,18 @@ const IndexPage = ({ data }) => {
               </div>
             </div>
           </SectionContent>
-        </SectionBlock>
+        </Section>
 
-        <SectionBlock id="instruments" isSpaced>
+        <Section id="instruments" isSpaced>
           <SectionHeader
             tagline="explore"
             headline="Instruments"
             id="instruments"
           />
           <SectionContent>
-            <InstrumentsGrid instrumentTypes={data.allInstrumentType.nodes} />
+            <InstrumentsGrid measurementTypes={data.allMeasurementType.nodes} />
           </SectionContent>
-        </SectionBlock>
+        </Section>
       </PageBody>
     </Layout>
   )
@@ -173,7 +169,7 @@ export const query = graphql`
         longname: long_name
       }
     }
-    allInstrumentType {
+    allMeasurementType {
       nodes {
         id
         shortname: short_name
@@ -239,7 +235,7 @@ IndexPage.propTypes = {
         })
       ),
     }),
-    allInstrumentType: PropTypes.shape({
+    allMeasurementType: PropTypes.shape({
       nodes: PropTypes.arrayOf(
         PropTypes.shape({
           id: PropTypes.string.isRequired,

@@ -160,8 +160,8 @@ const FilterMenu = ({
             {category === "instruments" && (
               <>
                 <Filter
-                  id="instrument-types"
-                  label="Instrument Types"
+                  id="measurement-types"
+                  label="Measurement Types"
                   options={getFilterOptionsById("type")}
                   selectedFilterIds={selectedFilterIds}
                 />

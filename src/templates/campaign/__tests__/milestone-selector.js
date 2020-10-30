@@ -1,6 +1,6 @@
 import React from "react"
 import renderer from "react-test-renderer"
-import MilestoneSelector from "../timeline/milestone-selector"
+import MilestoneSelector from "../milestone-selector"
 
 const testEvents = [
   {

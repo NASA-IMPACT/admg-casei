@@ -2,14 +2,14 @@ import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
-import Layout, { PageBody } from "../components/layout"
-import SEO from "../components/seo"
-import Hero from "../components/hero"
-import {
-  SectionBlock,
+import Layout, {
+  PageBody,
+  Section,
   SectionHeader,
   SectionContent,
-} from "../components/section"
+} from "../components/layout"
+import SEO from "../components/seo"
+import Hero from "../components/hero"
 import ExternalLink from "../components/external-link"
 import about from "../content/about.json"
 
@@ -59,7 +59,7 @@ const About = ({ data }) => {
       <PageBody id="about">
         {Object.entries(about).map(([id, section]) => {
           return (
-            <SectionBlock id={id} key={id}>
+            <Section id={id} key={id}>
               <SectionHeader
                 tagline={section.tagline}
                 headline={section.headline}
@@ -81,7 +81,7 @@ const About = ({ data }) => {
                 )}
                 {section.paragraphLinks && <LinkedParagraph />}
               </SectionContent>
-            </SectionBlock>
+            </Section>
           )
         })}
       </PageBody>

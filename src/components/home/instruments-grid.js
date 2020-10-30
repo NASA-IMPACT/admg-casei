@@ -4,11 +4,13 @@ import { Link } from "gatsby"
 
 import theme from "../../utils/theme"
 
-export const InstrumentsGrid = ({ instrumentTypes }) => {
-  const other = instrumentTypes.find(i => i.shortname.toLowerCase() === "other")
+export const InstrumentsGrid = ({ measurementTypes }) => {
+  const other = measurementTypes.find(
+    i => i.shortname.toLowerCase() === "other"
+  )
   // move type "Other" to the end of the list
-  instrumentTypes.push(
-    instrumentTypes.splice(instrumentTypes.indexOf(other), 1)[0]
+  measurementTypes.push(
+    measurementTypes.splice(measurementTypes.indexOf(other), 1)[0]
   )
 
   return (
@@ -19,13 +21,13 @@ export const InstrumentsGrid = ({ instrumentTypes }) => {
         border: `1px solid ${theme.color.base}`,
       }}
     >
-      {instrumentTypes.map(instrumentType => (
+      {measurementTypes.map(measurementType => (
         <Link
           to="/explore/instruments"
-          state={{ selectedFilterId: instrumentType.id }} // Pass state as props to the linked page
+          state={{ selectedFilterId: measurementType.id }} // Pass state as props to the linked page
           style={{ flexGrow: 1 }}
           data-cy="instrument-type"
-          key={instrumentType.id}
+          key={measurementType.id}
         >
           <div
             style={{
@@ -34,7 +36,7 @@ export const InstrumentsGrid = ({ instrumentTypes }) => {
               textAlign: `center`,
             }}
           >
-            {instrumentType.longname || instrumentType.shortname}
+            {measurementType.longname || measurementType.shortname}
           </div>
         </Link>
       ))}
@@ -43,7 +45,7 @@ export const InstrumentsGrid = ({ instrumentTypes }) => {
 }
 
 InstrumentsGrid.propTypes = {
-  instrumentTypes: PropTypes.arrayOf(
+  measurementTypes: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,
       shortname: PropTypes.string,

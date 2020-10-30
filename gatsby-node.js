@@ -36,7 +36,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       campaigns: [campaign] @link
       gcmd_phenomenas: [gcmd_phenomena] @link
       image: image @link
-      instrument_types: [instrument_type] @link
+      measurement_type: measurement_type @link
       measurement_regions: [measurement_region] @link
       platforms: [platform] @link
       repositories: [repository] @link
@@ -116,7 +116,7 @@ exports.sourceNodes = async ({ actions, createContentDigest }) => {
       "geophysical_concept",
       "image",
       "instrument",
-      "instrument_type",
+      "measurement_type",
       "measurement_region",
       "partner_org",
       "platform",
@@ -208,6 +208,11 @@ exports.createPages = async ({ graphql, actions }) => {
           id
         }
       }
+      allFocusArea {
+        nodes {
+          id
+        }
+      }
     }
   `)
 
@@ -233,6 +238,15 @@ exports.createPages = async ({ graphql, actions }) => {
     createPage({
       path: `platform/${node.id}`,
       component: path.resolve(`./src/templates/platform/index.js`),
+      context: {
+        slug: node.id,
+      },
+    })
+  })
+  result.data.allFocusArea.nodes.forEach(node => {
+    createPage({
+      path: `focus/${node.id}`,
+      component: path.resolve(`./src/templates/focus/index.js`),
       context: {
         slug: node.id,
       },
