@@ -47,7 +47,7 @@ exports[`Card renders card with tag 1`] = `
       className="c0"
     >
       <img
-        alt="Stationary"
+        alt="placeholder logo"
         height="85"
         src="test-file-stub"
       />
@@ -138,6 +138,7 @@ exports[`Card renders plain card 1`] = `
       className="c0"
     >
       <img
+        alt="placeholder logo"
         height="85"
         src="test-file-stub"
       />
@@ -216,6 +217,7 @@ exports[`Card renders with footer list 1`] = `
       className="c0"
     >
       <img
+        alt="placeholder logo"
         height="85"
         src="test-file-stub"
       />

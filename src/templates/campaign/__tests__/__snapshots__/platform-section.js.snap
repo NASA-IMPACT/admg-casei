@@ -68,6 +68,7 @@ exports[`Platform Section displays content 1`] = `
             >
               <img
                 alt="alt-text"
+                data-cy="platform-image"
                 fluid={[Function]}
                 src="test-image.png"
               />
@@ -137,6 +138,7 @@ exports[`Platform Section displays content 1`] = `
             >
               <img
                 alt="alt-text"
+                data-cy="platform-image"
                 fluid={[Function]}
                 src="test-image.png"
               />
@@ -206,6 +208,7 @@ exports[`Platform Section displays content 1`] = `
             >
               <img
                 alt="alt-text"
+                data-cy="platform-image"
                 fluid={[Function]}
                 src="test-image.png"
               />
