@@ -38,10 +38,9 @@ const Card = ({ children, image, tag, footerList }) => (
             fixed={image.logoImg.childImageSharp.fixed}
             style={{ margin: `0` }}
           />
-        ) :  (
-            <img src={PlaceholderLogo} alt={tag} height="85" />
-          )
-        }
+        ) : (
+          <img src={PlaceholderLogo} alt={tag} height="85" />
+        )}
         {tag && (
           <div
             style={{

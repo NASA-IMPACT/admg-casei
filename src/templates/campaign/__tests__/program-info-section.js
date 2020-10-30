@@ -53,9 +53,7 @@ describe("Program Info Section", () => {
     )
     const tree = component.toJSON()
     const instance = component.root
-    expect(instance.findAllByType("img")[0].props.alt).toBe(
-      testImage.logoAlt
-    )
+    expect(instance.findAllByType("img")[0].props.alt).toBe(testImage.logoAlt)
     expect(tree).toMatchSnapshot()
   })
   it("renders placeholder when no logo is available", () => {

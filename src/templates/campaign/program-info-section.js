@@ -127,7 +127,7 @@ ProgramInfoSection.propTypes = {
   id: PropTypes.string.isRequired,
   logo: PropTypes.shape({
     logoAlt: PropTypes.string.isRequired,
-    nasaImg: PropTypes.shape({
+    logoImg: PropTypes.shape({
       childImageSharp: PropTypes.object,
     }),
   }).isRequired,
