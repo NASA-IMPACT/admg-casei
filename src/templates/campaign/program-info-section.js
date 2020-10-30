@@ -57,7 +57,7 @@ const ProgramInfoSection = ({
               padding: `1rem`,
             }}
           >
-            {logo.logoImg ? (
+            {logo && logo.logoImg ? (
               <div
                 style={{
                   width: `100%` /* gatsby-image wants width, for it to be visible */,
