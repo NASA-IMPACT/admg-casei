@@ -4,7 +4,7 @@
   </a>
 </p>
 <h1 align="center">
-  Airborne Data Inventory
+  ADMG Inventory
 </h1>
 
 The goal of this project is to build a centralized airborne data inventory for easier user access to data and information. Airborne scientists and researchers would like to
