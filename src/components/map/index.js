@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import mapbox from "mapbox-gl"
+import MapboxDraw from "@mapbox/mapbox-gl-draw"
 
 export default function Map({ style, children }) {
   const containerRef = useRef()
@@ -15,6 +16,9 @@ export default function Map({ style, children }) {
       zoom: 1,
       center: [0, 0],
     })
+
+    const Draw = new MapboxDraw()
+    m.addControl(Draw, "top-left")
 
     m.on("load", () => {
       setMap(m)
