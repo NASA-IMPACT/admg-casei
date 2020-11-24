@@ -4,8 +4,10 @@ import { navigate } from "gatsby"
 
 import theme from "../../utils/theme"
 
-export default function HoverLayer({ id, map, sourceId }) {
+export default function HoverLayer({ id, map, sourceId, isDrawing }) {
   const [layer, setLayer] = useState(null)
+
+  // TODO: why does this not work with setState?
   // const [hoveredId, hoveredId = ] = useState(null)
 
   useEffect(() => {
@@ -27,10 +29,24 @@ export default function HoverLayer({ id, map, sourceId }) {
 
     setLayer(l)
 
-    let hoveredId // TODO: why does this not work with setState?
+    return () => {
+      if (layer) map.removeLayer(`${id}-hover-layer`)
+    }
+  }, [])
 
-    map.on("mousemove", `${id}-hover-layer`, function (e) {
-      if (e.features.length > 0) {
+  useEffect(() => {
+    let hoveredId // why does this not work with setState?
+
+    const onClick = e => {
+      // only make features clickable when not drawing
+      if (!isDrawing) {
+        navigate(`/campaign/${e.features[0].properties.id}`)
+      }
+    }
+
+    const onMouseMove = e => {
+      // only show hover effect when not drawing
+      if (!isDrawing && e.features.length > 0) {
         if (hoveredId) {
           map.setFeatureState(
             { source: sourceId, id: hoveredId },
@@ -38,16 +54,16 @@ export default function HoverLayer({ id, map, sourceId }) {
           )
         }
 
-        hoveredId = e.features[0].id
+        hoveredId = e.features[0].id // why does this not work with setState?
 
         map.setFeatureState(
           { source: sourceId, id: hoveredId },
           { hover: true }
         )
       }
-    })
+    }
 
-    map.on("mouseleave", `${id}-hover-layer`, function () {
+    const onMouseLeave = () => {
       if (hoveredId) {
         map.setFeatureState(
           { source: sourceId, id: hoveredId },
@@ -55,22 +71,25 @@ export default function HoverLayer({ id, map, sourceId }) {
         )
       }
       hoveredId = null
-    })
+    }
 
-    map.on("click", `${id}-hover-layer`, function (e) {
-      navigate(`/campaign/${e.features[0].properties.id}`)
-    })
+    map.on("mousemove", `${id}-hover-layer`, onMouseMove)
+    map.on("mouseleave", `${id}-hover-layer`, onMouseLeave)
+    map.on("click", `${id}-hover-layer`, onClick)
 
     return () => {
-      if (layer) map.removeLayer(`${id}-hover-layer`)
+      map.off("mousemove", `${id}-hover-layer`, onMouseMove)
+      map.off("mouseleave", `${id}-hover-layer`, onMouseLeave)
+      map.off("click", `${id}-hover-layer`, onClick)
     }
-  }, [])
+  }, [isDrawing])
 
   return null
 }
 
 HoverLayer.propTypes = {
   id: PropTypes.string.isRequired,
-  sourceId: PropTypes.string,
   map: PropTypes.object,
+  sourceId: PropTypes.string,
+  isDrawing: PropTypes.bool.isRequired,
 }

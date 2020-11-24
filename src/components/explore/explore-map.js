@@ -1,9 +1,10 @@
-import React from "react"
+import React, { useState } from "react"
 import PropTypes from "prop-types"
 import * as turf from "@turf/turf"
 import parse from "wellknown"
 
 import Map from "../map"
+import GeoFilter from "./geo-filter"
 import GeoJsonSource from "../map/geojson-source"
 import HoverLayer from "../map/hover-layer"
 import BboxLayer from "../map/bbox-layer"
@@ -16,7 +17,7 @@ const sortFeaturesBySize = (a, b) => {
 }
 
 const ExploreMap = ({ data }) => {
-  const geojson = {
+  const [geojson, setGeojson] = useState(() => ({
     type: "FeatureCollection",
     features: data
       .map((d, i) => ({
@@ -28,13 +29,16 @@ const ExploreMap = ({ data }) => {
         },
       }))
       .sort(sortFeaturesBySize),
-  }
-  const bbox = turf.bbox(geojson)
+  }))
+  const [bbox, setBbox] = useState(() => turf.bbox(geojson))
+
+  const [isDrawing, setIsDrawing] = useState(false)
 
   return (
     <Map style={{ height: 500 }}>
+      <GeoFilter isDrawing={isDrawing} setIsDrawing={setIsDrawing} />
       <GeoJsonSource geojson={geojson} id="explore">
-        <HoverLayer id="explore" />
+        <HoverLayer id="explore" isDrawing={isDrawing} />
         <BboxLayer id="explore" bbox={bbox} />
       </GeoJsonSource>
     </Map>
