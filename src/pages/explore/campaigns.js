@@ -27,8 +27,16 @@ export default function Campaigns({ data, location }) {
   const { selectedFilterId } = location.state || {}
 
   const [isLoading, setLoading] = useState(false)
+  const [campaignList, setCampaignList] = useState({
+    all: allCampaign.list,
+    filtered: allCampaign.list,
+    filteredByMenu: allCampaign.list,
+    filteredByGeo: allCampaign.list,
+    filteredBySearch: allCampaign.list,
+  })
   const [sortOrder, setSortOrder] = useState("most recent")
   const [selectedFilterIds, setFilter] = useState([])
+  const [geoFilterResult, setGeoFilter] = useState()
   const [searchResult, setSearchResult] = useState()
 
   useEffect(() => {
@@ -39,24 +47,13 @@ export default function Campaigns({ data, location }) {
     }
   }, [selectedFilterId])
 
-  const addFilter = id => setFilter([...selectedFilterIds, id])
-  const removeFilter = id => setFilter(selectedFilterIds.filter(f => f !== id))
-  const clearFilters = () => setFilter([])
+  useEffect(() => {
+    const sortedList = campaignList.all.sort(sortFunctions.campaigns[sortOrder])
+    setCampaignList(prev => ({ ...prev, all: sortedList }))
+  }, [sortOrder])
 
-  const inputElement = useRef(null)
-
-  const submitSearch = async e => {
-    setLoading(true)
-    e.preventDefault()
-    let searchstring = inputElement.current.value
-    const result = await api.fetchSearchResult("campaign", searchstring)
-    setSearchResult(result)
-    setLoading(false)
-  }
-
-  const list = allCampaign.list
-    .sort(sortFunctions.campaigns[sortOrder])
-    .filter(campaign =>
+  useEffect(() => {
+    const filteredByMenu = allCampaign.list.filter(campaign =>
       selectedFilterIds.length === 0
         ? true
         : selectedFilterIds.every(
@@ -72,9 +69,66 @@ export default function Campaigns({ data, location }) {
               campaign.fundingAgency.includes(filterId)
           )
     )
-    .filter(campaign =>
+
+    setCampaignList(prev => ({
+      ...prev,
+      filtered: prev.all.filter(
+        campaign =>
+          filteredByMenu.map(c => c.id).includes(campaign.id) &&
+          prev.filteredByGeo.map(c => c.id).includes(campaign.id) &&
+          prev.filteredBySearch.map(c => c.id).includes(campaign.id)
+      ),
+      filteredByMenu,
+    }))
+  }, [selectedFilterIds])
+
+  useEffect(() => {
+    const filteredByGeo = allCampaign.list.filter(campaign =>
+      geoFilterResult ? geoFilterResult.includes(campaign.id) : true
+    )
+
+    setCampaignList(prev => ({
+      ...prev,
+      filtered: prev.all.filter(
+        campaign =>
+          prev.filteredByMenu.map(c => c.id).includes(campaign.id) &&
+          filteredByGeo.map(c => c.id).includes(campaign.id) &&
+          prev.filteredBySearch.map(c => c.id).includes(campaign.id)
+      ),
+      filteredByGeo,
+    }))
+  }, [geoFilterResult])
+
+  useEffect(() => {
+    const filteredBySearch = allCampaign.list.filter(campaign =>
       searchResult ? searchResult.includes(campaign.shortname) : true
     )
+    setCampaignList(prev => ({
+      ...prev,
+      filtered: prev.all.filter(
+        campaign =>
+          prev.filteredByMenu.map(c => c.id).includes(campaign.id) &&
+          prev.filteredByGeo.map(c => c.id).includes(campaign.id) &&
+          filteredBySearch.map(c => c.id).includes(campaign.id)
+      ),
+      filteredBySearch,
+    }))
+  }, [searchResult])
+
+  const addFilter = id => setFilter([...selectedFilterIds, id])
+  const removeFilter = id => setFilter(selectedFilterIds.filter(f => f !== id))
+  const clearFilters = () => setFilter([])
+
+  const inputElement = useRef(null)
+
+  const submitSearch = async e => {
+    setLoading(true)
+    e.preventDefault()
+    let searchstring = inputElement.current.value
+    const result = await api.fetchSearchResult("campaign", searchstring)
+    setSearchResult(result)
+    setLoading(false)
+  }
 
   const { getFilterLabelById, getFilterOptionsById } = selector({
     focus: allFocusArea,
@@ -113,7 +167,17 @@ export default function Campaigns({ data, location }) {
           ref={inputElement}
           category="campaigns"
         />
-        <ExploreMap data={list.map(c => ({ id: c.id, bounds: c.bounds }))} />
+        <ExploreMap
+          allData={campaignList.all.map(c => ({
+            id: c.id,
+            bounds: c.bounds,
+          }))}
+          filteredData={campaignList.filtered.map(c => ({
+            id: c.id,
+            bounds: c.bounds,
+          }))}
+          setGeoFilter={setGeoFilter}
+        />
 
         {isLoading ? (
           <div
@@ -128,10 +192,10 @@ export default function Campaigns({ data, location }) {
             selectedFilterIds={selectedFilterIds}
             removeFilter={removeFilter}
             clearFilters={clearFilters}
-            filteredCount={list.length}
+            filteredCount={campaignList.filtered.length}
             totalCount={allCampaign.totalCount}
           >
-            {list.map(campaign => {
+            {campaignList.filtered.map(campaign => {
               return (
                 <Link to={`/campaign/${campaign.id}`} key={campaign.id}>
                   <CampaignCard id={campaign.id} />

@@ -5,7 +5,7 @@ import MapboxDraw from "@mapbox/mapbox-gl-draw"
 import DrawControlButton from "../map/draw-control-button"
 import { drawStyles } from "../map/mapbox-gl-draw-styles"
 
-export default function GeoFilter({ isDrawing, setIsDrawing, map }) {
+export default function GeoFilter({ isDrawing, setIsDrawing, setAoi, map }) {
   const [drawControl, setDrawControl] = useState(null)
 
   useEffect(() => {
@@ -41,6 +41,7 @@ export default function GeoFilter({ isDrawing, setIsDrawing, map }) {
         drawControl={drawControl}
         isDrawing={isDrawing}
         setIsDrawing={setIsDrawing}
+        setAoi={setAoi}
       />
     )
   )
@@ -50,4 +51,5 @@ GeoFilter.propTypes = {
   map: PropTypes.object,
   isDrawing: PropTypes.bool.isRequired,
   setIsDrawing: PropTypes.func.isRequired,
+  setAoi: PropTypes.func.isRequired,
 }

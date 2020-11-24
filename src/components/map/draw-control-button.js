@@ -9,7 +9,12 @@ const Button = styled.button`
   padding-right: 9px;
 `
 
-const DrawControlButton = ({ drawControl, isDrawing, setIsDrawing }) => {
+const DrawControlButton = ({
+  drawControl,
+  isDrawing,
+  setIsDrawing,
+  setAoi,
+}) => {
   const startDrawing = () => {
     setIsDrawing(true)
     drawControl.changeMode("draw_polygon")
@@ -18,6 +23,7 @@ const DrawControlButton = ({ drawControl, isDrawing, setIsDrawing }) => {
   const saveAndExit = () => {
     drawControl.changeMode("simple_select")
     setIsDrawing(false)
+    setAoi(drawControl.getAll().features[0])
   }
 
   const handleClick = () => {
@@ -49,6 +55,7 @@ DrawControlButton.propTypes = {
   drawControl: PropTypes.object.isRequired,
   isDrawing: PropTypes.bool.isRequired,
   setIsDrawing: PropTypes.func.isRequired,
+  setAoi: PropTypes.func.isRequired,
 }
 
 export default DrawControlButton
