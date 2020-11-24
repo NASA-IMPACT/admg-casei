@@ -17,7 +17,7 @@ const sortFeaturesBySize = (a, b) => {
 }
 
 const ExploreMap = ({ data }) => {
-  const [geojson, setGeojson] = useState(() => ({
+  const [geojson] = useState(() => ({
     type: "FeatureCollection",
     features: data
       .map((d, i) => ({
@@ -30,7 +30,7 @@ const ExploreMap = ({ data }) => {
       }))
       .sort(sortFeaturesBySize),
   }))
-  const [bbox, setBbox] = useState(() => turf.bbox(geojson))
+  const [bbox] = useState(() => turf.bbox(geojson))
 
   const [isDrawing, setIsDrawing] = useState(false)
 
