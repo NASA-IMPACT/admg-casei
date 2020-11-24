@@ -35,6 +35,7 @@ const ExploreMap = ({ allData, filteredData, setGeoFilter }) => {
   const [bbox] = useState(() => turf.bbox(geojson))
 
   useEffect(() => {
+    // updates the map after a filter was changed
     const updatedFeatures = filteredData.map((d, i) => ({
       type: "Feature",
       id: i + 1,
@@ -51,7 +52,7 @@ const ExploreMap = ({ allData, filteredData, setGeoFilter }) => {
   }, [filteredData])
 
   useEffect(() => {
-    // filter out features that do not intersect the drawn aoi
+    // updates the list of campaign ids intersecting the drawn aoi after the aoi was changed
     setGeoFilter(
       allData
         .map((d, i) => ({
