@@ -1,19 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Timeline renders correctly 1`] = `
-.c0 {
+.c0.c0 {
   display: grid;
   grid-template-columns: 30px 120px;
   grid-template-areas: "icon title" "icon subTitle" "icon flights";
 }
 
-.c1 {
+.c1.c1 {
   margin: 0;
   font-size: small;
   text-align: start;
 }
 
-.c2 {
+.c2.c2 {
   margin: 0;
   font-size: x-small;
   text-align: start;

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Card renders card with tag 1`] = `
-.c0 {
+.c0.c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -18,7 +18,7 @@ exports[`Card renders card with tag 1`] = `
   min-height: 2rem;
 }
 
-.c0 div:only-child {
+.c0.c0 div:only-child {
   margin-left: auto;
 }
 
@@ -92,7 +92,7 @@ exports[`Card renders card with tag 1`] = `
 `;
 
 exports[`Card renders plain card 1`] = `
-.c0 {
+.c0.c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -109,7 +109,7 @@ exports[`Card renders plain card 1`] = `
   min-height: 2rem;
 }
 
-.c0 div:only-child {
+.c0.c0 div:only-child {
   margin-left: auto;
 }
 
@@ -171,7 +171,7 @@ exports[`Card renders plain card 1`] = `
 `;
 
 exports[`Card renders with footer list 1`] = `
-.c0 {
+.c0.c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -188,7 +188,7 @@ exports[`Card renders with footer list 1`] = `
   min-height: 2rem;
 }
 
-.c0 div:only-child {
+.c0.c0 div:only-child {
   margin-left: auto;
 }
 
