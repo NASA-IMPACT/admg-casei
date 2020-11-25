@@ -16,8 +16,8 @@ const DrawControlButton = ({
   setAoi,
 }) => {
   const startDrawing = () => {
-    setIsDrawing(true)
     drawControl.changeMode("draw_polygon")
+    setIsDrawing(true)
   }
 
   const saveAndExit = () => {

@@ -15,7 +15,7 @@ export default function AoiControl({
   const [drawControl, setDrawControl] = useState(null)
 
   useEffect(() => {
-    const Draw = new MapboxDraw({
+    const draw = new MapboxDraw({
       modes: {
         ...MapboxDraw.modes,
       },
@@ -23,19 +23,24 @@ export default function AoiControl({
       styles: drawStyles,
     })
 
-    map.addControl(Draw, "top-left")
-    setDrawControl(Draw)
+    map.addControl(draw, "top-left")
+    setDrawControl(draw)
+
+    if (process.env.NODE_ENV === "development") {
+      // makes drawControl accessible in console for debugging
+      window.drawControl = draw
+    }
 
     map.on("draw.modechange", () => {
-      if (Draw.getMode() == "simple_select") {
-        const data = Draw.getAll()
+      if (draw.getMode() == "simple_select") {
+        const data = draw.getAll()
         const lastId = data.features[data.features.length - 1].id
         const previousIds = data.features
           .filter(f => f.geometry.type === "Polygon" && f.id !== lastId)
           .map(f => f.id)
 
         // keep only the last drawing, delete all previous
-        Draw.delete(previousIds)
+        draw.delete(previousIds)
       }
     })
     return () => {}
