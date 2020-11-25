@@ -4,7 +4,7 @@ import * as turf from "@turf/turf"
 import parse from "wellknown"
 
 import Map from "../map"
-import GeoFilter from "./geo-filter"
+import AoiControl from "../map/aoi-control"
 import GeoJsonSource from "../map/geojson-source"
 import HoverLayer from "../map/hover-layer"
 import BboxLayer from "../map/bbox-layer"
@@ -69,7 +69,7 @@ const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
 
   return (
     <Map style={{ height: 500 }}>
-      <GeoFilter
+      <AoiControl
         isDrawing={isDrawing}
         setIsDrawing={setIsDrawing}
         aoi={aoi}

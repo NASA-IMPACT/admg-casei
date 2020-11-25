@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import MapboxDraw from "@mapbox/mapbox-gl-draw"
 
-import DrawControlButton from "../map/draw-control-button"
-import { drawStyles } from "../map/mapbox-gl-draw-styles"
+import DrawControlButton from "./draw-control-button"
+import { drawStyles } from "./mapbox-gl-draw-styles"
 
-export default function GeoFilter({
+export default function AoiControl({
   isDrawing,
   setIsDrawing,
   aoi,
@@ -59,7 +59,7 @@ export default function GeoFilter({
   )
 }
 
-GeoFilter.propTypes = {
+AoiControl.propTypes = {
   map: PropTypes.object,
   isDrawing: PropTypes.bool.isRequired,
   setIsDrawing: PropTypes.func.isRequired,
