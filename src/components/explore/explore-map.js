@@ -16,9 +16,8 @@ const sortFeaturesBySize = (a, b) => {
   return turf.area(b.geometry) - turf.area(a.geometry)
 }
 
-const ExploreMap = ({ allData, filteredData, setGeoFilter }) => {
+const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
   const [isDrawing, setIsDrawing] = useState(false)
-  const [aoi, setAoi] = useState(null)
   const [geojson, setGeojson] = useState(() => ({
     type: "FeatureCollection",
     features: filteredData
@@ -73,6 +72,7 @@ const ExploreMap = ({ allData, filteredData, setGeoFilter }) => {
       <GeoFilter
         isDrawing={isDrawing}
         setIsDrawing={setIsDrawing}
+        aoi={aoi}
         setAoi={setAoi}
       />
       <GeoJsonSource geojson={geojson} id="explore">
@@ -96,6 +96,13 @@ ExploreMap.propTypes = {
       bounds: PropTypes.string.isRequired,
     }).isRequired
   ).isRequired,
+  aoi: PropTypes.shape({
+    type: PropTypes.oneOf(["Feature"]),
+    id: PropTypes.string.isRequired,
+    geometry: PropTypes.object.isRequired,
+    properties: PropTypes.object.isRequired,
+  }),
+  setAoi: PropTypes.func.isRequired,
   setGeoFilter: PropTypes.func.isRequired,
 }
 

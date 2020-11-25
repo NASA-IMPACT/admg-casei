@@ -1,14 +1,10 @@
 import React from "react"
 import PropTypes from "prop-types"
+
 import { TrashIcon } from "../icons"
 import { IconButton } from "../button"
-import Chip from "../chip"
 
-export default function FilterChips({
-  selectedFilterIds,
-  setSelectedFilterIds,
-  clearFilters,
-}) {
+export default function FilterChips({ clearFilters, children }) {
   return (
     <div
       style={{
@@ -19,21 +15,11 @@ export default function FilterChips({
       }}
     >
       Active filters:
-      {selectedFilterIds.map(f => (
-        <Chip
-          key={f}
-          actionId={f}
-          id="filter"
-          label={f}
-          chipAction={() =>
-            setSelectedFilterIds(selectedFilterIds.filter(id => id !== f))
-          }
-        />
-      ))}
-      {selectedFilterIds.length > 1 && (
+      {children}
+      {children.flat().filter(c => c).length > 1 && (
         <IconButton
           id="clear-filters"
-          action={() => clearFilters()}
+          action={clearFilters}
           icon={<TrashIcon />}
         />
       )}
@@ -42,7 +28,6 @@ export default function FilterChips({
 }
 
 FilterChips.propTypes = {
-  selectedFilterIds: PropTypes.array,
-  setSelectedFilterIds: PropTypes.func,
-  clearFilters: PropTypes.func,
+  children: PropTypes.node,
+  clearFilters: PropTypes.func.isRequired,
 }

@@ -11,9 +11,11 @@ import Layout, { PageBody } from "../../components/layout"
 import SEO from "../../components/seo"
 import ExploreMenu from "../../components/explore/explore-menu"
 import ExploreTools from "../../components/explore/explore-tools"
+import FilterChips from "../../components/filter/filter-chips"
 import ExploreSection from "../../components/explore/explore-section"
 import CampaignCard from "../../components/cards/campaign-card"
 import ExploreMap from "../../components/explore/explore-map"
+import Chip from "../../components/chip"
 
 export default function Campaigns({ data, location }) {
   const {
@@ -36,7 +38,8 @@ export default function Campaigns({ data, location }) {
   })
   const [sortOrder, setSortOrder] = useState("most recent")
   const [selectedFilterIds, setFilter] = useState([])
-  const [geoFilterResult, setGeoFilter] = useState()
+  const [aoi, setAoi] = useState(null)
+  const [geoFilterResult, setGeoFilter] = useState(null)
   const [searchResult, setSearchResult] = useState()
 
   useEffect(() => {
@@ -117,7 +120,15 @@ export default function Campaigns({ data, location }) {
 
   const addFilter = id => setFilter([...selectedFilterIds, id])
   const removeFilter = id => setFilter(selectedFilterIds.filter(f => f !== id))
-  const clearFilters = () => setFilter([])
+  const removeAoi = () => {
+    setAoi(null)
+    setGeoFilter(null)
+  }
+  const clearFilters = () => {
+    setFilter([])
+    setAoi(null)
+    setGeoFilter(null)
+  }
 
   const inputElement = useRef(null)
 
@@ -154,19 +165,19 @@ export default function Campaigns({ data, location }) {
       <SEO title="Campaigns" />
       <PageBody id="campaigns">
         <ExploreMenu />
+
         <ExploreTools
+          ref={inputElement}
           submitSearch={submitSearch}
           selectedFilterIds={selectedFilterIds}
-          clearFilters={clearFilters}
           addFilter={addFilter}
-          getFilterLabelById={getFilterLabelById}
           getFilterOptionsById={getFilterOptionsById}
           removeFilter={removeFilter}
           sortOrder={sortOrder}
           setSortOrder={setSortOrder}
-          ref={inputElement}
           category="campaigns"
         />
+
         <ExploreMap
           allData={campaignList.all.map(c => ({
             id: c.id,
@@ -177,7 +188,32 @@ export default function Campaigns({ data, location }) {
             bounds: c.bounds,
           }))}
           setGeoFilter={setGeoFilter}
+          aoi={aoi}
+          setAoi={setAoi}
         />
+
+        {(selectedFilterIds.length > 0 || aoi) && (
+          <FilterChips clearFilters={clearFilters}>
+            {selectedFilterIds.map(f => (
+              <Chip
+                key={f}
+                id="filter"
+                label={getFilterLabelById ? getFilterLabelById(f) : f}
+                actionId={f}
+                removeAction={removeFilter}
+              />
+            ))}
+
+            {aoi && (
+              <Chip
+                id="filter"
+                label={"Drawn Area"}
+                actionId={"aoi"}
+                removeAction={removeAoi}
+              />
+            )}
+          </FilterChips>
+        )}
 
         {isLoading ? (
           <div

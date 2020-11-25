@@ -514,6 +514,14 @@ exports[`Campaigns page renders correctly 1`] = `
         </div>
       </form>
       <div
+        data-cy="mapboxgl-map"
+        style={
+          Object {
+            "height": 500,
+          }
+        }
+      />
+      <div
         style={
           Object {
             "alignItems": "center",
@@ -579,14 +587,6 @@ exports[`Campaigns page renders correctly 1`] = `
           </button>
         </div>
       </div>
-      <div
-        data-cy="mapboxgl-map"
-        style={
-          Object {
-            "height": 500,
-          }
-        }
-      />
       <section>
         <div
           style={
