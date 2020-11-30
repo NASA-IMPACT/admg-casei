@@ -35,7 +35,7 @@ const DrawControlButton = ({
   }
 
   return (
-    <div className="mapboxgl-ctrl-top-right">
+    <div style={{ zIndex: `0` }} className="mapboxgl-ctrl-top-right">
       <div className="mapboxgl-ctrl mapboxgl-ctrl-group">
         <Button
           className={`mapbox-gl-draw_ctrl-draw-btn mapbox-gl-draw_polygon ${
