@@ -44,7 +44,7 @@ const DrawControlButton = ({
           onClick={handleClick}
           isDrawing={isDrawing}
         >
-          {isDrawing ? "Save" : "Draw AOI"}
+          {isDrawing ? "Save" : "Draw Polygon"}
         </Button>
       </div>
     </div>
