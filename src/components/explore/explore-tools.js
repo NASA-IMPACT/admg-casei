@@ -3,7 +3,6 @@ import PropTypes from "prop-types"
 
 import FilterMenu from "./filter-menu"
 import Searchbar from "./searchbar"
-import SortMenu from "./sort-menu"
 
 const ExploreTools = React.forwardRef(
   (
@@ -13,8 +12,6 @@ const ExploreTools = React.forwardRef(
       addFilter,
       getFilterOptionsById,
       removeFilter,
-      sortOrder,
-      setSortOrder,
       category,
     },
     ref
@@ -34,12 +31,6 @@ const ExploreTools = React.forwardRef(
         />
 
         <Searchbar ref={ref} />
-
-        <SortMenu
-          sortOrder={sortOrder}
-          setSortOrder={setSortOrder}
-          category={category}
-        />
       </form>
     )
   }
@@ -51,8 +42,6 @@ ExploreTools.propTypes = {
   addFilter: PropTypes.func.isRequired,
   getFilterOptionsById: PropTypes.func.isRequired,
   removeFilter: PropTypes.func.isRequired,
-  sortOrder: PropTypes.string.isRequired,
-  setSortOrder: PropTypes.func.isRequired,
   category: PropTypes.oneOf(["campaigns", "platforms", "instruments"])
     .isRequired,
 }

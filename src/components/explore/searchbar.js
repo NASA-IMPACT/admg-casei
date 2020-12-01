@@ -25,8 +25,7 @@ const Searchbar = React.forwardRef((_props, ref) => (
       flexGrow: 1,
       border: `1px solid ${theme.color.base}`,
       borderLeft: 0,
-      borderRight: 0,
-      borderRadius: `0`,
+      borderRadius: `0 ${theme.shape.rounded} ${theme.shape.rounded} 0`,
       padding: "0.25rem",
     }}
   >
