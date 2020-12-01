@@ -63,7 +63,7 @@ describe("Platform", () => {
 
     it("displays some data products", () => {
       cy.get("[data-cy=data-product]").should($div => {
-        expect($div).to.have.length(5)
+        expect($div).to.have.length.of.at.least(5)
       })
     })
 

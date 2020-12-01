@@ -91,7 +91,7 @@ describe("Instrument", () => {
 
       it("displays some data products", () => {
         cy.get("[data-cy=data-product]").should($div => {
-          expect($div).to.have.length(2)
+          expect($div).to.have.length.of.at.least(2)
         })
       })
 

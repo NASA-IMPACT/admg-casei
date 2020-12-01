@@ -19,8 +19,8 @@ describe("Chip", () => {
         <Chip
           id={testId}
           label={testLabel}
-          chipAction={() => {}}
           actionId={testActionId}
+          removeAction={() => {}}
         />
       )
       .toJSON()

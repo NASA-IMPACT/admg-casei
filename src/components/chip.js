@@ -8,7 +8,7 @@ import theme from "../utils/theme"
 const Chip = ({
   id,
   label,
-  chipAction,
+  removeAction,
   actionId,
   isDark,
   isInline,
@@ -27,10 +27,10 @@ const Chip = ({
     data-cy={`${id}-chip`}
   >
     <small title={hoverText}>{label}</small>
-    {chipAction && (
+    {removeAction && (
       <IconButton
         id="remove-filter"
-        action={() => chipAction(actionId)}
+        action={() => removeAction(actionId)}
         icon={<CloseIcon color={theme.color.base} />}
       />
     )}
@@ -41,7 +41,7 @@ Chip.propTypes = {
   id: PropTypes.string.isRequired,
   actionId: PropTypes.string,
   label: PropTypes.string.isRequired,
-  chipAction: PropTypes.func,
+  removeAction: PropTypes.func,
   isDark: PropTypes.bool,
   isInline: PropTypes.bool,
   hoverText: PropTypes.string,

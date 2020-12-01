@@ -8,11 +8,14 @@ import Label from "../../components/label"
 import theme from "../../utils/theme"
 import FilterChips from "../../components/filter/filter-chips"
 import FilterBox from "../../components/filter/filter-box"
+import Chip from "../../components/chip"
 
 const DataSection = ({ id, dois }) => {
   let [selectedFilterIds, setSelectedFilterIds] = useState([])
 
   const clearFilters = () => setSelectedFilterIds([])
+  const removeFilter = id =>
+    setSelectedFilterIds(selectedFilterIds.filter(f => f !== id))
 
   const filteredDois = selectedFilterIds.length
     ? dois.filter(
@@ -61,11 +64,17 @@ const DataSection = ({ id, dois }) => {
               </div>
             )}
             {selectedFilterIds.length > 0 && (
-              <FilterChips
-                selectedFilterIds={selectedFilterIds}
-                setSelectedFilterIds={setSelectedFilterIds}
-                clearFilters={clearFilters}
-              />
+              <FilterChips clearFilters={clearFilters}>
+                {selectedFilterIds.map(f => (
+                  <Chip
+                    key={f}
+                    id="filter"
+                    label={f}
+                    actionId={f}
+                    removeAction={removeFilter}
+                  />
+                ))}
+              </FilterChips>
             )}
             <div
               style={{

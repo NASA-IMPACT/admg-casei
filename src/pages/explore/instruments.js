@@ -13,6 +13,8 @@ import ExploreMenu from "../../components/explore/explore-menu"
 import ExploreSection from "../../components/explore/explore-section"
 import ExploreTools from "../../components/explore/explore-tools"
 import InstrumentCard from "../../components/cards/instrument-card"
+import FilterChips from "../../components/filter/filter-chips"
+import Chip from "../../components/chip"
 
 export default function Instruments({ data, location }) {
   const { allInstrument, allMeasurementType, allMeasurementRegion } = data
@@ -85,6 +87,20 @@ export default function Instruments({ data, location }) {
           ref={inputElement}
           category="instruments"
         />
+
+        {selectedFilterIds.length > 0 && (
+          <FilterChips clearFilters={clearFilters}>
+            {selectedFilterIds.map(f => (
+              <Chip
+                key={f}
+                id="filter"
+                label={getFilterLabelById ? getFilterLabelById(f) : f}
+                actionId={f}
+                removeAction={removeFilter}
+              />
+            ))}
+          </FilterChips>
+        )}
 
         {isLoading ? (
           <div

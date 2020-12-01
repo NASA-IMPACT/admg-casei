@@ -12,6 +12,7 @@ import styled from "styled-components"
 
 import "@reach/listbox/styles.css"
 import "mapbox-gl/dist/mapbox-gl.css"
+import "@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.css"
 import "../global.css"
 
 import Header from "../header"

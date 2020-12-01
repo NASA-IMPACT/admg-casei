@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Chip renders with action 1`] = `
-.c0:hover {
+.c0.c0:hover {
   opacity: 0.64;
 }
 
-.c0:active {
+.c0.c0:active {
   -webkit-transform: translate(0,1px);
   -ms-transform: translate(0,1px);
   transform: translate(0,1px);
