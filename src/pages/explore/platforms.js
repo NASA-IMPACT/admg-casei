@@ -13,6 +13,8 @@ import ExploreMenu from "../../components/explore/explore-menu"
 import ExploreTools from "../../components/explore/explore-tools"
 import ExploreSection from "../../components/explore/explore-section"
 import PlatformCard from "../../components/cards/platform-card"
+import FilterChips from "../../components/filter/filter-chips"
+import Chip from "../../components/chip"
 
 const Platforms = ({ data, location }) => {
   const { allPlatform, allInstrument } = data
@@ -82,6 +84,20 @@ const Platforms = ({ data, location }) => {
           ref={inputElement}
           category="platforms"
         />
+
+        {selectedFilterIds.length > 0 && (
+          <FilterChips clearFilters={clearFilters}>
+            {selectedFilterIds.map(f => (
+              <Chip
+                key={f}
+                id="filter"
+                label={getFilterLabelById ? getFilterLabelById(f) : f}
+                actionId={f}
+                removeAction={removeFilter}
+              />
+            ))}
+          </FilterChips>
+        )}
 
         {isLoading ? (
           <div
