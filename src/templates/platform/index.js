@@ -6,7 +6,7 @@ import Layout, { PageBody } from "../../components/layout"
 import PlatformHero from "./hero"
 import InpageNav from "../../components/inpage-nav"
 import Overview from "./overview"
-import RelatedCampaignsSection from "../../components/related-campaigns-section"
+import CampaignsAndInstruments from "./campaigns-instruments"
 import DataSection from "./data-section"
 
 export default function PlatformTemplate({ data: { platform }, path }) {
@@ -32,9 +32,9 @@ export default function PlatformTemplate({ data: { platform }, path }) {
         shortname: platform.shortname,
       },
     },
-    "related-campaigns": {
-      nav: "Related Campaigns",
-      component: RelatedCampaignsSection,
+    "campaigns-instruments": {
+      nav: "Related Campaigns & Instruments",
+      component: CampaignsAndInstruments,
       props: {
         id: "platform-campaigns",
         campaigns: platform.campaigns,
