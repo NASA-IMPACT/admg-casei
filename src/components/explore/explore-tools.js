@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 
 import FilterMenu from "./filter-menu"
 import Searchbar from "./searchbar"
+import theme from "../../utils/theme"
 
 const ExploreTools = React.forwardRef(
   (
@@ -19,18 +20,110 @@ const ExploreTools = React.forwardRef(
     return (
       <form
         onSubmit={submitSearch}
-        style={{ display: `flex`, margin: `2rem 0` }}
+        style={{
+          display: `flex`,
+          margin: `2rem 0`,
+          flexFlow: `column wrap`,
+          border: `1px solid ${theme.color.base}`,
+        }}
         data-cy="explore-tools"
       >
-        <FilterMenu
-          selectedFilterIds={selectedFilterIds}
-          addFilter={addFilter}
-          getFilterOptionsById={getFilterOptionsById}
-          removeFilter={removeFilter}
-          category={category}
-        />
+        <div style={{ display: `flex` }}>
+          {/* <FilterMenu
+            selectedFilterIds={selectedFilterIds}
+            addFilter={addFilter}
+            removeFilter={removeFilter}
+            label={category}
+            options={[{ id: "campaigns", shortname: "campaigns" }]}
+          /> */}
 
-        <Searchbar ref={ref} />
+          <Searchbar ref={ref} />
+        </div>
+
+        <div style={{ flexGrow: 1, display: `flex`, alignContent: `stretch` }}>
+          {category === "campaigns" && (
+            <>
+              <FilterMenu
+                style={{ flexGrow: 1 }}
+                selectedFilterIds={selectedFilterIds}
+                addFilter={addFilter}
+                removeFilter={removeFilter}
+                label="Focus Area"
+                options={getFilterOptionsById("focus")}
+              />
+              <FilterMenu
+                style={{ flexGrow: 1 }}
+                selectedFilterIds={selectedFilterIds}
+                addFilter={addFilter}
+                removeFilter={removeFilter}
+                label="Geophysical Concept"
+                options={getFilterOptionsById("geophysical")}
+              />
+              <FilterMenu
+                style={{ flexGrow: 1 }}
+                selectedFilterIds={selectedFilterIds}
+                addFilter={addFilter}
+                removeFilter={removeFilter}
+                label="Season"
+                options={getFilterOptionsById("season")}
+              />
+              <FilterMenu
+                style={{ flexGrow: 1 }}
+                selectedFilterIds={selectedFilterIds}
+                addFilter={addFilter}
+                removeFilter={removeFilter}
+                label="Geographical Region"
+                options={getFilterOptionsById("region")}
+              />
+              <FilterMenu
+                style={{ flexGrow: 1 }}
+                selectedFilterIds={selectedFilterIds}
+                addFilter={addFilter}
+                removeFilter={removeFilter}
+                label="Platform"
+                options={getFilterOptionsById("platform")}
+              />
+              <FilterMenu
+                style={{ flexGrow: 1 }}
+                selectedFilterIds={selectedFilterIds}
+                addFilter={addFilter}
+                removeFilter={removeFilter}
+                label="Funding Agency"
+                options={getFilterOptionsById("funding")}
+              />
+            </>
+          )}
+          {category === "platforms" && (
+            <FilterMenu
+              style={{ flexGrow: 1 }}
+              selectedFilterIds={selectedFilterIds}
+              addFilter={addFilter}
+              removeFilter={removeFilter}
+              label="Instrument"
+              options={getFilterOptionsById("instrument")}
+            />
+          )}
+          {category === "instruments" && (
+            <>
+              <FilterMenu
+                style={{ flexGrow: 1 }}
+                selectedFilterIds={selectedFilterIds}
+                addFilter={addFilter}
+                removeFilter={removeFilter}
+                label="Measurement Type"
+                options={getFilterOptionsById("type")}
+              />
+              <FilterMenu
+                style={{ flexGrow: 1 }}
+                selectedFilterIds={selectedFilterIds}
+                addFilter={addFilter}
+                removeFilter={removeFilter}
+                label="Measurement Region"
+                options={getFilterOptionsById("vertical")}
+              />
+            </>
+          )}
+        </div>
       </form>
     )
   }
