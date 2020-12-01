@@ -82,8 +82,6 @@ export default function Instruments({ data, location }) {
           getFilterLabelById={getFilterLabelById}
           getFilterOptionsById={getFilterOptionsById}
           removeFilter={removeFilter}
-          sortOrder={sortOrder}
-          setSortOrder={setSortOrder}
           ref={inputElement}
           category="instruments"
         />
@@ -117,6 +115,8 @@ export default function Instruments({ data, location }) {
             removeFilter={removeFilter}
             filteredCount={list.length}
             totalCount={allInstrument.totalCount}
+            sortOrder={sortOrder}
+            setSortOrder={setSortOrder}
           >
             {list.map(instrument => {
               return (

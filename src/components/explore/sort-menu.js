@@ -29,7 +29,7 @@ const SortMenu = ({ sortOrder, setSortOrder, category }) => {
             WebkitAppearance: `none`,
             background: `transparent`,
             border: `1px solid ${theme.color.base}`,
-            borderRadius: `0 ${theme.shape.rounded} ${theme.shape.rounded} 0`,
+            borderRadius: theme.shape.rounded,
             color: theme.color.base,
             padding: `0.5rem`,
             cursor: `pointer`,

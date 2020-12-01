@@ -79,8 +79,6 @@ const Platforms = ({ data, location }) => {
           getFilterLabelById={getFilterLabelById}
           getFilterOptionsById={getFilterOptionsById}
           removeFilter={removeFilter}
-          sortOrder={sortOrder}
-          setSortOrder={setSortOrder}
           ref={inputElement}
           category="platforms"
         />
@@ -113,6 +111,8 @@ const Platforms = ({ data, location }) => {
             removeFilter={removeFilter}
             filteredCount={list.length}
             totalCount={allPlatform.totalCount}
+            sortOrder={sortOrder}
+            setSortOrder={setSortOrder}
           >
             {list.map(platform => {
               return (
