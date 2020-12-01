@@ -287,10 +287,6 @@ describe("Campaign", () => {
         .first()
         .find("[data-cy=doi-label]")
         .should("exist")
-        .and(
-          "have.text",
-          "GPM GROUND VALIDATION CONICAL SCANNING MILLIMETER-WAVE IMAGING RADIOMETER (COSMIR) GCPEX V1"
-        )
 
       cy.get("[data-cy=data-product]")
         .first()
