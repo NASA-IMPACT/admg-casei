@@ -99,6 +99,7 @@ const FilterMenu = ({
 }
 
 FilterMenu.propTypes = {
+  id: PropTypes.string.isRequired,
   style: PropTypes.object,
   selectedFilterIds: PropTypes.arrayOf(PropTypes.string),
   addFilter: PropTypes.func.isRequired,
