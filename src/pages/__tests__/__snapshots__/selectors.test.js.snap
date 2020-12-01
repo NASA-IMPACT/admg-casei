@@ -424,7 +424,7 @@ exports[`Campaigns page renders correctly 1`] = `
             }
           >
             <span
-              id="filter-select"
+              id="focus-filter-select"
               style={
                 Object {
                   "border": 0,
@@ -443,7 +443,7 @@ exports[`Campaigns page renders correctly 1`] = `
               filter results by sub-categories
             </span>
             <div
-              data-cy="filter-select"
+              data-cy="focus-filter-select"
               data-reach-listbox-input=""
               data-state="closed"
               data-value=""
@@ -451,7 +451,7 @@ exports[`Campaigns page renders correctly 1`] = `
             >
               <span
                 aria-haspopup="listbox"
-                aria-labelledby="filter-select button--listbox-input--1"
+                aria-labelledby="focus-filter-select button--listbox-input--1"
                 className="c1"
                 data-reach-listbox-button=""
                 id="button--listbox-input--1"
@@ -489,7 +489,7 @@ exports[`Campaigns page renders correctly 1`] = `
             }
           >
             <span
-              id="filter-select"
+              id="geophysical-filter-select"
               style={
                 Object {
                   "border": 0,
@@ -508,7 +508,7 @@ exports[`Campaigns page renders correctly 1`] = `
               filter results by sub-categories
             </span>
             <div
-              data-cy="filter-select"
+              data-cy="geophysical-filter-select"
               data-reach-listbox-input=""
               data-state="closed"
               data-value=""
@@ -516,7 +516,7 @@ exports[`Campaigns page renders correctly 1`] = `
             >
               <span
                 aria-haspopup="listbox"
-                aria-labelledby="filter-select button--listbox-input--2"
+                aria-labelledby="geophysical-filter-select button--listbox-input--2"
                 className="c1"
                 data-reach-listbox-button=""
                 id="button--listbox-input--2"
@@ -554,7 +554,7 @@ exports[`Campaigns page renders correctly 1`] = `
             }
           >
             <span
-              id="filter-select"
+              id="season-filter-select"
               style={
                 Object {
                   "border": 0,
@@ -573,7 +573,7 @@ exports[`Campaigns page renders correctly 1`] = `
               filter results by sub-categories
             </span>
             <div
-              data-cy="filter-select"
+              data-cy="season-filter-select"
               data-reach-listbox-input=""
               data-state="closed"
               data-value=""
@@ -581,7 +581,7 @@ exports[`Campaigns page renders correctly 1`] = `
             >
               <span
                 aria-haspopup="listbox"
-                aria-labelledby="filter-select button--listbox-input--3"
+                aria-labelledby="season-filter-select button--listbox-input--3"
                 className="c1"
                 data-reach-listbox-button=""
                 id="button--listbox-input--3"
@@ -619,7 +619,7 @@ exports[`Campaigns page renders correctly 1`] = `
             }
           >
             <span
-              id="filter-select"
+              id="region-filter-select"
               style={
                 Object {
                   "border": 0,
@@ -638,7 +638,7 @@ exports[`Campaigns page renders correctly 1`] = `
               filter results by sub-categories
             </span>
             <div
-              data-cy="filter-select"
+              data-cy="region-filter-select"
               data-reach-listbox-input=""
               data-state="closed"
               data-value=""
@@ -646,7 +646,7 @@ exports[`Campaigns page renders correctly 1`] = `
             >
               <span
                 aria-haspopup="listbox"
-                aria-labelledby="filter-select button--listbox-input--4"
+                aria-labelledby="region-filter-select button--listbox-input--4"
                 className="c1"
                 data-reach-listbox-button=""
                 id="button--listbox-input--4"
@@ -684,7 +684,7 @@ exports[`Campaigns page renders correctly 1`] = `
             }
           >
             <span
-              id="filter-select"
+              id="platform-filter-select"
               style={
                 Object {
                   "border": 0,
@@ -703,7 +703,7 @@ exports[`Campaigns page renders correctly 1`] = `
               filter results by sub-categories
             </span>
             <div
-              data-cy="filter-select"
+              data-cy="platform-filter-select"
               data-reach-listbox-input=""
               data-state="closed"
               data-value=""
@@ -711,7 +711,7 @@ exports[`Campaigns page renders correctly 1`] = `
             >
               <span
                 aria-haspopup="listbox"
-                aria-labelledby="filter-select button--listbox-input--5"
+                aria-labelledby="platform-filter-select button--listbox-input--5"
                 className="c1"
                 data-reach-listbox-button=""
                 id="button--listbox-input--5"
@@ -749,7 +749,7 @@ exports[`Campaigns page renders correctly 1`] = `
             }
           >
             <span
-              id="filter-select"
+              id="funding-filter-select"
               style={
                 Object {
                   "border": 0,
@@ -768,7 +768,7 @@ exports[`Campaigns page renders correctly 1`] = `
               filter results by sub-categories
             </span>
             <div
-              data-cy="filter-select"
+              data-cy="funding-filter-select"
               data-reach-listbox-input=""
               data-state="closed"
               data-value=""
@@ -776,7 +776,7 @@ exports[`Campaigns page renders correctly 1`] = `
             >
               <span
                 aria-haspopup="listbox"
-                aria-labelledby="filter-select button--listbox-input--6"
+                aria-labelledby="funding-filter-select button--listbox-input--6"
                 className="c1"
                 data-reach-listbox-button=""
                 id="button--listbox-input--6"

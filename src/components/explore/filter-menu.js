@@ -40,6 +40,7 @@ const FilterItem = styled(ListboxOption)`
 `
 
 const FilterMenu = ({
+  id,
   style,
   selectedFilterIds,
   addFilter,
@@ -55,14 +56,14 @@ const FilterMenu = ({
   let [value, setValue] = useState("")
   return (
     <div style={style}>
-      <VisuallyHidden id="filter-select">
+      <VisuallyHidden id={`${id}-filter-select`}>
         filter results by sub-categories
       </VisuallyHidden>
       <ListboxInput
         name="filter"
-        aria-labelledby="filter-select"
+        aria-labelledby={`${id}-filter-select`}
         value={value}
-        data-cy="filter-select"
+        data-cy={`${id}-filter-select`}
         onChange={value => handleSelection(value)}
       >
         <FilterButton arrow="▼">{label}</FilterButton>

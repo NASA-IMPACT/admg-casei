@@ -44,6 +44,7 @@ const ExploreTools = React.forwardRef(
           {category === "campaigns" && (
             <>
               <FilterMenu
+                id="focus"
                 style={{ flexGrow: 1 }}
                 selectedFilterIds={selectedFilterIds}
                 addFilter={addFilter}
@@ -52,6 +53,7 @@ const ExploreTools = React.forwardRef(
                 options={getFilterOptionsById("focus")}
               />
               <FilterMenu
+                id="geophysical"
                 style={{ flexGrow: 1 }}
                 selectedFilterIds={selectedFilterIds}
                 addFilter={addFilter}
@@ -60,6 +62,7 @@ const ExploreTools = React.forwardRef(
                 options={getFilterOptionsById("geophysical")}
               />
               <FilterMenu
+                id="season"
                 style={{ flexGrow: 1 }}
                 selectedFilterIds={selectedFilterIds}
                 addFilter={addFilter}
@@ -68,6 +71,7 @@ const ExploreTools = React.forwardRef(
                 options={getFilterOptionsById("season")}
               />
               <FilterMenu
+                id="region"
                 style={{ flexGrow: 1 }}
                 selectedFilterIds={selectedFilterIds}
                 addFilter={addFilter}
@@ -76,6 +80,7 @@ const ExploreTools = React.forwardRef(
                 options={getFilterOptionsById("region")}
               />
               <FilterMenu
+                id="platform"
                 style={{ flexGrow: 1 }}
                 selectedFilterIds={selectedFilterIds}
                 addFilter={addFilter}
@@ -84,6 +89,7 @@ const ExploreTools = React.forwardRef(
                 options={getFilterOptionsById("platform")}
               />
               <FilterMenu
+                id="funding"
                 style={{ flexGrow: 1 }}
                 selectedFilterIds={selectedFilterIds}
                 addFilter={addFilter}
@@ -95,6 +101,7 @@ const ExploreTools = React.forwardRef(
           )}
           {category === "platforms" && (
             <FilterMenu
+              id="instrument"
               style={{ flexGrow: 1 }}
               selectedFilterIds={selectedFilterIds}
               addFilter={addFilter}
@@ -106,6 +113,7 @@ const ExploreTools = React.forwardRef(
           {category === "instruments" && (
             <>
               <FilterMenu
+                id="type"
                 style={{ flexGrow: 1 }}
                 selectedFilterIds={selectedFilterIds}
                 addFilter={addFilter}
@@ -114,6 +122,7 @@ const ExploreTools = React.forwardRef(
                 options={getFilterOptionsById("type")}
               />
               <FilterMenu
+                id="vertical"
                 style={{ flexGrow: 1 }}
                 selectedFilterIds={selectedFilterIds}
                 addFilter={addFilter}
