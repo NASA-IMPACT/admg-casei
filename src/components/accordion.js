@@ -14,24 +14,39 @@ import Label from "../components/label"
 
 export default function AccordionComp({ folds }) {
   return (
-    <Accordion>
+    <Accordion style={{ maxHeight: `50rem`, overflowY: `scroll` }}>
       {folds.map(instrument => (
         <AccordionItem key={instrument.id}>
-          <h3>
-            <AccordionButton>
+          <span>
+            <AccordionButton
+              style={{
+                borderWidth: `0 0 1px 0`,
+                borderColor: `white`,
+                background: `none`,
+                color: `white`,
+                width: `100%`,
+                textAlign: `left`,
+                cursor: `pointer`,
+                padding: `1rem`,
+                textTransform: `uppercase`,
+                fontWeight: `bold`,
+              }}
+            >
               {instrument.longname} ({instrument.shortname})
             </AccordionButton>
-          </h3>
-          <AccordionPanel>
+          </span>
+          <AccordionPanel style={{ padding: `.5rem 1rem` }}>
             {instrument.description}
-            <Label>Measurements/Variables</Label>
-            {instrument.gcmdPhenomenas
-              .map(x =>
-                Object.values(x)
-                  .filter(x => x)
-                  .join(" > ")
-              )
-              .join(" > ") || "N/A"}
+            <div style={{ margin: `3rem 0` }}>
+              <Label>Measurements/Variables</Label>
+              {instrument.gcmdPhenomenas
+                .map(x =>
+                  Object.values(x)
+                    .filter(x => x)
+                    .join(" > ")
+                )
+                .join(" > ") || "N/A"}
+            </div>
             <Link
               to={`/instrument/${instrument.id}`}
               style={{ color: theme.color.link }}

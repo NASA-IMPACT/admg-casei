@@ -90,7 +90,7 @@ const CampaignsAndInstruments = ({ id, campaigns }) => {
                       width: `70rem`,
                     }}
                   >
-                    <div style={{ width: `26rem`, height: `100%` }}>
+                    <div style={{ width: `26rem`, maxHeight: `30rem` }}>
                       <Link to={`/campaign/${campaign.id}`}>
                         <CampaignCard size="large" id={campaign.id} />
                       </Link>
