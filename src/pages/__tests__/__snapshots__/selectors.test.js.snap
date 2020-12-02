@@ -327,6 +327,7 @@ exports[`Campaigns page renders correctly 1`] = `
       </div>
       <form
         data-cy="explore-tools"
+        onReset={[Function]}
         onSubmit={[Function]}
         style={
           Object {
@@ -356,11 +357,11 @@ exports[`Campaigns page renders correctly 1`] = `
             }
           >
             <input
-              aria-label="Enter search text"
+              aria-label="Search for campaigns, platforms or instruments"
               autoComplete="off"
               data-cy="explore-input"
               name="search"
-              placeholder="Enter text..."
+              placeholder="Search for campaigns, platforms or instruments"
               style={
                 Object {
                   "background": "transparent",

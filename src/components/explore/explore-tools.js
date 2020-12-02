@@ -142,6 +142,7 @@ const ExploreTools = React.forwardRef(
 
 ExploreTools.propTypes = {
   submitSearch: PropTypes.func.isRequired,
+  resestSearch: PropTypes.func.isRequired,
   selectedFilterIds: PropTypes.arrayOf(PropTypes.string),
   addFilter: PropTypes.func.isRequired,
   getFilterOptionsById: PropTypes.func.isRequired,
