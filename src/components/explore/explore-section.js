@@ -1,13 +1,28 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-const ExploreSection = ({ category, filteredCount, totalCount, children }) => {
+import SortMenu from "./sort-menu"
+
+const ExploreSection = ({
+  category,
+  filteredCount,
+  totalCount,
+  sortOrder,
+  setSortOrder,
+  children,
+}) => {
   const filteredLabel =
     filteredCount === totalCount ? null : `${filteredCount} of `
 
   return (
     <section>
-      <div style={{ display: `flex` }}>
+      <div
+        style={{
+          display: `flex`,
+          justifyContent: `space-between`,
+          padding: `2rem 0`,
+        }}
+      >
         <h1
           style={{ fontSize: `small`, whiteSpace: `nowrap` }}
           data-cy="item-count"
@@ -15,6 +30,12 @@ const ExploreSection = ({ category, filteredCount, totalCount, children }) => {
           {totalCount > 0 ? `Showing` : `No`} {filteredLabel}
           {totalCount} {category}
         </h1>
+
+        <SortMenu
+          sortOrder={sortOrder}
+          setSortOrder={setSortOrder}
+          category={category}
+        />
       </div>
       <div
         style={{
@@ -34,6 +55,8 @@ ExploreSection.propTypes = {
     .isRequired,
   filteredCount: PropTypes.number,
   totalCount: PropTypes.number,
+  sortOrder: PropTypes.string.isRequired,
+  setSortOrder: PropTypes.func.isRequired,
   children: PropTypes.oneOfType([
     PropTypes.element,
     PropTypes.arrayOf(PropTypes.element),

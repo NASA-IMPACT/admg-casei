@@ -51,8 +51,10 @@ export default function Campaigns({ data, location }) {
   }, [selectedFilterId])
 
   useEffect(() => {
-    const sortedList = campaignList.all.sort(sortFunctions.campaigns[sortOrder])
-    setCampaignList(prev => ({ ...prev, all: sortedList }))
+    const sortedList = campaignList.filtered.sort(
+      sortFunctions.campaigns[sortOrder]
+    )
+    setCampaignList(prev => ({ ...prev, filtered: sortedList }))
   }, [sortOrder])
 
   useEffect(() => {
@@ -179,8 +181,6 @@ export default function Campaigns({ data, location }) {
           addFilter={addFilter}
           getFilterOptionsById={getFilterOptionsById}
           removeFilter={removeFilter}
-          sortOrder={sortOrder}
-          setSortOrder={setSortOrder}
           category="campaigns"
         />
 
@@ -236,6 +236,8 @@ export default function Campaigns({ data, location }) {
             clearFilters={clearFilters}
             filteredCount={campaignList.filtered.length}
             totalCount={allCampaign.totalCount}
+            sortOrder={sortOrder}
+            setSortOrder={setSortOrder}
           >
             {campaignList.filtered.map(campaign => {
               return (
