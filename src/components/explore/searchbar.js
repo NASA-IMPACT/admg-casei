@@ -29,7 +29,7 @@ const Searchbar = React.forwardRef((_props, ref) => (
       type="text"
       ref={ref}
     />
-    {ref.current && ref.current.value && (
+    {ref.current?.value ? (
       <button
         type="reset"
         style={{
@@ -45,22 +45,23 @@ const Searchbar = React.forwardRef((_props, ref) => (
           <CloseIcon color={theme.color.base} />
         </span>
       </button>
+    ) : (
+      <button
+        type="submit"
+        style={{
+          border: "none",
+          flexGrow: 0,
+          background: `transparent`,
+          color: theme.color.base,
+          verticalAlign: `middle`,
+        }}
+        data-cy="submit"
+      >
+        <span role="img" aria-label="Magnifying glass icon">
+          <SearchIcon color={theme.color.base} />
+        </span>
+      </button>
     )}
-    <button
-      type="submit"
-      style={{
-        border: "none",
-        flexGrow: 0,
-        background: `transparent`,
-        color: theme.color.base,
-        verticalAlign: `middle`,
-      }}
-      data-cy="submit"
-    >
-      <span role="img" aria-label="Magnifying glass icon">
-        <SearchIcon color={theme.color.base} />
-      </span>
-    </button>
   </div>
 ))
 

@@ -9,6 +9,7 @@ const ExploreTools = React.forwardRef(
   (
     {
       submitSearch,
+      resestSearch,
       selectedFilterIds,
       addFilter,
       getFilterOptionsById,
@@ -22,6 +23,7 @@ const ExploreTools = React.forwardRef(
     return (
       <form
         onSubmit={submitSearch}
+        onReset={resestSearch}
         style={{ display: `flex`, margin: `2rem 0` }}
         data-cy="explore-tools"
       >

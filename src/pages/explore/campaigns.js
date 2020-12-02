@@ -141,6 +141,11 @@ export default function Campaigns({ data, location }) {
     setLoading(false)
   }
 
+  const resestSearch = e => {
+    e.preventDefault()
+    setSearchResult(allCampaign.list.map(c => c.shortname))
+  }
+
   const { getFilterLabelById, getFilterOptionsById } = selector({
     focus: allFocusArea,
     geophysical: allGeophysicalConcept,
@@ -169,6 +174,7 @@ export default function Campaigns({ data, location }) {
         <ExploreTools
           ref={inputElement}
           submitSearch={submitSearch}
+          resestSearch={resestSearch}
           selectedFilterIds={selectedFilterIds}
           addFilter={addFilter}
           getFilterOptionsById={getFilterOptionsById}
