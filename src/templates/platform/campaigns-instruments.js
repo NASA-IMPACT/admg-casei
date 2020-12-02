@@ -12,10 +12,11 @@ import {
 } from "../../components/carousel-styles"
 import theme from "../../utils/theme"
 
-const CampaignsAndInstruments = ({ id, campaigns }) => {
+const CampaignsAndInstruments = ({ id, campaigns, instruments }) => {
   const controlTextRef = useRef(null)
 
   const [slideIndex, setSlideIndex] = useState(0)
+  console.log("instruments", instruments)
 
   return (
     <Section id={id}>
@@ -79,7 +80,6 @@ const CampaignsAndInstruments = ({ id, campaigns }) => {
                     display: `grid`,
                     gridTemplateColumns: `1fr minmax(auto,  ${theme.layout.maxWidth}) 1fr`,
                     width: `100vw`,
-                    // minHeight: `35rem`,
                     alignContent: `center`,
                   }}
                 >
