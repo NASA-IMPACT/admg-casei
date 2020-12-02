@@ -41,14 +41,21 @@ const CampaignsAndInstruments = ({ id, campaigns }) => {
               ))}
             </div>
             <Carousel
+              slideIndex={slideIndex}
+              afterSlide={slideIndex => {
+                setSlideIndex(slideIndex)
+                controlTextRef.current.scrollIntoView({
+                  behavior: "smooth",
+                  block: "nearest",
+                  inline: "nearest",
+                })
+              }}
+              renderBottomCenterControls={null}
               defaultControlsConfig={{
                 nextButtonText: `⦊`,
                 nextButtonStyle: controlButtonLRStyle,
                 prevButtonText: `⦉`,
                 prevButtonStyle: controlButtonLRStyle,
-                pagingDotsStyle: {
-                  fill: theme.color.base,
-                },
               }}
               getControlsContainerStyles={key => {
                 switch (key) {
@@ -62,16 +69,15 @@ const CampaignsAndInstruments = ({ id, campaigns }) => {
                 }
               }}
               heightMode="max"
-              slidesToShow={4}
             >
               {campaigns.map(campaign => (
                 <div
                   key={campaign.id}
-                  style={{ width: `16rem`, height: `100%` }}
+                  style={{ width: `26rem`, height: `100%` }}
                   data-cy="related-campaign"
                 >
                   <Link to={`/campaign/${campaign.id}`}>
-                    <CampaignCard id={campaign.id} />
+                    <CampaignCard size="large" id={campaign.id} />
                   </Link>
                 </div>
               ))}
