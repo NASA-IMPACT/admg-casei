@@ -1,4 +1,7 @@
 import React from "react"
+import PropTypes from "prop-types"
+import { Link } from "gatsby"
+
 import {
   Accordion,
   AccordionItem,
@@ -6,30 +9,58 @@ import {
   AccordionPanel,
 } from "@reach/accordion"
 
-export default function AccordionComp() {
+import theme from "../utils/theme"
+import Label from "../components/label"
+
+export default function AccordionComp({ folds }) {
   return (
     <Accordion>
-      <AccordionItem>
-        <h3>
-          <AccordionButton>Step 1: Do a thing</AccordionButton>
-        </h3>
-        <AccordionPanel>
-          Here are some detailed instructions about doing a thing. I am very
-          complex and probably contain a lot of content, so a user can hide or
-          show me by clicking the button above.
-        </AccordionPanel>
-      </AccordionItem>
-      <AccordionItem>
-        <h3>
-          <AccordionButton>Step 2: Do another thing</AccordionButton>
-        </h3>
-        <AccordionPanel>
-          Here are some detailed instructions about doing yet another thing.
-          There are a lot of things someone might want to do, so I am only going
-          to talk about doing that other thing. I'll let my fellow accordion
-          items go into detail about even more things.
-        </AccordionPanel>
-      </AccordionItem>
+      {folds.map(instrument => (
+        <AccordionItem key={instrument.id}>
+          <h3>
+            <AccordionButton>
+              {instrument.longname} ({instrument.shortname})
+            </AccordionButton>
+          </h3>
+          <AccordionPanel>
+            {instrument.description}
+            <Label>Measurements/Variables</Label>
+            {instrument.gcmdPhenomenas
+              .map(x =>
+                Object.values(x)
+                  .filter(x => x)
+                  .join(" > ")
+              )
+              .join(" > ") || "N/A"}
+            <Link
+              to={`/instrument/${instrument.id}`}
+              style={{ color: theme.color.link }}
+            >
+              <Label color={theme.color.link}>Learn More</Label>
+            </Link>
+          </AccordionPanel>
+        </AccordionItem>
+      ))}
     </Accordion>
   )
+}
+
+AccordionComp.propTypes = {
+  folds: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      shortname: PropTypes.string.isRequired,
+      longname: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
+      gcmdPhenomenas: PropTypes.arrayOf(
+        PropTypes.shape({
+          term: PropTypes.string.isRequired,
+          topic: PropTypes.string.isRequired,
+          variable_1: PropTypes.string.isRequired,
+          variable_2: PropTypes.string.isRequired,
+          variable_3: PropTypes.string.isRequired,
+        })
+      ),
+    })
+  ).isRequired,
 }

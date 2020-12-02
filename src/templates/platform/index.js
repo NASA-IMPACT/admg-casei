@@ -38,7 +38,6 @@ export default function PlatformTemplate({ data: { platform }, path }) {
       props: {
         id: "platform-campaigns",
         campaigns: platform.campaigns,
-        instruments: platform.instruments,
       },
     },
     data: {
@@ -90,6 +89,19 @@ export const query = graphql`
         dois {
           id
         }
+        instruments {
+          id
+          shortname: short_name
+          longname: long_name
+          description
+          gcmdPhenomenas: gcmd_phenomenas {
+            term
+            topic
+            variable_1
+            variable_2
+            variable_3
+          }
+        }
       }
       instruments {
         id
@@ -124,6 +136,23 @@ PlatformTemplate.propTypes = {
               id: PropTypes.string.isRequired,
             }).isRequired
           ),
+          instruments: PropTypes.arrayOf(
+            PropTypes.shape({
+              id: PropTypes.string.isRequired,
+              shortname: PropTypes.string.isRequired,
+              longname: PropTypes.string.isRequired,
+              description: PropTypes.string.isRequired,
+              gcmdPhenomenas: PropTypes.arrayOf(
+                PropTypes.shape({
+                  term: PropTypes.string.isRequired,
+                  topic: PropTypes.string.isRequired,
+                  variable_1: PropTypes.string.isRequired,
+                  variable_2: PropTypes.string.isRequired,
+                  variable_3: PropTypes.string.isRequired,
+                })
+              ),
+            })
+          ).isRequired,
         })
       ),
       instruments: PropTypes.arrayOf(

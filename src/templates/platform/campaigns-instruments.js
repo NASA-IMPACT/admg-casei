@@ -12,11 +12,10 @@ import {
 } from "../../components/carousel-styles"
 import theme from "../../utils/theme"
 
-const CampaignsAndInstruments = ({ id, campaigns, instruments }) => {
+const CampaignsAndInstruments = ({ id, campaigns }) => {
   const controlTextRef = useRef(null)
 
   const [slideIndex, setSlideIndex] = useState(0)
-  console.log("instruments", instruments)
 
   return (
     <Section id={id}>
@@ -96,7 +95,7 @@ const CampaignsAndInstruments = ({ id, campaigns, instruments }) => {
                         <CampaignCard size="large" id={campaign.id} />
                       </Link>
                     </div>
-                    <AccordionComp />
+                    <AccordionComp folds={campaign.instruments} />
                   </div>
                 </div>
               ))}
@@ -115,6 +114,23 @@ CampaignsAndInstruments.propTypes = {
   campaigns: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
+      instruments: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string.isRequired,
+          shortname: PropTypes.string.isRequired,
+          longname: PropTypes.string.isRequired,
+          description: PropTypes.string.isRequired,
+          gcmdPhenomenas: PropTypes.arrayOf(
+            PropTypes.shape({
+              term: PropTypes.string.isRequired,
+              topic: PropTypes.string.isRequired,
+              variable_1: PropTypes.string.isRequired,
+              variable_2: PropTypes.string.isRequired,
+              variable_3: PropTypes.string.isRequired,
+            })
+          ),
+        })
+      ).isRequired,
     }).isRequired
   ).isRequired,
 }
