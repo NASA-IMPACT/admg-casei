@@ -11,7 +11,7 @@
     "@mapbox/geo-viewport": "^0.4.0",
     "@mapbox/mapbox-gl-draw": "^1.2.0",
     "@quickbaseoss/babel-plugin-styled-components-css-namespace": "^1.0.1",
-    "@reach/listbox": "^0.11.0",
+    "@reach/listbox": "^0.12.1",
     "@reach/visually-hidden": "^0.11.0",
     "@turf/turf": "^5.1.6",
     "feedback-fish": "^0.2.0",
