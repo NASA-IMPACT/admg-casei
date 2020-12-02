@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
 import Layout, { PageBody } from "../../components/layout"
+import SEO from "../../components/seo"
 import CampaignHero from "./hero"
 import InpageNav from "../../components/inpage-nav"
 import OverviewSection from "./overview-section"
@@ -106,6 +107,7 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
 
   return (
     <Layout>
+      <SEO title={campaign.shortname} lang="en" />
       <CampaignHero
         bounds={campaign.bounds}
         shortname={campaign.shortname}

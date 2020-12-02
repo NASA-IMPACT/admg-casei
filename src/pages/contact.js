@@ -21,7 +21,7 @@ FishButton.propTypes = {
 
 const Contact = () => (
   <Layout>
-    <SEO title="Contact" />
+    <SEO title="Contact" lang="en" />
     <PageBody id="contact">
       <Section id="contact">
         <SectionHeader

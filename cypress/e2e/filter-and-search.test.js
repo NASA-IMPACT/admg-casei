@@ -35,7 +35,7 @@ describe("Filter, Search and Sort", () => {
     //   ],
     // },
   ].forEach(x => {
-    describe(x.category, () => {
+    describe(`${x.category}`, () => {
       beforeEach(() => {
         cy.visit("/explore")
         cy.get("[data-cy=tabbar]")
