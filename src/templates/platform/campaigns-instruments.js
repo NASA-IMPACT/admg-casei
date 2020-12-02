@@ -5,6 +5,7 @@ import Carousel from "nuka-carousel"
 
 import { Section, SectionHeader, SectionContent } from "../../components/layout"
 import CampaignCard from "../../components/cards/campaign-card"
+import AccordionComp from "../../components/accordion"
 import {
   controlButtonLRStyle,
   ControlTextButton,
@@ -73,12 +74,30 @@ const CampaignsAndInstruments = ({ id, campaigns }) => {
               {campaigns.map(campaign => (
                 <div
                   key={campaign.id}
-                  style={{ width: `26rem`, height: `100%` }}
                   data-cy="related-campaign"
+                  style={{
+                    display: `grid`,
+                    gridTemplateColumns: `1fr minmax(auto,  ${theme.layout.maxWidth}) 1fr`,
+                    width: `100vw`,
+                    // minHeight: `35rem`,
+                    alignContent: `center`,
+                  }}
                 >
-                  <Link to={`/campaign/${campaign.id}`}>
-                    <CampaignCard size="large" id={campaign.id} />
-                  </Link>
+                  <div
+                    style={{
+                      display: `grid`,
+                      gridTemplateColumns: `1fr 3fr`,
+                      gridGap: `1.5rem`,
+                      width: `70rem`,
+                    }}
+                  >
+                    <div style={{ width: `26rem`, height: `100%` }}>
+                      <Link to={`/campaign/${campaign.id}`}>
+                        <CampaignCard size="large" id={campaign.id} />
+                      </Link>
+                    </div>
+                    <AccordionComp />
+                  </div>
                 </div>
               ))}
             </Carousel>
