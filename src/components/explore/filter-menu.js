@@ -14,6 +14,19 @@ import { CloseIcon } from "../icons"
 import { IconButton } from "../button"
 import theme from "../../utils/theme"
 
+const FilterButton = styled(ListboxButton)`
+  flex-grow: 0;
+  height: 2.5rem;
+  width: 100%;
+  -webkit-appearance: none;
+  background: transparent;
+  border: 1px solid ${theme.color.base};
+  color: ${theme.color.base};
+  padding: 0.5rem;
+  cursor: pointer;
+  text-transform: uppercase;
+`
+
 const FilterItem = styled(ListboxOption)`
   display: flex;
   justify-content: space-between;
@@ -26,45 +39,14 @@ const FilterItem = styled(ListboxOption)`
   }
 `
 
-const Filter = ({ label, options, selectedFilterIds }) => (
-  <>
-    <strong>{label}</strong>
-    {options.map(o => (
-      <FilterItem
-        key={o.id}
-        value={o.id}
-        data-cy="filter-option"
-        selected={!!selectedFilterIds.includes(o.id)}
-      >
-        {o.shortname}
-        {selectedFilterIds.includes(o.id) && (
-          <IconButton
-            id="remove-filter"
-            icon={<CloseIcon color={theme.color.base} />}
-          />
-        )}
-      </FilterItem>
-    ))}
-  </>
-)
-
-Filter.propTypes = {
-  label: PropTypes.string.isRequired,
-  options: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string,
-      shortname: PropTypes.string,
-    })
-  ).isRequired,
-  selectedFilterIds: PropTypes.arrayOf(PropTypes.string).isRequired,
-}
-
 const FilterMenu = ({
+  id,
+  style,
   selectedFilterIds,
   addFilter,
-  getFilterOptionsById,
   removeFilter,
-  category,
+  label,
+  options,
 }) => {
   const handleSelection = value => {
     selectedFilterIds.includes(value) ? removeFilter(value) : addFilter(value)
@@ -73,34 +55,18 @@ const FilterMenu = ({
 
   let [value, setValue] = useState("")
   return (
-    <>
-      <VisuallyHidden id="filter-select">
+    <div style={style}>
+      <VisuallyHidden id={`${id}-filter-select`}>
         filter results by sub-categories
       </VisuallyHidden>
       <ListboxInput
         name="filter"
-        aria-labelledby="filter-select"
+        aria-labelledby={`${id}-filter-select`}
         value={value}
-        data-cy="filter-select"
+        data-cy={`${id}-filter-select`}
         onChange={value => handleSelection(value)}
       >
-        <ListboxButton
-          arrow="▼"
-          style={{
-            flexGrow: 0,
-            height: `2.5rem`,
-            maxWidth: `5rem`,
-            WebkitAppearance: `none`,
-            background: `transparent`,
-            border: `1px solid ${theme.color.base}`,
-            borderRadius: `${theme.shape.rounded} 0 0 ${theme.shape.rounded}`,
-            color: theme.color.base,
-            padding: `0.5rem`,
-            cursor: `pointer`,
-          }}
-        >
-          Filter
-        </ListboxButton>
+        <FilterButton arrow="▼">{label}</FilterButton>
         <ListboxPopover
           style={{
             background: theme.color.primary,
@@ -109,84 +75,42 @@ const FilterMenu = ({
           }}
         >
           <ListboxList data-cy="filter-options">
-            {category === "campaigns" && (
-              <>
-                <Filter
-                  id="focus"
-                  label="Focus Area"
-                  options={getFilterOptionsById("focus")}
-                  selectedFilterIds={selectedFilterIds}
-                />
-                <Filter
-                  id="geophysical"
-                  label="Geophysical Concept"
-                  options={getFilterOptionsById("geophysical")}
-                  selectedFilterIds={selectedFilterIds}
-                />
-                <Filter
-                  id="season"
-                  label="Season"
-                  options={getFilterOptionsById("season")}
-                  selectedFilterIds={selectedFilterIds}
-                />
-                <Filter
-                  id="region"
-                  label="Geographical Region"
-                  options={getFilterOptionsById("region")}
-                  selectedFilterIds={selectedFilterIds}
-                />
-                <Filter
-                  id="platform"
-                  label="Platform"
-                  options={getFilterOptionsById("platform")}
-                  selectedFilterIds={selectedFilterIds}
-                />
-                <Filter
-                  id="funding"
-                  label="Funding Agency"
-                  options={getFilterOptionsById("funding")}
-                  selectedFilterIds={selectedFilterIds}
-                />
-              </>
-            )}
-            {category === "platforms" && (
-              <Filter
-                id="instrument"
-                label="Instrument"
-                options={getFilterOptionsById("instrument")}
-                selectedFilterIds={selectedFilterIds}
-              />
-            )}
-            {category === "instruments" && (
-              <>
-                <Filter
-                  id="measurement-types"
-                  label="Measurement Types"
-                  options={getFilterOptionsById("type")}
-                  selectedFilterIds={selectedFilterIds}
-                />
-                <Filter
-                  id="measurement-regions"
-                  label="Measurement Regions"
-                  options={getFilterOptionsById("vertical")}
-                  selectedFilterIds={selectedFilterIds}
-                />
-              </>
-            )}
+            {options.map(o => (
+              <FilterItem
+                key={o.id}
+                value={o.id}
+                data-cy="filter-option"
+                selected={!!selectedFilterIds.includes(o.id)}
+              >
+                {o.shortname}
+                {selectedFilterIds.includes(o.id) && (
+                  <IconButton
+                    id="remove-filter"
+                    icon={<CloseIcon color={theme.color.base} />}
+                  />
+                )}
+              </FilterItem>
+            ))}
           </ListboxList>
         </ListboxPopover>
       </ListboxInput>
-    </>
+    </div>
   )
 }
 
 FilterMenu.propTypes = {
+  id: PropTypes.string.isRequired,
+  style: PropTypes.object,
   selectedFilterIds: PropTypes.arrayOf(PropTypes.string),
   addFilter: PropTypes.func.isRequired,
-  getFilterOptionsById: PropTypes.func.isRequired,
   removeFilter: PropTypes.func.isRequired,
-  category: PropTypes.oneOf(["campaigns", "platforms", "instruments"])
-    .isRequired,
+  label: PropTypes.string.isRequired,
+  options: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      shortname: PropTypes.string,
+    })
+  ).isRequired,
 }
 
 export default FilterMenu
