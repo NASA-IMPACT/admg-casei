@@ -2,7 +2,8 @@
 
 describe("Platform", () => {
   before(() => {
-    cy.visit("/explore/platforms")
+    cy.visit("/explore")
+    cy.get("[data-cy=tabbar]").contains("button", "Platforms").click()
     cy.get("main").find("[data-cy=explore-card]").contains("DC-8").click()
   })
 
@@ -47,7 +48,8 @@ describe("Platform", () => {
 
   describe("the data section", () => {
     before(() => {
-      cy.visit("/explore/platforms")
+      cy.visit("/explore")
+      cy.get("[data-cy=tabbar]").contains("button", "Platforms").click()
       cy.get("main").find("[data-cy=explore-card]").contains("DC-8").click()
     })
 

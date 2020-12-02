@@ -30,7 +30,7 @@ const FocusSection = ({ id, focus, geophysical, focusPhenomena }) => (
           {geophysical.map(concept => (
             <React.Fragment key={concept.id}>
               <Link
-                to="/explore/campaigns"
+                to="/explore"
                 state={{ selectedFilterId: concept.id }} // Pass state as props to the linked page
                 data-cy="geophysical-concept"
                 key={concept.id}

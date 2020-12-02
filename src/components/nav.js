@@ -2,12 +2,14 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
+import theme from "../utils/theme"
+
 const ListLink = props => (
   <li style={{ margin: `0 1rem 0 0` }}>
     <Link
       to={props.to}
       activeStyle={{
-        color: `#AAC9FF`,
+        color: theme.color.link,
         fontWeight: `bold`,
       }}
       partiallyActive={true}
@@ -46,7 +48,7 @@ const Nav = () => {
           listStyle: `none`,
         }}
       >
-        <ListLink to="/explore/campaigns">Explore</ListLink>
+        <ListLink to="/explore">Explore</ListLink>
         <ListLink to="/glossary">Glossary</ListLink>
         <ListLink to="/about">About</ListLink>
         <ListLink to="/contact">Contact</ListLink>

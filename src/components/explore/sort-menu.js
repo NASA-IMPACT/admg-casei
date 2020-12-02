@@ -19,7 +19,9 @@ const SortMenu = ({ sortOrder, setSortOrder, category }) => {
       <ListboxInput
         aria-labelledby="sort order"
         defaultValue={sortOrder}
-        onChange={value => setSortOrder(value)}
+        onChange={value =>
+          setSortOrder(prev => ({ ...prev, [category]: value }))
+        }
         data-cy="sort-select"
       >
         <ListboxButton

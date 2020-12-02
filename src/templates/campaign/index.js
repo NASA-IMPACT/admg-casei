@@ -143,7 +143,7 @@ export const query = graphql`
       ...heroFields
       ...overviewFields
       ...focusFields
-      ...platformFields
+      ...platformSectionFields
       ...deploymentFields
       ...dataFields
       ...fundingFields

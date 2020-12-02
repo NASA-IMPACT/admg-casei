@@ -2,35 +2,43 @@
 
 import api from "../../src/utils/api"
 
-// TODO: there is a bug with the reach ui Listbox that hides the elements! Needs investigation
-describe.skip("Explore Tools", () => {
+describe("Filter, Search and Sort", () => {
   ;[
     {
       category: "campaigns",
       filterExamples: [
-        "Weather",
-        "Clouds",
-        "boreal winter",
-        "rainforest",
-        "C-23 Sherpa",
+        { id: "focus", value: "Weather" },
+        { id: "geophysical", value: "Clouds" },
+        { id: "season", value: "boreal winter" },
+        { id: "region", value: "rainforest" },
+        { id: "platform", value: "C-23 Sherpa" },
       ],
     },
-    { category: "platforms", filterExamples: ["Aerolaser", "CPC"] },
+    {
+      category: "platforms",
+      filterExamples: [
+        { id: "instrument", value: "Aerolaser" },
+        { id: "instrument", value: "CPL" },
+      ],
+    },
     {
       category: "instruments",
-      filterExamples: ["Multi", "Stratosphere"],
+      filterExamples: [
+        { id: "type", value: "Multi" },
+        { id: "vertical", value: "Stratosphere" },
+      ],
     },
   ].forEach(x => {
     describe(x.category, () => {
       beforeEach(() => {
-        cy.visit(`/explore/${x.category}`)
-        cy.get("[data-cy=explore-tools]")
+        cy.visit("/explore")
+        cy.get("[data-cy=tabbar]")
+          .contains("button", x.category, { matchCase: false })
+          .click()
       })
 
       it("renders correctly", () => {
-        cy.get("[data-cy=filter-select]")
-          .invoke("text")
-          .should("contain", "Filter")
+        cy.get("[data-cy=explore-tools]").should("exist")
 
         cy.get("[data-cy=explore-input]").should(
           "have.attr",
@@ -50,10 +58,10 @@ describe.skip("Explore Tools", () => {
         cy.window().should("have.prop", "beforeReload", true)
 
         cy.get("[data-cy=explore-tools]")
-        cy.get("[data-cy=filter-select]").click()
+        cy.get(`[data-cy=${x.filterExamples[0].id}-filter-select]`).click()
 
         cy.get("[data-cy=filter-options]")
-          .contains("li", x.filterExamples[0])
+          .contains("li", x.filterExamples[0].value)
           .click()
 
         cy.get("[data-cy=submit]").click()
@@ -72,17 +80,18 @@ describe.skip("Explore Tools", () => {
           x.filterExamples.forEach(filterExample => {
             const numBefore = $cards.length
 
-            cy.get("[data-cy=filter-select]").click()
+            cy.get(`[data-cy=${filterExample.id}-filter-select]`).click()
             cy.get("[data-cy=filter-options]")
-              .contains("li", filterExample)
+              .contains("li", filterExample.value)
               .click()
 
             cy.get("[data-cy=filter-chip]").should("exist")
 
-            cy.get("[data-cy=item-count]").should(
-              "contain",
-              ` of ${numBefore} ${x.category}`
-            )
+            cy.get(`[data-cy=${x.category}-count]`)
+              .invoke("text")
+              .then(text => {
+                expect(Number(text.slice(2, -1))).to.be.lessThan(numBefore)
+              })
 
             cy.get("[data-cy=explore-card]")
               .its("length")
@@ -92,13 +101,6 @@ describe.skip("Explore Tools", () => {
 
             cy.get("[data-cy=filter-chip]").should("not.exist")
 
-            cy.get("[data-cy=item-count]").should("not.contain", " of ")
-
-            cy.get("[data-cy=item-count]").should(
-              "have.text",
-              `Showing ${numBefore} ${x.category}`
-            )
-
             cy.get("[data-cy=explore-card]")
               .its("length")
               .should("be.eq", numBefore)
@@ -107,14 +109,14 @@ describe.skip("Explore Tools", () => {
       })
 
       it("clears all filters", () => {
-        cy.get("[data-cy=filter-select]").click()
+        cy.get(`[data-cy=${x.filterExamples[0].id}-filter-select]`).click()
         cy.get("[data-cy=filter-options]")
-          .contains("li", x.filterExamples[0])
+          .contains("li", x.filterExamples[0].value)
           .click()
 
-        cy.get("[data-cy=filter-select]").click()
+        cy.get(`[data-cy=${x.filterExamples[1].id}-filter-select]`).click()
         cy.get("[data-cy=filter-options]")
-          .contains("li", x.filterExamples[1])
+          .contains("li", x.filterExamples[1].value)
           .click()
 
         cy.get("[data-cy=clear-filters]").should("exist")
