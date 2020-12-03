@@ -3650,7 +3650,7 @@ exports[`Explore page renders correctly 1`] = `
                   <small
                     data-cy="daterange"
                   >
-                    2015—1969
+                    2015—1970
                   </small>
                 </div>
                 <div>
