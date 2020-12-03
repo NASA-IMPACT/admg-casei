@@ -1,66 +1,106 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
+import styled from "styled-components"
 
-const ListLink = props => {
-  return (
-    <li style={{ margin: `0 1rem 0 0` }}>
-      <Link
-        to={props.to}
-        activeStyle={{
-          color: `#AAC9FF`,
-          fontWeight: `bold`,
-        }}
-        partiallyActive={true}
-      >
-        {props.children}
-      </Link>
-    </li>
-  )
-}
+import SortMenu from "./sort-menu"
+import theme from "../../utils/theme"
 
-ListLink.propTypes = {
-  to: function (props, propName, componentName) {
-    // validate that prop `to` links to an existing page
-    if (!/\/explore\/(campaigns|platforms|instruments)/.test(props[propName])) {
-      return new Error(
-        "Invalid prop `" +
-          propName +
-          "` supplied to" +
-          " `" +
-          componentName +
-          "`. Validation failed."
-      )
-    }
-  },
-  children: PropTypes.string.isRequired,
-}
+const TabButton = styled.button`
+  user-select: none;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.25rem 0.75rem;
+  min-width: 2rem;
+  background: none;
+  text-shadow: none;
+  border: 0;
+  cursor: pointer;
+  height: 2.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: ${({ isSelected }) =>
+    isSelected ? theme.color.link : theme.color.base};
+`
 
-const ExploreMenu = () => (
-  <>
-    <div
+const ExploreMenu = ({
+  selectedCategory,
+  setSelectedCategory,
+  filteredCount,
+  sortOrder,
+  setSortOrder,
+}) => (
+  <div
+    style={{
+      display: `flex`,
+      justifyContent: `space-between`,
+      padding: `2rem 0`,
+      marginBottom: `2rem`,
+    }}
+  >
+    <ul
       style={{
         display: `flex`,
-        justifyContent: `space-around`,
-        marginBottom: `2rem`,
+        flexDirection: `row`,
+        margin: 0,
+        listStyle: `none`,
+        alignItems: "center",
       }}
+      data-cy="tabbar"
     >
-      <ul
-        style={{
-          display: `flex`,
-          flexDirection: `row`,
-          margin: 0,
-          listStyle: `none`,
-          alignItems: "center",
-        }}
-        data-cy="tabbar"
-      >
-        <ListLink to="/explore/campaigns">Campaigns</ListLink>
-        <ListLink to="/explore/platforms">Platforms</ListLink>
-        <ListLink to="/explore/instruments">Instruments</ListLink>
-      </ul>
-    </div>
-  </>
+      <li>
+        <TabButton
+          onClick={() => setSelectedCategory("campaigns")}
+          isSelected={selectedCategory === "campaigns"}
+        >
+          Campaigns
+          <span data-cy="campaigns-count"> ({filteredCount["campaigns"]})</span>
+        </TabButton>
+      </li>
+
+      <li>
+        <TabButton
+          onClick={() => setSelectedCategory("platforms")}
+          isSelected={selectedCategory === "platforms"}
+        >
+          Platforms
+          <span data-cy="platforms-count"> ({filteredCount["platforms"]})</span>
+        </TabButton>
+      </li>
+
+      <li>
+        <TabButton
+          onClick={() => setSelectedCategory("instruments")}
+          isSelected={selectedCategory === "instruments"}
+        >
+          Instruments
+          <span data-cy="instruments-count">
+            {" "}
+            ({filteredCount["instruments"]})
+          </span>
+        </TabButton>
+      </li>
+    </ul>
+
+    <SortMenu
+      sortOrder={sortOrder}
+      setSortOrder={setSortOrder}
+      category={selectedCategory}
+    />
+  </div>
 )
+
+ExploreMenu.propTypes = {
+  selectedCategory: PropTypes.oneOf(["campaigns", "platforms", "instruments"])
+    .isRequired,
+  setSelectedCategory: PropTypes.func.isRequired,
+  filteredCount: PropTypes.shape({
+    campaigns: PropTypes.number.isRequired,
+    platforms: PropTypes.number.isRequired,
+    instruments: PropTypes.number.isRequired,
+  }).isRequired,
+  sortOrder: PropTypes.string.isRequired,
+  setSortOrder: PropTypes.func.isRequired,
+}
 
 export default ExploreMenu

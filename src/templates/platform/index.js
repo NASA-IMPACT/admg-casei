@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
 import Layout, { PageBody } from "../../components/layout"
+import SEO from "../../components/seo"
 import PlatformHero from "./hero"
 import InpageNav from "../../components/inpage-nav"
 import Overview from "./overview"
@@ -51,6 +52,8 @@ export default function PlatformTemplate({ data: { platform }, path }) {
 
   return (
     <Layout>
+      <SEO title={platform.shortname} lang="en" />
+
       <PlatformHero
         shortname={platform.shortname}
         longname={platform.longname}

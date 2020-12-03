@@ -10,7 +10,7 @@ import glossary from "../content/glossary.json"
 export default function Glossary({ data }) {
   return (
     <Layout>
-      <SEO title="Glossary" />
+      <SEO title="Glossary" lang="en" />
       <PageBody id="glossary">
         <h1>Glossary</h1>
         <DefinitionList

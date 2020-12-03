@@ -9,6 +9,7 @@ import Layout, {
   SectionHeader,
   SectionContent,
 } from "../../components/layout"
+import SEO from "../../components/seo"
 import Hero from "../../components/hero"
 import ExternalLink from "../../components/external-link"
 import RelatedCampaignsSection from "../../components/related-campaigns-section"
@@ -20,6 +21,8 @@ const FocusTemplate = ({ data }) => {
   const Icon = getFocusIcon(data.focusArea.uuid)
   return (
     <Layout>
+      <SEO title={data.focusArea.shortname} lang="en" />
+
       <Hero
         tagTitle="Focus Area"
         title={data.focusArea.shortname}

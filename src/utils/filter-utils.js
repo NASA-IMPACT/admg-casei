@@ -30,3 +30,42 @@ export const sortFunctions = {
     "most used": (a, b) => b.campaigns.length - a.campaigns.length,
   },
 }
+
+export function campaignFilter(selectedFilterIds) {
+  return campaign =>
+    selectedFilterIds.length === 0
+      ? true
+      : selectedFilterIds.every(
+          filterId =>
+            campaign.seasons.map(x => x.id).includes(filterId) ||
+            campaign.focus.map(x => x.id).includes(filterId) ||
+            campaign.geophysical.map(x => x.id).includes(filterId) ||
+            campaign.deployments
+              .map(x => x.regions.map(y => y.id))
+              .flat()
+              .includes(filterId) ||
+            campaign.platforms.map(x => x.id).includes(filterId) ||
+            campaign.fundingAgency.includes(filterId)
+        )
+}
+
+export function platformFilter(selectedFilterIds) {
+  return platform =>
+    selectedFilterIds.length === 0
+      ? true
+      : selectedFilterIds.every(filterId =>
+          platform.instruments.map(x => x.id).includes(filterId)
+        )
+}
+
+export function instrumentFilter(selectedFilterIds) {
+  return instrument =>
+    selectedFilterIds.length === 0
+      ? true
+      : selectedFilterIds.every(
+          filterId =>
+            (instrument.measurementType &&
+              instrument.measurementType.id === filterId) ||
+            instrument.measurementRegions.map(x => x.id).includes(filterId)
+        )
+}
