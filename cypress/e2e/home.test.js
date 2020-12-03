@@ -191,6 +191,7 @@ describe("Homepage", () => {
         .click()
 
       cy.url().should("include", "/explore")
+      cy.get("[data-cy=tabbar]").contains("button", "Instruments").click()
 
       cy.get("[data-cy=filter-chip]")
         .should("have.length", 1)

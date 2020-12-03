@@ -16,7 +16,7 @@ import theme from "../utils/theme"
 const IndexPage = ({ data }) => {
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Home" lang="en" />
 
       <Hero
         tagTitle={data.site.siteMetadata.shortname}

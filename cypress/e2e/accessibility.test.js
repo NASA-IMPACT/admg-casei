@@ -45,7 +45,7 @@ describe("Accessibility tests", () => {
       .findByText(/Platforms/i)
       .click()
 
-    cy.get("[data-cy=explore-card]").first().click()
+    cy.get("[data-cy=explore-card]").last().click()
 
     cy.get("h1").should("exist")
     cy.checkA11y()

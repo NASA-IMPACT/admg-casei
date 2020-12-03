@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
 import Layout, { PageBody } from "../../components/layout"
+import SEO from "../../components/seo"
 import InstrumentHero from "./hero"
 import InpageNav from "../../components/inpage-nav"
 import About from "./about"
@@ -63,6 +64,8 @@ const InstrumentTemplate = ({ data: { instrument }, path }) => {
   }
   return (
     <Layout>
+      <SEO title={instrument.shortname} lang="en" />
+
       <InstrumentHero
         shortname={instrument.shortname}
         longname={instrument.longname}

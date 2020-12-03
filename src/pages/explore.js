@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react"
 import PropTypes from "prop-types"
 import { graphql, Link } from "gatsby"
+import VisuallyHidden from "@reach/visually-hidden"
 
 import api from "../utils/api"
 import {
@@ -258,10 +259,11 @@ export default function Explore({ data, location }) {
 
   return (
     <Layout>
-      <SEO title="Explore" />
+      <SEO title="Explore" lang="en" />
       <PageBody id="explore">
-        <h1 hidden>Explore</h1>
-
+        <VisuallyHidden>
+          <h1>Explore</h1>
+        </VisuallyHidden>
         <ExploreTools
           ref={inputElement}
           submitSearch={submitSearch}
