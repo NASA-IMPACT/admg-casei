@@ -12,54 +12,55 @@ const Searchbar = React.forwardRef((_props, ref) => (
       padding: "0.25rem",
     }}
   >
-    <input
-      autoComplete="off"
-      data-cy="explore-input"
-      aria-label="Search for campaigns, platforms or instruments"
-      name="search"
-      placeholder="Search for campaigns, platforms or instruments"
+    <div style={{ flexGrow: 1 }}>
+      <input
+        autoComplete="off"
+        data-cy="explore-input"
+        aria-label="Search for campaigns, platforms or instruments"
+        name="search"
+        placeholder="Search for campaigns, platforms or instruments"
+        size={ref.current?.value.length || 50}
+        style={{
+          border: "none",
+          background: `transparent`,
+          color: theme.color.base,
+        }}
+        type="text"
+        ref={ref}
+      />
+      {ref.current?.value && (
+        <button
+          type="reset"
+          style={{
+            border: "none",
+            flexGrow: 0,
+            background: `transparent`,
+            color: theme.color.base,
+            verticalAlign: `middle`,
+          }}
+          data-cy="reset"
+        >
+          <span role="img" aria-label="X icon">
+            <CloseIcon color={theme.color.base} />
+          </span>
+        </button>
+      )}
+    </div>
+    <button
+      type="submit"
       style={{
         border: "none",
-        flexGrow: 1,
+        flexGrow: 0,
         background: `transparent`,
         color: theme.color.base,
+        verticalAlign: `middle`,
       }}
-      type="text"
-      ref={ref}
-    />
-    {ref.current?.value ? (
-      <button
-        type="reset"
-        style={{
-          border: "none",
-          flexGrow: 0,
-          background: `transparent`,
-          color: theme.color.base,
-          verticalAlign: `middle`,
-        }}
-        data-cy="reset"
-      >
-        <span role="img" aria-label="X icon">
-          <CloseIcon color={theme.color.base} />
-        </span>
-      </button>
-    ) : (
-      <button
-        type="submit"
-        style={{
-          border: "none",
-          flexGrow: 0,
-          background: `transparent`,
-          color: theme.color.base,
-          verticalAlign: `middle`,
-        }}
-        data-cy="submit"
-      >
-        <span role="img" aria-label="Magnifying glass icon">
-          <SearchIcon color={theme.color.base} />
-        </span>
-      </button>
-    )}
+      data-cy="submit"
+    >
+      <span role="img" aria-label="Magnifying glass icon">
+        <SearchIcon color={theme.color.base} />
+      </span>
+    </button>
   </div>
 ))
 
