@@ -9,7 +9,7 @@ const ExploreTools = React.forwardRef(
   (
     {
       submitSearch,
-      resestSearch,
+      resetSearch,
       selectedFilterIds,
       addFilter,
       getFilterOptionsById,
@@ -21,7 +21,7 @@ const ExploreTools = React.forwardRef(
     return (
       <form
         onSubmit={submitSearch}
-        onReset={resestSearch}
+        onReset={resetSearch}
         style={{
           display: `flex`,
           margin: `2rem 0`,
@@ -134,7 +134,7 @@ const ExploreTools = React.forwardRef(
 
 ExploreTools.propTypes = {
   submitSearch: PropTypes.func.isRequired,
-  resestSearch: PropTypes.func.isRequired,
+  resetSearch: PropTypes.func.isRequired,
   selectedFilterIds: PropTypes.arrayOf(PropTypes.string),
   addFilter: PropTypes.func.isRequired,
   getFilterOptionsById: PropTypes.func.isRequired,
