@@ -339,22 +339,31 @@ exports[`Explore page renders correctly 1`] = `
               }
             }
           >
-            <input
-              aria-label="Search for campaigns, platforms or instruments"
-              autoComplete="off"
-              data-cy="explore-input"
-              name="search"
-              placeholder="Search for campaigns, platforms or instruments"
+            <div
               style={
                 Object {
-                  "background": "transparent",
-                  "border": "none",
-                  "color": "hsla(0,0%,100%,0.9)",
                   "flexGrow": 1,
                 }
               }
-              type="text"
-            />
+            >
+              <input
+                aria-label="Search for campaigns, platforms or instruments"
+                autoComplete="off"
+                data-cy="explore-input"
+                name="search"
+                onChange={[Function]}
+                placeholder="Search for campaigns, platforms or instruments"
+                size={50}
+                style={
+                  Object {
+                    "background": "transparent",
+                    "border": "none",
+                    "color": "hsla(0,0%,100%,0.9)",
+                  }
+                }
+                type="text"
+              />
+            </div>
             <button
               data-cy="submit"
               style={
