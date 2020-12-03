@@ -528,7 +528,7 @@ const instrumentShape = PropTypes.shape({
   id: PropTypes.string.isRequired,
   measurementType: PropTypes.shape({
     id: PropTypes.string.isRequired,
-  }).isRequired,
+  }),
   measurementRegions: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
