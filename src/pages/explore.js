@@ -235,6 +235,12 @@ export default function Explore({ data, location }) {
     setLoading(false)
   }
 
+  const resestSearch = e => {
+    e.preventDefault()
+    // TODO: clear search for platforms and instruments as well
+    setSearchResult(allCampaign.list.map(c => c.shortname))
+  }
+
   const { getFilterLabelById, getFilterOptionsById } = selector({
     focus: allFocusArea,
     geophysical: allGeophysicalConcept,
@@ -267,6 +273,7 @@ export default function Explore({ data, location }) {
         <ExploreTools
           ref={inputElement}
           submitSearch={submitSearch}
+          resestSearch={resestSearch}
           selectedFilterIds={selectedFilterIds}
           addFilter={addFilter}
           getFilterOptionsById={getFilterOptionsById}
