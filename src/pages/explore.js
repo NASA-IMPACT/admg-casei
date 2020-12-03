@@ -234,7 +234,7 @@ export default function Explore({ data, location }) {
     setLoading(false)
   }
 
-  const resestSearch = () => {
+  const resetSearch = () => {
     setSearchResult(allCampaign.list.map(c => c.shortname))
   }
 
@@ -269,7 +269,7 @@ export default function Explore({ data, location }) {
         <ExploreTools
           ref={inputElement}
           submitSearch={submitSearch}
-          resestSearch={resestSearch}
+          resetSearch={resetSearch}
           selectedFilterIds={selectedFilterIds}
           addFilter={addFilter}
           getFilterOptionsById={getFilterOptionsById}
