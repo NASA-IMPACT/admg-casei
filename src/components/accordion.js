@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
 import {
-  Accordion,
+  Accordion as ReachAccordion,
   AccordionItem,
   AccordionButton,
   AccordionPanel,
@@ -12,9 +12,9 @@ import {
 import theme from "../utils/theme"
 import Label from "../components/label"
 
-export default function AccordionComp({ folds }) {
+export default function Accordion({ folds }) {
   return (
-    <Accordion style={{ maxHeight: `50rem`, overflowY: `scroll` }}>
+    <ReachAccordion style={{ maxHeight: `30rem`, overflowY: `scroll` }} collapsible>
       {folds.map(instrument => (
         <AccordionItem key={instrument.id}>
           <span>
@@ -56,11 +56,11 @@ export default function AccordionComp({ folds }) {
           </AccordionPanel>
         </AccordionItem>
       ))}
-    </Accordion>
+    </ReachAccordion>
   )
 }
 
-AccordionComp.propTypes = {
+Accordion.propTypes = {
   folds: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,

@@ -5,7 +5,7 @@ import Carousel from "nuka-carousel"
 
 import { Section, SectionHeader, SectionContent } from "../../components/layout"
 import CampaignCard from "../../components/cards/campaign-card"
-import AccordionComp from "../../components/accordion"
+import Accordion from "../../components/accordion"
 import {
   controlButtonLRStyle,
   ControlTextButton,
@@ -64,6 +64,14 @@ const CampaignsAndInstruments = ({ id, campaigns }) => {
                     return {
                       bottom: "-42px",
                     }
+                    case "CenterLeft":
+                    return {
+                      marginLeft: "-50px",
+                    }
+                  case "CenterRight":
+                    return {
+                      marginRight: "-50px",
+                    }
                   default:
                     // will apply all other keys
                     return
@@ -95,7 +103,7 @@ const CampaignsAndInstruments = ({ id, campaigns }) => {
                         <CampaignCard size="large" id={campaign.id} />
                       </Link>
                     </div>
-                    <AccordionComp folds={campaign.instruments} />
+                    <Accordion folds={campaign.instruments} />
                   </div>
                 </div>
               ))}
