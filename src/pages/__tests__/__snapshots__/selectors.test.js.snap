@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Campaigns page renders correctly 1`] = `
+exports[`Explore page renders correctly 1`] = `
 .c2.c2:hover {
   opacity: 0.64;
 }
@@ -11,7 +11,7 @@ exports[`Campaigns page renders correctly 1`] = `
   transform: translate(0,1px);
 }
 
-.c4.c4 {
+.c6.c6 {
   position: fixed;
   top: 0;
   right: 0;
@@ -33,7 +33,7 @@ exports[`Campaigns page renders correctly 1`] = `
   transition: opacity 400ms ease-in;
 }
 
-.c5.c5 {
+.c7.c7 {
   width: 400px;
   position: relative;
   padding: 32px;
@@ -69,7 +69,7 @@ exports[`Campaigns page renders correctly 1`] = `
   text-transform: uppercase;
 }
 
-.c3.c3 {
+.c5.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -86,8 +86,48 @@ exports[`Campaigns page renders correctly 1`] = `
   min-height: 2rem;
 }
 
-.c3.c3 div:only-child {
+.c5.c5 div:only-child {
   margin-left: auto;
+}
+
+.c3.c3 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.25rem 0.75rem;
+  min-width: 2rem;
+  background: none;
+  text-shadow: none;
+  border: 0;
+  cursor: pointer;
+  height: 2.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #aac9ff;
+}
+
+.c4.c4 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.25rem 0.75rem;
+  min-width: 2rem;
+  background: none;
+  text-shadow: none;
+  border: 0;
+  cursor: pointer;
+  height: 2.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: hsla(0,0%,100%,0.9);
 }
 
 <div
@@ -196,7 +236,7 @@ exports[`Campaigns page renders correctly 1`] = `
               }
             >
               <a
-                href="/explore/campaigns"
+                href="/explore"
               >
                 Explore
               </a>
@@ -253,7 +293,7 @@ exports[`Campaigns page renders correctly 1`] = `
     }
   >
     <div
-      data-cy="main-campaigns"
+      data-cy="main-explore"
       style={
         Object {
           "margin": "0 auto",
@@ -263,68 +303,26 @@ exports[`Campaigns page renders correctly 1`] = `
         }
       }
     >
-      <div
+      <span
         style={
           Object {
-            "display": "flex",
-            "justifyContent": "space-around",
-            "marginBottom": "2rem",
+            "border": 0,
+            "clip": "rect(0 0 0 0)",
+            "height": "1px",
+            "margin": "-1px",
+            "overflow": "hidden",
+            "padding": 0,
+            "position": "absolute",
+            "whiteSpace": "nowrap",
+            "width": "1px",
+            "wordWrap": "normal",
           }
         }
       >
-        <ul
-          data-cy="tabbar"
-          style={
-            Object {
-              "alignItems": "center",
-              "display": "flex",
-              "flexDirection": "row",
-              "listStyle": "none",
-              "margin": 0,
-            }
-          }
-        >
-          <li
-            style={
-              Object {
-                "margin": "0 1rem 0 0",
-              }
-            }
-          >
-            <a
-              href="/explore/campaigns"
-            >
-              Campaigns
-            </a>
-          </li>
-          <li
-            style={
-              Object {
-                "margin": "0 1rem 0 0",
-              }
-            }
-          >
-            <a
-              href="/explore/platforms"
-            >
-              Platforms
-            </a>
-          </li>
-          <li
-            style={
-              Object {
-                "margin": "0 1rem 0 0",
-              }
-            }
-          >
-            <a
-              href="/explore/instruments"
-            >
-              Instruments
-            </a>
-          </li>
-        </ul>
-      </div>
+        <h1>
+          Explore
+        </h1>
+      </span>
       <form
         data-cy="explore-tools"
         onReset={[Function]}
@@ -844,9 +842,7 @@ exports[`Campaigns page renders correctly 1`] = `
         >
           <small
             title=""
-          >
-            geophysical: Upper Atms Chem
-          </small>
+          />
           <button
             className="c2"
             data-cy="remove-filter"
@@ -883,91 +879,136 @@ exports[`Campaigns page renders correctly 1`] = `
           </button>
         </div>
       </div>
-      <section>
-        <div
+      <div
+        style={
+          Object {
+            "display": "flex",
+            "justifyContent": "space-between",
+            "marginBottom": "2rem",
+            "padding": "2rem 0",
+          }
+        }
+      >
+        <ul
+          data-cy="tabbar"
           style={
             Object {
+              "alignItems": "center",
               "display": "flex",
-              "justifyContent": "space-between",
-              "padding": "2rem 0",
+              "flexDirection": "row",
+              "listStyle": "none",
+              "margin": 0,
             }
           }
         >
-          <h1
-            data-cy="item-count"
-            style={
-              Object {
-                "fontSize": "small",
-                "whiteSpace": "nowrap",
-              }
-            }
-          >
-            Showing
-             
-            10
-             
-            campaigns
-          </h1>
-          <span
-            id="sort-order"
-            style={
-              Object {
-                "border": 0,
-                "clip": "rect(0 0 0 0)",
-                "height": "1px",
-                "margin": "-1px",
-                "overflow": "hidden",
-                "padding": 0,
-                "position": "absolute",
-                "whiteSpace": "nowrap",
-                "width": "1px",
-                "wordWrap": "normal",
-              }
-            }
-          >
-            Select sort order
-          </span>
-          <div
-            data-cy="sort-select"
-            data-reach-listbox-input=""
-            data-state="closed"
-            data-value="most recent"
-            id="listbox-input--7"
-          >
-            <span
-              aria-haspopup="listbox"
-              aria-labelledby="sort order button--listbox-input--7"
-              data-reach-listbox-button=""
-              id="button--listbox-input--7"
-              onKeyDown={[Function]}
-              onMouseDown={[Function]}
-              onMouseUp={[Function]}
-              role="button"
-              style={
-                Object {
-                  "WebkitAppearance": "none",
-                  "background": "transparent",
-                  "border": "1px solid hsla(0,0%,100%,0.9)",
-                  "borderRadius": "0.2rem",
-                  "color": "hsla(0,0%,100%,0.9)",
-                  "cursor": "pointer",
-                  "height": "2.5rem",
-                  "padding": "0.5rem",
-                }
-              }
-              tabIndex={0}
+          <li>
+            <button
+              className="c3"
+              onClick={[Function]}
             >
-              MOST RECENT
+              Campaigns
               <span
-                aria-hidden={true}
-                data-reach-listbox-arrow=""
+                data-cy="campaigns-count"
               >
-                ▼
+                 (
+                26
+                )
               </span>
+            </button>
+          </li>
+          <li>
+            <button
+              className="c4"
+              onClick={[Function]}
+            >
+              Platforms
+              <span
+                data-cy="platforms-count"
+              >
+                 (
+                48
+                )
+              </span>
+            </button>
+          </li>
+          <li>
+            <button
+              className="c4"
+              onClick={[Function]}
+            >
+              Instruments
+              <span
+                data-cy="instruments-count"
+              >
+                 
+                (
+                289
+                )
+              </span>
+            </button>
+          </li>
+        </ul>
+        <span
+          id="sort-order"
+          style={
+            Object {
+              "border": 0,
+              "clip": "rect(0 0 0 0)",
+              "height": "1px",
+              "margin": "-1px",
+              "overflow": "hidden",
+              "padding": 0,
+              "position": "absolute",
+              "whiteSpace": "nowrap",
+              "width": "1px",
+              "wordWrap": "normal",
+            }
+          }
+        >
+          Select sort order
+        </span>
+        <div
+          data-cy="sort-select"
+          data-reach-listbox-input=""
+          data-state="closed"
+          data-value="most recent"
+          id="listbox-input--7"
+        >
+          <span
+            aria-haspopup="listbox"
+            aria-labelledby="sort order button--listbox-input--7"
+            data-reach-listbox-button=""
+            id="button--listbox-input--7"
+            onKeyDown={[Function]}
+            onMouseDown={[Function]}
+            onMouseUp={[Function]}
+            role="button"
+            style={
+              Object {
+                "WebkitAppearance": "none",
+                "background": "transparent",
+                "border": "1px solid hsla(0,0%,100%,0.9)",
+                "borderRadius": "0.2rem",
+                "color": "hsla(0,0%,100%,0.9)",
+                "cursor": "pointer",
+                "height": "2.5rem",
+                "padding": "0.5rem",
+              }
+            }
+            tabIndex={0}
+          >
+            MOST RECENT
+            <span
+              aria-hidden={true}
+              data-reach-listbox-arrow=""
+            >
+              ▼
             </span>
-            <span />
-          </div>
+          </span>
+          <span />
         </div>
+      </div>
+      <section>
         <div
           style={
             Object {
@@ -978,7 +1019,7 @@ exports[`Campaigns page renders correctly 1`] = `
           }
         >
           <a
-            href="/campaign/be798dc9-dccb-4dc2-8e6b-d395c1bcbeb6"
+            href="/campaign/a37265bc-f88b-4af0-9bb6-05c54d0ae82f"
           >
             <div
               data-cy="explore-card"
@@ -1002,12 +1043,315 @@ exports[`Campaigns page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c3"
+                  className="c5"
                 >
                   <img
                     alt="placeholder logo"
                     height="85"
                     src="test-file-stub"
+                  />
+                </div>
+                <big
+                  data-cy="shortname"
+                  style={
+                    Object {
+                      "fontWeight": "bold",
+                      "marginTop": "0.5rem",
+                    }
+                  }
+                >
+                  ACT-America
+                </big>
+                <p
+                  data-cy="longname"
+                >
+                  Atmospheric Carbon and Transport – America
+                </p>
+                <div>
+                  <small
+                    data-cy="daterange"
+                  >
+                    2016—2019
+                  </small>
+                </div>
+                <div>
+                  <small
+                    data-cy="region"
+                  >
+                    Midwest, Mid-Atlantic, Southern US
+                  </small>
+                </div>
+              </div>
+              <div>
+                <small
+                  data-cy="count1"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                  <strong>
+                    5
+                  </strong>
+                   
+                  Deployment
+                  s
+                </small>
+                <small
+                  data-cy="count2"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                   · 
+                  <strong>
+                    8
+                  </strong>
+                   
+                  Data Product
+                  s
+                </small>
+              </div>
+            </div>
+          </a>
+          <a
+            href="/campaign/23057afe-20ad-4279-8568-7832908111cc"
+          >
+            <div
+              data-cy="explore-card"
+              style={
+                Object {
+                  "backgroundColor": "#303641",
+                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "height": "100%",
+                  "justifyContent": "space-between",
+                  "padding": "1rem",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "marginBottom": "2rem",
+                  }
+                }
+              >
+                <div
+                  className="c5"
+                >
+                  <img
+                    alt="placeholder logo"
+                    height="85"
+                    src="test-file-stub"
+                  />
+                </div>
+                <big
+                  data-cy="shortname"
+                  style={
+                    Object {
+                      "fontWeight": "bold",
+                      "marginTop": "0.5rem",
+                    }
+                  }
+                >
+                  ACEPOL
+                </big>
+                <p
+                  data-cy="longname"
+                >
+                  Aerosol Characterization from Polarimeter and Lidar
+                </p>
+                <div>
+                  <small
+                    data-cy="daterange"
+                  >
+                    2017
+                  </small>
+                </div>
+                <div>
+                  <small
+                    data-cy="region"
+                  >
+                    Western United States
+                  </small>
+                </div>
+              </div>
+              <div>
+                <small
+                  data-cy="count1"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                  <strong>
+                    1
+                  </strong>
+                   
+                  Deployment
+                </small>
+                <small
+                  data-cy="count2"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                   · 
+                  <strong>
+                    6
+                  </strong>
+                   
+                  Data Product
+                  s
+                </small>
+              </div>
+            </div>
+          </a>
+          <a
+            href="/campaign/7e637ca0-2c94-4350-a19d-d02261858997"
+          >
+            <div
+              data-cy="explore-card"
+              style={
+                Object {
+                  "backgroundColor": "#303641",
+                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "height": "100%",
+                  "justifyContent": "space-between",
+                  "padding": "1rem",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "marginBottom": "2rem",
+                  }
+                }
+              >
+                <div
+                  className="c5"
+                >
+                  <img
+                    alt="placeholder logo"
+                    height="85"
+                    src="test-file-stub"
+                  />
+                </div>
+                <big
+                  data-cy="shortname"
+                  style={
+                    Object {
+                      "fontWeight": "bold",
+                      "marginTop": "0.5rem",
+                    }
+                  }
+                >
+                  CPEX
+                </big>
+                <p
+                  data-cy="longname"
+                >
+                  Convective Processes Experiment
+                </p>
+                <div>
+                  <small
+                    data-cy="daterange"
+                  >
+                    2017
+                  </small>
+                </div>
+                <div>
+                  <small
+                    data-cy="region"
+                  >
+                    North Atlantic, Gulf of Mexico, Caribbean Oceanic region
+                  </small>
+                </div>
+              </div>
+              <div>
+                <small
+                  data-cy="count1"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                  <strong>
+                    1
+                  </strong>
+                   
+                  Deployment
+                </small>
+                <small
+                  data-cy="count2"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                   · 
+                  <strong>
+                    1
+                  </strong>
+                   
+                  Data Product
+                </small>
+              </div>
+            </div>
+          </a>
+          <a
+            href="/campaign/40aa5fbf-043f-4a68-a181-0993c1db05ef"
+          >
+            <div
+              data-cy="explore-card"
+              style={
+                Object {
+                  "backgroundColor": "#303641",
+                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "height": "100%",
+                  "justifyContent": "space-between",
+                  "padding": "1rem",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "marginBottom": "2rem",
+                  }
+                }
+              >
+                <div
+                  className="c5"
+                >
+                  <img
+                    alt="GOES-R PLT logo"
+                    fixed={
+                      Object {
+                        "src": "/static/57d85e673f190d05d7668e49c8361d50/6c838/GOES-R_PLT.png",
+                      }
+                    }
+                    src="test-image.png"
+                    style={
+                      Object {
+                        "margin": "0",
+                      }
+                    }
                   />
                 </div>
                 <big
@@ -1066,7 +1410,7 @@ exports[`Campaigns page renders correctly 1`] = `
                 >
                    · 
                   <strong>
-                    0
+                    17
                   </strong>
                    
                   Data Product
@@ -1076,7 +1420,7 @@ exports[`Campaigns page renders correctly 1`] = `
             </div>
           </a>
           <a
-            href="/campaign/c438c053-3708-4f53-83d8-8c57990c6bec"
+            href="/campaign/7352850d-8f94-486a-bebd-91eee880532c"
           >
             <div
               data-cy="explore-card"
@@ -1100,12 +1444,21 @@ exports[`Campaigns page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c3"
+                  className="c5"
                 >
                   <img
-                    alt="placeholder logo"
-                    height="85"
-                    src="test-file-stub"
+                    alt="OLYMPEX logo"
+                    fixed={
+                      Object {
+                        "src": "/static/cf547712f5b3512ff39fb1cf64f5e2e4/6c838/olympex.png",
+                      }
+                    }
+                    src="test-image.png"
+                    style={
+                      Object {
+                        "margin": "0",
+                      }
+                    }
                   />
                 </div>
                 <big
@@ -1164,7 +1517,7 @@ exports[`Campaigns page renders correctly 1`] = `
                 >
                    · 
                   <strong>
-                    0
+                    36
                   </strong>
                    
                   Data Product
@@ -1174,7 +1527,7 @@ exports[`Campaigns page renders correctly 1`] = `
             </div>
           </a>
           <a
-            href="/campaign/03b728ae-2235-488c-80ee-570dcf602f3b"
+            href="/campaign/0890744d-756f-4e4a-b867-8dc6d2fa2d04"
           >
             <div
               data-cy="explore-card"
@@ -1198,12 +1551,119 @@ exports[`Campaigns page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c3"
+                  className="c5"
                 >
                   <img
                     alt="placeholder logo"
                     height="85"
                     src="test-file-stub"
+                  />
+                </div>
+                <big
+                  data-cy="shortname"
+                  style={
+                    Object {
+                      "fontWeight": "bold",
+                      "marginTop": "0.5rem",
+                    }
+                  }
+                >
+                  AfriSAR
+                </big>
+                <p
+                  data-cy="longname"
+                >
+                  
+                </p>
+                <div>
+                  <small
+                    data-cy="daterange"
+                  >
+                    2015—2016
+                  </small>
+                </div>
+                <div>
+                  <small
+                    data-cy="region"
+                  >
+                    Gabon tropical forests
+                  </small>
+                </div>
+              </div>
+              <div>
+                <small
+                  data-cy="count1"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                  <strong>
+                    1
+                  </strong>
+                   
+                  Deployment
+                </small>
+                <small
+                  data-cy="count2"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                   · 
+                  <strong>
+                    9
+                  </strong>
+                   
+                  Data Product
+                  s
+                </small>
+              </div>
+            </div>
+          </a>
+          <a
+            href="/campaign/84b6cfe0-b357-4666-badd-43ac616b2440"
+          >
+            <div
+              data-cy="explore-card"
+              style={
+                Object {
+                  "backgroundColor": "#303641",
+                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "height": "100%",
+                  "justifyContent": "space-between",
+                  "padding": "1rem",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "marginBottom": "2rem",
+                  }
+                }
+              >
+                <div
+                  className="c5"
+                >
+                  <img
+                    alt="CARVE logo"
+                    fixed={
+                      Object {
+                        "src": "/static/b3225ddde77639b3e07a3cf470a9aa33/6c838/CARVE.png",
+                      }
+                    }
+                    src="test-image.png"
+                    style={
+                      Object {
+                        "margin": "0",
+                      }
+                    }
                   />
                 </div>
                 <big
@@ -1263,7 +1723,7 @@ exports[`Campaigns page renders correctly 1`] = `
                 >
                    · 
                   <strong>
-                    0
+                    28
                   </strong>
                    
                   Data Product
@@ -1273,7 +1733,7 @@ exports[`Campaigns page renders correctly 1`] = `
             </div>
           </a>
           <a
-            href="/campaign/0c68f350-b544-4b52-9f46-2aceb6aa1b7d"
+            href="/campaign/202b3ee6-9d9c-46cd-8e51-6889e727d105"
           >
             <div
               data-cy="explore-card"
@@ -1297,12 +1757,21 @@ exports[`Campaigns page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c3"
+                  className="c5"
                 >
                   <img
-                    alt="placeholder logo"
-                    height="85"
-                    src="test-file-stub"
+                    alt="AirMOSS logo"
+                    fixed={
+                      Object {
+                        "src": "/static/0d8b9bce5b2fabe7daa6ad4e8e418ba8/6c838/airmoss.png",
+                      }
+                    }
+                    src="test-image.png"
+                    style={
+                      Object {
+                        "margin": "0",
+                      }
+                    }
                   />
                 </div>
                 <big
@@ -1362,7 +1831,7 @@ exports[`Campaigns page renders correctly 1`] = `
                 >
                    · 
                   <strong>
-                    0
+                    23
                   </strong>
                    
                   Data Product
@@ -1372,7 +1841,7 @@ exports[`Campaigns page renders correctly 1`] = `
             </div>
           </a>
           <a
-            href="/campaign/c1e56561-6726-4832-8dbe-0453b10ff36c"
+            href="/campaign/260041b5-d0b0-46ac-a335-9172883d4cc9"
           >
             <div
               data-cy="explore-card"
@@ -1396,12 +1865,120 @@ exports[`Campaigns page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c3"
+                  className="c5"
                 >
                   <img
                     alt="placeholder logo"
                     height="85"
                     src="test-file-stub"
+                  />
+                </div>
+                <big
+                  data-cy="shortname"
+                  style={
+                    Object {
+                      "fontWeight": "bold",
+                      "marginTop": "0.5rem",
+                    }
+                  }
+                >
+                  ATTREX
+                </big>
+                <p
+                  data-cy="longname"
+                >
+                  Airborne Tropical Tropopause Experiment
+                </p>
+                <div>
+                  <small
+                    data-cy="daterange"
+                  >
+                    2011—2015
+                  </small>
+                </div>
+                <div>
+                  <small
+                    data-cy="region"
+                  >
+                    California, Guam, Tropics
+                  </small>
+                </div>
+              </div>
+              <div>
+                <small
+                  data-cy="count1"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                  <strong>
+                    4
+                  </strong>
+                   
+                  Deployment
+                  s
+                </small>
+                <small
+                  data-cy="count2"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                   · 
+                  <strong>
+                    5
+                  </strong>
+                   
+                  Data Product
+                  s
+                </small>
+              </div>
+            </div>
+          </a>
+          <a
+            href="/campaign/3671a147-4531-459e-92cf-3b15c0409426"
+          >
+            <div
+              data-cy="explore-card"
+              style={
+                Object {
+                  "backgroundColor": "#303641",
+                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "height": "100%",
+                  "justifyContent": "space-between",
+                  "padding": "1rem",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "marginBottom": "2rem",
+                  }
+                }
+              >
+                <div
+                  className="c5"
+                >
+                  <img
+                    alt="HS3 logo"
+                    fixed={
+                      Object {
+                        "src": "/static/bbd26b5234ecb45a352901f95787b0b3/6c838/HS3.png",
+                      }
+                    }
+                    src="test-image.png"
+                    style={
+                      Object {
+                        "margin": "0",
+                      }
+                    }
                   />
                 </div>
                 <big
@@ -1461,7 +2038,7 @@ exports[`Campaigns page renders correctly 1`] = `
                 >
                    · 
                   <strong>
-                    0
+                    15
                   </strong>
                    
                   Data Product
@@ -1471,7 +2048,7 @@ exports[`Campaigns page renders correctly 1`] = `
             </div>
           </a>
           <a
-            href="/campaign/6d8b649b-e0b9-4adf-94bb-f5defc7ba930"
+            href="/campaign/105b2c8d-8b1d-49bc-b8ab-d36635ebf2e5"
           >
             <div
               data-cy="explore-card"
@@ -1495,12 +2072,217 @@ exports[`Campaigns page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c3"
+                  className="c5"
                 >
                   <img
                     alt="placeholder logo"
                     height="85"
                     src="test-file-stub"
+                  />
+                </div>
+                <big
+                  data-cy="shortname"
+                  style={
+                    Object {
+                      "fontWeight": "bold",
+                      "marginTop": "0.5rem",
+                    }
+                  }
+                >
+                  IPHEx
+                </big>
+                <p
+                  data-cy="longname"
+                >
+                  Integrated Precipitation and Hydrology Experiment
+                </p>
+                <div>
+                  <small
+                    data-cy="daterange"
+                  >
+                    2014
+                  </small>
+                </div>
+                <div>
+                  <small
+                    data-cy="region"
+                  >
+                    Southern Appalachians, including portions of North Carolina, South Carolina, Tennessee, Georgia
+                  </small>
+                </div>
+              </div>
+              <div>
+                <small
+                  data-cy="count1"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                  <strong>
+                    1
+                  </strong>
+                   
+                  Deployment
+                </small>
+                <small
+                  data-cy="count2"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                   · 
+                  <strong>
+                    46
+                  </strong>
+                   
+                  Data Product
+                  s
+                </small>
+              </div>
+            </div>
+          </a>
+          <a
+            href="/campaign/60aaa8f9-b75d-414b-9d56-5ea48da9fbb6"
+          >
+            <div
+              data-cy="explore-card"
+              style={
+                Object {
+                  "backgroundColor": "#303641",
+                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "height": "100%",
+                  "justifyContent": "space-between",
+                  "padding": "1rem",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "marginBottom": "2rem",
+                  }
+                }
+              >
+                <div
+                  className="c5"
+                >
+                  <img
+                    alt="placeholder logo"
+                    height="85"
+                    src="test-file-stub"
+                  />
+                </div>
+                <big
+                  data-cy="shortname"
+                  style={
+                    Object {
+                      "fontWeight": "bold",
+                      "marginTop": "0.5rem",
+                    }
+                  }
+                >
+                  SEAC4RS
+                </big>
+                <p
+                  data-cy="longname"
+                >
+                  Studies of Emissions and Atmospheric Composition, Clouds and Climate Coupling by Regional Surveys
+                </p>
+                <div>
+                  <small
+                    data-cy="daterange"
+                  >
+                    2013
+                  </small>
+                </div>
+                <div>
+                  <small
+                    data-cy="region"
+                  >
+                    North America including portions of Canada, Mexico and the Gulf of Mexico
+                  </small>
+                </div>
+              </div>
+              <div>
+                <small
+                  data-cy="count1"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                  <strong>
+                    1
+                  </strong>
+                   
+                  Deployment
+                </small>
+                <small
+                  data-cy="count2"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                   · 
+                  <strong>
+                    2
+                  </strong>
+                   
+                  Data Product
+                  s
+                </small>
+              </div>
+            </div>
+          </a>
+          <a
+            href="/campaign/1037faf8-ac54-4c1a-a3f6-9b78578ea3c2"
+          >
+            <div
+              data-cy="explore-card"
+              style={
+                Object {
+                  "backgroundColor": "#303641",
+                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "height": "100%",
+                  "justifyContent": "space-between",
+                  "padding": "1rem",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "marginBottom": "2rem",
+                  }
+                }
+              >
+                <div
+                  className="c5"
+                >
+                  <img
+                    alt="DC3 logo"
+                    fixed={
+                      Object {
+                        "src": "/static/c566f0db523525874c608cdace0d5c91/6c838/dc3.png",
+                      }
+                    }
+                    src="test-image.png"
+                    style={
+                      Object {
+                        "margin": "0",
+                      }
+                    }
                   />
                 </div>
                 <big
@@ -1567,7 +2349,7 @@ exports[`Campaigns page renders correctly 1`] = `
             </div>
           </a>
           <a
-            href="/campaign/61616a26-fc33-450e-bd53-a7690d03e6b6"
+            href="/campaign/e7477510-226d-4876-ad82-937f8646ffb0"
           >
             <div
               data-cy="explore-card"
@@ -1591,12 +2373,21 @@ exports[`Campaigns page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c3"
+                  className="c5"
                 >
                   <img
-                    alt="placeholder logo"
-                    height="85"
-                    src="test-file-stub"
+                    alt="GCPEx logo"
+                    fixed={
+                      Object {
+                        "src": "/static/aee23860a3428c35081ea98fb6630d60/6c838/GCPEx.png",
+                      }
+                    }
+                    src="test-image.png"
+                    style={
+                      Object {
+                        "margin": "0",
+                      }
+                    }
                   />
                 </div>
                 <big
@@ -1655,7 +2446,7 @@ exports[`Campaigns page renders correctly 1`] = `
                 >
                    · 
                   <strong>
-                    0
+                    44
                   </strong>
                    
                   Data Product
@@ -1665,7 +2456,7 @@ exports[`Campaigns page renders correctly 1`] = `
             </div>
           </a>
           <a
-            href="/campaign/7739c801-46e6-4ddd-ad30-351626dcccdb"
+            href="/campaign/47548bf5-0a10-49c0-80f0-c5b8e4c832a3"
           >
             <div
               data-cy="explore-card"
@@ -1689,12 +2480,119 @@ exports[`Campaigns page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c3"
+                  className="c5"
                 >
                   <img
                     alt="placeholder logo"
                     height="85"
                     src="test-file-stub"
+                  />
+                </div>
+                <big
+                  data-cy="shortname"
+                  style={
+                    Object {
+                      "fontWeight": "bold",
+                      "marginTop": "0.5rem",
+                    }
+                  }
+                >
+                  LPVEx
+                </big>
+                <p
+                  data-cy="longname"
+                >
+                  Light Precipitation Evaluation Experiment
+                </p>
+                <div>
+                  <small
+                    data-cy="daterange"
+                  >
+                    2010
+                  </small>
+                </div>
+                <div>
+                  <small
+                    data-cy="region"
+                  >
+                    Gulf of Finland
+                  </small>
+                </div>
+              </div>
+              <div>
+                <small
+                  data-cy="count1"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                  <strong>
+                    1
+                  </strong>
+                   
+                  Deployment
+                </small>
+                <small
+                  data-cy="count2"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                   · 
+                  <strong>
+                    22
+                  </strong>
+                   
+                  Data Product
+                  s
+                </small>
+              </div>
+            </div>
+          </a>
+          <a
+            href="/campaign/76971af6-f228-4f34-bb05-56196788accc"
+          >
+            <div
+              data-cy="explore-card"
+              style={
+                Object {
+                  "backgroundColor": "#303641",
+                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "height": "100%",
+                  "justifyContent": "space-between",
+                  "padding": "1rem",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "marginBottom": "2rem",
+                  }
+                }
+              >
+                <div
+                  className="c5"
+                >
+                  <img
+                    alt="GRIP logo"
+                    fixed={
+                      Object {
+                        "src": "/static/aed8706356fd2b3a2bcb162e1e678a9f/6c838/grip.png",
+                      }
+                    }
+                    src="test-image.png"
+                    style={
+                      Object {
+                        "margin": "0",
+                      }
+                    }
                   />
                 </div>
                 <big
@@ -1753,7 +2651,7 @@ exports[`Campaigns page renders correctly 1`] = `
                 >
                    · 
                   <strong>
-                    0
+                    23
                   </strong>
                    
                   Data Product
@@ -1763,7 +2661,7 @@ exports[`Campaigns page renders correctly 1`] = `
             </div>
           </a>
           <a
-            href="/campaign/e48c2d79-822b-4c9e-9f72-2776d5d1eac6"
+            href="/campaign/b92c47a8-448f-4718-bcaf-b1354cc510ea"
           >
             <div
               data-cy="explore-card"
@@ -1787,12 +2685,21 @@ exports[`Campaigns page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c3"
+                  className="c5"
                 >
                   <img
-                    alt="placeholder logo"
-                    height="85"
-                    src="test-file-stub"
+                    alt="ARCTAS logo"
+                    fixed={
+                      Object {
+                        "src": "/static/16a8d79d7980aad3e45338142b6d08d2/6c838/arctas.png",
+                      }
+                    }
+                    src="test-image.png"
+                    style={
+                      Object {
+                        "margin": "0",
+                      }
+                    }
                   />
                 </div>
                 <big
@@ -1852,7 +2759,7 @@ exports[`Campaigns page renders correctly 1`] = `
                 >
                    · 
                   <strong>
-                    0
+                    8
                   </strong>
                    
                   Data Product
@@ -1862,7 +2769,7 @@ exports[`Campaigns page renders correctly 1`] = `
             </div>
           </a>
           <a
-            href="/campaign/951482fa-5748-46ba-aed5-aab8b106b103"
+            href="/campaign/2fb5796d-0a2f-4a0e-9d3d-fdd7b274d679"
           >
             <div
               data-cy="explore-card"
@@ -1886,12 +2793,315 @@ exports[`Campaigns page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c3"
+                  className="c5"
                 >
                   <img
                     alt="placeholder logo"
                     height="85"
                     src="test-file-stub"
+                  />
+                </div>
+                <big
+                  data-cy="shortname"
+                  style={
+                    Object {
+                      "fontWeight": "bold",
+                      "marginTop": "0.5rem",
+                    }
+                  }
+                >
+                  CLASIC07
+                </big>
+                <p
+                  data-cy="longname"
+                >
+                  Cloud and Land Surface Interaction Campaign 2007
+                </p>
+                <div>
+                  <small
+                    data-cy="daterange"
+                  >
+                    2007
+                  </small>
+                </div>
+                <div>
+                  <small
+                    data-cy="region"
+                  >
+                    Southern Great Plains, Oklahoma, Kansas
+                  </small>
+                </div>
+              </div>
+              <div>
+                <small
+                  data-cy="count1"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                  <strong>
+                    1
+                  </strong>
+                   
+                  Deployment
+                </small>
+                <small
+                  data-cy="count2"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                   · 
+                  <strong>
+                    7
+                  </strong>
+                   
+                  Data Product
+                  s
+                </small>
+              </div>
+            </div>
+          </a>
+          <a
+            href="/campaign/a4108ecb-0e76-420a-af18-4bbb3ef67065"
+          >
+            <div
+              data-cy="explore-card"
+              style={
+                Object {
+                  "backgroundColor": "#303641",
+                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "height": "100%",
+                  "justifyContent": "space-between",
+                  "padding": "1rem",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "marginBottom": "2rem",
+                  }
+                }
+              >
+                <div
+                  className="c5"
+                >
+                  <img
+                    alt="placeholder logo"
+                    height="85"
+                    src="test-file-stub"
+                  />
+                </div>
+                <big
+                  data-cy="shortname"
+                  style={
+                    Object {
+                      "fontWeight": "bold",
+                      "marginTop": "0.5rem",
+                    }
+                  }
+                >
+                  NAMMA
+                </big>
+                <p
+                  data-cy="longname"
+                >
+                  NASA African Monsoon Multidisciplinary Analyses
+                </p>
+                <div>
+                  <small
+                    data-cy="daterange"
+                  >
+                    2006
+                  </small>
+                </div>
+                <div>
+                  <small
+                    data-cy="region"
+                  >
+                    Cape Verde Islands, Atlantic Ocean
+                  </small>
+                </div>
+              </div>
+              <div>
+                <small
+                  data-cy="count1"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                  <strong>
+                    1
+                  </strong>
+                   
+                  Deployment
+                </small>
+                <small
+                  data-cy="count2"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                   · 
+                  <strong>
+                    23
+                  </strong>
+                   
+                  Data Product
+                  s
+                </small>
+              </div>
+            </div>
+          </a>
+          <a
+            href="/campaign/46d0f63b-9174-4cab-82c7-7624da1464ca"
+          >
+            <div
+              data-cy="explore-card"
+              style={
+                Object {
+                  "backgroundColor": "#303641",
+                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "height": "100%",
+                  "justifyContent": "space-between",
+                  "padding": "1rem",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "marginBottom": "2rem",
+                  }
+                }
+              >
+                <div
+                  className="c5"
+                >
+                  <img
+                    alt="placeholder logo"
+                    height="85"
+                    src="test-file-stub"
+                  />
+                </div>
+                <big
+                  data-cy="shortname"
+                  style={
+                    Object {
+                      "fontWeight": "bold",
+                      "marginTop": "0.5rem",
+                    }
+                  }
+                >
+                  TCSP
+                </big>
+                <p
+                  data-cy="longname"
+                >
+                  Tropical Cloud Systems and Processes
+                </p>
+                <div>
+                  <small
+                    data-cy="daterange"
+                  >
+                    2005
+                  </small>
+                </div>
+                <div>
+                  <small
+                    data-cy="region"
+                  >
+                    Costa Rica, Caribbean, Gulf of Mexico, eastern North Pacific
+                  </small>
+                </div>
+              </div>
+              <div>
+                <small
+                  data-cy="count1"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                  <strong>
+                    1
+                  </strong>
+                   
+                  Deployment
+                </small>
+                <small
+                  data-cy="count2"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                   · 
+                  <strong>
+                    14
+                  </strong>
+                   
+                  Data Product
+                  s
+                </small>
+              </div>
+            </div>
+          </a>
+          <a
+            href="/campaign/b2ee4239-e7fe-4c8c-9939-b9e236d2142a"
+          >
+            <div
+              data-cy="explore-card"
+              style={
+                Object {
+                  "backgroundColor": "#303641",
+                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "height": "100%",
+                  "justifyContent": "space-between",
+                  "padding": "1rem",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "marginBottom": "2rem",
+                  }
+                }
+              >
+                <div
+                  className="c5"
+                >
+                  <img
+                    alt="ACES logo"
+                    fixed={
+                      Object {
+                        "src": "/static/3d17ba6135efff1e39e6b4d97157a123/6c838/aces.png",
+                      }
+                    }
+                    src="test-image.png"
+                    style={
+                      Object {
+                        "margin": "0",
+                      }
+                    }
                   />
                 </div>
                 <big
@@ -1950,7 +3160,525 @@ exports[`Campaigns page renders correctly 1`] = `
                 >
                    · 
                   <strong>
-                    0
+                    5
+                  </strong>
+                   
+                  Data Product
+                  s
+                </small>
+              </div>
+            </div>
+          </a>
+          <a
+            href="/campaign/20c2121f-bd91-4f7e-80ac-b729c1998ca9"
+          >
+            <div
+              data-cy="explore-card"
+              style={
+                Object {
+                  "backgroundColor": "#303641",
+                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "height": "100%",
+                  "justifyContent": "space-between",
+                  "padding": "1rem",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "marginBottom": "2rem",
+                  }
+                }
+              >
+                <div
+                  className="c5"
+                >
+                  <img
+                    alt="placeholder logo"
+                    height="85"
+                    src="test-file-stub"
+                  />
+                </div>
+                <big
+                  data-cy="shortname"
+                  style={
+                    Object {
+                      "fontWeight": "bold",
+                      "marginTop": "0.5rem",
+                    }
+                  }
+                >
+                  BOREAS
+                </big>
+                <p
+                  data-cy="longname"
+                >
+                  Boreal Ecosystem-Atmosphere Study
+                </p>
+                <div>
+                  <small
+                    data-cy="daterange"
+                  >
+                    1994—1996
+                  </small>
+                </div>
+                <div>
+                  <small
+                    data-cy="region"
+                  >
+                    Boreal forests of central Canada
+                  </small>
+                </div>
+              </div>
+              <div>
+                <small
+                  data-cy="count1"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                  <strong>
+                    2
+                  </strong>
+                   
+                  Deployment
+                  s
+                </small>
+                <small
+                  data-cy="count2"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                   · 
+                  <strong>
+                    303
+                  </strong>
+                   
+                  Data Product
+                  s
+                </small>
+              </div>
+            </div>
+          </a>
+          <a
+            href="/campaign/9d716281-716d-41cd-9ddd-6637c5100c6a"
+          >
+            <div
+              data-cy="explore-card"
+              style={
+                Object {
+                  "backgroundColor": "#303641",
+                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "height": "100%",
+                  "justifyContent": "space-between",
+                  "padding": "1rem",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "marginBottom": "2rem",
+                  }
+                }
+              >
+                <div
+                  className="c5"
+                >
+                  <img
+                    alt="placeholder logo"
+                    height="85"
+                    src="test-file-stub"
+                  />
+                </div>
+                <big
+                  data-cy="shortname"
+                  style={
+                    Object {
+                      "fontWeight": "bold",
+                      "marginTop": "0.5rem",
+                    }
+                  }
+                >
+                  TARFOX
+                </big>
+                <p
+                  data-cy="longname"
+                >
+                  Tropospheric Aerosol Radiative Forcing Observational Experiment
+                </p>
+                <div>
+                  <small
+                    data-cy="daterange"
+                  >
+                    1996
+                  </small>
+                </div>
+                <div>
+                  <small
+                    data-cy="region"
+                  >
+                    Western Atlantic Ocean, US Eastern Seaboard
+                  </small>
+                </div>
+              </div>
+              <div>
+                <small
+                  data-cy="count1"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                  <strong>
+                    1
+                  </strong>
+                   
+                  Deployment
+                </small>
+                <small
+                  data-cy="count2"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                   · 
+                  <strong>
+                    5
+                  </strong>
+                   
+                  Data Product
+                  s
+                </small>
+              </div>
+            </div>
+          </a>
+          <a
+            href="/campaign/e6139609-d42a-41a4-9c78-b39b186864ff"
+          >
+            <div
+              data-cy="explore-card"
+              style={
+                Object {
+                  "backgroundColor": "#303641",
+                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "height": "100%",
+                  "justifyContent": "space-between",
+                  "padding": "1rem",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "marginBottom": "2rem",
+                  }
+                }
+              >
+                <div
+                  className="c5"
+                >
+                  <img
+                    alt="placeholder logo"
+                    height="85"
+                    src="test-file-stub"
+                  />
+                </div>
+                <big
+                  data-cy="shortname"
+                  style={
+                    Object {
+                      "fontWeight": "bold",
+                      "marginTop": "0.5rem",
+                    }
+                  }
+                >
+                  SNF
+                </big>
+                <p
+                  data-cy="longname"
+                >
+                  Superior National Forest Project
+                </p>
+                <div>
+                  <small
+                    data-cy="daterange"
+                  >
+                    1983—1984
+                  </small>
+                </div>
+                <div>
+                  <small
+                    data-cy="region"
+                  >
+                    Superior National Forest near Ely, Minnesota
+                  </small>
+                </div>
+              </div>
+              <div>
+                <small
+                  data-cy="count1"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                  <strong>
+                    2
+                  </strong>
+                   
+                  Deployment
+                  s
+                </small>
+                <small
+                  data-cy="count2"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                   · 
+                  <strong>
+                    37
+                  </strong>
+                   
+                  Data Product
+                  s
+                </small>
+              </div>
+            </div>
+          </a>
+          <a
+            href="/campaign/bc778cc5-b0c4-4d18-8a95-9ac417c418bf"
+          >
+            <div
+              data-cy="explore-card"
+              style={
+                Object {
+                  "backgroundColor": "#303641",
+                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "height": "100%",
+                  "justifyContent": "space-between",
+                  "padding": "1rem",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "marginBottom": "2rem",
+                  }
+                }
+              >
+                <div
+                  className="c5"
+                >
+                  <img
+                    alt="placeholder logo"
+                    height="85"
+                    src="test-file-stub"
+                  />
+                  <div
+                    data-cy="ongoing-tag"
+                    style={
+                      Object {
+                        "border": "1px solid",
+                        "padding": "0.25rem",
+                        "textTransform": "uppercase",
+                      }
+                    }
+                  >
+                    Ongoing
+                  </div>
+                </div>
+                <big
+                  data-cy="shortname"
+                  style={
+                    Object {
+                      "fontWeight": "bold",
+                      "marginTop": "0.5rem",
+                    }
+                  }
+                >
+                  SnowEx
+                </big>
+                <p
+                  data-cy="longname"
+                >
+                  SnowEx
+                </p>
+                <div>
+                  <small
+                    data-cy="daterange"
+                  >
+                    2016—1970
+                  </small>
+                </div>
+                <div>
+                  <small
+                    data-cy="region"
+                  >
+                    Grand Mesa, CO & Senator Beck Basin, CO
+                  </small>
+                </div>
+              </div>
+              <div>
+                <small
+                  data-cy="count1"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                  <strong>
+                    2
+                  </strong>
+                   
+                  Deployment
+                  s
+                </small>
+                <small
+                  data-cy="count2"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                   · 
+                  <strong>
+                    3
+                  </strong>
+                   
+                  Data Product
+                  s
+                </small>
+              </div>
+            </div>
+          </a>
+          <a
+            href="/campaign/c0c4fc9f-b5ca-472c-950c-49150a202c23"
+          >
+            <div
+              data-cy="explore-card"
+              style={
+                Object {
+                  "backgroundColor": "#303641",
+                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "height": "100%",
+                  "justifyContent": "space-between",
+                  "padding": "1rem",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "marginBottom": "2rem",
+                  }
+                }
+              >
+                <div
+                  className="c5"
+                >
+                  <img
+                    alt="placeholder logo"
+                    height="85"
+                    src="test-file-stub"
+                  />
+                  <div
+                    data-cy="ongoing-tag"
+                    style={
+                      Object {
+                        "border": "1px solid",
+                        "padding": "0.25rem",
+                        "textTransform": "uppercase",
+                      }
+                    }
+                  >
+                    Ongoing
+                  </div>
+                </div>
+                <big
+                  data-cy="shortname"
+                  style={
+                    Object {
+                      "fontWeight": "bold",
+                      "marginTop": "0.5rem",
+                    }
+                  }
+                >
+                  OMG
+                </big>
+                <p
+                  data-cy="longname"
+                >
+                  Oceans Melting Greenland
+                </p>
+                <div>
+                  <small
+                    data-cy="daterange"
+                  >
+                    2015—1970
+                  </small>
+                </div>
+                <div>
+                  <small
+                    data-cy="region"
+                  >
+                    Greenland
+                  </small>
+                </div>
+              </div>
+              <div>
+                <small
+                  data-cy="count1"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                  <strong>
+                    10
+                  </strong>
+                   
+                  Deployment
+                  s
+                </small>
+                <small
+                  data-cy="count2"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                   · 
+                  <strong>
+                    5
                   </strong>
                    
                   Data Product
@@ -2037,21 +3765,21 @@ exports[`Campaigns page renders correctly 1`] = `
         >
           <li>
             <a
-              href="/explore/campaigns"
+              href="/explore"
             >
               Campaigns
             </a>
           </li>
           <li>
             <a
-              href="/explore/platforms"
+              href="/explore"
             >
               Platforms
             </a>
           </li>
           <li>
             <a
-              href="/explore/instruments"
+              href="/explore"
             >
               Instruments
             </a>
@@ -2117,11 +3845,11 @@ exports[`Campaigns page renders correctly 1`] = `
               Maintenance login
             </button>
             <div
-              className="c4"
+              className="c6"
               onClick={[Function]}
             >
               <div
-                className="c5"
+                className="c7"
               >
                 <form
                   data-cy="login-form"

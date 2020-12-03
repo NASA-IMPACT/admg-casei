@@ -46,7 +46,7 @@ const LinkedParagraph = () => (
 const About = ({ data }) => {
   return (
     <Layout>
-      <SEO title="About" />
+      <SEO title="About" lang="en" />
 
       <Hero
         tagTitle="About"
