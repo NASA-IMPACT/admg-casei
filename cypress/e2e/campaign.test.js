@@ -2,7 +2,7 @@
 
 describe("Campaign", () => {
   before(() => {
-    cy.visit("/explore/campaigns")
+    cy.visit("/explore")
     cy.get("[data-cy=explore-card]").find("big").contains("OLYMPEX").click()
   })
 
@@ -163,7 +163,7 @@ describe("Campaign", () => {
         .contains("Hydrology")
         .click()
 
-      cy.url().should("include", "/explore/campaigns")
+      cy.url().should("include", "/explore")
 
       cy.get("[data-cy=filter-chip]")
         .should("have.length", 1)
@@ -177,7 +177,7 @@ describe("Campaign", () => {
 
   describe("the timeline section", () => {
     before(() => {
-      cy.visit("/explore/campaigns")
+      cy.visit("/explore")
       cy.get("[data-cy=explore-card]").find("big").contains("AirMOSS").click()
     })
 
@@ -262,7 +262,7 @@ describe("Campaign", () => {
 
   describe("the data section", () => {
     before(() => {
-      cy.visit("/explore/campaigns")
+      cy.visit("/explore")
       cy.get("[data-cy=explore-card]").find("big").contains("GCPEx").click()
     })
 

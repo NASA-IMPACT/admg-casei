@@ -17,7 +17,7 @@ describe("Accessibility tests", () => {
       .findByText(/Explore/i)
       .click()
 
-    cy.get("h1").should("exist")
+    cy.get("[data-cy=tabbar]").should("exist")
     cy.checkA11y()
   })
 
@@ -30,7 +30,6 @@ describe("Accessibility tests", () => {
       .findByText(/Campaigns/i)
       .click()
 
-    cy.get("[data-cy=main-campaigns]").should("exist")
     cy.get("[data-cy=explore-card]").first().click()
 
     cy.get("h1").should("exist")
@@ -46,7 +45,6 @@ describe("Accessibility tests", () => {
       .findByText(/Platforms/i)
       .click()
 
-    cy.get("[data-cy=main-platforms]").should("exist")
     cy.get("[data-cy=explore-card]").first().click()
 
     cy.get("h1").should("exist")
@@ -62,7 +60,6 @@ describe("Accessibility tests", () => {
       .findByText(/Instruments/i)
       .click()
 
-    cy.get("[data-cy=main-instruments]").should("exist")
     cy.get("[data-cy=explore-card]").first().click()
 
     cy.get("h1").should("exist")

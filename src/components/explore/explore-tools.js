@@ -31,14 +31,6 @@ const ExploreTools = React.forwardRef(
         data-cy="explore-tools"
       >
         <div style={{ display: `flex` }}>
-          {/* <FilterMenu
-            selectedFilterIds={selectedFilterIds}
-            addFilter={addFilter}
-            removeFilter={removeFilter}
-            label={category}
-            options={[{ id: "campaigns", shortname: "campaigns" }]}
-          /> */}
-
           <Searchbar ref={ref} />
         </div>
 

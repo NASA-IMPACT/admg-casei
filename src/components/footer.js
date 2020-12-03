@@ -60,13 +60,16 @@ const Footer = ({ shortname }) => {
           <p style={style.headline}>Explore</p>
           <ul style={style.ul}>
             <li>
-              <Link to="/explore/campaigns">Campaigns</Link>
+              <Link to="/explore">Campaigns</Link>
+              {/** TODO: link to explore with tab selected */}
             </li>
             <li>
-              <Link to="/explore/platforms">Platforms</Link>
+              <Link to="/explore">Platforms</Link>
+              {/** TODO: link to explore with tab selected */}
             </li>
             <li>
-              <Link to="/explore/instruments">Instruments</Link>
+              <Link to="/explore">Instruments</Link>
+              {/** TODO: link to explore with tab selected */}
             </li>
           </ul>
         </div>

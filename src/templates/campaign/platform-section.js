@@ -91,8 +91,8 @@ const PlatformSection = ({ id, platforms, instruments }) => (
   </Section>
 )
 
-export const platformFields = graphql`
-  fragment platformFields on campaign {
+export const platformSectionFields = graphql`
+  fragment platformSectionFields on campaign {
     platforms {
       id
       dois {
