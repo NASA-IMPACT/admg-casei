@@ -100,7 +100,7 @@ const CampaignsAndInstruments = ({ id, campaigns }) => {
                   >
                     <div style={{ width: `26rem`, maxHeight: `30rem` }}>
                       <Link to={`/campaign/${campaign.id}`}>
-                        <CampaignCard size="large" id={campaign.id} />
+                        <CampaignCard height={"30rem"} id={campaign.id} />
                       </Link>
                     </div>
                     <Accordion folds={campaign.instruments} />
