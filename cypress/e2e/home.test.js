@@ -113,7 +113,7 @@ describe("Homepage", () => {
 
       cy.get(".slide-visible > [data-cy=region-type]").click()
 
-      cy.url().should("include", "/explore/campaigns")
+      cy.url().should("include", "/explore")
 
       cy.get("[data-cy=filter-chip]")
         .should("have.length", 1)
@@ -148,7 +148,7 @@ describe("Homepage", () => {
         .contains("Biodiversity")
         .click()
 
-      cy.url().should("include", "/explore/campaigns")
+      cy.url().should("include", "/explore")
 
       cy.get("[data-cy=filter-chip]")
         .should("have.length", 1)
@@ -190,7 +190,7 @@ describe("Homepage", () => {
         .contains("Spectrometer/Radiometer")
         .click()
 
-      cy.url().should("include", "/explore/instruments")
+      cy.url().should("include", "/explore")
 
       cy.get("[data-cy=filter-chip]")
         .should("have.length", 1)

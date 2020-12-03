@@ -2,10 +2,10 @@ import React from "react"
 import renderer from "react-test-renderer"
 import * as Gatsby from "gatsby"
 
-import Campaigns from "../explore/campaigns"
+import Explore from "../explore"
 import { selector } from "../../utils/filter-utils"
 import {
-  campaignsQuery,
+  query,
   location,
   site,
   images,
@@ -16,13 +16,13 @@ const useStaticQuery = jest.spyOn(Gatsby, "useStaticQuery")
 useStaticQuery.mockImplementation(() => ({
   site,
   images,
-  ...staticQueries,
+  ...staticQueries.data,
 }))
 
-describe("Campaigns page", () => {
+describe("Explore page", () => {
   it("renders correctly", () => {
     const tree = renderer
-      .create(<Campaigns data={campaignsQuery} location={location} />)
+      .create(<Explore data={query.data} location={location} />)
       .toJSON()
     expect(tree).toMatchSnapshot()
   })

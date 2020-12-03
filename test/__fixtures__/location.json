@@ -1,8 +1,8 @@
 {
-  "pathname": "/explore/campaigns",
+  "pathname": "/explore",
   "search": "",
   "hash": "",
-  "href": "http://localhost:8000/explore/campaigns",
+  "href": "http://localhost:8000/explore",
   "origin": "http://localhost:8000",
   "protocol": "http:",
   "host": "localhost:8000",
