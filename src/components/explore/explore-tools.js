@@ -1,8 +1,10 @@
-import React from "react"
+import React, { useState } from "react"
 import PropTypes from "prop-types"
 
 import FilterMenu from "./filter-menu"
 import Searchbar from "./searchbar"
+import DateMenu from "./date-menu"
+
 import theme from "../../utils/theme"
 
 const ExploreTools = React.forwardRef(
@@ -35,6 +37,7 @@ const ExploreTools = React.forwardRef(
         <div style={{ flexGrow: 1, display: `flex`, alignContent: `stretch` }}>
           {category === "campaigns" && (
             <>
+              <DateMenu id="date" label="Date range" />
               <FilterMenu
                 id="focus"
                 style={{ flexGrow: 1 }}
