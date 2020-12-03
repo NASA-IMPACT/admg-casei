@@ -70,37 +70,45 @@ exports.onCreateNode = async ({
   createNodeId,
 }) => {
   if (node.internal.type === "NasaImagesJson" && !!node.nasaImgUrl) {
-    let fileNode = await createRemoteFileNode({
-      url: node.nasaImgUrl, // string that points to the URL of the image
-      parentNodeId: node.id, // id of the parent node of the fileNode you are going to create
-      createNode, // helper function in gatsby-node to generate the node
-      createNodeId, // helper function in gatsby-node to generate the node id
-      cache, // Gatsby's cache
-      store, // Gatsby's redux store
-    })
+    try {
+      let fileNode = await createRemoteFileNode({
+        url: node.nasaImgUrl, // string that points to the URL of the image
+        parentNodeId: node.id, // id of the parent node of the fileNode you are going to create
+        createNode, // helper function in gatsby-node to generate the node
+        createNodeId, // helper function in gatsby-node to generate the node id
+        cache, // Gatsby's cache
+        store, // Gatsby's redux store
+      })
 
-    // if the file was created, attach the new node (=File) to the parent node (=NasaImagesJson)
-    if (fileNode) {
-      node.nasaImg___NODE = fileNode.id
+      // if the file was created, attach the new node (=File) to the parent node (=NasaImagesJson)
+      if (fileNode) {
+        node.nasaImg___NODE = fileNode.id
+      }
+    } catch (error) {
+      console.log(error)
     }
   }
 
+  // TODO: remove when backend team fixes the /image endpoint response
   if (node.internal.type === "image") {
-    // TODO: remove when backend team fixes the /image endpoint response
-
     if (node.image.includes(".gif")) return // .gif format breaks gatsby build
-    let fileNode = await createRemoteFileNode({
-      url: node.image, // string that points to the URL of the image
-      parentNodeId: node.id, // id of the parent node of the fileNode you are going to create
-      createNode, // helper function in gatsby-node to generate the node
-      createNodeId, // helper function in gatsby-node to generate the node id
-      cache, // Gatsby's cache
-      store, // Gatsby's redux store
-    })
 
-    // if the file was created, attach the new node (=File) to the parent node (=image)
-    if (fileNode) {
-      node.gatsbyImg___NODE = fileNode.id
+    try {
+      let fileNode = await createRemoteFileNode({
+        url: node.image, // string that points to the URL of the image
+        parentNodeId: node.id, // id of the parent node of the fileNode you are going to create
+        createNode, // helper function in gatsby-node to generate the node
+        createNodeId, // helper function in gatsby-node to generate the node id
+        cache, // Gatsby's cache
+        store, // Gatsby's redux store
+      })
+
+      // if the file was created, attach the new node (=File) to the parent node (=image)
+      if (fileNode) {
+        node.gatsbyImg___NODE = fileNode.id
+      }
+    } catch (error) {
+      console.log(error)
     }
   }
 }
