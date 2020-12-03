@@ -234,8 +234,7 @@ export default function Explore({ data, location }) {
     setLoading(false)
   }
 
-  const resestSearch = e => {
-    e.preventDefault()
+  const resestSearch = () => {
     setSearchResult(allCampaign.list.map(c => c.shortname))
   }
 
