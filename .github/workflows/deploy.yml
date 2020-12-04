@@ -35,6 +35,5 @@ jobs:
 
       - name: Deploy 🚀
         run: |
-          cp ./dist/index.html ./dist/200.html
           npm install -g surge
-          surge ./dist ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
+          surge --project ./public --domain ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
