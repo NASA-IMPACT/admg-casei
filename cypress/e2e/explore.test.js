@@ -4,6 +4,7 @@ describe("Explore", () => {
   describe("campaigns", () => {
     beforeEach(() => {
       cy.visit("/explore")
+      cy.get("[data-cy=campaigns-card]")
     })
 
     it("renders correctly", () => {
@@ -75,6 +76,7 @@ describe("Explore", () => {
     beforeEach(() => {
       cy.visit("/explore")
       cy.get("[data-cy=tabbar]").contains("button", "Platforms").click()
+      cy.get("[data-cy=platforms-card]")
     })
 
     it("renders correctly", () => {
@@ -140,6 +142,7 @@ describe("Explore", () => {
     beforeEach(() => {
       cy.visit("/explore")
       cy.get("[data-cy=tabbar]").contains("button", "Instruments").click()
+      cy.get("[data-cy=instruments-card]")
     })
 
     it("renders correctly", () => {

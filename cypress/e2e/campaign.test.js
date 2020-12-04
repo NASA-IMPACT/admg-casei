@@ -169,7 +169,7 @@ describe("Campaign", () => {
         .should("have.length", 1)
         .and("have.text", "geophysical: Terr Hydro")
 
-      cy.get("main").find("[data-cy=campaigns-card]").should("have.length", 4)
+      cy.get("[data-cy=campaigns-card]").should("have.length", 4)
 
       cy.go("back")
     })
