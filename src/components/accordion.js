@@ -22,10 +22,10 @@ const RotatingContainer = styled.div`
 `
 
 export default function Accordion({ folds }) {
+  // TODO: add logic to allow for all drawers to be closed. A controlled accordion by default does not work with 'collapsible' prop
   const [index, setIndex] = useState(0)
   return (
     <ReachAccordion
-      collapsible
       style={{ maxHeight: `30rem`, overflowY: `scroll` }}
       index={index}
       onChange={value => setIndex(value)}
