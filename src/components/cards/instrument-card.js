@@ -8,8 +8,7 @@ export default function InstrumentCard(props) {
   /*
    * We can not pass props directly into a static query because it is
    * compiled and doesn't support string interpolation in its template literal.
-   * This is a workaround to still build a reuseable Image component using Gatsby's
-   * image functionalities:
+   * This is a workaround to still build a reuseable component:
    * It first queries all the images with graphql, and then uses javascript to filter
    * them based on the provided props.
    *
@@ -38,6 +37,7 @@ export default function InstrumentCard(props) {
   return (
     <Card
       footerList={[{ count: instrument.campaigns.length, title: "Campaign" }]}
+      category="instruments"
     >
       <big
         style={{ fontWeight: `bold`, marginTop: `0.5rem` }}

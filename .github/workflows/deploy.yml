@@ -1,0 +1,39 @@
+name: Deploy
+
+on:
+  workflow_run:
+    workflows: ["Quality Assurance"]
+    branches: [develop]
+    types: 
+      - completed
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    env:
+      ADMG_ACCESS_TOKEN: ${{ secrets.ADMG_ACCESS_TOKEN }}
+      CYPRESS_password: ${{ secrets.CYPRESS_password }}
+      GATSBY_ADMG_CLIENT_ID: ${{ secrets.GATSBY_ADMG_CLIENT_ID }}
+      GATSBY_ADMG_CLIENT_SECRET: ${{ secrets.GATSBY_ADMG_CLIENT_SECRET }}
+      GATSBY_CPU_COUNT: 1
+      GATSBY_MAPBOX_TOKEN: ${{ secrets.GATSBY_MAPBOX_TOKEN }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Use Node.js 14
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+
+      - name: Build
+        run: |
+          yarn install
+          yarn build
+
+      - name: Deploy 🚀
+        run: |
+          npm install -g surge
+          surge --project ./public --domain ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}

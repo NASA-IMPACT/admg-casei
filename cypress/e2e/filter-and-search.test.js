@@ -82,7 +82,7 @@ describe("Filter, Search and Sort", () => {
       })
 
       it("adds and removes filters", () => {
-        cy.get("[data-cy=explore-card]").then($cards => {
+        cy.get(`[data-cy=${x.category}-card]`).then($cards => {
           x.filterExamples.forEach(filterExample => {
             const numBefore = $cards.length
 
@@ -99,7 +99,7 @@ describe("Filter, Search and Sort", () => {
                 expect(Number(text.slice(2, -1))).to.be.lessThan(numBefore)
               })
 
-            cy.get("[data-cy=explore-card]")
+            cy.get(`[data-cy=${x.category}-card]`)
               .its("length")
               .should("be.lt", numBefore)
 
@@ -107,7 +107,7 @@ describe("Filter, Search and Sort", () => {
 
             cy.get("[data-cy=filter-chip]").should("not.exist")
 
-            cy.get("[data-cy=explore-card]")
+            cy.get(`[data-cy=${x.category}-card]`)
               .its("length")
               .should("be.eq", numBefore)
           })
@@ -134,7 +134,7 @@ describe("Filter, Search and Sort", () => {
         cy.get("[data-cy=sort-select]").click()
         cy.get("[data-cy=sort-options]").contains("li", "A TO Z").click()
 
-        cy.get("[data-cy=explore-card]")
+        cy.get(`[data-cy=${x.category}-card]`)
           .find("big")
           .should($big => {
             const first = $big.first().text()
@@ -148,7 +148,7 @@ describe("Filter, Search and Sort", () => {
         // cy.get("[data-cy=sort-select]").click()
         // cy.get("[data-cy=sort-options]").contains("li", "Z TO A").click()
 
-        // cy.get("[data-cy=explore-card]")
+        // cy.get(`[data-cy=${x.category}-card]`)
         //   .find("big")
         //   .should($big => {
         //     const first = $big.first().text()
@@ -163,7 +163,7 @@ describe("Filter, Search and Sort", () => {
           cy.get("[data-cy=sort-select]").click()
           cy.get("[data-cy=sort-options]").contains("li", "MOST RECENT").click()
 
-          cy.get("[data-cy=explore-card]")
+          cy.get(`[data-cy=${x.category}-card]`)
             .find("[data-cy=daterange]")
             .should($small => {
               const first = $small.first().text()
@@ -177,7 +177,7 @@ describe("Filter, Search and Sort", () => {
           cy.get("[data-cy=sort-select]").click()
           cy.get("[data-cy=sort-options]").contains("li", "OLDEST").click()
 
-          cy.get("[data-cy=explore-card]")
+          cy.get(`[data-cy=${x.category}-card]`)
             .find("[data-cy=daterange]")
             .should($small => {
               const first = $small.first().text()
@@ -193,7 +193,7 @@ describe("Filter, Search and Sort", () => {
           cy.get("[data-cy=sort-select]").click()
           cy.get("[data-cy=sort-options]").contains("li", "MOST USED").click()
 
-          cy.get("[data-cy=explore-card]")
+          cy.get(`[data-cy=${x.category}-card]`)
             .find("[data-cy=count1]")
             .should($small => {
               const first = $small.first().text()
@@ -243,7 +243,7 @@ describe("Filter, Search and Sort", () => {
           .find("input")
           .should("have.value", "arctic")
 
-        cy.get("[data-cy=explore-card]").should("have.length.greaterThan", 1)
+        cy.get(`[data-cy=campaigns-card]`).should("have.length.greaterThan", 1)
       })
     })
 
