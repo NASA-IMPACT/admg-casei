@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import PropTypes from "prop-types"
 
 import FilterMenu from "./filter-menu"
@@ -10,6 +10,8 @@ import theme from "../../utils/theme"
 const ExploreTools = React.forwardRef(
   (
     {
+      dateRange,
+      setDateRange,
       submitSearch,
       selectedFilterIds,
       addFilter,
@@ -37,7 +39,13 @@ const ExploreTools = React.forwardRef(
         <div style={{ flexGrow: 1, display: `flex`, alignContent: `stretch` }}>
           {category === "campaigns" && (
             <>
-              <DateMenu id="date" label="Date range" />
+              <DateMenu
+                id="date"
+                style={{ flexGrow: 1 }}
+                label="Date range"
+                dateRange={dateRange}
+                setDateRange={setDateRange}
+              />
               <FilterMenu
                 id="focus"
                 style={{ flexGrow: 1 }}
@@ -134,6 +142,11 @@ const ExploreTools = React.forwardRef(
 )
 
 ExploreTools.propTypes = {
+  dateRange: PropTypes.shape({
+    start: PropTypes.instanceOf(Date).isRequired,
+    end: PropTypes.instanceOf(Date).isRequired,
+  }).isRequired,
+  setDateRange: PropTypes.func.isRequired,
   submitSearch: PropTypes.func.isRequired,
   selectedFilterIds: PropTypes.arrayOf(PropTypes.string),
   addFilter: PropTypes.func.isRequired,

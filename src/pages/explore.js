@@ -45,6 +45,10 @@ export default function Explore({ data, location }) {
   const [selectedFilterIds, setFilter] = useState([])
   const [aoi, setAoi] = useState(null)
   const [geoFilterResult, setGeoFilter] = useState(null)
+  const [dateRange, setDateRange] = useState({
+    start: new Date("2000/01/01"),
+    end: new Date(),
+  }) // TODO: apply these dates as filter!
   const [searchResult, setSearchResult] = useState()
 
   useEffect(() => {
@@ -133,6 +137,8 @@ export default function Explore({ data, location }) {
         </VisuallyHidden>
         <ExploreTools
           ref={inputElement}
+          dateRange={dateRange}
+          setDateRange={setDateRange}
           submitSearch={submitSearch}
           selectedFilterIds={selectedFilterIds}
           addFilter={addFilter}

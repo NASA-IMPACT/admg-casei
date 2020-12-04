@@ -21,11 +21,14 @@ const FilterButton = styled(ListboxButton)`
   text-transform: uppercase;
 `
 
-const DateMenu = ({ id, style, label }) => {
-  // TODO: apply these dates as filter!
-  const [startDate, setStartDate] = useState(new Date("2014/02/08"))
-  const [endDate, setEndDate] = useState(new Date("2014/02/10"))
+const DateMenu = ({ id, style, label, dateRange, setDateRange }) => {
+  const [startDate, setStartDate] = useState(dateRange.start)
+  const [endDate, setEndDate] = useState(dateRange.end)
 
+  const onApply = () => {
+    setDateRange({ start: startDate, end: endDate })
+    // TODO: close popover
+  }
   return (
     <div style={style}>
       <VisuallyHidden id={`${id}-filter-select`}>
@@ -36,34 +39,51 @@ const DateMenu = ({ id, style, label }) => {
         aria-labelledby={`${id}-filter-select`}
         data-cy={`${id}-filter-select`}
       >
-        <FilterButton arrow="▼">{label}</FilterButton>
-        <ListboxPopover
-          style={{
-            background: theme.color.primary,
-            maxHeight: `24rem`,
-            display: `flex`, // TODO: only flex if open, otherwise none
-          }}
-        >
-          <DatePicker
-            inline
-            showYearDropdown
-            selected={startDate}
-            onChange={date => setStartDate(date)}
-            selectsStart
-            startDate={startDate}
-            endDate={endDate}
-          />
-          <DatePicker
-            inline
-            showYearDropdown
-            selected={endDate}
-            onChange={date => setEndDate(date)}
-            selectsEnd
-            startDate={startDate}
-            endDate={endDate}
-            minDate={startDate}
-          />
-        </ListboxPopover>
+        {({ isExpanded }) => (
+          <>
+            <FilterButton arrow="▼">{label}</FilterButton>
+            {isExpanded && (
+              <ListboxPopover
+                style={{
+                  background: theme.color.primary,
+                  maxHeight: `24rem`,
+                  display: `grid`,
+                  gridTemplateColumns: `1fr 1fr`,
+                }}
+              >
+                <DatePicker
+                  inline
+                  showYearDropdown
+                  selected={startDate}
+                  onChange={date => setStartDate(date)}
+                  selectsStart
+                  startDate={startDate}
+                  endDate={endDate}
+                  shouldCloseOnSelect={false}
+                />
+                <DatePicker
+                  inline
+                  showYearDropdown
+                  selected={endDate}
+                  onChange={date => setEndDate(date)}
+                  selectsEnd
+                  startDate={startDate}
+                  endDate={endDate}
+                  minDate={startDate}
+                  shouldCloseOnSelect={false}
+                />
+                <div>
+                  {/* TODO: Set internal state (setStartDate, setEndDate) to these ranges */}
+                  <button>Week ago</button>
+                  <button>Month ago</button>
+                  <button>6 Months ago</button>
+                </div>
+                {/* TODO: Button styles */}
+                <button onClick={onApply}>Apply</button>
+              </ListboxPopover>
+            )}
+          </>
+        )}
       </ListboxInput>
     </div>
   )
@@ -72,16 +92,12 @@ const DateMenu = ({ id, style, label }) => {
 DateMenu.propTypes = {
   id: PropTypes.string.isRequired,
   style: PropTypes.object,
-  selectedFilterIds: PropTypes.arrayOf(PropTypes.string),
-  addFilter: PropTypes.func.isRequired,
-  removeFilter: PropTypes.func.isRequired,
   label: PropTypes.string.isRequired,
-  options: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string,
-      shortname: PropTypes.string,
-    })
-  ).isRequired,
+  dateRange: PropTypes.shape({
+    start: PropTypes.instanceOf(Date).isRequired,
+    end: PropTypes.instanceOf(Date).isRequired,
+  }).isRequired,
+  setDateRange: PropTypes.func.isRequired,
 }
 
 export default DateMenu
