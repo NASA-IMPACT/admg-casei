@@ -40,6 +40,7 @@ jobs:
         run: yarn test
 
   build-and-test-e2e:
+    needs: [lint, test]
     runs-on: ubuntu-latest
 
     env:
