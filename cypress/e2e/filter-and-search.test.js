@@ -243,10 +243,7 @@ describe("Filter, Search and Sort", () => {
           .find("input")
           .should("have.value", "arctic")
 
-        cy.get(`[data-cy=${x.category}-card]`).should(
-          "have.length.greaterThan",
-          1
-        )
+        cy.get(`[data-cy=campaigns-card]`).should("have.length.greaterThan", 1)
       })
     })
 

@@ -115,7 +115,7 @@ describe("Platform", () => {
         .should("exist")
 
       cy.get("[data-cy=related-campaign]").within(() => {
-        cy.get("[data-cy=platforms-card]").should("exist")
+        cy.get("[data-cy=campaigns-card]").should("exist")
       })
 
       cy.get("[data-cy=related-campaign-carousel]")
