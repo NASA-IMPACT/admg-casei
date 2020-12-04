@@ -1,9 +1,46 @@
-name: Lint and Test
+name: Quality Assurance
 
 on: pull_request
 
 jobs:
-  lint-and-test:
+  lint:    
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Use Node.js 14
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+
+      - name: Install
+        run: yarn install
+
+      - name: Lint
+        run: yarn lint
+
+
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Use Node.js 14
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+
+      - name: Install
+        run: yarn install
+
+      - name: Test
+        run: yarn test
+
+  build-and-test-e2e:
     runs-on: ubuntu-latest
 
     env:
@@ -26,12 +63,6 @@ jobs:
 
       - name: Install
         run: yarn install
-
-      - name: Lint
-        run: yarn lint
-
-      - name: Test
-        run: yarn test
 
       - name: Build
         run: yarn build
