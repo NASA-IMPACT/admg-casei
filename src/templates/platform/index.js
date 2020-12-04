@@ -7,7 +7,7 @@ import SEO from "../../components/seo"
 import PlatformHero from "./hero"
 import InpageNav from "../../components/inpage-nav"
 import Overview from "./overview"
-import RelatedCampaignsSection from "../../components/related-campaigns-section"
+import CampaignsAndInstruments from "./campaigns-instruments"
 import DataSection from "./data-section"
 
 export default function PlatformTemplate({ data: { platform }, path }) {
@@ -33,9 +33,9 @@ export default function PlatformTemplate({ data: { platform }, path }) {
         shortname: platform.shortname,
       },
     },
-    "related-campaigns": {
-      nav: "Related Campaigns",
-      component: RelatedCampaignsSection,
+    "campaigns-instruments": {
+      nav: "Related Campaigns & Instruments",
+      component: CampaignsAndInstruments,
       props: {
         id: "platform-campaigns",
         campaigns: platform.campaigns,
@@ -92,6 +92,29 @@ export const query = graphql`
         dois {
           id
         }
+        instruments {
+          id
+          shortname: short_name
+          longname: long_name
+          description
+          gcmdPhenomenas: gcmd_phenomenas {
+            term
+            topic
+            variable_1
+            variable_2
+            variable_3
+          }
+          image {
+            description
+            gatsbyImg {
+              childImageSharp {
+                fixed(height: 100) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
+          }
+        }
       }
       instruments {
         id
@@ -126,6 +149,28 @@ PlatformTemplate.propTypes = {
               id: PropTypes.string.isRequired,
             }).isRequired
           ),
+          instruments: PropTypes.arrayOf(
+            PropTypes.shape({
+              id: PropTypes.string.isRequired,
+              shortname: PropTypes.string.isRequired,
+              longname: PropTypes.string.isRequired,
+              description: PropTypes.string.isRequired,
+              gcmdPhenomenas: PropTypes.arrayOf(
+                PropTypes.shape({
+                  term: PropTypes.string.isRequired,
+                  topic: PropTypes.string.isRequired,
+                  variable_1: PropTypes.string.isRequired,
+                  variable_2: PropTypes.string.isRequired,
+                  variable_3: PropTypes.string.isRequired,
+                })
+              ),
+              image: PropTypes.shape({
+                gatsbyImg: PropTypes.shape({
+                  childImageSharp: PropTypes.object.isRequired,
+                }),
+              }).isRequired,
+            })
+          ).isRequired,
         })
       ),
       instruments: PropTypes.arrayOf(
@@ -142,6 +187,7 @@ PlatformTemplate.propTypes = {
       image: PropTypes.shape({
         description: PropTypes.string.isRequired,
         gatsbyImg: PropTypes.shape({
+          description: PropTypes.string.isRequired,
           childImageSharp: PropTypes.object.isRequired,
         }).isRequired,
       }).isRequired,

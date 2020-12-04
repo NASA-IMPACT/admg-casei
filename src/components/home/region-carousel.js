@@ -3,20 +3,7 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import Image from "gatsby-image"
 import Carousel from "nuka-carousel"
-import styled from "styled-components"
-import { controlButtonLRStyle } from "../carousel-styles"
-
-const ControlTextButton = styled.button`
-  margin: 0.2rem 0.5rem;
-  padding: 0;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 1);
-  opacity: ${({ selected }) => (selected ? 1 : 0.6)};
-  border: 0;
-  background: rgba(255, 255, 255, 0);
-  text-transform: uppercase;
-  text-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-`
+import { controlButtonLRStyle, ControlTextButton } from "../carousel-styles"
 
 export const RegionCarousel = ({ regions }) => {
   const controlTextRef = useRef(null)

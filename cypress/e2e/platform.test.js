@@ -106,7 +106,7 @@ describe("Platform", () => {
     it("has a heading", () => {
       cy.get("[data-cy=platform-campaigns-section]")
         .find("h2")
-        .should("have.text", "Related Campaigns")
+        .should("have.text", "Related Campaigns & Instruments")
     })
 
     it("displays a carousel", () => {
