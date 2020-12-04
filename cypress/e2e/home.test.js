@@ -119,7 +119,7 @@ describe("Homepage", () => {
         .should("have.length", 1)
         .and("have.text", "region: mountains")
 
-      cy.get("main").find("[data-cy=explore-card]").should("have.length", 3)
+      cy.get("[data-cy=campaigns-card]").should("have.length", 3)
     })
   })
   describe("geophysical concepts", () => {
@@ -154,7 +154,7 @@ describe("Homepage", () => {
         .should("have.length", 1)
         .and("have.text", "geophysical: Biodiversity")
 
-      cy.get("main").find("[data-cy=explore-card]").should("have.length", 2)
+      cy.get("[data-cy=campaigns-card]").should("have.length", 2)
     })
   })
   describe("platforms", () => {
@@ -197,7 +197,7 @@ describe("Homepage", () => {
         .should("have.length", 1)
         .and("have.text", "type: Spectrometer/Radiometer")
 
-      cy.get("main").find("[data-cy=explore-card]").should("have.length", 65)
+      cy.get("[data-cy=instruments-card]").should("have.length", 65)
     })
   })
 })

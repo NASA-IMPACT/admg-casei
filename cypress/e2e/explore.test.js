@@ -4,6 +4,7 @@ describe("Explore", () => {
   describe("campaigns", () => {
     beforeEach(() => {
       cy.visit("/explore")
+      cy.get("[data-cy=campaigns-card]")
     })
 
     it("renders correctly", () => {
@@ -33,7 +34,7 @@ describe("Explore", () => {
 
       cy.get("[data-cy=explore-tools]").should("exist")
       cy.get("[data-cy=campaigns-count]").should("exist")
-      cy.get("[data-cy=explore-card]").should("exist")
+      cy.get("[data-cy=campaigns-card]").should("exist")
     })
 
     it("displays the number of items to explore", () => {
@@ -43,7 +44,7 @@ describe("Explore", () => {
     })
 
     it("displays a list of cards presenting the available campaigns", () => {
-      cy.get("[data-cy=explore-card]")
+      cy.get("[data-cy=campaigns-card]")
         .find("big")
         .contains("AirMOSS")
         .parent()
@@ -63,7 +64,7 @@ describe("Explore", () => {
     })
 
     it("navigates to the campaign page", () => {
-      cy.get("[data-cy=explore-card]").find("big").contains("AirMOSS").click()
+      cy.get("[data-cy=campaigns-card]").find("big").contains("AirMOSS").click()
 
       cy.url().should("include", "/campaign/")
 
@@ -75,6 +76,7 @@ describe("Explore", () => {
     beforeEach(() => {
       cy.visit("/explore")
       cy.get("[data-cy=tabbar]").contains("button", "Platforms").click()
+      cy.get("[data-cy=platforms-card]")
     })
 
     it("renders correctly", () => {
@@ -104,7 +106,7 @@ describe("Explore", () => {
 
       cy.get("[data-cy=explore-tools]").should("exist")
       cy.get("[data-cy=platforms-count]").should("exist")
-      cy.get("[data-cy=explore-card]").should("exist")
+      cy.get("[data-cy=platforms-card]").should("exist")
     })
 
     it("displays the number of items to explore", () => {
@@ -114,7 +116,7 @@ describe("Explore", () => {
     })
 
     it("displays a list of cards presenting the available platforms", () => {
-      cy.get("[data-cy=explore-card]")
+      cy.get("[data-cy=platforms-card]")
         .find("big")
         .contains("B-200")
         .parent()
@@ -140,6 +142,7 @@ describe("Explore", () => {
     beforeEach(() => {
       cy.visit("/explore")
       cy.get("[data-cy=tabbar]").contains("button", "Instruments").click()
+      cy.get("[data-cy=instruments-card]")
     })
 
     it("renders correctly", () => {
@@ -169,7 +172,7 @@ describe("Explore", () => {
 
       cy.get("[data-cy=explore-tools]").should("exist")
       cy.get("[data-cy=instruments-count]").should("exist")
-      cy.get("[data-cy=explore-card]").should("exist")
+      cy.get("[data-cy=instruments-card]").should("exist")
     })
 
     it("displays the number of items to explore", () => {
@@ -179,7 +182,7 @@ describe("Explore", () => {
     })
 
     it("displays a list of cards presenting the available instruments", () => {
-      cy.get("[data-cy=explore-card]")
+      cy.get("[data-cy=instruments-card]")
         .find("big")
         .contains("HAMSR")
         .parent()

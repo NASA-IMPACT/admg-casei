@@ -23,7 +23,7 @@ exports[`Card renders card with tag 1`] = `
 }
 
 <div
-  data-cy="explore-card"
+  data-cy="undefined-card"
   style={
     Object {
       "backgroundColor": "#303641",
@@ -114,7 +114,7 @@ exports[`Card renders plain card 1`] = `
 }
 
 <div
-  data-cy="explore-card"
+  data-cy="undefined-card"
   style={
     Object {
       "backgroundColor": "#303641",
@@ -193,7 +193,7 @@ exports[`Card renders with footer list 1`] = `
 }
 
 <div
-  data-cy="explore-card"
+  data-cy="undefined-card"
   style={
     Object {
       "backgroundColor": "#303641",
