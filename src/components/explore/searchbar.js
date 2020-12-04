@@ -32,25 +32,25 @@ const Searchbar = React.forwardRef((_props, ref) => {
           type="text"
           ref={ref}
         />
+        {ref.current?.value && (
+          <button
+            type="reset"
+            onClick={() => setInputsize(50)}
+            style={{
+              border: "none",
+              flexGrow: 0,
+              background: `transparent`,
+              color: theme.color.base,
+              verticalAlign: `middle`,
+            }}
+            data-cy="reset"
+          >
+            <span role="img" aria-label="X icon">
+              <CloseIcon color={theme.color.base} />
+            </span>
+          </button>
+        )}
       </div>
-      {ref.current?.value && (
-        <button
-          type="reset"
-          onClick={() => setInputsize(50)}
-          style={{
-            border: "none",
-            flexGrow: 0,
-            background: `transparent`,
-            color: theme.color.base,
-            verticalAlign: `middle`,
-          }}
-          data-cy="reset"
-        >
-          <span role="img" aria-label="X icon">
-            <CloseIcon color={theme.color.base} />
-          </span>
-        </button>
-      )}
       <button
         type="submit"
         style={{
