@@ -17,7 +17,7 @@ const CardHeader = styled.div`
   }
 `
 
-const Card = ({ children, image, height, tag, footerList }) => (
+const Card = ({ children, image, height, tag, footerList, category }) => (
   <div
     style={{
       backgroundColor: theme.color.secondary,
@@ -28,7 +28,7 @@ const Card = ({ children, image, height, tag, footerList }) => (
       justifyContent: `space-between`,
       height: height,
     }}
-    data-cy="explore-card"
+    data-cy={`${category}-card`}
   >
     <div style={{ marginBottom: `2rem` }}>
       <CardHeader>
@@ -90,6 +90,8 @@ Card.propTypes = {
   footerList: PropTypes.arrayOf(
     PropTypes.shape({ count: PropTypes.number, title: PropTypes.string })
   ),
+  category: PropTypes.oneOf(["campaigns", "platforms", "instruments"])
+    .isRequired,
 }
 
 Card.defaultProps = {

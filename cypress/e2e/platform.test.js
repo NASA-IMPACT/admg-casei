@@ -4,7 +4,7 @@ describe("Platform", () => {
   before(() => {
     cy.visit("/explore")
     cy.get("[data-cy=tabbar]").contains("button", "Platforms").click()
-    cy.get("main").find("[data-cy=explore-card]").contains("DC-8").click()
+    cy.get("[data-cy=platforms-card]").contains("DC-8").click()
   })
 
   describe("the header", () => {
@@ -50,7 +50,7 @@ describe("Platform", () => {
     before(() => {
       cy.visit("/explore")
       cy.get("[data-cy=tabbar]").contains("button", "Platforms").click()
-      cy.get("main").find("[data-cy=explore-card]").contains("DC-8").click()
+      cy.get("[data-cy=platforms-card]").contains("DC-8").click()
     })
 
     it("exists", () => {
@@ -115,7 +115,7 @@ describe("Platform", () => {
         .should("exist")
 
       cy.get("[data-cy=related-campaign]").within(() => {
-        cy.get("[data-cy=explore-card]").should("exist")
+        cy.get("[data-cy=campaigns-card]").should("exist")
       })
 
       cy.get("[data-cy=related-campaign-carousel]")

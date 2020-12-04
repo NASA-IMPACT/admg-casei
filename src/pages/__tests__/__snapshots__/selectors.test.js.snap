@@ -1021,7 +1021,7 @@ exports[`Explore page renders correctly 1`] = `
             href="/campaign/a37265bc-f88b-4af0-9bb6-05c54d0ae82f"
           >
             <div
-              data-cy="explore-card"
+              data-cy="campaigns-card"
               style={
                 Object {
                   "backgroundColor": "#303641",
@@ -1120,7 +1120,7 @@ exports[`Explore page renders correctly 1`] = `
             href="/campaign/23057afe-20ad-4279-8568-7832908111cc"
           >
             <div
-              data-cy="explore-card"
+              data-cy="campaigns-card"
               style={
                 Object {
                   "backgroundColor": "#303641",
@@ -1218,7 +1218,7 @@ exports[`Explore page renders correctly 1`] = `
             href="/campaign/7e637ca0-2c94-4350-a19d-d02261858997"
           >
             <div
-              data-cy="explore-card"
+              data-cy="campaigns-card"
               style={
                 Object {
                   "backgroundColor": "#303641",
@@ -1315,7 +1315,7 @@ exports[`Explore page renders correctly 1`] = `
             href="/campaign/40aa5fbf-043f-4a68-a181-0993c1db05ef"
           >
             <div
-              data-cy="explore-card"
+              data-cy="campaigns-card"
               style={
                 Object {
                   "backgroundColor": "#303641",
@@ -1422,7 +1422,7 @@ exports[`Explore page renders correctly 1`] = `
             href="/campaign/7352850d-8f94-486a-bebd-91eee880532c"
           >
             <div
-              data-cy="explore-card"
+              data-cy="campaigns-card"
               style={
                 Object {
                   "backgroundColor": "#303641",
@@ -1529,7 +1529,7 @@ exports[`Explore page renders correctly 1`] = `
             href="/campaign/0890744d-756f-4e4a-b867-8dc6d2fa2d04"
           >
             <div
-              data-cy="explore-card"
+              data-cy="campaigns-card"
               style={
                 Object {
                   "backgroundColor": "#303641",
@@ -1627,7 +1627,7 @@ exports[`Explore page renders correctly 1`] = `
             href="/campaign/84b6cfe0-b357-4666-badd-43ac616b2440"
           >
             <div
-              data-cy="explore-card"
+              data-cy="campaigns-card"
               style={
                 Object {
                   "backgroundColor": "#303641",
@@ -1735,7 +1735,7 @@ exports[`Explore page renders correctly 1`] = `
             href="/campaign/202b3ee6-9d9c-46cd-8e51-6889e727d105"
           >
             <div
-              data-cy="explore-card"
+              data-cy="campaigns-card"
               style={
                 Object {
                   "backgroundColor": "#303641",
@@ -1843,7 +1843,7 @@ exports[`Explore page renders correctly 1`] = `
             href="/campaign/260041b5-d0b0-46ac-a335-9172883d4cc9"
           >
             <div
-              data-cy="explore-card"
+              data-cy="campaigns-card"
               style={
                 Object {
                   "backgroundColor": "#303641",
@@ -1942,7 +1942,7 @@ exports[`Explore page renders correctly 1`] = `
             href="/campaign/3671a147-4531-459e-92cf-3b15c0409426"
           >
             <div
-              data-cy="explore-card"
+              data-cy="campaigns-card"
               style={
                 Object {
                   "backgroundColor": "#303641",
@@ -2050,7 +2050,7 @@ exports[`Explore page renders correctly 1`] = `
             href="/campaign/105b2c8d-8b1d-49bc-b8ab-d36635ebf2e5"
           >
             <div
-              data-cy="explore-card"
+              data-cy="campaigns-card"
               style={
                 Object {
                   "backgroundColor": "#303641",
@@ -2148,7 +2148,7 @@ exports[`Explore page renders correctly 1`] = `
             href="/campaign/60aaa8f9-b75d-414b-9d56-5ea48da9fbb6"
           >
             <div
-              data-cy="explore-card"
+              data-cy="campaigns-card"
               style={
                 Object {
                   "backgroundColor": "#303641",
@@ -2246,7 +2246,7 @@ exports[`Explore page renders correctly 1`] = `
             href="/campaign/1037faf8-ac54-4c1a-a3f6-9b78578ea3c2"
           >
             <div
-              data-cy="explore-card"
+              data-cy="campaigns-card"
               style={
                 Object {
                   "backgroundColor": "#303641",
@@ -2351,7 +2351,7 @@ exports[`Explore page renders correctly 1`] = `
             href="/campaign/e7477510-226d-4876-ad82-937f8646ffb0"
           >
             <div
-              data-cy="explore-card"
+              data-cy="campaigns-card"
               style={
                 Object {
                   "backgroundColor": "#303641",
@@ -2458,7 +2458,7 @@ exports[`Explore page renders correctly 1`] = `
             href="/campaign/47548bf5-0a10-49c0-80f0-c5b8e4c832a3"
           >
             <div
-              data-cy="explore-card"
+              data-cy="campaigns-card"
               style={
                 Object {
                   "backgroundColor": "#303641",
@@ -2556,7 +2556,7 @@ exports[`Explore page renders correctly 1`] = `
             href="/campaign/76971af6-f228-4f34-bb05-56196788accc"
           >
             <div
-              data-cy="explore-card"
+              data-cy="campaigns-card"
               style={
                 Object {
                   "backgroundColor": "#303641",
@@ -2663,7 +2663,7 @@ exports[`Explore page renders correctly 1`] = `
             href="/campaign/b92c47a8-448f-4718-bcaf-b1354cc510ea"
           >
             <div
-              data-cy="explore-card"
+              data-cy="campaigns-card"
               style={
                 Object {
                   "backgroundColor": "#303641",
@@ -2771,7 +2771,7 @@ exports[`Explore page renders correctly 1`] = `
             href="/campaign/2fb5796d-0a2f-4a0e-9d3d-fdd7b274d679"
           >
             <div
-              data-cy="explore-card"
+              data-cy="campaigns-card"
               style={
                 Object {
                   "backgroundColor": "#303641",
@@ -2869,7 +2869,7 @@ exports[`Explore page renders correctly 1`] = `
             href="/campaign/a4108ecb-0e76-420a-af18-4bbb3ef67065"
           >
             <div
-              data-cy="explore-card"
+              data-cy="campaigns-card"
               style={
                 Object {
                   "backgroundColor": "#303641",
@@ -2967,7 +2967,7 @@ exports[`Explore page renders correctly 1`] = `
             href="/campaign/46d0f63b-9174-4cab-82c7-7624da1464ca"
           >
             <div
-              data-cy="explore-card"
+              data-cy="campaigns-card"
               style={
                 Object {
                   "backgroundColor": "#303641",
@@ -3065,7 +3065,7 @@ exports[`Explore page renders correctly 1`] = `
             href="/campaign/b2ee4239-e7fe-4c8c-9939-b9e236d2142a"
           >
             <div
-              data-cy="explore-card"
+              data-cy="campaigns-card"
               style={
                 Object {
                   "backgroundColor": "#303641",
@@ -3172,7 +3172,7 @@ exports[`Explore page renders correctly 1`] = `
             href="/campaign/20c2121f-bd91-4f7e-80ac-b729c1998ca9"
           >
             <div
-              data-cy="explore-card"
+              data-cy="campaigns-card"
               style={
                 Object {
                   "backgroundColor": "#303641",
@@ -3271,7 +3271,7 @@ exports[`Explore page renders correctly 1`] = `
             href="/campaign/9d716281-716d-41cd-9ddd-6637c5100c6a"
           >
             <div
-              data-cy="explore-card"
+              data-cy="campaigns-card"
               style={
                 Object {
                   "backgroundColor": "#303641",
@@ -3369,7 +3369,7 @@ exports[`Explore page renders correctly 1`] = `
             href="/campaign/e6139609-d42a-41a4-9c78-b39b186864ff"
           >
             <div
-              data-cy="explore-card"
+              data-cy="campaigns-card"
               style={
                 Object {
                   "backgroundColor": "#303641",
@@ -3468,7 +3468,7 @@ exports[`Explore page renders correctly 1`] = `
             href="/campaign/bc778cc5-b0c4-4d18-8a95-9ac417c418bf"
           >
             <div
-              data-cy="explore-card"
+              data-cy="campaigns-card"
               style={
                 Object {
                   "backgroundColor": "#303641",
@@ -3579,7 +3579,7 @@ exports[`Explore page renders correctly 1`] = `
             href="/campaign/c0c4fc9f-b5ca-472c-950c-49150a202c23"
           >
             <div
-              data-cy="explore-card"
+              data-cy="campaigns-card"
               style={
                 Object {
                   "backgroundColor": "#303641",
