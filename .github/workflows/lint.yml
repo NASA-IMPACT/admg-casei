@@ -10,5 +10,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Use Node.js 14
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+
+      - name: Install
+        run: yarn install
+        
       - name: Lint
         run: yarn lint
