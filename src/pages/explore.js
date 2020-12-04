@@ -235,7 +235,7 @@ export default function Explore({ data, location }) {
     setLoading(false)
   }
 
-  const resetSearch = e => {
+  const resetSearch = () => {
     // TODO: clear search for platforms and instruments as well
     setSearchResult(allCampaign.list.map(c => c.shortname))
   }
