@@ -17,7 +17,7 @@ const CardHeader = styled.div`
   }
 `
 
-const Card = ({ children, image, tag, footerList, category }) => (
+const Card = ({ children, image, height, tag, footerList, category }) => (
   <div
     style={{
       backgroundColor: theme.color.secondary,
@@ -26,7 +26,7 @@ const Card = ({ children, image, tag, footerList, category }) => (
       display: `flex`,
       flexDirection: `column`,
       justifyContent: `space-between`,
-      height: `100%`,
+      height: height,
     }}
     data-cy={`${category}-card`}
   >
@@ -85,12 +85,17 @@ Card.propTypes = {
       childImageSharp: PropTypes.object,
     }),
   }),
+  height: PropTypes.string,
   tag: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   footerList: PropTypes.arrayOf(
     PropTypes.shape({ count: PropTypes.number, title: PropTypes.string })
   ),
   category: PropTypes.oneOf(["campaigns", "platforms", "instruments"])
     .isRequired,
+}
+
+Card.defaultProps = {
+  height: "100%",
 }
 
 export default Card
