@@ -32,6 +32,6 @@ Label.propTypes = {
   display: PropTypes.string,
 }
 
-Label.defaultProps = { 
-  display: "block"
+Label.defaultProps = {
+  display: "block",
 }

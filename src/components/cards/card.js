@@ -93,7 +93,7 @@ Card.propTypes = {
 }
 
 Card.defaultProps = {
-  height: "100%"
+  height: "100%",
 }
 
 export default Card

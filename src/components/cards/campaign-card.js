@@ -5,7 +5,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Card from "./card"
 import { formatYearRange } from "../../utils/helpers"
 
-export default function CampaignCard({id, height}) {
+export default function CampaignCard({ id, height }) {
   /*
    * We can not pass props directly into a static query because it is
    * compiled and doesn't support string interpolation in its template literal.
@@ -81,9 +81,9 @@ export default function CampaignCard({id, height}) {
 
 CampaignCard.propTypes = {
   id: PropTypes.string.isRequired,
-  height: PropTypes.string
+  height: PropTypes.string,
 }
 
 CampaignCard.defaultProps = {
-  height: "100%"
+  height: "100%",
 }

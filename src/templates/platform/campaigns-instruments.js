@@ -14,7 +14,6 @@ import theme from "../../utils/theme"
 
 const CampaignsAndInstruments = ({ id, campaigns }) => {
   const controlTextRef = useRef(null)
-
   const [slideIndex, setSlideIndex] = useState(0)
 
   return (
@@ -64,7 +63,7 @@ const CampaignsAndInstruments = ({ id, campaigns }) => {
                     return {
                       bottom: "-42px",
                     }
-                    case "CenterLeft":
+                  case "CenterLeft":
                     return {
                       marginLeft: "-50px",
                     }

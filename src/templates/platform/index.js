@@ -104,6 +104,16 @@ export const query = graphql`
             variable_2
             variable_3
           }
+          image {
+            description
+            gatsbyImg {
+              childImageSharp {
+                fixed(height: 100) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
+          }
         }
       }
       instruments {
@@ -154,6 +164,11 @@ PlatformTemplate.propTypes = {
                   variable_3: PropTypes.string.isRequired,
                 })
               ),
+              image: PropTypes.shape({
+                gatsbyImg: PropTypes.shape({
+                  childImageSharp: PropTypes.object.isRequired,
+                }),
+              }).isRequired,
             })
           ).isRequired,
         })
@@ -172,6 +187,7 @@ PlatformTemplate.propTypes = {
       image: PropTypes.shape({
         description: PropTypes.string.isRequired,
         gatsbyImg: PropTypes.shape({
+          description: PropTypes.string.isRequired,
           childImageSharp: PropTypes.object.isRequired,
         }).isRequired,
       }).isRequired,

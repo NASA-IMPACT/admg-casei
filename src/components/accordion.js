@@ -1,7 +1,8 @@
-import React, {useState} from "react"
+import React, { useState } from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 import { Link } from "gatsby"
+import Image from "gatsby-image"
 
 import {
   Accordion as ReachAccordion,
@@ -17,17 +18,17 @@ import { ChevronIcon, ArrowIcon } from "../components/icons"
 const RotatingContainer = styled.div`
   transition: transform 240ms ease-in-out;
   transform: ${({ isExpanded }) =>
-      isExpanded ? 'rotate(180deg)' : 'rotate(0deg)'};
+    isExpanded ? "rotate(180deg)" : "rotate(0deg)"};
 `
 
 export default function Accordion({ folds }) {
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(0)
   return (
     <ReachAccordion
       collapsible
       style={{ maxHeight: `30rem`, overflowY: `scroll` }}
       index={index}
-      onChange={(value) => setIndex(value)}
+      onChange={value => setIndex(value)}
     >
       {folds.map((instrument, itemIndex) => (
         <AccordionItem key={instrument.id}>
@@ -45,21 +46,43 @@ export default function Accordion({ folds }) {
                 textTransform: `uppercase`,
                 fontWeight: `bold`,
                 justifyContent: `space-between`,
-                display: `flex`
+                display: `flex`,
               }}
             >
               <div>
-              {instrument.longname} ({instrument.shortname})
-              {itemIndex}
-              {index}
+                {instrument.longname} ({instrument.shortname}){itemIndex}
+                {index}
               </div>
               <RotatingContainer isExpanded={itemIndex === index}>
-                <ChevronIcon role="img" aria-label="chevron-icon"/>
+                <ChevronIcon role="img" aria-label="chevron-icon" />
               </RotatingContainer>
             </AccordionButton>
           </span>
           <AccordionPanel style={{ padding: `.5rem 1rem` }}>
-            {instrument.description}
+            <div
+              style={{
+                display: `grid`,
+                gridTemplateColumns: `1fr 1f 1fr 1fr`,
+              }}
+            >
+              {instrument.image && (
+                <Image
+                  style={{ gridColumn: `1 / 2` }}
+                  alt={instrument.image.description}
+                  fixed={instrument.image.gatsbyImg.childImageSharp.fixed}
+                />
+              )}
+              <div
+                style={
+                  instrument.image
+                    ? { gridColumn: `2 / 4`, paddingLeft: `.5rem` }
+                    : { gridColumn: `1 / 4` }
+                }
+              >
+                {instrument.description}
+              </div>
+            </div>
+
             <div style={{ margin: `3rem 0` }}>
               <Label>Measurements/Variables</Label>
               {instrument.gcmdPhenomenas
@@ -76,7 +99,7 @@ export default function Accordion({ folds }) {
             >
               <Label display="flex" color={theme.color.link}>
                 Learn More
-                <ArrowIcon color={theme.color.link}/>
+                <ArrowIcon color={theme.color.link} />
               </Label>
             </Link>
           </AccordionPanel>
