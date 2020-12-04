@@ -44,11 +44,11 @@ jobs:
 
     env:
       ADMG_ACCESS_TOKEN: ${{ secrets.ADMG_ACCESS_TOKEN }}
-      CYPRESS_password:	${{ secrets.CYPRESS_password }}
+      CYPRESS_password: ${{ secrets.CYPRESS_password }}
       GATSBY_ADMG_CLIENT_ID: ${{ secrets.GATSBY_ADMG_CLIENT_ID }}
       GATSBY_ADMG_CLIENT_SECRET: ${{ secrets.GATSBY_ADMG_CLIENT_SECRET }}
       GATSBY_CPU_COUNT: 1
-      GATSBY_MAPBOX_TOKEN: ${{ secrets.MAPBOX_ACCESS_TOKEN }}
+      GATSBY_MAPBOX_TOKEN: ${{ secrets.GATSBY_MAPBOX_TOKEN }}
 
     steps:
       - name: Checkout
