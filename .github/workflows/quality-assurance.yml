@@ -21,7 +21,6 @@ jobs:
       - name: Lint
         run: yarn lint
 
-
   test:
     runs-on: ubuntu-latest
 
@@ -44,7 +43,6 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      
       ADMG_ACCESS_TOKEN: ${{ secrets.ADMG_ACCESS_TOKEN }}
       CYPRESS_password:	${{ secrets.CYPRESS_password }}
       GATSBY_ADMG_CLIENT_ID: ${{ secrets.GATSBY_ADMG_CLIENT_ID }}
