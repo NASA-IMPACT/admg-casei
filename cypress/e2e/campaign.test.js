@@ -3,7 +3,7 @@
 describe("Campaign", () => {
   before(() => {
     cy.visit("/explore")
-    cy.get("[data-cy=explore-card]").find("big").contains("OLYMPEX").click()
+    cy.get("[data-cy=campaigns-card]").find("big").contains("OLYMPEX").click()
   })
 
   describe("the hero", () => {
@@ -169,7 +169,7 @@ describe("Campaign", () => {
         .should("have.length", 1)
         .and("have.text", "geophysical: Terr Hydro")
 
-      cy.get("main").find("[data-cy=explore-card]").should("have.length", 4)
+      cy.get("main").find("[data-cy=campaigns-card]").should("have.length", 4)
 
       cy.go("back")
     })
@@ -178,7 +178,7 @@ describe("Campaign", () => {
   describe("the timeline section", () => {
     before(() => {
       cy.visit("/explore")
-      cy.get("[data-cy=explore-card]").find("big").contains("AirMOSS").click()
+      cy.get("[data-cy=campaigns-card]").find("big").contains("AirMOSS").click()
     })
 
     it("displays a milestone carousel", () => {
@@ -263,7 +263,7 @@ describe("Campaign", () => {
   describe("the data section", () => {
     before(() => {
       cy.visit("/explore")
-      cy.get("[data-cy=explore-card]").find("big").contains("GCPEx").click()
+      cy.get("[data-cy=campaigns-card]").find("big").contains("GCPEx").click()
     })
 
     it("exists", () => {
