@@ -8,13 +8,14 @@ export default function Label({
   id,
   color = theme.color.gray,
   showBorder,
+  display,
 }) {
   return (
     <label
       style={{
         color: color,
         borderBottom: showBorder ? `1px solid ${theme.color.gray}` : `none`,
-        display: `block`,
+        display,
       }}
       data-cy={`${id}-label`}
     >
@@ -28,4 +29,9 @@ Label.propTypes = {
   id: PropTypes.string.isRequired,
   color: PropTypes.string,
   showBorder: PropTypes.bool,
+  display: PropTypes.string,
+}
+
+Label.defaultProps = { 
+  display: "block"
 }

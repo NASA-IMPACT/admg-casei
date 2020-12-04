@@ -1,5 +1,6 @@
-import React from "react"
+import React, {useState} from "react"
 import PropTypes from "prop-types"
+import styled from "styled-components"
 import { Link } from "gatsby"
 
 import {
@@ -11,11 +12,24 @@ import {
 
 import theme from "../utils/theme"
 import Label from "../components/label"
+import { ChevronIcon, ArrowIcon } from "../components/icons"
+
+const RotatingContainer = styled.div`
+  transition: transform 240ms ease-in-out;
+  transform: ${({ isExpanded }) =>
+      isExpanded ? 'rotate(180deg)' : 'rotate(0deg)'};
+`
 
 export default function Accordion({ folds }) {
+  const [index, setIndex] = useState(0);
   return (
-    <ReachAccordion style={{ maxHeight: `30rem`, overflowY: `scroll` }} collapsible>
-      {folds.map(instrument => (
+    <ReachAccordion
+      collapsible
+      style={{ maxHeight: `30rem`, overflowY: `scroll` }}
+      index={index}
+      onChange={(value) => setIndex(value)}
+    >
+      {folds.map((instrument, itemIndex) => (
         <AccordionItem key={instrument.id}>
           <span>
             <AccordionButton
@@ -30,9 +44,18 @@ export default function Accordion({ folds }) {
                 padding: `1rem`,
                 textTransform: `uppercase`,
                 fontWeight: `bold`,
+                justifyContent: `space-between`,
+                display: `flex`
               }}
             >
+              <div>
               {instrument.longname} ({instrument.shortname})
+              {itemIndex}
+              {index}
+              </div>
+              <RotatingContainer isExpanded={itemIndex === index}>
+                <ChevronIcon role="img" aria-label="chevron-icon"/>
+              </RotatingContainer>
             </AccordionButton>
           </span>
           <AccordionPanel style={{ padding: `.5rem 1rem` }}>
@@ -51,7 +74,10 @@ export default function Accordion({ folds }) {
               to={`/instrument/${instrument.id}`}
               style={{ color: theme.color.link }}
             >
-              <Label color={theme.color.link}>Learn More</Label>
+              <Label display="flex" color={theme.color.link}>
+                Learn More
+                <ArrowIcon color={theme.color.link}/>
+              </Label>
             </Link>
           </AccordionPanel>
         </AccordionItem>
