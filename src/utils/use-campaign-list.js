@@ -68,10 +68,9 @@ export default function useCampaignList(
 
   useEffect(() => {
     // update after changing the date range
-
-    if (!(dateRange.start && dateRange.end)) return
-
     const filteredCampaignByDateRange = queryResult.filter(campaign => {
+      if (!(dateRange.start && dateRange.end)) return true
+
       const isStartWithinRange = isWithinInterval(
         new Date(campaign.startdate),
         dateRange

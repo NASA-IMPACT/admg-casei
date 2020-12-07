@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react"
 import PropTypes from "prop-types"
 import { graphql, Link } from "gatsby"
 import VisuallyHidden from "@reach/visually-hidden"
+import { format } from "date-fns"
 
 import api from "../utils/api"
 import { selector } from "../utils/filter-utils"
@@ -87,12 +88,18 @@ export default function Explore({ data, location }) {
 
   const addFilter = id => setFilter([...selectedFilterIds, id])
   const removeFilter = id => setFilter(selectedFilterIds.filter(f => f !== id))
+  const removeDateRange = () =>
+    setDateRange({
+      start: null,
+      end: null,
+    })
   const removeAoi = () => {
     setAoi(null)
     setGeoFilter(null)
   }
   const clearFilters = () => {
     setFilter([])
+    removeDateRange()
     setAoi(null)
     setGeoFilter(null)
   }
@@ -164,7 +171,9 @@ export default function Explore({ data, location }) {
           setAoi={setAoi}
         />
 
-        {(selectedFilterIds.length > 0 || aoi) && (
+        {(selectedFilterIds.length > 0 ||
+          aoi ||
+          !!(dateRange.start && dateRange.end)) && (
           <FilterChips clearFilters={clearFilters}>
             {selectedFilterIds.map(f => (
               <Chip
@@ -185,7 +194,16 @@ export default function Explore({ data, location }) {
               />
             )}
 
-            {/* TODO: add chip for date range */}
+            {!!(dateRange.start && dateRange.end) && (
+              <Chip
+                id="filter"
+                label={`date:
+                ${format(dateRange.start, "yyyy-MM-dd")} to 
+                ${format(dateRange.end, "yyyy-MM-dd")}`}
+                actionId={"dateRange"}
+                removeAction={removeDateRange}
+              />
+            )}
           </FilterChips>
         )}
 

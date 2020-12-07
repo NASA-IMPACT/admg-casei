@@ -10,11 +10,13 @@ import VisuallyHidden from "@reach/visually-hidden"
 import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css"
 import styled from "styled-components"
-import startOfToday from "date-fns/startOfToday"
-import endOfToday from "date-fns/endOfToday"
-import subWeeks from "date-fns/subWeeks"
-import subMonths from "date-fns/subMonths"
-import subYears from "date-fns/subYears"
+import {
+  startOfToday,
+  endOfToday,
+  subWeeks,
+  subMonths,
+  subYears,
+} from "date-fns"
 
 import theme from "../../utils/theme"
 
