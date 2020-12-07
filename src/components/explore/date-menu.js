@@ -1,10 +1,17 @@
 import React, { useState } from "react"
 import PropTypes from "prop-types"
-import { ListboxInput, ListboxButton, ListboxPopover } from "@reach/listbox"
+import {
+  ListboxInput,
+  ListboxButton,
+  ListboxPopover,
+  ListboxOption,
+} from "@reach/listbox"
 import VisuallyHidden from "@reach/visually-hidden"
 import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css"
 import styled from "styled-components"
+import subWeeks from "date-fns/subWeeks"
+import subMonths from "date-fns/subMonths"
 
 import theme from "../../utils/theme"
 
@@ -25,10 +32,40 @@ const DateMenu = ({ id, style, label, dateRange, setDateRange }) => {
   const [startDate, setStartDate] = useState(dateRange.start)
   const [endDate, setEndDate] = useState(dateRange.end)
 
-  const onApply = () => {
-    setDateRange({ start: startDate, end: endDate })
-    // TODO: close popover
+  const onButtonClick = value => {
+    switch (value) {
+      case "week": {
+        const today = new Date()
+        const lastWeek = subWeeks(today, 1)
+
+        setStartDate(lastWeek)
+        setEndDate(today)
+        break
+      }
+
+      case "month": {
+        const today = new Date()
+        const lastMonth = subMonths(today, 1)
+
+        setStartDate(lastMonth)
+        setEndDate(today)
+        break
+      }
+
+      case "halfYear": {
+        const today = new Date()
+        const sixMonthsAgo = subMonths(today, 6)
+
+        setStartDate(sixMonthsAgo)
+        setEndDate(today)
+        break
+      }
+
+      default:
+        break
+    }
   }
+
   return (
     <div style={style}>
       <VisuallyHidden id={`${id}-filter-select`}>
@@ -38,6 +75,7 @@ const DateMenu = ({ id, style, label, dateRange, setDateRange }) => {
         name="date-filter"
         aria-labelledby={`${id}-filter-select`}
         data-cy={`${id}-filter-select`}
+        onChange={() => setDateRange({ start: startDate, end: endDate })}
       >
         {({ isExpanded }) => (
           <>
@@ -51,12 +89,13 @@ const DateMenu = ({ id, style, label, dateRange, setDateRange }) => {
                   gridTemplateColumns: `1fr 1fr`,
                 }}
               >
+                {/* TODO: Calendar styles */}
                 <DatePicker
                   inline
                   showYearDropdown
-                  selected={startDate}
                   onChange={date => setStartDate(date)}
                   selectsStart
+                  selected={startDate}
                   startDate={startDate}
                   endDate={endDate}
                   shouldCloseOnSelect={false}
@@ -64,22 +103,27 @@ const DateMenu = ({ id, style, label, dateRange, setDateRange }) => {
                 <DatePicker
                   inline
                   showYearDropdown
-                  selected={endDate}
                   onChange={date => setEndDate(date)}
                   selectsEnd
+                  selected={endDate}
                   startDate={startDate}
                   endDate={endDate}
                   minDate={startDate}
                   shouldCloseOnSelect={false}
                 />
                 <div>
-                  {/* TODO: Set internal state (setStartDate, setEndDate) to these ranges */}
-                  <button>Week ago</button>
-                  <button>Month ago</button>
-                  <button>6 Months ago</button>
+                  {/* TODO: Button styles */}
+                  <button onClick={() => onButtonClick("week")}>
+                    Week ago
+                  </button>
+                  <button onClick={() => onButtonClick("month")}>
+                    Month ago
+                  </button>
+                  <button onClick={() => onButtonClick("halfYear")}>
+                    6 Months ago
+                  </button>
                 </div>
-                {/* TODO: Button styles */}
-                <button onClick={onApply}>Apply</button>
+                <ListboxOption value="selection">Apply</ListboxOption>
               </ListboxPopover>
             )}
           </>
