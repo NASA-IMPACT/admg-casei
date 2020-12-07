@@ -49,7 +49,7 @@ describe("Filter, Search and Sort", () => {
         cy.get("[data-cy=explore-input]").should(
           "have.attr",
           "aria-label",
-          "Enter search text"
+          "Search for campaigns, platforms or instruments"
         )
 
         cy.get("[data-cy=submit]").should("exist")

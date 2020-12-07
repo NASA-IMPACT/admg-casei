@@ -1,9 +1,10 @@
 import CloseIcon from "./close-icon"
 import TrashIcon from "./trash-icon"
+import SearchIcon from "./search-icon"
 import ArrowIcon from "./arrow-icon"
 import ChevronIcon from "./chevron-icon"
 
-export { CloseIcon, TrashIcon, ArrowIcon, ChevronIcon }
+export { CloseIcon, TrashIcon, SearchIcon, ArrowIcon, ChevronIcon }
 
 export { AtmosphericComposition as AtmosphericCompositionIcon } from "./atmospheric-composition"
 export { AtmosphericDynamics as AtmosphericDynamicsIcon } from "./atmospheric-dynamics"
