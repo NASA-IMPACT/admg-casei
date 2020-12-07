@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Explore page renders correctly 1`] = `
-.c2.c2:hover {
+.c3.c3:hover {
   opacity: 0.64;
 }
 
-.c2.c2:active {
+.c3.c3:active {
   -webkit-transform: translate(0,1px);
   -ms-transform: translate(0,1px);
   transform: translate(0,1px);
 }
 
-.c6.c6 {
+.c7.c7 {
   position: fixed;
   top: 0;
   right: 0;
@@ -33,7 +33,7 @@ exports[`Explore page renders correctly 1`] = `
   transition: opacity 400ms ease-in;
 }
 
-.c7.c7 {
+.c8.c8 {
   width: 400px;
   position: relative;
   padding: 32px;
@@ -53,6 +53,22 @@ exports[`Explore page renders correctly 1`] = `
   flex-direction: column;
 }
 
+.c2.c2 {
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  height: 2.5rem;
+  width: 100%;
+  -webkit-appearance: none;
+  background: transparent;
+  border: 1px solid hsla(0,0%,100%,0.9);
+  color: hsla(0,0%,100%,0.9);
+  padding: 0.5rem;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
 .c1.c1 {
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
@@ -69,7 +85,7 @@ exports[`Explore page renders correctly 1`] = `
   text-transform: uppercase;
 }
 
-.c5.c5 {
+.c6.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -86,11 +102,11 @@ exports[`Explore page renders correctly 1`] = `
   min-height: 2rem;
 }
 
-.c5.c5 div:only-child {
+.c6.c6 div:only-child {
   margin-left: auto;
 }
 
-.c3.c3 {
+.c4.c4 {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -110,7 +126,7 @@ exports[`Explore page renders correctly 1`] = `
   color: #aac9ff;
 }
 
-.c4.c4 {
+.c5.c5 {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -422,6 +438,70 @@ exports[`Explore page renders correctly 1`] = `
             }
           >
             <span
+              id="date-filter-select"
+              style={
+                Object {
+                  "border": 0,
+                  "clip": "rect(0 0 0 0)",
+                  "height": "1px",
+                  "margin": "-1px",
+                  "overflow": "hidden",
+                  "padding": 0,
+                  "position": "absolute",
+                  "whiteSpace": "nowrap",
+                  "width": "1px",
+                  "wordWrap": "normal",
+                }
+              }
+            >
+              select time range to filter by
+            </span>
+            <div
+              data-cy="date-filter-select"
+              data-reach-listbox-input=""
+              data-state="closed"
+              data-value={null}
+              id="listbox-input--1"
+            >
+              <span
+                aria-haspopup="listbox"
+                aria-labelledby="date-filter-select button--listbox-input--1"
+                className="c1"
+                data-reach-listbox-button=""
+                id="button--listbox-input--1"
+                onKeyDown={[Function]}
+                onMouseDown={[Function]}
+                onMouseUp={[Function]}
+                role="button"
+                tabIndex={0}
+              >
+                Date range
+                <span
+                  aria-hidden={true}
+                  data-reach-listbox-arrow=""
+                >
+                  ▼
+                </span>
+              </span>
+            </div>
+            <input
+              data-reach-listbox-hidden-input=""
+              disabled={false}
+              name="date-filter"
+              readOnly={true}
+              tabIndex={-1}
+              type="hidden"
+              value=""
+            />
+          </div>
+          <div
+            style={
+              Object {
+                "flexGrow": 1,
+              }
+            }
+          >
+            <span
               id="focus-filter-select"
               style={
                 Object {
@@ -445,14 +525,14 @@ exports[`Explore page renders correctly 1`] = `
               data-reach-listbox-input=""
               data-state="closed"
               data-value=""
-              id="listbox-input--1"
+              id="listbox-input--2"
             >
               <span
                 aria-haspopup="listbox"
-                aria-labelledby="focus-filter-select button--listbox-input--1"
-                className="c1"
+                aria-labelledby="focus-filter-select button--listbox-input--2"
+                className="c2"
                 data-reach-listbox-button=""
-                id="button--listbox-input--1"
+                id="button--listbox-input--2"
                 onKeyDown={[Function]}
                 onMouseDown={[Function]}
                 onMouseUp={[Function]}
@@ -510,14 +590,14 @@ exports[`Explore page renders correctly 1`] = `
               data-reach-listbox-input=""
               data-state="closed"
               data-value=""
-              id="listbox-input--2"
+              id="listbox-input--3"
             >
               <span
                 aria-haspopup="listbox"
-                aria-labelledby="geophysical-filter-select button--listbox-input--2"
-                className="c1"
+                aria-labelledby="geophysical-filter-select button--listbox-input--3"
+                className="c2"
                 data-reach-listbox-button=""
-                id="button--listbox-input--2"
+                id="button--listbox-input--3"
                 onKeyDown={[Function]}
                 onMouseDown={[Function]}
                 onMouseUp={[Function]}
@@ -575,14 +655,14 @@ exports[`Explore page renders correctly 1`] = `
               data-reach-listbox-input=""
               data-state="closed"
               data-value=""
-              id="listbox-input--3"
+              id="listbox-input--4"
             >
               <span
                 aria-haspopup="listbox"
-                aria-labelledby="season-filter-select button--listbox-input--3"
-                className="c1"
+                aria-labelledby="season-filter-select button--listbox-input--4"
+                className="c2"
                 data-reach-listbox-button=""
-                id="button--listbox-input--3"
+                id="button--listbox-input--4"
                 onKeyDown={[Function]}
                 onMouseDown={[Function]}
                 onMouseUp={[Function]}
@@ -640,14 +720,14 @@ exports[`Explore page renders correctly 1`] = `
               data-reach-listbox-input=""
               data-state="closed"
               data-value=""
-              id="listbox-input--4"
+              id="listbox-input--5"
             >
               <span
                 aria-haspopup="listbox"
-                aria-labelledby="region-filter-select button--listbox-input--4"
-                className="c1"
+                aria-labelledby="region-filter-select button--listbox-input--5"
+                className="c2"
                 data-reach-listbox-button=""
-                id="button--listbox-input--4"
+                id="button--listbox-input--5"
                 onKeyDown={[Function]}
                 onMouseDown={[Function]}
                 onMouseUp={[Function]}
@@ -705,14 +785,14 @@ exports[`Explore page renders correctly 1`] = `
               data-reach-listbox-input=""
               data-state="closed"
               data-value=""
-              id="listbox-input--5"
+              id="listbox-input--6"
             >
               <span
                 aria-haspopup="listbox"
-                aria-labelledby="platform-filter-select button--listbox-input--5"
-                className="c1"
+                aria-labelledby="platform-filter-select button--listbox-input--6"
+                className="c2"
                 data-reach-listbox-button=""
-                id="button--listbox-input--5"
+                id="button--listbox-input--6"
                 onKeyDown={[Function]}
                 onMouseDown={[Function]}
                 onMouseUp={[Function]}
@@ -770,14 +850,14 @@ exports[`Explore page renders correctly 1`] = `
               data-reach-listbox-input=""
               data-state="closed"
               data-value=""
-              id="listbox-input--6"
+              id="listbox-input--7"
             >
               <span
                 aria-haspopup="listbox"
-                aria-labelledby="funding-filter-select button--listbox-input--6"
-                className="c1"
+                aria-labelledby="funding-filter-select button--listbox-input--7"
+                className="c2"
                 data-reach-listbox-button=""
-                id="button--listbox-input--6"
+                id="button--listbox-input--7"
                 onKeyDown={[Function]}
                 onMouseDown={[Function]}
                 onMouseUp={[Function]}
@@ -843,7 +923,7 @@ exports[`Explore page renders correctly 1`] = `
             title=""
           />
           <button
-            className="c2"
+            className="c3"
             data-cy="remove-filter"
             onClick={[Function]}
             style={
@@ -902,7 +982,7 @@ exports[`Explore page renders correctly 1`] = `
         >
           <li>
             <button
-              className="c3"
+              className="c4"
               onClick={[Function]}
             >
               Campaigns
@@ -917,7 +997,7 @@ exports[`Explore page renders correctly 1`] = `
           </li>
           <li>
             <button
-              className="c4"
+              className="c5"
               onClick={[Function]}
             >
               Platforms
@@ -932,7 +1012,7 @@ exports[`Explore page renders correctly 1`] = `
           </li>
           <li>
             <button
-              className="c4"
+              className="c5"
               onClick={[Function]}
             >
               Instruments
@@ -971,13 +1051,13 @@ exports[`Explore page renders correctly 1`] = `
           data-reach-listbox-input=""
           data-state="closed"
           data-value="most recent"
-          id="listbox-input--7"
+          id="listbox-input--8"
         >
           <span
             aria-haspopup="listbox"
-            aria-labelledby="sort order button--listbox-input--7"
+            aria-labelledby="sort order button--listbox-input--8"
             data-reach-listbox-button=""
-            id="button--listbox-input--7"
+            id="button--listbox-input--8"
             onKeyDown={[Function]}
             onMouseDown={[Function]}
             onMouseUp={[Function]}
@@ -1042,7 +1122,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c5"
+                  className="c6"
                 >
                   <img
                     alt="placeholder logo"
@@ -1141,7 +1221,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c5"
+                  className="c6"
                 >
                   <img
                     alt="placeholder logo"
@@ -1239,7 +1319,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c5"
+                  className="c6"
                 >
                   <img
                     alt="placeholder logo"
@@ -1336,7 +1416,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c5"
+                  className="c6"
                 >
                   <img
                     alt="GOES-R PLT logo"
@@ -1443,7 +1523,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c5"
+                  className="c6"
                 >
                   <img
                     alt="OLYMPEX logo"
@@ -1550,7 +1630,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c5"
+                  className="c6"
                 >
                   <img
                     alt="placeholder logo"
@@ -1648,7 +1728,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c5"
+                  className="c6"
                 >
                   <img
                     alt="CARVE logo"
@@ -1756,7 +1836,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c5"
+                  className="c6"
                 >
                   <img
                     alt="AirMOSS logo"
@@ -1864,7 +1944,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c5"
+                  className="c6"
                 >
                   <img
                     alt="placeholder logo"
@@ -1963,7 +2043,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c5"
+                  className="c6"
                 >
                   <img
                     alt="HS3 logo"
@@ -2071,7 +2151,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c5"
+                  className="c6"
                 >
                   <img
                     alt="placeholder logo"
@@ -2169,7 +2249,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c5"
+                  className="c6"
                 >
                   <img
                     alt="placeholder logo"
@@ -2267,7 +2347,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c5"
+                  className="c6"
                 >
                   <img
                     alt="DC3 logo"
@@ -2372,7 +2452,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c5"
+                  className="c6"
                 >
                   <img
                     alt="GCPEx logo"
@@ -2479,7 +2559,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c5"
+                  className="c6"
                 >
                   <img
                     alt="placeholder logo"
@@ -2577,7 +2657,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c5"
+                  className="c6"
                 >
                   <img
                     alt="GRIP logo"
@@ -2684,7 +2764,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c5"
+                  className="c6"
                 >
                   <img
                     alt="ARCTAS logo"
@@ -2792,7 +2872,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c5"
+                  className="c6"
                 >
                   <img
                     alt="placeholder logo"
@@ -2890,7 +2970,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c5"
+                  className="c6"
                 >
                   <img
                     alt="placeholder logo"
@@ -2988,7 +3068,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c5"
+                  className="c6"
                 >
                   <img
                     alt="placeholder logo"
@@ -3086,7 +3166,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c5"
+                  className="c6"
                 >
                   <img
                     alt="ACES logo"
@@ -3193,7 +3273,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c5"
+                  className="c6"
                 >
                   <img
                     alt="placeholder logo"
@@ -3292,7 +3372,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c5"
+                  className="c6"
                 >
                   <img
                     alt="placeholder logo"
@@ -3390,7 +3470,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c5"
+                  className="c6"
                 >
                   <img
                     alt="placeholder logo"
@@ -3489,7 +3569,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c5"
+                  className="c6"
                 >
                   <img
                     alt="placeholder logo"
@@ -3600,7 +3680,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c5"
+                  className="c6"
                 >
                   <img
                     alt="placeholder logo"
@@ -3820,7 +3900,7 @@ exports[`Explore page renders correctly 1`] = `
           </li>
           <li>
             <button
-              className="c2"
+              className="c3"
               onClick={[Function]}
               style={
                 Object {
@@ -3844,11 +3924,11 @@ exports[`Explore page renders correctly 1`] = `
               Maintenance login
             </button>
             <div
-              className="c6"
+              className="c7"
               onClick={[Function]}
             >
               <div
-                className="c7"
+                className="c8"
               >
                 <form
                   data-cy="login-form"
