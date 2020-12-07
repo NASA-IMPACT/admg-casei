@@ -143,8 +143,8 @@ const ExploreTools = React.forwardRef(
 
 ExploreTools.propTypes = {
   dateRange: PropTypes.shape({
-    start: PropTypes.instanceOf(Date).isRequired,
-    end: PropTypes.instanceOf(Date).isRequired,
+    start: PropTypes.instanceOf(Date),
+    end: PropTypes.instanceOf(Date),
   }).isRequired,
   setDateRange: PropTypes.func.isRequired,
   submitSearch: PropTypes.func.isRequired,

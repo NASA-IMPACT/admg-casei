@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import { isWithinInterval } from "date-fns"
 
 import { sortFunctions, campaignFilter } from "../utils/filter-utils"
 
@@ -7,6 +8,7 @@ export default function useCampaignList(
   sortOrder,
   selectedFilterIds,
   geoFilterResult,
+  dateRange,
   searchResult
 ) {
   const [campaignList, setCampaignList] = useState({
@@ -14,6 +16,7 @@ export default function useCampaignList(
     filtered: queryResult,
     filteredByMenu: queryResult,
     filteredByGeo: queryResult,
+    filteredByDateRange: queryResult,
     filteredBySearch: queryResult,
   })
 
@@ -37,6 +40,7 @@ export default function useCampaignList(
         campaign =>
           filteredCampaignByMenu.map(c => c.id).includes(campaign.id) &&
           prev.filteredByGeo.map(c => c.id).includes(campaign.id) &&
+          prev.filteredByDateRange.map(c => c.id).includes(campaign.id) &&
           prev.filteredBySearch.map(c => c.id).includes(campaign.id)
       ),
       filteredByMenu: filteredCampaignByMenu,
@@ -55,11 +59,48 @@ export default function useCampaignList(
         campaign =>
           prev.filteredByMenu.map(c => c.id).includes(campaign.id) &&
           filteredByGeo.map(c => c.id).includes(campaign.id) &&
+          prev.filteredByDateRange.map(c => c.id).includes(campaign.id) &&
           prev.filteredBySearch.map(c => c.id).includes(campaign.id)
       ),
       filteredByGeo,
     }))
   }, [geoFilterResult])
+
+  useEffect(() => {
+    // update after changing the date range
+
+    if (!(dateRange.start && dateRange.end)) return
+
+    const filteredCampaignByDateRange = queryResult.filter(campaign => {
+      const isStartWithinRange = isWithinInterval(
+        new Date(campaign.startdate),
+        dateRange
+      )
+
+      const isEndWithinRange = campaign.enddate
+        ? isWithinInterval(new Date(campaign.enddate), dateRange)
+        : // ongoing campaigns have enddate: null, use now in that case
+          isWithinInterval(new Date(), dateRange)
+
+      // eslint-disable-next-line no-unused-vars
+      const isWithinRange = isStartWithinRange && isEndWithinRange
+      const isIntersectingRange = isStartWithinRange || isEndWithinRange
+
+      return isIntersectingRange
+    })
+
+    setCampaignList(prev => ({
+      ...prev,
+      filtered: prev.all.filter(
+        campaign =>
+          prev.filteredByMenu.map(c => c.id).includes(campaign.id) &&
+          prev.filteredByGeo.map(c => c.id).includes(campaign.id) &&
+          filteredCampaignByDateRange.map(c => c.id).includes(campaign.id) &&
+          prev.filteredBySearch.map(c => c.id).includes(campaign.id)
+      ),
+      filteredByDateRange: filteredCampaignByDateRange,
+    }))
+  }, [dateRange])
 
   useEffect(() => {
     // update after entering text in the search bar
@@ -72,6 +113,7 @@ export default function useCampaignList(
         campaign =>
           prev.filteredByMenu.map(c => c.id).includes(campaign.id) &&
           prev.filteredByGeo.map(c => c.id).includes(campaign.id) &&
+          prev.filteredByDateRange.map(c => c.id).includes(campaign.id) &&
           filteredCampaignBySearch.map(c => c.id).includes(campaign.id)
       ),
       filteredBySearch: filteredCampaignBySearch,

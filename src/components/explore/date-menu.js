@@ -10,8 +10,11 @@ import VisuallyHidden from "@reach/visually-hidden"
 import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css"
 import styled from "styled-components"
+import startOfToday from "date-fns/startOfToday"
+import endOfToday from "date-fns/endOfToday"
 import subWeeks from "date-fns/subWeeks"
 import subMonths from "date-fns/subMonths"
+import subYears from "date-fns/subYears"
 
 import theme from "../../utils/theme"
 
@@ -35,29 +38,34 @@ const DateMenu = ({ id, style, label, dateRange, setDateRange }) => {
   const onButtonClick = value => {
     switch (value) {
       case "week": {
-        const today = new Date()
-        const lastWeek = subWeeks(today, 1)
+        const lastWeek = subWeeks(startOfToday(), 1)
 
         setStartDate(lastWeek)
-        setEndDate(today)
+        setEndDate(endOfToday())
         break
       }
 
       case "month": {
-        const today = new Date()
-        const lastMonth = subMonths(today, 1)
+        const lastMonth = subMonths(startOfToday(), 1)
 
         setStartDate(lastMonth)
-        setEndDate(today)
+        setEndDate(endOfToday())
         break
       }
 
       case "halfYear": {
-        const today = new Date()
-        const sixMonthsAgo = subMonths(today, 6)
+        const sixMonthsAgo = subMonths(startOfToday(), 6)
 
         setStartDate(sixMonthsAgo)
-        setEndDate(today)
+        setEndDate(endOfToday())
+        break
+      }
+
+      case "tenYears": {
+        const tenYearsAgo = subYears(startOfToday(), 10)
+
+        setStartDate(tenYearsAgo)
+        setEndDate(endOfToday())
         break
       }
 
@@ -122,6 +130,9 @@ const DateMenu = ({ id, style, label, dateRange, setDateRange }) => {
                   <button onClick={() => onButtonClick("halfYear")}>
                     6 Months ago
                   </button>
+                  <button onClick={() => onButtonClick("tenYears")}>
+                    10 years ago
+                  </button>
                 </div>
                 <ListboxOption value="selection">Apply</ListboxOption>
               </ListboxPopover>
@@ -138,8 +149,8 @@ DateMenu.propTypes = {
   style: PropTypes.object,
   label: PropTypes.string.isRequired,
   dateRange: PropTypes.shape({
-    start: PropTypes.instanceOf(Date).isRequired,
-    end: PropTypes.instanceOf(Date).isRequired,
+    start: PropTypes.instanceOf(Date),
+    end: PropTypes.instanceOf(Date),
   }).isRequired,
   setDateRange: PropTypes.func.isRequired,
 }

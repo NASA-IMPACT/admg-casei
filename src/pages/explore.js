@@ -46,9 +46,9 @@ export default function Explore({ data, location }) {
   const [aoi, setAoi] = useState(null)
   const [geoFilterResult, setGeoFilter] = useState(null)
   const [dateRange, setDateRange] = useState({
-    start: new Date("2000/01/01"),
-    end: new Date(),
-  }) // TODO: apply these dates as filter!
+    start: null,
+    end: null,
+  })
   const [searchResult, setSearchResult] = useState()
 
   useEffect(() => {
@@ -65,6 +65,7 @@ export default function Explore({ data, location }) {
     sortOrder.campaigns,
     selectedFilterIds,
     geoFilterResult,
+    dateRange,
     searchResult
   )
 
@@ -72,6 +73,7 @@ export default function Explore({ data, location }) {
     allPlatform.list,
     sortOrder.platforms,
     selectedFilterIds,
+    dateRange,
     searchResult
   )
 
@@ -79,6 +81,7 @@ export default function Explore({ data, location }) {
     allInstrument.list,
     sortOrder.instruments,
     selectedFilterIds,
+    dateRange,
     searchResult
   )
 
@@ -181,6 +184,8 @@ export default function Explore({ data, location }) {
                 removeAction={removeAoi}
               />
             )}
+
+            {/* TODO: add chip for date range */}
           </FilterChips>
         )}
 
@@ -313,7 +318,8 @@ export const query = graphql`
     geophysical: geophysical_concepts {
       id # required for filter
     }
-    enddate: end_date # required for sort
+    startdate: start_date # required for temporal filter
+    enddate: end_date # required for sort and temporal filter
     deployments {
       regions: geographical_regions {
         id # required for filter
@@ -372,6 +378,7 @@ const campaignShape = PropTypes.shape({
       id: PropTypes.string.isRequired,
     })
   ).isRequired,
+  startdate: PropTypes.string,
   enddate: PropTypes.string,
   deployments: PropTypes.arrayOf(
     PropTypes.shape({
