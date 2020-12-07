@@ -211,6 +211,4 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 ## 💫 Deploy
 
-The project is set up to deploy with CircleCI when changes are merged into the branch `develop`. The configuration lives at [.circleci/config.yml](.circleci/config.yml).
-
-[![CircleCI Status](https://circleci.com/gh/developmentseed/admg-inventory.svg?style=svg&circle-token=7382cd33d87c082027d281aecdb24433511223c1)](https://app.circleci.com/pipelines/github/developmentseed/admg-inventory)
+The project is set up to deploy with [Github Actions](https://github.com/developmentseed/admg-inventory/actions) when changes are merged into the branch `develop`. The configuration lives at [.github/workflows/deploy.yml](.github/workflows/deploy.yml).
