@@ -198,8 +198,8 @@ export default function Explore({ data, location }) {
               <Chip
                 id="filter"
                 label={`date:
-                ${format(dateRange.start, "yyyy-MM-dd")} to 
-                ${format(dateRange.end, "yyyy-MM-dd")}`}
+                ${format(dateRange.start, "MM/dd/yyyy")} to 
+                ${format(dateRange.end, "MM/dd/yyyy")}`}
                 actionId={"dateRange"}
                 removeAction={removeDateRange}
               />

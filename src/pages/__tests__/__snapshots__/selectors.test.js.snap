@@ -483,6 +483,7 @@ exports[`Explore page renders correctly 1`] = `
                   ▼
                 </span>
               </span>
+              <span />
             </div>
             <input
               data-reach-listbox-hidden-input=""

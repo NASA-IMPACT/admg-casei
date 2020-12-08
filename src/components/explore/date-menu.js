@@ -4,6 +4,7 @@ import {
   ListboxInput,
   ListboxButton,
   ListboxPopover,
+  ListboxList,
   ListboxOption,
 } from "@reach/listbox"
 import VisuallyHidden from "@reach/visually-hidden"
@@ -33,9 +34,36 @@ const FilterButton = styled(ListboxButton)`
   text-transform: uppercase;
 `
 
+const TimeRangeButton = styled.button`
+  flex-grow: 0;
+  width: 100%;
+  -webkit-appearance: none;
+  background: transparent;
+  border: 0;
+  color: ${theme.color.base};
+  padding: 0.5rem;
+  cursor: pointer;
+  text-transform: capitalize;
+`
+
+const ApplyButton = styled(ListboxOption)`
+  flex-grow: 0;
+  height: 2.5rem;
+  width: 100%;
+  -webkit-appearance: none;
+  background: transparent;
+  border: 1px solid ${theme.color.base};
+  color: ${theme.color.base};
+  padding: 0.5rem;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+`
+
 const DateMenu = ({ id, style, label, dateRange, setDateRange }) => {
-  const [startDate, setStartDate] = useState(dateRange.start)
-  const [endDate, setEndDate] = useState(dateRange.end)
+  const [startDate, setStartDate] = useState(dateRange.start || new Date())
+  const [endDate, setEndDate] = useState(dateRange.end || new Date())
 
   const onButtonClick = value => {
     switch (value) {
@@ -87,60 +115,56 @@ const DateMenu = ({ id, style, label, dateRange, setDateRange }) => {
         data-cy={`${id}-filter-select`}
         onChange={() => setDateRange({ start: startDate, end: endDate })}
       >
-        {({ isExpanded }) => (
-          <>
-            <FilterButton arrow="▼">{label}</FilterButton>
-            {isExpanded && (
-              <ListboxPopover
-                style={{
-                  background: theme.color.primary,
-                  maxHeight: `24rem`,
-                  display: `grid`,
-                  gridTemplateColumns: `1fr 1fr`,
-                }}
-              >
-                {/* TODO: Calendar styles */}
-                <DatePicker
-                  inline
-                  showYearDropdown
-                  onChange={date => setStartDate(date)}
-                  selectsStart
-                  selected={startDate}
-                  startDate={startDate}
-                  endDate={endDate}
-                  shouldCloseOnSelect={false}
-                />
-                <DatePicker
-                  inline
-                  showYearDropdown
-                  onChange={date => setEndDate(date)}
-                  selectsEnd
-                  selected={endDate}
-                  startDate={startDate}
-                  endDate={endDate}
-                  minDate={startDate}
-                  shouldCloseOnSelect={false}
-                />
-                <div>
-                  {/* TODO: Button styles */}
-                  <button onClick={() => onButtonClick("week")}>
-                    Week ago
-                  </button>
-                  <button onClick={() => onButtonClick("month")}>
-                    Month ago
-                  </button>
-                  <button onClick={() => onButtonClick("halfYear")}>
-                    6 Months ago
-                  </button>
-                  <button onClick={() => onButtonClick("tenYears")}>
-                    10 years ago
-                  </button>
-                </div>
-                <ListboxOption value="selection">Apply</ListboxOption>
-              </ListboxPopover>
-            )}
-          </>
-        )}
+        <FilterButton arrow="▼">{label}</FilterButton>
+        <ListboxPopover
+          style={{
+            background: theme.color.primary,
+            minWidth: `fit-content`,
+          }}
+        >
+          <ListboxList
+            style={{
+              display: `flex`,
+              margin: `1rem`,
+              alignItems: `center`,
+              justifyContent: `space-between`,
+            }}
+          >
+            From:
+            <DatePicker
+              showYearDropdown
+              onChange={date => setStartDate(date)}
+              selected={startDate}
+            />
+            To:
+            <DatePicker
+              showYearDropdown
+              onChange={date => setEndDate(date)}
+              selected={endDate}
+              minDate={startDate}
+            />
+          </ListboxList>
+          <ListboxList
+            style={{
+              display: `flex`,
+              gap: `1rem`,
+              margin: `1rem`,
+              alignItems: `center`,
+            }}
+          >
+            <TimeRangeButton onClick={() => onButtonClick("month")}>
+              1 Month ago
+            </TimeRangeButton>
+            <TimeRangeButton onClick={() => onButtonClick("halfYear")}>
+              6 Months ago
+            </TimeRangeButton>
+            <TimeRangeButton onClick={() => onButtonClick("tenYears")}>
+              10 years ago
+            </TimeRangeButton>
+
+            <ApplyButton value="select">Apply</ApplyButton>
+          </ListboxList>
+        </ListboxPopover>
       </ListboxInput>
     </div>
   )
