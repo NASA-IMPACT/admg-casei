@@ -2,15 +2,13 @@ import React, { useState, useRef, useEffect } from "react"
 import PropTypes from "prop-types"
 import { graphql, Link } from "gatsby"
 import VisuallyHidden from "@reach/visually-hidden"
+import { format } from "date-fns"
 
 import api from "../utils/api"
-import {
-  selector,
-  sortFunctions,
-  campaignFilter,
-  platformFilter,
-  instrumentFilter,
-} from "../utils/filter-utils"
+import { selector } from "../utils/filter-utils"
+import useCampaignList from "../utils/use-campaign-list"
+import usePlatformList from "../utils/use-platform-list"
+import useInstrumentList from "../utils/use-instrument-list"
 
 import Layout, { PageBody } from "../components/layout"
 import SEO from "../components/seo"
@@ -40,25 +38,6 @@ export default function Explore({ data, location }) {
 
   const [isLoading, setLoading] = useState(false)
   const [selectedCategory, setSelectedCategory] = useState("campaigns")
-  const [campaignList, setCampaignList] = useState({
-    all: allCampaign.list,
-    filtered: allCampaign.list,
-    filteredByMenu: allCampaign.list,
-    filteredByGeo: allCampaign.list,
-    filteredBySearch: allCampaign.list,
-  })
-  const [platformList, setPlatformList] = useState({
-    all: allPlatform.list,
-    filtered: allPlatform.list,
-    filteredByMenu: allPlatform.list,
-    filteredBySearch: allPlatform.list,
-  })
-  const [instrumentList, setInstrumentList] = useState({
-    all: allInstrument.list,
-    filtered: allInstrument.list,
-    filteredByMenu: allInstrument.list,
-    filteredBySearch: allInstrument.list,
-  })
   const [sortOrder, setSortOrder] = useState({
     campaigns: "most recent",
     instruments: "most used",
@@ -67,6 +46,10 @@ export default function Explore({ data, location }) {
   const [selectedFilterIds, setFilter] = useState([])
   const [aoi, setAoi] = useState(null)
   const [geoFilterResult, setGeoFilter] = useState(null)
+  const [dateRange, setDateRange] = useState({
+    start: null,
+    end: null,
+  })
   const [searchResult, setSearchResult] = useState()
 
   useEffect(() => {
@@ -78,147 +61,45 @@ export default function Explore({ data, location }) {
     }
   }, [selectedFilterId])
 
-  useEffect(() => {
-    setCampaignList(prev => ({
-      ...prev,
-      filtered: campaignList.filtered.sort(
-        sortFunctions.campaigns[sortOrder.campaigns]
-      ),
-    }))
+  const campaignList = useCampaignList(
+    allCampaign.list,
+    sortOrder.campaigns,
+    selectedFilterIds,
+    geoFilterResult,
+    dateRange,
+    searchResult
+  )
 
-    setPlatformList(prev => ({
-      ...prev,
-      filtered: platformList.filtered.sort(
-        sortFunctions.platforms[sortOrder.platforms]
-      ),
-    }))
+  const platformList = usePlatformList(
+    allPlatform.list,
+    sortOrder.platforms,
+    selectedFilterIds,
+    dateRange,
+    searchResult
+  )
 
-    setInstrumentList(prev => ({
-      ...prev,
-      filtered: instrumentList.filtered.sort(
-        sortFunctions.instruments[sortOrder.instruments]
-      ),
-    }))
-  }, [sortOrder])
-
-  useEffect(() => {
-    const filteredCampaignByMenu = allCampaign.list.filter(
-      campaignFilter(selectedFilterIds)
-    )
-
-    setCampaignList(prev => ({
-      ...prev,
-      filtered: prev.all.filter(
-        campaign =>
-          filteredCampaignByMenu.map(c => c.id).includes(campaign.id) &&
-          prev.filteredByGeo.map(c => c.id).includes(campaign.id) &&
-          prev.filteredBySearch.map(c => c.id).includes(campaign.id)
-      ),
-      filteredByMenu: filteredCampaignByMenu,
-    }))
-
-    const filteredPlatformByMenu = allPlatform.list.filter(
-      platformFilter(selectedFilterIds)
-    )
-
-    setPlatformList(prev => ({
-      ...prev,
-      filtered: prev.all.filter(
-        platform =>
-          filteredPlatformByMenu.map(c => c.id).includes(platform.id) &&
-          prev.filteredBySearch.map(c => c.id).includes(platform.id)
-      ),
-      filteredByMenu: filteredPlatformByMenu,
-    }))
-
-    const filteredInstrumentByMenu = allInstrument.list.filter(
-      instrumentFilter(selectedFilterIds)
-    )
-
-    setInstrumentList(prev => ({
-      ...prev,
-      filtered: prev.all.filter(
-        instrument =>
-          filteredInstrumentByMenu.map(c => c.id).includes(instrument.id) &&
-          prev.filteredBySearch.map(c => c.id).includes(instrument.id)
-      ),
-      filteredByMenu: filteredInstrumentByMenu,
-    }))
-  }, [selectedFilterIds])
-
-  useEffect(() => {
-    const filteredByGeo = allCampaign.list.filter(campaign =>
-      geoFilterResult ? geoFilterResult.includes(campaign.id) : true
-    )
-
-    setCampaignList(prev => ({
-      ...prev,
-      filtered: prev.all.filter(
-        campaign =>
-          prev.filteredByMenu.map(c => c.id).includes(campaign.id) &&
-          filteredByGeo.map(c => c.id).includes(campaign.id) &&
-          prev.filteredBySearch.map(c => c.id).includes(campaign.id)
-      ),
-      filteredByGeo,
-    }))
-  }, [geoFilterResult])
-
-  useEffect(() => {
-    const filteredCampaignBySearch = allCampaign.list.filter(campaign =>
-      searchResult ? searchResult.includes(campaign.shortname) : true
-    )
-    setCampaignList(prev => ({
-      ...prev,
-      filtered: prev.all.filter(
-        campaign =>
-          prev.filteredByMenu.map(c => c.id).includes(campaign.id) &&
-          prev.filteredByGeo.map(c => c.id).includes(campaign.id) &&
-          filteredCampaignBySearch.map(c => c.id).includes(campaign.id)
-      ),
-      filteredBySearch: filteredCampaignBySearch,
-    }))
-
-    const filteredInstrumentBySearch = allInstrument.list.filter(
-      () =>
-        // TODO: implement free text search for instruments
-        // searchResult ? searchResult.includes(instrument.shortname) : true
-        true
-    )
-    setInstrumentList(prev => ({
-      ...prev,
-      filtered: prev.all.filter(
-        instrument =>
-          prev.filteredByMenu.map(c => c.id).includes(instrument.id) &&
-          filteredInstrumentBySearch.map(c => c.id).includes(instrument.id)
-      ),
-      filteredBySearch: filteredInstrumentBySearch,
-    }))
-
-    const filteredPlatformBySearch = allPlatform.list.filter(
-      () =>
-        // TODO: implement free text search for platforms
-        // searchResult ? searchResult.includes(platform.shortname) : true
-        true
-    )
-    setPlatformList(prev => ({
-      ...prev,
-      filtered: prev.all.filter(
-        platform =>
-          prev.filteredByMenu.map(c => c.id).includes(platform.id) &&
-          filteredPlatformBySearch.map(c => c.id).includes(platform.id)
-      ),
-      filteredBySearch: filteredPlatformBySearch,
-    }))
-  }, [searchResult])
+  const instrumentList = useInstrumentList(
+    allInstrument.list,
+    sortOrder.instruments,
+    selectedFilterIds,
+    dateRange,
+    searchResult
+  )
 
   const addFilter = id => setFilter([...selectedFilterIds, id])
   const removeFilter = id => setFilter(selectedFilterIds.filter(f => f !== id))
+  const removeDateRange = () =>
+    setDateRange({
+      start: null,
+      end: null,
+    })
   const removeAoi = () => {
     setAoi(null)
     setGeoFilter(null)
   }
   const clearFilters = () => {
     setFilter([])
+    removeDateRange()
     setAoi(null)
     setGeoFilter(null)
   }
@@ -271,6 +152,8 @@ export default function Explore({ data, location }) {
         </VisuallyHidden>
         <ExploreTools
           ref={inputElement}
+          dateRange={dateRange}
+          setDateRange={setDateRange}
           submitSearch={submitSearch}
           resetSearch={resetSearch}
           selectedFilterIds={selectedFilterIds}
@@ -294,7 +177,9 @@ export default function Explore({ data, location }) {
           setAoi={setAoi}
         />
 
-        {(selectedFilterIds.length > 0 || aoi) && (
+        {(selectedFilterIds.length > 0 ||
+          aoi ||
+          !!(dateRange.start && dateRange.end)) && (
           <FilterChips clearFilters={clearFilters}>
             {selectedFilterIds.map(f => (
               <Chip
@@ -312,6 +197,17 @@ export default function Explore({ data, location }) {
                 label={"Drawn Polygon"}
                 actionId={"aoi"}
                 removeAction={removeAoi}
+              />
+            )}
+
+            {!!(dateRange.start && dateRange.end) && (
+              <Chip
+                id="filter"
+                label={`date:
+                ${format(dateRange.start, "MM/dd/yyyy")} to 
+                ${format(dateRange.end, "MM/dd/yyyy")}`}
+                actionId={"dateRange"}
+                removeAction={removeDateRange}
               />
             )}
           </FilterChips>
@@ -446,7 +342,8 @@ export const query = graphql`
     geophysical: geophysical_concepts {
       id # required for filter
     }
-    enddate: end_date # required for sort
+    startdate: start_date # required for temporal filter
+    enddate: end_date # required for sort and temporal filter
     deployments {
       regions: geographical_regions {
         id # required for filter
@@ -505,6 +402,7 @@ const campaignShape = PropTypes.shape({
       id: PropTypes.string.isRequired,
     })
   ).isRequired,
+  startdate: PropTypes.string,
   enddate: PropTypes.string,
   deployments: PropTypes.arrayOf(
     PropTypes.shape({
