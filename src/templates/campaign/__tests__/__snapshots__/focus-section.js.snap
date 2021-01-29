@@ -85,10 +85,10 @@ exports[`Focus Section displays content 1`] = `
         >
           <a
             data-cy="focus-area"
-            href="/focus/347b2275-e553-42e2-bfd5-2e077dc00a95"
+            href="/focus/f1bd646f-876f-4e9f-896e-f7d4571ecc00"
             state={
               Object {
-                "selectedFilterId": "347b2275-e553-42e2-bfd5-2e077dc00a95",
+                "selectedFilterId": "f1bd646f-876f-4e9f-896e-f7d4571ecc00",
               }
             }
             style={
@@ -120,7 +120,7 @@ exports[`Focus Section displays content 1`] = `
                 }
               }
             >
-              area a
+              Carbon Cycle & Ecosystems
             </label>
           </a>
         </div>
@@ -145,7 +145,7 @@ exports[`Focus Section displays content 1`] = `
           href="/explore"
           state={
             Object {
-              "selectedFilterId": "347b2275-e553-42e2-bfd5-2e077dc00a95",
+              "selectedFilterId": "f1bd646f-876f-4e9f-896e-f7d4571ecc00",
             }
           }
         >
@@ -166,7 +166,7 @@ exports[`Focus Section displays content 1`] = `
             <small
               title=""
             >
-              area a
+              Carbon Cycle & Ecosystems
             </small>
           </div>
         </a>

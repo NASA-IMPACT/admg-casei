@@ -6,9 +6,9 @@ import FocusSection from "../focus-section"
 const testString = "test string"
 const testArray = [
   {
-    id: "347b2275-e553-42e2-bfd5-2e077dc00a95",
-    shortname: "area a",
-    longname: "area a",
+    id: "f1bd646f-876f-4e9f-896e-f7d4571ecc00",
+    shortname: "Carbon Cycle & Ecosystems",
+    longname: "Carbon Cycle & Ecosystems",
   },
 ]
 
