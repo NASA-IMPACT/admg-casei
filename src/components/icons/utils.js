@@ -10,6 +10,7 @@ import {
   EarthSurfaceInteriorIcon,
   GlobalWaterEnergyCycleIcon,
   WeatherIcon,
+  ExclamationIcon,
 } from "../icons"
 
 const icons = {
@@ -34,10 +35,13 @@ const icons = {
 }
 
 export function getFocusIcon(id) {
-  return icons[id]
+  return Object.keys(icons).includes(id)
+    ? icons[id]
+    : ({ color, size }) => <ExclamationIcon color={color} size={size} />
 }
 
 export const sizes = {
+  icon: { width: "16", height: "16" },
   tiny: { width: "30", height: "30" },
   small: { width: "60", height: "60" },
   large: { width: "120", height: "120" },
