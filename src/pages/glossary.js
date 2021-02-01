@@ -5,6 +5,7 @@ import Image from "gatsby-image"
 
 import Layout, { PageBody, DefinitionList } from "../components/layout"
 import SEO from "../components/seo"
+import { Heading1, BodyText } from "../theme/typography"
 import glossary from "../content/glossary.json"
 
 export default function Glossary({ data }) {
@@ -12,14 +13,14 @@ export default function Glossary({ data }) {
     <Layout>
       <SEO title="Glossary" lang="en" />
       <PageBody id="glossary">
-        <h1>Glossary</h1>
+        <Heading1>Glossary</Heading1>
         <DefinitionList
           id="glossary"
           list={glossary.map(x => ({
             title: x.term,
             content: (
               <div>
-                <p>{x.definition}</p>
+                <BodyText>{x.definition}</BodyText>
                 {x.listOptions && (
                   <ul data-cy="glossary-definition-options">
                     {x.listOptions.map(listItem => (
@@ -30,12 +31,12 @@ export default function Glossary({ data }) {
                   </ul>
                 )}
                 {x.note && (
-                  <p
+                  <BodyText
                     data-cy="glossary-definition-note"
                     style={{ fontStyle: `italic`, marginTop: `1rem` }}
                   >
                     Note: {x.note}
-                  </p>
+                  </BodyText>
                 )}
               </div>
             ),

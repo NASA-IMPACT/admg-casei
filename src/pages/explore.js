@@ -10,6 +10,8 @@ import useCampaignList from "../utils/use-campaign-list"
 import usePlatformList from "../utils/use-platform-list"
 import useInstrumentList from "../utils/use-instrument-list"
 
+import { Heading1 } from "../theme/typography"
+
 import Layout, { PageBody } from "../components/layout"
 import SEO from "../components/seo"
 import ExploreTools from "../components/explore/explore-tools"
@@ -148,7 +150,7 @@ export default function Explore({ data, location }) {
       <SEO title="Explore" lang="en" />
       <PageBody id="explore">
         <VisuallyHidden>
-          <h1>Explore</h1>
+          <Heading1>Explore</Heading1>
         </VisuallyHidden>
         <ExploreTools
           ref={inputElement}

@@ -1,11 +1,13 @@
 import React from "react"
 import PropTypes from "prop-types"
+
 import { PropTypeIsUrl } from "../utils/helpers"
 import theme from "../utils/theme"
+import { LinkText } from "../theme/typography"
 
 export default function ExternalLink({ label, url, id }) {
   return (
-    <a
+    <LinkText
       target="_blank"
       rel="noopener noreferrer"
       href={url}
@@ -13,7 +15,7 @@ export default function ExternalLink({ label, url, id }) {
       data-cy={`${id}-link`}
     >
       {label}
-    </a>
+    </LinkText>
   )
 }
 

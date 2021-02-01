@@ -4,6 +4,7 @@ import Button from "./button"
 import { Modal } from "./modal"
 import { AuthContext } from "../components/auth-provider"
 import { login, logout } from "../utils/auth"
+import { Label } from "../theme/typography"
 
 const Login = () => {
   const { isLoggedIn, setIsLoggedIn } = useContext(AuthContext)
@@ -34,7 +35,6 @@ const Login = () => {
       <Button action={() => (isLoggedIn ? handleLogout() : setModal(true))}>
         {buttonText}
       </Button>
-
       <Modal
         id="modal"
         isOpen={isModalOpen}

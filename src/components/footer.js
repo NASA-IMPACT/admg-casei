@@ -5,6 +5,7 @@ import { Link } from "gatsby"
 import theme from "../utils/theme"
 import Login from "./login"
 import ExternalLink from "./external-link"
+import { Heading2, SmallTitles, BodyText, LinkText } from "../theme/typography"
 
 const Footer = ({ shortname }) => {
   const [isClient, setIsClient] = useState(false)
@@ -16,11 +17,6 @@ const Footer = ({ shortname }) => {
     ul: {
       listStyle: `none`,
       margin: 0,
-    },
-    headline: {
-      margin: `0 0 1.5rem 0`,
-      fontWeight: `bold`,
-      lineHeight: `3rem`,
     },
   }
 
@@ -38,47 +34,45 @@ const Footer = ({ shortname }) => {
         }}
       >
         <div style={{ gridColumn: `1 / span 3` }}>
-          <div
-            style={{
-              textTransform: `uppercase`,
-              fontWeight: `900`,
-              fontSize: `30px`,
-              lineHeight: `2.5rem`,
-              marginBottom: `0.5rem`,
-            }}
-          >
-            {shortname}
-          </div>
-          <p>
+          <Heading2>{shortname}</Heading2>
+          <BodyText>
             {shortname} is a comprehensive inventory containing information
             about all airborne and field campaigns as well as aircrafts,
             instruments, and data products.
-          </p>
+          </BodyText>
         </div>
 
         <div style={{ gridColumn: `5 / span 2` }}>
-          <p style={style.headline}>Explore</p>
+          <BodyText>Explore</BodyText>
           <ul style={style.ul}>
             <li>
-              <Link to="/explore">Campaigns</Link>
+              <Link to="/explore">
+                <LinkText as="span">Campaigns</LinkText>
+              </Link>
               {/** TODO: link to explore with tab selected */}
             </li>
             <li>
-              <Link to="/explore">Platforms</Link>
+              <Link to="/explore">
+                <LinkText as="span">Platforms</LinkText>
+              </Link>
               {/** TODO: link to explore with tab selected */}
             </li>
             <li>
-              <Link to="/explore">Instruments</Link>
+              <Link to="/explore">
+                <LinkText as="span">Instruments</LinkText>
+              </Link>
               {/** TODO: link to explore with tab selected */}
             </li>
           </ul>
         </div>
 
         <div style={{ gridColumn: `7 / span 2` }}>
-          <p style={style.headline}>Resources</p>
+          <BodyText>Resources</BodyText>
           <ul style={style.ul}>
             <li>
-              <Link to="/glossary/">Glossary</Link>
+              <Link to="/glossary/">
+                <LinkText as="span">Glossary</LinkText>
+              </Link>
             </li>
             <li>
               {isClient && (
@@ -90,19 +84,23 @@ const Footer = ({ shortname }) => {
         </div>
 
         <div style={{ gridColumn: `9 / span 2` }}>
-          <p style={style.headline}>Quick Links</p>
+          <BodyText>Quick Links</BodyText>
           <ul style={style.ul}>
             <li>
-              <Link to="/about/">About</Link>
+              <Link to="/about/">
+                <LinkText as="span">About</LinkText>
+              </Link>
             </li>
             <li>
-              <Link to="/contact/">Contact us</Link>
+              <Link to="/contact/">
+                <LinkText as="span">Contact us</LinkText>
+              </Link>
             </li>
           </ul>
         </div>
 
         <div style={{ gridColumn: `11 / span 2` }}>
-          <p style={style.headline}>Organizations</p>
+          <BodyText>Organizations</BodyText>
           <ul style={style.ul}>
             <li>
               <ExternalLink
@@ -152,8 +150,8 @@ const Footer = ({ shortname }) => {
               }}
             ></div>
             <div>
-              <div>National Aeronautics and Space Administration</div>
-              <div>
+              <BodyText>National Aeronautics and Space Administration</BodyText>
+              <SmallTitles>
                 NASA Official:{" "}
                 <span
                   style={{
@@ -162,7 +160,7 @@ const Footer = ({ shortname }) => {
                 >
                   Rahul Ramachandran
                 </span>
-              </div>
+              </SmallTitles>
             </div>
           </div>
           <div
@@ -185,7 +183,7 @@ const Footer = ({ shortname }) => {
         </div>
       </div>
 
-      <div style={{ textAlign: `center` }}>
+      <BodyText style={{ textAlign: `center` }}>
         © {new Date().getFullYear()}, Built by{" "}
         <ExternalLink
           label="Development Seed"
@@ -193,7 +191,7 @@ const Footer = ({ shortname }) => {
           id="devseed-website"
         />
         .
-      </div>
+      </BodyText>
     </footer>
   )
 }

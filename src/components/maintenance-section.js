@@ -5,6 +5,7 @@ import { Link } from "gatsby"
 import { AuthContext } from "../components/auth-provider"
 import { Section } from "./layout"
 import theme from "../utils/theme"
+import { LinkText } from "../theme/typography"
 
 const MaintenanceSection = ({ id, data }) => {
   const { isLoggedIn } = useContext(AuthContext)
@@ -22,7 +23,7 @@ const MaintenanceSection = ({ id, data }) => {
             textTransform: `uppercase`,
           }}
         >
-          Edit
+          <LinkText as="span">Edit</LinkText>
         </Link>
       )}
     </Section>

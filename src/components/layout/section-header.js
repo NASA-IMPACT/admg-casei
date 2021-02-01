@@ -1,6 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 
+import { Heading1, Heading2 } from "../../theme/typography"
+
 export default function SectionHeader({ tagline, headline, id, isPrimary }) {
   return (
     <div style={{ gridColumn: `1 / span 7`, alignSelf: `end` }}>
@@ -11,7 +13,11 @@ export default function SectionHeader({ tagline, headline, id, isPrimary }) {
       )}
       {headline && (
         <a href={`#${id}`}>
-          {isPrimary ? <h1>{headline}</h1> : <h2>{headline}</h2>}
+          {isPrimary ? (
+            <Heading1>{headline}</Heading1>
+          ) : (
+            <Heading2>{headline}</Heading2>
+          )}
         </a>
       )}
     </div>

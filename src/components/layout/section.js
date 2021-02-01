@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 
+import { BodyText } from "../../theme/typography"
 import theme from "../../utils/theme"
 
 const Container = styled.section`
@@ -46,6 +47,6 @@ SectionContent.propTypes = {
   columns: PropTypes.arrayOf(PropTypes.number),
 }
 
-export const Paragraph = styled.p`
+export const Paragraph = styled(BodyText)`
   margin-bottom: 1rem;
 `

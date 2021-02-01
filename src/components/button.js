@@ -3,14 +3,11 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 
 import theme from "../utils/theme"
+import { baseTypeStyle, clickableStyle } from "../theme/typography"
 
 const Clickable = styled.button`
-  &:hover {
-    opacity: 0.64;
-  }
-  &:active {
-    transform: translate(0, 1px);
-  }
+  ${baseTypeStyle};
+  ${clickableStyle};
 `
 
 export default function Button({ children, action }) {

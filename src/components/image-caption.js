@@ -1,9 +1,11 @@
 import React from "react"
 import PropTypes from "prop-types"
 
+import { Label } from "../theme/typography"
+
 export default function ImageCaption({ children, id }) {
   return (
-    <label
+    <Label
       style={{
         position: `absolute`,
         bottom: `.5rem`,
@@ -14,7 +16,7 @@ export default function ImageCaption({ children, id }) {
       data-cy={`${id}-caption`}
     >
       {children}
-    </label>
+    </Label>
   )
 }
 

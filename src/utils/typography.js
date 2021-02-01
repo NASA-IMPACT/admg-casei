@@ -7,12 +7,12 @@ const typography = new Typography({
   baseLineHeight: 1,
   googleFonts: [
     {
-      name: "Titillium Web",
+      name: "Hachi Maru Pop",
       styles: ["400", "600", "700"],
     },
   ],
-  headerFontFamily: ["Titillium Web", "sans-serif"],
-  bodyFontFamily: ["Titillium Web", "sans-serif"],
+  headerFontFamily: ["Hachi Maru Pop", "cursive"],
+  bodyFontFamily: ["Hachi Maru Pop", "cursive"],
   headerColor: theme.color.base,
   bodyColor: theme.color.base,
   headerWeight: "600",
@@ -26,15 +26,15 @@ const typography = new Typography({
         color: theme.color.base,
         transition: "opacity 0.24s ease 0s",
       },
-      "a:active": {
-        transform: "translate(0, 1px)",
-      },
-      "a:hover": {
-        opacity: 0.64,
-      },
-      "a:visited": {
-        color: theme.color.base,
-      },
+      // "a:active": {
+      //   transform: "translate(0, 1px)",
+      // },
+      // "a:hover": {
+      //   opacity: 0.64,
+      // },
+      // "a:visited": {
+      //   color: theme.color.base,
+      // },
       h1: {
         fontSize: rhythm(4),
         marginTop: rhythm(0.5),

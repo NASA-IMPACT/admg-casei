@@ -11,10 +11,11 @@ import Layout, {
 import SEO from "../components/seo"
 import Hero from "../components/hero"
 import ExternalLink from "../components/external-link"
+import { BodyText, Heading2, Heading3 } from "../theme/typography"
 import about from "../content/about.json"
 
 const LinkedParagraph = () => (
-  <p>
+  <BodyText>
     NASA’s Airborne Data Management Group{" "}
     <ExternalLink
       url="https://earthdata.nasa.gov/esds/impact/admg"
@@ -40,7 +41,7 @@ const LinkedParagraph = () => (
     Additionally, ADMG serves the various airborne data user communities by
     providing resource access and key contextual information for past and
     current NASA airborne and field investigations.
-  </p>
+  </BodyText>
 )
 
 const About = ({ data }) => {
@@ -70,11 +71,11 @@ const About = ({ data }) => {
                   section.paragraphs.map((text, i) => <p key={i}>{text}</p>)}
                 {section.bulleted && (
                   <div>
-                    <h2>{section.bulletTitle}</h2>
+                    <Heading2>{section.bulletTitle}</Heading2>
                     {section.bulleted.map((point, i) => (
                       <div style={{ paddingLeft: `4rem` }} key={i}>
-                        <h3>{point.header}</h3>
-                        <p>{point.content}</p>
+                        <Heading3>{point.header}</Heading3>
+                        <BodyText>{point.content}</BodyText>
                       </div>
                     ))}
                   </div>

@@ -1,7 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
+import styled from "styled-components"
 import { FeedbackForm } from "feedback-fish"
 
+import { Heading2, LinkText, clickableStyle } from "../theme/typography"
 import theme from "../utils/theme"
 import Button from "../components/button"
 
@@ -14,9 +16,9 @@ FishButton.propTypes = {
 
 const InpageLink = props => (
   <li style={{ margin: `0 1rem 0 0` }}>
-    <a href={`#${props.id}`} data-cy={`${props.id}-inpage-link`}>
+    <LinkText href={`#${props.id}`} data-cy={`${props.id}-inpage-link`}>
       {props.children}
-    </a>
+    </LinkText>
   </li>
 )
 
@@ -24,6 +26,10 @@ InpageLink.propTypes = {
   id: PropTypes.string.isRequired,
   children: PropTypes.string.isRequired,
 }
+
+const InpageTopLink = styled(Heading2)`
+  ${clickableStyle};
+`
 
 const InpageNav = ({ shortname, items, path }) => (
   <div
@@ -57,11 +63,14 @@ const InpageNav = ({ shortname, items, path }) => (
           }}
         >
           <li>
-            <h2 style={{ paddingRight: `1rem` }}>
-              <a href="#top" data-cy={`top-inpage-link`}>
-                {shortname}
-              </a>
-            </h2>
+            <InpageTopLink
+              as="a"
+              href="#top"
+              style={{ paddingRight: `1rem` }}
+              data-cy={`top-inpage-link`}
+            >
+              {shortname}
+            </InpageTopLink>
           </li>
           {items.map(item => (
             <InpageLink key={item.id} id={item.id}>

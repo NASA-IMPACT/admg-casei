@@ -7,6 +7,7 @@ import { Section, SectionHeader, SectionContent } from "./layout"
 import CampaignCard from "./cards/campaign-card"
 import { controlButtonLRStyle } from "./carousel-styles"
 import theme from "../utils/theme"
+import { BodyText } from "../theme/typography"
 
 const RelatedCampaignsSection = ({ id, campaigns }) => {
   return (
@@ -53,7 +54,7 @@ const RelatedCampaignsSection = ({ id, campaigns }) => {
             </Carousel>
           </div>
         ) : (
-          <p>No available related campaigns</p>
+          <BodyText>No available related campaigns</BodyText>
         )}
       </SectionContent>
     </Section>

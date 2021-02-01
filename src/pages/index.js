@@ -11,6 +11,7 @@ import FocusAreaGallery from "../components/focus-area-gallery"
 import { RegionCarousel } from "../components/home/region-carousel"
 import { GeophysicsGrid } from "../components/home/geophysics-grid"
 import { InstrumentsGrid } from "../components/home/instruments-grid"
+import { BodyText } from "../theme/typography"
 import theme from "../utils/theme"
 
 const IndexPage = ({ data }) => {
@@ -86,10 +87,10 @@ const IndexPage = ({ data }) => {
                 id="platforms"
               />
               <div>
-                <p style={{ marginBottom: `2rem` }}>
+                <BodyText style={{ marginBottom: `2rem` }}>
                   From aircrafts to balloons, from sensors to plaftorms, it
                   takes a lot to understand earth.
-                </p>
+                </BodyText>
                 <Link
                   to="/explore" //** TODO: link to explore with tab selected */
                   style={{

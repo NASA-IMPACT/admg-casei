@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
 import theme from "../utils/theme"
+import { LinkText } from "../theme/typography"
 
 const ListLink = props => (
   <li style={{ margin: `0 1rem 0 0` }}>
@@ -14,7 +15,7 @@ const ListLink = props => (
       }}
       partiallyActive={true}
     >
-      {props.children}
+      <LinkText as="span">{props.children}</LinkText>
     </Link>
   </li>
 )
