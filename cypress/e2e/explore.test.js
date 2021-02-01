@@ -61,6 +61,16 @@ describe("Explore", () => {
           expect($card.find("[data-cy=count1]")).to.contain("Deployments")
           expect($card.find("[data-cy=count2]")).to.contain("Data Products")
         })
+      cy.get("[data-cy=campaigns-card]") // test ongoing campaign card
+        .find("big")
+        .contains("OMG")
+        .parent()
+        .parent()
+        .should($card => {
+          expect($card.find("[data-cy=ongoing-tag]")).to.exist
+          expect($card.find("[data-cy=shortname]")).to.contain("OMG")
+          expect($card.find("[data-cy=daterange]")).to.contain("2015—Ongoing")
+        })
     })
 
     it("navigates to the campaign page", () => {
