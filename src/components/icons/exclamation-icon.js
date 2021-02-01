@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { sizes } from "./utils"
 
-const ExclamationIcon = ({ color = "#FFF", size = "icon" }) => (
+const ExclamationIcon = ({ color = "#FFF", size = "text" }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={sizes[size].width}

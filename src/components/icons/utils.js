@@ -41,7 +41,7 @@ export function getFocusIcon(id) {
 }
 
 export const sizes = {
-  icon: { width: "16", height: "16" },
+  text: { width: "16", height: "16" },
   tiny: { width: "30", height: "30" },
   small: { width: "60", height: "60" },
   large: { width: "120", height: "120" },

@@ -33,7 +33,16 @@ describe("Homepage", () => {
       cy.get("[data-cy=focus-area-section]")
         .find("[data-cy=focus-area]")
         .each($el => {
-          cy.get($el).find("svg").should("exist")
+          cy.get($el)
+            .find("svg")
+            .should("exist")
+            .then($svg => {
+              expect(
+                $svg,
+                "should not display the fallback exclamation icon (indicated by its viewBox). If this fails, make sure all the id's provided with the focus areas match those in src/components/icons/utils.js"
+              ).to.not.have.attr("viewBox", "0 0 16 16")
+            })
+
           cy.get($el).find("label").should("have.text", $el[0].textContent)
         })
     })
