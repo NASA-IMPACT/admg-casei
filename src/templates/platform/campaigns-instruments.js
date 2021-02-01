@@ -25,7 +25,7 @@ const CampaignsAndInstruments = ({ id, campaigns }) => {
             <div
               style={{
                 display: `flex`,
-                overflow: `scroll`,
+                overflow: `auto`,
               }}
               data-cy="region-text-control"
             >

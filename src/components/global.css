@@ -1,10 +1,43 @@
+html {
+  --tertiary: #294060;
+  --primary: #0c1520;
+}
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: radial-gradient(
     circle at top,
-    /*tertiary color */ #294060 0%,
-    /*primary color */ #0c1520 45%
+    var(--tertiary) 0%,
+    var(--primary) 45%
   );
+}
+
+body::-webkit-scrollbar {
+  width: 11px;
+}
+body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--tertiary) var(--primary);
+}
+body::-webkit-scrollbar-track {
+  background: var(--primary);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--tertiary);
+}
+
+div::-webkit-scrollbar {
+  width: 11px;
+}
+div {
+  scrollbar-width: thin;
+  scrollbar-color: var(--tertiary) var(--primary);
+}
+div::-webkit-scrollbar-track {
+  background: var(--primary);
+}
+div::-webkit-scrollbar-thumb {
+  background-color: var(--tertiary);
 }

@@ -38,7 +38,7 @@ export default function Accordion({ folds }) {
                 borderWidth: `0 0 1px 0`,
                 borderColor: `white`,
                 background: `none`,
-                color: `white`,
+                color: itemIndex === index ? theme.color.link : `white`,
                 width: `100%`,
                 textAlign: `left`,
                 cursor: `pointer`,
@@ -50,8 +50,7 @@ export default function Accordion({ folds }) {
               }}
             >
               <div>
-                {instrument.longname} ({instrument.shortname}){itemIndex}
-                {index}
+                {instrument.longname} ({instrument.shortname})
               </div>
               <RotatingContainer isExpanded={itemIndex === index}>
                 <ChevronIcon role="img" aria-label="chevron-icon" />
