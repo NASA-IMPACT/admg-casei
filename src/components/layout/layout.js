@@ -20,14 +20,10 @@ import Header from "../header"
 import Nav from "../nav"
 import Footer from "../footer"
 
-import { baseTypeStyle } from "../../theme/typography"
-
 const Container = styled.div`
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-
-  ${baseTypeStyle};
 `
 
 const Layout = ({ children }) => {
