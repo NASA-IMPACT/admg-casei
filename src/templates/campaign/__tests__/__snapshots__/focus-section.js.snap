@@ -159,7 +159,7 @@ exports[`Focus Section displays content 1`] = `
                 "color": "hsla(0,0%,100%,0.9)",
                 "display": "inline-flex",
                 "margin": "0.25rem 0.5rem",
-                "padding": "0 0.5rem",
+                "padding": "0.25rem 0.5rem",
               }
             }
           >
@@ -196,7 +196,7 @@ exports[`Focus Section displays content 1`] = `
               "color": "hsla(0,0%,100%,0.9)",
               "display": "inline-flex",
               "margin": "0.25rem 0.5rem",
-              "padding": "0 0.5rem",
+              "padding": "0.25rem 0.5rem",
             }
           }
         >

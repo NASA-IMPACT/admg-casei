@@ -926,7 +926,7 @@ exports[`Explore page renders correctly 1`] = `
               "color": "hsla(0,0%,100%,0.9)",
               "display": "flex",
               "margin": "0.25rem 0.5rem",
-              "padding": "0 0.5rem",
+              "padding": "0.25rem 0.5rem",
             }
           }
         >
