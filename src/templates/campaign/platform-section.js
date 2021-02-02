@@ -17,14 +17,6 @@ import theme from "../../utils/theme"
 const PlatformSection = ({ id, platforms, instruments }) => {
   const controlTextRef = useRef(null)
   const [slideIndex, setSlideIndex] = useState(0)
-  // const updatedPlatforms = platforms.map(platform => {
-  //   return {
-  //     ...platform,
-  //     instruments: platform.instruments.filter(instrument =>
-  //       instruments.map(x => x.id).includes(instrument.id)
-  //     ),
-  //   }
-  // })
   return (
     <Section id={id}>
       <SectionHeader headline="Platforms & Instruments" id={id} />
@@ -88,58 +80,60 @@ const PlatformSection = ({ id, platforms, instruments }) => {
               heightMode="max"
             >
               {platforms.map(platform => (
-                <div key={platform.id} data-cy="platform">
-                  <Link to={`/platform/${platform.id}`}>
+                <div
+                  key={platform.id}
+                  data-cy="platform"
+                  style={{
+                    display: `grid`,
+                    gridTemplateColumns: `1fr minmax(auto,  ${theme.layout.maxWidth}) 1fr`,
+                    width: `100vw`,
+                    alignContent: `center`,
+                  }}
+                >
+                  <div
+                    style={{
+                      display: `grid`,
+                      gridTemplateColumns: `1fr 3fr`,
+                      gridGap: `1.5rem`,
+                      width: `70rem`,
+                    }}
+                  >
                     <div
                       style={{
-                        display: `grid`,
-                        gridTemplateColumns: `1fr minmax(auto,  ${theme.layout.maxWidth}) 1fr`,
-                        width: `100vw`,
-                        alignContent: `center`,
+                        width: `26rem`,
+                        maxHeight: `18rem`,
+                        marginTop: `1.25rem`,
                       }}
                     >
-                      {platform.image && platform.image.gatsbyImg ? (
-                        <Image
-                          alt={platform.image.description}
-                          fluid={platform.image.gatsbyImg.childImageSharp.fluid}
-                          data-cy="platform-image"
-                        />
-                      ) : (
-                        <div
-                          style={{
-                            height: 150, // TO DO: make box fill space
-                            backgroundColor: `#303641`,
-                            display: `flex`,
-                            alignItems: `center`,
-                            justifyContent: `center`,
-                          }}
-                          data-cy="platform-image"
-                        >
-                          No Image available.
-                        </div>
-                      )}
-                      <ImageCaption id="platform-image">
-                        {platform.longname || platform.shortname}
-                      </ImageCaption>
-                    </div>
-                  </Link>
-                  <div style={{ display: `flex`, flexWrap: `wrap` }}>
-                    {/* {platform.instruments
-                      .filter(instrument =>
-                        instruments.map(x => x.id).includes(instrument.id)
-                      )
-                      .map(instrument => (
-                        <Link
-                          to={`/instrument/${instrument.id}`}
-                          key={instrument.id}
-                        >
-                          <Chip
-                            id="instrument"
-                            label={instrument.shortname}
-                            hoverText={instrument.longname}
+                      <Link to={`/platform/${platform.id}`}>
+                        {platform.image && platform.image.gatsbyImg ? (
+                          <Image
+                            alt={platform.image.description}
+                            fluid={
+                              platform.image.gatsbyImg.childImageSharp.fluid
+                            }
+                            data-cy="platform-image"
                           />
-                        </Link>
-                      ))} */}
+                        ) : (
+                          <div
+                            style={{
+                              width: `26rem`,
+                              height: `18rem`,
+                              backgroundColor: `#303641`,
+                              display: `flex`,
+                              alignItems: `center`,
+                              justifyContent: `center`,
+                            }}
+                            data-cy="platform-image"
+                          >
+                            No Image available.
+                          </div>
+                        )}
+                        <ImageCaption id="platform-image">
+                          {platform.longname || platform.shortname}
+                        </ImageCaption>
+                      </Link>
+                    </div>
                     <Accordion
                       folds={platform.instruments.filter(instrument =>
                         instruments.map(x => x.id).includes(instrument.id)
