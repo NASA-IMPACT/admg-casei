@@ -27,7 +27,7 @@ const CampaignsAndInstruments = ({ id, campaigns }) => {
                 display: `flex`,
                 overflow: `auto`,
               }}
-              data-cy="region-text-control"
+              data-cy="carousel-list-text-control"
             >
               {campaigns.map((campaign, index) => (
                 <ControlTextButton

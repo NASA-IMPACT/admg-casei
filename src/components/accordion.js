@@ -22,6 +22,7 @@ const RotatingContainer = styled.div`
 `
 
 export default function Accordion({ folds }) {
+  console.log("folds", folds)
   // TODO: add logic to allow for all drawers to be closed. A controlled accordion by default does not work with 'collapsible' prop
   const [index, setIndex] = useState(0)
   return (
