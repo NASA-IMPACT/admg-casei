@@ -3,13 +3,14 @@ import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
 import { Section, SectionHeader, SectionContent } from "../../components/layout"
+import { BodyText } from "../../theme/typography"
 
 export default function Overview({ id, description }) {
   return (
     <Section id={id}>
       <SectionHeader headline="Overview" id={id} />
       <SectionContent columns={[1, 7]}>
-        <p>{description}</p>
+        <BodyText>{description}</BodyText>
       </SectionContent>
       {/* <SectionContent columns={[8, 4]}>
         <ul data-cy="platform-link-list">

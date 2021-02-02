@@ -1,11 +1,13 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
+
 import DefinitionList from "../../components/layout/definition-list"
 import Label from "../../components/label"
 import { Section, SectionHeader, SectionContent } from "../../components/layout"
 import ExternalLink from "../../components/external-link"
 import { isUrl } from "../../utils/helpers"
+import { BodyText } from "../../theme/typography"
 
 function BackgroundListItem({ id, label, children }) {
   return (
@@ -91,12 +93,12 @@ function Background({
                 key={repository.id}
                 data-cy="repository"
               >
-                <p>{repository.longname}</p>
+                <BodyText>{repository.longname}</BodyText>
               </li>
             ))}
           </ul>
         ) : (
-          <p>No repository available</p>
+          <BodyText>No repository available</BodyText>
         )}
       </BackgroundListItem>
     </div>

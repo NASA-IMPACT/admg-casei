@@ -11,7 +11,7 @@ import FocusAreaGallery from "../components/focus-area-gallery"
 import { RegionCarousel } from "../components/home/region-carousel"
 import { GeophysicsGrid } from "../components/home/geophysics-grid"
 import { InstrumentsGrid } from "../components/home/instruments-grid"
-import { BodyText } from "../theme/typography"
+import { BodyText, ButtonText } from "../theme/typography"
 import theme from "../utils/theme"
 
 const IndexPage = ({ data }) => {
@@ -99,7 +99,7 @@ const IndexPage = ({ data }) => {
                     textTransform: `uppercase`,
                   }}
                 >
-                  Explore
+                  <ButtonText>Explore</ButtonText>
                 </Link>
               </div>
             </div>

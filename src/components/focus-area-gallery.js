@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
 import theme from "../utils/theme"
-import Label from "./label"
+import { Label } from "../theme/typography"
 import { getFocusIcon } from "./icons/utils"
 
 const FocusArea = ({ id, caption, size }) => {
@@ -13,13 +13,17 @@ const FocusArea = ({ id, caption, size }) => {
     <Link
       to={`/focus/${id}`}
       state={{ selectedFilterId: id }} // Pass state as props to the linked page
-      style={{ textAlign: `center` }}
+      style={{
+        display: `flex`,
+        flexDirection: `column`,
+        gap: `1rem`,
+        alignItems: `center`,
+        textAlign: `center`,
+      }}
       data-cy="focus-area"
     >
       <Icon color={theme.color.base} size={size} />
-      <Label id="focus-area-icons" color={theme.color.base}>
-        {caption}
-      </Label>
+      <Label id="focus-area-icons">{caption}</Label>
     </Link>
   )
 }

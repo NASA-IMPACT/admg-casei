@@ -5,6 +5,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import Card from "./card"
 import { formatYearRange } from "../../utils/helpers"
 
+import { BodyText, SmallBodyText, SmallTitle } from "../../theme/typography"
+
 export default function CampaignCard({ id, height }) {
   /*
    * We can not pass props directly into a static query because it is
@@ -60,20 +62,20 @@ export default function CampaignCard({ id, height }) {
       ]}
       category="campaigns"
     >
-      <big
+      <BodyText
         style={{ fontWeight: `bold`, marginTop: `0.5rem` }}
         data-cy="shortname"
       >
         {campaign.shortname}
-      </big>
-      <p data-cy="longname">{campaign.longname}</p>
+      </BodyText>
+      <SmallBodyText data-cy="longname">{campaign.longname}</SmallBodyText>
       <div>
-        <small data-cy="daterange">
+        <SmallTitle data-cy="daterange">
           {formatYearRange(campaign.startdate, campaign.enddate)}
-        </small>
+        </SmallTitle>
       </div>
       <div>
-        <small data-cy="region">{campaign.region}</small>
+        <SmallTitle data-cy="region">{campaign.region}</SmallTitle>
       </div>
     </Card>
   )

@@ -11,6 +11,7 @@ import VisuallyHidden from "@reach/visually-hidden"
 
 import theme from "../../utils/theme"
 import { sortFunctions } from "../../utils/filter-utils"
+import { ButtonText } from "../../theme/typography"
 
 const SortMenu = ({ sortOrder, setSortOrder, category }) => {
   return (
@@ -37,13 +38,13 @@ const SortMenu = ({ sortOrder, setSortOrder, category }) => {
             cursor: `pointer`,
           }}
         >
-          {sortOrder.toUpperCase()}
+          <ButtonText>{sortOrder.toUpperCase()}</ButtonText>
         </ListboxButton>
         <ListboxPopover style={{ background: theme.color.primary }}>
           <ListboxList data-cy="sort-options">
             {Object.keys(sortFunctions[category]).map(o => (
               <ListboxOption key={o} value={o} data-cy="sort-option">
-                {o.toUpperCase()}
+                <ButtonText>{o.toUpperCase()}</ButtonText>
               </ListboxOption>
             ))}
           </ListboxList>

@@ -65,9 +65,19 @@ export const BodyText = styled.p`
   margin-bottom: 0;
 `
 
-export const SmallTitles = styled.label`
+export const SmallBodyText = styled.p`
   ${baseTypeStyle};
   font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.375;
+
+  margin-top: 0;
+  margin-bottom: 0;
+`
+
+export const SmallTitle = styled.label`
+  ${baseTypeStyle};
+  font-size: 0.875rem;
   font-weight: 600;
   line-height: 1;
 
@@ -79,7 +89,7 @@ export const SmallTitles = styled.label`
 
 export const Label = styled.label`
   ${baseTypeStyle};
-  font-size: 1rem;
+  font-size: 0.75rem;
   font-weight: 600;
   line-height: 1;
 
@@ -89,7 +99,7 @@ export const Label = styled.label`
 
 export const LinkText = styled.a`
   ${baseTypeStyle};
-  font-size: 1.25rem;
+  font-size: 0.75rem;
   font-weight: 600;
   line-height: 1;
 
@@ -97,4 +107,26 @@ export const LinkText = styled.a`
   margin-bottom: 0;
 
   ${clickableStyle};
+`
+
+export const ButtonText = styled.span`
+  ${baseTypeStyle};
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+
+  margin-top: 0;
+  margin-bottom: 0;
+
+  ${clickableStyle};
+`
+
+export const Banner = styled.span`
+  ${baseTypeStyle};
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.25;
+
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 `

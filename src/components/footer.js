@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 import theme from "../utils/theme"
 import Login from "./login"
 import ExternalLink from "./external-link"
-import { Heading2, SmallTitles, BodyText, LinkText } from "../theme/typography"
+import { Heading2, SmallTitle, BodyText, ButtonText } from "../theme/typography"
 
 const Footer = ({ shortname }) => {
   const [isClient, setIsClient] = useState(false)
@@ -47,19 +47,19 @@ const Footer = ({ shortname }) => {
           <ul style={style.ul}>
             <li>
               <Link to="/explore">
-                <LinkText as="span">Campaigns</LinkText>
+                <ButtonText>Campaigns</ButtonText>
               </Link>
               {/** TODO: link to explore with tab selected */}
             </li>
             <li>
               <Link to="/explore">
-                <LinkText as="span">Platforms</LinkText>
+                <ButtonText>Platforms</ButtonText>
               </Link>
               {/** TODO: link to explore with tab selected */}
             </li>
             <li>
               <Link to="/explore">
-                <LinkText as="span">Instruments</LinkText>
+                <ButtonText>Instruments</ButtonText>
               </Link>
               {/** TODO: link to explore with tab selected */}
             </li>
@@ -71,7 +71,7 @@ const Footer = ({ shortname }) => {
           <ul style={style.ul}>
             <li>
               <Link to="/glossary/">
-                <LinkText as="span">Glossary</LinkText>
+                <ButtonText>Glossary</ButtonText>
               </Link>
             </li>
             <li>
@@ -88,12 +88,12 @@ const Footer = ({ shortname }) => {
           <ul style={style.ul}>
             <li>
               <Link to="/about/">
-                <LinkText as="span">About</LinkText>
+                <ButtonText>About</ButtonText>
               </Link>
             </li>
             <li>
               <Link to="/contact/">
-                <LinkText as="span">Contact us</LinkText>
+                <ButtonText>Contact us</ButtonText>
               </Link>
             </li>
           </ul>
@@ -151,7 +151,7 @@ const Footer = ({ shortname }) => {
             ></div>
             <div>
               <BodyText>National Aeronautics and Space Administration</BodyText>
-              <SmallTitles>
+              <SmallTitle>
                 NASA Official:{" "}
                 <span
                   style={{
@@ -160,7 +160,7 @@ const Footer = ({ shortname }) => {
                 >
                   Rahul Ramachandran
                 </span>
-              </SmallTitles>
+              </SmallTitle>
             </div>
           </div>
           <div

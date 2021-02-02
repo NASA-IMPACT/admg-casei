@@ -7,11 +7,11 @@ import Layout, {
   Paragraph,
   Section,
   SectionContent,
-  SectionHeader,
 } from "../components/layout"
 import SEO from "../components/seo"
 import ExternalLink from "../components/external-link"
 import Button from "../components/button"
+import { Heading1 } from "../theme/typography"
 
 const FishButton = props => <Button action={props.onClick}>here</Button>
 
@@ -23,12 +23,8 @@ const Contact = () => (
   <Layout>
     <SEO title="Contact" lang="en" />
     <PageBody id="contact">
+      <Heading1 id="contact">We appreciate your feedback!</Heading1>
       <Section id="contact">
-        <SectionHeader
-          headline="We appreciate your feedback!"
-          id="contact"
-          isPrimary
-        />
         <SectionContent columns={[1, 8]}>
           <Paragraph>
             The Airborne Data Management Group (ADMG) has gathered the content

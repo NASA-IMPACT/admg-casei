@@ -20,6 +20,7 @@ import {
 } from "date-fns"
 
 import theme from "../../utils/theme"
+import { ButtonText, Label } from "../../theme/typography"
 
 const FilterButton = styled(ListboxButton)`
   flex-grow: 0;
@@ -115,7 +116,9 @@ const DateMenu = ({ id, style, label, dateRange, setDateRange }) => {
         data-cy={`${id}-filter-select`}
         onChange={() => setDateRange({ start: startDate, end: endDate })}
       >
-        <FilterButton arrow="▼">{label}</FilterButton>
+        <FilterButton arrow="▼">
+          <ButtonText>{label}</ButtonText>
+        </FilterButton>
         <ListboxPopover
           style={{
             background: theme.color.primary,
@@ -130,13 +133,13 @@ const DateMenu = ({ id, style, label, dateRange, setDateRange }) => {
               justifyContent: `space-between`,
             }}
           >
-            From:
+            <Label>From:</Label>
             <DatePicker
               showYearDropdown
               onChange={date => setStartDate(date)}
               selected={startDate}
             />
-            To:
+            <Label>To:</Label>
             <DatePicker
               showYearDropdown
               onChange={date => setEndDate(date)}
@@ -153,16 +156,18 @@ const DateMenu = ({ id, style, label, dateRange, setDateRange }) => {
             }}
           >
             <TimeRangeButton onClick={() => onButtonClick("month")}>
-              1 Month ago
+              <ButtonText>1 Month ago</ButtonText>
             </TimeRangeButton>
             <TimeRangeButton onClick={() => onButtonClick("halfYear")}>
-              6 Months ago
+              <ButtonText>6 Months ago</ButtonText>
             </TimeRangeButton>
             <TimeRangeButton onClick={() => onButtonClick("tenYears")}>
-              10 years ago
+              <ButtonText>10 years ago</ButtonText>
             </TimeRangeButton>
 
-            <ApplyButton value="select">Apply</ApplyButton>
+            <ApplyButton value="select">
+              <ButtonText>Apply</ButtonText>
+            </ApplyButton>
           </ListboxList>
         </ListboxPopover>
       </ListboxInput>

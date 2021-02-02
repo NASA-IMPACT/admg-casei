@@ -5,6 +5,8 @@ import Image from "gatsby-image"
 import Carousel from "nuka-carousel"
 import { controlButtonLRStyle, ControlTextButton } from "../carousel-styles"
 
+import { SmallTitle, Banner, BodyText } from "../../theme/typography"
+
 export const RegionCarousel = ({ regions }) => {
   const controlTextRef = useRef(null)
 
@@ -26,7 +28,7 @@ export const RegionCarousel = ({ regions }) => {
             selected={index === slideIndex}
             onClick={() => setSlideIndex(index)}
           >
-            {region.shortname}
+            <SmallTitle>{region.shortname}</SmallTitle>
           </ControlTextButton>
         ))}
       </div>
@@ -89,20 +91,18 @@ export const RegionCarousel = ({ regions }) => {
                 )}
               </div>
 
-              <div
+              <Banner
                 style={{
                   gridArea: `1 / 1 / 1 / 1`,
                   justifySelf: `center`,
-                  fontSize: `xxx-large`,
-                  fontWeight: `bold`,
-                  textTransform: `uppercase`,
+                  textTransform: `capitalize`,
                   textShadow: `3px 3px 10px #333`,
                 }}
                 data-cy="region-type-name"
               >
                 {region.shortname}
-              </div>
-              <span>{region.image.nasaImgAlt}</span>
+              </Banner>
+              <BodyText>{region.image.nasaImgAlt}</BodyText>
             </Link>
           </React.Fragment>
         ))}

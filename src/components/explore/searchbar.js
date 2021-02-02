@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+
 import { CloseIcon, SearchIcon } from "../icons"
 import theme from "../../utils/theme"
 
@@ -8,11 +9,11 @@ const Searchbar = React.forwardRef((_props, ref) => {
   return (
     <div
       style={{
-        display: "flex",
+        display: `flex`,
         height: `2.5rem`,
         flexGrow: 1,
         border: `1px solid ${theme.color.base}`,
-        padding: "0.25rem",
+        padding: `0.25rem`,
       }}
     >
       <div style={{ flexGrow: 1 }}>
@@ -25,7 +26,7 @@ const Searchbar = React.forwardRef((_props, ref) => {
           onChange={e => setInputsize(Math.min(e.target.value.length, 140))}
           size={inputsize}
           style={{
-            border: "none",
+            border: `none`,
             background: `transparent`,
             color: theme.color.base,
           }}
@@ -54,7 +55,7 @@ const Searchbar = React.forwardRef((_props, ref) => {
       <button
         type="submit"
         style={{
-          border: "none",
+          border: `none`,
           flexGrow: 0,
           background: `transparent`,
           color: theme.color.base,

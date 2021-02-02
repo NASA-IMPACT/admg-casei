@@ -9,6 +9,7 @@ import Image from "gatsby-image"
 
 import Chip from "../../components/chip"
 import { controlButtonLRStyle } from "../../components/carousel-styles"
+import { BodyText } from "../../theme/typography"
 
 const PlatformSection = ({ id, platforms, instruments }) => (
   <Section id={id}>
@@ -84,7 +85,7 @@ const PlatformSection = ({ id, platforms, instruments }) => (
             ))}
           </Carousel>
         ) : (
-          <p>No available platforms or instruments</p>
+          <BodyText>No available platforms or instruments</BodyText>
         )}
       </div>
     </SectionContent>

@@ -4,6 +4,7 @@ import styled from "styled-components"
 import Image from "gatsby-image"
 
 import theme from "../../utils/theme"
+import { Label, SmallTitle } from "../../theme/typography"
 import PlaceholderLogo from "../../images/placeholder-logo.svg"
 
 const CardHeader = styled.div`
@@ -42,16 +43,15 @@ const Card = ({ children, image, height, tag, footerList, category }) => (
           <img src={PlaceholderLogo} alt="placeholder logo" height="85" />
         )}
         {tag && (
-          <div
+          <SmallTitle
             style={{
-              textTransform: `uppercase`,
               border: `1px solid`,
               padding: `0.25rem`,
             }}
             data-cy={`${tag.toLowerCase()}-tag`}
           >
             {tag}
-          </div>
+          </SmallTitle>
         )}
       </CardHeader>
       {children}
@@ -59,7 +59,7 @@ const Card = ({ children, image, height, tag, footerList, category }) => (
     {footerList && (
       <div>
         {footerList.map((o, index) => (
-          <small
+          <Label
             key={o.title}
             style={{ whiteSpace: `nowrap` }}
             data-cy={`count${index + 1}`}
@@ -67,7 +67,7 @@ const Card = ({ children, image, height, tag, footerList, category }) => (
             {index !== 0 && ` · `}
             <strong>{o.count}</strong> {o.title}
             {o.count !== 1 && "s"}
-          </small>
+          </Label>
         ))}
       </div>
     )}

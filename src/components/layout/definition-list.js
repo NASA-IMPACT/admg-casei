@@ -3,7 +3,7 @@ import styled from "styled-components"
 import PropTypes from "prop-types"
 
 import theme from "../../utils/theme"
-
+import { Label } from "../../theme/typography"
 const List = styled.dl`
   display: grid;
   grid-gap: 0.5rem;
@@ -23,7 +23,7 @@ export default function DefinitionList({ id, list, isCentered }) {
         {list.map(row => (
           <React.Fragment key={row.title}>
             <dt>
-              <label>{row.title}</label>
+              <Label>{row.title}</Label>
             </dt>
             <dd
               style={

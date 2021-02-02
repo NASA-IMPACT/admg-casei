@@ -14,8 +14,9 @@ import Hero from "../../components/hero"
 import ExternalLink from "../../components/external-link"
 import RelatedCampaignsSection from "../../components/related-campaigns-section"
 import FocusAreaGallery from "../../components/focus-area-gallery"
-import theme from "../../utils/theme"
 import { getFocusIcon } from "../../components/icons/utils"
+import theme from "../../utils/theme"
+import { BodyText } from "../../theme/typography"
 
 const FocusTemplate = ({ data }) => {
   const Icon = getFocusIcon(data.focusArea.uuid)
@@ -54,7 +55,9 @@ const FocusTemplate = ({ data }) => {
                   id="focus"
                 />
               ) : (
-                <span data-cy="focus-link">No Focus Area URL Available</span>
+                <BodyText data-cy="focus-link">
+                  No Focus Area URL Available
+                </BodyText>
               )}
             </div>
           </SectionContent>

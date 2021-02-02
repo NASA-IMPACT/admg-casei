@@ -11,7 +11,7 @@ import Map from "../../components/map"
 import BboxLayer from "../../components/map/bbox-layer"
 import GeoJsonSource from "../../components/map/geojson-source"
 
-import { Heading1 } from "../../theme/typography"
+import { Heading1, BodyText } from "../../theme/typography"
 import theme from "../../utils/theme"
 
 const BackgroundGradient = styled.div`
@@ -95,10 +95,10 @@ const CampaignHero = ({
                 style={{ margin: `0` }}
               />
             ) : (
-              <p>{shortname}</p>
+              <BodyText>{shortname}</BodyText>
             )}
             <Heading1 data-cy="campaign-hero-header">{longname}</Heading1>
-            <p>{focusListing}</p>
+            <BodyText>{focusListing}</BodyText>
           </div>
           <HeroStats
             statList={[

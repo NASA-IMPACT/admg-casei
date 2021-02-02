@@ -4,7 +4,7 @@ import React from "react"
 
 import Image from "./image"
 import theme from "../utils/theme"
-import { SmallTitles, BodyText } from "../theme/typography"
+import { SmallTitle, BodyText } from "../theme/typography"
 
 const Header = ({ siteTitle, shortname, children }) => (
   <header>
@@ -40,7 +40,7 @@ const Header = ({ siteTitle, shortname, children }) => (
             <Image filename="logo.png" alt={`${shortname} logo`} />
           </div>
           <BodyText>{shortname}</BodyText>
-          <SmallTitles>{siteTitle}</SmallTitles>
+          <SmallTitle>{siteTitle}</SmallTitle>
         </Link>
       </div>
       <div style={{ display: `flex` }}>{children}</div>

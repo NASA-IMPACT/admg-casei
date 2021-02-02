@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
 import theme from "../../utils/theme"
+import { SmallTitle } from "../../theme/typography"
 
 export const InstrumentsGrid = ({ measurementTypes }) => {
   const other = measurementTypes.find(
@@ -36,7 +37,9 @@ export const InstrumentsGrid = ({ measurementTypes }) => {
               textAlign: `center`,
             }}
           >
-            {measurementType.longname || measurementType.shortname}
+            <SmallTitle>
+              {measurementType.longname || measurementType.shortname}
+            </SmallTitle>
           </div>
         </Link>
       ))}

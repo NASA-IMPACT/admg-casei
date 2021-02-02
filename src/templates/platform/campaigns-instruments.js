@@ -11,6 +11,7 @@ import {
   ControlTextButton,
 } from "../../components/carousel-styles"
 import theme from "../../utils/theme"
+import { BodyText } from "../../theme/typography"
 
 const CampaignsAndInstruments = ({ id, campaigns }) => {
   const controlTextRef = useRef(null)
@@ -109,7 +110,7 @@ const CampaignsAndInstruments = ({ id, campaigns }) => {
             </Carousel>
           </div>
         ) : (
-          <p>No available related campaigns</p>
+          <BodyText>No available related campaigns</BodyText>
         )}
       </SectionContent>
     </Section>

@@ -13,6 +13,7 @@ import styled from "styled-components"
 import { CloseIcon } from "../icons"
 import { IconButton } from "../button"
 import theme from "../../utils/theme"
+import { ButtonText } from "../../theme/typography"
 
 const FilterButton = styled(ListboxButton)`
   flex-grow: 0;
@@ -66,7 +67,9 @@ const FilterMenu = ({
         data-cy={`${id}-filter-select`}
         onChange={value => handleSelection(value)}
       >
-        <FilterButton arrow="▼">{label}</FilterButton>
+        <FilterButton arrow="▼">
+          <ButtonText>{label}</ButtonText>
+        </FilterButton>
         <ListboxPopover
           style={{
             background: theme.color.primary,
@@ -82,7 +85,7 @@ const FilterMenu = ({
                 data-cy="filter-option"
                 selected={!!selectedFilterIds.includes(o.id)}
               >
-                {o.shortname}
+                <ButtonText>{o.shortname}</ButtonText>
                 {selectedFilterIds.includes(o.id) && (
                   <IconButton
                     id="remove-filter"

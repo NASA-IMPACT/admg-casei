@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import Image from "gatsby-image"
 
-import { Heading1, SmallTitles, BodyText } from "../theme/typography"
+import { Heading1, SmallTitle, BodyText } from "../theme/typography"
 import theme from "../utils/theme"
 
 export const HeroStats = ({ statList }) => (
@@ -71,9 +71,9 @@ export default function Hero({
         }}
       >
         <div style={{ alignSelf: `end`, gridArea: `1 / 1 / 1 / 1` }}>
-          <SmallTitles style={{ textTransform: `uppercase` }}>
+          <SmallTitle style={{ textTransform: `uppercase` }}>
             {tagTitle}
-          </SmallTitles>
+          </SmallTitle>
           <Heading1>{title}</Heading1>
           {subTitle && <BodyText>{subTitle}</BodyText>}
         </div>

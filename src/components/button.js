@@ -3,10 +3,9 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 
 import theme from "../utils/theme"
-import { baseTypeStyle, clickableStyle } from "../theme/typography"
+import { baseTypeStyle, clickableStyle, LinkText } from "../theme/typography"
 
 const Clickable = styled.button`
-  ${baseTypeStyle};
   ${clickableStyle};
 `
 
@@ -16,7 +15,6 @@ export default function Button({ children, action }) {
       onClick={action}
       style={{
         userSelect: `none`,
-        color: `white`,
         display: `inline-block`,
         textAlign: `center`,
         verticalAlign: `middle`,
@@ -26,12 +24,12 @@ export default function Button({ children, action }) {
         textShadow: `none`,
         border: 0,
         cursor: `pointer`,
+        color: theme.color.base,
         backgroundColor: theme.color.tertiary,
         borderRadius: theme.shape.rounded,
-        fontWeight: `bold`,
       }}
     >
-      {children}
+      <LinkText>{children}</LinkText>
     </Clickable>
   )
 }

@@ -12,8 +12,9 @@ import VisuallyHidden from "@reach/visually-hidden"
 import { CloseIcon } from "../icons"
 import { IconButton } from "../button"
 import theme from "../../utils/theme"
+import { ButtonText } from "../../theme/typography"
 
-export default function Filter({
+export default function FilterBox({
   filterOptions,
   filterName,
   setSelectedFilterIds,
@@ -50,7 +51,7 @@ export default function Filter({
             cursor: `pointer`,
           }}
         >
-          {filterName.toUpperCase()}
+          <ButtonText>{filterName.toUpperCase()}</ButtonText>
         </ListboxButton>
         <ListboxPopover style={{ background: theme.color.primary }}>
           <ListboxList data-cy="data-products-filter-options">
@@ -58,7 +59,7 @@ export default function Filter({
               const value = o.longname || o.shortname
               return (
                 <ListboxOption key={o.id} value={value} data-cy="filter-option">
-                  {value.toUpperCase()}
+                  <ButtonText>{value.toUpperCase()}</ButtonText>
                   {selectedFilterIds.includes(value) && (
                     <IconButton
                       id="remove-filter"
@@ -75,7 +76,7 @@ export default function Filter({
   )
 }
 
-Filter.propTypes = {
+FilterBox.propTypes = {
   filterOptions: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,

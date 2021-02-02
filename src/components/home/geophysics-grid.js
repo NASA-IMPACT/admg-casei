@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
 import theme from "../../utils/theme"
+import { SmallTitle } from "../../theme/typography"
 
 export const GeophysicsGrid = ({ geophysicalConcepts }) => (
   <div
@@ -27,7 +28,7 @@ export const GeophysicsGrid = ({ geophysicalConcepts }) => (
             textAlign: `center`,
           }}
         >
-          {concept.longname}
+          <SmallTitle>{concept.longname}</SmallTitle>
         </div>
       </Link>
     ))}

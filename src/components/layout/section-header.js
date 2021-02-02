@@ -1,24 +1,26 @@
 import React from "react"
 import PropTypes from "prop-types"
+import styled from "styled-components"
 
-import { Heading1, Heading2 } from "../../theme/typography"
+import {
+  SmallTitle,
+  LinkText,
+  Heading2,
+  clickableStyle,
+} from "../../theme/typography"
 
-export default function SectionHeader({ tagline, headline, id, isPrimary }) {
+const InpageLinkHeading2 = styled(Heading2)`
+  ${clickableStyle};
+`
+
+export default function SectionHeader({ tagline, headline, id }) {
   return (
     <div style={{ gridColumn: `1 / span 7`, alignSelf: `end` }}>
-      {tagline && (
-        <div style={{ textTransform: `uppercase` }} data-cy="section-tagline">
-          {tagline}
-        </div>
-      )}
+      {tagline && <SmallTitle data-cy="section-tagline">{tagline}</SmallTitle>}
       {headline && (
-        <a href={`#${id}`}>
-          {isPrimary ? (
-            <Heading1>{headline}</Heading1>
-          ) : (
-            <Heading2>{headline}</Heading2>
-          )}
-        </a>
+        <LinkText href={`#${id}`}>
+          <InpageLinkHeading2>{headline}</InpageLinkHeading2>
+        </LinkText>
       )}
     </div>
   )
@@ -28,9 +30,4 @@ SectionHeader.propTypes = {
   tagline: PropTypes.string,
   id: PropTypes.string.isRequired,
   headline: PropTypes.string,
-  isPrimary: PropTypes.bool,
-}
-
-SectionHeader.defaultProps = {
-  isPrimary: false,
 }
