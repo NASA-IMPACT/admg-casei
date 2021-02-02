@@ -228,34 +228,24 @@ describe("Campaign", () => {
     it("displays a platform carousel", () => {
       cy.get("[data-cy=platform-carousel]").find(".slider").should("exist")
 
-      cy.get("[data-cy=platform]")
-        .first()
-        .find("[data-cy=platform-image]")
-        .should("exist")
-      cy.get("[data-cy=platform]")
-        .first()
-        .find("[data-cy=platform-image]")
-        .should("be.visible")
-      cy.get("[data-cy=platform]").first().find("label").should("exist")
+      cy.get("[data-cy=platform-image]").should("exist").should("be.visible")
+
       cy.get("[data-cy=platform-image-caption]").should("exist")
 
       cy.get("[data-cy=platform-carousel]").find(
         ".slider-control-centerright > button"
       )
     })
-
-    it("displays some platforms", () => {
-      cy.get("[data-cy=platform]").should($div => {
-        expect($div, "3 platforms").to.have.length(3)
-      })
+    it("contains an accordion", () => {
+      cy.get("[data-cy=platform-accordion]").should("exist")
     })
 
-    it("displays the instruments per platform", () => {
-      cy.get("[data-cy=platform]")
+    it("displays some platforms", () => {
+      cy.get("[data-cy=carousel-list-text-control]")
+        .should("exist")
         .first()
-        .find("[data-cy=instrument-chip]")
         .should($div => {
-          expect($div, "2 instruments").to.have.length(2)
+          expect($div.first()).to.contain("DC-8")
         })
     })
   })

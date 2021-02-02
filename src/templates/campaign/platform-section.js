@@ -22,7 +22,7 @@ const PlatformSection = ({ id, platforms, instruments }) => {
       <SectionHeader headline="Platforms & Instruments" id={id} />
       <SectionContent>
         {platforms.length > 0 ? (
-          <div data-cy="platforms-carousel">
+          <div data-cy="platform-carousel">
             <div
               style={{
                 display: `flex`,
@@ -138,6 +138,7 @@ const PlatformSection = ({ id, platforms, instruments }) => {
                       folds={platform.instruments.filter(instrument =>
                         instruments.map(x => x.id).includes(instrument.id)
                       )}
+                      id="platform"
                     />
                   </div>
                 </div>

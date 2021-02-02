@@ -16,7 +16,7 @@ const FocusArea = ({ id, caption, size }) => {
       style={{ textAlign: `center` }}
       data-cy="focus-area"
     >
-      {/* <Icon color={theme.color.base} size={size} /> */}
+      <Icon color={theme.color.base} size={size} />
       <Label id="focus-area-icons" color={theme.color.base}>
         {caption}
       </Label>

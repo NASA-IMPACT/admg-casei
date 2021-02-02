@@ -21,8 +21,7 @@ const RotatingContainer = styled.div`
     isExpanded ? "rotate(180deg)" : "rotate(0deg)"};
 `
 
-export default function Accordion({ folds }) {
-  console.log("folds", folds)
+export default function Accordion({ folds, id }) {
   // TODO: add logic to allow for all drawers to be closed. A controlled accordion by default does not work with 'collapsible' prop
   const [index, setIndex] = useState(0)
   return (
@@ -30,6 +29,7 @@ export default function Accordion({ folds }) {
       style={{ maxHeight: `30rem`, overflowY: `scroll` }}
       index={index}
       onChange={value => setIndex(value)}
+      data-cy={`${id}-accordion`}
     >
       {folds.map((instrument, itemIndex) => (
         <AccordionItem key={instrument.id}>
