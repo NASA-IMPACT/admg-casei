@@ -127,4 +127,5 @@ Accordion.propTypes = {
       ),
     })
   ).isRequired,
+  id: PropTypes.string,
 }
