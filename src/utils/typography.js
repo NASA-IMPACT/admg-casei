@@ -3,7 +3,7 @@ import Typography from "typography"
 import theme from "./theme"
 
 const typography = new Typography({
-  baseFontSize: "12px",
+  baseFontSize: "16px",
   baseLineHeight: 1,
   googleFonts: [
     {
@@ -37,13 +37,13 @@ const typography = new Typography({
       },
       h1: {
         fontSize: rhythm(4),
-        marginTop: rhythm(0.5),
-        marginBottom: rhythm(0.5),
+        marginTop: rhythm(1),
+        marginBottom: rhythm(1),
       },
       h2: {
         fontSize: rhythm(3.5),
         marginTop: rhythm(0.5),
-        marginBottom: rhythm(1.5),
+        marginBottom: rhythm(2.5),
       },
       h3: {
         fontSize: rhythm(2.25),
