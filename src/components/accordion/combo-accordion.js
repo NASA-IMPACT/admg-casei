@@ -108,7 +108,7 @@ export default function ComboAccordion({
                   >
                     {isImage ? (
                       <ImageCarousel
-                        id="platform"
+                        id={id}
                         address={`/${id}/${carouselItem.id}`}
                         carouselImage={carouselItem.image}
                         caption={
@@ -117,7 +117,10 @@ export default function ComboAccordion({
                       />
                     ) : (
                       <div style={{ width: `26rem`, maxHeight: `30rem` }}>
-                        <Link to={`/${id}/${carouselItem.id}`}>
+                        <Link
+                          to={`/${id}/${carouselItem.id}`}
+                          data-cy={`carousel-${id}-card-link`}
+                        >
                           <CampaignCard id={carouselItem.id} />
                         </Link>
                       </div>

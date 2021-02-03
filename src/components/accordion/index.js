@@ -44,7 +44,6 @@ export default function Accordion({ folds, id }) {
         <AccordionItem key={fold.id}>
           <span>
             <AccordionButton
-              isOpen={indices.includes(index)}
               style={{
                 borderWidth: `0 0 1px 0`,
                 borderColor: `#FFF`,
@@ -59,6 +58,7 @@ export default function Accordion({ folds, id }) {
                 justifyContent: `space-between`,
                 display: `flex`,
               }}
+              data-cy="accordion-button"
             >
               <div>
                 {fold.longname} ({fold.shortname})
@@ -74,12 +74,14 @@ export default function Accordion({ folds, id }) {
                 display: `grid`,
                 gridTemplateColumns: `1fr 1f 1fr 1fr`,
               }}
+              data-cy={`${id}-accordion-content`}
             >
               {fold.image && (
                 <Image
                   style={{ gridColumn: `1 / 2` }}
                   alt={fold.image.description}
                   fixed={fold.image.gatsbyImg.childImageSharp.fixed}
+                  data-cy={`${id}-accordion-image`}
                 />
               )}
               <div
@@ -88,13 +90,16 @@ export default function Accordion({ folds, id }) {
                     ? { gridColumn: `2 / 4`, paddingLeft: `.5rem` }
                     : { gridColumn: `1 / 4` }
                 }
+                data-cy={`${id}-accordion-image-description`}
               >
                 {fold.description}
               </div>
             </div>
             {fold.gcmdPhenomenas && (
               <div style={{ margin: `3rem 0` }}>
-                <Label>Measurements/Variables</Label>
+                <Label id="accordion-measurements">
+                  Measurements/Variables
+                </Label>
                 {fold.gcmdPhenomenas
                   .map(x =>
                     Object.values(x)
@@ -107,8 +112,13 @@ export default function Accordion({ folds, id }) {
             <Link
               to={`/instrument/${fold.id}`}
               style={{ color: theme.color.link }}
+              data-cy="accordion-link"
             >
-              <Label id="accordion" display="flex" color={theme.color.link}>
+              <Label
+                id="accordion-link"
+                display="flex"
+                color={theme.color.link}
+              >
                 Learn More
                 <ArrowIcon color={theme.color.link} />
               </Label>

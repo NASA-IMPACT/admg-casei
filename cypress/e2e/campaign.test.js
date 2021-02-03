@@ -228,7 +228,7 @@ describe("Campaign", () => {
     it("displays a platform carousel", () => {
       cy.get("[data-cy=platform-carousel]").find(".slider").should("exist")
 
-      cy.get("[data-cy=platform-image]").should("exist").should("be.visible")
+      cy.get("[data-cy=platform-image]").should("exist")
 
       cy.get("[data-cy=platform-image-caption]").should("exist")
 
@@ -237,7 +237,22 @@ describe("Campaign", () => {
       )
     })
     it("contains an accordion", () => {
-      cy.get("[data-cy=platform-accordion]").should("exist")
+      cy.get("[data-cy=instrument-accordion]")
+        .should("exist")
+        .find("[data-cy=accordion-button]")
+        .first()
+        .click()
+      cy.get("[data-cy=instrument-accordion-content]")
+        .should("exist")
+        .find("img")
+      cy.get("[data-cy=instrument-accordion-content]").find(
+        "[data-cy=instrument-accordion-image-description]"
+      )
+      cy.get("[data-cy=accordion-measurements-label]").should("exist")
+      cy.get("[data-cy=accordion-link]").should("exist").first().click()
+
+      cy.url().should("include", "instrument")
+      cy.go("back")
     })
 
     it("displays some platforms", () => {
@@ -268,7 +283,7 @@ describe("Campaign", () => {
 
     it("displays some data products", () => {
       cy.get("[data-cy=data-product]").should($div => {
-        expect($div).to.have.length(3)
+        expect($div).to.have.length(5)
       })
     })
 
