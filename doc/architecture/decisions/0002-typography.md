@@ -1,4 +1,4 @@
-# NUMBER. TITLE [short title of solved problem and solution]
+# 2. Implementing the typography design system
 
 - Status: proposed
 - Deciders: [@aliceR, @necoline]
