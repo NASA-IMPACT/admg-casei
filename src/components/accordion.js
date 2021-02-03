@@ -32,7 +32,11 @@ export default function Accordion({ folds, id }) {
   }
   return (
     <ReachAccordion
-      style={{ maxHeight: `30rem`, overflowY: `scroll` }}
+      style={{
+        maxHeight: `30rem`,
+        overflowY: `scroll`,
+        boxShadow: `inset 0 -20px 20px -20px ${theme.color.primary}`,
+      }}
       index={indices}
       onChange={toggleAccordionItem}
       data-cy={`${id}-accordion`}
@@ -44,9 +48,9 @@ export default function Accordion({ folds, id }) {
               isOpen={indices.includes(index)}
               style={{
                 borderWidth: `0 0 1px 0`,
-                borderColor: `white`,
+                borderColor: `"#FFF"`,
                 background: `none`,
-                color: indices.includes(index) ? theme.color.link : `white`,
+                color: indices.includes(index) ? theme.color.link : `"#FFF"`,
                 width: `100%`,
                 textAlign: `left`,
                 cursor: `pointer`,
