@@ -22,24 +22,31 @@ const RotatingContainer = styled.div`
 `
 
 export default function Accordion({ folds, id }) {
-  // TODO: add logic to allow for all drawers to be closed. A controlled accordion by default does not work with 'collapsible' prop
-  const [index, setIndex] = useState(0)
+  const [indices, setIndices] = useState([])
+  function toggleAccordionItem(toggledIndex) {
+    if (indices.includes(toggledIndex)) {
+      setIndices(indices.filter(currentIndex => currentIndex !== toggledIndex))
+    } else {
+      setIndices([...indices, toggledIndex].sort())
+    }
+  }
   return (
     <ReachAccordion
       style={{ maxHeight: `30rem`, overflowY: `scroll` }}
-      index={index}
-      onChange={value => setIndex(value)}
+      index={indices}
+      onChange={toggleAccordionItem}
       data-cy={`${id}-accordion`}
     >
-      {folds.map((instrument, itemIndex) => (
-        <AccordionItem key={instrument.id}>
+      {folds.map((fold, index) => (
+        <AccordionItem key={fold.id}>
           <span>
             <AccordionButton
+              isOpen={indices.includes(index)}
               style={{
                 borderWidth: `0 0 1px 0`,
                 borderColor: `white`,
                 background: `none`,
-                color: itemIndex === index ? theme.color.link : `white`,
+                color: indices.includes(index) ? theme.color.link : `white`,
                 width: `100%`,
                 textAlign: `left`,
                 cursor: `pointer`,
@@ -51,9 +58,9 @@ export default function Accordion({ folds, id }) {
               }}
             >
               <div>
-                {instrument.longname} ({instrument.shortname})
+                {fold.longname} ({fold.shortname})
               </div>
-              <RotatingContainer isExpanded={itemIndex === index}>
+              <RotatingContainer isExpanded={indices.includes(index)}>
                 <ChevronIcon role="img" aria-label="chevron-icon" />
               </RotatingContainer>
             </AccordionButton>
@@ -65,27 +72,27 @@ export default function Accordion({ folds, id }) {
                 gridTemplateColumns: `1fr 1f 1fr 1fr`,
               }}
             >
-              {instrument.image && (
+              {fold.image && (
                 <Image
                   style={{ gridColumn: `1 / 2` }}
-                  alt={instrument.image.description}
-                  fixed={instrument.image.gatsbyImg.childImageSharp.fixed}
+                  alt={fold.image.description}
+                  fixed={fold.image.gatsbyImg.childImageSharp.fixed}
                 />
               )}
               <div
                 style={
-                  instrument.image
+                  fold.image
                     ? { gridColumn: `2 / 4`, paddingLeft: `.5rem` }
                     : { gridColumn: `1 / 4` }
                 }
               >
-                {instrument.description}
+                {fold.description}
               </div>
             </div>
 
             <div style={{ margin: `3rem 0` }}>
               <Label>Measurements/Variables</Label>
-              {instrument.gcmdPhenomenas
+              {fold.gcmdPhenomenas
                 .map(x =>
                   Object.values(x)
                     .filter(x => x)
@@ -94,7 +101,7 @@ export default function Accordion({ folds, id }) {
                 .join(" > ") || "N/A"}
             </div>
             <Link
-              to={`/instrument/${instrument.id}`}
+              to={`/instrument/${fold.id}`}
               style={{ color: theme.color.link }}
             >
               <Label display="flex" color={theme.color.link}>
