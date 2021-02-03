@@ -10,7 +10,7 @@ We started the project with simple inline styles. The goal was to keep the style
 
 We use [TypographyJS](https://kyleamathews.github.io/typography.js/) and added our interpretation of the styles from the designs to the respective html elements as typography.js override styles. TypographyJS defines those styles as global css stylesheet. It is added to the Gatsby project via the `gatsby-plugin-typography`, which takes care of the integration into the build process.
 
-We have inconsistencies in our designs and implementation of those designs. As we update the designs to offer a consistent style guide, we need update the code. Ideally, our solution will be a combination of centralized core styles and component specific styles that live next to their components.
+We have inconsistencies in our designs, the design system, and implementation of those designs. As we update the designs to offer a consistent style guide, we need update the code. Ideally, our solution will be a combination of centralized base typography styles for general text, and component specific font styles that live next to their UI implementation.
 
 ## Decision Drivers
 
