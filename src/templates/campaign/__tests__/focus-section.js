@@ -6,7 +6,7 @@ import FocusSection from "../focus-section"
 const testString = "test string"
 const testArray = [
   {
-    id: "347b2275-e553-42e2-bfd5-2e077dc00a95",
+    id: "2231a3f1-3430-4f89-86a2-94938aa000a5",
     shortname: "area a",
     longname: "area a",
   },

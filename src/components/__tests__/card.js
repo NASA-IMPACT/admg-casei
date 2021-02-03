@@ -25,7 +25,7 @@ describe("Card", () => {
     const tree = renderer
       .create(
         <Card>
-          <CardContent />
+          <CardContent category="campaign" />
         </Card>
       )
       .toJSON()

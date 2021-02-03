@@ -40,7 +40,7 @@ const Chip = ({
 Chip.propTypes = {
   id: PropTypes.string.isRequired,
   actionId: PropTypes.string,
-  label: PropTypes.string.isRequired,
+  label: PropTypes.string,
   removeAction: PropTypes.func,
   isDark: PropTypes.bool,
   isInline: PropTypes.bool,
