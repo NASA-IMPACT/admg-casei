@@ -30,5 +30,9 @@ Chosen option: [Option 2], because encourages us to draw distinctions between co
 ### Links
 
 [TypographyJS](https://kyleamathews.github.io/typography.js/),
-[Typography Update Issue](https://github.com/developmentseed/admg-inventory/issues/156),
 [Miro Board](https://miro.com/app/board/o9J_lW2ssAE=/?moveToWidget=3074457353850170574&cot=14)
+[Gatsby Typography.js Plugin](https://web.archive.org/web/20201025193022/https://www.gatsbyjs.com/docs/using-typography-js/)
+
+### Related conversations
+[Issue: Typography Update](https://github.com/developmentseed/admg-inventory/issues/156),
+[PR: Clean up and tune typography #104](https://github.com/developmentseed/admg-inventory/pull/104)
