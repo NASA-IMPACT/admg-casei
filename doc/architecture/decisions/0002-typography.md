@@ -25,7 +25,7 @@ We have inconsistencies in our designs, the design system, and implementation of
 
 ## Decision Outcome
 
-Chosen option: [Option 2], because encourages us to draw distinctions between core styles and component specific styles and maintain integrity of our approach to styling. We will likely need to update our components that are slight offshoots of our core styles like button text or banner text. These should be override of our base `<p>` or `<a>` styles. The fact that we hold them in the button or banner component should indicate that these overrides are specific to that component and are not intended to be applied to anything else.
+Chosen option: [Option 2], because encourages us to draw distinctions between core typography styles and component specific font styles and maintain integrity of our approach to styling. We will likely need to update our components that are slight offshoots of our core styles (like button text or banner text). These should be override of our base `<p>` or `<a>` styles. The fact that we hold them in the button or banner component should indicate that these overrides are specific to that component and are not intended to be applied to anything else.
 
 ### Links
 
