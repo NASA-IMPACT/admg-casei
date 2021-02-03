@@ -11,9 +11,9 @@ import {
   AccordionPanel,
 } from "@reach/accordion"
 
-import theme from "../utils/theme"
-import Label from "../components/label"
-import { ChevronIcon, ArrowIcon } from "../components/icons"
+import theme from "../../utils/theme"
+import Label from "../label"
+import { ChevronIcon, ArrowIcon } from "../icons"
 
 const RotatingContainer = styled.div`
   transition: transform 240ms ease-in-out;
@@ -34,8 +34,7 @@ export default function Accordion({ folds, id }) {
     <ReachAccordion
       style={{
         maxHeight: `30rem`,
-        overflowY: `scroll`,
-        boxShadow: `inset 0 -20px 20px -20px ${theme.color.primary}`,
+        overflowY: `auto`,
       }}
       index={indices}
       onChange={toggleAccordionItem}
@@ -48,9 +47,9 @@ export default function Accordion({ folds, id }) {
               isOpen={indices.includes(index)}
               style={{
                 borderWidth: `0 0 1px 0`,
-                borderColor: `"#FFF"`,
+                borderColor: `#FFF`,
                 background: `none`,
-                color: indices.includes(index) ? theme.color.link : `"#FFF"`,
+                color: indices.includes(index) ? theme.color.link : `#FFF`,
                 width: `100%`,
                 textAlign: `left`,
                 cursor: `pointer`,
@@ -93,22 +92,23 @@ export default function Accordion({ folds, id }) {
                 {fold.description}
               </div>
             </div>
-
-            <div style={{ margin: `3rem 0` }}>
-              <Label>Measurements/Variables</Label>
-              {fold.gcmdPhenomenas
-                .map(x =>
-                  Object.values(x)
-                    .filter(x => x)
-                    .join(" > ")
-                )
-                .join(" > ") || "N/A"}
-            </div>
+            {fold.gcmdPhenomenas && (
+              <div style={{ margin: `3rem 0` }}>
+                <Label>Measurements/Variables</Label>
+                {fold.gcmdPhenomenas
+                  .map(x =>
+                    Object.values(x)
+                      .filter(x => x)
+                      .join(" > ")
+                  )
+                  .join(" > ") || "N/A"}
+              </div>
+            )}
             <Link
               to={`/instrument/${fold.id}`}
               style={{ color: theme.color.link }}
             >
-              <Label display="flex" color={theme.color.link}>
+              <Label id="accordion" display="flex" color={theme.color.link}>
                 Learn More
                 <ArrowIcon color={theme.color.link} />
               </Label>
@@ -124,16 +124,16 @@ Accordion.propTypes = {
   folds: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
-      shortname: PropTypes.string.isRequired,
-      longname: PropTypes.string.isRequired,
-      description: PropTypes.string.isRequired,
+      shortname: PropTypes.string,
+      longname: PropTypes.string,
+      description: PropTypes.string,
       gcmdPhenomenas: PropTypes.arrayOf(
         PropTypes.shape({
-          term: PropTypes.string.isRequired,
-          topic: PropTypes.string.isRequired,
-          variable_1: PropTypes.string.isRequired,
-          variable_2: PropTypes.string.isRequired,
-          variable_3: PropTypes.string.isRequired,
+          term: PropTypes.string,
+          topic: PropTypes.string,
+          variable_1: PropTypes.string,
+          variable_2: PropTypes.string,
+          variable_3: PropTypes.string,
         })
       ),
     })

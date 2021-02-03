@@ -1,152 +1,31 @@
-import React, { useState, useRef } from "react"
+import React from "react"
 import PropTypes from "prop-types"
-
-import { graphql, Link } from "gatsby"
-import Carousel from "nuka-carousel"
-import Image from "gatsby-image"
+import { graphql } from "gatsby"
 
 import { Section, SectionHeader, SectionContent } from "../../components/layout"
-import ImageCaption from "../../components/image-caption"
-import {
-  controlButtonLRStyle,
-  ControlTextButton,
-} from "../../components/carousel-styles"
-import Accordion from "../../components/accordion"
-import theme from "../../utils/theme"
+import ComboAccordion from "../../components/accordion/combo-accordion"
 
 const PlatformSection = ({ id, platforms, instruments }) => {
-  const controlTextRef = useRef(null)
-  const [slideIndex, setSlideIndex] = useState(0)
   return (
     <Section id={id}>
       <SectionHeader headline="Platforms & Instruments" id={id} />
       <SectionContent>
-        {platforms.length > 0 ? (
-          <div data-cy="platform-carousel">
-            <div
-              style={{
-                display: `flex`,
-                overflow: `auto`,
-              }}
-              data-cy="carousel-list-text-control"
-            >
-              {platforms.map((platform, index) => (
-                <ControlTextButton
-                  key={platform.id}
-                  ref={index === slideIndex ? controlTextRef : null}
-                  selected={index === slideIndex}
-                  onClick={() => setSlideIndex(index)}
-                >
-                  {platform.shortname}
-                </ControlTextButton>
-              ))}
-            </div>
-            <Carousel
-              slideIndex={slideIndex}
-              afterSlide={slideIndex => {
-                setSlideIndex(slideIndex)
-                controlTextRef.current.scrollIntoView({
-                  behavior: "smooth",
-                  block: "nearest",
-                  inline: "nearest",
-                })
-              }}
-              renderBottomCenterControls={null}
-              defaultControlsConfig={{
-                nextButtonText: `⦊`,
-                nextButtonStyle: controlButtonLRStyle,
-                prevButtonText: `⦉`,
-                prevButtonStyle: controlButtonLRStyle,
-              }}
-              getControlsContainerStyles={key => {
-                switch (key) {
-                  case "BottomCenter":
-                    return {
-                      bottom: "-42px",
-                    }
-                  case "CenterLeft":
-                    return {
-                      marginLeft: "-50px",
-                    }
-                  case "CenterRight":
-                    return {
-                      marginRight: "-50px",
-                    }
-                  default:
-                    // will apply all other keys
-                    return
-                }
-              }}
-              heightMode="max"
-            >
-              {platforms.map(platform => (
-                <div
-                  key={platform.id}
-                  data-cy="platform"
-                  style={{
-                    display: `grid`,
-                    gridTemplateColumns: `1fr minmax(auto,  ${theme.layout.maxWidth}) 1fr`,
-                    width: `100vw`,
-                    alignContent: `center`,
-                  }}
-                >
-                  <div
-                    style={{
-                      display: `grid`,
-                      gridTemplateColumns: `1fr 3fr`,
-                      gridGap: `1.5rem`,
-                      width: `70rem`,
-                    }}
-                  >
-                    <div
-                      style={{
-                        width: `26rem`,
-                        maxHeight: `18rem`,
-                        marginTop: `1.25rem`,
-                      }}
-                    >
-                      <Link to={`/platform/${platform.id}`}>
-                        {platform.image && platform.image.gatsbyImg ? (
-                          <Image
-                            alt={platform.image.description}
-                            fluid={
-                              platform.image.gatsbyImg.childImageSharp.fluid
-                            }
-                            data-cy="platform-image"
-                          />
-                        ) : (
-                          <div
-                            style={{
-                              width: `26rem`,
-                              height: `18rem`,
-                              backgroundColor: `#303641`,
-                              display: `flex`,
-                              alignItems: `center`,
-                              justifyContent: `center`,
-                            }}
-                            data-cy="platform-image"
-                          >
-                            No Image available.
-                          </div>
-                        )}
-                        <ImageCaption id="platform-image">
-                          {platform.longname || platform.shortname}
-                        </ImageCaption>
-                      </Link>
-                    </div>
-                    <Accordion
-                      folds={platform.instruments.filter(instrument =>
-                        instruments.map(x => x.id).includes(instrument.id)
-                      )}
-                      id="platform"
-                    />
-                  </div>
-                </div>
-              ))}
-            </Carousel>
-          </div>
-        ) : (
-          <p>No available related campaigns</p>
+        {platforms && instruments && (
+          <ComboAccordion
+            id="platform"
+            isImage
+            emptyMessage="No available related platforms or instruments"
+            carouselList={platforms}
+            folds={platforms.reduce(
+              (acc, platform) =>
+                Object.assign(acc, {
+                  [platform.id]: platform.instruments.filter(instrument =>
+                    instruments.map(x => x.id).includes(instrument.id)
+                  ),
+                }),
+              {}
+            )}
+          />
         )}
       </SectionContent>
     </Section>
@@ -177,6 +56,16 @@ export const platformSectionFields = graphql`
         shortname: short_name
         longname: long_name
         description
+        image {
+          description
+          gatsbyImg {
+            childImageSharp {
+              fixed(height: 100) {
+                ...GatsbyImageSharpFixed
+              }
+            }
+          }
+        }
         gcmdPhenomenas: gcmd_phenomenas {
           term
           topic

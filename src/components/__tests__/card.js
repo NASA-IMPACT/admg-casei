@@ -24,7 +24,7 @@ describe("Card", () => {
   it("renders plain card", () => {
     const tree = renderer
       .create(
-        <Card>
+        <Card category="campaigns">
           <CardContent />
         </Card>
       )

@@ -1,116 +1,26 @@
-import React, { useState, useRef } from "react"
+import React from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
-import Carousel from "nuka-carousel"
 
 import { Section, SectionHeader, SectionContent } from "../../components/layout"
-import CampaignCard from "../../components/cards/campaign-card"
-import Accordion from "../../components/accordion"
-import {
-  controlButtonLRStyle,
-  ControlTextButton,
-} from "../../components/carousel-styles"
-import theme from "../../utils/theme"
+import ComboAccordion from "../../components/accordion/combo-accordion"
 
 const CampaignsAndInstruments = ({ id, campaigns }) => {
-  const controlTextRef = useRef(null)
-  const [slideIndex, setSlideIndex] = useState(0)
-
   return (
     <Section id={id}>
       <SectionHeader headline="Related Campaigns & Instruments" id={id} />
       <SectionContent>
-        {campaigns.length > 0 ? (
-          <div data-cy="related-campaign-carousel">
-            <div
-              style={{
-                display: `flex`,
-                overflow: `auto`,
-              }}
-              data-cy="carousel-list-text-control"
-            >
-              {campaigns.map((campaign, index) => (
-                <ControlTextButton
-                  key={campaign.id}
-                  ref={index === slideIndex ? controlTextRef : null}
-                  selected={index === slideIndex}
-                  onClick={() => setSlideIndex(index)}
-                >
-                  {campaign.shortname}
-                </ControlTextButton>
-              ))}
-            </div>
-            <Carousel
-              slideIndex={slideIndex}
-              afterSlide={slideIndex => {
-                setSlideIndex(slideIndex)
-                controlTextRef.current.scrollIntoView({
-                  behavior: "smooth",
-                  block: "nearest",
-                  inline: "nearest",
-                })
-              }}
-              renderBottomCenterControls={null}
-              defaultControlsConfig={{
-                nextButtonText: `⦊`,
-                nextButtonStyle: controlButtonLRStyle,
-                prevButtonText: `⦉`,
-                prevButtonStyle: controlButtonLRStyle,
-              }}
-              getControlsContainerStyles={key => {
-                switch (key) {
-                  case "BottomCenter":
-                    return {
-                      bottom: "-42px",
-                    }
-                  case "CenterLeft":
-                    return {
-                      marginLeft: "-50px",
-                    }
-                  case "CenterRight":
-                    return {
-                      marginRight: "-50px",
-                    }
-                  default:
-                    // will apply all other keys
-                    return
-                }
-              }}
-              heightMode="max"
-            >
-              {campaigns.map(campaign => (
-                <div
-                  key={campaign.id}
-                  data-cy="related-campaign"
-                  style={{
-                    display: `grid`,
-                    gridTemplateColumns: `1fr minmax(auto,  ${theme.layout.maxWidth}) 1fr`,
-                    width: `100vw`,
-                    alignContent: `center`,
-                  }}
-                >
-                  <div
-                    style={{
-                      display: `grid`,
-                      gridTemplateColumns: `1fr 3fr`,
-                      gridGap: `1.5rem`,
-                      width: `70rem`,
-                    }}
-                  >
-                    <div style={{ width: `26rem`, maxHeight: `30rem` }}>
-                      <Link to={`/campaign/${campaign.id}`}>
-                        <CampaignCard height={"30rem"} id={campaign.id} />
-                      </Link>
-                    </div>
-                    <Accordion folds={campaign.instruments} />
-                  </div>
-                </div>
-              ))}
-            </Carousel>
-          </div>
-        ) : (
-          <p>No available related campaigns</p>
-        )}
+        <ComboAccordion
+          id="campaign"
+          emptyMessage="No available related campaigns"
+          carouselList={campaigns}
+          folds={campaigns.reduce(
+            (acc, campaign) =>
+              Object.assign(acc, {
+                [campaign.id]: campaign.instruments,
+              }),
+            {}
+          )}
+        />
       </SectionContent>
     </Section>
   )
