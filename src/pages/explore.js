@@ -181,16 +181,15 @@ export default function Explore({ data, location }) {
           aoi ||
           !!(dateRange.start && dateRange.end)) && (
           <FilterChips clearFilters={clearFilters}>
-            {selectedFilterIds.length &&
-              selectedFilterIds.map(f => (
-                <Chip
-                  key={f}
-                  id="filter"
-                  label={getFilterLabelById ? getFilterLabelById(f) : f}
-                  actionId={f}
-                  removeAction={removeFilter}
-                />
-              ))}
+            {selectedFilterIds.map(f => (
+              <Chip
+                key={f}
+                id="filter"
+                label={getFilterLabelById ? getFilterLabelById(f) : f}
+                actionId={f}
+                removeAction={removeFilter}
+              />
+            ))}
 
             {aoi && (
               <Chip
