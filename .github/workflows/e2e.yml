@@ -41,6 +41,7 @@ jobs:
 
       - name: Install
         run: yarn install
+        run: cypress install
 
       - name: Build
         run: yarn build
