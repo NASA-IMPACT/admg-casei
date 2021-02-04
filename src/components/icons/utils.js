@@ -10,35 +10,38 @@ import {
   EarthSurfaceInteriorIcon,
   GlobalWaterEnergyCycleIcon,
   WeatherIcon,
+  ExclamationIcon,
 } from "../icons"
 
 const icons = {
-  "960ac6eb-3e79-425d-998b-8b1271aa6d5e": ({ color, size }) => (
+  "df6847ab-9443-4fdb-a990-d5bf1daca3b7": ({ color, size }) => (
     <AtmosphericCompositionIcon color={color} size={size} />
   ),
-
-  "347b2275-e553-42e2-bfd5-2e077dc00a95": ({ color, size }) => (
+  "f1bd646f-876f-4e9f-896e-f7d4571ecc00": ({ color, size }) => (
     <CarbonCycleEcosystemsIcon color={color} size={size} />
   ),
-  "b2f74ede-ac7d-4cce-8abc-6f4af227b320": ({ color, size }) => (
+  "cd62c68f-a9f7-456a-ae15-53ef79ed5118": ({ color, size }) => (
     <ClimateVariabilityChangeIcon color={color} size={size} />
   ),
-  "1a2f4f6e-37a2-4238-95d0-123dab923322": ({ color, size }) => (
+  "2231a3f1-3430-4f89-86a2-94938aa000a5": ({ color, size }) => (
     <EarthSurfaceInteriorIcon color={color} size={size} />
   ),
-  "220c5519-e743-40d2-9d42-7c9fd15b727b": ({ color, size }) => (
+  "fd5c0baa-d6a4-45d7-b201-0eb2a5505dc7": ({ color, size }) => (
     <GlobalWaterEnergyCycleIcon color={color} size={size} />
   ),
-  "9bacf069-912f-4302-95de-f15bc4a3784d": ({ color, size }) => (
+  "6d719465-f32c-4808-9efb-da5ad2bae135": ({ color, size }) => (
     <WeatherIcon color={color} size={size} />
   ),
 }
 
 export function getFocusIcon(id) {
-  return icons[id]
+  return Object.keys(icons).includes(id)
+    ? icons[id]
+    : ({ color, size }) => <ExclamationIcon color={color} size={size} />
 }
 
 export const sizes = {
+  text: { width: "16", height: "16" },
   tiny: { width: "30", height: "30" },
   small: { width: "60", height: "60" },
   large: { width: "120", height: "120" },

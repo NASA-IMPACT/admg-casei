@@ -210,7 +210,7 @@ describe("Filter, Search and Sort", () => {
   // Turns out, dealing with fetch requests in cypress isn't that easy:
   // https://github.com/cypress-io/cypress/issues/95
   describe.skip("the free text search", () => {
-    beforeEach(() => {
+    before(() => {
       searchApiStub = cy
         .stub(api, "fetchSearchResult")
         .as("fetchSearchResultStub")
@@ -225,7 +225,7 @@ describe("Filter, Search and Sort", () => {
     })
 
     describe("on api success", () => {
-      beforeEach(() => {
+      before(() => {
         searchApiStub.resolves(["id1", "id2"])
       })
 
@@ -248,7 +248,7 @@ describe("Filter, Search and Sort", () => {
     })
 
     describe("on api failure", () => {
-      beforeEach(() => {
+      before(() => {
         searchApiStub.returns(new Error("UUUPS, there was an error"))
       })
 
