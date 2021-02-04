@@ -228,14 +228,8 @@ describe("Campaign", () => {
     it("displays a platform carousel", () => {
       cy.get("[data-cy=platform-carousel]").find(".slider").should("exist")
 
-      cy.get("[data-cy=platform]")
-        .first()
-        .find("[data-cy=platform-image]")
-        .should("exist")
-      cy.get("[data-cy=platform]")
-        .first()
-        .find("[data-cy=platform-image]")
-        .should("be.visible")
+      cy.get("[data-cy=platform-image]").should("exist")
+      cy.get("[data-cy=platform-image]").first().should("be.visible")
       cy.get("[data-cy=platform]").first().find("label").should("exist")
       cy.get("[data-cy=platform-image-caption]").should("exist")
 
@@ -246,7 +240,7 @@ describe("Campaign", () => {
 
     it("displays some platforms", () => {
       cy.get("[data-cy=platform]").should($div => {
-        expect($div, "3 platforms").to.have.length(3)
+        expect($div, "3 or more platforms").to.have.length.gte(3)
       })
     })
 
@@ -255,7 +249,7 @@ describe("Campaign", () => {
         .first()
         .find("[data-cy=instrument-chip]")
         .should($div => {
-          expect($div, "2 instruments").to.have.length(2)
+          expect($div, "2 or more instruments").to.have.length.gte(1)
         })
     })
   })
@@ -278,7 +272,7 @@ describe("Campaign", () => {
 
     it("displays some data products", () => {
       cy.get("[data-cy=data-product]").should($div => {
-        expect($div).to.have.length(3)
+        expect($div, "3 or more data products").to.have.length.gte(3)
       })
     })
 
