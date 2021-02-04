@@ -47,8 +47,10 @@ export function formatYearRange(start, end) {
   const startyear = startdate.getFullYear()
   const endyear = enddate.getFullYear()
 
-  return startyear === endyear || !end
-    ? `${startyear} - Ongoing`
+  return startyear === endyear
+    ? `${startyear}`
+    : !end
+    ? `${startyear} — Ongoing`
     : `${startyear}—${endyear}`
 }
 

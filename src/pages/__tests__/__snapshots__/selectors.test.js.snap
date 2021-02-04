@@ -1260,7 +1260,7 @@ exports[`Explore page renders correctly 1`] = `
                   <small
                     data-cy="daterange"
                   >
-                    2017 - Ongoing
+                    2017
                   </small>
                 </div>
                 <div>
@@ -1358,7 +1358,7 @@ exports[`Explore page renders correctly 1`] = `
                   <small
                     data-cy="daterange"
                   >
-                    2017 - Ongoing
+                    2017
                   </small>
                 </div>
                 <div>
@@ -1464,7 +1464,7 @@ exports[`Explore page renders correctly 1`] = `
                   <small
                     data-cy="daterange"
                   >
-                    2017 - Ongoing
+                    2017
                   </small>
                 </div>
                 <div>
@@ -2190,7 +2190,7 @@ exports[`Explore page renders correctly 1`] = `
                   <small
                     data-cy="daterange"
                   >
-                    2014 - Ongoing
+                    2014
                   </small>
                 </div>
                 <div>
@@ -2288,7 +2288,7 @@ exports[`Explore page renders correctly 1`] = `
                   <small
                     data-cy="daterange"
                   >
-                    2013 - Ongoing
+                    2013
                   </small>
                 </div>
                 <div>
@@ -2395,7 +2395,7 @@ exports[`Explore page renders correctly 1`] = `
                   <small
                     data-cy="daterange"
                   >
-                    2012 - Ongoing
+                    2012
                   </small>
                 </div>
                 <div>
@@ -2500,7 +2500,7 @@ exports[`Explore page renders correctly 1`] = `
                   <small
                     data-cy="daterange"
                   >
-                    2012 - Ongoing
+                    2012
                   </small>
                 </div>
                 <div>
@@ -2598,7 +2598,7 @@ exports[`Explore page renders correctly 1`] = `
                   <small
                     data-cy="daterange"
                   >
-                    2010 - Ongoing
+                    2010
                   </small>
                 </div>
                 <div>
@@ -2705,7 +2705,7 @@ exports[`Explore page renders correctly 1`] = `
                   <small
                     data-cy="daterange"
                   >
-                    2010 - Ongoing
+                    2010
                   </small>
                 </div>
                 <div>
@@ -2812,7 +2812,7 @@ exports[`Explore page renders correctly 1`] = `
                   <small
                     data-cy="daterange"
                   >
-                    2008 - Ongoing
+                    2008
                   </small>
                 </div>
                 <div>
@@ -2911,7 +2911,7 @@ exports[`Explore page renders correctly 1`] = `
                   <small
                     data-cy="daterange"
                   >
-                    2007 - Ongoing
+                    2007
                   </small>
                 </div>
                 <div>
@@ -3009,7 +3009,7 @@ exports[`Explore page renders correctly 1`] = `
                   <small
                     data-cy="daterange"
                   >
-                    2006 - Ongoing
+                    2006
                   </small>
                 </div>
                 <div>
@@ -3107,7 +3107,7 @@ exports[`Explore page renders correctly 1`] = `
                   <small
                     data-cy="daterange"
                   >
-                    2005 - Ongoing
+                    2005
                   </small>
                 </div>
                 <div>
@@ -3214,7 +3214,7 @@ exports[`Explore page renders correctly 1`] = `
                   <small
                     data-cy="daterange"
                   >
-                    2002 - Ongoing
+                    2002
                   </small>
                 </div>
                 <div>
@@ -3411,7 +3411,7 @@ exports[`Explore page renders correctly 1`] = `
                   <small
                     data-cy="daterange"
                   >
-                    1996 - Ongoing
+                    1996
                   </small>
                 </div>
                 <div>
@@ -3620,7 +3620,7 @@ exports[`Explore page renders correctly 1`] = `
                   <small
                     data-cy="daterange"
                   >
-                    2016 - Ongoing
+                    2016 — Ongoing
                   </small>
                 </div>
                 <div>
@@ -3731,7 +3731,7 @@ exports[`Explore page renders correctly 1`] = `
                   <small
                     data-cy="daterange"
                   >
-                    2015 - Ongoing
+                    2015 — Ongoing
                   </small>
                 </div>
                 <div>
