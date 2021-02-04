@@ -4,7 +4,7 @@ import theme from "./theme"
 
 const typography = new Typography({
   baseFontSize: "16px",
-  baseLineHeight: 1,
+  baseLineHeight: 1.15,
   googleFonts: [
     {
       name: "Titillium Web",
