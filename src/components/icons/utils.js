@@ -10,13 +10,13 @@ import {
   EarthSurfaceInteriorIcon,
   GlobalWaterEnergyCycleIcon,
   WeatherIcon,
+  ExclamationIcon,
 } from "../icons"
 
 const icons = {
   "df6847ab-9443-4fdb-a990-d5bf1daca3b7": ({ color, size }) => (
     <AtmosphericCompositionIcon color={color} size={size} />
   ),
-
   "f1bd646f-876f-4e9f-896e-f7d4571ecc00": ({ color, size }) => (
     <CarbonCycleEcosystemsIcon color={color} size={size} />
   ),
@@ -35,10 +35,13 @@ const icons = {
 }
 
 export function getFocusIcon(id) {
-  return icons[id]
+  return Object.keys(icons).includes(id)
+    ? icons[id]
+    : ({ color, size }) => <ExclamationIcon color={color} size={size} />
 }
 
 export const sizes = {
+  text: { width: "16", height: "16" },
   tiny: { width: "30", height: "30" },
   small: { width: "60", height: "60" },
   large: { width: "120", height: "120" },

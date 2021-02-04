@@ -1,6 +1,6 @@
-name: Quality Assurance
+name: Lint and Test
 
-on: push
+on: [push]
 
 jobs:
   lint:
@@ -62,48 +62,3 @@ jobs:
 
       - name: Test
         run: yarn test
-
-  build-and-test-e2e:
-    needs: [lint, test]
-    runs-on: ubuntu-latest
-
-    env:
-      ADMG_ACCESS_TOKEN: ${{ secrets.ADMG_ACCESS_TOKEN }}
-      CYPRESS_password: ${{ secrets.CYPRESS_password }}
-      GATSBY_ADMG_CLIENT_ID: ${{ secrets.GATSBY_ADMG_CLIENT_ID }}
-      GATSBY_ADMG_CLIENT_SECRET: ${{ secrets.GATSBY_ADMG_CLIENT_SECRET }}
-      GATSBY_CPU_COUNT: 1
-      GATSBY_MAPBOX_TOKEN: ${{ secrets.GATSBY_MAPBOX_TOKEN }}
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-
-      - name: Use Node.js 14
-        uses: actions/setup-node@v1
-        with:
-          node-version: 14
-
-      - name: Cache node modules
-        uses: actions/cache@v2
-        env:
-          cache-name: cache-node-modules
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
-
-      - name: Install
-        run: yarn install
-
-      - name: Build
-        run: yarn build
-
-      - name: Test End-to-end
-        uses: cypress-io/github-action@v2.2.7
-        with:
-          start: yarn serve -p 8000
-          wait-on: "http://localhost:8000"

@@ -3,7 +3,7 @@
 import { site } from "../../test/__fixtures__"
 
 describe("Header", () => {
-  beforeEach(() => {
+  before(() => {
     cy.visit("/")
   })
   it("renders correctly", () => {
