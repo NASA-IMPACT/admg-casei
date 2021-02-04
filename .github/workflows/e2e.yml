@@ -1,16 +1,10 @@
 name: End-to-End Test
 
-on:
-  workflow_run:
-    workflows: ["Lint and Test"]
-    types:
-      - completed
+on: [pull_request]
 
 jobs:
   build-and-test-e2e:
     runs-on: ubuntu-latest
-
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
 
     env:
       ADMG_ACCESS_TOKEN: ${{ secrets.ADMG_ACCESS_TOKEN }}
