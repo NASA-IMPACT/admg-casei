@@ -101,7 +101,6 @@ describe("Instrument", () => {
           .first()
           .find("[data-cy=doi-label]")
           .should("exist")
-          .and("have.text", "GOES-R PLT Cloud Physics LiDAR (CPL) V1")
 
         cy.get("[data-cy=data-product]")
           .first()
@@ -142,15 +141,9 @@ describe("Instrument", () => {
             expect($th.eq(1), "second item").to.contain("Campaigns")
           })
 
-        cy.get("[data-cy=related-platform]")
-          .find("big")
-          .first()
-          .should("have.text", "ER-2")
+        cy.get("[data-cy=related-platform]").find("big").first().should("exist")
 
-        cy.get("[data-cy=related-campaign]")
-          .find("big")
-          .first()
-          .should("have.text", "ACEPOL")
+        cy.get("[data-cy=related-campaign]").find("big").first().should("exist")
       })
     })
   })

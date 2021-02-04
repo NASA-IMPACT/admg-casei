@@ -46,7 +46,7 @@ const PlatformSection = ({ id, platforms, instruments }) => (
                     ) : (
                       <div
                         style={{
-                          height: 150, // TO DO: make box fill space
+                          height: 150, // TODO: make box fill space
                           backgroundColor: `#303641`,
                           display: `flex`,
                           alignItems: `center`,
