@@ -69,7 +69,7 @@ describe("Explore", () => {
         .should($card => {
           expect($card.find("[data-cy=ongoing-tag]")).to.exist
           expect($card.find("[data-cy=shortname]")).to.contain("OMG")
-          expect($card.find("[data-cy=daterange]")).to.contain("2015—Ongoing")
+          expect($card.find("[data-cy=daterange]")).to.contain("Ongoing")
         })
     })
 
