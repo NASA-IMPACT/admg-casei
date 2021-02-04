@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Card from "./card"
+import { InstrumentIcon } from "../icons"
 
 export default function InstrumentCard(props) {
   /*
@@ -36,6 +37,7 @@ export default function InstrumentCard(props) {
 
   return (
     <Card
+      placeholder={InstrumentIcon}
       footerList={[{ count: instrument.campaigns.length, title: "Campaign" }]}
       category="instruments"
     >

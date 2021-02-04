@@ -26,7 +26,7 @@ export function PropTypeIsUrl(props, propName, componentName) {
   if (!urlRegex.test(props[propName]) && !mailtoRegex.test(props[propName])) {
     return new Error(
       "Invalid url `" +
-        propName +
+        props[propName] +
         "` supplied to" +
         " `" +
         componentName +

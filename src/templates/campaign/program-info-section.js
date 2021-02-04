@@ -10,7 +10,7 @@ import {
   ContentItem,
   ContentGroup,
 } from "../../components/layout"
-import PlaceholderLogo from "../../images/placeholder-logo.svg"
+import { CampaignIcon } from "../../components/icons"
 
 const ProgramInfoSection = ({
   id,
@@ -70,11 +70,7 @@ const ProgramInfoSection = ({
                 />
               </div>
             ) : (
-              <img
-                src={PlaceholderLogo}
-                alt="placeholder-logo"
-                data-cy="campaign-logo"
-              />
+              <CampaignIcon />
             )}
           </div>
 
@@ -130,7 +126,7 @@ ProgramInfoSection.propTypes = {
     logoImg: PropTypes.shape({
       childImageSharp: PropTypes.object,
     }),
-  }).isRequired,
+  }),
   fundingAgency: PropTypes.string.isRequired,
   fundingProgram: PropTypes.string.isRequired,
   programLead: PropTypes.string.isRequired,
