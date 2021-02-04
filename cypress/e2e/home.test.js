@@ -148,7 +148,7 @@ describe("Homepage", () => {
     //   .should("have.length", 1)
     //   .and("have.text", "geophysical: Biodiversity")
 
-    cy.get("[data-cy=campaigns-card]").should("have.length", 26)
+    cy.get("[data-cy=campaigns-card]").should("have.length", 2)
   })
 
   it("there is a platform section", () => {
