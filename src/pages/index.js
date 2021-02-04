@@ -23,6 +23,7 @@ const IndexPage = ({ data }) => {
         title={data.site.siteMetadata.title}
         description={data.site.siteMetadata.description}
         backgroundImage={data.heroImage}
+        textToImageRatio={[6, 6]}
         id="home"
       />
       <PageBody id="home">
