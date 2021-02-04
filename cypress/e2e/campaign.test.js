@@ -229,7 +229,7 @@ describe("Campaign", () => {
       cy.get("[data-cy=platform-carousel]").find(".slider").should("exist")
 
       cy.get("[data-cy=platform-image]").should("exist")
-
+      cy.get("[data-cy=platform]").first().find("label").should("exist")
       cy.get("[data-cy=platform-image-caption]").should("exist")
 
       cy.get("[data-cy=platform-carousel]").find(
@@ -260,7 +260,7 @@ describe("Campaign", () => {
         .should("exist")
         .first()
         .should($div => {
-          expect($div.first()).to.contain("DC-8")
+          expect($div, "2 or more instruments").to.have.length.gte(1)
         })
     })
   })
@@ -283,7 +283,7 @@ describe("Campaign", () => {
 
     it("displays some data products", () => {
       cy.get("[data-cy=data-product]").should($div => {
-        expect($div).to.have.length(5)
+        expect($div, "3 or more data products").to.have.length.gte(3)
       })
     })
 

@@ -122,47 +122,56 @@ const DateMenu = ({ id, style, label, dateRange, setDateRange }) => {
             minWidth: `fit-content`,
           }}
         >
-          <ListboxList
-            style={{
-              display: `flex`,
-              margin: `1rem`,
-              alignItems: `center`,
-              justifyContent: `space-between`,
-            }}
-          >
-            From:
-            <DatePicker
-              showYearDropdown
-              onChange={date => setStartDate(date)}
-              selected={startDate}
-            />
-            To:
-            <DatePicker
-              showYearDropdown
-              onChange={date => setEndDate(date)}
-              selected={endDate}
-              minDate={startDate}
-            />
-          </ListboxList>
-          <ListboxList
-            style={{
-              display: `flex`,
-              gap: `1rem`,
-              margin: `1rem`,
-              alignItems: `center`,
-            }}
-          >
-            <TimeRangeButton onClick={() => onButtonClick("month")}>
-              1 Month ago
-            </TimeRangeButton>
-            <TimeRangeButton onClick={() => onButtonClick("halfYear")}>
-              6 Months ago
-            </TimeRangeButton>
-            <TimeRangeButton onClick={() => onButtonClick("tenYears")}>
-              10 years ago
-            </TimeRangeButton>
+          <ListboxList>
+            <div
+              style={{
+                display: `flex`,
+                margin: `1rem`,
+                alignItems: `center`,
+                justifyContent: `space-between`,
+              }}
+            >
+              From:
+              <DatePicker
+                showYearDropdown
+                onChange={date => setStartDate(date)}
+                selected={startDate}
+              />
+              To:
+              <DatePicker
+                showYearDropdown
+                onChange={date => setEndDate(date)}
+                selected={endDate}
+                minDate={startDate}
+              />
+            </div>
+            <div
+              style={{
+                display: `flex`,
+                gap: `1rem`,
+                margin: `1rem`,
+                alignItems: `center`,
+              }}
+            >
+              <TimeRangeButton onClick={() => onButtonClick("month")}>
+                1 Month ago
+              </TimeRangeButton>
+              <TimeRangeButton onClick={() => onButtonClick("halfYear")}>
+                6 Months ago
+              </TimeRangeButton>
+              <TimeRangeButton onClick={() => onButtonClick("tenYears")}>
+                10 years ago
+              </TimeRangeButton>
 
-            <ApplyButton value="select">Apply</ApplyButton>
+              {/**
+               * This button is the only actual listbox option
+               * Its only job is to submit the selected date
+               */}
+              <ApplyButton value="select" tabIndex={0}>
+                {/* tabIndex was required to allow keyboard focus. TODO: submit on enter ?!  */}
+                Apply
+              </ApplyButton>
+            </div>
           </ListboxList>
         </ListboxPopover>
       </ListboxInput>

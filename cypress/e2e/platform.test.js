@@ -46,7 +46,7 @@ describe("Platform", () => {
     })
   })
 
-  describe("the data section", () => {
+  describe.skip("the data section", () => {
     before(() => {
       cy.visit("/explore")
       cy.get("[data-cy=tabbar]").contains("button", "Platforms").click()
@@ -98,7 +98,7 @@ describe("Platform", () => {
     })
   })
 
-  describe("the related campaign section", () => {
+  describe.skip("the related campaign section", () => {
     it("exists", () => {
       cy.get("[data-cy=platform-campaigns-section]").should("exist")
     })
