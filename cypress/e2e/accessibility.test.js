@@ -1,7 +1,7 @@
 /// <reference types="Cypress" />
 
 describe("Accessibility tests", () => {
-  beforeEach(() => {
+  before(() => {
     cy.visit("/")
 
     cy.get("header").injectAxe()

@@ -1,5 +1,5 @@
 describe("Login", () => {
-  beforeEach(() => {
+  before(() => {
     cy.visit("/campaign/2a5f6d7b-2f5a-4c63-9199-62bebb98d2c4", {
       // using onLoad to overwrite fetch from cypress/support/index.json - is there a better way?
       onLoad: win => {
@@ -62,7 +62,7 @@ describe("Login", () => {
       })
   })
 
-  afterEach(() => {
+  after(() => {
     // ensure token is removed in case of errors
     sessionStorage.removeItem("token")
   })
