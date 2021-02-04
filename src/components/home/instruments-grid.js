@@ -34,6 +34,7 @@ export const InstrumentsGrid = ({ measurementTypes }) => {
               border: `1px solid ${theme.color.base}`,
               padding: `1rem`,
               textAlign: `center`,
+              fontWeight: `bold`,
             }}
           >
             {measurementType.longname || measurementType.shortname}

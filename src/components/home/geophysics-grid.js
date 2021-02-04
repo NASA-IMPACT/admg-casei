@@ -25,6 +25,7 @@ export const GeophysicsGrid = ({ geophysicalConcepts }) => (
             border: `1px solid ${theme.color.base}`,
             padding: `1rem`,
             textAlign: `center`,
+            fontWeight: `bold`,
           }}
         >
           {concept.longname}
