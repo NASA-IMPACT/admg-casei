@@ -1,7 +1,7 @@
 /// <reference types="Cypress" />
 
 describe("Glossary", () => {
-  beforeEach(() => {
+  before(() => {
     cy.visit("/glossary")
   })
   describe("the header", () => {

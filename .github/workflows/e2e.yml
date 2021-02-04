@@ -1,17 +1,10 @@
-name: Deploy
+name: End-to-End Test
 
-on:
-  workflow_run:
-    workflows: ["End-to-End Test"]
-    branches: [develop]
-    types:
-      - completed
+on: [pull_request]
 
 jobs:
-  build-and-deploy:
+  build-and-test-e2e:
     runs-on: ubuntu-latest
-
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
 
     env:
       ADMG_ACCESS_TOKEN: ${{ secrets.ADMG_ACCESS_TOKEN }}
@@ -42,12 +35,14 @@ jobs:
             ${{ runner.os }}-build-
             ${{ runner.os }}-
 
-      - name: Build
-        run: |
-          yarn install
-          yarn build
+      - name: Install
+        run: yarn install
 
-      - name: Deploy 🚀
-        run: |
-          npm install -g surge
-          surge --project ./public --domain ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
+      - name: Build
+        run: yarn build
+
+      - name: Test End-to-end
+        uses: cypress-io/github-action@v2
+        with:
+          start: yarn serve -p 8000
+          wait-on: "http://localhost:8000"

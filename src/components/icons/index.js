@@ -1,10 +1,18 @@
-import CloseIcon from "./close-icon"
-import TrashIcon from "./trash-icon"
-import SearchIcon from "./search-icon"
 import ArrowIcon from "./arrow-icon"
 import ChevronIcon from "./chevron-icon"
+import CloseIcon from "./close-icon"
+import ExclamationIcon from "./exclamation-icon.js"
+import SearchIcon from "./search-icon"
+import TrashIcon from "./trash-icon"
 
-export { CloseIcon, TrashIcon, SearchIcon, ArrowIcon, ChevronIcon }
+export {
+  ArrowIcon,
+  ChevronIcon,
+  CloseIcon,
+  ExclamationIcon,
+  SearchIcon,
+  TrashIcon,
+}
 
 export { AtmosphericComposition as AtmosphericCompositionIcon } from "./atmospheric-composition"
 export { AtmosphericDynamics as AtmosphericDynamicsIcon } from "./atmospheric-dynamics"
