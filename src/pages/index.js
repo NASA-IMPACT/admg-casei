@@ -84,24 +84,20 @@ const IndexPage = ({ data }) => {
               <SectionHeader
                 tagline="explore"
                 headline="Platforms"
+                subline="From aircrafts to balloons, from sensors to plaftorms, it
+                takes a lot to understand earth."
                 id="platforms"
               />
-              <div>
-                <p style={{ marginBottom: `2rem` }}>
-                  From aircrafts to balloons, from sensors to plaftorms, it
-                  takes a lot to understand earth.
-                </p>
-                <Link
-                  to="/explore" //** TODO: link to explore with tab selected */
-                  style={{
-                    border: `1px solid ${theme.color.base}`,
-                    padding: `1rem 5rem`,
-                    textTransform: `uppercase`,
-                  }}
-                >
-                  Explore
-                </Link>
-              </div>
+              <Link
+                to="/explore" //** TODO: link to explore with tab selected */
+                style={{
+                  border: `1px solid ${theme.color.base}`,
+                  padding: `1rem 5rem`,
+                  textTransform: `uppercase`,
+                }}
+              >
+                Explore
+              </Link>
             </div>
           </SectionContent>
         </Section>
