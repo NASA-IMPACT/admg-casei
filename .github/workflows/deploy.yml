@@ -4,12 +4,14 @@ on:
   workflow_run:
     workflows: ["Quality Assurance"]
     branches: [develop]
-    types: 
+    types:
       - completed
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
 
     env:
       ADMG_ACCESS_TOKEN: ${{ secrets.ADMG_ACCESS_TOKEN }}
@@ -27,6 +29,18 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 14
+
+      - name: Cache node modules
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
 
       - name: Build
         run: |
