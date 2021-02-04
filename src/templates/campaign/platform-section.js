@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
 import { Section, SectionHeader, SectionContent } from "../../components/layout"
-import ComboAccordion from "../../components/accordion/combo-accordion"
+import CarouselAccordionCombo from "../../components/accordion/carousel-accordion-combo"
 
 const PlatformSection = ({ id, platforms, instruments }) => {
   return (
@@ -11,7 +11,7 @@ const PlatformSection = ({ id, platforms, instruments }) => {
       <SectionHeader headline="Platforms & Instruments" id={id} />
       <SectionContent>
         {platforms && instruments && (
-          <ComboAccordion
+          <CarouselAccordionCombo
             id="platform"
             isImage
             emptyMessage="No available related platforms or instruments"

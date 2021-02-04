@@ -2,21 +2,23 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import { Section, SectionHeader, SectionContent } from "../../components/layout"
-import ComboAccordion from "../../components/accordion/combo-accordion"
+import CarouselAccordionCombo from "../../components/accordion/carousel-accordion-combo"
 
-const CampaignsAndInstruments = ({ id, campaigns }) => {
+const CampaignsAndInstruments = ({ id, campaigns, instruments }) => {
   return (
     <Section id={id}>
       <SectionHeader headline="Related Campaigns & Instruments" id={id} />
       <SectionContent>
-        <ComboAccordion
+        <CarouselAccordionCombo
           id="campaign"
           emptyMessage="No available related campaigns"
           carouselList={campaigns}
           folds={campaigns.reduce(
             (acc, campaign) =>
               Object.assign(acc, {
-                [campaign.id]: campaign.instruments,
+                [campaign.id]: campaign.instruments.filter(instrument =>
+                  instruments.map(x => x.id).includes(instrument.id)
+                ),
               }),
             {}
           )}

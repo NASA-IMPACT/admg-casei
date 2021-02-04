@@ -11,7 +11,7 @@ import { controlButtonLRStyle, ControlTextButton } from "../carousel-styles"
 import Accordion from "./index"
 import theme from "../../utils/theme"
 
-export default function ComboAccordion({
+export default function CarouselAccordionCombo({
   id,
   emptyMessage,
   carouselList,
@@ -139,7 +139,7 @@ export default function ComboAccordion({
   )
 }
 
-ComboAccordion.propTypes = {
+CarouselAccordionCombo.propTypes = {
   id: PropTypes.string.isRequired,
   emptyMessage: PropTypes.string.isRequired,
   carouselList: PropTypes.arrayOf(
