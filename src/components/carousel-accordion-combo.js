@@ -5,11 +5,11 @@ import { Link } from "gatsby"
 import Carousel from "nuka-carousel"
 import Image from "gatsby-image"
 
-import ImageCaption from "../image-caption"
-import CampaignCard from "../cards/campaign-card"
-import { controlButtonLRStyle, ControlTextButton } from "../carousel-styles"
-import Accordion from "./index"
-import theme from "../../utils/theme"
+import ImageCaption from "./image-caption"
+import CampaignCard from "./cards/campaign-card"
+import { controlButtonLRStyle, ControlTextButton } from "./carousel-styles"
+import Accordion from "./accordion"
+import theme from "../utils/theme"
 
 export default function CarouselAccordionCombo({
   id,

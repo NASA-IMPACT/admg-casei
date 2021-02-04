@@ -11,9 +11,9 @@ import {
   AccordionPanel,
 } from "@reach/accordion"
 
-import theme from "../../utils/theme"
-import Label from "../label"
-import { ChevronIcon, ArrowIcon } from "../icons"
+import theme from "../utils/theme"
+import Label from "./label"
+import { ChevronIcon, ArrowIcon } from "./icons"
 
 const RotatingContainer = styled.div`
   transition: transform 240ms ease-in-out;

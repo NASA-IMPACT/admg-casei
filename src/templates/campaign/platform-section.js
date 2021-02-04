@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
 import { Section, SectionHeader, SectionContent } from "../../components/layout"
-import CarouselAccordionCombo from "../../components/accordion/carousel-accordion-combo"
+import CarouselAccordionCombo from "../../components/carousel-accordion-combo"
 
 const PlatformSection = ({ id, platforms, instruments }) => {
   return (
