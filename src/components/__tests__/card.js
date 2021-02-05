@@ -34,7 +34,7 @@ describe("Card", () => {
   it("renders card with tag", () => {
     const tree = renderer
       .create(
-        <Card tag={testTag}>
+        <Card tag={testTag} category="campaigns">
           <CardContent />
         </Card>
       )
@@ -44,7 +44,7 @@ describe("Card", () => {
   it("renders with footer list", () => {
     const tree = renderer
       .create(
-        <Card testFooterList={testFooterList}>
+        <Card testFooterList={testFooterList} category="campaigns">
           <CardContent />
         </Card>
       )

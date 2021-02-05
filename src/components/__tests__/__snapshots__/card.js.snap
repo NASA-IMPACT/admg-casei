@@ -23,7 +23,7 @@ exports[`Card renders card with tag 1`] = `
 }
 
 <div
-  data-cy="undefined-card"
+  data-cy="campaigns-card"
   style={
     Object {
       "backgroundColor": "#303641",
@@ -193,7 +193,7 @@ exports[`Card renders with footer list 1`] = `
 }
 
 <div
-  data-cy="undefined-card"
+  data-cy="campaigns-card"
   style={
     Object {
       "backgroundColor": "#303641",
