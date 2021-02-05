@@ -1,8 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import { TrashIcon } from "../icons"
 import { IconButton } from "../button"
+import { TrashIcon } from "../../icons"
 
 export default function FilterChips({ clearFilters, children }) {
   return (

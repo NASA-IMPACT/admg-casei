@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 
-import { AirborneRemoteSensors } from "../../components/icons"
+import { AirborneRemoteSensors } from "../../icons"
 import theme from "../../utils/theme"
 
 const CardContent = styled.div`

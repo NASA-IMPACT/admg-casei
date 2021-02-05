@@ -79,7 +79,7 @@ describe("Program Info Section", () => {
     )
     const tree = component.toJSON()
     const instance = component.root
-    expect(instance.findByType("img").props.src).toBeDefined()
+    expect(instance.findByType("svg")).toBeDefined()
     expect(tree).toMatchSnapshot()
   })
 })

@@ -185,8 +185,8 @@ describe("Campaign", () => {
       cy.get("[data-cy=milestone-carousel]").find(".slider").should("exist")
 
       cy.get("[data-cy=milestone]").first().find("label").should("exist")
-      cy.get("[data-cy=milestone]").first().find("img").should("exist")
-      cy.get("[data-cy=milestone]").first().find("img").should("be.visible")
+      cy.get("[data-cy=milestone]").first().find("svg").should("exist")
+      cy.get("[data-cy=milestone]").first().find("svg").should("be.visible")
       cy.get("[data-cy=milestone]").first().find("h3").should("exist")
       cy.get("[data-cy=milestone]").first().find("p").should("exist")
 
@@ -194,7 +194,7 @@ describe("Campaign", () => {
         .find(".slider-control-centerright > button")
         .click()
 
-      cy.get("[data-cy=milestone]").first().find("img").should("not.be.visible")
+      cy.get("[data-cy=milestone]").first().find("svg").should("not.be.visible")
     })
 
     it("displays a timeline of milestones", () => {
