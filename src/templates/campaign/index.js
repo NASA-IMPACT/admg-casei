@@ -193,7 +193,13 @@ CampaignTemplate.propTypes = {
       tertiaryWebsite: PropTypes.string.isRequired,
       publicationLink: PropTypes.string.isRequired,
       notesPublic: PropTypes.string.isRequired,
-      repositories: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+      repositories: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string.isRequired,
+          shortname: PropTypes.string.isRequired,
+          longname: PropTypes.string.isRequired,
+        }).isRequired
+      ).isRequired,
       focusPhenomena: PropTypes.string.isRequired,
       platforms: PropTypes.arrayOf(
         PropTypes.shape({
