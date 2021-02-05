@@ -25,7 +25,7 @@ export default function Label({
 }
 
 Label.propTypes = {
-  children: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.array]).isRequired,
   id: PropTypes.string.isRequired,
   color: PropTypes.string,
   showBorder: PropTypes.bool,

@@ -6,9 +6,9 @@ export default function ImageCaption({ children, id }) {
     <label
       style={{
         position: `absolute`,
-        bottom: `.5rem`,
-        left: `1rem`,
-        maxWidth: `18rem`,
+        top: `16rem`,
+        left: `1.5rem`,
+        maxWidth: `24rem`,
         textShadow: `1px 1px rgba(0,0,0,0.8)`,
       }}
       data-cy={`${id}-caption`}
