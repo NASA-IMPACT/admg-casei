@@ -194,7 +194,7 @@ export default function Explore({ data, location }) {
             {aoi && (
               <Chip
                 id="filter"
-                label={"Drawn Polygon"}
+                label={"aoi: Spatial extend"}
                 actionId={"aoi"}
                 removeAction={removeAoi}
               />
