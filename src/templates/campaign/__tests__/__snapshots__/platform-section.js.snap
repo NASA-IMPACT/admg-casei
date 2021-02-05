@@ -189,9 +189,9 @@ exports[`Platform Section displays content 1`] = `
                   <button
                     aria-controls="panel--1---1"
                     aria-expanded={false}
+                    data-cy="accordion-button"
                     data-reach-accordion-button=""
                     id="button--1---1"
-                    isOpen={false}
                     onClick={[Function]}
                     onKeyDown={[Function]}
                     style={
@@ -220,7 +220,6 @@ exports[`Platform Section displays content 1`] = `
                       className="c5"
                     >
                       <svg
-                        aria-labelledby="chevronDownId"
                         height="16"
                         role="img"
                         version="1.1"
@@ -228,15 +227,12 @@ exports[`Platform Section displays content 1`] = `
                         width="16"
                         xmlns="http://www.w3.org/2000/svg"
                       >
-                        <title
-                          id="chevronDownId"
-                        >
+                        <title>
                           Chevron Down
                         </title>
                         <rect
                           fill="none"
                           height="16"
-                          id="icon-bound"
                           width="16"
                         />
                         <polygon
@@ -262,6 +258,7 @@ exports[`Platform Section displays content 1`] = `
                   tabIndex={-1}
                 >
                   <div
+                    data-cy="instrument-accordion-content"
                     style={
                       Object {
                         "display": "grid",
@@ -270,6 +267,7 @@ exports[`Platform Section displays content 1`] = `
                     }
                   >
                     <div
+                      data-cy="instrument-accordion-image-description"
                       style={
                         Object {
                           "gridColumn": "1 / 4",
@@ -278,6 +276,7 @@ exports[`Platform Section displays content 1`] = `
                     />
                   </div>
                   <a
+                    data-cy="accordion-link"
                     href="/instrument/a1f41f4d-2233-49be-a3d3-6eda1ded6be4"
                     style={
                       Object {
@@ -286,7 +285,7 @@ exports[`Platform Section displays content 1`] = `
                     }
                   >
                     <label
-                      data-cy="accordion-label"
+                      data-cy="accordion-link-label"
                       style={
                         Object {
                           "borderBottom": "none",
@@ -297,7 +296,6 @@ exports[`Platform Section displays content 1`] = `
                     >
                       Learn More
                       <svg
-                        aria-labelledby="rightArrowId"
                         height="16"
                         role="img"
                         style={
@@ -310,15 +308,12 @@ exports[`Platform Section displays content 1`] = `
                         width="16"
                         xmlns="http://www.w3.org/2000/svg"
                       >
-                        <title
-                          id="rightArrowId"
-                        >
+                        <title>
                           Arrow Right
                         </title>
                         <rect
                           fill="none"
                           height="16"
-                          id="icon-bound"
                           width="16"
                         />
                         <polygon
@@ -406,9 +401,9 @@ exports[`Platform Section displays content 1`] = `
                   <button
                     aria-controls="panel--2---1"
                     aria-expanded={false}
+                    data-cy="accordion-button"
                     data-reach-accordion-button=""
                     id="button--2---1"
-                    isOpen={false}
                     onClick={[Function]}
                     onKeyDown={[Function]}
                     style={
@@ -437,7 +432,6 @@ exports[`Platform Section displays content 1`] = `
                       className="c5"
                     >
                       <svg
-                        aria-labelledby="chevronDownId"
                         height="16"
                         role="img"
                         version="1.1"
@@ -445,15 +439,12 @@ exports[`Platform Section displays content 1`] = `
                         width="16"
                         xmlns="http://www.w3.org/2000/svg"
                       >
-                        <title
-                          id="chevronDownId"
-                        >
+                        <title>
                           Chevron Down
                         </title>
                         <rect
                           fill="none"
                           height="16"
-                          id="icon-bound"
                           width="16"
                         />
                         <polygon
@@ -479,6 +470,7 @@ exports[`Platform Section displays content 1`] = `
                   tabIndex={-1}
                 >
                   <div
+                    data-cy="instrument-accordion-content"
                     style={
                       Object {
                         "display": "grid",
@@ -487,6 +479,7 @@ exports[`Platform Section displays content 1`] = `
                     }
                   >
                     <div
+                      data-cy="instrument-accordion-image-description"
                       style={
                         Object {
                           "gridColumn": "1 / 4",
@@ -495,6 +488,7 @@ exports[`Platform Section displays content 1`] = `
                     />
                   </div>
                   <a
+                    data-cy="accordion-link"
                     href="/instrument/aa6e3d99-17ca-4b4e-9130-c6e0b0864fd9"
                     style={
                       Object {
@@ -503,7 +497,7 @@ exports[`Platform Section displays content 1`] = `
                     }
                   >
                     <label
-                      data-cy="accordion-label"
+                      data-cy="accordion-link-label"
                       style={
                         Object {
                           "borderBottom": "none",
@@ -514,7 +508,6 @@ exports[`Platform Section displays content 1`] = `
                     >
                       Learn More
                       <svg
-                        aria-labelledby="rightArrowId"
                         height="16"
                         role="img"
                         style={
@@ -527,15 +520,12 @@ exports[`Platform Section displays content 1`] = `
                         width="16"
                         xmlns="http://www.w3.org/2000/svg"
                       >
-                        <title
-                          id="rightArrowId"
-                        >
+                        <title>
                           Arrow Right
                         </title>
                         <rect
                           fill="none"
                           height="16"
-                          id="icon-bound"
                           width="16"
                         />
                         <polygon
@@ -623,9 +613,9 @@ exports[`Platform Section displays content 1`] = `
                   <button
                     aria-controls="panel--3---1"
                     aria-expanded={false}
+                    data-cy="accordion-button"
                     data-reach-accordion-button=""
                     id="button--3---1"
-                    isOpen={false}
                     onClick={[Function]}
                     onKeyDown={[Function]}
                     style={
@@ -654,7 +644,6 @@ exports[`Platform Section displays content 1`] = `
                       className="c5"
                     >
                       <svg
-                        aria-labelledby="chevronDownId"
                         height="16"
                         role="img"
                         version="1.1"
@@ -662,15 +651,12 @@ exports[`Platform Section displays content 1`] = `
                         width="16"
                         xmlns="http://www.w3.org/2000/svg"
                       >
-                        <title
-                          id="chevronDownId"
-                        >
+                        <title>
                           Chevron Down
                         </title>
                         <rect
                           fill="none"
                           height="16"
-                          id="icon-bound"
                           width="16"
                         />
                         <polygon
@@ -696,6 +682,7 @@ exports[`Platform Section displays content 1`] = `
                   tabIndex={-1}
                 >
                   <div
+                    data-cy="instrument-accordion-content"
                     style={
                       Object {
                         "display": "grid",
@@ -704,6 +691,7 @@ exports[`Platform Section displays content 1`] = `
                     }
                   >
                     <div
+                      data-cy="instrument-accordion-image-description"
                       style={
                         Object {
                           "gridColumn": "1 / 4",
@@ -712,6 +700,7 @@ exports[`Platform Section displays content 1`] = `
                     />
                   </div>
                   <a
+                    data-cy="accordion-link"
                     href="/instrument/a1f41f4d-2233-49be-a3d3-6eda1ded6be4"
                     style={
                       Object {
@@ -720,7 +709,7 @@ exports[`Platform Section displays content 1`] = `
                     }
                   >
                     <label
-                      data-cy="accordion-label"
+                      data-cy="accordion-link-label"
                       style={
                         Object {
                           "borderBottom": "none",
@@ -731,7 +720,6 @@ exports[`Platform Section displays content 1`] = `
                     >
                       Learn More
                       <svg
-                        aria-labelledby="rightArrowId"
                         height="16"
                         role="img"
                         style={
@@ -744,15 +732,12 @@ exports[`Platform Section displays content 1`] = `
                         width="16"
                         xmlns="http://www.w3.org/2000/svg"
                       >
-                        <title
-                          id="rightArrowId"
-                        >
+                        <title>
                           Arrow Right
                         </title>
                         <rect
                           fill="none"
                           height="16"
-                          id="icon-bound"
                           width="16"
                         />
                         <polygon

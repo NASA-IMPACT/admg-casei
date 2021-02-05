@@ -52,6 +52,16 @@ CampaignsAndInstruments.propTypes = {
       ).isRequired,
     }).isRequired
   ).isRequired,
+  instruments: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      dois: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string.isRequired,
+        }).isRequired
+      ),
+    })
+  ),
 }
 
 export default CampaignsAndInstruments
