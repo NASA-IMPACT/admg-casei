@@ -67,12 +67,19 @@ describe("Campaign", () => {
     )
   })
 
-  it("the overview section", () => {
+  it.only("the overview section", () => {
     cy.get("[data-cy=overview-section]").should("exist")
 
     cy.get("[data-cy=overview-section]")
       .find("h2")
       .should("have.text", "Overview")
+      .and("not.be.visible")
+
+    cy.get("[data-cy=overview-section]")
+      .find("h3")
+      .first()
+      .should("have.text", "The Campaign")
+      .and("be.visible")
 
     cy.get("[data-cy=description]").should("exist")
 
@@ -93,6 +100,14 @@ describe("Campaign", () => {
       .find("[data-cy=doi-link]")
       .should("exist")
       .and("have.text", "http://dx.doi.org/10.5067/GPMGV/OLYMPEX/DATA101")
+
+    cy.get("[data-cy=notes-public]").should("exist")
+    cy.get("[data-cy=repo-list]").should("exist")
+    cy.get("[data-cy=repo-list]")
+      .find("li")
+      .should($li => {
+        expect($li, "at least 1").to.have.length.gte(1)
+      })
   })
 
   it("the focus section displays clickable focus areas and other chips", () => {

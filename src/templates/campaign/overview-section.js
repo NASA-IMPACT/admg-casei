@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
+import VisuallyHidden from "@reach/visually-hidden"
 
 import {
   Section,
@@ -14,7 +15,10 @@ import { isUrl, PropTypeIsUrl } from "../../utils/helpers"
 
 const ListLink = props => (
   <li
-    style={{ padding: `1rem`, borderBottom: `1px solid ${theme.color.gray}` }}
+    style={{
+      padding: props.noPadding ? 0 : `1rem`,
+      borderBottom: props.noBorder ? `none` : `1px solid ${theme.color.gray}`,
+    }}
   >
     {isUrl(props.to) ? (
       <ExternalLink label={props.children} url={props.to} id={props.children} />
@@ -26,6 +30,8 @@ const ListLink = props => (
 
 ListLink.propTypes = {
   to: PropTypeIsUrl,
+  noPadding: PropTypes.bool,
+  noBorder: PropTypes.bool,
   children: PropTypes.string.isRequired,
 }
 
@@ -42,10 +48,15 @@ const OverviewSection = ({
   repositoryWebsite,
   tertiaryWebsite,
   publicationLink,
+  notesPublic,
+  repositories,
 }) => (
-  <Section id={id}>
-    <SectionHeader headline="Overview" id={id} />
+  <Section id={id} isLight>
+    <VisuallyHidden>
+      <SectionHeader headline="Overview" id={id} />
+    </VisuallyHidden>
     <SectionContent columns={[1, 8]}>
+      <h3>The Campaign</h3>
       <p data-cy="description">{description}</p>
       <div
         style={{
@@ -74,12 +85,13 @@ const OverviewSection = ({
         />
       </div>
     </SectionContent>
+
     <SectionContent columns={[10, 3]}>
       <ul style={{ margin: 0, listStyle: `none` }} data-cy="link-list">
         <li
           style={{
             padding: `1rem`,
-            border: `1px solid ${theme.color.base}`,
+            border: `1px solid ${theme.color.text}`,
           }}
         >
           {doi ? (
@@ -110,6 +122,21 @@ const OverviewSection = ({
         )}
       </ul>
     </SectionContent>
+
+    <SectionContent columns={[1, 8]}>
+      <h3>Additional Notes</h3>
+      <p data-cy="notes-public">{notesPublic}</p>
+    </SectionContent>
+    <SectionContent columns={[1, 8]}>
+      <h3>Repositories</h3>
+      <ul style={{ margin: 0, listStyle: `none` }} data-cy="repo-list">
+        {repositories.map(repo => (
+          <ListLink key={repo.id} to={repo.shortname} noBorder noPadding>
+            {repo.longname}
+          </ListLink>
+        ))}
+      </ul>
+    </SectionContent>
   </Section>
 )
 
@@ -130,6 +157,12 @@ export const overviewFields = graphql`
     repositoryWebsite: repository_website
     tertiaryWebsite: tertiary_website
     publicationLink: publication_links
+    notesPublic: notes_public
+    repositories: repositories {
+      id
+      shortname: short_name
+      longname: long_name
+    }
   }
 `
 
@@ -146,6 +179,8 @@ OverviewSection.propTypes = {
   repositoryWebsite: PropTypes.string.isRequired,
   tertiaryWebsite: PropTypes.string.isRequired,
   publicationLink: PropTypes.string.isRequired,
+  notesPublic: PropTypes.string.isRequired,
+  repositories: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
 }
 
 export default OverviewSection

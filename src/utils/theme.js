@@ -4,8 +4,10 @@ const color = {
   secondary: "#303641", // dark blue box background
   tertiary: "#294060", // medium blue for gradiant background
   gray: "#9E9E9E",
+  white: "#FFFFFF",
   link: "#aac9ff",
   highlight: "#F93C21",
+  text: "#262A31",
 }
 
 const shape = {

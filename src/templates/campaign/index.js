@@ -52,6 +52,8 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
         repositoryWebsite: campaign.repositoryWebsite,
         tertiaryWebsite: campaign.tertiaryWebsite,
         publicationLink: campaign.publicationLink,
+        notesPublic: campaign.notesPublic,
+        repositories: campaign.repositories,
       },
     },
     focus: {
@@ -190,6 +192,8 @@ CampaignTemplate.propTypes = {
       repositoryWebsite: PropTypes.string.isRequired,
       tertiaryWebsite: PropTypes.string.isRequired,
       publicationLink: PropTypes.string.isRequired,
+      notesPublic: PropTypes.string.isRequired,
+      repositories: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
       focusPhenomena: PropTypes.string.isRequired,
       platforms: PropTypes.arrayOf(
         PropTypes.shape({
