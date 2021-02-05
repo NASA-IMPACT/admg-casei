@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Card from "./card"
-import { CampaignIcon } from "../icons"
+import { CampaignIcon } from "../../icons"
 import { formatYearRange } from "../../utils/helpers"
 
 export default function CampaignCard({ id, height }) {

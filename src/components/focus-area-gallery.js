@@ -2,9 +2,9 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
-import theme from "../utils/theme"
 import Label from "./label"
-import { getFocusIcon } from "./icons/utils"
+import { getFocusIcon } from "../icons/utils"
+import theme from "../utils/theme"
 
 const FocusArea = ({ id, caption, size }) => {
   const Icon = getFocusIcon(id)

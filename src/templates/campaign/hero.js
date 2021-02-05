@@ -10,7 +10,7 @@ import { HeroStats } from "../../components/hero"
 import Map from "../../components/map"
 import BboxLayer from "../../components/map/bbox-layer"
 import GeoJsonSource from "../../components/map/geojson-source"
-import { CampaignIcon } from "../../components/icons"
+import { CampaignIcon } from "../../icons"
 import theme from "../../utils/theme"
 
 const BackgroundGradient = styled.div`

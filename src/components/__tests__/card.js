@@ -1,7 +1,7 @@
 import React from "react"
 import renderer from "react-test-renderer"
 import Card from "../cards/card"
-import { CampaignIcon } from "../../components/icons"
+import { CampaignIcon } from "../../icons"
 
 const CardContent = () => (
   <div>

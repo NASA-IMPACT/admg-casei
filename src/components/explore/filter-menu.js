@@ -10,8 +10,8 @@ import {
 import VisuallyHidden from "@reach/visually-hidden"
 import styled from "styled-components"
 
-import { CloseIcon } from "../icons"
 import { IconButton } from "../button"
+import { CloseIcon } from "../../icons"
 import theme from "../../utils/theme"
 
 const FilterButton = styled(ListboxButton)`

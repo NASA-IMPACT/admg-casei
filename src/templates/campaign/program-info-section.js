@@ -10,7 +10,7 @@ import {
   ContentItem,
   ContentGroup,
 } from "../../components/layout"
-import { CampaignIcon } from "../../components/icons"
+import { CampaignIcon } from "../../icons"
 
 const ProgramInfoSection = ({
   id,

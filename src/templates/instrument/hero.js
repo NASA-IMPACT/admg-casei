@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import Image from "gatsby-image"
 
 import Hero from "../../components/hero"
-import { InstrumentIcon } from "../../components/icons"
+import { InstrumentIcon } from "../../icons"
 
 export default function InstrumentHero({
   shortname,

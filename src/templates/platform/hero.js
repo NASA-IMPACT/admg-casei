@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import Image from "gatsby-image"
 
 import Hero from "../../components/hero"
-import { PlatformIcon } from "../../components/icons"
+import { PlatformIcon } from "../../icons"
 
 export default function PlatformHero({
   shortname,

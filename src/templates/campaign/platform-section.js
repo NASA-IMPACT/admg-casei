@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 
 import { Section, SectionHeader, SectionContent } from "../../components/layout"
 import CarouselAccordionCombo from "../../components/carousel-accordion-combo"
-import { PlatformIcon } from "../../components/icons"
+import { PlatformIcon } from "../../icons"
 
 const PlatformSection = ({ id, platforms, instruments }) => {
   return (

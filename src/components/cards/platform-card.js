@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Card from "./card"
-import { PlatformIcon } from "../icons"
+import { PlatformIcon } from "../../icons"
 
 export default function PlatformCard(props) {
   /*

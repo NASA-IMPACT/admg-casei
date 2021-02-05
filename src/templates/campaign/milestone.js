@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import Label from "../../components/label"
-import { PlatformIcon } from "../../components/icons"
+import { PlatformIcon } from "../../icons"
 import theme from "../../utils/theme"
 
 const Milestone = ({ type, daterange, name, details, region }) => {
