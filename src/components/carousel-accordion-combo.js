@@ -17,6 +17,7 @@ export default function CarouselAccordionCombo({
   carouselList,
   folds,
   isImage,
+  placeholderImage,
 }) {
   const controlTextRef = useRef(null)
   const [slideIndex, setSlideIndex] = useState(0)
@@ -111,6 +112,7 @@ export default function CarouselAccordionCombo({
                         id={id}
                         address={`/${id}/${carouselItem.id}`}
                         carouselImage={carouselItem.image}
+                        placeholder={placeholderImage}
                         caption={
                           carouselItem.longname || carouselItem.shortname
                         }
@@ -126,6 +128,7 @@ export default function CarouselAccordionCombo({
                       </div>
                     )}
                   </div>
+
                   <Accordion folds={folds[carouselItem.id]} id="instrument" />
                 </div>
               </div>
@@ -142,6 +145,7 @@ export default function CarouselAccordionCombo({
 CarouselAccordionCombo.propTypes = {
   id: PropTypes.string.isRequired,
   emptyMessage: PropTypes.string.isRequired,
+  placeholderImage: PropTypes.func,
   carouselList: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
@@ -172,7 +176,13 @@ CarouselAccordionCombo.propTypes = {
   isImage: PropTypes.bool,
 }
 
-function ImageCarousel({ id, address, carouselImage, caption }) {
+function ImageCarousel({
+  id,
+  address,
+  carouselImage,
+  placeholder: Placeholder,
+  caption,
+}) {
   return (
     <Link to={address}>
       {carouselImage && carouselImage.gatsbyImg ? (
@@ -190,10 +200,11 @@ function ImageCarousel({ id, address, carouselImage, caption }) {
             display: `flex`,
             alignItems: `center`,
             justifyContent: `center`,
+            paddingBottom: `2rem`,
           }}
           data-cy={`${id}-image`}
         >
-          No Image available.
+          <Placeholder />
         </div>
       )}
       <ImageCaption id={`${id}-image`}>{caption}</ImageCaption>
@@ -210,5 +221,6 @@ ImageCarousel.propTypes = {
       childImageSharp: PropTypes.object,
     }),
   }),
+  placeholder: PropTypes.func.isRequired,
   caption: PropTypes.string.isRequired,
 }

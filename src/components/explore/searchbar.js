@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { CloseIcon, SearchIcon } from "../icons"
+import { CloseIcon, SearchIcon } from "../../icons"
 import theme from "../../utils/theme"
 
 const Searchbar = React.forwardRef((_props, ref) => {

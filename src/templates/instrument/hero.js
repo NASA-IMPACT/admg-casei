@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import Image from "gatsby-image"
 
 import Hero from "../../components/hero"
+import { InstrumentIcon } from "../../icons"
 
 export default function InstrumentHero({
   shortname,
@@ -20,11 +21,13 @@ export default function InstrumentHero({
       textToImageRatio={[5, 3]}
       id="instrument"
     >
-      {image && (
+      {image && image.gatsbyImg ? (
         <Image
           alt={image.description}
           fixed={image.gatsbyImg.childImageSharp.fixed}
         />
+      ) : (
+        <InstrumentIcon size="huge" />
       )}
     </Hero>
   )

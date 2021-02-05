@@ -15,6 +15,8 @@ const DrawControlButton = ({
   setIsDrawing,
   setAoi,
 }) => {
+  const hasDrawing = !!(drawControl.getAll().features.length > 0)
+
   const startDrawing = () => {
     drawControl.changeMode("draw_polygon")
     setIsDrawing(true)
@@ -26,7 +28,18 @@ const DrawControlButton = ({
     setAoi(drawControl.getAll().features[0])
   }
 
-  const handleClick = () => {
+  const cancelAndExit = () => {
+    drawControl.trash()
+    drawControl.changeMode("simple_select")
+    setIsDrawing(false)
+  }
+
+  const deleteDrawing = () => {
+    drawControl.deleteAll()
+    setAoi(null)
+  }
+
+  const handlePolygonClick = () => {
     if (isDrawing) {
       saveAndExit()
     } else {
@@ -34,18 +47,45 @@ const DrawControlButton = ({
     }
   }
 
+  const handleDeleteClick = () => {
+    if (isDrawing) {
+      cancelAndExit()
+    } else {
+      deleteDrawing()
+    }
+  }
+
   return (
     <div style={{ zIndex: `0` }} className="mapboxgl-ctrl-top-right">
-      <div className="mapboxgl-ctrl mapboxgl-ctrl-group">
+      <div
+        style={{ minWidth: `9rem` }}
+        className="mapboxgl-ctrl mapboxgl-ctrl-group"
+      >
         <Button
           className={`mapbox-gl-draw_ctrl-draw-btn mapbox-gl-draw_polygon ${
             isDrawing ? "active" : ""
           }`}
-          onClick={handleClick}
+          onClick={handlePolygonClick}
           isDrawing={isDrawing}
         >
-          {isDrawing ? "Save" : "Draw Polygon"}
+          {isDrawing
+            ? "Save"
+            : hasDrawing
+            ? "Draw new Polygon"
+            : "Draw Polygon"}
         </Button>
+
+        {hasDrawing && (
+          <Button
+            className={`mapbox-gl-draw_ctrl-draw-btn mapbox-gl-draw_trash ${
+              isDrawing ? "active" : ""
+            }`}
+            onClick={handleDeleteClick}
+            isDrawing={isDrawing}
+          >
+            {isDrawing ? "Cancel" : "Delete Polygon"}
+          </Button>
+        )}
       </div>
     </div>
   )

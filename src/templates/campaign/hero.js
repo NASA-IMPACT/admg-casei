@@ -10,7 +10,7 @@ import { HeroStats } from "../../components/hero"
 import Map from "../../components/map"
 import BboxLayer from "../../components/map/bbox-layer"
 import GeoJsonSource from "../../components/map/geojson-source"
-
+import { CampaignIcon } from "../../icons"
 import theme from "../../utils/theme"
 
 const BackgroundGradient = styled.div`
@@ -29,7 +29,7 @@ const BackgroundGradient = styled.div`
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 47rem;
+  height: 53rem;
   margin-top: -12rem;
   z-index: 0;
   grid-area: 1 / 1 / 1 / 4;
@@ -38,7 +38,6 @@ const BackgroundGradient = styled.div`
 const CampaignHero = ({
   logo,
   bounds,
-  shortname,
   longname,
   focusListing,
   countDeployments,
@@ -64,7 +63,7 @@ const CampaignHero = ({
     >
       <Map
         style={{
-          height: `47rem`,
+          height: `53rem`,
           marginTop: `-12rem`,
           zIndex: -1,
           gridArea: `1 / 1 / 1 / 4`,
@@ -94,7 +93,7 @@ const CampaignHero = ({
                 style={{ margin: `0` }}
               />
             ) : (
-              <p>{shortname}</p>
+              <CampaignIcon />
             )}
             <h1 data-cy="campaign-hero-header">{longname}</h1>
             <p>{focusListing}</p>
@@ -145,7 +144,6 @@ CampaignHero.propTypes = {
     }),
   }),
   bounds: PropTypes.string.isRequired,
-  shortname: PropTypes.string.isRequired,
   longname: PropTypes.string.isRequired,
   focusListing: PropTypes.string.isRequired,
   countDeployments: PropTypes.number.isRequired,

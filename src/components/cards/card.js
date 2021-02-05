@@ -4,7 +4,6 @@ import styled from "styled-components"
 import Image from "gatsby-image"
 
 import theme from "../../utils/theme"
-import PlaceholderLogo from "../../images/placeholder-logo.svg"
 
 const CardHeader = styled.div`
   display: flex;
@@ -17,7 +16,15 @@ const CardHeader = styled.div`
   }
 `
 
-const Card = ({ children, image, height, tag, footerList, category }) => (
+const Card = ({
+  children,
+  image,
+  placeholder: Placeholder,
+  height,
+  tag,
+  footerList,
+  category,
+}) => (
   <div
     style={{
       backgroundColor: theme.color.secondary,
@@ -39,7 +46,7 @@ const Card = ({ children, image, height, tag, footerList, category }) => (
             style={{ margin: `0` }}
           />
         ) : (
-          <img src={PlaceholderLogo} alt="placeholder logo" height="85" />
+          <Placeholder size="small" />
         )}
         {tag && (
           <div
@@ -85,6 +92,7 @@ Card.propTypes = {
       childImageSharp: PropTypes.object,
     }),
   }),
+  placeholder: PropTypes.func.isRequired,
   height: PropTypes.string,
   tag: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   footerList: PropTypes.arrayOf(

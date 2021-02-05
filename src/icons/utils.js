@@ -11,7 +11,7 @@ import {
   GlobalWaterEnergyCycleIcon,
   WeatherIcon,
   ExclamationIcon,
-} from "../icons"
+} from "./"
 
 const icons = {
   "df6847ab-9443-4fdb-a990-d5bf1daca3b7": ({ color, size }) => (

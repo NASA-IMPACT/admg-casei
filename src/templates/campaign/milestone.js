@@ -1,15 +1,16 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
 
 import Label from "../../components/label"
+import { PlatformIcon } from "../../icons"
 import theme from "../../utils/theme"
 
 const Milestone = ({ type, daterange, name, details, region }) => {
-  const { deploymentPlaceholder: deploymentImage } = usePlaceholderImageQuery()
   return (
-    <div style={{ padding: `3rem`, minHeight: `400px` }} data-cy="milestone">
+    <div
+      style={{ padding: `3rem`, minHeight: `400px`, display: `flex` }}
+      data-cy="milestone"
+    >
       <label
         style={{
           color: theme.color.primary,
@@ -23,14 +24,11 @@ const Milestone = ({ type, daterange, name, details, region }) => {
       >
         {type}
       </label>
-      <div style={{ display: `flex` }}>
-        <div style={{ flex: `1` }}>
-          <Image
-            alt={deploymentImage.nasaImgAlt}
-            fluid={deploymentImage.nasaImg.childImageSharp.fluid}
-          />
+      <div style={{ flex: 1, display: `grid`, gridTemplateColumns: `1fr 3fr` }}>
+        <div style={{ justifySelf: `center`, alignSelf: `center` }}>
+          <PlatformIcon />
         </div>
-        <div style={{ flex: `1.61803398875`, padding: `1rem` }}>
+        <div style={{ padding: `1rem` }}>
           <Label id="timeline-milestone-date">{daterange}</Label>
           <h3>{name}</h3>
           <p>{details}</p>
@@ -50,21 +48,3 @@ Milestone.propTypes = {
   details: PropTypes.string.isRequired,
   region: PropTypes.string.isRequired,
 }
-
-const usePlaceholderImageQuery = () =>
-  useStaticQuery(graphql`
-    query {
-      deploymentPlaceholder: nasaImagesJson(
-        shortname: { eq: "placeholder-deployment" }
-      ) {
-        nasaImgAlt
-        nasaImg {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-    }
-  `)

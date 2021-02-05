@@ -262,7 +262,7 @@ CampaignTemplate.propTypes = {
         logoImg: PropTypes.shape({
           childImageSharp: PropTypes.object,
         }),
-      }).isRequired,
+      }),
       fundingAgency: PropTypes.string.isRequired,
       fundingProgram: PropTypes.string.isRequired,
       programLead: PropTypes.string.isRequired,
