@@ -4,10 +4,10 @@ describe("Explore", () => {
   describe("campaigns", () => {
     before(() => {
       cy.visit("/explore")
-      cy.get("[data-cy=campaigns-card]")
+      cy.get("h1").should("have.text", "Explore").and("not.be.visible")
     })
 
-    it("renders correctly", () => {
+    it("displays campaign cards and navigates to the selected campaign", () => {
       cy.get("[data-cy=tabbar]")
         .find("li")
         .should($li => {
@@ -35,15 +35,11 @@ describe("Explore", () => {
       cy.get("[data-cy=explore-tools]").should("exist")
       cy.get("[data-cy=campaigns-count]").should("exist")
       cy.get("[data-cy=campaigns-card]").should("exist")
-    })
 
-    it("displays the number of items to explore", () => {
       cy.get("[data-cy=campaigns-count]")
         .invoke("text")
         .should("match", /[0-9]+/i)
-    })
 
-    it("displays a list of cards presenting the available campaigns", () => {
       cy.get("[data-cy=campaigns-card]")
         .find("big")
         .contains("AirMOSS")
@@ -61,6 +57,7 @@ describe("Explore", () => {
           expect($card.find("[data-cy=count1]")).to.contain("Deployments")
           expect($card.find("[data-cy=count2]")).to.contain("Data Products")
         })
+
       cy.get("[data-cy=campaigns-card]") // test ongoing campaign card
         .find("big")
         .contains("OMG")
@@ -71,9 +68,7 @@ describe("Explore", () => {
           expect($card.find("[data-cy=shortname]")).to.contain("OMG")
           expect($card.find("[data-cy=daterange]")).to.contain("Ongoing")
         })
-    })
 
-    it("navigates to the campaign page", () => {
       cy.get("[data-cy=campaigns-card]").find("big").contains("AirMOSS").click()
 
       cy.url().should("include", "/campaign/")
@@ -82,15 +77,15 @@ describe("Explore", () => {
     })
   })
 
-  // skip for now, its failing on ci ?!
-  describe.skip("platforms", () => {
+  describe("platforms", () => {
     before(() => {
       cy.visit("/explore")
+      cy.get("[data-cy=campaigns-card]")
       cy.get("[data-cy=tabbar]").contains("button", "Platforms").click()
       cy.get("[data-cy=platforms-card]")
     })
 
-    it("renders correctly", () => {
+    it("displays platform cards and navigates to the selected platform", () => {
       cy.get("[data-cy=tabbar]")
         .find("li")
         .should($li => {
@@ -118,15 +113,11 @@ describe("Explore", () => {
       cy.get("[data-cy=explore-tools]").should("exist")
       cy.get("[data-cy=platforms-count]").should("exist")
       cy.get("[data-cy=platforms-card]").should("exist")
-    })
 
-    it("displays the number of items to explore", () => {
       cy.get("[data-cy=platforms-count]")
         .invoke("text")
         .should("match", /[0-9]+/i)
-    })
 
-    it("displays a list of cards presenting the available platforms", () => {
       cy.get("[data-cy=platforms-card]")
         .find("big")
         .contains("B-200")
@@ -149,15 +140,15 @@ describe("Explore", () => {
     })
   })
 
-  // skip for now, its failing on ci ?!
-  describe.skip("instruments", () => {
+  describe("instruments", () => {
     before(() => {
       cy.visit("/explore")
+      cy.get("[data-cy=campaigns-card]")
       cy.get("[data-cy=tabbar]").contains("button", "Instruments").click()
       cy.get("[data-cy=instruments-card]")
     })
 
-    it("renders correctly", () => {
+    it("displays instrument cards and navigates to the selected instrument", () => {
       cy.get("[data-cy=tabbar]")
         .find("li")
         .should($li => {
@@ -185,15 +176,11 @@ describe("Explore", () => {
       cy.get("[data-cy=explore-tools]").should("exist")
       cy.get("[data-cy=instruments-count]").should("exist")
       cy.get("[data-cy=instruments-card]").should("exist")
-    })
 
-    it("displays the number of items to explore", () => {
       cy.get("[data-cy=instruments-count]")
         .invoke("text")
         .should("match", /[0-9]+/i)
-    })
 
-    it("displays a list of cards presenting the available instruments", () => {
       cy.get("[data-cy=instruments-card]")
         .find("big")
         .contains("HAMSR")

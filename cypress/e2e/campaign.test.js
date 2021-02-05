@@ -6,7 +6,7 @@ describe("Campaign", () => {
     cy.get("[data-cy=campaigns-card]").find("big").contains("OLYMPEX").click()
   })
 
-  it("the hero displays titke, subtitle, and stats", () => {
+  it("provides information on the campaign", () => {
     cy.get("[data-cy=campaign-hero]").find("p").should("exist")
 
     cy.get("[data-cy=campaign-hero]").find("h1").should("exist")
@@ -35,9 +35,7 @@ describe("Campaign", () => {
       })
 
     cy.get("[data-cy=mapboxgl-map]").should("exist")
-  })
 
-  it("the inpage nav navigates to the sections", () => {
     cy.get("main").find("nav").should("exist")
 
     cy.get("main")
@@ -65,9 +63,7 @@ describe("Campaign", () => {
         cy.get(`[data-cy=${id}-section]`).find("h2").should("be.inViewport")
       }
     )
-  })
 
-  it.only("the overview section", () => {
     cy.get("[data-cy=overview-section]").should("exist")
 
     cy.get("[data-cy=overview-section]")
@@ -108,9 +104,7 @@ describe("Campaign", () => {
       .should($li => {
         expect($li, "at least 1").to.have.length.gte(1)
       })
-  })
 
-  it("the focus section displays clickable focus areas and other chips", () => {
     cy.get("[data-cy=focus-section]").should("exist")
 
     cy.get("[data-cy=focus-section]").find("h2").should("have.text", "Focus")
