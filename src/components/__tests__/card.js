@@ -1,6 +1,7 @@
 import React from "react"
 import renderer from "react-test-renderer"
 import Card from "../cards/card"
+import { CampaignIcon } from "../../icons"
 
 const CardContent = () => (
   <div>
@@ -24,7 +25,7 @@ describe("Card", () => {
   it("renders plain card", () => {
     const tree = renderer
       .create(
-        <Card>
+        <Card placeholder={CampaignIcon} category="campaigns">
           <CardContent />
         </Card>
       )
@@ -34,7 +35,7 @@ describe("Card", () => {
   it("renders card with tag", () => {
     const tree = renderer
       .create(
-        <Card tag={testTag}>
+        <Card placeholder={CampaignIcon} category="campaigns" tag={testTag}>
           <CardContent />
         </Card>
       )
@@ -44,7 +45,11 @@ describe("Card", () => {
   it("renders with footer list", () => {
     const tree = renderer
       .create(
-        <Card testFooterList={testFooterList}>
+        <Card
+          placeholder={CampaignIcon}
+          category="campaigns"
+          testFooterList={testFooterList}
+        >
           <CardContent />
         </Card>
       )

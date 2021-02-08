@@ -39,6 +39,7 @@ export default function PlatformTemplate({ data: { platform }, path }) {
       props: {
         id: "platform-campaigns",
         campaigns: platform.campaigns,
+        instruments: platform.instruments,
       },
     },
     data: {

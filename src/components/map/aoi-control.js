@@ -34,6 +34,13 @@ export default function AoiControl({
     map.on("draw.modechange", () => {
       if (draw.getMode() == "simple_select") {
         const data = draw.getAll()
+
+        // cancel if there is no previous drawing
+        if (!data.features[data.features.length - 1]) {
+          setIsDrawing(false)
+          return
+        }
+
         const lastId = data.features[data.features.length - 1].id
         const previousIds = data.features
           .filter(f => f.geometry.type === "Polygon" && f.id !== lastId)

@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import Image from "gatsby-image"
 
 import Hero from "../../components/hero"
+import { PlatformIcon } from "../../icons"
 
 export default function PlatformHero({
   shortname,
@@ -23,11 +24,13 @@ export default function PlatformHero({
       ]}
       id="platform"
     >
-      {image && image.gatsbyImg && (
+      {image && image.gatsbyImg ? (
         <Image
           alt={image.description}
           fluid={image.gatsbyImg.childImageSharp.fluid}
         />
+      ) : (
+        <PlatformIcon size="huge" />
       )}
     </Hero>
   )

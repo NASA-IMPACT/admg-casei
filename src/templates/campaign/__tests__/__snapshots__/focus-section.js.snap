@@ -79,6 +79,7 @@ exports[`Focus Section displays content 1`] = `
               "display": "grid",
               "gap": "1rem",
               "gridTemplateColumns": "repeat(1, 1fr)",
+              "justifyItems": "center",
               "paddingTop": "1rem",
             }
           }
@@ -93,6 +94,7 @@ exports[`Focus Section displays content 1`] = `
             }
             style={
               Object {
+                "maxWidth": "130px",
                 "textAlign": "center",
               }
             }

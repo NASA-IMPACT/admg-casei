@@ -185,8 +185,8 @@ describe("Campaign", () => {
       cy.get("[data-cy=milestone-carousel]").find(".slider").should("exist")
 
       cy.get("[data-cy=milestone]").first().find("label").should("exist")
-      cy.get("[data-cy=milestone]").first().find("img").should("exist")
-      cy.get("[data-cy=milestone]").first().find("img").should("be.visible")
+      cy.get("[data-cy=milestone]").first().find("svg").should("exist")
+      cy.get("[data-cy=milestone]").first().find("svg").should("be.visible")
       cy.get("[data-cy=milestone]").first().find("h3").should("exist")
       cy.get("[data-cy=milestone]").first().find("p").should("exist")
 
@@ -194,7 +194,7 @@ describe("Campaign", () => {
         .find(".slider-control-centerright > button")
         .click()
 
-      cy.get("[data-cy=milestone]").first().find("img").should("not.be.visible")
+      cy.get("[data-cy=milestone]").first().find("svg").should("not.be.visible")
     })
 
     it("displays a timeline of milestones", () => {
@@ -229,7 +229,6 @@ describe("Campaign", () => {
       cy.get("[data-cy=platform-carousel]").find(".slider").should("exist")
 
       cy.get("[data-cy=platform-image]").should("exist")
-      cy.get("[data-cy=platform-image]").first().should("be.visible")
       cy.get("[data-cy=platform]").first().find("label").should("exist")
       cy.get("[data-cy=platform-image-caption]").should("exist")
 
@@ -237,17 +236,29 @@ describe("Campaign", () => {
         ".slider-control-centerright > button"
       )
     })
+    it("contains an accordion", () => {
+      cy.get("[data-cy=instrument-accordion]")
+        .should("exist")
+        .find("[data-cy=accordion-button]")
+        .first()
+        .click()
+      cy.get("[data-cy=instrument-accordion-content]")
+        .should("exist")
+        .find("img")
+      cy.get("[data-cy=instrument-accordion-content]").find(
+        "[data-cy=instrument-accordion-image-description]"
+      )
+      cy.get("[data-cy=accordion-measurements-label]").should("exist")
+      cy.get("[data-cy=accordion-link]").should("exist").first().click()
 
-    it("displays some platforms", () => {
-      cy.get("[data-cy=platform]").should($div => {
-        expect($div, "3 or more platforms").to.have.length.gte(3)
-      })
+      cy.url().should("include", "instrument")
+      cy.go("back")
     })
 
-    it("displays the instruments per platform", () => {
-      cy.get("[data-cy=platform]")
+    it("displays some platforms", () => {
+      cy.get("[data-cy=carousel-list-text-control]")
+        .should("exist")
         .first()
-        .find("[data-cy=instrument-chip]")
         .should($div => {
           expect($div, "2 or more instruments").to.have.length.gte(1)
         })

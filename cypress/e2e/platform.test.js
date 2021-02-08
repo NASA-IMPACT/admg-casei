@@ -110,17 +110,37 @@ describe("Platform", () => {
     })
 
     it("displays a carousel", () => {
-      cy.get("[data-cy=related-campaign-carousel]")
-        .find(".slider")
+      cy.get("[data-cy=campaign-carousel]").find(".slider").should("exist")
+
+      cy.get("[data-cy=carousel-campaign-card-link]")
         .should("exist")
-
-      cy.get("[data-cy=related-campaign]").within(() => {
-        cy.get("[data-cy=campaigns-card]").should("exist")
-      })
-
-      cy.get("[data-cy=related-campaign-carousel]")
-        .find(".slider-control-centerright > button")
+        .first()
         .click()
+      cy.url().should("include", "campaign")
+      cy.go("back")
+
+      cy.get("[data-cy=campaign-carousel]").find(
+        ".slider-control-centerright > button"
+      )
+    })
+
+    it("contains an accordion", () => {
+      cy.get("[data-cy=instrument-accordion]")
+        .should("exist")
+        .find("[data-cy=accordion-button]")
+        .first()
+        .click()
+      cy.get("[data-cy=instrument-accordion-content]")
+        .should("exist")
+        .find("img")
+      cy.get("[data-cy=instrument-accordion-content]").find(
+        "[data-cy=instrument-accordion-image-description]"
+      )
+      cy.get("[data-cy=accordion-measurements-label]").should("exist")
+      cy.get("[data-cy=accordion-link]").should("exist").first().click()
+
+      cy.url().should("include", "instrument")
+      cy.go("back")
     })
   })
 })

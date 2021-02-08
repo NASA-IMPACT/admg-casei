@@ -9,8 +9,8 @@ import {
 } from "@reach/listbox"
 import VisuallyHidden from "@reach/visually-hidden"
 
-import { CloseIcon } from "../icons"
 import { IconButton } from "../button"
+import { CloseIcon } from "../../icons"
 import theme from "../../utils/theme"
 
 export default function Filter({
