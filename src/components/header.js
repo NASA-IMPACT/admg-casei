@@ -5,7 +5,7 @@ import React from "react"
 import Image from "./image"
 import theme from "../utils/theme"
 
-const Header = ({ siteTitle, shortname, children }) => (
+const Header = ({ shortname, children }) => (
   <header>
     <div
       style={{
@@ -28,16 +28,13 @@ const Header = ({ siteTitle, shortname, children }) => (
           style={{
             textDecoration: `none`,
             display: `grid`,
-            gridTemplateRows: `1.5rem 1.5rem`,
             gridTemplateColumns: `3rem auto`,
             columnGap: `1rem`,
+            alignItems: `center`,
           }}
         >
-          <div style={{ gridArea: `1 / 1 / 3 / 2` }}>
-            <Image filename="logo.png" alt={`${shortname} logo`} />
-          </div>
-          {shortname}
-          <p>{siteTitle}</p>
+          <Image filename="logo.png" alt={`${shortname} logo`} />
+          <div style={{ fontSize: `1.5rem` }}>{shortname}</div>
         </Link>
       </div>
       <div style={{ display: `flex` }}>{children}</div>
@@ -46,7 +43,6 @@ const Header = ({ siteTitle, shortname, children }) => (
 )
 
 Header.propTypes = {
-  siteTitle: PropTypes.string.isRequired,
   shortname: PropTypes.string.isRequired,
   children: PropTypes.element,
 }

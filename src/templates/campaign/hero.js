@@ -29,8 +29,8 @@ const BackgroundGradient = styled.div`
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 47rem;
-  margin-top: -12rem;
+  height: 60rem;
+  margin-top: -7rem;
   z-index: 0;
   grid-area: 1 / 1 / 1 / 4;
 `
@@ -64,8 +64,8 @@ const CampaignHero = ({
     >
       <Map
         style={{
-          height: `47rem`,
-          marginTop: `-12rem`,
+          height: `60rem`,
+          marginTop: `-7rem`,
           zIndex: -1,
           gridArea: `1 / 1 / 1 / 4`,
         }}
@@ -86,7 +86,7 @@ const CampaignHero = ({
         }}
       >
         <div style={{ flex: `2`, padding: `0 ${theme.layout.pageMargin}` }}>
-          <div>
+          <div style={{ marginBottom: `6rem` }}>
             {logo && logo.logoImg ? (
               <Image
                 alt={logo.logoAlt}
