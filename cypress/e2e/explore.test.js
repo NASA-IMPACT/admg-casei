@@ -82,7 +82,6 @@ describe("Explore", () => {
       cy.visit("/explore")
       cy.get("[data-cy=campaigns-card]")
       cy.get("[data-cy=tabbar]").contains("button", "Platforms").click()
-      cy.get("[data-cy=platforms-card]")
     })
 
     it("displays platform cards and navigates to the selected platform", () => {
@@ -145,7 +144,6 @@ describe("Explore", () => {
       cy.visit("/explore")
       cy.get("[data-cy=campaigns-card]")
       cy.get("[data-cy=tabbar]").contains("button", "Instruments").click()
-      cy.get("[data-cy=instruments-card]")
     })
 
     it("displays instrument cards and navigates to the selected instrument", () => {
