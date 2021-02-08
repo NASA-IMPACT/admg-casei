@@ -53,15 +53,16 @@ const InpageNav = ({ shortname, items, path }) => (
             justifyContent: `flex-start`,
             alignItems: `center`,
             margin: 0,
+            padding: `0.25rem 0`,
             listStyle: `none`,
           }}
         >
-          <li>
-            <h2 style={{ paddingRight: `1rem` }}>
+          <li style={{ margin: `0 1rem 0 0` }}>
+            <div style={{ paddingRight: `1rem`, fontSize: `2rem` }}>
               <a href="#top" data-cy={`top-inpage-link`}>
                 {shortname}
               </a>
-            </h2>
+            </div>
           </li>
           {items.map(item => (
             <InpageLink key={item.id} id={item.id}>

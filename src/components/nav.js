@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 import theme from "../utils/theme"
 
 const ListLink = props => (
-  <li style={{ margin: `0 1rem 0 0` }}>
+  <li style={{ margin: `0 1rem 0 0`, textTransform: `uppercase` }}>
     <Link
       to={props.to}
       activeStyle={{

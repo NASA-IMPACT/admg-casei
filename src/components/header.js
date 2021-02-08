@@ -20,8 +20,6 @@ const Header = ({ siteTitle, shortname, children }) => (
       <div
         style={{
           margin: 0,
-          fontSize: `1.5rem`,
-          lineHeight: `1.5rem`,
           zIndex: 100,
         }}
       >

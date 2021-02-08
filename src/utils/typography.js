@@ -41,7 +41,7 @@ const typography = new Typography({
         marginBottom: rhythm(1),
       },
       h2: {
-        fontSize: rhythm(3.5),
+        fontSize: rhythm(3),
         marginTop: rhythm(0.5),
         marginBottom: rhythm(2.5),
       },
@@ -61,14 +61,13 @@ const typography = new Typography({
         marginBottom: 0,
       },
       p: {
-        fontSize: rhythm(1.25),
         marginBottom: 0,
       },
-      label: {
-        fontSize: rhythm(1.125),
-        marginTop: rhythm(0.5),
-        textTransform: `uppercase`,
+      "label, button": {
+        fontSize: rhythm(0.75),
         fontWeight: 600,
+        textTransform: `uppercase`,
+        marginTop: rhythm(0.5),
       },
     }
   },
