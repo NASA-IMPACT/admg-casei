@@ -15,21 +15,21 @@ describe("Explore", () => {
         })
         .then($li => {
           expect($li[0], "text content").to.contain("Campaigns")
-          expect($li[0].firstChild, "active link").to.have.css(
+          expect($li[0].firstChild, "Campaigns link is blue").to.have.css(
             "color",
             "rgb(170, 201, 255)"
           )
           expect($li[1], "text content").to.contain("Platforms")
-          expect($li[1].firstChild, "other link").not.to.have.css(
-            "color",
-            "rgb(170, 201, 255)"
-          )
+          expect(
+            $li[1].firstChild,
+            "Platforms link is not blue"
+          ).not.to.have.css("color", "rgb(170, 201, 255)")
           expect($li[2], "text content").to.contain("Instruments")
 
-          expect($li[2].firstChild, "other link").not.to.have.css(
-            "color",
-            "rgb(170, 201, 255)"
-          )
+          expect(
+            $li[2].firstChild,
+            "Instruments link is not blue"
+          ).not.to.have.css("color", "rgb(170, 201, 255)")
         })
 
       cy.get("[data-cy=explore-tools]").should("exist")
@@ -80,7 +80,7 @@ describe("Explore", () => {
   describe("platforms", () => {
     before(() => {
       cy.visit("/explore")
-      cy.get("[data-cy=campaigns-card]")
+      cy.get("h1").should("have.text", "Explore").and("not.be.visible")
       cy.get("[data-cy=tabbar]").contains("button", "Platforms").click()
     })
 
@@ -92,21 +92,20 @@ describe("Explore", () => {
         })
         .then($li => {
           expect($li[0], "text content").to.contain("Campaigns")
-          expect($li[0].firstChild, "other link").not.to.have.css(
-            "color",
-            "rgb(170, 201, 255)"
-          )
+          expect(
+            $li[0].firstChild,
+            "Campaigns link is not blue"
+          ).not.to.have.css("color", "rgb(170, 201, 255)")
           expect($li[1], "text content").to.contain("Platforms")
-          expect($li[1].firstChild, "active link").to.have.css(
+          expect($li[1].firstChild, "Platforms link is blue").to.have.css(
             "color",
             "rgb(170, 201, 255)"
           )
           expect($li[2], "text content").to.contain("Instruments")
-
-          expect($li[2].firstChild, "other link").not.to.have.css(
-            "color",
-            "rgb(170, 201, 255)"
-          )
+          expect(
+            $li[2].firstChild,
+            "Instruments link is not blue"
+          ).not.to.have.css("color", "rgb(170, 201, 255)")
         })
 
       cy.get("[data-cy=explore-tools]").should("exist")
@@ -136,13 +135,19 @@ describe("Explore", () => {
           )
           expect($card.find("[data-cy=count3]")).to.contain("Instruments")
         })
+
+      cy.get("[data-cy=platforms-card]").find("big").contains("GH").click()
+
+      cy.url().should("include", "/platform/")
+
+      cy.get("h1").should("have.text", "Global Hawk UAV")
     })
   })
 
   describe("instruments", () => {
     before(() => {
       cy.visit("/explore")
-      cy.get("[data-cy=campaigns-card]")
+      cy.get("h1").should("have.text", "Explore").and("not.be.visible")
       cy.get("[data-cy=tabbar]").contains("button", "Instruments").click()
     })
 
@@ -154,18 +159,18 @@ describe("Explore", () => {
         })
         .then($li => {
           expect($li[0], "text content").to.contain("Campaigns")
-          expect($li[0].firstChild, "other link").not.to.have.css(
-            "color",
-            "rgb(170, 201, 255)"
-          )
+          expect(
+            $li[0].firstChild,
+            "Campaigns link is not blue"
+          ).not.to.have.css("color", "rgb(170, 201, 255)")
           expect($li[1], "text content").to.contain("Platforms")
-          expect($li[1].firstChild, "other link").not.to.have.css(
-            "color",
-            "rgb(170, 201, 255)"
-          )
+          expect(
+            $li[1].firstChild,
+            "Platforms link is not blue"
+          ).not.to.have.css("color", "rgb(170, 201, 255)")
           expect($li[2], "text content").to.contain("Instruments")
 
-          expect($li[2].firstChild, "active link").to.have.css(
+          expect($li[2].firstChild, "Instruments link is blue").to.have.css(
             "color",
             "rgb(170, 201, 255)"
           )
@@ -193,6 +198,12 @@ describe("Explore", () => {
 
           expect($card.find("[data-cy=count1]")).to.contain("Campaigns")
         })
+
+      cy.get("[data-cy=instruments-card]").find("big").contains("CPL").click()
+
+      cy.url().should("include", "/instrument/")
+
+      cy.get("h1").should("have.text", "CPL")
     })
   })
 })
