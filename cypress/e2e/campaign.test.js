@@ -42,16 +42,17 @@ describe("Campaign", () => {
       .find("nav")
       .find("a")
       .should($anchor => {
-        expect($anchor, "7 items").to.have.length(7)
+        expect($anchor, "8 items").to.have.length(8)
         expect($anchor.eq(0), "first item").to.exist
         expect($anchor.eq(1), "second item").to.contain("Overview")
-        expect($anchor.eq(2), "third item").to.contain("Focus")
-        expect($anchor.eq(3), "fourth item").to.contain(
+        expect($anchor.eq(2), "third item").to.contain("Missions")
+        expect($anchor.eq(3), "fourth item").to.contain("Focus")
+        expect($anchor.eq(4), "fifth item").to.contain(
           "Platforms & Instruments"
         )
-        expect($anchor.eq(4), "fifth item").to.contain("Timeline")
-        expect($anchor.eq(5), "sixth item").to.contain("Data")
-        expect($anchor.eq(6), "seventh item").to.contain("Program Info")
+        expect($anchor.eq(5), "sixth item").to.contain("Timeline")
+        expect($anchor.eq(6), "seventh item").to.contain("Data")
+        expect($anchor.eq(7), "eigth item").to.contain("Program Info")
       })
     ;["program-info", "platform", "overview", "timeline", "focus"].forEach(
       id => {
@@ -105,6 +106,11 @@ describe("Campaign", () => {
         expect($li, "at least 1").to.have.length.gte(1)
       })
 
+    cy.get("[data-cy=missions-section]").should("exist")
+    cy.get("[data-cy=linked-mission]").should($div => {
+      expect($div, "2 missions").to.have.length(2)
+    })
+
     cy.get("[data-cy=focus-section]").should("exist")
 
     cy.get("[data-cy=focus-section]").find("h2").should("have.text", "Focus")
@@ -143,44 +149,9 @@ describe("Campaign", () => {
     cy.get("[data-cy=campaigns-card]").should("have.length", 4)
 
     cy.go("back")
-  })
 
-  describe("the timeline section", () => {
-    before(() => {
-      cy.visit("/explore")
-      cy.get("[data-cy=campaigns-card]").find("big").contains("AirMOSS").click()
-    })
+    cy.url().should("include", "/campaign/")
 
-    it("displays a milestone carousel", () => {
-      cy.get("[data-cy=milestone-carousel]").find(".slider").should("exist")
-
-      cy.get("[data-cy=milestone]").first().find("label").should("exist")
-      cy.get("[data-cy=milestone]").first().find("svg").should("exist")
-      cy.get("[data-cy=milestone]").first().find("svg").should("be.visible")
-      cy.get("[data-cy=milestone]").first().find("h3").should("exist")
-      cy.get("[data-cy=milestone]").first().find("p").should("exist")
-
-      cy.get("[data-cy=milestone-carousel]")
-        .find(".slider-control-centerright > button")
-        .click()
-
-      cy.get("[data-cy=milestone]").first().find("svg").should("not.be.visible")
-
-      cy.get("[data-cy=milestone-timeline]").should("exist")
-      cy.get("[data-cy=milestone-timeline]").first().find("ol").should("exist")
-      cy.get("[data-cy=milestone-timeline]").first().find("li").should("exist")
-
-      cy.get("[data-cy=milestone-timeline-card]")
-        .should("exist")
-        .click({ multiple: true, force: true }) // needs to be forced in order to access the cards that exist outside of the window
-      cy.get("[data-cy=milestone-timeline-card]")
-        .first()
-        .find("svg")
-        .should("exist")
-    })
-  })
-
-  it("the platforms section displays platforms in a carousel accordion combo", () => {
     cy.get("[data-cy=platform-section]").should("exist")
 
     cy.get("[data-cy=platform-section]")
@@ -217,6 +188,62 @@ describe("Campaign", () => {
       .should($div => {
         expect($div, "2 or more instruments").to.have.length.gte(1)
       })
+
+    cy.get("[data-cy=program-info-section]").should("exist")
+
+    cy.get("[data-cy=program-info-section]")
+      .find("h2")
+      .should("have.text", "Program Info")
+
+    cy.get("[data-cy=campaign-logo]").should("exist")
+
+    cy.get("[data-cy=program-info-content]").should($div => {
+      expect($div, "8 info items").to.have.length(8)
+    })
+    cy.get("[data-cy=program-info-content-label]").should($label => {
+      expect($label, "8 labels").to.have.length(8)
+    })
+    cy.get("[data-cy=program-info-content-text]").should($p => {
+      expect($p, "6 text entries").to.have.length.within(6, 8)
+    })
+    cy.get("[data-cy=program-info-content-link]").should($a => {
+      expect($a, "2 links").to.have.length.of.at.most(2)
+    })
+  })
+
+  describe("the timeline section", () => {
+    before(() => {
+      cy.visit("/explore")
+      cy.get("[data-cy=campaigns-card]").find("big").contains("AirMOSS").click()
+    })
+
+    it("displays a milestone carousel", () => {
+      cy.get("[data-cy=milestone-carousel]").find(".slider").should("exist")
+
+      cy.get("[data-cy=milestone]").first().find("label").should("exist")
+      cy.get("[data-cy=milestone]").first().find("svg").should("exist")
+      cy.get("[data-cy=milestone]").first().find("svg").should("be.visible")
+      cy.get("[data-cy=milestone]").first().find("h3").should("exist")
+      cy.get("[data-cy=milestone]").first().find("p").should("exist")
+
+      cy.get("[data-cy=milestone-carousel]")
+        .find(".slider-control-centerright > button")
+        .click()
+
+      cy.get("[data-cy=milestone]").first().find("svg").should("not.be.visible")
+
+      cy.get("[data-cy=milestone-timeline]").should("exist")
+      cy.get("[data-cy=milestone-timeline]").first().find("ol").should("exist")
+      cy.get("[data-cy=milestone-timeline]").first().find("li").should("exist")
+
+      cy.get("[data-cy=milestone-timeline-card]")
+        .should("exist")
+        .click({ multiple: true, force: true }) // needs to be forced in order to access the cards that exist outside of the window
+      cy.get("[data-cy=milestone-timeline-card]")
+        .first()
+        .find("svg")
+        .should("exist")
+    })
   })
 
   describe("the data section", () => {
@@ -256,29 +283,6 @@ describe("Campaign", () => {
         .find("[data-cy=doi-instrument-label]")
         .should("exist")
         .and("have.text", "Instruments")
-    })
-  })
-
-  it("the program info section displays infos", () => {
-    cy.get("[data-cy=program-info-section]").should("exist")
-
-    cy.get("[data-cy=program-info-section]")
-      .find("h2")
-      .should("have.text", "Program Info")
-
-    cy.get("[data-cy=campaign-logo]").should("exist")
-
-    cy.get("[data-cy=program-info-content]").should($div => {
-      expect($div, "8 info items").to.have.length(8)
-    })
-    cy.get("[data-cy=program-info-content-label]").should($label => {
-      expect($label, "8 labels").to.have.length(8)
-    })
-    cy.get("[data-cy=program-info-content-text]").should($p => {
-      expect($p, "6 text entries").to.have.length.within(6, 8)
-    })
-    cy.get("[data-cy=program-info-content-link]").should($a => {
-      expect($a, "2 links").to.have.length.of.at.most(2)
     })
   })
 })

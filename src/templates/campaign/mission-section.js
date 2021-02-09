@@ -28,6 +28,7 @@ const MissionSection = ({ id, missions }) => (
               alignItems: `start`,
               backgroundColor: theme.color.secondary,
             }}
+            data-cy="linked-mission"
           >
             <CampaignIcon size="small" />
             <label>{mission}</label>
