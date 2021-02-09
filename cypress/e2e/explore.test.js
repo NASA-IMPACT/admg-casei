@@ -4,7 +4,9 @@ describe("Explore", () => {
   describe("campaigns", () => {
     before(() => {
       cy.visit("/explore")
-      cy.get("h1").should("have.text", "Explore").and("not.be.visible")
+      cy.get("h1")
+        .should("have.text", "Explore campaigns")
+        .and("not.be.visible")
     })
 
     it("displays campaign cards and navigates to the selected campaign", () => {
@@ -73,18 +75,27 @@ describe("Explore", () => {
 
       cy.url().should("include", "/campaign/")
 
-      cy.get("h1").should("have.length", 1)
+      cy.get("h1").should(
+        "have.text",
+        "Airborne Microwave Observatory of Subcanopy and Subsurface"
+      )
     })
   })
 
   describe("platforms", () => {
     before(() => {
       cy.visit("/explore")
-      cy.get("h1").should("have.text", "Explore").and("not.be.visible")
+      cy.get("h1")
+        .should("have.text", "Explore campaigns")
+        .and("not.be.visible")
       cy.get("[data-cy=tabbar]").contains("button", "Platforms").click()
     })
 
     it("displays platform cards and navigates to the selected platform", () => {
+      cy.get("h1")
+        .should("have.text", "Explore platforms")
+        .and("not.be.visible")
+
       cy.get("[data-cy=tabbar]")
         .find("li")
         .should($li => {
@@ -147,11 +158,17 @@ describe("Explore", () => {
   describe("instruments", () => {
     before(() => {
       cy.visit("/explore")
-      cy.get("h1").should("have.text", "Explore").and("not.be.visible")
+      cy.get("h1")
+        .should("have.text", "Explore campaigns")
+        .and("not.be.visible")
       cy.get("[data-cy=tabbar]").contains("button", "Instruments").click()
     })
 
     it("displays instrument cards and navigates to the selected instrument", () => {
+      cy.get("h1")
+        .should("have.text", "Explore instruments")
+        .and("not.be.visible")
+
       cy.get("[data-cy=tabbar]")
         .find("li")
         .should($li => {

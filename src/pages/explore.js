@@ -148,7 +148,7 @@ export default function Explore({ data, location }) {
       <SEO title="Explore" lang="en" />
       <PageBody id="explore">
         <VisuallyHidden>
-          <h1>Explore</h1>
+          <h1>Explore {selectedCategory}</h1>
         </VisuallyHidden>
         <ExploreTools
           ref={inputElement}
