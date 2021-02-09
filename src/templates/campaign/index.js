@@ -7,6 +7,7 @@ import SEO from "../../components/seo"
 import CampaignHero from "./hero"
 import InpageNav from "../../components/inpage-nav"
 import OverviewSection from "./overview-section"
+import MissionSection from "./mission-section"
 import FocusSection from "./focus-section"
 import PlatformSection from "./platform-section"
 import TimelineSection from "./timeline-section"
@@ -54,6 +55,13 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
         publicationLink: campaign.publicationLink,
         notesPublic: campaign.notesPublic,
         repositories: campaign.repositories,
+      },
+    },
+    missions: {
+      nav: "Missions",
+      component: MissionSection,
+      props: {
+        missions: campaign.missions.split(", ").filter(x => x),
       },
     },
     focus: {
@@ -146,6 +154,7 @@ export const query = graphql`
     campaign: campaign(id: { eq: $slug }) {
       ...heroFields
       ...overviewFields
+      ...missionFields
       ...focusFields
       ...platformSectionFields
       ...deploymentFields
@@ -200,6 +209,7 @@ CampaignTemplate.propTypes = {
           longname: PropTypes.string.isRequired,
         }).isRequired
       ).isRequired,
+      missions: PropTypes.string,
       focusPhenomena: PropTypes.string.isRequired,
       platforms: PropTypes.arrayOf(
         PropTypes.shape({

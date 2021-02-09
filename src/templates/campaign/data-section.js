@@ -36,9 +36,7 @@ const DataSection = ({ id, dois }) => {
     <Section id={id}>
       <SectionHeader headline="Data Products" id={id} />
       <SectionContent>
-        {dois.length < 1 ? (
-          "No data products available."
-        ) : (
+        {dois.length > 0 ? (
           <>
             {platformList.concat(instrumentList).length > 2 && (
               <div
@@ -79,7 +77,7 @@ const DataSection = ({ id, dois }) => {
             <div
               style={{
                 display: `grid`,
-                gridTemplateColumns: `1fr 1fr 1fr`,
+                gridTemplateColumns: `repeat(auto-fit, minmax(15rem, 1fr))`,
                 gap: `1rem`,
               }}
             >
@@ -90,7 +88,7 @@ const DataSection = ({ id, dois }) => {
                     display: `flex`,
                     flexDirection: `column`,
                     backgroundColor: theme.color.secondary,
-                    padding: `0 1rem 0.71rem 1rem`,
+                    padding: `1.5rem`,
                   }}
                   data-cy="data-product"
                 >
@@ -144,6 +142,8 @@ const DataSection = ({ id, dois }) => {
               ))}
             </div>
           </>
+        ) : (
+          "No data products available."
         )}
       </SectionContent>
     </Section>
