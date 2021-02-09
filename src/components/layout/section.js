@@ -13,7 +13,7 @@ const Container = styled.section`
 
   margin: ${props => (props.isLight ? `0 -6rem` : 0)};
   padding: ${props => (props.isLight ? `6rem` : 0)};
-  margin-top: ${props => (props.isSpaced ? `6rem` : `2rem`)};
+  margin-bottom: ${props => (props.isSpaced ? `6rem` : `6rem`)};
 
   background-color: ${props => (props.isLight ? theme.color.white : `none`)};
   > *,

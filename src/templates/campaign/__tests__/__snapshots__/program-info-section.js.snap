@@ -10,7 +10,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
   position: relative;
   margin: 0;
   padding: 0;
-  margin-top: 2rem;
+  margin-bottom: 6rem;
   background-color: none;
 }
 
@@ -315,7 +315,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
   position: relative;
   margin: 0;
   padding: 0;
-  margin-top: 2rem;
+  margin-bottom: 6rem;
   background-color: none;
 }
 

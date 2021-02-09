@@ -120,15 +120,15 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
         countDataProducts={campaign.countDataProducts}
         logo={campaign.logo}
       />
-      <InpageNav
-        shortname={campaign.shortname}
-        items={Object.entries(sections).map(([id, section]) => ({
-          id,
-          label: section.nav,
-        }))}
-        path={path}
-      />
       <PageBody id="campaign">
+        <InpageNav
+          shortname={campaign.shortname}
+          items={Object.entries(sections).map(([id, section]) => ({
+            id,
+            label: section.nav,
+          }))}
+          path={path}
+        />
         {Object.entries(sections).map(([id, section]) => (
           <section.component key={id} id={id} {...section.props} />
         ))}

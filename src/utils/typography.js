@@ -43,12 +43,12 @@ const typography = new Typography({
       h2: {
         fontSize: rhythm(3),
         marginTop: rhythm(0.5),
-        marginBottom: rhythm(2.5),
+        marginBottom: rhythm(1),
       },
       h3: {
-        fontSize: rhythm(2.25),
+        fontSize: rhythm(2),
         marginTop: rhythm(0.5),
-        marginBottom: rhythm(0.5),
+        marginBottom: rhythm(1),
       },
       "h4,h5,h6": {
         fontSize: rhythm(1.5),
@@ -67,7 +67,6 @@ const typography = new Typography({
         fontSize: rhythm(0.75),
         fontWeight: 600,
         textTransform: `uppercase`,
-        marginTop: rhythm(0.5),
       },
     }
   },

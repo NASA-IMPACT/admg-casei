@@ -72,15 +72,15 @@ const InstrumentTemplate = ({ data: { instrument }, path }) => {
         description={instrument.description}
         image={instrument.image}
       />
-      <InpageNav
-        shortname={instrument.shortname}
-        items={Object.entries(sections).map(([id, section]) => ({
-          id,
-          label: section.nav,
-        }))}
-        path={path}
-      />
       <PageBody id="instrument">
+        <InpageNav
+          shortname={instrument.shortname}
+          items={Object.entries(sections).map(([id, section]) => ({
+            id,
+            label: section.nav,
+          }))}
+          path={path}
+        />
         {Object.entries(sections).map(([id, section]) => (
           <section.component key={id} id={id} {...section.props} />
         ))}

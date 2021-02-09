@@ -60,6 +60,7 @@ const OverviewSection = ({
       <p data-cy="description">{description}</p>
       <div
         style={{
+          marginTop: `3rem`,
           display: `grid`,
           gap: `2rem`,
           gridAutoFlow: `column`,
@@ -99,6 +100,7 @@ const OverviewSection = ({
               style={{
                 whiteSpace: `nowrap`,
                 overflow: `hidden`,
+                lineHeight: `1.5rem`,
                 textOverflow: `ellipsis`,
               }}
             >

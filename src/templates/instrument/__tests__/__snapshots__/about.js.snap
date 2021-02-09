@@ -22,7 +22,7 @@ exports[`About Section displays content 1`] = `
   position: relative;
   margin: 0;
   padding: 0;
-  margin-top: 2rem;
+  margin-bottom: 6rem;
   background-color: none;
 }
 

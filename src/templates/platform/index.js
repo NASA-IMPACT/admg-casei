@@ -37,7 +37,7 @@ export default function PlatformTemplate({ data: { platform }, path }) {
       nav: "Related Campaigns & Instruments",
       component: CampaignsAndInstruments,
       props: {
-        id: "platform-campaigns",
+        id: "campaigns-instruments",
         campaigns: platform.campaigns,
         instruments: platform.instruments,
       },
@@ -63,15 +63,15 @@ export default function PlatformTemplate({ data: { platform }, path }) {
         textToImageRatio={[3, 5]}
         image={platform.image}
       />
-      <InpageNav
-        shortname={platform.shortname}
-        items={Object.entries(sections).map(([id, section]) => ({
-          id,
-          label: section.nav,
-        }))}
-        path={path}
-      />
       <PageBody id="platform">
+        <InpageNav
+          shortname={platform.shortname}
+          items={Object.entries(sections).map(([id, section]) => ({
+            id,
+            label: section.nav,
+          }))}
+          path={path}
+        />
         {Object.entries(sections).map(([id, section]) => (
           <section.component key={id} id={id} {...section.props} />
         ))}

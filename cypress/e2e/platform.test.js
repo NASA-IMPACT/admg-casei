@@ -67,9 +67,9 @@ describe("Platform", () => {
       .should("exist")
       .and("have.text", "Instruments")
 
-    cy.get("[data-cy=platform-campaigns-section]").should("exist")
+    cy.get("[data-cy=campaigns-instruments-section]").should("exist")
 
-    cy.get("[data-cy=platform-campaigns-section]")
+    cy.get("[data-cy=campaigns-instruments-section]")
       .find("h2")
       .should("have.text", "Related Campaigns & Instruments")
 
