@@ -335,7 +335,8 @@ exports[`Explore page renders correctly 1`] = `
         }
       >
         <h1>
-          Explore
+          Explore 
+          campaigns
         </h1>
       </span>
       <form
