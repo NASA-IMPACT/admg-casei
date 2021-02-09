@@ -7,7 +7,6 @@ import Layout, {
   Paragraph,
   Section,
   SectionContent,
-  SectionHeader,
 } from "../components/layout"
 import SEO from "../components/seo"
 import ExternalLink from "../components/external-link"
@@ -23,12 +22,8 @@ const Contact = () => (
   <Layout>
     <SEO title="Contact" lang="en" />
     <PageBody id="contact">
+      <h1>We appreciate your feedback!</h1>
       <Section id="contact">
-        <SectionHeader
-          headline="We appreciate your feedback!"
-          id="contact"
-          isPrimary
-        />
         <SectionContent columns={[1, 8]}>
           <Paragraph>
             The Airborne Data Management Group (ADMG) has gathered the content

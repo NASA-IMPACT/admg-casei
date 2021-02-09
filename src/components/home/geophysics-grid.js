@@ -27,7 +27,7 @@ export const GeophysicsGrid = ({ geophysicalConcepts }) => (
             textAlign: `center`,
           }}
         >
-          {concept.longname}
+          <label>{concept.longname}</label>
         </div>
       </Link>
     ))}

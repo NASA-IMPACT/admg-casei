@@ -8,7 +8,6 @@ describe("Header", () => {
   })
   it("renders correctly", () => {
     cy.get("header").contains(site.siteMetadata.shortname)
-    cy.get("header").contains(site.siteMetadata.title)
     cy.get("nav")
       .find("li")
       .should($li => {
