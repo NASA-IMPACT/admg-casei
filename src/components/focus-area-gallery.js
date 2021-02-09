@@ -13,7 +13,7 @@ const FocusArea = ({ id, caption, size }) => {
     <Link
       to={`/focus/${id}`}
       state={{ selectedFilterId: id }} // Pass state as props to the linked page
-      style={{ textAlign: `center` }}
+      style={{ textAlign: `center`, maxWidth: `130px` }}
       data-cy="focus-area"
     >
       <Icon color={theme.color.base} size={size} />
@@ -36,6 +36,7 @@ const FocusAreaGallery = ({ focusAreas, size = "large" }) => {
       style={{
         display: `grid`,
         gridTemplateColumns: `repeat(${focusAreas.length}, 1fr)`,
+        justifyItems: `center`,
         gap: `1rem`,
         paddingTop: `1rem`,
       }}

@@ -18,7 +18,7 @@ const ExploreSection = ({ isLoading, children }) => {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: `repeat(auto-fill, minmax(270px, 1fr))`,
+            gridTemplateColumns: `repeat(auto-fill, minmax(15rem, 1fr))`,
             gap: `1rem`,
           }}
         >

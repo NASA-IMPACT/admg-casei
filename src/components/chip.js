@@ -21,7 +21,7 @@ const Chip = ({
       backgroundColor: isDark ? theme.color.primary : theme.color.secondary,
       color: theme.color.base,
       borderRadius: theme.shape.rounded,
-      padding: `0 0.5rem`,
+      padding: `0.25rem 0.5rem`,
       margin: `0.25rem 0.5rem`,
     }}
     data-cy={`${id}-chip`}

@@ -1,9 +1,10 @@
 import Typography from "typography"
+
 import theme from "./theme"
 
 const typography = new Typography({
   baseFontSize: "16px",
-  baseLineHeight: 1.42,
+  baseLineHeight: 1.15,
   googleFonts: [
     {
       name: "Titillium Web",
@@ -35,16 +36,21 @@ const typography = new Typography({
         color: theme.color.base,
       },
       h1: {
-        fontSize: rhythm(2),
+        fontSize: rhythm(4),
+        marginTop: rhythm(1),
+        marginBottom: rhythm(1),
+      },
+      h2: {
+        fontSize: rhythm(3),
+        marginTop: rhythm(0.5),
+        marginBottom: rhythm(2.5),
+      },
+      h3: {
+        fontSize: rhythm(2.25),
         marginTop: rhythm(0.5),
         marginBottom: rhythm(0.5),
       },
-      h2: {
-        fontSize: rhythm(1.75),
-        marginTop: rhythm(0.5),
-        marginBottom: rhythm(1.5),
-      },
-      "h3,h4,h5,h6": {
+      "h4,h5,h6": {
         fontSize: rhythm(1.5),
         marginTop: rhythm(0.5),
         marginBottom: rhythm(1),
@@ -57,11 +63,11 @@ const typography = new Typography({
       p: {
         marginBottom: 0,
       },
-      label: {
-        fontSize: rhythm(0.6),
-        marginTop: rhythm(0.5),
-        textTransform: `uppercase`,
+      "label, button": {
+        fontSize: rhythm(0.75),
         fontWeight: 600,
+        textTransform: `uppercase`,
+        marginTop: rhythm(0.5),
       },
     }
   },
