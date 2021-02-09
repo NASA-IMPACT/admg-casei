@@ -88,10 +88,10 @@ describe("Explore", () => {
       cy.get("[data-cy=h1-campaigns]")
         .should("have.text", "Explore campaigns")
         .and("not.be.visible")
-      cy.get("[data-cy=tabbar]").contains("button", "Platforms").click()
     })
 
     it("displays platform cards and navigates to the selected platform", () => {
+      cy.get("[data-cy=tabbar]").contains("button", "Platforms").click()
       cy.get("[data-cy=h1-platforms]")
         .should("have.text", "Explore platforms")
         .and("not.be.visible")
@@ -161,10 +161,10 @@ describe("Explore", () => {
       cy.get("[data-cy=h1-campaigns]")
         .should("have.text", "Explore campaigns")
         .and("not.be.visible")
-      cy.get("[data-cy=tabbar]").contains("button", "Instruments").click()
     })
 
     it("displays instrument cards and navigates to the selected instrument", () => {
+      cy.get("[data-cy=tabbar]").contains("button", "Instruments").click()
       cy.get("[data-cy=h1-instruments]")
         .should("have.text", "Explore instruments")
         .and("not.be.visible")
