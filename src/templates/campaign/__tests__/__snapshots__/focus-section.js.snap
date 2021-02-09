@@ -87,7 +87,7 @@ exports[`Focus Section displays content 1`] = `
             Object {
               "display": "grid",
               "gap": "1rem",
-              "gridTemplateColumns": "repeat(1, 1fr)",
+              "gridTemplateColumns": "repeat(auto-fit, minmax(5rem, 1fr))",
               "justifyItems": "center",
               "paddingTop": "1rem",
             }
@@ -103,7 +103,10 @@ exports[`Focus Section displays content 1`] = `
             }
             style={
               Object {
-                "maxWidth": "130px",
+                "alignItems": "center",
+                "display": "flex",
+                "flexDirection": "column",
+                "gap": "1rem",
                 "textAlign": "center",
               }
             }
@@ -122,14 +125,8 @@ exports[`Focus Section displays content 1`] = `
               />
             </svg>
             <label
-              data-cy="focus-area-icons-label"
-              style={
-                Object {
-                  "borderBottom": "none",
-                  "color": "hsla(0,0%,100%,0.9)",
-                  "display": "block",
-                }
-              }
+              color="hsla(0,0%,100%,0.9)"
+              id="focus-area-icons"
             >
               Carbon Cycle & Ecosystems
             </label>

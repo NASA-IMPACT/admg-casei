@@ -64,7 +64,7 @@ const typography = new Typography({
         marginBottom: 0,
       },
       "label, button": {
-        fontSize: rhythm(0.75),
+        fontSize: rhythm(0.6),
         fontWeight: 600,
         textTransform: `uppercase`,
       },
