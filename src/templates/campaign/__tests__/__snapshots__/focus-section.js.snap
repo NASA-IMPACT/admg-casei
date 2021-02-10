@@ -126,7 +126,6 @@ exports[`Focus Section displays content 1`] = `
             </svg>
             <label
               color="hsla(0,0%,100%,0.9)"
-              id="focus-area-icons"
             >
               Carbon Cycle & Ecosystems
             </label>
