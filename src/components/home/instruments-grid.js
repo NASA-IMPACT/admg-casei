@@ -24,7 +24,10 @@ export const InstrumentsGrid = ({ measurementTypes }) => {
       {measurementTypes.map(measurementType => (
         <Link
           to="/explore"
-          state={{ selectedFilterId: measurementType.id }} // Pass state as props to the linked page
+          state={{
+            selectedFilterId: measurementType.id,
+            defaultExploreCategory: "instruments",
+          }}
           style={{ flexGrow: 1 }}
           data-cy="instrument-type"
           key={measurementType.id}

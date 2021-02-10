@@ -34,7 +34,7 @@ export default function Explore({ data, location }) {
     allMeasurementType,
     allMeasurementRegion,
   } = data
-  const { selectedFilterId } = location.state || {}
+  const { selectedFilterId, defaultExploreCategory } = location.state || {}
 
   const [isLoading, setLoading] = useState(false)
   const [selectedCategory, setSelectedCategory] = useState("campaigns")
@@ -60,6 +60,15 @@ export default function Explore({ data, location }) {
       setFilter([])
     }
   }, [selectedFilterId])
+
+  useEffect(() => {
+    // update based on passed state
+    if (defaultExploreCategory) setSelectedCategory(defaultExploreCategory)
+    return () => {
+      // cleanup
+      setSelectedCategory("campaigns")
+    }
+  }, [defaultExploreCategory])
 
   const campaignList = useCampaignList(
     allCampaign.list,

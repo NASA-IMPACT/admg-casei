@@ -91,7 +91,8 @@ const IndexPage = ({ data }) => {
                   takes a lot to understand earth.
                 </p>
                 <Link
-                  to="/explore" //** TODO: link to explore with tab selected */
+                  to="/explore"
+                  state={{ defaultExploreCategory: "platforms" }}
                   style={{
                     border: `1px solid ${theme.color.base}`,
                     padding: `1rem 5rem`,
