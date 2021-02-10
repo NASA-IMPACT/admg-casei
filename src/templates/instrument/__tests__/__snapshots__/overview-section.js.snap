@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`About Section displays content 1`] = `
+exports[`Overview Section displays content 1`] = `
 .c3.c3 {
   display: grid;
   grid-gap: 0.5rem;
@@ -20,15 +20,15 @@ exports[`About Section displays content 1`] = `
   column-gap: 1rem;
   row-gap: 2rem;
   position: relative;
-  margin: 0;
-  padding: 0;
+  margin: 0 -6rem;
+  padding: 6rem;
   margin-bottom: 6rem;
-  background-color: none;
+  background-color: #FFFFFF;
 }
 
 .c0.c0 > *,
 .c0.c0 h3 {
-  color: hsla(0,0%,100%,0.9);
+  color: #262A31;
 }
 
 .c1.c1 {
@@ -52,25 +52,45 @@ exports[`About Section displays content 1`] = `
     className="c1"
     id="unique-id"
   />
-  <div
+  <span
     style={
       Object {
-        "alignSelf": "end",
-        "gridColumn": "1 / span 7",
+        "border": 0,
+        "clip": "rect(0 0 0 0)",
+        "height": "1px",
+        "margin": "-1px",
+        "overflow": "hidden",
+        "padding": 0,
+        "position": "absolute",
+        "whiteSpace": "nowrap",
+        "width": "1px",
+        "wordWrap": "normal",
       }
     }
   >
-    <a
-      href="#unique-id"
+    <div
+      style={
+        Object {
+          "alignSelf": "end",
+          "gridColumn": "1 / span 7",
+        }
+      }
     >
-      <h2>
-        Instrument Details
-      </h2>
-    </a>
-  </div>
+      <a
+        href="#unique-id"
+      >
+        <h2>
+          Overview
+        </h2>
+      </a>
+    </div>
+  </span>
   <div
     className="c2"
   >
+    <h3>
+      Instrument Details
+    </h3>
     <section
       data-cy="instrument-definition-list"
       style={
@@ -83,7 +103,13 @@ exports[`About Section displays content 1`] = `
         className="c3"
       >
         <dt>
-          <label>
+          <label
+            style={
+              Object {
+                "color": "#5F5F5F",
+              }
+            }
+          >
             Measurement Type
           </label>
         </dt>
@@ -93,7 +119,13 @@ exports[`About Section displays content 1`] = `
           test
         </dd>
         <dt>
-          <label>
+          <label
+            style={
+              Object {
+                "color": "#5F5F5F",
+              }
+            }
+          >
             Measurement/Variables
           </label>
         </dt>
@@ -103,7 +135,13 @@ exports[`About Section displays content 1`] = `
           test, test, test, test, test
         </dd>
         <dt>
-          <label>
+          <label
+            style={
+              Object {
+                "color": "#5F5F5F",
+              }
+            }
+          >
             Measurement Regions
           </label>
         </dt>
@@ -113,7 +151,13 @@ exports[`About Section displays content 1`] = `
           test, test2
         </dd>
         <dt>
-          <label>
+          <label
+            style={
+              Object {
+                "color": "#5F5F5F",
+              }
+            }
+          >
             Temporal Resolution
           </label>
         </dt>
@@ -123,7 +167,13 @@ exports[`About Section displays content 1`] = `
           test
         </dd>
         <dt>
-          <label>
+          <label
+            style={
+              Object {
+                "color": "#5F5F5F",
+              }
+            }
+          >
             Spatial Resolution
           </label>
         </dt>
@@ -133,7 +183,13 @@ exports[`About Section displays content 1`] = `
           test
         </dd>
         <dt>
-          <label>
+          <label
+            style={
+              Object {
+                "color": "#5F5F5F",
+              }
+            }
+          >
             Measurement Frequency
           </label>
         </dt>
@@ -143,7 +199,13 @@ exports[`About Section displays content 1`] = `
           test
         </dd>
         <dt>
-          <label>
+          <label
+            style={
+              Object {
+                "color": "#5F5F5F",
+              }
+            }
+          >
             Calibration Details
           </label>
         </dt>
@@ -156,7 +218,7 @@ exports[`About Section displays content 1`] = `
             rel="noopener noreferrer"
             style={
               Object {
-                "color": "#aac9ff",
+                "color": "#15418C",
               }
             }
             target="_blank"
@@ -165,7 +227,13 @@ exports[`About Section displays content 1`] = `
           </a>
         </dd>
         <dt>
-          <label>
+          <label
+            style={
+              Object {
+                "color": "#5F5F5F",
+              }
+            }
+          >
             Online Information
           </label>
         </dt>
@@ -192,7 +260,7 @@ exports[`About Section displays content 1`] = `
                 rel="noopener noreferrer"
                 style={
                   Object {
-                    "color": "#aac9ff",
+                    "color": "#15418C",
                   }
                 }
                 target="_blank"
@@ -208,10 +276,17 @@ exports[`About Section displays content 1`] = `
   <div
     className="c4"
   >
-    <div
+    <ul
       data-cy="instrument-background"
+      style={
+        Object {
+          "listStyle": "none",
+          "margin": 0,
+        }
+      }
     >
-      <div
+      <li
+        data-cy="lead-investigator-label"
         style={
           Object {
             "padding": "1rem 0",
@@ -219,20 +294,20 @@ exports[`About Section displays content 1`] = `
         }
       >
         <label
-          data-cy="lead-investigator-label"
           style={
             Object {
-              "borderBottom": "1px solid #9E9E9E",
-              "color": "#9E9E9E",
-              "display": "block",
+              "color": "#5F5F5F",
             }
           }
         >
           Lead Investigator
         </label>
-        test
-      </div>
-      <div
+        <p>
+          test
+        </p>
+      </li>
+      <li
+        data-cy="technical-contact-label"
         style={
           Object {
             "padding": "1rem 0",
@@ -240,20 +315,20 @@ exports[`About Section displays content 1`] = `
         }
       >
         <label
-          data-cy="technical-contact-label"
           style={
             Object {
-              "borderBottom": "1px solid #9E9E9E",
-              "color": "#9E9E9E",
-              "display": "block",
+              "color": "#5F5F5F",
             }
           }
         >
           Technical Contact
         </label>
-        test
-      </div>
-      <div
+        <p>
+          test
+        </p>
+      </li>
+      <li
+        data-cy="instrument-manufacturer-label"
         style={
           Object {
             "padding": "1rem 0",
@@ -261,20 +336,20 @@ exports[`About Section displays content 1`] = `
         }
       >
         <label
-          data-cy="instrument-manufacturer-label"
           style={
             Object {
-              "borderBottom": "1px solid #9E9E9E",
-              "color": "#9E9E9E",
-              "display": "block",
+              "color": "#5F5F5F",
             }
           }
         >
           Instrument Maker
         </label>
-        test
-      </div>
-      <div
+        <p>
+          test
+        </p>
+      </li>
+      <li
+        data-cy="funding-source-label"
         style={
           Object {
             "padding": "1rem 0",
@@ -282,19 +357,18 @@ exports[`About Section displays content 1`] = `
         }
       >
         <label
-          data-cy="funding-source-label"
           style={
             Object {
-              "borderBottom": "1px solid #9E9E9E",
-              "color": "#9E9E9E",
-              "display": "block",
+              "color": "#5F5F5F",
             }
           }
         >
           Funding Source
         </label>
-        test
-      </div>
+        <p>
+          test
+        </p>
+      </li>
       <div
         style={
           Object {
@@ -328,7 +402,8 @@ exports[`About Section displays content 1`] = `
           </a>
         </p>
       </div>
-      <div
+      <li
+        data-cy="data-locations-label"
         style={
           Object {
             "padding": "1rem 0",
@@ -336,20 +411,20 @@ exports[`About Section displays content 1`] = `
         }
       >
         <label
-          data-cy="data-locations-label"
           style={
             Object {
-              "borderBottom": "1px solid #9E9E9E",
-              "color": "#9E9E9E",
-              "display": "block",
+              "color": "#5F5F5F",
             }
           }
         >
           Data Locations
         </label>
-        N/A
-      </div>
-      <div
+        <p>
+          N/A
+        </p>
+      </li>
+      <li
+        data-cy="repositories-label"
         style={
           Object {
             "padding": "1rem 0",
@@ -357,12 +432,9 @@ exports[`About Section displays content 1`] = `
         }
       >
         <label
-          data-cy="repositories-label"
           style={
             Object {
-              "borderBottom": "1px solid #9E9E9E",
-              "color": "#9E9E9E",
-              "display": "block",
+              "color": "#5F5F5F",
             }
           }
         >
@@ -402,8 +474,8 @@ exports[`About Section displays content 1`] = `
             </p>
           </li>
         </ul>
-      </div>
-    </div>
+      </li>
+    </ul>
   </div>
 </section>
 `;

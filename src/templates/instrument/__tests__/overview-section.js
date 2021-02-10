@@ -1,7 +1,7 @@
 import React from "react"
 import { create } from "react-test-renderer"
 
-import About from "../about"
+import OverviewSection from "../overview-section"
 
 const id = "unique-id"
 const measurementType = {
@@ -36,7 +36,7 @@ const instrumentManufacturer = "test"
 const fundingSource = "test"
 const leadInvestigator = "test"
 const technicalContact = "test"
-const onlineInformation = "http://www.example.com"
+const onlineInformation = ["http://www.example.com"]
 const overviewPublication = "test"
 const repositories = [
   {
@@ -49,10 +49,10 @@ const repositories = [
   },
 ]
 
-describe("About Section", () => {
+describe("Overview Section", () => {
   it("displays content", () => {
     const tree = create(
-      <About
+      <OverviewSection
         id={id}
         measurementType={measurementType}
         radiometricFrequency={radiometricFrequency}
