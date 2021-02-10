@@ -158,8 +158,13 @@ describe("Homepage", () => {
         expect($h2).to.have.length(1)
       })
       .then($h2 => {
-        expect($h2, "text content").to.have.text("Platforms").click()
+        expect($h2, "text content").to.have.text("Platforms")
       })
+    cy.get("[data-cy=platform-section-link]")
+      .should($a => {
+        expect($a, "text content").to.have.text("Explore")
+      })
+      .click()
     cy.get("[data-cy=platforms-card]").find("big").contains("B-200")
     cy.go("back")
   })
