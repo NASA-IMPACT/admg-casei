@@ -14,14 +14,14 @@ import theme from "../../utils/theme"
 import { isUrl, PropTypeIsUrl } from "../../utils/helpers"
 
 const ListLink = props => (
-  <li
-    style={{
-      padding: props.noPadding ? 0 : `1rem`,
-      borderBottom: props.noBorder ? `none` : `1px solid ${theme.color.gray}`,
-    }}
-  >
+  <li style={{ padding: props.noPadding ? 0 : `1rem` }}>
     {isUrl(props.to) ? (
-      <ExternalLink label={props.children} url={props.to} id={props.children} />
+      <ExternalLink
+        label={props.children}
+        url={props.to}
+        id={props.children}
+        isLight
+      />
     ) : (
       <p className="placeholder">{props.children}</p> // fallback for invalid url
     )}
@@ -62,27 +62,38 @@ const OverviewSection = ({
         style={{
           marginTop: `3rem`,
           display: `grid`,
-          gap: `2rem`,
+          columnGap: `2rem`,
           gridAutoFlow: `column`,
           gridTemplateColumns: `1fr 1fr`,
-          gridTemplateRows: ` 1fr 1fr`,
+          gridTemplateRows: ` 1fr auto 1fr`,
         }}
       >
         <ContentItem
           id="overview-content"
           label="Study dates"
           info={`${startdate} — ${enddate || "ongoing"}`}
+          isLight
         />
-        <ContentItem id="overview-content" label="Region" info={region} />
+        <hr />
+        <ContentItem
+          id="overview-content"
+          label="Region"
+          info={region}
+          isLight
+        />
+
         <ContentItem
           id="overview-content"
           label="Season of Study"
           info={seasonListing}
+          isLight
         />
+        <hr />
         <ContentItem
           id="overview-content"
           label="Spatial bounds (WKT)"
           info={bounds}
+          isLight
         />
       </div>
     </SectionContent>
@@ -92,7 +103,8 @@ const OverviewSection = ({
         <li
           style={{
             padding: `1rem`,
-            border: `1px solid ${theme.color.text}`,
+            border: `1px solid hsla(0,0%,0%,0.2)`,
+            marginBottom: `3rem`,
           }}
         >
           {doi ? (
@@ -104,12 +116,15 @@ const OverviewSection = ({
                 textOverflow: `ellipsis`,
               }}
             >
-              Campaign DOI: <ExternalLink label={doi} url={doi} id="doi" />
+              Campaign DOI:
+              <br />
+              <ExternalLink label={doi} url={doi} id="doi" isLight />
             </p>
           ) : (
             <p data-cy="doi-link">no campaign DOI available</p>
           )}
         </li>
+
         {repositoryWebsite && (
           <ListLink to={repositoryWebsite}>Repository website</ListLink>
         )}
