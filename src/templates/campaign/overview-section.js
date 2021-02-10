@@ -133,7 +133,7 @@ const OverviewSection = ({
       <h3>Repositories</h3>
       <ul style={{ margin: 0, listStyle: `none` }} data-cy="repo-list">
         {repositories.map(repo => (
-          <ListLink key={repo.id} to={repo.shortname} noBorder noPadding>
+          <ListLink key={repo.id} to={repo.shortname} isLight noPadding>
             {repo.longname}
           </ListLink>
         ))}
