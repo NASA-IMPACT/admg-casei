@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useRef } from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 import styled from "styled-components"
@@ -12,6 +12,7 @@ import BboxLayer from "../../components/map/bbox-layer"
 import GeoJsonSource from "../../components/map/geojson-source"
 import { CampaignIcon } from "../../icons"
 import theme from "../../utils/theme"
+import { useContainerDimensions } from "../../utils/use-container-dimensions"
 
 const BackgroundGradient = styled.div`
   background-image: linear-gradient(
@@ -29,7 +30,6 @@ const BackgroundGradient = styled.div`
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 60rem;
   margin-top: -7rem;
   z-index: 0;
   grid-area: 1 / 1 / 1 / 4;
@@ -50,8 +50,12 @@ const CampaignHero = ({
   }
   const bbox = turf.bbox(geojson)
 
+  const containerRef = useRef()
+  const { height } = useContainerDimensions(containerRef)
+
   return (
     <section
+      ref={containerRef}
       data-cy="campaign-hero"
       style={{
         display: `grid`,
@@ -63,7 +67,7 @@ const CampaignHero = ({
     >
       <Map
         style={{
-          height: `60rem`,
+          height: `calc(${height}px + 7rem`,
           marginTop: `-7rem`,
           zIndex: -1,
           gridArea: `1 / 1 / 1 / 4`,
@@ -74,7 +78,7 @@ const CampaignHero = ({
         </GeoJsonSource>
       </Map>
 
-      <BackgroundGradient />
+      <BackgroundGradient height={height} />
 
       <div
         style={{
