@@ -13,6 +13,7 @@ import PlatformSection from "./platform-section"
 import TimelineSection from "./timeline-section"
 import DataSection from "./data-section"
 import ProgramInfoSection from "./program-info-section"
+import OtherResourcesSection from "./other-resources-section"
 import MaintenanceSection from "../../components/maintenance-section"
 
 const CampaignTemplate = ({ data: { campaign }, path }) => {
@@ -61,7 +62,7 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
       nav: "Missions",
       component: MissionSection,
       props: {
-        missions: campaign.missions.split(", ").filter(x => x),
+        missions: campaign.missions.split(",").filter(x => x),
       },
     },
     focus: {
@@ -113,6 +114,13 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
         publicationLink: campaign.publicationLink,
       },
     },
+    "other-resources": {
+      nav: "Other",
+      component: OtherResourcesSection,
+      props: {
+        resources: campaign.resources.split("\n").filter(x => x),
+      },
+    },
   }
 
   return (
@@ -160,6 +168,7 @@ export const query = graphql`
       ...deploymentFields
       ...dataFields
       ...fundingFields
+      ...resourceFields
       uuid
     }
   }
@@ -284,6 +293,7 @@ CampaignTemplate.propTypes = {
         })
       ).isRequired,
       partnerWebsite: PropTypes.string,
+      resources: PropTypes.string,
       uuid: PropTypes.string.isRequired,
     }).isRequired,
   }).isRequired,

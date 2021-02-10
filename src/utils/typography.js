@@ -55,9 +55,7 @@ const typography = new Typography({
         marginTop: rhythm(0.5),
         marginBottom: rhythm(1),
       },
-      // children ol, ul
-      "li>ol,li>ul": {
-        marginLeft: "20px",
+      li: {
         marginBottom: 0,
       },
       p: {

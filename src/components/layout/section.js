@@ -8,7 +8,7 @@ const Container = styled.section`
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   column-gap: 1rem;
-  row-gap: 3rem;
+  row-gap: 2rem;
   position: relative;
 
   margin: ${props => (props.isLight ? `0 -6rem` : 0)};
