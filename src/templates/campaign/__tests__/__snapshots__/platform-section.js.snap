@@ -22,24 +22,20 @@ exports[`Platform Section displays content 1`] = `
 .c3.c3 {
   margin: 0.2rem 0.5rem;
   padding: 0;
-  font-weight: 600;
-  color: rgba(255,255,255,1);
+  color: hsla(0,0%,100%,0.9);
   opacity: 1;
   border: 0;
   background: rgba(255,255,255,0);
-  text-transform: uppercase;
   text-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
 }
 
 .c4.c4 {
   margin: 0.2rem 0.5rem;
   padding: 0;
-  font-weight: 600;
-  color: rgba(255,255,255,1);
+  color: hsla(0,0%,100%,0.9);
   opacity: 0.6;
   border: 0;
   background: rgba(255,255,255,0);
-  text-transform: uppercase;
   text-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
 }
 

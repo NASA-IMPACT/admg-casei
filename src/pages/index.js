@@ -23,6 +23,7 @@ const IndexPage = ({ data }) => {
         title={data.site.siteMetadata.title}
         description={data.site.siteMetadata.description}
         backgroundImage={data.heroImage}
+        textToImageRatio={[6, 6]}
         id="home"
       />
       <PageBody id="home">
@@ -83,25 +84,21 @@ const IndexPage = ({ data }) => {
               <SectionHeader
                 tagline="explore"
                 headline="Platforms"
+                subline="From aircrafts to balloons, from sensors to plaftorms, it
+                takes a lot to understand earth."
                 id="platforms"
               />
-              <div>
-                <p style={{ marginBottom: `2rem` }}>
-                  From aircrafts to balloons, from sensors to plaftorms, it
-                  takes a lot to understand earth.
-                </p>
-                <Link
-                  to="/explore"
-                  state={{ defaultExploreCategory: "platforms" }}
-                  style={{
-                    border: `1px solid ${theme.color.base}`,
-                    padding: `1rem 5rem`,
-                    textTransform: `uppercase`,
-                  }}
-                >
-                  Explore
-                </Link>
-              </div>
+              <Link
+                to="/explore"
+                state={{ defaultExploreCategory: "platforms" }}
+                style={{
+                  border: `1px solid ${theme.color.base}`,
+                  padding: `1rem 5rem`,
+                  textTransform: `uppercase`,
+                }}
+              >
+                Explore
+              </Link>
             </div>
           </SectionContent>
         </Section>

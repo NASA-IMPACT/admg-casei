@@ -39,7 +39,9 @@ export const InstrumentsGrid = ({ measurementTypes }) => {
               textAlign: `center`,
             }}
           >
-            {measurementType.longname || measurementType.shortname}
+            <label>
+              {measurementType.longname || measurementType.shortname}
+            </label>
           </div>
         </Link>
       ))}

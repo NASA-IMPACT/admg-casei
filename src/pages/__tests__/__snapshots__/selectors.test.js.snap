@@ -166,8 +166,6 @@ exports[`Explore page renders correctly 1`] = `
       <div
         style={
           Object {
-            "fontSize": "1.5rem",
-            "lineHeight": "1.5rem",
             "margin": 0,
             "zIndex": 100,
           }
@@ -177,46 +175,43 @@ exports[`Explore page renders correctly 1`] = `
           href="/"
           style={
             Object {
+              "alignItems": "center",
               "columnGap": "1rem",
               "display": "grid",
               "gridTemplateColumns": "3rem auto",
-              "gridTemplateRows": "1.5rem 1.5rem",
               "textDecoration": "none",
             }
           }
         >
+          <img
+            alt="NASA | CASEI logo"
+            fluid={
+              Object {
+                "aspectRatio": 1,
+                "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsSAAALEgHS3X78AAACjElEQVQ4y2WVWW/MURjGZ7TWTi0htmmj2thFXbQuVAixlbQkgxJBkdAQtdXWZSpVVUtpIqSJihAJiStbQiTc+AJ8BnHjO8z4PfKc5Pj3n/zmPetz3nPe95xJFYvFlNCHHZfyR7kcGqG9UChcx96AC7AHFoZx9KVT8ZcUw6bhFNyHQ0xYDhWU58EqaIE+yEO155QGnaTYXHgITa4vgp0wHapiR1hkDW3dY5yLxGbCa3jD4JzbOuALXIU/cNweLolENsIxmBErlyIyDDWua7sdLkvkNGShC34z7hZ2Asgehss6plhQjbsS7reFLSFwVsEJ23KQvsFW9w9SXh0mToSPOj86SizeBEe0cmKBc7CUcUPYKbAMXipw2B3/FuBnPQ0jWK064PPYbGrpO6BFLTpI/QUoqrvhO9S7rxY6VWhXxY2KaDaKpDz94b4W6vIwi32AzckjeAbzPaZPk/qdLoreXXgLSolp8t4Dj3q7Tc7BUWUHKD9/wQaPy+vnJsyGtY7aU90ElzXxiXdxBc5oLE7sx553pEeoZ2LBizSscEMNjI+S+r0T/XHkbT2shGvMW+yA9rivP+XVtrhTHjR7a1WwHT7APW1RWRBFXZHtVtLTrmhP1fEFr3o9qNfp0uPcqsC2+RjKUonPZ/sVFsAmZUjo0HlVwza4BCctHrZZbtugI9KjAZMduNswi4XvYOcEQQXhkcvh8FuhLvJGWTDkre6DYXjl43inCxEGlkQ5OODyXiUxrHO9TGKJ16bBu/ikbPjvPY1Ec/ZC13ESVEaPbWf0MmUQVDrpQTmRfFuTonXKLR94paMr8eeOfAY+w0/aW6P56TGqQdRbanRadFEeBeVkHqv7flBBCULhb0BafwG7wPZR6IGaZQAAAABJRU5ErkJggg==",
+                "originalImg": "/static/c98d88bae1ac1d803f877ce6657b89ab/73f23/logo.png",
+                "originalName": "logo.png",
+                "presentationHeight": 62,
+                "presentationWidth": 62,
+                "sizes": "(max-width: 62px) 100vw, 62px",
+                "src": "/static/c98d88bae1ac1d803f877ce6657b89ab/73f23/logo.png",
+                "srcSet": "/static/c98d88bae1ac1d803f877ce6657b89ab/73f23/logo.png 62w",
+                "srcSetWebp": "/static/c98d88bae1ac1d803f877ce6657b89ab/766b3/logo.webp 62w",
+                "srcWebp": "/static/c98d88bae1ac1d803f877ce6657b89ab/766b3/logo.webp",
+                "tracedSVG": "data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='400'%20height='400'%20viewBox='0%200%20400%20400'%20preserveAspectRatio='none'%3e%3cpath%20d='M174%201l-2%202%2029%201%2029-1-2-2c1-1-8-1-27-1s-28%200-27%201m-14%2012c-1%202%201%203%2011%203%208%200%2011-1%2012-2%203-2%200-3-12-3-8%200-10%200-11%202m52-1c-5%202%201%203%2013%204%2012%200%2015-1%2014-3s-23-3-27-1m-60%20105v13l3-2c3-4%203-17%200-22l-2-3-1%2014m-71%2017l1%203c2%201%2036%202%2051%201l1-2c0-2-1-2-4-2H81m-15%2013H55c-8%200-10%201-10%202%200%202%201%202%2014%202l14-1c0-2-6-5-7-3m-54%2014v27c2%208%205-14%204-24-1-4-3-5-4-3m373%202c-1%204%201%2020%202%2022%202%202%203-3%203-15%200-8-1-10-2-10l-3%203M3%20172l-2%202c-1-1-1%207-1%2027%200%2018%200%2027%201%2026l2%202%201-28a842%20842%200%2000-1-29m394%2028c0%2027%200%2031%202%2028s2-52%200-55-2%201-2%2027M89%20179H73c-14%200-15%200-15%202%200%203%201%203%205%202h20c4-1%206-2%207-1%202%201%204%200%204-2s-4-3-5-1m298%2035l-1%2014c0%2012%200%2014%202%2013s2-3%202-13c0-14-1-17-3-14m-375%204c-2%205-1%2022%201%2023s3-2%203-12c0-7-1-10-2-12-2-1-2-1-2%201m48%201l7%201h18c3%201%204%201%207-1l2-2H76c-17%200-17%200-16%202m101%20167l-1%202c1%203%2033%203%2035%200%201-1%200-1-2-1-6-2-30-2-32-1m56%200c-2%201-3%202-2%203%203%202%2025%201%2026-1v-2h-24m-44%2013c3%202%2052%202%2055%200s-1-2-28-2c-26%200-30%200-27%202'%20fill='%23d3d3d3'%20fill-rule='evenodd'/%3e%3c/svg%3e",
+              }
+            }
+            src="test-image.png"
+          />
           <div
             style={
               Object {
-                "gridArea": "1 / 1 / 3 / 2",
+                "fontSize": "1.5rem",
               }
             }
           >
-            <img
-              alt="NASA | CASEI logo"
-              fluid={
-                Object {
-                  "aspectRatio": 1,
-                  "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsSAAALEgHS3X78AAACjElEQVQ4y2WVWW/MURjGZ7TWTi0htmmj2thFXbQuVAixlbQkgxJBkdAQtdXWZSpVVUtpIqSJihAJiStbQiTc+AJ8BnHjO8z4PfKc5Pj3n/zmPetz3nPe95xJFYvFlNCHHZfyR7kcGqG9UChcx96AC7AHFoZx9KVT8ZcUw6bhFNyHQ0xYDhWU58EqaIE+yEO155QGnaTYXHgITa4vgp0wHapiR1hkDW3dY5yLxGbCa3jD4JzbOuALXIU/cNweLolENsIxmBErlyIyDDWua7sdLkvkNGShC34z7hZ2Asgehss6plhQjbsS7reFLSFwVsEJ23KQvsFW9w9SXh0mToSPOj86SizeBEe0cmKBc7CUcUPYKbAMXipw2B3/FuBnPQ0jWK064PPYbGrpO6BFLTpI/QUoqrvhO9S7rxY6VWhXxY2KaDaKpDz94b4W6vIwi32AzckjeAbzPaZPk/qdLoreXXgLSolp8t4Dj3q7Tc7BUWUHKD9/wQaPy+vnJsyGtY7aU90ElzXxiXdxBc5oLE7sx553pEeoZ2LBizSscEMNjI+S+r0T/XHkbT2shGvMW+yA9rivP+XVtrhTHjR7a1WwHT7APW1RWRBFXZHtVtLTrmhP1fEFr3o9qNfp0uPcqsC2+RjKUonPZ/sVFsAmZUjo0HlVwza4BCctHrZZbtugI9KjAZMduNswi4XvYOcEQQXhkcvh8FuhLvJGWTDkre6DYXjl43inCxEGlkQ5OODyXiUxrHO9TGKJ16bBu/ikbPjvPY1Ec/ZC13ESVEaPbWf0MmUQVDrpQTmRfFuTonXKLR94paMr8eeOfAY+w0/aW6P56TGqQdRbanRadFEeBeVkHqv7flBBCULhb0BafwG7wPZR6IGaZQAAAABJRU5ErkJggg==",
-                  "originalImg": "/static/c98d88bae1ac1d803f877ce6657b89ab/73f23/logo.png",
-                  "originalName": "logo.png",
-                  "presentationHeight": 62,
-                  "presentationWidth": 62,
-                  "sizes": "(max-width: 62px) 100vw, 62px",
-                  "src": "/static/c98d88bae1ac1d803f877ce6657b89ab/73f23/logo.png",
-                  "srcSet": "/static/c98d88bae1ac1d803f877ce6657b89ab/73f23/logo.png 62w",
-                  "srcSetWebp": "/static/c98d88bae1ac1d803f877ce6657b89ab/766b3/logo.webp 62w",
-                  "srcWebp": "/static/c98d88bae1ac1d803f877ce6657b89ab/766b3/logo.webp",
-                  "tracedSVG": "data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='400'%20height='400'%20viewBox='0%200%20400%20400'%20preserveAspectRatio='none'%3e%3cpath%20d='M174%201l-2%202%2029%201%2029-1-2-2c1-1-8-1-27-1s-28%200-27%201m-14%2012c-1%202%201%203%2011%203%208%200%2011-1%2012-2%203-2%200-3-12-3-8%200-10%200-11%202m52-1c-5%202%201%203%2013%204%2012%200%2015-1%2014-3s-23-3-27-1m-60%20105v13l3-2c3-4%203-17%200-22l-2-3-1%2014m-71%2017l1%203c2%201%2036%202%2051%201l1-2c0-2-1-2-4-2H81m-15%2013H55c-8%200-10%201-10%202%200%202%201%202%2014%202l14-1c0-2-6-5-7-3m-54%2014v27c2%208%205-14%204-24-1-4-3-5-4-3m373%202c-1%204%201%2020%202%2022%202%202%203-3%203-15%200-8-1-10-2-10l-3%203M3%20172l-2%202c-1-1-1%207-1%2027%200%2018%200%2027%201%2026l2%202%201-28a842%20842%200%2000-1-29m394%2028c0%2027%200%2031%202%2028s2-52%200-55-2%201-2%2027M89%20179H73c-14%200-15%200-15%202%200%203%201%203%205%202h20c4-1%206-2%207-1%202%201%204%200%204-2s-4-3-5-1m298%2035l-1%2014c0%2012%200%2014%202%2013s2-3%202-13c0-14-1-17-3-14m-375%204c-2%205-1%2022%201%2023s3-2%203-12c0-7-1-10-2-12-2-1-2-1-2%201m48%201l7%201h18c3%201%204%201%207-1l2-2H76c-17%200-17%200-16%202m101%20167l-1%202c1%203%2033%203%2035%200%201-1%200-1-2-1-6-2-30-2-32-1m56%200c-2%201-3%202-2%203%203%202%2025%201%2026-1v-2h-24m-44%2013c3%202%2052%202%2055%200s-1-2-28-2c-26%200-30%200-27%202'%20fill='%23d3d3d3'%20fill-rule='evenodd'/%3e%3c/svg%3e",
-                }
-              }
-              src="test-image.png"
-            />
+            NASA | CASEI
           </div>
-          NASA | CASEI
-          <p>
-            Catalog of Archived Suborbital Earth Science Investigations
-          </p>
         </a>
       </div>
       <div
@@ -248,6 +243,7 @@ exports[`Explore page renders correctly 1`] = `
               style={
                 Object {
                   "margin": "0 1rem 0 0",
+                  "textTransform": "uppercase",
                 }
               }
             >
@@ -261,6 +257,7 @@ exports[`Explore page renders correctly 1`] = `
               style={
                 Object {
                   "margin": "0 1rem 0 0",
+                  "textTransform": "uppercase",
                 }
               }
             >
@@ -274,6 +271,7 @@ exports[`Explore page renders correctly 1`] = `
               style={
                 Object {
                   "margin": "0 1rem 0 0",
+                  "textTransform": "uppercase",
                 }
               }
             >
@@ -287,6 +285,7 @@ exports[`Explore page renders correctly 1`] = `
               style={
                 Object {
                   "margin": "0 1rem 0 0",
+                  "textTransform": "uppercase",
                 }
               }
             >
@@ -926,7 +925,7 @@ exports[`Explore page renders correctly 1`] = `
               "color": "hsla(0,0%,100%,0.9)",
               "display": "flex",
               "margin": "0.25rem 0.5rem",
-              "padding": "0 0.5rem",
+              "padding": "0.25rem 0.5rem",
             }
           }
         >
@@ -1104,7 +1103,7 @@ exports[`Explore page renders correctly 1`] = `
             Object {
               "display": "grid",
               "gap": "1rem",
-              "gridTemplateColumns": "repeat(auto-fill, minmax(270px, 1fr))",
+              "gridTemplateColumns": "repeat(auto-fill, minmax(15rem, 1fr))",
             }
           }
         >
