@@ -36,7 +36,7 @@ const DataSection = ({ id, dois }) => {
     <Section id={id}>
       <SectionHeader headline="Data Products" id={id} />
       <SectionContent>
-        {dois.length > 0 ? (
+        {dois.length ? (
           <>
             {platformList.concat(instrumentList).length > 2 && (
               <div
