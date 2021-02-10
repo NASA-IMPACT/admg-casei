@@ -11,7 +11,7 @@ const ListLink = props => (
         label={props.children}
         url={props.to}
         id={props.children}
-        isLight
+        isLight={props.isLight}
       />
     ) : (
       <p className="placeholder">{props.children}</p> // fallback for invalid url
@@ -22,7 +22,7 @@ const ListLink = props => (
 ListLink.propTypes = {
   to: PropTypeIsUrl,
   noPadding: PropTypes.bool,
-  noBorder: PropTypes.bool,
+  isLight: PropTypes.bool,
   children: PropTypes.string.isRequired,
 }
 

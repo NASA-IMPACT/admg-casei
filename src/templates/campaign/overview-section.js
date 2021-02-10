@@ -103,16 +103,24 @@ const OverviewSection = ({
         </li>
 
         {repositoryWebsite && (
-          <ListLink to={repositoryWebsite}>Repository website</ListLink>
+          <ListLink isLight to={repositoryWebsite}>
+            Repository website
+          </ListLink>
         )}
         {projectWebsite && (
-          <ListLink to={projectWebsite}>Project website</ListLink>
+          <ListLink isLight to={projectWebsite}>
+            Project website
+          </ListLink>
         )}
         {tertiaryWebsite && (
-          <ListLink to={tertiaryWebsite}>Tertiary website</ListLink>
+          <ListLink isLight to={tertiaryWebsite}>
+            Tertiary website
+          </ListLink>
         )}
         {publicationLink && (
-          <ListLink to={publicationLink}>Overview Publication</ListLink>
+          <ListLink isLight to={publicationLink}>
+            Overview Publication
+          </ListLink>
         )}
       </ul>
     </SectionContent>
