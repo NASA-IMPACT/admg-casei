@@ -29,6 +29,19 @@ describe("Platform", () => {
 
     cy.get("[data-cy=overview-section]").should("exist")
 
+    cy.get("[data-cy=overview-section]")
+      .find("h2")
+      .should("have.text", "Overview")
+      .and("not.be.visible")
+
+    cy.get("[data-cy=overview-section]")
+      .find("h3")
+      .first()
+      .should("have.text", "Overview")
+      .and("be.visible")
+
+    cy.get("[data-cy=link-list]").find("li").should("have.length.within", 0, 2)
+
     cy.get("[data-cy=overview-section]").first().find("p").should("exist")
 
     cy.get("[data-cy=data-section]").should("exist")
