@@ -1,20 +1,20 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
+import VisuallyHidden from "@reach/visually-hidden"
+
 import DefinitionList from "../../components/layout/definition-list"
-import Label from "../../components/label"
 import { Section, SectionHeader, SectionContent } from "../../components/layout"
 import ExternalLink from "../../components/external-link"
 import { isUrl } from "../../utils/helpers"
+import theme from "../../utils/theme"
 
 function BackgroundListItem({ id, label, children }) {
   return (
-    <div style={{ padding: `1rem 0` }}>
-      <Label id={id} showBorder>
-        {label}
-      </Label>
-      {children}
-    </div>
+    <li style={{ padding: `1rem 0` }} data-cy={`${id}-label`}>
+      <label style={{ color: theme.color.grayDark }}>{label}</label>
+      <p>{children}</p>
+    </li>
   )
 }
 
@@ -37,7 +37,10 @@ function Background({
   repositories,
 }) {
   return (
-    <div data-cy="instrument-background">
+    <ul
+      style={{ margin: 0, listStyle: `none` }}
+      data-cy="instrument-background"
+    >
       <BackgroundListItem id="lead-investigator" label="Lead Investigator">
         {leadInvestigator}
       </BackgroundListItem>
@@ -74,15 +77,16 @@ function Background({
             label="Overview Publication"
             url={overviewPublication}
             id="overview-publication"
+            isLight
           />
         ) : (
           "N/A"
         )}
       </BackgroundListItem>
-      <BackgroundListItem
-        id="repositories"
-        label={repositories.length === 1 ? "Repository" : "Repositories"}
-      >
+      <li style={{ padding: `1rem 0` }} data-cy="repositories-label">
+        <label style={{ color: theme.color.grayDark }}>
+          {repositories.length === 1 ? "Repository" : "Repositories"}
+        </label>
         {repositories.length > 0 ? (
           <ul style={{ margin: `0` }}>
             {repositories.map(repository => (
@@ -98,8 +102,8 @@ function Background({
         ) : (
           <p>No repository available</p>
         )}
-      </BackgroundListItem>
-    </div>
+      </li>
+    </ul>
   )
 }
 
@@ -118,7 +122,7 @@ Background.propTypes = {
   ),
 }
 
-export default function About({
+export default function OverviewSection({
   id,
   measurementType,
   radiometricFrequency,
@@ -136,14 +140,16 @@ export default function About({
   overviewPublication,
   repositories,
 }) {
-  const links = onlineInformation ? onlineInformation.split("\n") : null
-
   return (
-    <Section id={id}>
-      <SectionHeader headline="Instrument Details" id={id} />
+    <Section id={id} isLight>
+      <VisuallyHidden>
+        <SectionHeader headline="Overview" id={id} />
+      </VisuallyHidden>
       <SectionContent columns={[1, 8]}>
+        <h3>Instrument Details</h3>
         <DefinitionList
           id="instrument"
+          isLight
           list={[
             {
               title: "Measurement Type",
@@ -187,6 +193,7 @@ export default function About({
                   label={calibration}
                   url={calibration}
                   id="calibration-doi"
+                  isLight
                 />
               ) : (
                 "N/A"
@@ -196,21 +203,20 @@ export default function About({
               title: "Online Information",
               content: onlineInformation ? (
                 <ul style={{ margin: `0` }}>
-                  {links
-                    .map(link => link.replace(",", ""))
-                    .map(link => (
-                      <li key={link} style={{ listStyle: `none` }}>
-                        {isUrl(link) ? (
-                          <ExternalLink
-                            label={link}
-                            url={link}
-                            id="online-information"
-                          />
-                        ) : (
-                          <p className="placeholder">{link}</p> // fallback for invalid url
-                        )}
-                      </li>
-                    ))}
+                  {onlineInformation.map(link => (
+                    <li key={link} style={{ listStyle: `none` }}>
+                      {isUrl(link) ? (
+                        <ExternalLink
+                          label={link}
+                          url={link}
+                          id="online-information"
+                          isLight
+                        />
+                      ) : (
+                        <p className="placeholder">{link}</p> // fallback for invalid url
+                      )}
+                    </li>
+                  ))}
                 </ul>
               ) : (
                 "N/A"
@@ -235,7 +241,7 @@ export default function About({
   )
 }
 
-About.propTypes = {
+OverviewSection.propTypes = {
   id: PropTypes.string,
   collectionPeriods: PropTypes.arrayOf(PropTypes.string),
   measurementType: PropTypes.shape({
@@ -266,7 +272,7 @@ About.propTypes = {
   fundingSource: PropTypes.string,
   leadInvestigator: PropTypes.string,
   technicalContact: PropTypes.string,
-  onlineInformation: PropTypes.string,
+  onlineInformation: PropTypes.arrayOf(PropTypes.string),
   overviewPublication: PropTypes.string,
   repositories: PropTypes.arrayOf(
     PropTypes.shape({

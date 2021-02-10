@@ -22,10 +22,15 @@ describe("Instrument", () => {
     cy.get("[data-cy=instrument-hero]").first().find("img").should("exist")
     cy.get("[data-cy=instrument-hero]").first().find("img").should("be.visible")
 
-    cy.get("[data-cy=about-section]").should("exist")
+    cy.get("[data-cy=overview-section]").should("exist")
 
-    cy.get("[data-cy=about-section]")
+    cy.get("[data-cy=overview-section]")
       .find("h2")
+      .should("have.text", "Overview")
+      .and("not.be.visible")
+
+    cy.get("[data-cy=overview-section]")
+      .find("h3")
       .should("have.text", "Instrument Details")
 
     cy.get("[data-cy=instrument-definition-list]").should("exist")

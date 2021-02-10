@@ -6,7 +6,7 @@ import Layout, { PageBody } from "../../components/layout"
 import SEO from "../../components/seo"
 import InstrumentHero from "./hero"
 import InpageNav from "../../components/inpage-nav"
-import About from "./about"
+import OverviewSection from "./overview-section"
 import Entities from "./entities"
 import DataSection from "./data-section"
 
@@ -25,9 +25,9 @@ const InstrumentTemplate = ({ data: { instrument }, path }) => {
     }
   })
   const sections = {
-    about: {
+    overview: {
       nav: "Instrument Details",
-      component: About,
+      component: OverviewSection,
       props: {
         measurementType: instrument.measurementType,
         radiometricFrequency: instrument.radiometricFrequency,
@@ -41,7 +41,9 @@ const InstrumentTemplate = ({ data: { instrument }, path }) => {
         fundingSource: instrument.fundingSource,
         leadInvestigator: instrument.leadInvestigator,
         technicalContact: instrument.technicalContact,
-        onlineInformation: instrument.onlineInformation,
+        onlineInformation: instrument.onlineInformation
+          .split("\n")
+          .filter(x => x),
         overviewPublication: instrument.overviewPublication,
         repositories: instrument.repositories,
       },
