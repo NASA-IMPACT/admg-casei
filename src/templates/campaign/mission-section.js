@@ -25,7 +25,7 @@ const MissionSection = ({ id, missions }) => (
               padding: `1.5rem`,
               display: `flex`,
               gap: `1.5rem`,
-              alignItems: `start`,
+              alignItems: `center`,
               backgroundColor: theme.color.secondary,
             }}
             data-cy="linked-mission"
