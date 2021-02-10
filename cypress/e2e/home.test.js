@@ -158,8 +158,10 @@ describe("Homepage", () => {
         expect($h2).to.have.length(1)
       })
       .then($h2 => {
-        expect($h2, "text content").to.have.text("Platforms")
+        expect($h2, "text content").to.have.text("Platforms").click()
       })
+    cy.get("[data-cy=platforms-card]").find("big").contains("B-200")
+    cy.go("back")
   })
 
   it("an intrument can be selected", () => {
@@ -187,13 +189,12 @@ describe("Homepage", () => {
 
     cy.get("[data-cy=tabbar]").contains("button", "Instruments").click()
 
-    // skipping, can't get it to pass on ci
-    // cy.get("[data-cy=filter-chip]")
-    //   .should("have.length", 1)
-    //   .and("have.text", "type: Spectrometer/Radiometer")
+    cy.get("[data-cy=filter-chip]")
+      .should("have.length", 1)
+      .and("have.text", "type: Spectrometer/Radiometer")
 
-    // cy.get("[data-cy=instruments-card]").should($div => {
-    //   expect($div, "70 or more instrument cards ").to.have.length.gte(70)
-    // })
+    cy.get("[data-cy=instruments-card]").should($div => {
+      expect($div, "70 or more instrument cards ").to.have.length.gte(70)
+    })
   })
 })
