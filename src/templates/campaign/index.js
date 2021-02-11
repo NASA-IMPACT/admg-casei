@@ -216,6 +216,7 @@ CampaignTemplate.propTypes = {
           id: PropTypes.string.isRequired,
           shortname: PropTypes.string.isRequired,
           longname: PropTypes.string.isRequired,
+          url: PropTypes.string.isRequired,
         }).isRequired
       ).isRequired,
       missions: PropTypes.string,
