@@ -37,7 +37,9 @@ export default function Explore({ data, location }) {
   const { selectedFilterId, defaultExploreCategory } = location.state || {}
 
   const [isLoading, setLoading] = useState(false)
-  const [selectedCategory, setSelectedCategory] = useState("campaigns")
+  const [selectedCategory, setSelectedCategory] = useState(
+    defaultExploreCategory || "campaigns"
+  )
   const [sortOrder, setSortOrder] = useState({
     campaigns: "most recent",
     instruments: "most used",
@@ -60,15 +62,6 @@ export default function Explore({ data, location }) {
       setFilter([])
     }
   }, [selectedFilterId])
-
-  useEffect(() => {
-    // update based on passed state
-    if (defaultExploreCategory) setSelectedCategory(defaultExploreCategory)
-    return () => {
-      // cleanup
-      setSelectedCategory("campaigns")
-    }
-  }, [defaultExploreCategory])
 
   const campaignList = useCampaignList(
     allCampaign.list,
