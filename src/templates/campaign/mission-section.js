@@ -3,7 +3,6 @@ import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
 import { Section, SectionHeader, SectionContent } from "../../components/layout"
-import { CampaignIcon } from "../../icons"
 import theme from "../../utils/theme"
 
 const MissionSection = ({ id, missions }) => (
@@ -30,7 +29,6 @@ const MissionSection = ({ id, missions }) => (
             }}
             data-cy="linked-mission"
           >
-            <CampaignIcon size="small" />
             <label>{mission}</label>
           </div>
         ))
