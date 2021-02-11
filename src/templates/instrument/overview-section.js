@@ -4,7 +4,12 @@ import { graphql } from "gatsby"
 import VisuallyHidden from "@reach/visually-hidden"
 
 import DefinitionList from "../../components/layout/definition-list"
-import { Section, SectionHeader, SectionContent } from "../../components/layout"
+import {
+  Section,
+  SectionHeader,
+  SectionContent,
+  ListLink,
+} from "../../components/layout"
 import ExternalLink from "../../components/external-link"
 import { isUrl } from "../../utils/helpers"
 import theme from "../../utils/theme"
@@ -88,15 +93,11 @@ function Background({
           {repositories.length === 1 ? "Repository" : "Repositories"}
         </label>
         {repositories.length > 0 ? (
-          <ul style={{ margin: `0` }}>
-            {repositories.map(repository => (
-              <li
-                style={{ listStyle: `none`, paddingBottom: `4px` }}
-                key={repository.id}
-                data-cy="repository"
-              >
-                <p>{repository.longname}</p>
-              </li>
+          <ul style={{ margin: 0, listStyle: `none` }}>
+            {repositories.map(repo => (
+              <ListLink key={repo.id} to={repo.url} isLight noPadding>
+                {repo.longname}
+              </ListLink>
             ))}
           </ul>
         ) : (
@@ -278,6 +279,7 @@ OverviewSection.propTypes = {
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       longname: PropTypes.string.isRequired,
+      url: PropTypes.string.isRequired,
     })
   ),
 }
@@ -315,6 +317,7 @@ export const instrumentDetailFields = graphql`
     repositories {
       id
       longname: long_name
+      url: notes_public
     }
   }
 `

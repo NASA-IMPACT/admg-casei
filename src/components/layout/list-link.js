@@ -5,7 +5,7 @@ import ExternalLink from "../external-link"
 import { isUrl, PropTypeIsUrl } from "../../utils/helpers"
 
 const ListLink = props => (
-  <li style={{ padding: props.noPadding ? 0 : `1rem` }}>
+  <li style={{ padding: props.noPadding ? 0 : `1rem 0` }}>
     {isUrl(props.to) ? (
       <ExternalLink
         label={props.children}

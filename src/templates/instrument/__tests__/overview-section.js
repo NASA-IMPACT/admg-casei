@@ -42,10 +42,12 @@ const repositories = [
   {
     id: "test",
     longname: "test",
+    url: "http://www.example.com",
   },
   {
     id: "test2",
     longname: "test2",
+    url: "http://www.example.com",
   },
 ]
 

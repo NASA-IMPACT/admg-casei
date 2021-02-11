@@ -172,6 +172,7 @@ InstrumentTemplate.propTypes = {
         PropTypes.shape({
           id: PropTypes.string.isRequired,
           longname: PropTypes.string.isRequired,
+          url: PropTypes.string.isRequired,
         })
       ),
       platforms: PropTypes.arrayOf(

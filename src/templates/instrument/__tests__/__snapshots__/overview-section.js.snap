@@ -443,35 +443,52 @@ exports[`Overview Section displays content 1`] = `
         <ul
           style={
             Object {
-              "margin": "0",
+              "listStyle": "none",
+              "margin": 0,
             }
           }
         >
           <li
-            data-cy="repository"
             style={
               Object {
-                "listStyle": "none",
-                "paddingBottom": "4px",
+                "padding": 0,
               }
             }
           >
-            <p>
+            <a
+              data-cy="test-link"
+              href="http://www.example.com"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "#15418C",
+                }
+              }
+              target="_blank"
+            >
               test
-            </p>
+            </a>
           </li>
           <li
-            data-cy="repository"
             style={
               Object {
-                "listStyle": "none",
-                "paddingBottom": "4px",
+                "padding": 0,
               }
             }
           >
-            <p>
+            <a
+              data-cy="test2-link"
+              href="http://www.example.com"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "#15418C",
+                }
+              }
+              target="_blank"
+            >
               test2
-            </p>
+            </a>
           </li>
         </ul>
       </li>
