@@ -441,6 +441,7 @@ exports[`Overview Section displays content 1`] = `
           Repositories
         </label>
         <ul
+          data-cy="repository-list"
           style={
             Object {
               "listStyle": "none",

@@ -79,7 +79,7 @@ const DataSection = ({ id, dois }) => {
             <div
               style={{
                 display: `grid`,
-                gridTemplateColumns: `1fr 1fr 1fr`,
+                gridTemplateColumns: `repeat(auto-fit, minmax(18rem, 1fr))`,
                 gap: `1rem`,
               }}
             >
@@ -90,13 +90,12 @@ const DataSection = ({ id, dois }) => {
                     display: `flex`,
                     flexDirection: `column`,
                     backgroundColor: theme.color.secondary,
-                    padding: `0 1rem 0.71rem 1rem`,
+                    gap: `0.5rem`,
+                    padding: `1.5rem`,
                   }}
                   data-cy="data-product"
                 >
-                  <Label id="doi" color={theme.color.base}>
-                    {doi.longname}
-                  </Label>
+                  <label data-cy="doi-label">{doi.longname}</label>
                   <ExternalLink
                     label={doi.shortname}
                     url={`http://dx.doi.org/${doi.shortname}`}
@@ -110,7 +109,6 @@ const DataSection = ({ id, dois }) => {
                         display: `grid`,
                         gap: `1rem`,
                         gridTemplateColumns: `1fr 1fr`,
-                        padding: `.5rem`,
                       }}
                     >
                       <div data-cy="data-product-campaigns">
@@ -121,7 +119,6 @@ const DataSection = ({ id, dois }) => {
                           <Link
                             key={campaign.id}
                             to={`/campaign/${campaign.id}`}
-                            style={{ display: `inline-block` }}
                           >
                             <small>{campaign.longname}</small>
                           </Link>
@@ -136,25 +133,15 @@ const DataSection = ({ id, dois }) => {
                             key={platform.id}
                             to={`/platform/${platform.id}`}
                           >
-                            <small style={{ display: `inline-block` }}>
-                              {platform.longname}
-                            </small>
+                            <small>{platform.longname}</small>
                           </Link>
                         ))}
                       </div>
                     </div>
                   ) : (
-                    <div
-                      style={{
-                        flex: `2.618`,
-                        display: `grid`,
-                        padding: `1rem .5rem`,
-                      }}
-                    >
-                      <Label id="doi-campaign">
-                        No Related Campaigns or Platforms
-                      </Label>
-                    </div>
+                    <label data-cy="no-campaigns-label">
+                      No Related Campaigns or Platforms
+                    </label>
                   )}
                 </div>
               ))}
