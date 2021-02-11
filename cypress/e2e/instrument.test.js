@@ -48,9 +48,12 @@ describe("Instrument", () => {
     cy.get("[data-cy=instrument-manufacturer-label]").should("exist")
     cy.get("[data-cy=funding-source-label]").should("exist")
     cy.get("[data-cy=data-locations-label]").should("exist")
-    cy.get("[data-cy=repository]").should($li => {
-      expect($li, "item").to.have.length.of.at.least(1)
-    })
+    cy.get("[data-cy=repositories-label]").should("exist")
+    cy.get("[data-cy=repository-list]")
+      .children()
+      .should($li => {
+        expect($li, "item").to.have.length.of.at.least(1)
+      })
 
     cy.get("[data-cy=data-section]").should("exist")
 

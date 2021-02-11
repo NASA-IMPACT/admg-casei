@@ -93,7 +93,10 @@ function Background({
           {repositories.length === 1 ? "Repository" : "Repositories"}
         </label>
         {repositories.length > 0 ? (
-          <ul style={{ margin: 0, listStyle: `none` }}>
+          <ul
+            style={{ margin: 0, listStyle: `none` }}
+            data-cy="repository-list"
+          >
             {repositories.map(repo => (
               <ListLink key={repo.id} to={repo.url} isLight noPadding>
                 {repo.longname}
