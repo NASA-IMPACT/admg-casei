@@ -9,7 +9,7 @@ import ImageCaption from "./image-caption"
 import CampaignCard from "./cards/campaign-card"
 import { controlButtonLRStyle, ControlTextButton } from "./carousel-styles"
 import Accordion from "./accordion"
-import theme from "../utils/theme"
+import { colors, layout } from "../utils/theme"
 
 export default function CarouselAccordionCombo({
   id,
@@ -87,7 +87,7 @@ export default function CarouselAccordionCombo({
                 data-cy={id}
                 style={{
                   display: `grid`,
-                  gridTemplateColumns: `1fr minmax(auto,  ${theme.layout.maxWidth}) 1fr`,
+                  gridTemplateColumns: `1fr minmax(auto,  ${layout.maxWidth}) 1fr`,
                   width: `100vw`,
                   alignContent: `center`,
                 }}
@@ -196,7 +196,7 @@ function ImageCarousel({
           style={{
             width: `26rem`,
             height: `18rem`,
-            backgroundColor: `#303641`,
+            backgroundColor: colors.darkTheme.background,
             display: `flex`,
             alignItems: `center`,
             justifyContent: `center`,

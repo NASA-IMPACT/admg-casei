@@ -16,7 +16,7 @@ exports[`Platform Section displays content 1`] = `
 
 .c0.c0 > *,
 .c0.c0 h3 {
-  color: hsla(0,0%,100%,0.9);
+  color: #e9eaec;
 }
 
 .c1.c1 {
@@ -31,7 +31,7 @@ exports[`Platform Section displays content 1`] = `
 .c3.c3 {
   margin: 0.2rem 0.5rem;
   padding: 0;
-  color: hsla(0,0%,100%,0.9);
+  color: #e9eaec;
   opacity: 1;
   border: 0;
   background: rgba(255,255,255,0);
@@ -41,7 +41,7 @@ exports[`Platform Section displays content 1`] = `
 .c4.c4 {
   margin: 0.2rem 0.5rem;
   padding: 0;
-  color: hsla(0,0%,100%,0.9);
+  color: #e9eaec;
   opacity: 0.6;
   border: 0;
   background: rgba(255,255,255,0);
@@ -202,9 +202,9 @@ exports[`Platform Section displays content 1`] = `
                     style={
                       Object {
                         "background": "none",
-                        "borderColor": "#FFF",
+                        "borderColor": "#e9eaec",
                         "borderWidth": "0 0 1px 0",
-                        "color": "#FFF",
+                        "color": "#e9eaec",
                         "cursor": "pointer",
                         "display": "flex",
                         "fontWeight": "bold",
@@ -414,9 +414,9 @@ exports[`Platform Section displays content 1`] = `
                     style={
                       Object {
                         "background": "none",
-                        "borderColor": "#FFF",
+                        "borderColor": "#e9eaec",
                         "borderWidth": "0 0 1px 0",
-                        "color": "#FFF",
+                        "color": "#e9eaec",
                         "cursor": "pointer",
                         "display": "flex",
                         "fontWeight": "bold",
@@ -626,9 +626,9 @@ exports[`Platform Section displays content 1`] = `
                     style={
                       Object {
                         "background": "none",
-                        "borderColor": "#FFF",
+                        "borderColor": "#e9eaec",
                         "borderWidth": "0 0 1px 0",
-                        "color": "#FFF",
+                        "color": "#e9eaec",
                         "cursor": "pointer",
                         "display": "flex",
                         "fontWeight": "bold",

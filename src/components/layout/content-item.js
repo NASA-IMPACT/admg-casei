@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import ExternalLink from "../external-link"
-import theme from "../../utils/theme"
+import { colors } from "../../utils/theme"
 
 export default function ContentItem({
   id,
@@ -14,7 +14,9 @@ export default function ContentItem({
   return (
     <div data-cy={id}>
       <label
-        style={{ color: isLight ? theme.color.grayDark : theme.color.gray }}
+        style={{
+          color: isLight ? colors.lightTheme.altText : colors.darkTheme.altText,
+        }}
         data-cy={`${id}-label`}
       >
         {label}

@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 
-import theme from "../../utils/theme"
+import { colors } from "../../utils/theme"
 
 const Container = styled.section`
   display: grid;
@@ -15,10 +15,12 @@ const Container = styled.section`
   padding: ${props => (props.isLight ? `6rem` : 0)};
   margin-bottom: ${props => (props.isSpaced ? `6rem` : `6rem`)};
 
-  background-color: ${props => (props.isLight ? theme.color.white : `none`)};
+  background-color: ${props =>
+    props.isLight ? colors.lightTheme.background : `none`};
   > *,
   h3 {
-    color: ${props => (props.isLight ? theme.color.text : theme.color.base)};
+    color: ${props =>
+      props.isLight ? colors.lightTheme.text : colors.darkTheme.text};
   }
   /* TODO: think about a better approach to the dark vs. light theme switch within a page */
 `
@@ -50,7 +52,7 @@ export const SectionContent = styled.div`
   grid-column: ${({ columns = [1, 12] }) =>
     `${columns[0]} / span ${columns[1]}`};
   background-color: ${({ withBackground }) =>
-    withBackground ? theme.color.secondary : null};
+    withBackground ? colors.darkTheme.background : null};
   min-height: ${({ minHeight }) => (minHeight ? minHeight : null)};
 `
 

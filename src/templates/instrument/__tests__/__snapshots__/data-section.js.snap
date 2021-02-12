@@ -16,7 +16,7 @@ exports[`Data Section matches snapshot 1`] = `
 
 .c0.c0 > *,
 .c0.c0 h3 {
-  color: hsla(0,0%,100%,0.9);
+  color: #e9eaec;
 }
 
 .c1.c1 {

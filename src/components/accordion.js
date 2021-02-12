@@ -13,7 +13,7 @@ import {
 
 import Label from "./label"
 import { ChevronIcon, ArrowIcon } from "../icons"
-import theme from "../utils/theme"
+import { colors } from "../utils/theme"
 
 const RotatingContainer = styled.div`
   transition: transform 240ms ease-in-out;
@@ -46,9 +46,11 @@ export default function Accordion({ folds, id }) {
             <AccordionButton
               style={{
                 borderWidth: `0 0 1px 0`,
-                borderColor: `#FFF`,
+                borderColor: colors.darkTheme.text,
                 background: `none`,
-                color: indices.includes(index) ? theme.color.link : `#FFF`,
+                color: indices.includes(index)
+                  ? colors.darkTheme.linkText
+                  : colors.darkTheme.text,
                 width: `100%`,
                 textAlign: `left`,
                 cursor: `pointer`,
@@ -111,16 +113,16 @@ export default function Accordion({ folds, id }) {
             )}
             <Link
               to={`/instrument/${fold.id}`}
-              style={{ color: theme.color.link }}
+              style={{ color: colors.darkTheme.linkText }}
               data-cy="accordion-link"
             >
               <Label
                 id="accordion-link"
                 display="flex"
-                color={theme.color.link}
+                color={colors.darkTheme.linkText}
               >
                 Learn More
-                <ArrowIcon color={theme.color.link} />
+                <ArrowIcon color={colors.darkTheme.linkText} />
               </Label>
             </Link>
           </AccordionPanel>

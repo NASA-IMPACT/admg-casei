@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 
 import { AuthContext } from "../components/auth-provider"
 import { Section } from "./layout"
-import theme from "../utils/theme"
+import { colors } from "../utils/theme"
 
 const MaintenanceSection = ({ id, data }) => {
   const { isLoggedIn } = useContext(AuthContext)
@@ -18,7 +18,7 @@ const MaintenanceSection = ({ id, data }) => {
           to={`/edit/campaign/${id}`}
           state={{ data }}
           style={{
-            border: `1px solid ${theme.color.base}`,
+            border: `1px solid ${colors.darkTheme.text}`,
             padding: `1rem 5rem`,
             textTransform: `uppercase`,
           }}

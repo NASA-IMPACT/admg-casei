@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import Spinner from "react-spinkit"
 
-import theme from "../../utils/theme"
+import { colors } from "../../utils/theme"
 
 const ExploreSection = ({ isLoading, children }) => {
   return (
@@ -12,7 +12,7 @@ const ExploreSection = ({ isLoading, children }) => {
           style={{ display: `flex`, justifyContent: `space-around` }}
           data-cy="loading-indicator"
         >
-          <Spinner name="cube-grid" color={theme.color.base} />
+          <Spinner name="cube-grid" color={colors.darkTheme.text} />
         </div>
       ) : (
         <div

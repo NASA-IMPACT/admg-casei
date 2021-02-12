@@ -11,7 +11,7 @@ import FocusAreaGallery from "../components/focus-area-gallery"
 import { RegionCarousel } from "../components/home/region-carousel"
 import { GeophysicsGrid } from "../components/home/geophysics-grid"
 import { InstrumentsGrid } from "../components/home/instruments-grid"
-import theme from "../utils/theme"
+import { colors } from "../utils/theme"
 
 const IndexPage = ({ data }) => {
   return (
@@ -92,7 +92,7 @@ const IndexPage = ({ data }) => {
                 to="/explore"
                 state={{ defaultExploreCategory: "platforms" }}
                 style={{
-                  border: `1px solid ${theme.color.base}`,
+                  border: `1px solid ${colors.darkTheme.text}`,
                   padding: `1rem 5rem`,
                   textTransform: `uppercase`,
                 }}

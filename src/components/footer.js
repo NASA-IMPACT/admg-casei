@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
-import theme from "../utils/theme"
+import { colors, layout } from "../utils/theme"
 import Login from "./login"
 import ExternalLink from "./external-link"
 
@@ -25,12 +25,17 @@ const Footer = ({ shortname }) => {
   }
 
   return (
-    <footer style={{ marginTop: `5rem`, backgroundColor: `#262A31` }}>
+    <footer
+      style={{
+        marginTop: `5rem`,
+        backgroundColor: colors.darkTheme.background,
+      }}
+    >
       <div
         style={{
           margin: `5rem auto`,
-          maxWidth: theme.layout.maxWidth,
-          padding: `2rem ${theme.layout.pageMargin}`,
+          maxWidth: layout.maxWidth,
+          padding: `2rem ${layout.pageMargin}`,
           flexShrink: 0,
           display: `grid`,
           gap: `1rem`,
@@ -170,8 +175,7 @@ const Footer = ({ shortname }) => {
               display: `flex`,
               alignItems: `center`,
               textTransform: `uppercase`,
-              color: `#81AEFB`,
-              fontWeight: `bold`,
+              color: colors.darkTheme.link,
             }}
           >
             {/* TODO: Add back in with real links */}

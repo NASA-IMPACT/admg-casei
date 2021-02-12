@@ -14,7 +14,7 @@ import Hero from "../../components/hero"
 import ExternalLink from "../../components/external-link"
 import RelatedCampaignsSection from "../../components/related-campaigns-section"
 import FocusAreaGallery from "../../components/focus-area-gallery"
-import theme from "../../utils/theme"
+import { colors } from "../../utils/theme"
 import { getFocusIcon } from "../../icons/utils"
 
 const FocusTemplate = ({ data }) => {
@@ -29,7 +29,7 @@ const FocusTemplate = ({ data }) => {
         textToImageRatio={[8, 4]}
         id="focus"
       >
-        <Icon color={theme.color.base} size="huge" />
+        <Icon color={colors.darkTheme.text} size="huge" />
       </Hero>
 
       <PageBody id="focus">
@@ -44,7 +44,7 @@ const FocusTemplate = ({ data }) => {
             <div
               style={{
                 padding: `1rem`,
-                border: `1px solid ${theme.color.base}`,
+                border: `1px solid ${colors.darkTheme.text}`,
               }}
             >
               {data.focusArea.url ? (

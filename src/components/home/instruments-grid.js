@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
-import theme from "../../utils/theme"
+import { colors } from "../../utils/theme"
 
 export const InstrumentsGrid = ({ measurementTypes }) => {
   const other = measurementTypes.find(
@@ -18,7 +18,7 @@ export const InstrumentsGrid = ({ measurementTypes }) => {
       style={{
         display: `flex`,
         flexWrap: `wrap`,
-        border: `1px solid ${theme.color.base}`,
+        border: `1px solid ${colors.darkTheme.text}`,
       }}
     >
       {measurementTypes.map(measurementType => (
@@ -34,7 +34,7 @@ export const InstrumentsGrid = ({ measurementTypes }) => {
         >
           <div
             style={{
-              border: `1px solid ${theme.color.base}`,
+              border: `1px solid ${colors.darkTheme.text}`,
               padding: `1rem`,
               textAlign: `center`,
             }}

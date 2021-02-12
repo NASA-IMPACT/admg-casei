@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { PropTypeIsUrl } from "../utils/helpers"
-import theme from "../utils/theme"
+import { colors } from "../utils/theme"
 
 export default function ExternalLink({ label, url, id, isLight }) {
   return (
@@ -9,7 +9,9 @@ export default function ExternalLink({ label, url, id, isLight }) {
       target="_blank"
       rel="noopener noreferrer"
       href={url}
-      style={{ color: isLight ? theme.color.linkDark : theme.color.link }}
+      style={{
+        color: isLight ? colors.lightTheme.linkText : colors.darkTheme.linkText,
+      }}
       data-cy={`${id}-link`}
     >
       {label}

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import PropTypes from "prop-types"
-import theme from "../../utils/theme"
+import { colors } from "../../utils/theme"
 
 export default function BboxLayer({ id, bbox, map, sourceId }) {
   const [layer, setLayer] = useState(null)
@@ -12,7 +12,7 @@ export default function BboxLayer({ id, bbox, map, sourceId }) {
       source: sourceId,
       layout: {},
       paint: {
-        "line-color": theme.color.base,
+        "line-color": colors.darkTheme.text,
         "line-opacity": 0.8,
         "line-width": 2,
       },

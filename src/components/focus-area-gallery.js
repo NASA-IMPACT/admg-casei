@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
 import { getFocusIcon } from "../icons/utils"
-import theme from "../utils/theme"
+import { colors } from "../utils/theme"
 
 const FocusArea = ({ id, caption, size }) => {
   const Icon = getFocusIcon(id)
@@ -21,8 +21,8 @@ const FocusArea = ({ id, caption, size }) => {
       }}
       data-cy="focus-area"
     >
-      <Icon color={theme.color.base} size={size} />
-      <label color={theme.color.base}>{caption}</label>
+      <Icon color={colors.darkTheme.text} size={size} />
+      <label color={colors.darkTheme.text}>{caption}</label>
     </Link>
   )
 }

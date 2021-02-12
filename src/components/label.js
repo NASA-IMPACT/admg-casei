@@ -1,12 +1,12 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import theme from "../utils/theme"
+import { colors } from "../utils/theme"
 
 export default function Label({
   children,
   id,
-  color = theme.color.gray,
+  color = colors.darkTheme.altText,
   showBorder,
   display,
 }) {
@@ -14,7 +14,9 @@ export default function Label({
     <label
       style={{
         color: color,
-        borderBottom: showBorder ? `1px solid ${theme.color.gray}` : `none`,
+        borderBottom: showBorder
+          ? `1px solid ${colors.darkTheme.altText}`
+          : `none`,
         display,
       }}
       data-cy={`${id}-label`}

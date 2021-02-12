@@ -62,8 +62,8 @@ exports[`Explore page renders correctly 1`] = `
   width: 100%;
   -webkit-appearance: none;
   background: transparent;
-  border: 1px solid hsla(0,0%,100%,0.9);
-  color: hsla(0,0%,100%,0.9);
+  border: 1px solid #e9eaec;
+  color: #e9eaec;
   padding: 0.5rem;
   cursor: pointer;
   text-transform: uppercase;
@@ -78,8 +78,8 @@ exports[`Explore page renders correctly 1`] = `
   width: 100%;
   -webkit-appearance: none;
   background: transparent;
-  border: 1px solid hsla(0,0%,100%,0.9);
-  color: hsla(0,0%,100%,0.9);
+  border: 1px solid #e9eaec;
+  color: #e9eaec;
   padding: 0.5rem;
   cursor: pointer;
   text-transform: uppercase;
@@ -143,7 +143,7 @@ exports[`Explore page renders correctly 1`] = `
   height: 2.5rem;
   text-transform: uppercase;
   font-weight: bold;
-  color: hsla(0,0%,100%,0.9);
+  color: #e9eaec;
 }
 
 <div
@@ -347,7 +347,7 @@ exports[`Explore page renders correctly 1`] = `
         onSubmit={[Function]}
         style={
           Object {
-            "border": "1px solid hsla(0,0%,100%,0.9)",
+            "border": "1px solid #e9eaec",
             "display": "flex",
             "flexFlow": "column wrap",
             "margin": "2rem 0",
@@ -364,7 +364,7 @@ exports[`Explore page renders correctly 1`] = `
           <div
             style={
               Object {
-                "border": "1px solid hsla(0,0%,100%,0.9)",
+                "border": "1px solid #e9eaec",
                 "display": "flex",
                 "flexGrow": 1,
                 "height": "2.5rem",
@@ -391,7 +391,7 @@ exports[`Explore page renders correctly 1`] = `
                   Object {
                     "background": "transparent",
                     "border": "none",
-                    "color": "hsla(0,0%,100%,0.9)",
+                    "color": "#e9eaec",
                   }
                 }
                 type="text"
@@ -403,7 +403,7 @@ exports[`Explore page renders correctly 1`] = `
                 Object {
                   "background": "transparent",
                   "border": "none",
-                  "color": "hsla(0,0%,100%,0.9)",
+                  "color": "#e9eaec",
                   "flexGrow": 0,
                   "verticalAlign": "middle",
                 }
@@ -426,7 +426,7 @@ exports[`Explore page renders correctly 1`] = `
                   />
                   <path
                     d="M15.708,13.587l-3.675-3.675C12.646,8.92,13,7.751,13,6.5C13,2.91,10.09,0,6.5,0S0,2.91,0,6.5S2.91,13,6.5,13 c1.251,0,2.42-0.354,3.412-0.967l3.675,3.675c0.389,0.389,1.025,0.389,1.414,0l0.707-0.707 C16.097,14.612,16.097,13.976,15.708,13.587z M3.318,9.682C2.468,8.832,2,7.702,2,6.5s0.468-2.332,1.318-3.182S5.298,2,6.5,2 s2.332,0.468,3.182,1.318C10.532,4.168,11,5.298,11,6.5s-0.468,2.332-1.318,3.182C8.832,10.532,7.702,11,6.5,11 S4.168,10.532,3.318,9.682z"
-                    fill="hsla(0,0%,100%,0.9)"
+                    fill="#e9eaec"
                   />
                 </svg>
               </span>
@@ -925,7 +925,7 @@ exports[`Explore page renders correctly 1`] = `
               "alignItems": "center",
               "backgroundColor": "#303641",
               "borderRadius": "0.2rem",
-              "color": "hsla(0,0%,100%,0.9)",
+              "color": "#e9eaec",
               "display": "flex",
               "margin": "0.25rem 0.5rem",
               "padding": "0.25rem 0.5rem",
@@ -943,7 +943,7 @@ exports[`Explore page renders correctly 1`] = `
               Object {
                 "background": "none",
                 "border": "none",
-                "color": "hsla(0,0%,100%,0.9)",
+                "color": "#e9eaec",
                 "cursor": "pointer",
                 "flexGrow": 0,
                 "marginLeft": "0.5rem",
@@ -963,7 +963,7 @@ exports[`Explore page renders correctly 1`] = `
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <polygon
-                  fill="hsla(0,0%,100%,0.9)"
+                  fill="#e9eaec"
                   points="13.707,3.707 12.293,2.293 8,6.586 3.707,2.293 2.293,3.707 6.586,8 2.293,12.293 3.707,13.707 8,9.414  12.293,13.707 13.707,12.293 9.414,8"
                 />
               </svg>
@@ -1079,9 +1079,9 @@ exports[`Explore page renders correctly 1`] = `
               Object {
                 "WebkitAppearance": "none",
                 "background": "transparent",
-                "border": "1px solid hsla(0,0%,100%,0.9)",
+                "border": "1px solid #e9eaec",
                 "borderRadius": "0.2rem",
-                "color": "hsla(0,0%,100%,0.9)",
+                "color": "#e9eaec",
                 "cursor": "pointer",
                 "height": "2.5rem",
                 "padding": "0.5rem",
@@ -3994,7 +3994,7 @@ exports[`Explore page renders correctly 1`] = `
   <footer
     style={
       Object {
-        "backgroundColor": "#262A31",
+        "backgroundColor": "#303641",
         "marginTop": "5rem",
       }
     }
@@ -4126,7 +4126,7 @@ exports[`Explore page renders correctly 1`] = `
               style={
                 Object {
                   "background": "none",
-                  "backgroundColor": "#294060",
+                  "backgroundColor": "#15418c",
                   "border": 0,
                   "borderRadius": "0.2rem",
                   "color": "white",
@@ -4350,9 +4350,8 @@ exports[`Explore page renders correctly 1`] = `
           style={
             Object {
               "alignItems": "center",
-              "color": "#81AEFB",
+              "color": undefined,
               "display": "flex",
-              "fontWeight": "bold",
               "textTransform": "uppercase",
             }
           }

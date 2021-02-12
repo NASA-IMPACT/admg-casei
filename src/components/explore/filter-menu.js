@@ -12,7 +12,7 @@ import styled from "styled-components"
 
 import { IconButton } from "../button"
 import { CloseIcon } from "../../icons"
-import theme from "../../utils/theme"
+import { colors } from "../../utils/theme"
 
 const FilterButton = styled(ListboxButton)`
   flex-grow: 0;
@@ -20,8 +20,8 @@ const FilterButton = styled(ListboxButton)`
   width: 100%;
   -webkit-appearance: none;
   background: transparent;
-  border: 1px solid ${theme.color.base};
-  color: ${theme.color.base};
+  border: 1px solid ${colors.darkTheme.text};
+  color: ${colors.darkTheme.text};
   padding: 0.5rem;
   cursor: pointer;
   text-transform: uppercase;
@@ -31,10 +31,12 @@ const FilterItem = styled(ListboxOption)`
   display: flex;
   justify-content: space-between;
   background-color: ${props =>
-    props.selected ? theme.color.secondary : theme.color.primary};
+    props.selected
+      ? colors.darkTheme.background
+      : colors.darkTheme.altBackground};
 
   &[data-reach-listbox-option][aria-selected="true"] {
-    background: ${theme.color.secondary};
+    background: ${colors.darkTheme.background};
     opacity: 0.64;
   }
 `
@@ -69,7 +71,7 @@ const FilterMenu = ({
         <FilterButton arrow="▼">{label}</FilterButton>
         <ListboxPopover
           style={{
-            background: theme.color.primary,
+            background: colors.darkTheme.altBackground,
             maxHeight: `24rem`,
             overflowY: `scroll`,
           }}
@@ -86,7 +88,7 @@ const FilterMenu = ({
                 {selectedFilterIds.includes(o.id) && (
                   <IconButton
                     id="remove-filter"
-                    icon={<CloseIcon color={theme.color.base} />}
+                    icon={<CloseIcon color={colors.darkTheme.text} />}
                   />
                 )}
               </FilterItem>
