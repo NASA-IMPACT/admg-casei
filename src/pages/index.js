@@ -90,7 +90,6 @@ const IndexPage = ({ data }) => {
               />
               <Link
                 to="/explore"
-                data-cy="platform-section-link"
                 state={{ defaultExploreCategory: "platforms" }}
                 style={{
                   border: `1px solid ${theme.color.base}`,

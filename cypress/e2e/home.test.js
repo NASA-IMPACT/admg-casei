@@ -165,7 +165,7 @@ describe("Homepage", () => {
 
     cy.url().should("include", "/explore")
 
-    cy.get("h1").should("have.text", "Explore campaigns")
+    cy.get("h1").should("have.text", "Explore platforms")
     cy.get("[data-cy=platforms-card]").find("big").contains("B-200")
   })
 
@@ -190,8 +190,7 @@ describe("Homepage", () => {
 
     cy.url().should("include", "/explore")
 
-    cy.get("h1").should("have.text", "Explore campaigns")
-    // TODO: should be cy.get("h1").should("have.text", "Explore instruments")
+    cy.get("h1").should("have.text", "Explore instruments")
 
     cy.get("[data-cy=tabbar]").contains("button", "Instruments").click()
 
