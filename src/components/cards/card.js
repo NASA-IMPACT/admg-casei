@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 import Image from "gatsby-image"
-
+import DateList from "../../components/date-list-hover"
 import theme from "../../utils/theme"
 
 const CardHeader = styled.div`
@@ -64,17 +64,25 @@ const Card = ({
       {children}
     </div>
     {footerList && (
-      <div>
+      <div style={{ display: `flex`, alignItems: `center` }}>
         {footerList.map((o, index) => (
-          <small
-            key={o.title}
-            style={{ whiteSpace: `nowrap` }}
-            data-cy={`count${index + 1}`}
-          >
-            {index !== 0 && ` · `}
-            <strong>{o.count}</strong> {o.title}
-            {o.count !== 1 && "s"}
-          </small>
+          <>
+            {o.title === "Deployment" ? (
+              <DateList id="Deployment" dates={o.deploymentDates || []} />
+            ) : (
+              <small
+                key={o.title}
+                style={{
+                  whiteSpace: `nowrap`,
+                }}
+                data-cy={`count${index + 1}`}
+              >
+                {index !== 0 && ` · `}
+                <strong>{o.count}</strong> {o.title}
+                {o.count !== 1 && "s"}
+              </small>
+            )}
+          </>
         ))}
       </div>
     )}
@@ -96,7 +104,17 @@ Card.propTypes = {
   height: PropTypes.string,
   tag: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   footerList: PropTypes.arrayOf(
-    PropTypes.shape({ count: PropTypes.number, title: PropTypes.string })
+    PropTypes.shape({
+      count: PropTypes.number,
+      title: PropTypes.string,
+      deploymentDates: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string,
+          startdate: PropTypes.string,
+          enddate: PropTypes.string,
+        })
+      ),
+    })
   ),
   category: PropTypes.oneOf(["campaigns", "platforms", "instruments"])
     .isRequired,

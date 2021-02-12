@@ -41,6 +41,8 @@ export default function CampaignCard({ id, height }) {
           region: region_description
           deployments {
             id
+            startdate: start_date
+            enddate: end_date
           }
           countDataProducts: number_data_products
         }
@@ -57,7 +59,11 @@ export default function CampaignCard({ id, height }) {
       height={height}
       tag={campaign.ongoing && "Ongoing"}
       footerList={[
-        { count: campaign.deployments.length, title: "Deployment" },
+        {
+          count: campaign.deployments.length,
+          title: "Deployment",
+          deploymentDates: campaign.deployments,
+        },
         { count: campaign.countDataProducts, title: "Data Product" },
       ]}
       category="campaigns"
