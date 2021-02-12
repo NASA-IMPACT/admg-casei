@@ -128,16 +128,20 @@ exports[`Footer renders correctly 1`] = `
     >
       <div
         className="c3"
+        data-cy="footer-title"
       >
         NASA | CASEI
       </div>
-      <p>
+      <p
+        data-cy="footer-subtitle"
+      >
         NASA | CASEI
          is a comprehensive inventory containing information about all airborne and field campaigns as well as aircrafts, instruments, and data products.
       </p>
     </div>
     <div
       className="c4"
+      data-cy="footer-explore"
     >
       <p
         className="c5"
@@ -170,7 +174,7 @@ exports[`Footer renders correctly 1`] = `
         </li>
         <li>
           <a
-            data-cy="footer-platforms-link"
+            data-cy="footer-instruments-link"
             href="/explore"
             state={
               Object {
@@ -185,6 +189,7 @@ exports[`Footer renders correctly 1`] = `
     </div>
     <div
       className="c7"
+      data-cy="footer-resources"
     >
       <p
         className="c5"
@@ -206,6 +211,7 @@ exports[`Footer renders correctly 1`] = `
     </div>
     <div
       className="c8"
+      data-cy="footer-quick-links"
     >
       <p
         className="c5"
@@ -233,6 +239,7 @@ exports[`Footer renders correctly 1`] = `
     </div>
     <div
       className="c9"
+      data-cy="footer-organizations"
     >
       <p
         className="c5"
@@ -286,11 +293,17 @@ exports[`Footer renders correctly 1`] = `
         <div
           className="c13"
         />
-        <div>
-          <div>
+        <div
+          data-cy="footer-credits"
+        >
+          <div
+            data-cy="footer-credit-org"
+          >
             National Aeronautics and Space Administration
           </div>
-          <div>
+          <div
+            data-cy="footer-credit-official"
+          >
             NASA Official:
              
             <span
@@ -308,6 +321,7 @@ exports[`Footer renders correctly 1`] = `
   </div>
   <div
     className="c16"
+    data-cy="footer-credit-devseed"
   >
     © 
     2021
