@@ -59,5 +59,5 @@ InstrumentHero.propTypes = {
     gatsbyImg: PropTypes.shape({
       childImageSharp: PropTypes.object.isRequired,
     }),
-  }).isRequired,
+  }),
 }

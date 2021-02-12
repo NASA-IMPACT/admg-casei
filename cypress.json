@@ -6,7 +6,5 @@
   "env": {
     "username": "alice",
     "password": ""
-  },
-  "defaultCommandTimeout": 7000,
-  "pageLoadTimeout": 10000
+  }
 }

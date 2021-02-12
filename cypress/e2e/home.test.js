@@ -108,7 +108,7 @@ describe("Homepage", () => {
 
     cy.url().should("include", "/explore")
 
-    cy.get("h1").should("have.text", "Explore")
+    cy.get("h1").should("have.text", "Explore campaigns")
 
     // skipping, can't get it to pass on ci
     // cy.get("[data-cy=filter-chip]")
@@ -141,7 +141,7 @@ describe("Homepage", () => {
 
     cy.url().should("include", "/explore")
 
-    cy.get("h1").should("have.text", "Explore")
+    cy.get("h1").should("have.text", "Explore campaigns")
 
     // skipping, can't get it to pass on ci
     // cy.get("[data-cy=filter-chip]")
@@ -160,13 +160,13 @@ describe("Homepage", () => {
       .then($h2 => {
         expect($h2, "text content").to.have.text("Platforms")
       })
-    cy.get("[data-cy=platform-section-link]")
-      .should($a => {
-        expect($a, "text content").to.have.text("Explore")
-      })
-      .click()
+
+    cy.get("[data-cy=explore-platforms-link]").click()
+
+    cy.url().should("include", "/explore")
+
+    cy.get("h1").should("have.text", "Explore campaigns")
     cy.get("[data-cy=platforms-card]").find("big").contains("B-200")
-    cy.go("back")
   })
 
   it("an intrument can be selected", () => {
@@ -190,7 +190,8 @@ describe("Homepage", () => {
 
     cy.url().should("include", "/explore")
 
-    cy.get("h1").should("have.text", "Explore")
+    cy.get("h1").should("have.text", "Explore campaigns")
+    // TODO: should be cy.get("h1").should("have.text", "Explore instruments")
 
     cy.get("[data-cy=tabbar]").contains("button", "Instruments").click()
 

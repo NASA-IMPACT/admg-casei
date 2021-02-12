@@ -7,11 +7,13 @@ import SEO from "../../components/seo"
 import CampaignHero from "./hero"
 import InpageNav from "../../components/inpage-nav"
 import OverviewSection from "./overview-section"
+import MissionSection from "./mission-section"
 import FocusSection from "./focus-section"
 import PlatformSection from "./platform-section"
 import TimelineSection from "./timeline-section"
 import DataSection from "./data-section"
 import ProgramInfoSection from "./program-info-section"
+import OtherResourcesSection from "./other-resources-section"
 import MaintenanceSection from "../../components/maintenance-section"
 
 const CampaignTemplate = ({ data: { campaign }, path }) => {
@@ -52,6 +54,15 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
         repositoryWebsite: campaign.repositoryWebsite,
         tertiaryWebsite: campaign.tertiaryWebsite,
         publicationLink: campaign.publicationLink,
+        notesPublic: campaign.notesPublic,
+        repositories: campaign.repositories,
+      },
+    },
+    missions: {
+      nav: "Missions",
+      component: MissionSection,
+      props: {
+        missions: campaign.missions.split(",").filter(x => x),
       },
     },
     focus: {
@@ -103,6 +114,13 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
         publicationLink: campaign.publicationLink,
       },
     },
+    "other-resources": {
+      nav: "Other",
+      component: OtherResourcesSection,
+      props: {
+        resources: campaign.resources.split("\n").filter(x => x),
+      },
+    },
   }
 
   return (
@@ -118,15 +136,15 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
         countDataProducts={campaign.countDataProducts}
         logo={campaign.logo}
       />
-      <InpageNav
-        shortname={campaign.shortname}
-        items={Object.entries(sections).map(([id, section]) => ({
-          id,
-          label: section.nav,
-        }))}
-        path={path}
-      />
       <PageBody id="campaign">
+        <InpageNav
+          shortname={campaign.shortname}
+          items={Object.entries(sections).map(([id, section]) => ({
+            id,
+            label: section.nav,
+          }))}
+          path={path}
+        />
         {Object.entries(sections).map(([id, section]) => (
           <section.component key={id} id={id} {...section.props} />
         ))}
@@ -144,11 +162,13 @@ export const query = graphql`
     campaign: campaign(id: { eq: $slug }) {
       ...heroFields
       ...overviewFields
+      ...missionFields
       ...focusFields
       ...platformSectionFields
       ...deploymentFields
       ...dataFields
       ...fundingFields
+      ...resourceFields
       uuid
     }
   }
@@ -190,6 +210,16 @@ CampaignTemplate.propTypes = {
       repositoryWebsite: PropTypes.string.isRequired,
       tertiaryWebsite: PropTypes.string.isRequired,
       publicationLink: PropTypes.string.isRequired,
+      notesPublic: PropTypes.string.isRequired,
+      repositories: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string.isRequired,
+          shortname: PropTypes.string.isRequired,
+          longname: PropTypes.string.isRequired,
+          url: PropTypes.string.isRequired,
+        }).isRequired
+      ).isRequired,
+      missions: PropTypes.string,
       focusPhenomena: PropTypes.string.isRequired,
       platforms: PropTypes.arrayOf(
         PropTypes.shape({
@@ -264,6 +294,7 @@ CampaignTemplate.propTypes = {
         })
       ).isRequired,
       partnerWebsite: PropTypes.string,
+      resources: PropTypes.string,
       uuid: PropTypes.string.isRequired,
     }).isRequired,
   }).isRequired,

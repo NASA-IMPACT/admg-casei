@@ -9,10 +9,11 @@ import theme from "../utils/theme"
 const MaintenanceSection = ({ id, data }) => {
   const { isLoggedIn } = useContext(AuthContext)
 
+  // TODO: this is temporary, build out edit functionality
+
   return (
-    <Section id="maintenance">
-      {isLoggedIn && (
-        // TODO: this is temporary, build out edit functionality
+    isLoggedIn && (
+      <Section id="maintenance">
         <Link
           to={`/edit/campaign/${id}`}
           state={{ data }}
@@ -24,8 +25,8 @@ const MaintenanceSection = ({ id, data }) => {
         >
           Edit
         </Link>
-      )}
-    </Section>
+      </Section>
+    )
   )
 }
 

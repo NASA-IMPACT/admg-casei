@@ -19,6 +19,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       partner_orgs: [partner_org] @link
       platform_types: [platform_type] @link
       platforms: [platform] @link
+      repositories: [repository] @link
       seasons: [season] @link
       logo: LogosJson @link(by: "shortname", from: "short_name")
     }
