@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import PropTypes from "prop-types"
 import {
   ListboxInput,
@@ -115,7 +115,7 @@ const DateList = ({ id, dates }) => {
 
 DateList.propTypes = {
   id: PropTypes.string.isRequired,
-  deploymentDates: PropTypes.arrayOf(
+  dates: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,
       startdate: PropTypes.string,
