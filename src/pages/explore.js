@@ -34,10 +34,12 @@ export default function Explore({ data, location }) {
     allMeasurementType,
     allMeasurementRegion,
   } = data
-  const { selectedFilterId } = location.state || {}
+  const { selectedFilterId, defaultExploreCategory } = location.state || {}
 
   const [isLoading, setLoading] = useState(false)
-  const [selectedCategory, setSelectedCategory] = useState("campaigns")
+  const [selectedCategory, setSelectedCategory] = useState(
+    defaultExploreCategory || "campaigns"
+  )
   const [sortOrder, setSortOrder] = useState({
     campaigns: "most recent",
     instruments: "most used",

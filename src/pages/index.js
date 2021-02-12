@@ -89,7 +89,8 @@ const IndexPage = ({ data }) => {
                 id="platforms"
               />
               <Link
-                to="/explore" //** TODO: link to explore with tab selected */
+                to="/explore"
+                state={{ defaultExploreCategory: "platforms" }}
                 style={{
                   border: `1px solid ${theme.color.base}`,
                   padding: `1rem 5rem`,
