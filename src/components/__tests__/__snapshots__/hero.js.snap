@@ -8,6 +8,7 @@ exports[`Header renders correctly 1`] = `
       "alignContent": "center",
       "display": "grid",
       "gridTemplateColumns": "1fr minmax(auto,  1280px) 1fr",
+      "marginBottom": "6rem",
       "minHeight": "35rem",
       "width": "100vw",
     }
@@ -89,6 +90,7 @@ exports[`Header renders with adjust ratios 1`] = `
       "alignContent": "center",
       "display": "grid",
       "gridTemplateColumns": "1fr minmax(auto,  1280px) 1fr",
+      "marginBottom": "6rem",
       "minHeight": "35rem",
       "width": "100vw",
     }

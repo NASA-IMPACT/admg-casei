@@ -14,7 +14,11 @@ FishButton.propTypes = {
 
 const InpageLink = props => (
   <li style={{ margin: `0 1rem 0 0` }}>
-    <a href={`#${props.id}`} data-cy={`${props.id}-inpage-link`}>
+    <a
+      href={`#${props.id}`}
+      style={{ color: theme.color.text, fontWeight: 600 }}
+      data-cy={`${props.id}-inpage-link`}
+    >
       {props.children}
     </a>
   </li>
@@ -30,19 +34,18 @@ const InpageNav = ({ shortname, items, path }) => (
     style={{
       position: `sticky`,
       top: 0,
-      borderBottom: `1px solid #9E9E9E`,
-      backgroundColor: theme.color.primary,
       zIndex: 1000,
     }}
   >
     <div
       style={{
-        margin: `0 auto`,
-        maxWidth: theme.layout.maxWidth,
-        padding: `0 ${theme.layout.pageMargin}`,
+        margin: `0 -6rem`,
+        padding: `0 6rem`,
         display: `flex`,
         justifyContent: `space-between`,
         alignItems: `center`,
+        backgroundColor: theme.color.white,
+        color: theme.color.text,
       }}
     >
       <nav aria-label="inpage-scroll">
@@ -58,11 +61,17 @@ const InpageNav = ({ shortname, items, path }) => (
           }}
         >
           <li style={{ margin: `0 1rem 0 0` }}>
-            <div style={{ paddingRight: `1rem`, fontSize: `2rem` }}>
-              <a href="#top" data-cy={`top-inpage-link`}>
-                {shortname}
-              </a>
-            </div>
+            <a
+              href="#top"
+              style={{
+                paddingRight: `1rem`,
+                fontSize: `2rem`,
+                color: theme.color.text,
+              }}
+              data-cy={`top-inpage-link`}
+            >
+              {shortname}
+            </a>
           </li>
           {items.map(item => (
             <InpageLink key={item.id} id={item.id}>

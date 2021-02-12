@@ -4,7 +4,7 @@ import theme from "./theme"
 
 const typography = new Typography({
   baseFontSize: "16px",
-  baseLineHeight: 1.15,
+  baseLineHeight: 1.5,
   googleFonts: [
     {
       name: "Titillium Web",
@@ -36,38 +36,35 @@ const typography = new Typography({
         color: theme.color.base,
       },
       h1: {
-        fontSize: rhythm(4),
+        fontSize: rhythm(3),
         marginTop: rhythm(1),
         marginBottom: rhythm(1),
       },
       h2: {
-        fontSize: rhythm(3),
+        fontSize: rhythm(2),
         marginTop: rhythm(0.5),
-        marginBottom: rhythm(2.5),
+        marginBottom: rhythm(1),
       },
       h3: {
-        fontSize: rhythm(2.25),
+        fontSize: rhythm(1.5),
         marginTop: rhythm(0.5),
-        marginBottom: rhythm(0.5),
+        marginBottom: rhythm(1),
       },
       "h4,h5,h6": {
         fontSize: rhythm(1.5),
         marginTop: rhythm(0.5),
-        marginBottom: rhythm(0.5),
+        marginBottom: rhythm(1),
       },
-      // children ol, ul
-      "li>ol,li>ul": {
-        marginLeft: "20px",
+      li: {
         marginBottom: 0,
       },
       p: {
         marginBottom: 0,
       },
       "label, button": {
-        fontSize: rhythm(0.75),
+        fontSize: rhythm(0.6),
         fontWeight: 600,
         textTransform: `uppercase`,
-        marginTop: rhythm(0.5),
       },
     }
   },

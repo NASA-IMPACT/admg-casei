@@ -95,6 +95,7 @@ const IndexPage = ({ data }) => {
                   padding: `1rem 5rem`,
                   textTransform: `uppercase`,
                 }}
+                data-cy="explore-platforms-link"
               >
                 Explore
               </Link>

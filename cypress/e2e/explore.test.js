@@ -4,10 +4,12 @@ describe("Explore", () => {
   describe("campaigns", () => {
     before(() => {
       cy.visit("/explore")
-      cy.get("[data-cy=campaigns-card]")
+      cy.get("[data-cy=h1-campaigns]")
+        .should("have.text", "Explore campaigns")
+        .and("not.be.visible")
     })
 
-    it("renders correctly", () => {
+    it("displays campaign cards and navigates to the selected campaign", () => {
       cy.get("[data-cy=tabbar]")
         .find("li")
         .should($li => {
@@ -15,35 +17,31 @@ describe("Explore", () => {
         })
         .then($li => {
           expect($li[0], "text content").to.contain("Campaigns")
-          expect($li[0].firstChild, "active link").to.have.css(
+          expect($li[0].firstChild, "Campaigns link is blue").to.have.css(
             "color",
             "rgb(170, 201, 255)"
           )
           expect($li[1], "text content").to.contain("Platforms")
-          expect($li[1].firstChild, "other link").not.to.have.css(
-            "color",
-            "rgb(170, 201, 255)"
-          )
+          expect(
+            $li[1].firstChild,
+            "Platforms link is not blue"
+          ).not.to.have.css("color", "rgb(170, 201, 255)")
           expect($li[2], "text content").to.contain("Instruments")
 
-          expect($li[2].firstChild, "other link").not.to.have.css(
-            "color",
-            "rgb(170, 201, 255)"
-          )
+          expect(
+            $li[2].firstChild,
+            "Instruments link is not blue"
+          ).not.to.have.css("color", "rgb(170, 201, 255)")
         })
 
       cy.get("[data-cy=explore-tools]").should("exist")
       cy.get("[data-cy=campaigns-count]").should("exist")
       cy.get("[data-cy=campaigns-card]").should("exist")
-    })
 
-    it("displays the number of items to explore", () => {
       cy.get("[data-cy=campaigns-count]")
         .invoke("text")
         .should("match", /[0-9]+/i)
-    })
 
-    it("displays a list of cards presenting the available campaigns", () => {
       cy.get("[data-cy=campaigns-card]")
         .find("big")
         .contains("AirMOSS")
@@ -61,6 +59,7 @@ describe("Explore", () => {
           expect($card.find("[data-cy=count1]")).to.contain("Deployments")
           expect($card.find("[data-cy=count2]")).to.contain("Data Products")
         })
+
       cy.get("[data-cy=campaigns-card]") // test ongoing campaign card
         .find("big")
         .contains("OMG")
@@ -71,26 +70,32 @@ describe("Explore", () => {
           expect($card.find("[data-cy=shortname]")).to.contain("OMG")
           expect($card.find("[data-cy=daterange]")).to.contain("Ongoing")
         })
-    })
 
-    it("navigates to the campaign page", () => {
       cy.get("[data-cy=campaigns-card]").find("big").contains("AirMOSS").click()
 
       cy.url().should("include", "/campaign/")
 
-      cy.get("h1").should("have.length", 1)
+      cy.get("h1").should(
+        "have.text",
+        "Airborne Microwave Observatory of Subcanopy and Subsurface"
+      )
     })
   })
 
-  // skip for now, its failing on ci ?!
-  describe.skip("platforms", () => {
+  describe("platforms", () => {
     before(() => {
       cy.visit("/explore")
-      cy.get("[data-cy=tabbar]").contains("button", "Platforms").click()
-      cy.get("[data-cy=platforms-card]")
+      cy.get("[data-cy=h1-campaigns]")
+        .should("have.text", "Explore campaigns")
+        .and("not.be.visible")
     })
 
-    it("renders correctly", () => {
+    it("displays platform cards and navigates to the selected platform", () => {
+      cy.get("[data-cy=tabbar]").contains("button", "Platforms").click()
+      cy.get("[data-cy=h1-platforms]")
+        .should("have.text", "Explore platforms")
+        .and("not.be.visible")
+
       cy.get("[data-cy=tabbar]")
         .find("li")
         .should($li => {
@@ -98,35 +103,30 @@ describe("Explore", () => {
         })
         .then($li => {
           expect($li[0], "text content").to.contain("Campaigns")
-          expect($li[0].firstChild, "other link").not.to.have.css(
-            "color",
-            "rgb(170, 201, 255)"
-          )
+          expect(
+            $li[0].firstChild,
+            "Campaigns link is not blue"
+          ).not.to.have.css("color", "rgb(170, 201, 255)")
           expect($li[1], "text content").to.contain("Platforms")
-          expect($li[1].firstChild, "active link").to.have.css(
+          expect($li[1].firstChild, "Platforms link is blue").to.have.css(
             "color",
             "rgb(170, 201, 255)"
           )
           expect($li[2], "text content").to.contain("Instruments")
-
-          expect($li[2].firstChild, "other link").not.to.have.css(
-            "color",
-            "rgb(170, 201, 255)"
-          )
+          expect(
+            $li[2].firstChild,
+            "Instruments link is not blue"
+          ).not.to.have.css("color", "rgb(170, 201, 255)")
         })
 
       cy.get("[data-cy=explore-tools]").should("exist")
       cy.get("[data-cy=platforms-count]").should("exist")
       cy.get("[data-cy=platforms-card]").should("exist")
-    })
 
-    it("displays the number of items to explore", () => {
       cy.get("[data-cy=platforms-count]")
         .invoke("text")
         .should("match", /[0-9]+/i)
-    })
 
-    it("displays a list of cards presenting the available platforms", () => {
       cy.get("[data-cy=platforms-card]")
         .find("big")
         .contains("B-200")
@@ -146,18 +146,29 @@ describe("Explore", () => {
           )
           expect($card.find("[data-cy=count3]")).to.contain("Instruments")
         })
+
+      cy.get("[data-cy=platforms-card]").find("big").contains("GH").click()
+
+      cy.url().should("include", "/platform/")
+
+      cy.get("h1").should("have.text", "Global Hawk UAV")
     })
   })
 
-  // skip for now, its failing on ci ?!
-  describe.skip("instruments", () => {
+  describe("instruments", () => {
     before(() => {
       cy.visit("/explore")
-      cy.get("[data-cy=tabbar]").contains("button", "Instruments").click()
-      cy.get("[data-cy=instruments-card]")
+      cy.get("[data-cy=h1-campaigns]")
+        .should("have.text", "Explore campaigns")
+        .and("not.be.visible")
     })
 
-    it("renders correctly", () => {
+    it("displays instrument cards and navigates to the selected instrument", () => {
+      cy.get("[data-cy=tabbar]").contains("button", "Instruments").click()
+      cy.get("[data-cy=h1-instruments]")
+        .should("have.text", "Explore instruments")
+        .and("not.be.visible")
+
       cy.get("[data-cy=tabbar]")
         .find("li")
         .should($li => {
@@ -165,18 +176,18 @@ describe("Explore", () => {
         })
         .then($li => {
           expect($li[0], "text content").to.contain("Campaigns")
-          expect($li[0].firstChild, "other link").not.to.have.css(
-            "color",
-            "rgb(170, 201, 255)"
-          )
+          expect(
+            $li[0].firstChild,
+            "Campaigns link is not blue"
+          ).not.to.have.css("color", "rgb(170, 201, 255)")
           expect($li[1], "text content").to.contain("Platforms")
-          expect($li[1].firstChild, "other link").not.to.have.css(
-            "color",
-            "rgb(170, 201, 255)"
-          )
+          expect(
+            $li[1].firstChild,
+            "Platforms link is not blue"
+          ).not.to.have.css("color", "rgb(170, 201, 255)")
           expect($li[2], "text content").to.contain("Instruments")
 
-          expect($li[2].firstChild, "active link").to.have.css(
+          expect($li[2].firstChild, "Instruments link is blue").to.have.css(
             "color",
             "rgb(170, 201, 255)"
           )
@@ -185,15 +196,11 @@ describe("Explore", () => {
       cy.get("[data-cy=explore-tools]").should("exist")
       cy.get("[data-cy=instruments-count]").should("exist")
       cy.get("[data-cy=instruments-card]").should("exist")
-    })
 
-    it("displays the number of items to explore", () => {
       cy.get("[data-cy=instruments-count]")
         .invoke("text")
         .should("match", /[0-9]+/i)
-    })
 
-    it("displays a list of cards presenting the available instruments", () => {
       cy.get("[data-cy=instruments-card]")
         .find("big")
         .contains("HAMSR")
@@ -208,6 +215,12 @@ describe("Explore", () => {
 
           expect($card.find("[data-cy=count1]")).to.contain("Campaigns")
         })
+
+      cy.get("[data-cy=instruments-card]").find("big").contains("CPL").click()
+
+      cy.url().should("include", "/instrument/")
+
+      cy.get("h1").should("have.text", "CPL")
     })
   })
 })

@@ -57,6 +57,7 @@ export default function Hero({
         width: `100vw`,
         minHeight: `35rem`,
         alignContent: `center`,
+        marginBottom: `6rem`,
       }}
       data-cy={`${id}-hero`}
     >

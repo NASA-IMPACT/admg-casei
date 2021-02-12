@@ -6,8 +6,17 @@ exports[`Program Info Section renders logo when present in props 1`] = `
   grid-template-columns: repeat(12,1fr);
   -webkit-column-gap: 1rem;
   column-gap: 1rem;
-  margin-top: 2rem;
+  row-gap: 2rem;
   position: relative;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 6rem;
+  background-color: none;
+}
+
+.c0.c0 > *,
+.c0.c0 h3 {
+  color: hsla(0,0%,100%,0.9);
 }
 
 .c1.c1 {
@@ -113,9 +122,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
             data-cy="program-info-content-label"
             style={
               Object {
-                "borderBottom": "1px solid #9E9E9E",
                 "color": "#9E9E9E",
-                "display": "block",
               }
             }
           >
@@ -134,9 +141,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
             data-cy="program-info-content-label"
             style={
               Object {
-                "borderBottom": "1px solid #9E9E9E",
                 "color": "#9E9E9E",
-                "display": "block",
               }
             }
           >
@@ -155,9 +160,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
             data-cy="program-info-content-label"
             style={
               Object {
-                "borderBottom": "1px solid #9E9E9E",
                 "color": "#9E9E9E",
-                "display": "block",
               }
             }
           >
@@ -176,9 +179,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
             data-cy="program-info-content-label"
             style={
               Object {
-                "borderBottom": "1px solid #9E9E9E",
                 "color": "#9E9E9E",
-                "display": "block",
               }
             }
           >
@@ -197,9 +198,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
             data-cy="program-info-content-label"
             style={
               Object {
-                "borderBottom": "1px solid #9E9E9E",
                 "color": "#9E9E9E",
-                "display": "block",
               }
             }
           >
@@ -218,27 +217,27 @@ exports[`Program Info Section renders logo when present in props 1`] = `
             data-cy="program-info-content-label"
             style={
               Object {
-                "borderBottom": "1px solid #9E9E9E",
                 "color": "#9E9E9E",
-                "display": "block",
               }
             }
           >
             NASA Data Repository
           </label>
-          <a
-            data-cy="program-info-content-link"
-            href="https://www.test-campaign.io"
-            rel="noopener noreferrer"
-            style={
-              Object {
-                "color": "#aac9ff",
+          <p>
+            <a
+              data-cy="program-info-content-link"
+              href="https://www.test-campaign.io"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "#aac9ff",
+                }
               }
-            }
-            target="_blank"
-          >
-            https://www.test-campaign.io
-          </a>
+              target="_blank"
+            >
+              https://www.test-campaign.io
+            </a>
+          </p>
         </div>
         <div
           data-cy="program-info-content"
@@ -247,9 +246,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
             data-cy="program-info-content-label"
             style={
               Object {
-                "borderBottom": "1px solid #9E9E9E",
                 "color": "#9E9E9E",
-                "display": "block",
               }
             }
           >
@@ -268,27 +265,27 @@ exports[`Program Info Section renders logo when present in props 1`] = `
             data-cy="program-info-content-label"
             style={
               Object {
-                "borderBottom": "1px solid #9E9E9E",
                 "color": "#9E9E9E",
-                "display": "block",
               }
             }
           >
             Publication Overview
           </label>
-          <a
-            data-cy="program-info-content-link"
-            href="https://www.test-campaign.io"
-            rel="noopener noreferrer"
-            style={
-              Object {
-                "color": "#aac9ff",
+          <p>
+            <a
+              data-cy="program-info-content-link"
+              href="https://www.test-campaign.io"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "#aac9ff",
+                }
               }
-            }
-            target="_blank"
-          >
-            https://www.test-campaign.io
-          </a>
+              target="_blank"
+            >
+              https://www.test-campaign.io
+            </a>
+          </p>
         </div>
       </div>
     </div>
@@ -302,8 +299,17 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
   grid-template-columns: repeat(12,1fr);
   -webkit-column-gap: 1rem;
   column-gap: 1rem;
-  margin-top: 2rem;
+  row-gap: 2rem;
   position: relative;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 6rem;
+  background-color: none;
+}
+
+.c0.c0 > *,
+.c0.c0 h3 {
+  color: hsla(0,0%,100%,0.9);
 }
 
 .c1.c1 {
@@ -398,9 +404,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
             data-cy="program-info-content-label"
             style={
               Object {
-                "borderBottom": "1px solid #9E9E9E",
                 "color": "#9E9E9E",
-                "display": "block",
               }
             }
           >
@@ -419,9 +423,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
             data-cy="program-info-content-label"
             style={
               Object {
-                "borderBottom": "1px solid #9E9E9E",
                 "color": "#9E9E9E",
-                "display": "block",
               }
             }
           >
@@ -440,9 +442,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
             data-cy="program-info-content-label"
             style={
               Object {
-                "borderBottom": "1px solid #9E9E9E",
                 "color": "#9E9E9E",
-                "display": "block",
               }
             }
           >
@@ -461,9 +461,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
             data-cy="program-info-content-label"
             style={
               Object {
-                "borderBottom": "1px solid #9E9E9E",
                 "color": "#9E9E9E",
-                "display": "block",
               }
             }
           >
@@ -482,9 +480,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
             data-cy="program-info-content-label"
             style={
               Object {
-                "borderBottom": "1px solid #9E9E9E",
                 "color": "#9E9E9E",
-                "display": "block",
               }
             }
           >
@@ -503,27 +499,27 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
             data-cy="program-info-content-label"
             style={
               Object {
-                "borderBottom": "1px solid #9E9E9E",
                 "color": "#9E9E9E",
-                "display": "block",
               }
             }
           >
             NASA Data Repository
           </label>
-          <a
-            data-cy="program-info-content-link"
-            href="https://www.test-campaign.io"
-            rel="noopener noreferrer"
-            style={
-              Object {
-                "color": "#aac9ff",
+          <p>
+            <a
+              data-cy="program-info-content-link"
+              href="https://www.test-campaign.io"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "#aac9ff",
+                }
               }
-            }
-            target="_blank"
-          >
-            https://www.test-campaign.io
-          </a>
+              target="_blank"
+            >
+              https://www.test-campaign.io
+            </a>
+          </p>
         </div>
         <div
           data-cy="program-info-content"
@@ -532,9 +528,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
             data-cy="program-info-content-label"
             style={
               Object {
-                "borderBottom": "1px solid #9E9E9E",
                 "color": "#9E9E9E",
-                "display": "block",
               }
             }
           >
@@ -553,27 +547,27 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
             data-cy="program-info-content-label"
             style={
               Object {
-                "borderBottom": "1px solid #9E9E9E",
                 "color": "#9E9E9E",
-                "display": "block",
               }
             }
           >
             Publication Overview
           </label>
-          <a
-            data-cy="program-info-content-link"
-            href="https://www.test-campaign.io"
-            rel="noopener noreferrer"
-            style={
-              Object {
-                "color": "#aac9ff",
+          <p>
+            <a
+              data-cy="program-info-content-link"
+              href="https://www.test-campaign.io"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "color": "#aac9ff",
+                }
               }
-            }
-            target="_blank"
-          >
-            https://www.test-campaign.io
-          </a>
+              target="_blank"
+            >
+              https://www.test-campaign.io
+            </a>
+          </p>
         </div>
       </div>
     </div>
