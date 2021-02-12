@@ -16,14 +16,20 @@ const List = styled.dl`
   }
 `
 
-export default function DefinitionList({ id, list, isCentered }) {
+export default function DefinitionList({ id, list, isCentered, isLight }) {
   return (
     <section style={{ padding: `1rem` }} data-cy={`${id}-definition-list`}>
       <List>
         {list.map(row => (
           <React.Fragment key={row.title}>
             <dt>
-              <label>{row.title}</label>
+              <label
+                style={{
+                  color: isLight ? theme.color.grayDark : theme.color.gray,
+                }}
+              >
+                {row.title}
+              </label>
             </dt>
             <dd
               style={
@@ -52,6 +58,7 @@ DefinitionList.propTypes = {
     })
   ),
   isCentered: PropTypes.bool,
+  isLight: PropTypes.bool,
 }
 
 DefinitionList.defaultProps = {

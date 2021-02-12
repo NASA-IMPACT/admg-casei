@@ -77,7 +77,7 @@ const DataSection = ({ id, dois }) => {
             <div
               style={{
                 display: `grid`,
-                gridTemplateColumns: `repeat(auto-fit, minmax(15rem, 1fr))`,
+                gridTemplateColumns: `repeat(auto-fit, minmax(18rem, 1fr))`,
                 gap: `1rem`,
               }}
             >
@@ -88,6 +88,7 @@ const DataSection = ({ id, dois }) => {
                     display: `flex`,
                     flexDirection: `column`,
                     backgroundColor: theme.color.secondary,
+                    gap: `0.5rem`,
                     padding: `1.5rem`,
                   }}
                   data-cy="data-product"
@@ -107,7 +108,6 @@ const DataSection = ({ id, dois }) => {
                       display: `grid`,
                       gap: `1rem`,
                       gridTemplateColumns: `1fr 1fr`,
-                      padding: `.5rem`,
                     }}
                   >
                     <div data-cy="data-product-platforms">
@@ -116,9 +116,7 @@ const DataSection = ({ id, dois }) => {
                       </Label>
                       {doi.platforms.map(platform => (
                         <Link key={platform.id} to={`/platform/${platform.id}`}>
-                          <small style={{ display: `inline-block` }}>
-                            {platform.longname}
-                          </small>
+                          <small>{platform.longname}</small>
                         </Link>
                       ))}
                     </div>
@@ -131,9 +129,7 @@ const DataSection = ({ id, dois }) => {
                           key={instrument.id}
                           to={`/instrument/${instrument.id}`}
                         >
-                          <small style={{ display: `inline-block` }}>
-                            {instrument.longname}
-                          </small>
+                          <small>{instrument.longname}</small>
                         </Link>
                       ))}
                     </div>
@@ -143,7 +139,7 @@ const DataSection = ({ id, dois }) => {
             </div>
           </>
         ) : (
-          "No data products available."
+          <label data-cy="no-doi-label">No data products available.</label>
         )}
       </SectionContent>
     </Section>
