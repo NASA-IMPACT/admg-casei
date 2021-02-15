@@ -75,7 +75,11 @@ const Footer = ({ shortname }) => {
           <Headline>Explore</Headline>
           <Ul>
             <li>
-              <Link to="/explore" data-cy="footer-campaigns-link">
+              <Link
+                to="/explore"
+                state={{ defaultExploreCategory: "campaigns" }}
+                data-cy="footer-campaigns-link"
+              >
                 Campaigns
               </Link>
             </li>
