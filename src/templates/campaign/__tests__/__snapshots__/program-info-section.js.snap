@@ -32,6 +32,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
 <section
   className="c0"
   data-cy="program-info-section"
+  mode="darkTheme"
 >
   <div
     className="c1"
@@ -325,6 +326,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
 <section
   className="c0"
   data-cy="program-info-section"
+  mode="darkTheme"
 >
   <div
     className="c1"

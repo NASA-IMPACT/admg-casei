@@ -82,7 +82,7 @@ function Background({
             label="Overview Publication"
             url={overviewPublication}
             id="overview-publication"
-            isLight
+            mode="lightTheme"
           />
         ) : (
           "N/A"
@@ -98,7 +98,7 @@ function Background({
             data-cy="repository-list"
           >
             {repositories.map(repo => (
-              <ListLink key={repo.id} to={repo.url} isLight noPadding>
+              <ListLink key={repo.id} to={repo.url} mode="lightTheme" noPadding>
                 {repo.longname}
               </ListLink>
             ))}
@@ -145,7 +145,7 @@ export default function OverviewSection({
   repositories,
 }) {
   return (
-    <Section id={id} isLight>
+    <Section id={id} mode="lightTheme">
       <VisuallyHidden>
         <SectionHeader headline="Overview" id={id} />
       </VisuallyHidden>
@@ -153,7 +153,7 @@ export default function OverviewSection({
         <h3>Instrument Details</h3>
         <DefinitionList
           id="instrument"
-          isLight
+          mode="lightTheme"
           list={[
             {
               title: "Measurement Type",
@@ -197,7 +197,7 @@ export default function OverviewSection({
                   label={calibration}
                   url={calibration}
                   id="calibration-doi"
-                  isLight
+                  mode="lightTheme"
                 />
               ) : (
                 "N/A"
@@ -214,7 +214,7 @@ export default function OverviewSection({
                           label={link}
                           url={link}
                           id="online-information"
-                          isLight
+                          mode="lightTheme"
                         />
                       ) : (
                         <p className="placeholder">{link}</p> // fallback for invalid url

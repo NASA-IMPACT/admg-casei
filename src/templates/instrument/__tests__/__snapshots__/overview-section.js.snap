@@ -47,6 +47,7 @@ exports[`Overview Section displays content 1`] = `
 <section
   className="c0"
   data-cy="unique-id-section"
+  mode="lightTheme"
 >
   <div
     className="c1"

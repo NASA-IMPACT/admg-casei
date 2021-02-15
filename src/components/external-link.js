@@ -3,14 +3,14 @@ import PropTypes from "prop-types"
 import { PropTypeIsUrl } from "../utils/helpers"
 import { colors } from "../utils/theme"
 
-export default function ExternalLink({ label, url, id, isLight }) {
+export default function ExternalLink({ label, url, id, mode = "darkTheme" }) {
   return (
     <a
       target="_blank"
       rel="noopener noreferrer"
       href={url}
       style={{
-        color: isLight ? colors.lightTheme.linkText : colors.darkTheme.linkText,
+        color: colors[mode].linkText,
       }}
       data-cy={`${id}-link`}
     >
@@ -23,5 +23,5 @@ ExternalLink.propTypes = {
   label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   url: PropTypeIsUrl,
   id: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
-  isLight: PropTypes.bool,
+  mode: PropTypes.oneOf(["lightTheme", "darkTheme"]),
 }

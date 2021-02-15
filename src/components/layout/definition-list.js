@@ -16,7 +16,12 @@ const List = styled.dl`
   }
 `
 
-export default function DefinitionList({ id, list, isCentered, isLight }) {
+export default function DefinitionList({
+  id,
+  list,
+  isCentered,
+  mode = "darkTheme",
+}) {
   return (
     <section style={{ padding: `1rem` }} data-cy={`${id}-definition-list`}>
       <List>
@@ -25,9 +30,7 @@ export default function DefinitionList({ id, list, isCentered, isLight }) {
             <dt>
               <label
                 style={{
-                  color: isLight
-                    ? colors.lightTheme.altText
-                    : colors.darkTheme.altText,
+                  color: colors[mode].altText,
                 }}
               >
                 {row.title}
@@ -60,7 +63,7 @@ DefinitionList.propTypes = {
     })
   ),
   isCentered: PropTypes.bool,
-  isLight: PropTypes.bool,
+  mode: PropTypes.oneOf(["lightTheme", "darkTheme"]),
 }
 
 DefinitionList.defaultProps = {

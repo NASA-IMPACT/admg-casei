@@ -28,7 +28,7 @@ const OverviewSection = ({
   notesPublic,
   repositories,
 }) => (
-  <Section id={id} isLight>
+  <Section id={id} mode="lightTheme">
     <VisuallyHidden>
       <SectionHeader headline="Overview" id={id} />
     </VisuallyHidden>
@@ -49,28 +49,28 @@ const OverviewSection = ({
           id="overview-content"
           label="Study dates"
           info={`${startdate} — ${enddate || "ongoing"}`}
-          isLight
+          mode="lightTheme"
         />
         <hr />
         <ContentItem
           id="overview-content"
           label="Region"
           info={region}
-          isLight
+          mode="lightTheme"
         />
 
         <ContentItem
           id="overview-content"
           label="Season of Study"
           info={seasonListing}
-          isLight
+          mode="lightTheme"
         />
         <hr />
         <ContentItem
           id="overview-content"
           label="Spatial bounds (WKT)"
           info={bounds}
-          isLight
+          mode="lightTheme"
         />
       </div>
     </SectionContent>
@@ -95,7 +95,7 @@ const OverviewSection = ({
             >
               Campaign DOI:
               <br />
-              <ExternalLink label={doi} url={doi} id="doi" isLight />
+              <ExternalLink label={doi} url={doi} id="doi" mode="lightTheme" />
             </p>
           ) : (
             <p data-cy="doi-link">no campaign DOI available</p>
@@ -103,22 +103,22 @@ const OverviewSection = ({
         </li>
 
         {repositoryWebsite && (
-          <ListLink isLight to={repositoryWebsite}>
+          <ListLink mode="lightTheme" to={repositoryWebsite}>
             Repository website
           </ListLink>
         )}
         {projectWebsite && (
-          <ListLink isLight to={projectWebsite}>
+          <ListLink mode="lightTheme" to={projectWebsite}>
             Project website
           </ListLink>
         )}
         {tertiaryWebsite && (
-          <ListLink isLight to={tertiaryWebsite}>
+          <ListLink mode="lightTheme" to={tertiaryWebsite}>
             Tertiary website
           </ListLink>
         )}
         {publicationLink && (
-          <ListLink isLight to={publicationLink}>
+          <ListLink mode="lightTheme" to={publicationLink}>
             Overview Publication
           </ListLink>
         )}
@@ -133,7 +133,7 @@ const OverviewSection = ({
       <h3>Repositories</h3>
       <ul style={{ margin: 0, listStyle: `none` }} data-cy="repo-list">
         {repositories.map(repo => (
-          <ListLink key={repo.id} to={repo.url} isLight noPadding>
+          <ListLink key={repo.id} to={repo.url} mode="lightTheme" noPadding>
             {repo.longname}
           </ListLink>
         ))}

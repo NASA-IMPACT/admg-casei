@@ -9,13 +9,13 @@ export default function ContentItem({
   label,
   info = "N/A",
   link,
-  isLight,
+  mode = "darkTheme",
 }) {
   return (
     <div data-cy={id}>
       <label
         style={{
-          color: isLight ? colors.lightTheme.altText : colors.darkTheme.altText,
+          color: colors[mode].altText,
         }}
         data-cy={`${id}-label`}
       >
@@ -38,5 +38,5 @@ ContentItem.propTypes = {
   label: PropTypes.string.isRequired,
   info: PropTypes.string,
   link: PropTypes.string,
-  isLight: PropTypes.bool,
+  mode: PropTypes.oneOf(["lightTheme", "darkTheme"]),
 }

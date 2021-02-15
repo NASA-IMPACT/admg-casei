@@ -60,6 +60,7 @@ exports[`Platform Section displays content 1`] = `
 <section
   className="c0"
   data-cy="platform-section"
+  mode="darkTheme"
 >
   <div
     className="c1"
