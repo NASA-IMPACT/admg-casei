@@ -66,7 +66,7 @@ const Card = ({
     {footerList && (
       <div style={{ display: `flex`, alignItems: `center` }}>
         {footerList.map((o, index) => (
-          <>
+          <div key={index}>
             {o.title === "Deployment" ? (
               <DateList id="Deployment" dates={o.deploymentDates || []} />
             ) : (
@@ -82,7 +82,7 @@ const Card = ({
                 {o.count !== 1 && "s"}
               </small>
             )}
-          </>
+          </div>
         ))}
       </div>
     )}

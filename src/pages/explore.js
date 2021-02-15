@@ -229,9 +229,9 @@ export default function Explore({ data, location }) {
           {selectedCategory === "campaigns" &&
             campaignList.filtered.map(campaign => {
               return (
-                // <Link to={`/campaign/${campaign.id}`} key={campaign.id}>
-                <CampaignCard id={campaign.id} />
-                // </Link>
+                <Link to={`/campaign/${campaign.id}`} key={campaign.id}>
+                  <CampaignCard id={campaign.id} />
+                </Link>
               )
             })}
           {selectedCategory === "platforms" &&

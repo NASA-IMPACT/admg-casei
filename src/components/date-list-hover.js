@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useRef, useLayoutEffect } from "react"
 import PropTypes from "prop-types"
 import {
   ListboxInput,
@@ -17,15 +17,32 @@ const ListTrigger = styled(ListboxButton)`
     padding-right: 0.25rem;
   }
 `
-const HoverList = styled.div`
-  /* &:hover [data-reach-listbox-popover][hidden] {
-    display: block;
-  } */
-`
 
 const DateList = ({ id, dates }) => {
+  let [isOverButton, setIsOverButton] = useState(false)
+  let [isOverList, setIsOverList] = useState(false)
+  let [isOpen, setIsOpen] = useState()
+
+  let triggerRef = useRef(null)
+  let listRef = useRef(null)
+
+  useLayoutEffect(() => {
+    if (isOpen && !isOverButton && !isOverList) {
+      triggerRef.current.setAttribute("data-state", "closed")
+      listRef.current.setAttribute("hidden", true)
+
+      setIsOpen(false)
+    } else if (!isOpen && (isOverButton || isOverList)) {
+      triggerRef.current.setAttribute("data-state", "expanded")
+
+      listRef.current.removeAttribute("hidden")
+
+      setIsOpen(true)
+    }
+  }, [isOverButton, isOverList])
+
   return (
-    <HoverList>
+    <>
       <VisuallyHidden id={`${id}-hover-list`}>
         view all deployment dates
       </VisuallyHidden>
@@ -33,8 +50,19 @@ const DateList = ({ id, dates }) => {
         name={`${id}-hover-list`}
         aria-labelledby={`${id}-hover-list`}
         data-cy={`${id}-hover-list`}
+        ref={triggerRef}
       >
-        <ListTrigger>
+        <ListTrigger
+          onMouseEnter={() => {
+            setIsOverButton(true)
+          }}
+          onMouseLeave={() => {
+            setIsOverButton(false)
+          }}
+          onKeyDown={() => {
+            setIsOpen(!isOpen)
+          }}
+        >
           <small
             css={`
               white-space: nowrap;
@@ -46,6 +74,13 @@ const DateList = ({ id, dates }) => {
           </small>
         </ListTrigger>
         <ListboxPopover
+          ref={listRef}
+          onMouseEnter={() => {
+            setIsOverList(true)
+          }}
+          onMouseLeave={() => {
+            setIsOverList(false)
+          }}
           css={`
             background: ${theme.color.base};
             min-width: fit-content;
@@ -109,7 +144,7 @@ const DateList = ({ id, dates }) => {
           </ListboxList>
         </ListboxPopover>
       </ListboxInput>
-    </HoverList>
+    </>
   )
 }
 
