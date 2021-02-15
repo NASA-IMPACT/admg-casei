@@ -163,9 +163,11 @@ describe("Homepage", () => {
 
     cy.get("[data-cy=explore-platforms-link]").click()
 
-    cy.url().should("include", "/explore")
-    // TODO: find out how to wait for props to come through first
-    // cy.get("h1-platforms").should("have.text", "Explore platforms")
+    cy.location("pathname", { timeout: 10000 }).should("include", "/explore")
+
+    cy.get("[data-cy=h1-platforms]")
+      .should("exist")
+      .should("have.text", "Explore platforms")
 
     cy.get("[data-cy=platforms-card]").find("big").contains("B-200")
   })
@@ -189,10 +191,13 @@ describe("Homepage", () => {
       .contains("Spectrometer/Radiometer")
       .click()
 
-    cy.url().should("include", "/explore")
-    // TODO: find out how to wait for props to come through first
-    // cy.get("h1").should("have.text", "Explore instruments").should('exist')
+    cy.location("pathname", { timeout: 10000 }).should("include", "/explore")
 
+    cy.get("h1").should("have.text", "Explore instruments").should("exist")
+
+    cy.get("[data-cy=h1-instruments]")
+      .should("exist")
+      .should("have.text", "Explore instruments")
     cy.get("[data-cy=filter-chip]")
       .should("have.length", 1)
       .and("have.text", "type: Spectrometer/Radiometer")
