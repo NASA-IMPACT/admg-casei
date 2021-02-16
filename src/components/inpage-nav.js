@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { FeedbackForm } from "feedback-fish"
 
-import theme from "../utils/theme"
+import { colors } from "../utils/theme"
 import Button from "../components/button"
 
 // Note: the triggerComponent can be any component you want!
@@ -16,7 +16,7 @@ const InpageLink = props => (
   <li style={{ margin: `0 1rem 0 0` }}>
     <a
       href={`#${props.id}`}
-      style={{ color: theme.color.text, fontWeight: 600 }}
+      style={{ color: colors.lightTheme.text, fontWeight: 600 }}
       data-cy={`${props.id}-inpage-link`}
     >
       {props.children}
@@ -44,8 +44,8 @@ const InpageNav = ({ shortname, items, path }) => (
         display: `flex`,
         justifyContent: `space-between`,
         alignItems: `center`,
-        backgroundColor: theme.color.white,
-        color: theme.color.text,
+        backgroundColor: colors.lightTheme.background,
+        color: colors.lightTheme.text,
       }}
     >
       <nav aria-label="inpage-scroll">
@@ -66,7 +66,7 @@ const InpageNav = ({ shortname, items, path }) => (
               style={{
                 paddingRight: `1rem`,
                 fontSize: `2rem`,
-                color: theme.color.text,
+                color: colors.lightTheme.text,
               }}
               data-cy={`top-inpage-link`}
             >

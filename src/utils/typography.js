@@ -1,6 +1,6 @@
 import Typography from "typography"
 
-import theme from "./theme"
+import { colors } from "./theme"
 
 const typography = new Typography({
   baseFontSize: "16px",
@@ -13,8 +13,8 @@ const typography = new Typography({
   ],
   headerFontFamily: ["Titillium Web", "sans-serif"],
   bodyFontFamily: ["Titillium Web", "sans-serif"],
-  headerColor: theme.color.base,
-  bodyColor: theme.color.base,
+  headerColor: colors.darkTheme.text,
+  bodyColor: colors.darkTheme.text,
   headerWeight: "600",
   bodyWeight: 400,
   boldWeight: 700,
@@ -23,7 +23,7 @@ const typography = new Typography({
       a: {
         textDecoration: "none",
         cursor: "pointer",
-        color: theme.color.base,
+        color: colors.darkTheme.text,
         transition: "opacity 0.24s ease 0s",
       },
       "a:active": {
@@ -33,7 +33,7 @@ const typography = new Typography({
         opacity: 0.64,
       },
       "a:visited": {
-        color: theme.color.base,
+        color: colors.darkTheme.text,
       },
       h1: {
         fontSize: rhythm(3),

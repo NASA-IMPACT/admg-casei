@@ -9,7 +9,7 @@ import {
 } from "@reach/listbox"
 import VisuallyHidden from "@reach/visually-hidden"
 
-import theme from "../../utils/theme"
+import { colors, shape } from "../../utils/theme"
 import { sortFunctions } from "../../utils/filter-utils"
 
 const SortMenu = ({ sortOrder, setSortOrder, category }) => {
@@ -30,16 +30,16 @@ const SortMenu = ({ sortOrder, setSortOrder, category }) => {
             height: `2.5rem`,
             WebkitAppearance: `none`,
             background: `transparent`,
-            border: `1px solid ${theme.color.base}`,
-            borderRadius: theme.shape.rounded,
-            color: theme.color.base,
+            border: `1px solid ${colors.darkTheme.text}`,
+            borderRadius: shape.rounded,
+            color: colors.darkTheme.text,
             padding: `0.5rem`,
             cursor: `pointer`,
           }}
         >
           {sortOrder.toUpperCase()}
         </ListboxButton>
-        <ListboxPopover style={{ background: theme.color.primary }}>
+        <ListboxPopover style={{ background: colors.darkTheme.altBackground }}>
           <ListboxList data-cy="sort-options">
             {Object.keys(sortFunctions[category]).map(o => (
               <ListboxOption key={o} value={o} data-cy="sort-option">

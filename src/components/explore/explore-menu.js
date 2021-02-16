@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 
 import SortMenu from "./sort-menu"
-import theme from "../../utils/theme"
+import { colors } from "../../utils/theme"
 
 const TabButton = styled.button`
   user-select: none;
@@ -20,7 +20,7 @@ const TabButton = styled.button`
   text-transform: uppercase;
   font-weight: bold;
   color: ${({ isSelected }) =>
-    isSelected ? theme.color.link : theme.color.base};
+    isSelected ? colors.darkTheme.linkText : colors.darkTheme.text};
 `
 
 const ExploreMenu = ({

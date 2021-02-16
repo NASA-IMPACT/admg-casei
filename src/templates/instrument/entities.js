@@ -6,7 +6,7 @@ import styled from "styled-components"
 import { Section, SectionHeader, SectionContent } from "../../components/layout"
 import PlatformCard from "../../components/cards/platform-card"
 import CampaignCard from "../../components/cards/campaign-card"
-import theme from "../../utils/theme"
+import { colors } from "../../utils/theme"
 
 const Table = styled.table`
   th:first-child {
@@ -24,7 +24,9 @@ export default function Entities({ id, campaigns, platforms }) {
       <SectionContent>
         <Table data-cy={`instrument-related-entities-table`}>
           <tbody>
-            <tr style={{ borderBottom: `2px solid ${theme.color.gray}` }}>
+            <tr
+              style={{ borderBottom: `2px solid ${colors.darkTheme.altText}` }}
+            >
               <th>
                 <label>Platform</label>
               </th>

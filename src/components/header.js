@@ -3,15 +3,15 @@ import PropTypes from "prop-types"
 import React from "react"
 
 import Image from "./image"
-import theme from "../utils/theme"
+import { layout } from "../utils/theme"
 
 const Header = ({ shortname, children }) => (
   <header>
     <div
       style={{
         margin: `0 auto`,
-        maxWidth: theme.layout.maxWidth,
-        padding: `2rem ${theme.layout.pageMargin}`,
+        maxWidth: layout.maxWidth,
+        padding: `2rem ${layout.pageMargin}`,
         display: `flex`,
         justifyContent: `space-between`,
         alignItems: `center`,

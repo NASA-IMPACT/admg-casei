@@ -12,12 +12,12 @@ import {
 } from "../../components/layout"
 import ExternalLink from "../../components/external-link"
 import { isUrl } from "../../utils/helpers"
-import theme from "../../utils/theme"
+import { colors } from "../../utils/theme"
 
 function BackgroundListItem({ id, label, children }) {
   return (
     <li style={{ padding: `1rem 0` }} data-cy={`${id}-label`}>
-      <label style={{ color: theme.color.grayDark }}>{label}</label>
+      <label style={{ color: colors.lightTheme.altText }}>{label}</label>
       <p>{children}</p>
     </li>
   )
@@ -82,14 +82,14 @@ function Background({
             label="Overview Publication"
             url={overviewPublication}
             id="overview-publication"
-            isLight
+            mode="lightTheme"
           />
         ) : (
           "N/A"
         )}
       </BackgroundListItem>
       <li style={{ padding: `1rem 0` }} data-cy="repositories-label">
-        <label style={{ color: theme.color.grayDark }}>
+        <label style={{ color: colors.lightTheme.altText }}>
           {repositories.length === 1 ? "Repository" : "Repositories"}
         </label>
         {repositories.length > 0 ? (
@@ -98,7 +98,7 @@ function Background({
             data-cy="repository-list"
           >
             {repositories.map(repo => (
-              <ListLink key={repo.id} to={repo.url} isLight noPadding>
+              <ListLink key={repo.id} to={repo.url} mode="lightTheme" noPadding>
                 {repo.longname}
               </ListLink>
             ))}
@@ -145,7 +145,7 @@ export default function OverviewSection({
   repositories,
 }) {
   return (
-    <Section id={id} isLight>
+    <Section id={id} mode="lightTheme">
       <VisuallyHidden>
         <SectionHeader headline="Overview" id={id} />
       </VisuallyHidden>
@@ -153,7 +153,7 @@ export default function OverviewSection({
         <h3>Instrument Details</h3>
         <DefinitionList
           id="instrument"
-          isLight
+          mode="lightTheme"
           list={[
             {
               title: "Measurement Type",
@@ -197,7 +197,7 @@ export default function OverviewSection({
                   label={calibration}
                   url={calibration}
                   id="calibration-doi"
-                  isLight
+                  mode="lightTheme"
                 />
               ) : (
                 "N/A"
@@ -214,7 +214,7 @@ export default function OverviewSection({
                           label={link}
                           url={link}
                           id="online-information"
-                          isLight
+                          mode="lightTheme"
                         />
                       ) : (
                         <p className="placeholder">{link}</p> // fallback for invalid url

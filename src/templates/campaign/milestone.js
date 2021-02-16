@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 
 import Label from "../../components/label"
 import { PlatformIcon } from "../../icons"
-import theme from "../../utils/theme"
+import { colors } from "../../utils/theme"
 
 const Milestone = ({ type, daterange, name, details, region }) => {
   return (
@@ -13,8 +13,8 @@ const Milestone = ({ type, daterange, name, details, region }) => {
     >
       <label
         style={{
-          color: theme.color.primary,
-          backgroundColor: theme.color.highlight,
+          color: colors.darkTheme.altBackground,
+          backgroundColor: colors.darkTheme.highlight,
           position: `absolute`,
           top: `4rem`,
           left: `4rem`,

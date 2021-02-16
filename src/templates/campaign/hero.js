@@ -11,7 +11,7 @@ import Map from "../../components/map"
 import BboxLayer from "../../components/map/bbox-layer"
 import GeoJsonSource from "../../components/map/geojson-source"
 import { CampaignIcon } from "../../icons"
-import theme from "../../utils/theme"
+import { layout } from "../../utils/theme"
 import { useContainerDimensions } from "../../utils/use-container-dimensions"
 
 const BackgroundGradient = styled.div`
@@ -59,7 +59,7 @@ const CampaignHero = ({
       data-cy="campaign-hero"
       style={{
         display: `grid`,
-        gridTemplateColumns: `1fr minmax(auto,  ${theme.layout.maxWidth}) 1fr`,
+        gridTemplateColumns: `1fr minmax(auto,  ${layout.maxWidth}) 1fr`,
         width: `100vw`,
         minHeight: `35rem`,
         alignContent: `center`,
@@ -88,7 +88,7 @@ const CampaignHero = ({
           zIndex: 1,
         }}
       >
-        <div style={{ flex: `2`, padding: `0 ${theme.layout.pageMargin}` }}>
+        <div style={{ flex: `2`, padding: `0 ${layout.pageMargin}` }}>
           <div style={{ marginBottom: `6rem` }}>
             {logo && logo.logoImg ? (
               <Image

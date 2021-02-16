@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 import Image from "gatsby-image"
 
-import theme from "../../utils/theme"
+import { colors } from "../../utils/theme"
 
 const CardHeader = styled.div`
   display: flex;
@@ -27,7 +27,7 @@ const Card = ({
 }) => (
   <div
     style={{
-      backgroundColor: theme.color.secondary,
+      backgroundColor: colors.darkTheme.background,
       boxShadow: `rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px`,
       padding: `1rem`,
       display: `flex`,
