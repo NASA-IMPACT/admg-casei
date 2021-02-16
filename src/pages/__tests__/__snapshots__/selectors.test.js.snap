@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Explore page renders correctly 1`] = `
-.c3.c3:hover {
+.c7.c7:hover {
   opacity: 0.64;
 }
 
-.c3.c3:active {
+.c7.c7:active {
   -webkit-transform: translate(0,1px);
   -ms-transform: translate(0,1px);
   transform: translate(0,1px);
 }
 
-.c15.c15 {
+.c19.c19 {
   position: fixed;
   top: 0;
   right: 0;
@@ -33,7 +33,7 @@ exports[`Explore page renders correctly 1`] = `
   transition: opacity 400ms ease-in;
 }
 
-.c16.c16 {
+.c20.c20 {
   width: 400px;
   position: relative;
   padding: 32px;
@@ -42,23 +42,23 @@ exports[`Explore page renders correctly 1`] = `
   pointer-events: auto;
 }
 
-.c13.c13 {
+.c17.c17 {
   list-style: none;
   margin: 0;
 }
 
-.c12.c12 {
+.c16.c16 {
   margin: 0 0 1.5rem 0;
   font-weight: bold;
   line-height: 3rem;
 }
 
-.c7.c7 {
+.c11.c11 {
   margin-top: 5rem;
   background-color: #303641;
 }
 
-.c8.c8 {
+.c12.c12 {
   margin: 5rem auto;
   max-width: 1280px;
   padding: 2rem 5rem;
@@ -70,11 +70,11 @@ exports[`Explore page renders correctly 1`] = `
   grid-template-columns: repeat(12,1fr);
 }
 
-.c9.c9 {
+.c13.c13 {
   grid-column: 1 / span 3;
 }
 
-.c10.c10 {
+.c14.c14 {
   text-transform: uppercase;
   font-weight: 900;
   font-size: 30px;
@@ -82,28 +82,28 @@ exports[`Explore page renders correctly 1`] = `
   margin-bottom: 0.5rem;
 }
 
-.c11.c11 {
+.c15.c15 {
   grid-column: 5 / span 2;
 }
 
-.c14.c14 {
+.c18.c18 {
   grid-column: 7 / span 2;
 }
 
-.c17.c17 {
+.c21.c21 {
   grid-column: 9 / span 2;
 }
 
-.c18.c18 {
+.c22.c22 {
   grid-column: 11 / span 2;
 }
 
-.c19.c19 {
+.c23.c23 {
   grid-column: 1 / span 12;
   background-color: rgba(255,255,255,0.2);
 }
 
-.c20.c20 {
+.c24.c24 {
   grid-column: 1 / span 12;
   display: -webkit-box;
   display: -webkit-flex;
@@ -115,7 +115,7 @@ exports[`Explore page renders correctly 1`] = `
   justify-content: space-between;
 }
 
-.c21.c21 {
+.c25.c25 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -127,7 +127,7 @@ exports[`Explore page renders correctly 1`] = `
   font-weight: bold;
 }
 
-.c22.c22 {
+.c26.c26 {
   background-image: url("https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png");
   background-size: cover;
   background-position: center;
@@ -135,11 +135,11 @@ exports[`Explore page renders correctly 1`] = `
   height: 100px;
 }
 
-.c23.c23 {
+.c27.c27 {
   font-weight: normal;
 }
 
-.c24.c24 {
+.c28.c28 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -151,7 +151,7 @@ exports[`Explore page renders correctly 1`] = `
   text-transform: uppercase;
 }
 
-.c25.c25 {
+.c29.c29 {
   text-align: center;
 }
 
@@ -166,7 +166,7 @@ exports[`Explore page renders correctly 1`] = `
   flex-direction: column;
 }
 
-.c2.c2 {
+.c6.c6 {
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
   -ms-flex-positive: 0;
@@ -183,6 +183,44 @@ exports[`Explore page renders correctly 1`] = `
 }
 
 .c1.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 2.5rem;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: 1px solid #e9eaec;
+  padding: 0.25rem;
+}
+
+.c2.c2 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  font-style: italic;
+}
+
+.c3.c3 {
+  border: none;
+  background: transparent;
+  color: #e9eaec;
+}
+
+.c4.c4 {
+  border: none;
+  -webkit-flexgrow: 0;
+  -ms-flexgrow: 0;
+  flexgrow: 0;
+  background: transparent;
+  color: #e9eaec;
+  verticalalign: middle;
+}
+
+.c5.c5 {
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
   -ms-flex-positive: 0;
@@ -198,7 +236,7 @@ exports[`Explore page renders correctly 1`] = `
   text-transform: uppercase;
 }
 
-.c6.c6 {
+.c10.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -215,11 +253,11 @@ exports[`Explore page renders correctly 1`] = `
   min-height: 2rem;
 }
 
-.c6.c6 div:only-child {
+.c10.c10 div:only-child {
   margin-left: auto;
 }
 
-.c4.c4 {
+.c8.c8 {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -239,7 +277,7 @@ exports[`Explore page renders correctly 1`] = `
   color: #aac9ff;
 }
 
-.c5.c5 {
+.c9.c9 {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -476,52 +514,26 @@ exports[`Explore page renders correctly 1`] = `
           }
         >
           <div
-            style={
-              Object {
-                "border": "1px solid #e9eaec",
-                "display": "flex",
-                "flexGrow": 1,
-                "height": "2.5rem",
-                "padding": "0.25rem",
-              }
-            }
+            className="c1"
           >
             <div
-              style={
-                Object {
-                  "flexGrow": 1,
-                }
-              }
+              className="c2"
             >
               <input
                 aria-label="Search for campaigns, platforms or instruments"
                 autoComplete="off"
+                className="c3"
                 data-cy="explore-input"
                 name="search"
                 onChange={[Function]}
                 placeholder="Search for campaigns, platforms or instruments"
                 size={50}
-                style={
-                  Object {
-                    "background": "transparent",
-                    "border": "none",
-                    "color": "#e9eaec",
-                  }
-                }
                 type="text"
               />
             </div>
             <button
+              className="c4"
               data-cy="submit"
-              style={
-                Object {
-                  "background": "transparent",
-                  "border": "none",
-                  "color": "#e9eaec",
-                  "flexGrow": 0,
-                  "verticalAlign": "middle",
-                }
-              }
               type="submit"
             >
               <span
@@ -592,7 +604,7 @@ exports[`Explore page renders correctly 1`] = `
               <span
                 aria-haspopup="listbox"
                 aria-labelledby="date-filter-select button--listbox-input--1"
-                className="c1"
+                className="c5"
                 data-reach-listbox-button=""
                 id="button--listbox-input--1"
                 onKeyDown={[Function]}
@@ -657,7 +669,7 @@ exports[`Explore page renders correctly 1`] = `
               <span
                 aria-haspopup="listbox"
                 aria-labelledby="focus-filter-select button--listbox-input--2"
-                className="c2"
+                className="c6"
                 data-reach-listbox-button=""
                 id="button--listbox-input--2"
                 onKeyDown={[Function]}
@@ -722,7 +734,7 @@ exports[`Explore page renders correctly 1`] = `
               <span
                 aria-haspopup="listbox"
                 aria-labelledby="geophysical-filter-select button--listbox-input--3"
-                className="c2"
+                className="c6"
                 data-reach-listbox-button=""
                 id="button--listbox-input--3"
                 onKeyDown={[Function]}
@@ -787,7 +799,7 @@ exports[`Explore page renders correctly 1`] = `
               <span
                 aria-haspopup="listbox"
                 aria-labelledby="season-filter-select button--listbox-input--4"
-                className="c2"
+                className="c6"
                 data-reach-listbox-button=""
                 id="button--listbox-input--4"
                 onKeyDown={[Function]}
@@ -852,7 +864,7 @@ exports[`Explore page renders correctly 1`] = `
               <span
                 aria-haspopup="listbox"
                 aria-labelledby="region-filter-select button--listbox-input--5"
-                className="c2"
+                className="c6"
                 data-reach-listbox-button=""
                 id="button--listbox-input--5"
                 onKeyDown={[Function]}
@@ -917,7 +929,7 @@ exports[`Explore page renders correctly 1`] = `
               <span
                 aria-haspopup="listbox"
                 aria-labelledby="platform-filter-select button--listbox-input--6"
-                className="c2"
+                className="c6"
                 data-reach-listbox-button=""
                 id="button--listbox-input--6"
                 onKeyDown={[Function]}
@@ -982,7 +994,7 @@ exports[`Explore page renders correctly 1`] = `
               <span
                 aria-haspopup="listbox"
                 aria-labelledby="funding-filter-select button--listbox-input--7"
-                className="c2"
+                className="c6"
                 data-reach-listbox-button=""
                 id="button--listbox-input--7"
                 onKeyDown={[Function]}
@@ -1050,7 +1062,7 @@ exports[`Explore page renders correctly 1`] = `
             title=""
           />
           <button
-            className="c3"
+            className="c7"
             data-cy="remove-filter"
             onClick={[Function]}
             style={
@@ -1109,7 +1121,7 @@ exports[`Explore page renders correctly 1`] = `
         >
           <li>
             <button
-              className="c4"
+              className="c8"
               onClick={[Function]}
             >
               Campaigns
@@ -1124,7 +1136,7 @@ exports[`Explore page renders correctly 1`] = `
           </li>
           <li>
             <button
-              className="c5"
+              className="c9"
               onClick={[Function]}
             >
               Platforms
@@ -1139,7 +1151,7 @@ exports[`Explore page renders correctly 1`] = `
           </li>
           <li>
             <button
-              className="c5"
+              className="c9"
               onClick={[Function]}
             >
               Instruments
@@ -1249,7 +1261,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c6"
+                  className="c10"
                 >
                   <svg
                     height="60"
@@ -1361,7 +1373,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c6"
+                  className="c10"
                 >
                   <svg
                     height="60"
@@ -1472,7 +1484,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c6"
+                  className="c10"
                 >
                   <svg
                     height="60"
@@ -1582,7 +1594,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c6"
+                  className="c10"
                 >
                   <img
                     alt="GOES-R PLT logo"
@@ -1689,7 +1701,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c6"
+                  className="c10"
                 >
                   <img
                     alt="OLYMPEX logo"
@@ -1796,7 +1808,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c6"
+                  className="c10"
                 >
                   <svg
                     height="60"
@@ -1907,7 +1919,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c6"
+                  className="c10"
                 >
                   <img
                     alt="CARVE logo"
@@ -2015,7 +2027,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c6"
+                  className="c10"
                 >
                   <img
                     alt="AirMOSS logo"
@@ -2123,7 +2135,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c6"
+                  className="c10"
                 >
                   <svg
                     height="60"
@@ -2235,7 +2247,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c6"
+                  className="c10"
                 >
                   <img
                     alt="HS3 logo"
@@ -2343,7 +2355,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c6"
+                  className="c10"
                 >
                   <svg
                     height="60"
@@ -2454,7 +2466,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c6"
+                  className="c10"
                 >
                   <svg
                     height="60"
@@ -2565,7 +2577,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c6"
+                  className="c10"
                 >
                   <img
                     alt="DC3 logo"
@@ -2670,7 +2682,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c6"
+                  className="c10"
                 >
                   <img
                     alt="GCPEx logo"
@@ -2777,7 +2789,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c6"
+                  className="c10"
                 >
                   <svg
                     height="60"
@@ -2888,7 +2900,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c6"
+                  className="c10"
                 >
                   <img
                     alt="GRIP logo"
@@ -2995,7 +3007,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c6"
+                  className="c10"
                 >
                   <img
                     alt="ARCTAS logo"
@@ -3103,7 +3115,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c6"
+                  className="c10"
                 >
                   <svg
                     height="60"
@@ -3214,7 +3226,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c6"
+                  className="c10"
                 >
                   <svg
                     height="60"
@@ -3325,7 +3337,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c6"
+                  className="c10"
                 >
                   <svg
                     height="60"
@@ -3436,7 +3448,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c6"
+                  className="c10"
                 >
                   <img
                     alt="ACES logo"
@@ -3543,7 +3555,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c6"
+                  className="c10"
                 >
                   <svg
                     height="60"
@@ -3655,7 +3667,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c6"
+                  className="c10"
                 >
                   <svg
                     height="60"
@@ -3766,7 +3778,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c6"
+                  className="c10"
                 >
                   <svg
                     height="60"
@@ -3878,7 +3890,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c6"
+                  className="c10"
                 >
                   <svg
                     height="60"
@@ -4002,7 +4014,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c6"
+                  className="c10"
                 >
                   <svg
                     height="60"
@@ -4106,17 +4118,17 @@ exports[`Explore page renders correctly 1`] = `
     </div>
   </main>
   <footer
-    className="c7"
+    className="c11"
     data-cy="page-footer"
   >
     <div
-      className="c8"
+      className="c12"
     >
       <div
-        className="c9"
+        className="c13"
       >
         <div
-          className="c10"
+          className="c14"
           data-cy="footer-title"
         >
           NASA | CASEI
@@ -4129,16 +4141,16 @@ exports[`Explore page renders correctly 1`] = `
         </p>
       </div>
       <div
-        className="c11"
+        className="c15"
         data-cy="footer-explore"
       >
         <p
-          className="c12"
+          className="c16"
         >
           Explore
         </p>
         <ul
-          className="c13"
+          className="c17"
         >
           <li>
             <a
@@ -4182,16 +4194,16 @@ exports[`Explore page renders correctly 1`] = `
         </ul>
       </div>
       <div
-        className="c14"
+        className="c18"
         data-cy="footer-resources"
       >
         <p
-          className="c12"
+          className="c16"
         >
           Resources
         </p>
         <ul
-          className="c13"
+          className="c17"
         >
           <li>
             <a
@@ -4202,7 +4214,7 @@ exports[`Explore page renders correctly 1`] = `
           </li>
           <li>
             <button
-              className="c3"
+              className="c7"
               onClick={[Function]}
               style={
                 Object {
@@ -4226,11 +4238,11 @@ exports[`Explore page renders correctly 1`] = `
               Maintenance login
             </button>
             <div
-              className="c15"
+              className="c19"
               onClick={[Function]}
             >
               <div
-                className="c16"
+                className="c20"
               >
                 <form
                   data-cy="login-form"
@@ -4272,16 +4284,16 @@ exports[`Explore page renders correctly 1`] = `
         </ul>
       </div>
       <div
-        className="c17"
+        className="c21"
         data-cy="footer-quick-links"
       >
         <p
-          className="c12"
+          className="c16"
         >
           Quick Links
         </p>
         <ul
-          className="c13"
+          className="c17"
         >
           <li>
             <a
@@ -4300,16 +4312,16 @@ exports[`Explore page renders correctly 1`] = `
         </ul>
       </div>
       <div
-        className="c18"
+        className="c22"
         data-cy="footer-organizations"
       >
         <p
-          className="c12"
+          className="c16"
         >
           Organizations
         </p>
         <ul
-          className="c13"
+          className="c17"
         >
           <li>
             <a
@@ -4344,17 +4356,17 @@ exports[`Explore page renders correctly 1`] = `
         </ul>
       </div>
       <hr
-        className="c19"
+        className="c23"
       />
       <div
-        className="c20"
+        className="c24"
       >
         <div
-          className="c21"
+          className="c25"
         >
           <div
             aria-hidden="true"
-            className="c22"
+            className="c26"
           />
           <div
             data-cy="footer-credits"
@@ -4370,7 +4382,7 @@ exports[`Explore page renders correctly 1`] = `
               NASA Official:
                
               <span
-                className="c23"
+                className="c27"
               >
                 Rahul Ramachandran
               </span>
@@ -4378,12 +4390,12 @@ exports[`Explore page renders correctly 1`] = `
           </div>
         </div>
         <div
-          className="c24"
+          className="c28"
         />
       </div>
     </div>
     <div
-      className="c25"
+      className="c29"
       data-cy="footer-credit-devseed"
     >
       © 
