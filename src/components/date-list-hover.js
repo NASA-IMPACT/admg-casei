@@ -18,6 +18,16 @@ const ListTrigger = styled(ListboxButton)`
   }
 `
 
+const Popover = styled(ListboxPopover)`
+  &[data-reach-listbox-popover] {
+    opacity: 0.99 !important;
+    /* :hover {
+      opacity: 0.99 !important;
+      background-color: pink;
+    } */
+  }
+`
+
 const DateList = ({ id, dates }) => {
   let [isOverButton, setIsOverButton] = useState(false)
   let [isOverList, setIsOverList] = useState(false)
@@ -29,7 +39,7 @@ const DateList = ({ id, dates }) => {
   useLayoutEffect(() => {
     if (isOpen && !isOverButton && !isOverList) {
       triggerRef.current.setAttribute("data-state", "closed")
-      listRef.current.setAttribute("hidden", true)
+      listRef.current.setAttribute("hidden", "")
 
       setIsOpen(false)
     } else if (!isOpen && (isOverButton || isOverList)) {
@@ -73,7 +83,7 @@ const DateList = ({ id, dates }) => {
             {dates.length !== 1 && "s"}
           </small>
         </ListTrigger>
-        <ListboxPopover
+        <Popover
           ref={listRef}
           onMouseEnter={() => {
             setIsOverList(true)
@@ -81,6 +91,7 @@ const DateList = ({ id, dates }) => {
           onMouseLeave={() => {
             setIsOverList(false)
           }}
+          portal={false}
           css={`
             background: ${theme.color.base};
             min-width: fit-content;
@@ -142,7 +153,7 @@ const DateList = ({ id, dates }) => {
               </div>
             )}
           </ListboxList>
-        </ListboxPopover>
+        </Popover>
       </ListboxInput>
     </>
   )
