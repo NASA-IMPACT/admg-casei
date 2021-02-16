@@ -38,14 +38,18 @@ const DataSection = ({ id, dois }) => {
       <SectionContent>
         {dois.length ? (
           <>
+            <p>
+              Show data products from this campaign by specific platforms or
+              instruments.
+            </p>
             {platformList.concat(instrumentList).length > 2 && (
               <div
-                style={{
-                  display: `flex`,
-                  borderBottom: `1px solid ${colors.darkTheme.altText}`,
-                  padding: `2rem 0`,
-                  marginBottom: `2rem`,
-                }}
+                css={`
+                  display: flex;
+                  border-bottom: 1px solid ${colors.darkTheme.altText};
+                  padding: 2rem 0;
+                  margin-bottom: 2rem;
+                `}
               >
                 <FilterBox
                   filterOptions={platformList}
@@ -75,40 +79,43 @@ const DataSection = ({ id, dois }) => {
               </FilterChips>
             )}
             <div
-              style={{
-                display: `grid`,
-                gridTemplateColumns: `repeat(auto-fit, minmax(18rem, 1fr))`,
-                gap: `1rem`,
-              }}
+              css={`
+                display: flex;
+                flex-direction: column;
+                max-height: 35rem;
+                overflow: auto;
+                gap: 1rem;
+              `}
             >
               {filteredDois.map(doi => (
                 <div
                   key={doi.id}
-                  style={{
-                    display: `flex`,
-                    flexDirection: `column`,
-                    backgroundColor: colors.darkTheme.background,
-                    gap: `0.5rem`,
-                    padding: `1.5rem`,
-                  }}
+                  css={`
+                    display: grid;
+                    gap: 1rem;
+                    grid-template-columns: 1fr 1fr;
+                    background-color: ${colors.darkTheme.background};
+                    padding: 1.5rem;
+                  `}
                   data-cy="data-product"
                 >
-                  <Label id="doi" color={colors.darkTheme.text}>
-                    {doi.longname}
-                  </Label>
-                  <ExternalLink
-                    label={doi.shortname}
-                    url={`http://dx.doi.org/${doi.shortname}`}
-                    id="doi"
-                  ></ExternalLink>
+                  <div>
+                    <Label id="doi" color={colors.darkTheme.text}>
+                      {doi.longname}
+                    </Label>
+                    <ExternalLink
+                      label={doi.shortname}
+                      url={`http://dx.doi.org/${doi.shortname}`}
+                      id="doi"
+                    ></ExternalLink>
+                  </div>
 
                   <div
-                    style={{
-                      flex: `2.618`,
-                      display: `grid`,
-                      gap: `1rem`,
-                      gridTemplateColumns: `1fr 1fr`,
-                    }}
+                    css={`
+                      display: flex;
+                      flex-direction: column;
+                      gap: 1rem;
+                    `}
                   >
                     <div data-cy="data-product-platforms">
                       <Label id="doi-platform" showBorder>

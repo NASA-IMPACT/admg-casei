@@ -28,6 +28,27 @@ exports[`Data Section matches snapshot 1`] = `
   grid-column: 1 / span 12;
 }
 
+.c3.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-height: 35rem;
+  overflow: auto;
+  gap: 1rem;
+}
+
+.c4.c4 {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  background-color: #303641;
+  padding: 1.5rem;
+}
+
 <section
   className="c0"
   data-cy="unique-id-section"
@@ -56,50 +77,41 @@ exports[`Data Section matches snapshot 1`] = `
   <div
     className="c2"
   >
+    <p>
+      Show data products from this instrument by specific campaigns or platforms.
+    </p>
     <div
-      style={
-        Object {
-          "display": "grid",
-          "gap": "1rem",
-          "gridTemplateColumns": "repeat(auto-fit, minmax(18rem, 1fr))",
-        }
-      }
+      className="c3"
     >
       <div
+        className="c4"
         data-cy="data-product"
-        style={
-          Object {
-            "backgroundColor": "#303641",
-            "display": "flex",
-            "flexDirection": "column",
-            "gap": "0.5rem",
-            "padding": "1.5rem",
-          }
-        }
       >
-        <label
-          data-cy="doi-label"
-        >
-          
-        </label>
-        <a
-          data-cy="doi-link"
-          href="http://dx.doi.org/"
-          rel="noopener noreferrer"
-          style={
-            Object {
-              "color": "#aac9ff",
+        <div>
+          <label
+            data-cy="doi-label"
+          >
+            
+          </label>
+          <a
+            data-cy="doi-link"
+            href="http://dx.doi.org/"
+            rel="noopener noreferrer"
+            style={
+              Object {
+                "color": "#aac9ff",
+              }
             }
-          }
-          target="_blank"
-        >
-          
-        </a>
-        <label
+            target="_blank"
+          >
+            
+          </a>
+        </div>
+        <small
           data-cy="no-campaigns-label"
         >
           No Related Campaigns or Platforms
-        </label>
+        </small>
       </div>
     </div>
   </div>
