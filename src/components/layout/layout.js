@@ -39,7 +39,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <Container id="top">
+    <Container id="top" data-cy="page">
       <Header shortname={data.site.siteMetadata.shortname}>
         <Nav />
       </Header>

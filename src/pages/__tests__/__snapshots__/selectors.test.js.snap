@@ -11,7 +11,7 @@ exports[`Explore page renders correctly 1`] = `
   transform: translate(0,1px);
 }
 
-.c7.c7 {
+.c15.c15 {
   position: fixed;
   top: 0;
   right: 0;
@@ -33,13 +33,126 @@ exports[`Explore page renders correctly 1`] = `
   transition: opacity 400ms ease-in;
 }
 
-.c8.c8 {
+.c16.c16 {
   width: 400px;
   position: relative;
   padding: 32px;
   border-radius: 3px;
   background: #303641;
   pointer-events: auto;
+}
+
+.c13.c13 {
+  list-style: none;
+  margin: 0;
+}
+
+.c12.c12 {
+  margin: 0 0 1.5rem 0;
+  font-weight: bold;
+  line-height: 3rem;
+}
+
+.c7.c7 {
+  margin-top: 5rem;
+  background-color: #303641;
+}
+
+.c8.c8 {
+  margin: 5rem auto;
+  max-width: 1280px;
+  padding: 2rem 5rem;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(12,1fr);
+}
+
+.c9.c9 {
+  grid-column: 1 / span 3;
+}
+
+.c10.c10 {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.c11.c11 {
+  grid-column: 5 / span 2;
+}
+
+.c14.c14 {
+  grid-column: 7 / span 2;
+}
+
+.c17.c17 {
+  grid-column: 9 / span 2;
+}
+
+.c18.c18 {
+  grid-column: 11 / span 2;
+}
+
+.c19.c19 {
+  grid-column: 1 / span 12;
+  background-color: rgba(255,255,255,0.2);
+}
+
+.c20.c20 {
+  grid-column: 1 / span 12;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c21.c21 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.c22.c22 {
+  background-image: url("https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png");
+  background-size: cover;
+  background-position: center;
+  width: 100px;
+  height: 100px;
+}
+
+.c23.c23 {
+  font-weight: normal;
+}
+
+.c24.c24 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.c25.c25 {
+  text-align: center;
 }
 
 .c0.c0 {
@@ -148,6 +261,7 @@ exports[`Explore page renders correctly 1`] = `
 
 <div
   className="c0"
+  data-cy="page"
   id="top"
 >
   <header>
@@ -3992,94 +4106,75 @@ exports[`Explore page renders correctly 1`] = `
     </div>
   </main>
   <footer
-    style={
-      Object {
-        "backgroundColor": "#303641",
-        "marginTop": "5rem",
-      }
-    }
+    className="c7"
+    data-cy="page-footer"
   >
     <div
-      style={
-        Object {
-          "display": "grid",
-          "flexShrink": 0,
-          "gap": "1rem",
-          "gridTemplateColumns": "repeat(12, 1fr)",
-          "margin": "5rem auto",
-          "maxWidth": "1280px",
-          "padding": "2rem 5rem",
-        }
-      }
+      className="c8"
     >
       <div
-        style={
-          Object {
-            "gridColumn": "1 / span 3",
-          }
-        }
+        className="c9"
       >
         <div
-          style={
-            Object {
-              "fontSize": "30px",
-              "fontWeight": "900",
-              "lineHeight": "2.5rem",
-              "marginBottom": "0.5rem",
-              "textTransform": "uppercase",
-            }
-          }
+          className="c10"
+          data-cy="footer-title"
         >
           NASA | CASEI
         </div>
-        <p>
+        <p
+          data-cy="footer-subtitle"
+        >
           NASA | CASEI
            is a comprehensive inventory containing information about all airborne and field campaigns as well as aircrafts, instruments, and data products.
         </p>
       </div>
       <div
-        style={
-          Object {
-            "gridColumn": "5 / span 2",
-          }
-        }
+        className="c11"
+        data-cy="footer-explore"
       >
         <p
-          style={
-            Object {
-              "fontWeight": "bold",
-              "lineHeight": "3rem",
-              "margin": "0 0 1.5rem 0",
-            }
-          }
+          className="c12"
         >
           Explore
         </p>
         <ul
-          style={
-            Object {
-              "listStyle": "none",
-              "margin": 0,
-            }
-          }
+          className="c13"
         >
           <li>
             <a
+              data-cy="footer-campaigns-link"
               href="/explore"
+              state={
+                Object {
+                  "defaultExploreCategory": "campaigns",
+                }
+              }
             >
               Campaigns
             </a>
           </li>
           <li>
             <a
+              data-cy="footer-platforms-link"
               href="/explore"
+              state={
+                Object {
+                  "defaultExploreCategory": "platforms",
+                }
+              }
             >
               Platforms
             </a>
           </li>
           <li>
             <a
+              data-cy="footer-instruments-link"
               href="/explore"
+              state={
+                Object {
+                  "defaultExploreCategory": "instruments",
+                }
+              }
             >
               Instruments
             </a>
@@ -4087,30 +4182,16 @@ exports[`Explore page renders correctly 1`] = `
         </ul>
       </div>
       <div
-        style={
-          Object {
-            "gridColumn": "7 / span 2",
-          }
-        }
+        className="c14"
+        data-cy="footer-resources"
       >
         <p
-          style={
-            Object {
-              "fontWeight": "bold",
-              "lineHeight": "3rem",
-              "margin": "0 0 1.5rem 0",
-            }
-          }
+          className="c12"
         >
           Resources
         </p>
         <ul
-          style={
-            Object {
-              "listStyle": "none",
-              "margin": 0,
-            }
-          }
+          className="c13"
         >
           <li>
             <a
@@ -4145,11 +4226,11 @@ exports[`Explore page renders correctly 1`] = `
               Maintenance login
             </button>
             <div
-              className="c7"
+              className="c15"
               onClick={[Function]}
             >
               <div
-                className="c8"
+                className="c16"
               >
                 <form
                   data-cy="login-form"
@@ -4191,30 +4272,16 @@ exports[`Explore page renders correctly 1`] = `
         </ul>
       </div>
       <div
-        style={
-          Object {
-            "gridColumn": "9 / span 2",
-          }
-        }
+        className="c17"
+        data-cy="footer-quick-links"
       >
         <p
-          style={
-            Object {
-              "fontWeight": "bold",
-              "lineHeight": "3rem",
-              "margin": "0 0 1.5rem 0",
-            }
-          }
+          className="c12"
         >
           Quick Links
         </p>
         <ul
-          style={
-            Object {
-              "listStyle": "none",
-              "margin": 0,
-            }
-          }
+          className="c13"
         >
           <li>
             <a
@@ -4233,30 +4300,16 @@ exports[`Explore page renders correctly 1`] = `
         </ul>
       </div>
       <div
-        style={
-          Object {
-            "gridColumn": "11 / span 2",
-          }
-        }
+        className="c18"
+        data-cy="footer-organizations"
       >
         <p
-          style={
-            Object {
-              "fontWeight": "bold",
-              "lineHeight": "3rem",
-              "margin": "0 0 1.5rem 0",
-            }
-          }
+          className="c12"
         >
           Organizations
         </p>
         <ul
-          style={
-            Object {
-              "listStyle": "none",
-              "margin": 0,
-            }
-          }
+          className="c13"
         >
           <li>
             <a
@@ -4291,55 +4344,33 @@ exports[`Explore page renders correctly 1`] = `
         </ul>
       </div>
       <hr
-        style={
-          Object {
-            "backgroundColor": "rgba(255,255,255,0.2)",
-            "gridColumn": "1 / span 12",
-          }
-        }
+        className="c19"
       />
       <div
-        style={
-          Object {
-            "display": "flex",
-            "gridColumn": "1 / span 12",
-            "justifyContent": "space-between",
-          }
-        }
+        className="c20"
       >
         <div
-          style={
-            Object {
-              "alignItems": "center",
-              "display": "flex",
-              "fontWeight": "bold",
-            }
-          }
+          className="c21"
         >
           <div
-            style={
-              Object {
-                "backgroundImage": "url('https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png')",
-                "backgroundPosition": "center",
-                "backgroundSize": "cover",
-                "height": 100,
-                "width": 100,
-              }
-            }
+            aria-hidden="true"
+            className="c22"
           />
-          <div>
-            <div>
+          <div
+            data-cy="footer-credits"
+          >
+            <div
+              data-cy="footer-credit-org"
+            >
               National Aeronautics and Space Administration
             </div>
-            <div>
+            <div
+              data-cy="footer-credit-official"
+            >
               NASA Official:
                
               <span
-                style={
-                  Object {
-                    "fontWeight": "normal",
-                  }
-                }
+                className="c23"
               >
                 Rahul Ramachandran
               </span>
@@ -4347,23 +4378,13 @@ exports[`Explore page renders correctly 1`] = `
           </div>
         </div>
         <div
-          style={
-            Object {
-              "alignItems": "center",
-              "color": undefined,
-              "display": "flex",
-              "textTransform": "uppercase",
-            }
-          }
+          className="c24"
         />
       </div>
     </div>
     <div
-      style={
-        Object {
-          "textAlign": "center",
-        }
-      }
+      className="c25"
+      data-cy="footer-credit-devseed"
     >
       © 
       2021
