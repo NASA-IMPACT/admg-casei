@@ -20,10 +20,13 @@ const IndexPage = ({ data }) => {
 
       <Hero
         tagTitle={data.site.siteMetadata.shortname}
-        title={data.site.siteMetadata.title}
+        title={data.site.siteMetadata.title.replace(
+          "Earth Science",
+          "Earth\u00a0Science" // add non-breaking space
+        )}
         description={data.site.siteMetadata.description}
         backgroundImage={data.heroImage}
-        textToImageRatio={[6, 6]}
+        textToImageRatio={[10, 2]}
         id="home"
       />
       <PageBody id="home">
