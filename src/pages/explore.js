@@ -53,6 +53,7 @@ export default function Explore({ data, location }) {
     end: null,
   })
   const [searchResult, setSearchResult] = useState()
+  const [isDisplayingMap, toggleMap] = useState(false)
 
   useEffect(() => {
     // update based on passed state
@@ -163,21 +164,24 @@ export default function Explore({ data, location }) {
           getFilterOptionsById={getFilterOptionsById}
           removeFilter={removeFilter}
           category={selectedCategory}
+          toggleMap={toggleMap}
+          isDisplayingMap={isDisplayingMap}
         />
-
-        <ExploreMap
-          allData={campaignList.all.map(c => ({
-            id: c.id,
-            bounds: c.bounds,
-          }))}
-          filteredData={campaignList.filtered.map(c => ({
-            id: c.id,
-            bounds: c.bounds,
-          }))}
-          setGeoFilter={setGeoFilter}
-          aoi={aoi}
-          setAoi={setAoi}
-        />
+        {isDisplayingMap && (
+          <ExploreMap
+            allData={campaignList.all.map(c => ({
+              id: c.id,
+              bounds: c.bounds,
+            }))}
+            filteredData={campaignList.filtered.map(c => ({
+              id: c.id,
+              bounds: c.bounds,
+            }))}
+            setGeoFilter={setGeoFilter}
+            aoi={aoi}
+            setAoi={setAoi}
+          />
+        )}
 
         {(selectedFilterIds.length > 0 ||
           aoi ||

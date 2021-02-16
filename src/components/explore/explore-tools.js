@@ -19,6 +19,8 @@ const ExploreTools = React.forwardRef(
       getFilterOptionsById,
       removeFilter,
       category,
+      toggleMap,
+      isDisplayingMap,
     },
     ref
   ) => {
@@ -35,7 +37,11 @@ const ExploreTools = React.forwardRef(
         data-cy="explore-tools"
       >
         <div style={{ display: `flex` }}>
-          <Searchbar ref={ref} />
+          <Searchbar
+            ref={ref}
+            toggleMap={toggleMap}
+            isDisplayingMap={isDisplayingMap}
+          />
         </div>
 
         <div style={{ flexGrow: 1, display: `flex`, alignContent: `stretch` }}>
@@ -157,6 +163,8 @@ ExploreTools.propTypes = {
   removeFilter: PropTypes.func.isRequired,
   category: PropTypes.oneOf(["campaigns", "platforms", "instruments"])
     .isRequired,
+  toggleMap: PropTypes.func.isRequired,
+  isDisplayingMap: PropTypes.func.isRequired,
 }
 
 // https://reactjs.org/docs/forwarding-refs.html#displaying-a-custom-name-in-devtools
