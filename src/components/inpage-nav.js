@@ -1,7 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { Link } from "gatsby"
 import { FeedbackForm } from "feedback-fish"
 
+import Image from "./image"
 import { colors } from "../utils/theme"
 import Button from "../components/button"
 
@@ -60,6 +62,20 @@ const InpageNav = ({ shortname, items, path }) => (
             listStyle: `none`,
           }}
         >
+          <li>
+            <Link
+              to="/"
+              style={{
+                textDecoration: `none`,
+                display: `grid`,
+                gridTemplateColumns: `3rem auto`,
+                columnGap: `1rem`,
+                alignItems: `center`,
+              }}
+            >
+              <Image filename="logo.png" alt={`${shortname} logo`} />
+            </Link>
+          </li>
           <li style={{ margin: `0 1rem 0 0` }}>
             <a
               href="#top"
