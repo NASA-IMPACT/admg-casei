@@ -15,10 +15,24 @@ const Searchbar = React.forwardRef((_props, ref) => {
         padding: 0.25rem;
       `}
     >
+      <button
+        type="submit"
+        css={`
+          border: none;
+          flexgrow: 0;
+          background: transparent;
+          color: ${colors.darkTheme.text};
+          verticalalign: middle;
+        `}
+        data-cy="submit"
+      >
+        <span role="img" aria-label="Magnifying glass icon">
+          <SearchIcon color={colors.darkTheme.text} />
+        </span>
+      </button>
       <div
         css={`
           flex-grow: 1;
-          font-style: italic;
         `}
       >
         <input
@@ -33,6 +47,7 @@ const Searchbar = React.forwardRef((_props, ref) => {
             border: none;
             background: transparent;
             color: ${colors.darkTheme.text};
+            font-style: italic;
           `}
           type="text"
           ref={ref}
@@ -56,21 +71,6 @@ const Searchbar = React.forwardRef((_props, ref) => {
           </button>
         )}
       </div>
-      <button
-        type="submit"
-        css={`
-          border: none;
-          flexgrow: 0;
-          background: transparent;
-          color: ${colors.darkTheme.text};
-          verticalalign: middle;
-        `}
-        data-cy="submit"
-      >
-        <span role="img" aria-label="Magnifying glass icon">
-          <SearchIcon color={colors.darkTheme.text} />
-        </span>
-      </button>
     </div>
   )
 })
