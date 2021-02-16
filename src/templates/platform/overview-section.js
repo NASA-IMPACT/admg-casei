@@ -16,7 +16,7 @@ export default function OverviewSection({
   onlineInformation,
 }) {
   return (
-    <Section id={id} isLight>
+    <Section id={id} mode="lightTheme">
       <VisuallyHidden>
         <SectionHeader headline="Overview" id={id} />
       </VisuallyHidden>
@@ -28,7 +28,7 @@ export default function OverviewSection({
         <h3>Online information</h3>
         <ul style={{ margin: 0, listStyle: `none` }} data-cy="link-list">
           {onlineInformation.map(link => (
-            <ListLink key={link} to={link} isLight noPadding>
+            <ListLink key={link} to={link} mode="lightTheme" noPadding>
               {link}
             </ListLink>
           ))}

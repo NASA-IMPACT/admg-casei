@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
-import theme from "../utils/theme"
+import { colors, layout } from "../utils/theme"
 import Login from "./login"
 import ExternalLink from "./external-link"
 
@@ -27,15 +27,15 @@ const Footer = ({ shortname }) => {
     <footer
       css={`
         margin-top: 5rem;
-        background-color: #262a31;
+        background-color: ${colors.darkTheme.background};
       `}
       data-cy="page-footer"
     >
       <div
         css={`
           margin: 5rem auto;
-          max-width: theme.layout.maxWidth;
-          padding: 2rem ${theme.layout.pageMargin};
+          max-width: ${layout.maxWidth};
+          padding: 2rem ${layout.pageMargin};
           flex-shrink: 0;
           display: grid;
           gap: 1rem;
@@ -192,9 +192,10 @@ const Footer = ({ shortname }) => {
                 background-image: url("https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png");
                 background-size: cover;
                 background-position: center;
-                width: 100;
-                height: 100;
+                width: 100px;
+                height: 100px;
               `}
+              aria-hidden="true" // purely decorative content
             ></div>
             <div data-cy="footer-credits">
               <div data-cy="footer-credit-org">
@@ -217,8 +218,7 @@ const Footer = ({ shortname }) => {
               display: flex;
               align-items: center;
               text-transform: uppercase;
-              color: #81aefb;
-              font-weight: bold;
+              color: ${colors.darkTheme.link};
             `}
           >
             {/* TODO: Add back in with real links */}

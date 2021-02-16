@@ -14,12 +14,12 @@ exports[`Footer renders correctly 1`] = `
 
 .c0.c0 {
   margin-top: 5rem;
-  background-color: #262a31;
+  background-color: #303641;
 }
 
 .c1.c1 {
   margin: 5rem auto;
-  max-width: theme.layout.maxWidth;
+  max-width: 1280px;
   padding: 2rem 5rem;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -90,8 +90,8 @@ exports[`Footer renders correctly 1`] = `
   background-image: url("https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png");
   background-size: cover;
   background-position: center;
-  width: 100;
-  height: 100;
+  width: 100px;
+  height: 100px;
 }
 
 .c14.c14 {
@@ -108,8 +108,6 @@ exports[`Footer renders correctly 1`] = `
   -ms-flex-align: center;
   align-items: center;
   text-transform: uppercase;
-  color: #81aefb;
-  font-weight: bold;
 }
 
 .c16.c16 {
@@ -155,6 +153,11 @@ exports[`Footer renders correctly 1`] = `
           <a
             data-cy="footer-campaigns-link"
             href="/explore"
+            state={
+              Object {
+                "defaultExploreCategory": "campaigns",
+              }
+            }
           >
             Campaigns
           </a>
@@ -291,6 +294,7 @@ exports[`Footer renders correctly 1`] = `
         className="c12"
       >
         <div
+          aria-hidden="true"
           className="c13"
         />
         <div

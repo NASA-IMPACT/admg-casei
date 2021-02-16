@@ -2,19 +2,21 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import ExternalLink from "../external-link"
-import theme from "../../utils/theme"
+import { colors } from "../../utils/theme"
 
 export default function ContentItem({
   id,
   label,
   info = "N/A",
   link,
-  isLight,
+  mode = "darkTheme",
 }) {
   return (
     <div data-cy={id}>
       <label
-        style={{ color: isLight ? theme.color.grayDark : theme.color.gray }}
+        style={{
+          color: colors[mode].altText,
+        }}
         data-cy={`${id}-label`}
       >
         {label}
@@ -36,5 +38,5 @@ ContentItem.propTypes = {
   label: PropTypes.string.isRequired,
   info: PropTypes.string,
   link: PropTypes.string,
-  isLight: PropTypes.bool,
+  mode: PropTypes.oneOf(["lightTheme", "darkTheme"]),
 }

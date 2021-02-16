@@ -19,7 +19,7 @@ import {
   subYears,
 } from "date-fns"
 
-import theme from "../../utils/theme"
+import { colors } from "../../utils/theme"
 
 const FilterButton = styled(ListboxButton)`
   flex-grow: 0;
@@ -27,8 +27,8 @@ const FilterButton = styled(ListboxButton)`
   width: 100%;
   -webkit-appearance: none;
   background: transparent;
-  border: 1px solid ${theme.color.base};
-  color: ${theme.color.base};
+  border: 1px solid ${colors.darkTheme.text};
+  color: ${colors.darkTheme.text};
   padding: 0.5rem;
   cursor: pointer;
   text-transform: uppercase;
@@ -40,7 +40,7 @@ const TimeRangeButton = styled.button`
   -webkit-appearance: none;
   background: transparent;
   border: 0;
-  color: ${theme.color.base};
+  color: ${colors.darkTheme.text};
   padding: 0.5rem;
   cursor: pointer;
   text-transform: capitalize;
@@ -52,8 +52,8 @@ const ApplyButton = styled(ListboxOption)`
   width: 100%;
   -webkit-appearance: none;
   background: transparent;
-  border: 1px solid ${theme.color.base};
-  color: ${theme.color.base};
+  border: 1px solid ${colors.darkTheme.text};
+  color: ${colors.darkTheme.text};
   padding: 0.5rem;
   cursor: pointer;
   text-align: center;
@@ -118,7 +118,7 @@ const DateMenu = ({ id, style, label, dateRange, setDateRange }) => {
         <FilterButton arrow="▼">{label}</FilterButton>
         <ListboxPopover
           style={{
-            background: theme.color.primary,
+            background: colors.darkTheme.altBackground,
             minWidth: `fit-content`,
           }}
         >

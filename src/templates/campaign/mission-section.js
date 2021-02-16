@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
 import { Section, SectionHeader, SectionContent } from "../../components/layout"
-import theme from "../../utils/theme"
+import { colors } from "../../utils/theme"
 
 const MissionSection = ({ id, missions }) => (
   <Section id={id}>
@@ -25,7 +25,7 @@ const MissionSection = ({ id, missions }) => (
               display: `flex`,
               gap: `1.5rem`,
               alignItems: `center`,
-              backgroundColor: theme.color.secondary,
+              backgroundColor: colors.darkTheme.background,
             }}
             data-cy="linked-mission"
           >

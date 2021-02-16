@@ -16,7 +16,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
 
 .c0.c0 > *,
 .c0.c0 h3 {
-  color: hsla(0,0%,100%,0.9);
+  color: #e9eaec;
 }
 
 .c1.c1 {
@@ -32,6 +32,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
 <section
   className="c0"
   data-cy="program-info-section"
+  mode="darkTheme"
 >
   <div
     className="c1"
@@ -122,7 +123,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
             data-cy="program-info-content-label"
             style={
               Object {
-                "color": "#9E9E9E",
+                "color": "#9e9e9e",
               }
             }
           >
@@ -141,7 +142,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
             data-cy="program-info-content-label"
             style={
               Object {
-                "color": "#9E9E9E",
+                "color": "#9e9e9e",
               }
             }
           >
@@ -160,7 +161,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
             data-cy="program-info-content-label"
             style={
               Object {
-                "color": "#9E9E9E",
+                "color": "#9e9e9e",
               }
             }
           >
@@ -179,7 +180,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
             data-cy="program-info-content-label"
             style={
               Object {
-                "color": "#9E9E9E",
+                "color": "#9e9e9e",
               }
             }
           >
@@ -198,7 +199,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
             data-cy="program-info-content-label"
             style={
               Object {
-                "color": "#9E9E9E",
+                "color": "#9e9e9e",
               }
             }
           >
@@ -217,7 +218,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
             data-cy="program-info-content-label"
             style={
               Object {
-                "color": "#9E9E9E",
+                "color": "#9e9e9e",
               }
             }
           >
@@ -246,7 +247,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
             data-cy="program-info-content-label"
             style={
               Object {
-                "color": "#9E9E9E",
+                "color": "#9e9e9e",
               }
             }
           >
@@ -265,7 +266,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
             data-cy="program-info-content-label"
             style={
               Object {
-                "color": "#9E9E9E",
+                "color": "#9e9e9e",
               }
             }
           >
@@ -309,7 +310,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
 
 .c0.c0 > *,
 .c0.c0 h3 {
-  color: hsla(0,0%,100%,0.9);
+  color: #e9eaec;
 }
 
 .c1.c1 {
@@ -325,6 +326,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
 <section
   className="c0"
   data-cy="program-info-section"
+  mode="darkTheme"
 >
   <div
     className="c1"
@@ -404,7 +406,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
             data-cy="program-info-content-label"
             style={
               Object {
-                "color": "#9E9E9E",
+                "color": "#9e9e9e",
               }
             }
           >
@@ -423,7 +425,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
             data-cy="program-info-content-label"
             style={
               Object {
-                "color": "#9E9E9E",
+                "color": "#9e9e9e",
               }
             }
           >
@@ -442,7 +444,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
             data-cy="program-info-content-label"
             style={
               Object {
-                "color": "#9E9E9E",
+                "color": "#9e9e9e",
               }
             }
           >
@@ -461,7 +463,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
             data-cy="program-info-content-label"
             style={
               Object {
-                "color": "#9E9E9E",
+                "color": "#9e9e9e",
               }
             }
           >
@@ -480,7 +482,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
             data-cy="program-info-content-label"
             style={
               Object {
-                "color": "#9E9E9E",
+                "color": "#9e9e9e",
               }
             }
           >
@@ -499,7 +501,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
             data-cy="program-info-content-label"
             style={
               Object {
-                "color": "#9E9E9E",
+                "color": "#9e9e9e",
               }
             }
           >
@@ -528,7 +530,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
             data-cy="program-info-content-label"
             style={
               Object {
-                "color": "#9E9E9E",
+                "color": "#9e9e9e",
               }
             }
           >
@@ -547,7 +549,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
             data-cy="program-info-content-label"
             style={
               Object {
-                "color": "#9E9E9E",
+                "color": "#9e9e9e",
               }
             }
           >

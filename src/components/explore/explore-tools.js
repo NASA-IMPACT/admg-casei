@@ -5,7 +5,7 @@ import FilterMenu from "./filter-menu"
 import Searchbar from "./searchbar"
 import DateMenu from "./date-menu"
 
-import theme from "../../utils/theme"
+import { colors } from "../../utils/theme"
 
 const ExploreTools = React.forwardRef(
   (
@@ -30,7 +30,7 @@ const ExploreTools = React.forwardRef(
           display: `flex`,
           margin: `2rem 0`,
           flexFlow: `column wrap`,
-          border: `1px solid ${theme.color.base}`,
+          border: `1px solid ${colors.darkTheme.text}`,
         }}
         data-cy="explore-tools"
       >

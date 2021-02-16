@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import Image from "gatsby-image"
 
-import theme from "../utils/theme"
+import { layout } from "../utils/theme"
 
 export const HeroStats = ({ statList }) => (
   <dl style={{ display: `grid`, maxHeight: `6rem` }} data-cy="stats">
@@ -53,7 +53,7 @@ export default function Hero({
       style={{
         ...imageStyle,
         display: `grid`,
-        gridTemplateColumns: `1fr minmax(auto,  ${theme.layout.maxWidth}) 1fr`,
+        gridTemplateColumns: `1fr minmax(auto,  ${layout.maxWidth}) 1fr`,
         width: `100vw`,
         minHeight: `35rem`,
         alignContent: `center`,
@@ -67,7 +67,7 @@ export default function Hero({
           display: `grid`,
           gridTemplateColumns: `${textToImageRatio[0]}fr ${textToImageRatio[1]}fr`,
           gridGap: `.5rem`,
-          padding: `0 ${theme.layout.pageMargin}`,
+          padding: `0 ${layout.pageMargin}`,
         }}
       >
         <div style={{ alignSelf: `end`, gridArea: `1 / 1 / 1 / 1` }}>
