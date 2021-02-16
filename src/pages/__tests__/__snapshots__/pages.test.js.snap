@@ -123,7 +123,16 @@ exports[`Explore page renders correctly 1`] = `
   height: 2.5rem;
   text-transform: uppercase;
   font-weight: bold;
-  color: #aac9ff;
+  color: #e9eaec;
+}
+
+.c4.c4::after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid #e9eaec;
+  width: 100%;
+  position: relative;
+  bottom: -0.25rem;
 }
 
 .c5.c5 {
@@ -142,8 +151,15 @@ exports[`Explore page renders correctly 1`] = `
   cursor: pointer;
   height: 2.5rem;
   text-transform: uppercase;
-  font-weight: bold;
   color: #e9eaec;
+}
+
+.c5.c5::after {
+  content: "";
+  display: block;
+  width: 100%;
+  position: relative;
+  bottom: -0.25rem;
 }
 
 <div
