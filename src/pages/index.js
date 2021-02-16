@@ -13,7 +13,7 @@ import { GeophysicsGrid } from "../components/home/geophysics-grid"
 import { InstrumentsGrid } from "../components/home/instruments-grid"
 import { colors } from "../utils/theme"
 
-const IndexPage = ({ data }) => {
+const Home = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" lang="en" />
@@ -193,7 +193,7 @@ export const query = graphql`
   }
 `
 
-IndexPage.propTypes = {
+Home.propTypes = {
   data: PropTypes.shape({
     site: PropTypes.shape({
       siteMetadata: PropTypes.shape({
@@ -255,4 +255,4 @@ IndexPage.propTypes = {
   }).isRequired,
 }
 
-export default IndexPage
+export default Home
