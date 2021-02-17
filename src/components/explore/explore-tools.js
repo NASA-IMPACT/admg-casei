@@ -188,7 +188,7 @@ ExploreTools.propTypes = {
   category: PropTypes.oneOf(["campaigns", "platforms", "instruments"])
     .isRequired,
   toggleMap: PropTypes.func.isRequired,
-  isDisplayingMap: PropTypes.func.isRequired,
+  isDisplayingMap: PropTypes.bool.isRequired,
 }
 
 // https://reactjs.org/docs/forwarding-refs.html#displaying-a-custom-name-in-devtools

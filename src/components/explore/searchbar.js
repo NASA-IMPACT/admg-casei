@@ -103,7 +103,7 @@ Searchbar.displayName = "Searchbar"
 
 Searchbar.propTypes = {
   toggleMap: PropTypes.func.isRequired,
-  isDisplayingMap: PropTypes.func.isRequired,
+  isDisplayingMap: PropTypes.bool.isRequired,
 }
 
 export default Searchbar
