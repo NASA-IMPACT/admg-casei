@@ -29,6 +29,11 @@ exports[`Focus Section displays content 1`] = `
   background-color: #303641;
 }
 
+.c2.c2 > *,
+.c2.c2 h3 {
+  color: #e9eaec;
+}
+
 <section
   className="c0"
   data-cy="focus-section"
@@ -56,6 +61,7 @@ exports[`Focus Section displays content 1`] = `
   </div>
   <div
     className="c2"
+    mode="darkTheme"
   >
     <div
       style={

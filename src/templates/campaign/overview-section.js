@@ -32,7 +32,7 @@ const OverviewSection = ({
     <VisuallyHidden>
       <SectionHeader headline="Overview" id={id} />
     </VisuallyHidden>
-    <SectionContent columns={[1, 8]}>
+    <SectionContent mode="lightTheme" columns={[1, 8]}>
       <h3>The Campaign</h3>
       <p data-cy="description">{description}</p>
       <div
@@ -75,7 +75,7 @@ const OverviewSection = ({
       </div>
     </SectionContent>
 
-    <SectionContent columns={[10, 3]}>
+    <SectionContent mode="lightTheme" columns={[10, 3]}>
       <ul style={{ margin: 0, listStyle: `none` }} data-cy="link-list">
         <li
           style={{
@@ -125,11 +125,11 @@ const OverviewSection = ({
       </ul>
     </SectionContent>
 
-    <SectionContent columns={[1, 8]}>
+    <SectionContent mode="lightTheme" columns={[1, 8]}>
       <h3>Additional Notes</h3>
       <p data-cy="notes-public">{notesPublic}</p>
     </SectionContent>
-    <SectionContent columns={[1, 8]}>
+    <SectionContent mode="lightTheme" columns={[1, 8]}>
       <h3>Repositories</h3>
       <ul style={{ margin: 0, listStyle: `none` }} data-cy="repo-list">
         {repositories.map(repo => (

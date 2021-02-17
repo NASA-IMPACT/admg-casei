@@ -54,13 +54,27 @@ Section.propTypes = {
 export const SectionContent = styled.div`
   grid-column: ${({ columns = [1, 12] }) =>
     `${columns[0]} / span ${columns[1]}`};
-  background-color: ${({ withBackground }) =>
-    withBackground ? colors.darkTheme.background : null};
+  background-color: ${({ withBackground, mode }) =>
+    withBackground ? colors[mode].background : null};
   min-height: ${({ minHeight }) => (minHeight ? minHeight : null)};
+  padding: ${({ withPadding }) => (withPadding ? `5rem` : null)};
+
+  > *,
+  h3 {
+    color: ${props => colors[props.mode].text};
+  }
 `
+
+SectionContent.defaultProps = {
+  mode: "darkTheme",
+}
 
 SectionContent.propTypes = {
   columns: PropTypes.arrayOf(PropTypes.number),
+  minHeight: PropTypes.string,
+  mode: PropTypes.oneOf(["darkTheme", "lightTheme"]),
+  withBackground: PropTypes.bool,
+  withPadding: PropTypes.bool,
 }
 
 export const Paragraph = styled.p`

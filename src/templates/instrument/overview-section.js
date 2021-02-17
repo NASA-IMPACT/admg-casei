@@ -149,7 +149,7 @@ export default function OverviewSection({
       <VisuallyHidden>
         <SectionHeader headline="Overview" id={id} />
       </VisuallyHidden>
-      <SectionContent columns={[1, 8]}>
+      <SectionContent mode="lightTheme" columns={[1, 8]}>
         <h3>Instrument Details</h3>
         <DefinitionList
           id="instrument"
@@ -229,7 +229,7 @@ export default function OverviewSection({
           ]}
         />
       </SectionContent>
-      <SectionContent columns={[10, 3]}>
+      <SectionContent mode="lightTheme" columns={[10, 3]}>
         <Background
           instrumentDoi={instrumentDoi}
           instrumentManufacturer={instrumentManufacturer}

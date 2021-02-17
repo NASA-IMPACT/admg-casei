@@ -29,6 +29,11 @@ exports[`Program Info Section renders logo when present in props 1`] = `
   background-color: #303641;
 }
 
+.c2.c2 > *,
+.c2.c2 h3 {
+  color: #e9eaec;
+}
+
 <section
   className="c0"
   data-cy="program-info-section"
@@ -56,6 +61,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
   </div>
   <div
     className="c2"
+    mode="darkTheme"
   >
     <div
       style={
@@ -323,6 +329,11 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
   background-color: #303641;
 }
 
+.c2.c2 > *,
+.c2.c2 h3 {
+  color: #e9eaec;
+}
+
 <section
   className="c0"
   data-cy="program-info-section"
@@ -350,6 +361,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
   </div>
   <div
     className="c2"
+    mode="darkTheme"
   >
     <div
       style={

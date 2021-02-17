@@ -20,11 +20,11 @@ export default function OverviewSection({
       <VisuallyHidden>
         <SectionHeader headline="Overview" id={id} />
       </VisuallyHidden>
-      <SectionContent columns={[1, 7]}>
+      <SectionContent mode="lightTheme" columns={[1, 7]}>
         <h3>Overview</h3>
         <p>{description}</p>
       </SectionContent>
-      <SectionContent columns={[1, 8]}>
+      <SectionContent mode="lightTheme" columns={[1, 8]}>
         <h3>Online information</h3>
         <ul style={{ margin: 0, listStyle: `none` }} data-cy="link-list">
           {onlineInformation.map(link => (

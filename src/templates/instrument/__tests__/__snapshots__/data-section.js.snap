@@ -28,6 +28,11 @@ exports[`Data Section matches snapshot 1`] = `
   grid-column: 1 / span 12;
 }
 
+.c2.c2 > *,
+.c2.c2 h3 {
+  color: #e9eaec;
+}
+
 <section
   className="c0"
   data-cy="unique-id-section"
@@ -55,6 +60,7 @@ exports[`Data Section matches snapshot 1`] = `
   </div>
   <div
     className="c2"
+    mode="darkTheme"
   >
     <div
       style={
