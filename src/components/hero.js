@@ -5,7 +5,7 @@ import Image from "gatsby-image"
 import { layout } from "../utils/theme"
 
 export const HeroStats = ({ statList }) => (
-  <dl style={{ display: `grid`, maxHeight: `6rem` }} data-cy="stats">
+  <dl style={{ display: `grid` }} data-cy="stats">
     {statList.map(stat => (
       <React.Fragment key={stat.label}>
         <dt style={{ fontSize: `4rem` }}>
