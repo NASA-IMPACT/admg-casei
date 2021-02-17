@@ -168,7 +168,7 @@ export default function Explore({ data, location }) {
           toggleMap={toggleMap}
           isDisplayingMap={isDisplayingMap}
         />
-        {isDisplayingMap && (
+        {isDisplayingMap && selectedCategory === "campaigns" && (
           <ExploreMap
             allData={campaignList.all.map(c => ({
               id: c.id,

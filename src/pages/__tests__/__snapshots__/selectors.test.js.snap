@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Explore page renders correctly 1`] = `
-.c15.c15:hover {
+.c16.c16:hover {
   opacity: 0.64;
 }
 
-.c15.c15:active {
+.c16.c16:active {
   -webkit-transform: translate(0,1px);
   -ms-transform: translate(0,1px);
   transform: translate(0,1px);
 }
 
-.c28.c28 {
+.c29.c29 {
   position: fixed;
   top: 0;
   right: 0;
@@ -33,7 +33,7 @@ exports[`Explore page renders correctly 1`] = `
   transition: opacity 400ms ease-in;
 }
 
-.c29.c29 {
+.c30.c30 {
   width: 400px;
   position: relative;
   padding: 32px;
@@ -42,23 +42,23 @@ exports[`Explore page renders correctly 1`] = `
   pointer-events: auto;
 }
 
-.c26.c26 {
+.c27.c27 {
   list-style: none;
   margin: 0;
 }
 
-.c25.c25 {
+.c26.c26 {
   margin: 0 0 1.5rem 0;
   font-weight: bold;
   line-height: 3rem;
 }
 
-.c20.c20 {
+.c21.c21 {
   margin-top: 5rem;
   background-color: #303641;
 }
 
-.c21.c21 {
+.c22.c22 {
   margin: 5rem auto;
   max-width: 1280px;
   padding: 2rem 5rem;
@@ -70,11 +70,11 @@ exports[`Explore page renders correctly 1`] = `
   grid-template-columns: repeat(12,1fr);
 }
 
-.c22.c22 {
+.c23.c23 {
   grid-column: 1 / span 3;
 }
 
-.c23.c23 {
+.c24.c24 {
   text-transform: uppercase;
   font-weight: 900;
   font-size: 30px;
@@ -82,28 +82,28 @@ exports[`Explore page renders correctly 1`] = `
   margin-bottom: 0.5rem;
 }
 
-.c24.c24 {
+.c25.c25 {
   grid-column: 5 / span 2;
 }
 
-.c27.c27 {
+.c28.c28 {
   grid-column: 7 / span 2;
 }
 
-.c30.c30 {
+.c31.c31 {
   grid-column: 9 / span 2;
 }
 
-.c31.c31 {
+.c32.c32 {
   grid-column: 11 / span 2;
 }
 
-.c32.c32 {
+.c33.c33 {
   grid-column: 1 / span 12;
   background-color: rgba(255,255,255,0.2);
 }
 
-.c33.c33 {
+.c34.c34 {
   grid-column: 1 / span 12;
   display: -webkit-box;
   display: -webkit-flex;
@@ -115,7 +115,7 @@ exports[`Explore page renders correctly 1`] = `
   justify-content: space-between;
 }
 
-.c34.c34 {
+.c35.c35 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -127,7 +127,7 @@ exports[`Explore page renders correctly 1`] = `
   font-weight: bold;
 }
 
-.c35.c35 {
+.c36.c36 {
   background-image: url("https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png");
   background-size: cover;
   background-position: center;
@@ -135,11 +135,11 @@ exports[`Explore page renders correctly 1`] = `
   height: 100px;
 }
 
-.c36.c36 {
+.c37.c37 {
   font-weight: normal;
 }
 
-.c37.c37 {
+.c38.c38 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -151,7 +151,7 @@ exports[`Explore page renders correctly 1`] = `
   text-transform: uppercase;
 }
 
-.c38.c38 {
+.c39.c39 {
   text-align: center;
 }
 
@@ -166,7 +166,7 @@ exports[`Explore page renders correctly 1`] = `
   flex-direction: column;
 }
 
-.c14.c14 {
+.c15.c15 {
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
   -ms-flex-positive: 0;
@@ -181,11 +181,11 @@ exports[`Explore page renders correctly 1`] = `
   text-transform: uppercase;
 }
 
-.c13.c13 {
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
+.c14.c14 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
 }
 
 .c3.c3 {
@@ -230,24 +230,7 @@ exports[`Explore page renders correctly 1`] = `
   font-style: italic;
 }
 
-.c7.c7 {
-  border: 1px solid #e9eaec;
-  padding: 0.25rem;
-}
-
-.c8.c8 {
-  border: none;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  background: transparent;
-  color: #e9eaec;
-  vertical-align: middle;
-  cursor: pointer;
-}
-
-.c12.c12 {
+.c13.c13 {
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
   -ms-flex-positive: 0;
@@ -262,7 +245,7 @@ exports[`Explore page renders correctly 1`] = `
   text-transform: uppercase;
 }
 
-.c11.c11 {
+.c12.c12 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -286,6 +269,23 @@ exports[`Explore page renders correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.c7.c7 {
+  border: 1px solid #e9eaec;
+  padding: 0.25rem;
+}
+
+.c8.c8 {
+  border: none;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  background: transparent;
+  color: #e9eaec;
+  vertical-align: middle;
+  cursor: pointer;
 }
 
 .c9.c9 {
@@ -313,10 +313,18 @@ exports[`Explore page renders correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.55rem;
 }
 
-.c19.c19 {
+.c11.c11 {
+  display: inherit;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c20.c20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -333,28 +341,8 @@ exports[`Explore page renders correctly 1`] = `
   min-height: 2rem;
 }
 
-.c19.c19 div:only-child {
+.c20.c20 div:only-child {
   margin-left: auto;
-}
-
-.c17.c17 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  display: inline-block;
-  text-align: center;
-  vertical-align: middle;
-  padding: 0.25rem 0.75rem;
-  min-width: 2rem;
-  background: none;
-  text-shadow: none;
-  border: 0;
-  cursor: pointer;
-  height: 2.5rem;
-  text-transform: uppercase;
-  font-weight: bold;
-  color: #aac9ff;
 }
 
 .c18.c18 {
@@ -374,34 +362,72 @@ exports[`Explore page renders correctly 1`] = `
   height: 2.5rem;
   text-transform: uppercase;
   font-weight: bold;
+  color: #aac9ff;
+}
+
+.c19.c19 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.25rem 0.75rem;
+  min-width: 2rem;
+  background: none;
+  text-shadow: none;
+  border: 0;
+  cursor: pointer;
+  height: 2.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
   color: #e9eaec;
 }
 
-.c16.c16 {
+.c17.c17 {
   background: #5f5f5f;
 }
 
 @media screen and (max-width:1400px) {
-  .c14.c14 {
+  .c15.c15 {
     height: 2.5rem;
   }
 }
 
 @media screen and (max-width:1280px) {
-  .c14.c14 {
+  .c15.c15 {
     height: 4.5rem;
+  }
+}
+
+@media screen and (max-width:800px) {
+  .c15.c15 {
+    height: 2.5rem;
   }
 }
 
 @media screen and (max-width:1400px) {
-  .c12.c12 {
+  .c13.c13 {
     height: 2.5rem;
   }
 }
 
 @media screen and (max-width:1280px) {
-  .c12.c12 {
+  .c13.c13 {
     height: 4.5rem;
+  }
+}
+
+@media screen and (max-width:800px) {
+  .c13.c13 {
+    height: 2.5rem;
+  }
+}
+
+@media screen and (max-width:800px) {
+  .c11.c11 {
+    display: block;
   }
 }
 
@@ -654,20 +680,20 @@ exports[`Explore page renders correctly 1`] = `
                 type="text"
               />
             </div>
-            <div
-              className="c7"
+          </div>
+          <div
+            className="c7"
+          >
+            <button
+              className="c8"
+              data-cy="map-toggle-btn"
+              onClick={[Function]}
             >
-              <button
-                className="c8"
-                data-cy="map-toggle-btn"
-                onClick={[Function]}
-              >
-                <span>
-                  Show
-                   Map
-                </span>
-              </button>
-            </div>
+              <span>
+                Show
+                 Map
+              </span>
+            </button>
           </div>
         </div>
         <div
@@ -704,429 +730,439 @@ exports[`Explore page renders correctly 1`] = `
           <div
             className="c11"
           >
-            <span
-              id="date-filter-select"
-              style={
-                Object {
-                  "border": 0,
-                  "clip": "rect(0 0 0 0)",
-                  "height": "1px",
-                  "margin": "-1px",
-                  "overflow": "hidden",
-                  "padding": 0,
-                  "position": "absolute",
-                  "whiteSpace": "nowrap",
-                  "width": "1px",
-                  "wordWrap": "normal",
-                }
-              }
-            >
-              select time range to filter by
-            </span>
             <div
-              data-cy="date-filter-select"
-              data-reach-listbox-input=""
-              data-state="closed"
-              data-value={null}
-              id="listbox-input--1"
+              className="c12"
             >
               <span
-                aria-haspopup="listbox"
-                aria-labelledby="date-filter-select button--listbox-input--1"
-                className="c12"
-                data-reach-listbox-button=""
-                id="button--listbox-input--1"
-                onKeyDown={[Function]}
-                onMouseDown={[Function]}
-                onMouseUp={[Function]}
-                role="button"
-                tabIndex={0}
-              >
-                Date range
-                <span
-                  aria-hidden={true}
-                  data-reach-listbox-arrow=""
-                >
-                  ▼
-                </span>
-              </span>
-              <span />
-            </div>
-            <input
-              data-reach-listbox-hidden-input=""
-              disabled={false}
-              name="date-filter"
-              readOnly={true}
-              tabIndex={-1}
-              type="hidden"
-              value=""
-            />
-          </div>
-          <div
-            className="c13"
-          >
-            <span
-              id="focus-filter-select"
-              style={
-                Object {
-                  "border": 0,
-                  "clip": "rect(0 0 0 0)",
-                  "height": "1px",
-                  "margin": "-1px",
-                  "overflow": "hidden",
-                  "padding": 0,
-                  "position": "absolute",
-                  "whiteSpace": "nowrap",
-                  "width": "1px",
-                  "wordWrap": "normal",
+                id="date-filter-select"
+                style={
+                  Object {
+                    "border": 0,
+                    "clip": "rect(0 0 0 0)",
+                    "height": "1px",
+                    "margin": "-1px",
+                    "overflow": "hidden",
+                    "padding": 0,
+                    "position": "absolute",
+                    "whiteSpace": "nowrap",
+                    "width": "1px",
+                    "wordWrap": "normal",
+                  }
                 }
-              }
-            >
-              filter results by sub-categories
-            </span>
+              >
+                select time range to filter by
+              </span>
+              <div
+                data-cy="date-filter-select"
+                data-reach-listbox-input=""
+                data-state="closed"
+                data-value={null}
+                id="listbox-input--1"
+              >
+                <span
+                  aria-haspopup="listbox"
+                  aria-labelledby="date-filter-select button--listbox-input--1"
+                  className="c13"
+                  data-reach-listbox-button=""
+                  id="button--listbox-input--1"
+                  onKeyDown={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseUp={[Function]}
+                  role="button"
+                  tabIndex={0}
+                >
+                  Date range
+                  <span
+                    aria-hidden={true}
+                    data-reach-listbox-arrow=""
+                  >
+                    ▼
+                  </span>
+                </span>
+                <span />
+              </div>
+              <input
+                data-reach-listbox-hidden-input=""
+                disabled={false}
+                name="date-filter"
+                readOnly={true}
+                tabIndex={-1}
+                type="hidden"
+                value=""
+              />
+            </div>
             <div
-              data-cy="focus-filter-select"
-              data-reach-listbox-input=""
-              data-state="closed"
-              data-value=""
-              id="listbox-input--2"
+              className="c14"
             >
               <span
-                aria-haspopup="listbox"
-                aria-labelledby="focus-filter-select button--listbox-input--2"
-                className="c14"
-                data-reach-listbox-button=""
-                id="button--listbox-input--2"
-                onKeyDown={[Function]}
-                onMouseDown={[Function]}
-                onMouseUp={[Function]}
-                role="button"
-                tabIndex={0}
-              >
-                Focus Area
-                <span
-                  aria-hidden={true}
-                  data-reach-listbox-arrow=""
-                >
-                  ▼
-                </span>
-              </span>
-              <span />
-            </div>
-            <input
-              data-reach-listbox-hidden-input=""
-              disabled={false}
-              name="filter"
-              readOnly={true}
-              tabIndex={-1}
-              type="hidden"
-              value=""
-            />
-          </div>
-          <div
-            className="c13"
-          >
-            <span
-              id="geophysical-filter-select"
-              style={
-                Object {
-                  "border": 0,
-                  "clip": "rect(0 0 0 0)",
-                  "height": "1px",
-                  "margin": "-1px",
-                  "overflow": "hidden",
-                  "padding": 0,
-                  "position": "absolute",
-                  "whiteSpace": "nowrap",
-                  "width": "1px",
-                  "wordWrap": "normal",
+                id="focus-filter-select"
+                style={
+                  Object {
+                    "border": 0,
+                    "clip": "rect(0 0 0 0)",
+                    "height": "1px",
+                    "margin": "-1px",
+                    "overflow": "hidden",
+                    "padding": 0,
+                    "position": "absolute",
+                    "whiteSpace": "nowrap",
+                    "width": "1px",
+                    "wordWrap": "normal",
+                  }
                 }
-              }
-            >
-              filter results by sub-categories
-            </span>
+              >
+                filter results by sub-categories
+              </span>
+              <div
+                data-cy="focus-filter-select"
+                data-reach-listbox-input=""
+                data-state="closed"
+                data-value=""
+                id="listbox-input--2"
+              >
+                <span
+                  aria-haspopup="listbox"
+                  aria-labelledby="focus-filter-select button--listbox-input--2"
+                  category="campaigns"
+                  className="c15"
+                  data-reach-listbox-button=""
+                  id="button--listbox-input--2"
+                  onKeyDown={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseUp={[Function]}
+                  role="button"
+                  tabIndex={0}
+                >
+                  Focus Area
+                  <span
+                    aria-hidden={true}
+                    data-reach-listbox-arrow=""
+                  >
+                    ▼
+                  </span>
+                </span>
+                <span />
+              </div>
+              <input
+                data-reach-listbox-hidden-input=""
+                disabled={false}
+                name="filter"
+                readOnly={true}
+                tabIndex={-1}
+                type="hidden"
+                value=""
+              />
+            </div>
             <div
-              data-cy="geophysical-filter-select"
-              data-reach-listbox-input=""
-              data-state="closed"
-              data-value=""
-              id="listbox-input--3"
+              className="c14"
             >
               <span
-                aria-haspopup="listbox"
-                aria-labelledby="geophysical-filter-select button--listbox-input--3"
-                className="c14"
-                data-reach-listbox-button=""
-                id="button--listbox-input--3"
-                onKeyDown={[Function]}
-                onMouseDown={[Function]}
-                onMouseUp={[Function]}
-                role="button"
-                tabIndex={0}
-              >
-                Geophysical Concept
-                <span
-                  aria-hidden={true}
-                  data-reach-listbox-arrow=""
-                >
-                  ▼
-                </span>
-              </span>
-              <span />
-            </div>
-            <input
-              data-reach-listbox-hidden-input=""
-              disabled={false}
-              name="filter"
-              readOnly={true}
-              tabIndex={-1}
-              type="hidden"
-              value=""
-            />
-          </div>
-          <div
-            className="c13"
-          >
-            <span
-              id="season-filter-select"
-              style={
-                Object {
-                  "border": 0,
-                  "clip": "rect(0 0 0 0)",
-                  "height": "1px",
-                  "margin": "-1px",
-                  "overflow": "hidden",
-                  "padding": 0,
-                  "position": "absolute",
-                  "whiteSpace": "nowrap",
-                  "width": "1px",
-                  "wordWrap": "normal",
+                id="geophysical-filter-select"
+                style={
+                  Object {
+                    "border": 0,
+                    "clip": "rect(0 0 0 0)",
+                    "height": "1px",
+                    "margin": "-1px",
+                    "overflow": "hidden",
+                    "padding": 0,
+                    "position": "absolute",
+                    "whiteSpace": "nowrap",
+                    "width": "1px",
+                    "wordWrap": "normal",
+                  }
                 }
-              }
-            >
-              filter results by sub-categories
-            </span>
+              >
+                filter results by sub-categories
+              </span>
+              <div
+                data-cy="geophysical-filter-select"
+                data-reach-listbox-input=""
+                data-state="closed"
+                data-value=""
+                id="listbox-input--3"
+              >
+                <span
+                  aria-haspopup="listbox"
+                  aria-labelledby="geophysical-filter-select button--listbox-input--3"
+                  category="campaigns"
+                  className="c15"
+                  data-reach-listbox-button=""
+                  id="button--listbox-input--3"
+                  onKeyDown={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseUp={[Function]}
+                  role="button"
+                  tabIndex={0}
+                >
+                  Geophysical Concept
+                  <span
+                    aria-hidden={true}
+                    data-reach-listbox-arrow=""
+                  >
+                    ▼
+                  </span>
+                </span>
+                <span />
+              </div>
+              <input
+                data-reach-listbox-hidden-input=""
+                disabled={false}
+                name="filter"
+                readOnly={true}
+                tabIndex={-1}
+                type="hidden"
+                value=""
+              />
+            </div>
             <div
-              data-cy="season-filter-select"
-              data-reach-listbox-input=""
-              data-state="closed"
-              data-value=""
-              id="listbox-input--4"
+              className="c14"
             >
               <span
-                aria-haspopup="listbox"
-                aria-labelledby="season-filter-select button--listbox-input--4"
-                className="c14"
-                data-reach-listbox-button=""
-                id="button--listbox-input--4"
-                onKeyDown={[Function]}
-                onMouseDown={[Function]}
-                onMouseUp={[Function]}
-                role="button"
-                tabIndex={0}
-              >
-                Season
-                <span
-                  aria-hidden={true}
-                  data-reach-listbox-arrow=""
-                >
-                  ▼
-                </span>
-              </span>
-              <span />
-            </div>
-            <input
-              data-reach-listbox-hidden-input=""
-              disabled={false}
-              name="filter"
-              readOnly={true}
-              tabIndex={-1}
-              type="hidden"
-              value=""
-            />
-          </div>
-          <div
-            className="c13"
-          >
-            <span
-              id="region-filter-select"
-              style={
-                Object {
-                  "border": 0,
-                  "clip": "rect(0 0 0 0)",
-                  "height": "1px",
-                  "margin": "-1px",
-                  "overflow": "hidden",
-                  "padding": 0,
-                  "position": "absolute",
-                  "whiteSpace": "nowrap",
-                  "width": "1px",
-                  "wordWrap": "normal",
+                id="season-filter-select"
+                style={
+                  Object {
+                    "border": 0,
+                    "clip": "rect(0 0 0 0)",
+                    "height": "1px",
+                    "margin": "-1px",
+                    "overflow": "hidden",
+                    "padding": 0,
+                    "position": "absolute",
+                    "whiteSpace": "nowrap",
+                    "width": "1px",
+                    "wordWrap": "normal",
+                  }
                 }
-              }
-            >
-              filter results by sub-categories
-            </span>
+              >
+                filter results by sub-categories
+              </span>
+              <div
+                data-cy="season-filter-select"
+                data-reach-listbox-input=""
+                data-state="closed"
+                data-value=""
+                id="listbox-input--4"
+              >
+                <span
+                  aria-haspopup="listbox"
+                  aria-labelledby="season-filter-select button--listbox-input--4"
+                  category="campaigns"
+                  className="c15"
+                  data-reach-listbox-button=""
+                  id="button--listbox-input--4"
+                  onKeyDown={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseUp={[Function]}
+                  role="button"
+                  tabIndex={0}
+                >
+                  Season
+                  <span
+                    aria-hidden={true}
+                    data-reach-listbox-arrow=""
+                  >
+                    ▼
+                  </span>
+                </span>
+                <span />
+              </div>
+              <input
+                data-reach-listbox-hidden-input=""
+                disabled={false}
+                name="filter"
+                readOnly={true}
+                tabIndex={-1}
+                type="hidden"
+                value=""
+              />
+            </div>
             <div
-              data-cy="region-filter-select"
-              data-reach-listbox-input=""
-              data-state="closed"
-              data-value=""
-              id="listbox-input--5"
+              className="c14"
             >
               <span
-                aria-haspopup="listbox"
-                aria-labelledby="region-filter-select button--listbox-input--5"
-                className="c14"
-                data-reach-listbox-button=""
-                id="button--listbox-input--5"
-                onKeyDown={[Function]}
-                onMouseDown={[Function]}
-                onMouseUp={[Function]}
-                role="button"
-                tabIndex={0}
-              >
-                Geographical Region
-                <span
-                  aria-hidden={true}
-                  data-reach-listbox-arrow=""
-                >
-                  ▼
-                </span>
-              </span>
-              <span />
-            </div>
-            <input
-              data-reach-listbox-hidden-input=""
-              disabled={false}
-              name="filter"
-              readOnly={true}
-              tabIndex={-1}
-              type="hidden"
-              value=""
-            />
-          </div>
-          <div
-            className="c13"
-          >
-            <span
-              id="platform-filter-select"
-              style={
-                Object {
-                  "border": 0,
-                  "clip": "rect(0 0 0 0)",
-                  "height": "1px",
-                  "margin": "-1px",
-                  "overflow": "hidden",
-                  "padding": 0,
-                  "position": "absolute",
-                  "whiteSpace": "nowrap",
-                  "width": "1px",
-                  "wordWrap": "normal",
+                id="region-filter-select"
+                style={
+                  Object {
+                    "border": 0,
+                    "clip": "rect(0 0 0 0)",
+                    "height": "1px",
+                    "margin": "-1px",
+                    "overflow": "hidden",
+                    "padding": 0,
+                    "position": "absolute",
+                    "whiteSpace": "nowrap",
+                    "width": "1px",
+                    "wordWrap": "normal",
+                  }
                 }
-              }
-            >
-              filter results by sub-categories
-            </span>
+              >
+                filter results by sub-categories
+              </span>
+              <div
+                data-cy="region-filter-select"
+                data-reach-listbox-input=""
+                data-state="closed"
+                data-value=""
+                id="listbox-input--5"
+              >
+                <span
+                  aria-haspopup="listbox"
+                  aria-labelledby="region-filter-select button--listbox-input--5"
+                  category="campaigns"
+                  className="c15"
+                  data-reach-listbox-button=""
+                  id="button--listbox-input--5"
+                  onKeyDown={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseUp={[Function]}
+                  role="button"
+                  tabIndex={0}
+                >
+                  Geographical Region
+                  <span
+                    aria-hidden={true}
+                    data-reach-listbox-arrow=""
+                  >
+                    ▼
+                  </span>
+                </span>
+                <span />
+              </div>
+              <input
+                data-reach-listbox-hidden-input=""
+                disabled={false}
+                name="filter"
+                readOnly={true}
+                tabIndex={-1}
+                type="hidden"
+                value=""
+              />
+            </div>
             <div
-              data-cy="platform-filter-select"
-              data-reach-listbox-input=""
-              data-state="closed"
-              data-value=""
-              id="listbox-input--6"
+              className="c14"
             >
               <span
-                aria-haspopup="listbox"
-                aria-labelledby="platform-filter-select button--listbox-input--6"
-                className="c14"
-                data-reach-listbox-button=""
-                id="button--listbox-input--6"
-                onKeyDown={[Function]}
-                onMouseDown={[Function]}
-                onMouseUp={[Function]}
-                role="button"
-                tabIndex={0}
-              >
-                Platform
-                <span
-                  aria-hidden={true}
-                  data-reach-listbox-arrow=""
-                >
-                  ▼
-                </span>
-              </span>
-              <span />
-            </div>
-            <input
-              data-reach-listbox-hidden-input=""
-              disabled={false}
-              name="filter"
-              readOnly={true}
-              tabIndex={-1}
-              type="hidden"
-              value=""
-            />
-          </div>
-          <div
-            className="c13"
-          >
-            <span
-              id="funding-filter-select"
-              style={
-                Object {
-                  "border": 0,
-                  "clip": "rect(0 0 0 0)",
-                  "height": "1px",
-                  "margin": "-1px",
-                  "overflow": "hidden",
-                  "padding": 0,
-                  "position": "absolute",
-                  "whiteSpace": "nowrap",
-                  "width": "1px",
-                  "wordWrap": "normal",
+                id="platform-filter-select"
+                style={
+                  Object {
+                    "border": 0,
+                    "clip": "rect(0 0 0 0)",
+                    "height": "1px",
+                    "margin": "-1px",
+                    "overflow": "hidden",
+                    "padding": 0,
+                    "position": "absolute",
+                    "whiteSpace": "nowrap",
+                    "width": "1px",
+                    "wordWrap": "normal",
+                  }
                 }
-              }
-            >
-              filter results by sub-categories
-            </span>
+              >
+                filter results by sub-categories
+              </span>
+              <div
+                data-cy="platform-filter-select"
+                data-reach-listbox-input=""
+                data-state="closed"
+                data-value=""
+                id="listbox-input--6"
+              >
+                <span
+                  aria-haspopup="listbox"
+                  aria-labelledby="platform-filter-select button--listbox-input--6"
+                  category="campaigns"
+                  className="c15"
+                  data-reach-listbox-button=""
+                  id="button--listbox-input--6"
+                  onKeyDown={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseUp={[Function]}
+                  role="button"
+                  tabIndex={0}
+                >
+                  Platform
+                  <span
+                    aria-hidden={true}
+                    data-reach-listbox-arrow=""
+                  >
+                    ▼
+                  </span>
+                </span>
+                <span />
+              </div>
+              <input
+                data-reach-listbox-hidden-input=""
+                disabled={false}
+                name="filter"
+                readOnly={true}
+                tabIndex={-1}
+                type="hidden"
+                value=""
+              />
+            </div>
             <div
-              data-cy="funding-filter-select"
-              data-reach-listbox-input=""
-              data-state="closed"
-              data-value=""
-              id="listbox-input--7"
+              className="c14"
             >
               <span
-                aria-haspopup="listbox"
-                aria-labelledby="funding-filter-select button--listbox-input--7"
-                className="c14"
-                data-reach-listbox-button=""
-                id="button--listbox-input--7"
-                onKeyDown={[Function]}
-                onMouseDown={[Function]}
-                onMouseUp={[Function]}
-                role="button"
-                tabIndex={0}
+                id="funding-filter-select"
+                style={
+                  Object {
+                    "border": 0,
+                    "clip": "rect(0 0 0 0)",
+                    "height": "1px",
+                    "margin": "-1px",
+                    "overflow": "hidden",
+                    "padding": 0,
+                    "position": "absolute",
+                    "whiteSpace": "nowrap",
+                    "width": "1px",
+                    "wordWrap": "normal",
+                  }
+                }
               >
-                Funding Agency
-                <span
-                  aria-hidden={true}
-                  data-reach-listbox-arrow=""
-                >
-                  ▼
-                </span>
+                filter results by sub-categories
               </span>
-              <span />
+              <div
+                data-cy="funding-filter-select"
+                data-reach-listbox-input=""
+                data-state="closed"
+                data-value=""
+                id="listbox-input--7"
+              >
+                <span
+                  aria-haspopup="listbox"
+                  aria-labelledby="funding-filter-select button--listbox-input--7"
+                  category="campaigns"
+                  className="c15"
+                  data-reach-listbox-button=""
+                  id="button--listbox-input--7"
+                  onKeyDown={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseUp={[Function]}
+                  role="button"
+                  tabIndex={0}
+                >
+                  Funding Agency
+                  <span
+                    aria-hidden={true}
+                    data-reach-listbox-arrow=""
+                  >
+                    ▼
+                  </span>
+                </span>
+                <span />
+              </div>
+              <input
+                data-reach-listbox-hidden-input=""
+                disabled={false}
+                name="filter"
+                readOnly={true}
+                tabIndex={-1}
+                type="hidden"
+                value=""
+              />
             </div>
-            <input
-              data-reach-listbox-hidden-input=""
-              disabled={false}
-              name="filter"
-              readOnly={true}
-              tabIndex={-1}
-              type="hidden"
-              value=""
-            />
           </div>
         </div>
       </form>
@@ -1159,7 +1195,7 @@ exports[`Explore page renders correctly 1`] = `
             title=""
           />
           <button
-            className="c15"
+            className="c16"
             data-cy="remove-filter"
             onClick={[Function]}
             style={
@@ -1195,7 +1231,7 @@ exports[`Explore page renders correctly 1`] = `
         </div>
       </div>
       <hr
-        className="c16"
+        className="c17"
       />
       <div
         style={
@@ -1221,7 +1257,7 @@ exports[`Explore page renders correctly 1`] = `
         >
           <li>
             <button
-              className="c17"
+              className="c18"
               onClick={[Function]}
             >
               Campaigns
@@ -1236,7 +1272,7 @@ exports[`Explore page renders correctly 1`] = `
           </li>
           <li>
             <button
-              className="c18"
+              className="c19"
               onClick={[Function]}
             >
               Platforms
@@ -1251,7 +1287,7 @@ exports[`Explore page renders correctly 1`] = `
           </li>
           <li>
             <button
-              className="c18"
+              className="c19"
               onClick={[Function]}
             >
               Instruments
@@ -1361,7 +1397,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c19"
+                  className="c20"
                 >
                   <svg
                     height="60"
@@ -1473,7 +1509,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c19"
+                  className="c20"
                 >
                   <svg
                     height="60"
@@ -1584,7 +1620,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c19"
+                  className="c20"
                 >
                   <svg
                     height="60"
@@ -1694,7 +1730,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c19"
+                  className="c20"
                 >
                   <img
                     alt="GOES-R PLT logo"
@@ -1801,7 +1837,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c19"
+                  className="c20"
                 >
                   <img
                     alt="OLYMPEX logo"
@@ -1908,7 +1944,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c19"
+                  className="c20"
                 >
                   <svg
                     height="60"
@@ -2019,7 +2055,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c19"
+                  className="c20"
                 >
                   <img
                     alt="CARVE logo"
@@ -2127,7 +2163,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c19"
+                  className="c20"
                 >
                   <img
                     alt="AirMOSS logo"
@@ -2235,7 +2271,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c19"
+                  className="c20"
                 >
                   <svg
                     height="60"
@@ -2347,7 +2383,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c19"
+                  className="c20"
                 >
                   <img
                     alt="HS3 logo"
@@ -2455,7 +2491,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c19"
+                  className="c20"
                 >
                   <svg
                     height="60"
@@ -2566,7 +2602,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c19"
+                  className="c20"
                 >
                   <svg
                     height="60"
@@ -2677,7 +2713,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c19"
+                  className="c20"
                 >
                   <img
                     alt="DC3 logo"
@@ -2782,7 +2818,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c19"
+                  className="c20"
                 >
                   <img
                     alt="GCPEx logo"
@@ -2889,7 +2925,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c19"
+                  className="c20"
                 >
                   <svg
                     height="60"
@@ -3000,7 +3036,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c19"
+                  className="c20"
                 >
                   <img
                     alt="GRIP logo"
@@ -3107,7 +3143,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c19"
+                  className="c20"
                 >
                   <img
                     alt="ARCTAS logo"
@@ -3215,7 +3251,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c19"
+                  className="c20"
                 >
                   <svg
                     height="60"
@@ -3326,7 +3362,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c19"
+                  className="c20"
                 >
                   <svg
                     height="60"
@@ -3437,7 +3473,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c19"
+                  className="c20"
                 >
                   <svg
                     height="60"
@@ -3548,7 +3584,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c19"
+                  className="c20"
                 >
                   <img
                     alt="ACES logo"
@@ -3655,7 +3691,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c19"
+                  className="c20"
                 >
                   <svg
                     height="60"
@@ -3767,7 +3803,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c19"
+                  className="c20"
                 >
                   <svg
                     height="60"
@@ -3878,7 +3914,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c19"
+                  className="c20"
                 >
                   <svg
                     height="60"
@@ -3990,7 +4026,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c19"
+                  className="c20"
                 >
                   <svg
                     height="60"
@@ -4114,7 +4150,7 @@ exports[`Explore page renders correctly 1`] = `
                 }
               >
                 <div
-                  className="c19"
+                  className="c20"
                 >
                   <svg
                     height="60"
@@ -4218,17 +4254,17 @@ exports[`Explore page renders correctly 1`] = `
     </div>
   </main>
   <footer
-    className="c20"
+    className="c21"
     data-cy="page-footer"
   >
     <div
-      className="c21"
+      className="c22"
     >
       <div
-        className="c22"
+        className="c23"
       >
         <div
-          className="c23"
+          className="c24"
           data-cy="footer-title"
         >
           NASA | CASEI
@@ -4241,16 +4277,16 @@ exports[`Explore page renders correctly 1`] = `
         </p>
       </div>
       <div
-        className="c24"
+        className="c25"
         data-cy="footer-explore"
       >
         <p
-          className="c25"
+          className="c26"
         >
           Explore
         </p>
         <ul
-          className="c26"
+          className="c27"
         >
           <li>
             <a
@@ -4294,16 +4330,16 @@ exports[`Explore page renders correctly 1`] = `
         </ul>
       </div>
       <div
-        className="c27"
+        className="c28"
         data-cy="footer-resources"
       >
         <p
-          className="c25"
+          className="c26"
         >
           Resources
         </p>
         <ul
-          className="c26"
+          className="c27"
         >
           <li>
             <a
@@ -4314,7 +4350,7 @@ exports[`Explore page renders correctly 1`] = `
           </li>
           <li>
             <button
-              className="c15"
+              className="c16"
               onClick={[Function]}
               style={
                 Object {
@@ -4338,11 +4374,11 @@ exports[`Explore page renders correctly 1`] = `
               Maintenance login
             </button>
             <div
-              className="c28"
+              className="c29"
               onClick={[Function]}
             >
               <div
-                className="c29"
+                className="c30"
               >
                 <form
                   data-cy="login-form"
@@ -4384,16 +4420,16 @@ exports[`Explore page renders correctly 1`] = `
         </ul>
       </div>
       <div
-        className="c30"
+        className="c31"
         data-cy="footer-quick-links"
       >
         <p
-          className="c25"
+          className="c26"
         >
           Quick Links
         </p>
         <ul
-          className="c26"
+          className="c27"
         >
           <li>
             <a
@@ -4412,16 +4448,16 @@ exports[`Explore page renders correctly 1`] = `
         </ul>
       </div>
       <div
-        className="c31"
+        className="c32"
         data-cy="footer-organizations"
       >
         <p
-          className="c25"
+          className="c26"
         >
           Organizations
         </p>
         <ul
-          className="c26"
+          className="c27"
         >
           <li>
             <a
@@ -4456,17 +4492,17 @@ exports[`Explore page renders correctly 1`] = `
         </ul>
       </div>
       <hr
-        className="c32"
+        className="c33"
       />
       <div
-        className="c33"
+        className="c34"
       >
         <div
-          className="c34"
+          className="c35"
         >
           <div
             aria-hidden="true"
-            className="c35"
+            className="c36"
           />
           <div
             data-cy="footer-credits"
@@ -4482,7 +4518,7 @@ exports[`Explore page renders correctly 1`] = `
               NASA Official:
                
               <span
-                className="c36"
+                className="c37"
               >
                 Rahul Ramachandran
               </span>
@@ -4490,12 +4526,12 @@ exports[`Explore page renders correctly 1`] = `
           </div>
         </div>
         <div
-          className="c37"
+          className="c38"
         />
       </div>
     </div>
     <div
-      className="c38"
+      className="c39"
       data-cy="footer-credit-devseed"
     >
       © 

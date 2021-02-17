@@ -28,7 +28,10 @@ const FilterButton = styled(ListboxButton)`
     height: 2.5rem;
   }
   @media screen and (max-width: 1280px) {
-    height: 4.5rem;
+    height: ${props => (props.category === "campaigns" ? `4.5rem` : `2.5rem`)};
+  }
+  @media screen and (max-width: 800px) {
+    height: 2.5rem;
   }
 `
 
@@ -53,6 +56,7 @@ const FilterMenu = ({
   removeFilter,
   label,
   options,
+  category,
 }) => {
   const handleSelection = value => {
     selectedFilterIds.includes(value) ? removeFilter(value) : addFilter(value)
@@ -63,7 +67,7 @@ const FilterMenu = ({
   return (
     <div
       css={`
-        flex-grow: 0;
+        flex-grow: 1;
       `}
     >
       <VisuallyHidden id={`${id}-filter-select`}>
@@ -76,7 +80,9 @@ const FilterMenu = ({
         data-cy={`${id}-filter-select`}
         onChange={value => handleSelection(value)}
       >
-        <FilterButton arrow="▼">{label}</FilterButton>
+        <FilterButton arrow="▼" category={category}>
+          {label}
+        </FilterButton>
         <ListboxPopover
           css={`
             background: ${colors.darkTheme.altBackground};
@@ -120,6 +126,7 @@ FilterMenu.propTypes = {
       shortname: PropTypes.string,
     })
   ).isRequired,
+  category: PropTypes.string,
 }
 
 export default FilterMenu

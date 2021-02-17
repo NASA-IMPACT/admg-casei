@@ -37,6 +37,9 @@ const FilterButton = styled(ListboxButton)`
   @media screen and (max-width: 1280px) {
     height: 4.5rem;
   }
+  @media screen and (max-width: 800px) {
+    height: 2.5rem;
+  }
 `
 
 const TimeRangeButton = styled.button`

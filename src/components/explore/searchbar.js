@@ -1,9 +1,8 @@
 import React, { useState } from "react"
-import PropTypes from "prop-types"
 import { CloseIcon, SearchIcon } from "../../icons"
 import { colors } from "../../utils/theme"
 
-const Searchbar = React.forwardRef(({ toggleMap, isDisplayingMap }, ref) => {
+const Searchbar = React.forwardRef((_props, ref) => {
   const [inputsize, setInputsize] = useState(50)
 
   return (
@@ -73,37 +72,11 @@ const Searchbar = React.forwardRef(({ toggleMap, isDisplayingMap }, ref) => {
           </button>
         )}
       </div>
-      <div
-        css={`
-          border: 1px solid ${colors.darkTheme.text};
-          padding: 0.25rem;
-        `}
-      >
-        <button
-          css={`
-            border: none;
-            flex-grow: 0;
-            background: transparent;
-            color: ${colors.darkTheme.text};
-            vertical-align: middle;
-            cursor: pointer;
-          `}
-          data-cy="map-toggle-btn"
-          onClick={() => toggleMap(!isDisplayingMap)}
-        >
-          <span>{isDisplayingMap ? "Hide" : "Show"} Map</span>
-        </button>
-      </div>
     </div>
   )
 })
 
 // https://reactjs.org/docs/forwarding-refs.html#displaying-a-custom-name-in-devtools
 Searchbar.displayName = "Searchbar"
-
-Searchbar.propTypes = {
-  toggleMap: PropTypes.func.isRequired,
-  isDisplayingMap: PropTypes.bool.isRequired,
-}
 
 export default Searchbar

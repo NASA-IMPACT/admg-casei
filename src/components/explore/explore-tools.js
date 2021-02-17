@@ -45,7 +45,31 @@ const ExploreTools = React.forwardRef(
             ref={ref}
             toggleMap={toggleMap}
             isDisplayingMap={isDisplayingMap}
+            category={category}
           />
+          {category === "campaigns" && (
+            <div
+              css={`
+                border: 1px solid ${colors.darkTheme.text};
+                padding: 0.25rem;
+              `}
+            >
+              <button
+                css={`
+                  border: none;
+                  flex-grow: 0;
+                  background: transparent;
+                  color: ${colors.darkTheme.text};
+                  vertical-align: middle;
+                  cursor: pointer;
+                `}
+                data-cy="map-toggle-btn"
+                onClick={() => toggleMap(!isDisplayingMap)}
+              >
+                <span>{isDisplayingMap ? "Hide" : "Show"} Map</span>
+              </button>
+            </div>
+          )}
         </div>
 
         <div
@@ -61,7 +85,7 @@ const ExploreTools = React.forwardRef(
               border: 1px solid ${colors.darkTheme.text};
               display: flex;
               align-items: center;
-              gap: 0.5rem;
+              gap: 0.55rem;
             `}
             data-cy="main-filter-label"
           >
@@ -70,7 +94,15 @@ const ExploreTools = React.forwardRef(
           </div>
 
           {category === "campaigns" && (
-            <>
+            <div
+              css={`
+                display: inherit;
+                flex-grow: 1;
+                @media screen and (max-width: 800px) {
+                  display: block;
+                }
+              `}
+            >
               <DateMenu
                 id="date"
                 label="Date range"
@@ -84,6 +116,7 @@ const ExploreTools = React.forwardRef(
                 removeFilter={removeFilter}
                 label="Focus Area"
                 options={getFilterOptionsById("focus")}
+                category={category}
               />
               <FilterMenu
                 id="geophysical"
@@ -92,6 +125,7 @@ const ExploreTools = React.forwardRef(
                 removeFilter={removeFilter}
                 label="Geophysical Concept"
                 options={getFilterOptionsById("geophysical")}
+                category={category}
               />
               <FilterMenu
                 id="season"
@@ -100,6 +134,7 @@ const ExploreTools = React.forwardRef(
                 removeFilter={removeFilter}
                 label="Season"
                 options={getFilterOptionsById("season")}
+                category={category}
               />
               <FilterMenu
                 id="region"
@@ -108,6 +143,7 @@ const ExploreTools = React.forwardRef(
                 removeFilter={removeFilter}
                 label="Geographical Region"
                 options={getFilterOptionsById("region")}
+                category={category}
               />
               <FilterMenu
                 id="platform"
@@ -116,6 +152,7 @@ const ExploreTools = React.forwardRef(
                 removeFilter={removeFilter}
                 label="Platform"
                 options={getFilterOptionsById("platform")}
+                category={category}
               />
               <FilterMenu
                 id="funding"
@@ -124,8 +161,9 @@ const ExploreTools = React.forwardRef(
                 removeFilter={removeFilter}
                 label="Funding Agency"
                 options={getFilterOptionsById("funding")}
+                category={category}
               />
-            </>
+            </div>
           )}
           {category === "platforms" && (
             <FilterMenu
