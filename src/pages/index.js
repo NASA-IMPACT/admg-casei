@@ -13,14 +13,17 @@ import { GeophysicsGrid } from "../components/home/geophysics-grid"
 import { InstrumentsGrid } from "../components/home/instruments-grid"
 import { colors } from "../utils/theme"
 
-const IndexPage = ({ data }) => {
+const Home = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" lang="en" />
 
       <Hero
         tagTitle={data.site.siteMetadata.shortname}
-        title={data.site.siteMetadata.title}
+        title={data.site.siteMetadata.title.replace(
+          "Earth Science",
+          "Earth\u00a0Science" // add non-breaking space
+        )}
         description={data.site.siteMetadata.description}
         backgroundImage={data.heroImage}
         textToImageRatio={[6, 6]}
@@ -190,7 +193,7 @@ export const query = graphql`
   }
 `
 
-IndexPage.propTypes = {
+Home.propTypes = {
   data: PropTypes.shape({
     site: PropTypes.shape({
       siteMetadata: PropTypes.shape({
@@ -252,4 +255,4 @@ IndexPage.propTypes = {
   }).isRequired,
 }
 
-export default IndexPage
+export default Home

@@ -9,7 +9,7 @@ const ListLink = props => (
     <Link
       to={props.to}
       activeStyle={{
-        color: colors.darkTheme.linkText,
+        borderBottom: `1px solid ${colors.darkTheme.text}`,
         fontWeight: `bold`,
       }}
       partiallyActive={true}

@@ -1,0 +1,562 @@
+{
+  "data": {
+    "site": {
+      "siteMetadata": {
+        "title": "Catalog of Archived Suborbital Earth Science Investigations",
+        "shortname": "NASA | CASEI",
+        "description": "Explore NASA’s catalog of airborne and field campaign observations."
+      }
+    },
+    "heroImage": {
+      "nasaImgAlt": "View from a Chase Plane; HS3 Science Flight 8 Wraps Up The chase plane accompanying NASA's Global Hawk No. 872 captured this picture on Sept. 19 after the Global Hawk completed science flight #8 where it gathered data from a weakening Tropical Storm Edouard over the North Atlantic Ocean. Credit: NASA ",
+      "nasaImg": {
+        "childImageSharp": {
+          "fluid": {
+            "src": "/static/068436cd6fd00ecb9d2d3e6309d590d0/14b42/GSFC_20171208_Archive_e000980~orig.jpg"
+          }
+        }
+      }
+    },
+    "allFocusArea": {
+      "nodes": [
+        {
+          "id": "df6847ab-9443-4fdb-a990-d5bf1daca3b7",
+          "shortname": "Atmospheric Composition"
+        },
+        {
+          "id": "6d719465-f32c-4808-9efb-da5ad2bae135",
+          "shortname": "Weather"
+        },
+        {
+          "id": "cd62c68f-a9f7-456a-ae15-53ef79ed5118",
+          "shortname": "Climate Variability & Change"
+        },
+        {
+          "id": "fd5c0baa-d6a4-45d7-b201-0eb2a5505dc7",
+          "shortname": "Global Water & Energy Cycle"
+        },
+        {
+          "id": "f1bd646f-876f-4e9f-896e-f7d4571ecc00",
+          "shortname": "Carbon Cycle & Ecosystems"
+        },
+        {
+          "id": "2231a3f1-3430-4f89-86a2-94938aa000a5",
+          "shortname": "Earth Surface & Interior"
+        }
+      ]
+    },
+    "allGeographicalRegion": {
+      "nodes": [
+        {
+          "id": "2f6e780d-3d8c-47bc-8382-bcb6e4e68927",
+          "shortname": "continental",
+          "example": "Kansas",
+          "image": {
+            "nasaImgUrl": "https://eoimages.gsfc.nasa.gov/images/imagerecords/145000/145932/iss060e035401_lrg.jpg",
+            "nasaImgAlt": "A network of farms and ranches surrounds the cities and small towns near the Nebraska–Iowa border.",
+            "nasaImg": {
+              "childImageSharp": {
+                "fluid": {
+                  "src": "/static/012dfd5e04753c3cd37730951ec6fef9/13200/iss060e035401_lrg.jpg"
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "a801d32b-4395-40c3-a4ea-6655e3c0679d",
+          "shortname": "maritime",
+          "example": "Atlantic Ocean",
+          "image": {
+            "nasaImgUrl": "https://climate.nasa.gov/system/resources/detail_files/170_gulfoffinland_full.jpg",
+            "nasaImgAlt": "Phytoplankton blooms across the northern basins of the North Atlantic and Arctic Oceans.",
+            "nasaImg": {
+              "childImageSharp": {
+                "fluid": {
+                  "src": "/static/d9cb547d00b032403bbe48747a17690c/13200/170_gulfoffinland_full.jpg"
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "f2a54d61-c532-4042-8c68-c1286a9f417f",
+          "shortname": "coastal",
+          "example": "US Gulf coast, Pacific NW, FL Everglades",
+          "image": {
+            "nasaImgUrl": "https://images-assets.nasa.gov/image/KSC-04pd1634/KSC-04pd1634~orig.jpg",
+            "nasaImgAlt": "The pristine sand dunes near the launch pads at KSC are gently washed by the calm blue Atlantic Ocean.",
+            "nasaImg": {
+              "childImageSharp": {
+                "fluid": {
+                  "src": "/static/8bb8e953c0bfe01d9b50d33bc50a1498/13200/KSC-04pd1634~orig.jpg"
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "ef949f62-c078-4886-9006-3829c0983d0b",
+          "shortname": "mountains",
+          "example": "Rockies, Andes, Alps",
+          "image": {
+            "nasaImgUrl": "https://images-assets.nasa.gov/image/ED04-0056-099/ED04-0056-099~orig.jpg",
+            "nasaImgAlt": "The Cuernos del Paine mountains in Torres del Paine National Park, Chile, during NASA's AirSAR 2004 campaign.",
+            "nasaImg": {
+              "childImageSharp": {
+                "fluid": {
+                  "src": "/static/740fb6cdee15c3bed7886e02e870aa48/13200/ED04-0056-099~orig.jpg"
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "f3905325-695d-41ff-984b-b3e192c03c5b",
+          "shortname": "island",
+          "example": "Puerto Rico, St Croix, Hawaii",
+          "image": {
+            "nasaImgUrl": "https://climate.nasa.gov/system/resources/detail_files/218_PIA21166_hires-768px-v2.jpg",
+            "nasaImgAlt": "The Republic of Maldives with its twenty-six atolls, and 1192 coral islands, with an average ground elevation of 1.5 meters (about 5 feet).",
+            "nasaImg": {
+              "childImageSharp": {
+                "fluid": {
+                  "src": "/static/ac27142e538661d074ff7912147d7b00/235ae/218_PIA21166_hires-768px-v2.jpg"
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "793324dc-4710-4144-9925-e55ee707a380",
+          "shortname": "desert",
+          "example": "Sahara, Sonoran regions of SW US",
+          "image": {
+            "nasaImgUrl": "https://earthobservatory.nasa.gov/blogs/fromthefield/wp-content/uploads/sites/2/2018/01/desert-plant-and-lidar.jpg",
+            "nasaImgAlt": "The lidar on its tripod. NASA/GSFC",
+            "nasaImg": {
+              "childImageSharp": {
+                "fluid": {
+                  "src": "/static/4c11912352d4c7904aea691c195b1bd6/f6c18/desert-plant-and-lidar.jpg"
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "e8ba2642-3145-45a9-b8ff-e88d538d17a5",
+          "shortname": "forest",
+          "example": "Pisgah Forest (NC), Bankhead Forest (AL)",
+          "image": {
+            "nasaImgUrl": "https://earthobservatory.nasa.gov/ContentFeature/ForestCarbon/images/gabon_forest.jpg",
+            "nasaImgAlt": "Tropical forests, such as those in Gabon, Africa, are an important reservoir of carbon. (Photography courtesy Sassan Saatchi, NASA/JPL-Caltech.)",
+            "nasaImg": {
+              "childImageSharp": {
+                "fluid": {
+                  "src": "/static/f902e06833c91735cfa81507901f14fa/b94b5/gabon_forest.jpg"
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "96721a9e-2c61-496f-b31c-daf241d429a8",
+          "shortname": "urban",
+          "example": "Huntsville, New York City",
+          "image": {
+            "nasaImgUrl": "https://eoimages.gsfc.nasa.gov/images/imagerecords/83000/83828/ISS039-E-018538_lrg.jpg",
+            "nasaImgAlt": "The narrow island of Manhattan, located between the Hudson River and the East River.",
+            "nasaImg": {
+              "childImageSharp": {
+                "fluid": {
+                  "src": "/static/a6e68f36b5ad3b600b03c9c14761cd53/13200/ISS039-E-018538_lrg.jpg"
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "d78d5a37-e703-4e4f-bf7a-debb7950b0f6",
+          "shortname": "agricultural",
+          "example": "corn fields in Iowa",
+          "image": {
+            "nasaImgUrl": "https://eoimages.gsfc.nasa.gov/images/imagerecords/5000/5772/kansas_AST_2001175_lrg.jpg",
+            "nasaImgAlt": "Variegated green crop circles cover what was once shortgrass prairie in southwestern Kansas.",
+            "nasaImg": {
+              "childImageSharp": {
+                "fluid": {
+                  "src": "/static/4722bcd2e261bd732e5ca17c48e012fd/13200/kansas_AST_2001175_lrg.jpg"
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "7e75c46c-cdd8-4d7f-a3a9-18ffdecefa68",
+          "shortname": "equitorial",
+          "example": "Singapore, Indonesia, portions of central Africa",
+          "image": {
+            "nasaImgUrl": "https://images-assets.nasa.gov/image/sts054-95-042/sts054-95-042~orig.jpg",
+            "nasaImgAlt": "Equatorial Wave Line, Pacific Ocean.",
+            "nasaImg": {
+              "childImageSharp": {
+                "fluid": {
+                  "src": "/static/4f881cb74284bad8567c0dc93528ae95/13200/sts054-95-042~orig.jpg"
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "edd6e841-7106-4dfa-bfa9-c126c87cd37c",
+          "shortname": "tropical",
+          "example": "Caribbean Sea, most of Central America, portions of South America, Indonesia, Philippines",
+          "image": {
+            "nasaImgUrl": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e001630/GSFC_20171208_Archive_e001630~orig.jpg",
+            "nasaImgAlt": "An archipelago in the Andaman Sea surrounded by extensive coral reefs",
+            "nasaImg": {
+              "childImageSharp": {
+                "fluid": {
+                  "src": "/static/22146df783be742696493dedef5912d0/13200/GSFC_20171208_Archive_e001630~orig.jpg"
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "d9bb3b94-90db-47d6-926d-d91a7f2654c1",
+          "shortname": "mid-latitude",
+          "example": "most of the contiguous US, Europe and extreme northern Africa",
+          "image": {
+            "nasaImgUrl": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e000236/GSFC_20171208_Archive_e000236~orig.jpg",
+            "nasaImgAlt": "Yosemite Valley",
+            "nasaImg": {
+              "childImageSharp": {
+                "fluid": {
+                  "src": "/static/05f7edb53330c26394a4a1e5ca30e6d3/13200/GSFC_20171208_Archive_e000236~orig.jpg"
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "7d054686-cde0-4c25-aa3f-a34643958940",
+          "shortname": "polar",
+          "example": "Antarctica; portions of AK, Canada",
+          "image": {
+            "nasaImgUrl": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e001793/GSFC_20171208_Archive_e001793~orig.jpg",
+            "nasaImgAlt": "A NASA scientific balloon awaits launch in McMurdo, Antarctica.",
+            "nasaImg": {
+              "childImageSharp": {
+                "fluid": {
+                  "src": "/static/937a42268fe119a9cc4c07c9395c0d8e/13200/GSFC_20171208_Archive_e001793~orig.jpg"
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "4e10c854-5602-477a-8f13-49702c71a281",
+          "shortname": "sea ice",
+          "example": "Greenland's periphery",
+          "image": {
+            "nasaImgUrl": "https://eoimages.gsfc.nasa.gov/images/imagerecords/146000/146974/greenlandseaice_amo_2020184_lrg.jpg",
+            "nasaImgAlt": "Sea ice hugging the coast of East Greenland.",
+            "nasaImg": {
+              "childImageSharp": {
+                "fluid": {
+                  "src": "/static/a56a22a2de7672f1166cee91fa6b4e3d/13200/greenlandseaice_amo_2020184_lrg.jpg"
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "b7bfb341-cb4c-45d7-9bc7-b3fdc71f20d1",
+          "shortname": "coral",
+          "example": "NE coast of Queensland, Australia",
+          "image": {
+            "nasaImgUrl": "https://eoimages.gsfc.nasa.gov/images/imagerecords/88000/88109/iss045e056257_lrg.jpg",
+            "nasaImgAlt": "Great Barrier Reef near Whitsunday Islands.",
+            "nasaImg": {
+              "childImageSharp": {
+                "fluid": {
+                  "src": "/static/0e894c84cabec1bf105b95b675d37687/13200/iss045e056257_lrg.jpg"
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "6695bbce-1c74-4b00-a8cb-07a488a7f8cd",
+          "shortname": "rainforest",
+          "example": "Olympic Pennisula, Amazon Rainforest",
+          "image": {
+            "nasaImgUrl": "https://images-assets.nasa.gov/image/ED04-0056-057/ED04-0056-057~orig.jpg",
+            "nasaImgAlt": "A stream in the La Selva region of the Costa Rican rain forest, taken during NASA's AirSAR 2004 campaign.",
+            "nasaImg": {
+              "childImageSharp": {
+                "fluid": {
+                  "src": "/static/b607daaedc59f4944d27a2f0b2675fbc/13200/ED04-0056-057~orig.jpg"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "allGeophysicalConcept": {
+      "nodes": [
+        {
+          "id": "5923576e-acc9-4e76-ad37-74b3530cfada",
+          "longname": "Aerosols"
+        },
+        {
+          "id": "74492dcb-ef79-443a-9947-33d3be22d9c8",
+          "longname": "Air Quality"
+        },
+        {
+          "id": "501d6b02-9a5e-4c46-9883-2d80433dc1b3",
+          "longname": "Atmospheric Chemicals & Trace Gases"
+        },
+        {
+          "id": "62ce3aea-f50b-4776-a3bd-83887e4dfdf6",
+          "longname": "Upper Atmospheric Chemistry"
+        },
+        {
+          "id": "08e0f217-6d0d-401c-8e1f-591066fc4bbf",
+          "longname": "Radiation & Energy Budget"
+        },
+        {
+          "id": "16e2ea33-cbcb-4809-93a5-9539c8ae3d31",
+          "longname": "Clouds-Properties & Processes & Dynamics"
+        },
+        {
+          "id": "e16d0782-f294-4034-a197-f339dc76c533",
+          "longname": "Boundary Layer Processes"
+        },
+        {
+          "id": "4458e6f8-3c5e-48b5-befd-fc785a82845b",
+          "longname": "Atmospheric Electricity & Lightning"
+        },
+        {
+          "id": "751f7659-0e9e-40e8-be47-cfe2c6c230f0",
+          "longname": "Tropical Cyclones"
+        },
+        {
+          "id": "6bc3d82d-3438-4f98-8604-589712c382f7",
+          "longname": "Mesoscale Convection & Severe Weather"
+        },
+        {
+          "id": "78063d7d-8e3c-497d-b770-e0cda20c09f3",
+          "longname": "Mid-latitude Cyclones"
+        },
+        {
+          "id": "7782afeb-a46b-4e73-8e88-ec23b92873af",
+          "longname": "Precipitation"
+        },
+        {
+          "id": "848abab6-42f5-4812-be34-709b7062d604",
+          "longname": "Terrestrial Hydrology"
+        },
+        {
+          "id": "b7f2f7e3-3911-43af-8126-89172a61ac4e",
+          "longname": "Ice and Glacial Properties & Processes"
+        },
+        {
+          "id": "9ff20734-1c6e-4890-814e-7e7e89410ba7",
+          "longname": "Ocean Properties & Processes"
+        },
+        {
+          "id": "cf88d4e4-f16b-42cc-adb5-f6b7a8ee3c28",
+          "longname": "Ecosystems/Biogeochemical Interactions"
+        },
+        {
+          "id": "0f79d0d1-b5df-418a-88b8-228569a12990",
+          "longname": "Biodiversity"
+        },
+        {
+          "id": "7ee027b9-cfe4-4db3-b31d-adee136944a1",
+          "longname": "Carbon Storage & Processes"
+        },
+        {
+          "id": "e2792eb0-8ca1-4c8d-b18d-f799b06fdd4f",
+          "longname": "Soil Properties"
+        },
+        {
+          "id": "ac788e6e-d5d2-46d5-a172-6a3d8c953c95",
+          "longname": "Land Characteristics"
+        },
+        {
+          "id": "42391e2f-fbd8-4293-81a3-b40eddc0af61",
+          "longname": "Tectonic Processes"
+        },
+        {
+          "id": "310aee9a-3f45-42e5-97cc-cc3954ab93ec",
+          "longname": "Volcanic Processes"
+        },
+        {
+          "id": "87377927-0567-4ad7-a2e8-84896b0604cb",
+          "longname": "Earth's Magnetic Field"
+        },
+        {
+          "id": "fcf87eb8-f745-4aaf-9667-a5e1e1f3fa4e",
+          "longname": "Earth's Interior"
+        },
+        {
+          "id": "3bd80dd0-6a62-4941-862f-1b28de77b01f",
+          "longname": "Earth/Climate Interactions"
+        },
+        {
+          "id": "afb5ecc5-7005-4136-97b4-a4a63d080ad3",
+          "longname": "Geodesy"
+        }
+      ]
+    },
+    "allMeasurementType": {
+      "nodes": [
+        {
+          "id": "e9fd8ba0-c28f-4ff9-8cb7-97b15ac01d48",
+          "shortname": "Altimeter",
+          "longname": ""
+        },
+        {
+          "id": "3c343468-b9b8-43d2-99e1-330abb71bc3f",
+          "shortname": "Conductivity Sensor",
+          "longname": ""
+        },
+        {
+          "id": "37f7c535-e126-49ee-8183-8232b40d4bee",
+          "shortname": "Corer",
+          "longname": ""
+        },
+        {
+          "id": "165ec513-81b4-4b2c-a3d1-608d3e750811",
+          "shortname": "Gauge",
+          "longname": ""
+        },
+        {
+          "id": "db96733f-b7c0-48a1-9c6d-b39e2a347000",
+          "shortname": "Imaging Radar",
+          "longname": ""
+        },
+        {
+          "id": "4db6ee1c-5ce6-4d3c-8440-b5519c1d2052",
+          "shortname": "Magnetic/Electric",
+          "longname": "Magnetic/Electric Field"
+        },
+        {
+          "id": "432bf19b-9d48-4ae2-8882-807a414978dd",
+          "shortname": "Meter/Analyzer",
+          "longname": ""
+        },
+        {
+          "id": "78e60e92-c00e-4455-ab8e-e6079adde347",
+          "shortname": "Multi",
+          "longname": ""
+        },
+        {
+          "id": "dabd2183-d0a1-4f5b-b409-342b3254eecc",
+          "shortname": "Photon/Optical Detector",
+          "longname": ""
+        },
+        {
+          "id": "9fc1f7a4-3c32-44af-950d-bcbbcfad00b1",
+          "shortname": "Particle Detector",
+          "longname": ""
+        },
+        {
+          "id": "13bd515b-bdc1-4929-b113-5667bc4e751d",
+          "shortname": "Position/Navigation",
+          "longname": ""
+        },
+        {
+          "id": "e69125c3-5df4-42d0-a466-5727b338996d",
+          "shortname": "Pressure/Height",
+          "longname": ""
+        },
+        {
+          "id": "4eef72e1-9e34-4084-9161-7328a2951f59",
+          "shortname": "Probe",
+          "longname": ""
+        },
+        {
+          "id": "dd8dcf19-ca22-4fa5-9d0a-8977a37fe5a6",
+          "shortname": "Profiler/Sounder",
+          "longname": ""
+        },
+        {
+          "id": "116dbe53-de71-4250-aebf-c86eef02c745",
+          "shortname": "Radio Wave Detector",
+          "longname": ""
+        },
+        {
+          "id": "56a22454-2efb-473d-8454-8ad48d8c33d4",
+          "shortname": "Recorder/Logger",
+          "longname": ""
+        },
+        {
+          "id": "b6466a79-3440-460a-a096-c1b72ffaef87",
+          "shortname": "Sampler",
+          "longname": ""
+        },
+        {
+          "id": "b2148710-0fcb-48ad-a52f-a150ed08f5ea",
+          "shortname": "Scatterometer",
+          "longname": ""
+        },
+        {
+          "id": "0d4f8c4c-a23d-4424-b553-af0862553974",
+          "shortname": "Spectrometer/Radiometer",
+          "longname": ""
+        },
+        {
+          "id": "04225d35-d087-484c-bc7e-57ae18610ec3",
+          "shortname": "Temp/Humidity",
+          "longname": ""
+        },
+        {
+          "id": "a58af291-9106-41d9-afa9-db38410e5db9",
+          "shortname": "Thermal/Radiation Detector",
+          "longname": ""
+        },
+        {
+          "id": "4b3f0d78-170e-4d7b-9aee-f6f3c0994838",
+          "shortname": "Ultraviolet",
+          "longname": ""
+        },
+        {
+          "id": "17c21cb2-2e4e-469c-a4f3-28b2e75e32bc",
+          "shortname": "Visible/Infrared",
+          "longname": ""
+        },
+        {
+          "id": "00c318c9-af74-4e02-88b8-441b08b96002",
+          "shortname": "Wind/Current",
+          "longname": ""
+        },
+        {
+          "id": "084d1452-c97e-4fba-a24e-b028c8c54e68",
+          "shortname": "X-ray/Gamma",
+          "longname": ""
+        },
+        {
+          "id": "c48c70cc-6fd4-45f2-b0dc-41db28ee1c6d",
+          "shortname": "Other",
+          "longname": ""
+        }
+      ]
+    },
+    "platformPlaceholder": {
+      "nasaImgAlt": "NASA’s ER-2",
+      "nasaImg": {
+        "childImageSharp": {
+          "fluid": {
+            "src": "/static/7ddd9c149f4e945b3f973cd4f681a847/14b42/EC98-44435-2~orig.jpg"
+          }
+        }
+      }
+    }
+  },
+  "extensions": {}
+}
