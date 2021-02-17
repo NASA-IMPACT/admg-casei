@@ -16,7 +16,6 @@ import { colors } from "../../utils/theme"
 
 const FilterButton = styled(ListboxButton)`
   flex-grow: 0;
-  height: 2.5rem;
   width: 100%;
   -webkit-appearance: none;
   background: transparent;
@@ -25,6 +24,12 @@ const FilterButton = styled(ListboxButton)`
   padding: 0.5rem;
   cursor: pointer;
   text-transform: uppercase;
+  @media screen and (max-width: 1400px) {
+    height: 2.5rem;
+  }
+  @media screen and (max-width: 1280px) {
+    height: 4.5rem;
+  }
 `
 
 const FilterItem = styled(ListboxOption)`
@@ -43,7 +48,6 @@ const FilterItem = styled(ListboxOption)`
 
 const FilterMenu = ({
   id,
-  style,
   selectedFilterIds,
   addFilter,
   removeFilter,
@@ -57,7 +61,11 @@ const FilterMenu = ({
 
   let [value, setValue] = useState("")
   return (
-    <div style={style}>
+    <div
+      css={`
+        flex-grow: 0;
+      `}
+    >
       <VisuallyHidden id={`${id}-filter-select`}>
         filter results by sub-categories
       </VisuallyHidden>
@@ -102,7 +110,6 @@ const FilterMenu = ({
 
 FilterMenu.propTypes = {
   id: PropTypes.string.isRequired,
-  style: PropTypes.object,
   selectedFilterIds: PropTypes.arrayOf(PropTypes.string),
   addFilter: PropTypes.func.isRequired,
   removeFilter: PropTypes.func.isRequired,

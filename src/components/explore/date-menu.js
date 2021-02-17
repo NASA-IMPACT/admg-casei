@@ -23,7 +23,6 @@ import { colors } from "../../utils/theme"
 
 const FilterButton = styled(ListboxButton)`
   flex-grow: 0;
-  height: 2.5rem;
   width: 100%;
   -webkit-appearance: none;
   background: transparent;
@@ -32,6 +31,12 @@ const FilterButton = styled(ListboxButton)`
   padding: 0.5rem;
   cursor: pointer;
   text-transform: uppercase;
+  @media screen and (max-width: 1400px) {
+    height: 2.5rem;
+  }
+  @media screen and (max-width: 1280px) {
+    height: 4.5rem;
+  }
 `
 
 const TimeRangeButton = styled.button`
@@ -61,7 +66,7 @@ const ApplyButton = styled(ListboxOption)`
   text-transform: uppercase;
 `
 
-const DateMenu = ({ id, style, label, dateRange, setDateRange }) => {
+const DateMenu = ({ id, label, dateRange, setDateRange }) => {
   const [startDate, setStartDate] = useState(dateRange.start || new Date())
   const [endDate, setEndDate] = useState(dateRange.end || new Date())
 
@@ -105,7 +110,11 @@ const DateMenu = ({ id, style, label, dateRange, setDateRange }) => {
   }
 
   return (
-    <div style={style}>
+    <div
+      css={`
+        flex-grow: 1;
+      `}
+    >
       <VisuallyHidden id={`${id}-filter-select`}>
         select time range to filter by
       </VisuallyHidden>
@@ -181,7 +190,6 @@ const DateMenu = ({ id, style, label, dateRange, setDateRange }) => {
 
 DateMenu.propTypes = {
   id: PropTypes.string.isRequired,
-  style: PropTypes.object,
   label: PropTypes.string.isRequired,
   dateRange: PropTypes.shape({
     start: PropTypes.instanceOf(Date),

@@ -73,14 +73,12 @@ const ExploreTools = React.forwardRef(
             <>
               <DateMenu
                 id="date"
-                style={{ flexGrow: 1 }}
                 label="Date range"
                 dateRange={dateRange}
                 setDateRange={setDateRange}
               />
               <FilterMenu
                 id="focus"
-                style={{ flexGrow: 1 }}
                 selectedFilterIds={selectedFilterIds}
                 addFilter={addFilter}
                 removeFilter={removeFilter}
@@ -89,7 +87,6 @@ const ExploreTools = React.forwardRef(
               />
               <FilterMenu
                 id="geophysical"
-                style={{ flexGrow: 1 }}
                 selectedFilterIds={selectedFilterIds}
                 addFilter={addFilter}
                 removeFilter={removeFilter}
@@ -98,7 +95,6 @@ const ExploreTools = React.forwardRef(
               />
               <FilterMenu
                 id="season"
-                style={{ flexGrow: 1 }}
                 selectedFilterIds={selectedFilterIds}
                 addFilter={addFilter}
                 removeFilter={removeFilter}
@@ -107,7 +103,6 @@ const ExploreTools = React.forwardRef(
               />
               <FilterMenu
                 id="region"
-                style={{ flexGrow: 1 }}
                 selectedFilterIds={selectedFilterIds}
                 addFilter={addFilter}
                 removeFilter={removeFilter}
@@ -116,7 +111,6 @@ const ExploreTools = React.forwardRef(
               />
               <FilterMenu
                 id="platform"
-                style={{ flexGrow: 1 }}
                 selectedFilterIds={selectedFilterIds}
                 addFilter={addFilter}
                 removeFilter={removeFilter}
@@ -125,7 +119,6 @@ const ExploreTools = React.forwardRef(
               />
               <FilterMenu
                 id="funding"
-                style={{ flexGrow: 1 }}
                 selectedFilterIds={selectedFilterIds}
                 addFilter={addFilter}
                 removeFilter={removeFilter}
@@ -137,7 +130,6 @@ const ExploreTools = React.forwardRef(
           {category === "platforms" && (
             <FilterMenu
               id="instrument"
-              style={{ flexGrow: 1 }}
               selectedFilterIds={selectedFilterIds}
               addFilter={addFilter}
               removeFilter={removeFilter}
@@ -149,7 +141,6 @@ const ExploreTools = React.forwardRef(
             <>
               <FilterMenu
                 id="type"
-                style={{ flexGrow: 1 }}
                 selectedFilterIds={selectedFilterIds}
                 addFilter={addFilter}
                 removeFilter={removeFilter}
@@ -158,7 +149,6 @@ const ExploreTools = React.forwardRef(
               />
               <FilterMenu
                 id="vertical"
-                style={{ flexGrow: 1 }}
                 selectedFilterIds={selectedFilterIds}
                 addFilter={addFilter}
                 removeFilter={removeFilter}
