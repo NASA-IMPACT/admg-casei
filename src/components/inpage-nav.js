@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { FeedbackForm } from "feedback-fish"
 
-import Image from "./image"
+import { CaseiLogoIcon } from "../icons"
 import { colors } from "../utils/theme"
 import Button from "../components/button"
 
@@ -69,11 +69,10 @@ const InpageNav = ({ shortname, items, path }) => (
                 textDecoration: `none`,
                 display: `grid`,
                 gridTemplateColumns: `3rem auto`,
-                columnGap: `1rem`,
                 alignItems: `center`,
               }}
             >
-              <Image filename="logo.png" alt={`${shortname} logo`} />
+              <CaseiLogoIcon color={colors.lightTheme.text} size="tiny" />
             </Link>
           </li>
           <li style={{ margin: `0 1rem 0 0` }}>

@@ -1,12 +1,13 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { sizes } from "./utils"
 
 export default function CaseiLogoIcon({ color = "#FFF", size = "text" }) {
   return (
     <svg
       width={sizes[size].width}
       height={sizes[size].height}
-      viewBox="0 0 16 16"
+      viewBox="0 0 62 62"
       xmlns="http://www.w3.org/2000/svg"
     >
       <title>CASEI Logo</title>

@@ -8,6 +8,7 @@ import TrashIcon from "./trash-icon"
 import CampaignIcon from "./campaign-icon"
 import InstrumentIcon from "./instrument-icon"
 import PlatformIcon from "./platform-icon"
+import CaseiLogoIcon from "./casei-logo-icon"
 
 export {
   ArrowIcon,
@@ -18,7 +19,7 @@ export {
   TrashIcon,
 }
 
-export { CampaignIcon, InstrumentIcon, PlatformIcon }
+export { CampaignIcon, InstrumentIcon, PlatformIcon, CaseiLogoIcon }
 
 export { AtmosphericComposition as AtmosphericCompositionIcon } from "./atmospheric-composition"
 export { AtmosphericDynamics as AtmosphericDynamicsIcon } from "./atmospheric-dynamics"
