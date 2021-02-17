@@ -39,7 +39,7 @@ const DataSection = ({ id, dois }) => {
         {dois.length ? (
           <>
             <p>
-              Show data products from this instrument by specific campaigns or
+              Filter data products from this instrument by specific campaigns or
               platforms.
             </p>
             {campaignList.concat(platformList).length > 2 && (

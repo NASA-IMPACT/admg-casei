@@ -78,7 +78,7 @@ exports[`Data Section matches snapshot 1`] = `
     className="c2"
   >
     <p>
-      Show data products from this instrument by specific campaigns or platforms.
+      Filter data products from this instrument by specific campaigns or platforms.
     </p>
     <div
       className="c3"
