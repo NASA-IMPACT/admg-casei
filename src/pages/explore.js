@@ -5,6 +5,7 @@ import VisuallyHidden from "@reach/visually-hidden"
 import { format } from "date-fns"
 
 import api from "../utils/api"
+import { colors } from "../utils/theme"
 import { selector } from "../utils/filter-utils"
 import useCampaignList from "../utils/use-campaign-list"
 import usePlatformList from "../utils/use-platform-list"
@@ -186,37 +187,44 @@ export default function Explore({ data, location }) {
         {(selectedFilterIds.length > 0 ||
           aoi ||
           !!(dateRange.start && dateRange.end)) && (
-          <FilterChips clearFilters={clearFilters}>
-            {selectedFilterIds.map(f => (
-              <Chip
-                key={f}
-                id="filter"
-                label={getFilterLabelById ? getFilterLabelById(f) : f}
-                actionId={f}
-                removeAction={removeFilter}
-              />
-            ))}
+          <>
+            <FilterChips clearFilters={clearFilters}>
+              {selectedFilterIds.map(f => (
+                <Chip
+                  key={f}
+                  id="filter"
+                  label={getFilterLabelById ? getFilterLabelById(f) : f}
+                  actionId={f}
+                  removeAction={removeFilter}
+                />
+              ))}
 
-            {aoi && (
-              <Chip
-                id="filter"
-                label={"aoi: Spatial extend"}
-                actionId={"aoi"}
-                removeAction={removeAoi}
-              />
-            )}
+              {aoi && (
+                <Chip
+                  id="filter"
+                  label={"aoi: Spatial extend"}
+                  actionId={"aoi"}
+                  removeAction={removeAoi}
+                />
+              )}
 
-            {!!(dateRange.start && dateRange.end) && (
-              <Chip
-                id="filter"
-                label={`date:
+              {!!(dateRange.start && dateRange.end) && (
+                <Chip
+                  id="filter"
+                  label={`date:
                 ${format(dateRange.start, "MM/dd/yyyy")} to 
                 ${format(dateRange.end, "MM/dd/yyyy")}`}
-                actionId={"dateRange"}
-                removeAction={removeDateRange}
-              />
-            )}
-          </FilterChips>
+                  actionId={"dateRange"}
+                  removeAction={removeDateRange}
+                />
+              )}
+            </FilterChips>
+            <hr
+              css={`
+                background: ${colors.darkTheme.division};
+              `}
+            />
+          </>
         )}
 
         <ExploreMenu
