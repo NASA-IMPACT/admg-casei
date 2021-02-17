@@ -1,10 +1,21 @@
 import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
+import styled from "styled-components"
 
 import { colors, layout } from "../utils/theme"
 import Login from "./login"
 import ExternalLink from "./external-link"
+
+const Ul = styled.ul`
+  list-style: none;
+  margin: 0;
+`
+const Headline = styled.p`
+  margin: 0 0 1.5rem 0;
+  font-weight: bold;
+  line-height: 3rem;
+`
 
 const Footer = ({ shortname }) => {
   const [isClient, setIsClient] = useState(false)
@@ -12,76 +23,95 @@ const Footer = ({ shortname }) => {
     setIsClient(true)
   }, [])
 
-  const style = {
-    ul: {
-      listStyle: `none`,
-      margin: 0,
-    },
-    headline: {
-      margin: `0 0 1.5rem 0`,
-      fontWeight: `bold`,
-      lineHeight: `3rem`,
-    },
-  }
-
   return (
     <footer
-      style={{
-        marginTop: `5rem`,
-        backgroundColor: colors.darkTheme.background,
-      }}
+      css={`
+        margin-top: 5rem;
+        background-color: ${colors.darkTheme.background};
+      `}
+      data-cy="page-footer"
     >
       <div
-        style={{
-          margin: `5rem auto`,
-          maxWidth: layout.maxWidth,
-          padding: `2rem ${layout.pageMargin}`,
-          flexShrink: 0,
-          display: `grid`,
-          gap: `1rem`,
-          gridTemplateColumns: `repeat(12, 1fr)`,
-        }}
+        css={`
+          margin: 5rem auto;
+          max-width: ${layout.maxWidth};
+          padding: 2rem ${layout.pageMargin};
+          flex-shrink: 0;
+          display: grid;
+          gap: 1rem;
+          grid-template-columns: repeat(12, 1fr);
+        `}
       >
-        <div style={{ gridColumn: `1 / span 3` }}>
+        <div
+          css={`
+            grid-column: 1 / span 3;
+          `}
+        >
           <div
-            style={{
-              textTransform: `uppercase`,
-              fontWeight: `900`,
-              fontSize: `30px`,
-              lineHeight: `2.5rem`,
-              marginBottom: `0.5rem`,
-            }}
+            css={`
+              text-transform: uppercase;
+              font-weight: 900;
+              font-size: 30px;
+              line-height: 2.5rem;
+              margin-bottom: 0.5rem;
+            `}
+            data-cy="footer-title"
           >
             {shortname}
           </div>
-          <p>
+          <p data-cy="footer-subtitle">
             {shortname} is a comprehensive inventory containing information
             about all airborne and field campaigns as well as aircrafts,
             instruments, and data products.
           </p>
         </div>
 
-        <div style={{ gridColumn: `5 / span 2` }}>
-          <p style={style.headline}>Explore</p>
-          <ul style={style.ul}>
+        <div
+          css={`
+            grid-column: 5 / span 2;
+          `}
+          data-cy="footer-explore"
+        >
+          <Headline>Explore</Headline>
+          <Ul>
             <li>
-              <Link to="/explore">Campaigns</Link>
-              {/** TODO: link to explore with tab selected */}
+              <Link
+                to="/explore"
+                state={{ defaultExploreCategory: "campaigns" }}
+                data-cy="footer-campaigns-link"
+              >
+                Campaigns
+              </Link>
             </li>
             <li>
-              <Link to="/explore">Platforms</Link>
-              {/** TODO: link to explore with tab selected */}
+              <Link
+                to="/explore"
+                state={{ defaultExploreCategory: "platforms" }}
+                data-cy="footer-platforms-link"
+              >
+                Platforms
+              </Link>
             </li>
             <li>
-              <Link to="/explore">Instruments</Link>
-              {/** TODO: link to explore with tab selected */}
+              <Link
+                to="/explore"
+                state={{ defaultExploreCategory: "instruments" }}
+                data-cy="footer-instruments-link"
+              >
+                Instruments
+              </Link>
             </li>
-          </ul>
+          </Ul>
         </div>
 
-        <div style={{ gridColumn: `7 / span 2` }}>
-          <p style={style.headline}>Resources</p>
-          <ul style={style.ul}>
+        <div
+          css={`
+            grid-column: 7 / span 2;
+          `}
+          data-cy="footer-resources"
+        >
+          <Headline>Resources</Headline>
+          <Ul>
             <li>
               <Link to="/glossary/">Glossary</Link>
             </li>
@@ -91,24 +121,34 @@ const Footer = ({ shortname }) => {
                 <Login />
               )}
             </li>
-          </ul>
+          </Ul>
         </div>
 
-        <div style={{ gridColumn: `9 / span 2` }}>
-          <p style={style.headline}>Quick Links</p>
-          <ul style={style.ul}>
+        <div
+          css={`
+            grid-column: 9 / span 2;
+          `}
+          data-cy="footer-quick-links"
+        >
+          <Headline>Quick Links</Headline>
+          <Ul>
             <li>
               <Link to="/about/">About</Link>
             </li>
             <li>
               <Link to="/contact/">Contact us</Link>
             </li>
-          </ul>
+          </Ul>
         </div>
 
-        <div style={{ gridColumn: `11 / span 2` }}>
-          <p style={style.headline}>Organizations</p>
-          <ul style={style.ul}>
+        <div
+          css={`
+            grid-column: 11 / span 2;
+          `}
+          data-cy="footer-organizations"
+        >
+          <Headline>Organizations</Headline>
+          <Ul>
             <li>
               <ExternalLink
                 label="ADMG Website"
@@ -123,47 +163,50 @@ const Footer = ({ shortname }) => {
                 id="impact-website"
               />
             </li>
-          </ul>
+          </Ul>
         </div>
 
         <hr
-          style={{
-            gridColumn: `1 / span 12`,
-            backgroundColor: `rgba(255,255,255,0.2)`,
-          }}
+          css={`
+            grid-column: 1 / span 12;
+            background-color: rgba(255, 255, 255, 0.2);
+          `}
         />
 
         <div
-          style={{
-            gridColumn: `1 / span 12`,
-            display: `flex`,
-            justifyContent: `space-between`,
-          }}
+          css={`
+            grid-column: 1 / span 12;
+            display: flex;
+            justify-content: space-between;
+          `}
         >
           <div
-            style={{
-              display: `flex`,
-              alignItems: `center`,
-              fontWeight: `bold`,
-            }}
+            css={`
+              display: flex;
+              align-items: center;
+              font-weight: bold;
+            `}
           >
             <div
-              style={{
-                backgroundImage: `url('https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png')`,
-                backgroundSize: `cover`,
-                backgroundPosition: `center`,
-                width: 100,
-                height: 100,
-              }}
+              css={`
+                background-image: url("https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png");
+                background-size: cover;
+                background-position: center;
+                width: 100px;
+                height: 100px;
+              `}
+              aria-hidden="true" // purely decorative content
             ></div>
-            <div>
-              <div>National Aeronautics and Space Administration</div>
-              <div>
+            <div data-cy="footer-credits">
+              <div data-cy="footer-credit-org">
+                National Aeronautics and Space Administration
+              </div>
+              <div data-cy="footer-credit-official">
                 NASA Official:{" "}
                 <span
-                  style={{
-                    fontWeight: `normal`,
-                  }}
+                  css={`
+                    font-weight: normal;
+                  `}
                 >
                   Rahul Ramachandran
                 </span>
@@ -171,12 +214,12 @@ const Footer = ({ shortname }) => {
             </div>
           </div>
           <div
-            style={{
-              display: `flex`,
-              alignItems: `center`,
-              textTransform: `uppercase`,
-              color: colors.darkTheme.link,
-            }}
+            css={`
+              display: flex;
+              align-items: center;
+              text-transform: uppercase;
+              color: ${colors.darkTheme.link};
+            `}
           >
             {/* TODO: Add back in with real links */}
             {/* <div style={{ marginLeft: `3rem` }}>
@@ -189,7 +232,12 @@ const Footer = ({ shortname }) => {
         </div>
       </div>
 
-      <div style={{ textAlign: `center` }}>
+      <div
+        css={`
+          text-align: center;
+        `}
+        data-cy="footer-credit-devseed"
+      >
         © {new Date().getFullYear()}, Built by{" "}
         <ExternalLink
           label="Development Seed"
