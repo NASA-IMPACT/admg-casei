@@ -26,7 +26,7 @@ const Home = ({ data }) => {
         )}
         description={data.site.siteMetadata.description}
         backgroundImage={data.heroImage}
-        textToImageRatio={[10, 2]}
+        textToImageRatio={[6, 6]}
         id="home"
       />
       <PageBody id="home">

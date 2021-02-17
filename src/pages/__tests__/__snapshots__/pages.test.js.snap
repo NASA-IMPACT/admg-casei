@@ -5791,7 +5791,7 @@ exports[`Home page renders correctly 1`] = `
       style={
         Object {
           "alignContent": "center",
-          "background": "linear-gradient(90deg, rgba(12,21,32, 0.8) 0%, rgba(12,21,32, 0.7)63.33333333333334%, rgba(12,21,32, 0.0)103.33333333333334%)",
+          "background": "linear-gradient(90deg, rgba(12,21,32, 0.8) 0%, rgba(12,21,32, 0.7)30%, rgba(12,21,32, 0.0)70%)",
           "display": "grid",
           "gridTemplateColumns": "1fr minmax(auto,  1280px) 1fr",
           "marginBottom": "6rem",
@@ -5806,7 +5806,7 @@ exports[`Home page renders correctly 1`] = `
             "display": "grid",
             "gridArea": "1 / 2 / 1 / 2",
             "gridGap": ".5rem",
-            "gridTemplateColumns": "10fr 2fr",
+            "gridTemplateColumns": "6fr 6fr",
             "padding": "0 5rem",
           }
         }
