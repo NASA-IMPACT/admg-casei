@@ -126,19 +126,19 @@ const DateMenu = ({ id, label, dateRange, setDateRange }) => {
       >
         <FilterButton arrow="▼">{label}</FilterButton>
         <ListboxPopover
-          style={{
-            background: colors.darkTheme.altBackground,
-            minWidth: `fit-content`,
-          }}
+          css={`
+            background: ${colors.darkTheme.altBackground};
+            min-width: fit-content;
+          `}
         >
           <ListboxList>
             <div
-              style={{
-                display: `flex`,
-                margin: `1rem`,
-                alignItems: `center`,
-                justifyContent: `space-between`,
-              }}
+              css={`
+                display: flex;
+                margin: 1rem;
+                align-items: center;
+                justify-content: space-between;
+              `}
             >
               From:
               <DatePicker
@@ -155,12 +155,12 @@ const DateMenu = ({ id, label, dateRange, setDateRange }) => {
               />
             </div>
             <div
-              style={{
-                display: `flex`,
-                gap: `1rem`,
-                margin: `1rem`,
-                alignItems: `center`,
-              }}
+              css={`
+                display: flex;
+                gap: 1rem;
+                margin: 1rem;
+                align-items: center;
+              `}
             >
               <TimeRangeButton onClick={() => onButtonClick("month")}>
                 1 Month ago

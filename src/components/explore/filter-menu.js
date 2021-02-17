@@ -78,11 +78,11 @@ const FilterMenu = ({
       >
         <FilterButton arrow="▼">{label}</FilterButton>
         <ListboxPopover
-          style={{
-            background: colors.darkTheme.altBackground,
-            maxHeight: `24rem`,
-            overflowY: `scroll`,
-          }}
+          css={`
+            background: ${colors.darkTheme.altBackground};
+            max-height: 24rem;
+            overflow-y: scroll;
+          `}
         >
           <ListboxList data-cy="filter-options">
             {options.map(o => (

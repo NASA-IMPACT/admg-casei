@@ -138,12 +138,12 @@ describe("Filter, Search and Sort", () => {
         cy.get(`[data-cy=${x.filterExamples[0].id}-filter-select]`).click()
         cy.get("[data-cy=filter-options]")
           .contains("li", x.filterExamples[0].value)
-          .click()
+          .click({ force: true })
 
         cy.get(`[data-cy=${x.filterExamples[1].id}-filter-select]`).click()
         cy.get("[data-cy=filter-options]")
           .contains("li", x.filterExamples[1].value)
-          .click()
+          .click({ force: true })
 
         cy.get("[data-cy=clear-filters]").should("exist")
         cy.get("[data-cy=clear-filters]").click()
