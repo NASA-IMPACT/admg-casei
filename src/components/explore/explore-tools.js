@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 import FilterMenu from "./filter-menu"
 import Searchbar from "./searchbar"
 import DateMenu from "./date-menu"
-
+import { FilterIcon } from "../../icons"
 import { colors } from "../../utils/theme"
 
 const ExploreTools = React.forwardRef(
@@ -28,15 +28,19 @@ const ExploreTools = React.forwardRef(
       <form
         onSubmit={submitSearch}
         onReset={resetSearch}
-        style={{
-          display: `flex`,
-          margin: `2rem 0`,
-          flexFlow: `column wrap`,
-          border: `1px solid ${colors.darkTheme.text}`,
-        }}
+        css={`
+          display: flex;
+          margin: 2rem 0;
+          flex-flow: column wrap;
+          border: 1px solid ${colors.darkTheme.text};
+        `}
         data-cy="explore-tools"
       >
-        <div style={{ display: `flex` }}>
+        <div
+          css={`
+            display: flex;
+          `}
+        >
           <Searchbar
             ref={ref}
             toggleMap={toggleMap}
@@ -44,7 +48,27 @@ const ExploreTools = React.forwardRef(
           />
         </div>
 
-        <div style={{ flexGrow: 1, display: `flex`, alignContent: `stretch` }}>
+        <div
+          css={`
+            flex-grow: 1;
+            display: flex;
+            align-content: stretch;
+          `}
+        >
+          <div
+            css={`
+              padding: 0.25rem 0.75rem;
+              border: 1px solid ${colors.darkTheme.text};
+              display: flex;
+              align-items: center;
+              gap: 0.5rem;
+            `}
+            data-cy="main-filter-label"
+          >
+            <FilterIcon color={colors.darkTheme.text} />
+            <strong>Filter By</strong>
+          </div>
+
           {category === "campaigns" && (
             <>
               <DateMenu
