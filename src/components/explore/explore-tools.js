@@ -64,7 +64,10 @@ const ExploreTools = React.forwardRef(
                   cursor: pointer;
                 `}
                 data-cy="map-toggle-btn"
-                onClick={() => toggleMap(!isDisplayingMap)}
+                onClick={e => {
+                  e.preventDefault()
+                  toggleMap(!isDisplayingMap)
+                }}
               >
                 <span>{isDisplayingMap ? "Hide" : "Show"} Map</span>
               </button>
