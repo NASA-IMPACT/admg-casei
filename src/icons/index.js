@@ -9,6 +9,7 @@ import FilterIcon from "./filter-icon"
 import CampaignIcon from "./campaign-icon"
 import InstrumentIcon from "./instrument-icon"
 import PlatformIcon from "./platform-icon"
+import CaseiLogoIcon from "./casei-logo-icon"
 
 import DiscoveryIcon from "./about/discovery-icon"
 import AccountingIcon from "./about/accounting-icon"
@@ -24,7 +25,7 @@ export {
   FilterIcon,
 }
 
-export { CampaignIcon, InstrumentIcon, PlatformIcon }
+export { CampaignIcon, InstrumentIcon, PlatformIcon, CaseiLogoIcon }
 
 export { DiscoveryIcon, AccountingIcon, MetadataIcon }
 

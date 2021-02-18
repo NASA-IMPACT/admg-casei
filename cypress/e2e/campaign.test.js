@@ -38,22 +38,29 @@ describe("Campaign", () => {
 
     cy.get("main").find("nav").should("exist")
 
+    cy.get("[data-cy=inpage-nav]").find("[data-cy=home-link]").should("exist")
+    cy.get("[data-cy=home-link]").click()
+
+    cy.url().should("eq", "http://localhost:8000/")
+    cy.go("back")
+
     cy.get("main")
       .find("nav")
       .find("a")
       .should($anchor => {
-        expect($anchor, "9 items").to.have.length(9)
-        expect($anchor.eq(0), "first item").to.exist
-        expect($anchor.eq(1), "second item").to.contain("Overview")
-        expect($anchor.eq(2), "third item").to.contain("Missions")
-        expect($anchor.eq(3), "fourth item").to.contain("Focus")
-        expect($anchor.eq(4), "fifth item").to.contain(
+        expect($anchor, "10 items").to.have.length(10)
+        expect($anchor.eq(0), "first item").to.contain("CASEI Logo")
+        expect($anchor.eq(1), "second item").to.exist
+        expect($anchor.eq(2), "third item").to.contain("Overview")
+        expect($anchor.eq(3), "fourth item").to.contain("Missions")
+        expect($anchor.eq(4), "fifth item").to.contain("Focus")
+        expect($anchor.eq(5), "sixth item").to.contain(
           "Platforms & Instruments"
         )
-        expect($anchor.eq(5), "sixth item").to.contain("Timeline")
-        expect($anchor.eq(6), "seventh item").to.contain("Data")
-        expect($anchor.eq(7), "eigth item").to.contain("Program Info")
-        expect($anchor.eq(8), "ninth item").to.contain("Other")
+        expect($anchor.eq(6), "seventh item").to.contain("Timeline")
+        expect($anchor.eq(7), "eigth item").to.contain("Data")
+        expect($anchor.eq(8), "ninth item").to.contain("Program Info")
+        expect($anchor.eq(9), "tenth item").to.contain("Other")
       })
     ;["program-info", "platform", "overview", "timeline", "focus"].forEach(
       id => {

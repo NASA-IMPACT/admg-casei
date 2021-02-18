@@ -2,42 +2,54 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-import Image from "./image"
 import { layout } from "../utils/theme"
+import { CaseiLogoIcon } from "../icons"
 
 const Header = ({ shortname, children }) => (
   <header>
     <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: layout.maxWidth,
-        padding: `2rem ${layout.pageMargin}`,
-        display: `flex`,
-        justifyContent: `space-between`,
-        alignItems: `center`,
-      }}
+      css={`
+        margin: 0 auto;
+        max-width: ${layout.maxWidth};
+        padding: 2rem ${layout.pageMargin};
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      `}
     >
       <div
-        style={{
-          margin: 0,
-          zIndex: 100,
-        }}
+        css={`
+          margin: 0;
+          z-index: 100;
+        `}
       >
         <Link
           to="/"
-          style={{
-            textDecoration: `none`,
-            display: `grid`,
-            gridTemplateColumns: `3rem auto`,
-            columnGap: `1rem`,
-            alignItems: `center`,
-          }}
+          css={`
+            text-decoration: none;
+            display: grid;
+            grid-template-columns: 3rem auto;
+            column-gap: 2rem;
+            align-items: center;
+          `}
         >
-          <Image filename="logo.png" alt={`${shortname} logo`} />
-          <div style={{ fontSize: `1.5rem` }}>{shortname}</div>
+          <CaseiLogoIcon size="small" />
+          <div
+            css={`
+              font-size: 1.5rem;
+            `}
+          >
+            {shortname}
+          </div>
         </Link>
       </div>
-      <div style={{ display: `flex` }}>{children}</div>
+      <div
+        css={`
+          display: flex;
+        `}
+      >
+        {children}
+      </div>
     </div>
   </header>
 )

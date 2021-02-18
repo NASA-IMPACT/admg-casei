@@ -64,7 +64,6 @@ export default function Explore({ data, location }) {
       setFilter([])
     }
   }, [selectedFilterId])
-
   const campaignList = useCampaignList(
     allCampaign.list,
     sortOrder.campaigns,
