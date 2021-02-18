@@ -1,0 +1,40 @@
+{
+  "data": {
+    "dois": [ 
+      {
+        "campaigns": [
+          {
+            "dois": [
+              {"id": "677b4372-1e77-400f-af12-ca7eb0314ee1"},
+              {"id": "5b300576-4346-4999-90d5-db58733b5f17"},
+              {"id": "09d66e11-21ad-461e-a214-22aea60d1105"},
+              {"id": "18d441e4-43b6-48c9-b78c-7307e107cc03"}
+           ],
+            "id": "ac9220f0-edde-47ee-ab0a-41e38221a104",
+            "longname": "Light Precipitation Evaluation Experiment",
+            "shortname": "LPVEx"
+          }
+        ],
+      "id": "5b300576-4346-4999-90d5-db58733b5f17",
+      "longname": "GPM GROUND VALIDATION WYOMING KING AIR CLOUD MICROPHYSICS LPVEX V1",
+      "platforms": [
+        {
+          "campaign": [
+            { "id": "ac9220f0-edde-47ee-ab0a-41e38221a104"}, 
+            { "id": "6fd4df89-03fd-4971-ba4b-fa20dbaefb9b"}
+          ],
+          "dois": [
+            {"id": "da3b9711-9c6e-4825-9b72-9d6d3dc60d6"},
+            {"id": "93756098-2b99-4121-9071-ced7e236e91e"},
+            {"id": "5b300576-4346-4999-90d5-db58733b5f17"}
+         ],
+          "id": "704d3b91-7883-477c-be57-c50dd33f6165",
+          "longname": "University of Wyoming King Air",
+          "shortname": "UWKA"
+        }
+      ],
+      "shortname": "10.5067/GPMGV/LPVEX/MULTPLE/DATA202"
+      }
+    ]
+  }
+}
