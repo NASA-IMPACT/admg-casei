@@ -26,6 +26,7 @@ const colors = {
     altText: palette["spanish gray"],
     linkText: palette["baby blue eyes"],
     highlight: palette["red ryb"],
+    division: palette["davys grey"],
   },
 }
 

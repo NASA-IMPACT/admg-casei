@@ -1,7 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { Link } from "gatsby"
 import { FeedbackForm } from "feedback-fish"
 
+import { CaseiLogoIcon } from "../icons"
 import { colors } from "../utils/theme"
 import Button from "../components/button"
 
@@ -13,10 +15,17 @@ FishButton.propTypes = {
 }
 
 const InpageLink = props => (
-  <li style={{ margin: `0 1rem 0 0` }}>
+  <li
+    css={`
+      margin: 0 1rem 0 0;
+    `}
+  >
     <a
       href={`#${props.id}`}
-      style={{ color: colors.lightTheme.text, fontWeight: 600 }}
+      css={`
+        color: ${colors.lightTheme.text};
+        font-weight: 600;
+      `}
       data-cy={`${props.id}-inpage-link`}
     >
       {props.children}
@@ -31,43 +40,62 @@ InpageLink.propTypes = {
 
 const InpageNav = ({ shortname, items, path }) => (
   <div
-    style={{
-      position: `sticky`,
-      top: 0,
-      zIndex: 1000,
-    }}
+    css={`
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    `}
+    data-cy="inpage-nav"
   >
     <div
-      style={{
-        margin: `0 -6rem`,
-        padding: `0 6rem`,
-        display: `flex`,
-        justifyContent: `space-between`,
-        alignItems: `center`,
-        backgroundColor: colors.lightTheme.background,
-        color: colors.lightTheme.text,
-      }}
+      css={`
+        margin: 0 -6rem;
+        padding: 0 6rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: ${colors.lightTheme.background};
+        color: ${colors.lightTheme.text};
+      `}
     >
       <nav aria-label="inpage-scroll">
         <ul
-          style={{
-            display: `flex`,
-            flexDirection: `row`,
-            justifyContent: `flex-start`,
-            alignItems: `center`,
-            margin: 0,
-            padding: `0.25rem 0`,
-            listStyle: `none`,
-          }}
+          css={`
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            margin: 0;
+            padding: 0.25rem 0;
+            list-style: none;
+          `}
         >
-          <li style={{ margin: `0 1rem 0 0` }}>
+          <li>
+            <Link
+              to="/"
+              css={`
+                text-decoration: none;
+                display: grid;
+                grid-template-columns: 3rem auto;
+                align-items: center;
+              `}
+              data-cy="home-link"
+            >
+              <CaseiLogoIcon color={colors.lightTheme.text} size="tiny" />
+            </Link>
+          </li>
+          <li
+            css={`
+              margin: 0 1rem 0 0;
+            `}
+          >
             <a
               href="#top"
-              style={{
-                paddingRight: `1rem`,
-                fontSize: `2rem`,
-                color: colors.lightTheme.text,
-              }}
+              css={`
+                padding-right: 1rem;
+                font-size: 2rem;
+                color: ${colors.lightTheme.text};
+              `}
               data-cy={`top-inpage-link`}
             >
               {shortname}

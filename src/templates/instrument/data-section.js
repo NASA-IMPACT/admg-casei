@@ -16,7 +16,6 @@ const DataSection = ({ id, dois }) => {
   const clearFilters = () => setSelectedFilterIds([])
   const removeFilter = id =>
     setSelectedFilterIds(selectedFilterIds.filter(f => f !== id))
-
   const filteredDois = selectedFilterIds.length
     ? dois.filter(
         doi =>
