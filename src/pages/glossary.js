@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 import Image from "gatsby-image"
 
+import { LargeP } from "../utils/typography"
 import Layout, { PageBody, DefinitionList } from "../components/layout"
 import SEO from "../components/seo"
 import glossary from "../content/glossary.json"
@@ -19,7 +20,7 @@ export default function Glossary({ data }) {
             title: x.term,
             content: (
               <div>
-                <p>{x.definition}</p>
+                <LargeP>{x.definition}</LargeP>
                 {x.listOptions && (
                   <ul data-cy="glossary-definition-options">
                     {x.listOptions.map(listItem => (
@@ -30,12 +31,12 @@ export default function Glossary({ data }) {
                   </ul>
                 )}
                 {x.note && (
-                  <p
+                  <LargeP
                     data-cy="glossary-definition-note"
                     style={{ fontStyle: `italic`, marginTop: `1rem` }}
                   >
                     Note: {x.note}
-                  </p>
+                  </LargeP>
                 )}
               </div>
             ),

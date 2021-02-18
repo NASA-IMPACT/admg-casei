@@ -1,4 +1,5 @@
 import Typography from "typography"
+import styled from "styled-components"
 
 import { colors } from "./theme"
 
@@ -60,6 +61,7 @@ const typography = new Typography({
       },
       p: {
         marginBottom: 0,
+        fontSize: `1rem`,
       },
       "label, button": {
         fontSize: rhythm(0.6),
@@ -69,5 +71,9 @@ const typography = new Typography({
     }
   },
 })
+
+export const LargeP = styled.p`
+  font-size: 1.25rem;
+`
 
 export default typography
