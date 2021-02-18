@@ -86,6 +86,8 @@ describe("Campaign", () => {
       .should("have.text", "The Campaign")
       .and("be.visible")
 
+    cy.get("[data-cy=aliases]").should("not.exist") // OLYMPEX does not have any aliases listed
+
     cy.get("[data-cy=description]").should("exist")
 
     cy.get("[data-cy=overview-content]")

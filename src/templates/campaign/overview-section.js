@@ -11,9 +11,11 @@ import {
   ListLink,
 } from "../../components/layout"
 import ExternalLink from "../../components/external-link"
+import { colors } from "../../utils/theme"
 
 const OverviewSection = ({
   id,
+  aliases,
   description,
   startdate,
   enddate,
@@ -34,16 +36,36 @@ const OverviewSection = ({
     </VisuallyHidden>
     <SectionContent columns={[1, 8]}>
       <h3>The Campaign</h3>
+
       <p data-cy="description">{description}</p>
+
+      {aliases.length ? (
+        <p
+          css={`
+            margin-top: 2rem;
+          `}
+          data-cy="aliases"
+        >
+          <label
+            css={`
+              color: ${colors.lightTheme.altText};
+            `}
+          >
+            {aliases.length === 1 ? "Alias" : "Aliases"}:{" "}
+          </label>
+          {aliases.map((a, i) => (i > 0 ? `, ${a.shortname}` : a.shortname))}
+        </p>
+      ) : null}
+
       <div
-        style={{
-          marginTop: `3rem`,
-          display: `grid`,
-          columnGap: `2rem`,
-          gridAutoFlow: `column`,
-          gridTemplateColumns: `1fr 1fr`,
-          gridTemplateRows: ` 1fr auto 1fr`,
-        }}
+        css={`
+          margin-top: 3rem;
+          display: grid;
+          column-gap: 2rem;
+          grid-auto-flow: column;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr auto 1fr;
+        `}
       >
         <ContentItem
           id="overview-content"
@@ -76,22 +98,28 @@ const OverviewSection = ({
     </SectionContent>
 
     <SectionContent columns={[10, 3]}>
-      <ul style={{ margin: 0, listStyle: `none` }} data-cy="link-list">
+      <ul
+        css={`
+          margin: 0;
+          list-style: none;
+        `}
+        data-cy="link-list"
+      >
         <li
-          style={{
-            padding: `1rem`,
-            border: `1px solid hsla(0,0%,0%,0.2)`,
-            marginBottom: `3rem`,
-          }}
+          css={`
+            padding: 1rem;
+            border: 1px solid hsla(0, 0%, 0%, 0.2);
+            margin-bottom: 3rem;
+          `}
         >
           {doi ? (
             <p
-              style={{
-                whiteSpace: `nowrap`,
-                overflow: `hidden`,
-                lineHeight: `1.5rem`,
-                textOverflow: `ellipsis`,
-              }}
+              css={`
+                white-space: nowrap;
+                overflow: hidden;
+                line-height: 1.5rem;
+                text-overflow: ellipsis;
+              `}
             >
               Campaign DOI:
               <br />
@@ -131,7 +159,13 @@ const OverviewSection = ({
     </SectionContent>
     <SectionContent columns={[1, 8]}>
       <h3>Repositories</h3>
-      <ul style={{ margin: 0, listStyle: `none` }} data-cy="repo-list">
+      <ul
+        css={`
+          margin: 0;
+          list-style: none;
+        `}
+        data-cy="repo-list"
+      >
         {repositories.map(repo => (
           <ListLink key={repo.id} to={repo.url} mode="lightTheme" noPadding>
             {repo.longname}
@@ -144,6 +178,9 @@ const OverviewSection = ({
 
 export const overviewFields = graphql`
   fragment overviewFields on campaign {
+    aliases: aliases {
+      shortname: short_name
+    }
     description: description_long
     startdate: start_date
     enddate: end_date
@@ -171,6 +208,11 @@ export const overviewFields = graphql`
 
 OverviewSection.propTypes = {
   id: PropTypes.string.isRequired,
+  aliases: PropTypes.arrayOf(
+    PropTypes.shape({
+      shortname: PropTypes.string.isRequired,
+    }).isRequired
+  ),
   description: PropTypes.string.isRequired,
   startdate: PropTypes.string.isRequired,
   enddate: PropTypes.string.isRequired,
