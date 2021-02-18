@@ -4661,17 +4661,17 @@ exports[`Glossary page renders correctly 1`] = `
   display: flex;
 }
 
-.c15.c15:hover {
+.c16.c16:hover {
   opacity: 0.64;
 }
 
-.c15.c15:active {
+.c16.c16:active {
   -webkit-transform: translate(0,1px);
   -ms-transform: translate(0,1px);
   transform: translate(0,1px);
 }
 
-.c16.c16 {
+.c17.c17 {
   position: fixed;
   top: 0;
   right: 0;
@@ -4693,7 +4693,7 @@ exports[`Glossary page renders correctly 1`] = `
   transition: opacity 400ms ease-in;
 }
 
-.c17.c17 {
+.c18.c18 {
   width: 400px;
   position: relative;
   padding: 32px;
@@ -4702,23 +4702,23 @@ exports[`Glossary page renders correctly 1`] = `
   pointer-events: auto;
 }
 
-.c13.c13 {
+.c14.c14 {
   list-style: none;
   margin: 0;
 }
 
-.c12.c12 {
+.c13.c13 {
   margin: 0 0 1.5rem 0;
   font-weight: bold;
   line-height: 3rem;
 }
 
-.c7.c7 {
+.c8.c8 {
   margin-top: 5rem;
   background-color: #303641;
 }
 
-.c8.c8 {
+.c9.c9 {
   margin: 5rem auto;
   max-width: 1280px;
   padding: 2rem 5rem;
@@ -4730,11 +4730,11 @@ exports[`Glossary page renders correctly 1`] = `
   grid-template-columns: repeat(12,1fr);
 }
 
-.c9.c9 {
+.c10.c10 {
   grid-column: 1 / span 3;
 }
 
-.c10.c10 {
+.c11.c11 {
   text-transform: uppercase;
   font-weight: 900;
   font-size: 30px;
@@ -4742,28 +4742,28 @@ exports[`Glossary page renders correctly 1`] = `
   margin-bottom: 0.5rem;
 }
 
-.c11.c11 {
+.c12.c12 {
   grid-column: 5 / span 2;
 }
 
-.c14.c14 {
+.c15.c15 {
   grid-column: 7 / span 2;
 }
 
-.c18.c18 {
+.c19.c19 {
   grid-column: 9 / span 2;
 }
 
-.c19.c19 {
+.c20.c20 {
   grid-column: 11 / span 2;
 }
 
-.c20.c20 {
+.c21.c21 {
   grid-column: 1 / span 12;
   background-color: rgba(255,255,255,0.2);
 }
 
-.c21.c21 {
+.c22.c22 {
   grid-column: 1 / span 12;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4775,7 +4775,7 @@ exports[`Glossary page renders correctly 1`] = `
   justify-content: space-between;
 }
 
-.c22.c22 {
+.c23.c23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4787,7 +4787,7 @@ exports[`Glossary page renders correctly 1`] = `
   font-weight: bold;
 }
 
-.c23.c23 {
+.c24.c24 {
   background-image: url("https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png");
   background-size: cover;
   background-position: center;
@@ -4795,11 +4795,11 @@ exports[`Glossary page renders correctly 1`] = `
   height: 100px;
 }
 
-.c24.c24 {
+.c25.c25 {
   font-weight: normal;
 }
 
-.c25.c25 {
+.c26.c26 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4811,7 +4811,7 @@ exports[`Glossary page renders correctly 1`] = `
   text-transform: uppercase;
 }
 
-.c26.c26 {
+.c27.c27 {
   text-align: center;
 }
 
@@ -4824,6 +4824,10 @@ exports[`Glossary page renders correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+}
+
+.c7.c7 {
+  font-size: 1.25rem;
 }
 
 @media screen and (max-width:1400px) {
@@ -5037,7 +5041,9 @@ exports[`Glossary page renders correctly 1`] = `
             style={Object {}}
           >
             <div>
-              <p>
+              <p
+                className="c7"
+              >
                 A NASA-funded program containing one or more satellites and/or field investigation projects. Missions target a relatively broad set of science requirements, while supporting projects each tend to investigate a more narrow set of mission-supporting objectives and/or specific research questions.  Examples include the Aqua mission, the Precipitation Measurement mission, and the Earth Venture-Suborbital program.
               </p>
             </div>
@@ -5057,10 +5063,13 @@ exports[`Glossary page renders correctly 1`] = `
             style={Object {}}
           >
             <div>
-              <p>
+              <p
+                className="c7"
+              >
                 An observational study during which individuals/programs/agencies/institutions utilize preselected, specific sensors or sets of sensors to acquire targeted observations in a natural, non-laboratory setting in support of common, clearly defined, science or research objectives.  Field investigations usually occur over a designated geographical space and/or period of time.  Sensors can include in-situ and/or remote sensing instruments operating on airborne, ground-based, and/or other non-satellite platform(s).  Satellite-based observations may be included in, but are not collected specifically as part of, a field investigation.
               </p>
               <p
+                className="c7"
                 data-cy="glossary-definition-note"
                 style={
                   Object {
@@ -5089,7 +5098,9 @@ exports[`Glossary page renders correctly 1`] = `
             style={Object {}}
           >
             <div>
-              <p>
+              <p
+                className="c7"
+              >
                 A previously scheduled, continuous time period during which a field investigation’s platforms and/or sensors are dedicated for use in support of the science objective(s).  The deployment time frame typically consists of the calendar date range during which there are mission and/or instrument scientists and/or NASA ESPO personnel stationed on-site for the field investigation.  There may be time periods within a deployment during which individual platforms and/or instruments do not operate due to unfavorable environmental conditions, mechanical issues/maintenance, and/or prescribed personnel rest time.  There may be one or more deployments within a single field investigation.
               </p>
             </div>
@@ -5109,7 +5120,9 @@ exports[`Glossary page renders correctly 1`] = `
             style={Object {}}
           >
             <div>
-              <p>
+              <p
+                className="c7"
+              >
                 An individual time frame, within a deployment, during which all or a subset of the field investigation’s instrument(s) and platform(s) are operated with the goal of observing phenomena in support of the field investigation’s science or research objective(s).  IOPs are the primary measurement periods within a single deployment and typically signify a highly focused effort by investigation scientists and staff.  A single IOP may contain observations of one or more events or cases, and these may or may not be considered significant events or golden cases.  There may be one or more IOPs within a single deployment.
               </p>
             </div>
@@ -5129,7 +5142,9 @@ exports[`Glossary page renders correctly 1`] = `
             style={Object {}}
           >
             <div>
-              <p>
+              <p
+                className="c7"
+              >
                 An event observed during a deployment that is notable for the occurrence of a great example of one or more specific phenomena relating to the field investigation science or research objective(s).  Significant events may occur within or outside of an IOP.
               </p>
             </div>
@@ -5149,7 +5164,9 @@ exports[`Glossary page renders correctly 1`] = `
             style={Object {}}
           >
             <div>
-              <p>
+              <p
+                className="c7"
+              >
                 An event or short time period during an IOP that is notable for having all or nearly all of a field investigation’s selected instrument(s) or platform(s) operating successfully, and/or a significant event which has data available from most of the deployed instruments/platforms.  It is possible for a significant event to also be a golden case.
               </p>
             </div>
@@ -5169,10 +5186,13 @@ exports[`Glossary page renders correctly 1`] = `
             style={Object {}}
           >
             <div>
-              <p>
+              <p
+                className="c7"
+              >
                 An institution that participates in a field investigation with non-NASA separate funding resources allocated specifically for the field investigation. Includes any organization that provided specific platforms or instruments without NASA funding, including co-participating/ cooperating field campaigns. Also, if investigation data are archived by a non-NASA entity, the archiving organization is a partner organization, regardless of the funding pathway. For example,University X coordinates with NASA during a field investigation to collect data that University X is willing to share with NASA as part of the field investigation, despite University X not receiving any funding from NASA for this effort.  University Y also participates in the field investigation, but is receiving NASA funding, and thus is not considered a partner organization, but rather is an investigation participant.  The $ for University Y's participation is coming from NASA, the /$ for University X's participation is not.
               </p>
               <p
+                className="c7"
                 data-cy="glossary-definition-note"
                 style={
                   Object {
@@ -5201,7 +5221,9 @@ exports[`Glossary page renders correctly 1`] = `
             style={Object {}}
           >
             <div>
-              <p>
+              <p
+                className="c7"
+              >
                 The following requirements must be met for NASA to be considered a significant participant: At least one aircraft or instrument (not a satellite instrument), is funded by NASA to participate in the field investigation and one of the following conditions is true
               </p>
               <ul
@@ -5236,6 +5258,7 @@ exports[`Glossary page renders correctly 1`] = `
                 </li>
               </ul>
               <p
+                className="c7"
                 data-cy="glossary-definition-note"
                 style={
                   Object {
@@ -5264,7 +5287,9 @@ exports[`Glossary page renders correctly 1`] = `
             style={Object {}}
           >
             <div>
-              <p>
+              <p
+                className="c7"
+              >
                 A structure, item, or surface on which an instrument and/or instrument package can be placed for operation. Platforms can be moving or stationary; permanent or temporary; and airborne, land-/ground-, or water-based. ADMG has identified platform types, guided largely by GCMD’s Platform keywords’ Category level. Examples of platforms include: individual aircraft, balloons, field sites, vehicles, ships, and buoys. In order to provide a consistent method of organizing field investigation metadata, the following are also considered platforms:  satellites, models, and visuals (maps, photographs, etc).  These are included so that data from any of these sources, if specifically pertinent for the field investigation and archived in concert with other field investigation data, are properly accounted for in the Inventory.
               </p>
             </div>
@@ -5284,10 +5309,13 @@ exports[`Glossary page renders correctly 1`] = `
             style={Object {}}
           >
             <div>
-              <p>
+              <p
+                className="c7"
+              >
                 All instruments operating on a platform.  This may consist of a single or multiple individual instruments and all their associated technology.  The instrument package used on a given platform can change over time, by deployment, or by field investigation, to support specific science/research objectives or due to individual instrument failure.
               </p>
               <p
+                className="c7"
                 data-cy="glossary-definition-note"
                 style={
                   Object {
@@ -5316,10 +5344,13 @@ exports[`Glossary page renders correctly 1`] = `
             style={Object {}}
           >
             <div>
-              <p>
+              <p
+                className="c7"
+              >
                 A continuous period of data collection by a platform during which the instrument package is operated.  Continuous Data Collection Periods (CDCPs) are based on the activity or operation of a platform, not on individual instruments comprising the instrument package on the platform.  For airborne platforms, CDCPs are also often referred to as flights.  For water-based platforms, including ships, CDCPs may also often be referred to as cruises or voyages.  For fixed, stationary platforms, such as land-based field sites, CDCPs are sometimes colloquially referred to as deployments, which is somewhat inconsistent with the ADMG definition of deployment used in this inventory (see above).  CDCPs fall within a deployment.
               </p>
               <p
+                className="c7"
                 data-cy="glossary-definition-note"
                 style={
                   Object {
@@ -5348,7 +5379,9 @@ exports[`Glossary page renders correctly 1`] = `
             style={Object {}}
           >
             <div>
-              <p>
+              <p
+                className="c7"
+              >
                 NASA uses the term facility instrument for airborne instruments or instrument/platform combinations that operate out of a NASA research center and support multiple science disciplines, field investigations, and NASA science objectives.  Facility instruments are typically supported by NASA’s Earth Science Division Research and Analysis program and/or the Earth Observing System Project Science Office and are available to the NASA science research community via a request system.  Investigators must include the cost for facility instrument operation in their funded field investigation budgets.  The NASA Airborne Science Program typically coordinates requests for use of these instruments to participate.  In many cases, all data from a facility instrument are archived together at one NASA DAAC.  Facility instruments are included in the ADMG inventory, both as contributing instruments to field investigations and as an instrument-named “campaign” entry that includes all flights not associated with any specific field investigation(s).
               </p>
             </div>
@@ -5368,7 +5401,9 @@ exports[`Glossary page renders correctly 1`] = `
             style={Object {}}
           >
             <div>
-              <p>
+              <p
+                className="c7"
+              >
                 Some field investigations operate primarily to collect data for calibrating and/or validating NASA satellite instruments.  These are referred to as Calibration/Validation (Cal/Val) campaigns and collect observations required to calibrate the instrument’s measurements, algorithm(s) used for data product creation, instrument engineering data, and/or spacecraft engineering data. Cal/Val campaign observations can include pre-flight and in-flight calibration measurements, calibration equation coefficients derived from software routines or empirical data, and ground truth data used in data calibration processing routines. 
               </p>
             </div>
@@ -5388,10 +5423,13 @@ exports[`Glossary page renders correctly 1`] = `
             style={Object {}}
           >
             <div>
-              <p>
+              <p
+                className="c7"
+              >
                 A logically meaningful group of data with the same basic characteristics (instrument source or class of source, processing level, resolution, etc.) but may have multiple different independent variables.  A data product, as used in the ADMG inventory, represents each item that would be listed in Earthdata Search for a given field investigation.  Data products can consist of raw data, higher level/processed data, or may be composed of output from a merging of observations from several similar instruments or from a model. In the context of NASA Earth Science data preservation, a data product includes the data and the associated information (metadata).
               </p>
               <p
+                className="c7"
                 data-cy="glossary-definition-note"
                 style={
                   Object {
@@ -5420,10 +5458,13 @@ exports[`Glossary page renders correctly 1`] = `
             style={Object {}}
           >
             <div>
-              <p>
+              <p
+                className="c7"
+              >
                 The group of all the data products generated by observations from airborne and other instruments/sensors during a field investigation.  Thus, the investigation data collection consists of multiple data products.  Note that a DOI can be obtained to identify an entire investigation data collection.
               </p>
               <p
+                className="c7"
                 data-cy="glossary-definition-note"
                 style={
                   Object {
@@ -5452,10 +5493,13 @@ exports[`Glossary page renders correctly 1`] = `
             style={Object {}}
           >
             <div>
-              <p>
+              <p
+                className="c7"
+              >
                 A quantity or value observed or diagnosed from measurements made with an instrument.  For example, a radar measures the amount of power and phase received due to returned electromagnetic waves, and through signal processing and retrieval techniques provides several parameters, including reflectivity, radial velocity, and spectrum width.  As another example, tipping bucket-type rain gauges measure the number of bucket tips that occur with time in order to provide the parameters of rain amount and rain rate.  By utilizing the GCMD Science Keywords for the Earth Science Category, the ADMG inventory tracks parameters collected by individual instruments or instrument packages.
               </p>
               <p
+                className="c7"
                 data-cy="glossary-definition-note"
                 style={
                   Object {
@@ -5529,17 +5573,17 @@ exports[`Glossary page renders correctly 1`] = `
     </div>
   </main>
   <footer
-    className="c7"
+    className="c8"
     data-cy="page-footer"
   >
     <div
-      className="c8"
+      className="c9"
     >
       <div
-        className="c9"
+        className="c10"
       >
         <div
-          className="c10"
+          className="c11"
           data-cy="footer-title"
         >
           NASA | CASEI
@@ -5552,16 +5596,16 @@ exports[`Glossary page renders correctly 1`] = `
         </p>
       </div>
       <div
-        className="c11"
+        className="c12"
         data-cy="footer-explore"
       >
         <p
-          className="c12"
+          className="c13"
         >
           Explore
         </p>
         <ul
-          className="c13"
+          className="c14"
         >
           <li>
             <a
@@ -5605,16 +5649,16 @@ exports[`Glossary page renders correctly 1`] = `
         </ul>
       </div>
       <div
-        className="c14"
+        className="c15"
         data-cy="footer-resources"
       >
         <p
-          className="c12"
+          className="c13"
         >
           Resources
         </p>
         <ul
-          className="c13"
+          className="c14"
         >
           <li>
             <a
@@ -5625,7 +5669,7 @@ exports[`Glossary page renders correctly 1`] = `
           </li>
           <li>
             <button
-              className="c15"
+              className="c16"
               onClick={[Function]}
               style={
                 Object {
@@ -5649,11 +5693,11 @@ exports[`Glossary page renders correctly 1`] = `
               Maintenance login
             </button>
             <div
-              className="c16"
+              className="c17"
               onClick={[Function]}
             >
               <div
-                className="c17"
+                className="c18"
               >
                 <form
                   data-cy="login-form"
@@ -5695,16 +5739,16 @@ exports[`Glossary page renders correctly 1`] = `
         </ul>
       </div>
       <div
-        className="c18"
+        className="c19"
         data-cy="footer-quick-links"
       >
         <p
-          className="c12"
+          className="c13"
         >
           Quick Links
         </p>
         <ul
-          className="c13"
+          className="c14"
         >
           <li>
             <a
@@ -5723,16 +5767,16 @@ exports[`Glossary page renders correctly 1`] = `
         </ul>
       </div>
       <div
-        className="c19"
+        className="c20"
         data-cy="footer-organizations"
       >
         <p
-          className="c12"
+          className="c13"
         >
           Organizations
         </p>
         <ul
-          className="c13"
+          className="c14"
         >
           <li>
             <a
@@ -5767,17 +5811,17 @@ exports[`Glossary page renders correctly 1`] = `
         </ul>
       </div>
       <hr
-        className="c20"
+        className="c21"
       />
       <div
-        className="c21"
+        className="c22"
       >
         <div
-          className="c22"
+          className="c23"
         >
           <div
             aria-hidden="true"
-            className="c23"
+            className="c24"
           />
           <div
             data-cy="footer-credits"
@@ -5793,7 +5837,7 @@ exports[`Glossary page renders correctly 1`] = `
               NASA Official:
                
               <span
-                className="c24"
+                className="c25"
               >
                 Rahul Ramachandran
               </span>
@@ -5801,12 +5845,12 @@ exports[`Glossary page renders correctly 1`] = `
           </div>
         </div>
         <div
-          className="c25"
+          className="c26"
         />
       </div>
     </div>
     <div
-      className="c26"
+      className="c27"
       data-cy="footer-credit-devseed"
     >
       © 
