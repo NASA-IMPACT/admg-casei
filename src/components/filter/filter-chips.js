@@ -1,8 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import { IconButton } from "../button"
-import { TrashIcon } from "../../icons"
+import { colors } from "../../utils/theme"
 
 export default function FilterChips({ clearFilters, children }) {
   return (
@@ -17,11 +16,20 @@ export default function FilterChips({ clearFilters, children }) {
       Active filters:
       {children}
       {children.flat().filter(c => c).length > 1 && (
-        <IconButton
-          id="clear-filters"
-          action={clearFilters}
-          icon={<TrashIcon />}
-        />
+        <button
+          data-cy="clear-filters"
+          onClick={clearFilters}
+          css={`
+            background: none;
+            border: none;
+            text-transform: none;
+            text-decoration-line: underline;
+            color: ${colors.darkTheme.linkText};
+            cursor: pointer;
+          `}
+        >
+          Clear all
+        </button>
       )}
     </div>
   )
