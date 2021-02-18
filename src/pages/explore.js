@@ -144,7 +144,10 @@ export default function Explore({ data, location }) {
     type: allMeasurementType,
     vertical: allMeasurementRegion,
   })
-
+  console.log(
+    "allCampaign.options",
+    allCampaign.options.map(x => x.split(/\s*,\s*/))
+  )
   return (
     <Layout>
       <SEO title="Explore" lang="en" />

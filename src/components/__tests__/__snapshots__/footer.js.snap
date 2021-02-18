@@ -20,7 +20,7 @@ exports[`Footer renders correctly 1`] = `
 .c1.c1 {
   margin: 5rem auto;
   max-width: 1280px;
-  padding: 2rem 5rem;
+  padding: 2rem 4rem;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
