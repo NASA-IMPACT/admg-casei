@@ -1,6 +1,40 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header renders correctly 1`] = `
+.c0.c0 {
+  grid-area: 1 / 2 / 1 / 2;
+  display: grid;
+  grid-template-columns: 3fr 5fr;
+  grid-gap: 0.5rem;
+  padding: 0 5rem;
+}
+
+.c1.c1 {
+  -webkit-align-self: end;
+  -ms-flex-item-align: end;
+  align-self: end;
+  grid-area: 1 / 1 / 1 / 1;
+}
+
+.c2.c2 {
+  text-transform: uppercase;
+}
+
+.c3.c3 {
+  font-size: x-large;
+}
+
+.c4.c4 {
+  -webkit-align-self: start;
+  -ms-flex-item-align: start;
+  align-self: start;
+  grid-area: 2 / 1 / 2 / 1;
+}
+
+.c5.c5 {
+  grid-area: 1 / 2 / 3 / 3;
+}
+
 <section
   data-cy="test-hero"
   style={
@@ -15,30 +49,13 @@ exports[`Header renders correctly 1`] = `
   }
 >
   <div
-    style={
-      Object {
-        "display": "grid",
-        "gridArea": "1 / 2 / 1 / 2",
-        "gridGap": ".5rem",
-        "gridTemplateColumns": "3fr 5fr",
-        "padding": "0 5rem",
-      }
-    }
+    className="c0"
   >
     <div
-      style={
-        Object {
-          "alignSelf": "end",
-          "gridArea": "1 / 1 / 1 / 1",
-        }
-      }
+      className="c1"
     >
       <p
-        style={
-          Object {
-            "textTransform": "uppercase",
-          }
-        }
+        className="c2"
       >
         Instrument
       </p>
@@ -46,33 +63,20 @@ exports[`Header renders correctly 1`] = `
         2D-C/P
       </h1>
       <p
-        style={
-          Object {
-            "fontSize": "x-large",
-          }
-        }
+        className="c3"
       >
         2D-C/P Hydrometeor Imaging Probe
       </p>
     </div>
     <div
-      style={
-        Object {
-          "alignSelf": "start",
-          "gridArea": "2 / 1 / 2 / 1",
-        }
-      }
+      className="c4"
     >
       <p>
         The 2DC probe records images of hydrometeors...
       </p>
     </div>
     <div
-      style={
-        Object {
-          "gridArea": "1 / 2 / 3 / 3",
-        }
-      }
+      className="c5"
     >
       <div>
         children
@@ -83,6 +87,40 @@ exports[`Header renders correctly 1`] = `
 `;
 
 exports[`Header renders with adjust ratios 1`] = `
+.c0.c0 {
+  grid-area: 1 / 2 / 1 / 2;
+  display: grid;
+  grid-template-columns: 5fr 3fr;
+  grid-gap: 0.5rem;
+  padding: 0 5rem;
+}
+
+.c1.c1 {
+  -webkit-align-self: end;
+  -ms-flex-item-align: end;
+  align-self: end;
+  grid-area: 1 / 1 / 1 / 1;
+}
+
+.c2.c2 {
+  text-transform: uppercase;
+}
+
+.c3.c3 {
+  font-size: x-large;
+}
+
+.c4.c4 {
+  -webkit-align-self: start;
+  -ms-flex-item-align: start;
+  align-self: start;
+  grid-area: 2 / 1 / 2 / 1;
+}
+
+.c5.c5 {
+  grid-area: 1 / 2 / 3 / 3;
+}
+
 <section
   data-cy="undefined-hero"
   style={
@@ -97,30 +135,13 @@ exports[`Header renders with adjust ratios 1`] = `
   }
 >
   <div
-    style={
-      Object {
-        "display": "grid",
-        "gridArea": "1 / 2 / 1 / 2",
-        "gridGap": ".5rem",
-        "gridTemplateColumns": "5fr 3fr",
-        "padding": "0 5rem",
-      }
-    }
+    className="c0"
   >
     <div
-      style={
-        Object {
-          "alignSelf": "end",
-          "gridArea": "1 / 1 / 1 / 1",
-        }
-      }
+      className="c1"
     >
       <p
-        style={
-          Object {
-            "textTransform": "uppercase",
-          }
-        }
+        className="c2"
       >
         Instrument
       </p>
@@ -128,33 +149,20 @@ exports[`Header renders with adjust ratios 1`] = `
         2D-C/P
       </h1>
       <p
-        style={
-          Object {
-            "fontSize": "x-large",
-          }
-        }
+        className="c3"
       >
         2D-C/P Hydrometeor Imaging Probe
       </p>
     </div>
     <div
-      style={
-        Object {
-          "alignSelf": "start",
-          "gridArea": "2 / 1 / 2 / 1",
-        }
-      }
+      className="c4"
     >
       <p>
         The 2DC probe records images of hydrometeors...
       </p>
     </div>
     <div
-      style={
-        Object {
-          "gridArea": "1 / 2 / 3 / 3",
-        }
-      }
+      className="c5"
     >
       <div>
         children

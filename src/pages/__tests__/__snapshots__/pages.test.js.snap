@@ -4586,47 +4586,6 @@ exports[`Glossary page renders correctly 1`] = `
   color: #9e9e9e;
 }
 
-.c10.c10:hover {
-  opacity: 0.64;
-}
-
-.c10.c10:active {
-  -webkit-transform: translate(0,1px);
-  -ms-transform: translate(0,1px);
-  transform: translate(0,1px);
-}
-
-.c11.c11 {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: none;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  background: rgba(0,0,0,0.5);
-  z-index: 9999;
-  opacity: 0;
-  -webkit-transition: opacity 400ms ease-in;
-  transition: opacity 400ms ease-in;
-}
-
-.c12.c12 {
-  width: 400px;
-  position: relative;
-  padding: 32px;
-  border-radius: 3px;
-  background: #303641;
-  pointer-events: auto;
-}
-
 .c8.c8 {
   list-style: none;
   margin: 0;
@@ -4675,20 +4634,20 @@ exports[`Glossary page renders correctly 1`] = `
   grid-column: 7 / span 2;
 }
 
-.c13.c13 {
+.c10.c10 {
   grid-column: 9 / span 2;
 }
 
-.c14.c14 {
+.c11.c11 {
   grid-column: 11 / span 2;
 }
 
-.c15.c15 {
+.c12.c12 {
   grid-column: 1 / span 12;
   background-color: rgba(255,255,255,0.2);
 }
 
-.c16.c16 {
+.c13.c13 {
   grid-column: 1 / span 12;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4700,7 +4659,7 @@ exports[`Glossary page renders correctly 1`] = `
   justify-content: space-between;
 }
 
-.c17.c17 {
+.c14.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4712,7 +4671,7 @@ exports[`Glossary page renders correctly 1`] = `
   font-weight: bold;
 }
 
-.c18.c18 {
+.c15.c15 {
   background-image: url("https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png");
   background-size: cover;
   background-position: center;
@@ -4720,11 +4679,11 @@ exports[`Glossary page renders correctly 1`] = `
   height: 100px;
 }
 
-.c19.c19 {
+.c16.c16 {
   font-weight: normal;
 }
 
-.c20.c20 {
+.c17.c17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4736,7 +4695,7 @@ exports[`Glossary page renders correctly 1`] = `
   text-transform: uppercase;
 }
 
-.c21.c21 {
+.c18.c18 {
   text-align: center;
 }
 
@@ -4749,34 +4708,6 @@ exports[`Glossary page renders correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-}
-
-@media screen and (max-width:1400px) {
-
-}
-
-@media screen and (max-width:1280px) {
-
-}
-
-@media screen and (max-width:800px) {
-
-}
-
-@media screen and (max-width:1400px) {
-
-}
-
-@media screen and (max-width:1280px) {
-
-}
-
-@media screen and (max-width:800px) {
-
-}
-
-@media screen and (max-width:800px) {
-
 }
 
 <div
@@ -5567,79 +5498,11 @@ exports[`Glossary page renders correctly 1`] = `
               Glossary
             </a>
           </li>
-          <li>
-            <button
-              className="c10"
-              onClick={[Function]}
-              style={
-                Object {
-                  "background": "none",
-                  "backgroundColor": "#15418c",
-                  "border": 0,
-                  "borderRadius": "0.2rem",
-                  "color": "white",
-                  "cursor": "pointer",
-                  "display": "inline-block",
-                  "fontWeight": "bold",
-                  "minWidth": "2rem",
-                  "padding": "0.25rem 0.75rem",
-                  "textAlign": "center",
-                  "textShadow": "none",
-                  "userSelect": "none",
-                  "verticalAlign": "middle",
-                }
-              }
-            >
-              Maintenance login
-            </button>
-            <div
-              className="c11"
-              onClick={[Function]}
-            >
-              <div
-                className="c12"
-              >
-                <form
-                  data-cy="login-form"
-                  onSubmit={[Function]}
-                >
-                  <h3>
-                    Log In
-                  </h3>
-                  <label
-                    htmlFor="username"
-                  >
-                    Username
-                  </label>
-                  <input
-                    name="username"
-                    onChange={[Function]}
-                    type="text"
-                    value=""
-                  />
-                  <label
-                    htmlFor="password"
-                  >
-                    Password
-                  </label>
-                  <input
-                    autoComplete="on"
-                    name="password"
-                    onChange={[Function]}
-                    type="password"
-                    value=""
-                  />
-                  <input
-                    type="submit"
-                  />
-                </form>
-              </div>
-            </div>
-          </li>
+          <li />
         </ul>
       </div>
       <div
-        className="c13"
+        className="c10"
         data-cy="footer-quick-links"
       >
         <p
@@ -5667,7 +5530,7 @@ exports[`Glossary page renders correctly 1`] = `
         </ul>
       </div>
       <div
-        className="c14"
+        className="c11"
         data-cy="footer-organizations"
       >
         <p
@@ -5711,17 +5574,17 @@ exports[`Glossary page renders correctly 1`] = `
         </ul>
       </div>
       <hr
-        className="c15"
+        className="c12"
       />
       <div
-        className="c16"
+        className="c13"
       >
         <div
-          className="c17"
+          className="c14"
         >
           <div
             aria-hidden="true"
-            className="c18"
+            className="c15"
           />
           <div
             data-cy="footer-credits"
@@ -5737,7 +5600,7 @@ exports[`Glossary page renders correctly 1`] = `
               NASA Official:
                
               <span
-                className="c19"
+                className="c16"
               >
                 Rahul Ramachandran
               </span>
@@ -5745,12 +5608,12 @@ exports[`Glossary page renders correctly 1`] = `
           </div>
         </div>
         <div
-          className="c20"
+          className="c17"
         />
       </div>
     </div>
     <div
-      className="c21"
+      className="c18"
       data-cy="footer-credit-devseed"
     >
       © 
@@ -5777,7 +5640,7 @@ exports[`Glossary page renders correctly 1`] = `
 `;
 
 exports[`Home page renders correctly 1`] = `
-.c1.c1 {
+.c7.c7 {
   display: grid;
   grid-template-columns: repeat(12,1fr);
   -webkit-column-gap: 1rem;
@@ -5790,45 +5653,61 @@ exports[`Home page renders correctly 1`] = `
   background-color: none;
 }
 
-.c1.c1 > *,
-.c1.c1 h3 {
+.c7.c7 > *,
+.c7.c7 h3 {
   color: #e9eaec;
 }
 
-.c2.c2 {
+.c8.c8 {
   position: absolute;
   top: -80px;
 }
 
-.c3.c3 {
+.c11.c11 {
   grid-column: 1 / span 12;
 }
 
-.c6.c6 {
+.c14.c14 {
   grid-column: 1 / span 6;
 }
 
-.c7.c7 {
+.c15.c15 {
   grid-column: 7 / span 6;
 }
 
-.c14.c14 {
+.c9.c9 {
+  grid-column: 1 / span 7;
+  -webkit-align-self: end;
+  -ms-flex-item-align: end;
+  align-self: end;
+}
+
+.c10.c10 {
+  text-transform: uppercase;
+}
+
+.c16.c16 {
+  margin-top: -2rem;
+  margin-bottom: 2.5rem;
+}
+
+.c23.c23 {
   list-style: none;
   margin: 0;
 }
 
-.c13.c13 {
+.c22.c22 {
   margin: 0 0 1.5rem 0;
   font-weight: bold;
   line-height: 3rem;
 }
 
-.c8.c8 {
+.c17.c17 {
   margin-top: 5rem;
   background-color: #303641;
 }
 
-.c9.c9 {
+.c18.c18 {
   margin: 5rem auto;
   max-width: 1280px;
   padding: 2rem 5rem;
@@ -5840,11 +5719,11 @@ exports[`Home page renders correctly 1`] = `
   grid-template-columns: repeat(12,1fr);
 }
 
-.c10.c10 {
+.c19.c19 {
   grid-column: 1 / span 3;
 }
 
-.c11.c11 {
+.c20.c20 {
   text-transform: uppercase;
   font-weight: 900;
   font-size: 30px;
@@ -5852,28 +5731,28 @@ exports[`Home page renders correctly 1`] = `
   margin-bottom: 0.5rem;
 }
 
-.c12.c12 {
+.c21.c21 {
   grid-column: 5 / span 2;
 }
 
-.c15.c15 {
+.c24.c24 {
   grid-column: 7 / span 2;
 }
 
-.c16.c16 {
+.c25.c25 {
   grid-column: 9 / span 2;
 }
 
-.c17.c17 {
+.c26.c26 {
   grid-column: 11 / span 2;
 }
 
-.c18.c18 {
+.c27.c27 {
   grid-column: 1 / span 12;
   background-color: rgba(255,255,255,0.2);
 }
 
-.c19.c19 {
+.c28.c28 {
   grid-column: 1 / span 12;
   display: -webkit-box;
   display: -webkit-flex;
@@ -5885,7 +5764,7 @@ exports[`Home page renders correctly 1`] = `
   justify-content: space-between;
 }
 
-.c20.c20 {
+.c29.c29 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5897,7 +5776,7 @@ exports[`Home page renders correctly 1`] = `
   font-weight: bold;
 }
 
-.c21.c21 {
+.c30.c30 {
   background-image: url("https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png");
   background-size: cover;
   background-position: center;
@@ -5905,11 +5784,11 @@ exports[`Home page renders correctly 1`] = `
   height: 100px;
 }
 
-.c22.c22 {
+.c31.c31 {
   font-weight: normal;
 }
 
-.c23.c23 {
+.c32.c32 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5921,7 +5800,7 @@ exports[`Home page renders correctly 1`] = `
   text-transform: uppercase;
 }
 
-.c24.c24 {
+.c33.c33 {
   text-align: center;
 }
 
@@ -5936,7 +5815,43 @@ exports[`Home page renders correctly 1`] = `
   flex-direction: column;
 }
 
+.c1.c1 {
+  grid-area: 1 / 2 / 1 / 2;
+  display: grid;
+  grid-template-columns: 6fr 6fr;
+  grid-gap: 0.5rem;
+  padding: 0 5rem;
+}
+
+.c2.c2 {
+  -webkit-align-self: end;
+  -ms-flex-item-align: end;
+  align-self: end;
+  grid-area: 1 / 1 / 1 / 1;
+}
+
+.c3.c3 {
+  text-transform: uppercase;
+}
+
 .c4.c4 {
+  -webkit-align-self: start;
+  -ms-flex-item-align: start;
+  align-self: start;
+  grid-area: 2 / 1 / 2 / 1;
+}
+
+.c5.c5 {
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 3;
+  z-index: -1;
+}
+
+.c6.c6 {
+  max-height: 35rem;
+}
+
+.c12.c12 {
   margin: 0.2rem 0.5rem;
   padding: 0;
   color: #e9eaec;
@@ -5946,7 +5861,7 @@ exports[`Home page renders correctly 1`] = `
   text-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
 }
 
-.c5.c5 {
+.c13.c13 {
   margin: 0.2rem 0.5rem;
   padding: 0;
   color: #e9eaec;
@@ -6133,30 +6048,13 @@ exports[`Home page renders correctly 1`] = `
       }
     >
       <div
-        style={
-          Object {
-            "display": "grid",
-            "gridArea": "1 / 2 / 1 / 2",
-            "gridGap": ".5rem",
-            "gridTemplateColumns": "6fr 6fr",
-            "padding": "0 5rem",
-          }
-        }
+        className="c1"
       >
         <div
-          style={
-            Object {
-              "alignSelf": "end",
-              "gridArea": "1 / 1 / 1 / 1",
-            }
-          }
+          className="c2"
         >
           <p
-            style={
-              Object {
-                "textTransform": "uppercase",
-              }
-            }
+            className="c3"
           >
             NASA | CASEI
           </p>
@@ -6165,12 +6063,7 @@ exports[`Home page renders correctly 1`] = `
           </h1>
         </div>
         <div
-          style={
-            Object {
-              "alignSelf": "start",
-              "gridArea": "2 / 1 / 2 / 1",
-            }
-          }
+          className="c4"
         >
           <p>
             Explore NASA’s catalog of airborne and field campaign observations.
@@ -6178,27 +6071,17 @@ exports[`Home page renders correctly 1`] = `
         </div>
       </div>
       <div
-        style={
-          Object {
-            "gridColumn": "1 / span 3",
-            "gridRow": "1 / span 1",
-            "zIndex": -1,
-          }
-        }
+        className="c5"
       >
         <img
           alt="View from a Chase Plane; HS3 Science Flight 8 Wraps Up The chase plane accompanying NASA's Global Hawk No. 872 captured this picture on Sept. 19 after the Global Hawk completed science flight #8 where it gathered data from a weakening Tropical Storm Edouard over the North Atlantic Ocean. Credit: NASA "
+          className="c6"
           fluid={
             Object {
               "src": "/static/068436cd6fd00ecb9d2d3e6309d590d0/14b42/GSFC_20171208_Archive_e000980~orig.jpg",
             }
           }
           src="test-image.png"
-          style={
-            Object {
-              "maxHeight": "35rem",
-            }
-          }
         />
       </div>
     </section>
@@ -6214,29 +6097,21 @@ exports[`Home page renders correctly 1`] = `
       }
     >
       <section
-        className="c1"
+        className="c7"
         data-cy="focus-area-section"
         mode="darkTheme"
       >
         <div
-          className="c2"
+          className="c8"
           id="focus-area"
         />
         <div
-          style={
-            Object {
-              "alignSelf": "end",
-              "gridColumn": "1 / span 7",
-            }
-          }
+          className="c9"
+          data-cy="focus-section-header"
         >
           <div
+            className="c10"
             data-cy="section-tagline"
-            style={
-              Object {
-                "textTransform": "uppercase",
-              }
-            }
           >
             explore nasa earth science
           </div>
@@ -6249,7 +6124,7 @@ exports[`Home page renders correctly 1`] = `
           </a>
         </div>
         <div
-          className="c3"
+          className="c11"
         >
           <div
             style={
@@ -6488,29 +6363,21 @@ exports[`Home page renders correctly 1`] = `
         </div>
       </section>
       <section
-        className="c1"
+        className="c7"
         data-cy="region-type-section"
         mode="darkTheme"
       >
         <div
-          className="c2"
+          className="c8"
           id="region-type"
         />
         <div
-          style={
-            Object {
-              "alignSelf": "end",
-              "gridColumn": "1 / span 7",
-            }
-          }
+          className="c9"
+          data-cy="region-type-section-header"
         >
           <div
+            className="c10"
             data-cy="section-tagline"
-            style={
-              Object {
-                "textTransform": "uppercase",
-              }
-            }
           >
             explore campaigns by
           </div>
@@ -6523,7 +6390,7 @@ exports[`Home page renders correctly 1`] = `
           </a>
         </div>
         <div
-          className="c3"
+          className="c11"
         >
           <div
             data-cy="region-text-control"
@@ -6535,112 +6402,112 @@ exports[`Home page renders correctly 1`] = `
             }
           >
             <button
-              className="c4"
+              className="c12"
               onClick={[Function]}
               selected={false}
             >
               continental
             </button>
             <button
-              className="c5"
+              className="c13"
               onClick={[Function]}
               selected={true}
             >
               maritime
             </button>
             <button
-              className="c4"
+              className="c12"
               onClick={[Function]}
               selected={false}
             >
               coastal
             </button>
             <button
-              className="c4"
+              className="c12"
               onClick={[Function]}
               selected={false}
             >
               mountains
             </button>
             <button
-              className="c4"
+              className="c12"
               onClick={[Function]}
               selected={false}
             >
               island
             </button>
             <button
-              className="c4"
+              className="c12"
               onClick={[Function]}
               selected={false}
             >
               desert
             </button>
             <button
-              className="c4"
+              className="c12"
               onClick={[Function]}
               selected={false}
             >
               forest
             </button>
             <button
-              className="c4"
+              className="c12"
               onClick={[Function]}
               selected={false}
             >
               urban
             </button>
             <button
-              className="c4"
+              className="c12"
               onClick={[Function]}
               selected={false}
             >
               agricultural
             </button>
             <button
-              className="c4"
+              className="c12"
               onClick={[Function]}
               selected={false}
             >
               equitorial
             </button>
             <button
-              className="c4"
+              className="c12"
               onClick={[Function]}
               selected={false}
             >
               tropical
             </button>
             <button
-              className="c4"
+              className="c12"
               onClick={[Function]}
               selected={false}
             >
               mid-latitude
             </button>
             <button
-              className="c4"
+              className="c12"
               onClick={[Function]}
               selected={false}
             >
               polar
             </button>
             <button
-              className="c4"
+              className="c12"
               onClick={[Function]}
               selected={false}
             >
               sea ice
             </button>
             <button
-              className="c4"
+              className="c12"
               onClick={[Function]}
               selected={false}
             >
               coral
             </button>
             <button
-              className="c4"
+              className="c12"
               onClick={[Function]}
               selected={false}
             >
@@ -7614,29 +7481,21 @@ exports[`Home page renders correctly 1`] = `
         </div>
       </section>
       <section
-        className="c1"
+        className="c7"
         data-cy="geophysical-concepts-section"
         mode="darkTheme"
       >
         <div
-          className="c2"
+          className="c8"
           id="geophysical-concepts"
         />
         <div
-          style={
-            Object {
-              "alignSelf": "end",
-              "gridColumn": "1 / span 7",
-            }
-          }
+          className="c9"
+          data-cy="geophysical-concepts-section-header"
         >
           <div
+            className="c10"
             data-cy="section-tagline"
-            style={
-              Object {
-                "textTransform": "uppercase",
-              }
-            }
           >
             explore campaigns by
           </div>
@@ -7649,7 +7508,7 @@ exports[`Home page renders correctly 1`] = `
           </a>
         </div>
         <div
-          className="c3"
+          className="c11"
         >
           <div
             style={
@@ -8392,16 +8251,16 @@ exports[`Home page renders correctly 1`] = `
         </div>
       </section>
       <section
-        className="c1"
+        className="c7"
         data-cy="platforms-section"
         mode="darkTheme"
       >
         <div
-          className="c2"
+          className="c8"
           id="platforms"
         />
         <div
-          className="c6"
+          className="c14"
         >
           <img
             alt="NASA’s ER-2"
@@ -8414,7 +8273,7 @@ exports[`Home page renders correctly 1`] = `
           />
         </div>
         <div
-          className="c7"
+          className="c15"
         >
           <div
             style={
@@ -8427,20 +8286,12 @@ exports[`Home page renders correctly 1`] = `
             }
           >
             <div
-              style={
-                Object {
-                  "alignSelf": "end",
-                  "gridColumn": "1 / span 7",
-                }
-              }
+              className="c9"
+              data-cy="platforms-section-header"
             >
               <div
+                className="c10"
                 data-cy="section-tagline"
-                style={
-                  Object {
-                    "textTransform": "uppercase",
-                  }
-                }
               >
                 explore
               </div>
@@ -8452,13 +8303,8 @@ exports[`Home page renders correctly 1`] = `
                 </h2>
               </a>
               <p
+                className="c16"
                 data-cy="section-subline"
-                style={
-                  Object {
-                    "marginBottom": "2.5rem",
-                    "marginTop": "-2rem",
-                  }
-                }
               >
                 From aircrafts to balloons, from sensors to plaftorms, it takes a lot to understand earth.
               </p>
@@ -8485,29 +8331,21 @@ exports[`Home page renders correctly 1`] = `
         </div>
       </section>
       <section
-        className="c1"
+        className="c7"
         data-cy="instruments-section"
         mode="darkTheme"
       >
         <div
-          className="c2"
+          className="c8"
           id="instruments"
         />
         <div
-          style={
-            Object {
-              "alignSelf": "end",
-              "gridColumn": "1 / span 7",
-            }
-          }
+          className="c9"
+          data-cy="instruments-section-header"
         >
           <div
+            className="c10"
             data-cy="section-tagline"
-            style={
-              Object {
-                "textTransform": "uppercase",
-              }
-            }
           >
             explore
           </div>
@@ -8520,7 +8358,7 @@ exports[`Home page renders correctly 1`] = `
           </a>
         </div>
         <div
-          className="c3"
+          className="c11"
         >
           <div
             style={
@@ -9291,17 +9129,17 @@ exports[`Home page renders correctly 1`] = `
     </div>
   </main>
   <footer
-    className="c8"
+    className="c17"
     data-cy="page-footer"
   >
     <div
-      className="c9"
+      className="c18"
     >
       <div
-        className="c10"
+        className="c19"
       >
         <div
-          className="c11"
+          className="c20"
           data-cy="footer-title"
         >
           NASA | CASEI
@@ -9314,16 +9152,16 @@ exports[`Home page renders correctly 1`] = `
         </p>
       </div>
       <div
-        className="c12"
+        className="c21"
         data-cy="footer-explore"
       >
         <p
-          className="c13"
+          className="c22"
         >
           Explore
         </p>
         <ul
-          className="c14"
+          className="c23"
         >
           <li>
             <a
@@ -9367,16 +9205,16 @@ exports[`Home page renders correctly 1`] = `
         </ul>
       </div>
       <div
-        className="c15"
+        className="c24"
         data-cy="footer-resources"
       >
         <p
-          className="c13"
+          className="c22"
         >
           Resources
         </p>
         <ul
-          className="c14"
+          className="c23"
         >
           <li>
             <a
@@ -9389,16 +9227,16 @@ exports[`Home page renders correctly 1`] = `
         </ul>
       </div>
       <div
-        className="c16"
+        className="c25"
         data-cy="footer-quick-links"
       >
         <p
-          className="c13"
+          className="c22"
         >
           Quick Links
         </p>
         <ul
-          className="c14"
+          className="c23"
         >
           <li>
             <a
@@ -9417,16 +9255,16 @@ exports[`Home page renders correctly 1`] = `
         </ul>
       </div>
       <div
-        className="c17"
+        className="c26"
         data-cy="footer-organizations"
       >
         <p
-          className="c13"
+          className="c22"
         >
           Organizations
         </p>
         <ul
-          className="c14"
+          className="c23"
         >
           <li>
             <a
@@ -9461,17 +9299,17 @@ exports[`Home page renders correctly 1`] = `
         </ul>
       </div>
       <hr
-        className="c18"
+        className="c27"
       />
       <div
-        className="c19"
+        className="c28"
       >
         <div
-          className="c20"
+          className="c29"
         >
           <div
             aria-hidden="true"
-            className="c21"
+            className="c30"
           />
           <div
             data-cy="footer-credits"
@@ -9487,7 +9325,7 @@ exports[`Home page renders correctly 1`] = `
               NASA Official:
                
               <span
-                className="c22"
+                className="c31"
               >
                 Rahul Ramachandran
               </span>
@@ -9495,12 +9333,12 @@ exports[`Home page renders correctly 1`] = `
           </div>
         </div>
         <div
-          className="c23"
+          className="c32"
         />
       </div>
     </div>
     <div
-      className="c24"
+      className="c33"
       data-cy="footer-credit-devseed"
     >
       © 

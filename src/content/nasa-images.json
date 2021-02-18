@@ -114,10 +114,16 @@
     "nasaImgAlt": "View from a Chase Plane; HS3 Science Flight 8 Wraps Up The chase plane accompanying NASA's Global Hawk No. 872 captured this picture on Sept. 19 after the Global Hawk completed science flight #8 where it gathered data from a weakening Tropical Storm Edouard over the North Atlantic Ocean. Credit: NASA "
   },
   {
-    "shortname": "About",
+    "shortname": "about-hero",
     "category": "layout",
     "nasaImgUrl": "https://images-assets.nasa.gov/image/GRC-2020-C-00100/GRC-2020-C-00100~orig.jpg",
     "nasaImgAlt": "Glenn Research Center, Lockheed S-3 Viking Research Aircraft, N601NA at Sunrise"
+  },
+  {
+    "shortname": "about-body",
+    "category": "layout",
+    "nasaImgUrl": "https://images-assets.nasa.gov/image/PIA17771/PIA17771~orig.jpg",
+    "nasaImgAlt": "View over mountain range from plane"
   },
   {
     "shortname": "Glossary",
