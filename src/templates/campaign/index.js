@@ -43,6 +43,7 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
       nav: "Overview",
       component: OverviewSection,
       props: {
+        aliases: campaign.aliases,
         description: campaign.description,
         startdate: campaign.startdate,
         enddate: campaign.enddate,
@@ -195,6 +196,11 @@ CampaignTemplate.propTypes = {
       countDeployments: PropTypes.number,
       countCollectionPeriods: PropTypes.number.isRequired,
       countDataProducts: PropTypes.number,
+      aliases: PropTypes.arrayOf(
+        PropTypes.shape({
+          shortname: PropTypes.string.isRequired,
+        }).isRequired
+      ),
       description: PropTypes.string.isRequired,
       startdate: PropTypes.string.isRequired,
       enddate: PropTypes.string.isRequired,
