@@ -28,7 +28,6 @@ describe("Platform", () => {
       })
 
     // displays inpage nav
-    cy.get("main").find("nav").should("exist")
     cy.get("[data-cy=inpage-nav]").find("[data-cy=home-link]").should("exist")
     cy.get("[data-cy=home-link]").click()
 
