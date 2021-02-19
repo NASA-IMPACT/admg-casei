@@ -6,13 +6,12 @@ describe("Glossary", () => {
   })
   it("displays the glossary", () => {
     cy.get("[data-cy=main-glossary]").find("h1").contains("Glossary")
-
-    cy.get("[data-cy=main-glossary]")
-      .find("[data-cy=glossary-term-section]")
-      .each($el => {
+    ;["C", "D", "P"].forEach(letter => {
+      cy.get(`[data-cy=${letter}-term-section]`).each($el => {
         cy.get($el).find("h3").should("exist")
         cy.get($el).find("p").should("exist")
       })
+    })
 
     cy.get("[data-cy=glossary-definition-options")
       .should("exist")
