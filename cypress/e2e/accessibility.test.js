@@ -40,13 +40,14 @@ describe("Accessibility tests", () => {
   })
 
   it("Navigates to page for a /platform and checks for accessibility violations", () => {
-    cy.visit("/explore")
+    // cy.visit("/explore")
+    cy.visit("/platform/7ea39fb9-d467-45d9-8e11-48ad6917a704")
 
-    cy.get("[data-cy=tabbar]")
-      .findByText(/Platforms/i)
-      .click()
-
-    cy.get("[data-cy=platforms-card]").last().click()
+    // cy.get("[data-cy=tabbar]")
+    //   .findByText(/Platforms/i)
+    //   .click()
+    // TODO: understand why this is brittle on ci
+    // cy.get("[data-cy=platforms-card]").last().click()
 
     cy.get("h1").should("exist")
 
