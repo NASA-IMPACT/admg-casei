@@ -3,9 +3,20 @@ import PropTypes from "prop-types"
 
 export default function SectionHeader({ tagline, headline, subline, id }) {
   return (
-    <div style={{ gridColumn: `1 / span 7`, alignSelf: `end` }}>
+    <div
+      css={`
+        grid-column: 1 / span 7;
+        align-self: end;
+      `}
+      data-cy={`${id}-section-header`}
+    >
       {tagline && (
-        <div style={{ textTransform: `uppercase` }} data-cy="section-tagline">
+        <div
+          css={`
+            text-transform: uppercase;
+          `}
+          data-cy="section-tagline"
+        >
           {tagline}
         </div>
       )}
@@ -14,7 +25,10 @@ export default function SectionHeader({ tagline, headline, subline, id }) {
       </a>
       {subline && (
         <p
-          style={{ marginTop: `-2rem`, marginBottom: `2.5rem` }}
+          css={`
+            margin-top: -2rem;
+            margin-bottom: 2.5rem;
+          `}
           data-cy="section-subline"
         >
           {subline}

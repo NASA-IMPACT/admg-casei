@@ -31,6 +31,7 @@ HeroStats.propTypes = {
 export default function Hero({
   tagTitle,
   title,
+  blockTitle,
   subTitle,
   description,
   stats,
@@ -62,30 +63,57 @@ export default function Hero({
       data-cy={`${id}-hero`}
     >
       <div
-        style={{
-          gridArea: `1 / 2 / 1 / 2`,
-          display: `grid`,
-          gridTemplateColumns: `${textToImageRatio[0]}fr ${textToImageRatio[1]}fr`,
-          gridGap: `.5rem`,
-          padding: `0 ${layout.pageMargin}`,
-        }}
+        css={`
+          grid-area: 1 / 2 / 1 / 2;
+          display: grid;
+          grid-template-columns: ${textToImageRatio[0]}fr ${textToImageRatio[1]}fr;
+          grid-gap: 0.5rem;
+          padding: 0 ${layout.pageMargin};
+        `}
       >
-        <div style={{ alignSelf: `end`, gridArea: `1 / 1 / 1 / 1` }}>
-          <p style={{ textTransform: `uppercase` }}>{tagTitle}</p>
+        <div
+          css={`
+            align-self: end;
+            grid-area: 1 / 1 / 1 / 1;
+          `}
+        >
+          <p
+            css={`
+              text-transform: uppercase;
+            `}
+          >
+            {tagTitle}
+          </p>
           <h1>{title}</h1>
-          {subTitle && <p style={{ fontSize: `x-large` }}>{subTitle}</p>}
+          {blockTitle && <h2>{blockTitle}</h2>}
+          {subTitle && <p>{subTitle}</p>}
         </div>
 
-        <div style={{ alignSelf: `start`, gridArea: `2 / 1 / 2 / 1` }}>
+        <div
+          css={`
+            align-self: start;
+            grid-area: 2 / 1 / 2 / 1;
+          `}
+        >
           {description && <p>{description}</p>}
         </div>
 
         {children && (
-          <div style={{ gridArea: `1 / 2 / 3 / 3` }}>{children}</div>
+          <div
+            css={`
+              grid-area: 1 / 2 / 3 / 3;
+            `}
+          >
+            {children}
+          </div>
         )}
 
         {stats && (
-          <div style={{ gridArea: `2 / 1 / 2 / 1` }}>
+          <div
+            css={`
+              grid-area: 2 / 1 / 2 / 1;
+            `}
+          >
             <HeroStats statList={stats} />
           </div>
         )}
@@ -93,18 +121,18 @@ export default function Hero({
 
       {backgroundImage && (
         <div
-          style={{
-            gridRow: `1 / span 1`,
-            gridColumn: `1 / span 3`,
-            zIndex: -1,
-          }}
+          css={`
+            grid-row: 1 / span 1;
+            grid-column: 1 / span 3;
+            z-index: -1;
+          `}
         >
           <Image
             alt={backgroundImage.nasaImgAlt}
             fluid={backgroundImage.nasaImg.childImageSharp.fluid}
-            style={{
-              maxHeight: `35rem`,
-            }}
+            css={`
+              max-height: 35rem;
+            `}
           />
         </div>
       )}
@@ -115,6 +143,7 @@ export default function Hero({
 Hero.propTypes = {
   tagTitle: PropTypes.string,
   title: PropTypes.string,
+  blockTitle: PropTypes.string,
   subTitle: PropTypes.string,
   description: PropTypes.string,
   stats: PropTypes.arrayOf(

@@ -7,12 +7,10 @@ describe("Campaign", () => {
   })
 
   it("provides information on the campaign", () => {
-    cy.get("[data-cy=campaign-hero]").find("p").should("exist")
+    // cy.get("[data-cy=campaign-hero]").find("p").should("exist")
 
     cy.get("[data-cy=campaign-hero]").find("h1").should("exist")
     cy.get("[data-cy=campaign-hero-header]").should("have.length", 1)
-
-    cy.get("[data-cy=campaign-hero]").find("p").should("exist")
 
     cy.get("[data-cy=campaign-hero]")
       .find("[data-cy=stats]")

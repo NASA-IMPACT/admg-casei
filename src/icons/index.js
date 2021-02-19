@@ -11,6 +11,10 @@ import InstrumentIcon from "./instrument-icon"
 import PlatformIcon from "./platform-icon"
 import CaseiLogoIcon from "./casei-logo-icon"
 
+import DiscoveryIcon from "./about/discovery-icon"
+import AccountingIcon from "./about/accounting-icon"
+import MetadataIcon from "./about/metadata-icon"
+
 export {
   ArrowIcon,
   ChevronIcon,
@@ -22,6 +26,8 @@ export {
 }
 
 export { CampaignIcon, InstrumentIcon, PlatformIcon, CaseiLogoIcon }
+
+export { DiscoveryIcon, AccountingIcon, MetadataIcon }
 
 export { AtmosphericComposition as AtmosphericCompositionIcon } from "./atmospheric-composition"
 export { AtmosphericDynamics as AtmosphericDynamicsIcon } from "./atmospheric-dynamics"
