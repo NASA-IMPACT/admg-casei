@@ -35,7 +35,7 @@ const shape = {
 }
 
 const layout = {
-  pageMargin: "5rem",
+  pageMargin: "4rem",
   maxWidth: "1280px",
 }
 

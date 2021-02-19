@@ -4,7 +4,7 @@ exports[`Explore page renders correctly 1`] = `
 .c1.c1 {
   margin: 0 auto;
   max-width: 1280px;
-  padding: 2rem 5rem;
+  padding: 2rem 4rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -108,7 +108,7 @@ exports[`Explore page renders correctly 1`] = `
 .c27.c27 {
   margin: 5rem auto;
   max-width: 1280px;
-  padding: 2rem 5rem;
+  padding: 2rem 4rem;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -643,7 +643,7 @@ exports[`Explore page renders correctly 1`] = `
         Object {
           "margin": "0 auto",
           "maxWidth": "1280px",
-          "padding": "0 5rem",
+          "padding": "0 4rem",
           "width": "100%",
         }
       }
@@ -1411,7 +1411,7 @@ exports[`Explore page renders correctly 1`] = `
           style={
             Object {
               "display": "grid",
-              "gap": "1rem",
+              "gap": "1.75rem",
               "gridTemplateColumns": "repeat(auto-fill, minmax(15rem, 1fr))",
             }
           }
@@ -1429,6 +1429,7 @@ exports[`Explore page renders correctly 1`] = `
                   "flexDirection": "column",
                   "height": "100%",
                   "justifyContent": "space-between",
+                  "minHeight": "24rem",
                   "padding": "1rem",
                 }
               }
@@ -1541,6 +1542,7 @@ exports[`Explore page renders correctly 1`] = `
                   "flexDirection": "column",
                   "height": "100%",
                   "justifyContent": "space-between",
+                  "minHeight": "24rem",
                   "padding": "1rem",
                 }
               }
@@ -1652,6 +1654,7 @@ exports[`Explore page renders correctly 1`] = `
                   "flexDirection": "column",
                   "height": "100%",
                   "justifyContent": "space-between",
+                  "minHeight": "24rem",
                   "padding": "1rem",
                 }
               }
@@ -1762,6 +1765,7 @@ exports[`Explore page renders correctly 1`] = `
                   "flexDirection": "column",
                   "height": "100%",
                   "justifyContent": "space-between",
+                  "minHeight": "24rem",
                   "padding": "1rem",
                 }
               }
@@ -1869,6 +1873,7 @@ exports[`Explore page renders correctly 1`] = `
                   "flexDirection": "column",
                   "height": "100%",
                   "justifyContent": "space-between",
+                  "minHeight": "24rem",
                   "padding": "1rem",
                 }
               }
@@ -1976,6 +1981,7 @@ exports[`Explore page renders correctly 1`] = `
                   "flexDirection": "column",
                   "height": "100%",
                   "justifyContent": "space-between",
+                  "minHeight": "24rem",
                   "padding": "1rem",
                 }
               }
@@ -2087,6 +2093,7 @@ exports[`Explore page renders correctly 1`] = `
                   "flexDirection": "column",
                   "height": "100%",
                   "justifyContent": "space-between",
+                  "minHeight": "24rem",
                   "padding": "1rem",
                 }
               }
@@ -2195,6 +2202,7 @@ exports[`Explore page renders correctly 1`] = `
                   "flexDirection": "column",
                   "height": "100%",
                   "justifyContent": "space-between",
+                  "minHeight": "24rem",
                   "padding": "1rem",
                 }
               }
@@ -2303,6 +2311,7 @@ exports[`Explore page renders correctly 1`] = `
                   "flexDirection": "column",
                   "height": "100%",
                   "justifyContent": "space-between",
+                  "minHeight": "24rem",
                   "padding": "1rem",
                 }
               }
@@ -2415,6 +2424,7 @@ exports[`Explore page renders correctly 1`] = `
                   "flexDirection": "column",
                   "height": "100%",
                   "justifyContent": "space-between",
+                  "minHeight": "24rem",
                   "padding": "1rem",
                 }
               }
@@ -2523,6 +2533,7 @@ exports[`Explore page renders correctly 1`] = `
                   "flexDirection": "column",
                   "height": "100%",
                   "justifyContent": "space-between",
+                  "minHeight": "24rem",
                   "padding": "1rem",
                 }
               }
@@ -2634,6 +2645,7 @@ exports[`Explore page renders correctly 1`] = `
                   "flexDirection": "column",
                   "height": "100%",
                   "justifyContent": "space-between",
+                  "minHeight": "24rem",
                   "padding": "1rem",
                 }
               }
@@ -2745,6 +2757,7 @@ exports[`Explore page renders correctly 1`] = `
                   "flexDirection": "column",
                   "height": "100%",
                   "justifyContent": "space-between",
+                  "minHeight": "24rem",
                   "padding": "1rem",
                 }
               }
@@ -2850,6 +2863,7 @@ exports[`Explore page renders correctly 1`] = `
                   "flexDirection": "column",
                   "height": "100%",
                   "justifyContent": "space-between",
+                  "minHeight": "24rem",
                   "padding": "1rem",
                 }
               }
@@ -2957,6 +2971,7 @@ exports[`Explore page renders correctly 1`] = `
                   "flexDirection": "column",
                   "height": "100%",
                   "justifyContent": "space-between",
+                  "minHeight": "24rem",
                   "padding": "1rem",
                 }
               }
@@ -3068,6 +3083,7 @@ exports[`Explore page renders correctly 1`] = `
                   "flexDirection": "column",
                   "height": "100%",
                   "justifyContent": "space-between",
+                  "minHeight": "24rem",
                   "padding": "1rem",
                 }
               }
@@ -3175,6 +3191,7 @@ exports[`Explore page renders correctly 1`] = `
                   "flexDirection": "column",
                   "height": "100%",
                   "justifyContent": "space-between",
+                  "minHeight": "24rem",
                   "padding": "1rem",
                 }
               }
@@ -3283,6 +3300,7 @@ exports[`Explore page renders correctly 1`] = `
                   "flexDirection": "column",
                   "height": "100%",
                   "justifyContent": "space-between",
+                  "minHeight": "24rem",
                   "padding": "1rem",
                 }
               }
@@ -3394,6 +3412,7 @@ exports[`Explore page renders correctly 1`] = `
                   "flexDirection": "column",
                   "height": "100%",
                   "justifyContent": "space-between",
+                  "minHeight": "24rem",
                   "padding": "1rem",
                 }
               }
@@ -3505,6 +3524,7 @@ exports[`Explore page renders correctly 1`] = `
                   "flexDirection": "column",
                   "height": "100%",
                   "justifyContent": "space-between",
+                  "minHeight": "24rem",
                   "padding": "1rem",
                 }
               }
@@ -3616,6 +3636,7 @@ exports[`Explore page renders correctly 1`] = `
                   "flexDirection": "column",
                   "height": "100%",
                   "justifyContent": "space-between",
+                  "minHeight": "24rem",
                   "padding": "1rem",
                 }
               }
@@ -3723,6 +3744,7 @@ exports[`Explore page renders correctly 1`] = `
                   "flexDirection": "column",
                   "height": "100%",
                   "justifyContent": "space-between",
+                  "minHeight": "24rem",
                   "padding": "1rem",
                 }
               }
@@ -3835,6 +3857,7 @@ exports[`Explore page renders correctly 1`] = `
                   "flexDirection": "column",
                   "height": "100%",
                   "justifyContent": "space-between",
+                  "minHeight": "24rem",
                   "padding": "1rem",
                 }
               }
@@ -3946,6 +3969,7 @@ exports[`Explore page renders correctly 1`] = `
                   "flexDirection": "column",
                   "height": "100%",
                   "justifyContent": "space-between",
+                  "minHeight": "24rem",
                   "padding": "1rem",
                 }
               }
@@ -4058,6 +4082,7 @@ exports[`Explore page renders correctly 1`] = `
                   "flexDirection": "column",
                   "height": "100%",
                   "justifyContent": "space-between",
+                  "minHeight": "24rem",
                   "padding": "1rem",
                 }
               }
@@ -4182,6 +4207,7 @@ exports[`Explore page renders correctly 1`] = `
                   "flexDirection": "column",
                   "height": "100%",
                   "justifyContent": "space-between",
+                  "minHeight": "24rem",
                   "padding": "1rem",
                 }
               }
@@ -4617,7 +4643,7 @@ exports[`Glossary page renders correctly 1`] = `
 .c1.c1 {
   margin: 0 auto;
   max-width: 1280px;
-  padding: 2rem 5rem;
+  padding: 2rem 4rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4721,7 +4747,7 @@ exports[`Glossary page renders correctly 1`] = `
 .c9.c9 {
   margin: 5rem auto;
   max-width: 1280px;
-  padding: 2rem 5rem;
+  padding: 2rem 4rem;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -5007,7 +5033,7 @@ exports[`Glossary page renders correctly 1`] = `
         Object {
           "margin": "0 auto",
           "maxWidth": "1280px",
-          "padding": "0 5rem",
+          "padding": "0 4rem",
           "width": "100%",
         }
       }
@@ -5931,7 +5957,7 @@ exports[`Home page renders correctly 1`] = `
 .c1.c1 {
   margin: 0 auto;
   max-width: 1280px;
-  padding: 2rem 5rem;
+  padding: 2rem 4rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5994,7 +6020,7 @@ exports[`Home page renders correctly 1`] = `
 .c23.c23 {
   margin: 5rem auto;
   max-width: 1280px;
-  padding: 2rem 5rem;
+  padding: 2rem 4rem;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -6104,7 +6130,7 @@ exports[`Home page renders correctly 1`] = `
   display: grid;
   grid-template-columns: 6fr 6fr;
   grid-gap: 0.5rem;
-  padding: 0 5rem;
+  padding: 0 4rem;
 }
 
 .c7.c7 {
@@ -6356,7 +6382,7 @@ exports[`Home page renders correctly 1`] = `
         Object {
           "margin": "0 auto",
           "maxWidth": "1280px",
-          "padding": "0 5rem",
+          "padding": "0 4rem",
           "width": "100%",
         }
       }
