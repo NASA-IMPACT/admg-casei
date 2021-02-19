@@ -42,8 +42,7 @@ describe("Campaign", () => {
     cy.url().should("eq", "http://localhost:8000/")
     cy.go("back")
 
-    cy.get("main")
-      .find("nav")
+    cy.get("[data-cy=inpage-nav]")
       .find("a")
       .should($anchor => {
         expect($anchor, "10 items").to.have.length(10)
