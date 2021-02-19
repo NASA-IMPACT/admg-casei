@@ -6,6 +6,7 @@ import Carousel from "nuka-carousel"
 import { Section, SectionHeader, SectionContent } from "./layout"
 import CampaignCard from "./cards/campaign-card"
 import { controlButtonLRStyle } from "./carousel-styles"
+import { NEGATIVE } from "../../utils/constants"
 import { colors } from "../utils/theme"
 
 const RelatedCampaignsSection = ({ id, campaigns }) => {
@@ -22,7 +23,7 @@ const RelatedCampaignsSection = ({ id, campaigns }) => {
                 prevButtonText: `⦉`,
                 prevButtonStyle: controlButtonLRStyle,
                 pagingDotsStyle: {
-                  fill: colors.darkTheme.text,
+                  fill: colors[NEGATIVE].text,
                 },
               }}
               getControlsContainerStyles={key => {

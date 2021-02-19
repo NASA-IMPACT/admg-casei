@@ -5,6 +5,7 @@ import { graphql, Link } from "gatsby"
 import { Section, SectionHeader, SectionContent } from "../../components/layout"
 import ExternalLink from "../../components/external-link"
 import Label from "../../components/label"
+import { NEGATIVE } from "../../utils/constants"
 import { colors } from "../../utils/theme"
 import FilterChips from "../../components/filter/filter-chips"
 import FilterBox from "../../components/filter/filter-box"
@@ -44,7 +45,7 @@ const DataSection = ({ id, dois }) => {
               <div
                 style={{
                   display: `flex`,
-                  borderBottom: `1px solid ${colors.darkTheme.altText}`,
+                  borderBottom: `1px solid ${colors[NEGATIVE].altText}`,
                   padding: `2rem 0`,
                   marginBottom: `2rem`,
                 }}
@@ -89,12 +90,12 @@ const DataSection = ({ id, dois }) => {
                   style={{
                     display: `flex`,
                     flexDirection: `column`,
-                    backgroundColor: colors.darkTheme.background,
+                    backgroundColor: colors[NEGATIVE].background,
                     padding: `0 1rem 0.71rem 1rem`,
                   }}
                   data-cy="data-product"
                 >
-                  <Label id="doi" color={colors.darkTheme.text}>
+                  <Label id="doi" color={colors[NEGATIVE].text}>
                     {doi.longname}
                   </Label>
                   <ExternalLink

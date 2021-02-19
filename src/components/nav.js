@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
+import { NEGATIVE } from "../utils/constants"
 import { colors } from "../utils/theme"
 
 const ListLink = props => (
@@ -9,7 +10,7 @@ const ListLink = props => (
     <Link
       to={props.to}
       activeStyle={{
-        color: colors.darkTheme.linkText,
+        color: colors[NEGATIVE].linkText,
         fontWeight: `bold`,
       }}
       partiallyActive={true}

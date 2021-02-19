@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import ExternalLink from "../external-link"
+import { POSITIVE, NEGATIVE } from "../../utils/constants"
 import { isUrl, PropTypeIsUrl } from "../../utils/helpers"
 
 const ListLink = props => (
@@ -22,7 +23,7 @@ const ListLink = props => (
 ListLink.propTypes = {
   to: PropTypeIsUrl,
   noPadding: PropTypes.bool,
-  mode: PropTypes.oneOf(["lightTheme", "darkTheme"]),
+  mode: PropTypes.oneOf([POSITIVE, NEGATIVE]),
   children: PropTypes.string.isRequired,
 }
 

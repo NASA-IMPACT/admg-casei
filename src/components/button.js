@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 
+import { POSITIVE, NEGATIVE } from "../utils/constants"
 import { colors, shape } from "../utils/theme"
 
 const Clickable = styled.button`
@@ -29,7 +30,7 @@ export default function Button({ children, action }) {
         textShadow: `none`,
         border: 0,
         cursor: `pointer`,
-        backgroundColor: colors.lightTheme.linkText,
+        backgroundColor: colors[POSITIVE].linkText,
         borderRadius: shape.rounded,
         fontWeight: `bold`,
       }}
@@ -53,7 +54,7 @@ export const IconButton = ({ id, icon, action }) => (
       border: "none",
       flexGrow: 0,
       cursor: `pointer`,
-      color: colors.darkTheme.text,
+      color: colors[NEGATIVE].text,
       verticalAlign: `middle`,
       marginLeft: `0.5rem`,
     }}

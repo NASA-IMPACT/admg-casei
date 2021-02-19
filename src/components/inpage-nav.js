@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { FeedbackForm } from "feedback-fish"
 
+import { POSITIVE, NEGATIVE } from "../utils/constants"
 import { colors } from "../utils/theme"
 import Button from "../components/button"
 
@@ -16,7 +17,7 @@ const InpageLink = props => (
   <li style={{ margin: `0 1rem 0 0` }}>
     <a
       href={`#${props.id}`}
-      style={{ color: colors.lightTheme.text, fontWeight: 600 }}
+      style={{ color: colors[POSITIVE].text, fontWeight: 600 }}
       data-cy={`${props.id}-inpage-link`}
     >
       {props.children}
@@ -44,8 +45,8 @@ const InpageNav = ({ shortname, items, path }) => (
         display: `flex`,
         justifyContent: `space-between`,
         alignItems: `center`,
-        backgroundColor: colors.lightTheme.background,
-        color: colors.lightTheme.text,
+        backgroundColor: colors[POSITIVE].background,
+        color: colors[POSITIVE].text,
       }}
     >
       <nav aria-label="inpage-scroll">
@@ -66,7 +67,7 @@ const InpageNav = ({ shortname, items, path }) => (
               style={{
                 paddingRight: `1rem`,
                 fontSize: `2rem`,
-                color: colors.lightTheme.text,
+                color: colors[POSITIVE].text,
               }}
               data-cy={`top-inpage-link`}
             >

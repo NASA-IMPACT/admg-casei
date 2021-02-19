@@ -9,6 +9,7 @@ import {
   SectionContent,
   ListLink,
 } from "../../components/layout"
+import { POSITIVE, NEGATIVE } from "../../utils/constants"
 
 export default function OverviewSection({
   id,
@@ -16,19 +17,19 @@ export default function OverviewSection({
   onlineInformation,
 }) {
   return (
-    <Section id={id} mode="lightTheme">
+    <Section id={id} mode={POSITIVE}>
       <VisuallyHidden>
         <SectionHeader headline="Overview" id={id} />
       </VisuallyHidden>
-      <SectionContent mode="lightTheme" columns={[1, 7]}>
+      <SectionContent mode={POSITIVE} columns={[1, 7]}>
         <h3>Overview</h3>
         <p>{description}</p>
       </SectionContent>
-      <SectionContent mode="lightTheme" columns={[1, 8]}>
+      <SectionContent mode={POSITIVE} columns={[1, 8]}>
         <h3>Online information</h3>
         <ul style={{ margin: 0, listStyle: `none` }} data-cy="link-list">
           {onlineInformation.map(link => (
-            <ListLink key={link} to={link} mode="lightTheme" noPadding>
+            <ListLink key={link} to={link} mode={POSITIVE} noPadding>
               {link}
             </ListLink>
           ))}

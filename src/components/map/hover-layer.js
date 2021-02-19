@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import { navigate } from "gatsby"
 
+import { NEGATIVE } from "../../utils/constants"
 import { colors } from "../../utils/theme"
 
 export default function HoverLayer({ id, map, sourceId, isDrawing }) {
@@ -17,7 +18,7 @@ export default function HoverLayer({ id, map, sourceId, isDrawing }) {
       source: sourceId,
       layout: {},
       paint: {
-        "fill-color": colors.darkTheme.background,
+        "fill-color": colors[NEGATIVE].background,
         "fill-opacity": [
           "case",
           ["boolean", ["feature-state", "hover"], false],

@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
+import { NEGATIVE } from "../utils/constants"
 import { colors, layout } from "../utils/theme"
 import Login from "./login"
 import ExternalLink from "./external-link"
@@ -27,7 +28,7 @@ const Footer = ({ shortname }) => {
     <footer
       css={`
         margin-top: 5rem;
-        background-color: ${colors.darkTheme.background};
+        background-color: ${colors[NEGATIVE].background};
       `}
       data-cy="page-footer"
     >
@@ -218,7 +219,7 @@ const Footer = ({ shortname }) => {
               display: flex;
               align-items: center;
               text-transform: uppercase;
-              color: ${colors.darkTheme.link};
+              color: ${colors[NEGATIVE].link};
             `}
           >
             {/* TODO: Add back in with real links */}

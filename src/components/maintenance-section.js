@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 
 import { AuthContext } from "../components/auth-provider"
 import { Section } from "./layout"
+import { NEGATIVE } from "../../utils/constants"
 import { colors } from "../utils/theme"
 
 const MaintenanceSection = ({ id, data }) => {
@@ -18,7 +19,7 @@ const MaintenanceSection = ({ id, data }) => {
           to={`/edit/campaign/${id}`}
           state={{ data }}
           style={{
-            border: `1px solid ${colors.darkTheme.text}`,
+            border: `1px solid ${colors[NEGATIVE].text}`,
             padding: `1rem 5rem`,
             textTransform: `uppercase`,
           }}

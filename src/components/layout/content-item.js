@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import ExternalLink from "../external-link"
+import { POSITIVE, NEGATIVE } from "../../utils/constants"
 import { colors } from "../../utils/theme"
 
 export default function ContentItem({
@@ -9,7 +10,7 @@ export default function ContentItem({
   label,
   info = "N/A",
   link,
-  mode = "darkTheme",
+  mode = NEGATIVE,
 }) {
   return (
     <div data-cy={id}>
@@ -38,5 +39,5 @@ ContentItem.propTypes = {
   label: PropTypes.string.isRequired,
   info: PropTypes.string,
   link: PropTypes.string,
-  mode: PropTypes.oneOf(["lightTheme", "darkTheme"]),
+  mode: PropTypes.oneOf([POSITIVE, NEGATIVE]),
 }

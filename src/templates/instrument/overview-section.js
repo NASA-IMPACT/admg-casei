@@ -11,13 +11,14 @@ import {
   ListLink,
 } from "../../components/layout"
 import ExternalLink from "../../components/external-link"
+import { POSITIVE, NEGATIVE } from "../../utils/constants"
 import { isUrl } from "../../utils/helpers"
 import { colors } from "../../utils/theme"
 
 function BackgroundListItem({ id, label, children }) {
   return (
     <li style={{ padding: `1rem 0` }} data-cy={`${id}-label`}>
-      <label style={{ color: colors.lightTheme.altText }}>{label}</label>
+      <label style={{ color: colors[POSITIVE].altText }}>{label}</label>
       <p>{children}</p>
     </li>
   )
@@ -82,14 +83,14 @@ function Background({
             label="Overview Publication"
             url={overviewPublication}
             id="overview-publication"
-            mode="lightTheme"
+            mode={POSITIVE}
           />
         ) : (
           "N/A"
         )}
       </BackgroundListItem>
       <li style={{ padding: `1rem 0` }} data-cy="repositories-label">
-        <label style={{ color: colors.lightTheme.altText }}>
+        <label style={{ color: colors[POSITIVE].altText }}>
           {repositories.length === 1 ? "Repository" : "Repositories"}
         </label>
         {repositories.length > 0 ? (
@@ -98,7 +99,7 @@ function Background({
             data-cy="repository-list"
           >
             {repositories.map(repo => (
-              <ListLink key={repo.id} to={repo.url} mode="lightTheme" noPadding>
+              <ListLink key={repo.id} to={repo.url} mode={POSITIVE} noPadding>
                 {repo.longname}
               </ListLink>
             ))}
@@ -145,15 +146,15 @@ export default function OverviewSection({
   repositories,
 }) {
   return (
-    <Section id={id} mode="lightTheme">
+    <Section id={id} mode={POSITIVE}>
       <VisuallyHidden>
         <SectionHeader headline="Overview" id={id} />
       </VisuallyHidden>
-      <SectionContent mode="lightTheme" columns={[1, 8]}>
+      <SectionContent mode={POSITIVE} columns={[1, 8]}>
         <h3>Instrument Details</h3>
         <DefinitionList
           id="instrument"
-          mode="lightTheme"
+          mode={POSITIVE}
           list={[
             {
               title: "Measurement Type",
@@ -197,7 +198,7 @@ export default function OverviewSection({
                   label={calibration}
                   url={calibration}
                   id="calibration-doi"
-                  mode="lightTheme"
+                  mode={POSITIVE}
                 />
               ) : (
                 "N/A"
@@ -214,7 +215,7 @@ export default function OverviewSection({
                           label={link}
                           url={link}
                           id="online-information"
-                          mode="lightTheme"
+                          mode={POSITIVE}
                         />
                       ) : (
                         <p className="placeholder">{link}</p> // fallback for invalid url
@@ -229,7 +230,7 @@ export default function OverviewSection({
           ]}
         />
       </SectionContent>
-      <SectionContent mode="lightTheme" columns={[10, 3]}>
+      <SectionContent mode={POSITIVE} columns={[10, 3]}>
         <Background
           instrumentDoi={instrumentDoi}
           instrumentManufacturer={instrumentManufacturer}

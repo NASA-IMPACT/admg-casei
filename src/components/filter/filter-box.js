@@ -11,6 +11,7 @@ import VisuallyHidden from "@reach/visually-hidden"
 
 import { IconButton } from "../button"
 import { CloseIcon } from "../../icons"
+import { NEGATIVE } from "../../utils/constants"
 import { colors, shape } from "../../utils/theme"
 
 export default function Filter({
@@ -43,16 +44,16 @@ export default function Filter({
             height: `2.5rem`,
             WebkitAppearance: `none`,
             background: `transparent`,
-            border: `1px solid ${colors.darkTheme.text}`,
+            border: `1px solid ${colors[NEGATIVE].text}`,
             borderRadius: `${shape.rounded} `,
-            color: colors.darkTheme.text,
+            color: colors[NEGATIVE].text,
             padding: `0.5rem`,
             cursor: `pointer`,
           }}
         >
           {filterName.toUpperCase()}
         </ListboxButton>
-        <ListboxPopover style={{ background: colors.darkTheme.altBackground }}>
+        <ListboxPopover style={{ background: colors[NEGATIVE].altBackground }}>
           <ListboxList data-cy="data-products-filter-options">
             {filterOptions.map(o => {
               const value = o.longname || o.shortname
@@ -62,7 +63,7 @@ export default function Filter({
                   {selectedFilterIds.includes(value) && (
                     <IconButton
                       id="remove-filter"
-                      icon={<CloseIcon color={colors.darkTheme.text} />}
+                      icon={<CloseIcon color={colors[NEGATIVE].text} />}
                     />
                   )}
                 </ListboxOption>

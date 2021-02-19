@@ -10,35 +10,7 @@ import Layout, {
   SectionContent,
 } from "../components/layout"
 import SEO from "../components/seo"
-
-const alphabet = [
-  "A",
-  "B",
-  "C",
-  "D",
-  "E",
-  "F",
-  "G",
-  "H",
-  "I",
-  "J",
-  "K",
-  "L",
-  "M",
-  "N",
-  "O",
-  "P",
-  "Q",
-  "R",
-  "S",
-  "T",
-  "U",
-  "V",
-  "W",
-  "X",
-  "Y",
-  "Z",
-]
+import { ALPHABET, POSITIVE } from "../utils/constants"
 
 export default function Glossary({ data }) {
   return (
@@ -47,7 +19,7 @@ export default function Glossary({ data }) {
       <PageBody id="glossary">
         <h1>Glossary</h1>
 
-        {alphabet.map(letter => {
+        {ALPHABET.map(letter => {
           const entriesOfLetter = data.allGlossaryJson.nodes.filter(x =>
             x.term.startsWith(letter)
           )
@@ -61,7 +33,7 @@ export default function Glossary({ data }) {
                 <SectionContent
                   key={x.term}
                   withBackground
-                  mode="lightTheme"
+                  mode={POSITIVE}
                   withPadding
                 >
                   <h3>{x.term}</h3>

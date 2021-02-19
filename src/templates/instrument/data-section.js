@@ -5,6 +5,7 @@ import { graphql, Link } from "gatsby"
 import { Section, SectionHeader, SectionContent } from "../../components/layout"
 import ExternalLink from "../../components/external-link"
 import Label from "../../components/label"
+import { NEGATIVE } from "../../utils/constants"
 import { colors } from "../../utils/theme"
 import FilterChips from "../../components/filter/filter-chips"
 import FilterBox from "../../components/filter/filter-box"
@@ -44,7 +45,7 @@ const DataSection = ({ id, dois }) => {
               <div
                 style={{
                   display: `flex`,
-                  borderBottom: `1px solid ${colors.darkTheme.altText}`,
+                  borderBottom: `1px solid ${colors[NEGATIVE].altText}`,
                   padding: `2rem 0`,
                   marginBottom: `2rem`,
                 }}
@@ -89,7 +90,7 @@ const DataSection = ({ id, dois }) => {
                   style={{
                     display: `flex`,
                     flexDirection: `column`,
-                    backgroundColor: colors.darkTheme.background,
+                    backgroundColor: colors[NEGATIVE].background,
                     gap: `0.5rem`,
                     padding: `1.5rem`,
                   }}

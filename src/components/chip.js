@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 
 import { IconButton } from "./button"
 import { CloseIcon } from "../icons"
+import { NEGATIVE } from "../utils/constants"
 import { colors, shape } from "../utils/theme"
 
 const Chip = ({
@@ -19,9 +20,9 @@ const Chip = ({
       display: isInline ? `inline-flex` : `flex`,
       alignItems: `center`,
       backgroundColor: isDark
-        ? colors.darkTheme.altBackground
-        : colors.darkTheme.background,
-      color: colors.darkTheme.text,
+        ? colors[NEGATIVE].altBackground
+        : colors[NEGATIVE].background,
+      color: colors[NEGATIVE].text,
       borderRadius: shape.rounded,
       padding: `0.25rem 0.5rem`,
       margin: `0.25rem 0.5rem`,
@@ -33,7 +34,7 @@ const Chip = ({
       <IconButton
         id="remove-filter"
         action={() => removeAction(actionId)}
-        icon={<CloseIcon color={colors.darkTheme.text} />}
+        icon={<CloseIcon color={colors[NEGATIVE].text} />}
       />
     )}
   </div>

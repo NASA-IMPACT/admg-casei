@@ -1,12 +1,13 @@
 import React from "react"
 import PropTypes from "prop-types"
 
+import { NEGATIVE } from "../utils/constants"
 import { colors } from "../utils/theme"
 
 export default function Label({
   children,
   id,
-  color = colors.darkTheme.altText,
+  color = colors[NEGATIVE].altText,
   showBorder,
   display,
 }) {
@@ -15,7 +16,7 @@ export default function Label({
       style={{
         color: color,
         borderBottom: showBorder
-          ? `1px solid ${colors.darkTheme.altText}`
+          ? `1px solid ${colors[NEGATIVE].altText}`
           : `none`,
         display,
       }}
