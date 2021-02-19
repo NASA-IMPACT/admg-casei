@@ -61,7 +61,7 @@ const typography = new Typography({
       },
       p: {
         marginBottom: 0,
-        fontSize: `1rem`,
+        fontSize: rhythm(1.5),
       },
       "label, button": {
         fontSize: rhythm(0.6),
