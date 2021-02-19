@@ -58,12 +58,15 @@ describe("Accessibility tests", () => {
   })
 
   it("Navigates to page for a /instrument and checks for accessibility violations", () => {
+    cy.intercept("/explore").as("explore")
     cy.visit("/explore")
+    cy.wait("@explore")
 
     cy.get("[data-cy=tabbar]")
       .findByText(/Instruments/i)
       .click()
 
+    cy.wait("@explore")
     cy.get("[data-cy=instruments-card]").first().click()
 
     cy.get("h1").should("exist")
