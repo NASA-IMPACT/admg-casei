@@ -17,7 +17,7 @@ import ExternalLink from "../components/external-link"
 import about from "../content/about.json"
 
 const LinkedParagraph = () => (
-  <big>
+  <p>
     NASA’s Airborne Data Management Group{" "}
     <ExternalLink
       url="https://earthdata.nasa.gov/esds/impact/admg"
@@ -43,7 +43,7 @@ const LinkedParagraph = () => (
     Additionally, ADMG serves the various airborne data user communities by
     providing resource access and key contextual information for past and
     current NASA airborne and field investigations.
-  </big>
+  </p>
 )
 
 const About = ({ data }) => {

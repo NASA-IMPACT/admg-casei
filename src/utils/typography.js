@@ -1,5 +1,4 @@
 import Typography from "typography"
-import styled from "styled-components"
 
 import { colors } from "./theme"
 
@@ -62,6 +61,9 @@ const typography = new Typography({
       p: {
         marginBottom: 0,
         fontSize: rhythm(1),
+      },
+      small: {
+        fontSize: rhythm(0.7),
       },
       "label, button": {
         fontSize: rhythm(0.6),
