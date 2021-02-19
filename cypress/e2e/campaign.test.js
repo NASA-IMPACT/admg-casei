@@ -36,8 +36,6 @@ describe("Campaign", () => {
 
     cy.get("[data-cy=mapboxgl-map]").should("exist")
 
-    cy.get("main").find("nav").should("exist")
-
     cy.get("[data-cy=inpage-nav]").find("[data-cy=home-link]").should("exist")
     cy.get("[data-cy=home-link]").click()
 
