@@ -40,8 +40,18 @@ exports[`Overview Section displays content 1`] = `
   grid-column: 1 / span 8;
 }
 
+.c3.c3 > *,
+.c3.c3 h3 {
+  color: #262a31;
+}
+
 .c5.c5 {
   grid-column: 10 / span 3;
+}
+
+.c5.c5 > *,
+.c5.c5 h3 {
+  color: #262a31;
 }
 
 .c2.c2 {
@@ -91,6 +101,7 @@ exports[`Overview Section displays content 1`] = `
   </span>
   <div
     className="c3"
+    mode="lightTheme"
   >
     <h3>
       Instrument Details
@@ -279,6 +290,7 @@ exports[`Overview Section displays content 1`] = `
   </div>
   <div
     className="c5"
+    mode="lightTheme"
   >
     <ul
       data-cy="instrument-background"

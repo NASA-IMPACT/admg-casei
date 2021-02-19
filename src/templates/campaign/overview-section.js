@@ -11,6 +11,7 @@ import {
   ListLink,
 } from "../../components/layout"
 import ExternalLink from "../../components/external-link"
+import { POSITIVE } from "../../utils/constants"
 import { colors } from "../../utils/theme"
 
 const OverviewSection = ({
@@ -30,11 +31,11 @@ const OverviewSection = ({
   notesPublic,
   repositories,
 }) => (
-  <Section id={id} mode="lightTheme">
+  <Section id={id} mode={POSITIVE}>
     <VisuallyHidden>
       <SectionHeader headline="Overview" id={id} />
     </VisuallyHidden>
-    <SectionContent columns={[1, 8]}>
+    <SectionContent mode={POSITIVE} columns={[1, 8]}>
       <h3>The Campaign</h3>
 
       <p data-cy="description">{description}</p>
@@ -48,7 +49,7 @@ const OverviewSection = ({
         >
           <label
             css={`
-              color: ${colors.lightTheme.altText};
+              color: ${colors[POSITIVE].altText};
             `}
           >
             {aliases.length === 1 ? "Alias" : "Aliases"}:{" "}
@@ -71,33 +72,33 @@ const OverviewSection = ({
           id="overview-content"
           label="Study dates"
           info={`${startdate} — ${enddate || "ongoing"}`}
-          mode="lightTheme"
+          mode={POSITIVE}
         />
         <hr />
         <ContentItem
           id="overview-content"
           label="Region"
           info={region}
-          mode="lightTheme"
+          mode={POSITIVE}
         />
 
         <ContentItem
           id="overview-content"
           label="Season of Study"
           info={seasonListing}
-          mode="lightTheme"
+          mode={POSITIVE}
         />
         <hr />
         <ContentItem
           id="overview-content"
           label="Spatial bounds (WKT)"
           info={bounds}
-          mode="lightTheme"
+          mode={POSITIVE}
         />
       </div>
     </SectionContent>
 
-    <SectionContent columns={[10, 3]}>
+    <SectionContent mode={POSITIVE} columns={[10, 3]}>
       <ul
         css={`
           margin: 0;
@@ -123,7 +124,7 @@ const OverviewSection = ({
             >
               Campaign DOI:
               <br />
-              <ExternalLink label={doi} url={doi} id="doi" mode="lightTheme" />
+              <ExternalLink label={doi} url={doi} id="doi" mode={POSITIVE} />
             </p>
           ) : (
             <p data-cy="doi-link">no campaign DOI available</p>
@@ -131,33 +132,33 @@ const OverviewSection = ({
         </li>
 
         {repositoryWebsite && (
-          <ListLink mode="lightTheme" to={repositoryWebsite}>
+          <ListLink mode={POSITIVE} to={repositoryWebsite}>
             Repository website
           </ListLink>
         )}
         {projectWebsite && (
-          <ListLink mode="lightTheme" to={projectWebsite}>
+          <ListLink mode={POSITIVE} to={projectWebsite}>
             Project website
           </ListLink>
         )}
         {tertiaryWebsite && (
-          <ListLink mode="lightTheme" to={tertiaryWebsite}>
+          <ListLink mode={POSITIVE} to={tertiaryWebsite}>
             Tertiary website
           </ListLink>
         )}
         {publicationLink && (
-          <ListLink mode="lightTheme" to={publicationLink}>
+          <ListLink mode={POSITIVE} to={publicationLink}>
             Overview Publication
           </ListLink>
         )}
       </ul>
     </SectionContent>
 
-    <SectionContent columns={[1, 8]}>
+    <SectionContent mode={POSITIVE} columns={[1, 8]}>
       <h3>Additional Notes</h3>
       <p data-cy="notes-public">{notesPublic}</p>
     </SectionContent>
-    <SectionContent columns={[1, 8]}>
+    <SectionContent mode={POSITIVE} columns={[1, 8]}>
       <h3>Repositories</h3>
       <ul
         css={`
@@ -167,7 +168,7 @@ const OverviewSection = ({
         data-cy="repo-list"
       >
         {repositories.map(repo => (
-          <ListLink key={repo.id} to={repo.url} mode="lightTheme" noPadding>
+          <ListLink key={repo.id} to={repo.url} mode={POSITIVE} noPadding>
             {repo.longname}
           </ListLink>
         ))}

@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
+import { NEGATIVE } from "../../utils/constants"
 import { colors } from "../../utils/theme"
 
 export default function FilterChips({ clearFilters, children }) {
@@ -24,7 +25,7 @@ export default function FilterChips({ clearFilters, children }) {
             border: none;
             text-transform: none;
             text-decoration-line: underline;
-            color: ${colors.darkTheme.linkText};
+            color: ${colors[NEGATIVE].linkText};
             cursor: pointer;
           `}
         >

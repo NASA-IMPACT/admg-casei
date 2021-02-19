@@ -5,11 +5,8 @@ describe("About", () => {
     cy.visit("/about")
   })
   it("renders correctly", () => {
-    cy.get("[data-cy=about-hero]")
-      .find("h2")
-      .contains("NASA conducts and supports")
-
     cy.get("[data-cy=about-hero]").should("exist").and("contain", "About")
+    cy.get("[data-cy=about-hero]").find("h1").contains("NASA")
 
     // inventory section
     cy.get("[data-cy=about-inventory-section]").should("exist")

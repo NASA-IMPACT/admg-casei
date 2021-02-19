@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
+import { NEGATIVE } from "../../utils/constants"
 import { colors } from "../../utils/theme"
 
 export const InstrumentsGrid = ({ measurementTypes }) => {
@@ -18,7 +19,7 @@ export const InstrumentsGrid = ({ measurementTypes }) => {
       style={{
         display: `flex`,
         flexWrap: `wrap`,
-        border: `1px solid ${colors.darkTheme.text}`,
+        border: `1px solid ${colors[NEGATIVE].text}`,
       }}
     >
       {measurementTypes.map(measurementType => (
@@ -34,7 +35,7 @@ export const InstrumentsGrid = ({ measurementTypes }) => {
         >
           <div
             style={{
-              border: `1px solid ${colors.darkTheme.text}`,
+              border: `1px solid ${colors[NEGATIVE].text}`,
               padding: `1rem`,
               textAlign: `center`,
             }}

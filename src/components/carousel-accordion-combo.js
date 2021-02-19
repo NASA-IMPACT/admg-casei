@@ -9,6 +9,7 @@ import ImageCaption from "./image-caption"
 import CampaignCard from "./cards/campaign-card"
 import { controlButtonLRStyle, ControlTextButton } from "./carousel-styles"
 import Accordion from "./accordion"
+import { NEGATIVE } from "../utils/constants"
 import { colors, layout } from "../utils/theme"
 
 export default function CarouselAccordionCombo({
@@ -196,7 +197,7 @@ function ImageCarousel({
           style={{
             width: `26rem`,
             height: `18rem`,
-            backgroundColor: colors.darkTheme.background,
+            backgroundColor: colors[NEGATIVE].background,
             display: `flex`,
             alignItems: `center`,
             justifyContent: `center`,

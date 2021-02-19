@@ -10,6 +10,7 @@ import {
 import VisuallyHidden from "@reach/visually-hidden"
 import styled from "styled-components"
 
+import { NEGATIVE } from "../../utils/constants"
 import { IconButton } from "../button"
 import { CloseIcon } from "../../icons"
 import { colors } from "../../utils/theme"
@@ -19,8 +20,8 @@ const FilterButton = styled(ListboxButton)`
   width: 100%;
   -webkit-appearance: none;
   background: transparent;
-  border: 1px solid ${colors.darkTheme.text};
-  color: ${colors.darkTheme.text};
+  border: 1px solid ${colors[NEGATIVE].text};
+  color: ${colors[NEGATIVE].text};
   padding: 0.5rem;
   cursor: pointer;
   text-transform: uppercase;
@@ -40,11 +41,11 @@ const FilterItem = styled(ListboxOption)`
   justify-content: space-between;
   background-color: ${props =>
     props.selected
-      ? colors.darkTheme.background
-      : colors.darkTheme.altBackground};
+      ? colors[NEGATIVE].background
+      : colors[NEGATIVE].altBackground};
 
   &[data-reach-listbox-option][aria-selected="true"] {
-    background: ${colors.darkTheme.background};
+    background: ${colors[NEGATIVE].background};
     opacity: 0.64;
   }
 `
@@ -85,7 +86,7 @@ const FilterMenu = ({
         </FilterButton>
         <ListboxPopover
           css={`
-            background: ${colors.darkTheme.altBackground};
+            background: ${colors[NEGATIVE].altBackground};
             max-height: 24rem;
             overflow-y: scroll;
           `}
@@ -102,7 +103,7 @@ const FilterMenu = ({
                 {selectedFilterIds.includes(o.id) && (
                   <IconButton
                     id="remove-filter"
-                    icon={<CloseIcon color={colors.darkTheme.text} />}
+                    icon={<CloseIcon color={colors[NEGATIVE].text} />}
                   />
                 )}
               </FilterItem>

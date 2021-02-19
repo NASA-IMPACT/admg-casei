@@ -29,6 +29,11 @@ exports[`Focus Section displays content 1`] = `
   background-color: #303641;
 }
 
+.c3.c3 > *,
+.c3.c3 h3 {
+  color: #e9eaec;
+}
+
 .c2.c2 {
   grid-column: 1 / span 7;
   -webkit-align-self: end;
@@ -59,6 +64,7 @@ exports[`Focus Section displays content 1`] = `
   </div>
   <div
     className="c3"
+    mode="darkTheme"
   >
     <div
       style={

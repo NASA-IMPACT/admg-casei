@@ -1,5 +1,7 @@
 import React, { useState } from "react"
+
 import { CloseIcon, SearchIcon } from "../../icons"
+import { NEGATIVE } from "../../utils/constants"
 import { colors } from "../../utils/theme"
 
 const Searchbar = React.forwardRef((_props, ref) => {
@@ -16,7 +18,7 @@ const Searchbar = React.forwardRef((_props, ref) => {
     >
       <div
         css={`
-          border: 1px solid ${colors.darkTheme.text};
+          border: 1px solid ${colors[NEGATIVE].text};
           padding: 0.25rem;
           flex-grow: 1;
         `}
@@ -27,13 +29,13 @@ const Searchbar = React.forwardRef((_props, ref) => {
             border: none;
             flex-grow: 0;
             background: transparent;
-            color: ${colors.darkTheme.text};
+            color: ${colors[NEGATIVE].text};
             vertical-align: middle;
           `}
           data-cy="submit"
         >
           <span role="img" aria-label="Magnifying glass icon">
-            <SearchIcon color={colors.darkTheme.text} />
+            <SearchIcon color={colors[NEGATIVE].text} />
           </span>
         </button>
         <input
@@ -47,7 +49,7 @@ const Searchbar = React.forwardRef((_props, ref) => {
           css={`
             border: none;
             background: transparent;
-            color: ${colors.darkTheme.text};
+            color: ${colors[NEGATIVE].text};
             font-style: italic;
           `}
           type="text"
@@ -61,13 +63,13 @@ const Searchbar = React.forwardRef((_props, ref) => {
               border: none;
               flex-grow: 0;
               background: transparent;
-              color: ${colors.darkTheme.text};
+              color: ${colors[NEGATIVE].text};
               vertical-align: middle;
             `}
             data-cy="reset"
           >
             <span role="img" aria-label="X icon">
-              <CloseIcon color={colors.darkTheme.text} />
+              <CloseIcon color={colors[NEGATIVE].text} />
             </span>
           </button>
         )}
