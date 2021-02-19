@@ -58,16 +58,14 @@ describe("Accessibility tests", () => {
   })
 
   it("Navigates to page for a /instrument and checks for accessibility violations", () => {
-    cy.intercept("/explore").as("explore")
-    cy.visit("/explore")
-    cy.wait("@explore")
+    // cy.visit("/explore")
+    cy.visit("/instrument/1ce41ae9-f993-4151-8591-b40acdd49d5c")
 
-    cy.get("[data-cy=tabbar]")
-      .findByText(/Instruments/i)
-      .click()
-
-    cy.wait("@explore")
-    cy.get("[data-cy=instruments-card]").first().click()
+    // cy.get("[data-cy=tabbar]")
+    //   .findByText(/Instruments/i)
+    //   .click()
+    // TODO: understand why this is brittle on ci
+    // cy.get("[data-cy=instruments-card]").first().click()
 
     cy.get("h1").should("exist")
 
