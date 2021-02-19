@@ -11,7 +11,7 @@ const Header = ({ shortname, children }) => (
       css={`
         margin: 0 auto;
         max-width: ${layout.maxWidth};
-        padding: 2rem ${layout.pageMargin};
+        padding: 1.5rem ${layout.pageMargin};
         display: flex;
         justify-content: space-between;
         align-items: center;
