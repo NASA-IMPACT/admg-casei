@@ -5071,12 +5071,12 @@ exports[`Glossary page renders correctly 1`] = `
       </h1>
       <section
         className="c6"
-        data-cy="C-section"
+        data-cy="glossary-term-section"
         mode="darkTheme"
       >
         <div
           className="c7"
-          id="C"
+          id="glossary-term"
         />
         <div
           style={
@@ -5131,12 +5131,12 @@ exports[`Glossary page renders correctly 1`] = `
       </section>
       <section
         className="c6"
-        data-cy="D-section"
+        data-cy="glossary-term-section"
         mode="darkTheme"
       >
         <div
           className="c7"
-          id="D"
+          id="glossary-term"
         />
         <div
           style={
@@ -5191,12 +5191,12 @@ exports[`Glossary page renders correctly 1`] = `
       </section>
       <section
         className="c6"
-        data-cy="F-section"
+        data-cy="glossary-term-section"
         mode="darkTheme"
       >
         <div
           className="c7"
-          id="F"
+          id="glossary-term"
         />
         <div
           style={
@@ -5251,12 +5251,12 @@ exports[`Glossary page renders correctly 1`] = `
       </section>
       <section
         className="c6"
-        data-cy="G-section"
+        data-cy="glossary-term-section"
         mode="darkTheme"
       >
         <div
           className="c7"
-          id="G"
+          id="glossary-term"
         />
         <div
           style={
@@ -5288,12 +5288,12 @@ exports[`Glossary page renders correctly 1`] = `
       </section>
       <section
         className="c6"
-        data-cy="I-section"
+        data-cy="glossary-term-section"
         mode="darkTheme"
       >
         <div
           className="c7"
-          id="I"
+          id="glossary-term"
         />
         <div
           style={
@@ -5371,12 +5371,12 @@ exports[`Glossary page renders correctly 1`] = `
       </section>
       <section
         className="c6"
-        data-cy="M-section"
+        data-cy="glossary-term-section"
         mode="darkTheme"
       >
         <div
           className="c7"
-          id="M"
+          id="glossary-term"
         />
         <div
           style={
@@ -5408,12 +5408,12 @@ exports[`Glossary page renders correctly 1`] = `
       </section>
       <section
         className="c6"
-        data-cy="P-section"
+        data-cy="glossary-term-section"
         mode="darkTheme"
       >
         <div
           className="c7"
-          id="P"
+          id="glossary-term"
         />
         <div
           style={
@@ -5491,12 +5491,12 @@ exports[`Glossary page renders correctly 1`] = `
       </section>
       <section
         className="c6"
-        data-cy="S-section"
+        data-cy="glossary-term-section"
         mode="darkTheme"
       >
         <div
           className="c7"
-          id="S"
+          id="glossary-term"
         />
         <div
           style={
