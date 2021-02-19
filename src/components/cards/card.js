@@ -20,7 +20,6 @@ const Card = ({
   children,
   image,
   placeholder: Placeholder,
-  height,
   tag,
   footerList,
   category,
@@ -33,7 +32,8 @@ const Card = ({
       display: `flex`,
       flexDirection: `column`,
       justifyContent: `space-between`,
-      height: height,
+      minHeight: `24rem`,
+      height: `100%`,
     }}
     data-cy={`${category}-card`}
   >

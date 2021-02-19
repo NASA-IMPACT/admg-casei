@@ -21,7 +21,7 @@ exports[`Header renders correctly 1`] = `
         "gridArea": "1 / 2 / 1 / 2",
         "gridGap": ".5rem",
         "gridTemplateColumns": "3fr 5fr",
-        "padding": "0 5rem",
+        "padding": "0 4rem",
       }
     }
   >
@@ -103,7 +103,7 @@ exports[`Header renders with adjust ratios 1`] = `
         "gridArea": "1 / 2 / 1 / 2",
         "gridGap": ".5rem",
         "gridTemplateColumns": "5fr 3fr",
-        "padding": "0 5rem",
+        "padding": "0 4rem",
       }
     }
   >
