@@ -27,7 +27,7 @@ export default function Glossary({ data }) {
           if (!entriesOfLetter.length) return null
 
           return (
-            <Section id={letter} key={letter}>
+            <Section id="glossary-term" key={letter}>
               <SectionHeader id={letter} headline={letter} />
               {entriesOfLetter.map(x => (
                 <SectionContent
