@@ -5,6 +5,8 @@ import VisuallyHidden from "@reach/visually-hidden"
 import { format } from "date-fns"
 
 import api from "../utils/api"
+import { NEGATIVE } from "../utils/constants"
+import { colors } from "../utils/theme"
 import { selector } from "../utils/filter-utils"
 import useCampaignList from "../utils/use-campaign-list"
 import usePlatformList from "../utils/use-platform-list"
@@ -53,6 +55,7 @@ export default function Explore({ data, location }) {
     end: null,
   })
   const [searchResult, setSearchResult] = useState()
+  const [isDisplayingMap, toggleMap] = useState(false)
 
   useEffect(() => {
     // update based on passed state
@@ -62,7 +65,6 @@ export default function Explore({ data, location }) {
       setFilter([])
     }
   }, [selectedFilterId])
-
   const campaignList = useCampaignList(
     allCampaign.list,
     sortOrder.campaigns,
@@ -163,56 +165,66 @@ export default function Explore({ data, location }) {
           getFilterOptionsById={getFilterOptionsById}
           removeFilter={removeFilter}
           category={selectedCategory}
+          toggleMap={toggleMap}
+          isDisplayingMap={isDisplayingMap}
         />
-
-        <ExploreMap
-          allData={campaignList.all.map(c => ({
-            id: c.id,
-            bounds: c.bounds,
-          }))}
-          filteredData={campaignList.filtered.map(c => ({
-            id: c.id,
-            bounds: c.bounds,
-          }))}
-          setGeoFilter={setGeoFilter}
-          aoi={aoi}
-          setAoi={setAoi}
-        />
+        {isDisplayingMap && selectedCategory === "campaigns" && (
+          <ExploreMap
+            allData={campaignList.all.map(c => ({
+              id: c.id,
+              bounds: c.bounds,
+            }))}
+            filteredData={campaignList.filtered.map(c => ({
+              id: c.id,
+              bounds: c.bounds,
+            }))}
+            setGeoFilter={setGeoFilter}
+            aoi={aoi}
+            setAoi={setAoi}
+          />
+        )}
 
         {(selectedFilterIds.length > 0 ||
           aoi ||
           !!(dateRange.start && dateRange.end)) && (
-          <FilterChips clearFilters={clearFilters}>
-            {selectedFilterIds.map(f => (
-              <Chip
-                key={f}
-                id="filter"
-                label={getFilterLabelById ? getFilterLabelById(f) : f}
-                actionId={f}
-                removeAction={removeFilter}
-              />
-            ))}
+          <>
+            <FilterChips clearFilters={clearFilters}>
+              {selectedFilterIds.map(f => (
+                <Chip
+                  key={f}
+                  id="filter"
+                  label={getFilterLabelById ? getFilterLabelById(f) : f}
+                  actionId={f}
+                  removeAction={removeFilter}
+                />
+              ))}
 
-            {aoi && (
-              <Chip
-                id="filter"
-                label={"aoi: Spatial extend"}
-                actionId={"aoi"}
-                removeAction={removeAoi}
-              />
-            )}
+              {aoi && (
+                <Chip
+                  id="filter"
+                  label={"aoi: Spatial extend"}
+                  actionId={"aoi"}
+                  removeAction={removeAoi}
+                />
+              )}
 
-            {!!(dateRange.start && dateRange.end) && (
-              <Chip
-                id="filter"
-                label={`date:
+              {!!(dateRange.start && dateRange.end) && (
+                <Chip
+                  id="filter"
+                  label={`date:
                 ${format(dateRange.start, "MM/dd/yyyy")} to 
                 ${format(dateRange.end, "MM/dd/yyyy")}`}
-                actionId={"dateRange"}
-                removeAction={removeDateRange}
-              />
-            )}
-          </FilterChips>
+                  actionId={"dateRange"}
+                  removeAction={removeDateRange}
+                />
+              )}
+            </FilterChips>
+            <hr
+              css={`
+                background: ${colors[NEGATIVE].division};
+              `}
+            />
+          </>
         )}
 
         <ExploreMenu

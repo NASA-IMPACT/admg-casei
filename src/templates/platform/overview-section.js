@@ -9,7 +9,7 @@ import {
   SectionContent,
   ListLink,
 } from "../../components/layout"
-import { POSITIVE, NEGATIVE } from "../../utils/constants"
+import { POSITIVE } from "../../utils/constants"
 
 export default function OverviewSection({
   id,

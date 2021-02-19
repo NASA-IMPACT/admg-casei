@@ -276,7 +276,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
               }
             }
           >
-            Publication Overview
+            Overview Publication
           </label>
           <p>
             <a
@@ -565,7 +565,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
               }
             }
           >
-            Publication Overview
+            Overview Publication
           </label>
           <p>
             <a

@@ -6,7 +6,7 @@ import Card from "./card"
 import { CampaignIcon } from "../../icons"
 import { formatYearRange } from "../../utils/helpers"
 
-export default function CampaignCard({ id, height }) {
+export default function CampaignCard({ id }) {
   /*
    * We can not pass props directly into a static query because it is
    * compiled and doesn't support string interpolation in its template literal.
@@ -54,7 +54,6 @@ export default function CampaignCard({ id, height }) {
     <Card
       image={campaign.logo}
       placeholder={CampaignIcon}
-      height={height}
       tag={campaign.ongoing && "Ongoing"}
       footerList={[
         { count: campaign.deployments.length, title: "Deployment" },
@@ -83,9 +82,4 @@ export default function CampaignCard({ id, height }) {
 
 CampaignCard.propTypes = {
   id: PropTypes.string.isRequired,
-  height: PropTypes.string,
-}
-
-CampaignCard.defaultProps = {
-  height: "100%",
 }

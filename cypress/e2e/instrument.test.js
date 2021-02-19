@@ -8,6 +8,7 @@ describe("Instrument", () => {
   })
 
   it("explains the instrument", () => {
+    // has a hero
     cy.get("[data-cy=instrument-hero]").first().find("p").contains("Instrument")
 
     cy.get("[data-cy=instrument-hero]").first().find("h1").contains("CPL")
@@ -22,8 +23,30 @@ describe("Instrument", () => {
     cy.get("[data-cy=instrument-hero]").first().find("img").should("exist")
     cy.get("[data-cy=instrument-hero]").first().find("img").should("be.visible")
 
+    // displays an overview section
     cy.get("[data-cy=overview-section]").should("exist")
 
+    // displays inpage nav
+    cy.get("main").find("nav").should("exist")
+    cy.get("[data-cy=inpage-nav]").find("[data-cy=home-link]").should("exist")
+    cy.get("[data-cy=home-link]").click()
+
+    cy.url().should("eq", "http://localhost:8000/")
+    cy.go("back")
+
+    cy.get("main")
+      .find("nav")
+      .find("a")
+      .should($anchor => {
+        expect($anchor, "5 items").to.have.length(5)
+        expect($anchor.eq(0), "first item").to.contain("CASEI Logo")
+        expect($anchor.eq(1), "second item").to.exist
+        expect($anchor.eq(2), "third item").to.contain("Instrument Details")
+        expect($anchor.eq(3), "fourth item").to.contain("Instrument Operation")
+        expect($anchor.eq(4), "fifth item").to.contain("Data")
+      })
+
+    // describes overview content
     cy.get("[data-cy=overview-section]")
       .find("h2")
       .should("have.text", "Overview")

@@ -9,15 +9,35 @@ const Searchbar = React.forwardRef((_props, ref) => {
 
   return (
     <div
-      style={{
-        display: "flex",
-        height: `2.5rem`,
-        flexGrow: 1,
-        border: `1px solid ${colors[NEGATIVE].text}`,
-        padding: "0.25rem",
-      }}
+      css={`
+        flex-grow: 1;
+        display: flex;
+        height: 2.5rem;
+        align-content: stretch;
+      `}
     >
-      <div style={{ flexGrow: 1 }}>
+      <div
+        css={`
+          border: 1px solid ${colors[NEGATIVE].text};
+          padding: 0.25rem;
+          flex-grow: 1;
+        `}
+      >
+        <button
+          type="submit"
+          css={`
+            border: none;
+            flex-grow: 0;
+            background: transparent;
+            color: ${colors[NEGATIVE].text};
+            vertical-align: middle;
+          `}
+          data-cy="submit"
+        >
+          <span role="img" aria-label="Magnifying glass icon">
+            <SearchIcon color={colors[NEGATIVE].text} />
+          </span>
+        </button>
         <input
           autoComplete="off"
           data-cy="explore-input"
@@ -26,11 +46,12 @@ const Searchbar = React.forwardRef((_props, ref) => {
           placeholder="Search for campaigns, platforms or instruments"
           onChange={e => setInputsize(Math.min(e.target.value.length, 140))}
           size={inputsize}
-          style={{
-            border: "none",
-            background: `transparent`,
-            color: colors[NEGATIVE].text,
-          }}
+          css={`
+            border: none;
+            background: transparent;
+            color: ${colors[NEGATIVE].text};
+            font-style: italic;
+          `}
           type="text"
           ref={ref}
         />
@@ -38,13 +59,13 @@ const Searchbar = React.forwardRef((_props, ref) => {
           <button
             type="reset"
             onClick={() => setInputsize(50)}
-            style={{
-              border: "none",
-              flexGrow: 0,
-              background: `transparent`,
-              color: colors[NEGATIVE].text,
-              verticalAlign: `middle`,
-            }}
+            css={`
+              border: none;
+              flex-grow: 0;
+              background: transparent;
+              color: ${colors[NEGATIVE].text};
+              vertical-align: middle;
+            `}
             data-cy="reset"
           >
             <span role="img" aria-label="X icon">
@@ -53,21 +74,6 @@ const Searchbar = React.forwardRef((_props, ref) => {
           </button>
         )}
       </div>
-      <button
-        type="submit"
-        style={{
-          border: "none",
-          flexGrow: 0,
-          background: `transparent`,
-          color: colors[NEGATIVE].text,
-          verticalAlign: `middle`,
-        }}
-        data-cy="submit"
-      >
-        <span role="img" aria-label="Magnifying glass icon">
-          <SearchIcon color={colors[NEGATIVE].text} />
-        </span>
-      </button>
     </div>
   )
 })

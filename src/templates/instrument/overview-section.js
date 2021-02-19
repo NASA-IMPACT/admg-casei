@@ -11,7 +11,7 @@ import {
   ListLink,
 } from "../../components/layout"
 import ExternalLink from "../../components/external-link"
-import { POSITIVE, NEGATIVE } from "../../utils/constants"
+import { POSITIVE } from "../../utils/constants"
 import { isUrl } from "../../utils/helpers"
 import { colors } from "../../utils/theme"
 

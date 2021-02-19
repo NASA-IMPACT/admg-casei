@@ -37,7 +37,7 @@ const ProgramInfoSection = ({
     },
     { label: "Partner Organizations", info: partnerOrgListing },
     {
-      label: "Publication Overview",
+      label: "Overview Publication",
       info: publicationLink,
       link: publicationLink,
     },

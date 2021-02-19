@@ -26,6 +26,7 @@ const colors = {
     altText: palette["spanish gray"],
     linkText: palette["baby blue eyes"],
     highlight: palette["red ryb"],
+    division: palette["davys grey"],
   },
 }
 
@@ -34,7 +35,7 @@ const shape = {
 }
 
 const layout = {
-  pageMargin: "5rem",
+  pageMargin: "4rem",
   maxWidth: "1280px",
 }
 

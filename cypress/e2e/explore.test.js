@@ -17,21 +17,21 @@ describe("Explore", () => {
         })
         .then($li => {
           expect($li[0], "text content").to.contain("Campaigns")
-          expect($li[0].firstChild, "Campaigns link is blue").to.have.css(
-            "color",
-            "rgb(170, 201, 255)"
+          expect($li[0].firstChild, "Campaigns weight is bold").to.have.css(
+            "font-weight",
+            "700"
           )
           expect($li[1], "text content").to.contain("Platforms")
           expect(
             $li[1].firstChild,
-            "Platforms link is not blue"
-          ).not.to.have.css("color", "rgb(170, 201, 255)")
+            "Platforms weight is not bold"
+          ).not.to.have.css("font-weight", "700")
           expect($li[2], "text content").to.contain("Instruments")
 
           expect(
             $li[2].firstChild,
-            "Instruments link is not blue"
-          ).not.to.have.css("color", "rgb(170, 201, 255)")
+            "Instruments weight is not bold"
+          ).not.to.have.css("font-weight", "700")
         })
 
       cy.get("[data-cy=explore-tools]").should("exist")
@@ -105,18 +105,18 @@ describe("Explore", () => {
           expect($li[0], "text content").to.contain("Campaigns")
           expect(
             $li[0].firstChild,
-            "Campaigns link is not blue"
-          ).not.to.have.css("color", "rgb(170, 201, 255)")
+            "Campaigns weight is not bold"
+          ).not.to.have.css("font-weight", "700")
           expect($li[1], "text content").to.contain("Platforms")
-          expect($li[1].firstChild, "Platforms link is blue").to.have.css(
-            "color",
-            "rgb(170, 201, 255)"
+          expect($li[1].firstChild, "Platforms weight is bold").to.have.css(
+            "font-weight",
+            "700"
           )
           expect($li[2], "text content").to.contain("Instruments")
           expect(
             $li[2].firstChild,
-            "Instruments link is not blue"
-          ).not.to.have.css("color", "rgb(170, 201, 255)")
+            "Instruments weight is not bold"
+          ).not.to.have.css("font-weight", "700")
         })
 
       cy.get("[data-cy=explore-tools]").should("exist")
@@ -178,18 +178,18 @@ describe("Explore", () => {
           expect($li[0], "text content").to.contain("Campaigns")
           expect(
             $li[0].firstChild,
-            "Campaigns link is not blue"
-          ).not.to.have.css("color", "rgb(170, 201, 255)")
+            "Campaigns weight is not bold"
+          ).not.to.have.css("font-weight", "700")
           expect($li[1], "text content").to.contain("Platforms")
           expect(
             $li[1].firstChild,
-            "Platforms link is not blue"
-          ).not.to.have.css("color", "rgb(170, 201, 255)")
+            "Platforms weight is not bold"
+          ).not.to.have.css("font-weight", "700")
           expect($li[2], "text content").to.contain("Instruments")
 
-          expect($li[2].firstChild, "Instruments link is blue").to.have.css(
-            "color",
-            "rgb(170, 201, 255)"
+          expect($li[2].firstChild, "Instruments weight is bold").to.have.css(
+            "font-weight",
+            "700"
           )
         })
 

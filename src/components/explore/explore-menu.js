@@ -19,9 +19,18 @@ const TabButton = styled.button`
   cursor: pointer;
   height: 2.5rem;
   text-transform: uppercase;
-  font-weight: bold;
-  color: ${({ isSelected }) =>
-    isSelected ? colors[NEGATIVE].linkText : colors[NEGATIVE].text};
+  font-weight: ${({ isSelected }) => isSelected && "bold"};
+  color: ${colors[NEGATIVE].text};
+
+  ::after {
+    content: "";
+    display: block;
+    border-bottom: ${({ isSelected }) =>
+      isSelected && `1px solid ${colors[NEGATIVE].text}`};
+    width: 100%;
+    position: relative;
+    bottom: -0.25rem;
+  }
 `
 
 const ExploreMenu = ({

@@ -1,6 +1,6 @@
 import Typography from "typography"
 
-import { NEGATIVE } from "../../utils/constants"
+import { NEGATIVE } from "./constants"
 import { colors } from "./theme"
 
 const typography = new Typography({

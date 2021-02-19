@@ -6,7 +6,7 @@ import Carousel from "nuka-carousel"
 import { Section, SectionHeader, SectionContent } from "./layout"
 import CampaignCard from "./cards/campaign-card"
 import { controlButtonLRStyle } from "./carousel-styles"
-import { NEGATIVE } from "../../utils/constants"
+import { NEGATIVE } from "../utils/constants"
 import { colors } from "../utils/theme"
 
 const RelatedCampaignsSection = ({ id, campaigns }) => {

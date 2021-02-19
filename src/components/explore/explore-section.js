@@ -20,7 +20,7 @@ const ExploreSection = ({ isLoading, children }) => {
           style={{
             display: "grid",
             gridTemplateColumns: `repeat(auto-fill, minmax(15rem, 1fr))`,
-            gap: `1rem`,
+            gap: `1.75rem`,
           }}
         >
           {children}
