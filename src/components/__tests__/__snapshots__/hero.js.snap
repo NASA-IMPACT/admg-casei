@@ -21,17 +21,13 @@ exports[`Header renders correctly 1`] = `
 }
 
 .c3.c3 {
-  font-size: x-large;
-}
-
-.c4.c4 {
   -webkit-align-self: start;
   -ms-flex-item-align: start;
   align-self: start;
   grid-area: 2 / 1 / 2 / 1;
 }
 
-.c5.c5 {
+.c4.c4 {
   grid-area: 1 / 2 / 3 / 3;
 }
 
@@ -62,21 +58,19 @@ exports[`Header renders correctly 1`] = `
       <h1>
         2D-C/P
       </h1>
-      <p
-        className="c3"
-      >
+      <p>
         2D-C/P Hydrometeor Imaging Probe
       </p>
     </div>
     <div
-      className="c4"
+      className="c3"
     >
       <p>
         The 2DC probe records images of hydrometeors...
       </p>
     </div>
     <div
-      className="c5"
+      className="c4"
     >
       <div>
         children
@@ -107,17 +101,13 @@ exports[`Header renders with adjust ratios 1`] = `
 }
 
 .c3.c3 {
-  font-size: x-large;
-}
-
-.c4.c4 {
   -webkit-align-self: start;
   -ms-flex-item-align: start;
   align-self: start;
   grid-area: 2 / 1 / 2 / 1;
 }
 
-.c5.c5 {
+.c4.c4 {
   grid-area: 1 / 2 / 3 / 3;
 }
 
@@ -148,21 +138,19 @@ exports[`Header renders with adjust ratios 1`] = `
       <h1>
         2D-C/P
       </h1>
-      <p
-        className="c3"
-      >
+      <p>
         2D-C/P Hydrometeor Imaging Probe
       </p>
     </div>
     <div
-      className="c4"
+      className="c3"
     >
       <p>
         The 2DC probe records images of hydrometeors...
       </p>
     </div>
     <div
-      className="c5"
+      className="c4"
     >
       <div>
         children

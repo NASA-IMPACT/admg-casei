@@ -86,15 +86,7 @@ export default function Hero({
           </p>
           <h1>{title}</h1>
           {blockTitle && <h2>{blockTitle}</h2>}
-          {subTitle && (
-            <p
-              css={`
-                font-size: x-large;
-              `}
-            >
-              {subTitle}
-            </p>
-          )}
+          {subTitle && <p>{subTitle}</p>}
         </div>
 
         <div

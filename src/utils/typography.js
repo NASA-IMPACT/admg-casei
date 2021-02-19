@@ -60,10 +60,10 @@ const typography = new Typography({
       },
       p: {
         marginBottom: 0,
-        fontSize: rhythm(1),
+        fontSize: rhythm(0.9),
       },
       small: {
-        fontSize: rhythm(0.7),
+        fontSize: rhythm(0.65),
       },
       "label, button": {
         fontSize: rhythm(0.6),
