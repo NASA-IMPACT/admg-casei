@@ -2,14 +2,14 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
-import theme from "../utils/theme"
+import { colors } from "../utils/theme"
 
 const ListLink = props => (
-  <li style={{ margin: `0 1rem 0 0` }}>
+  <li style={{ margin: `0 1rem 0 0`, textTransform: `uppercase` }}>
     <Link
       to={props.to}
       activeStyle={{
-        color: theme.color.link,
+        borderBottom: `1px solid ${colors.darkTheme.text}`,
         fontWeight: `bold`,
       }}
       partiallyActive={true}

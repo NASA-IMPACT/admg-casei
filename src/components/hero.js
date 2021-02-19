@@ -2,13 +2,13 @@ import React from "react"
 import PropTypes from "prop-types"
 import Image from "gatsby-image"
 
-import theme from "../utils/theme"
+import { layout } from "../utils/theme"
 
 export const HeroStats = ({ statList }) => (
-  <dl style={{ display: `grid`, maxHeight: `6rem` }} data-cy="stats">
+  <dl style={{ display: `grid` }} data-cy="stats">
     {statList.map(stat => (
       <React.Fragment key={stat.label}>
-        <dt style={{ fontSize: `3rem` }}>
+        <dt style={{ fontSize: `4rem` }}>
           {!stat.number && stat.number !== 0 ? "--" : stat.number}
         </dt>
         <dd style={{ gridRowStart: 2, textTransform: `uppercase` }}>
@@ -53,10 +53,11 @@ export default function Hero({
       style={{
         ...imageStyle,
         display: `grid`,
-        gridTemplateColumns: `1fr minmax(auto,  ${theme.layout.maxWidth}) 1fr`,
+        gridTemplateColumns: `1fr minmax(auto,  ${layout.maxWidth}) 1fr`,
         width: `100vw`,
         minHeight: `35rem`,
         alignContent: `center`,
+        marginBottom: `6rem`,
       }}
       data-cy={`${id}-hero`}
     >
@@ -66,7 +67,7 @@ export default function Hero({
           display: `grid`,
           gridTemplateColumns: `${textToImageRatio[0]}fr ${textToImageRatio[1]}fr`,
           gridGap: `.5rem`,
-          padding: `0 ${theme.layout.pageMargin}`,
+          padding: `0 ${layout.pageMargin}`,
         }}
       >
         <div style={{ alignSelf: `end`, gridArea: `1 / 1 / 1 / 1` }}>

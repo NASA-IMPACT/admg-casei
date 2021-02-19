@@ -1,9 +1,10 @@
 import Typography from "typography"
-import theme from "./theme"
+
+import { colors } from "./theme"
 
 const typography = new Typography({
   baseFontSize: "16px",
-  baseLineHeight: 1.42,
+  baseLineHeight: 1.5,
   googleFonts: [
     {
       name: "Titillium Web",
@@ -12,8 +13,8 @@ const typography = new Typography({
   ],
   headerFontFamily: ["Titillium Web", "sans-serif"],
   bodyFontFamily: ["Titillium Web", "sans-serif"],
-  headerColor: theme.color.base,
-  bodyColor: theme.color.base,
+  headerColor: colors.darkTheme.text,
+  bodyColor: colors.darkTheme.text,
   headerWeight: "600",
   bodyWeight: 400,
   boldWeight: 700,
@@ -22,7 +23,7 @@ const typography = new Typography({
       a: {
         textDecoration: "none",
         cursor: "pointer",
-        color: theme.color.base,
+        color: colors.darkTheme.text,
         transition: "opacity 0.24s ease 0s",
       },
       "a:active": {
@@ -32,36 +33,38 @@ const typography = new Typography({
         opacity: 0.64,
       },
       "a:visited": {
-        color: theme.color.base,
+        color: colors.darkTheme.text,
       },
       h1: {
-        fontSize: rhythm(2),
-        marginTop: rhythm(0.5),
-        marginBottom: rhythm(0.5),
+        fontSize: rhythm(3),
+        marginTop: rhythm(1),
+        marginBottom: rhythm(1),
       },
       h2: {
-        fontSize: rhythm(1.75),
+        fontSize: rhythm(2),
         marginTop: rhythm(0.5),
-        marginBottom: rhythm(1.5),
+        marginBottom: rhythm(1),
       },
-      "h3,h4,h5,h6": {
+      h3: {
         fontSize: rhythm(1.5),
         marginTop: rhythm(0.5),
-        marginBottom: rhythm(0.5),
+        marginBottom: rhythm(1),
       },
-      // children ol, ul
-      "li>ol,li>ul": {
-        marginLeft: "20px",
+      "h4,h5,h6": {
+        fontSize: rhythm(1.5),
+        marginTop: rhythm(0.5),
+        marginBottom: rhythm(1),
+      },
+      li: {
         marginBottom: 0,
       },
       p: {
         marginBottom: 0,
       },
-      label: {
+      "label, button": {
         fontSize: rhythm(0.6),
-        marginTop: rhythm(0.5),
-        textTransform: `uppercase`,
         fontWeight: 600,
+        textTransform: `uppercase`,
       },
     }
   },

@@ -1,6 +1,3 @@
-import { useState, useEffect } from "react"
-import debounce from "lodash.debounce"
-
 const urlRegex = /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{2,256}\.[a-z]{2,4}/s
 const mailtoRegex = /^mailto:(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i
 
@@ -26,7 +23,7 @@ export function PropTypeIsUrl(props, propName, componentName) {
   if (!urlRegex.test(props[propName]) && !mailtoRegex.test(props[propName])) {
     return new Error(
       "Invalid url `" +
-        propName +
+        props[propName] +
         "` supplied to" +
         " `" +
         componentName +
@@ -47,7 +44,11 @@ export function formatYearRange(start, end) {
   const startyear = startdate.getFullYear()
   const endyear = enddate.getFullYear()
 
-  return startyear === endyear ? `${startyear}` : `${startyear}—${endyear}`
+  return startyear === endyear
+    ? `${startyear}`
+    : !end
+    ? `${startyear} — Ongoing`
+    : `${startyear}—${endyear}`
 }
 
 /**
@@ -64,38 +65,4 @@ export function formatDateRange(start, end) {
   }
 
   return `${formatDateString(startdate)} — ${formatDateString(enddate)}`
-}
-
-/**
- * A custom hook the calculate the width and height of a reference element.
- * @param {element} containerRef - the reference element, for example created with useRef()
- * @return {object} An object containing width and height properties, for example `{ width: 800, height: 600 }`.
- */
-export const useContainerDimensions = containerRef => {
-  const getDimensions = () => ({
-    width: containerRef.current.offsetWidth,
-    height: containerRef.current.offsetHeight,
-  })
-
-  const [dimensions, setDimensions] = useState({ width: null, height: null })
-
-  useEffect(() => {
-    const handleResize = () => {
-      setDimensions(getDimensions())
-    }
-
-    if (containerRef.current) {
-      setDimensions(getDimensions())
-    }
-
-    const debouncedResize = debounce(handleResize, 250)
-
-    window.addEventListener("resize", debouncedResize)
-
-    return () => {
-      window.removeEventListener("resize", debouncedResize)
-    }
-  }, [containerRef])
-
-  return dimensions
 }

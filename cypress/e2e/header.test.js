@@ -3,12 +3,11 @@
 import { site } from "../../test/__fixtures__"
 
 describe("Header", () => {
-  beforeEach(() => {
+  before(() => {
     cy.visit("/")
   })
   it("renders correctly", () => {
     cy.get("header").contains(site.siteMetadata.shortname)
-    cy.get("header").contains(site.siteMetadata.title)
     cy.get("nav")
       .find("li")
       .should($li => {

@@ -19,19 +19,27 @@ import {
   subYears,
 } from "date-fns"
 
-import theme from "../../utils/theme"
+import { colors } from "../../utils/theme"
 
 const FilterButton = styled(ListboxButton)`
   flex-grow: 0;
-  height: 2.5rem;
   width: 100%;
   -webkit-appearance: none;
   background: transparent;
-  border: 1px solid ${theme.color.base};
-  color: ${theme.color.base};
+  border: 1px solid ${colors.darkTheme.text};
+  color: ${colors.darkTheme.text};
   padding: 0.5rem;
   cursor: pointer;
   text-transform: uppercase;
+  @media screen and (max-width: 1400px) {
+    height: 2.5rem;
+  }
+  @media screen and (max-width: 1280px) {
+    height: 4.5rem;
+  }
+  @media screen and (max-width: 800px) {
+    height: 2.5rem;
+  }
 `
 
 const TimeRangeButton = styled.button`
@@ -40,7 +48,7 @@ const TimeRangeButton = styled.button`
   -webkit-appearance: none;
   background: transparent;
   border: 0;
-  color: ${theme.color.base};
+  color: ${colors.darkTheme.text};
   padding: 0.5rem;
   cursor: pointer;
   text-transform: capitalize;
@@ -52,8 +60,8 @@ const ApplyButton = styled(ListboxOption)`
   width: 100%;
   -webkit-appearance: none;
   background: transparent;
-  border: 1px solid ${theme.color.base};
-  color: ${theme.color.base};
+  border: 1px solid ${colors.darkTheme.text};
+  color: ${colors.darkTheme.text};
   padding: 0.5rem;
   cursor: pointer;
   text-align: center;
@@ -61,7 +69,7 @@ const ApplyButton = styled(ListboxOption)`
   text-transform: uppercase;
 `
 
-const DateMenu = ({ id, style, label, dateRange, setDateRange }) => {
+const DateMenu = ({ id, label, dateRange, setDateRange }) => {
   const [startDate, setStartDate] = useState(dateRange.start || new Date())
   const [endDate, setEndDate] = useState(dateRange.end || new Date())
 
@@ -105,7 +113,11 @@ const DateMenu = ({ id, style, label, dateRange, setDateRange }) => {
   }
 
   return (
-    <div style={style}>
+    <div
+      css={`
+        flex-grow: 1;
+      `}
+    >
       <VisuallyHidden id={`${id}-filter-select`}>
         select time range to filter by
       </VisuallyHidden>
@@ -117,52 +129,61 @@ const DateMenu = ({ id, style, label, dateRange, setDateRange }) => {
       >
         <FilterButton arrow="▼">{label}</FilterButton>
         <ListboxPopover
-          style={{
-            background: theme.color.primary,
-            minWidth: `fit-content`,
-          }}
+          css={`
+            background: ${colors.darkTheme.altBackground};
+            min-width: fit-content;
+          `}
         >
-          <ListboxList
-            style={{
-              display: `flex`,
-              margin: `1rem`,
-              alignItems: `center`,
-              justifyContent: `space-between`,
-            }}
-          >
-            From:
-            <DatePicker
-              showYearDropdown
-              onChange={date => setStartDate(date)}
-              selected={startDate}
-            />
-            To:
-            <DatePicker
-              showYearDropdown
-              onChange={date => setEndDate(date)}
-              selected={endDate}
-              minDate={startDate}
-            />
-          </ListboxList>
-          <ListboxList
-            style={{
-              display: `flex`,
-              gap: `1rem`,
-              margin: `1rem`,
-              alignItems: `center`,
-            }}
-          >
-            <TimeRangeButton onClick={() => onButtonClick("month")}>
-              1 Month ago
-            </TimeRangeButton>
-            <TimeRangeButton onClick={() => onButtonClick("halfYear")}>
-              6 Months ago
-            </TimeRangeButton>
-            <TimeRangeButton onClick={() => onButtonClick("tenYears")}>
-              10 years ago
-            </TimeRangeButton>
+          <ListboxList>
+            <div
+              css={`
+                display: flex;
+                margin: 1rem;
+                align-items: center;
+                justify-content: space-between;
+              `}
+            >
+              From:
+              <DatePicker
+                showYearDropdown
+                onChange={date => setStartDate(date)}
+                selected={startDate}
+              />
+              To:
+              <DatePicker
+                showYearDropdown
+                onChange={date => setEndDate(date)}
+                selected={endDate}
+                minDate={startDate}
+              />
+            </div>
+            <div
+              css={`
+                display: flex;
+                gap: 1rem;
+                margin: 1rem;
+                align-items: center;
+              `}
+            >
+              <TimeRangeButton onClick={() => onButtonClick("month")}>
+                1 Month ago
+              </TimeRangeButton>
+              <TimeRangeButton onClick={() => onButtonClick("halfYear")}>
+                6 Months ago
+              </TimeRangeButton>
+              <TimeRangeButton onClick={() => onButtonClick("tenYears")}>
+                10 years ago
+              </TimeRangeButton>
 
-            <ApplyButton value="select">Apply</ApplyButton>
+              {/**
+               * This button is the only actual listbox option
+               * Its only job is to submit the selected date
+               */}
+              <ApplyButton value="select" tabIndex={0}>
+                {/* tabIndex was required to allow keyboard focus. TODO: submit on enter ?!  */}
+                Apply
+              </ApplyButton>
+            </div>
           </ListboxList>
         </ListboxPopover>
       </ListboxInput>
@@ -172,7 +193,6 @@ const DateMenu = ({ id, style, label, dateRange, setDateRange }) => {
 
 DateMenu.propTypes = {
   id: PropTypes.string.isRequired,
-  style: PropTypes.object,
   label: PropTypes.string.isRequired,
   dateRange: PropTypes.shape({
     start: PropTypes.instanceOf(Date),

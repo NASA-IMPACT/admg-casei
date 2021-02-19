@@ -8,14 +8,14 @@ import { controlButtonLRStyle, ControlTextButton } from "../carousel-styles"
 export const RegionCarousel = ({ regions }) => {
   const controlTextRef = useRef(null)
 
-  const [slideIndex, setSlideIndex] = useState(0)
+  const [slideIndex, setSlideIndex] = useState(1)
 
   return (
     <>
       <div
         style={{
           display: `flex`,
-          overflow: `scroll`,
+          overflow: `auto`,
         }}
         data-cy="region-text-control"
       >

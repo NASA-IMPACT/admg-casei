@@ -1,9 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import { CloseIcon } from "./icons"
 import { IconButton } from "./button"
-import theme from "../utils/theme"
+import { CloseIcon } from "../icons"
+import { colors, shape } from "../utils/theme"
 
 const Chip = ({
   id,
@@ -18,10 +18,12 @@ const Chip = ({
     style={{
       display: isInline ? `inline-flex` : `flex`,
       alignItems: `center`,
-      backgroundColor: isDark ? theme.color.primary : theme.color.secondary,
-      color: theme.color.base,
-      borderRadius: theme.shape.rounded,
-      padding: `0 0.5rem`,
+      backgroundColor: isDark
+        ? colors.darkTheme.altBackground
+        : colors.darkTheme.background,
+      color: colors.darkTheme.text,
+      borderRadius: shape.rounded,
+      padding: `0.25rem 0.5rem`,
       margin: `0.25rem 0.5rem`,
     }}
     data-cy={`${id}-chip`}
@@ -31,7 +33,7 @@ const Chip = ({
       <IconButton
         id="remove-filter"
         action={() => removeAction(actionId)}
-        icon={<CloseIcon color={theme.color.base} />}
+        icon={<CloseIcon color={colors.darkTheme.text} />}
       />
     )}
   </div>
@@ -40,7 +42,7 @@ const Chip = ({
 Chip.propTypes = {
   id: PropTypes.string.isRequired,
   actionId: PropTypes.string,
-  label: PropTypes.string.isRequired,
+  label: PropTypes.string,
   removeAction: PropTypes.func,
   isDark: PropTypes.bool,
   isInline: PropTypes.bool,

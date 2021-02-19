@@ -8,6 +8,7 @@ exports[`Header renders correctly 1`] = `
       "alignContent": "center",
       "display": "grid",
       "gridTemplateColumns": "1fr minmax(auto,  1280px) 1fr",
+      "marginBottom": "6rem",
       "minHeight": "35rem",
       "width": "100vw",
     }
@@ -20,7 +21,7 @@ exports[`Header renders correctly 1`] = `
         "gridArea": "1 / 2 / 1 / 2",
         "gridGap": ".5rem",
         "gridTemplateColumns": "3fr 5fr",
-        "padding": "0 5rem",
+        "padding": "0 4rem",
       }
     }
   >
@@ -89,6 +90,7 @@ exports[`Header renders with adjust ratios 1`] = `
       "alignContent": "center",
       "display": "grid",
       "gridTemplateColumns": "1fr minmax(auto,  1280px) 1fr",
+      "marginBottom": "6rem",
       "minHeight": "35rem",
       "width": "100vw",
     }
@@ -101,7 +103,7 @@ exports[`Header renders with adjust ratios 1`] = `
         "gridArea": "1 / 2 / 1 / 2",
         "gridGap": ".5rem",
         "gridTemplateColumns": "5fr 3fr",
-        "padding": "0 5rem",
+        "padding": "0 4rem",
       }
     }
   >

@@ -18,10 +18,10 @@ exports[`Chip renders with action 1`] = `
       "alignItems": "center",
       "backgroundColor": "#303641",
       "borderRadius": "0.2rem",
-      "color": "hsla(0,0%,100%,0.9)",
+      "color": "#e9eaec",
       "display": "flex",
       "margin": "0.25rem 0.5rem",
-      "padding": "0 0.5rem",
+      "padding": "0.25rem 0.5rem",
     }
   }
 >
@@ -38,7 +38,7 @@ exports[`Chip renders with action 1`] = `
       Object {
         "background": "none",
         "border": "none",
-        "color": "hsla(0,0%,100%,0.9)",
+        "color": "#e9eaec",
         "cursor": "pointer",
         "flexGrow": 0,
         "marginLeft": "0.5rem",
@@ -58,7 +58,7 @@ exports[`Chip renders with action 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       >
         <polygon
-          fill="hsla(0,0%,100%,0.9)"
+          fill="#e9eaec"
           points="13.707,3.707 12.293,2.293 8,6.586 3.707,2.293 2.293,3.707 6.586,8 2.293,12.293 3.707,13.707 8,9.414  12.293,13.707 13.707,12.293 9.414,8"
         />
       </svg>
@@ -75,10 +75,10 @@ exports[`Chip renders without action 1`] = `
       "alignItems": "center",
       "backgroundColor": "#303641",
       "borderRadius": "0.2rem",
-      "color": "hsla(0,0%,100%,0.9)",
+      "color": "#e9eaec",
       "display": "flex",
       "margin": "0.25rem 0.5rem",
-      "padding": "0 0.5rem",
+      "padding": "0.25rem 0.5rem",
     }
   }
 >

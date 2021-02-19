@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
-import theme from "../../utils/theme"
+import { colors } from "../../utils/theme"
 
 export const InstrumentsGrid = ({ measurementTypes }) => {
   const other = measurementTypes.find(
@@ -18,25 +18,30 @@ export const InstrumentsGrid = ({ measurementTypes }) => {
       style={{
         display: `flex`,
         flexWrap: `wrap`,
-        border: `1px solid ${theme.color.base}`,
+        border: `1px solid ${colors.darkTheme.text}`,
       }}
     >
       {measurementTypes.map(measurementType => (
         <Link
           to="/explore"
-          state={{ selectedFilterId: measurementType.id }} // Pass state as props to the linked page
+          state={{
+            selectedFilterId: measurementType.id,
+            defaultExploreCategory: "instruments",
+          }}
           style={{ flexGrow: 1 }}
           data-cy="instrument-type"
           key={measurementType.id}
         >
           <div
             style={{
-              border: `1px solid ${theme.color.base}`,
+              border: `1px solid ${colors.darkTheme.text}`,
               padding: `1rem`,
               textAlign: `center`,
             }}
           >
-            {measurementType.longname || measurementType.shortname}
+            <label>
+              {measurementType.longname || measurementType.shortname}
+            </label>
           </div>
         </Link>
       ))}

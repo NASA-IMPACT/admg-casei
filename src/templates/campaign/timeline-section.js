@@ -47,7 +47,11 @@ const TimelineSection = ({ id, deployments }) => {
                 key={deployment.id}
                 type="deployment"
                 daterange={formatDateRange(deployment.start, deployment.end)}
-                name={`${deployment.longname} (${deployment.shortname})`}
+                name={
+                  deployment.longname
+                    ? `${deployment.longname} (${deployment.shortname})`
+                    : deployment.shortname
+                }
                 details={`${deployment.collectionPeriods.length} CDCPs`}
                 region={deployment.regions.map(x => x.longname).join(", ")}
               />

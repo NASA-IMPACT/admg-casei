@@ -3,8 +3,7 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 import Image from "gatsby-image"
 
-import theme from "../../utils/theme"
-import PlaceholderLogo from "../../images/placeholder-logo.svg"
+import { colors } from "../../utils/theme"
 
 const CardHeader = styled.div`
   display: flex;
@@ -17,16 +16,24 @@ const CardHeader = styled.div`
   }
 `
 
-const Card = ({ children, image, height, tag, footerList, category }) => (
+const Card = ({
+  children,
+  image,
+  placeholder: Placeholder,
+  tag,
+  footerList,
+  category,
+}) => (
   <div
     style={{
-      backgroundColor: theme.color.secondary,
+      backgroundColor: colors.darkTheme.background,
       boxShadow: `rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px`,
       padding: `1rem`,
       display: `flex`,
       flexDirection: `column`,
       justifyContent: `space-between`,
-      height: height,
+      minHeight: `24rem`,
+      height: `100%`,
     }}
     data-cy={`${category}-card`}
   >
@@ -39,7 +46,7 @@ const Card = ({ children, image, height, tag, footerList, category }) => (
             style={{ margin: `0` }}
           />
         ) : (
-          <img src={PlaceholderLogo} alt="placeholder logo" height="85" />
+          <Placeholder size="small" />
         )}
         {tag && (
           <div
@@ -85,6 +92,7 @@ Card.propTypes = {
       childImageSharp: PropTypes.object,
     }),
   }),
+  placeholder: PropTypes.func.isRequired,
   height: PropTypes.string,
   tag: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   footerList: PropTypes.arrayOf(

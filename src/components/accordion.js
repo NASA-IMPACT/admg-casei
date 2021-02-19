@@ -11,9 +11,9 @@ import {
   AccordionPanel,
 } from "@reach/accordion"
 
-import theme from "../utils/theme"
-import Label from "../components/label"
-import { ChevronIcon, ArrowIcon } from "../components/icons"
+import Label from "./label"
+import { ChevronIcon, ArrowIcon } from "../icons"
+import { colors } from "../utils/theme"
 
 const RotatingContainer = styled.div`
   transition: transform 240ms ease-in-out;
@@ -21,24 +21,36 @@ const RotatingContainer = styled.div`
     isExpanded ? "rotate(180deg)" : "rotate(0deg)"};
 `
 
-export default function Accordion({ folds }) {
-  // TODO: add logic to allow for all drawers to be closed. A controlled accordion by default does not work with 'collapsible' prop
-  const [index, setIndex] = useState(0)
+export default function Accordion({ folds, id }) {
+  const [indices, setIndices] = useState([])
+  function toggleAccordionItem(toggledIndex) {
+    if (indices.includes(toggledIndex)) {
+      setIndices(indices.filter(currentIndex => currentIndex !== toggledIndex))
+    } else {
+      setIndices([...indices, toggledIndex].sort())
+    }
+  }
   return (
     <ReachAccordion
-      style={{ maxHeight: `30rem`, overflowY: `scroll` }}
-      index={index}
-      onChange={value => setIndex(value)}
+      style={{
+        maxHeight: `30rem`,
+        overflowY: `auto`,
+      }}
+      index={indices}
+      onChange={toggleAccordionItem}
+      data-cy={`${id}-accordion`}
     >
-      {folds.map((instrument, itemIndex) => (
-        <AccordionItem key={instrument.id}>
+      {folds.map((fold, index) => (
+        <AccordionItem key={fold.id}>
           <span>
             <AccordionButton
               style={{
                 borderWidth: `0 0 1px 0`,
-                borderColor: `white`,
+                borderColor: colors.darkTheme.text,
                 background: `none`,
-                color: `white`,
+                color: indices.includes(index)
+                  ? colors.darkTheme.linkText
+                  : colors.darkTheme.text,
                 width: `100%`,
                 textAlign: `left`,
                 cursor: `pointer`,
@@ -48,12 +60,12 @@ export default function Accordion({ folds }) {
                 justifyContent: `space-between`,
                 display: `flex`,
               }}
+              data-cy="accordion-button"
             >
               <div>
-                {instrument.longname} ({instrument.shortname}){itemIndex}
-                {index}
+                {fold.longname} ({fold.shortname})
               </div>
-              <RotatingContainer isExpanded={itemIndex === index}>
+              <RotatingContainer isExpanded={indices.includes(index)}>
                 <ChevronIcon role="img" aria-label="chevron-icon" />
               </RotatingContainer>
             </AccordionButton>
@@ -64,42 +76,53 @@ export default function Accordion({ folds }) {
                 display: `grid`,
                 gridTemplateColumns: `1fr 1f 1fr 1fr`,
               }}
+              data-cy={`${id}-accordion-content`}
             >
-              {instrument.image && (
+              {fold.image && (
                 <Image
                   style={{ gridColumn: `1 / 2` }}
-                  alt={instrument.image.description}
-                  fixed={instrument.image.gatsbyImg.childImageSharp.fixed}
+                  alt={fold.image.description}
+                  fixed={fold.image.gatsbyImg.childImageSharp.fixed}
+                  data-cy={`${id}-accordion-image`}
                 />
               )}
               <div
                 style={
-                  instrument.image
+                  fold.image
                     ? { gridColumn: `2 / 4`, paddingLeft: `.5rem` }
                     : { gridColumn: `1 / 4` }
                 }
+                data-cy={`${id}-accordion-image-description`}
               >
-                {instrument.description}
+                {fold.description}
               </div>
             </div>
-
-            <div style={{ margin: `3rem 0` }}>
-              <Label>Measurements/Variables</Label>
-              {instrument.gcmdPhenomenas
-                .map(x =>
-                  Object.values(x)
-                    .filter(x => x)
-                    .join(" > ")
-                )
-                .join(" > ") || "N/A"}
-            </div>
+            {fold.gcmdPhenomenas && (
+              <div style={{ margin: `3rem 0` }}>
+                <Label id="accordion-measurements">
+                  Measurements/Variables
+                </Label>
+                {fold.gcmdPhenomenas
+                  .map(x =>
+                    Object.values(x)
+                      .filter(x => x)
+                      .join(" > ")
+                  )
+                  .join(" > ") || "N/A"}
+              </div>
+            )}
             <Link
-              to={`/instrument/${instrument.id}`}
-              style={{ color: theme.color.link }}
+              to={`/instrument/${fold.id}`}
+              style={{ color: colors.darkTheme.linkText }}
+              data-cy="accordion-link"
             >
-              <Label display="flex" color={theme.color.link}>
+              <Label
+                id="accordion-link"
+                display="flex"
+                color={colors.darkTheme.linkText}
+              >
                 Learn More
-                <ArrowIcon color={theme.color.link} />
+                <ArrowIcon color={colors.darkTheme.linkText} />
               </Label>
             </Link>
           </AccordionPanel>
@@ -113,18 +136,19 @@ Accordion.propTypes = {
   folds: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
-      shortname: PropTypes.string.isRequired,
-      longname: PropTypes.string.isRequired,
-      description: PropTypes.string.isRequired,
+      shortname: PropTypes.string,
+      longname: PropTypes.string,
+      description: PropTypes.string,
       gcmdPhenomenas: PropTypes.arrayOf(
         PropTypes.shape({
-          term: PropTypes.string.isRequired,
-          topic: PropTypes.string.isRequired,
-          variable_1: PropTypes.string.isRequired,
-          variable_2: PropTypes.string.isRequired,
-          variable_3: PropTypes.string.isRequired,
+          term: PropTypes.string,
+          topic: PropTypes.string,
+          variable_1: PropTypes.string,
+          variable_2: PropTypes.string,
+          variable_3: PropTypes.string,
         })
       ),
     })
   ).isRequired,
+  id: PropTypes.string,
 }

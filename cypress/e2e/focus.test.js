@@ -8,72 +8,47 @@ describe("Focus Area", () => {
       .contains("Global Water & Energy Cycle")
       .click()
   })
+  it("explains the focus area Global Water & Energy Cycle", () => {
+    cy.get("[data-cy=focus-hero]").first().find("p").contains("Focus Area")
 
-  describe("the header", () => {
-    it("displays the category label", () => {
-      cy.get("[data-cy=focus-hero]").first().find("p").contains("Focus Area")
-    })
+    cy.get("[data-cy=focus-hero]")
+      .first()
+      .find("h1")
+      .contains("Global Water & Energy Cycle")
 
-    it("displays the short name as title", () => {
-      cy.get("[data-cy=focus-hero]")
-        .first()
-        .find("h1")
-        .contains("Global Water & Energy Cycle")
-    })
+    cy.get("[data-cy=focus-hero]").first().find("svg").should("exist")
+    cy.get("[data-cy=focus-hero]").first().find("svg").should("be.visible")
 
-    it("displays focus area icon as image", () => {
-      cy.get("[data-cy=focus-hero]").first().find("svg").should("exist")
-      cy.get("[data-cy=focus-hero]").first().find("svg").should("be.visible")
-    })
-  })
+    cy.get("[data-cy=overview-section]").should("exist")
 
-  describe("the overview section", () => {
-    it("exists", () => {
-      cy.get("[data-cy=overview-section]").should("exist")
-    })
+    cy.get("[data-cy=overview-section]")
+      .find("h2")
+      .should("have.text", "Overview")
 
-    it("has a heading", () => {
-      cy.get("[data-cy=overview-section]")
-        .find("h2")
-        .should("have.text", "Overview")
-    })
+    cy.get("[data-cy=description]").should("exist")
 
-    it("displays a description", () => {
-      cy.get("[data-cy=description]").should("exist")
-    })
+    cy.get("[data-cy=focus-link]")
+      .should("exist")
+      .and("have.text", "NASA SMD Homepage")
 
-    it("displays the URL", () => {
-      cy.get("[data-cy=focus-link]")
-        .should("exist")
-        .and("have.text", "NASA SMD Homepage")
-    })
-  })
+    cy.get("[data-cy=focus-areas-section]")
+      .find("[data-cy=focus-area]")
+      .should("have.length", 6)
 
-  describe("the other focus areas", () => {
-    it("renders a focus area gallery with 6 items", () => {
-      cy.get("[data-cy=focus-areas-section]")
-        .find("[data-cy=focus-area]")
-        .should("have.length", 6)
-    })
+    cy.get("[data-cy=focus-areas-section]")
+      .find("[data-cy=focus-area]")
+      .each($el => {
+        cy.get($el).find("svg").should("exist")
+        cy.get($el).find("label").should("have.text", $el[0].textContent)
+      })
 
-    it("renders icon and text per focus area", () => {
-      cy.get("[data-cy=focus-areas-section]")
-        .find("[data-cy=focus-area]")
-        .each($el => {
-          cy.get($el).find("svg").should("exist")
-          cy.get($el).find("label").should("have.text", $el[0].textContent)
-        })
-    })
+    cy.get("[data-cy=focus-areas-section]")
+      .find("[data-cy=focus-area]")
+      .contains("Weather")
+      .click()
 
-    it("clicking an item navigates to the focus area page", () => {
-      cy.get("[data-cy=focus-areas-section]")
-        .find("[data-cy=focus-area]")
-        .contains("Weather")
-        .click()
+    cy.url().should("include", "/focus/")
 
-      cy.url().should("include", "/focus/")
-
-      cy.get("h1").should("contain", "Weather")
-    })
+    cy.get("h1").should("contain", "Weather")
   })
 })

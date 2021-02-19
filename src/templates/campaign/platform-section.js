@@ -1,95 +1,38 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { graphql, Link } from "gatsby"
-import Carousel from "nuka-carousel"
+import { graphql } from "gatsby"
 
 import { Section, SectionHeader, SectionContent } from "../../components/layout"
-import ImageCaption from "../../components/image-caption"
-import Image from "gatsby-image"
+import CarouselAccordionCombo from "../../components/carousel-accordion-combo"
+import { PlatformIcon } from "../../icons"
 
-import Chip from "../../components/chip"
-import { controlButtonLRStyle } from "../../components/carousel-styles"
-
-const PlatformSection = ({ id, platforms, instruments }) => (
-  <Section id={id}>
-    <SectionHeader headline="Platforms & Instruments" id={id} />
-    <SectionContent>
-      <div data-cy="platform-carousel">
-        {platforms.length > 0 ? (
-          <Carousel
-            defaultControlsConfig={{
-              nextButtonText: `⦊`,
-              nextButtonStyle: controlButtonLRStyle,
-              prevButtonText: `⦉`,
-              prevButtonStyle: controlButtonLRStyle,
-              pagingDotsStyle: {
-                fill: "none",
-              },
-            }}
-            slidesToShow={3}
-          >
-            {platforms.map(platform => (
-              <div key={platform.id} data-cy="platform">
-                <Link to={`/platform/${platform.id}`}>
-                  <div
-                    style={{
-                      position: `relative`,
-                      marginRight: `1rem`,
-                    }}
-                  >
-                    {platform.image && platform.image.gatsbyImg ? (
-                      <Image
-                        alt={platform.image.description}
-                        fluid={platform.image.gatsbyImg.childImageSharp.fluid}
-                        data-cy="platform-image"
-                      />
-                    ) : (
-                      <div
-                        style={{
-                          height: 150, // TO DO: make box fill space
-                          backgroundColor: `#303641`,
-                          display: `flex`,
-                          alignItems: `center`,
-                          justifyContent: `center`,
-                        }}
-                        data-cy="platform-image"
-                      >
-                        No Image available.
-                      </div>
-                    )}
-                    <ImageCaption id="platform-image">
-                      {platform.longname || platform.shortname}
-                    </ImageCaption>
-                  </div>
-                </Link>
-                <div style={{ display: `flex`, flexWrap: `wrap` }}>
-                  {platform.instruments
-                    .filter(instrument =>
-                      instruments.map(x => x.id).includes(instrument.id)
-                    )
-                    .map(instrument => (
-                      <Link
-                        to={`/instrument/${instrument.id}`}
-                        key={instrument.id}
-                      >
-                        <Chip
-                          id="instrument"
-                          label={instrument.shortname}
-                          hoverText={instrument.longname}
-                        />
-                      </Link>
-                    ))}
-                </div>
-              </div>
-            ))}
-          </Carousel>
-        ) : (
-          <p>No available platforms or instruments</p>
+const PlatformSection = ({ id, platforms, instruments }) => {
+  return (
+    <Section id={id}>
+      <SectionHeader headline="Platforms & Instruments" id={id} />
+      <SectionContent>
+        {platforms && instruments && (
+          <CarouselAccordionCombo
+            id="platform"
+            isImage
+            placeholderImage={PlatformIcon}
+            emptyMessage="No available related platforms or instruments"
+            carouselList={platforms}
+            folds={platforms.reduce(
+              (acc, platform) =>
+                Object.assign(acc, {
+                  [platform.id]: platform.instruments.filter(instrument =>
+                    instruments.map(x => x.id).includes(instrument.id)
+                  ),
+                }),
+              {}
+            )}
+          />
         )}
-      </div>
-    </SectionContent>
-  </Section>
-)
+      </SectionContent>
+    </Section>
+  )
+}
 
 export const platformSectionFields = graphql`
   fragment platformSectionFields on campaign {
@@ -114,6 +57,24 @@ export const platformSectionFields = graphql`
         id
         shortname: short_name
         longname: long_name
+        description
+        image {
+          description
+          gatsbyImg {
+            childImageSharp {
+              fixed(height: 100) {
+                ...GatsbyImageSharpFixed
+              }
+            }
+          }
+        }
+        gcmdPhenomenas: gcmd_phenomenas {
+          term
+          topic
+          variable_1
+          variable_2
+          variable_3
+        }
       }
     }
     instruments {

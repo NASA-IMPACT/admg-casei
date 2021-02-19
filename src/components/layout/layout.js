@@ -39,11 +39,8 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <Container id="top">
-      <Header
-        siteTitle={data.site.siteMetadata.title}
-        shortname={data.site.siteMetadata.shortname}
-      >
+    <Container id="top" data-cy="page">
+      <Header shortname={data.site.siteMetadata.shortname}>
         <Nav />
       </Header>
       <main style={{ flexGrow: 1 }}>{children}</main>

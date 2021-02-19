@@ -3,6 +3,7 @@
     "title": "Catalog of Archived Suborbital Earth Science Investigations",
     "shortname": "NASA | CASEI",
     "description": "Explore NASA’s catalog of airborne and field campaign observations.",
-    "author": "@developmentseed"
+    "author": "@developmentseed",
+    "siteDefinition": "NASA | CASEI is a comprehensive inventory containing information about all airborne and field campaigns as well as aircrafts, instruments, and data products."
   }
 }

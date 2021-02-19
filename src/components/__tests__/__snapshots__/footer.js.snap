@@ -1,0 +1,350 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer renders correctly 1`] = `
+.c6.c6 {
+  list-style: none;
+  margin: 0;
+}
+
+.c5.c5 {
+  margin: 0 0 1.5rem 0;
+  font-weight: bold;
+  line-height: 3rem;
+}
+
+.c0.c0 {
+  margin-top: 5rem;
+  background-color: #303641;
+}
+
+.c1.c1 {
+  margin: 5rem auto;
+  max-width: 1280px;
+  padding: 2rem 4rem;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(12,1fr);
+}
+
+.c2.c2 {
+  grid-column: 1 / span 3;
+}
+
+.c3.c3 {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.c4.c4 {
+  grid-column: 5 / span 2;
+}
+
+.c7.c7 {
+  grid-column: 7 / span 2;
+}
+
+.c8.c8 {
+  grid-column: 9 / span 2;
+}
+
+.c9.c9 {
+  grid-column: 11 / span 2;
+}
+
+.c10.c10 {
+  grid-column: 1 / span 12;
+  background-color: rgba(255,255,255,0.2);
+}
+
+.c11.c11 {
+  grid-column: 1 / span 12;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c12.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.c13.c13 {
+  background-image: url("https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png");
+  background-size: cover;
+  background-position: center;
+  width: 100px;
+  height: 100px;
+}
+
+.c14.c14 {
+  font-weight: normal;
+}
+
+.c15.c15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.c16.c16 {
+  text-align: center;
+}
+
+<footer
+  className="c0"
+  data-cy="page-footer"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+        data-cy="footer-title"
+      >
+        NASA | CASEI
+      </div>
+      <p
+        data-cy="footer-subtitle"
+      >
+        NASA | CASEI
+         is a comprehensive inventory containing information about all airborne and field campaigns as well as aircrafts, instruments, and data products.
+      </p>
+    </div>
+    <div
+      className="c4"
+      data-cy="footer-explore"
+    >
+      <p
+        className="c5"
+      >
+        Explore
+      </p>
+      <ul
+        className="c6"
+      >
+        <li>
+          <a
+            data-cy="footer-campaigns-link"
+            href="/explore"
+            state={
+              Object {
+                "defaultExploreCategory": "campaigns",
+              }
+            }
+          >
+            Campaigns
+          </a>
+        </li>
+        <li>
+          <a
+            data-cy="footer-platforms-link"
+            href="/explore"
+            state={
+              Object {
+                "defaultExploreCategory": "platforms",
+              }
+            }
+          >
+            Platforms
+          </a>
+        </li>
+        <li>
+          <a
+            data-cy="footer-instruments-link"
+            href="/explore"
+            state={
+              Object {
+                "defaultExploreCategory": "instruments",
+              }
+            }
+          >
+            Instruments
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div
+      className="c7"
+      data-cy="footer-resources"
+    >
+      <p
+        className="c5"
+      >
+        Resources
+      </p>
+      <ul
+        className="c6"
+      >
+        <li>
+          <a
+            href="/glossary/"
+          >
+            Glossary
+          </a>
+        </li>
+        <li />
+      </ul>
+    </div>
+    <div
+      className="c8"
+      data-cy="footer-quick-links"
+    >
+      <p
+        className="c5"
+      >
+        Quick Links
+      </p>
+      <ul
+        className="c6"
+      >
+        <li>
+          <a
+            href="/about/"
+          >
+            About
+          </a>
+        </li>
+        <li>
+          <a
+            href="/contact/"
+          >
+            Contact us
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div
+      className="c9"
+      data-cy="footer-organizations"
+    >
+      <p
+        className="c5"
+      >
+        Organizations
+      </p>
+      <ul
+        className="c6"
+      >
+        <li>
+          <a
+            data-cy="admg-website-link"
+            href="https://earthdata.nasa.gov/esds/impact/admg"
+            rel="noopener noreferrer"
+            style={
+              Object {
+                "color": "#aac9ff",
+              }
+            }
+            target="_blank"
+          >
+            ADMG Website
+          </a>
+        </li>
+        <li>
+          <a
+            data-cy="impact-website-link"
+            href="https://earthdata.nasa.gov/esds/impact"
+            rel="noopener noreferrer"
+            style={
+              Object {
+                "color": "#aac9ff",
+              }
+            }
+            target="_blank"
+          >
+            Impact Website
+          </a>
+        </li>
+      </ul>
+    </div>
+    <hr
+      className="c10"
+    />
+    <div
+      className="c11"
+    >
+      <div
+        className="c12"
+      >
+        <div
+          aria-hidden="true"
+          className="c13"
+        />
+        <div
+          data-cy="footer-credits"
+        >
+          <div
+            data-cy="footer-credit-org"
+          >
+            National Aeronautics and Space Administration
+          </div>
+          <div
+            data-cy="footer-credit-official"
+          >
+            NASA Official:
+             
+            <span
+              className="c14"
+            >
+              Rahul Ramachandran
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        className="c15"
+      />
+    </div>
+  </div>
+  <div
+    className="c16"
+    data-cy="footer-credit-devseed"
+  >
+    © 
+    2021
+    , Built by
+     
+    <a
+      data-cy="devseed-website-link"
+      href="https://www.developmentseed.org"
+      rel="noopener noreferrer"
+      style={
+        Object {
+          "color": "#aac9ff",
+        }
+      }
+      target="_blank"
+    >
+      Development Seed
+    </a>
+    .
+  </div>
+</footer>
+`;

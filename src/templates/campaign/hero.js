@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useRef } from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 import styled from "styled-components"
@@ -10,8 +10,9 @@ import { HeroStats } from "../../components/hero"
 import Map from "../../components/map"
 import BboxLayer from "../../components/map/bbox-layer"
 import GeoJsonSource from "../../components/map/geojson-source"
-
-import theme from "../../utils/theme"
+import { CampaignIcon } from "../../icons"
+import { layout } from "../../utils/theme"
+import { useContainerDimensions } from "../../utils/use-container-dimensions"
 
 const BackgroundGradient = styled.div`
   background-image: linear-gradient(
@@ -29,8 +30,7 @@ const BackgroundGradient = styled.div`
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 47rem;
-  margin-top: -12rem;
+  margin-top: -7rem;
   z-index: 0;
   grid-area: 1 / 1 / 1 / 4;
 `
@@ -38,7 +38,6 @@ const BackgroundGradient = styled.div`
 const CampaignHero = ({
   logo,
   bounds,
-  shortname,
   longname,
   focusListing,
   countDeployments,
@@ -51,12 +50,16 @@ const CampaignHero = ({
   }
   const bbox = turf.bbox(geojson)
 
+  const containerRef = useRef()
+  const { height } = useContainerDimensions(containerRef)
+
   return (
     <section
+      ref={containerRef}
       data-cy="campaign-hero"
       style={{
         display: `grid`,
-        gridTemplateColumns: `1fr minmax(auto,  ${theme.layout.maxWidth}) 1fr`,
+        gridTemplateColumns: `1fr minmax(auto,  ${layout.maxWidth}) 1fr`,
         width: `100vw`,
         minHeight: `35rem`,
         alignContent: `center`,
@@ -64,8 +67,8 @@ const CampaignHero = ({
     >
       <Map
         style={{
-          height: `47rem`,
-          marginTop: `-12rem`,
+          height: `calc(${height}px + 7rem`,
+          marginTop: `-7rem`,
           zIndex: -1,
           gridArea: `1 / 1 / 1 / 4`,
         }}
@@ -75,7 +78,7 @@ const CampaignHero = ({
         </GeoJsonSource>
       </Map>
 
-      <BackgroundGradient />
+      <BackgroundGradient height={height} />
 
       <div
         style={{
@@ -85,8 +88,8 @@ const CampaignHero = ({
           zIndex: 1,
         }}
       >
-        <div style={{ flex: `2`, padding: `0 ${theme.layout.pageMargin}` }}>
-          <div>
+        <div style={{ flex: `2`, padding: `0 ${layout.pageMargin}` }}>
+          <div style={{ marginBottom: `6rem` }}>
             {logo && logo.logoImg ? (
               <Image
                 alt={logo.logoAlt}
@@ -94,7 +97,7 @@ const CampaignHero = ({
                 style={{ margin: `0` }}
               />
             ) : (
-              <p>{shortname}</p>
+              <CampaignIcon />
             )}
             <h1 data-cy="campaign-hero-header">{longname}</h1>
             <p>{focusListing}</p>
@@ -145,7 +148,6 @@ CampaignHero.propTypes = {
     }),
   }),
   bounds: PropTypes.string.isRequired,
-  shortname: PropTypes.string.isRequired,
   longname: PropTypes.string.isRequired,
   focusListing: PropTypes.string.isRequired,
   countDeployments: PropTypes.number.isRequired,

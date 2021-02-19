@@ -6,8 +6,17 @@ exports[`Platform Section displays content 1`] = `
   grid-template-columns: repeat(12,1fr);
   -webkit-column-gap: 1rem;
   column-gap: 1rem;
-  margin-top: 2rem;
+  row-gap: 2rem;
   position: relative;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 6rem;
+  background-color: none;
+}
+
+.c0.c0 > *,
+.c0.c0 h3 {
+  color: #e9eaec;
 }
 
 .c1.c1 {
@@ -19,9 +28,39 @@ exports[`Platform Section displays content 1`] = `
   grid-column: 1 / span 12;
 }
 
+.c3.c3 {
+  margin: 0.2rem 0.5rem;
+  padding: 0;
+  color: #e9eaec;
+  opacity: 1;
+  border: 0;
+  background: rgba(255,255,255,0);
+  text-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+}
+
+.c4.c4 {
+  margin: 0.2rem 0.5rem;
+  padding: 0;
+  color: #e9eaec;
+  opacity: 0.6;
+  border: 0;
+  background: rgba(255,255,255,0);
+  text-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+}
+
+.c5.c5 {
+  -webkit-transition: -webkit-transform 240ms ease-in-out;
+  -webkit-transition: transform 240ms ease-in-out;
+  transition: transform 240ms ease-in-out;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
 <section
   className="c0"
   data-cy="platform-section"
+  mode="darkTheme"
 >
   <div
     className="c1"
@@ -50,216 +89,673 @@ exports[`Platform Section displays content 1`] = `
       data-cy="platform-carousel"
     >
       <div
+        data-cy="carousel-list-text-control"
+        style={
+          Object {
+            "display": "flex",
+            "overflow": "auto",
+          }
+        }
+      >
+        <button
+          className="c3"
+          onClick={[Function]}
+          selected={true}
+        >
+          DC-8
+        </button>
+        <button
+          className="c4"
+          onClick={[Function]}
+          selected={false}
+        >
+          B-200
+        </button>
+        <button
+          className="c4"
+          onClick={[Function]}
+          selected={false}
+        >
+          P-3
+        </button>
+      </div>
+      <div
         data-test="mocked-nuka-carousel"
       >
         <div
           data-cy="platform"
+          style={
+            Object {
+              "alignContent": "center",
+              "display": "grid",
+              "gridTemplateColumns": "1fr minmax(auto,  1280px) 1fr",
+              "width": "100vw",
+            }
+          }
         >
-          <a
-            href="/platform/d59b3d7e-f782-4e25-a8eb-ceec91c0331e"
+          <div
+            style={
+              Object {
+                "display": "grid",
+                "gridGap": "1.5rem",
+                "gridTemplateColumns": "1fr 3fr",
+                "width": "70rem",
+              }
+            }
           >
             <div
               style={
                 Object {
-                  "marginRight": "1rem",
-                  "position": "relative",
+                  "marginTop": "1.25rem",
+                  "maxHeight": "18rem",
+                  "width": "26rem",
                 }
               }
             >
-              <img
-                alt="alt-text"
-                data-cy="platform-image"
-                fluid={[Function]}
-                src="test-image.png"
-              />
-              <label
-                data-cy="platform-image-caption"
-                style={
-                  Object {
-                    "bottom": ".5rem",
-                    "left": "1rem",
-                    "maxWidth": "18rem",
-                    "position": "absolute",
-                    "textShadow": "1px 1px rgba(0,0,0,0.8)",
-                  }
-                }
+              <a
+                href="/platform/d59b3d7e-f782-4e25-a8eb-ceec91c0331e"
               >
-                Douglas DC-8
-              </label>
+                <img
+                  alt="alt-text"
+                  data-cy="platform-image"
+                  fluid={[Function]}
+                  src="test-image.png"
+                />
+                <label
+                  data-cy="platform-image-caption"
+                  style={
+                    Object {
+                      "left": "1.5rem",
+                      "maxWidth": "24rem",
+                      "position": "absolute",
+                      "textShadow": "1px 1px rgba(0,0,0,0.8)",
+                      "top": "16rem",
+                    }
+                  }
+                >
+                  Douglas DC-8
+                </label>
+              </a>
             </div>
-          </a>
-          <div
-            style={
-              Object {
-                "display": "flex",
-                "flexWrap": "wrap",
+            <div
+              data-cy="instrument-accordion"
+              data-reach-accordion=""
+              style={
+                Object {
+                  "maxHeight": "30rem",
+                  "overflowY": "auto",
+                }
               }
-            }
-          >
-            <a
-              href="/instrument/a1f41f4d-2233-49be-a3d3-6eda1ded6be4"
             >
               <div
-                data-cy="instrument-chip"
-                style={
-                  Object {
-                    "alignItems": "center",
-                    "backgroundColor": "#303641",
-                    "borderRadius": "0.2rem",
-                    "color": "hsla(0,0%,100%,0.9)",
-                    "display": "flex",
-                    "margin": "0.25rem 0.5rem",
-                    "padding": "0 0.5rem",
-                  }
-                }
+                data-reach-accordion-item=""
+                data-state="collapsed"
               >
-                <small
-                  title=""
+                <span>
+                  <button
+                    aria-controls="panel--1---1"
+                    aria-expanded={false}
+                    data-cy="accordion-button"
+                    data-reach-accordion-button=""
+                    id="button--1---1"
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    style={
+                      Object {
+                        "background": "none",
+                        "borderColor": "#e9eaec",
+                        "borderWidth": "0 0 1px 0",
+                        "color": "#e9eaec",
+                        "cursor": "pointer",
+                        "display": "flex",
+                        "fontWeight": "bold",
+                        "justifyContent": "space-between",
+                        "padding": "1rem",
+                        "textAlign": "left",
+                        "textTransform": "uppercase",
+                        "width": "100%",
+                      }
+                    }
+                  >
+                    <div>
+                       (
+                      Gen-Chemistry
+                      )
+                    </div>
+                    <div
+                      className="c5"
+                    >
+                      <svg
+                        height="16"
+                        role="img"
+                        version="1.1"
+                        viewBox="0 0 16 16"
+                        width="16"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <title>
+                          Chevron Down
+                        </title>
+                        <rect
+                          fill="none"
+                          height="16"
+                          width="16"
+                        />
+                        <polygon
+                          fill="#FFF"
+                          points="12.586,4.586 8,9.172 3.414,4.586 2,6 8,12 14,6"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                </span>
+                <div
+                  aria-labelledby="button--1---1"
+                  data-reach-accordion-panel=""
+                  data-state="collapsed"
+                  hidden={true}
+                  id="panel--1---1"
+                  role="region"
+                  style={
+                    Object {
+                      "padding": ".5rem 1rem",
+                    }
+                  }
+                  tabIndex={-1}
                 >
-                  Gen-Chemistry
-                </small>
+                  <div
+                    data-cy="instrument-accordion-content"
+                    style={
+                      Object {
+                        "display": "grid",
+                        "gridTemplateColumns": "1fr 1f 1fr 1fr",
+                      }
+                    }
+                  >
+                    <div
+                      data-cy="instrument-accordion-image-description"
+                      style={
+                        Object {
+                          "gridColumn": "1 / 4",
+                        }
+                      }
+                    />
+                  </div>
+                  <a
+                    data-cy="accordion-link"
+                    href="/instrument/a1f41f4d-2233-49be-a3d3-6eda1ded6be4"
+                    style={
+                      Object {
+                        "color": "#aac9ff",
+                      }
+                    }
+                  >
+                    <label
+                      data-cy="accordion-link-label"
+                      style={
+                        Object {
+                          "borderBottom": "none",
+                          "color": "#aac9ff",
+                          "display": "flex",
+                        }
+                      }
+                    >
+                      Learn More
+                      <svg
+                        height="16"
+                        role="img"
+                        style={
+                          Object {
+                            "marginLeft": ".5rem",
+                          }
+                        }
+                        version="1.1"
+                        viewBox="0 0 16 16"
+                        width="16"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <title>
+                          Arrow Right
+                        </title>
+                        <rect
+                          fill="none"
+                          height="16"
+                          width="16"
+                        />
+                        <polygon
+                          fill="#aac9ff"
+                          points="7.586,2.414 12.172,7 0,7 0,9 12.172,9 7.586,13.586 9,15 16,8 9,1"
+                        />
+                      </svg>
+                    </label>
+                  </a>
+                </div>
               </div>
-            </a>
+            </div>
           </div>
         </div>
         <div
           data-cy="platform"
+          style={
+            Object {
+              "alignContent": "center",
+              "display": "grid",
+              "gridTemplateColumns": "1fr minmax(auto,  1280px) 1fr",
+              "width": "100vw",
+            }
+          }
         >
-          <a
-            href="/platform/1b607095-4f6d-4e70-8e16-798bc59a2d59"
+          <div
+            style={
+              Object {
+                "display": "grid",
+                "gridGap": "1.5rem",
+                "gridTemplateColumns": "1fr 3fr",
+                "width": "70rem",
+              }
+            }
           >
             <div
               style={
                 Object {
-                  "marginRight": "1rem",
-                  "position": "relative",
+                  "marginTop": "1.25rem",
+                  "maxHeight": "18rem",
+                  "width": "26rem",
                 }
               }
             >
-              <img
-                alt="alt-text"
-                data-cy="platform-image"
-                fluid={[Function]}
-                src="test-image.png"
-              />
-              <label
-                data-cy="platform-image-caption"
-                style={
-                  Object {
-                    "bottom": ".5rem",
-                    "left": "1rem",
-                    "maxWidth": "18rem",
-                    "position": "absolute",
-                    "textShadow": "1px 1px rgba(0,0,0,0.8)",
-                  }
-                }
+              <a
+                href="/platform/1b607095-4f6d-4e70-8e16-798bc59a2d59"
               >
-                Beechcraft King Air B-200
-              </label>
+                <img
+                  alt="alt-text"
+                  data-cy="platform-image"
+                  fluid={[Function]}
+                  src="test-image.png"
+                />
+                <label
+                  data-cy="platform-image-caption"
+                  style={
+                    Object {
+                      "left": "1.5rem",
+                      "maxWidth": "24rem",
+                      "position": "absolute",
+                      "textShadow": "1px 1px rgba(0,0,0,0.8)",
+                      "top": "16rem",
+                    }
+                  }
+                >
+                  Beechcraft King Air B-200
+                </label>
+              </a>
             </div>
-          </a>
-          <div
-            style={
-              Object {
-                "display": "flex",
-                "flexWrap": "wrap",
+            <div
+              data-cy="instrument-accordion"
+              data-reach-accordion=""
+              style={
+                Object {
+                  "maxHeight": "30rem",
+                  "overflowY": "auto",
+                }
               }
-            }
-          >
-            <a
-              href="/instrument/aa6e3d99-17ca-4b4e-9130-c6e0b0864fd9"
             >
               <div
-                data-cy="instrument-chip"
-                style={
-                  Object {
-                    "alignItems": "center",
-                    "backgroundColor": "#303641",
-                    "borderRadius": "0.2rem",
-                    "color": "hsla(0,0%,100%,0.9)",
-                    "display": "flex",
-                    "margin": "0.25rem 0.5rem",
-                    "padding": "0 0.5rem",
-                  }
-                }
+                data-reach-accordion-item=""
+                data-state="collapsed"
               >
-                <small
-                  title=""
+                <span>
+                  <button
+                    aria-controls="panel--2---1"
+                    aria-expanded={false}
+                    data-cy="accordion-button"
+                    data-reach-accordion-button=""
+                    id="button--2---1"
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    style={
+                      Object {
+                        "background": "none",
+                        "borderColor": "#e9eaec",
+                        "borderWidth": "0 0 1px 0",
+                        "color": "#e9eaec",
+                        "cursor": "pointer",
+                        "display": "flex",
+                        "fontWeight": "bold",
+                        "justifyContent": "space-between",
+                        "padding": "1rem",
+                        "textAlign": "left",
+                        "textTransform": "uppercase",
+                        "width": "100%",
+                      }
+                    }
+                  >
+                    <div>
+                       (
+                      HSRL
+                      )
+                    </div>
+                    <div
+                      className="c5"
+                    >
+                      <svg
+                        height="16"
+                        role="img"
+                        version="1.1"
+                        viewBox="0 0 16 16"
+                        width="16"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <title>
+                          Chevron Down
+                        </title>
+                        <rect
+                          fill="none"
+                          height="16"
+                          width="16"
+                        />
+                        <polygon
+                          fill="#FFF"
+                          points="12.586,4.586 8,9.172 3.414,4.586 2,6 8,12 14,6"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                </span>
+                <div
+                  aria-labelledby="button--2---1"
+                  data-reach-accordion-panel=""
+                  data-state="collapsed"
+                  hidden={true}
+                  id="panel--2---1"
+                  role="region"
+                  style={
+                    Object {
+                      "padding": ".5rem 1rem",
+                    }
+                  }
+                  tabIndex={-1}
                 >
-                  HSRL
-                </small>
+                  <div
+                    data-cy="instrument-accordion-content"
+                    style={
+                      Object {
+                        "display": "grid",
+                        "gridTemplateColumns": "1fr 1f 1fr 1fr",
+                      }
+                    }
+                  >
+                    <div
+                      data-cy="instrument-accordion-image-description"
+                      style={
+                        Object {
+                          "gridColumn": "1 / 4",
+                        }
+                      }
+                    />
+                  </div>
+                  <a
+                    data-cy="accordion-link"
+                    href="/instrument/aa6e3d99-17ca-4b4e-9130-c6e0b0864fd9"
+                    style={
+                      Object {
+                        "color": "#aac9ff",
+                      }
+                    }
+                  >
+                    <label
+                      data-cy="accordion-link-label"
+                      style={
+                        Object {
+                          "borderBottom": "none",
+                          "color": "#aac9ff",
+                          "display": "flex",
+                        }
+                      }
+                    >
+                      Learn More
+                      <svg
+                        height="16"
+                        role="img"
+                        style={
+                          Object {
+                            "marginLeft": ".5rem",
+                          }
+                        }
+                        version="1.1"
+                        viewBox="0 0 16 16"
+                        width="16"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <title>
+                          Arrow Right
+                        </title>
+                        <rect
+                          fill="none"
+                          height="16"
+                          width="16"
+                        />
+                        <polygon
+                          fill="#aac9ff"
+                          points="7.586,2.414 12.172,7 0,7 0,9 12.172,9 7.586,13.586 9,15 16,8 9,1"
+                        />
+                      </svg>
+                    </label>
+                  </a>
+                </div>
               </div>
-            </a>
+            </div>
           </div>
         </div>
         <div
           data-cy="platform"
+          style={
+            Object {
+              "alignContent": "center",
+              "display": "grid",
+              "gridTemplateColumns": "1fr minmax(auto,  1280px) 1fr",
+              "width": "100vw",
+            }
+          }
         >
-          <a
-            href="/platform/2084ab0c-4f18-4aa6-ad7b-70bc861d2d80"
+          <div
+            style={
+              Object {
+                "display": "grid",
+                "gridGap": "1.5rem",
+                "gridTemplateColumns": "1fr 3fr",
+                "width": "70rem",
+              }
+            }
           >
             <div
               style={
                 Object {
-                  "marginRight": "1rem",
-                  "position": "relative",
+                  "marginTop": "1.25rem",
+                  "maxHeight": "18rem",
+                  "width": "26rem",
                 }
               }
             >
-              <img
-                alt="alt-text"
-                data-cy="platform-image"
-                fluid={[Function]}
-                src="test-image.png"
-              />
-              <label
-                data-cy="platform-image-caption"
-                style={
-                  Object {
-                    "bottom": ".5rem",
-                    "left": "1rem",
-                    "maxWidth": "18rem",
-                    "position": "absolute",
-                    "textShadow": "1px 1px rgba(0,0,0,0.8)",
-                  }
-                }
+              <a
+                href="/platform/2084ab0c-4f18-4aa6-ad7b-70bc861d2d80"
               >
-                P-3 Orion
-              </label>
+                <img
+                  alt="alt-text"
+                  data-cy="platform-image"
+                  fluid={[Function]}
+                  src="test-image.png"
+                />
+                <label
+                  data-cy="platform-image-caption"
+                  style={
+                    Object {
+                      "left": "1.5rem",
+                      "maxWidth": "24rem",
+                      "position": "absolute",
+                      "textShadow": "1px 1px rgba(0,0,0,0.8)",
+                      "top": "16rem",
+                    }
+                  }
+                >
+                  P-3 Orion
+                </label>
+              </a>
             </div>
-          </a>
-          <div
-            style={
-              Object {
-                "display": "flex",
-                "flexWrap": "wrap",
+            <div
+              data-cy="instrument-accordion"
+              data-reach-accordion=""
+              style={
+                Object {
+                  "maxHeight": "30rem",
+                  "overflowY": "auto",
+                }
               }
-            }
-          >
-            <a
-              href="/instrument/a1f41f4d-2233-49be-a3d3-6eda1ded6be4"
             >
               <div
-                data-cy="instrument-chip"
-                style={
-                  Object {
-                    "alignItems": "center",
-                    "backgroundColor": "#303641",
-                    "borderRadius": "0.2rem",
-                    "color": "hsla(0,0%,100%,0.9)",
-                    "display": "flex",
-                    "margin": "0.25rem 0.5rem",
-                    "padding": "0 0.5rem",
-                  }
-                }
+                data-reach-accordion-item=""
+                data-state="collapsed"
               >
-                <small
-                  title=""
+                <span>
+                  <button
+                    aria-controls="panel--3---1"
+                    aria-expanded={false}
+                    data-cy="accordion-button"
+                    data-reach-accordion-button=""
+                    id="button--3---1"
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    style={
+                      Object {
+                        "background": "none",
+                        "borderColor": "#e9eaec",
+                        "borderWidth": "0 0 1px 0",
+                        "color": "#e9eaec",
+                        "cursor": "pointer",
+                        "display": "flex",
+                        "fontWeight": "bold",
+                        "justifyContent": "space-between",
+                        "padding": "1rem",
+                        "textAlign": "left",
+                        "textTransform": "uppercase",
+                        "width": "100%",
+                      }
+                    }
+                  >
+                    <div>
+                       (
+                      Gen-Chemistry
+                      )
+                    </div>
+                    <div
+                      className="c5"
+                    >
+                      <svg
+                        height="16"
+                        role="img"
+                        version="1.1"
+                        viewBox="0 0 16 16"
+                        width="16"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <title>
+                          Chevron Down
+                        </title>
+                        <rect
+                          fill="none"
+                          height="16"
+                          width="16"
+                        />
+                        <polygon
+                          fill="#FFF"
+                          points="12.586,4.586 8,9.172 3.414,4.586 2,6 8,12 14,6"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                </span>
+                <div
+                  aria-labelledby="button--3---1"
+                  data-reach-accordion-panel=""
+                  data-state="collapsed"
+                  hidden={true}
+                  id="panel--3---1"
+                  role="region"
+                  style={
+                    Object {
+                      "padding": ".5rem 1rem",
+                    }
+                  }
+                  tabIndex={-1}
                 >
-                  Gen-Chemistry
-                </small>
+                  <div
+                    data-cy="instrument-accordion-content"
+                    style={
+                      Object {
+                        "display": "grid",
+                        "gridTemplateColumns": "1fr 1f 1fr 1fr",
+                      }
+                    }
+                  >
+                    <div
+                      data-cy="instrument-accordion-image-description"
+                      style={
+                        Object {
+                          "gridColumn": "1 / 4",
+                        }
+                      }
+                    />
+                  </div>
+                  <a
+                    data-cy="accordion-link"
+                    href="/instrument/a1f41f4d-2233-49be-a3d3-6eda1ded6be4"
+                    style={
+                      Object {
+                        "color": "#aac9ff",
+                      }
+                    }
+                  >
+                    <label
+                      data-cy="accordion-link-label"
+                      style={
+                        Object {
+                          "borderBottom": "none",
+                          "color": "#aac9ff",
+                          "display": "flex",
+                        }
+                      }
+                    >
+                      Learn More
+                      <svg
+                        height="16"
+                        role="img"
+                        style={
+                          Object {
+                            "marginLeft": ".5rem",
+                          }
+                        }
+                        version="1.1"
+                        viewBox="0 0 16 16"
+                        width="16"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <title>
+                          Arrow Right
+                        </title>
+                        <rect
+                          fill="none"
+                          height="16"
+                          width="16"
+                        />
+                        <polygon
+                          fill="#aac9ff"
+                          points="7.586,2.414 12.172,7 0,7 0,9 12.172,9 7.586,13.586 9,15 16,8 9,1"
+                        />
+                      </svg>
+                    </label>
+                  </a>
+                </div>
               </div>
-            </a>
+            </div>
           </div>
         </div>
       </div>

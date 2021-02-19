@@ -17,11 +17,11 @@ exports[`ImageCaption renders caption on image 1`] = `
     data-cy="test-image-caption"
     style={
       Object {
-        "bottom": ".5rem",
-        "left": "1rem",
-        "maxWidth": "18rem",
+        "left": "1.5rem",
+        "maxWidth": "24rem",
         "position": "absolute",
         "textShadow": "1px 1px rgba(0,0,0,0.8)",
+        "top": "16rem",
       }
     }
   >
