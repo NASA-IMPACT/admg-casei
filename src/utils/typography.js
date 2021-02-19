@@ -72,8 +72,4 @@ const typography = new Typography({
   },
 })
 
-export const LargeP = styled.p`
-  font-size: 1.25rem;
-`
-
 export default typography

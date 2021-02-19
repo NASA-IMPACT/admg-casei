@@ -11,14 +11,13 @@ import Layout, {
   SectionHeader,
   SectionContent,
 } from "../components/layout"
-import { LargeP } from "../utils/typography"
 import SEO from "../components/seo"
 import Hero from "../components/hero"
 import ExternalLink from "../components/external-link"
 import about from "../content/about.json"
 
 const LinkedParagraph = () => (
-  <LargeP>
+  <big>
     NASA’s Airborne Data Management Group{" "}
     <ExternalLink
       url="https://earthdata.nasa.gov/esds/impact/admg"
@@ -44,7 +43,7 @@ const LinkedParagraph = () => (
     Additionally, ADMG serves the various airborne data user communities by
     providing resource access and key contextual information for past and
     current NASA airborne and field investigations.
-  </LargeP>
+  </big>
 )
 
 const About = ({ data }) => {
@@ -67,7 +66,7 @@ const About = ({ data }) => {
             id="about-inventory"
           />
           <SectionContent columns={[1, 7]}>
-            <LargeP>{about.aboutInventory.definition}</LargeP>
+            <p>{about.aboutInventory.definition}</p>
           </SectionContent>
           <SectionContent columns={[1, 12]}>
             <label data-cy="about-inventory-label">
@@ -95,15 +94,15 @@ const About = ({ data }) => {
                       accounting: <AccountingIcon size="small" />,
                     }[objective.id]
                   }
-                  <LargeP
+                  <p
                     css={`
                       padding: 2rem 0;
                       font-weight: bold;
                     `}
                   >
                     {objective.header}
-                  </LargeP>
-                  <p>{objective.description}</p>
+                  </p>
+                  <small>{objective.description}</small>
                 </div>
               ))}
             </section>
@@ -141,7 +140,7 @@ const About = ({ data }) => {
               >
                 {aboutSection.paragraphs ? (
                   aboutSection.paragraphs.map((paragraph, index) => (
-                    <LargeP key={index}>{paragraph}</LargeP>
+                    <p key={index}>{paragraph}</p>
                   ))
                 ) : (
                   <LinkedParagraph />

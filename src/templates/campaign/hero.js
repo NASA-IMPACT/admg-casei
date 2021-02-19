@@ -12,7 +12,6 @@ import BboxLayer from "../../components/map/bbox-layer"
 import GeoJsonSource from "../../components/map/geojson-source"
 import { CampaignIcon } from "../../icons"
 import { layout } from "../../utils/theme"
-import { LargeP } from "../../utils/typography"
 import { useContainerDimensions } from "../../utils/use-container-dimensions"
 
 const BackgroundGradient = styled.div`
@@ -101,7 +100,7 @@ const CampaignHero = ({
               <CampaignIcon />
             )}
             <h1 data-cy="campaign-hero-header">{longname}</h1>
-            <LargeP>{focusListing}</LargeP>
+            <p>{focusListing}</p>
           </div>
           <HeroStats
             statList={[
