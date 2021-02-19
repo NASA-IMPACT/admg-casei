@@ -53,7 +53,8 @@ const About = ({ data }) => {
 
       <Hero
         tagTitle="About"
-        blockTitle="NASA conducts and supports Earth Science field investigations, including airborne campaigns, to supplement space-borne observations and advance scientific understanding and predictive capability of our home planet’s natural processes."
+        title="NASA"
+        subTitle="conducts and supports Earth Science field investigations, including airborne campaigns, to supplement space-borne observations and advance scientific understanding and predictive capability of our home planet’s natural processes."
         textToImageRatio={[12, 0]}
         backgroundImage={data.heroImage}
         id="about"
