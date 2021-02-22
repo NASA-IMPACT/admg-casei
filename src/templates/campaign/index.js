@@ -129,8 +129,8 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
       <SEO title={campaign.shortname} lang="en" />
       <CampaignHero
         bounds={campaign.bounds}
-        shortname={campaign.shortname}
         longname={campaign.longname}
+        shortname={campaign.shortname}
         focusListing={campaign.focus.map(x => x.shortname).join(", ")}
         countDeployments={campaign.countDeployments}
         countCollectionPeriods={campaign.countCollectionPeriods}

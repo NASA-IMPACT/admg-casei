@@ -39,6 +39,7 @@ const CampaignHero = ({
   logo,
   bounds,
   longname,
+  shortname,
   focusListing,
   countDeployments,
   countCollectionPeriods,
@@ -99,7 +100,7 @@ const CampaignHero = ({
             ) : (
               <CampaignIcon />
             )}
-            <h1 data-cy="campaign-hero-header">{longname}</h1>
+            <h1 data-cy="campaign-hero-header">{longname || shortname}</h1>
             <p>{focusListing}</p>
           </div>
           <HeroStats
@@ -148,7 +149,8 @@ CampaignHero.propTypes = {
     }),
   }),
   bounds: PropTypes.string.isRequired,
-  longname: PropTypes.string.isRequired,
+  longname: PropTypes.string,
+  shortname: PropTypes.string.isRequired,
   focusListing: PropTypes.string.isRequired,
   countDeployments: PropTypes.number.isRequired,
   countCollectionPeriods: PropTypes.number.isRequired,
