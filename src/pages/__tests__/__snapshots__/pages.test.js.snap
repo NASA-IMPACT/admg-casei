@@ -4650,23 +4650,32 @@ exports[`Glossary page renders correctly 1`] = `
 }
 
 .c9.c9 {
-  grid-column: 1 / span 12;
-  background-color: #ffffff;
-  padding: 5rem;
+  grid-column: 1 / span 11;
 }
 
 .c9.c9 > *,
 .c9.c9 h3 {
+  color: #e9eaec;
+}
+
+.c15.c15 {
+  grid-column: 2 / span 10;
+  background-color: #ffffff;
+  padding: 5rem;
+}
+
+.c15.c15 > *,
+.c15.c15 h3 {
   color: #262a31;
 }
 
-.c10.c10 {
+.c16.c16 {
   grid-column: 1 / span 12;
   padding: 5rem;
 }
 
-.c10.c10 > *,
-.c10.c10 h3 {
+.c16.c16 > *,
+.c16.c16 h3 {
   color: #e9eaec;
 }
 
@@ -4724,17 +4733,17 @@ exports[`Glossary page renders correctly 1`] = `
   display: flex;
 }
 
-.c19.c19:hover {
+.c25.c25:hover {
   opacity: 0.64;
 }
 
-.c19.c19:active {
+.c25.c25:active {
   -webkit-transform: translate(0,1px);
   -ms-transform: translate(0,1px);
   transform: translate(0,1px);
 }
 
-.c20.c20 {
+.c26.c26 {
   position: fixed;
   top: 0;
   right: 0;
@@ -4756,7 +4765,7 @@ exports[`Glossary page renders correctly 1`] = `
   transition: opacity 400ms ease-in;
 }
 
-.c21.c21 {
+.c27.c27 {
   width: 400px;
   position: relative;
   padding: 32px;
@@ -4765,23 +4774,23 @@ exports[`Glossary page renders correctly 1`] = `
   pointer-events: auto;
 }
 
-.c17.c17 {
+.c23.c23 {
   list-style: none;
   margin: 0;
 }
 
-.c16.c16 {
+.c22.c22 {
   margin: 0 0 1.5rem 0;
   font-weight: bold;
   line-height: 3rem;
 }
 
-.c11.c11 {
+.c17.c17 {
   margin-top: 5rem;
   background-color: #303641;
 }
 
-.c12.c12 {
+.c18.c18 {
   margin: 5rem auto;
   max-width: 1280px;
   padding: 2rem 4rem;
@@ -4793,11 +4802,11 @@ exports[`Glossary page renders correctly 1`] = `
   grid-template-columns: repeat(12,1fr);
 }
 
-.c13.c13 {
+.c19.c19 {
   grid-column: 1 / span 3;
 }
 
-.c14.c14 {
+.c20.c20 {
   text-transform: uppercase;
   font-weight: 900;
   font-size: 30px;
@@ -4805,28 +4814,28 @@ exports[`Glossary page renders correctly 1`] = `
   margin-bottom: 0.5rem;
 }
 
-.c15.c15 {
+.c21.c21 {
   grid-column: 5 / span 2;
 }
 
-.c18.c18 {
+.c24.c24 {
   grid-column: 7 / span 2;
 }
 
-.c22.c22 {
+.c28.c28 {
   grid-column: 9 / span 2;
 }
 
-.c23.c23 {
+.c29.c29 {
   grid-column: 11 / span 2;
 }
 
-.c24.c24 {
+.c30.c30 {
   grid-column: 1 / span 12;
   background-color: rgba(255,255,255,0.2);
 }
 
-.c25.c25 {
+.c31.c31 {
   grid-column: 1 / span 12;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4838,7 +4847,7 @@ exports[`Glossary page renders correctly 1`] = `
   justify-content: space-between;
 }
 
-.c26.c26 {
+.c32.c32 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4850,7 +4859,7 @@ exports[`Glossary page renders correctly 1`] = `
   font-weight: bold;
 }
 
-.c27.c27 {
+.c33.c33 {
   background-image: url("https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png");
   background-size: cover;
   background-position: center;
@@ -4858,11 +4867,11 @@ exports[`Glossary page renders correctly 1`] = `
   height: 100px;
 }
 
-.c28.c28 {
+.c34.c34 {
   font-weight: normal;
 }
 
-.c29.c29 {
+.c35.c35 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4874,7 +4883,7 @@ exports[`Glossary page renders correctly 1`] = `
   text-transform: uppercase;
 }
 
-.c30.c30 {
+.c36.c36 {
   text-align: center;
 }
 
@@ -4887,6 +4896,31 @@ exports[`Glossary page renders correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+}
+
+.c10.c10 {
+  margin-top: 6rem;
+  font-size: x-large;
+  color: #9e9e9e;
+}
+
+.c12.c12 {
+  font-weight: 600;
+}
+
+.c13.c13 {
+  color: #e9eaec;
+}
+
+.c11.c11 {
+  font-weight: 600;
+}
+
+.c14.c14 {
+  grid-column: -2;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
 }
 
 @media screen and (max-width:1400px) {
@@ -5074,12 +5108,332 @@ exports[`Glossary page renders correctly 1`] = `
       </h1>
       <section
         className="c6"
-        data-cy="C-term-section"
+        data-cy="letter-navigation-section"
         mode="darkTheme"
       >
         <div
           className="c7"
-          id="C-term"
+          id="letter-navigation"
+        />
+        <span
+          style={
+            Object {
+              "border": 0,
+              "clip": "rect(0 0 0 0)",
+              "height": "1px",
+              "margin": "-1px",
+              "overflow": "hidden",
+              "padding": 0,
+              "position": "absolute",
+              "whiteSpace": "nowrap",
+              "width": "1px",
+              "wordWrap": "normal",
+            }
+          }
+        >
+          <div
+            className="c8"
+            data-cy="letter-navigation-section-header"
+          >
+            <a
+              href="#letter-navigation"
+            >
+              <h2>
+                Jump to letter
+              </h2>
+            </a>
+          </div>
+        </span>
+        <div
+          className="c9"
+          mode="darkTheme"
+        >
+          <nav
+            className="c10"
+            role="letter selection"
+          >
+            <span
+              className="c11"
+            >
+              A
+            </span>
+             
+            <span>
+              — 
+            </span>
+            <span
+              className="c11"
+            >
+              B
+            </span>
+             
+            <span>
+              — 
+            </span>
+            <a
+              className="c12"
+              data-cy="C-inpage-link"
+              href="#C"
+            >
+              C
+            </a>
+             
+            <span
+              className="c13"
+            >
+              —
+               
+            </span>
+            <a
+              className="c12"
+              data-cy="D-inpage-link"
+              href="#D"
+            >
+              D
+            </a>
+             
+            <span
+              className="c13"
+            >
+              —
+               
+            </span>
+            <span
+              className="c11"
+            >
+              E
+            </span>
+             
+            <span>
+              — 
+            </span>
+            <a
+              className="c12"
+              data-cy="F-inpage-link"
+              href="#F"
+            >
+              F
+            </a>
+             
+            <span
+              className="c13"
+            >
+              —
+               
+            </span>
+            <a
+              className="c12"
+              data-cy="G-inpage-link"
+              href="#G"
+            >
+              G
+            </a>
+             
+            <span
+              className="c13"
+            >
+              —
+               
+            </span>
+            <span
+              className="c11"
+            >
+              H
+            </span>
+             
+            <span>
+              — 
+            </span>
+            <a
+              className="c12"
+              data-cy="I-inpage-link"
+              href="#I"
+            >
+              I
+            </a>
+             
+            <span
+              className="c13"
+            >
+              —
+               
+            </span>
+            <span
+              className="c11"
+            >
+              J
+            </span>
+             
+            <span>
+              — 
+            </span>
+            <span
+              className="c11"
+            >
+              K
+            </span>
+             
+            <span>
+              — 
+            </span>
+            <span
+              className="c11"
+            >
+              L
+            </span>
+             
+            <span>
+              — 
+            </span>
+            <a
+              className="c12"
+              data-cy="M-inpage-link"
+              href="#M"
+            >
+              M
+            </a>
+             
+            <span
+              className="c13"
+            >
+              —
+               
+            </span>
+            <span
+              className="c11"
+            >
+              N
+            </span>
+             
+            <span>
+              — 
+            </span>
+            <span
+              className="c11"
+            >
+              O
+            </span>
+             
+            <span>
+              — 
+            </span>
+            <a
+              className="c12"
+              data-cy="P-inpage-link"
+              href="#P"
+            >
+              P
+            </a>
+             
+            <span
+              className="c13"
+            >
+              —
+               
+            </span>
+            <span
+              className="c11"
+            >
+              Q
+            </span>
+             
+            <span>
+              — 
+            </span>
+            <span
+              className="c11"
+            >
+              R
+            </span>
+             
+            <span>
+              — 
+            </span>
+            <a
+              className="c12"
+              data-cy="S-inpage-link"
+              href="#S"
+            >
+              S
+            </a>
+             
+            <span
+              className="c13"
+            >
+              —
+               
+            </span>
+            <span
+              className="c11"
+            >
+              T
+            </span>
+             
+            <span>
+              — 
+            </span>
+            <span
+              className="c11"
+            >
+              U
+            </span>
+             
+            <span>
+              — 
+            </span>
+            <span
+              className="c11"
+            >
+              V
+            </span>
+             
+            <span>
+              — 
+            </span>
+            <span
+              className="c11"
+            >
+              W
+            </span>
+             
+            <span>
+              — 
+            </span>
+            <span
+              className="c11"
+            >
+              X
+            </span>
+             
+            <span>
+              — 
+            </span>
+            <span
+              className="c11"
+            >
+              Y
+            </span>
+             
+            <span>
+              — 
+            </span>
+            <span
+              className="c11"
+            >
+              Z
+            </span>
+             
+          </nav>
+        </div>
+      </section>
+      <section
+        className="c6"
+        data-cy="C-section"
+        mode="darkTheme"
+      >
+        <div
+          className="c7"
+          id="C"
         />
         <div
           className="c8"
@@ -5093,8 +5447,43 @@ exports[`Glossary page renders correctly 1`] = `
             </h2>
           </a>
         </div>
+        <a
+          className="c14"
+          data-cy="top-inpage-link"
+          href="#top"
+        >
+          to top 
+          <svg
+            height="16"
+            role="img"
+            style={
+              Object {
+                "marginLeft": ".5rem",
+              }
+            }
+            version="1.1"
+            viewBox="0 0 16 16"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>
+              Arrow 
+              up
+            </title>
+            <rect
+              fill="none"
+              height="16"
+              width="16"
+            />
+            <polygon
+              fill="#FFF"
+              points="7.586,2.414 12.172,7 0,7 0,9 12.172,9 7.586,13.586 9,15 16,8 9,1"
+              transform="rotate(-90)  translate(-16, 0)"
+            />
+          </svg>
+        </a>
         <div
-          className="c9"
+          className="c15"
           mode="lightTheme"
         >
           <h3>
@@ -5117,7 +5506,7 @@ exports[`Glossary page renders correctly 1`] = `
           </p>
         </div>
         <div
-          className="c9"
+          className="c15"
           mode="lightTheme"
         >
           <h3>
@@ -5130,12 +5519,12 @@ exports[`Glossary page renders correctly 1`] = `
       </section>
       <section
         className="c6"
-        data-cy="D-term-section"
+        data-cy="D-section"
         mode="darkTheme"
       >
         <div
           className="c7"
-          id="D-term"
+          id="D"
         />
         <div
           className="c8"
@@ -5149,8 +5538,43 @@ exports[`Glossary page renders correctly 1`] = `
             </h2>
           </a>
         </div>
+        <a
+          className="c14"
+          data-cy="top-inpage-link"
+          href="#top"
+        >
+          to top 
+          <svg
+            height="16"
+            role="img"
+            style={
+              Object {
+                "marginLeft": ".5rem",
+              }
+            }
+            version="1.1"
+            viewBox="0 0 16 16"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>
+              Arrow 
+              up
+            </title>
+            <rect
+              fill="none"
+              height="16"
+              width="16"
+            />
+            <polygon
+              fill="#FFF"
+              points="7.586,2.414 12.172,7 0,7 0,9 12.172,9 7.586,13.586 9,15 16,8 9,1"
+              transform="rotate(-90)  translate(-16, 0)"
+            />
+          </svg>
+        </a>
         <div
-          className="c9"
+          className="c15"
           mode="lightTheme"
         >
           <h3>
@@ -5161,7 +5585,7 @@ exports[`Glossary page renders correctly 1`] = `
           </p>
         </div>
         <div
-          className="c9"
+          className="c15"
           mode="lightTheme"
         >
           <h3>
@@ -5186,12 +5610,12 @@ exports[`Glossary page renders correctly 1`] = `
       </section>
       <section
         className="c6"
-        data-cy="F-term-section"
+        data-cy="F-section"
         mode="darkTheme"
       >
         <div
           className="c7"
-          id="F-term"
+          id="F"
         />
         <div
           className="c8"
@@ -5205,8 +5629,43 @@ exports[`Glossary page renders correctly 1`] = `
             </h2>
           </a>
         </div>
+        <a
+          className="c14"
+          data-cy="top-inpage-link"
+          href="#top"
+        >
+          to top 
+          <svg
+            height="16"
+            role="img"
+            style={
+              Object {
+                "marginLeft": ".5rem",
+              }
+            }
+            version="1.1"
+            viewBox="0 0 16 16"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>
+              Arrow 
+              up
+            </title>
+            <rect
+              fill="none"
+              height="16"
+              width="16"
+            />
+            <polygon
+              fill="#FFF"
+              points="7.586,2.414 12.172,7 0,7 0,9 12.172,9 7.586,13.586 9,15 16,8 9,1"
+              transform="rotate(-90)  translate(-16, 0)"
+            />
+          </svg>
+        </a>
         <div
-          className="c9"
+          className="c15"
           mode="lightTheme"
         >
           <h3>
@@ -5229,7 +5688,7 @@ exports[`Glossary page renders correctly 1`] = `
           </p>
         </div>
         <div
-          className="c9"
+          className="c15"
           mode="lightTheme"
         >
           <h3>
@@ -5242,12 +5701,12 @@ exports[`Glossary page renders correctly 1`] = `
       </section>
       <section
         className="c6"
-        data-cy="G-term-section"
+        data-cy="G-section"
         mode="darkTheme"
       >
         <div
           className="c7"
-          id="G-term"
+          id="G"
         />
         <div
           className="c8"
@@ -5261,8 +5720,43 @@ exports[`Glossary page renders correctly 1`] = `
             </h2>
           </a>
         </div>
+        <a
+          className="c14"
+          data-cy="top-inpage-link"
+          href="#top"
+        >
+          to top 
+          <svg
+            height="16"
+            role="img"
+            style={
+              Object {
+                "marginLeft": ".5rem",
+              }
+            }
+            version="1.1"
+            viewBox="0 0 16 16"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>
+              Arrow 
+              up
+            </title>
+            <rect
+              fill="none"
+              height="16"
+              width="16"
+            />
+            <polygon
+              fill="#FFF"
+              points="7.586,2.414 12.172,7 0,7 0,9 12.172,9 7.586,13.586 9,15 16,8 9,1"
+              transform="rotate(-90)  translate(-16, 0)"
+            />
+          </svg>
+        </a>
         <div
-          className="c9"
+          className="c15"
           mode="lightTheme"
         >
           <h3>
@@ -5275,12 +5769,12 @@ exports[`Glossary page renders correctly 1`] = `
       </section>
       <section
         className="c6"
-        data-cy="I-term-section"
+        data-cy="I-section"
         mode="darkTheme"
       >
         <div
           className="c7"
-          id="I-term"
+          id="I"
         />
         <div
           className="c8"
@@ -5294,8 +5788,43 @@ exports[`Glossary page renders correctly 1`] = `
             </h2>
           </a>
         </div>
+        <a
+          className="c14"
+          data-cy="top-inpage-link"
+          href="#top"
+        >
+          to top 
+          <svg
+            height="16"
+            role="img"
+            style={
+              Object {
+                "marginLeft": ".5rem",
+              }
+            }
+            version="1.1"
+            viewBox="0 0 16 16"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>
+              Arrow 
+              up
+            </title>
+            <rect
+              fill="none"
+              height="16"
+              width="16"
+            />
+            <polygon
+              fill="#FFF"
+              points="7.586,2.414 12.172,7 0,7 0,9 12.172,9 7.586,13.586 9,15 16,8 9,1"
+              transform="rotate(-90)  translate(-16, 0)"
+            />
+          </svg>
+        </a>
         <div
-          className="c9"
+          className="c15"
           mode="lightTheme"
         >
           <h3>
@@ -5306,7 +5835,7 @@ exports[`Glossary page renders correctly 1`] = `
           </p>
         </div>
         <div
-          className="c9"
+          className="c15"
           mode="lightTheme"
         >
           <h3>
@@ -5329,7 +5858,7 @@ exports[`Glossary page renders correctly 1`] = `
           </p>
         </div>
         <div
-          className="c9"
+          className="c15"
           mode="lightTheme"
         >
           <h3>
@@ -5354,12 +5883,12 @@ exports[`Glossary page renders correctly 1`] = `
       </section>
       <section
         className="c6"
-        data-cy="M-term-section"
+        data-cy="M-section"
         mode="darkTheme"
       >
         <div
           className="c7"
-          id="M-term"
+          id="M"
         />
         <div
           className="c8"
@@ -5373,8 +5902,43 @@ exports[`Glossary page renders correctly 1`] = `
             </h2>
           </a>
         </div>
+        <a
+          className="c14"
+          data-cy="top-inpage-link"
+          href="#top"
+        >
+          to top 
+          <svg
+            height="16"
+            role="img"
+            style={
+              Object {
+                "marginLeft": ".5rem",
+              }
+            }
+            version="1.1"
+            viewBox="0 0 16 16"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>
+              Arrow 
+              up
+            </title>
+            <rect
+              fill="none"
+              height="16"
+              width="16"
+            />
+            <polygon
+              fill="#FFF"
+              points="7.586,2.414 12.172,7 0,7 0,9 12.172,9 7.586,13.586 9,15 16,8 9,1"
+              transform="rotate(-90)  translate(-16, 0)"
+            />
+          </svg>
+        </a>
         <div
-          className="c9"
+          className="c15"
           mode="lightTheme"
         >
           <h3>
@@ -5387,12 +5951,12 @@ exports[`Glossary page renders correctly 1`] = `
       </section>
       <section
         className="c6"
-        data-cy="P-term-section"
+        data-cy="P-section"
         mode="darkTheme"
       >
         <div
           className="c7"
-          id="P-term"
+          id="P"
         />
         <div
           className="c8"
@@ -5406,8 +5970,43 @@ exports[`Glossary page renders correctly 1`] = `
             </h2>
           </a>
         </div>
+        <a
+          className="c14"
+          data-cy="top-inpage-link"
+          href="#top"
+        >
+          to top 
+          <svg
+            height="16"
+            role="img"
+            style={
+              Object {
+                "marginLeft": ".5rem",
+              }
+            }
+            version="1.1"
+            viewBox="0 0 16 16"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>
+              Arrow 
+              up
+            </title>
+            <rect
+              fill="none"
+              height="16"
+              width="16"
+            />
+            <polygon
+              fill="#FFF"
+              points="7.586,2.414 12.172,7 0,7 0,9 12.172,9 7.586,13.586 9,15 16,8 9,1"
+              transform="rotate(-90)  translate(-16, 0)"
+            />
+          </svg>
+        </a>
         <div
-          className="c9"
+          className="c15"
           mode="lightTheme"
         >
           <h3>
@@ -5430,7 +6029,7 @@ exports[`Glossary page renders correctly 1`] = `
           </p>
         </div>
         <div
-          className="c9"
+          className="c15"
           mode="lightTheme"
         >
           <h3>
@@ -5441,7 +6040,7 @@ exports[`Glossary page renders correctly 1`] = `
           </p>
         </div>
         <div
-          className="c9"
+          className="c15"
           mode="lightTheme"
         >
           <h3>
@@ -5466,12 +6065,12 @@ exports[`Glossary page renders correctly 1`] = `
       </section>
       <section
         className="c6"
-        data-cy="S-term-section"
+        data-cy="S-section"
         mode="darkTheme"
       >
         <div
           className="c7"
-          id="S-term"
+          id="S"
         />
         <div
           className="c8"
@@ -5485,8 +6084,43 @@ exports[`Glossary page renders correctly 1`] = `
             </h2>
           </a>
         </div>
+        <a
+          className="c14"
+          data-cy="top-inpage-link"
+          href="#top"
+        >
+          to top 
+          <svg
+            height="16"
+            role="img"
+            style={
+              Object {
+                "marginLeft": ".5rem",
+              }
+            }
+            version="1.1"
+            viewBox="0 0 16 16"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>
+              Arrow 
+              up
+            </title>
+            <rect
+              fill="none"
+              height="16"
+              width="16"
+            />
+            <polygon
+              fill="#FFF"
+              points="7.586,2.414 12.172,7 0,7 0,9 12.172,9 7.586,13.586 9,15 16,8 9,1"
+              transform="rotate(-90)  translate(-16, 0)"
+            />
+          </svg>
+        </a>
         <div
-          className="c9"
+          className="c15"
           mode="lightTheme"
         >
           <h3>
@@ -5497,7 +6131,7 @@ exports[`Glossary page renders correctly 1`] = `
           </p>
         </div>
         <div
-          className="c9"
+          className="c15"
           mode="lightTheme"
         >
           <h3>
@@ -5573,7 +6207,7 @@ exports[`Glossary page renders correctly 1`] = `
           </a>
         </div>
         <div
-          className="c10"
+          className="c16"
           mode="darkTheme"
         >
           <a
@@ -5603,17 +6237,17 @@ exports[`Glossary page renders correctly 1`] = `
     </div>
   </main>
   <footer
-    className="c11"
+    className="c17"
     data-cy="page-footer"
   >
     <div
-      className="c12"
+      className="c18"
     >
       <div
-        className="c13"
+        className="c19"
       >
         <div
-          className="c14"
+          className="c20"
           data-cy="footer-title"
         >
           NASA | CASEI
@@ -5626,16 +6260,16 @@ exports[`Glossary page renders correctly 1`] = `
         </p>
       </div>
       <div
-        className="c15"
+        className="c21"
         data-cy="footer-explore"
       >
         <p
-          className="c16"
+          className="c22"
         >
           Explore
         </p>
         <ul
-          className="c17"
+          className="c23"
         >
           <li>
             <a
@@ -5679,16 +6313,16 @@ exports[`Glossary page renders correctly 1`] = `
         </ul>
       </div>
       <div
-        className="c18"
+        className="c24"
         data-cy="footer-resources"
       >
         <p
-          className="c16"
+          className="c22"
         >
           Resources
         </p>
         <ul
-          className="c17"
+          className="c23"
         >
           <li>
             <a
@@ -5699,7 +6333,7 @@ exports[`Glossary page renders correctly 1`] = `
           </li>
           <li>
             <button
-              className="c19"
+              className="c25"
               onClick={[Function]}
               style={
                 Object {
@@ -5723,11 +6357,11 @@ exports[`Glossary page renders correctly 1`] = `
               Maintenance login
             </button>
             <div
-              className="c20"
+              className="c26"
               onClick={[Function]}
             >
               <div
-                className="c21"
+                className="c27"
               >
                 <form
                   data-cy="login-form"
@@ -5769,16 +6403,16 @@ exports[`Glossary page renders correctly 1`] = `
         </ul>
       </div>
       <div
-        className="c22"
+        className="c28"
         data-cy="footer-quick-links"
       >
         <p
-          className="c16"
+          className="c22"
         >
           Quick Links
         </p>
         <ul
-          className="c17"
+          className="c23"
         >
           <li>
             <a
@@ -5797,16 +6431,16 @@ exports[`Glossary page renders correctly 1`] = `
         </ul>
       </div>
       <div
-        className="c23"
+        className="c29"
         data-cy="footer-organizations"
       >
         <p
-          className="c16"
+          className="c22"
         >
           Organizations
         </p>
         <ul
-          className="c17"
+          className="c23"
         >
           <li>
             <a
@@ -5841,17 +6475,17 @@ exports[`Glossary page renders correctly 1`] = `
         </ul>
       </div>
       <hr
-        className="c24"
+        className="c30"
       />
       <div
-        className="c25"
+        className="c31"
       >
         <div
-          className="c26"
+          className="c32"
         >
           <div
             aria-hidden="true"
-            className="c27"
+            className="c33"
           />
           <div
             data-cy="footer-credits"
@@ -5867,7 +6501,7 @@ exports[`Glossary page renders correctly 1`] = `
               NASA Official:
                
               <span
-                className="c28"
+                className="c34"
               >
                 Rahul Ramachandran
               </span>
@@ -5875,12 +6509,12 @@ exports[`Glossary page renders correctly 1`] = `
           </div>
         </div>
         <div
-          className="c29"
+          className="c35"
         />
       </div>
     </div>
     <div
-      className="c30"
+      className="c36"
       data-cy="footer-credit-devseed"
     >
       © 

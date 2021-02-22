@@ -7,7 +7,7 @@ describe("Glossary", () => {
   it("displays the glossary", () => {
     cy.get("[data-cy=main-glossary]").find("h1").contains("Glossary")
     ;["C", "D", "P"].forEach(letter => {
-      cy.get(`[data-cy=${letter}-term-section]`).each($el => {
+      cy.get(`[data-cy=${letter}-section]`).each($el => {
         cy.get($el).find("h3").should("exist")
         cy.get($el).find("p").should("exist")
       })
