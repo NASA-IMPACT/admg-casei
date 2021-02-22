@@ -55,7 +55,7 @@ export default function Glossary({ data }) {
 
           <SectionContent columns={[1, 11]}>
             <nav
-              role="letter selection"
+              aria-label="letter selection"
               css={`
                 margin-top: 6rem;
                 font-size: x-large;

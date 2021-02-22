@@ -5149,8 +5149,8 @@ exports[`Glossary page renders correctly 1`] = `
           mode="darkTheme"
         >
           <nav
+            aria-label="letter selection"
             className="c10"
-            role="letter selection"
           >
             <span
               className="c11"
