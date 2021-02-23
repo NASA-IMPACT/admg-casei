@@ -4,7 +4,9 @@ import PropTypes from "prop-types"
 import FilterMenu from "./filter-menu"
 import Searchbar from "./searchbar"
 import DateMenu from "./date-menu"
+
 import { FilterIcon } from "../../icons"
+import { NEGATIVE } from "../../utils/constants"
 import { colors } from "../../utils/theme"
 
 const ExploreTools = React.forwardRef(
@@ -32,7 +34,7 @@ const ExploreTools = React.forwardRef(
           display: flex;
           margin: 2rem 0;
           flex-flow: column wrap;
-          border: 1px solid ${colors.darkTheme.text};
+          border: 1px solid ${colors[NEGATIVE].text};
         `}
         data-cy="explore-tools"
       >
@@ -50,7 +52,7 @@ const ExploreTools = React.forwardRef(
           {category === "campaigns" && (
             <div
               css={`
-                border: 1px solid ${colors.darkTheme.text};
+                border: 1px solid ${colors[NEGATIVE].text};
                 padding: 0.25rem;
               `}
             >
@@ -59,7 +61,7 @@ const ExploreTools = React.forwardRef(
                   border: none;
                   flex-grow: 0;
                   background: transparent;
-                  color: ${colors.darkTheme.text};
+                  color: ${colors[NEGATIVE].text};
                   vertical-align: middle;
                   cursor: pointer;
                 `}
@@ -85,14 +87,14 @@ const ExploreTools = React.forwardRef(
           <div
             css={`
               padding: 0.25rem 0.75rem;
-              border: 1px solid ${colors.darkTheme.text};
+              border: 1px solid ${colors[NEGATIVE].text};
               display: flex;
               align-items: center;
               gap: 0.55rem;
             `}
             data-cy="main-filter-label"
           >
-            <FilterIcon color={colors.darkTheme.text} />
+            <FilterIcon color={colors[NEGATIVE].text} />
             <strong>Filter By</strong>
           </div>
 

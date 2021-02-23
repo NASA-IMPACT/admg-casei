@@ -24,9 +24,21 @@ exports[`Program Info Section renders logo when present in props 1`] = `
   top: -80px;
 }
 
-.c2.c2 {
+.c3.c3 {
   grid-column: 1 / span 12;
   background-color: #303641;
+}
+
+.c3.c3 > *,
+.c3.c3 h3 {
+  color: #e9eaec;
+}
+
+.c2.c2 {
+  grid-column: 1 / span 7;
+  -webkit-align-self: end;
+  -ms-flex-item-align: end;
+  align-self: end;
 }
 
 <section
@@ -39,12 +51,8 @@ exports[`Program Info Section renders logo when present in props 1`] = `
     id="program-info"
   />
   <div
-    style={
-      Object {
-        "alignSelf": "end",
-        "gridColumn": "1 / span 7",
-      }
-    }
+    className="c2"
+    data-cy="program-info-section-header"
   >
     <a
       href="#program-info"
@@ -55,7 +63,8 @@ exports[`Program Info Section renders logo when present in props 1`] = `
     </a>
   </div>
   <div
-    className="c2"
+    className="c3"
+    mode="darkTheme"
   >
     <div
       style={
@@ -318,9 +327,21 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
   top: -80px;
 }
 
-.c2.c2 {
+.c3.c3 {
   grid-column: 1 / span 12;
   background-color: #303641;
+}
+
+.c3.c3 > *,
+.c3.c3 h3 {
+  color: #e9eaec;
+}
+
+.c2.c2 {
+  grid-column: 1 / span 7;
+  -webkit-align-self: end;
+  -ms-flex-item-align: end;
+  align-self: end;
 }
 
 <section
@@ -333,12 +354,8 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
     id="program-info"
   />
   <div
-    style={
-      Object {
-        "alignSelf": "end",
-        "gridColumn": "1 / span 7",
-      }
-    }
+    className="c2"
+    data-cy="program-info-section-header"
   >
     <a
       href="#program-info"
@@ -349,7 +366,8 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
     </a>
   </div>
   <div
-    className="c2"
+    className="c3"
+    mode="darkTheme"
   >
     <div
       style={

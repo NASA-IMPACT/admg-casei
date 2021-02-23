@@ -1,5 +1,6 @@
 import Typography from "typography"
 
+import { NEGATIVE } from "./constants"
 import { colors } from "./theme"
 
 const typography = new Typography({
@@ -13,8 +14,8 @@ const typography = new Typography({
   ],
   headerFontFamily: ["Titillium Web", "sans-serif"],
   bodyFontFamily: ["Titillium Web", "sans-serif"],
-  headerColor: colors.darkTheme.text,
-  bodyColor: colors.darkTheme.text,
+  headerColor: colors[NEGATIVE].text,
+  bodyColor: colors[NEGATIVE].text,
   headerWeight: "600",
   bodyWeight: 400,
   boldWeight: 700,
@@ -23,7 +24,7 @@ const typography = new Typography({
       a: {
         textDecoration: "none",
         cursor: "pointer",
-        color: colors.darkTheme.text,
+        color: colors[NEGATIVE].text,
         transition: "opacity 0.24s ease 0s",
       },
       "a:active": {
@@ -33,7 +34,7 @@ const typography = new Typography({
         opacity: 0.64,
       },
       "a:visited": {
-        color: colors.darkTheme.text,
+        color: colors[NEGATIVE].text,
       },
       h1: {
         fontSize: rhythm(3),
@@ -60,6 +61,9 @@ const typography = new Typography({
       },
       p: {
         marginBottom: 0,
+      },
+      small: {
+        fontSize: rhythm(0.65),
       },
       "label, button": {
         fontSize: rhythm(0.6),

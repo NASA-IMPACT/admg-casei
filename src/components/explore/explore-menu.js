@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 
 import SortMenu from "./sort-menu"
+import { NEGATIVE } from "../../utils/constants"
 import { colors } from "../../utils/theme"
 
 const TabButton = styled.button`
@@ -19,13 +20,13 @@ const TabButton = styled.button`
   height: 2.5rem;
   text-transform: uppercase;
   font-weight: ${({ isSelected }) => isSelected && "bold"};
-  color: ${colors.darkTheme.text};
+  color: ${colors[NEGATIVE].text};
 
   ::after {
     content: "";
     display: block;
     border-bottom: ${({ isSelected }) =>
-      isSelected && `1px solid ${colors.darkTheme.text}`};
+      isSelected && `1px solid ${colors[NEGATIVE].text}`};
     width: 100%;
     position: relative;
     bottom: -0.25rem;

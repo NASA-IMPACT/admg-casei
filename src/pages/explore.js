@@ -5,6 +5,7 @@ import VisuallyHidden from "@reach/visually-hidden"
 import { format } from "date-fns"
 
 import api from "../utils/api"
+import { NEGATIVE } from "../utils/constants"
 import { colors } from "../utils/theme"
 import { selector } from "../utils/filter-utils"
 import useCampaignList from "../utils/use-campaign-list"
@@ -220,7 +221,7 @@ export default function Explore({ data, location }) {
             </FilterChips>
             <hr
               css={`
-                background: ${colors.darkTheme.division};
+                background: ${colors[NEGATIVE].division};
               `}
             />
           </>

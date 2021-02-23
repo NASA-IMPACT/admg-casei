@@ -1,9 +1,11 @@
 import React from "react"
 import PropTypes from "prop-types"
+
+import { POSITIVE, NEGATIVE } from "../utils/constants"
 import { PropTypeIsUrl } from "../utils/helpers"
 import { colors } from "../utils/theme"
 
-export default function ExternalLink({ label, url, id, mode = "darkTheme" }) {
+export default function ExternalLink({ label, url, id, mode = NEGATIVE }) {
   return (
     <a
       target="_blank"
@@ -23,5 +25,5 @@ ExternalLink.propTypes = {
   label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   url: PropTypeIsUrl,
   id: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
-  mode: PropTypes.oneOf(["lightTheme", "darkTheme"]),
+  mode: PropTypes.oneOf([POSITIVE, NEGATIVE]),
 }

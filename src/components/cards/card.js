@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 import Image from "gatsby-image"
 
+import { NEGATIVE } from "../../utils/constants"
 import { colors } from "../../utils/theme"
 
 const CardHeader = styled.div`
@@ -26,7 +27,7 @@ const Card = ({
 }) => (
   <div
     style={{
-      backgroundColor: colors.darkTheme.background,
+      backgroundColor: colors[NEGATIVE].background,
       boxShadow: `rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px`,
       padding: `1rem`,
       display: `flex`,

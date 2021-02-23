@@ -24,11 +24,23 @@ exports[`Platform Section displays content 1`] = `
   top: -80px;
 }
 
-.c2.c2 {
+.c3.c3 {
   grid-column: 1 / span 12;
 }
 
-.c3.c3 {
+.c3.c3 > *,
+.c3.c3 h3 {
+  color: #e9eaec;
+}
+
+.c2.c2 {
+  grid-column: 1 / span 7;
+  -webkit-align-self: end;
+  -ms-flex-item-align: end;
+  align-self: end;
+}
+
+.c4.c4 {
   margin: 0.2rem 0.5rem;
   padding: 0;
   color: #e9eaec;
@@ -38,7 +50,7 @@ exports[`Platform Section displays content 1`] = `
   text-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
 }
 
-.c4.c4 {
+.c5.c5 {
   margin: 0.2rem 0.5rem;
   padding: 0;
   color: #e9eaec;
@@ -48,7 +60,7 @@ exports[`Platform Section displays content 1`] = `
   text-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
 }
 
-.c5.c5 {
+.c6.c6 {
   -webkit-transition: -webkit-transform 240ms ease-in-out;
   -webkit-transition: transform 240ms ease-in-out;
   transition: transform 240ms ease-in-out;
@@ -67,12 +79,8 @@ exports[`Platform Section displays content 1`] = `
     id="platform"
   />
   <div
-    style={
-      Object {
-        "alignSelf": "end",
-        "gridColumn": "1 / span 7",
-      }
-    }
+    className="c2"
+    data-cy="platform-section-header"
   >
     <a
       href="#platform"
@@ -83,7 +91,8 @@ exports[`Platform Section displays content 1`] = `
     </a>
   </div>
   <div
-    className="c2"
+    className="c3"
+    mode="darkTheme"
   >
     <div
       data-cy="platform-carousel"
@@ -98,21 +107,21 @@ exports[`Platform Section displays content 1`] = `
         }
       >
         <button
-          className="c3"
+          className="c4"
           onClick={[Function]}
           selected={true}
         >
           DC-8
         </button>
         <button
-          className="c4"
+          className="c5"
           onClick={[Function]}
           selected={false}
         >
           B-200
         </button>
         <button
-          className="c4"
+          className="c5"
           onClick={[Function]}
           selected={false}
         >
@@ -223,7 +232,7 @@ exports[`Platform Section displays content 1`] = `
                       )
                     </div>
                     <div
-                      className="c5"
+                      className="c6"
                     >
                       <svg
                         height="16"
@@ -435,7 +444,7 @@ exports[`Platform Section displays content 1`] = `
                       )
                     </div>
                     <div
-                      className="c5"
+                      className="c6"
                     >
                       <svg
                         height="16"
@@ -647,7 +656,7 @@ exports[`Platform Section displays content 1`] = `
                       )
                     </div>
                     <div
-                      className="c5"
+                      className="c6"
                     >
                       <svg
                         height="16"

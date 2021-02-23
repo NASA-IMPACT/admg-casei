@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 
+import { POSITIVE, NEGATIVE } from "../../utils/constants"
 import { colors } from "../../utils/theme"
 
 const Container = styled.section`
@@ -11,12 +12,12 @@ const Container = styled.section`
   row-gap: 2rem;
   position: relative;
 
-  margin: ${props => (props.mode === "lightTheme" ? `0 -6rem` : 0)};
-  padding: ${props => (props.mode === "lightTheme" ? `6rem` : 0)};
+  margin: ${props => (props.mode === POSITIVE ? `0 -6rem` : 0)};
+  padding: ${props => (props.mode === POSITIVE ? `6rem` : 0)};
   margin-bottom: ${props => (props.isSpaced ? `6rem` : `6rem`)};
 
   background-color: ${props =>
-    props.mode === "lightTheme" ? colors.lightTheme.background : `none`};
+    props.mode === POSITIVE ? colors[POSITIVE].background : `none`};
   > *,
   h3 {
     color: ${props => colors[props.mode].text};
@@ -32,7 +33,7 @@ const Buffer = styled.div`
 export default function Section({
   id,
   children,
-  mode = "darkTheme",
+  mode = NEGATIVE,
   isSpaced = false,
 }) {
   return (
@@ -47,20 +48,34 @@ Section.propTypes = {
   id: PropTypes.string.isRequired,
   withText: PropTypes.bool,
   children: PropTypes.node,
-  mode: PropTypes.oneOf(["lightTheme", "darkTheme"]),
+  mode: PropTypes.oneOf([POSITIVE, NEGATIVE]),
   isSpaced: PropTypes.bool, // adds large spacing to section - ideal for home page
 }
 
 export const SectionContent = styled.div`
   grid-column: ${({ columns = [1, 12] }) =>
     `${columns[0]} / span ${columns[1]}`};
-  background-color: ${({ withBackground }) =>
-    withBackground ? colors.darkTheme.background : null};
+  background-color: ${({ withBackground, mode }) =>
+    withBackground ? colors[mode].background : null};
   min-height: ${({ minHeight }) => (minHeight ? minHeight : null)};
+  padding: ${({ withPadding }) => (withPadding ? `5rem` : null)};
+
+  > *,
+  h3 {
+    color: ${props => colors[props.mode].text};
+  }
 `
+
+SectionContent.defaultProps = {
+  mode: NEGATIVE,
+}
 
 SectionContent.propTypes = {
   columns: PropTypes.arrayOf(PropTypes.number),
+  minHeight: PropTypes.string,
+  mode: PropTypes.oneOf([NEGATIVE, POSITIVE]),
+  withBackground: PropTypes.bool,
+  withPadding: PropTypes.bool,
 }
 
 export const Paragraph = styled.p`

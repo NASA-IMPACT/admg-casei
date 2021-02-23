@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import { FeedbackForm } from "feedback-fish"
 
 import { CaseiLogoIcon } from "../icons"
+import { POSITIVE } from "../utils/constants"
 import { colors } from "../utils/theme"
 import Button from "../components/button"
 
@@ -23,7 +24,7 @@ const InpageLink = props => (
     <a
       href={`#${props.id}`}
       css={`
-        color: ${colors.lightTheme.text};
+        color: ${colors[POSITIVE].text};
         font-weight: 600;
       `}
       data-cy={`${props.id}-inpage-link`}
@@ -54,8 +55,8 @@ const InpageNav = ({ shortname, items, path }) => (
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: ${colors.lightTheme.background};
-        color: ${colors.lightTheme.text};
+        background-color: ${colors[POSITIVE].background};
+        color: ${colors[POSITIVE].text};
       `}
     >
       <nav aria-label="inpage-scroll">
@@ -81,7 +82,7 @@ const InpageNav = ({ shortname, items, path }) => (
               `}
               data-cy="home-link"
             >
-              <CaseiLogoIcon color={colors.lightTheme.text} size="tiny" />
+              <CaseiLogoIcon color={colors[POSITIVE].text} size="tiny" />
             </Link>
           </li>
           <li
@@ -94,7 +95,7 @@ const InpageNav = ({ shortname, items, path }) => (
               css={`
                 padding-right: 1rem;
                 font-size: 2rem;
-                color: ${colors.lightTheme.text};
+                color: ${colors[POSITIVE].text};
               `}
               data-cy={`top-inpage-link`}
             >

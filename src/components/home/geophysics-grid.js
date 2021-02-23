@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
+import { NEGATIVE } from "../../utils/constants"
 import { colors } from "../../utils/theme"
 
 export const GeophysicsGrid = ({ geophysicalConcepts }) => (
@@ -9,7 +10,7 @@ export const GeophysicsGrid = ({ geophysicalConcepts }) => (
     style={{
       display: `flex`,
       flexWrap: `wrap`,
-      border: `1px solid ${colors.darkTheme.text}`,
+      border: `1px solid ${colors[NEGATIVE].text}`,
     }}
   >
     {geophysicalConcepts.map(concept => (
@@ -22,7 +23,7 @@ export const GeophysicsGrid = ({ geophysicalConcepts }) => (
       >
         <div
           style={{
-            border: `1px solid ${colors.darkTheme.text}`,
+            border: `1px solid ${colors[NEGATIVE].text}`,
             padding: `1rem`,
             textAlign: `center`,
           }}

@@ -28,15 +28,13 @@ describe("Platform", () => {
       })
 
     // displays inpage nav
-    cy.get("main").find("nav").should("exist")
     cy.get("[data-cy=inpage-nav]").find("[data-cy=home-link]").should("exist")
     cy.get("[data-cy=home-link]").click()
 
     cy.url().should("eq", "http://localhost:8000/")
     cy.go("back")
 
-    cy.get("main")
-      .find("nav")
+    cy.get("[data-cy=inpage-nav]")
       .find("a")
       .should($anchor => {
         expect($anchor, "5 items").to.have.length(5)

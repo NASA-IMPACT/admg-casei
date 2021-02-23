@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import PropTypes from "prop-types"
 
+import { POSITIVE, NEGATIVE } from "../../utils/constants"
 import { colors } from "../../utils/theme"
 
 const List = styled.dl`
@@ -12,7 +13,7 @@ const List = styled.dl`
 
   dt {
     width: 12rem;
-    color: ${colors.darkTheme.altText};
+    color: ${colors[NEGATIVE].altText};
   }
 `
 
@@ -20,7 +21,7 @@ export default function DefinitionList({
   id,
   list,
   isCentered,
-  mode = "darkTheme",
+  mode = NEGATIVE,
 }) {
   return (
     <section style={{ padding: `1rem` }} data-cy={`${id}-definition-list`}>
@@ -63,7 +64,7 @@ DefinitionList.propTypes = {
     })
   ),
   isCentered: PropTypes.bool,
-  mode: PropTypes.oneOf(["lightTheme", "darkTheme"]),
+  mode: PropTypes.oneOf([POSITIVE, NEGATIVE]),
 }
 
 DefinitionList.defaultProps = {

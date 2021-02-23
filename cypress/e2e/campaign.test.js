@@ -7,12 +7,10 @@ describe("Campaign", () => {
   })
 
   it("provides information on the campaign", () => {
-    cy.get("[data-cy=campaign-hero]").find("p").should("exist")
+    // cy.get("[data-cy=campaign-hero]").find("p").should("exist")
 
     cy.get("[data-cy=campaign-hero]").find("h1").should("exist")
     cy.get("[data-cy=campaign-hero-header]").should("have.length", 1)
-
-    cy.get("[data-cy=campaign-hero]").find("p").should("exist")
 
     cy.get("[data-cy=campaign-hero]")
       .find("[data-cy=stats]")
@@ -36,16 +34,13 @@ describe("Campaign", () => {
 
     cy.get("[data-cy=mapboxgl-map]").should("exist")
 
-    cy.get("main").find("nav").should("exist")
-
     cy.get("[data-cy=inpage-nav]").find("[data-cy=home-link]").should("exist")
     cy.get("[data-cy=home-link]").click()
 
     cy.url().should("eq", "http://localhost:8000/")
     cy.go("back")
 
-    cy.get("main")
-      .find("nav")
+    cy.get("[data-cy=inpage-nav]")
       .find("a")
       .should($anchor => {
         expect($anchor, "10 items").to.have.length(10)

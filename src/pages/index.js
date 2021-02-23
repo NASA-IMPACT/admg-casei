@@ -11,6 +11,7 @@ import FocusAreaGallery from "../components/focus-area-gallery"
 import { RegionCarousel } from "../components/home/region-carousel"
 import { GeophysicsGrid } from "../components/home/geophysics-grid"
 import { InstrumentsGrid } from "../components/home/instruments-grid"
+import { NEGATIVE } from "../utils/constants"
 import { colors } from "../utils/theme"
 
 const Home = ({ data }) => {
@@ -95,7 +96,7 @@ const Home = ({ data }) => {
                 to="/explore"
                 state={{ defaultExploreCategory: "platforms" }}
                 style={{
-                  border: `1px solid ${colors.darkTheme.text}`,
+                  border: `1px solid ${colors[NEGATIVE].text}`,
                   padding: `1rem 5rem`,
                   textTransform: `uppercase`,
                 }}
