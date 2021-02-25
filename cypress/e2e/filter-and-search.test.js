@@ -11,10 +11,10 @@ describe("Filter, Search and Sort", () => {
   it("should not reload on button click nor type and enter", () => {
     cy.visit("/explore")
 
-    // should not show map on intitial load
+    // should show map on intitial load
     cy.get("[data-cy=main-explore]")
       .find("[data-cy=mapboxgl-map]")
-      .should("not.exist")
+      .should("exist")
 
     cy.get("[data-cy=tabbar]")
 
@@ -26,13 +26,13 @@ describe("Filter, Search and Sort", () => {
     cy.get("[data-cy=explore-tools]")
 
     // should toggle map on button click
-    cy.get(`[data-cy=map-toggle-btn]`).contains("Show Map").click()
+    cy.get(`[data-cy=map-toggle-btn]`).contains("Hide Map").click()
     cy.window().should("have.prop", "beforeReload", true)
 
-    cy.get(`[data-cy=map-toggle-btn]`).contains("Hide Map")
+    cy.get(`[data-cy=map-toggle-btn]`).contains("Show Map")
     cy.get("[data-cy=main-explore]")
       .find("[data-cy=mapboxgl-map]")
-      .should("exist")
+      .should("not.exist")
 
     cy.get("[data-cy=main-filter-label").should("exist").contains("Filter By")
 
