@@ -14,26 +14,42 @@ const Clickable = styled.button`
   }
 `
 
-export default function Button({ children, action }) {
+export default function Button({
+  children,
+  action,
+  mode = NEGATIVE,
+  isPrimary,
+}) {
+  // flip mode for primary buttons
+  const overrideMode = isPrimary
+    ? mode === NEGATIVE
+      ? POSITIVE
+      : NEGATIVE
+    : mode
+
   return (
     <Clickable
       onClick={action}
-      style={{
-        userSelect: `none`,
-        color: `white`,
-        display: `inline-block`,
-        textAlign: `center`,
-        verticalAlign: `middle`,
-        padding: `0.25rem 0.75rem`,
-        minWidth: `2rem`,
-        background: `none`,
-        textShadow: `none`,
-        border: 0,
-        cursor: `pointer`,
-        backgroundColor: colors[POSITIVE].linkText,
-        borderRadius: shape.rounded,
-        fontWeight: `bold`,
-      }}
+      css={`
+         {
+          user-select: none;
+          color: ${colors[overrideMode].text};
+          display: inline-block;
+          text-align: center;
+          vertical-align: middle;
+          padding: 0.25rem 0.75rem;
+          min-width: 2rem;
+          background: none;
+          text-shadow: none;
+          border: 1px solid ${colors[overrideMode].text};
+          cursor: pointer;
+          background-color: ${isPrimary
+            ? colors[overrideMode].background
+            : "none"};
+          border-radius: ${shape.rounded};
+          font-weight: bold;
+        }
+      `}
     >
       {children}
     </Clickable>
@@ -43,6 +59,8 @@ export default function Button({ children, action }) {
 Button.propTypes = {
   children: PropTypes.string.isRequired,
   action: PropTypes.func.isRequired,
+  mode: PropTypes.oneOf([POSITIVE, NEGATIVE]),
+  isPrimary: PropTypes.bool,
 }
 
 export const IconButton = ({ id, icon, action }) => (

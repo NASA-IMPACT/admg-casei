@@ -9,7 +9,11 @@ import { colors } from "../utils/theme"
 import Button from "../components/button"
 
 // Note: the triggerComponent can be any component you want!
-const FishButton = props => <Button action={props.onClick}>Feedback</Button>
+const FishButton = props => (
+  <Button action={props.onClick} mode={POSITIVE} isPrimary>
+    Feedback
+  </Button>
+)
 
 FishButton.propTypes = {
   onClick: PropTypes.func.isRequired,

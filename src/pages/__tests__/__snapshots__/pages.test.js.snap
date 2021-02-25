@@ -59,6 +59,26 @@ exports[`Explore page renders correctly 1`] = `
 }
 
 .c34.c34 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #e9eaec;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.25rem 0.75rem;
+  min-width: 2rem;
+  background: none;
+  text-shadow: none;
+  border: 1px solid #e9eaec;
+  cursor: pointer;
+  background-color: none;
+  border-radius: 0.2rem;
+  font-weight: bold;
+}
+
+.c35.c35 {
   position: fixed;
   top: 0;
   right: 0;
@@ -80,7 +100,7 @@ exports[`Explore page renders correctly 1`] = `
   transition: opacity 400ms ease-in;
 }
 
-.c35.c35 {
+.c36.c36 {
   width: 400px;
   position: relative;
   padding: 32px;
@@ -137,20 +157,20 @@ exports[`Explore page renders correctly 1`] = `
   grid-column: 7 / span 2;
 }
 
-.c36.c36 {
+.c37.c37 {
   grid-column: 9 / span 2;
 }
 
-.c37.c37 {
+.c38.c38 {
   grid-column: 11 / span 2;
 }
 
-.c38.c38 {
+.c39.c39 {
   grid-column: 1 / span 12;
   background-color: rgba(255,255,255,0.2);
 }
 
-.c39.c39 {
+.c40.c40 {
   grid-column: 1 / span 12;
   display: -webkit-box;
   display: -webkit-flex;
@@ -162,7 +182,7 @@ exports[`Explore page renders correctly 1`] = `
   justify-content: space-between;
 }
 
-.c40.c40 {
+.c41.c41 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -174,7 +194,7 @@ exports[`Explore page renders correctly 1`] = `
   font-weight: bold;
 }
 
-.c41.c41 {
+.c42.c42 {
   background-image: url("https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png");
   background-size: cover;
   background-position: center;
@@ -182,11 +202,11 @@ exports[`Explore page renders correctly 1`] = `
   height: 100px;
 }
 
-.c42.c42 {
+.c43.c43 {
   font-weight: normal;
 }
 
-.c43.c43 {
+.c44.c44 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -198,7 +218,7 @@ exports[`Explore page renders correctly 1`] = `
   text-transform: uppercase;
 }
 
-.c44.c44 {
+.c45.c45 {
   text-align: center;
 }
 
@@ -4418,35 +4438,17 @@ exports[`Explore page renders correctly 1`] = `
           </li>
           <li>
             <button
-              className="c21"
+              className="c21 c34"
               onClick={[Function]}
-              style={
-                Object {
-                  "background": "none",
-                  "backgroundColor": "#15418c",
-                  "border": 0,
-                  "borderRadius": "0.2rem",
-                  "color": "white",
-                  "cursor": "pointer",
-                  "display": "inline-block",
-                  "fontWeight": "bold",
-                  "minWidth": "2rem",
-                  "padding": "0.25rem 0.75rem",
-                  "textAlign": "center",
-                  "textShadow": "none",
-                  "userSelect": "none",
-                  "verticalAlign": "middle",
-                }
-              }
             >
               Maintenance login
             </button>
             <div
-              className="c34"
+              className="c35"
               onClick={[Function]}
             >
               <div
-                className="c35"
+                className="c36"
               >
                 <form
                   data-cy="login-form"
@@ -4488,7 +4490,7 @@ exports[`Explore page renders correctly 1`] = `
         </ul>
       </div>
       <div
-        className="c36"
+        className="c37"
         data-cy="footer-quick-links"
       >
         <p
@@ -4516,7 +4518,7 @@ exports[`Explore page renders correctly 1`] = `
         </ul>
       </div>
       <div
-        className="c37"
+        className="c38"
         data-cy="footer-organizations"
       >
         <p
@@ -4560,17 +4562,17 @@ exports[`Explore page renders correctly 1`] = `
         </ul>
       </div>
       <hr
-        className="c38"
+        className="c39"
       />
       <div
-        className="c39"
+        className="c40"
       >
         <div
-          className="c40"
+          className="c41"
         >
           <div
             aria-hidden="true"
-            className="c41"
+            className="c42"
           />
           <div
             data-cy="footer-credits"
@@ -4586,7 +4588,7 @@ exports[`Explore page renders correctly 1`] = `
               NASA Official:
                
               <span
-                className="c42"
+                className="c43"
               >
                 Rahul Ramachandran
               </span>
@@ -4594,12 +4596,12 @@ exports[`Explore page renders correctly 1`] = `
           </div>
         </div>
         <div
-          className="c43"
+          className="c44"
         />
       </div>
     </div>
     <div
-      className="c44"
+      className="c45"
       data-cy="footer-credit-devseed"
     >
       © 
@@ -4735,6 +4737,26 @@ exports[`Glossary page renders correctly 1`] = `
 }
 
 .c20.c20 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #e9eaec;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.25rem 0.75rem;
+  min-width: 2rem;
+  background: none;
+  text-shadow: none;
+  border: 1px solid #e9eaec;
+  cursor: pointer;
+  background-color: none;
+  border-radius: 0.2rem;
+  font-weight: bold;
+}
+
+.c21.c21 {
   position: fixed;
   top: 0;
   right: 0;
@@ -4756,7 +4778,7 @@ exports[`Glossary page renders correctly 1`] = `
   transition: opacity 400ms ease-in;
 }
 
-.c21.c21 {
+.c22.c22 {
   width: 400px;
   position: relative;
   padding: 32px;
@@ -4813,20 +4835,20 @@ exports[`Glossary page renders correctly 1`] = `
   grid-column: 7 / span 2;
 }
 
-.c22.c22 {
+.c23.c23 {
   grid-column: 9 / span 2;
 }
 
-.c23.c23 {
+.c24.c24 {
   grid-column: 11 / span 2;
 }
 
-.c24.c24 {
+.c25.c25 {
   grid-column: 1 / span 12;
   background-color: rgba(255,255,255,0.2);
 }
 
-.c25.c25 {
+.c26.c26 {
   grid-column: 1 / span 12;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4838,7 +4860,7 @@ exports[`Glossary page renders correctly 1`] = `
   justify-content: space-between;
 }
 
-.c26.c26 {
+.c27.c27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4850,7 +4872,7 @@ exports[`Glossary page renders correctly 1`] = `
   font-weight: bold;
 }
 
-.c27.c27 {
+.c28.c28 {
   background-image: url("https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png");
   background-size: cover;
   background-position: center;
@@ -4858,11 +4880,11 @@ exports[`Glossary page renders correctly 1`] = `
   height: 100px;
 }
 
-.c28.c28 {
+.c29.c29 {
   font-weight: normal;
 }
 
-.c29.c29 {
+.c30.c30 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4874,7 +4896,7 @@ exports[`Glossary page renders correctly 1`] = `
   text-transform: uppercase;
 }
 
-.c30.c30 {
+.c31.c31 {
   text-align: center;
 }
 
@@ -5699,35 +5721,17 @@ exports[`Glossary page renders correctly 1`] = `
           </li>
           <li>
             <button
-              className="c19"
+              className="c19 c20"
               onClick={[Function]}
-              style={
-                Object {
-                  "background": "none",
-                  "backgroundColor": "#15418c",
-                  "border": 0,
-                  "borderRadius": "0.2rem",
-                  "color": "white",
-                  "cursor": "pointer",
-                  "display": "inline-block",
-                  "fontWeight": "bold",
-                  "minWidth": "2rem",
-                  "padding": "0.25rem 0.75rem",
-                  "textAlign": "center",
-                  "textShadow": "none",
-                  "userSelect": "none",
-                  "verticalAlign": "middle",
-                }
-              }
             >
               Maintenance login
             </button>
             <div
-              className="c20"
+              className="c21"
               onClick={[Function]}
             >
               <div
-                className="c21"
+                className="c22"
               >
                 <form
                   data-cy="login-form"
@@ -5769,7 +5773,7 @@ exports[`Glossary page renders correctly 1`] = `
         </ul>
       </div>
       <div
-        className="c22"
+        className="c23"
         data-cy="footer-quick-links"
       >
         <p
@@ -5797,7 +5801,7 @@ exports[`Glossary page renders correctly 1`] = `
         </ul>
       </div>
       <div
-        className="c23"
+        className="c24"
         data-cy="footer-organizations"
       >
         <p
@@ -5841,17 +5845,17 @@ exports[`Glossary page renders correctly 1`] = `
         </ul>
       </div>
       <hr
-        className="c24"
+        className="c25"
       />
       <div
-        className="c25"
+        className="c26"
       >
         <div
-          className="c26"
+          className="c27"
         >
           <div
             aria-hidden="true"
-            className="c27"
+            className="c28"
           />
           <div
             data-cy="footer-credits"
@@ -5867,7 +5871,7 @@ exports[`Glossary page renders correctly 1`] = `
               NASA Official:
                
               <span
-                className="c28"
+                className="c29"
               >
                 Rahul Ramachandran
               </span>
@@ -5875,12 +5879,12 @@ exports[`Glossary page renders correctly 1`] = `
           </div>
         </div>
         <div
-          className="c29"
+          className="c30"
         />
       </div>
     </div>
     <div
-      className="c30"
+      className="c31"
       data-cy="footer-credit-devseed"
     >
       © 
