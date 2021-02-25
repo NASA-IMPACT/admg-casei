@@ -752,7 +752,7 @@ exports[`Explore page renders correctly 1`] = `
               onClick={[Function]}
             >
               <span>
-                Show
+                Hide
                  Map
               </span>
             </button>
@@ -1228,6 +1228,14 @@ exports[`Explore page renders correctly 1`] = `
           </div>
         </div>
       </form>
+      <div
+        data-cy="mapboxgl-map"
+        style={
+          Object {
+            "height": 500,
+          }
+        }
+      />
       <div
         style={
           Object {

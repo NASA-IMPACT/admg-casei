@@ -55,7 +55,7 @@ export default function Explore({ data, location }) {
     end: null,
   })
   const [searchResult, setSearchResult] = useState()
-  const [isDisplayingMap, toggleMap] = useState(false)
+  const [isDisplayingMap, toggleMap] = useState(true)
 
   useEffect(() => {
     // update based on passed state
