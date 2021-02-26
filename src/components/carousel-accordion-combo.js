@@ -5,12 +5,11 @@ import { Link } from "gatsby"
 import Carousel from "nuka-carousel"
 import Image from "gatsby-image"
 
-import ImageCaption from "./image-caption"
 import CampaignCard from "./cards/campaign-card"
 import { controlButtonLRStyle, ControlTextButton } from "./carousel-styles"
 import Accordion from "./accordion"
 import { NEGATIVE } from "../utils/constants"
-import { colors, layout } from "../utils/theme"
+import { colors } from "../utils/theme"
 
 export default function CarouselAccordionCombo({
   id,
@@ -44,6 +43,7 @@ export default function CarouselAccordionCombo({
               </ControlTextButton>
             ))}
           </div>
+
           <Carousel
             slideIndex={slideIndex}
             afterSlide={slideIndex => {
@@ -86,52 +86,41 @@ export default function CarouselAccordionCombo({
               <div
                 key={carouselItem.id}
                 data-cy={id}
-                style={{
-                  display: `grid`,
-                  gridTemplateColumns: `1fr minmax(auto,  ${layout.maxWidth}) 1fr`,
-                  width: `100vw`,
-                  alignContent: `center`,
-                }}
+                css={`
+                   {
+                    display: grid;
+                    grid-template-columns: 26rem auto;
+                    gap: 2rem;
+                    height: 100%;
+                  }
+                `}
               >
-                <div
-                  style={{
-                    display: `grid`,
-                    gridTemplateColumns: `1fr 3fr`,
-                    gridGap: `1.5rem`,
-                    width: `70rem`,
-                  }}
-                >
+                {isImage ? (
+                  <ImageCarousel
+                    id={id}
+                    address={`/${id}/${carouselItem.id}`}
+                    carouselImage={carouselItem.image}
+                    placeholder={placeholderImage}
+                    caption={carouselItem.longname || carouselItem.shortname}
+                  />
+                ) : (
                   <div
-                    style={{
-                      width: `26rem`,
-                      maxHeight: `18rem`,
-                      marginTop: `1.25rem`,
-                    }}
+                    css={`
+                       {
+                        max-height: 30rem;
+                      }
+                    `}
                   >
-                    {isImage ? (
-                      <ImageCarousel
-                        id={id}
-                        address={`/${id}/${carouselItem.id}`}
-                        carouselImage={carouselItem.image}
-                        placeholder={placeholderImage}
-                        caption={
-                          carouselItem.longname || carouselItem.shortname
-                        }
-                      />
-                    ) : (
-                      <div style={{ width: `26rem`, maxHeight: `30rem` }}>
-                        <Link
-                          to={`/${id}/${carouselItem.id}`}
-                          data-cy={`carousel-${id}-card-link`}
-                        >
-                          <CampaignCard id={carouselItem.id} />
-                        </Link>
-                      </div>
-                    )}
+                    <Link
+                      to={`/${id}/${carouselItem.id}`}
+                      data-cy={`carousel-${id}-card-link`}
+                    >
+                      <CampaignCard id={carouselItem.id} />
+                    </Link>
                   </div>
+                )}
 
-                  <Accordion folds={folds[carouselItem.id]} id="instrument" />
-                </div>
+                <Accordion folds={folds[carouselItem.id]} id="instrument" />
               </div>
             ))}
           </Carousel>
@@ -185,30 +174,59 @@ function ImageCarousel({
   caption,
 }) {
   return (
-    <Link to={address}>
+    <Link
+      to={address}
+      css={`
+         {
+          display: grid;
+          grid-template-rows: auto 4rem;
+          height: 100%;
+        }
+      `}
+    >
       {carouselImage && carouselImage.gatsbyImg ? (
         <Image
           alt={carouselImage.description}
           fluid={carouselImage.gatsbyImg.childImageSharp.fluid}
+          css={`
+             {
+              grid-area: 1 / 1 / 3 / 1;
+            }
+          `}
           data-cy={`${id}-image`}
         />
       ) : (
         <div
-          style={{
-            width: `26rem`,
-            height: `18rem`,
-            backgroundColor: colors[NEGATIVE].background,
-            display: `flex`,
-            alignItems: `center`,
-            justifyContent: `center`,
-            paddingBottom: `2rem`,
-          }}
+          css={`
+             {
+              grid-area: 1 / 1 / 3 / 1;
+
+              min-height: 18rem;
+              height: 100%;
+              background-color: ${colors[NEGATIVE].background};
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding-bottom: 2rem;
+            }
+          `}
           data-cy={`${id}-image`}
         >
           <Placeholder />
         </div>
       )}
-      <ImageCaption id={`${id}-image`}>{caption}</ImageCaption>
+      <label
+        css={`
+           {
+            grid-area: 2 / 1 / 3 / 1;
+            margin: 1rem;
+            z-index: 1;
+          }
+        `}
+        data-cy={`${id}-image-caption`}
+      >
+        {caption}
+      </label>
     </Link>
   )
 }

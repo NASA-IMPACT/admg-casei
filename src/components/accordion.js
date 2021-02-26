@@ -33,73 +33,107 @@ export default function Accordion({ folds, id }) {
   }
   return (
     <ReachAccordion
-      style={{
-        maxHeight: `30rem`,
-        overflowY: `auto`,
-      }}
+      css={`
+         {
+          max-height: 30rem;
+          overflow-y: auto;
+        }
+      `}
       index={indices}
       onChange={toggleAccordionItem}
       data-cy={`${id}-accordion`}
     >
       {folds.map((fold, index) => (
         <AccordionItem key={fold.id}>
-          <span>
-            <AccordionButton
-              style={{
-                borderWidth: `0 0 1px 0`,
-                borderColor: colors[NEGATIVE].text,
-                background: `none`,
-                color: indices.includes(index)
-                  ? colors[NEGATIVE].linkText
-                  : colors[NEGATIVE].text,
-                width: `100%`,
-                textAlign: `left`,
-                cursor: `pointer`,
-                padding: `1rem`,
-                textTransform: `uppercase`,
-                fontWeight: `bold`,
-                justifyContent: `space-between`,
-                display: `flex`,
-              }}
-              data-cy="accordion-button"
-            >
-              <div>
-                {fold.longname} ({fold.shortname})
-              </div>
-              <RotatingContainer isExpanded={indices.includes(index)}>
-                <ChevronIcon role="img" aria-label="chevron-icon" />
-              </RotatingContainer>
-            </AccordionButton>
-          </span>
-          <AccordionPanel style={{ padding: `.5rem 1rem` }}>
+          <AccordionButton
+            css={`
+               {
+                border-width: 0 0 1px 0;
+                border-color: ${colors[NEGATIVE].altText};
+                background: none;
+                color: ${colors[NEGATIVE].text};
+                width: 100%;
+                text-align: left;
+                cursor: pointer;
+                padding: 1rem;
+                text-transform: none;
+                font-weight: bold;
+                justify-content: space-between;
+                display: flex;
+              }
+            `}
+            data-cy="accordion-button"
+          >
+            <span>
+              {fold.longname
+                ? `${fold.longname} (${fold.shortname})`
+                : fold.shortname}
+            </span>
+            <RotatingContainer isExpanded={indices.includes(index)}>
+              <ChevronIcon role="img" aria-label="chevron-icon" />
+            </RotatingContainer>
+          </AccordionButton>
+          <AccordionPanel
+            css={`
+               {
+                padding: 0.5rem 1rem;
+              }
+            `}
+          >
             <div
-              style={{
-                display: `grid`,
-                gridTemplateColumns: `1fr 1f 1fr 1fr`,
-              }}
+              css={`
+                 {
+                  display: grid;
+                  grid-template-columns: 1fr 1fr 1fr 1fr;
+                }
+              `}
               data-cy={`${id}-accordion-content`}
             >
               {fold.image && (
                 <Image
-                  style={{ gridColumn: `1 / 2` }}
+                  css={`
+                     {
+                      grid-column: 1 / 2;
+                    }
+                  `}
                   alt={fold.image.description}
                   fixed={fold.image.gatsbyImg.childImageSharp.fixed}
                   data-cy={`${id}-accordion-image`}
                 />
               )}
-              <div
-                style={
-                  fold.image
-                    ? { gridColumn: `2 / 4`, paddingLeft: `.5rem` }
-                    : { gridColumn: `1 / 4` }
-                }
-                data-cy={`${id}-accordion-image-description`}
-              >
-                {fold.description}
-              </div>
+              {fold.image ? (
+                <div
+                  css={`
+                     {
+                      grid-column: 2 / 4;
+                      padding-left: 0.5rem;
+                    }
+                  `}
+                  data-cy={`${id}-accordion-image-description`}
+                >
+                  {fold.description}
+                </div>
+              ) : (
+                <div
+                  css={`
+                     {
+                      grid-column: 1 / 4;
+                    }
+                  `}
+                  data-cy={`${id}-accordion-image-description`}
+                >
+                  {fold.description}
+                </div>
+              )}
             </div>
             {fold.gcmdPhenomenas && (
-              <div style={{ margin: `3rem 0` }}>
+              <div
+                css={`
+                   {
+                    margin: 3rem 0;
+                  }
+                `}
+              >
                 <Label id="accordion-measurements">
                   Measurements/Variables
                 </Label>
@@ -114,7 +148,11 @@ export default function Accordion({ folds, id }) {
             )}
             <Link
               to={`/instrument/${fold.id}`}
-              style={{ color: colors[NEGATIVE].linkText }}
+              css={`
+                 {
+                  color: ${colors[NEGATIVE].linkText};
+                }
+              `}
               data-cy="accordion-link"
             >
               <Label
