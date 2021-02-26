@@ -40,27 +40,53 @@ exports[`Platform Section displays content 1`] = `
   align-self: end;
 }
 
-.c4.c4 {
-  margin: 0.2rem 0.5rem;
-  padding: 0;
-  color: #e9eaec;
-  opacity: 1;
-  border: 0;
-  background: rgba(255,255,255,0);
-  text-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+.c5.c5:hover {
+  opacity: 0.64;
 }
 
-.c5.c5 {
-  margin: 0.2rem 0.5rem;
-  padding: 0;
-  color: #e9eaec;
-  opacity: 0.6;
-  border: 0;
-  background: rgba(255,255,255,0);
-  text-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+.c5.c5:active {
+  -webkit-transform: translate(0,1px);
+  -ms-transform: translate(0,1px);
+  transform: translate(0,1px);
 }
 
-.c12.c12 {
+.c6.c6 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #262a31;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.25rem 0.75rem;
+  background: none;
+  text-shadow: none;
+  border: 1px solid #262a31;
+  cursor: pointer;
+  background-color: #ffffff;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.c7.c7 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #e9eaec;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.25rem 0.75rem;
+  background: none;
+  text-shadow: none;
+  border: 1px solid #e9eaec;
+  cursor: pointer;
+  background-color: transparent;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.c14.c14 {
   -webkit-transition: -webkit-transform 240ms ease-in-out;
   -webkit-transition: transform 240ms ease-in-out;
   transition: transform 240ms ease-in-out;
@@ -69,12 +95,12 @@ exports[`Platform Section displays content 1`] = `
   transform: rotate(0deg);
 }
 
-.c10.c10 {
+.c12.c12 {
   max-height: 30rem;
   overflow-y: auto;
 }
 
-.c11.c11 {
+.c13.c13 {
   border-width: 0 0 1px 0;
   border-color: #9e9e9e;
   background: none;
@@ -95,41 +121,51 @@ exports[`Platform Section displays content 1`] = `
   display: flex;
 }
 
-.c13.c13 {
+.c15.c15 {
   padding: 0.5rem 1rem;
 }
 
-.c14.c14 {
+.c16.c16 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-.c15.c15 {
+.c17.c17 {
   grid-column: 1 / 4;
 }
 
-.c16.c16 {
+.c18.c18 {
   color: #aac9ff;
 }
 
-.c6.c6 {
+.c4.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: auto;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.c8.c8 {
   display: grid;
   grid-template-columns: 26rem auto;
   gap: 2rem;
   height: 100%;
 }
 
-.c7.c7 {
+.c9.c9 {
   display: grid;
   grid-template-rows: auto 4rem;
   height: 100%;
 }
 
-.c8.c8 {
+.c10.c10 {
   grid-area: 1 / 1 / 3 / 1;
 }
 
-.c9.c9 {
+.c11.c11 {
   grid-area: 2 / 1 / 3 / 1;
   margin: 1rem;
   z-index: 1;
@@ -164,32 +200,24 @@ exports[`Platform Section displays content 1`] = `
       data-cy="platform-carousel"
     >
       <div
+        className="c4"
         data-cy="carousel-list-text-control"
-        style={
-          Object {
-            "display": "flex",
-            "overflow": "auto",
-          }
-        }
       >
         <button
-          className="c4"
+          className="c5 c6"
           onClick={[Function]}
-          selected={true}
         >
           DC-8
         </button>
         <button
-          className="c5"
+          className="c5 c7"
           onClick={[Function]}
-          selected={false}
         >
           B-200
         </button>
         <button
-          className="c5"
+          className="c5 c7"
           onClick={[Function]}
-          selected={false}
         >
           P-3
         </button>
@@ -198,29 +226,29 @@ exports[`Platform Section displays content 1`] = `
         data-test="mocked-nuka-carousel"
       >
         <div
-          className="c6"
+          className="c8"
           data-cy="platform"
         >
           <a
-            className="c7"
+            className="c9"
             href="/platform/d59b3d7e-f782-4e25-a8eb-ceec91c0331e"
           >
             <img
               alt="alt-text"
-              className="c8"
+              className="c10"
               data-cy="platform-image"
               fluid={[Function]}
               src="test-image.png"
             />
             <label
-              className="c9"
+              className="c11"
               data-cy="platform-image-caption"
             >
               Douglas DC-8
             </label>
           </a>
           <div
-            className="c10"
+            className="c12"
             data-cy="instrument-accordion"
             data-reach-accordion=""
           >
@@ -233,7 +261,7 @@ exports[`Platform Section displays content 1`] = `
                 _css2="#e9eaec"
                 aria-controls="panel--1---1"
                 aria-expanded={false}
-                className="c11"
+                className="c13"
                 data-cy="accordion-button"
                 data-reach-accordion-button=""
                 id="button--1---1"
@@ -244,7 +272,7 @@ exports[`Platform Section displays content 1`] = `
                   Gen-Chemistry
                 </span>
                 <div
-                  className="c12"
+                  className="c14"
                 >
                   <svg
                     height="16"
@@ -271,7 +299,7 @@ exports[`Platform Section displays content 1`] = `
               </button>
               <div
                 aria-labelledby="button--1---1"
-                className="c13"
+                className="c15"
                 data-reach-accordion-panel=""
                 data-state="collapsed"
                 hidden={true}
@@ -280,17 +308,17 @@ exports[`Platform Section displays content 1`] = `
                 tabIndex={-1}
               >
                 <div
-                  className="c14"
+                  className="c16"
                   data-cy="instrument-accordion-content"
                 >
                   <div
-                    className="c15"
+                    className="c17"
                     data-cy="instrument-accordion-image-description"
                   />
                 </div>
                 <a
                   _css3="#aac9ff"
-                  className="c16"
+                  className="c18"
                   data-cy="accordion-link"
                   href="/instrument/a1f41f4d-2233-49be-a3d3-6eda1ded6be4"
                 >
@@ -339,29 +367,29 @@ exports[`Platform Section displays content 1`] = `
           </div>
         </div>
         <div
-          className="c6"
+          className="c8"
           data-cy="platform"
         >
           <a
-            className="c7"
+            className="c9"
             href="/platform/1b607095-4f6d-4e70-8e16-798bc59a2d59"
           >
             <img
               alt="alt-text"
-              className="c8"
+              className="c10"
               data-cy="platform-image"
               fluid={[Function]}
               src="test-image.png"
             />
             <label
-              className="c9"
+              className="c11"
               data-cy="platform-image-caption"
             >
               Beechcraft King Air B-200
             </label>
           </a>
           <div
-            className="c10"
+            className="c12"
             data-cy="instrument-accordion"
             data-reach-accordion=""
           >
@@ -374,7 +402,7 @@ exports[`Platform Section displays content 1`] = `
                 _css2="#e9eaec"
                 aria-controls="panel--2---1"
                 aria-expanded={false}
-                className="c11"
+                className="c13"
                 data-cy="accordion-button"
                 data-reach-accordion-button=""
                 id="button--2---1"
@@ -385,7 +413,7 @@ exports[`Platform Section displays content 1`] = `
                   HSRL
                 </span>
                 <div
-                  className="c12"
+                  className="c14"
                 >
                   <svg
                     height="16"
@@ -412,7 +440,7 @@ exports[`Platform Section displays content 1`] = `
               </button>
               <div
                 aria-labelledby="button--2---1"
-                className="c13"
+                className="c15"
                 data-reach-accordion-panel=""
                 data-state="collapsed"
                 hidden={true}
@@ -421,17 +449,17 @@ exports[`Platform Section displays content 1`] = `
                 tabIndex={-1}
               >
                 <div
-                  className="c14"
+                  className="c16"
                   data-cy="instrument-accordion-content"
                 >
                   <div
-                    className="c15"
+                    className="c17"
                     data-cy="instrument-accordion-image-description"
                   />
                 </div>
                 <a
                   _css3="#aac9ff"
-                  className="c16"
+                  className="c18"
                   data-cy="accordion-link"
                   href="/instrument/aa6e3d99-17ca-4b4e-9130-c6e0b0864fd9"
                 >
@@ -480,29 +508,29 @@ exports[`Platform Section displays content 1`] = `
           </div>
         </div>
         <div
-          className="c6"
+          className="c8"
           data-cy="platform"
         >
           <a
-            className="c7"
+            className="c9"
             href="/platform/2084ab0c-4f18-4aa6-ad7b-70bc861d2d80"
           >
             <img
               alt="alt-text"
-              className="c8"
+              className="c10"
               data-cy="platform-image"
               fluid={[Function]}
               src="test-image.png"
             />
             <label
-              className="c9"
+              className="c11"
               data-cy="platform-image-caption"
             >
               P-3 Orion
             </label>
           </a>
           <div
-            className="c10"
+            className="c12"
             data-cy="instrument-accordion"
             data-reach-accordion=""
           >
@@ -515,7 +543,7 @@ exports[`Platform Section displays content 1`] = `
                 _css2="#e9eaec"
                 aria-controls="panel--3---1"
                 aria-expanded={false}
-                className="c11"
+                className="c13"
                 data-cy="accordion-button"
                 data-reach-accordion-button=""
                 id="button--3---1"
@@ -526,7 +554,7 @@ exports[`Platform Section displays content 1`] = `
                   Gen-Chemistry
                 </span>
                 <div
-                  className="c12"
+                  className="c14"
                 >
                   <svg
                     height="16"
@@ -553,7 +581,7 @@ exports[`Platform Section displays content 1`] = `
               </button>
               <div
                 aria-labelledby="button--3---1"
-                className="c13"
+                className="c15"
                 data-reach-accordion-panel=""
                 data-state="collapsed"
                 hidden={true}
@@ -562,17 +590,17 @@ exports[`Platform Section displays content 1`] = `
                 tabIndex={-1}
               >
                 <div
-                  className="c14"
+                  className="c16"
                   data-cy="instrument-accordion-content"
                 >
                   <div
-                    className="c15"
+                    className="c17"
                     data-cy="instrument-accordion-image-description"
                   />
                 </div>
                 <a
                   _css3="#aac9ff"
-                  className="c16"
+                  className="c18"
                   data-cy="accordion-link"
                   href="/instrument/a1f41f4d-2233-49be-a3d3-6eda1ded6be4"
                 >

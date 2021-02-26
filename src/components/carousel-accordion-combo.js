@@ -6,7 +6,8 @@ import Carousel from "nuka-carousel"
 import Image from "gatsby-image"
 
 import CampaignCard from "./cards/campaign-card"
-import { controlButtonLRStyle, ControlTextButton } from "./carousel-styles"
+import Button from "./button"
+import { controlButtonLRStyle } from "./carousel-styles"
 import Accordion from "./accordion"
 import { NEGATIVE } from "../utils/constants"
 import { colors } from "../utils/theme"
@@ -26,21 +27,25 @@ export default function CarouselAccordionCombo({
       {carouselList.length > 0 ? (
         <div data-cy={`${id}-carousel`}>
           <div
-            style={{
-              display: `flex`,
-              overflow: `auto`,
-            }}
+            css={`
+               {
+                display: flex;
+                overflow: auto;
+                gap: 0.5rem;
+                margin: 1rem 0;
+              }
+            `}
             data-cy="carousel-list-text-control"
           >
             {carouselList.map((carouselItem, index) => (
-              <ControlTextButton
+              <Button
                 key={carouselItem.id}
                 ref={index === slideIndex ? controlTextRef : null}
-                selected={index === slideIndex}
-                onClick={() => setSlideIndex(index)}
+                isSecondary={!(index === slideIndex)}
+                action={() => setSlideIndex(index)}
               >
                 {carouselItem.shortname}
-              </ControlTextButton>
+              </Button>
             ))}
           </div>
 

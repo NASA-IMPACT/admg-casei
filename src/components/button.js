@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 
 import { POSITIVE, NEGATIVE } from "../utils/constants"
-import { colors, shape } from "../utils/theme"
+import { colors } from "../utils/theme"
 
 const Clickable = styled.button`
   &:hover {
@@ -14,47 +14,43 @@ const Clickable = styled.button`
   }
 `
 
-export default function Button({
-  children,
-  action,
-  mode = NEGATIVE,
-  isSecondary,
-}) {
-  // flip mode for primary buttons
-  const overrideMode = isSecondary
-    ? mode
-    : mode === NEGATIVE
-    ? POSITIVE
-    : NEGATIVE
+const Button = React.forwardRef(
+  ({ children, action, mode = NEGATIVE, isSecondary }, ref) => {
+    // flip mode for primary buttons
+    const overrideMode = isSecondary
+      ? mode
+      : mode === NEGATIVE
+      ? POSITIVE
+      : NEGATIVE
 
-  return (
-    <Clickable
-      onClick={action}
-      css={`
-         {
-          user-select: none;
-          color: ${colors[overrideMode].text};
-          display: inline-block;
-          text-align: center;
-          vertical-align: middle;
-          padding: 0.25rem 0.75rem;
-          min-width: 2rem;
-          background: none;
-          text-shadow: none;
-          border: 1px solid ${colors[overrideMode].text};
-          cursor: pointer;
-          background-color: ${isSecondary
-            ? "none"
-            : colors[overrideMode].background};
-          border-radius: ${shape.rounded};
-          font-weight: bold;
-        }
-      `}
-    >
-      {children}
-    </Clickable>
-  )
-}
+    return (
+      <Clickable
+        ref={ref}
+        onClick={action}
+        css={`
+           {
+            user-select: none;
+            color: ${colors[overrideMode].text};
+            text-align: center;
+            vertical-align: middle;
+            padding: 0.25rem 0.75rem;
+            background: none;
+            text-shadow: none;
+            border: 1px solid ${colors[overrideMode].text};
+            cursor: pointer;
+            background-color: ${isSecondary
+              ? "transparent"
+              : colors[overrideMode].background};
+            font-weight: bold;
+            white-space: nowrap;
+          }
+        `}
+      >
+        {children}
+      </Clickable>
+    )
+  }
+)
 
 Button.propTypes = {
   children: PropTypes.string.isRequired,
@@ -62,6 +58,11 @@ Button.propTypes = {
   mode: PropTypes.oneOf([POSITIVE, NEGATIVE]),
   isSecondary: PropTypes.bool,
 }
+
+// https://reactjs.org/docs/forwarding-refs.html#displaying-a-custom-name-in-devtools
+Button.displayName = "Button"
+
+export default Button
 
 export const IconButton = ({ id, icon, action }) => (
   <Clickable

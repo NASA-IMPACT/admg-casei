@@ -64,18 +64,16 @@ exports[`Explore page renders correctly 1`] = `
   -ms-user-select: none;
   user-select: none;
   color: #e9eaec;
-  display: inline-block;
   text-align: center;
   vertical-align: middle;
   padding: 0.25rem 0.75rem;
-  min-width: 2rem;
   background: none;
   text-shadow: none;
   border: 1px solid #e9eaec;
   cursor: pointer;
-  background-color: none;
-  border-radius: 0.2rem;
+  background-color: transparent;
   font-weight: bold;
+  white-space: nowrap;
 }
 
 .c35.c35 {
@@ -4759,18 +4757,16 @@ exports[`Glossary page renders correctly 1`] = `
   -ms-user-select: none;
   user-select: none;
   color: #e9eaec;
-  display: inline-block;
   text-align: center;
   vertical-align: middle;
   padding: 0.25rem 0.75rem;
-  min-width: 2rem;
   background: none;
   text-shadow: none;
   border: 1px solid #e9eaec;
   cursor: pointer;
-  background-color: none;
-  border-radius: 0.2rem;
+  background-color: transparent;
   font-weight: bold;
+  white-space: nowrap;
 }
 
 .c27.c27 {
@@ -6585,21 +6581,21 @@ exports[`Home page renders correctly 1`] = `
   color: #e9eaec;
 }
 
-.c19.c19 {
+.c21.c21 {
   grid-column: 1 / span 6;
 }
 
-.c19.c19 > *,
-.c19.c19 h3 {
+.c21.c21 > *,
+.c21.c21 h3 {
   color: #e9eaec;
 }
 
-.c20.c20 {
+.c22.c22 {
   grid-column: 7 / span 6;
 }
 
-.c20.c20 > *,
-.c20.c20 h3 {
+.c22.c22 > *,
+.c22.c22 h3 {
   color: #e9eaec;
 }
 
@@ -6614,7 +6610,7 @@ exports[`Home page renders correctly 1`] = `
   text-transform: uppercase;
 }
 
-.c21.c21 {
+.c23.c23 {
   margin-top: -2rem;
   margin-bottom: 2.5rem;
 }
@@ -6666,23 +6662,69 @@ exports[`Home page renders correctly 1`] = `
   display: flex;
 }
 
-.c28.c28 {
+.c18.c18:hover {
+  opacity: 0.64;
+}
+
+.c18.c18:active {
+  -webkit-transform: translate(0,1px);
+  -ms-transform: translate(0,1px);
+  transform: translate(0,1px);
+}
+
+.c19.c19 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #e9eaec;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.25rem 0.75rem;
+  background: none;
+  text-shadow: none;
+  border: 1px solid #e9eaec;
+  cursor: pointer;
+  background-color: transparent;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.c20.c20 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #262a31;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.25rem 0.75rem;
+  background: none;
+  text-shadow: none;
+  border: 1px solid #262a31;
+  cursor: pointer;
+  background-color: #ffffff;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.c30.c30 {
   list-style: none;
   margin: 0;
 }
 
-.c27.c27 {
+.c29.c29 {
   margin: 0 0 1.5rem 0;
   font-weight: bold;
   line-height: 3rem;
 }
 
-.c22.c22 {
+.c24.c24 {
   margin-top: 5rem;
   background-color: #303641;
 }
 
-.c23.c23 {
+.c25.c25 {
   margin: 5rem auto;
   max-width: 1280px;
   padding: 2rem 4rem;
@@ -6694,11 +6736,11 @@ exports[`Home page renders correctly 1`] = `
   grid-template-columns: repeat(12,1fr);
 }
 
-.c24.c24 {
+.c26.c26 {
   grid-column: 1 / span 3;
 }
 
-.c25.c25 {
+.c27.c27 {
   text-transform: uppercase;
   font-weight: 900;
   font-size: 30px;
@@ -6706,28 +6748,28 @@ exports[`Home page renders correctly 1`] = `
   margin-bottom: 0.5rem;
 }
 
-.c26.c26 {
+.c28.c28 {
   grid-column: 5 / span 2;
 }
 
-.c29.c29 {
+.c31.c31 {
   grid-column: 7 / span 2;
 }
 
-.c30.c30 {
+.c32.c32 {
   grid-column: 9 / span 2;
 }
 
-.c31.c31 {
+.c33.c33 {
   grid-column: 11 / span 2;
 }
 
-.c32.c32 {
+.c34.c34 {
   grid-column: 1 / span 12;
   background-color: rgba(255,255,255,0.2);
 }
 
-.c33.c33 {
+.c35.c35 {
   grid-column: 1 / span 12;
   display: -webkit-box;
   display: -webkit-flex;
@@ -6739,7 +6781,7 @@ exports[`Home page renders correctly 1`] = `
   justify-content: space-between;
 }
 
-.c34.c34 {
+.c36.c36 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6751,7 +6793,7 @@ exports[`Home page renders correctly 1`] = `
   font-weight: bold;
 }
 
-.c35.c35 {
+.c37.c37 {
   background-image: url("https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png");
   background-size: cover;
   background-position: center;
@@ -6759,11 +6801,11 @@ exports[`Home page renders correctly 1`] = `
   height: 100px;
 }
 
-.c36.c36 {
+.c38.c38 {
   font-weight: normal;
 }
 
-.c37.c37 {
+.c39.c39 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6775,7 +6817,7 @@ exports[`Home page renders correctly 1`] = `
   text-transform: uppercase;
 }
 
-.c38.c38 {
+.c40.c40 {
   text-align: center;
 }
 
@@ -6827,23 +6869,13 @@ exports[`Home page renders correctly 1`] = `
 }
 
 .c17.c17 {
-  margin: 0.2rem 0.5rem;
-  padding: 0;
-  color: #e9eaec;
-  opacity: 0.6;
-  border: 0;
-  background: rgba(255,255,255,0);
-  text-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
-}
-
-.c18.c18 {
-  margin: 0.2rem 0.5rem;
-  padding: 0;
-  color: #e9eaec;
-  opacity: 1;
-  border: 0;
-  background: rgba(255,255,255,0);
-  text-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: auto;
+  gap: 0.5rem;
+  margin: 1rem 0;
 }
 
 <div
@@ -7349,123 +7381,102 @@ exports[`Home page renders correctly 1`] = `
           mode="darkTheme"
         >
           <div
+            className="c17"
             data-cy="region-text-control"
-            style={
-              Object {
-                "display": "flex",
-                "overflow": "auto",
-              }
-            }
           >
             <button
-              className="c17"
+              className="c18 c19"
               onClick={[Function]}
-              selected={false}
             >
               continental
             </button>
             <button
-              className="c18"
+              className="c18 c20"
               onClick={[Function]}
-              selected={true}
             >
               maritime
             </button>
             <button
-              className="c17"
+              className="c18 c19"
               onClick={[Function]}
-              selected={false}
             >
               coastal
             </button>
             <button
-              className="c17"
+              className="c18 c19"
               onClick={[Function]}
-              selected={false}
             >
               mountains
             </button>
             <button
-              className="c17"
+              className="c18 c19"
               onClick={[Function]}
-              selected={false}
             >
               island
             </button>
             <button
-              className="c17"
+              className="c18 c19"
               onClick={[Function]}
-              selected={false}
             >
               desert
             </button>
             <button
-              className="c17"
+              className="c18 c19"
               onClick={[Function]}
-              selected={false}
             >
               forest
             </button>
             <button
-              className="c17"
+              className="c18 c19"
               onClick={[Function]}
-              selected={false}
             >
               urban
             </button>
             <button
-              className="c17"
+              className="c18 c19"
               onClick={[Function]}
-              selected={false}
             >
               agricultural
             </button>
             <button
-              className="c17"
+              className="c18 c19"
               onClick={[Function]}
-              selected={false}
             >
               equitorial
             </button>
             <button
-              className="c17"
+              className="c18 c19"
               onClick={[Function]}
-              selected={false}
             >
               tropical
             </button>
             <button
-              className="c17"
+              className="c18 c19"
               onClick={[Function]}
-              selected={false}
             >
               mid-latitude
             </button>
             <button
-              className="c17"
+              className="c18 c19"
               onClick={[Function]}
-              selected={false}
             >
               polar
             </button>
             <button
-              className="c17"
+              className="c18 c19"
               onClick={[Function]}
-              selected={false}
             >
               sea ice
             </button>
             <button
-              className="c17"
+              className="c18 c19"
               onClick={[Function]}
-              selected={false}
             >
               coral
             </button>
             <button
-              className="c17"
+              className="c18 c19"
               onClick={[Function]}
-              selected={false}
             >
               rainforest
             </button>
@@ -9217,7 +9228,7 @@ exports[`Home page renders correctly 1`] = `
           id="platforms"
         />
         <div
-          className="c19"
+          className="c21"
           mode="darkTheme"
         >
           <img
@@ -9231,7 +9242,7 @@ exports[`Home page renders correctly 1`] = `
           />
         </div>
         <div
-          className="c20"
+          className="c22"
           mode="darkTheme"
         >
           <div
@@ -9262,7 +9273,7 @@ exports[`Home page renders correctly 1`] = `
                 </h2>
               </a>
               <p
-                className="c21"
+                className="c23"
                 data-cy="section-subline"
               >
                 From aircrafts to balloons, from sensors to plaftorms, it takes a lot to understand earth.
@@ -10089,17 +10100,17 @@ exports[`Home page renders correctly 1`] = `
     </div>
   </main>
   <footer
-    className="c22"
+    className="c24"
     data-cy="page-footer"
   >
     <div
-      className="c23"
+      className="c25"
     >
       <div
-        className="c24"
+        className="c26"
       >
         <div
-          className="c25"
+          className="c27"
           data-cy="footer-title"
         >
           NASA | CASEI
@@ -10112,16 +10123,16 @@ exports[`Home page renders correctly 1`] = `
         </p>
       </div>
       <div
-        className="c26"
+        className="c28"
         data-cy="footer-explore"
       >
         <p
-          className="c27"
+          className="c29"
         >
           Explore
         </p>
         <ul
-          className="c28"
+          className="c30"
         >
           <li>
             <a
@@ -10165,16 +10176,16 @@ exports[`Home page renders correctly 1`] = `
         </ul>
       </div>
       <div
-        className="c29"
+        className="c31"
         data-cy="footer-resources"
       >
         <p
-          className="c27"
+          className="c29"
         >
           Resources
         </p>
         <ul
-          className="c28"
+          className="c30"
         >
           <li>
             <a
@@ -10187,16 +10198,16 @@ exports[`Home page renders correctly 1`] = `
         </ul>
       </div>
       <div
-        className="c30"
+        className="c32"
         data-cy="footer-quick-links"
       >
         <p
-          className="c27"
+          className="c29"
         >
           Quick Links
         </p>
         <ul
-          className="c28"
+          className="c30"
         >
           <li>
             <a
@@ -10215,16 +10226,16 @@ exports[`Home page renders correctly 1`] = `
         </ul>
       </div>
       <div
-        className="c31"
+        className="c33"
         data-cy="footer-organizations"
       >
         <p
-          className="c27"
+          className="c29"
         >
           Organizations
         </p>
         <ul
-          className="c28"
+          className="c30"
         >
           <li>
             <a
@@ -10259,17 +10270,17 @@ exports[`Home page renders correctly 1`] = `
         </ul>
       </div>
       <hr
-        className="c32"
+        className="c34"
       />
       <div
-        className="c33"
+        className="c35"
       >
         <div
-          className="c34"
+          className="c36"
         >
           <div
             aria-hidden="true"
-            className="c35"
+            className="c37"
           />
           <div
             data-cy="footer-credits"
@@ -10285,7 +10296,7 @@ exports[`Home page renders correctly 1`] = `
               NASA Official:
                
               <span
-                className="c36"
+                className="c38"
               >
                 Rahul Ramachandran
               </span>
@@ -10293,12 +10304,12 @@ exports[`Home page renders correctly 1`] = `
           </div>
         </div>
         <div
-          className="c37"
+          className="c39"
         />
       </div>
     </div>
     <div
-      className="c38"
+      className="c40"
       data-cy="footer-credit-devseed"
     >
       © 
