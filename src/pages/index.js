@@ -137,7 +137,7 @@ export const query = graphql`
       nasaImg {
         childImageSharp {
           fluid {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
