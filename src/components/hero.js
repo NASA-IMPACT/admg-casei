@@ -130,8 +130,11 @@ export default function Hero({
           <Image
             alt={backgroundImage.nasaImgAlt}
             fluid={backgroundImage.nasaImg.childImageSharp.fluid}
+            objectPosition={"center top"} // TODO: does not take effect
             css={`
               max-height: 35rem;
+              min-width: 55rem;
+              object-position: center top; /* TODO: does not take effect */
             `}
           />
         </div>
