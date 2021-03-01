@@ -86,7 +86,7 @@ exports[`Platform Section displays content 1`] = `
   white-space: nowrap;
 }
 
-.c14.c14 {
+.c13.c13 {
   max-height: 30rem;
   overflow-y: auto;
 }
@@ -103,16 +103,13 @@ exports[`Platform Section displays content 1`] = `
 
 .c8.c8 {
   display: grid;
-  grid-template-columns: 26rem auto;
+  grid-template-columns: minmax(15rem,1fr) minmax(auto,3fr);
   gap: 2rem;
   height: 100%;
+  max-height: 24rem;
 }
 
-.c9.c9 {
-  max-height: 30rem;
-}
-
-.c12.c12 {
+.c11.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -129,7 +126,7 @@ exports[`Platform Section displays content 1`] = `
   min-height: 2rem;
 }
 
-.c10.c10 {
+.c9.c9 {
   color: #262a31;
   background-color: #ffffff;
   box-shadow: rgba(68,63,63,0.08) 0px -1px 1px 0px,rgba(68,63,63,0.08) 0px 2px 6px 0px;
@@ -149,11 +146,11 @@ exports[`Platform Section displays content 1`] = `
   height: 100%;
 }
 
-.c11.c11 {
+.c10.c10 {
   margin-bottom: 2rem;
 }
 
-.c13.c13 {
+.c12.c12 {
   white-space: nowrap;
 }
 
@@ -216,19 +213,18 @@ exports[`Platform Section displays content 1`] = `
           data-cy="platform"
         >
           <a
-            className="c9"
             data-cy="carousel-platform-card-link"
             href="/platform/dfb8cbd6-c33c-47df-9249-8949de2b81d7"
           >
             <div
-              className="c10"
+              className="c9"
               data-cy="platforms-card"
             >
               <div
-                className="c11"
+                className="c10"
               >
                 <div
-                  className="c12"
+                  className="c11"
                 >
                   <svg
                     height="60"
@@ -271,7 +267,7 @@ exports[`Platform Section displays content 1`] = `
               </div>
               <div>
                 <small
-                  className="c13"
+                  className="c12"
                   data-cy="count1"
                 >
                   <strong>
@@ -281,7 +277,7 @@ exports[`Platform Section displays content 1`] = `
                   Campaign
                 </small>
                 <small
-                  className="c13"
+                  className="c12"
                   data-cy="count2"
                 >
                    · 
@@ -292,7 +288,7 @@ exports[`Platform Section displays content 1`] = `
                   Collection Period
                 </small>
                 <small
-                  className="c13"
+                  className="c12"
                   data-cy="count3"
                 >
                    · 
@@ -306,7 +302,7 @@ exports[`Platform Section displays content 1`] = `
             </div>
           </a>
           <div
-            className="c14"
+            className="c13"
             data-cy="instrument-accordion"
             data-reach-accordion=""
           />
@@ -316,19 +312,18 @@ exports[`Platform Section displays content 1`] = `
           data-cy="platform"
         >
           <a
-            className="c9"
             data-cy="carousel-platform-card-link"
             href="/platform/8b97267c-bc15-4744-90a3-043dc20a76e8"
           >
             <div
-              className="c10"
+              className="c9"
               data-cy="platforms-card"
             >
               <div
-                className="c11"
+                className="c10"
               >
                 <div
-                  className="c12"
+                  className="c11"
                 >
                   <svg
                     height="60"
@@ -371,7 +366,7 @@ exports[`Platform Section displays content 1`] = `
               </div>
               <div>
                 <small
-                  className="c13"
+                  className="c12"
                   data-cy="count1"
                 >
                   <strong>
@@ -381,7 +376,7 @@ exports[`Platform Section displays content 1`] = `
                   Campaign
                 </small>
                 <small
-                  className="c13"
+                  className="c12"
                   data-cy="count2"
                 >
                    · 
@@ -392,7 +387,7 @@ exports[`Platform Section displays content 1`] = `
                   Collection Period
                 </small>
                 <small
-                  className="c13"
+                  className="c12"
                   data-cy="count3"
                 >
                    · 
@@ -407,7 +402,7 @@ exports[`Platform Section displays content 1`] = `
             </div>
           </a>
           <div
-            className="c14"
+            className="c13"
             data-cy="instrument-accordion"
             data-reach-accordion=""
           />
@@ -417,19 +412,18 @@ exports[`Platform Section displays content 1`] = `
           data-cy="platform"
         >
           <a
-            className="c9"
             data-cy="carousel-platform-card-link"
             href="/platform/1854d7b1-53c3-4ed4-8180-8f5bd6e4fd26"
           >
             <div
-              className="c10"
+              className="c9"
               data-cy="platforms-card"
             >
               <div
-                className="c11"
+                className="c10"
               >
                 <div
-                  className="c12"
+                  className="c11"
                 >
                   <svg
                     height="60"
@@ -472,7 +466,7 @@ exports[`Platform Section displays content 1`] = `
               </div>
               <div>
                 <small
-                  className="c13"
+                  className="c12"
                   data-cy="count1"
                 >
                   <strong>
@@ -482,7 +476,7 @@ exports[`Platform Section displays content 1`] = `
                   Campaign
                 </small>
                 <small
-                  className="c13"
+                  className="c12"
                   data-cy="count2"
                 >
                    · 
@@ -494,7 +488,7 @@ exports[`Platform Section displays content 1`] = `
                   s
                 </small>
                 <small
-                  className="c13"
+                  className="c12"
                   data-cy="count3"
                 >
                    · 
@@ -509,7 +503,7 @@ exports[`Platform Section displays content 1`] = `
             </div>
           </a>
           <div
-            className="c14"
+            className="c13"
             data-cy="instrument-accordion"
             data-reach-accordion=""
           />

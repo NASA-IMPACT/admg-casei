@@ -90,19 +90,15 @@ export default function CarouselAccordionCombo({
                 css={`
                    {
                     display: grid;
-                    grid-template-columns: 26rem auto;
+                    grid-template-columns: minmax(15rem, 1fr) minmax(auto, 3fr);
                     gap: 2rem;
                     height: 100%;
+                    max-height: 24rem;
                   }
                 `}
               >
                 <Link
                   to={`/${id}/${carouselItem.id}`}
-                  css={`
-                     {
-                      max-height: 30rem;
-                    }
-                  `}
                   data-cy={`carousel-${id}-card-link`}
                 >
                   <CategoryCard id={carouselItem.id} mode={POSITIVE} />
