@@ -3,22 +3,18 @@ import PropTypes from "prop-types"
 
 import { Link } from "gatsby"
 import Carousel from "nuka-carousel"
-import Image from "gatsby-image"
 
-import CampaignCard from "./cards/campaign-card"
 import Button from "./button"
 import { controlButtonLRStyle } from "./carousel-styles"
 import Accordion from "./accordion"
-import { POSITIVE, NEGATIVE } from "../utils/constants"
-import { colors } from "../utils/theme"
+import { POSITIVE } from "../utils/constants"
 
 export default function CarouselAccordionCombo({
   id,
   emptyMessage,
   carouselList,
+  card: CategoryCard,
   folds,
-  isImage,
-  placeholderImage,
 }) {
   const controlTextRef = useRef(null)
   const [slideIndex, setSlideIndex] = useState(0)
@@ -100,30 +96,17 @@ export default function CarouselAccordionCombo({
                   }
                 `}
               >
-                {isImage ? (
-                  <ImageCarousel
-                    id={id}
-                    address={`/${id}/${carouselItem.id}`}
-                    carouselImage={carouselItem.image}
-                    placeholder={placeholderImage}
-                    caption={carouselItem.longname || carouselItem.shortname}
-                  />
-                ) : (
-                  <div
-                    css={`
-                       {
-                        max-height: 30rem;
-                      }
-                    `}
-                  >
-                    <Link
-                      to={`/${id}/${carouselItem.id}`}
-                      data-cy={`carousel-${id}-card-link`}
-                    >
-                      <CampaignCard id={carouselItem.id} mode={POSITIVE} />
-                    </Link>
-                  </div>
-                )}
+                <Link
+                  to={`/${id}/${carouselItem.id}`}
+                  css={`
+                     {
+                      max-height: 30rem;
+                    }
+                  `}
+                  data-cy={`carousel-${id}-card-link`}
+                >
+                  <CategoryCard id={carouselItem.id} mode={POSITIVE} />
+                </Link>
 
                 <Accordion folds={folds[carouselItem.id]} id="instrument" />
               </div>
@@ -140,7 +123,7 @@ export default function CarouselAccordionCombo({
 CarouselAccordionCombo.propTypes = {
   id: PropTypes.string.isRequired,
   emptyMessage: PropTypes.string.isRequired,
-  placeholderImage: PropTypes.func,
+  card: PropTypes.func,
   carouselList: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
@@ -168,83 +151,4 @@ CarouselAccordionCombo.propTypes = {
       })
     ),
   }),
-  isImage: PropTypes.bool,
-}
-
-function ImageCarousel({
-  id,
-  address,
-  carouselImage,
-  placeholder: Placeholder,
-  caption,
-}) {
-  return (
-    <Link
-      to={address}
-      css={`
-         {
-          display: grid;
-          grid-template-rows: auto 4rem;
-          height: 100%;
-        }
-      `}
-    >
-      {carouselImage && carouselImage.gatsbyImg ? (
-        <Image
-          alt={carouselImage.description}
-          fluid={carouselImage.gatsbyImg.childImageSharp.fluid}
-          css={`
-             {
-              grid-area: 1 / 1 / 3 / 1;
-            }
-          `}
-          data-cy={`${id}-image`}
-        />
-      ) : (
-        <div
-          css={`
-             {
-              grid-area: 1 / 1 / 3 / 1;
-
-              min-height: 18rem;
-              height: 100%;
-              background-color: ${colors[NEGATIVE].background};
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              padding-bottom: 2rem;
-            }
-          `}
-          data-cy={`${id}-image`}
-        >
-          <Placeholder />
-        </div>
-      )}
-      <label
-        css={`
-           {
-            grid-area: 2 / 1 / 3 / 1;
-            margin: 1rem;
-            z-index: 1;
-          }
-        `}
-        data-cy={`${id}-image-caption`}
-      >
-        {caption}
-      </label>
-    </Link>
-  )
-}
-
-ImageCarousel.propTypes = {
-  id: PropTypes.string.isRequired,
-  address: PropTypes.string.isRequired,
-  carouselImage: PropTypes.shape({
-    description: PropTypes.string,
-    gatsbyImg: PropTypes.shape({
-      childImageSharp: PropTypes.object,
-    }),
-  }),
-  placeholder: PropTypes.func.isRequired,
-  caption: PropTypes.string.isRequired,
 }

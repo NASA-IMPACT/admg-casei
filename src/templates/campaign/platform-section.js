@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 
 import { Section, SectionHeader, SectionContent } from "../../components/layout"
 import CarouselAccordionCombo from "../../components/carousel-accordion-combo"
-import { PlatformIcon } from "../../icons"
+import PlatformCard from "../../components/cards/platform-card"
 
 const PlatformSection = ({ id, platforms, instruments }) => {
   return (
@@ -14,10 +14,9 @@ const PlatformSection = ({ id, platforms, instruments }) => {
         {platforms && instruments && (
           <CarouselAccordionCombo
             id="platform"
-            isImage
-            placeholderImage={PlatformIcon}
             emptyMessage="No available related platforms or instruments"
             carouselList={platforms}
+            card={PlatformCard}
             folds={platforms.reduce(
               (acc, platform) =>
                 Object.assign(acc, {

@@ -4,8 +4,9 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Card from "./card"
 import { PlatformIcon } from "../../icons"
+import { POSITIVE, NEGATIVE } from "../../utils/constants"
 
-export default function PlatformCard(props) {
+export default function PlatformCard({ id, mode }) {
   /*
    * We can not pass props directly into a static query because it is
    * compiled and doesn't support string interpolation in its template literal.
@@ -38,7 +39,7 @@ export default function PlatformCard(props) {
     }
   `)
 
-  const platform = data.allPlatform.nodes.find(x => x.id === props.id)
+  const platform = data.allPlatform.nodes.find(x => x.id === id)
 
   return (
     <Card
@@ -53,6 +54,7 @@ export default function PlatformCard(props) {
         { count: platform.instruments.length, title: "Instrument" },
       ]}
       category="platforms"
+      mode={mode}
     >
       <big
         style={{ fontWeight: `bold`, marginTop: `0.5rem` }}
@@ -68,4 +70,5 @@ export default function PlatformCard(props) {
 
 PlatformCard.propTypes = {
   id: PropTypes.string.isRequired,
+  mode: PropTypes.oneOf([POSITIVE, NEGATIVE]),
 }

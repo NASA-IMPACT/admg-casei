@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 
 import { Section, SectionHeader, SectionContent } from "../../components/layout"
 import CarouselAccordionCombo from "../../components/carousel-accordion-combo"
+import CampaignCard from "../../components/cards/campaign-card"
 
 const CampaignsAndInstruments = ({ id, campaigns, instruments }) => {
   return (
@@ -13,6 +14,7 @@ const CampaignsAndInstruments = ({ id, campaigns, instruments }) => {
           id="campaign"
           emptyMessage="No available related campaigns"
           carouselList={campaigns}
+          card={CampaignCard}
           folds={campaigns.reduce(
             (acc, campaign) =>
               Object.assign(acc, {
