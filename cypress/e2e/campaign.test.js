@@ -164,14 +164,16 @@ describe("Campaign", () => {
       .should("have.text", "Platforms & Instruments")
 
     cy.get("[data-cy=platform-carousel]").find(".slider").should("exist")
-
-    cy.get("[data-cy=platform-image]").should("exist")
-    cy.get("[data-cy=platform]").first().find("label").should("exist")
-    cy.get("[data-cy=platform-image-caption]").should("exist")
-
     cy.get("[data-cy=platform-carousel]").find(
       ".slider-control-centerright > button"
     )
+    cy.get("[data-cy=platforms-card]").should("exist")
+    cy.get("[data-cy=platforms-card]")
+      .find("[data-cy=shortname]")
+      .should("exist")
+    cy.get("[data-cy=platforms-card]")
+      .find("[data-cy=longname]")
+      .should("exist")
     cy.get("[data-cy=instrument-accordion]")
       .should("exist")
       .find("[data-cy=accordion-button]")
