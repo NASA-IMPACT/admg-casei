@@ -173,7 +173,7 @@ PlatformTemplate.propTypes = {
                 gatsbyImg: PropTypes.shape({
                   childImageSharp: PropTypes.object.isRequired,
                 }),
-              }).isRequired,
+              }),
             })
           ).isRequired,
         })
@@ -192,10 +192,10 @@ PlatformTemplate.propTypes = {
       image: PropTypes.shape({
         description: PropTypes.string.isRequired,
         gatsbyImg: PropTypes.shape({
-          description: PropTypes.string.isRequired,
+          description: PropTypes.string,
           childImageSharp: PropTypes.object.isRequired,
         }).isRequired,
-      }).isRequired,
+      }),
     }),
   }),
   path: PropTypes.string.isRequired,

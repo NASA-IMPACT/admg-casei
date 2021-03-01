@@ -9,7 +9,7 @@ import CampaignCard from "./cards/campaign-card"
 import Button from "./button"
 import { controlButtonLRStyle } from "./carousel-styles"
 import Accordion from "./accordion"
-import { NEGATIVE } from "../utils/constants"
+import { POSITIVE, NEGATIVE } from "../utils/constants"
 import { colors } from "../utils/theme"
 
 export default function CarouselAccordionCombo({
@@ -120,7 +120,7 @@ export default function CarouselAccordionCombo({
                       to={`/${id}/${carouselItem.id}`}
                       data-cy={`carousel-${id}-card-link`}
                     >
-                      <CampaignCard id={carouselItem.id} />
+                      <CampaignCard id={carouselItem.id} mode={POSITIVE} />
                     </Link>
                   </div>
                 )}

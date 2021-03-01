@@ -58,7 +58,7 @@ exports[`Explore page renders correctly 1`] = `
   transform: translate(0,1px);
 }
 
-.c34.c34 {
+.c39.c39 {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -76,7 +76,7 @@ exports[`Explore page renders correctly 1`] = `
   white-space: nowrap;
 }
 
-.c35.c35 {
+.c40.c40 {
   position: fixed;
   top: 0;
   right: 0;
@@ -98,7 +98,7 @@ exports[`Explore page renders correctly 1`] = `
   transition: opacity 400ms ease-in;
 }
 
-.c36.c36 {
+.c41.c41 {
   width: 400px;
   position: relative;
   padding: 32px;
@@ -107,23 +107,23 @@ exports[`Explore page renders correctly 1`] = `
   pointer-events: auto;
 }
 
-.c32.c32 {
+.c37.c37 {
   list-style: none;
   margin: 0;
 }
 
-.c31.c31 {
+.c36.c36 {
   margin: 0 0 1.5rem 0;
   font-weight: bold;
   line-height: 3rem;
 }
 
-.c26.c26 {
+.c31.c31 {
   margin-top: 5rem;
   background-color: #303641;
 }
 
-.c27.c27 {
+.c32.c32 {
   margin: 5rem auto;
   max-width: 1280px;
   padding: 2rem 4rem;
@@ -135,11 +135,11 @@ exports[`Explore page renders correctly 1`] = `
   grid-template-columns: repeat(12,1fr);
 }
 
-.c28.c28 {
+.c33.c33 {
   grid-column: 1 / span 3;
 }
 
-.c29.c29 {
+.c34.c34 {
   text-transform: uppercase;
   font-weight: 900;
   font-size: 30px;
@@ -147,28 +147,28 @@ exports[`Explore page renders correctly 1`] = `
   margin-bottom: 0.5rem;
 }
 
-.c30.c30 {
+.c35.c35 {
   grid-column: 5 / span 2;
 }
 
-.c33.c33 {
+.c38.c38 {
   grid-column: 7 / span 2;
 }
 
-.c37.c37 {
+.c42.c42 {
   grid-column: 9 / span 2;
 }
 
-.c38.c38 {
+.c43.c43 {
   grid-column: 11 / span 2;
 }
 
-.c39.c39 {
+.c44.c44 {
   grid-column: 1 / span 12;
   background-color: rgba(255,255,255,0.2);
 }
 
-.c40.c40 {
+.c45.c45 {
   grid-column: 1 / span 12;
   display: -webkit-box;
   display: -webkit-flex;
@@ -180,7 +180,7 @@ exports[`Explore page renders correctly 1`] = `
   justify-content: space-between;
 }
 
-.c41.c41 {
+.c46.c46 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -192,7 +192,7 @@ exports[`Explore page renders correctly 1`] = `
   font-weight: bold;
 }
 
-.c42.c42 {
+.c47.c47 {
   background-image: url("https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png");
   background-size: cover;
   background-position: center;
@@ -200,11 +200,11 @@ exports[`Explore page renders correctly 1`] = `
   height: 100px;
 }
 
-.c43.c43 {
+.c48.c48 {
   font-weight: normal;
 }
 
-.c44.c44 {
+.c49.c49 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -216,7 +216,7 @@ exports[`Explore page renders correctly 1`] = `
   text-transform: uppercase;
 }
 
-.c45.c45 {
+.c50.c50 {
   text-align: center;
 }
 
@@ -389,7 +389,7 @@ exports[`Explore page renders correctly 1`] = `
   flex-grow: 1;
 }
 
-.c25.c25 {
+.c27.c27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -406,8 +406,42 @@ exports[`Explore page renders correctly 1`] = `
   min-height: 2rem;
 }
 
-.c25.c25 div:only-child {
-  margin-left: auto;
+.c25.c25 {
+  color: #e9eaec;
+  background-color: #303641;
+  box-shadow: rgba(68,63,63,0.08) 0px -1px 1px 0px,rgba(68,63,63,0.08) 0px 2px 6px 0px;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 24rem;
+  height: 100%;
+}
+
+.c26.c26 {
+  margin-bottom: 2rem;
+}
+
+.c29.c29 {
+  margin: 0;
+}
+
+.c30.c30 {
+  text-transform: uppercase;
+  border: 1px solid;
+  padding: 0.25rem;
+}
+
+.c28.c28 {
+  white-space: nowrap;
 }
 
 .c23.c23 {
@@ -1444,29 +1478,14 @@ exports[`Explore page renders correctly 1`] = `
             href="/campaign/a37265bc-f88b-4af0-9bb6-05c54d0ae82f"
           >
             <div
+              className="c25"
               data-cy="campaigns-card"
-              style={
-                Object {
-                  "backgroundColor": "#303641",
-                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "height": "100%",
-                  "justifyContent": "space-between",
-                  "minHeight": "24rem",
-                  "padding": "1rem",
-                }
-              }
             >
               <div
-                style={
-                  Object {
-                    "marginBottom": "2rem",
-                  }
-                }
+                className="c26"
               >
                 <div
-                  className="c25"
+                  className="c27"
                 >
                   <svg
                     height="60"
@@ -1475,7 +1494,7 @@ exports[`Explore page renders correctly 1`] = `
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <g
-                      fill="#FFF"
+                      fill="#e9eaec"
                       fillRule="nonzero"
                     >
                       <path
@@ -1520,12 +1539,8 @@ exports[`Explore page renders correctly 1`] = `
               </div>
               <div>
                 <small
+                  className="c28"
                   data-cy="count1"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                   <strong>
                     5
@@ -1535,12 +1550,8 @@ exports[`Explore page renders correctly 1`] = `
                   s
                 </small>
                 <small
+                  className="c28"
                   data-cy="count2"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                    · 
                   <strong>
@@ -1557,29 +1568,14 @@ exports[`Explore page renders correctly 1`] = `
             href="/campaign/23057afe-20ad-4279-8568-7832908111cc"
           >
             <div
+              className="c25"
               data-cy="campaigns-card"
-              style={
-                Object {
-                  "backgroundColor": "#303641",
-                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "height": "100%",
-                  "justifyContent": "space-between",
-                  "minHeight": "24rem",
-                  "padding": "1rem",
-                }
-              }
             >
               <div
-                style={
-                  Object {
-                    "marginBottom": "2rem",
-                  }
-                }
+                className="c26"
               >
                 <div
-                  className="c25"
+                  className="c27"
                 >
                   <svg
                     height="60"
@@ -1588,7 +1584,7 @@ exports[`Explore page renders correctly 1`] = `
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <g
-                      fill="#FFF"
+                      fill="#e9eaec"
                       fillRule="nonzero"
                     >
                       <path
@@ -1633,12 +1629,8 @@ exports[`Explore page renders correctly 1`] = `
               </div>
               <div>
                 <small
+                  className="c28"
                   data-cy="count1"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                   <strong>
                     1
@@ -1647,12 +1639,8 @@ exports[`Explore page renders correctly 1`] = `
                   Deployment
                 </small>
                 <small
+                  className="c28"
                   data-cy="count2"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                    · 
                   <strong>
@@ -1669,29 +1657,14 @@ exports[`Explore page renders correctly 1`] = `
             href="/campaign/7e637ca0-2c94-4350-a19d-d02261858997"
           >
             <div
+              className="c25"
               data-cy="campaigns-card"
-              style={
-                Object {
-                  "backgroundColor": "#303641",
-                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "height": "100%",
-                  "justifyContent": "space-between",
-                  "minHeight": "24rem",
-                  "padding": "1rem",
-                }
-              }
             >
               <div
-                style={
-                  Object {
-                    "marginBottom": "2rem",
-                  }
-                }
+                className="c26"
               >
                 <div
-                  className="c25"
+                  className="c27"
                 >
                   <svg
                     height="60"
@@ -1700,7 +1673,7 @@ exports[`Explore page renders correctly 1`] = `
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <g
-                      fill="#FFF"
+                      fill="#e9eaec"
                       fillRule="nonzero"
                     >
                       <path
@@ -1745,12 +1718,8 @@ exports[`Explore page renders correctly 1`] = `
               </div>
               <div>
                 <small
+                  className="c28"
                   data-cy="count1"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                   <strong>
                     1
@@ -1759,12 +1728,8 @@ exports[`Explore page renders correctly 1`] = `
                   Deployment
                 </small>
                 <small
+                  className="c28"
                   data-cy="count2"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                    · 
                   <strong>
@@ -1780,43 +1745,24 @@ exports[`Explore page renders correctly 1`] = `
             href="/campaign/40aa5fbf-043f-4a68-a181-0993c1db05ef"
           >
             <div
+              className="c25"
               data-cy="campaigns-card"
-              style={
-                Object {
-                  "backgroundColor": "#303641",
-                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "height": "100%",
-                  "justifyContent": "space-between",
-                  "minHeight": "24rem",
-                  "padding": "1rem",
-                }
-              }
             >
               <div
-                style={
-                  Object {
-                    "marginBottom": "2rem",
-                  }
-                }
+                className="c26"
               >
                 <div
-                  className="c25"
+                  className="c27"
                 >
                   <img
                     alt="GOES-R PLT logo"
+                    className="c29"
                     fixed={
                       Object {
                         "src": "/static/57d85e673f190d05d7668e49c8361d50/6c838/GOES-R_PLT.png",
                       }
                     }
                     src="test-image.png"
-                    style={
-                      Object {
-                        "margin": "0",
-                      }
-                    }
                   />
                 </div>
                 <big
@@ -1852,12 +1798,8 @@ exports[`Explore page renders correctly 1`] = `
               </div>
               <div>
                 <small
+                  className="c28"
                   data-cy="count1"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                   <strong>
                     1
@@ -1866,12 +1808,8 @@ exports[`Explore page renders correctly 1`] = `
                   Deployment
                 </small>
                 <small
+                  className="c28"
                   data-cy="count2"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                    · 
                   <strong>
@@ -1888,43 +1826,24 @@ exports[`Explore page renders correctly 1`] = `
             href="/campaign/7352850d-8f94-486a-bebd-91eee880532c"
           >
             <div
+              className="c25"
               data-cy="campaigns-card"
-              style={
-                Object {
-                  "backgroundColor": "#303641",
-                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "height": "100%",
-                  "justifyContent": "space-between",
-                  "minHeight": "24rem",
-                  "padding": "1rem",
-                }
-              }
             >
               <div
-                style={
-                  Object {
-                    "marginBottom": "2rem",
-                  }
-                }
+                className="c26"
               >
                 <div
-                  className="c25"
+                  className="c27"
                 >
                   <img
                     alt="OLYMPEX logo"
+                    className="c29"
                     fixed={
                       Object {
                         "src": "/static/cf547712f5b3512ff39fb1cf64f5e2e4/6c838/olympex.png",
                       }
                     }
                     src="test-image.png"
-                    style={
-                      Object {
-                        "margin": "0",
-                      }
-                    }
                   />
                 </div>
                 <big
@@ -1960,12 +1879,8 @@ exports[`Explore page renders correctly 1`] = `
               </div>
               <div>
                 <small
+                  className="c28"
                   data-cy="count1"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                   <strong>
                     1
@@ -1974,12 +1889,8 @@ exports[`Explore page renders correctly 1`] = `
                   Deployment
                 </small>
                 <small
+                  className="c28"
                   data-cy="count2"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                    · 
                   <strong>
@@ -1996,29 +1907,14 @@ exports[`Explore page renders correctly 1`] = `
             href="/campaign/0890744d-756f-4e4a-b867-8dc6d2fa2d04"
           >
             <div
+              className="c25"
               data-cy="campaigns-card"
-              style={
-                Object {
-                  "backgroundColor": "#303641",
-                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "height": "100%",
-                  "justifyContent": "space-between",
-                  "minHeight": "24rem",
-                  "padding": "1rem",
-                }
-              }
             >
               <div
-                style={
-                  Object {
-                    "marginBottom": "2rem",
-                  }
-                }
+                className="c26"
               >
                 <div
-                  className="c25"
+                  className="c27"
                 >
                   <svg
                     height="60"
@@ -2027,7 +1923,7 @@ exports[`Explore page renders correctly 1`] = `
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <g
-                      fill="#FFF"
+                      fill="#e9eaec"
                       fillRule="nonzero"
                     >
                       <path
@@ -2072,12 +1968,8 @@ exports[`Explore page renders correctly 1`] = `
               </div>
               <div>
                 <small
+                  className="c28"
                   data-cy="count1"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                   <strong>
                     1
@@ -2086,12 +1978,8 @@ exports[`Explore page renders correctly 1`] = `
                   Deployment
                 </small>
                 <small
+                  className="c28"
                   data-cy="count2"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                    · 
                   <strong>
@@ -2108,43 +1996,24 @@ exports[`Explore page renders correctly 1`] = `
             href="/campaign/84b6cfe0-b357-4666-badd-43ac616b2440"
           >
             <div
+              className="c25"
               data-cy="campaigns-card"
-              style={
-                Object {
-                  "backgroundColor": "#303641",
-                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "height": "100%",
-                  "justifyContent": "space-between",
-                  "minHeight": "24rem",
-                  "padding": "1rem",
-                }
-              }
             >
               <div
-                style={
-                  Object {
-                    "marginBottom": "2rem",
-                  }
-                }
+                className="c26"
               >
                 <div
-                  className="c25"
+                  className="c27"
                 >
                   <img
                     alt="CARVE logo"
+                    className="c29"
                     fixed={
                       Object {
                         "src": "/static/b3225ddde77639b3e07a3cf470a9aa33/6c838/CARVE.png",
                       }
                     }
                     src="test-image.png"
-                    style={
-                      Object {
-                        "margin": "0",
-                      }
-                    }
                   />
                 </div>
                 <big
@@ -2180,12 +2049,8 @@ exports[`Explore page renders correctly 1`] = `
               </div>
               <div>
                 <small
+                  className="c28"
                   data-cy="count1"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                   <strong>
                     4
@@ -2195,12 +2060,8 @@ exports[`Explore page renders correctly 1`] = `
                   s
                 </small>
                 <small
+                  className="c28"
                   data-cy="count2"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                    · 
                   <strong>
@@ -2217,43 +2078,24 @@ exports[`Explore page renders correctly 1`] = `
             href="/campaign/202b3ee6-9d9c-46cd-8e51-6889e727d105"
           >
             <div
+              className="c25"
               data-cy="campaigns-card"
-              style={
-                Object {
-                  "backgroundColor": "#303641",
-                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "height": "100%",
-                  "justifyContent": "space-between",
-                  "minHeight": "24rem",
-                  "padding": "1rem",
-                }
-              }
             >
               <div
-                style={
-                  Object {
-                    "marginBottom": "2rem",
-                  }
-                }
+                className="c26"
               >
                 <div
-                  className="c25"
+                  className="c27"
                 >
                   <img
                     alt="AirMOSS logo"
+                    className="c29"
                     fixed={
                       Object {
                         "src": "/static/0d8b9bce5b2fabe7daa6ad4e8e418ba8/6c838/airmoss.png",
                       }
                     }
                     src="test-image.png"
-                    style={
-                      Object {
-                        "margin": "0",
-                      }
-                    }
                   />
                 </div>
                 <big
@@ -2289,12 +2131,8 @@ exports[`Explore page renders correctly 1`] = `
               </div>
               <div>
                 <small
+                  className="c28"
                   data-cy="count1"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                   <strong>
                     34
@@ -2304,12 +2142,8 @@ exports[`Explore page renders correctly 1`] = `
                   s
                 </small>
                 <small
+                  className="c28"
                   data-cy="count2"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                    · 
                   <strong>
@@ -2326,29 +2160,14 @@ exports[`Explore page renders correctly 1`] = `
             href="/campaign/260041b5-d0b0-46ac-a335-9172883d4cc9"
           >
             <div
+              className="c25"
               data-cy="campaigns-card"
-              style={
-                Object {
-                  "backgroundColor": "#303641",
-                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "height": "100%",
-                  "justifyContent": "space-between",
-                  "minHeight": "24rem",
-                  "padding": "1rem",
-                }
-              }
             >
               <div
-                style={
-                  Object {
-                    "marginBottom": "2rem",
-                  }
-                }
+                className="c26"
               >
                 <div
-                  className="c25"
+                  className="c27"
                 >
                   <svg
                     height="60"
@@ -2357,7 +2176,7 @@ exports[`Explore page renders correctly 1`] = `
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <g
-                      fill="#FFF"
+                      fill="#e9eaec"
                       fillRule="nonzero"
                     >
                       <path
@@ -2402,12 +2221,8 @@ exports[`Explore page renders correctly 1`] = `
               </div>
               <div>
                 <small
+                  className="c28"
                   data-cy="count1"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                   <strong>
                     4
@@ -2417,12 +2232,8 @@ exports[`Explore page renders correctly 1`] = `
                   s
                 </small>
                 <small
+                  className="c28"
                   data-cy="count2"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                    · 
                   <strong>
@@ -2439,43 +2250,24 @@ exports[`Explore page renders correctly 1`] = `
             href="/campaign/3671a147-4531-459e-92cf-3b15c0409426"
           >
             <div
+              className="c25"
               data-cy="campaigns-card"
-              style={
-                Object {
-                  "backgroundColor": "#303641",
-                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "height": "100%",
-                  "justifyContent": "space-between",
-                  "minHeight": "24rem",
-                  "padding": "1rem",
-                }
-              }
             >
               <div
-                style={
-                  Object {
-                    "marginBottom": "2rem",
-                  }
-                }
+                className="c26"
               >
                 <div
-                  className="c25"
+                  className="c27"
                 >
                   <img
                     alt="HS3 logo"
+                    className="c29"
                     fixed={
                       Object {
                         "src": "/static/bbd26b5234ecb45a352901f95787b0b3/6c838/HS3.png",
                       }
                     }
                     src="test-image.png"
-                    style={
-                      Object {
-                        "margin": "0",
-                      }
-                    }
                   />
                 </div>
                 <big
@@ -2511,12 +2303,8 @@ exports[`Explore page renders correctly 1`] = `
               </div>
               <div>
                 <small
+                  className="c28"
                   data-cy="count1"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                   <strong>
                     3
@@ -2526,12 +2314,8 @@ exports[`Explore page renders correctly 1`] = `
                   s
                 </small>
                 <small
+                  className="c28"
                   data-cy="count2"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                    · 
                   <strong>
@@ -2548,29 +2332,14 @@ exports[`Explore page renders correctly 1`] = `
             href="/campaign/105b2c8d-8b1d-49bc-b8ab-d36635ebf2e5"
           >
             <div
+              className="c25"
               data-cy="campaigns-card"
-              style={
-                Object {
-                  "backgroundColor": "#303641",
-                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "height": "100%",
-                  "justifyContent": "space-between",
-                  "minHeight": "24rem",
-                  "padding": "1rem",
-                }
-              }
             >
               <div
-                style={
-                  Object {
-                    "marginBottom": "2rem",
-                  }
-                }
+                className="c26"
               >
                 <div
-                  className="c25"
+                  className="c27"
                 >
                   <svg
                     height="60"
@@ -2579,7 +2348,7 @@ exports[`Explore page renders correctly 1`] = `
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <g
-                      fill="#FFF"
+                      fill="#e9eaec"
                       fillRule="nonzero"
                     >
                       <path
@@ -2624,12 +2393,8 @@ exports[`Explore page renders correctly 1`] = `
               </div>
               <div>
                 <small
+                  className="c28"
                   data-cy="count1"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                   <strong>
                     1
@@ -2638,12 +2403,8 @@ exports[`Explore page renders correctly 1`] = `
                   Deployment
                 </small>
                 <small
+                  className="c28"
                   data-cy="count2"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                    · 
                   <strong>
@@ -2660,29 +2421,14 @@ exports[`Explore page renders correctly 1`] = `
             href="/campaign/60aaa8f9-b75d-414b-9d56-5ea48da9fbb6"
           >
             <div
+              className="c25"
               data-cy="campaigns-card"
-              style={
-                Object {
-                  "backgroundColor": "#303641",
-                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "height": "100%",
-                  "justifyContent": "space-between",
-                  "minHeight": "24rem",
-                  "padding": "1rem",
-                }
-              }
             >
               <div
-                style={
-                  Object {
-                    "marginBottom": "2rem",
-                  }
-                }
+                className="c26"
               >
                 <div
-                  className="c25"
+                  className="c27"
                 >
                   <svg
                     height="60"
@@ -2691,7 +2437,7 @@ exports[`Explore page renders correctly 1`] = `
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <g
-                      fill="#FFF"
+                      fill="#e9eaec"
                       fillRule="nonzero"
                     >
                       <path
@@ -2736,12 +2482,8 @@ exports[`Explore page renders correctly 1`] = `
               </div>
               <div>
                 <small
+                  className="c28"
                   data-cy="count1"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                   <strong>
                     1
@@ -2750,12 +2492,8 @@ exports[`Explore page renders correctly 1`] = `
                   Deployment
                 </small>
                 <small
+                  className="c28"
                   data-cy="count2"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                    · 
                   <strong>
@@ -2772,43 +2510,24 @@ exports[`Explore page renders correctly 1`] = `
             href="/campaign/1037faf8-ac54-4c1a-a3f6-9b78578ea3c2"
           >
             <div
+              className="c25"
               data-cy="campaigns-card"
-              style={
-                Object {
-                  "backgroundColor": "#303641",
-                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "height": "100%",
-                  "justifyContent": "space-between",
-                  "minHeight": "24rem",
-                  "padding": "1rem",
-                }
-              }
             >
               <div
-                style={
-                  Object {
-                    "marginBottom": "2rem",
-                  }
-                }
+                className="c26"
               >
                 <div
-                  className="c25"
+                  className="c27"
                 >
                   <img
                     alt="DC3 logo"
+                    className="c29"
                     fixed={
                       Object {
                         "src": "/static/c566f0db523525874c608cdace0d5c91/6c838/dc3.png",
                       }
                     }
                     src="test-image.png"
-                    style={
-                      Object {
-                        "margin": "0",
-                      }
-                    }
                   />
                 </div>
                 <big
@@ -2844,12 +2563,8 @@ exports[`Explore page renders correctly 1`] = `
               </div>
               <div>
                 <small
+                  className="c28"
                   data-cy="count1"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                   <strong>
                     1
@@ -2858,12 +2573,8 @@ exports[`Explore page renders correctly 1`] = `
                   Deployment
                 </small>
                 <small
+                  className="c28"
                   data-cy="count2"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                    · 
                   <strong />
@@ -2878,43 +2589,24 @@ exports[`Explore page renders correctly 1`] = `
             href="/campaign/e7477510-226d-4876-ad82-937f8646ffb0"
           >
             <div
+              className="c25"
               data-cy="campaigns-card"
-              style={
-                Object {
-                  "backgroundColor": "#303641",
-                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "height": "100%",
-                  "justifyContent": "space-between",
-                  "minHeight": "24rem",
-                  "padding": "1rem",
-                }
-              }
             >
               <div
-                style={
-                  Object {
-                    "marginBottom": "2rem",
-                  }
-                }
+                className="c26"
               >
                 <div
-                  className="c25"
+                  className="c27"
                 >
                   <img
                     alt="GCPEx logo"
+                    className="c29"
                     fixed={
                       Object {
                         "src": "/static/aee23860a3428c35081ea98fb6630d60/6c838/GCPEx.png",
                       }
                     }
                     src="test-image.png"
-                    style={
-                      Object {
-                        "margin": "0",
-                      }
-                    }
                   />
                 </div>
                 <big
@@ -2950,12 +2642,8 @@ exports[`Explore page renders correctly 1`] = `
               </div>
               <div>
                 <small
+                  className="c28"
                   data-cy="count1"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                   <strong>
                     1
@@ -2964,12 +2652,8 @@ exports[`Explore page renders correctly 1`] = `
                   Deployment
                 </small>
                 <small
+                  className="c28"
                   data-cy="count2"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                    · 
                   <strong>
@@ -2986,29 +2670,14 @@ exports[`Explore page renders correctly 1`] = `
             href="/campaign/47548bf5-0a10-49c0-80f0-c5b8e4c832a3"
           >
             <div
+              className="c25"
               data-cy="campaigns-card"
-              style={
-                Object {
-                  "backgroundColor": "#303641",
-                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "height": "100%",
-                  "justifyContent": "space-between",
-                  "minHeight": "24rem",
-                  "padding": "1rem",
-                }
-              }
             >
               <div
-                style={
-                  Object {
-                    "marginBottom": "2rem",
-                  }
-                }
+                className="c26"
               >
                 <div
-                  className="c25"
+                  className="c27"
                 >
                   <svg
                     height="60"
@@ -3017,7 +2686,7 @@ exports[`Explore page renders correctly 1`] = `
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <g
-                      fill="#FFF"
+                      fill="#e9eaec"
                       fillRule="nonzero"
                     >
                       <path
@@ -3062,12 +2731,8 @@ exports[`Explore page renders correctly 1`] = `
               </div>
               <div>
                 <small
+                  className="c28"
                   data-cy="count1"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                   <strong>
                     1
@@ -3076,12 +2741,8 @@ exports[`Explore page renders correctly 1`] = `
                   Deployment
                 </small>
                 <small
+                  className="c28"
                   data-cy="count2"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                    · 
                   <strong>
@@ -3098,43 +2759,24 @@ exports[`Explore page renders correctly 1`] = `
             href="/campaign/76971af6-f228-4f34-bb05-56196788accc"
           >
             <div
+              className="c25"
               data-cy="campaigns-card"
-              style={
-                Object {
-                  "backgroundColor": "#303641",
-                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "height": "100%",
-                  "justifyContent": "space-between",
-                  "minHeight": "24rem",
-                  "padding": "1rem",
-                }
-              }
             >
               <div
-                style={
-                  Object {
-                    "marginBottom": "2rem",
-                  }
-                }
+                className="c26"
               >
                 <div
-                  className="c25"
+                  className="c27"
                 >
                   <img
                     alt="GRIP logo"
+                    className="c29"
                     fixed={
                       Object {
                         "src": "/static/aed8706356fd2b3a2bcb162e1e678a9f/6c838/grip.png",
                       }
                     }
                     src="test-image.png"
-                    style={
-                      Object {
-                        "margin": "0",
-                      }
-                    }
                   />
                 </div>
                 <big
@@ -3170,12 +2812,8 @@ exports[`Explore page renders correctly 1`] = `
               </div>
               <div>
                 <small
+                  className="c28"
                   data-cy="count1"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                   <strong>
                     1
@@ -3184,12 +2822,8 @@ exports[`Explore page renders correctly 1`] = `
                   Deployment
                 </small>
                 <small
+                  className="c28"
                   data-cy="count2"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                    · 
                   <strong>
@@ -3206,43 +2840,24 @@ exports[`Explore page renders correctly 1`] = `
             href="/campaign/b92c47a8-448f-4718-bcaf-b1354cc510ea"
           >
             <div
+              className="c25"
               data-cy="campaigns-card"
-              style={
-                Object {
-                  "backgroundColor": "#303641",
-                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "height": "100%",
-                  "justifyContent": "space-between",
-                  "minHeight": "24rem",
-                  "padding": "1rem",
-                }
-              }
             >
               <div
-                style={
-                  Object {
-                    "marginBottom": "2rem",
-                  }
-                }
+                className="c26"
               >
                 <div
-                  className="c25"
+                  className="c27"
                 >
                   <img
                     alt="ARCTAS logo"
+                    className="c29"
                     fixed={
                       Object {
                         "src": "/static/16a8d79d7980aad3e45338142b6d08d2/6c838/arctas.png",
                       }
                     }
                     src="test-image.png"
-                    style={
-                      Object {
-                        "margin": "0",
-                      }
-                    }
                   />
                 </div>
                 <big
@@ -3278,12 +2893,8 @@ exports[`Explore page renders correctly 1`] = `
               </div>
               <div>
                 <small
+                  className="c28"
                   data-cy="count1"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                   <strong>
                     3
@@ -3293,12 +2904,8 @@ exports[`Explore page renders correctly 1`] = `
                   s
                 </small>
                 <small
+                  className="c28"
                   data-cy="count2"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                    · 
                   <strong>
@@ -3315,29 +2922,14 @@ exports[`Explore page renders correctly 1`] = `
             href="/campaign/2fb5796d-0a2f-4a0e-9d3d-fdd7b274d679"
           >
             <div
+              className="c25"
               data-cy="campaigns-card"
-              style={
-                Object {
-                  "backgroundColor": "#303641",
-                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "height": "100%",
-                  "justifyContent": "space-between",
-                  "minHeight": "24rem",
-                  "padding": "1rem",
-                }
-              }
             >
               <div
-                style={
-                  Object {
-                    "marginBottom": "2rem",
-                  }
-                }
+                className="c26"
               >
                 <div
-                  className="c25"
+                  className="c27"
                 >
                   <svg
                     height="60"
@@ -3346,7 +2938,7 @@ exports[`Explore page renders correctly 1`] = `
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <g
-                      fill="#FFF"
+                      fill="#e9eaec"
                       fillRule="nonzero"
                     >
                       <path
@@ -3391,12 +2983,8 @@ exports[`Explore page renders correctly 1`] = `
               </div>
               <div>
                 <small
+                  className="c28"
                   data-cy="count1"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                   <strong>
                     1
@@ -3405,12 +2993,8 @@ exports[`Explore page renders correctly 1`] = `
                   Deployment
                 </small>
                 <small
+                  className="c28"
                   data-cy="count2"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                    · 
                   <strong>
@@ -3427,29 +3011,14 @@ exports[`Explore page renders correctly 1`] = `
             href="/campaign/a4108ecb-0e76-420a-af18-4bbb3ef67065"
           >
             <div
+              className="c25"
               data-cy="campaigns-card"
-              style={
-                Object {
-                  "backgroundColor": "#303641",
-                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "height": "100%",
-                  "justifyContent": "space-between",
-                  "minHeight": "24rem",
-                  "padding": "1rem",
-                }
-              }
             >
               <div
-                style={
-                  Object {
-                    "marginBottom": "2rem",
-                  }
-                }
+                className="c26"
               >
                 <div
-                  className="c25"
+                  className="c27"
                 >
                   <svg
                     height="60"
@@ -3458,7 +3027,7 @@ exports[`Explore page renders correctly 1`] = `
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <g
-                      fill="#FFF"
+                      fill="#e9eaec"
                       fillRule="nonzero"
                     >
                       <path
@@ -3503,12 +3072,8 @@ exports[`Explore page renders correctly 1`] = `
               </div>
               <div>
                 <small
+                  className="c28"
                   data-cy="count1"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                   <strong>
                     1
@@ -3517,12 +3082,8 @@ exports[`Explore page renders correctly 1`] = `
                   Deployment
                 </small>
                 <small
+                  className="c28"
                   data-cy="count2"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                    · 
                   <strong>
@@ -3539,29 +3100,14 @@ exports[`Explore page renders correctly 1`] = `
             href="/campaign/46d0f63b-9174-4cab-82c7-7624da1464ca"
           >
             <div
+              className="c25"
               data-cy="campaigns-card"
-              style={
-                Object {
-                  "backgroundColor": "#303641",
-                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "height": "100%",
-                  "justifyContent": "space-between",
-                  "minHeight": "24rem",
-                  "padding": "1rem",
-                }
-              }
             >
               <div
-                style={
-                  Object {
-                    "marginBottom": "2rem",
-                  }
-                }
+                className="c26"
               >
                 <div
-                  className="c25"
+                  className="c27"
                 >
                   <svg
                     height="60"
@@ -3570,7 +3116,7 @@ exports[`Explore page renders correctly 1`] = `
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <g
-                      fill="#FFF"
+                      fill="#e9eaec"
                       fillRule="nonzero"
                     >
                       <path
@@ -3615,12 +3161,8 @@ exports[`Explore page renders correctly 1`] = `
               </div>
               <div>
                 <small
+                  className="c28"
                   data-cy="count1"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                   <strong>
                     1
@@ -3629,12 +3171,8 @@ exports[`Explore page renders correctly 1`] = `
                   Deployment
                 </small>
                 <small
+                  className="c28"
                   data-cy="count2"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                    · 
                   <strong>
@@ -3651,43 +3189,24 @@ exports[`Explore page renders correctly 1`] = `
             href="/campaign/b2ee4239-e7fe-4c8c-9939-b9e236d2142a"
           >
             <div
+              className="c25"
               data-cy="campaigns-card"
-              style={
-                Object {
-                  "backgroundColor": "#303641",
-                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "height": "100%",
-                  "justifyContent": "space-between",
-                  "minHeight": "24rem",
-                  "padding": "1rem",
-                }
-              }
             >
               <div
-                style={
-                  Object {
-                    "marginBottom": "2rem",
-                  }
-                }
+                className="c26"
               >
                 <div
-                  className="c25"
+                  className="c27"
                 >
                   <img
                     alt="ACES logo"
+                    className="c29"
                     fixed={
                       Object {
                         "src": "/static/3d17ba6135efff1e39e6b4d97157a123/6c838/aces.png",
                       }
                     }
                     src="test-image.png"
-                    style={
-                      Object {
-                        "margin": "0",
-                      }
-                    }
                   />
                 </div>
                 <big
@@ -3723,12 +3242,8 @@ exports[`Explore page renders correctly 1`] = `
               </div>
               <div>
                 <small
+                  className="c28"
                   data-cy="count1"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                   <strong>
                     1
@@ -3737,12 +3252,8 @@ exports[`Explore page renders correctly 1`] = `
                   Deployment
                 </small>
                 <small
+                  className="c28"
                   data-cy="count2"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                    · 
                   <strong>
@@ -3759,29 +3270,14 @@ exports[`Explore page renders correctly 1`] = `
             href="/campaign/20c2121f-bd91-4f7e-80ac-b729c1998ca9"
           >
             <div
+              className="c25"
               data-cy="campaigns-card"
-              style={
-                Object {
-                  "backgroundColor": "#303641",
-                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "height": "100%",
-                  "justifyContent": "space-between",
-                  "minHeight": "24rem",
-                  "padding": "1rem",
-                }
-              }
             >
               <div
-                style={
-                  Object {
-                    "marginBottom": "2rem",
-                  }
-                }
+                className="c26"
               >
                 <div
-                  className="c25"
+                  className="c27"
                 >
                   <svg
                     height="60"
@@ -3790,7 +3286,7 @@ exports[`Explore page renders correctly 1`] = `
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <g
-                      fill="#FFF"
+                      fill="#e9eaec"
                       fillRule="nonzero"
                     >
                       <path
@@ -3835,12 +3331,8 @@ exports[`Explore page renders correctly 1`] = `
               </div>
               <div>
                 <small
+                  className="c28"
                   data-cy="count1"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                   <strong>
                     2
@@ -3850,12 +3342,8 @@ exports[`Explore page renders correctly 1`] = `
                   s
                 </small>
                 <small
+                  className="c28"
                   data-cy="count2"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                    · 
                   <strong>
@@ -3872,29 +3360,14 @@ exports[`Explore page renders correctly 1`] = `
             href="/campaign/9d716281-716d-41cd-9ddd-6637c5100c6a"
           >
             <div
+              className="c25"
               data-cy="campaigns-card"
-              style={
-                Object {
-                  "backgroundColor": "#303641",
-                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "height": "100%",
-                  "justifyContent": "space-between",
-                  "minHeight": "24rem",
-                  "padding": "1rem",
-                }
-              }
             >
               <div
-                style={
-                  Object {
-                    "marginBottom": "2rem",
-                  }
-                }
+                className="c26"
               >
                 <div
-                  className="c25"
+                  className="c27"
                 >
                   <svg
                     height="60"
@@ -3903,7 +3376,7 @@ exports[`Explore page renders correctly 1`] = `
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <g
-                      fill="#FFF"
+                      fill="#e9eaec"
                       fillRule="nonzero"
                     >
                       <path
@@ -3948,12 +3421,8 @@ exports[`Explore page renders correctly 1`] = `
               </div>
               <div>
                 <small
+                  className="c28"
                   data-cy="count1"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                   <strong>
                     1
@@ -3962,12 +3431,8 @@ exports[`Explore page renders correctly 1`] = `
                   Deployment
                 </small>
                 <small
+                  className="c28"
                   data-cy="count2"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                    · 
                   <strong>
@@ -3984,29 +3449,14 @@ exports[`Explore page renders correctly 1`] = `
             href="/campaign/e6139609-d42a-41a4-9c78-b39b186864ff"
           >
             <div
+              className="c25"
               data-cy="campaigns-card"
-              style={
-                Object {
-                  "backgroundColor": "#303641",
-                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "height": "100%",
-                  "justifyContent": "space-between",
-                  "minHeight": "24rem",
-                  "padding": "1rem",
-                }
-              }
             >
               <div
-                style={
-                  Object {
-                    "marginBottom": "2rem",
-                  }
-                }
+                className="c26"
               >
                 <div
-                  className="c25"
+                  className="c27"
                 >
                   <svg
                     height="60"
@@ -4015,7 +3465,7 @@ exports[`Explore page renders correctly 1`] = `
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <g
-                      fill="#FFF"
+                      fill="#e9eaec"
                       fillRule="nonzero"
                     >
                       <path
@@ -4060,12 +3510,8 @@ exports[`Explore page renders correctly 1`] = `
               </div>
               <div>
                 <small
+                  className="c28"
                   data-cy="count1"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                   <strong>
                     2
@@ -4075,12 +3521,8 @@ exports[`Explore page renders correctly 1`] = `
                   s
                 </small>
                 <small
+                  className="c28"
                   data-cy="count2"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                    · 
                   <strong>
@@ -4097,29 +3539,14 @@ exports[`Explore page renders correctly 1`] = `
             href="/campaign/bc778cc5-b0c4-4d18-8a95-9ac417c418bf"
           >
             <div
+              className="c25"
               data-cy="campaigns-card"
-              style={
-                Object {
-                  "backgroundColor": "#303641",
-                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "height": "100%",
-                  "justifyContent": "space-between",
-                  "minHeight": "24rem",
-                  "padding": "1rem",
-                }
-              }
             >
               <div
-                style={
-                  Object {
-                    "marginBottom": "2rem",
-                  }
-                }
+                className="c26"
               >
                 <div
-                  className="c25"
+                  className="c27"
                 >
                   <svg
                     height="60"
@@ -4128,7 +3555,7 @@ exports[`Explore page renders correctly 1`] = `
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <g
-                      fill="#FFF"
+                      fill="#e9eaec"
                       fillRule="nonzero"
                     >
                       <path
@@ -4140,14 +3567,8 @@ exports[`Explore page renders correctly 1`] = `
                     </g>
                   </svg>
                   <div
+                    className="c30"
                     data-cy="ongoing-tag"
-                    style={
-                      Object {
-                        "border": "1px solid",
-                        "padding": "0.25rem",
-                        "textTransform": "uppercase",
-                      }
-                    }
                   >
                     Ongoing
                   </div>
@@ -4185,12 +3606,8 @@ exports[`Explore page renders correctly 1`] = `
               </div>
               <div>
                 <small
+                  className="c28"
                   data-cy="count1"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                   <strong>
                     2
@@ -4200,12 +3617,8 @@ exports[`Explore page renders correctly 1`] = `
                   s
                 </small>
                 <small
+                  className="c28"
                   data-cy="count2"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                    · 
                   <strong>
@@ -4222,29 +3635,14 @@ exports[`Explore page renders correctly 1`] = `
             href="/campaign/c0c4fc9f-b5ca-472c-950c-49150a202c23"
           >
             <div
+              className="c25"
               data-cy="campaigns-card"
-              style={
-                Object {
-                  "backgroundColor": "#303641",
-                  "boxShadow": "rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "height": "100%",
-                  "justifyContent": "space-between",
-                  "minHeight": "24rem",
-                  "padding": "1rem",
-                }
-              }
             >
               <div
-                style={
-                  Object {
-                    "marginBottom": "2rem",
-                  }
-                }
+                className="c26"
               >
                 <div
-                  className="c25"
+                  className="c27"
                 >
                   <svg
                     height="60"
@@ -4253,7 +3651,7 @@ exports[`Explore page renders correctly 1`] = `
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <g
-                      fill="#FFF"
+                      fill="#e9eaec"
                       fillRule="nonzero"
                     >
                       <path
@@ -4265,14 +3663,8 @@ exports[`Explore page renders correctly 1`] = `
                     </g>
                   </svg>
                   <div
+                    className="c30"
                     data-cy="ongoing-tag"
-                    style={
-                      Object {
-                        "border": "1px solid",
-                        "padding": "0.25rem",
-                        "textTransform": "uppercase",
-                      }
-                    }
                   >
                     Ongoing
                   </div>
@@ -4310,12 +3702,8 @@ exports[`Explore page renders correctly 1`] = `
               </div>
               <div>
                 <small
+                  className="c28"
                   data-cy="count1"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                   <strong>
                     10
@@ -4325,12 +3713,8 @@ exports[`Explore page renders correctly 1`] = `
                   s
                 </small>
                 <small
+                  className="c28"
                   data-cy="count2"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                    · 
                   <strong>
@@ -4348,17 +3732,17 @@ exports[`Explore page renders correctly 1`] = `
     </div>
   </main>
   <footer
-    className="c26"
+    className="c31"
     data-cy="page-footer"
   >
     <div
-      className="c27"
+      className="c32"
     >
       <div
-        className="c28"
+        className="c33"
       >
         <div
-          className="c29"
+          className="c34"
           data-cy="footer-title"
         >
           NASA | CASEI
@@ -4371,16 +3755,16 @@ exports[`Explore page renders correctly 1`] = `
         </p>
       </div>
       <div
-        className="c30"
+        className="c35"
         data-cy="footer-explore"
       >
         <p
-          className="c31"
+          className="c36"
         >
           Explore
         </p>
         <ul
-          className="c32"
+          className="c37"
         >
           <li>
             <a
@@ -4424,16 +3808,16 @@ exports[`Explore page renders correctly 1`] = `
         </ul>
       </div>
       <div
-        className="c33"
+        className="c38"
         data-cy="footer-resources"
       >
         <p
-          className="c31"
+          className="c36"
         >
           Resources
         </p>
         <ul
-          className="c32"
+          className="c37"
         >
           <li>
             <a
@@ -4444,17 +3828,17 @@ exports[`Explore page renders correctly 1`] = `
           </li>
           <li>
             <button
-              className="c21 c34"
+              className="c21 c39"
               onClick={[Function]}
             >
               Maintenance login
             </button>
             <div
-              className="c35"
+              className="c40"
               onClick={[Function]}
             >
               <div
-                className="c36"
+                className="c41"
               >
                 <form
                   data-cy="login-form"
@@ -4496,16 +3880,16 @@ exports[`Explore page renders correctly 1`] = `
         </ul>
       </div>
       <div
-        className="c37"
+        className="c42"
         data-cy="footer-quick-links"
       >
         <p
-          className="c31"
+          className="c36"
         >
           Quick Links
         </p>
         <ul
-          className="c32"
+          className="c37"
         >
           <li>
             <a
@@ -4524,16 +3908,16 @@ exports[`Explore page renders correctly 1`] = `
         </ul>
       </div>
       <div
-        className="c38"
+        className="c43"
         data-cy="footer-organizations"
       >
         <p
-          className="c31"
+          className="c36"
         >
           Organizations
         </p>
         <ul
-          className="c32"
+          className="c37"
         >
           <li>
             <a
@@ -4568,17 +3952,17 @@ exports[`Explore page renders correctly 1`] = `
         </ul>
       </div>
       <hr
-        className="c39"
+        className="c44"
       />
       <div
-        className="c40"
+        className="c45"
       >
         <div
-          className="c41"
+          className="c46"
         >
           <div
             aria-hidden="true"
-            className="c42"
+            className="c47"
           />
           <div
             data-cy="footer-credits"
@@ -4594,7 +3978,7 @@ exports[`Explore page renders correctly 1`] = `
               NASA Official:
                
               <span
-                className="c43"
+                className="c48"
               >
                 Rahul Ramachandran
               </span>
@@ -4602,12 +3986,12 @@ exports[`Explore page renders correctly 1`] = `
           </div>
         </div>
         <div
-          className="c44"
+          className="c49"
         />
       </div>
     </div>
     <div
-      className="c45"
+      className="c50"
       data-cy="footer-credit-devseed"
     >
       © 

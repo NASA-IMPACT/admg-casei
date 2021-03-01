@@ -25,16 +25,18 @@ export default function OverviewSection({
         <h3>Overview</h3>
         <p>{description}</p>
       </SectionContent>
-      <SectionContent mode={POSITIVE} columns={[1, 8]}>
-        <h3>Online information</h3>
-        <ul style={{ margin: 0, listStyle: `none` }} data-cy="link-list">
-          {onlineInformation.map(link => (
-            <ListLink key={link} to={link} mode={POSITIVE} noPadding>
-              {link}
-            </ListLink>
-          ))}
-        </ul>
-      </SectionContent>
+      {onlineInformation.length && (
+        <SectionContent mode={POSITIVE} columns={[1, 8]}>
+          <h3>Online information</h3>
+          <ul style={{ margin: 0, listStyle: `none` }} data-cy="link-list">
+            {onlineInformation.map(link => (
+              <ListLink key={link} to={link} mode={POSITIVE} noPadding>
+                {link}
+              </ListLink>
+            ))}
+          </ul>
+        </SectionContent>
+      )}
     </Section>
   )
 }
@@ -48,5 +50,5 @@ export const platformOverviewFields = graphql`
 OverviewSection.propTypes = {
   id: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  onlineInformation: PropTypes.string.isRequired,
+  onlineInformation: PropTypes.arrayOf(PropTypes.string).isRequired,
 }
