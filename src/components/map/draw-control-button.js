@@ -71,7 +71,7 @@ const DrawControlButton = ({
           }
         `}
       >
-        <Button isPrimary={isDrawing} action={handlePolygonClick}>
+        <Button isSecondary={!isDrawing} action={handlePolygonClick}>
           {isDrawing
             ? "Save"
             : hasDrawing
@@ -80,7 +80,7 @@ const DrawControlButton = ({
         </Button>
 
         {hasDrawing && (
-          <Button action={handleDeleteClick}>
+          <Button isSecondary action={handleDeleteClick}>
             {isDrawing ? "Cancel" : "Delete Polygon"}
           </Button>
         )}

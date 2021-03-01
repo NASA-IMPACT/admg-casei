@@ -18,14 +18,14 @@ export default function Button({
   children,
   action,
   mode = NEGATIVE,
-  isPrimary,
+  isSecondary,
 }) {
   // flip mode for primary buttons
-  const overrideMode = isPrimary
-    ? mode === NEGATIVE
-      ? POSITIVE
-      : NEGATIVE
-    : mode
+  const overrideMode = isSecondary
+    ? mode
+    : mode === NEGATIVE
+    ? POSITIVE
+    : NEGATIVE
 
   return (
     <Clickable
@@ -43,9 +43,9 @@ export default function Button({
           text-shadow: none;
           border: 1px solid ${colors[overrideMode].text};
           cursor: pointer;
-          background-color: ${isPrimary
-            ? colors[overrideMode].background
-            : "none"};
+          background-color: ${isSecondary
+            ? "none"
+            : colors[overrideMode].background};
           border-radius: ${shape.rounded};
           font-weight: bold;
         }
@@ -60,7 +60,7 @@ Button.propTypes = {
   children: PropTypes.string.isRequired,
   action: PropTypes.func.isRequired,
   mode: PropTypes.oneOf([POSITIVE, NEGATIVE]),
-  isPrimary: PropTypes.bool,
+  isSecondary: PropTypes.bool,
 }
 
 export const IconButton = ({ id, icon, action }) => (

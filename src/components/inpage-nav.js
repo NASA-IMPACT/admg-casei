@@ -10,7 +10,7 @@ import Button from "../components/button"
 
 // Note: the triggerComponent can be any component you want!
 const FishButton = props => (
-  <Button action={props.onClick} mode={POSITIVE} isPrimary>
+  <Button action={props.onClick} mode={POSITIVE}>
     Feedback
   </Button>
 )

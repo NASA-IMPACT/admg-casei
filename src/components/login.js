@@ -31,7 +31,10 @@ const Login = () => {
 
   return (
     <>
-      <Button action={() => (isLoggedIn ? handleLogout() : setModal(true))}>
+      <Button
+        action={() => (isLoggedIn ? handleLogout() : setModal(true))}
+        isSecondary
+      >
         {buttonText}
       </Button>
 
