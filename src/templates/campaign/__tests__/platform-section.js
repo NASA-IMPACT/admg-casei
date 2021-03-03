@@ -1,5 +1,6 @@
 import React from "react"
 import { create } from "react-test-renderer"
+import * as Gatsby from "gatsby"
 
 import PlatformSection from "../platform-section"
 jest.mock("../../../components/image", () => {
@@ -9,95 +10,102 @@ jest.mock("../../../components/image", () => {
 
 const testArray = [
   {
-    id: "d59b3d7e-f782-4e25-a8eb-ceec91c0331e",
-    shortname: "DC-8",
-    longname: "Douglas DC-8",
-    image: {
-      description: "alt-text",
-      gatsbyImg: {
-        childImageSharp: {
-          fluid: () => {},
-        },
-      },
-    },
-    instruments: [
+    shortname: "J-31",
+    longname: "Jetstream-31",
+    id: "dfb8cbd6-c33c-47df-9249-8949de2b81d7",
+    description:
+      "The Jetstream 31 and the Jetstream 32 are 19-seat turboprop airliners in operation worldwide. The aircraft is suited for conversion for special operations \nconfigurations, for example military communications and exclusive economic zone patrol.",
+    collectionPeriodIds: ["b62536a8-117c-4818-a60c-5ff3eaeaa2e3"],
+    campaigns: [
       {
-        id: "a1f41f4d-2233-49be-a3d3-6eda1ded6be4",
-        shortname: "Gen-Chemistry",
-      },
-      {
-        id: "d5e31d80-a0d9-4d5b-95e1-e10714ec7970",
-        shortname: "DAWN",
-      },
-      {
-        id: "c40cc568-c4eb-4605-a3bc-f9027ad538a6",
-        shortname: "PTR-MS",
-      },
-      {
-        id: "f095abde-d0eb-4d00-b33b-549b37c28dca",
-        shortname: "CIT-CIMS",
-      },
-      {
-        id: "fdec9678-fd19-48b9-a30f-b0c2d8503c82",
-        shortname: "AVOCET",
-      },
-      {
-        id: "eaabd936-b6ae-4136-b160-90ef5f629da4",
-        shortname: "Nephelometer",
+        id: "1b0fd195-f46f-4d7a-8874-4225cec7c589",
       },
     ],
+    instruments: [
+      {
+        id: "b02a8891-c45c-4479-b3cc-3683a6ee179b",
+        shortname: "CAR",
+      },
+    ],
+    stationary: false,
   },
   {
-    id: "1b607095-4f6d-4e70-8e16-798bc59a2d59",
-    shortname: "B-200",
-    longname: "Beechcraft King Air B-200",
-    image: {
-      description: "alt-text",
-      gatsbyImg: {
-        childImageSharp: {
-          fluid: () => {},
-        },
-      },
-    },
-    instruments: [
+    shortname: "Aerosonde",
+    longname: "Aerosonde Small Unmanned Aircraft System",
+    id: "8b97267c-bc15-4744-90a3-043dc20a76e8",
+    description:
+      "The Aerosonde is a small, autonomous, high performance, high endurance, expeditionary unmanned aerial system. The air vehicle and its core systems are incredibly robust, with mission success of supporting flights into the eye of several different hurricanes and tropical storms.",
+    collectionPeriodIds: ["ec826889-bf36-48a8-a62e-ed0aa12e31ab"],
+    campaigns: [
       {
-        id: "aa6e3d99-17ca-4b4e-9130-c6e0b0864fd9",
-        shortname: "HSRL",
-      },
-      {
-        id: "7c2a6034-9983-4308-a81b-e9fd538c3dd3",
-        shortname: "RSP",
+        id: "bb3806f5-af3c-46cc-ae6f-6065aa51851d",
       },
     ],
+    instruments: [
+      {
+        id: "7cda54ad-e12e-4cf0-9c13-f4f601c3075c",
+        shortname: "Pyrometer",
+      },
+      {
+        id: "9fa2d277-d5ec-4234-ba8e-9ccb45762a04",
+        shortname: "Vaisala RS902 sonde",
+      },
+    ],
+    stationary: false,
   },
   {
-    id: "2084ab0c-4f18-4aa6-ad7b-70bc861d2d80",
-    shortname: "P-3",
-    longname: "P-3 Orion",
-    image: {
-      description: "alt-text",
-      gatsbyImg: {
-        childImageSharp: {
-          fluid: () => {},
-        },
-      },
-    },
-    instruments: [
+    shortname: "C-23 Sherpa",
+    longname: "Short Brothers C-23 Sherpa",
+    id: "1854d7b1-53c3-4ed4-8180-8f5bd6e4fd26",
+    description:
+      "C-23 Sherpa is a two-engine turboprop aircraft which is owned and operated by GSFC/WFF. primarily used for airborne science research, providing logistics support for various NASA missions and is sometimes used as a technology test bed for new airborne instrumentation",
+    collectionPeriodIds: [
+      "e321b71d-3f76-484b-b851-57a01881418e",
+      "6eaba698-579d-46f9-b201-85a2b726bda4",
+      "b6fc964e-2edd-4e2f-8b85-0b07cbd32fa4",
+      "ce35559d-ad21-45d8-a450-3879a37c71c6",
+    ],
+    campaigns: [
       {
-        id: "a1f41f4d-2233-49be-a3d3-6eda1ded6be4",
-        shortname: "Gen-Chemistry",
-      },
-      {
-        id: "edf760b9-d2b4-4ce5-8524-31268e6532fc",
-        shortname: "PSAP",
-      },
-      {
-        id: "3e5c6687-3a1c-40f5-95ed-49eb3248aea7",
-        shortname: "TE49C",
+        id: "c00b9ed9-03dc-4068-8cc8-c7454f6c8076",
       },
     ],
+    instruments: [
+      {
+        id: "29fdc8f7-e945-4cc6-afd6-569a22a7bc8a",
+        shortname: "Picarro",
+      },
+      {
+        id: "d4d4a305-7730-4cf1-94d8-fa67f0b143ab",
+        shortname: "FLIR",
+      },
+      {
+        id: "9414d6bc-0c1b-47e4-97a7-144b67b06744",
+        shortname: "PFP",
+      },
+      {
+        id: "e5c5ddac-3025-48b1-84fe-3e42b32d0eca",
+        shortname: "PALS",
+      },
+      {
+        id: "cd653605-4b2b-4f2d-847e-78dcb5a81331",
+        shortname: "FTS",
+      },
+      {
+        id: "15a442ba-c117-442a-a7cf-01fc9267d13b",
+        shortname: "DADS",
+      },
+    ],
+    stationary: false,
   },
 ]
+
+const useStaticQuery = jest.spyOn(Gatsby, "useStaticQuery")
+useStaticQuery.mockImplementation(() => ({
+  allPlatform: {
+    nodes: testArray,
+  },
+}))
 
 describe("Platform Section", () => {
   it("displays content", () => {
@@ -108,9 +116,11 @@ describe("Platform Section", () => {
         instruments={[
           {
             id: "a1f41f4d-2233-49be-a3d3-6eda1ded6be4",
+            shortname: "instrument-1",
           },
           {
             id: "aa6e3d99-17ca-4b4e-9130-c6e0b0864fd9",
+            shortname: "instrument-2",
           },
         ]}
       />

@@ -3,22 +3,18 @@ import PropTypes from "prop-types"
 
 import { Link } from "gatsby"
 import Carousel from "nuka-carousel"
-import Image from "gatsby-image"
 
-import ImageCaption from "./image-caption"
-import CampaignCard from "./cards/campaign-card"
-import { controlButtonLRStyle, ControlTextButton } from "./carousel-styles"
+import Button from "./button"
+import { controlButtonLRStyle } from "./carousel-styles"
 import Accordion from "./accordion"
-import { NEGATIVE } from "../utils/constants"
-import { colors, layout } from "../utils/theme"
+import { POSITIVE } from "../utils/constants"
 
 export default function CarouselAccordionCombo({
   id,
   emptyMessage,
   carouselList,
+  card: CategoryCard,
   folds,
-  isImage,
-  placeholderImage,
 }) {
   const controlTextRef = useRef(null)
   const [slideIndex, setSlideIndex] = useState(0)
@@ -27,23 +23,28 @@ export default function CarouselAccordionCombo({
       {carouselList.length > 0 ? (
         <div data-cy={`${id}-carousel`}>
           <div
-            style={{
-              display: `flex`,
-              overflow: `auto`,
-            }}
+            css={`
+               {
+                display: flex;
+                overflow: auto;
+                gap: 0.5rem;
+                margin: 1rem 0;
+              }
+            `}
             data-cy="carousel-list-text-control"
           >
             {carouselList.map((carouselItem, index) => (
-              <ControlTextButton
+              <Button
                 key={carouselItem.id}
                 ref={index === slideIndex ? controlTextRef : null}
-                selected={index === slideIndex}
-                onClick={() => setSlideIndex(index)}
+                isSecondary={!(index === slideIndex)}
+                action={() => setSlideIndex(index)}
               >
                 {carouselItem.shortname}
-              </ControlTextButton>
+              </Button>
             ))}
           </div>
+
           <Carousel
             slideIndex={slideIndex}
             afterSlide={slideIndex => {
@@ -86,52 +87,24 @@ export default function CarouselAccordionCombo({
               <div
                 key={carouselItem.id}
                 data-cy={id}
-                style={{
-                  display: `grid`,
-                  gridTemplateColumns: `1fr minmax(auto,  ${layout.maxWidth}) 1fr`,
-                  width: `100vw`,
-                  alignContent: `center`,
-                }}
+                css={`
+                   {
+                    display: grid;
+                    grid-template-columns: minmax(15rem, 1fr) minmax(auto, 3fr);
+                    gap: 2rem;
+                    height: 100%;
+                    max-height: 24rem;
+                  }
+                `}
               >
-                <div
-                  style={{
-                    display: `grid`,
-                    gridTemplateColumns: `1fr 3fr`,
-                    gridGap: `1.5rem`,
-                    width: `70rem`,
-                  }}
+                <Link
+                  to={`/${id}/${carouselItem.id}`}
+                  data-cy={`carousel-${id}-card-link`}
                 >
-                  <div
-                    style={{
-                      width: `26rem`,
-                      maxHeight: `18rem`,
-                      marginTop: `1.25rem`,
-                    }}
-                  >
-                    {isImage ? (
-                      <ImageCarousel
-                        id={id}
-                        address={`/${id}/${carouselItem.id}`}
-                        carouselImage={carouselItem.image}
-                        placeholder={placeholderImage}
-                        caption={
-                          carouselItem.longname || carouselItem.shortname
-                        }
-                      />
-                    ) : (
-                      <div style={{ width: `26rem`, maxHeight: `30rem` }}>
-                        <Link
-                          to={`/${id}/${carouselItem.id}`}
-                          data-cy={`carousel-${id}-card-link`}
-                        >
-                          <CampaignCard id={carouselItem.id} />
-                        </Link>
-                      </div>
-                    )}
-                  </div>
+                  <CategoryCard id={carouselItem.id} mode={POSITIVE} />
+                </Link>
 
-                  <Accordion folds={folds[carouselItem.id]} id="instrument" />
-                </div>
+                <Accordion folds={folds[carouselItem.id]} id="instrument" />
               </div>
             ))}
           </Carousel>
@@ -146,7 +119,7 @@ export default function CarouselAccordionCombo({
 CarouselAccordionCombo.propTypes = {
   id: PropTypes.string.isRequired,
   emptyMessage: PropTypes.string.isRequired,
-  placeholderImage: PropTypes.func,
+  card: PropTypes.func,
   carouselList: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
@@ -174,54 +147,4 @@ CarouselAccordionCombo.propTypes = {
       })
     ),
   }),
-  isImage: PropTypes.bool,
-}
-
-function ImageCarousel({
-  id,
-  address,
-  carouselImage,
-  placeholder: Placeholder,
-  caption,
-}) {
-  return (
-    <Link to={address}>
-      {carouselImage && carouselImage.gatsbyImg ? (
-        <Image
-          alt={carouselImage.description}
-          fluid={carouselImage.gatsbyImg.childImageSharp.fluid}
-          data-cy={`${id}-image`}
-        />
-      ) : (
-        <div
-          style={{
-            width: `26rem`,
-            height: `18rem`,
-            backgroundColor: colors[NEGATIVE].background,
-            display: `flex`,
-            alignItems: `center`,
-            justifyContent: `center`,
-            paddingBottom: `2rem`,
-          }}
-          data-cy={`${id}-image`}
-        >
-          <Placeholder />
-        </div>
-      )}
-      <ImageCaption id={`${id}-image`}>{caption}</ImageCaption>
-    </Link>
-  )
-}
-
-ImageCarousel.propTypes = {
-  id: PropTypes.string.isRequired,
-  address: PropTypes.string.isRequired,
-  carouselImage: PropTypes.shape({
-    description: PropTypes.string,
-    gatsbyImg: PropTypes.shape({
-      childImageSharp: PropTypes.object,
-    }),
-  }),
-  placeholder: PropTypes.func.isRequired,
-  caption: PropTypes.string.isRequired,
 }

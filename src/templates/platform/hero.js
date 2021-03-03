@@ -66,5 +66,5 @@ PlatformHero.propTypes = {
     gatsbyImg: PropTypes.shape({
       childImageSharp: PropTypes.object.isRequired,
     }).isRequired,
-  }).isRequired,
+  }),
 }
