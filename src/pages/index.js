@@ -11,16 +11,20 @@ import FocusAreaGallery from "../components/focus-area-gallery"
 import { RegionCarousel } from "../components/home/region-carousel"
 import { GeophysicsGrid } from "../components/home/geophysics-grid"
 import { InstrumentsGrid } from "../components/home/instruments-grid"
-import theme from "../utils/theme"
+import { NEGATIVE } from "../utils/constants"
+import { colors } from "../utils/theme"
 
-const IndexPage = ({ data }) => {
+const Home = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" lang="en" />
 
       <Hero
         tagTitle={data.site.siteMetadata.shortname}
-        title={data.site.siteMetadata.title}
+        title={data.site.siteMetadata.title.replace(
+          "Earth Science",
+          "Earth\u00a0Science" // add non-breaking space
+        )}
         description={data.site.siteMetadata.description}
         backgroundImage={data.heroImage}
         textToImageRatio={[6, 6]}
@@ -89,12 +93,14 @@ const IndexPage = ({ data }) => {
                 id="platforms"
               />
               <Link
-                to="/explore" //** TODO: link to explore with tab selected */
+                to="/explore"
+                state={{ defaultExploreCategory: "platforms" }}
                 style={{
-                  border: `1px solid ${theme.color.base}`,
+                  border: `1px solid ${colors[NEGATIVE].text}`,
                   padding: `1rem 5rem`,
                   textTransform: `uppercase`,
                 }}
+                data-cy="explore-platforms-link"
               >
                 Explore
               </Link>
@@ -131,7 +137,7 @@ export const query = graphql`
       nasaImg {
         childImageSharp {
           fluid {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
@@ -188,7 +194,7 @@ export const query = graphql`
   }
 `
 
-IndexPage.propTypes = {
+Home.propTypes = {
   data: PropTypes.shape({
     site: PropTypes.shape({
       siteMetadata: PropTypes.shape({
@@ -250,4 +256,4 @@ IndexPage.propTypes = {
   }).isRequired,
 }
 
-export default IndexPage
+export default Home

@@ -1,20 +1,26 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
+import VisuallyHidden from "@reach/visually-hidden"
+
 import DefinitionList from "../../components/layout/definition-list"
-import Label from "../../components/label"
-import { Section, SectionHeader, SectionContent } from "../../components/layout"
+import {
+  Section,
+  SectionHeader,
+  SectionContent,
+  ListLink,
+} from "../../components/layout"
 import ExternalLink from "../../components/external-link"
+import { POSITIVE } from "../../utils/constants"
 import { isUrl } from "../../utils/helpers"
+import { colors } from "../../utils/theme"
 
 function BackgroundListItem({ id, label, children }) {
   return (
-    <div style={{ padding: `1rem 0` }}>
-      <Label id={id} showBorder>
-        {label}
-      </Label>
-      {children}
-    </div>
+    <li style={{ padding: `1rem 0` }} data-cy={`${id}-label`}>
+      <label style={{ color: colors[POSITIVE].altText }}>{label}</label>
+      <p>{children}</p>
+    </li>
   )
 }
 
@@ -37,7 +43,10 @@ function Background({
   repositories,
 }) {
   return (
-    <div data-cy="instrument-background">
+    <ul
+      style={{ margin: 0, listStyle: `none` }}
+      data-cy="instrument-background"
+    >
       <BackgroundListItem id="lead-investigator" label="Lead Investigator">
         {leadInvestigator}
       </BackgroundListItem>
@@ -74,32 +83,32 @@ function Background({
             label="Overview Publication"
             url={overviewPublication}
             id="overview-publication"
+            mode={POSITIVE}
           />
         ) : (
           "N/A"
         )}
       </BackgroundListItem>
-      <BackgroundListItem
-        id="repositories"
-        label={repositories.length === 1 ? "Repository" : "Repositories"}
-      >
+      <li style={{ padding: `1rem 0` }} data-cy="repositories-label">
+        <label style={{ color: colors[POSITIVE].altText }}>
+          {repositories.length === 1 ? "Repository" : "Repositories"}
+        </label>
         {repositories.length > 0 ? (
-          <ul style={{ margin: `0` }}>
-            {repositories.map(repository => (
-              <li
-                style={{ listStyle: `none`, paddingBottom: `4px` }}
-                key={repository.id}
-                data-cy="repository"
-              >
-                <p>{repository.longname}</p>
-              </li>
+          <ul
+            style={{ margin: 0, listStyle: `none` }}
+            data-cy="repository-list"
+          >
+            {repositories.map(repo => (
+              <ListLink key={repo.id} to={repo.url} mode={POSITIVE} noPadding>
+                {repo.longname}
+              </ListLink>
             ))}
           </ul>
         ) : (
           <p>No repository available</p>
         )}
-      </BackgroundListItem>
-    </div>
+      </li>
+    </ul>
   )
 }
 
@@ -118,7 +127,7 @@ Background.propTypes = {
   ),
 }
 
-export default function About({
+export default function OverviewSection({
   id,
   measurementType,
   radiometricFrequency,
@@ -136,14 +145,16 @@ export default function About({
   overviewPublication,
   repositories,
 }) {
-  const links = onlineInformation ? onlineInformation.split("\n") : null
-
   return (
-    <Section id={id}>
-      <SectionHeader headline="Instrument Details" id={id} />
-      <SectionContent columns={[1, 8]}>
+    <Section id={id} mode={POSITIVE}>
+      <VisuallyHidden>
+        <SectionHeader headline="Overview" id={id} />
+      </VisuallyHidden>
+      <SectionContent mode={POSITIVE} columns={[1, 8]}>
+        <h3>Instrument Details</h3>
         <DefinitionList
           id="instrument"
+          mode={POSITIVE}
           list={[
             {
               title: "Measurement Type",
@@ -187,6 +198,7 @@ export default function About({
                   label={calibration}
                   url={calibration}
                   id="calibration-doi"
+                  mode={POSITIVE}
                 />
               ) : (
                 "N/A"
@@ -196,21 +208,20 @@ export default function About({
               title: "Online Information",
               content: onlineInformation ? (
                 <ul style={{ margin: `0` }}>
-                  {links
-                    .map(link => link.replace(",", ""))
-                    .map(link => (
-                      <li key={link} style={{ listStyle: `none` }}>
-                        {isUrl(link) ? (
-                          <ExternalLink
-                            label={link}
-                            url={link}
-                            id="online-information"
-                          />
-                        ) : (
-                          <p className="placeholder">{link}</p> // fallback for invalid url
-                        )}
-                      </li>
-                    ))}
+                  {onlineInformation.map(link => (
+                    <li key={link} style={{ listStyle: `none` }}>
+                      {isUrl(link) ? (
+                        <ExternalLink
+                          label={link}
+                          url={link}
+                          id="online-information"
+                          mode={POSITIVE}
+                        />
+                      ) : (
+                        <p className="placeholder">{link}</p> // fallback for invalid url
+                      )}
+                    </li>
+                  ))}
                 </ul>
               ) : (
                 "N/A"
@@ -219,7 +230,7 @@ export default function About({
           ]}
         />
       </SectionContent>
-      <SectionContent columns={[10, 3]}>
+      <SectionContent mode={POSITIVE} columns={[10, 3]}>
         <Background
           instrumentDoi={instrumentDoi}
           instrumentManufacturer={instrumentManufacturer}
@@ -235,7 +246,7 @@ export default function About({
   )
 }
 
-About.propTypes = {
+OverviewSection.propTypes = {
   id: PropTypes.string,
   collectionPeriods: PropTypes.arrayOf(PropTypes.string),
   measurementType: PropTypes.shape({
@@ -266,12 +277,13 @@ About.propTypes = {
   fundingSource: PropTypes.string,
   leadInvestigator: PropTypes.string,
   technicalContact: PropTypes.string,
-  onlineInformation: PropTypes.string,
+  onlineInformation: PropTypes.arrayOf(PropTypes.string),
   overviewPublication: PropTypes.string,
   repositories: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       longname: PropTypes.string.isRequired,
+      url: PropTypes.string.isRequired,
     })
   ),
 }
@@ -309,6 +321,7 @@ export const instrumentDetailFields = graphql`
     repositories {
       id
       longname: long_name
+      url: notes_public
     }
   }
 `

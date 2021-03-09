@@ -1,20 +1,38 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { Link } from "gatsby"
 import { FeedbackForm } from "feedback-fish"
 
-import theme from "../utils/theme"
+import { CaseiLogoIcon } from "../icons"
+import { POSITIVE } from "../utils/constants"
+import { colors } from "../utils/theme"
 import Button from "../components/button"
 
 // Note: the triggerComponent can be any component you want!
-const FishButton = props => <Button action={props.onClick}>Feedback</Button>
+const FishButton = props => (
+  <Button action={props.onClick} mode={POSITIVE}>
+    Feedback
+  </Button>
+)
 
 FishButton.propTypes = {
   onClick: PropTypes.func.isRequired,
 }
 
 const InpageLink = props => (
-  <li style={{ margin: `0 1rem 0 0` }}>
-    <a href={`#${props.id}`} data-cy={`${props.id}-inpage-link`}>
+  <li
+    css={`
+      margin: 0 1rem 0 0;
+    `}
+  >
+    <a
+      href={`#${props.id}`}
+      css={`
+        color: ${colors[POSITIVE].text};
+        font-weight: 600;
+      `}
+      data-cy={`${props.id}-inpage-link`}
+    >
       {props.children}
     </a>
   </li>
@@ -27,42 +45,66 @@ InpageLink.propTypes = {
 
 const InpageNav = ({ shortname, items, path }) => (
   <div
-    style={{
-      position: `sticky`,
-      top: 0,
-      borderBottom: `1px solid #9E9E9E`,
-      backgroundColor: theme.color.primary,
-      zIndex: 1000,
-    }}
+    css={`
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    `}
+    data-cy="inpage-nav"
   >
     <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: theme.layout.maxWidth,
-        padding: `0 ${theme.layout.pageMargin}`,
-        display: `flex`,
-        justifyContent: `space-between`,
-        alignItems: `center`,
-      }}
+      css={`
+        margin: 0 -6rem;
+        padding: 0 6rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: ${colors[POSITIVE].background};
+        color: ${colors[POSITIVE].text};
+      `}
     >
       <nav aria-label="inpage-scroll">
         <ul
-          style={{
-            display: `flex`,
-            flexDirection: `row`,
-            justifyContent: `flex-start`,
-            alignItems: `center`,
-            margin: 0,
-            padding: `0.25rem 0`,
-            listStyle: `none`,
-          }}
+          css={`
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            margin: 0;
+            padding: 0.25rem 0;
+            list-style: none;
+          `}
         >
-          <li style={{ margin: `0 1rem 0 0` }}>
-            <div style={{ paddingRight: `1rem`, fontSize: `2rem` }}>
-              <a href="#top" data-cy={`top-inpage-link`}>
-                {shortname}
-              </a>
-            </div>
+          <li>
+            <Link
+              to="/"
+              css={`
+                text-decoration: none;
+                display: grid;
+                grid-template-columns: 3rem auto;
+                align-items: center;
+              `}
+              data-cy="home-link"
+            >
+              <CaseiLogoIcon color={colors[POSITIVE].text} size="tiny" />
+            </Link>
+          </li>
+          <li
+            css={`
+              margin: 0 1rem 0 0;
+            `}
+          >
+            <a
+              href="#top"
+              css={`
+                padding-right: 1rem;
+                font-size: 2rem;
+                color: ${colors[POSITIVE].text};
+              `}
+              data-cy={`top-inpage-link`}
+            >
+              {shortname}
+            </a>
           </li>
           {items.map(item => (
             <InpageLink key={item.id} id={item.id}>

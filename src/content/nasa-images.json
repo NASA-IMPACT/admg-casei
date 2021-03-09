@@ -110,14 +110,20 @@
   {
     "shortname": "Home",
     "category": "layout",
-    "nasaImgUrl": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e000980/GSFC_20171208_Archive_e000980~orig.jpg",
-    "nasaImgAlt": "View from a Chase Plane; HS3 Science Flight 8 Wraps Up The chase plane accompanying NASA's Global Hawk No. 872 captured this picture on Sept. 19 after the Global Hawk completed science flight #8 where it gathered data from a weakening Tropical Storm Edouard over the North Atlantic Ocean. Credit: NASA "
+    "nasaImgUrl": "https://www.nasa.gov/sites/default/files/images/699943main_ice_bridge_full_full.jpg",
+    "nasaImgAlt": "NASA's DC-8 flying laboratory passes Antarctica's tallest peak, Mount Vinson, on Oct. 22, 2012, during a flight over the continent to measure changes in the massive ice sheet and sea ice. Credit: NASA/Michael Studinger"
   },
   {
-    "shortname": "About",
+    "shortname": "about-hero",
     "category": "layout",
     "nasaImgUrl": "https://images-assets.nasa.gov/image/GRC-2020-C-00100/GRC-2020-C-00100~orig.jpg",
     "nasaImgAlt": "Glenn Research Center, Lockheed S-3 Viking Research Aircraft, N601NA at Sunrise"
+  },
+  {
+    "shortname": "about-body",
+    "category": "layout",
+    "nasaImgUrl": "https://images-assets.nasa.gov/image/PIA17771/PIA17771~orig.jpg",
+    "nasaImgAlt": "View over mountain range from plane"
   },
   {
     "shortname": "Glossary",

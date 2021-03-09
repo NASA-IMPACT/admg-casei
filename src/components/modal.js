@@ -2,7 +2,8 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 
-import theme from "../utils/theme"
+import { NEGATIVE } from "../utils/constants"
+import { colors } from "../utils/theme"
 
 const Backdrop = styled.div`
   position: fixed;
@@ -24,7 +25,7 @@ const Component = styled.div`
   position: relative;
   padding: 32px;
   border-radius: 3px;
-  background: ${theme.color.secondary};
+  background: ${colors[NEGATIVE].background};
   pointer-events: auto;
 `
 

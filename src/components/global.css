@@ -4,7 +4,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: radial-gradient(
     circle at top,
-    /*tertiary color */ #294060 0%,
-    /*primary color */ #0c1520 45%
+    /* other blue color (?) */ #294060 0%,
+    /* darkTheme.altBackground */ #0c1520 45%
   );
 }

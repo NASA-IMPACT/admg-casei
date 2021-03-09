@@ -1,13 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
-import styled from "styled-components"
 
-const Button = styled.button`
-  width: 100%;
-  background-position: left 5.5px bottom 50%;
-  padding-left: 29px;
-  padding-right: 9px;
-`
+import Button from "../button"
 
 const DrawControlButton = ({
   drawControl,
@@ -56,18 +50,28 @@ const DrawControlButton = ({
   }
 
   return (
-    <div style={{ zIndex: `0` }} className="mapboxgl-ctrl-top-right">
+    <div
+      css={`
+         {
+          z-index: 0;
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+      `}
+    >
       <div
-        style={{ minWidth: `9rem` }}
-        className="mapboxgl-ctrl mapboxgl-ctrl-group"
+        css={`
+           {
+            min-width: 9rem;
+            margin: 0.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+          }
+        `}
       >
-        <Button
-          className={`mapbox-gl-draw_ctrl-draw-btn mapbox-gl-draw_polygon ${
-            isDrawing ? "active" : ""
-          }`}
-          onClick={handlePolygonClick}
-          isDrawing={isDrawing}
-        >
+        <Button isSecondary={!isDrawing} action={handlePolygonClick}>
           {isDrawing
             ? "Save"
             : hasDrawing
@@ -76,13 +80,7 @@ const DrawControlButton = ({
         </Button>
 
         {hasDrawing && (
-          <Button
-            className={`mapbox-gl-draw_ctrl-draw-btn mapbox-gl-draw_trash ${
-              isDrawing ? "active" : ""
-            }`}
-            onClick={handleDeleteClick}
-            isDrawing={isDrawing}
-          >
+          <Button isSecondary action={handleDeleteClick}>
             {isDrawing ? "Cancel" : "Delete Polygon"}
           </Button>
         )}

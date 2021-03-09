@@ -10,43 +10,54 @@ import {
 import VisuallyHidden from "@reach/visually-hidden"
 import styled from "styled-components"
 
+import { NEGATIVE } from "../../utils/constants"
 import { IconButton } from "../button"
 import { CloseIcon } from "../../icons"
-import theme from "../../utils/theme"
+import { colors } from "../../utils/theme"
 
 const FilterButton = styled(ListboxButton)`
   flex-grow: 0;
-  height: 2.5rem;
   width: 100%;
   -webkit-appearance: none;
   background: transparent;
-  border: 1px solid ${theme.color.base};
-  color: ${theme.color.base};
+  border: 1px solid ${colors[NEGATIVE].text};
+  color: ${colors[NEGATIVE].text};
   padding: 0.5rem;
   cursor: pointer;
   text-transform: uppercase;
+  @media screen and (max-width: 1400px) {
+    height: 2.5rem;
+  }
+  @media screen and (max-width: 1280px) {
+    height: ${props => (props.category === "campaigns" ? `4.5rem` : `2.5rem`)};
+  }
+  @media screen and (max-width: 800px) {
+    height: 2.5rem;
+  }
 `
 
 const FilterItem = styled(ListboxOption)`
   display: flex;
   justify-content: space-between;
   background-color: ${props =>
-    props.selected ? theme.color.secondary : theme.color.primary};
+    props.selected
+      ? colors[NEGATIVE].background
+      : colors[NEGATIVE].altBackground};
 
   &[data-reach-listbox-option][aria-selected="true"] {
-    background: ${theme.color.secondary};
+    background: ${colors[NEGATIVE].background};
     opacity: 0.64;
   }
 `
 
 const FilterMenu = ({
   id,
-  style,
   selectedFilterIds,
   addFilter,
   removeFilter,
   label,
   options,
+  category,
 }) => {
   const handleSelection = value => {
     selectedFilterIds.includes(value) ? removeFilter(value) : addFilter(value)
@@ -55,7 +66,11 @@ const FilterMenu = ({
 
   let [value, setValue] = useState("")
   return (
-    <div style={style}>
+    <div
+      css={`
+        flex-grow: 1;
+      `}
+    >
       <VisuallyHidden id={`${id}-filter-select`}>
         filter results by sub-categories
       </VisuallyHidden>
@@ -66,13 +81,15 @@ const FilterMenu = ({
         data-cy={`${id}-filter-select`}
         onChange={value => handleSelection(value)}
       >
-        <FilterButton arrow="▼">{label}</FilterButton>
+        <FilterButton arrow="▼" category={category}>
+          {label}
+        </FilterButton>
         <ListboxPopover
-          style={{
-            background: theme.color.primary,
-            maxHeight: `24rem`,
-            overflowY: `scroll`,
-          }}
+          css={`
+            background: ${colors[NEGATIVE].altBackground};
+            max-height: 24rem;
+            overflow-y: scroll;
+          `}
         >
           <ListboxList data-cy="filter-options">
             {options.map(o => (
@@ -86,7 +103,7 @@ const FilterMenu = ({
                 {selectedFilterIds.includes(o.id) && (
                   <IconButton
                     id="remove-filter"
-                    icon={<CloseIcon color={theme.color.base} />}
+                    icon={<CloseIcon color={colors[NEGATIVE].text} />}
                   />
                 )}
               </FilterItem>
@@ -100,7 +117,6 @@ const FilterMenu = ({
 
 FilterMenu.propTypes = {
   id: PropTypes.string.isRequired,
-  style: PropTypes.object,
   selectedFilterIds: PropTypes.arrayOf(PropTypes.string),
   addFilter: PropTypes.func.isRequired,
   removeFilter: PropTypes.func.isRequired,
@@ -111,6 +127,7 @@ FilterMenu.propTypes = {
       shortname: PropTypes.string,
     })
   ).isRequired,
+  category: PropTypes.string,
 }
 
 export default FilterMenu

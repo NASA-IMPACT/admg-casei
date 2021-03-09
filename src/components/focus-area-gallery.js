@@ -2,9 +2,9 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
-import Label from "./label"
 import { getFocusIcon } from "../icons/utils"
-import theme from "../utils/theme"
+import { NEGATIVE } from "../utils/constants"
+import { colors } from "../utils/theme"
 
 const FocusArea = ({ id, caption, size }) => {
   const Icon = getFocusIcon(id)
@@ -13,13 +13,17 @@ const FocusArea = ({ id, caption, size }) => {
     <Link
       to={`/focus/${id}`}
       state={{ selectedFilterId: id }} // Pass state as props to the linked page
-      style={{ textAlign: `center`, maxWidth: `130px` }}
+      style={{
+        textAlign: `center`,
+        display: `flex`,
+        flexDirection: `column`,
+        alignItems: `center`,
+        gap: `1rem`,
+      }}
       data-cy="focus-area"
     >
-      <Icon color={theme.color.base} size={size} />
-      <Label id="focus-area-icons" color={theme.color.base}>
-        {caption}
-      </Label>
+      <Icon color={colors[NEGATIVE].text} size={size} />
+      <label color={colors[NEGATIVE].text}>{caption}</label>
     </Link>
   )
 }
@@ -35,7 +39,9 @@ const FocusAreaGallery = ({ focusAreas, size = "large" }) => {
     <div
       style={{
         display: `grid`,
-        gridTemplateColumns: `repeat(${focusAreas.length}, 1fr)`,
+        gridTemplateColumns: `repeat(auto-fit, minmax(${
+          size === "small" ? "5rem" : "10rem"
+        }, 1fr))`,
         justifyItems: `center`,
         gap: `1rem`,
         paddingTop: `1rem`,

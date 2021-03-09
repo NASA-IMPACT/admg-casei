@@ -6,7 +6,7 @@ import Layout, { PageBody } from "../../components/layout"
 import SEO from "../../components/seo"
 import InstrumentHero from "./hero"
 import InpageNav from "../../components/inpage-nav"
-import About from "./about"
+import OverviewSection from "./overview-section"
 import Entities from "./entities"
 import DataSection from "./data-section"
 
@@ -25,9 +25,9 @@ const InstrumentTemplate = ({ data: { instrument }, path }) => {
     }
   })
   const sections = {
-    about: {
+    overview: {
       nav: "Instrument Details",
-      component: About,
+      component: OverviewSection,
       props: {
         measurementType: instrument.measurementType,
         radiometricFrequency: instrument.radiometricFrequency,
@@ -41,7 +41,9 @@ const InstrumentTemplate = ({ data: { instrument }, path }) => {
         fundingSource: instrument.fundingSource,
         leadInvestigator: instrument.leadInvestigator,
         technicalContact: instrument.technicalContact,
-        onlineInformation: instrument.onlineInformation,
+        onlineInformation: instrument.onlineInformation
+          .split("\n")
+          .filter(x => x),
         overviewPublication: instrument.overviewPublication,
         repositories: instrument.repositories,
       },
@@ -72,15 +74,15 @@ const InstrumentTemplate = ({ data: { instrument }, path }) => {
         description={instrument.description}
         image={instrument.image}
       />
-      <InpageNav
-        shortname={instrument.shortname}
-        items={Object.entries(sections).map(([id, section]) => ({
-          id,
-          label: section.nav,
-        }))}
-        path={path}
-      />
       <PageBody id="instrument">
+        <InpageNav
+          shortname={instrument.shortname}
+          items={Object.entries(sections).map(([id, section]) => ({
+            id,
+            label: section.nav,
+          }))}
+          path={path}
+        />
         {Object.entries(sections).map(([id, section]) => (
           <section.component key={id} id={id} {...section.props} />
         ))}
@@ -170,6 +172,7 @@ InstrumentTemplate.propTypes = {
         PropTypes.shape({
           id: PropTypes.string.isRequired,
           longname: PropTypes.string.isRequired,
+          url: PropTypes.string.isRequired,
         })
       ),
       platforms: PropTypes.arrayOf(

@@ -11,6 +11,7 @@ exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions
   const typeDefs = `
     type campaign implements Node {
+      aliases: [alias] @link
       deployments: [deployment] @link
       dois: [doi] @link
       focus_areas: [focus_area] @link
@@ -19,6 +20,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       partner_orgs: [partner_org] @link
       platform_types: [platform_type] @link
       platforms: [platform] @link
+      repositories: [repository] @link
       seasons: [season] @link
       logo: LogosJson @link(by: "shortname", from: "short_name")
     }
@@ -117,6 +119,7 @@ exports.sourceNodes = async ({ actions, createContentDigest }) => {
   const { createNode } = actions
   try {
     const endpoints = [
+      "alias",
       "campaign",
       "collection_period",
       "deployment",

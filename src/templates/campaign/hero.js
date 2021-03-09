@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useRef } from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 import styled from "styled-components"
@@ -11,7 +11,8 @@ import Map from "../../components/map"
 import BboxLayer from "../../components/map/bbox-layer"
 import GeoJsonSource from "../../components/map/geojson-source"
 import { CampaignIcon } from "../../icons"
-import theme from "../../utils/theme"
+import { layout } from "../../utils/theme"
+import { useContainerDimensions } from "../../utils/use-container-dimensions"
 
 const BackgroundGradient = styled.div`
   background-image: linear-gradient(
@@ -29,7 +30,6 @@ const BackgroundGradient = styled.div`
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 60rem;
   margin-top: -7rem;
   z-index: 0;
   grid-area: 1 / 1 / 1 / 4;
@@ -39,6 +39,7 @@ const CampaignHero = ({
   logo,
   bounds,
   longname,
+  shortname,
   focusListing,
   countDeployments,
   countCollectionPeriods,
@@ -50,12 +51,16 @@ const CampaignHero = ({
   }
   const bbox = turf.bbox(geojson)
 
+  const containerRef = useRef()
+  const { height } = useContainerDimensions(containerRef)
+
   return (
     <section
+      ref={containerRef}
       data-cy="campaign-hero"
       style={{
         display: `grid`,
-        gridTemplateColumns: `1fr minmax(auto,  ${theme.layout.maxWidth}) 1fr`,
+        gridTemplateColumns: `1fr minmax(auto,  ${layout.maxWidth}) 1fr`,
         width: `100vw`,
         minHeight: `35rem`,
         alignContent: `center`,
@@ -63,7 +68,7 @@ const CampaignHero = ({
     >
       <Map
         style={{
-          height: `60rem`,
+          height: `calc(${height}px + 7rem`,
           marginTop: `-7rem`,
           zIndex: -1,
           gridArea: `1 / 1 / 1 / 4`,
@@ -74,7 +79,7 @@ const CampaignHero = ({
         </GeoJsonSource>
       </Map>
 
-      <BackgroundGradient />
+      <BackgroundGradient height={height} />
 
       <div
         style={{
@@ -84,7 +89,7 @@ const CampaignHero = ({
           zIndex: 1,
         }}
       >
-        <div style={{ flex: `2`, padding: `0 ${theme.layout.pageMargin}` }}>
+        <div style={{ flex: `2`, padding: `0 ${layout.pageMargin}` }}>
           <div style={{ marginBottom: `6rem` }}>
             {logo && logo.logoImg ? (
               <Image
@@ -95,7 +100,7 @@ const CampaignHero = ({
             ) : (
               <CampaignIcon />
             )}
-            <h1 data-cy="campaign-hero-header">{longname}</h1>
+            <h1 data-cy="campaign-hero-header">{longname || shortname}</h1>
             <p>{focusListing}</p>
           </div>
           <HeroStats
@@ -144,7 +149,8 @@ CampaignHero.propTypes = {
     }),
   }),
   bounds: PropTypes.string.isRequired,
-  longname: PropTypes.string.isRequired,
+  longname: PropTypes.string,
+  shortname: PropTypes.string.isRequired,
   focusListing: PropTypes.string.isRequired,
   countDeployments: PropTypes.number.isRequired,
   countCollectionPeriods: PropTypes.number.isRequired,

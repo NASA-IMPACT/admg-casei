@@ -5,7 +5,9 @@ import FilterMenu from "./filter-menu"
 import Searchbar from "./searchbar"
 import DateMenu from "./date-menu"
 
-import theme from "../../utils/theme"
+import { FilterIcon } from "../../icons"
+import { NEGATIVE } from "../../utils/constants"
+import { colors } from "../../utils/theme"
 
 const ExploreTools = React.forwardRef(
   (
@@ -19,6 +21,8 @@ const ExploreTools = React.forwardRef(
       getFilterOptionsById,
       removeFilter,
       category,
+      toggleMap,
+      isDisplayingMap,
     },
     ref
   ) => {
@@ -26,88 +30,149 @@ const ExploreTools = React.forwardRef(
       <form
         onSubmit={submitSearch}
         onReset={resetSearch}
-        style={{
-          display: `flex`,
-          margin: `2rem 0`,
-          flexFlow: `column wrap`,
-          border: `1px solid ${theme.color.base}`,
-        }}
+        css={`
+          display: flex;
+          margin: 2rem 0;
+          flex-flow: column wrap;
+          border: 1px solid ${colors[NEGATIVE].text};
+        `}
         data-cy="explore-tools"
       >
-        <div style={{ display: `flex` }}>
-          <Searchbar ref={ref} />
+        <div
+          css={`
+            display: flex;
+          `}
+        >
+          <Searchbar
+            ref={ref}
+            toggleMap={toggleMap}
+            isDisplayingMap={isDisplayingMap}
+            category={category}
+          />
+          {category === "campaigns" && (
+            <div
+              css={`
+                border: 1px solid ${colors[NEGATIVE].text};
+                padding: 0.25rem;
+              `}
+            >
+              <button
+                css={`
+                  border: none;
+                  flex-grow: 0;
+                  background: transparent;
+                  color: ${colors[NEGATIVE].text};
+                  vertical-align: middle;
+                  cursor: pointer;
+                `}
+                data-cy="map-toggle-btn"
+                onClick={e => {
+                  e.preventDefault()
+                  toggleMap(!isDisplayingMap)
+                }}
+              >
+                <span>{isDisplayingMap ? "Hide" : "Show"} Map</span>
+              </button>
+            </div>
+          )}
         </div>
 
-        <div style={{ flexGrow: 1, display: `flex`, alignContent: `stretch` }}>
+        <div
+          css={`
+            flex-grow: 1;
+            display: flex;
+            align-content: stretch;
+          `}
+        >
+          <div
+            css={`
+              padding: 0.25rem 0.75rem;
+              border: 1px solid ${colors[NEGATIVE].text};
+              display: flex;
+              align-items: center;
+              gap: 0.55rem;
+            `}
+            data-cy="main-filter-label"
+          >
+            <FilterIcon color={colors[NEGATIVE].text} />
+            <strong>Filter By</strong>
+          </div>
+
           {category === "campaigns" && (
-            <>
+            <div
+              css={`
+                display: inherit;
+                flex-grow: 1;
+                @media screen and (max-width: 800px) {
+                  display: block;
+                }
+              `}
+            >
               <DateMenu
                 id="date"
-                style={{ flexGrow: 1 }}
                 label="Date range"
                 dateRange={dateRange}
                 setDateRange={setDateRange}
               />
               <FilterMenu
                 id="focus"
-                style={{ flexGrow: 1 }}
                 selectedFilterIds={selectedFilterIds}
                 addFilter={addFilter}
                 removeFilter={removeFilter}
                 label="Focus Area"
                 options={getFilterOptionsById("focus")}
+                category={category}
               />
               <FilterMenu
                 id="geophysical"
-                style={{ flexGrow: 1 }}
                 selectedFilterIds={selectedFilterIds}
                 addFilter={addFilter}
                 removeFilter={removeFilter}
                 label="Geophysical Concept"
                 options={getFilterOptionsById("geophysical")}
+                category={category}
               />
               <FilterMenu
                 id="season"
-                style={{ flexGrow: 1 }}
                 selectedFilterIds={selectedFilterIds}
                 addFilter={addFilter}
                 removeFilter={removeFilter}
                 label="Season"
                 options={getFilterOptionsById("season")}
+                category={category}
               />
               <FilterMenu
                 id="region"
-                style={{ flexGrow: 1 }}
                 selectedFilterIds={selectedFilterIds}
                 addFilter={addFilter}
                 removeFilter={removeFilter}
                 label="Geographical Region"
                 options={getFilterOptionsById("region")}
+                category={category}
               />
               <FilterMenu
                 id="platform"
-                style={{ flexGrow: 1 }}
                 selectedFilterIds={selectedFilterIds}
                 addFilter={addFilter}
                 removeFilter={removeFilter}
                 label="Platform"
                 options={getFilterOptionsById("platform")}
+                category={category}
               />
               <FilterMenu
                 id="funding"
-                style={{ flexGrow: 1 }}
                 selectedFilterIds={selectedFilterIds}
                 addFilter={addFilter}
                 removeFilter={removeFilter}
                 label="Funding Agency"
                 options={getFilterOptionsById("funding")}
+                category={category}
               />
-            </>
+            </div>
           )}
           {category === "platforms" && (
             <FilterMenu
               id="instrument"
-              style={{ flexGrow: 1 }}
               selectedFilterIds={selectedFilterIds}
               addFilter={addFilter}
               removeFilter={removeFilter}
@@ -119,7 +184,6 @@ const ExploreTools = React.forwardRef(
             <>
               <FilterMenu
                 id="type"
-                style={{ flexGrow: 1 }}
                 selectedFilterIds={selectedFilterIds}
                 addFilter={addFilter}
                 removeFilter={removeFilter}
@@ -128,7 +192,6 @@ const ExploreTools = React.forwardRef(
               />
               <FilterMenu
                 id="vertical"
-                style={{ flexGrow: 1 }}
                 selectedFilterIds={selectedFilterIds}
                 addFilter={addFilter}
                 removeFilter={removeFilter}
@@ -157,6 +220,8 @@ ExploreTools.propTypes = {
   removeFilter: PropTypes.func.isRequired,
   category: PropTypes.oneOf(["campaigns", "platforms", "instruments"])
     .isRequired,
+  toggleMap: PropTypes.func.isRequired,
+  isDisplayingMap: PropTypes.bool.isRequired,
 }
 
 // https://reactjs.org/docs/forwarding-refs.html#displaying-a-custom-name-in-devtools

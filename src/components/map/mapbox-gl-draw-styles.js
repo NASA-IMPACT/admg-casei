@@ -1,4 +1,5 @@
-import theme from "../../utils/theme"
+import { NEGATIVE } from "../../utils/constants"
+import { colors } from "../../utils/theme"
 
 export const drawStyles = [
   {
@@ -11,8 +12,8 @@ export const drawStyles = [
       ["!=", "mode", "static"],
     ],
     paint: {
-      "fill-color": theme.color.highlight,
-      "fill-outline-color": theme.color.highlight,
+      "fill-color": colors[NEGATIVE].highlight,
+      "fill-outline-color": colors[NEGATIVE].highlight,
       "fill-opacity": 0.16,
     },
   },
@@ -21,8 +22,8 @@ export const drawStyles = [
     type: "fill",
     filter: ["all", ["==", "active", "true"], ["==", "$type", "Polygon"]],
     paint: {
-      "fill-color": theme.color.highlight,
-      "fill-outline-color": theme.color.highlight,
+      "fill-color": colors[NEGATIVE].highlight,
+      "fill-outline-color": colors[NEGATIVE].highlight,
       "fill-opacity": 0.16,
     },
   },
@@ -40,7 +41,7 @@ export const drawStyles = [
       "line-join": "round",
     },
     paint: {
-      "line-color": theme.color.highlight,
+      "line-color": colors[NEGATIVE].highlight,
       "line-width": 2,
     },
   },
@@ -53,7 +54,7 @@ export const drawStyles = [
       "line-join": "round",
     },
     paint: {
-      "line-color": theme.color.highlight,
+      "line-color": colors[NEGATIVE].highlight,
       "line-dasharray": [0.64, 2],
       "line-width": 2,
     },
@@ -69,7 +70,7 @@ export const drawStyles = [
     ],
     paint: {
       "circle-radius": 6,
-      "circle-color": "#fff",
+      "circle-color": colors[NEGATIVE].text,
     },
   },
   {
@@ -83,7 +84,7 @@ export const drawStyles = [
     ],
     paint: {
       "circle-radius": 4,
-      "circle-color": theme.color.highlight,
+      "circle-color": colors[NEGATIVE].highlight,
     },
   },
   {
@@ -97,7 +98,7 @@ export const drawStyles = [
     ],
     paint: {
       "circle-radius": 8,
-      "circle-color": "#fff",
+      "circle-color": colors[NEGATIVE].text,
     },
   },
   {
@@ -111,7 +112,7 @@ export const drawStyles = [
     ],
     paint: {
       "circle-radius": 6,
-      "circle-color": theme.color.highlight,
+      "circle-color": colors[NEGATIVE].highlight,
     },
   },
 ]

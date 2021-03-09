@@ -19,19 +19,28 @@ import {
   subYears,
 } from "date-fns"
 
-import theme from "../../utils/theme"
+import { NEGATIVE } from "../../utils/constants"
+import { colors } from "../../utils/theme"
 
 const FilterButton = styled(ListboxButton)`
   flex-grow: 0;
-  height: 2.5rem;
   width: 100%;
   -webkit-appearance: none;
   background: transparent;
-  border: 1px solid ${theme.color.base};
-  color: ${theme.color.base};
+  border: 1px solid ${colors[NEGATIVE].text};
+  color: ${colors[NEGATIVE].text};
   padding: 0.5rem;
   cursor: pointer;
   text-transform: uppercase;
+  @media screen and (max-width: 1400px) {
+    height: 2.5rem;
+  }
+  @media screen and (max-width: 1280px) {
+    height: 4.5rem;
+  }
+  @media screen and (max-width: 800px) {
+    height: 2.5rem;
+  }
 `
 
 const TimeRangeButton = styled.button`
@@ -40,7 +49,7 @@ const TimeRangeButton = styled.button`
   -webkit-appearance: none;
   background: transparent;
   border: 0;
-  color: ${theme.color.base};
+  color: ${colors[NEGATIVE].text};
   padding: 0.5rem;
   cursor: pointer;
   text-transform: capitalize;
@@ -52,8 +61,8 @@ const ApplyButton = styled(ListboxOption)`
   width: 100%;
   -webkit-appearance: none;
   background: transparent;
-  border: 1px solid ${theme.color.base};
-  color: ${theme.color.base};
+  border: 1px solid ${colors[NEGATIVE].text};
+  color: ${colors[NEGATIVE].text};
   padding: 0.5rem;
   cursor: pointer;
   text-align: center;
@@ -61,7 +70,7 @@ const ApplyButton = styled(ListboxOption)`
   text-transform: uppercase;
 `
 
-const DateMenu = ({ id, style, label, dateRange, setDateRange }) => {
+const DateMenu = ({ id, label, dateRange, setDateRange }) => {
   const [startDate, setStartDate] = useState(dateRange.start || new Date())
   const [endDate, setEndDate] = useState(dateRange.end || new Date())
 
@@ -105,7 +114,11 @@ const DateMenu = ({ id, style, label, dateRange, setDateRange }) => {
   }
 
   return (
-    <div style={style}>
+    <div
+      css={`
+        flex-grow: 1;
+      `}
+    >
       <VisuallyHidden id={`${id}-filter-select`}>
         select time range to filter by
       </VisuallyHidden>
@@ -117,19 +130,19 @@ const DateMenu = ({ id, style, label, dateRange, setDateRange }) => {
       >
         <FilterButton arrow="▼">{label}</FilterButton>
         <ListboxPopover
-          style={{
-            background: theme.color.primary,
-            minWidth: `fit-content`,
-          }}
+          css={`
+            background: ${colors[NEGATIVE].altBackground};
+            min-width: fit-content;
+          `}
         >
           <ListboxList>
             <div
-              style={{
-                display: `flex`,
-                margin: `1rem`,
-                alignItems: `center`,
-                justifyContent: `space-between`,
-              }}
+              css={`
+                display: flex;
+                margin: 1rem;
+                align-items: center;
+                justify-content: space-between;
+              `}
             >
               From:
               <DatePicker
@@ -146,12 +159,12 @@ const DateMenu = ({ id, style, label, dateRange, setDateRange }) => {
               />
             </div>
             <div
-              style={{
-                display: `flex`,
-                gap: `1rem`,
-                margin: `1rem`,
-                alignItems: `center`,
-              }}
+              css={`
+                display: flex;
+                gap: 1rem;
+                margin: 1rem;
+                align-items: center;
+              `}
             >
               <TimeRangeButton onClick={() => onButtonClick("month")}>
                 1 Month ago
@@ -181,7 +194,6 @@ const DateMenu = ({ id, style, label, dateRange, setDateRange }) => {
 
 DateMenu.propTypes = {
   id: PropTypes.string.isRequired,
-  style: PropTypes.object,
   label: PropTypes.string.isRequired,
   dateRange: PropTypes.shape({
     start: PropTypes.instanceOf(Date),

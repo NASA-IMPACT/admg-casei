@@ -6,7 +6,7 @@ import Layout, { PageBody } from "../../components/layout"
 import SEO from "../../components/seo"
 import PlatformHero from "./hero"
 import InpageNav from "../../components/inpage-nav"
-import Overview from "./overview"
+import OverviewSection from "./overview-section"
 import CampaignsAndInstruments from "./campaigns-instruments"
 import DataSection from "./data-section"
 
@@ -27,17 +27,20 @@ export default function PlatformTemplate({ data: { platform }, path }) {
   const sections = {
     overview: {
       nav: "Overview",
-      component: Overview,
+      component: OverviewSection,
       props: {
         description: platform.description,
         shortname: platform.shortname,
+        onlineInformation: platform.onlineInformation
+          .split("\n")
+          .filter(x => x),
       },
     },
     "campaigns-instruments": {
       nav: "Related Campaigns & Instruments",
       component: CampaignsAndInstruments,
       props: {
-        id: "platform-campaigns",
+        id: "campaigns-instruments",
         campaigns: platform.campaigns,
         instruments: platform.instruments,
       },
@@ -63,15 +66,15 @@ export default function PlatformTemplate({ data: { platform }, path }) {
         textToImageRatio={[3, 5]}
         image={platform.image}
       />
-      <InpageNav
-        shortname={platform.shortname}
-        items={Object.entries(sections).map(([id, section]) => ({
-          id,
-          label: section.nav,
-        }))}
-        path={path}
-      />
       <PageBody id="platform">
+        <InpageNav
+          shortname={platform.shortname}
+          items={Object.entries(sections).map(([id, section]) => ({
+            id,
+            label: section.nav,
+          }))}
+          path={path}
+        />
         {Object.entries(sections).map(([id, section]) => (
           <section.component key={id} id={id} {...section.props} />
         ))}
@@ -135,6 +138,7 @@ PlatformTemplate.propTypes = {
       shortname: PropTypes.string.isRequired,
       longname: PropTypes.string.isRequired,
       description: PropTypes.string,
+      onlineInformation: PropTypes.string,
       dois: PropTypes.arrayOf(
         PropTypes.shape({
           id: PropTypes.string.isRequired,
@@ -169,7 +173,7 @@ PlatformTemplate.propTypes = {
                 gatsbyImg: PropTypes.shape({
                   childImageSharp: PropTypes.object.isRequired,
                 }),
-              }).isRequired,
+              }),
             })
           ).isRequired,
         })
@@ -188,10 +192,10 @@ PlatformTemplate.propTypes = {
       image: PropTypes.shape({
         description: PropTypes.string.isRequired,
         gatsbyImg: PropTypes.shape({
-          description: PropTypes.string.isRequired,
+          description: PropTypes.string,
           childImageSharp: PropTypes.object.isRequired,
         }).isRequired,
-      }).isRequired,
+      }),
     }),
   }),
   path: PropTypes.string.isRequired,

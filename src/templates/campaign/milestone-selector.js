@@ -3,7 +3,8 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 
 import { AirborneRemoteSensors } from "../../icons"
-import theme from "../../utils/theme"
+import { NEGATIVE } from "../../utils/constants"
+import { colors } from "../../utils/theme"
 
 const CardContent = styled.div`
   display: grid;
@@ -53,7 +54,7 @@ export default function MilestoneSelector({
               display: `flex`,
               listStyleType: `none`,
               height: `2px`,
-              background: `#fff`,
+              background: colors[NEGATIVE].text,
               flex: `1 0 25%`,
             }}
           >
@@ -63,7 +64,7 @@ export default function MilestoneSelector({
                 bottom: `0rem`,
                 height: `2rem`,
                 width: `1px`,
-                background: theme.color.base,
+                background: colors[NEGATIVE].text,
               }}
             ></div>
             <button
@@ -73,7 +74,7 @@ export default function MilestoneSelector({
                 width: `12rem`,
                 padding: `.5rem`,
                 color: `black`,
-                background: theme.color.base,
+                background: colors[NEGATIVE].text,
                 opacity: activeMilestone === event.id ? 1 : 0.7,
                 border: `none`,
               }}
@@ -86,8 +87,8 @@ export default function MilestoneSelector({
                   <AirborneRemoteSensors
                     color={
                       activeMilestone === event.id
-                        ? theme.color.highlight
-                        : theme.color.primary
+                        ? colors[NEGATIVE].highlight
+                        : colors[NEGATIVE].altBackground
                     }
                     size="tiny"
                   />
@@ -109,7 +110,7 @@ export default function MilestoneSelector({
                 width: `100%`,
                 height: `40px`,
                 top: `1rem`,
-                color: theme.color.base,
+                color: colors[NEGATIVE].text,
               }}
             >
               {event.end}

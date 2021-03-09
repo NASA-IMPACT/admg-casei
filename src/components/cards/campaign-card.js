@@ -4,9 +4,10 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Card from "./card"
 import { CampaignIcon } from "../../icons"
+import { POSITIVE, NEGATIVE } from "../../utils/constants"
 import { formatYearRange } from "../../utils/helpers"
 
-export default function CampaignCard({ id, height }) {
+export default function CampaignCard({ id, mode }) {
   /*
    * We can not pass props directly into a static query because it is
    * compiled and doesn't support string interpolation in its template literal.
@@ -56,7 +57,6 @@ export default function CampaignCard({ id, height }) {
     <Card
       image={campaign.logo}
       placeholder={CampaignIcon}
-      height={height}
       tag={campaign.ongoing && "Ongoing"}
       footerList={[
         {
@@ -67,6 +67,7 @@ export default function CampaignCard({ id, height }) {
         { count: campaign.countDataProducts, title: "Data Product" },
       ]}
       category="campaigns"
+      mode={mode}
     >
       <big
         style={{ fontWeight: `bold`, marginTop: `0.5rem` }}
@@ -89,9 +90,5 @@ export default function CampaignCard({ id, height }) {
 
 CampaignCard.propTypes = {
   id: PropTypes.string.isRequired,
-  height: PropTypes.string,
-}
-
-CampaignCard.defaultProps = {
-  height: "100%",
+  mode: PropTypes.oneOf([POSITIVE, NEGATIVE]),
 }

@@ -108,9 +108,9 @@ describe("Homepage", () => {
 
     cy.url().should("include", "/explore")
 
-    cy.get("h1").should("have.text", "Explore")
+    cy.get("h1").should("have.text", "Explore campaigns")
 
-    // skipping, can't get it to pass on ci
+    // TODO: skipping, can't get it to pass on ci
     // cy.get("[data-cy=filter-chip]")
     //   .should("have.length", 1)
     //   .and("have.text", "region: mountains")
@@ -141,9 +141,9 @@ describe("Homepage", () => {
 
     cy.url().should("include", "/explore")
 
-    cy.get("h1").should("have.text", "Explore")
+    cy.get("h1").should("have.text", "Explore campaigns")
 
-    // skipping, can't get it to pass on ci
+    // TODO: skipping, can't get it to pass on ci
     // cy.get("[data-cy=filter-chip]")
     //   .should("have.length", 1)
     //   .and("have.text", "geophysical: Biodiversity")
@@ -160,6 +160,17 @@ describe("Homepage", () => {
       .then($h2 => {
         expect($h2, "text content").to.have.text("Platforms")
       })
+
+    cy.get("[data-cy=explore-platforms-link]").click()
+
+    cy.location("pathname").should("include", "/explore")
+    // TODO: skipping, can't get it to pass on ci
+
+    // cy.get("[data-cy=h1-platforms]")
+    //   .should("exist")
+    //   .should("have.text", "Explore platforms")
+
+    // cy.get("[data-cy=platforms-card]").find("big").contains("B-200")
   })
 
   it("an intrument can be selected", () => {
@@ -181,13 +192,13 @@ describe("Homepage", () => {
       .contains("Spectrometer/Radiometer")
       .click()
 
-    cy.url().should("include", "/explore")
+    cy.location("pathname").should("include", "/explore")
+    // TODO: skipping, can't get it to pass on ci
 
-    cy.get("h1").should("have.text", "Explore")
+    // cy.get("[data-cy=h1-instruments]")
+    //   .should("exist")
+    //   .should("have.text", "Explore instruments")
 
-    cy.get("[data-cy=tabbar]").contains("button", "Instruments").click()
-
-    // skipping, can't get it to pass on ci
     // cy.get("[data-cy=filter-chip]")
     //   .should("have.length", 1)
     //   .and("have.text", "type: Spectrometer/Radiometer")

@@ -34,22 +34,9 @@ module.exports = {
         name: `Catalog of Archived Suborbital Earth Science Investigations`,
         short_name: `NASA | CASEI`,
         start_url: `/`,
-        background_color: `#008888`,
-        theme_color: `#008888`,
         display: `minimal-ui`,
-        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
-        icons: [
-          {
-            src: `/favicons/android-chrome.png`,
-            sizes: `192x192`,
-            type: `image/png`,
-          },
-          {
-            src: `/favicons/apple-touch-icon.png`,
-            sizes: `180x180`,
-            type: `image/png`,
-          },
-        ],
+        icon: `src/images/favicon.svg`, // This path is relative to the root of the site.
+        theme_color_in_head: false,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

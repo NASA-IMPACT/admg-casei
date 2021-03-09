@@ -6,8 +6,17 @@ exports[`Platform Section displays content 1`] = `
   grid-template-columns: repeat(12,1fr);
   -webkit-column-gap: 1rem;
   column-gap: 1rem;
-  margin-top: 2rem;
+  row-gap: 2rem;
   position: relative;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 6rem;
+  background-color: none;
+}
+
+.c0.c0 > *,
+.c0.c0 h3 {
+  color: #e9eaec;
 }
 
 .c1.c1 {
@@ -15,54 +24,148 @@ exports[`Platform Section displays content 1`] = `
   top: -80px;
 }
 
-.c2.c2 {
+.c3.c3 {
   grid-column: 1 / span 12;
 }
 
-.c3.c3 {
-  margin: 0.2rem 0.5rem;
-  padding: 0;
-  color: hsla(0,0%,100%,0.9);
-  opacity: 1;
-  border: 0;
-  background: rgba(255,255,255,0);
-  text-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+.c3.c3 > *,
+.c3.c3 h3 {
+  color: #e9eaec;
+}
+
+.c2.c2 {
+  grid-column: 1 / span 7;
+  -webkit-align-self: end;
+  -ms-flex-item-align: end;
+  align-self: end;
+}
+
+.c5.c5:hover {
+  opacity: 0.64;
+}
+
+.c5.c5:active {
+  -webkit-transform: translate(0,1px);
+  -ms-transform: translate(0,1px);
+  transform: translate(0,1px);
+}
+
+.c6.c6 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #262a31;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.25rem 0.75rem;
+  background: none;
+  text-shadow: none;
+  border: 1px solid #262a31;
+  cursor: pointer;
+  background-color: #ffffff;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.c7.c7 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #e9eaec;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.25rem 0.75rem;
+  background: none;
+  text-shadow: none;
+  border: 1px solid #e9eaec;
+  cursor: pointer;
+  background-color: transparent;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.c13.c13 {
+  max-height: 30rem;
+  overflow-y: auto;
 }
 
 .c4.c4 {
-  margin: 0.2rem 0.5rem;
-  padding: 0;
-  color: hsla(0,0%,100%,0.9);
-  opacity: 0.6;
-  border: 0;
-  background: rgba(255,255,255,0);
-  text-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: auto;
+  gap: 0.5rem;
+  margin: 1rem 0;
 }
 
-.c5.c5 {
-  -webkit-transition: -webkit-transform 240ms ease-in-out;
-  -webkit-transition: transform 240ms ease-in-out;
-  transition: transform 240ms ease-in-out;
-  -webkit-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  transform: rotate(0deg);
+.c8.c8 {
+  display: grid;
+  grid-template-columns: minmax(15rem,1fr) minmax(auto,3fr);
+  gap: 2rem;
+  height: 100%;
+  max-height: 24rem;
+}
+
+.c11.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0.5rem 0 2rem 0;
+  min-height: 2rem;
+}
+
+.c9.c9 {
+  color: #262a31;
+  background-color: #ffffff;
+  box-shadow: rgba(68,63,63,0.08) 0px -1px 1px 0px,rgba(68,63,63,0.08) 0px 2px 6px 0px;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 24rem;
+  height: 100%;
+}
+
+.c10.c10 {
+  margin-bottom: 2rem;
+}
+
+.c12.c12 {
+  white-space: nowrap;
 }
 
 <section
   className="c0"
   data-cy="platform-section"
+  mode="darkTheme"
 >
   <div
     className="c1"
     id="platform"
   />
   <div
-    style={
-      Object {
-        "alignSelf": "end",
-        "gridColumn": "1 / span 7",
-      }
-    }
+    className="c2"
+    data-cy="platform-section-header"
   >
     <a
       href="#platform"
@@ -73,680 +176,337 @@ exports[`Platform Section displays content 1`] = `
     </a>
   </div>
   <div
-    className="c2"
+    className="c3"
+    mode="darkTheme"
   >
     <div
       data-cy="platform-carousel"
     >
       <div
+        className="c4"
         data-cy="carousel-list-text-control"
-        style={
-          Object {
-            "display": "flex",
-            "overflow": "auto",
-          }
-        }
       >
         <button
-          className="c3"
+          className="c5 c6"
           onClick={[Function]}
-          selected={true}
         >
-          DC-8
+          J-31
         </button>
         <button
-          className="c4"
+          className="c5 c7"
           onClick={[Function]}
-          selected={false}
         >
-          B-200
+          Aerosonde
         </button>
         <button
-          className="c4"
+          className="c5 c7"
           onClick={[Function]}
-          selected={false}
         >
-          P-3
+          C-23 Sherpa
         </button>
       </div>
       <div
         data-test="mocked-nuka-carousel"
       >
         <div
+          className="c8"
           data-cy="platform"
-          style={
-            Object {
-              "alignContent": "center",
-              "display": "grid",
-              "gridTemplateColumns": "1fr minmax(auto,  1280px) 1fr",
-              "width": "100vw",
-            }
-          }
         >
-          <div
-            style={
-              Object {
-                "display": "grid",
-                "gridGap": "1.5rem",
-                "gridTemplateColumns": "1fr 3fr",
-                "width": "70rem",
-              }
-            }
+          <a
+            data-cy="carousel-platform-card-link"
+            href="/platform/dfb8cbd6-c33c-47df-9249-8949de2b81d7"
           >
             <div
-              style={
-                Object {
-                  "marginTop": "1.25rem",
-                  "maxHeight": "18rem",
-                  "width": "26rem",
-                }
-              }
-            >
-              <a
-                href="/platform/d59b3d7e-f782-4e25-a8eb-ceec91c0331e"
-              >
-                <img
-                  alt="alt-text"
-                  data-cy="platform-image"
-                  fluid={[Function]}
-                  src="test-image.png"
-                />
-                <label
-                  data-cy="platform-image-caption"
-                  style={
-                    Object {
-                      "left": "1.5rem",
-                      "maxWidth": "24rem",
-                      "position": "absolute",
-                      "textShadow": "1px 1px rgba(0,0,0,0.8)",
-                      "top": "16rem",
-                    }
-                  }
-                >
-                  Douglas DC-8
-                </label>
-              </a>
-            </div>
-            <div
-              data-cy="instrument-accordion"
-              data-reach-accordion=""
-              style={
-                Object {
-                  "maxHeight": "30rem",
-                  "overflowY": "auto",
-                }
-              }
+              className="c9"
+              data-cy="platforms-card"
             >
               <div
-                data-reach-accordion-item=""
-                data-state="collapsed"
+                className="c10"
               >
-                <span>
-                  <button
-                    aria-controls="panel--1---1"
-                    aria-expanded={false}
-                    data-cy="accordion-button"
-                    data-reach-accordion-button=""
-                    id="button--1---1"
-                    onClick={[Function]}
-                    onKeyDown={[Function]}
-                    style={
-                      Object {
-                        "background": "none",
-                        "borderColor": "#FFF",
-                        "borderWidth": "0 0 1px 0",
-                        "color": "#FFF",
-                        "cursor": "pointer",
-                        "display": "flex",
-                        "fontWeight": "bold",
-                        "justifyContent": "space-between",
-                        "padding": "1rem",
-                        "textAlign": "left",
-                        "textTransform": "uppercase",
-                        "width": "100%",
-                      }
-                    }
-                  >
-                    <div>
-                       (
-                      Gen-Chemistry
-                      )
-                    </div>
-                    <div
-                      className="c5"
-                    >
-                      <svg
-                        height="16"
-                        role="img"
-                        version="1.1"
-                        viewBox="0 0 16 16"
-                        width="16"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <title>
-                          Chevron Down
-                        </title>
-                        <rect
-                          fill="none"
-                          height="16"
-                          width="16"
-                        />
-                        <polygon
-                          fill="#FFF"
-                          points="12.586,4.586 8,9.172 3.414,4.586 2,6 8,12 14,6"
-                        />
-                      </svg>
-                    </div>
-                  </button>
-                </span>
                 <div
-                  aria-labelledby="button--1---1"
-                  data-reach-accordion-panel=""
-                  data-state="collapsed"
-                  hidden={true}
-                  id="panel--1---1"
-                  role="region"
+                  className="c11"
+                >
+                  <svg
+                    height="60"
+                    viewBox="0 0 69 71"
+                    width="60"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g
+                      fill="#262a31"
+                      fillRule="nonzero"
+                    >
+                      <path
+                        d="M66.962 42.064a2.476 2.476 0 01-.434-.23 3.66 3.66 0 00-2.91-.49 6.202 6.202 0 00-4.185-7.847v-.794c0-.73-.468-1.352-1.12-1.584v-1.434l5.247-2.099a.56.56 0 000-1.04l-5.599-2.24a.56.56 0 00-.482.032c-.212.12-.262.279-.286.498V31.119a1.682 1.682 0 00-1.12 1.584v.794a6.202 6.202 0 00-4.189 7.833 3.658 3.658 0 00-2.85.503c-.15.1-.312.184-.48.249a.56.56 0 10.405 1.044c.244-.094.478-.216.696-.361a2.528 2.528 0 012.776 0c.594.396 1.27.608 1.957.615a3.583 3.583 0 002.024-.615 2.462 2.462 0 012.738 0c.581.387 1.243.6 1.913.614a3.579 3.579 0 002.068-.614 2.528 2.528 0 012.776 0c.198.132.41.245.63.335a.56.56 0 00.425-1.036zm-8.649-13.585v-2.826l3.532 1.413-3.532 1.413zm-1.12 4.224a.56.56 0 011.12 0v.586a6.172 6.172 0 00-1.12 0v-.586zm3.894 9.556a2.473 2.473 0 01-1.315-.426 3.579 3.579 0 00-3.981 0 2.468 2.468 0 01-1.392.427 2.408 2.408 0 01-.975-.22 5.023 5.023 0 01-.71-2.58c0-2.8 2.26-5.077 5.04-5.077 2.778 0 5.039 2.277 5.039 5.077a5.02 5.02 0 01-.73 2.613 2.4 2.4 0 01-.976.186zM21.07 37.82l-1.655-1.91a2.113 2.113 0 00-1.6-.729h-5.897l-2.11-1.921a.617.617 0 00-.415-.16H6.596a.614.614 0 00-.535.31.602.602 0 00.012.614l.718 1.157H5.197l-1.624-3.119a.614.614 0 00-.545-.329H1.21a.61.61 0 00-.613.607v4.14c0 2.45 2.013 4.444 4.488 4.444h14.543c.75 0 1.412-.42 1.725-1.095a1.847 1.847 0 00-.284-2.01zm-2.586-1.12l.748.864h-.82a1.795 1.795 0 01-1.685-1.168h1.089c.257 0 .5.11.668.304zm-9.33-2.386l3.073 2.8H9.428l-1.736-2.8h1.462zm-7.33-1.366h.83l1.163 2.233H1.823v-2.233zm18.415 6.374a.658.658 0 01-.611.388H5.085c-1.799 0-3.262-1.449-3.262-3.23v-.084H7.543l1.02 1.642c.111.18.309.29.522.29H13.8c.253 0 .48-.154.571-.387a.603.603 0 00-.156-.667l-.964-.878h2.204a3.018 3.018 0 002.957 2.382h1.745a.62.62 0 00.086-.007c.08.173.08.368-.004.55zM39.22 6.76c0-3.736-3.002-6.76-6.712-6.76-3.709 0-6.711 3.023-6.711 6.76 0 2.095.707 3.147 1.88 4.892.712 1.06 1.578 2.349 2.612 4.324h-.832v3.154a1.84 1.84 0 001.83 1.844h2.441a1.84 1.84 0 001.83-1.844v-3.154h-.83c1.034-1.975 1.9-3.263 2.612-4.324 1.172-1.745 1.88-2.797 1.88-4.893zm-5.553-4.118c.433 1.09.672 2.552.672 4.117 0 1.825-.23 2.682-.69 4.388-.091.343-.193.72-.302 1.142H31.67c-.11-.422-.21-.8-.302-1.142-.459-1.706-.69-2.563-.69-4.388 0-1.565.24-3.027.672-4.117.341-.858.796-1.413 1.16-1.413.362 0 .817.555 1.158 1.413zm-6.65 4.117a5.53 5.53 0 013.455-5.139c-.09.176-.176.364-.256.566-.49 1.231-.759 2.856-.759 4.573 0 1.989.276 3.013.732 4.71l.218.82h-.845a68.449 68.449 0 00-.875-1.326c-1.112-1.655-1.67-2.485-1.67-4.204zm7.322 12.371a.613.613 0 01-.61.615h-2.441a.613.613 0 01-.61-.615v-1.925h3.66v1.925zm-2.676-3.154a42.591 42.591 0 00-1.345-2.458h4.38a42.591 42.591 0 00-1.345 2.458h-1.69zm3.792-3.687h-.846c.077-.295.15-.568.219-.82.456-1.697.73-2.721.73-4.71 0-1.717-.268-3.342-.757-4.573a6.466 6.466 0 00-.256-.566 5.53 5.53 0 013.454 5.14c0 1.718-.558 2.548-1.67 4.203-.26.388-.554.825-.874 1.326zM40.971 68.744c-.543 0-.788-.125-1.098-.284a4.593 4.593 0 00-.417-.194l1.662-4.477c.13-.348.108-.738-.059-1.07a1.292 1.292 0 00-.817-.669l-1.145-.306V58.23c0-.738-.586-1.338-1.306-1.338h-2.26v-1.3c0-1.035-.822-1.877-1.833-1.877H32.43c-1.011 0-1.834.842-1.834 1.877v1.3h-2.26c-.72 0-1.306.6-1.306 1.338v3.514l-1.145.306c-.352.094-.65.339-.817.67a1.345 1.345 0 00-.059 1.07l1.663 4.476c-.155.06-.29.13-.417.194-.31.159-.556.284-1.1.284a.498.498 0 00-.491.503c0 .279.22.504.492.504.775 0 1.18-.206 1.537-.388.31-.159.556-.284 1.099-.284.543 0 .788.125 1.099.284.357.182.762.388 1.537.388.775 0 1.18-.206 1.537-.388.31-.159.556-.284 1.099-.284.543 0 .788.125 1.098.284.358.182.763.388 1.538.388s1.18-.206 1.537-.388c.31-.159.555-.284 1.099-.284.543 0 .788.125 1.098.284.358.182.763.388 1.538.388a.498.498 0 00.492-.504.498.498 0 00-.493-.503zm-9.39-13.152c0-.48.38-.87.849-.87h1.268c.468 0 .85.39.85.87v1.3H31.58v-1.3zm-3.567 2.638c0-.182.145-.33.323-.33h9.454c.178 0 .322.148.322.33v3.25l-4.925-1.316a.482.482 0 00-.249 0l-4.925 1.317V58.23zm8.784 10.23c-.31.159-.555.284-1.098.284s-.788-.125-1.099-.284c-.357-.182-.762-.388-1.537-.388-.775 0-1.18.206-1.537.388-.31.159-.556.284-1.099.284-.543 0-.788-.125-1.099-.284-.357-.182-.762-.388-1.537-.388-.047 0-.094 0-.138.002l-1.724-4.643a.31.31 0 01.204-.406l6.93-1.853 6.93 1.853a.31.31 0 01.205.406l-1.725 4.643a4.18 4.18 0 00-.138-.002c-.775 0-1.18.206-1.538.388z"
+                      />
+                      <path
+                        d="M38.038 64.133l-4.467-1.237a.47.47 0 00-.251 0l-4.467 1.237a.53.53 0 00-.355.643c.07.281.34.45.606.376l4.342-1.203 4.34 1.203a.47.47 0 00.127.017c.22 0 .422-.157.48-.393a.53.53 0 00-.355-.643zM61.254 7.768L4.022 65c-.416.416-.53.974-.257 1.248.273.273.831.158 1.247-.258L62.244 8.758c.416-.416.531-.974.258-1.247-.274-.274-.832-.159-1.248.257z"
+                      />
+                      <path
+                        d="M62.244 65L5.012 7.768c-.416-.416-.974-.53-1.247-.257-.274.273-.159.831.257 1.247L61.254 65.99c.416.416.974.531 1.248.258.273-.274.158-.832-.258-1.248z"
+                      />
+                    </g>
+                  </svg>
+                </div>
+                <big
+                  data-cy="shortname"
                   style={
                     Object {
-                      "padding": ".5rem 1rem",
+                      "fontWeight": "bold",
+                      "marginTop": "0.5rem",
                     }
                   }
-                  tabIndex={-1}
                 >
-                  <div
-                    data-cy="instrument-accordion-content"
-                    style={
-                      Object {
-                        "display": "grid",
-                        "gridTemplateColumns": "1fr 1f 1fr 1fr",
-                      }
-                    }
-                  >
-                    <div
-                      data-cy="instrument-accordion-image-description"
-                      style={
-                        Object {
-                          "gridColumn": "1 / 4",
-                        }
-                      }
-                    />
-                  </div>
-                  <a
-                    data-cy="accordion-link"
-                    href="/instrument/a1f41f4d-2233-49be-a3d3-6eda1ded6be4"
-                    style={
-                      Object {
-                        "color": "#aac9ff",
-                      }
-                    }
-                  >
-                    <label
-                      data-cy="accordion-link-label"
-                      style={
-                        Object {
-                          "borderBottom": "none",
-                          "color": "#aac9ff",
-                          "display": "flex",
-                        }
-                      }
-                    >
-                      Learn More
-                      <svg
-                        height="16"
-                        role="img"
-                        style={
-                          Object {
-                            "marginLeft": ".5rem",
-                          }
-                        }
-                        version="1.1"
-                        viewBox="0 0 16 16"
-                        width="16"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <title>
-                          Arrow Right
-                        </title>
-                        <rect
-                          fill="none"
-                          height="16"
-                          width="16"
-                        />
-                        <polygon
-                          fill="#aac9ff"
-                          points="7.586,2.414 12.172,7 0,7 0,9 12.172,9 7.586,13.586 9,15 16,8 9,1"
-                        />
-                      </svg>
-                    </label>
-                  </a>
-                </div>
+                  J-31
+                </big>
+                <p
+                  data-cy="longname"
+                >
+                  Jetstream-31
+                </p>
+              </div>
+              <div>
+                <small
+                  className="c12"
+                  data-cy="count1"
+                >
+                  <strong>
+                    1
+                  </strong>
+                   
+                  Campaign
+                </small>
+                <small
+                  className="c12"
+                  data-cy="count2"
+                >
+                   · 
+                  <strong>
+                    1
+                  </strong>
+                   
+                  Collection Period
+                </small>
+                <small
+                  className="c12"
+                  data-cy="count3"
+                >
+                   · 
+                  <strong>
+                    1
+                  </strong>
+                   
+                  Instrument
+                </small>
               </div>
             </div>
-          </div>
+          </a>
+          <div
+            className="c13"
+            data-cy="instrument-accordion"
+            data-reach-accordion=""
+          />
         </div>
         <div
+          className="c8"
           data-cy="platform"
-          style={
-            Object {
-              "alignContent": "center",
-              "display": "grid",
-              "gridTemplateColumns": "1fr minmax(auto,  1280px) 1fr",
-              "width": "100vw",
-            }
-          }
         >
-          <div
-            style={
-              Object {
-                "display": "grid",
-                "gridGap": "1.5rem",
-                "gridTemplateColumns": "1fr 3fr",
-                "width": "70rem",
-              }
-            }
+          <a
+            data-cy="carousel-platform-card-link"
+            href="/platform/8b97267c-bc15-4744-90a3-043dc20a76e8"
           >
             <div
-              style={
-                Object {
-                  "marginTop": "1.25rem",
-                  "maxHeight": "18rem",
-                  "width": "26rem",
-                }
-              }
-            >
-              <a
-                href="/platform/1b607095-4f6d-4e70-8e16-798bc59a2d59"
-              >
-                <img
-                  alt="alt-text"
-                  data-cy="platform-image"
-                  fluid={[Function]}
-                  src="test-image.png"
-                />
-                <label
-                  data-cy="platform-image-caption"
-                  style={
-                    Object {
-                      "left": "1.5rem",
-                      "maxWidth": "24rem",
-                      "position": "absolute",
-                      "textShadow": "1px 1px rgba(0,0,0,0.8)",
-                      "top": "16rem",
-                    }
-                  }
-                >
-                  Beechcraft King Air B-200
-                </label>
-              </a>
-            </div>
-            <div
-              data-cy="instrument-accordion"
-              data-reach-accordion=""
-              style={
-                Object {
-                  "maxHeight": "30rem",
-                  "overflowY": "auto",
-                }
-              }
+              className="c9"
+              data-cy="platforms-card"
             >
               <div
-                data-reach-accordion-item=""
-                data-state="collapsed"
+                className="c10"
               >
-                <span>
-                  <button
-                    aria-controls="panel--2---1"
-                    aria-expanded={false}
-                    data-cy="accordion-button"
-                    data-reach-accordion-button=""
-                    id="button--2---1"
-                    onClick={[Function]}
-                    onKeyDown={[Function]}
-                    style={
-                      Object {
-                        "background": "none",
-                        "borderColor": "#FFF",
-                        "borderWidth": "0 0 1px 0",
-                        "color": "#FFF",
-                        "cursor": "pointer",
-                        "display": "flex",
-                        "fontWeight": "bold",
-                        "justifyContent": "space-between",
-                        "padding": "1rem",
-                        "textAlign": "left",
-                        "textTransform": "uppercase",
-                        "width": "100%",
-                      }
-                    }
-                  >
-                    <div>
-                       (
-                      HSRL
-                      )
-                    </div>
-                    <div
-                      className="c5"
-                    >
-                      <svg
-                        height="16"
-                        role="img"
-                        version="1.1"
-                        viewBox="0 0 16 16"
-                        width="16"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <title>
-                          Chevron Down
-                        </title>
-                        <rect
-                          fill="none"
-                          height="16"
-                          width="16"
-                        />
-                        <polygon
-                          fill="#FFF"
-                          points="12.586,4.586 8,9.172 3.414,4.586 2,6 8,12 14,6"
-                        />
-                      </svg>
-                    </div>
-                  </button>
-                </span>
                 <div
-                  aria-labelledby="button--2---1"
-                  data-reach-accordion-panel=""
-                  data-state="collapsed"
-                  hidden={true}
-                  id="panel--2---1"
-                  role="region"
+                  className="c11"
+                >
+                  <svg
+                    height="60"
+                    viewBox="0 0 69 71"
+                    width="60"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g
+                      fill="#262a31"
+                      fillRule="nonzero"
+                    >
+                      <path
+                        d="M66.962 42.064a2.476 2.476 0 01-.434-.23 3.66 3.66 0 00-2.91-.49 6.202 6.202 0 00-4.185-7.847v-.794c0-.73-.468-1.352-1.12-1.584v-1.434l5.247-2.099a.56.56 0 000-1.04l-5.599-2.24a.56.56 0 00-.482.032c-.212.12-.262.279-.286.498V31.119a1.682 1.682 0 00-1.12 1.584v.794a6.202 6.202 0 00-4.189 7.833 3.658 3.658 0 00-2.85.503c-.15.1-.312.184-.48.249a.56.56 0 10.405 1.044c.244-.094.478-.216.696-.361a2.528 2.528 0 012.776 0c.594.396 1.27.608 1.957.615a3.583 3.583 0 002.024-.615 2.462 2.462 0 012.738 0c.581.387 1.243.6 1.913.614a3.579 3.579 0 002.068-.614 2.528 2.528 0 012.776 0c.198.132.41.245.63.335a.56.56 0 00.425-1.036zm-8.649-13.585v-2.826l3.532 1.413-3.532 1.413zm-1.12 4.224a.56.56 0 011.12 0v.586a6.172 6.172 0 00-1.12 0v-.586zm3.894 9.556a2.473 2.473 0 01-1.315-.426 3.579 3.579 0 00-3.981 0 2.468 2.468 0 01-1.392.427 2.408 2.408 0 01-.975-.22 5.023 5.023 0 01-.71-2.58c0-2.8 2.26-5.077 5.04-5.077 2.778 0 5.039 2.277 5.039 5.077a5.02 5.02 0 01-.73 2.613 2.4 2.4 0 01-.976.186zM21.07 37.82l-1.655-1.91a2.113 2.113 0 00-1.6-.729h-5.897l-2.11-1.921a.617.617 0 00-.415-.16H6.596a.614.614 0 00-.535.31.602.602 0 00.012.614l.718 1.157H5.197l-1.624-3.119a.614.614 0 00-.545-.329H1.21a.61.61 0 00-.613.607v4.14c0 2.45 2.013 4.444 4.488 4.444h14.543c.75 0 1.412-.42 1.725-1.095a1.847 1.847 0 00-.284-2.01zm-2.586-1.12l.748.864h-.82a1.795 1.795 0 01-1.685-1.168h1.089c.257 0 .5.11.668.304zm-9.33-2.386l3.073 2.8H9.428l-1.736-2.8h1.462zm-7.33-1.366h.83l1.163 2.233H1.823v-2.233zm18.415 6.374a.658.658 0 01-.611.388H5.085c-1.799 0-3.262-1.449-3.262-3.23v-.084H7.543l1.02 1.642c.111.18.309.29.522.29H13.8c.253 0 .48-.154.571-.387a.603.603 0 00-.156-.667l-.964-.878h2.204a3.018 3.018 0 002.957 2.382h1.745a.62.62 0 00.086-.007c.08.173.08.368-.004.55zM39.22 6.76c0-3.736-3.002-6.76-6.712-6.76-3.709 0-6.711 3.023-6.711 6.76 0 2.095.707 3.147 1.88 4.892.712 1.06 1.578 2.349 2.612 4.324h-.832v3.154a1.84 1.84 0 001.83 1.844h2.441a1.84 1.84 0 001.83-1.844v-3.154h-.83c1.034-1.975 1.9-3.263 2.612-4.324 1.172-1.745 1.88-2.797 1.88-4.893zm-5.553-4.118c.433 1.09.672 2.552.672 4.117 0 1.825-.23 2.682-.69 4.388-.091.343-.193.72-.302 1.142H31.67c-.11-.422-.21-.8-.302-1.142-.459-1.706-.69-2.563-.69-4.388 0-1.565.24-3.027.672-4.117.341-.858.796-1.413 1.16-1.413.362 0 .817.555 1.158 1.413zm-6.65 4.117a5.53 5.53 0 013.455-5.139c-.09.176-.176.364-.256.566-.49 1.231-.759 2.856-.759 4.573 0 1.989.276 3.013.732 4.71l.218.82h-.845a68.449 68.449 0 00-.875-1.326c-1.112-1.655-1.67-2.485-1.67-4.204zm7.322 12.371a.613.613 0 01-.61.615h-2.441a.613.613 0 01-.61-.615v-1.925h3.66v1.925zm-2.676-3.154a42.591 42.591 0 00-1.345-2.458h4.38a42.591 42.591 0 00-1.345 2.458h-1.69zm3.792-3.687h-.846c.077-.295.15-.568.219-.82.456-1.697.73-2.721.73-4.71 0-1.717-.268-3.342-.757-4.573a6.466 6.466 0 00-.256-.566 5.53 5.53 0 013.454 5.14c0 1.718-.558 2.548-1.67 4.203-.26.388-.554.825-.874 1.326zM40.971 68.744c-.543 0-.788-.125-1.098-.284a4.593 4.593 0 00-.417-.194l1.662-4.477c.13-.348.108-.738-.059-1.07a1.292 1.292 0 00-.817-.669l-1.145-.306V58.23c0-.738-.586-1.338-1.306-1.338h-2.26v-1.3c0-1.035-.822-1.877-1.833-1.877H32.43c-1.011 0-1.834.842-1.834 1.877v1.3h-2.26c-.72 0-1.306.6-1.306 1.338v3.514l-1.145.306c-.352.094-.65.339-.817.67a1.345 1.345 0 00-.059 1.07l1.663 4.476c-.155.06-.29.13-.417.194-.31.159-.556.284-1.1.284a.498.498 0 00-.491.503c0 .279.22.504.492.504.775 0 1.18-.206 1.537-.388.31-.159.556-.284 1.099-.284.543 0 .788.125 1.099.284.357.182.762.388 1.537.388.775 0 1.18-.206 1.537-.388.31-.159.556-.284 1.099-.284.543 0 .788.125 1.098.284.358.182.763.388 1.538.388s1.18-.206 1.537-.388c.31-.159.555-.284 1.099-.284.543 0 .788.125 1.098.284.358.182.763.388 1.538.388a.498.498 0 00.492-.504.498.498 0 00-.493-.503zm-9.39-13.152c0-.48.38-.87.849-.87h1.268c.468 0 .85.39.85.87v1.3H31.58v-1.3zm-3.567 2.638c0-.182.145-.33.323-.33h9.454c.178 0 .322.148.322.33v3.25l-4.925-1.316a.482.482 0 00-.249 0l-4.925 1.317V58.23zm8.784 10.23c-.31.159-.555.284-1.098.284s-.788-.125-1.099-.284c-.357-.182-.762-.388-1.537-.388-.775 0-1.18.206-1.537.388-.31.159-.556.284-1.099.284-.543 0-.788-.125-1.099-.284-.357-.182-.762-.388-1.537-.388-.047 0-.094 0-.138.002l-1.724-4.643a.31.31 0 01.204-.406l6.93-1.853 6.93 1.853a.31.31 0 01.205.406l-1.725 4.643a4.18 4.18 0 00-.138-.002c-.775 0-1.18.206-1.538.388z"
+                      />
+                      <path
+                        d="M38.038 64.133l-4.467-1.237a.47.47 0 00-.251 0l-4.467 1.237a.53.53 0 00-.355.643c.07.281.34.45.606.376l4.342-1.203 4.34 1.203a.47.47 0 00.127.017c.22 0 .422-.157.48-.393a.53.53 0 00-.355-.643zM61.254 7.768L4.022 65c-.416.416-.53.974-.257 1.248.273.273.831.158 1.247-.258L62.244 8.758c.416-.416.531-.974.258-1.247-.274-.274-.832-.159-1.248.257z"
+                      />
+                      <path
+                        d="M62.244 65L5.012 7.768c-.416-.416-.974-.53-1.247-.257-.274.273-.159.831.257 1.247L61.254 65.99c.416.416.974.531 1.248.258.273-.274.158-.832-.258-1.248z"
+                      />
+                    </g>
+                  </svg>
+                </div>
+                <big
+                  data-cy="shortname"
                   style={
                     Object {
-                      "padding": ".5rem 1rem",
+                      "fontWeight": "bold",
+                      "marginTop": "0.5rem",
                     }
                   }
-                  tabIndex={-1}
                 >
-                  <div
-                    data-cy="instrument-accordion-content"
-                    style={
-                      Object {
-                        "display": "grid",
-                        "gridTemplateColumns": "1fr 1f 1fr 1fr",
-                      }
-                    }
-                  >
-                    <div
-                      data-cy="instrument-accordion-image-description"
-                      style={
-                        Object {
-                          "gridColumn": "1 / 4",
-                        }
-                      }
-                    />
-                  </div>
-                  <a
-                    data-cy="accordion-link"
-                    href="/instrument/aa6e3d99-17ca-4b4e-9130-c6e0b0864fd9"
-                    style={
-                      Object {
-                        "color": "#aac9ff",
-                      }
-                    }
-                  >
-                    <label
-                      data-cy="accordion-link-label"
-                      style={
-                        Object {
-                          "borderBottom": "none",
-                          "color": "#aac9ff",
-                          "display": "flex",
-                        }
-                      }
-                    >
-                      Learn More
-                      <svg
-                        height="16"
-                        role="img"
-                        style={
-                          Object {
-                            "marginLeft": ".5rem",
-                          }
-                        }
-                        version="1.1"
-                        viewBox="0 0 16 16"
-                        width="16"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <title>
-                          Arrow Right
-                        </title>
-                        <rect
-                          fill="none"
-                          height="16"
-                          width="16"
-                        />
-                        <polygon
-                          fill="#aac9ff"
-                          points="7.586,2.414 12.172,7 0,7 0,9 12.172,9 7.586,13.586 9,15 16,8 9,1"
-                        />
-                      </svg>
-                    </label>
-                  </a>
-                </div>
+                  Aerosonde
+                </big>
+                <p
+                  data-cy="longname"
+                >
+                  Aerosonde Small Unmanned Aircraft System
+                </p>
+              </div>
+              <div>
+                <small
+                  className="c12"
+                  data-cy="count1"
+                >
+                  <strong>
+                    1
+                  </strong>
+                   
+                  Campaign
+                </small>
+                <small
+                  className="c12"
+                  data-cy="count2"
+                >
+                   · 
+                  <strong>
+                    1
+                  </strong>
+                   
+                  Collection Period
+                </small>
+                <small
+                  className="c12"
+                  data-cy="count3"
+                >
+                   · 
+                  <strong>
+                    2
+                  </strong>
+                   
+                  Instrument
+                  s
+                </small>
               </div>
             </div>
-          </div>
+          </a>
+          <div
+            className="c13"
+            data-cy="instrument-accordion"
+            data-reach-accordion=""
+          />
         </div>
         <div
+          className="c8"
           data-cy="platform"
-          style={
-            Object {
-              "alignContent": "center",
-              "display": "grid",
-              "gridTemplateColumns": "1fr minmax(auto,  1280px) 1fr",
-              "width": "100vw",
-            }
-          }
         >
-          <div
-            style={
-              Object {
-                "display": "grid",
-                "gridGap": "1.5rem",
-                "gridTemplateColumns": "1fr 3fr",
-                "width": "70rem",
-              }
-            }
+          <a
+            data-cy="carousel-platform-card-link"
+            href="/platform/1854d7b1-53c3-4ed4-8180-8f5bd6e4fd26"
           >
             <div
-              style={
-                Object {
-                  "marginTop": "1.25rem",
-                  "maxHeight": "18rem",
-                  "width": "26rem",
-                }
-              }
-            >
-              <a
-                href="/platform/2084ab0c-4f18-4aa6-ad7b-70bc861d2d80"
-              >
-                <img
-                  alt="alt-text"
-                  data-cy="platform-image"
-                  fluid={[Function]}
-                  src="test-image.png"
-                />
-                <label
-                  data-cy="platform-image-caption"
-                  style={
-                    Object {
-                      "left": "1.5rem",
-                      "maxWidth": "24rem",
-                      "position": "absolute",
-                      "textShadow": "1px 1px rgba(0,0,0,0.8)",
-                      "top": "16rem",
-                    }
-                  }
-                >
-                  P-3 Orion
-                </label>
-              </a>
-            </div>
-            <div
-              data-cy="instrument-accordion"
-              data-reach-accordion=""
-              style={
-                Object {
-                  "maxHeight": "30rem",
-                  "overflowY": "auto",
-                }
-              }
+              className="c9"
+              data-cy="platforms-card"
             >
               <div
-                data-reach-accordion-item=""
-                data-state="collapsed"
+                className="c10"
               >
-                <span>
-                  <button
-                    aria-controls="panel--3---1"
-                    aria-expanded={false}
-                    data-cy="accordion-button"
-                    data-reach-accordion-button=""
-                    id="button--3---1"
-                    onClick={[Function]}
-                    onKeyDown={[Function]}
-                    style={
-                      Object {
-                        "background": "none",
-                        "borderColor": "#FFF",
-                        "borderWidth": "0 0 1px 0",
-                        "color": "#FFF",
-                        "cursor": "pointer",
-                        "display": "flex",
-                        "fontWeight": "bold",
-                        "justifyContent": "space-between",
-                        "padding": "1rem",
-                        "textAlign": "left",
-                        "textTransform": "uppercase",
-                        "width": "100%",
-                      }
-                    }
-                  >
-                    <div>
-                       (
-                      Gen-Chemistry
-                      )
-                    </div>
-                    <div
-                      className="c5"
-                    >
-                      <svg
-                        height="16"
-                        role="img"
-                        version="1.1"
-                        viewBox="0 0 16 16"
-                        width="16"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <title>
-                          Chevron Down
-                        </title>
-                        <rect
-                          fill="none"
-                          height="16"
-                          width="16"
-                        />
-                        <polygon
-                          fill="#FFF"
-                          points="12.586,4.586 8,9.172 3.414,4.586 2,6 8,12 14,6"
-                        />
-                      </svg>
-                    </div>
-                  </button>
-                </span>
                 <div
-                  aria-labelledby="button--3---1"
-                  data-reach-accordion-panel=""
-                  data-state="collapsed"
-                  hidden={true}
-                  id="panel--3---1"
-                  role="region"
+                  className="c11"
+                >
+                  <svg
+                    height="60"
+                    viewBox="0 0 69 71"
+                    width="60"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g
+                      fill="#262a31"
+                      fillRule="nonzero"
+                    >
+                      <path
+                        d="M66.962 42.064a2.476 2.476 0 01-.434-.23 3.66 3.66 0 00-2.91-.49 6.202 6.202 0 00-4.185-7.847v-.794c0-.73-.468-1.352-1.12-1.584v-1.434l5.247-2.099a.56.56 0 000-1.04l-5.599-2.24a.56.56 0 00-.482.032c-.212.12-.262.279-.286.498V31.119a1.682 1.682 0 00-1.12 1.584v.794a6.202 6.202 0 00-4.189 7.833 3.658 3.658 0 00-2.85.503c-.15.1-.312.184-.48.249a.56.56 0 10.405 1.044c.244-.094.478-.216.696-.361a2.528 2.528 0 012.776 0c.594.396 1.27.608 1.957.615a3.583 3.583 0 002.024-.615 2.462 2.462 0 012.738 0c.581.387 1.243.6 1.913.614a3.579 3.579 0 002.068-.614 2.528 2.528 0 012.776 0c.198.132.41.245.63.335a.56.56 0 00.425-1.036zm-8.649-13.585v-2.826l3.532 1.413-3.532 1.413zm-1.12 4.224a.56.56 0 011.12 0v.586a6.172 6.172 0 00-1.12 0v-.586zm3.894 9.556a2.473 2.473 0 01-1.315-.426 3.579 3.579 0 00-3.981 0 2.468 2.468 0 01-1.392.427 2.408 2.408 0 01-.975-.22 5.023 5.023 0 01-.71-2.58c0-2.8 2.26-5.077 5.04-5.077 2.778 0 5.039 2.277 5.039 5.077a5.02 5.02 0 01-.73 2.613 2.4 2.4 0 01-.976.186zM21.07 37.82l-1.655-1.91a2.113 2.113 0 00-1.6-.729h-5.897l-2.11-1.921a.617.617 0 00-.415-.16H6.596a.614.614 0 00-.535.31.602.602 0 00.012.614l.718 1.157H5.197l-1.624-3.119a.614.614 0 00-.545-.329H1.21a.61.61 0 00-.613.607v4.14c0 2.45 2.013 4.444 4.488 4.444h14.543c.75 0 1.412-.42 1.725-1.095a1.847 1.847 0 00-.284-2.01zm-2.586-1.12l.748.864h-.82a1.795 1.795 0 01-1.685-1.168h1.089c.257 0 .5.11.668.304zm-9.33-2.386l3.073 2.8H9.428l-1.736-2.8h1.462zm-7.33-1.366h.83l1.163 2.233H1.823v-2.233zm18.415 6.374a.658.658 0 01-.611.388H5.085c-1.799 0-3.262-1.449-3.262-3.23v-.084H7.543l1.02 1.642c.111.18.309.29.522.29H13.8c.253 0 .48-.154.571-.387a.603.603 0 00-.156-.667l-.964-.878h2.204a3.018 3.018 0 002.957 2.382h1.745a.62.62 0 00.086-.007c.08.173.08.368-.004.55zM39.22 6.76c0-3.736-3.002-6.76-6.712-6.76-3.709 0-6.711 3.023-6.711 6.76 0 2.095.707 3.147 1.88 4.892.712 1.06 1.578 2.349 2.612 4.324h-.832v3.154a1.84 1.84 0 001.83 1.844h2.441a1.84 1.84 0 001.83-1.844v-3.154h-.83c1.034-1.975 1.9-3.263 2.612-4.324 1.172-1.745 1.88-2.797 1.88-4.893zm-5.553-4.118c.433 1.09.672 2.552.672 4.117 0 1.825-.23 2.682-.69 4.388-.091.343-.193.72-.302 1.142H31.67c-.11-.422-.21-.8-.302-1.142-.459-1.706-.69-2.563-.69-4.388 0-1.565.24-3.027.672-4.117.341-.858.796-1.413 1.16-1.413.362 0 .817.555 1.158 1.413zm-6.65 4.117a5.53 5.53 0 013.455-5.139c-.09.176-.176.364-.256.566-.49 1.231-.759 2.856-.759 4.573 0 1.989.276 3.013.732 4.71l.218.82h-.845a68.449 68.449 0 00-.875-1.326c-1.112-1.655-1.67-2.485-1.67-4.204zm7.322 12.371a.613.613 0 01-.61.615h-2.441a.613.613 0 01-.61-.615v-1.925h3.66v1.925zm-2.676-3.154a42.591 42.591 0 00-1.345-2.458h4.38a42.591 42.591 0 00-1.345 2.458h-1.69zm3.792-3.687h-.846c.077-.295.15-.568.219-.82.456-1.697.73-2.721.73-4.71 0-1.717-.268-3.342-.757-4.573a6.466 6.466 0 00-.256-.566 5.53 5.53 0 013.454 5.14c0 1.718-.558 2.548-1.67 4.203-.26.388-.554.825-.874 1.326zM40.971 68.744c-.543 0-.788-.125-1.098-.284a4.593 4.593 0 00-.417-.194l1.662-4.477c.13-.348.108-.738-.059-1.07a1.292 1.292 0 00-.817-.669l-1.145-.306V58.23c0-.738-.586-1.338-1.306-1.338h-2.26v-1.3c0-1.035-.822-1.877-1.833-1.877H32.43c-1.011 0-1.834.842-1.834 1.877v1.3h-2.26c-.72 0-1.306.6-1.306 1.338v3.514l-1.145.306c-.352.094-.65.339-.817.67a1.345 1.345 0 00-.059 1.07l1.663 4.476c-.155.06-.29.13-.417.194-.31.159-.556.284-1.1.284a.498.498 0 00-.491.503c0 .279.22.504.492.504.775 0 1.18-.206 1.537-.388.31-.159.556-.284 1.099-.284.543 0 .788.125 1.099.284.357.182.762.388 1.537.388.775 0 1.18-.206 1.537-.388.31-.159.556-.284 1.099-.284.543 0 .788.125 1.098.284.358.182.763.388 1.538.388s1.18-.206 1.537-.388c.31-.159.555-.284 1.099-.284.543 0 .788.125 1.098.284.358.182.763.388 1.538.388a.498.498 0 00.492-.504.498.498 0 00-.493-.503zm-9.39-13.152c0-.48.38-.87.849-.87h1.268c.468 0 .85.39.85.87v1.3H31.58v-1.3zm-3.567 2.638c0-.182.145-.33.323-.33h9.454c.178 0 .322.148.322.33v3.25l-4.925-1.316a.482.482 0 00-.249 0l-4.925 1.317V58.23zm8.784 10.23c-.31.159-.555.284-1.098.284s-.788-.125-1.099-.284c-.357-.182-.762-.388-1.537-.388-.775 0-1.18.206-1.537.388-.31.159-.556.284-1.099.284-.543 0-.788-.125-1.099-.284-.357-.182-.762-.388-1.537-.388-.047 0-.094 0-.138.002l-1.724-4.643a.31.31 0 01.204-.406l6.93-1.853 6.93 1.853a.31.31 0 01.205.406l-1.725 4.643a4.18 4.18 0 00-.138-.002c-.775 0-1.18.206-1.538.388z"
+                      />
+                      <path
+                        d="M38.038 64.133l-4.467-1.237a.47.47 0 00-.251 0l-4.467 1.237a.53.53 0 00-.355.643c.07.281.34.45.606.376l4.342-1.203 4.34 1.203a.47.47 0 00.127.017c.22 0 .422-.157.48-.393a.53.53 0 00-.355-.643zM61.254 7.768L4.022 65c-.416.416-.53.974-.257 1.248.273.273.831.158 1.247-.258L62.244 8.758c.416-.416.531-.974.258-1.247-.274-.274-.832-.159-1.248.257z"
+                      />
+                      <path
+                        d="M62.244 65L5.012 7.768c-.416-.416-.974-.53-1.247-.257-.274.273-.159.831.257 1.247L61.254 65.99c.416.416.974.531 1.248.258.273-.274.158-.832-.258-1.248z"
+                      />
+                    </g>
+                  </svg>
+                </div>
+                <big
+                  data-cy="shortname"
                   style={
                     Object {
-                      "padding": ".5rem 1rem",
+                      "fontWeight": "bold",
+                      "marginTop": "0.5rem",
                     }
                   }
-                  tabIndex={-1}
                 >
-                  <div
-                    data-cy="instrument-accordion-content"
-                    style={
-                      Object {
-                        "display": "grid",
-                        "gridTemplateColumns": "1fr 1f 1fr 1fr",
-                      }
-                    }
-                  >
-                    <div
-                      data-cy="instrument-accordion-image-description"
-                      style={
-                        Object {
-                          "gridColumn": "1 / 4",
-                        }
-                      }
-                    />
-                  </div>
-                  <a
-                    data-cy="accordion-link"
-                    href="/instrument/a1f41f4d-2233-49be-a3d3-6eda1ded6be4"
-                    style={
-                      Object {
-                        "color": "#aac9ff",
-                      }
-                    }
-                  >
-                    <label
-                      data-cy="accordion-link-label"
-                      style={
-                        Object {
-                          "borderBottom": "none",
-                          "color": "#aac9ff",
-                          "display": "flex",
-                        }
-                      }
-                    >
-                      Learn More
-                      <svg
-                        height="16"
-                        role="img"
-                        style={
-                          Object {
-                            "marginLeft": ".5rem",
-                          }
-                        }
-                        version="1.1"
-                        viewBox="0 0 16 16"
-                        width="16"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <title>
-                          Arrow Right
-                        </title>
-                        <rect
-                          fill="none"
-                          height="16"
-                          width="16"
-                        />
-                        <polygon
-                          fill="#aac9ff"
-                          points="7.586,2.414 12.172,7 0,7 0,9 12.172,9 7.586,13.586 9,15 16,8 9,1"
-                        />
-                      </svg>
-                    </label>
-                  </a>
-                </div>
+                  C-23 Sherpa
+                </big>
+                <p
+                  data-cy="longname"
+                >
+                  Short Brothers C-23 Sherpa
+                </p>
+              </div>
+              <div>
+                <small
+                  className="c12"
+                  data-cy="count1"
+                >
+                  <strong>
+                    1
+                  </strong>
+                   
+                  Campaign
+                </small>
+                <small
+                  className="c12"
+                  data-cy="count2"
+                >
+                   · 
+                  <strong>
+                    4
+                  </strong>
+                   
+                  Collection Period
+                  s
+                </small>
+                <small
+                  className="c12"
+                  data-cy="count3"
+                >
+                   · 
+                  <strong>
+                    6
+                  </strong>
+                   
+                  Instrument
+                  s
+                </small>
               </div>
             </div>
-          </div>
+          </a>
+          <div
+            className="c13"
+            data-cy="instrument-accordion"
+            data-reach-accordion=""
+          />
         </div>
       </div>
     </div>

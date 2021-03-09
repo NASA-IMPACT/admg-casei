@@ -3,7 +3,9 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import Image from "gatsby-image"
 import Carousel from "nuka-carousel"
-import { controlButtonLRStyle, ControlTextButton } from "../carousel-styles"
+
+import Button from "../button"
+import { controlButtonLRStyle } from "../carousel-styles"
 
 export const RegionCarousel = ({ regions }) => {
   const controlTextRef = useRef(null)
@@ -13,21 +15,25 @@ export const RegionCarousel = ({ regions }) => {
   return (
     <>
       <div
-        style={{
-          display: `flex`,
-          overflow: `auto`,
-        }}
+        css={`
+           {
+            display: flex;
+            overflow: auto;
+            gap: 0.5rem;
+            margin: 1rem 0;
+          }
+        `}
         data-cy="region-text-control"
       >
         {regions.map((region, index) => (
-          <ControlTextButton
+          <Button
             key={region.id}
             ref={index === slideIndex ? controlTextRef : null}
-            selected={index === slideIndex}
-            onClick={() => setSlideIndex(index)}
+            isSecondary={!(index === slideIndex)}
+            action={() => setSlideIndex(index)}
           >
             {region.shortname}
-          </ControlTextButton>
+          </Button>
         ))}
       </div>
 

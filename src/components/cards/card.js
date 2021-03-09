@@ -2,8 +2,10 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 import Image from "gatsby-image"
+
 import DateList from "../../components/date-list-hover"
-import theme from "../../utils/theme"
+import { POSITIVE, NEGATIVE } from "../../utils/constants"
+import { colors } from "../../utils/theme"
 
 const CardHeader = styled.div`
   display: flex;
@@ -11,50 +13,64 @@ const CardHeader = styled.div`
   align-items: center;
   margin: 0.5rem 0 2rem 0;
   min-height: 2rem;
-  & div:only-child {
-    margin-left: auto;
-  }
 `
 
 const Card = ({
   children,
   image,
   placeholder: Placeholder,
-  height,
   tag,
   footerList,
   category,
+  mode = NEGATIVE,
 }) => (
   <div
-    style={{
-      backgroundColor: theme.color.secondary,
-      boxShadow: `rgba(68, 63, 63, 0.08) 0px -1px 1px 0px, rgba(68, 63, 63, 0.08) 0px 2px 6px 0px`,
-      padding: `1rem`,
-      display: `flex`,
-      flexDirection: `column`,
-      justifyContent: `space-between`,
-      height: height,
-    }}
+    css={`
+       {
+        color: ${colors[mode].text};
+        background-color: ${colors[mode].background};
+        box-shadow: rgba(68, 63, 63, 0.08) 0px -1px 1px 0px,
+          rgba(68, 63, 63, 0.08) 0px 2px 6px 0px;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 24rem;
+        height: 100%;
+      }
+    `}
     data-cy={`${category}-card`}
   >
-    <div style={{ marginBottom: `2rem` }}>
+    <div
+      css={`
+         {
+          margin-bottom: 2rem;
+        }
+      `}
+    >
       <CardHeader>
         {image && image.logoImg ? (
           <Image
             alt={image.logoAlt}
             fixed={image.logoImg.childImageSharp.fixed}
-            style={{ margin: `0` }}
+            css={`
+               {
+                margin: 0;
+              }
+            `}
           />
         ) : (
-          <Placeholder size="small" />
+          <Placeholder size="small" color={colors[mode].text} />
         )}
         {tag && (
           <div
-            style={{
-              textTransform: `uppercase`,
-              border: `1px solid`,
-              padding: `0.25rem`,
-            }}
+            css={`
+               {
+                text-transform: uppercase;
+                border: 1px solid;
+                padding: 0.25rem;
+              }
+            `}
             data-cy={`${tag.toLowerCase()}-tag`}
           >
             {tag}
@@ -118,6 +134,7 @@ Card.propTypes = {
   ),
   category: PropTypes.oneOf(["campaigns", "platforms", "instruments"])
     .isRequired,
+  mode: PropTypes.oneOf([POSITIVE, NEGATIVE]),
 }
 
 Card.defaultProps = {
