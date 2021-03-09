@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react"
 import PropTypes from "prop-types"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import VisuallyHidden from "@reach/visually-hidden"
 import { format } from "date-fns"
 
@@ -243,25 +243,31 @@ export default function Explore({ data, location }) {
           {selectedCategory === "campaigns" &&
             campaignList.filtered.map(campaign => {
               return (
-                <Link to={`/campaign/${campaign.id}`} key={campaign.id}>
-                  <CampaignCard id={campaign.id} />
-                </Link>
+                <CampaignCard
+                  id={campaign.id}
+                  key={campaign.id}
+                  link={`/campaign/${campaign.id}`}
+                />
               )
             })}
           {selectedCategory === "platforms" &&
             platformList.filtered.map(platform => {
               return (
-                <Link to={`/platform/${platform.id}`} key={platform.id}>
-                  <PlatformCard id={platform.id} />
-                </Link>
+                <PlatformCard
+                  id={platform.id}
+                  link={`/platform/${platform.id}`}
+                  key={platform.id}
+                />
               )
             })}
           {selectedCategory === "instruments" &&
             instrumentList.filtered.map(instrument => {
               return (
-                <Link to={`/instrument/${instrument.id}`} key={instrument.id}>
-                  <InstrumentCard id={instrument.id} />
-                </Link>
+                <InstrumentCard
+                  id={instrument.id}
+                  link={`/instrument/${instrument.id}`}
+                  key={instrument.id}
+                />
               )
             })}
         </ExploreSection>

@@ -8,7 +8,8 @@ import {
 } from "@reach/listbox"
 import VisuallyHidden from "@reach/visually-hidden"
 import styled from "styled-components"
-import theme from "../utils/theme"
+import { colors } from "../utils/theme"
+import { POSITIVE } from "../utils/constants"
 
 const ListTrigger = styled(ListboxButton)`
   &[data-reach-listbox-button] {
@@ -20,9 +21,10 @@ const ListTrigger = styled(ListboxButton)`
 
 const Popover = styled(ListboxPopover)`
   &[data-reach-listbox-popover] {
-    opacity: 0.99 !important;
+    z-index: 99;
+
     /* :hover {
-      opacity: 0.99 !important;
+      opacity: 1 !important;
       background-color: pink;
     } */
   }
@@ -76,7 +78,7 @@ const DateList = ({ id, dates }) => {
           <small
             css={`
               white-space: nowrap;
-              border-bottom: ${theme.color.base} 1px dashed;
+              border-bottom: ${colors[POSITIVE].background} 1px dashed;
             `}
           >
             <strong>{dates.length}</strong> {id}
@@ -93,7 +95,7 @@ const DateList = ({ id, dates }) => {
           }}
           portal={false}
           css={`
-            background: ${theme.color.base};
+            background: ${colors[POSITIVE].background};
             min-width: fit-content;
           `}
         >
@@ -108,17 +110,20 @@ const DateList = ({ id, dates }) => {
               Deployment Dates
             </label>
             {dates.length ? (
-              <table>
-                <tbody
+              <table
+                css={`
+                  color: ${colors[POSITIVE].text};
+                `}
+              >
+                <thead
                   css={`
-                    overflow-y: scroll;
-                    margin: 0 0.25rem;
-                    color: ${theme.color.gray};
+                    display: table;
+                    margin: 1rem;
                   `}
                 >
                   <tr
                     css={`
-                      background-color: ${theme.color.lightGray};
+                      background-color: ${colors[POSITIVE].background};
                     `}
                   >
                     <th>
@@ -128,14 +133,17 @@ const DateList = ({ id, dates }) => {
                       <label>End Date</label>
                     </th>
                   </tr>
+                </thead>
+                <tbody
+                  css={`
+                    overflow-y: scroll;
+                    max-height: 10rem;
+                    display: block;
+                    margin: 1rem;
+                  `}
+                >
                   {dates.map(date => (
-                    <tr
-                      css={`
-                        overflow-y: scroll;
-                        margin: 0 0.25rem;
-                      `}
-                      key={date.id}
-                    >
+                    <tr key={date.id}>
                       <td>{date.startdate}</td>
                       <td>{date.enddate}</td>
                     </tr>

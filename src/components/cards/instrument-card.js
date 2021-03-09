@@ -5,7 +5,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Card from "./card"
 import { InstrumentIcon } from "../../icons"
 
-export default function InstrumentCard(props) {
+export default function InstrumentCard({ id, link }) {
   /*
    * We can not pass props directly into a static query because it is
    * compiled and doesn't support string interpolation in its template literal.
@@ -33,11 +33,12 @@ export default function InstrumentCard(props) {
     }
   `)
 
-  const instrument = data.allInstrument.nodes.find(x => x.id === props.id)
+  const instrument = data.allInstrument.nodes.find(x => x.id === id)
 
   return (
     <Card
       placeholder={InstrumentIcon}
+      link={link}
       footerList={[{ count: instrument.campaigns.length, title: "Campaign" }]}
       category="instruments"
     >
@@ -55,4 +56,5 @@ export default function InstrumentCard(props) {
 
 InstrumentCard.propTypes = {
   id: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
 }

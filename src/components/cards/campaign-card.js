@@ -7,7 +7,7 @@ import { CampaignIcon } from "../../icons"
 import { POSITIVE, NEGATIVE } from "../../utils/constants"
 import { formatYearRange } from "../../utils/helpers"
 
-export default function CampaignCard({ id, mode }) {
+export default function CampaignCard({ id, link, mode }) {
   /*
    * We can not pass props directly into a static query because it is
    * compiled and doesn't support string interpolation in its template literal.
@@ -58,6 +58,7 @@ export default function CampaignCard({ id, mode }) {
       image={campaign.logo}
       placeholder={CampaignIcon}
       tag={campaign.ongoing && "Ongoing"}
+      link={link}
       footerList={[
         {
           count: campaign.deployments.length,
@@ -90,5 +91,6 @@ export default function CampaignCard({ id, mode }) {
 
 CampaignCard.propTypes = {
   id: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
   mode: PropTypes.oneOf([POSITIVE, NEGATIVE]),
 }

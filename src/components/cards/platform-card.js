@@ -6,7 +6,7 @@ import Card from "./card"
 import { PlatformIcon } from "../../icons"
 import { POSITIVE, NEGATIVE } from "../../utils/constants"
 
-export default function PlatformCard({ id, mode }) {
+export default function PlatformCard({ id, link, mode }) {
   /*
    * We can not pass props directly into a static query because it is
    * compiled and doesn't support string interpolation in its template literal.
@@ -45,6 +45,7 @@ export default function PlatformCard({ id, mode }) {
     <Card
       placeholder={PlatformIcon}
       tag={platform.stationary && "Stationary"}
+      link={link}
       footerList={[
         { count: platform.campaigns.length, title: "Campaign" },
         {
@@ -70,5 +71,6 @@ export default function PlatformCard({ id, mode }) {
 
 PlatformCard.propTypes = {
   id: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
   mode: PropTypes.oneOf([POSITIVE, NEGATIVE]),
 }
