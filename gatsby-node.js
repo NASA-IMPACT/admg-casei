@@ -67,6 +67,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       image: image @link
       instruments: [instrument] @link
       dois: [doi] @link
+      platform_type: platform_type @link
     }
     type website implements Node {
       title: String

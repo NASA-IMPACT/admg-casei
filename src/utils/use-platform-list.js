@@ -2,6 +2,15 @@ import { useState, useEffect } from "react"
 
 import { sortFunctions, platformFilter } from "../utils/filter-utils"
 
+const groupByPlatformType = (acc, item) => {
+  if (!acc[item.platformType.shortname]) {
+    acc[item.platformType.shortname] = []
+  }
+
+  acc[item.platformType.shortname].push(item)
+  return acc
+}
+
 export default function usePlatformList(
   queryResult,
   sortOrder,
@@ -11,6 +20,7 @@ export default function usePlatformList(
   const [platformList, setPlatformList] = useState({
     all: queryResult,
     filtered: queryResult,
+    grouped: queryResult.reduce(groupByPlatformType, {}),
     filteredByMenu: queryResult,
     filteredBySearch: queryResult,
   })
@@ -38,6 +48,11 @@ export default function usePlatformList(
       ),
       filteredByMenu: filteredPlatformByMenu,
     }))
+
+    setPlatformList(prev => ({
+      ...prev,
+      grouped: prev.filtered.reduce(groupByPlatformType, {}),
+    }))
   }, [selectedFilterIds])
 
   useEffect(() => {
@@ -48,6 +63,7 @@ export default function usePlatformList(
         // searchResult ? searchResult.includes(platform.shortname) : true
         true
     )
+
     setPlatformList(prev => ({
       ...prev,
       filtered: prev.all.filter(
@@ -56,6 +72,11 @@ export default function usePlatformList(
           filteredPlatformBySearch.map(c => c.id).includes(platform.id)
       ),
       filteredBySearch: filteredPlatformBySearch,
+    }))
+
+    setPlatformList(prev => ({
+      ...prev,
+      grouped: prev.filtered.reduce(groupByPlatformType, {}),
     }))
   }, [searchResult])
 

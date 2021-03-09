@@ -15,14 +15,15 @@ import useInstrumentList from "../utils/use-instrument-list"
 import Layout, { PageBody } from "../components/layout"
 import SEO from "../components/seo"
 import ExploreTools from "../components/explore/explore-tools"
+import ExploreMap from "../components/explore/explore-map"
 import FilterChips from "../components/filter/filter-chips"
+import Chip from "../components/chip"
+import ExploreMenu from "../components/explore/explore-menu"
+import PlatformNav from "../components/explore/platform-nav"
 import ExploreSection from "../components/explore/explore-section"
 import CampaignCard from "../components/cards/campaign-card"
-import ExploreMap from "../components/explore/explore-map"
-import Chip from "../components/chip"
-import InstrumentCard from "../components/cards/instrument-card"
 import PlatformCard from "../components/cards/platform-card"
-import ExploreMenu from "../components/explore/explore-menu"
+import InstrumentCard from "../components/cards/instrument-card"
 
 export default function Explore({ data, location }) {
   const {
@@ -237,7 +238,11 @@ export default function Explore({ data, location }) {
           }}
           sortOrder={sortOrder[selectedCategory]}
           setSortOrder={setSortOrder}
-        />
+        >
+          {selectedCategory === "platforms" && (
+            <PlatformNav items={Object.keys(platformList.grouped)} />
+          )}
+        </ExploreMenu>
 
         <ExploreSection isLoading={isLoading}>
           {selectedCategory === "campaigns" &&
@@ -245,9 +250,23 @@ export default function Explore({ data, location }) {
               return <CampaignCard id={campaign.id} key={campaign.id} />
             })}
           {selectedCategory === "platforms" &&
-            platformList.filtered.map(platform => {
-              return <PlatformCard id={platform.id} key={platform.id} />
-            })}
+            Object.entries(platformList.grouped).map(
+              ([platformType, platforms]) => (
+                <React.Fragment key={platformType}>
+                  <h3
+                    id={platformType}
+                    css={`
+                      grid-column: 1/-1;
+                    `}
+                  >
+                    {platformType} <small>({platforms.length})</small>
+                  </h3>
+                  {platforms.map(platform => {
+                    return <PlatformCard id={platform.id} key={platform.id} />
+                  })}
+                </React.Fragment>
+              )
+            )}
           {selectedCategory === "instruments" &&
             instrumentList.filtered.map(instrument => {
               return <InstrumentCard id={instrument.id} key={instrument.id} />
@@ -368,6 +387,11 @@ export const query = graphql`
     }
     instruments {
       id # required for filter
+    }
+    platformType: platform_type {
+      id
+      shortname: short_name # required for grouping
+      longname: long_name
     }
   }
 
