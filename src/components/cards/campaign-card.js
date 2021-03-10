@@ -6,6 +6,8 @@ import Card from "./card"
 import { CampaignIcon } from "../../icons"
 import { POSITIVE, NEGATIVE } from "../../utils/constants"
 import { formatYearRange } from "../../utils/helpers"
+import CardFooterItem from "./card-footer-item"
+import DateList from "../../components/date-list-hover"
 
 export default function CampaignCard({ id, link, mode }) {
   /*
@@ -59,14 +61,23 @@ export default function CampaignCard({ id, link, mode }) {
       placeholder={CampaignIcon}
       tag={campaign.ongoing && "Ongoing"}
       link={link}
-      footerList={[
-        {
-          count: campaign.deployments.length,
-          title: "Deployment",
-          deploymentDates: campaign.deployments,
+      footerList={{
+        deployment: {
+          component: DateList,
+          props: {
+            id: id,
+            title: "Deployment",
+            dates: campaign.deployments || [],
+          },
         },
-        { count: campaign.countDataProducts, title: "Data Product" },
-      ]}
+        dataProduct: {
+          component: CardFooterItem,
+          props: {
+            count: campaign.countDataProducts,
+            title: "Data Product",
+          },
+        },
+      }}
       category="campaigns"
       mode={mode}
     >

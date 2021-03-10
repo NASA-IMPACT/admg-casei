@@ -100,24 +100,13 @@ const Card = ({
           align-items: center;
         `}
       >
-        {footerList.map((o, index) => (
-          <div key={index}>
-            {o.title === "Deployment" ? (
-              <DateList id="Deployment" dates={o.deploymentDates || []} />
-            ) : (
-              <small
-                key={o.title}
-                style={{
-                  whiteSpace: `nowrap`,
-                }}
-                data-cy={`count${index + 1}`}
-              >
-                {index !== 0 && ` · `}
-                <strong>{o.count}</strong> {o.title}
-                {o.count !== 1 && "s"}
-              </small>
-            )}
-          </div>
+        {Object.entries(footerList).map(([id, footeritem], index) => (
+          <footeritem.component
+            key={index}
+            id={id}
+            index={index}
+            {...footeritem.props}
+          />
         ))}
       </div>
     )}
@@ -139,19 +128,7 @@ Card.propTypes = {
   height: PropTypes.string,
   link: PropTypes.string,
   tag: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
-  footerList: PropTypes.arrayOf(
-    PropTypes.shape({
-      count: PropTypes.number,
-      title: PropTypes.string,
-      deploymentDates: PropTypes.arrayOf(
-        PropTypes.shape({
-          id: PropTypes.string,
-          startdate: PropTypes.string,
-          enddate: PropTypes.string,
-        })
-      ),
-    })
-  ),
+  footerList: PropTypes.object,
   category: PropTypes.oneOf(["campaigns", "platforms", "instruments"])
     .isRequired,
   mode: PropTypes.oneOf([POSITIVE, NEGATIVE]),

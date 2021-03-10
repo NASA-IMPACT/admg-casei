@@ -22,15 +22,10 @@ const ListTrigger = styled(ListboxButton)`
 const Popover = styled(ListboxPopover)`
   &[data-reach-listbox-popover] {
     z-index: 99;
-
-    /* :hover {
-      opacity: 1 !important;
-      background-color: pink;
-    } */
   }
 `
 
-const DateList = ({ id, dates }) => {
+const DateList = ({ id, title, dates }) => {
   let [isOverButton, setIsOverButton] = useState(false)
   let [isOverList, setIsOverList] = useState(false)
   let [isOpen, setIsOpen] = useState()
@@ -81,7 +76,7 @@ const DateList = ({ id, dates }) => {
               border-bottom: ${colors[POSITIVE].background} 1px dashed;
             `}
           >
-            <strong>{dates.length}</strong> {id}
+            <strong>{dates.length}</strong> {title}
             {dates.length !== 1 && "s"}
           </small>
         </ListTrigger>
@@ -169,6 +164,7 @@ const DateList = ({ id, dates }) => {
 
 DateList.propTypes = {
   id: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
   dates: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,
