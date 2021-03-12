@@ -9,7 +9,7 @@ import {
 import VisuallyHidden from "@reach/visually-hidden"
 import styled from "styled-components"
 import { colors } from "../utils/theme"
-import { POSITIVE } from "../utils/constants"
+import { NEGATIVE, POSITIVE } from "../utils/constants"
 
 const ListTrigger = styled(ListboxButton)`
   &[data-reach-listbox-button] {
@@ -22,10 +22,25 @@ const ListTrigger = styled(ListboxButton)`
 const Popover = styled(ListboxPopover)`
   &[data-reach-listbox-popover] {
     z-index: 99;
+    position: relative;
+    border: none;
   }
 `
 
-const DateList = ({ id, title, dates }) => {
+const CustomListBox = styled(ListboxList)`
+  &[data-reach-listbox-list] {
+    list-style: none;
+    bottom: -30px;
+    left: 100%;
+    position: absolute;
+    background: white;
+    border: solid 1px hsla(0, 0%, 0%, 0.25);
+    padding: 0.25rem 0;
+    min-width: 14rem;
+  }
+`
+
+const DateList = ({ id, title, dates, mode = NEGATIVE }) => {
   let [isOverButton, setIsOverButton] = useState(false)
   let [isOverList, setIsOverList] = useState(false)
   let [isOpen, setIsOpen] = useState()
@@ -73,7 +88,7 @@ const DateList = ({ id, title, dates }) => {
           <small
             css={`
               white-space: nowrap;
-              border-bottom: ${colors[POSITIVE].background} 1px dashed;
+              border-bottom: ${colors[mode].text} 1px dashed;
             `}
           >
             <strong>{dates.length}</strong> {title}
@@ -94,7 +109,7 @@ const DateList = ({ id, title, dates }) => {
             min-width: fit-content;
           `}
         >
-          <ListboxList>
+          <CustomListBox>
             <label
               css={`
                 padding: 1rem;
@@ -155,7 +170,7 @@ const DateList = ({ id, title, dates }) => {
                 none found
               </div>
             )}
-          </ListboxList>
+          </CustomListBox>
         </Popover>
       </ListboxInput>
     </>

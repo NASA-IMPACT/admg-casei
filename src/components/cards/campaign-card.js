@@ -68,6 +68,7 @@ export default function CampaignCard({ id, link, mode }) {
             id: id,
             title: "Deployment",
             dates: campaign.deployments || [],
+            mode: mode,
           },
         },
         dataProduct: {
