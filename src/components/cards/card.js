@@ -3,7 +3,6 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 import Image from "gatsby-image"
 import { Link } from "gatsby"
-import DateList from "../../components/date-list-hover"
 import { POSITIVE, NEGATIVE } from "../../utils/constants"
 import { colors } from "../../utils/theme"
 
@@ -99,6 +98,7 @@ const Card = ({
           flex-wrap: wrap;
           align-items: center;
         `}
+        data-cy={"card-footer"}
       >
         {Object.entries(footerList).map(([id, footeritem], index) => (
           <footeritem.component

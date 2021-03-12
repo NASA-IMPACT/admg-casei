@@ -106,7 +106,7 @@ exports[`Platform Section displays content 1`] = `
   grid-template-columns: minmax(15rem,1fr) minmax(auto,3fr);
   gap: 2rem;
   height: 100%;
-  max-height: 24rem;
+  max-height: 30rem;
 }
 
 .c11.c11 {
@@ -289,57 +289,52 @@ exports[`Platform Section displays content 1`] = `
               </a>
               <div
                 className="c12"
+                data-cy="card-footer"
               >
-                <div>
-                  <small
-                    data-cy="count1"
-                    style={
-                      Object {
-                        "whiteSpace": "nowrap",
-                      }
+                <small
+                  data-cy="count1"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
                     }
-                  >
-                    <strong>
-                      1
-                    </strong>
-                     
-                    Campaign
-                  </small>
-                </div>
-                <div>
-                  <small
-                    data-cy="count2"
-                    style={
-                      Object {
-                        "whiteSpace": "nowrap",
-                      }
+                  }
+                >
+                  <strong>
+                    1
+                  </strong>
+                   
+                  Campaign
+                </small>
+                <small
+                  data-cy="count2"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
                     }
-                  >
-                     · 
-                    <strong>
-                      1
-                    </strong>
-                     
-                    Collection Period
-                  </small>
-                </div>
-                <div>
-                  <small
-                    data-cy="count3"
-                    style={
-                      Object {
-                        "whiteSpace": "nowrap",
-                      }
+                  }
+                >
+                   · 
+                  <strong>
+                    1
+                  </strong>
+                   
+                  Collection Period
+                </small>
+                <small
+                  data-cy="count3"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
                     }
-                  >
-                     · 
-                    <strong>
-                      1
-                    </strong>
-                     
-                    Instrument
-                  </small>
-                </div>
+                  }
+                >
+                   · 
+                  <strong>
+                    1
+                  </strong>
+                   
+                  Instrument
+                </small>
               </div>
             </div>
           </a>
@@ -412,58 +407,53 @@ exports[`Platform Section displays content 1`] = `
               </a>
               <div
                 className="c12"
+                data-cy="card-footer"
               >
-                <div>
-                  <small
-                    data-cy="count1"
-                    style={
-                      Object {
-                        "whiteSpace": "nowrap",
-                      }
+                <small
+                  data-cy="count1"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
                     }
-                  >
-                    <strong>
-                      1
-                    </strong>
-                     
-                    Campaign
-                  </small>
-                </div>
-                <div>
-                  <small
-                    data-cy="count2"
-                    style={
-                      Object {
-                        "whiteSpace": "nowrap",
-                      }
+                  }
+                >
+                  <strong>
+                    1
+                  </strong>
+                   
+                  Campaign
+                </small>
+                <small
+                  data-cy="count2"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
                     }
-                  >
-                     · 
-                    <strong>
-                      1
-                    </strong>
-                     
-                    Collection Period
-                  </small>
-                </div>
-                <div>
-                  <small
-                    data-cy="count3"
-                    style={
-                      Object {
-                        "whiteSpace": "nowrap",
-                      }
+                  }
+                >
+                   · 
+                  <strong>
+                    1
+                  </strong>
+                   
+                  Collection Period
+                </small>
+                <small
+                  data-cy="count3"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
                     }
-                  >
-                     · 
-                    <strong>
-                      2
-                    </strong>
-                     
-                    Instrument
-                    s
-                  </small>
-                </div>
+                  }
+                >
+                   · 
+                  <strong>
+                    2
+                  </strong>
+                   
+                  Instrument
+                  s
+                </small>
               </div>
             </div>
           </a>
@@ -536,59 +526,54 @@ exports[`Platform Section displays content 1`] = `
               </a>
               <div
                 className="c12"
+                data-cy="card-footer"
               >
-                <div>
-                  <small
-                    data-cy="count1"
-                    style={
-                      Object {
-                        "whiteSpace": "nowrap",
-                      }
+                <small
+                  data-cy="count1"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
                     }
-                  >
-                    <strong>
-                      1
-                    </strong>
-                     
-                    Campaign
-                  </small>
-                </div>
-                <div>
-                  <small
-                    data-cy="count2"
-                    style={
-                      Object {
-                        "whiteSpace": "nowrap",
-                      }
+                  }
+                >
+                  <strong>
+                    1
+                  </strong>
+                   
+                  Campaign
+                </small>
+                <small
+                  data-cy="count2"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
                     }
-                  >
-                     · 
-                    <strong>
-                      4
-                    </strong>
-                     
-                    Collection Period
-                    s
-                  </small>
-                </div>
-                <div>
-                  <small
-                    data-cy="count3"
-                    style={
-                      Object {
-                        "whiteSpace": "nowrap",
-                      }
+                  }
+                >
+                   · 
+                  <strong>
+                    4
+                  </strong>
+                   
+                  Collection Period
+                  s
+                </small>
+                <small
+                  data-cy="count3"
+                  style={
+                    Object {
+                      "whiteSpace": "nowrap",
                     }
-                  >
-                     · 
-                    <strong>
-                      6
-                    </strong>
-                     
-                    Instrument
-                    s
-                  </small>
-                </div>
+                  }
+                >
+                   · 
+                  <strong>
+                    6
+                  </strong>
+                   
+                  Instrument
+                  s
+                </small>
               </div>
             </div>
           </a>

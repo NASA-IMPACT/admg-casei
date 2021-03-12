@@ -55,9 +55,9 @@ describe("Explore", () => {
           )
           expect($card.find("[data-cy=daterange]")).to.contain("2012—2015")
           expect($card.find("[data-cy=region]")).to.contain("North America")
-
-          expect($card.find("[data-cy=count1]")).to.contain("Deployments")
-          expect($card.find("[data-cy=count2]")).to.contain("Data Products")
+          // TODO: update footer test to check for date dropdown
+          // expect($card.find("[data-cy=count1]")).to.contain("Deployments")
+          // expect($card.find("[data-cy=count2]")).to.contain("Data Products")
         })
 
       cy.get("[data-cy=campaigns-card]") // test ongoing campaign card
@@ -139,12 +139,12 @@ describe("Explore", () => {
             "Beechcraft King Air B-200"
           )
           expect($card.find("[data-cy=longname]")).to.exist
-
-          expect($card.find("[data-cy=count1]")).to.contain("Campaign")
-          expect($card.find("[data-cy=count2]")).to.contain(
-            "Collection Periods"
-          )
-          expect($card.find("[data-cy=count3]")).to.contain("Instruments")
+          // TODO: update footer test to check for date dropdown
+          // expect($card.find("[data-cy=count1]")).to.contain("Campaign")
+          // expect($card.find("[data-cy=count2]")).to.contain(
+          //   "Collection Periods"
+          // )
+          // expect($card.find("[data-cy=count3]")).to.contain("Instruments")
         })
 
       cy.get("[data-cy=platforms-card]").find("big").contains("GH").click()
@@ -212,9 +212,10 @@ describe("Explore", () => {
             "High Altitude Monolithic Microwave integrated Circuit(MMIC) Sounding Radiometer"
           )
           expect($card.find("[data-cy=longname]")).to.exist
-
-          expect($card.find("[data-cy=count1]")).to.contain("Campaigns")
+          // TODO: update footer test to check for date dropdown
+          // expect($card.find("[data-cy=count1]")).to.contain("Campaigns")
         })
+      cy.get("[data-cy=instruments-card]")
 
       cy.get("[data-cy=instruments-card]").find("big").contains("CPL").click()
 
