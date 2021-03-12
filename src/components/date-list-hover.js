@@ -130,6 +130,7 @@ const DateList = ({ id, title, dates, mode = NEGATIVE }) => {
               <table
                 css={`
                   color: ${colors[POSITIVE].text};
+                  margin-bottom: 0;
                 `}
               >
                 <thead

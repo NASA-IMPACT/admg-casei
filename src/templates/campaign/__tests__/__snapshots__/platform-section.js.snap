@@ -109,7 +109,7 @@ exports[`Platform Section displays content 1`] = `
   max-height: 30rem;
 }
 
-.c11.c11 {
+.c10.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -149,20 +149,19 @@ exports[`Platform Section displays content 1`] = `
   opacity: 0.64;
 }
 
-.c10.c10 {
-  margin-bottom: 2rem;
-}
-
-.c12.c12 {
+.c11.c11 {
   color: #262a31;
   background-color: #ffffff;
   box-shadow: rgba(68,63,63,0.08) 0px -1px 1px 0px,rgba(68,63,63,0.08) 0px 2px 6px 0px;
-  padding: 1rem;
+  padding: 1rem 0.5rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  min-height: 6rem;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -170,6 +169,11 @@ exports[`Platform Section displays content 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.c12.c12 {
+  padding-right: 0.25rem;
+  white-space: nowrap;
 }
 
 <section
@@ -240,11 +244,9 @@ exports[`Platform Section displays content 1`] = `
                   className="c9"
                   data-cy="platforms-card"
                 >
-                  <div
-                    className="c10"
-                  >
+                  <div>
                     <div
-                      className="c11"
+                      className="c10"
                     >
                       <svg
                         height="60"
@@ -288,16 +290,12 @@ exports[`Platform Section displays content 1`] = `
                 </div>
               </a>
               <div
-                className="c12"
+                className="c11"
                 data-cy="card-footer"
               >
                 <small
+                  className="c12"
                   data-cy="count1"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                   <strong>
                     1
@@ -306,12 +304,8 @@ exports[`Platform Section displays content 1`] = `
                   Campaign
                 </small>
                 <small
+                  className="c12"
                   data-cy="count2"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                    · 
                   <strong>
@@ -321,14 +315,9 @@ exports[`Platform Section displays content 1`] = `
                   Collection Period
                 </small>
                 <small
+                  className="c12"
                   data-cy="count3"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
-                   · 
                   <strong>
                     1
                   </strong>
@@ -358,11 +347,9 @@ exports[`Platform Section displays content 1`] = `
                   className="c9"
                   data-cy="platforms-card"
                 >
-                  <div
-                    className="c10"
-                  >
+                  <div>
                     <div
-                      className="c11"
+                      className="c10"
                     >
                       <svg
                         height="60"
@@ -406,16 +393,12 @@ exports[`Platform Section displays content 1`] = `
                 </div>
               </a>
               <div
-                className="c12"
+                className="c11"
                 data-cy="card-footer"
               >
                 <small
+                  className="c12"
                   data-cy="count1"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                   <strong>
                     1
@@ -424,12 +407,8 @@ exports[`Platform Section displays content 1`] = `
                   Campaign
                 </small>
                 <small
+                  className="c12"
                   data-cy="count2"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                    · 
                   <strong>
@@ -439,14 +418,9 @@ exports[`Platform Section displays content 1`] = `
                   Collection Period
                 </small>
                 <small
+                  className="c12"
                   data-cy="count3"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
-                   · 
                   <strong>
                     2
                   </strong>
@@ -477,11 +451,9 @@ exports[`Platform Section displays content 1`] = `
                   className="c9"
                   data-cy="platforms-card"
                 >
-                  <div
-                    className="c10"
-                  >
+                  <div>
                     <div
-                      className="c11"
+                      className="c10"
                     >
                       <svg
                         height="60"
@@ -525,16 +497,12 @@ exports[`Platform Section displays content 1`] = `
                 </div>
               </a>
               <div
-                className="c12"
+                className="c11"
                 data-cy="card-footer"
               >
                 <small
+                  className="c12"
                   data-cy="count1"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                   <strong>
                     1
@@ -543,12 +511,8 @@ exports[`Platform Section displays content 1`] = `
                   Campaign
                 </small>
                 <small
+                  className="c12"
                   data-cy="count2"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
                    · 
                   <strong>
@@ -559,14 +523,9 @@ exports[`Platform Section displays content 1`] = `
                   s
                 </small>
                 <small
+                  className="c12"
                   data-cy="count3"
-                  style={
-                    Object {
-                      "whiteSpace": "nowrap",
-                    }
-                  }
                 >
-                   · 
                   <strong>
                     6
                   </strong>

@@ -5,12 +5,13 @@ export default function CardFooterItem({ title, count, index }) {
   return (
     <small
       key={title}
-      style={{
-        whiteSpace: `nowrap`,
-      }}
+      css={`
+        padding-right: 0.25rem;
+        white-space: nowrap;
+      `}
       data-cy={`count${index + 1}`}
     >
-      {index !== 0 && ` · `}
+      {(index == 1 || index == 3) && ` · `}
       <strong>{count}</strong> {title}
       {count !== 1 && "s"}
     </small>

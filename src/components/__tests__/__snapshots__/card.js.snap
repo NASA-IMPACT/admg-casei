@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Card renders card with tag 1`] = `
-.c2.c2 {
+.c1.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -41,11 +41,7 @@ exports[`Card renders card with tag 1`] = `
   opacity: 0.64;
 }
 
-.c1.c1 {
-  margin-bottom: 2rem;
-}
-
-.c3.c3 {
+.c2.c2 {
   text-transform: uppercase;
   border: 1px solid;
   padding: 0.25rem;
@@ -57,11 +53,9 @@ exports[`Card renders card with tag 1`] = `
       className="c0"
       data-cy="campaigns-card"
     >
-      <div
-        className="c1"
-      >
+      <div>
         <div
-          className="c2"
+          className="c1"
         >
           <svg
             height="60"
@@ -82,7 +76,7 @@ exports[`Card renders card with tag 1`] = `
             </g>
           </svg>
           <div
-            className="c3"
+            className="c2"
             data-cy="stationary-tag"
           >
             Stationary
@@ -118,7 +112,7 @@ exports[`Card renders card with tag 1`] = `
 `;
 
 exports[`Card renders plain card 1`] = `
-.c2.c2 {
+.c1.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -158,21 +152,15 @@ exports[`Card renders plain card 1`] = `
   opacity: 0.64;
 }
 
-.c1.c1 {
-  margin-bottom: 2rem;
-}
-
 <div>
   <a>
     <div
       className="c0"
       data-cy="campaigns-card"
     >
-      <div
-        className="c1"
-      >
+      <div>
         <div
-          className="c2"
+          className="c1"
         >
           <svg
             height="60"
@@ -223,7 +211,7 @@ exports[`Card renders plain card 1`] = `
 `;
 
 exports[`Card renders with footer list 1`] = `
-.c2.c2 {
+.c1.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -263,21 +251,15 @@ exports[`Card renders with footer list 1`] = `
   opacity: 0.64;
 }
 
-.c1.c1 {
-  margin-bottom: 2rem;
-}
-
 <div>
   <a>
     <div
       className="c0"
       data-cy="campaigns-card"
     >
-      <div
-        className="c1"
-      >
+      <div>
         <div
-          className="c2"
+          className="c1"
         >
           <svg
             height="60"

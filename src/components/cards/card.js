@@ -45,13 +45,7 @@ const Card = ({
         `}
         data-cy={`${category}-card`}
       >
-        <div
-          css={`
-             {
-              margin-bottom: 2rem;
-            }
-          `}
-        >
+        <div>
           <CardHeader>
             {image && image.logoImg ? (
               <Image
@@ -92,9 +86,9 @@ const Card = ({
           background-color: ${colors[mode].background};
           box-shadow: rgba(68, 63, 63, 0.08) 0px -1px 1px 0px,
             rgba(68, 63, 63, 0.08) 0px 2px 6px 0px;
-          padding: 1rem;
+          padding: 1rem 0.5rem;
+          justify-content: center;
           display: flex;
-          min-height: 6rem;
           flex-wrap: wrap;
           align-items: center;
         `}
