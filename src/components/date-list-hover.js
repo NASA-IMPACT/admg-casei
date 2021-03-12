@@ -16,6 +16,7 @@ const ListTrigger = styled(ListboxButton)`
     border: none;
     display: inherit;
     padding-right: 0.25rem;
+    cursor: pointer;
   }
 `
 
@@ -24,6 +25,8 @@ const Popover = styled(ListboxPopover)`
     z-index: 99;
     position: relative;
     border: none;
+    background: none;
+    padding: 0;
   }
 `
 
@@ -34,10 +37,14 @@ const CustomListBox = styled(ListboxList)`
     left: 100%;
     position: absolute;
     background: white;
-    border: solid 1px hsla(0, 0%, 0%, 0.25);
     padding: 0.25rem 0;
     min-width: 14rem;
   }
+`
+
+const DateText = styled.td`
+  padding-top: 0;
+  padding-right: 0;
 `
 
 const DateList = ({ id, title, dates, mode = NEGATIVE }) => {
@@ -112,7 +119,7 @@ const DateList = ({ id, title, dates, mode = NEGATIVE }) => {
           <CustomListBox>
             <label
               css={`
-                padding: 1rem;
+                padding: 0 0.5rem;
                 color: #000;
                 font-size: large;
               `}
@@ -128,18 +135,28 @@ const DateList = ({ id, title, dates, mode = NEGATIVE }) => {
                 <thead
                   css={`
                     display: table;
-                    margin: 1rem;
+                    width: 100%;
                   `}
                 >
                   <tr
                     css={`
-                      background-color: ${colors[POSITIVE].background};
+                      background-color: ${colors[NEGATIVE].text};
+                      color: ${colors[NEGATIVE].altText};
                     `}
                   >
-                    <th>
+                    <th
+                      css={`
+                        padding: 0 0.5rem;
+                        max-width: 4rem;
+                      `}
+                    >
                       <label>Start Date</label>
                     </th>
-                    <th>
+                    <th
+                      css={`
+                        padding: 0;
+                      `}
+                    >
                       <label>End Date</label>
                     </th>
                   </tr>
@@ -149,13 +166,13 @@ const DateList = ({ id, title, dates, mode = NEGATIVE }) => {
                     overflow-y: scroll;
                     max-height: 10rem;
                     display: block;
-                    margin: 1rem;
+                    margin: 0.5rem;
                   `}
                 >
                   {dates.map(date => (
                     <tr key={date.id}>
-                      <td>{date.startdate}</td>
-                      <td>{date.enddate}</td>
+                      <DateText>{date.startdate}</DateText>
+                      <DateText>{date.enddate}</DateText>
                     </tr>
                   ))}
                 </tbody>
