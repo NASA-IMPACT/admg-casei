@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Card from "./card"
+import CardFooterItem from "./card-footer-item"
 import { PlatformIcon } from "../../icons"
 import { POSITIVE, NEGATIVE } from "../../utils/constants"
 
@@ -45,14 +46,30 @@ export default function PlatformCard({ id, mode }) {
     <Card
       placeholder={PlatformIcon}
       tag={platform.stationary && "Stationary"}
-      footerList={[
-        { count: platform.campaigns.length, title: "Campaign" },
-        {
-          count: platform.collectionPeriodIds.length,
-          title: "Collection Period",
+      link={`/platform/${platform.id}`}
+      footerList={{
+        campaign: {
+          component: CardFooterItem,
+          props: {
+            count: platform.campaigns.length,
+            title: "Campaign",
+          },
         },
-        { count: platform.instruments.length, title: "Instrument" },
-      ]}
+        collectionPeriod: {
+          component: CardFooterItem,
+          props: {
+            count: platform.collectionPeriodIds.length,
+            title: "Collection Period",
+          },
+        },
+        instrument: {
+          component: CardFooterItem,
+          props: {
+            count: platform.instruments.length,
+            title: "Instrument",
+          },
+        },
+      }}
       category="platforms"
       mode={mode}
     >

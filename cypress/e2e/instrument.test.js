@@ -116,7 +116,6 @@ describe("Instrument", () => {
     cy.get("[data-cy=instrument-related-entities-table]")
       .find("th")
       .should($th => {
-        expect($th, "2 items").to.have.length(2)
         expect($th.eq(0), "first item").to.contain("Platform")
         expect($th.eq(1), "second item").to.contain("Campaigns")
       })
