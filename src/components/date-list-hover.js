@@ -122,7 +122,7 @@ const DateList = ({
           }}
           portal={false}
           css={`
-            background: ${colors[cardMode].background};
+            background: ${colors[hoverListMode].background};
             min-width: fit-content;
           `}
         >
@@ -130,7 +130,7 @@ const DateList = ({
             <label
               css={`
                 padding: 0 0.5rem;
-                color: #000;
+                color: ${colors[hoverListMode].text};
                 font-size: large;
               `}
             >
@@ -151,8 +151,8 @@ const DateList = ({
                 >
                   <tr
                     css={`
-                      background-color: ${colors[NEGATIVE].text};
-                      color: ${colors[NEGATIVE].altText};
+                      background-color: ${colors[hoverListMode].altBackground};
+                      color: ${colors[hoverListMode].altText};
                     `}
                   >
                     <th
@@ -211,7 +211,7 @@ const DateList = ({
             ) : (
               <div
                 css={`
-                  color: #000;
+                  color: ${colors[hoverListMode].text};
                   text-align: center;
                 `}
               >

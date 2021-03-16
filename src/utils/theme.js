@@ -14,6 +14,7 @@ const palette = {
 const colors = {
   lightTheme: {
     background: palette.white,
+    altBackground: palette.platinum,
     text: palette.gunmetal,
     altText: palette["davys grey"],
     linkText: palette["dark cornflower blue"],
