@@ -7,7 +7,7 @@ import CardFooterItem from "./card-footer-item"
 import { PlatformIcon } from "../../icons"
 import { POSITIVE, NEGATIVE } from "../../utils/constants"
 
-export default function PlatformCard({ id, link, mode }) {
+export default function PlatformCard({ id, mode }) {
   /*
    * We can not pass props directly into a static query because it is
    * compiled and doesn't support string interpolation in its template literal.

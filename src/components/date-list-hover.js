@@ -53,7 +53,7 @@ const DateList = ({
   title,
   dates,
   isStat,
-  iscustomspacing,
+  isCustomSpacing,
   cardMode = NEGATIVE,
 }) => {
   let [isOverButton, setIsOverButton] = useState(false)
@@ -127,7 +127,7 @@ const DateList = ({
             min-width: fit-content;
           `}
         >
-          <CustomListBox iscustomspacing={iscustomspacing}>
+          <CustomListBox iscustomspacing={isCustomSpacing && "true"}>
             <label
               css={`
                 padding: 0 0.5rem;
@@ -206,9 +206,9 @@ const DateList = ({
 
 DateList.propTypes = {
   id: PropTypes.string.isRequired,
-  index: PropTypes.number.isRequired,
+  index: PropTypes.number,
   isStat: PropTypes.bool,
-  iscustomspacing: PropTypes.bool,
+  isCustomSpacing: PropTypes.bool,
   title: PropTypes.string.isRequired,
   cardMode: PropTypes.oneOf([POSITIVE, NEGATIVE]),
   dates: PropTypes.arrayOf(

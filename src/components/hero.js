@@ -19,7 +19,7 @@ export const HeroStats = ({ statList }) => (
               title={stat.label}
               dates={stat.dates}
               isStat
-              iscustomspacing
+              isCustomSpacing
             />
           ) : (
             stat.label
@@ -35,7 +35,7 @@ HeroStats.propTypes = {
     PropTypes.shape({
       number: PropTypes.number,
       label: PropTypes.string.isRequired,
-      dates: PropTypes.array.isRequired,
+      dates: PropTypes.array,
     })
   ).isRequired,
 }

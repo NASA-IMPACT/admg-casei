@@ -239,7 +239,9 @@ exports[`Platform Section displays content 1`] = `
             href="/platform/dfb8cbd6-c33c-47df-9249-8949de2b81d7"
           >
             <div>
-              <a>
+              <a
+                href="/platform/dfb8cbd6-c33c-47df-9249-8949de2b81d7"
+              >
                 <div
                   className="c9"
                   data-cy="platforms-card"
@@ -342,7 +344,9 @@ exports[`Platform Section displays content 1`] = `
             href="/platform/8b97267c-bc15-4744-90a3-043dc20a76e8"
           >
             <div>
-              <a>
+              <a
+                href="/platform/8b97267c-bc15-4744-90a3-043dc20a76e8"
+              >
                 <div
                   className="c9"
                   data-cy="platforms-card"
@@ -446,7 +450,9 @@ exports[`Platform Section displays content 1`] = `
             href="/platform/1854d7b1-53c3-4ed4-8180-8f5bd6e4fd26"
           >
             <div>
-              <a>
+              <a
+                href="/platform/1854d7b1-53c3-4ed4-8180-8f5bd6e4fd26"
+              >
                 <div
                   className="c9"
                   data-cy="platforms-card"
