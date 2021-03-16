@@ -48,6 +48,20 @@ export default function Glossary({ data }) {
       <PageBody id="glossary">
         <h1>Glossary</h1>
 
+        <Section id="intro">
+          <SectionContent columns={[1, 8]}>
+            <p>
+              We use the formalized definitions below for building NASA’s
+              Catalog of Archived Suborbital Earth Science Investigations.
+              Consistent use of vocabulary is required for clear organization of
+              the variety of airborne and field investigation metadata. Where
+              possible, we aim to align terminology with conventions in use
+              among the communities served by ADMG. Feedback on these
+              definitions are welcome.
+            </p>
+          </SectionContent>
+        </Section>
+
         <Section id="letter-navigation">
           <VisuallyHidden>
             <SectionHeader id="letter-navigation" headline="Jump to letter" />
