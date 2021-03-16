@@ -242,33 +242,15 @@ export default function Explore({ data, location }) {
         <ExploreSection isLoading={isLoading}>
           {selectedCategory === "campaigns" &&
             campaignList.filtered.map(campaign => {
-              return (
-                <CampaignCard
-                  id={campaign.id}
-                  key={campaign.id}
-                  link={`/campaign/${campaign.id}`}
-                />
-              )
+              return <CampaignCard id={campaign.id} key={campaign.id} />
             })}
           {selectedCategory === "platforms" &&
             platformList.filtered.map(platform => {
-              return (
-                <PlatformCard
-                  id={platform.id}
-                  link={`/platform/${platform.id}`}
-                  key={platform.id}
-                />
-              )
+              return <PlatformCard id={platform.id} key={platform.id} />
             })}
           {selectedCategory === "instruments" &&
             instrumentList.filtered.map(instrument => {
-              return (
-                <InstrumentCard
-                  id={instrument.id}
-                  link={`/instrument/${instrument.id}`}
-                  key={instrument.id}
-                />
-              )
+              return <InstrumentCard id={instrument.id} key={instrument.id} />
             })}
         </ExploreSection>
       </PageBody>

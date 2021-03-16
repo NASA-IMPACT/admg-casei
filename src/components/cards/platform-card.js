@@ -46,7 +46,7 @@ export default function PlatformCard({ id, link, mode }) {
     <Card
       placeholder={PlatformIcon}
       tag={platform.stationary && "Stationary"}
-      link={link}
+      link={`/platform/${platform.id}`}
       footerList={{
         campaign: {
           component: CardFooterItem,
@@ -87,6 +87,5 @@ export default function PlatformCard({ id, link, mode }) {
 
 PlatformCard.propTypes = {
   id: PropTypes.string.isRequired,
-  link: PropTypes.string.isRequired,
   mode: PropTypes.oneOf([POSITIVE, NEGATIVE]),
 }

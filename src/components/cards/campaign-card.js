@@ -9,7 +9,7 @@ import { formatYearRange } from "../../utils/helpers"
 import CardFooterItem from "./card-footer-item"
 import DateList from "../../components/date-list-hover"
 
-export default function CampaignCard({ id, link, mode }) {
+export default function CampaignCard({ id, mode }) {
   /*
    * We can not pass props directly into a static query because it is
    * compiled and doesn't support string interpolation in its template literal.
@@ -60,7 +60,7 @@ export default function CampaignCard({ id, link, mode }) {
       image={campaign.logo}
       placeholder={CampaignIcon}
       tag={campaign.ongoing && "Ongoing"}
-      link={link}
+      link={`/campaign/${campaign.id}`}
       footerList={{
         deployment: {
           component: DateList,
@@ -103,6 +103,5 @@ export default function CampaignCard({ id, link, mode }) {
 
 CampaignCard.propTypes = {
   id: PropTypes.string.isRequired,
-  link: PropTypes.string.isRequired,
   mode: PropTypes.oneOf([POSITIVE, NEGATIVE]),
 }

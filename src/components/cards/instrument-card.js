@@ -6,7 +6,7 @@ import Card from "./card"
 import CardFooterItem from "./card-footer-item"
 import { InstrumentIcon } from "../../icons"
 
-export default function InstrumentCard({ id, link }) {
+export default function InstrumentCard({ id }) {
   /*
    * We can not pass props directly into a static query because it is
    * compiled and doesn't support string interpolation in its template literal.
@@ -39,7 +39,7 @@ export default function InstrumentCard({ id, link }) {
   return (
     <Card
       placeholder={InstrumentIcon}
-      link={link}
+      link={`/instrument/${instrument.id}`}
       footerList={{
         campaign: {
           component: CardFooterItem,
@@ -65,5 +65,4 @@ export default function InstrumentCard({ id, link }) {
 
 InstrumentCard.propTypes = {
   id: PropTypes.string.isRequired,
-  link: PropTypes.string.isRequired,
 }
