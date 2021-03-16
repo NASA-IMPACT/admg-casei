@@ -33,8 +33,10 @@ const Home = ({ data }) => {
       <PageBody id="home">
         <Section id="focus-area" isSpaced>
           <SectionHeader
-            tagline="explore nasa earth science"
-            headline="Focus Areas"
+            tagline="explore "
+            headline="Earth Science Focus Areas"
+            subline="NASA’s Earth Science Research and Analysis Program supports
+            investigations related to six broad Focus Areas:"
             id="focus"
           />
           <SectionContent>
@@ -78,12 +80,13 @@ const Home = ({ data }) => {
           </SectionContent>
           <SectionContent columns={[7, 6]}>
             <div
-              style={{
-                height: `100%`,
-                display: `grid`,
-                alignContent: `center`,
-                padding: `1rem`,
-              }}
+              css={`
+                height: 100%;
+                display: grid;
+                gap: 2.5rem;
+                align-content: center;
+                padding: 1rem;
+              `}
             >
               <SectionHeader
                 tagline="explore"
@@ -95,11 +98,11 @@ const Home = ({ data }) => {
               <Link
                 to="/explore"
                 state={{ defaultExploreCategory: "platforms" }}
-                style={{
-                  border: `1px solid ${colors[NEGATIVE].text}`,
-                  padding: `1rem 5rem`,
-                  textTransform: `uppercase`,
-                }}
+                css={`
+                  border: 1px solid ${colors[NEGATIVE].text};
+                  padding: 1rem 5rem;
+                  text-transform: uppercase;
+                `}
                 data-cy="explore-platforms-link"
               >
                 Explore
