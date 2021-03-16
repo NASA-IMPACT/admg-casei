@@ -308,7 +308,7 @@ exports[`Explore page renders correctly 1`] = `
   max-height: 10rem;
   display: block;
   margin: 0.5rem;
-  background: linear-gradient( #ffff 33%,rgba(247,155,184,0) ),linear-gradient(rgba(247,155,184,0),#ffff 66%) 0 100%,radial-gradient( farthest-side at 50% 0,rgba(34,34,34,0.5),rgba(0,0,0,0) ),radial-gradient( farthest-side at 50% 100%,rgba(34,34,34,0.5),rgba(0,0,0,0) ) 0 100%;
+  background: linear-gradient(#ffffff 33%,rgba(247,155,184,0)), linear-gradient(rgba(247,155,184,0),#ffffff 66%) 0 100%, radial-gradient( farthest-side at 50% 0, rgba(34,34,34,0.5), rgba(0,0,0,0) ), radial-gradient( farthest-side at 50% 100%, rgba(34,34,34,0.5), rgba(0,0,0,0) ) 0 100%;
   background-color: #ffffff;
   background-repeat: no-repeat;
   background-attachment: local,local,scroll,scroll;
@@ -1751,6 +1751,7 @@ exports[`Explore page renders correctly 1`] = `
                       </thead>
                       <tbody
                         className="c39"
+                        mode="lightTheme"
                       >
                         <tr>
                           <td
@@ -1990,6 +1991,7 @@ exports[`Explore page renders correctly 1`] = `
                       </thead>
                       <tbody
                         className="c39"
+                        mode="lightTheme"
                       >
                         <tr>
                           <td
@@ -2197,6 +2199,7 @@ exports[`Explore page renders correctly 1`] = `
                       </thead>
                       <tbody
                         className="c39"
+                        mode="lightTheme"
                       >
                         <tr>
                           <td
@@ -2395,6 +2398,7 @@ exports[`Explore page renders correctly 1`] = `
                       </thead>
                       <tbody
                         className="c39"
+                        mode="lightTheme"
                       >
                         <tr>
                           <td
@@ -2594,6 +2598,7 @@ exports[`Explore page renders correctly 1`] = `
                       </thead>
                       <tbody
                         className="c39"
+                        mode="lightTheme"
                       >
                         <tr>
                           <td
@@ -2801,6 +2806,7 @@ exports[`Explore page renders correctly 1`] = `
                       </thead>
                       <tbody
                         className="c39"
+                        mode="lightTheme"
                       >
                         <tr>
                           <td
@@ -3001,6 +3007,7 @@ exports[`Explore page renders correctly 1`] = `
                       </thead>
                       <tbody
                         className="c39"
+                        mode="lightTheme"
                       >
                         <tr>
                           <td
@@ -3225,6 +3232,7 @@ exports[`Explore page renders correctly 1`] = `
                       </thead>
                       <tbody
                         className="c39"
+                        mode="lightTheme"
                       >
                         <tr>
                           <td
@@ -3697,6 +3705,7 @@ exports[`Explore page renders correctly 1`] = `
                       </thead>
                       <tbody
                         className="c39"
+                        mode="lightTheme"
                       >
                         <tr>
                           <td
@@ -3921,6 +3930,7 @@ exports[`Explore page renders correctly 1`] = `
                       </thead>
                       <tbody
                         className="c39"
+                        mode="lightTheme"
                       >
                         <tr>
                           <td
@@ -4144,6 +4154,7 @@ exports[`Explore page renders correctly 1`] = `
                       </thead>
                       <tbody
                         className="c39"
+                        mode="lightTheme"
                       >
                         <tr>
                           <td
@@ -4351,6 +4362,7 @@ exports[`Explore page renders correctly 1`] = `
                       </thead>
                       <tbody
                         className="c39"
+                        mode="lightTheme"
                       >
                         <tr>
                           <td
@@ -4550,6 +4562,7 @@ exports[`Explore page renders correctly 1`] = `
                       </thead>
                       <tbody
                         className="c39"
+                        mode="lightTheme"
                       >
                         <tr>
                           <td
@@ -4747,6 +4760,7 @@ exports[`Explore page renders correctly 1`] = `
                       </thead>
                       <tbody
                         className="c39"
+                        mode="lightTheme"
                       >
                         <tr>
                           <td
@@ -4954,6 +4968,7 @@ exports[`Explore page renders correctly 1`] = `
                       </thead>
                       <tbody
                         className="c39"
+                        mode="lightTheme"
                       >
                         <tr>
                           <td
@@ -5153,6 +5168,7 @@ exports[`Explore page renders correctly 1`] = `
                       </thead>
                       <tbody
                         className="c39"
+                        mode="lightTheme"
                       >
                         <tr>
                           <td
@@ -5353,6 +5369,7 @@ exports[`Explore page renders correctly 1`] = `
                       </thead>
                       <tbody
                         className="c39"
+                        mode="lightTheme"
                       >
                         <tr>
                           <td
@@ -5576,6 +5593,7 @@ exports[`Explore page renders correctly 1`] = `
                       </thead>
                       <tbody
                         className="c39"
+                        mode="lightTheme"
                       >
                         <tr>
                           <td
@@ -5783,6 +5801,7 @@ exports[`Explore page renders correctly 1`] = `
                       </thead>
                       <tbody
                         className="c39"
+                        mode="lightTheme"
                       >
                         <tr>
                           <td
@@ -5990,6 +6009,7 @@ exports[`Explore page renders correctly 1`] = `
                       </thead>
                       <tbody
                         className="c39"
+                        mode="lightTheme"
                       >
                         <tr>
                           <td
@@ -6189,6 +6209,7 @@ exports[`Explore page renders correctly 1`] = `
                       </thead>
                       <tbody
                         className="c39"
+                        mode="lightTheme"
                       >
                         <tr>
                           <td
@@ -6397,6 +6418,7 @@ exports[`Explore page renders correctly 1`] = `
                       </thead>
                       <tbody
                         className="c39"
+                        mode="lightTheme"
                       >
                         <tr>
                           <td
@@ -6612,6 +6634,7 @@ exports[`Explore page renders correctly 1`] = `
                       </thead>
                       <tbody
                         className="c39"
+                        mode="lightTheme"
                       >
                         <tr>
                           <td
@@ -6820,6 +6843,7 @@ exports[`Explore page renders correctly 1`] = `
                       </thead>
                       <tbody
                         className="c39"
+                        mode="lightTheme"
                       >
                         <tr>
                           <td
@@ -7042,6 +7066,7 @@ exports[`Explore page renders correctly 1`] = `
                       </thead>
                       <tbody
                         className="c39"
+                        mode="lightTheme"
                       >
                         <tr>
                           <td
@@ -7264,6 +7289,7 @@ exports[`Explore page renders correctly 1`] = `
                       </thead>
                       <tbody
                         className="c39"
+                        mode="lightTheme"
                       >
                         <tr>
                           <td
