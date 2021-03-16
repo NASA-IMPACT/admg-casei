@@ -30,7 +30,12 @@ const FocusTemplate = ({ data }) => {
         textToImageRatio={[8, 4]}
         id="focus"
       >
-        <Icon color={colors[NEGATIVE].text} size="huge" />
+        <ExternalLink
+          url={"https://science.nasa.gov/earth-science/"}
+          id="focus-area-logo"
+        >
+          <Icon color={colors[NEGATIVE].text} size="huge" />
+        </ExternalLink>
       </Hero>
 
       <PageBody id="focus">

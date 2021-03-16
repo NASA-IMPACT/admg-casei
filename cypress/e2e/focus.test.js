@@ -18,6 +18,10 @@ describe("Focus Area", () => {
 
     cy.get("[data-cy=focus-hero]").first().find("svg").should("exist")
     cy.get("[data-cy=focus-hero]").first().find("svg").should("be.visible")
+    cy.get("[data-cy=focus-area-logo-link]")
+      .should("exist")
+      .and("have.attr", "href")
+      .and("include", "/earth-science/")
 
     cy.get("[data-cy=overview-section]").should("exist")
 
@@ -29,7 +33,8 @@ describe("Focus Area", () => {
 
     cy.get("[data-cy=focus-link]")
       .should("exist")
-      .and("have.text", "NASA SMD Homepage")
+      .and("have.attr", "href")
+      .and("include", "/water-and-energy-cycle")
 
     cy.get("[data-cy=focus-areas-section]")
       .find("[data-cy=focus-area]")
