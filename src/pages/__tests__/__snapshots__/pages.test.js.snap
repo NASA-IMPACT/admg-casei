@@ -8683,7 +8683,7 @@ exports[`Home page renders correctly 1`] = `
                 className="c16"
                 data-cy="section-subline"
               >
-                From aircrafts to balloons, from sensors to plaftorms, it takes a lot to understand earth.
+                Learn about the variety of air and Earth-based platforms NASA uses to study our home planet.
               </p>
             </div>
             <a

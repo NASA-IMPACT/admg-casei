@@ -92,8 +92,7 @@ const Home = ({ data }) => {
               <SectionHeader
                 tagline="explore"
                 headline="Platforms"
-                subline="From aircrafts to balloons, from sensors to plaftorms, it
-                takes a lot to understand earth."
+                subline="Learn about the variety of air and Earth-based platforms NASA uses to study our home planet."
                 id="platforms"
               />
               <Link
