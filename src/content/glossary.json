@@ -26,16 +26,6 @@
     "note": "Partner organizations are not limited to universities and may include, for example, other government agencies or departments, organizations from other countries, or private companies."
   },
   {
-    "term": "Significant Participant",
-    "definition": "The following requirements must be met for NASA to be considered a significant participant: At least one aircraft or instrument (not a satellite instrument), is funded by NASA to participate in the field investigation and one of the following conditions is true",
-    "listOptions": [
-      "One NASA aircraft is flown with at least one NASA instrument onboard",
-      "Multiple NASA instruments participate on either airborne, ground, or water platforms",
-      "NASA is listed as one of the funders and NASA-funded PIs participated"
-    ],
-    "note": "Field investigations led by non-NASA organizations (such as NOAA, NSF, ESA, regional organizations) are only included in the ADMG inventory when NASA is a significant participant in the campaign."
-  },
-  {
     "term": "Platform",
     "definition": "A structure, item, or surface on which an instrument and/or instrument package can be placed for operation. Platforms can be moving or stationary; permanent or temporary; and airborne, land-/ground-, or water-based. ADMG has identified platform types, guided largely by GCMD’s Platform keywords’ Category level. Examples of platforms include: individual aircraft, balloons, field sites, vehicles, ships, and buoys. In order to provide a consistent method of organizing field investigation metadata, the following are also considered platforms:  satellites, models, and visuals (maps, photographs, etc).  These are included so that data from any of these sources, if specifically pertinent for the field investigation and archived in concert with other field investigation data, are properly accounted for in the Inventory."
   },
