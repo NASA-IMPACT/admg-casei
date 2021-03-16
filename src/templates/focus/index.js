@@ -50,7 +50,7 @@ const FocusTemplate = ({ data }) => {
             >
               {data.focusArea.url ? (
                 <ExternalLink
-                  label={"NASA SMD Homepage"}
+                  label={`NASA's ${data.focusArea.shortname} Homepage`}
                   url={data.focusArea.url}
                   id="focus"
                 />
