@@ -62,6 +62,29 @@ export default function Glossary({ data }) {
           </SectionContent>
         </Section>
 
+        <Section id="glossary-img">
+          <SectionHeader id="glossary-img" headline="Terminology map" />
+
+          <SectionContent withPadding>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://earthdata.nasa.gov/esds/impact/admg/admg-definitions"
+            >
+              <figure>
+                <Image
+                  alt="terminology map"
+                  fluid={data.image.childImageSharp.fluid}
+                />
+                <figcaption>
+                  Source:{" "}
+                  https://earthdata.nasa.gov/esds/impact/admg/admg-definitions
+                </figcaption>
+              </figure>
+            </a>
+          </SectionContent>
+        </Section>
+
         <Section id="letter-navigation">
           <VisuallyHidden>
             <SectionHeader id="letter-navigation" headline="Jump to letter" />
@@ -71,7 +94,6 @@ export default function Glossary({ data }) {
             <nav
               aria-label="letter selection"
               css={`
-                margin-top: 6rem;
                 font-size: x-large;
                 color: ${colors[NEGATIVE].altText};
               `}
@@ -159,29 +181,6 @@ export default function Glossary({ data }) {
               </Section>
             )
           })}
-
-        <Section id="glossary-img">
-          <SectionHeader id="glossary-img" headline="Terminology map" />
-
-          <SectionContent withPadding>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://earthdata.nasa.gov/esds/impact/admg/admg-definitions"
-            >
-              <figure>
-                <Image
-                  alt="terminology map"
-                  fluid={data.image.childImageSharp.fluid}
-                />
-                <figcaption>
-                  Source:{" "}
-                  https://earthdata.nasa.gov/esds/impact/admg/admg-definitions
-                </figcaption>
-              </figure>
-            </a>
-          </SectionContent>
-        </Section>
       </PageBody>
     </Layout>
   )
