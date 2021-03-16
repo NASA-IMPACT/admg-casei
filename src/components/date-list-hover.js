@@ -10,6 +10,7 @@ import VisuallyHidden from "@reach/visually-hidden"
 import styled from "styled-components"
 import { colors } from "../utils/theme"
 import { NEGATIVE, POSITIVE } from "../utils/constants"
+import { scrollFade } from "../utils/style-helpers"
 
 const ListTrigger = styled(ListboxButton)`
   &[data-reach-listbox-button] {
@@ -34,7 +35,7 @@ const CustomListBox = styled(ListboxList)`
   &[data-reach-listbox-list] {
     list-style: none;
     bottom: -30px;
-    left: ${props => (props.isCustomSpacing ? `7rem` : `100%`)};
+    left: ${props => (props.iscustomspacing ? `7rem` : `100%`)};
     position: absolute;
     background: white;
     padding: 0.25rem 0;
@@ -52,7 +53,7 @@ const DateList = ({
   title,
   dates,
   isStat,
-  isCustomSpacing,
+  iscustomspacing,
   cardMode = NEGATIVE,
 }) => {
   let [isOverButton, setIsOverButton] = useState(false)
@@ -126,7 +127,7 @@ const DateList = ({
             min-width: fit-content;
           `}
         >
-          <CustomListBox isCustomSpacing={isCustomSpacing}>
+          <CustomListBox iscustomspacing={iscustomspacing}>
             <label
               css={`
                 padding: 0 0.5rem;
@@ -173,31 +174,9 @@ const DateList = ({
                   </tr>
                 </thead>
                 <tbody
+                  mode={hoverListMode}
                   css={`
-                    overflow-y: scroll;
-                    max-height: 10rem;
-                    display: block;
-                    margin: 0.5rem;
-                    background: linear-gradient(
-                        #ffff 33%,
-                        rgba(247, 155, 184, 0)
-                      ),
-                      linear-gradient(rgba(247, 155, 184, 0), #ffff 66%) 0 100%,
-                      radial-gradient(
-                        farthest-side at 50% 0,
-                        rgba(34, 34, 34, 0.5),
-                        rgba(0, 0, 0, 0)
-                      ),
-                      radial-gradient(
-                          farthest-side at 50% 100%,
-                          rgba(34, 34, 34, 0.5),
-                          rgba(0, 0, 0, 0)
-                        )
-                        0 100%;
-                    background-color: ${colors[hoverListMode].background};
-                    background-repeat: no-repeat;
-                    background-attachment: local, local, scroll, scroll;
-                    background-size: 100% 45px, 100% 45px, 100% 15px, 100% 15px;
+                    ${scrollFade};
                   `}
                 >
                   {dates.map(date => (
@@ -227,9 +206,9 @@ const DateList = ({
 
 DateList.propTypes = {
   id: PropTypes.string.isRequired,
-  index: PropTypes.string.isRequired,
-  isStat: PropTypes.bool.isRequired,
-  isCustomSpacing: PropTypes.bool.isRequired,
+  index: PropTypes.number.isRequired,
+  isStat: PropTypes.bool,
+  iscustomspacing: PropTypes.bool,
   title: PropTypes.string.isRequired,
   cardMode: PropTypes.oneOf([POSITIVE, NEGATIVE]),
   dates: PropTypes.arrayOf(

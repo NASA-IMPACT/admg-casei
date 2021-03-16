@@ -19,7 +19,7 @@ export const HeroStats = ({ statList }) => (
               title={stat.label}
               dates={stat.dates}
               isStat
-              isCustomSpacing
+              iscustomspacing
             />
           ) : (
             stat.label
