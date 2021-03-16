@@ -132,18 +132,6 @@ export default function Glossary({ data }) {
                   >
                     <h3>{x.term}</h3>
                     <p>{x.definition}</p>
-                    {x.listOptions && (
-                      <ul data-cy="glossary-definition-options">
-                        {x.listOptions.map(listItem => (
-                          <li
-                            key={listItem}
-                            style={{ listStyleType: `circle` }}
-                          >
-                            {listItem}
-                          </li>
-                        ))}
-                      </ul>
-                    )}
                     {x.note && (
                       <p
                         data-cy="glossary-definition-note"
@@ -192,7 +180,6 @@ export const query = graphql`
         term
         definition
         note
-        listOptions
       }
     }
     image: file(relativePath: { eq: "glossary-map.png" }) {
@@ -213,7 +200,6 @@ Glossary.propTypes = {
           term: PropTypes.string.isRequired,
           definition: PropTypes.string.isRequired,
           note: PropTypes.string,
-          listOptions: PropTypes.arrayOf(PropTypes.string),
         })
       ),
     }).isRequired,
