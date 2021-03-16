@@ -46,7 +46,7 @@ jobs:
       - name: Build
         run: |
           yarn install
-          yarn build
+          yarn build --prefix-paths
 
       - name: Configure AWS CLI
         uses: aws-actions/configure-aws-credentials@v1
@@ -58,4 +58,5 @@ jobs:
       - name: Deploy 🚀
         run: |
           aws s3 rm s3://${{ secrets.PRODUCTION_BUCKET }} --recursive
-          aws s3 cp ./public/ s3://${{ secrets.PRODUCTION_BUCKET }}
+          aws s3 cp ./public/ s3://${{ secrets.PRODUCTION_BUCKET }}/casei --recursive
+          aws s3 cp ./public/index.html s3://${{ secrets.PRODUCTION_BUCKET }}
