@@ -21,10 +21,6 @@
     "definition": "An event observed during a deployment that is notable for the occurrence of a great example of one or more specific phenomena relating to the field investigation science or research objective(s).  Significant events may occur within or outside of an IOP."
   },
   {
-    "term": "Golden Case",
-    "definition": "An event or short time period during an IOP that is notable for having all or nearly all of a field investigation’s selected instrument(s) or platform(s) operating successfully, and/or a significant event which has data available from most of the deployed instruments/platforms.  It is possible for a significant event to also be a golden case."
-  },
-  {
     "term": "Partner Organization",
     "definition": "An institution that participates in a field investigation with non-NASA separate funding resources allocated specifically for the field investigation. Includes any organization that provided specific platforms or instruments without NASA funding, including co-participating/ cooperating field campaigns. Also, if investigation data are archived by a non-NASA entity, the archiving organization is a partner organization, regardless of the funding pathway. For example,University X coordinates with NASA during a field investigation to collect data that University X is willing to share with NASA as part of the field investigation, despite University X not receiving any funding from NASA for this effort.  University Y also participates in the field investigation, but is receiving NASA funding, and thus is not considered a partner organization, but rather is an investigation participant.  The $ for University Y's participation is coming from NASA, the /$ for University X's participation is not.",
     "note": "Partner organizations are not limited to universities and may include, for example, other government agencies or departments, organizations from other countries, or private companies."
