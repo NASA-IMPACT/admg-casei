@@ -7881,6 +7881,12 @@ exports[`Home page renders correctly 1`] = `
               Geophysical Concepts
             </h2>
           </a>
+          <p
+            className="c16"
+            data-cy="section-subline"
+          >
+            NASA investigates a myriad of factors that comprise Earth’s properties, systems, and processes.
+          </p>
         </div>
         <div
           className="c17"

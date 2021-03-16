@@ -62,6 +62,7 @@ const Home = ({ data }) => {
           <SectionHeader
             tagline="explore campaigns by"
             headline="Geophysical Concepts"
+            subline="NASA investigates a myriad of factors that comprise Earth’s properties, systems, and processes."
             id="geophysical-concepts"
           />
           <SectionContent>
