@@ -291,7 +291,7 @@ exports[`Platform Section displays content 1`] = `
               </a>
               <div
                 className="c11"
-                data-cy="card-footer"
+                data-cy="platforms-card-footer"
               >
                 <small
                   className="c12"
@@ -394,7 +394,7 @@ exports[`Platform Section displays content 1`] = `
               </a>
               <div
                 className="c11"
-                data-cy="card-footer"
+                data-cy="platforms-card-footer"
               >
                 <small
                   className="c12"
@@ -498,7 +498,7 @@ exports[`Platform Section displays content 1`] = `
               </a>
               <div
                 className="c11"
-                data-cy="card-footer"
+                data-cy="platforms-card-footer"
               >
                 <small
                   className="c12"

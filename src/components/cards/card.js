@@ -92,7 +92,7 @@ const Card = ({
           flex-wrap: wrap;
           align-items: center;
         `}
-        data-cy={"card-footer"}
+        data-cy={`${category}-card-footer`}
       >
         {Object.entries(footerList).map(([id, footeritem], index) => (
           <footeritem.component

@@ -15,7 +15,7 @@ const ListTrigger = styled(ListboxButton)`
   &[data-reach-listbox-button] {
     border: none;
     display: inherit;
-    padding-right: 0.25rem;
+    padding: 0 0.25rem 0 0;
     cursor: pointer;
   }
 `
@@ -34,7 +34,7 @@ const CustomListBox = styled(ListboxList)`
   &[data-reach-listbox-list] {
     list-style: none;
     bottom: -30px;
-    left: 100%;
+    left: ${props => (props.isCustomSpacing ? `7rem` : `100%`)};
     position: absolute;
     background: white;
     padding: 0.25rem 0;
@@ -46,14 +46,23 @@ const DateText = styled.td`
   padding-top: 0;
   padding-right: 0;
 `
-
-const DateList = ({ id, title, dates, mode = NEGATIVE }) => {
+const DateList = ({
+  id,
+  index,
+  title,
+  dates,
+  isStat,
+  isCustomSpacing,
+  cardMode = NEGATIVE,
+}) => {
   let [isOverButton, setIsOverButton] = useState(false)
   let [isOverList, setIsOverList] = useState(false)
   let [isOpen, setIsOpen] = useState()
 
   let triggerRef = useRef(null)
   let listRef = useRef(null)
+
+  const hoverListMode = POSITIVE
 
   useLayoutEffect(() => {
     if (isOpen && !isOverButton && !isOverList) {
@@ -95,10 +104,11 @@ const DateList = ({ id, title, dates, mode = NEGATIVE }) => {
           <small
             css={`
               white-space: nowrap;
-              border-bottom: ${colors[mode].text} 1px dashed;
+              border-bottom: ${colors[cardMode].text} 1px dashed;
             `}
+            data-cy={`count${index + 1}`}
           >
-            <strong>{dates.length}</strong> {title}
+            {!isStat && <strong>{dates.length}</strong>} {title}
             {dates.length !== 1 && "s"}
           </small>
         </ListTrigger>
@@ -112,11 +122,11 @@ const DateList = ({ id, title, dates, mode = NEGATIVE }) => {
           }}
           portal={false}
           css={`
-            background: ${colors[POSITIVE].background};
+            background: ${colors[cardMode].background};
             min-width: fit-content;
           `}
         >
-          <CustomListBox>
+          <CustomListBox isCustomSpacing={isCustomSpacing}>
             <label
               css={`
                 padding: 0 0.5rem;
@@ -129,7 +139,7 @@ const DateList = ({ id, title, dates, mode = NEGATIVE }) => {
             {dates.length ? (
               <table
                 css={`
-                  color: ${colors[POSITIVE].text};
+                  color: ${colors[hoverListMode].text};
                   margin-bottom: 0;
                 `}
               >
@@ -184,7 +194,7 @@ const DateList = ({ id, title, dates, mode = NEGATIVE }) => {
                           rgba(0, 0, 0, 0)
                         )
                         0 100%;
-                    background-color: ${colors[POSITIVE].background};
+                    background-color: ${colors[hoverListMode].background};
                     background-repeat: no-repeat;
                     background-attachment: local, local, scroll, scroll;
                     background-size: 100% 45px, 100% 45px, 100% 15px, 100% 15px;
@@ -192,8 +202,8 @@ const DateList = ({ id, title, dates, mode = NEGATIVE }) => {
                 >
                   {dates.map(date => (
                     <tr key={date.id}>
-                      <DateText>{date.startdate}</DateText>
-                      <DateText>{date.enddate}</DateText>
+                      <DateText>{date.startdate || date.start}</DateText>
+                      <DateText>{date.enddate || date.end}</DateText>
                     </tr>
                   ))}
                 </tbody>
@@ -217,8 +227,11 @@ const DateList = ({ id, title, dates, mode = NEGATIVE }) => {
 
 DateList.propTypes = {
   id: PropTypes.string.isRequired,
+  index: PropTypes.string.isRequired,
+  isStat: PropTypes.bool.isRequired,
+  isCustomSpacing: PropTypes.bool.isRequired,
   title: PropTypes.string.isRequired,
-  mode: PropTypes.oneOf([POSITIVE, NEGATIVE]),
+  cardMode: PropTypes.oneOf([POSITIVE, NEGATIVE]),
   dates: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,

@@ -44,6 +44,7 @@ const CampaignHero = ({
   countDeployments,
   countCollectionPeriods,
   countDataProducts,
+  deployments,
 }) => {
   const geojson = {
     type: "Feature",
@@ -105,7 +106,11 @@ const CampaignHero = ({
           </div>
           <HeroStats
             statList={[
-              { number: countDeployments, label: "Deployments" },
+              {
+                number: countDeployments,
+                label: "Deployment",
+                dates: deployments,
+              },
               { number: countCollectionPeriods, label: "Collection Periods" },
               { number: countDataProducts, label: "Data Products" },
             ]}
@@ -155,6 +160,7 @@ CampaignHero.propTypes = {
   countDeployments: PropTypes.number.isRequired,
   countCollectionPeriods: PropTypes.number.isRequired,
   countDataProducts: PropTypes.number,
+  deployments: PropTypes.array,
 }
 
 export default CampaignHero
