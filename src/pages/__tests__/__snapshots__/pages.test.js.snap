@@ -4041,37 +4041,46 @@ exports[`Glossary page renders correctly 1`] = `
   top: -80px;
 }
 
-.c9.c9 {
-  grid-column: 1 / span 11;
+.c8.c8 {
+  grid-column: 1 / span 8;
 }
 
-.c9.c9 > *,
-.c9.c9 h3 {
+.c8.c8 > *,
+.c8.c8 h3 {
   color: #e9eaec;
 }
 
-.c15.c15 {
+.c10.c10 {
+  grid-column: 1 / span 12;
+  padding: 5rem;
+}
+
+.c10.c10 > *,
+.c10.c10 h3 {
+  color: #e9eaec;
+}
+
+.c11.c11 {
+  grid-column: 1 / span 11;
+}
+
+.c11.c11 > *,
+.c11.c11 h3 {
+  color: #e9eaec;
+}
+
+.c17.c17 {
   grid-column: 2 / span 10;
   background-color: #ffffff;
   padding: 5rem;
 }
 
-.c15.c15 > *,
-.c15.c15 h3 {
+.c17.c17 > *,
+.c17.c17 h3 {
   color: #262a31;
 }
 
-.c16.c16 {
-  grid-column: 1 / span 12;
-  padding: 5rem;
-}
-
-.c16.c16 > *,
-.c16.c16 h3 {
-  color: #e9eaec;
-}
-
-.c8.c8 {
+.c9.c9 {
   grid-column: 1 / span 7;
   -webkit-align-self: end;
   -ms-flex-item-align: end;
@@ -4125,17 +4134,17 @@ exports[`Glossary page renders correctly 1`] = `
   display: flex;
 }
 
-.c25.c25:hover {
+.c26.c26:hover {
   opacity: 0.64;
 }
 
-.c25.c25:active {
+.c26.c26:active {
   -webkit-transform: translate(0,1px);
   -ms-transform: translate(0,1px);
   transform: translate(0,1px);
 }
 
-.c26.c26 {
+.c27.c27 {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -4153,7 +4162,7 @@ exports[`Glossary page renders correctly 1`] = `
   white-space: nowrap;
 }
 
-.c27.c27 {
+.c28.c28 {
   position: fixed;
   top: 0;
   right: 0;
@@ -4175,7 +4184,7 @@ exports[`Glossary page renders correctly 1`] = `
   transition: opacity 400ms ease-in;
 }
 
-.c28.c28 {
+.c29.c29 {
   width: 400px;
   position: relative;
   padding: 32px;
@@ -4184,23 +4193,23 @@ exports[`Glossary page renders correctly 1`] = `
   pointer-events: auto;
 }
 
-.c23.c23 {
+.c24.c24 {
   list-style: none;
   margin: 0;
 }
 
-.c22.c22 {
+.c23.c23 {
   margin: 0 0 1.5rem 0;
   font-weight: bold;
   line-height: 3rem;
 }
 
-.c17.c17 {
+.c18.c18 {
   margin-top: 5rem;
   background-color: #303641;
 }
 
-.c18.c18 {
+.c19.c19 {
   margin: 5rem auto;
   max-width: 1280px;
   padding: 2rem 4rem;
@@ -4212,11 +4221,11 @@ exports[`Glossary page renders correctly 1`] = `
   grid-template-columns: repeat(12,1fr);
 }
 
-.c19.c19 {
+.c20.c20 {
   grid-column: 1 / span 3;
 }
 
-.c20.c20 {
+.c21.c21 {
   text-transform: uppercase;
   font-weight: 900;
   font-size: 30px;
@@ -4224,28 +4233,28 @@ exports[`Glossary page renders correctly 1`] = `
   margin-bottom: 0.5rem;
 }
 
-.c21.c21 {
+.c22.c22 {
   grid-column: 5 / span 2;
 }
 
-.c24.c24 {
+.c25.c25 {
   grid-column: 7 / span 2;
 }
 
-.c29.c29 {
+.c30.c30 {
   grid-column: 9 / span 2;
 }
 
-.c30.c30 {
+.c31.c31 {
   grid-column: 11 / span 2;
 }
 
-.c31.c31 {
+.c32.c32 {
   grid-column: 1 / span 12;
   background-color: rgba(255,255,255,0.2);
 }
 
-.c32.c32 {
+.c33.c33 {
   grid-column: 1 / span 12;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4257,7 +4266,7 @@ exports[`Glossary page renders correctly 1`] = `
   justify-content: space-between;
 }
 
-.c33.c33 {
+.c34.c34 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4269,7 +4278,7 @@ exports[`Glossary page renders correctly 1`] = `
   font-weight: bold;
 }
 
-.c34.c34 {
+.c35.c35 {
   background-image: url("https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png");
   background-size: cover;
   background-position: center;
@@ -4277,11 +4286,11 @@ exports[`Glossary page renders correctly 1`] = `
   height: 100px;
 }
 
-.c35.c35 {
+.c36.c36 {
   font-weight: normal;
 }
 
-.c36.c36 {
+.c37.c37 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4293,7 +4302,7 @@ exports[`Glossary page renders correctly 1`] = `
   text-transform: uppercase;
 }
 
-.c37.c37 {
+.c38.c38 {
   text-align: center;
 }
 
@@ -4308,25 +4317,24 @@ exports[`Glossary page renders correctly 1`] = `
   flex-direction: column;
 }
 
-.c10.c10 {
-  margin-top: 6rem;
+.c12.c12 {
   font-size: x-large;
   color: #9e9e9e;
 }
 
-.c12.c12 {
+.c14.c14 {
   font-weight: 600;
 }
 
-.c13.c13 {
+.c15.c15 {
   color: #e9eaec;
 }
 
-.c11.c11 {
+.c13.c13 {
   font-weight: 600;
 }
 
-.c14.c14 {
+.c16.c16 {
   grid-column: -2;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
@@ -4518,6 +4526,73 @@ exports[`Glossary page renders correctly 1`] = `
       </h1>
       <section
         className="c6"
+        data-cy="intro-section"
+        mode="darkTheme"
+      >
+        <div
+          className="c7"
+          id="intro"
+        />
+        <div
+          className="c8"
+          mode="darkTheme"
+        >
+          <p>
+            We use the formalized definitions below for building NASA’s Catalog of Archived Suborbital Earth Science Investigations. Consistent use of vocabulary is required for clear organization of the variety of airborne and field investigation metadata. Where possible, we aim to align terminology with conventions in use among the communities served by ADMG. Feedback on these definitions are welcome.
+          </p>
+        </div>
+      </section>
+      <section
+        className="c6"
+        data-cy="glossary-img-section"
+        mode="darkTheme"
+      >
+        <div
+          className="c7"
+          id="glossary-img"
+        />
+        <div
+          className="c9"
+          data-cy="glossary-img-section-header"
+        >
+          <a
+            href="#glossary-img"
+          >
+            <h2>
+              Terminology map
+            </h2>
+          </a>
+        </div>
+        <div
+          className="c10"
+          mode="darkTheme"
+        >
+          <a
+            href="https://earthdata.nasa.gov/esds/impact/admg/admg-definitions"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <figure>
+              <img
+                alt="terminology map"
+                fluid={
+                  Object {
+                    "src": "/static/cc377dc42c8612124e621078fb0d0e23/ee604/glossary-map.png",
+                  }
+                }
+                src="test-image.png"
+              />
+              <figcaption>
+                Source:
+                 
+                https://earthdata.nasa.gov/esds/impact/admg/admg-definitions
+              </figcaption>
+            </figure>
+          </a>
+        </div>
+      </section>
+      <section
+        className="c6"
         data-cy="letter-navigation-section"
         mode="darkTheme"
       >
@@ -4542,7 +4617,7 @@ exports[`Glossary page renders correctly 1`] = `
           }
         >
           <div
-            className="c8"
+            className="c9"
             data-cy="letter-navigation-section-header"
           >
             <a
@@ -4555,15 +4630,15 @@ exports[`Glossary page renders correctly 1`] = `
           </div>
         </span>
         <div
-          className="c9"
+          className="c11"
           mode="darkTheme"
         >
           <nav
             aria-label="letter selection"
-            className="c10"
+            className="c12"
           >
             <span
-              className="c11"
+              className="c13"
             >
               A
             </span>
@@ -4572,7 +4647,7 @@ exports[`Glossary page renders correctly 1`] = `
               — 
             </span>
             <span
-              className="c11"
+              className="c13"
             >
               B
             </span>
@@ -4581,7 +4656,7 @@ exports[`Glossary page renders correctly 1`] = `
               — 
             </span>
             <a
-              className="c12"
+              className="c14"
               data-cy="C-inpage-link"
               href="#C"
             >
@@ -4589,13 +4664,13 @@ exports[`Glossary page renders correctly 1`] = `
             </a>
              
             <span
-              className="c13"
+              className="c15"
             >
               —
                
             </span>
             <a
-              className="c12"
+              className="c14"
               data-cy="D-inpage-link"
               href="#D"
             >
@@ -4603,13 +4678,13 @@ exports[`Glossary page renders correctly 1`] = `
             </a>
              
             <span
-              className="c13"
+              className="c15"
             >
               —
                
             </span>
             <span
-              className="c11"
+              className="c13"
             >
               E
             </span>
@@ -4618,7 +4693,7 @@ exports[`Glossary page renders correctly 1`] = `
               — 
             </span>
             <a
-              className="c12"
+              className="c14"
               data-cy="F-inpage-link"
               href="#F"
             >
@@ -4626,13 +4701,13 @@ exports[`Glossary page renders correctly 1`] = `
             </a>
              
             <span
-              className="c13"
+              className="c15"
             >
               —
                
             </span>
             <a
-              className="c12"
+              className="c14"
               data-cy="G-inpage-link"
               href="#G"
             >
@@ -4640,13 +4715,13 @@ exports[`Glossary page renders correctly 1`] = `
             </a>
              
             <span
-              className="c13"
+              className="c15"
             >
               —
                
             </span>
             <span
-              className="c11"
+              className="c13"
             >
               H
             </span>
@@ -4655,7 +4730,7 @@ exports[`Glossary page renders correctly 1`] = `
               — 
             </span>
             <a
-              className="c12"
+              className="c14"
               data-cy="I-inpage-link"
               href="#I"
             >
@@ -4663,13 +4738,13 @@ exports[`Glossary page renders correctly 1`] = `
             </a>
              
             <span
-              className="c13"
+              className="c15"
             >
               —
                
             </span>
             <span
-              className="c11"
+              className="c13"
             >
               J
             </span>
@@ -4678,7 +4753,7 @@ exports[`Glossary page renders correctly 1`] = `
               — 
             </span>
             <span
-              className="c11"
+              className="c13"
             >
               K
             </span>
@@ -4687,7 +4762,7 @@ exports[`Glossary page renders correctly 1`] = `
               — 
             </span>
             <span
-              className="c11"
+              className="c13"
             >
               L
             </span>
@@ -4696,7 +4771,7 @@ exports[`Glossary page renders correctly 1`] = `
               — 
             </span>
             <a
-              className="c12"
+              className="c14"
               data-cy="M-inpage-link"
               href="#M"
             >
@@ -4704,13 +4779,13 @@ exports[`Glossary page renders correctly 1`] = `
             </a>
              
             <span
-              className="c13"
+              className="c15"
             >
               —
                
             </span>
             <span
-              className="c11"
+              className="c13"
             >
               N
             </span>
@@ -4719,7 +4794,7 @@ exports[`Glossary page renders correctly 1`] = `
               — 
             </span>
             <span
-              className="c11"
+              className="c13"
             >
               O
             </span>
@@ -4728,7 +4803,7 @@ exports[`Glossary page renders correctly 1`] = `
               — 
             </span>
             <a
-              className="c12"
+              className="c14"
               data-cy="P-inpage-link"
               href="#P"
             >
@@ -4736,13 +4811,13 @@ exports[`Glossary page renders correctly 1`] = `
             </a>
              
             <span
-              className="c13"
+              className="c15"
             >
               —
                
             </span>
             <span
-              className="c11"
+              className="c13"
             >
               Q
             </span>
@@ -4751,7 +4826,7 @@ exports[`Glossary page renders correctly 1`] = `
               — 
             </span>
             <span
-              className="c11"
+              className="c13"
             >
               R
             </span>
@@ -4760,7 +4835,7 @@ exports[`Glossary page renders correctly 1`] = `
               — 
             </span>
             <a
-              className="c12"
+              className="c14"
               data-cy="S-inpage-link"
               href="#S"
             >
@@ -4768,13 +4843,13 @@ exports[`Glossary page renders correctly 1`] = `
             </a>
              
             <span
-              className="c13"
+              className="c15"
             >
               —
                
             </span>
             <span
-              className="c11"
+              className="c13"
             >
               T
             </span>
@@ -4783,7 +4858,7 @@ exports[`Glossary page renders correctly 1`] = `
               — 
             </span>
             <span
-              className="c11"
+              className="c13"
             >
               U
             </span>
@@ -4792,7 +4867,7 @@ exports[`Glossary page renders correctly 1`] = `
               — 
             </span>
             <span
-              className="c11"
+              className="c13"
             >
               V
             </span>
@@ -4801,7 +4876,7 @@ exports[`Glossary page renders correctly 1`] = `
               — 
             </span>
             <span
-              className="c11"
+              className="c13"
             >
               W
             </span>
@@ -4810,7 +4885,7 @@ exports[`Glossary page renders correctly 1`] = `
               — 
             </span>
             <span
-              className="c11"
+              className="c13"
             >
               X
             </span>
@@ -4819,7 +4894,7 @@ exports[`Glossary page renders correctly 1`] = `
               — 
             </span>
             <span
-              className="c11"
+              className="c13"
             >
               Y
             </span>
@@ -4828,7 +4903,7 @@ exports[`Glossary page renders correctly 1`] = `
               — 
             </span>
             <span
-              className="c11"
+              className="c13"
             >
               Z
             </span>
@@ -4846,7 +4921,7 @@ exports[`Glossary page renders correctly 1`] = `
           id="C"
         />
         <div
-          className="c8"
+          className="c9"
           data-cy="C-section-header"
         >
           <a
@@ -4858,7 +4933,7 @@ exports[`Glossary page renders correctly 1`] = `
           </a>
         </div>
         <a
-          className="c14"
+          className="c16"
           data-cy="top-inpage-link"
           href="#top"
         >
@@ -4893,7 +4968,7 @@ exports[`Glossary page renders correctly 1`] = `
           </svg>
         </a>
         <div
-          className="c15"
+          className="c17"
           mode="lightTheme"
         >
           <h3>
@@ -4916,7 +4991,7 @@ exports[`Glossary page renders correctly 1`] = `
           </p>
         </div>
         <div
-          className="c15"
+          className="c17"
           mode="lightTheme"
         >
           <h3>
@@ -4937,7 +5012,7 @@ exports[`Glossary page renders correctly 1`] = `
           id="D"
         />
         <div
-          className="c8"
+          className="c9"
           data-cy="D-section-header"
         >
           <a
@@ -4949,7 +5024,7 @@ exports[`Glossary page renders correctly 1`] = `
           </a>
         </div>
         <a
-          className="c14"
+          className="c16"
           data-cy="top-inpage-link"
           href="#top"
         >
@@ -4984,7 +5059,7 @@ exports[`Glossary page renders correctly 1`] = `
           </svg>
         </a>
         <div
-          className="c15"
+          className="c17"
           mode="lightTheme"
         >
           <h3>
@@ -4995,7 +5070,7 @@ exports[`Glossary page renders correctly 1`] = `
           </p>
         </div>
         <div
-          className="c15"
+          className="c17"
           mode="lightTheme"
         >
           <h3>
@@ -5028,7 +5103,7 @@ exports[`Glossary page renders correctly 1`] = `
           id="F"
         />
         <div
-          className="c8"
+          className="c9"
           data-cy="F-section-header"
         >
           <a
@@ -5040,7 +5115,7 @@ exports[`Glossary page renders correctly 1`] = `
           </a>
         </div>
         <a
-          className="c14"
+          className="c16"
           data-cy="top-inpage-link"
           href="#top"
         >
@@ -5075,7 +5150,7 @@ exports[`Glossary page renders correctly 1`] = `
           </svg>
         </a>
         <div
-          className="c15"
+          className="c17"
           mode="lightTheme"
         >
           <h3>
@@ -5098,7 +5173,7 @@ exports[`Glossary page renders correctly 1`] = `
           </p>
         </div>
         <div
-          className="c15"
+          className="c17"
           mode="lightTheme"
         >
           <h3>
@@ -5119,7 +5194,7 @@ exports[`Glossary page renders correctly 1`] = `
           id="G"
         />
         <div
-          className="c8"
+          className="c9"
           data-cy="G-section-header"
         >
           <a
@@ -5131,7 +5206,7 @@ exports[`Glossary page renders correctly 1`] = `
           </a>
         </div>
         <a
-          className="c14"
+          className="c16"
           data-cy="top-inpage-link"
           href="#top"
         >
@@ -5166,7 +5241,7 @@ exports[`Glossary page renders correctly 1`] = `
           </svg>
         </a>
         <div
-          className="c15"
+          className="c17"
           mode="lightTheme"
         >
           <h3>
@@ -5187,7 +5262,7 @@ exports[`Glossary page renders correctly 1`] = `
           id="I"
         />
         <div
-          className="c8"
+          className="c9"
           data-cy="I-section-header"
         >
           <a
@@ -5199,7 +5274,7 @@ exports[`Glossary page renders correctly 1`] = `
           </a>
         </div>
         <a
-          className="c14"
+          className="c16"
           data-cy="top-inpage-link"
           href="#top"
         >
@@ -5234,7 +5309,7 @@ exports[`Glossary page renders correctly 1`] = `
           </svg>
         </a>
         <div
-          className="c15"
+          className="c17"
           mode="lightTheme"
         >
           <h3>
@@ -5245,7 +5320,7 @@ exports[`Glossary page renders correctly 1`] = `
           </p>
         </div>
         <div
-          className="c15"
+          className="c17"
           mode="lightTheme"
         >
           <h3>
@@ -5268,7 +5343,7 @@ exports[`Glossary page renders correctly 1`] = `
           </p>
         </div>
         <div
-          className="c15"
+          className="c17"
           mode="lightTheme"
         >
           <h3>
@@ -5301,7 +5376,7 @@ exports[`Glossary page renders correctly 1`] = `
           id="M"
         />
         <div
-          className="c8"
+          className="c9"
           data-cy="M-section-header"
         >
           <a
@@ -5313,7 +5388,7 @@ exports[`Glossary page renders correctly 1`] = `
           </a>
         </div>
         <a
-          className="c14"
+          className="c16"
           data-cy="top-inpage-link"
           href="#top"
         >
@@ -5348,7 +5423,7 @@ exports[`Glossary page renders correctly 1`] = `
           </svg>
         </a>
         <div
-          className="c15"
+          className="c17"
           mode="lightTheme"
         >
           <h3>
@@ -5369,7 +5444,7 @@ exports[`Glossary page renders correctly 1`] = `
           id="P"
         />
         <div
-          className="c8"
+          className="c9"
           data-cy="P-section-header"
         >
           <a
@@ -5381,7 +5456,7 @@ exports[`Glossary page renders correctly 1`] = `
           </a>
         </div>
         <a
-          className="c14"
+          className="c16"
           data-cy="top-inpage-link"
           href="#top"
         >
@@ -5416,7 +5491,7 @@ exports[`Glossary page renders correctly 1`] = `
           </svg>
         </a>
         <div
-          className="c15"
+          className="c17"
           mode="lightTheme"
         >
           <h3>
@@ -5439,7 +5514,7 @@ exports[`Glossary page renders correctly 1`] = `
           </p>
         </div>
         <div
-          className="c15"
+          className="c17"
           mode="lightTheme"
         >
           <h3>
@@ -5450,7 +5525,7 @@ exports[`Glossary page renders correctly 1`] = `
           </p>
         </div>
         <div
-          className="c15"
+          className="c17"
           mode="lightTheme"
         >
           <h3>
@@ -5483,7 +5558,7 @@ exports[`Glossary page renders correctly 1`] = `
           id="S"
         />
         <div
-          className="c8"
+          className="c9"
           data-cy="S-section-header"
         >
           <a
@@ -5495,7 +5570,7 @@ exports[`Glossary page renders correctly 1`] = `
           </a>
         </div>
         <a
-          className="c14"
+          className="c16"
           data-cy="top-inpage-link"
           href="#top"
         >
@@ -5530,7 +5605,7 @@ exports[`Glossary page renders correctly 1`] = `
           </svg>
         </a>
         <div
-          className="c15"
+          className="c17"
           mode="lightTheme"
         >
           <h3>
@@ -5541,7 +5616,7 @@ exports[`Glossary page renders correctly 1`] = `
           </p>
         </div>
         <div
-          className="c15"
+          className="c17"
           mode="lightTheme"
         >
           <h3>
@@ -5550,37 +5625,6 @@ exports[`Glossary page renders correctly 1`] = `
           <p>
             The following requirements must be met for NASA to be considered a significant participant: At least one aircraft or instrument (not a satellite instrument), is funded by NASA to participate in the field investigation and one of the following conditions is true
           </p>
-          <ul
-            data-cy="glossary-definition-options"
-          >
-            <li
-              style={
-                Object {
-                  "listStyleType": "circle",
-                }
-              }
-            >
-              One NASA aircraft is flown with at least one NASA instrument onboard
-            </li>
-            <li
-              style={
-                Object {
-                  "listStyleType": "circle",
-                }
-              }
-            >
-              Multiple NASA instruments participate on either airborne, ground, or water platforms
-            </li>
-            <li
-              style={
-                Object {
-                  "listStyleType": "circle",
-                }
-              }
-            >
-              NASA is listed as one of the funders and NASA-funded PIs participated
-            </li>
-          </ul>
           <p
             data-cy="glossary-definition-note"
             style={
@@ -5595,69 +5639,20 @@ exports[`Glossary page renders correctly 1`] = `
           </p>
         </div>
       </section>
-      <section
-        className="c6"
-        data-cy="glossary-img-section"
-        mode="darkTheme"
-      >
-        <div
-          className="c7"
-          id="glossary-img"
-        />
-        <div
-          className="c8"
-          data-cy="glossary-img-section-header"
-        >
-          <a
-            href="#glossary-img"
-          >
-            <h2>
-              Terminology map
-            </h2>
-          </a>
-        </div>
-        <div
-          className="c16"
-          mode="darkTheme"
-        >
-          <a
-            href="https://earthdata.nasa.gov/esds/impact/admg/admg-definitions"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <figure>
-              <img
-                alt="terminology map"
-                fluid={
-                  Object {
-                    "src": "/static/cc377dc42c8612124e621078fb0d0e23/ee604/glossary-map.png",
-                  }
-                }
-                src="test-image.png"
-              />
-              <figcaption>
-                Source:
-                 
-                https://earthdata.nasa.gov/esds/impact/admg/admg-definitions
-              </figcaption>
-            </figure>
-          </a>
-        </div>
-      </section>
     </div>
   </main>
   <footer
-    className="c17"
+    className="c18"
     data-cy="page-footer"
   >
     <div
-      className="c18"
+      className="c19"
     >
       <div
-        className="c19"
+        className="c20"
       >
         <div
-          className="c20"
+          className="c21"
           data-cy="footer-title"
         >
           NASA | CASEI
@@ -5670,16 +5665,16 @@ exports[`Glossary page renders correctly 1`] = `
         </p>
       </div>
       <div
-        className="c21"
+        className="c22"
         data-cy="footer-explore"
       >
         <p
-          className="c22"
+          className="c23"
         >
           Explore
         </p>
         <ul
-          className="c23"
+          className="c24"
         >
           <li>
             <a
@@ -5723,16 +5718,16 @@ exports[`Glossary page renders correctly 1`] = `
         </ul>
       </div>
       <div
-        className="c24"
+        className="c25"
         data-cy="footer-resources"
       >
         <p
-          className="c22"
+          className="c23"
         >
           Resources
         </p>
         <ul
-          className="c23"
+          className="c24"
         >
           <li>
             <a
@@ -5743,17 +5738,17 @@ exports[`Glossary page renders correctly 1`] = `
           </li>
           <li>
             <button
-              className="c25 c26"
+              className="c26 c27"
               onClick={[Function]}
             >
               Maintenance login
             </button>
             <div
-              className="c27"
+              className="c28"
               onClick={[Function]}
             >
               <div
-                className="c28"
+                className="c29"
               >
                 <form
                   data-cy="login-form"
@@ -5795,16 +5790,16 @@ exports[`Glossary page renders correctly 1`] = `
         </ul>
       </div>
       <div
-        className="c29"
+        className="c30"
         data-cy="footer-quick-links"
       >
         <p
-          className="c22"
+          className="c23"
         >
           Quick Links
         </p>
         <ul
-          className="c23"
+          className="c24"
         >
           <li>
             <a
@@ -5823,16 +5818,16 @@ exports[`Glossary page renders correctly 1`] = `
         </ul>
       </div>
       <div
-        className="c30"
+        className="c31"
         data-cy="footer-organizations"
       >
         <p
-          className="c22"
+          className="c23"
         >
           Organizations
         </p>
         <ul
-          className="c23"
+          className="c24"
         >
           <li>
             <a
@@ -5867,17 +5862,17 @@ exports[`Glossary page renders correctly 1`] = `
         </ul>
       </div>
       <hr
-        className="c31"
+        className="c32"
       />
       <div
-        className="c32"
+        className="c33"
       >
         <div
-          className="c33"
+          className="c34"
         >
           <div
             aria-hidden="true"
-            className="c34"
+            className="c35"
           />
           <div
             data-cy="footer-credits"
@@ -5893,7 +5888,7 @@ exports[`Glossary page renders correctly 1`] = `
               NASA Official:
                
               <span
-                className="c35"
+                className="c36"
               >
                 Rahul Ramachandran
               </span>
@@ -5901,12 +5896,12 @@ exports[`Glossary page renders correctly 1`] = `
           </div>
         </div>
         <div
-          className="c36"
+          className="c37"
         />
       </div>
     </div>
     <div
-      className="c37"
+      className="c38"
       data-cy="footer-credit-devseed"
     >
       © 
