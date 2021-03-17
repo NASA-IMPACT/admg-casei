@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 
 import ExternalLink from "../external-link"
 import { POSITIVE, NEGATIVE } from "../../utils/constants"
-import { colors } from "../../utils/theme"
+import { colors } from "../../theme"
 
 export default function ContentItem({
   id,

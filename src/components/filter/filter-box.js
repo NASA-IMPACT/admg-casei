@@ -12,7 +12,7 @@ import VisuallyHidden from "@reach/visually-hidden"
 import { IconButton } from "../button"
 import { CloseIcon } from "../../icons"
 import { NEGATIVE } from "../../utils/constants"
-import { colors, shape } from "../../utils/theme"
+import { colors, shape } from "../../theme"
 
 export default function Filter({
   filterOptions,

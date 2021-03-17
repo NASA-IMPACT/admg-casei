@@ -1,7 +1,7 @@
 import Typography from "typography"
 
-import { NEGATIVE } from "./constants"
-import { colors } from "./theme"
+import { NEGATIVE } from "../utils/constants"
+import { colors } from "../theme"
 
 const typography = new Typography({
   baseFontSize: "16px",

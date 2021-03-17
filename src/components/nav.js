@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
 import { NEGATIVE } from "../utils/constants"
-import { colors } from "../utils/theme"
+import { colors } from "../theme"
 
 const ListLink = props => (
   <li style={{ margin: `0 1rem 0 0`, textTransform: `uppercase` }}>

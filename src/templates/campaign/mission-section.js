@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 
 import { Section, SectionHeader, SectionContent } from "../../components/layout"
 import { NEGATIVE } from "../../utils/constants"
-import { colors } from "../../utils/theme"
+import { colors } from "../../theme"
 
 const MissionSection = ({ id, missions }) => (
   <Section id={id}>

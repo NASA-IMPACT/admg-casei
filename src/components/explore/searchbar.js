@@ -2,7 +2,7 @@ import React, { useState } from "react"
 
 import { CloseIcon, SearchIcon } from "../../icons"
 import { NEGATIVE } from "../../utils/constants"
-import { colors } from "../../utils/theme"
+import { colors } from "../../theme"
 
 const Searchbar = React.forwardRef((_props, ref) => {
   const [inputsize, setInputsize] = useState(50)

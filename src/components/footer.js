@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 
 import { NEGATIVE } from "../utils/constants"
-import { colors, layout } from "../utils/theme"
+import { colors, layout } from "../theme"
 import Login from "./login"
 import ExternalLink from "./external-link"
 

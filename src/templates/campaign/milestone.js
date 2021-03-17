@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 import Label from "../../components/label"
 import { PlatformIcon } from "../../icons"
 import { NEGATIVE } from "../../utils/constants"
-import { colors } from "../../utils/theme"
+import { colors } from "../../theme"
 
 const Milestone = ({ type, daterange, name, details, region }) => {
   return (

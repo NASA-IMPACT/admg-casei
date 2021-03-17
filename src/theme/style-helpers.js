@@ -1,5 +1,6 @@
 import { css } from "styled-components"
-import { colors } from "./theme"
+
+import { colors } from "../theme"
 
 export const scrollFade = css`
   overflow-y: scroll;

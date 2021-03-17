@@ -14,7 +14,7 @@ import {
 import Label from "./label"
 import { ChevronIcon, ArrowIcon } from "../icons"
 import { NEGATIVE } from "../utils/constants"
-import { colors } from "../utils/theme"
+import { colors } from "../theme"
 
 const RotatingContainer = styled.div`
   transition: transform 240ms ease-in-out;

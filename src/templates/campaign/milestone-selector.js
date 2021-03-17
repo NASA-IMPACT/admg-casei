@@ -4,7 +4,7 @@ import styled from "styled-components"
 
 import { AirborneRemoteSensors } from "../../icons"
 import { NEGATIVE } from "../../utils/constants"
-import { colors } from "../../utils/theme"
+import { colors } from "../../theme"
 
 const CardContent = styled.div`
   display: grid;

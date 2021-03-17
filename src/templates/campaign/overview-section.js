@@ -12,7 +12,7 @@ import {
 } from "../../components/layout"
 import ExternalLink from "../../components/external-link"
 import { POSITIVE } from "../../utils/constants"
-import { colors } from "../../utils/theme"
+import { colors } from "../../theme"
 
 const OverviewSection = ({
   id,

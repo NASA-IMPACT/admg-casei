@@ -11,7 +11,7 @@ import Map from "../../components/map"
 import BboxLayer from "../../components/map/bbox-layer"
 import GeoJsonSource from "../../components/map/geojson-source"
 import { CampaignIcon } from "../../icons"
-import { layout } from "../../utils/theme"
+import { layout } from "../../theme"
 import { useContainerDimensions } from "../../utils/use-container-dimensions"
 
 const BackgroundGradient = styled.div`

@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import { layout } from "../../utils/theme"
+import { layout } from "../../theme"
 
 export default function PageBody({ children, id }) {
   return (
