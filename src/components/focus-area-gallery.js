@@ -64,10 +64,9 @@ export default FocusAreaGallery
 FocusAreaGallery.propTypes = {
   focusAreas: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string,
-      shortname: PropTypes.string,
-      longname: PropTypes.string,
-    })
-  ),
+      id: PropTypes.string.isRequired,
+      shortname: PropTypes.string.isRequired,
+    }).isRequired
+  ).isRequired,
   size: PropTypes.string,
 }

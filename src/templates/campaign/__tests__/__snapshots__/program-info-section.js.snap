@@ -35,7 +35,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
 }
 
 .c2.c2 {
-  grid-column: 1 / span 7;
+  grid-column: 1 / span 6;
   -webkit-align-self: end;
   -ms-flex-item-align: end;
   align-self: end;
@@ -338,7 +338,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
 }
 
 .c2.c2 {
-  grid-column: 1 / span 7;
+  grid-column: 1 / span 6;
   -webkit-align-self: end;
   -ms-flex-item-align: end;
   align-self: end;

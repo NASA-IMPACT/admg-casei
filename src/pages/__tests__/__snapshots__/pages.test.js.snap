@@ -7753,7 +7753,7 @@ exports[`Glossary page renders correctly 1`] = `
 }
 
 .c9.c9 {
-  grid-column: 1 / span 7;
+  grid-column: 1 / span 6;
   -webkit-align-self: end;
   -ms-flex-item-align: end;
   align-self: end;
@@ -9623,26 +9623,17 @@ exports[`Home page renders correctly 1`] = `
   top: -80px;
 }
 
-.c16.c16 {
+.c17.c17 {
   grid-column: 1 / span 12;
 }
 
-.c16.c16 > *,
-.c16.c16 h3 {
-  color: #e9eaec;
-}
-
-.c21.c21 {
-  grid-column: 1 / span 6;
-}
-
-.c21.c21 > *,
-.c21.c21 h3 {
+.c17.c17 > *,
+.c17.c17 h3 {
   color: #e9eaec;
 }
 
 .c22.c22 {
-  grid-column: 7 / span 6;
+  grid-column: 1 / span 6;
 }
 
 .c22.c22 > *,
@@ -9650,8 +9641,17 @@ exports[`Home page renders correctly 1`] = `
   color: #e9eaec;
 }
 
+.c23.c23 {
+  grid-column: 7 / span 6;
+}
+
+.c23.c23 > *,
+.c23.c23 h3 {
+  color: #e9eaec;
+}
+
 .c14.c14 {
-  grid-column: 1 / span 7;
+  grid-column: 1 / span 6;
   -webkit-align-self: end;
   -ms-flex-item-align: end;
   align-self: end;
@@ -9661,9 +9661,8 @@ exports[`Home page renders correctly 1`] = `
   text-transform: uppercase;
 }
 
-.c23.c23 {
-  margin-top: -2rem;
-  margin-bottom: 2.5rem;
+.c16.c16 {
+  margin-top: -1rem;
 }
 
 .c1.c1 {
@@ -9713,17 +9712,17 @@ exports[`Home page renders correctly 1`] = `
   display: flex;
 }
 
-.c18.c18:hover {
+.c19.c19:hover {
   opacity: 0.64;
 }
 
-.c18.c18:active {
+.c19.c19:active {
   -webkit-transform: translate(0,1px);
   -ms-transform: translate(0,1px);
   transform: translate(0,1px);
 }
 
-.c19.c19 {
+.c20.c20 {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -9741,7 +9740,7 @@ exports[`Home page renders correctly 1`] = `
   white-space: nowrap;
 }
 
-.c20.c20 {
+.c21.c21 {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -9759,23 +9758,23 @@ exports[`Home page renders correctly 1`] = `
   white-space: nowrap;
 }
 
-.c30.c30 {
+.c32.c32 {
   list-style: none;
   margin: 0;
 }
 
-.c29.c29 {
+.c31.c31 {
   margin: 0 0 1.5rem 0;
   font-weight: bold;
   line-height: 3rem;
 }
 
-.c24.c24 {
+.c26.c26 {
   margin-top: 5rem;
   background-color: #303641;
 }
 
-.c25.c25 {
+.c27.c27 {
   margin: 5rem auto;
   max-width: 1280px;
   padding: 2rem 4rem;
@@ -9787,11 +9786,11 @@ exports[`Home page renders correctly 1`] = `
   grid-template-columns: repeat(12,1fr);
 }
 
-.c26.c26 {
+.c28.c28 {
   grid-column: 1 / span 3;
 }
 
-.c27.c27 {
+.c29.c29 {
   text-transform: uppercase;
   font-weight: 900;
   font-size: 30px;
@@ -9799,28 +9798,28 @@ exports[`Home page renders correctly 1`] = `
   margin-bottom: 0.5rem;
 }
 
-.c28.c28 {
+.c30.c30 {
   grid-column: 5 / span 2;
 }
 
-.c31.c31 {
+.c33.c33 {
   grid-column: 7 / span 2;
 }
 
-.c32.c32 {
+.c34.c34 {
   grid-column: 9 / span 2;
 }
 
-.c33.c33 {
+.c35.c35 {
   grid-column: 11 / span 2;
 }
 
-.c34.c34 {
+.c36.c36 {
   grid-column: 1 / span 12;
   background-color: rgba(255,255,255,0.2);
 }
 
-.c35.c35 {
+.c37.c37 {
   grid-column: 1 / span 12;
   display: -webkit-box;
   display: -webkit-flex;
@@ -9832,7 +9831,7 @@ exports[`Home page renders correctly 1`] = `
   justify-content: space-between;
 }
 
-.c36.c36 {
+.c38.c38 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9844,7 +9843,7 @@ exports[`Home page renders correctly 1`] = `
   font-weight: bold;
 }
 
-.c37.c37 {
+.c39.c39 {
   background-image: url("https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png");
   background-size: cover;
   background-position: center;
@@ -9852,11 +9851,11 @@ exports[`Home page renders correctly 1`] = `
   height: 100px;
 }
 
-.c38.c38 {
+.c40.c40 {
   font-weight: normal;
 }
 
-.c39.c39 {
+.c41.c41 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9868,7 +9867,7 @@ exports[`Home page renders correctly 1`] = `
   text-transform: uppercase;
 }
 
-.c40.c40 {
+.c42.c42 {
   text-align: center;
 }
 
@@ -9921,7 +9920,7 @@ exports[`Home page renders correctly 1`] = `
   object-position: center top;
 }
 
-.c17.c17 {
+.c18.c18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9929,6 +9928,22 @@ exports[`Home page renders correctly 1`] = `
   overflow: auto;
   gap: 0.5rem;
   margin: 1rem 0;
+}
+
+.c24.c24 {
+  height: 100%;
+  display: grid;
+  gap: 2.5rem;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  padding: 1rem;
+}
+
+.c25.c25 {
+  border: 1px solid #e9eaec;
+  padding: 1rem 5rem;
+  text-transform: uppercase;
 }
 
 <div
@@ -10153,18 +10168,24 @@ exports[`Home page renders correctly 1`] = `
             className="c15"
             data-cy="section-tagline"
           >
-            explore nasa earth science
+            view
           </div>
           <a
             href="#focus"
           >
             <h2>
-              Focus Areas
+              Earth Science Focus Areas
             </h2>
           </a>
+          <p
+            className="c16"
+            data-cy="section-subline"
+          >
+            NASA’s Earth Science Research and Analysis Program supports investigations related to six broad Focus Areas:
+          </p>
         </div>
         <div
-          className="c16"
+          className="c17"
           mode="darkTheme"
         >
           <div
@@ -10431,105 +10452,105 @@ exports[`Home page renders correctly 1`] = `
           </a>
         </div>
         <div
-          className="c16"
+          className="c17"
           mode="darkTheme"
         >
           <div
-            className="c17"
+            className="c18"
             data-cy="region-text-control"
           >
             <button
-              className="c18 c19"
+              className="c19 c20"
               onClick={[Function]}
             >
               continental
             </button>
             <button
-              className="c18 c20"
+              className="c19 c21"
               onClick={[Function]}
             >
               maritime
             </button>
             <button
-              className="c18 c19"
+              className="c19 c20"
               onClick={[Function]}
             >
               coastal
             </button>
             <button
-              className="c18 c19"
+              className="c19 c20"
               onClick={[Function]}
             >
               mountains
             </button>
             <button
-              className="c18 c19"
+              className="c19 c20"
               onClick={[Function]}
             >
               island
             </button>
             <button
-              className="c18 c19"
+              className="c19 c20"
               onClick={[Function]}
             >
               desert
             </button>
             <button
-              className="c18 c19"
+              className="c19 c20"
               onClick={[Function]}
             >
               forest
             </button>
             <button
-              className="c18 c19"
+              className="c19 c20"
               onClick={[Function]}
             >
               urban
             </button>
             <button
-              className="c18 c19"
+              className="c19 c20"
               onClick={[Function]}
             >
               agricultural
             </button>
             <button
-              className="c18 c19"
+              className="c19 c20"
               onClick={[Function]}
             >
               equitorial
             </button>
             <button
-              className="c18 c19"
+              className="c19 c20"
               onClick={[Function]}
             >
               tropical
             </button>
             <button
-              className="c18 c19"
+              className="c19 c20"
               onClick={[Function]}
             >
               mid-latitude
             </button>
             <button
-              className="c18 c19"
+              className="c19 c20"
               onClick={[Function]}
             >
               polar
             </button>
             <button
-              className="c18 c19"
+              className="c19 c20"
               onClick={[Function]}
             >
               sea ice
             </button>
             <button
-              className="c18 c19"
+              className="c19 c20"
               onClick={[Function]}
             >
               coral
             </button>
             <button
-              className="c18 c19"
+              className="c19 c20"
               onClick={[Function]}
             >
               rainforest
@@ -11527,9 +11548,15 @@ exports[`Home page renders correctly 1`] = `
               Geophysical Concepts
             </h2>
           </a>
+          <p
+            className="c16"
+            data-cy="section-subline"
+          >
+            NASA investigates a myriad of factors that comprise Earth’s properties, systems, and processes.
+          </p>
         </div>
         <div
-          className="c16"
+          className="c17"
           mode="darkTheme"
         >
           <div
@@ -12282,7 +12309,7 @@ exports[`Home page renders correctly 1`] = `
           id="platforms"
         />
         <div
-          className="c21"
+          className="c22"
           mode="darkTheme"
         >
           <img
@@ -12296,18 +12323,11 @@ exports[`Home page renders correctly 1`] = `
           />
         </div>
         <div
-          className="c22"
+          className="c23"
           mode="darkTheme"
         >
           <div
-            style={
-              Object {
-                "alignContent": "center",
-                "display": "grid",
-                "height": "100%",
-                "padding": "1rem",
-              }
-            }
+            className="c24"
           >
             <div
               className="c14"
@@ -12327,25 +12347,20 @@ exports[`Home page renders correctly 1`] = `
                 </h2>
               </a>
               <p
-                className="c23"
+                className="c16"
                 data-cy="section-subline"
               >
-                From aircrafts to balloons, from sensors to plaftorms, it takes a lot to understand earth.
+                Learn about the variety of air and Earth-based platforms NASA uses to study our home planet.
               </p>
             </div>
             <a
+              _css="#e9eaec"
+              className="c25"
               data-cy="explore-platforms-link"
               href="/explore"
               state={
                 Object {
                   "defaultExploreCategory": "platforms",
-                }
-              }
-              style={
-                Object {
-                  "border": "1px solid #e9eaec",
-                  "padding": "1rem 5rem",
-                  "textTransform": "uppercase",
                 }
               }
             >
@@ -12371,18 +12386,18 @@ exports[`Home page renders correctly 1`] = `
             className="c15"
             data-cy="section-tagline"
           >
-            explore
+            explore instruments by
           </div>
           <a
             href="#instruments"
           >
             <h2>
-              Instruments
+              Measurement Type
             </h2>
           </a>
         </div>
         <div
-          className="c16"
+          className="c17"
           mode="darkTheme"
         >
           <div
@@ -13154,17 +13169,17 @@ exports[`Home page renders correctly 1`] = `
     </div>
   </main>
   <footer
-    className="c24"
+    className="c26"
     data-cy="page-footer"
   >
     <div
-      className="c25"
+      className="c27"
     >
       <div
-        className="c26"
+        className="c28"
       >
         <div
-          className="c27"
+          className="c29"
           data-cy="footer-title"
         >
           NASA | CASEI
@@ -13177,16 +13192,16 @@ exports[`Home page renders correctly 1`] = `
         </p>
       </div>
       <div
-        className="c28"
+        className="c30"
         data-cy="footer-explore"
       >
         <p
-          className="c29"
+          className="c31"
         >
           Explore
         </p>
         <ul
-          className="c30"
+          className="c32"
         >
           <li>
             <a
@@ -13230,16 +13245,16 @@ exports[`Home page renders correctly 1`] = `
         </ul>
       </div>
       <div
-        className="c31"
+        className="c33"
         data-cy="footer-resources"
       >
         <p
-          className="c29"
+          className="c31"
         >
           Resources
         </p>
         <ul
-          className="c30"
+          className="c32"
         >
           <li>
             <a
@@ -13252,16 +13267,16 @@ exports[`Home page renders correctly 1`] = `
         </ul>
       </div>
       <div
-        className="c32"
+        className="c34"
         data-cy="footer-quick-links"
       >
         <p
-          className="c29"
+          className="c31"
         >
           Quick Links
         </p>
         <ul
-          className="c30"
+          className="c32"
         >
           <li>
             <a
@@ -13280,16 +13295,16 @@ exports[`Home page renders correctly 1`] = `
         </ul>
       </div>
       <div
-        className="c33"
+        className="c35"
         data-cy="footer-organizations"
       >
         <p
-          className="c29"
+          className="c31"
         >
           Organizations
         </p>
         <ul
-          className="c30"
+          className="c32"
         >
           <li>
             <a
@@ -13324,17 +13339,17 @@ exports[`Home page renders correctly 1`] = `
         </ul>
       </div>
       <hr
-        className="c34"
+        className="c36"
       />
       <div
-        className="c35"
+        className="c37"
       >
         <div
-          className="c36"
+          className="c38"
         >
           <div
             aria-hidden="true"
-            className="c37"
+            className="c39"
           />
           <div
             data-cy="footer-credits"
@@ -13350,7 +13365,7 @@ exports[`Home page renders correctly 1`] = `
               NASA Official:
                
               <span
-                className="c38"
+                className="c40"
               >
                 Rahul Ramachandran
               </span>
@@ -13358,12 +13373,12 @@ exports[`Home page renders correctly 1`] = `
           </div>
         </div>
         <div
-          className="c39"
+          className="c41"
         />
       </div>
     </div>
     <div
-      className="c40"
+      className="c42"
       data-cy="footer-credit-devseed"
     >
       © 

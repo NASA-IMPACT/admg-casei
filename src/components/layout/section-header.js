@@ -5,7 +5,7 @@ export default function SectionHeader({ tagline, headline, subline, id }) {
   return (
     <div
       css={`
-        grid-column: 1 / span 7;
+        grid-column: 1 / span 6;
         align-self: end;
       `}
       data-cy={`${id}-section-header`}
@@ -26,8 +26,7 @@ export default function SectionHeader({ tagline, headline, subline, id }) {
       {subline && (
         <p
           css={`
-            margin-top: -2rem;
-            margin-bottom: 2.5rem;
+            margin-top: -1rem;
           `}
           data-cy="section-subline"
         >

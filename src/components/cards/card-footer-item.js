@@ -20,6 +20,6 @@ export default function CardFooterItem({ title, count, index }) {
 
 CardFooterItem.propTypes = {
   title: PropTypes.string.isRequired,
-  count: PropTypes.number.isRequired,
+  count: PropTypes.number,
   index: PropTypes.number,
 }

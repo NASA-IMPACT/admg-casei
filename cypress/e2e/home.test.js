@@ -24,7 +24,7 @@ describe("Homepage", () => {
         expect($h2).to.have.length(1)
       })
       .then($h2 => {
-        expect($h2, "text content").to.have.text("Focus Areas")
+        expect($h2, "text content").to.have.text("Earth Science Focus Areas")
       })
 
     cy.get("[data-cy=focus-area-section]")
@@ -180,7 +180,7 @@ describe("Homepage", () => {
         expect($h2).to.have.length(1)
       })
       .then($h2 => {
-        expect($h2, "text content").to.have.text("Instruments")
+        expect($h2, "text content").to.have.text("Measurement Type")
       })
 
     cy.get("[data-cy=instruments-section]")
