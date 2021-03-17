@@ -6501,7 +6501,7 @@ exports[`Home page renders correctly 1`] = `
             className="c15"
             data-cy="section-tagline"
           >
-            explore 
+            view
           </div>
           <a
             href="#focus"
@@ -8719,13 +8719,13 @@ exports[`Home page renders correctly 1`] = `
             className="c15"
             data-cy="section-tagline"
           >
-            explore
+            explore instruments by
           </div>
           <a
             href="#instruments"
           >
             <h2>
-              Instruments
+              Measurement Type
             </h2>
           </a>
         </div>
