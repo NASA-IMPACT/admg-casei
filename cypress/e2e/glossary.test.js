@@ -13,12 +13,6 @@ describe("Glossary", () => {
       })
     })
 
-    cy.get("[data-cy=glossary-definition-options")
-      .should("exist")
-      .and($li => {
-        expect($li, "list item").to.have.length.of.at.least(1)
-      })
-
     cy.get("[data-cy=glossary-definition-note")
       .should("exist")
       .and($li => {
