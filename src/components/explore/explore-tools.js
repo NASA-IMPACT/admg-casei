@@ -7,7 +7,7 @@ import DateMenu from "./date-menu"
 
 import { FilterIcon } from "../../icons"
 import { NEGATIVE } from "../../utils/constants"
-import { colors } from "../../utils/theme"
+import { colors } from "../../theme"
 
 const ExploreTools = React.forwardRef(
   (

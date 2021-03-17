@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import Spinner from "react-spinkit"
 
 import { NEGATIVE } from "../../utils/constants"
-import { colors } from "../../utils/theme"
+import { colors } from "../../theme"
 
 const ExploreSection = ({ isLoading, children }) => {
   return (

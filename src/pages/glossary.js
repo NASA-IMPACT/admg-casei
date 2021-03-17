@@ -12,7 +12,7 @@ import Layout, {
 } from "../components/layout"
 import SEO from "../components/seo"
 import { ArrowIcon } from "../icons"
-import { colors } from "../utils/theme"
+import { colors } from "../theme"
 import { ALPHABET, POSITIVE, NEGATIVE } from "../utils/constants"
 
 export default function Glossary({ data }) {

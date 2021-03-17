@@ -10,7 +10,7 @@ import {
 import VisuallyHidden from "@reach/visually-hidden"
 
 import { NEGATIVE } from "../../utils/constants"
-import { colors, shape } from "../../utils/theme"
+import { colors, shape } from "../../theme"
 import { sortFunctions } from "../../utils/filter-utils"
 
 const SortMenu = ({ sortOrder, setSortOrder, category }) => {

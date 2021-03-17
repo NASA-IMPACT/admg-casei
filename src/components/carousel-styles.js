@@ -1,5 +1,5 @@
 import { NEGATIVE } from "../utils/constants"
-import { colors } from "../utils/theme"
+import { colors } from "../theme"
 
 // nuka carousel expects inline styles
 const controlButtonLRStyle = {

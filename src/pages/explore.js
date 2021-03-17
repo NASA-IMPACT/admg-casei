@@ -6,7 +6,7 @@ import { format } from "date-fns"
 
 import api from "../utils/api"
 import { NEGATIVE } from "../utils/constants"
-import { colors } from "../utils/theme"
+import { colors } from "../theme"
 import { selector } from "../utils/filter-utils"
 import useCampaignList from "../utils/use-campaign-list"
 import usePlatformList from "../utils/use-platform-list"

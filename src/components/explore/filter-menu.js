@@ -13,7 +13,7 @@ import styled from "styled-components"
 import { NEGATIVE } from "../../utils/constants"
 import { IconButton } from "../button"
 import { CloseIcon } from "../../icons"
-import { colors } from "../../utils/theme"
+import { colors } from "../../theme"
 
 const FilterButton = styled(ListboxButton)`
   flex-grow: 0;

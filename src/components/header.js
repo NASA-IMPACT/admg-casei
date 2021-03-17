@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-import { layout } from "../utils/theme"
+import { layout } from "../theme"
 import { CaseiLogoIcon } from "../icons"
 
 const Header = ({ shortname, children }) => (

@@ -5,7 +5,7 @@ import { FeedbackForm } from "feedback-fish"
 
 import { CaseiLogoIcon } from "../icons"
 import { POSITIVE } from "../utils/constants"
-import { colors } from "../utils/theme"
+import { colors } from "../theme"
 import Button from "../components/button"
 
 // Note: the triggerComponent can be any component you want!

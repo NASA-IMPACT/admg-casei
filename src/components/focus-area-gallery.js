@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 
 import { getFocusIcon } from "../icons/utils"
 import { NEGATIVE } from "../utils/constants"
-import { colors } from "../utils/theme"
+import { colors } from "../theme"
 
 const FocusArea = ({ id, caption, size }) => {
   const Icon = getFocusIcon(id)

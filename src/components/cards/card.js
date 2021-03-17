@@ -4,7 +4,7 @@ import styled from "styled-components"
 import Image from "gatsby-image"
 import { Link } from "gatsby"
 import { POSITIVE, NEGATIVE } from "../../utils/constants"
-import { colors } from "../../utils/theme"
+import { colors } from "../../theme"
 
 const CardHeader = styled.div`
   display: flex;

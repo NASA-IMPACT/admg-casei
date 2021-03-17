@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
 import { NEGATIVE } from "../../utils/constants"
-import { colors } from "../../utils/theme"
+import { colors } from "../../theme"
 
 export const GeophysicsGrid = ({ geophysicalConcepts }) => (
   <div
