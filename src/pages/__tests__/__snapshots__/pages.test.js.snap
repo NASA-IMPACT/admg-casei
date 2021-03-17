@@ -10450,6 +10450,12 @@ exports[`Home page renders correctly 1`] = `
               Region Type
             </h2>
           </a>
+          <p
+            className="c16"
+            data-cy="section-subline"
+          >
+            Choose a type of geographical region to explore
+          </p>
         </div>
         <div
           className="c17"
