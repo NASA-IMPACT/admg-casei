@@ -17,7 +17,7 @@ describe("Campaign", () => {
       .find("dd")
       .should($stat => {
         expect($stat, "3 items").to.have.length(3)
-        expect($stat.eq(0), "first item").to.contain("Deployments")
+        expect($stat.eq(0), "first item").to.contain("Deployment")
         expect($stat.eq(1), "second item").to.contain("Collection Periods")
         expect($stat.eq(2), "third item").to.contain("Data Products")
       })

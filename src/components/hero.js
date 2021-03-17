@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import Image from "gatsby-image"
 
 import { layout } from "../utils/theme"
+import DateList from "./date-list-hover"
 
 export const HeroStats = ({ statList }) => (
   <dl style={{ display: `grid` }} data-cy="stats">
@@ -12,7 +13,17 @@ export const HeroStats = ({ statList }) => (
           {!stat.number && stat.number !== 0 ? "--" : stat.number}
         </dt>
         <dd style={{ gridRowStart: 2, textTransform: `uppercase` }}>
-          {stat.label}
+          {stat.dates ? (
+            <DateList
+              id={stat.label}
+              title={stat.label}
+              dates={stat.dates}
+              isStat
+              isCustomSpacing
+            />
+          ) : (
+            stat.label
+          )}
         </dd>
       </React.Fragment>
     ))}
@@ -24,6 +35,7 @@ HeroStats.propTypes = {
     PropTypes.shape({
       number: PropTypes.number,
       label: PropTypes.string.isRequired,
+      dates: PropTypes.array,
     })
   ).isRequired,
 }

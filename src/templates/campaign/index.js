@@ -135,6 +135,7 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
         countDeployments={campaign.countDeployments}
         countCollectionPeriods={campaign.countCollectionPeriods}
         countDataProducts={campaign.countDataProducts}
+        deployments={campaign.deployments}
         logo={campaign.logo}
       />
       <PageBody id="campaign">
