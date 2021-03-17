@@ -3,37 +3,37 @@
     "shortname": "continental",
     "category": "region",
     "nasaImgUrl": "https://eoimages.gsfc.nasa.gov/images/imagerecords/145000/145932/iss060e035401_lrg.jpg",
-    "nasaImgAlt": "A network of farms and ranches surrounds the cities and small towns near the Nebraska–Iowa border."
+    "nasaImgAlt": "A network of farms and ranches surrounds the cities and small towns near the Nebraska–Iowa border. (Photography courtesy NASA/GSFC)"
   },
   {
     "shortname": "maritime",
     "category": "region",
     "nasaImgUrl": "https://climate.nasa.gov/system/resources/detail_files/170_gulfoffinland_full.jpg",
-    "nasaImgAlt": "Phytoplankton blooms across the northern basins of the North Atlantic and Arctic Oceans."
+    "nasaImgAlt": "Phytoplankton blooms across the northern basins of the North Atlantic and Arctic Oceans. (Photography courtesy NASA/Climate)"
   },
   {
     "shortname": "coastal",
     "category": "region",
     "nasaImgUrl": "https://images-assets.nasa.gov/image/KSC-04pd1634/KSC-04pd1634~orig.jpg",
-    "nasaImgAlt": "The pristine sand dunes near the launch pads at KSC are gently washed by the calm blue Atlantic Ocean."
+    "nasaImgAlt": "Pristine sand dunes near the launch pads at Kennedy Space Center in Florida. (Photography courtesy NASA Images)"
   },
   {
     "shortname": "mountains",
     "category": "region",
     "nasaImgUrl": "https://images-assets.nasa.gov/image/ED04-0056-099/ED04-0056-099~orig.jpg",
-    "nasaImgAlt": "The Cuernos del Paine mountains in Torres del Paine National Park, Chile, during NASA's AirSAR 2004 campaign."
+    "nasaImgAlt": "The Cuernos del Paine mountains in Torres del Paine National Park, Chile, during NASA's AirSAR 2004 campaign. (Photography courtesy NASA Images)"
   },
   {
     "shortname": "island",
     "category": "region",
     "nasaImgUrl": "https://climate.nasa.gov/system/resources/detail_files/218_PIA21166_hires-768px-v2.jpg",
-    "nasaImgAlt": "The Republic of Maldives with its twenty-six atolls, and 1192 coral islands, with an average ground elevation of 1.5 meters (about 5 feet)."
+    "nasaImgAlt": "The Republic of Maldives with its twenty-six atolls, and 1192 coral islands, with an average ground elevation of 1.5 meters (about 5 feet). (Photography courtesy NASA/Climate)"
   },
   {
     "shortname": "desert",
     "category": "region",
     "nasaImgUrl": "https://earthobservatory.nasa.gov/blogs/fromthefield/wp-content/uploads/sites/2/2018/01/desert-plant-and-lidar.jpg",
-    "nasaImgAlt": "The lidar on its tripod. NASA/GSFC"
+    "nasaImgAlt": "The lidar on its tripod. (Photography courtesy NASA/GSFC)"
   },
   {
     "shortname": "forest",
@@ -45,90 +45,90 @@
     "shortname": "urban",
     "category": "region",
     "nasaImgUrl": "https://eoimages.gsfc.nasa.gov/images/imagerecords/83000/83828/ISS039-E-018538_lrg.jpg",
-    "nasaImgAlt": "The narrow island of Manhattan, located between the Hudson River and the East River."
+    "nasaImgAlt": "The narrow island of Manhattan, located between the Hudson River and the East River. (Photography courtesy NASA/GSFC)"
   },
   {
     "shortname": "agricultural",
     "category": "region",
     "nasaImgUrl": "https://eoimages.gsfc.nasa.gov/images/imagerecords/5000/5772/kansas_AST_2001175_lrg.jpg",
-    "nasaImgAlt": "Variegated green crop circles cover what was once shortgrass prairie in southwestern Kansas."
+    "nasaImgAlt": "Variegated green crop circles cover what was once shortgrass prairie in southwestern Kansas. (Photography courtesy NASA/GSFC)"
   },
   {
     "shortname": "equitorial",
     "category": "region",
     "nasaImgUrl": "https://images-assets.nasa.gov/image/sts054-95-042/sts054-95-042~orig.jpg",
-    "nasaImgAlt": "Equatorial Wave Line, Pacific Ocean."
+    "nasaImgAlt": "Equatorial Wave Line, Pacific Ocean. (Photography courtesy NASA Images)"
   },
   {
     "shortname": "tropical",
     "category": "region",
     "nasaImgUrl": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e001630/GSFC_20171208_Archive_e001630~orig.jpg",
-    "nasaImgAlt": "An archipelago in the Andaman Sea surrounded by extensive coral reefs"
+    "nasaImgAlt": "An archipelago in the Andaman Sea surrounded by extensive coral reefs (Photography courtesy NASA/GSFC)"
   },
   {
     "shortname": "mid-latitude",
     "category": "region",
     "nasaImgUrl": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e000236/GSFC_20171208_Archive_e000236~orig.jpg",
-    "nasaImgAlt": "Yosemite Valley"
+    "nasaImgAlt": "Yosemite Valley (Photography courtesy NASA/GSFC)"
   },
   {
     "shortname": "polar",
     "category": "region",
     "nasaImgUrl": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e001793/GSFC_20171208_Archive_e001793~orig.jpg",
-    "nasaImgAlt": "A NASA scientific balloon awaits launch in McMurdo, Antarctica."
+    "nasaImgAlt": "A NASA scientific balloon awaits launch in McMurdo, Antarctica. (Photography courtesy NASA/GSFC)"
   },
   {
     "shortname": "sea ice",
     "category": "region",
     "nasaImgUrl": "https://eoimages.gsfc.nasa.gov/images/imagerecords/146000/146974/greenlandseaice_amo_2020184_lrg.jpg",
-    "nasaImgAlt": "Sea ice hugging the coast of East Greenland."
+    "nasaImgAlt": "Sea ice hugging the coast of East Greenland. (Photography courtesy NASA/GSFC)"
   },
   {
     "shortname": "coral",
     "category": "region",
     "nasaImgUrl": "https://eoimages.gsfc.nasa.gov/images/imagerecords/88000/88109/iss045e056257_lrg.jpg",
-    "nasaImgAlt": "Great Barrier Reef near Whitsunday Islands."
+    "nasaImgAlt": "Great Barrier Reef near Whitsunday Islands. (Photography courtesy NASA/GSFC)"
   },
   {
     "shortname": "rainforest",
     "category": "region",
     "nasaImgUrl": "https://images-assets.nasa.gov/image/ED04-0056-057/ED04-0056-057~orig.jpg",
-    "nasaImgAlt": "A stream in the La Selva region of the Costa Rican rain forest, taken during NASA's AirSAR 2004 campaign."
+    "nasaImgAlt": "A stream in the La Selva region of the Costa Rican rain forest, taken during NASA's AirSAR 2004 campaign. (Photography courtesy NASA Images)"
   },
   {
     "shortname": "placeholder-platform",
     "category": "placeholder",
     "nasaImgUrl": "https://images-assets.nasa.gov/image/EC98-44435-2/EC98-44435-2~orig.jpg",
-    "nasaImgAlt": "NASA’s ER-2"
+    "nasaImgAlt": "NASA’s ER-2 (Photography courtesy NASA Images)"
   },
   {
     "shortname": "placeholder-deployment",
     "category": "placeholder",
     "nasaImgUrl": "https://images-assets.nasa.gov/image/AFRC2016-0292-08/AFRC2016-0292-08~orig.jpg",
-    "nasaImgAlt": "NASA’s Global Hawk aircraft being deployed to Florida from Armstrong Flight Research Center"
+    "nasaImgAlt": "NASA’s Global Hawk aircraft being deployed to Florida from Armstrong Flight Research Center (Photography courtesy NASA Images)"
   },
   {
     "shortname": "Home",
     "category": "layout",
     "nasaImgUrl": "https://www.nasa.gov/sites/default/files/images/699943main_ice_bridge_full_full.jpg",
-    "nasaImgAlt": "NASA's DC-8 flying laboratory passes Antarctica's tallest peak, Mount Vinson, on Oct. 22, 2012, during a flight over the continent to measure changes in the massive ice sheet and sea ice. Credit: NASA/Michael Studinger"
+    "nasaImgAlt": "NASA's DC-8 flying laboratory passes Antarctica's tallest peak, Mount Vinson, on Oct. 22, 2012, during a flight over the continent to measure changes in the massive ice sheet and sea ice. Credit: NASA/Michael Studinger (Photography courtesy NASA Images)"
   },
   {
     "shortname": "about-hero",
     "category": "layout",
     "nasaImgUrl": "https://images-assets.nasa.gov/image/GRC-2020-C-00100/GRC-2020-C-00100~orig.jpg",
-    "nasaImgAlt": "Glenn Research Center, Lockheed S-3 Viking Research Aircraft, N601NA at Sunrise"
+    "nasaImgAlt": "Glenn Research Center, Lockheed S-3 Viking Research Aircraft, N601NA at Sunrise (Photography courtesy NASA Images)"
   },
   {
     "shortname": "about-body",
     "category": "layout",
     "nasaImgUrl": "https://images-assets.nasa.gov/image/PIA17771/PIA17771~orig.jpg",
-    "nasaImgAlt": "View over mountain range from plane"
+    "nasaImgAlt": "View over mountain range from plane (Photography courtesy NASA Images)"
   },
   {
     "shortname": "Glossary",
     "category": "layout",
     "nasaImgUrl": "https://cdn.earthdata.nasa.gov/conduit/upload/14882/DataInvRel.png",
-    "nasaImgAlt": "Definition flowchart"
+    "nasaImgAlt": "Definition flowchart (Photography courtesy NASA Images)"
   }
 ]
