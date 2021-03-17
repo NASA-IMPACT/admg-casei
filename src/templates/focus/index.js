@@ -1,10 +1,10 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
+import VisuallyHidden from "@reach/visually-hidden"
 
 import Layout, {
   PageBody,
-  Paragraph,
   Section,
   SectionHeader,
   SectionContent,
@@ -12,21 +12,23 @@ import Layout, {
 import SEO from "../../components/seo"
 import Hero from "../../components/hero"
 import ExternalLink from "../../components/external-link"
+import InpageNav from "../../components/inpage-nav"
 import RelatedCampaignsSection from "../../components/related-campaigns-section"
 import FocusAreaGallery from "../../components/focus-area-gallery"
-import { NEGATIVE } from "../../utils/constants"
+
+import { NEGATIVE, POSITIVE } from "../../utils/constants"
 import { colors } from "../../utils/theme"
 import { getFocusIcon } from "../../icons/utils"
 
-const FocusTemplate = ({ data }) => {
-  const Icon = getFocusIcon(data.focusArea.uuid)
+const FocusTemplate = ({ data: { focusArea, allFocusArea }, path }) => {
+  const Icon = getFocusIcon(focusArea.uuid)
   return (
     <Layout>
-      <SEO title={data.focusArea.shortname} lang="en" />
+      <SEO title={focusArea.shortname} lang="en" />
 
       <Hero
         tagTitle="Focus Area"
-        title={data.focusArea.shortname}
+        title={focusArea.shortname}
         textToImageRatio={[8, 4]}
         id="focus"
       >
@@ -39,24 +41,45 @@ const FocusTemplate = ({ data }) => {
       </Hero>
 
       <PageBody id="focus">
-        <Section id="overview">
-          <SectionHeader headline="Overview" id="overview" />
-          <SectionContent columns={[1, 8]} minHeight={`12rem`}>
-            <Paragraph data-cy="description">
-              {data.focusArea.description}
-            </Paragraph>
+        <InpageNav
+          shortname={focusArea.shortname}
+          items={[
+            {
+              id: "overview",
+              label: "Overview",
+            },
+            {
+              id: "focus-campaigns",
+              label: "Related Campaigns",
+            },
+            {
+              id: "focus-areas",
+              label: "Focus Areas",
+            },
+          ]}
+          path={path}
+        />
+        <Section id="overview" mode={POSITIVE}>
+          <VisuallyHidden>
+            <SectionHeader headline="Overview" id="overview" />
+          </VisuallyHidden>
+          <SectionContent mode={POSITIVE} columns={[1, 8]}>
+            <h3>Overview</h3>
+
+            <p data-cy="description">{focusArea.description}</p>
           </SectionContent>
-          <SectionContent columns={[10, 3]}>
+          <SectionContent mode={POSITIVE} columns={[10, 3]}>
             <div
-              style={{
-                padding: `1rem`,
-                border: `1px solid ${colors[NEGATIVE].text}`,
-              }}
+              css={`
+                padding: 1rem;
+                border: 1px solid hsla(0, 0%, 0%, 0.2);
+              `}
             >
-              {data.focusArea.url ? (
+              {focusArea.url ? (
                 <ExternalLink
-                  label={`NASA's ${data.focusArea.shortname} Homepage`}
-                  url={data.focusArea.url}
+                  label={`NASA's ${focusArea.shortname} Homepage`}
+                  url={focusArea.url}
+                  mode={POSITIVE}
                   id="focus"
                 />
               ) : (
@@ -68,16 +91,17 @@ const FocusTemplate = ({ data }) => {
 
         <RelatedCampaignsSection
           id="focus-campaigns"
-          campaigns={data.focusArea.campaigns}
+          campaigns={focusArea.campaigns}
         />
 
         <Section id="focus-areas" isSpaced>
-          <SectionHeader tagline="explore nasa earth science" id="focus" />
+          <SectionHeader
+            headline="Focus Areas"
+            tagline="explore nasa earth science"
+            id="focus"
+          />
           <SectionContent>
-            <FocusAreaGallery
-              focusAreas={data.allFocusArea.nodes}
-              size="large"
-            />
+            <FocusAreaGallery focusAreas={allFocusArea.nodes} size="large" />
           </SectionContent>
         </Section>
       </PageBody>
@@ -108,6 +132,7 @@ export const query = graphql`
 `
 
 FocusTemplate.propTypes = {
+  path: PropTypes.string.isRequired,
   data: PropTypes.shape({
     focusArea: PropTypes.shape({
       uuid: PropTypes.string,
