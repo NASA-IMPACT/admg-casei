@@ -91,7 +91,6 @@ exports.onCreateNode = async ({
     }
   }
 
-  // TODO: remove when backend team fixes the /image endpoint response
   if (node.internal.type === "image") {
     if (node.image.includes(".gif")) return // .gif format breaks gatsby build
 
@@ -144,24 +143,6 @@ exports.sourceNodes = async ({ actions, createContentDigest }) => {
     responses.forEach(response => {
       if (response.success) {
         response.data.forEach(item => {
-          createNode({
-            // Data for the node.
-            ...item,
-
-            // Required fields.
-            id: item.uuid,
-            parent: null,
-            children: [],
-            internal: {
-              type: response.type,
-              contentDigest: createContentDigest(item),
-              description: `Creating nodes from ${response.type} endpoint`,
-            },
-          })
-        })
-      } else if (response.type === "image") {
-        Object.values(response).forEach(item => {
-          if (typeof item === "string") return
           createNode({
             // Data for the node.
             ...item,
