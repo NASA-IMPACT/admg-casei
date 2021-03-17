@@ -33,7 +33,7 @@ const Home = ({ data }) => {
       <PageBody id="home">
         <Section id="focus-area" isSpaced>
           <SectionHeader
-            tagline="explore "
+            tagline="view"
             headline="Earth Science Focus Areas"
             subline="NASA’s Earth Science Research and Analysis Program supports
             investigations related to six broad Focus Areas:"
@@ -113,8 +113,8 @@ const Home = ({ data }) => {
 
         <Section id="instruments" isSpaced>
           <SectionHeader
-            tagline="explore"
-            headline="Instruments"
+            tagline="explore instruments by"
+            headline="Measurement Type"
             id="instruments"
           />
           <SectionContent>
