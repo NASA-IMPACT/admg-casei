@@ -11,29 +11,6 @@ export const RegionCarousel = ({ regions }) => {
   const controlTextRef = useRef(null)
 
   const [slideIndex, setSlideIndex] = useState(1)
-  const regionOrder = [
-    "continental",
-    "maritime",
-    "coastal",
-    "mountains",
-    "agricultural",
-    "urban",
-    "island",
-    "equitorial",
-    "tropical",
-    "mid-latitude",
-    "polar",
-    "sea ice",
-    "coral",
-    "desert",
-    "forest",
-    "rainforest",
-  ]
-
-  const sortedRegions = regions.sort(
-    (a, b) =>
-      regionOrder.indexOf(a.shortname) - regionOrder.indexOf(b.shortname)
-  )
 
   return (
     <>
@@ -48,7 +25,7 @@ export const RegionCarousel = ({ regions }) => {
         `}
         data-cy="region-text-control"
       >
-        {sortedRegions.map((region, index) => (
+        {regions.map((region, index) => (
           <Button
             key={region.id}
             ref={index === slideIndex ? controlTextRef : null}
@@ -89,7 +66,7 @@ export const RegionCarousel = ({ regions }) => {
           }
         }}
       >
-        {sortedRegions.map(region => (
+        {regions.map(region => (
           <React.Fragment key={region.id}>
             <Link
               to="/explore"
