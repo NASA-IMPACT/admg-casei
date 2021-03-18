@@ -10493,7 +10493,19 @@ exports[`Home page renders correctly 1`] = `
               className="c19 c20"
               onClick={[Function]}
             >
-              agricultural
+              island
+            </button>
+            <button
+              className="c19 c20"
+              onClick={[Function]}
+            >
+              desert
+            </button>
+            <button
+              className="c19 c20"
+              onClick={[Function]}
+            >
+              forest
             </button>
             <button
               className="c19 c20"
@@ -10505,7 +10517,7 @@ exports[`Home page renders correctly 1`] = `
               className="c19 c20"
               onClick={[Function]}
             >
-              island
+              agricultural
             </button>
             <button
               className="c19 c20"
@@ -10542,18 +10554,6 @@ exports[`Home page renders correctly 1`] = `
               onClick={[Function]}
             >
               coral
-            </button>
-            <button
-              className="c19 c20"
-              onClick={[Function]}
-            >
-              desert
-            </button>
-            <button
-              className="c19 c20"
-              onClick={[Function]}
-            >
-              forest
             </button>
             <button
               className="c19 c20"
@@ -10810,7 +10810,7 @@ exports[`Home page renders correctly 1`] = `
               href="/explore"
               state={
                 Object {
-                  "selectedFilterId": "d78d5a37-e703-4e4f-bf7a-debb7950b0f6",
+                  "selectedFilterId": "f3905325-695d-41ff-984b-b3e192c03c5b",
                 }
               }
               style={
@@ -10832,10 +10832,10 @@ exports[`Home page renders correctly 1`] = `
                 }
               >
                 <img
-                  alt="Variegated green crop circles cover what was once shortgrass prairie in southwestern Kansas."
+                  alt="The Republic of Maldives with its twenty-six atolls, and 1192 coral islands, with an average ground elevation of 1.5 meters (about 5 feet)."
                   fluid={
                     Object {
-                      "src": "/static/4722bcd2e261bd732e5ca17c48e012fd/13200/kansas_AST_2001175_lrg.jpg",
+                      "src": "/static/ac27142e538661d074ff7912147d7b00/235ae/218_PIA21166_hires-768px-v2.jpg",
                     }
                   }
                   src="test-image.png"
@@ -10859,10 +10859,130 @@ exports[`Home page renders correctly 1`] = `
                   }
                 }
               >
-                agricultural
+                island
               </div>
               <span>
-                Variegated green crop circles cover what was once shortgrass prairie in southwestern Kansas.
+                The Republic of Maldives with its twenty-six atolls, and 1192 coral islands, with an average ground elevation of 1.5 meters (about 5 feet).
+              </span>
+            </a>
+            <a
+              data-cy="region-type"
+              href="/explore"
+              state={
+                Object {
+                  "selectedFilterId": "793324dc-4710-4144-9925-e55ee707a380",
+                }
+              }
+              style={
+                Object {
+                  "alignItems": "center",
+                  "display": "grid",
+                  "gridTemplateColumns": "1fr",
+                  "gridTemplateRows": "1fr",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "gridArea": "1 / 1 / 1 / 1",
+                    "height": 550,
+                    "zIndex": -1,
+                  }
+                }
+              >
+                <img
+                  alt="The lidar on its tripod. NASA/GSFC"
+                  fluid={
+                    Object {
+                      "src": "/static/4c11912352d4c7904aea691c195b1bd6/f6c18/desert-plant-and-lidar.jpg",
+                    }
+                  }
+                  src="test-image.png"
+                  style={
+                    Object {
+                      "height": 550,
+                    }
+                  }
+                />
+              </div>
+              <div
+                data-cy="region-type-name"
+                style={
+                  Object {
+                    "fontSize": "xxx-large",
+                    "fontWeight": "bold",
+                    "gridArea": "1 / 1 / 1 / 1",
+                    "justifySelf": "center",
+                    "textShadow": "3px 3px 10px #333",
+                    "textTransform": "uppercase",
+                  }
+                }
+              >
+                desert
+              </div>
+              <span>
+                The lidar on its tripod. NASA/GSFC
+              </span>
+            </a>
+            <a
+              data-cy="region-type"
+              href="/explore"
+              state={
+                Object {
+                  "selectedFilterId": "e8ba2642-3145-45a9-b8ff-e88d538d17a5",
+                }
+              }
+              style={
+                Object {
+                  "alignItems": "center",
+                  "display": "grid",
+                  "gridTemplateColumns": "1fr",
+                  "gridTemplateRows": "1fr",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "gridArea": "1 / 1 / 1 / 1",
+                    "height": 550,
+                    "zIndex": -1,
+                  }
+                }
+              >
+                <img
+                  alt="Tropical forests, such as those in Gabon, Africa, are an important reservoir of carbon. (Photography courtesy Sassan Saatchi, NASA/JPL-Caltech.)"
+                  fluid={
+                    Object {
+                      "src": "/static/f902e06833c91735cfa81507901f14fa/b94b5/gabon_forest.jpg",
+                    }
+                  }
+                  src="test-image.png"
+                  style={
+                    Object {
+                      "height": 550,
+                    }
+                  }
+                />
+              </div>
+              <div
+                data-cy="region-type-name"
+                style={
+                  Object {
+                    "fontSize": "xxx-large",
+                    "fontWeight": "bold",
+                    "gridArea": "1 / 1 / 1 / 1",
+                    "justifySelf": "center",
+                    "textShadow": "3px 3px 10px #333",
+                    "textTransform": "uppercase",
+                  }
+                }
+              >
+                forest
+              </div>
+              <span>
+                Tropical forests, such as those in Gabon, Africa, are an important reservoir of carbon. (Photography courtesy Sassan Saatchi, NASA/JPL-Caltech.)
               </span>
             </a>
             <a
@@ -10930,7 +11050,7 @@ exports[`Home page renders correctly 1`] = `
               href="/explore"
               state={
                 Object {
-                  "selectedFilterId": "f3905325-695d-41ff-984b-b3e192c03c5b",
+                  "selectedFilterId": "d78d5a37-e703-4e4f-bf7a-debb7950b0f6",
                 }
               }
               style={
@@ -10952,10 +11072,10 @@ exports[`Home page renders correctly 1`] = `
                 }
               >
                 <img
-                  alt="The Republic of Maldives with its twenty-six atolls, and 1192 coral islands, with an average ground elevation of 1.5 meters (about 5 feet)."
+                  alt="Variegated green crop circles cover what was once shortgrass prairie in southwestern Kansas."
                   fluid={
                     Object {
-                      "src": "/static/ac27142e538661d074ff7912147d7b00/235ae/218_PIA21166_hires-768px-v2.jpg",
+                      "src": "/static/4722bcd2e261bd732e5ca17c48e012fd/13200/kansas_AST_2001175_lrg.jpg",
                     }
                   }
                   src="test-image.png"
@@ -10979,10 +11099,10 @@ exports[`Home page renders correctly 1`] = `
                   }
                 }
               >
-                island
+                agricultural
               </div>
               <span>
-                The Republic of Maldives with its twenty-six atolls, and 1192 coral islands, with an average ground elevation of 1.5 meters (about 5 feet).
+                Variegated green crop circles cover what was once shortgrass prairie in southwestern Kansas.
               </span>
             </a>
             <a
@@ -11343,126 +11463,6 @@ exports[`Home page renders correctly 1`] = `
               </div>
               <span>
                 Great Barrier Reef near Whitsunday Islands.
-              </span>
-            </a>
-            <a
-              data-cy="region-type"
-              href="/explore"
-              state={
-                Object {
-                  "selectedFilterId": "793324dc-4710-4144-9925-e55ee707a380",
-                }
-              }
-              style={
-                Object {
-                  "alignItems": "center",
-                  "display": "grid",
-                  "gridTemplateColumns": "1fr",
-                  "gridTemplateRows": "1fr",
-                }
-              }
-            >
-              <div
-                style={
-                  Object {
-                    "gridArea": "1 / 1 / 1 / 1",
-                    "height": 550,
-                    "zIndex": -1,
-                  }
-                }
-              >
-                <img
-                  alt="The lidar on its tripod. NASA/GSFC"
-                  fluid={
-                    Object {
-                      "src": "/static/4c11912352d4c7904aea691c195b1bd6/f6c18/desert-plant-and-lidar.jpg",
-                    }
-                  }
-                  src="test-image.png"
-                  style={
-                    Object {
-                      "height": 550,
-                    }
-                  }
-                />
-              </div>
-              <div
-                data-cy="region-type-name"
-                style={
-                  Object {
-                    "fontSize": "xxx-large",
-                    "fontWeight": "bold",
-                    "gridArea": "1 / 1 / 1 / 1",
-                    "justifySelf": "center",
-                    "textShadow": "3px 3px 10px #333",
-                    "textTransform": "uppercase",
-                  }
-                }
-              >
-                desert
-              </div>
-              <span>
-                The lidar on its tripod. NASA/GSFC
-              </span>
-            </a>
-            <a
-              data-cy="region-type"
-              href="/explore"
-              state={
-                Object {
-                  "selectedFilterId": "e8ba2642-3145-45a9-b8ff-e88d538d17a5",
-                }
-              }
-              style={
-                Object {
-                  "alignItems": "center",
-                  "display": "grid",
-                  "gridTemplateColumns": "1fr",
-                  "gridTemplateRows": "1fr",
-                }
-              }
-            >
-              <div
-                style={
-                  Object {
-                    "gridArea": "1 / 1 / 1 / 1",
-                    "height": 550,
-                    "zIndex": -1,
-                  }
-                }
-              >
-                <img
-                  alt="Tropical forests, such as those in Gabon, Africa, are an important reservoir of carbon. (Photography courtesy Sassan Saatchi, NASA/JPL-Caltech.)"
-                  fluid={
-                    Object {
-                      "src": "/static/f902e06833c91735cfa81507901f14fa/b94b5/gabon_forest.jpg",
-                    }
-                  }
-                  src="test-image.png"
-                  style={
-                    Object {
-                      "height": 550,
-                    }
-                  }
-                />
-              </div>
-              <div
-                data-cy="region-type-name"
-                style={
-                  Object {
-                    "fontSize": "xxx-large",
-                    "fontWeight": "bold",
-                    "gridArea": "1 / 1 / 1 / 1",
-                    "justifySelf": "center",
-                    "textShadow": "3px 3px 10px #333",
-                    "textTransform": "uppercase",
-                  }
-                }
-              >
-                forest
-              </div>
-              <span>
-                Tropical forests, such as those in Gabon, Africa, are an important reservoir of carbon. (Photography courtesy Sassan Saatchi, NASA/JPL-Caltech.)
               </span>
             </a>
             <a
