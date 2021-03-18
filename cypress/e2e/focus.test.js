@@ -18,10 +18,7 @@ describe("Focus Area", () => {
 
     cy.get("[data-cy=focus-hero]").first().find("svg").should("exist")
     cy.get("[data-cy=focus-hero]").first().find("svg").should("be.visible")
-    cy.get("[data-cy=focus-area-logo-link]")
-      .should("exist")
-      .and("have.attr", "href")
-      .and("include", "/earth-science/")
+
     // displays inpage nav
     cy.get("[data-cy=inpage-nav]").find("[data-cy=home-link]").should("exist")
     cy.get("[data-cy=home-link]").click()

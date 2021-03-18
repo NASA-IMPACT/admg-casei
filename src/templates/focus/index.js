@@ -32,12 +32,7 @@ const FocusTemplate = ({ data: { focusArea, allFocusArea }, path }) => {
         textToImageRatio={[8, 4]}
         id="focus"
       >
-        <ExternalLink
-          url={"https://science.nasa.gov/earth-science/"}
-          id="focus-area-logo"
-        >
-          <Icon color={colors[NEGATIVE].text} size="huge" />
-        </ExternalLink>
+        <Icon color={colors[NEGATIVE].text} size="huge" />
       </Hero>
 
       <PageBody id="focus">
@@ -72,7 +67,7 @@ const FocusTemplate = ({ data: { focusArea, allFocusArea }, path }) => {
             <div
               css={`
                 padding: 1rem;
-                border: 1px solid hsla(0, 0%, 0%, 0.2);
+                border: 1px solid ${colors[POSITIVE].border};
               `}
             >
               {focusArea.url ? (
@@ -96,8 +91,8 @@ const FocusTemplate = ({ data: { focusArea, allFocusArea }, path }) => {
 
         <Section id="focus-areas" isSpaced>
           <SectionHeader
-            headline="Focus Areas"
-            tagline="explore nasa earth science"
+            headline="Earth Science Focus Areas"
+            tagline="view other"
             id="focus"
           />
           <SectionContent>
