@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 
 import { getFocusIcon } from "../icons/utils"
 import { NEGATIVE } from "../utils/constants"
-import { colors } from "../utils/theme"
+import { colors } from "../theme"
 
 const FocusArea = ({ id, caption, size }) => {
   const Icon = getFocusIcon(id)
@@ -64,10 +64,9 @@ export default FocusAreaGallery
 FocusAreaGallery.propTypes = {
   focusAreas: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string,
-      shortname: PropTypes.string,
-      longname: PropTypes.string,
-    })
-  ),
+      id: PropTypes.string.isRequired,
+      shortname: PropTypes.string.isRequired,
+    }).isRequired
+  ).isRequired,
   size: PropTypes.string,
 }

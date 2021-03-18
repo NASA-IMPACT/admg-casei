@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 
 import { NEGATIVE } from "../utils/constants"
-import { colors } from "../utils/theme"
+import { colors } from "../theme"
 
 const Backdrop = styled.div`
   position: fixed;

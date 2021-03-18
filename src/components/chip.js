@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 import { IconButton } from "./button"
 import { CloseIcon } from "../icons"
 import { NEGATIVE } from "../utils/constants"
-import { colors, shape } from "../utils/theme"
+import { colors, shape } from "../theme"
 
 const Chip = ({
   id,

@@ -20,7 +20,7 @@ import {
 } from "date-fns"
 
 import { NEGATIVE } from "../../utils/constants"
-import { colors } from "../../utils/theme"
+import { colors } from "../../theme"
 
 const FilterButton = styled(ListboxButton)`
   flex-grow: 0;

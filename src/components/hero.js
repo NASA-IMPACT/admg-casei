@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import Image from "gatsby-image"
 
-import { layout } from "../utils/theme"
+import { layout } from "../theme"
 import DateList from "./date-list-hover"
 
 export const HeroStats = ({ statList }) => (

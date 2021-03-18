@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 import { AuthContext } from "../components/auth-provider"
 import { Section } from "./layout"
 import { NEGATIVE } from "../utils/constants"
-import { colors } from "../utils/theme"
+import { colors } from "../theme"
 
 const MaintenanceSection = ({ id, data }) => {
   const { isLoggedIn } = useContext(AuthContext)

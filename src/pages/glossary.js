@@ -12,7 +12,7 @@ import Layout, {
 } from "../components/layout"
 import SEO from "../components/seo"
 import { ArrowIcon } from "../icons"
-import { colors } from "../utils/theme"
+import { colors } from "../theme"
 import { ALPHABET, POSITIVE, NEGATIVE } from "../utils/constants"
 
 export default function Glossary({ data }) {
@@ -48,6 +48,43 @@ export default function Glossary({ data }) {
       <PageBody id="glossary">
         <h1>Glossary</h1>
 
+        <Section id="intro">
+          <SectionContent columns={[1, 8]}>
+            <p>
+              We use the formalized definitions below for building NASA’s
+              Catalog of Archived Suborbital Earth Science Investigations.
+              Consistent use of vocabulary is required for clear organization of
+              the variety of airborne and field investigation metadata. Where
+              possible, we aim to align terminology with conventions in use
+              among the communities served by ADMG. Feedback on these
+              definitions are welcome.
+            </p>
+          </SectionContent>
+        </Section>
+
+        <Section id="glossary-img">
+          <SectionHeader id="glossary-img" headline="Terminology map" />
+
+          <SectionContent withPadding>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://earthdata.nasa.gov/esds/impact/admg/admg-definitions"
+            >
+              <figure>
+                <Image
+                  alt="terminology map"
+                  fluid={data.image.childImageSharp.fluid}
+                />
+                <figcaption>
+                  Source:{" "}
+                  https://earthdata.nasa.gov/esds/impact/admg/admg-definitions
+                </figcaption>
+              </figure>
+            </a>
+          </SectionContent>
+        </Section>
+
         <Section id="letter-navigation">
           <VisuallyHidden>
             <SectionHeader id="letter-navigation" headline="Jump to letter" />
@@ -57,7 +94,6 @@ export default function Glossary({ data }) {
             <nav
               aria-label="letter selection"
               css={`
-                margin-top: 6rem;
                 font-size: x-large;
                 color: ${colors[NEGATIVE].altText};
               `}
@@ -132,18 +168,6 @@ export default function Glossary({ data }) {
                   >
                     <h3>{x.term}</h3>
                     <p>{x.definition}</p>
-                    {x.listOptions && (
-                      <ul data-cy="glossary-definition-options">
-                        {x.listOptions.map(listItem => (
-                          <li
-                            key={listItem}
-                            style={{ listStyleType: `circle` }}
-                          >
-                            {listItem}
-                          </li>
-                        ))}
-                      </ul>
-                    )}
                     {x.note && (
                       <p
                         data-cy="glossary-definition-note"
@@ -157,29 +181,6 @@ export default function Glossary({ data }) {
               </Section>
             )
           })}
-
-        <Section id="glossary-img">
-          <SectionHeader id="glossary-img" headline="Terminology map" />
-
-          <SectionContent withPadding>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://earthdata.nasa.gov/esds/impact/admg/admg-definitions"
-            >
-              <figure>
-                <Image
-                  alt="terminology map"
-                  fluid={data.image.childImageSharp.fluid}
-                />
-                <figcaption>
-                  Source:{" "}
-                  https://earthdata.nasa.gov/esds/impact/admg/admg-definitions
-                </figcaption>
-              </figure>
-            </a>
-          </SectionContent>
-        </Section>
       </PageBody>
     </Layout>
   )
@@ -192,7 +193,6 @@ export const query = graphql`
         term
         definition
         note
-        listOptions
       }
     }
     image: file(relativePath: { eq: "glossary-map.png" }) {
@@ -213,7 +213,6 @@ Glossary.propTypes = {
           term: PropTypes.string.isRequired,
           definition: PropTypes.string.isRequired,
           note: PropTypes.string,
-          listOptions: PropTypes.arrayOf(PropTypes.string),
         })
       ),
     }).isRequired,

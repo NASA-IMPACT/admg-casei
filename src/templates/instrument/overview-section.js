@@ -13,7 +13,7 @@ import {
 import ExternalLink from "../../components/external-link"
 import { POSITIVE } from "../../utils/constants"
 import { isUrl } from "../../utils/helpers"
-import { colors } from "../../utils/theme"
+import { colors } from "../../theme"
 
 function BackgroundListItem({ id, label, children }) {
   return (

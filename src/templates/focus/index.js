@@ -17,7 +17,7 @@ import RelatedCampaignsSection from "../../components/related-campaigns-section"
 import FocusAreaGallery from "../../components/focus-area-gallery"
 
 import { NEGATIVE, POSITIVE } from "../../utils/constants"
-import { colors } from "../../utils/theme"
+import { colors } from "../../theme"
 import { getFocusIcon } from "../../icons/utils"
 
 const FocusTemplate = ({ data: { focusArea, allFocusArea }, path }) => {

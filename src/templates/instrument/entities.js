@@ -7,7 +7,7 @@ import { Section, SectionHeader, SectionContent } from "../../components/layout"
 import PlatformCard from "../../components/cards/platform-card"
 import CampaignCard from "../../components/cards/campaign-card"
 import { NEGATIVE } from "../../utils/constants"
-import { colors } from "../../utils/theme"
+import { colors } from "../../theme"
 
 const Table = styled.table`
   th:first-child {

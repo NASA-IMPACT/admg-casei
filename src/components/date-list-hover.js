@@ -8,9 +8,9 @@ import {
 } from "@reach/listbox"
 import VisuallyHidden from "@reach/visually-hidden"
 import styled from "styled-components"
-import { colors } from "../utils/theme"
+import { colors } from "../theme"
 import { NEGATIVE, POSITIVE } from "../utils/constants"
-import { scrollFade } from "../utils/style-helpers"
+import { scrollFade } from "../theme/style-helpers"
 
 const ListTrigger = styled(ListboxButton)`
   &[data-reach-listbox-button] {

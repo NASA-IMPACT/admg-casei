@@ -12,7 +12,7 @@ import { RegionCarousel } from "../components/home/region-carousel"
 import { GeophysicsGrid } from "../components/home/geophysics-grid"
 import { InstrumentsGrid } from "../components/home/instruments-grid"
 import { NEGATIVE } from "../utils/constants"
-import { colors } from "../utils/theme"
+import { colors } from "../theme"
 
 const Home = ({ data }) => {
   return (
@@ -33,8 +33,10 @@ const Home = ({ data }) => {
       <PageBody id="home">
         <Section id="focus-area" isSpaced>
           <SectionHeader
-            tagline="explore nasa earth science"
-            headline="Focus Areas"
+            tagline="view"
+            headline="Earth Science Focus Areas"
+            subline="NASA’s Earth Science Research and Analysis Program supports
+            investigations related to six broad Focus Areas:"
             id="focus"
           />
           <SectionContent>
@@ -60,6 +62,7 @@ const Home = ({ data }) => {
           <SectionHeader
             tagline="explore campaigns by"
             headline="Geophysical Concepts"
+            subline="NASA investigates a myriad of factors that comprise Earth’s properties, systems, and processes."
             id="geophysical-concepts"
           />
           <SectionContent>
@@ -78,28 +81,28 @@ const Home = ({ data }) => {
           </SectionContent>
           <SectionContent columns={[7, 6]}>
             <div
-              style={{
-                height: `100%`,
-                display: `grid`,
-                alignContent: `center`,
-                padding: `1rem`,
-              }}
+              css={`
+                height: 100%;
+                display: grid;
+                gap: 2.5rem;
+                align-content: center;
+                padding: 1rem;
+              `}
             >
               <SectionHeader
                 tagline="explore"
                 headline="Platforms"
-                subline="From aircrafts to balloons, from sensors to plaftorms, it
-                takes a lot to understand earth."
+                subline="Learn about the variety of air and Earth-based platforms NASA uses to study our home planet."
                 id="platforms"
               />
               <Link
                 to="/explore"
                 state={{ defaultExploreCategory: "platforms" }}
-                style={{
-                  border: `1px solid ${colors[NEGATIVE].text}`,
-                  padding: `1rem 5rem`,
-                  textTransform: `uppercase`,
-                }}
+                css={`
+                  border: 1px solid ${colors[NEGATIVE].text};
+                  padding: 1rem 5rem;
+                  text-transform: uppercase;
+                `}
                 data-cy="explore-platforms-link"
               >
                 Explore
@@ -110,8 +113,8 @@ const Home = ({ data }) => {
 
         <Section id="instruments" isSpaced>
           <SectionHeader
-            tagline="explore"
-            headline="Instruments"
+            tagline="explore instruments by"
+            headline="Measurement Type"
             id="instruments"
           />
           <SectionContent>

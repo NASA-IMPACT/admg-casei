@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import { NEGATIVE } from "../../utils/constants"
-import { colors } from "../../utils/theme"
+import { colors } from "../../theme"
 
 export default function FilterChips({ clearFilters, children }) {
   return (

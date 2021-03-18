@@ -7,7 +7,7 @@ import { Section, SectionHeader, SectionContent } from "./layout"
 import CampaignCard from "./cards/campaign-card"
 import { controlButtonLRStyle } from "./carousel-styles"
 import { NEGATIVE } from "../utils/constants"
-import { colors } from "../utils/theme"
+import { colors } from "../theme"
 
 const RelatedCampaignsSection = ({ id, campaigns }) => {
   return (

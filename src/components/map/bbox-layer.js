@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 
 import { NEGATIVE } from "../../utils/constants"
-import { colors } from "../../utils/theme"
+import { colors } from "../../theme"
 
 export default function BboxLayer({ id, bbox, map, sourceId }) {
   const [layer, setLayer] = useState(null)

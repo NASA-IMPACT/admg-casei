@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { navigate } from "gatsby"
 
 import { NEGATIVE } from "../../utils/constants"
-import { colors } from "../../utils/theme"
+import { colors } from "../../theme"
 
 export default function HoverLayer({ id, map, sourceId, isDrawing }) {
   const [layer, setLayer] = useState(null)

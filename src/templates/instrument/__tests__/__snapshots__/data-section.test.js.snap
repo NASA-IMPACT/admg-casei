@@ -34,7 +34,7 @@ exports[`Data Section matches snapshot 1`] = `
 }
 
 .c2.c2 {
-  grid-column: 1 / span 7;
+  grid-column: 1 / span 6;
   -webkit-align-self: end;
   -ms-flex-item-align: end;
   align-self: end;
