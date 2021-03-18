@@ -51,6 +51,7 @@ const Home = ({ data }) => {
           <SectionHeader
             tagline="explore campaigns by"
             headline="Region Type"
+            subline="Choose a type of geographical region to explore"
             id="region-type"
           />
           <SectionContent>
