@@ -8,12 +8,9 @@ import { isUrl, PropTypeIsUrl } from "../../utils/helpers"
 const ListLink = props => (
   <li style={{ padding: props.noPadding ? 0 : `1rem 0` }}>
     {isUrl(props.to) ? (
-      <ExternalLink
-        label={props.children}
-        url={props.to}
-        id={props.children}
-        mode={props.mode}
-      />
+      <ExternalLink url={props.to} id={props.children} mode={props.mode}>
+        {props.children}
+      </ExternalLink>
     ) : (
       <p className="placeholder">{props.children}</p> // fallback for invalid url
     )}

@@ -109,7 +109,7 @@ const OverviewSection = ({
         <li
           css={`
             padding: 1rem;
-            border: 1px solid hsla(0, 0%, 0%, 0.2);
+            border: 1px solid ${colors[POSITIVE].border};
             margin-bottom: 3rem;
           `}
         >
