@@ -17,11 +17,13 @@ exports.createSchemaCustomization = ({ actions }) => {
       focus_areas: [focus_area] @link
       geophysical_concepts: [geophysical_concept] @link
       instruments: [instrument] @link
+      iops: [iop] @link
       partner_orgs: [partner_org] @link
       platform_types: [platform_type] @link
       platforms: [platform] @link
       repositories: [repository] @link
       seasons: [season] @link
+      significant_events: [significant_event] @link
       logo: LogosJson @link(by: "shortname", from: "short_name")
     }
     type collection_period implements Node {
@@ -30,6 +32,8 @@ exports.createSchemaCustomization = ({ actions }) => {
     type deployment implements Node {
       collection_periods: [collection_period] @link
       geographical_regions: [geographical_region] @link
+      iops: [iop] @link
+      significant_events: [significant_event] @link
     }
     type focus_area implements Node {
       campaigns: [campaign] @link
@@ -129,6 +133,7 @@ exports.sourceNodes = async ({ actions, createContentDigest }) => {
       "geophysical_concept",
       "image",
       "instrument",
+      "iop",
       "measurement_type",
       "measurement_region",
       "partner_org",
@@ -136,6 +141,7 @@ exports.sourceNodes = async ({ actions, createContentDigest }) => {
       "platform_type",
       "repository",
       "season",
+      "significant_event",
     ]
 
     let responses = await Promise.all(endpoints.map(key => fetchData(key)))
