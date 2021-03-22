@@ -22,10 +22,10 @@ const DataSection = ({ id, dois }) => {
     ? dois.filter(
         doi =>
           doi.platforms
-            .map(platform => platform.longname)
+            .map(platform => platform.longname || platform.shortname)
             .some(id => selectedFilterIds.includes(id)) ||
           doi.instruments
-            .map(instrument => instrument.longname)
+            .map(instrument => instrument.longname || instrument.shortname)
             .some(id => selectedFilterIds.includes(id))
       )
     : dois
@@ -39,32 +39,38 @@ const DataSection = ({ id, dois }) => {
       <SectionContent>
         {dois.length ? (
           <>
-            <p>
-              Filter data products from this campaign by specific platforms or
-              instruments.
-            </p>
-            {platformList.concat(instrumentList).length > 2 && (
-              <div
-                css={`
-                  display: flex;
-                  border-bottom: 1px solid ${colors[NEGATIVE].altText};
-                  padding: 2rem 0;
-                  margin-bottom: 2rem;
-                `}
-              >
-                <FilterBox
-                  filterOptions={platformList}
-                  filterName="Platforms"
-                  setSelectedFilterIds={setSelectedFilterIds}
-                  selectedFilterIds={selectedFilterIds}
-                />
-                <FilterBox
-                  filterOptions={instrumentList}
-                  filterName="Instruments"
-                  setSelectedFilterIds={setSelectedFilterIds}
-                  selectedFilterIds={selectedFilterIds}
-                />
-              </div>
+            {platformList.concat(instrumentList).length > 0 && (
+              <>
+                <p>
+                  Filter data products from this campaign by specific platforms
+                  or instruments.
+                </p>
+                <div
+                  css={`
+                    display: flex;
+                    border-bottom: 1px solid ${colors[NEGATIVE].altText};
+                    padding: 2rem 0;
+                    margin-bottom: 2rem;
+                  `}
+                >
+                  {!!platformList.length && (
+                    <FilterBox
+                      filterOptions={platformList}
+                      filterName="Platforms"
+                      setSelectedFilterIds={setSelectedFilterIds}
+                      selectedFilterIds={selectedFilterIds}
+                    />
+                  )}
+                  {!!instrumentList.length && (
+                    <FilterBox
+                      filterOptions={instrumentList}
+                      filterName="Instruments"
+                      setSelectedFilterIds={setSelectedFilterIds}
+                      selectedFilterIds={selectedFilterIds}
+                    />
+                  )}
+                </div>
+              </>
             )}
             {selectedFilterIds.length > 0 && (
               <FilterChips clearFilters={clearFilters}>
@@ -102,46 +108,63 @@ const DataSection = ({ id, dois }) => {
                 >
                   <div>
                     <Label id="doi" color={colors[NEGATIVE].text}>
-                      {doi.longname}
+                      {doi.longname || doi.cmrTitle}
                     </Label>
                     <ExternalLink
-                      label={doi.shortname}
-                      url={`http://dx.doi.org/${doi.shortname}`}
+                      label={doi.doi}
+                      url={`http://dx.doi.org/${doi.doi}`}
                       id="doi"
                     ></ExternalLink>
                   </div>
 
-                  <div
-                    css={`
-                      display: flex;
-                      flex-direction: column;
-                      gap: 1rem;
-                    `}
-                  >
-                    <div data-cy="data-product-platforms">
-                      <Label id="doi-platform" showBorder>
-                        Platforms
-                      </Label>
-                      {doi.platforms.map(platform => (
-                        <Link key={platform.id} to={`/platform/${platform.id}`}>
-                          <small>{platform.longname}</small>
-                        </Link>
-                      ))}
+                  {doi.platforms.concat(doi.instruments).length ? (
+                    <div
+                      css={`
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1rem;
+                      `}
+                    >
+                      {!!doi.platforms.length && (
+                        <div data-cy="data-product-platforms">
+                          <Label id="doi-platform" showBorder>
+                            Platforms
+                          </Label>
+                          {doi.platforms.map(platform => (
+                            <Link
+                              key={platform.id}
+                              to={`/platform/${platform.id}`}
+                            >
+                              <small>
+                                {platform.longname || platform.shortname}
+                              </small>
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                      {!!doi.instruments.length && (
+                        <div data-cy="data-product-instruments">
+                          <Label id="doi-instrument" showBorder>
+                            Instruments
+                          </Label>
+                          {doi.instruments.map(instrument => (
+                            <Link
+                              key={instrument.id}
+                              to={`/instrument/${instrument.id}`}
+                            >
+                              <small>
+                                {instrument.longname || instrument.shortname}
+                              </small>
+                            </Link>
+                          ))}
+                        </div>
+                      )}
                     </div>
-                    <div data-cy="data-product-instruments">
-                      <Label id="doi-instrument" showBorder>
-                        Instruments
-                      </Label>
-                      {doi.instruments.map(instrument => (
-                        <Link
-                          key={instrument.id}
-                          to={`/instrument/${instrument.id}`}
-                        >
-                          <small>{instrument.longname}</small>
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
+                  ) : (
+                    <small data-cy="no-platforms-label">
+                      No Related Platforms or Instruments
+                    </small>
+                  )}
                 </div>
               ))}
             </div>
@@ -157,9 +180,10 @@ const DataSection = ({ id, dois }) => {
 export const dataFields = graphql`
   fragment dataFields on campaign {
     dois {
-      shortname: short_name
-      longname: long_name
+      cmrTitle: cmr_entry_title
+      doi
       id
+      longname: long_name
     }
   }
 `
@@ -168,8 +192,9 @@ DataSection.propTypes = {
   id: PropTypes.string.isRequired,
   dois: PropTypes.arrayOf(
     PropTypes.shape({
+      cmrTitle: PropTypes.string.isRequired,
+      doi: PropTypes.string.isRequired,
       id: PropTypes.string.isRequired,
-      shortname: PropTypes.string.isRequired,
       longname: PropTypes.string,
     })
   ).isRequired,

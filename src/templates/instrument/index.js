@@ -126,8 +126,9 @@ InstrumentTemplate.propTypes = {
       description: PropTypes.string.isRequired,
       dois: PropTypes.arrayOf(
         PropTypes.shape({
+          cmrTitle: PropTypes.string.isRequired,
+          doi: PropTypes.string.isRequired,
           id: PropTypes.string.isRequired,
-          shortname: PropTypes.string.isRequired,
           longname: PropTypes.string,
         })
       ).isRequired,

@@ -41,6 +41,11 @@ exports.createSchemaCustomization = ({ actions }) => {
       iops: [iop] @link
       significant_events: [significant_event] @link
     }
+    type doi implements Node {
+      campaigns: [campaign] @link
+      instruments: [instrument] @link
+      platforms: [platform] @link
+    }
     type focus_area implements Node {
       campaigns: [campaign] @link
     }
