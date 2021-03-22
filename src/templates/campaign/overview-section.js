@@ -24,12 +24,9 @@ const OverviewSection = ({
   seasonListing,
   bounds,
   doi,
-  projectWebsite,
-  repositoryWebsite,
-  tertiaryWebsite,
-  publicationLink,
   notesPublic,
   repositories,
+  websites,
 }) => (
   <Section id={id} mode={POSITIVE}>
     <VisuallyHidden>
@@ -131,26 +128,14 @@ const OverviewSection = ({
           )}
         </li>
 
-        {repositoryWebsite && (
-          <ListLink mode={POSITIVE} to={repositoryWebsite}>
-            Repository website
-          </ListLink>
-        )}
-        {projectWebsite && (
-          <ListLink mode={POSITIVE} to={projectWebsite}>
-            Project website
-          </ListLink>
-        )}
-        {tertiaryWebsite && (
-          <ListLink mode={POSITIVE} to={tertiaryWebsite}>
-            Tertiary website
-          </ListLink>
-        )}
-        {publicationLink && (
-          <ListLink mode={POSITIVE} to={publicationLink}>
-            Overview Publication
-          </ListLink>
-        )}
+        {websites &&
+          websites
+            .sort((a, b) => a.priority - b.priority)
+            .map(({ website }) => (
+              <ListLink key={website.url} mode={POSITIVE} to={website.url}>
+                {website.title}
+              </ListLink>
+            ))}
       </ul>
     </SectionContent>
 
@@ -192,17 +177,22 @@ export const overviewFields = graphql`
       longname: long_name
     }
     bounds: spatial_bounds
-    doi
-    projectWebsite: project_website
-    repositoryWebsite: repository_website
-    tertiaryWebsite: tertiary_website
-    publicationLink: publication_links
+    doi: campaign_doi
     notesPublic: notes_public
-    repositories: repositories {
+    repositories {
       id
       shortname: short_name
       longname: long_name
       url: notes_public
+    }
+    websites {
+      priority
+      website {
+        title
+        url
+        description
+        notes_public
+      }
     }
   }
 `
@@ -221,16 +211,19 @@ OverviewSection.propTypes = {
   seasonListing: PropTypes.string.isRequired,
   bounds: PropTypes.string.isRequired,
   doi: PropTypes.string,
-  projectWebsite: PropTypes.string.isRequired,
-  repositoryWebsite: PropTypes.string.isRequired,
-  tertiaryWebsite: PropTypes.string.isRequired,
-  publicationLink: PropTypes.string.isRequired,
   notesPublic: PropTypes.string.isRequired,
   repositories: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       shortname: PropTypes.string.isRequired,
       longname: PropTypes.string.isRequired,
+      url: PropTypes.string.isRequired,
+    }).isRequired
+  ).isRequired,
+  websites: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
       url: PropTypes.string.isRequired,
     }).isRequired
   ).isRequired,

@@ -13,7 +13,7 @@ import PlatformSection from "./platform-section"
 import TimelineSection from "./timeline-section"
 import DataSection from "./data-section"
 import ProgramInfoSection from "./program-info-section"
-import OtherResourcesSection from "./other-resources-section"
+// import OtherResourcesSection from "./other-resources-section"
 import MaintenanceSection from "../../components/maintenance-section"
 
 const CampaignTemplate = ({ data: { campaign }, path }) => {
@@ -51,12 +51,9 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
         seasonListing: campaign.seasons.map(x => x.shortname).join(", "),
         bounds: campaign.bounds,
         doi: campaign.doi,
-        projectWebsite: campaign.projectWebsite,
-        repositoryWebsite: campaign.repositoryWebsite,
-        tertiaryWebsite: campaign.tertiaryWebsite,
-        publicationLink: campaign.publicationLink,
         notesPublic: campaign.notesPublic,
         repositories: campaign.repositories,
+        websites: campaign.websites,
       },
     },
     missions: {
@@ -107,21 +104,19 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
         programLead: campaign.programLead,
         leadInvestigator: campaign.leadInvestigator,
         dataManager: campaign.dataManager,
-        repositoryWebsite: campaign.repositoryWebsite,
         partnerOrgListing: campaign.partnerOrgs
           .map(x => x.shortname)
           .join(", "),
         partnerWebsite: campaign.partnerWebsite,
-        publicationLink: campaign.publicationLink,
       },
     },
-    "other-resources": {
-      nav: "Other",
-      component: OtherResourcesSection,
-      props: {
-        resources: campaign.resources.split("\n").filter(x => x),
-      },
-    },
+    // "other-resources": {
+    //   nav: "Other",
+    //   component: OtherResourcesSection,
+    //   props: {
+    //     resources: campaign.resources.split("\n").filter(x => x),
+    //   },
+    // },
   }
 
   return (
@@ -170,7 +165,6 @@ export const query = graphql`
       ...deploymentFields
       ...dataFields
       ...fundingFields
-      ...resourceFields
       uuid
     }
   }
@@ -213,16 +207,19 @@ CampaignTemplate.propTypes = {
         })
       ).isRequired,
       doi: PropTypes.string.isRequired,
-      projectWebsite: PropTypes.string.isRequired,
-      repositoryWebsite: PropTypes.string.isRequired,
-      tertiaryWebsite: PropTypes.string.isRequired,
-      publicationLink: PropTypes.string.isRequired,
       notesPublic: PropTypes.string.isRequired,
       repositories: PropTypes.arrayOf(
         PropTypes.shape({
           id: PropTypes.string.isRequired,
           shortname: PropTypes.string.isRequired,
           longname: PropTypes.string.isRequired,
+          url: PropTypes.string.isRequired,
+        }).isRequired
+      ).isRequired,
+      websites: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string.isRequired,
+          title: PropTypes.string.isRequired,
           url: PropTypes.string.isRequired,
         }).isRequired
       ).isRequired,
@@ -279,8 +276,9 @@ CampaignTemplate.propTypes = {
       ).isRequired,
       dois: PropTypes.arrayOf(
         PropTypes.shape({
+          cmrTitle: PropTypes.string.isRequired,
+          doi: PropTypes.string.isRequired,
           id: PropTypes.string.isRequired,
-          shortname: PropTypes.string.isRequired,
           longname: PropTypes.string,
         })
       ).isRequired,

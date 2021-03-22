@@ -24,7 +24,13 @@ exports.createSchemaCustomization = ({ actions }) => {
       repositories: [repository] @link
       seasons: [season] @link
       significant_events: [significant_event] @link
+      websites: [campaign_website]
       logo: LogosJson @link(by: "shortname", from: "short_name")
+    }
+    type campaign_website implements Node {
+      priority: String
+      campaign: campaign @link
+      website: website @link
     }
     type collection_period implements Node {
       dois: [doi] @link
@@ -56,6 +62,18 @@ exports.createSchemaCustomization = ({ actions }) => {
       image: image @link
       instruments: [instrument] @link
       dois: [doi] @link
+    }
+    type website implements Node {
+      title: String
+      url: String
+      description: String
+      notes_public: String
+      website_type: website_type @link
+    }
+    type website_type implements Node {
+      websites: [website] @link
+      long_name: String
+      description: String
     }
     type NasaImagesJson implements Node {
       nasaImg: File @link(from: "nasaImg___NODE")
@@ -124,6 +142,7 @@ exports.sourceNodes = async ({ actions, createContentDigest }) => {
     const endpoints = [
       "alias",
       "campaign",
+      "campaign_website",
       "collection_period",
       "deployment",
       "doi",
@@ -142,6 +161,8 @@ exports.sourceNodes = async ({ actions, createContentDigest }) => {
       "repository",
       "season",
       "significant_event",
+      "website",
+      "website_type",
     ]
 
     let responses = await Promise.all(endpoints.map(key => fetchData(key)))

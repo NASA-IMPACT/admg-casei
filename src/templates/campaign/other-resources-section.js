@@ -1,6 +1,5 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { graphql } from "gatsby"
 
 import {
   Section,
@@ -34,12 +33,6 @@ const OtherResourcesSection = ({ id, resources }) => (
     </SectionContent>
   </Section>
 )
-
-export const resource = graphql`
-  fragment resourceFields on campaign {
-    resources: other_resources
-  }
-`
 
 OtherResourcesSection.propTypes = {
   id: PropTypes.string.isRequired,

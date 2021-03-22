@@ -111,11 +111,11 @@ export const fundingFields = graphql`
     leadInvestigator: lead_investigator
     dataManager: technical_contact
 
-    repositoryWebsite: repository_website
+    # repositoryWebsite: repository_website
     partnerOrgs: partner_orgs {
       shortname: short_name
     }
-    publicationLink: publication_links
+    # publicationLink: publication_links
   }
 `
 
