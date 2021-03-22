@@ -75,7 +75,12 @@ describe("Explore", () => {
           expect($card.find("[data-cy=daterange]")).to.contain("Ongoing")
         })
 
-      cy.get("[data-cy=campaigns-card]").find("big").contains("AirMOSS").click()
+      cy.get("[data-cy=campaigns-card]")
+        .find("big")
+        .contains("AirMOSS")
+        .parent()
+        .parent()
+        .click()
 
       cy.url().should("include", "/campaign/")
 
@@ -135,7 +140,7 @@ describe("Explore", () => {
         .find("big")
         .contains("B-200")
         .parent()
-        .parent() // is there a better way to select the card?
+        .parent()
         .should($card => {
           expect($card.find("[data-cy=stationary-tag]")).not.to.exist
           expect($card.find("[data-cy=shortname]")).to.contain("B-200")
@@ -155,7 +160,12 @@ describe("Explore", () => {
           expect($small.find("[data-cy=count3]")).to.contain("Instruments")
         })
 
-      cy.get("[data-cy=platforms-card]").find("big").contains("GH").click()
+      cy.get("[data-cy=platforms-card]")
+        .find("big")
+        .contains("GH")
+        .parent()
+        .parent()
+        .click()
 
       cy.url().should("include", "/platform/")
 
@@ -213,7 +223,7 @@ describe("Explore", () => {
         .find("big")
         .contains("HAMSR")
         .parent()
-        .parent() // is there a better way to select the card?
+        .parent()
         .should($card => {
           expect($card.find("[data-cy=shortname]")).to.contain("HAMSR")
           expect($card.find("[data-cy=longname]")).to.contain(
@@ -229,7 +239,12 @@ describe("Explore", () => {
         })
       cy.get("[data-cy=instruments-card]")
 
-      cy.get("[data-cy=instruments-card]").find("big").contains("CPL").click()
+      cy.get("[data-cy=instruments-card]")
+        .find("big")
+        .contains("CPL")
+        .parent()
+        .parent()
+        .click()
 
       cy.url().should("include", "/instrument/")
 

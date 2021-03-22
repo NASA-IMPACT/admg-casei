@@ -3,7 +3,12 @@
 describe("Campaign", () => {
   before(() => {
     cy.visit("/explore")
-    cy.get("[data-cy=campaigns-card]").find("big").contains("OLYMPEX").click()
+    cy.get("[data-cy=campaigns-card]")
+      .find("big")
+      .contains("OLYMPEX")
+      .parent()
+      .parent()
+      .click()
   })
 
   it("provides information on the campaign", () => {
@@ -43,7 +48,7 @@ describe("Campaign", () => {
     cy.get("[data-cy=inpage-nav]")
       .find("a")
       .should($anchor => {
-        expect($anchor, "10 items").to.have.length(10)
+        expect($anchor, "9 items").to.have.length(9)
         expect($anchor.eq(0), "first item").to.contain("CASEI Logo")
         expect($anchor.eq(1), "second item").to.exist
         expect($anchor.eq(2), "third item").to.contain("Overview")
@@ -55,7 +60,7 @@ describe("Campaign", () => {
         expect($anchor.eq(6), "seventh item").to.contain("Timeline")
         expect($anchor.eq(7), "eigth item").to.contain("Data")
         expect($anchor.eq(8), "ninth item").to.contain("Program Info")
-        expect($anchor.eq(9), "tenth item").to.contain("Other")
+        // expect($anchor.eq(9), "tenth item").to.contain("Other")
       })
     ;["program-info", "platform", "overview", "timeline", "focus"].forEach(
       id => {
@@ -96,12 +101,13 @@ describe("Campaign", () => {
         expect($label.eq(3), "first item").to.contain("Spatial bounds")
       })
 
-    cy.get("[data-cy=link-list]").find("li").should("have.length.within", 2, 5)
+    // TODO: add back when we have the data
+    // cy.get("[data-cy=link-list]").find("li").should("have.length.within", 2, 5)
 
-    cy.get("[data-cy=link-list]")
-      .find("[data-cy=doi-link]")
-      .should("exist")
-      .and("have.text", "http://dx.doi.org/10.5067/GPMGV/OLYMPEX/DATA101")
+    // cy.get("[data-cy=link-list]")
+    //   .find("[data-cy=doi-link]")
+    //   .should("exist")
+    //   .and("have.text", "http://dx.doi.org/10.5067/GPMGV/OLYMPEX/DATA101")
 
     cy.get("[data-cy=notes-public]").should("exist")
     cy.get("[data-cy=repo-list]").should("exist")
@@ -151,7 +157,7 @@ describe("Campaign", () => {
       .should("have.length", 1)
       .and("have.text", "geophysical: Terr Hydro")
 
-    cy.get("[data-cy=campaigns-card]").should("have.length", 4)
+    cy.get("[data-cy=campaigns-card]").should("have.length.gte", 4)
 
     cy.go("back")
 
@@ -221,7 +227,12 @@ describe("Campaign", () => {
   describe("the timeline section", () => {
     before(() => {
       cy.visit("/explore")
-      cy.get("[data-cy=campaigns-card]").find("big").contains("AirMOSS").click()
+      cy.get("[data-cy=campaigns-card]")
+        .find("big")
+        .contains("AirMOSS")
+        .parent()
+        .parent()
+        .click()
     })
 
     it("displays a milestone carousel", () => {
@@ -256,7 +267,12 @@ describe("Campaign", () => {
   describe("the data section", () => {
     before(() => {
       cy.visit("/explore")
-      cy.get("[data-cy=campaigns-card]").find("big").contains("GCPEx").click()
+      cy.get("[data-cy=campaigns-card]")
+        .find("big")
+        .contains("CAMP2Ex")
+        .parent()
+        .parent()
+        .click()
     })
 
     it("displays some data products", () => {

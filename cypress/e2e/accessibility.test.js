@@ -62,7 +62,7 @@ describe("Accessibility tests", () => {
 
   it("Navigates to page for a /instrument and checks for accessibility violations", () => {
     // cy.visit("/explore")
-    cy.visit("/instrument/1ce41ae9-f993-4151-8591-b40acdd49d5c")
+    cy.visit("/instrument/482c482f-4fcb-456e-815f-4296977c9bf6")
 
     // cy.get("[data-cy=tabbar]")
     //   .findByText(/Instruments/i)

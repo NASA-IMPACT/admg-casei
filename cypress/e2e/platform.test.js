@@ -4,7 +4,12 @@ describe("Platform", () => {
   before(() => {
     cy.visit("/explore")
     cy.get("[data-cy=tabbar]").contains("button", "Platforms").click()
-    cy.get("[data-cy=platforms-card]").contains("DC-8").click()
+    cy.get("[data-cy=platforms-card]")
+      .find("big")
+      .contains("DC-8")
+      .parent()
+      .parent()
+      .click()
   })
 
   it("explains the platform", () => {
@@ -78,10 +83,6 @@ describe("Platform", () => {
       .first()
       .find("[data-cy=doi-label]")
       .should("exist")
-      .and(
-        "have.text",
-        "GPM GROUND VALIDATION AIRBORNE SECOND GENERATION PRECIPITATION RADAR (APR-2) GCPEX V1"
-      )
 
     cy.get("[data-cy=data-product]")
       .first()

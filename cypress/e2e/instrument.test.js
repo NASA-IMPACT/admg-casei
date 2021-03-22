@@ -4,7 +4,12 @@ describe("Instrument", () => {
   before(() => {
     cy.visit("/explore")
     cy.get("[data-cy=tabbar]").contains("button", "Instruments").click()
-    cy.get("[data-cy=instruments-card]").contains("CPL").click()
+    cy.get("[data-cy=instruments-card]")
+      .find("big")
+      .contains("CPL")
+      .parent()
+      .parent()
+      .click()
   })
 
   it("explains the instrument", () => {
