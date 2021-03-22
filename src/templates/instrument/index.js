@@ -49,6 +49,7 @@ const InstrumentTemplate = ({ data: { instrument }, path }) => {
       props: {
         dois: instrument.dois,
         filterBy: ["campaigns", "platforms"],
+        category: "instrument",
       },
     },
   }

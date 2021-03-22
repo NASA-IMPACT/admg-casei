@@ -108,10 +108,12 @@ exports[`Data Section matches snapshot 1`] = `
     mode="darkTheme"
   >
     <p>
-      Filter data products from this campaign by specific 
-      campaigns
+      Filter data products from this 
+      instrument
+       by specific
        
-      or 
+      campaigns
+       or 
       platforms
       .
     </p>

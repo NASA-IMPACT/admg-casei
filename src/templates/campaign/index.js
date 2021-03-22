@@ -78,6 +78,7 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
       props: {
         dois: campaign.dois,
         filterBy: ["platforms", "instruments"],
+        category: "campaign",
       },
     },
     "program-info": {

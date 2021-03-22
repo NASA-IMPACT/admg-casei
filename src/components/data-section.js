@@ -12,7 +12,7 @@ import FilterChips from "./filter/filter-chips"
 import FilterBox from "./filter/filter-box"
 import Chip from "./chip"
 
-const DataSection = ({ id, dois, filterBy }) => {
+const DataSection = ({ id, dois, filterBy, category }) => {
   const [filter1, filter2] = filterBy
   let [selectedFilterIds, setSelectedFilterIds] = useState([])
 
@@ -47,8 +47,8 @@ const DataSection = ({ id, dois, filterBy }) => {
               0 && (
               <>
                 <p>
-                  Filter data products from this campaign by specific {filter1}{" "}
-                  or {filter2}.
+                  Filter data products from this {category} by specific{" "}
+                  {filter1} or {filter2}.
                 </p>
                 <div
                   css={`
@@ -240,6 +240,7 @@ DataSection.propTypes = {
   filterBy: PropTypes.arrayOf(
     PropTypes.oneOf(["campaigns", "platforms", "instruments"])
   ),
+  category: PropTypes.oneOf(["campaign", "platform", "instrument"]),
 }
 
 export default DataSection

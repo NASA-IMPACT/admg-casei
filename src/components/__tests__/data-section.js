@@ -11,6 +11,7 @@ describe("Data Section", () => {
         id="data"
         dois={instrumentQuery.data.instrument.dois}
         filterBy={["campaigns", "platforms"]}
+        category="instrument"
       />
     ).toJSON()
     expect(tree).toMatchSnapshot()

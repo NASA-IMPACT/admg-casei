@@ -38,6 +38,7 @@ export default function PlatformTemplate({ data: { platform }, path }) {
       props: {
         dois: platform.dois,
         filterBy: ["campaigns", "instruments"],
+        category: "platform",
       },
     },
   }
