@@ -12,7 +12,7 @@ export const selector = filterOptions => ({
 
 export const uniqueElementsById = arr =>
   arr.reduce((acc, v) => {
-    if (!acc.some(x => x.id == v.id)) acc.push(v)
+    if (v && !acc.some(x => x.id == v.id)) acc.push(v)
     return acc
   }, [])
 

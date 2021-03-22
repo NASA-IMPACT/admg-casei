@@ -8,7 +8,7 @@ import PlatformHero from "./hero"
 import InpageNav from "../../components/inpage-nav"
 import OverviewSection from "./overview-section"
 import CampaignsAndInstruments from "./campaigns-instruments"
-import DataSection from "./data-section"
+import DataSection from "../../components/data-section"
 
 export default function PlatformTemplate({ data: { platform }, path }) {
   const sections = {
@@ -37,6 +37,7 @@ export default function PlatformTemplate({ data: { platform }, path }) {
       component: DataSection,
       props: {
         dois: platform.dois,
+        filterBy: ["campaigns", "instruments"],
       },
     },
   }
@@ -75,7 +76,27 @@ export const query = graphql`
     platform: platform(id: { eq: $slug }) {
       ...platformHeroFields
       ...platformOverviewFields
-      ...platformDataFields
+      dois {
+        cmrTitle: cmr_entry_title
+        doi
+        id
+        longname: long_name
+        campaigns {
+          id
+          shortname: short_name
+          longname: long_name
+        }
+        platforms {
+          id
+          shortname: short_name
+          longname: long_name
+        }
+        instruments {
+          id
+          shortname: short_name
+          longname: long_name
+        }
+      }
       campaigns {
         id
         shortname: short_name

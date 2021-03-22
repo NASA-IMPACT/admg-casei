@@ -11,7 +11,7 @@ import MissionSection from "./mission-section"
 import FocusSection from "./focus-section"
 import PlatformSection from "./platform-section"
 import TimelineSection from "./timeline-section"
-import DataSection from "./data-section"
+import DataSection from "../../components/data-section"
 import ProgramInfoSection from "./program-info-section"
 // import OtherResourcesSection from "./other-resources-section"
 import MaintenanceSection from "../../components/maintenance-section"
@@ -77,6 +77,7 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
       component: DataSection,
       props: {
         dois: campaign.dois,
+        filterBy: ["platforms", "instruments"],
       },
     },
     "program-info": {
@@ -148,7 +149,27 @@ export const query = graphql`
       ...focusFields
       ...platformSectionFields
       ...deploymentFields
-      ...dataFields
+      dois {
+        cmrTitle: cmr_entry_title
+        doi
+        id
+        longname: long_name
+        campaigns {
+          id
+          shortname: short_name
+          longname: long_name
+        }
+        platforms {
+          id
+          shortname: short_name
+          longname: long_name
+        }
+        instruments {
+          id
+          shortname: short_name
+          longname: long_name
+        }
+      }
       ...fundingFields
       uuid
     }

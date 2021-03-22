@@ -8,7 +8,7 @@ import InstrumentHero from "./hero"
 import InpageNav from "../../components/inpage-nav"
 import OverviewSection from "./overview-section"
 import Entities from "./entities"
-import DataSection from "./data-section"
+import DataSection from "../../components/data-section"
 
 const InstrumentTemplate = ({ data: { instrument }, path }) => {
   const sections = {
@@ -48,6 +48,7 @@ const InstrumentTemplate = ({ data: { instrument }, path }) => {
       component: DataSection,
       props: {
         dois: instrument.dois,
+        filterBy: ["campaigns", "platforms"],
       },
     },
   }
@@ -84,7 +85,27 @@ export const query = graphql`
       ...instrumentHeroFields
       ...instrumentDetailFields
       ...instrumentEntitiesFields
-      ...instrumentDataFields
+      dois {
+        cmrTitle: cmr_entry_title
+        doi
+        id
+        longname: long_name
+        campaigns {
+          id
+          shortname: short_name
+          longname: long_name
+        }
+        platforms {
+          id
+          shortname: short_name
+          longname: long_name
+        }
+        instruments {
+          id
+          shortname: short_name
+          longname: long_name
+        }
+      }
     }
   }
 `
