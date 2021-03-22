@@ -11,19 +11,6 @@ import CampaignsAndInstruments from "./campaigns-instruments"
 import DataSection from "./data-section"
 
 export default function PlatformTemplate({ data: { platform }, path }) {
-  const updatedPlatformDois = platform.dois.map(platformDoi => {
-    const matchedCampaign = platform.campaigns.filter(campaign =>
-      campaign.dois.map(x => x.id).includes(platformDoi.id)
-    )
-    const matchedInstrument = platform.instruments.filter(instrument =>
-      instrument.dois.map(x => x.id).includes(platformDoi.id)
-    )
-    return {
-      ...platformDoi,
-      campaigns: matchedCampaign,
-      instruments: matchedInstrument,
-    }
-  })
   const sections = {
     overview: {
       nav: "Overview",
@@ -49,7 +36,7 @@ export default function PlatformTemplate({ data: { platform }, path }) {
       nav: "Data",
       component: DataSection,
       props: {
-        dois: updatedPlatformDois,
+        dois: platform.dois,
       },
     },
   }

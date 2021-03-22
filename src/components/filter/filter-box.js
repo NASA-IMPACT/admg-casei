@@ -14,7 +14,7 @@ import { CloseIcon } from "../../icons"
 import { NEGATIVE } from "../../utils/constants"
 import { colors, shape } from "../../theme"
 
-export default function Filter({
+export default function FilterBox({
   filterOptions,
   filterName,
   setSelectedFilterIds,
@@ -56,11 +56,10 @@ export default function Filter({
         <ListboxPopover style={{ background: colors[NEGATIVE].altBackground }}>
           <ListboxList data-cy="data-products-filter-options">
             {filterOptions.map(o => {
-              const value = o.longname || o.shortname
               return (
-                <ListboxOption key={o.id} value={value} data-cy="filter-option">
-                  {value.toUpperCase()}
-                  {selectedFilterIds.includes(value) && (
+                <ListboxOption key={o.id} value={o.id} data-cy="filter-option">
+                  {(o.longname || o.shortname).toUpperCase()}
+                  {selectedFilterIds.includes(o.id) && (
                     <IconButton
                       id="remove-filter"
                       icon={<CloseIcon color={colors[NEGATIVE].text} />}
@@ -76,17 +75,12 @@ export default function Filter({
   )
 }
 
-Filter.propTypes = {
+FilterBox.propTypes = {
   filterOptions: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
-      longname: PropTypes.string.isRequired,
+      longname: PropTypes.string,
       shortname: PropTypes.string.isRequired,
-      dois: PropTypes.arrayOf(
-        PropTypes.shape({
-          id: PropTypes.string.isRequired,
-        }).isRequired
-      ).isRequired,
     })
   ).isRequired,
   filterName: PropTypes.string.isRequired,

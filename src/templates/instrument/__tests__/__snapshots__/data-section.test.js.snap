@@ -45,6 +45,16 @@ exports[`Data Section matches snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  border-bottom: 1px solid #9e9e9e;
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+}
+
+.c5.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -53,7 +63,7 @@ exports[`Data Section matches snapshot 1`] = `
   gap: 1rem;
 }
 
-.c5.c5 {
+.c6.c6 {
   display: grid;
   gap: 1rem;
   grid-template-columns: 1fr 1fr;
@@ -61,7 +71,7 @@ exports[`Data Section matches snapshot 1`] = `
   padding: 1.5rem;
 }
 
-.c6.c6 {
+.c7.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -104,31 +114,164 @@ exports[`Data Section matches snapshot 1`] = `
       className="c4"
     >
       <div
-        className="c5"
+        style={
+          Object {
+            "marginRight": "2rem",
+          }
+        }
+      >
+        <span
+          id="Campaigns"
+          style={
+            Object {
+              "border": 0,
+              "clip": "rect(0 0 0 0)",
+              "height": "1px",
+              "margin": "-1px",
+              "overflow": "hidden",
+              "padding": 0,
+              "position": "absolute",
+              "whiteSpace": "nowrap",
+              "width": "1px",
+              "wordWrap": "normal",
+            }
+          }
+        >
+          Campaigns
+        </span>
+        <div
+          data-cy="filter-by-Campaigns"
+          data-reach-listbox-input=""
+          data-state="closed"
+          data-value={null}
+          id="listbox-input--1"
+        >
+          <span
+            aria-haspopup="listbox"
+            aria-labelledby="Campaigns button--listbox-input--1"
+            data-reach-listbox-button=""
+            id="button--listbox-input--1"
+            onKeyDown={[Function]}
+            onMouseDown={[Function]}
+            onMouseUp={[Function]}
+            role="button"
+            style={
+              Object {
+                "WebkitAppearance": "none",
+                "background": "transparent",
+                "border": "1px solid #e9eaec",
+                "borderRadius": "0.2rem ",
+                "color": "#e9eaec",
+                "cursor": "pointer",
+                "height": "2.5rem",
+                "padding": "0.5rem",
+              }
+            }
+            tabIndex={0}
+          >
+            CAMPAIGNS
+            <span
+              aria-hidden={true}
+              data-reach-listbox-arrow=""
+            >
+              ▼
+            </span>
+          </span>
+          <span />
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "marginRight": "2rem",
+          }
+        }
+      >
+        <span
+          id="Platforms"
+          style={
+            Object {
+              "border": 0,
+              "clip": "rect(0 0 0 0)",
+              "height": "1px",
+              "margin": "-1px",
+              "overflow": "hidden",
+              "padding": 0,
+              "position": "absolute",
+              "whiteSpace": "nowrap",
+              "width": "1px",
+              "wordWrap": "normal",
+            }
+          }
+        >
+          Platforms
+        </span>
+        <div
+          data-cy="filter-by-Platforms"
+          data-reach-listbox-input=""
+          data-state="closed"
+          data-value={null}
+          id="listbox-input--2"
+        >
+          <span
+            aria-haspopup="listbox"
+            aria-labelledby="Platforms button--listbox-input--2"
+            data-reach-listbox-button=""
+            id="button--listbox-input--2"
+            onKeyDown={[Function]}
+            onMouseDown={[Function]}
+            onMouseUp={[Function]}
+            role="button"
+            style={
+              Object {
+                "WebkitAppearance": "none",
+                "background": "transparent",
+                "border": "1px solid #e9eaec",
+                "borderRadius": "0.2rem ",
+                "color": "#e9eaec",
+                "cursor": "pointer",
+                "height": "2.5rem",
+                "padding": "0.5rem",
+              }
+            }
+            tabIndex={0}
+          >
+            PLATFORMS
+            <span
+              aria-hidden={true}
+              data-reach-listbox-arrow=""
+            >
+              ▼
+            </span>
+          </span>
+          <span />
+        </div>
+      </div>
+    </div>
+    <div
+      className="c5"
+    >
+      <div
+        className="c6"
         data-cy="data-product"
       >
         <div>
           <label
             data-cy="doi-label"
-          >
-            GPM GROUND VALIDATION WYOMING KING AIR CLOUD MICROPHYSICS LPVEX V1
-          </label>
-          <a
-            data-cy="doi-link"
-            href="http://dx.doi.org/10.5067/GPMGV/LPVEX/MULTPLE/DATA202"
-            rel="noopener noreferrer"
             style={
               Object {
-                "color": "#aac9ff",
+                "borderBottom": "none",
+                "color": "#e9eaec",
+                "display": "block",
               }
             }
-            target="_blank"
           >
-            10.5067/GPMGV/LPVEX/MULTPLE/DATA202
-          </a>
+            GPM GROUND VALIDATION ADVANCED MICROWAVE PRECIPITATION RADIOMETER (AMPR) IPHEX V2
+          </label>
+          
         </div>
         <div
-          className="c6"
+          className="c7"
         >
           <div
             data-cy="data-product-campaigns"
@@ -146,10 +289,10 @@ exports[`Data Section matches snapshot 1`] = `
               Campaigns
             </label>
             <a
-              href="/campaign/ac9220f0-edde-47ee-ab0a-41e38221a104"
+              href="/campaign/4030be70-b228-48a2-8a0b-557d53f6c55a"
             >
               <small>
-                Light Precipitation Evaluation Experiment
+                Integrated Precipitation and Hydrology Experiment
               </small>
             </a>
           </div>
@@ -169,10 +312,302 @@ exports[`Data Section matches snapshot 1`] = `
               Platforms
             </label>
             <a
-              href="/platform/704d3b91-7883-477c-be57-c50dd33f6165"
+              href="/platform/f9d60e34-0b86-442e-91e7-e6f793e26a37"
             >
               <small>
-                University of Wyoming King Air
+                NASA Earth Resources-2 aircraft
+              </small>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        className="c6"
+        data-cy="data-product"
+      >
+        <div>
+          <label
+            data-cy="doi-label"
+            style={
+              Object {
+                "borderBottom": "none",
+                "color": "#e9eaec",
+                "display": "block",
+              }
+            }
+          >
+            CAMP2Ex P-3 Remotely Sensed Aerosol Data
+          </label>
+          <a
+            data-cy="doi-link"
+            href="http://dx.doi.org/10.5067/Airborne/CAMP2Ex_Aerosol_AircraftRemoteSensing_P3_Data_1"
+            rel="noopener noreferrer"
+            style={
+              Object {
+                "color": "#aac9ff",
+              }
+            }
+            target="_blank"
+          >
+            10.5067/Airborne/CAMP2Ex_Aerosol_AircraftRemoteSensing_P3_Data_1
+          </a>
+        </div>
+        <div
+          className="c7"
+        >
+          <div
+            data-cy="data-product-campaigns"
+          >
+            <label
+              data-cy="doi-campaign-label"
+              style={
+                Object {
+                  "borderBottom": "1px solid #9e9e9e",
+                  "color": "#9e9e9e",
+                  "display": "block",
+                }
+              }
+            >
+              Campaigns
+            </label>
+            <a
+              href="/campaign/4539ae55-f263-4bfc-b7e1-137bfbf6750e"
+            >
+              <small>
+                Clouds, Aerosol, and Monsoon Processes-Philippines Experiment
+              </small>
+            </a>
+          </div>
+          <div
+            data-cy="data-product-platforms"
+          >
+            <label
+              data-cy="doi-platform-label"
+              style={
+                Object {
+                  "borderBottom": "1px solid #9e9e9e",
+                  "color": "#9e9e9e",
+                  "display": "block",
+                }
+              }
+            >
+              Platforms
+            </label>
+            <a
+              href="/platform/c4fb875d-c7ee-4d38-ae3f-99b6df7be6ed"
+            >
+              <small>
+                P-3 Orion
+              </small>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        className="c6"
+        data-cy="data-product"
+      >
+        <div>
+          <label
+            data-cy="doi-label"
+            style={
+              Object {
+                "borderBottom": "none",
+                "color": "#e9eaec",
+                "display": "block",
+              }
+            }
+          >
+            GPM GROUND VALIDATION ADVANCED MICROWAVE PRECIPITATION RADIOMETER (AMPR) MC3E V1
+          </label>
+          
+        </div>
+        <div
+          className="c7"
+        >
+          <div
+            data-cy="data-product-campaigns"
+          >
+            <label
+              data-cy="doi-campaign-label"
+              style={
+                Object {
+                  "borderBottom": "1px solid #9e9e9e",
+                  "color": "#9e9e9e",
+                  "display": "block",
+                }
+              }
+            >
+              Campaigns
+            </label>
+            <a
+              href="/campaign/9e747e16-a5d2-4e67-9fb7-1e06a868bce9"
+            >
+              <small>
+                Mid-latitude Continental Convective Clouds Experiment
+              </small>
+            </a>
+          </div>
+          <div
+            data-cy="data-product-platforms"
+          >
+            <label
+              data-cy="doi-platform-label"
+              style={
+                Object {
+                  "borderBottom": "1px solid #9e9e9e",
+                  "color": "#9e9e9e",
+                  "display": "block",
+                }
+              }
+            >
+              Platforms
+            </label>
+            <a
+              href="/platform/f9d60e34-0b86-442e-91e7-e6f793e26a37"
+            >
+              <small>
+                NASA Earth Resources-2 aircraft
+              </small>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        className="c6"
+        data-cy="data-product"
+      >
+        <div>
+          <label
+            data-cy="doi-label"
+            style={
+              Object {
+                "borderBottom": "none",
+                "color": "#e9eaec",
+                "display": "block",
+              }
+            }
+          >
+            GPM Ground Validation Advanced Microwave Precipitation Radiometer (AMPR) OLYMPEX V1
+          </label>
+          
+        </div>
+        <div
+          className="c7"
+        >
+          <div
+            data-cy="data-product-campaigns"
+          >
+            <label
+              data-cy="doi-campaign-label"
+              style={
+                Object {
+                  "borderBottom": "1px solid #9e9e9e",
+                  "color": "#9e9e9e",
+                  "display": "block",
+                }
+              }
+            >
+              Campaigns
+            </label>
+            <a
+              href="/campaign/b4d3a465-6b78-4240-9003-c2d348066326"
+            >
+              <small>
+                Olympic Mountains Experiment
+              </small>
+            </a>
+          </div>
+          <div
+            data-cy="data-product-platforms"
+          >
+            <label
+              data-cy="doi-platform-label"
+              style={
+                Object {
+                  "borderBottom": "1px solid #9e9e9e",
+                  "color": "#9e9e9e",
+                  "display": "block",
+                }
+              }
+            >
+              Platforms
+            </label>
+            <a
+              href="/platform/f9d60e34-0b86-442e-91e7-e6f793e26a37"
+            >
+              <small>
+                NASA Earth Resources-2 aircraft
+              </small>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        className="c6"
+        data-cy="data-product"
+      >
+        <div>
+          <label
+            data-cy="doi-label"
+            style={
+              Object {
+                "borderBottom": "none",
+                "color": "#e9eaec",
+                "display": "block",
+              }
+            }
+          >
+            TCSP AMPR BRIGHTNESS TEMPERATURE (TB) V2
+          </label>
+          
+        </div>
+        <div
+          className="c7"
+        >
+          <div
+            data-cy="data-product-campaigns"
+          >
+            <label
+              data-cy="doi-campaign-label"
+              style={
+                Object {
+                  "borderBottom": "1px solid #9e9e9e",
+                  "color": "#9e9e9e",
+                  "display": "block",
+                }
+              }
+            >
+              Campaigns
+            </label>
+            <a
+              href="/campaign/0ad5176c-0143-4846-90f2-2f20e3968e07"
+            >
+              <small>
+                Tropical Cloud Systems and Processes
+              </small>
+            </a>
+          </div>
+          <div
+            data-cy="data-product-platforms"
+          >
+            <label
+              data-cy="doi-platform-label"
+              style={
+                Object {
+                  "borderBottom": "1px solid #9e9e9e",
+                  "color": "#9e9e9e",
+                  "display": "block",
+                }
+              }
+            >
+              Platforms
+            </label>
+            <a
+              href="/platform/f9d60e34-0b86-442e-91e7-e6f793e26a37"
+            >
+              <small>
+                NASA Earth Resources-2 aircraft
               </small>
             </a>
           </div>

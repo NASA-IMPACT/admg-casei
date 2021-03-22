@@ -1,40 +1,109 @@
 {
   "data": {
-    "dois": [ 
-      {
-        "campaigns": [
-          {
-            "dois": [
-              {"id": "677b4372-1e77-400f-af12-ca7eb0314ee1"},
-              {"id": "5b300576-4346-4999-90d5-db58733b5f17"},
-              {"id": "09d66e11-21ad-461e-a214-22aea60d1105"},
-              {"id": "18d441e4-43b6-48c9-b78c-7307e107cc03"}
-           ],
-            "id": "ac9220f0-edde-47ee-ab0a-41e38221a104",
-            "longname": "Light Precipitation Evaluation Experiment",
-            "shortname": "LPVEx"
-          }
-        ],
-      "id": "5b300576-4346-4999-90d5-db58733b5f17",
-      "longname": "GPM GROUND VALIDATION WYOMING KING AIR CLOUD MICROPHYSICS LPVEX V1",
-      "platforms": [
+    "instrument": {
+      "dois": [
         {
-          "campaign": [
-            { "id": "ac9220f0-edde-47ee-ab0a-41e38221a104"}, 
-            { "id": "6fd4df89-03fd-4971-ba4b-fa20dbaefb9b"}
+          "cmrTitle": "GPM GROUND VALIDATION ADVANCED MICROWAVE PRECIPITATION RADIOMETER (AMPR) IPHEX V2",
+          "doi": "",
+          "id": "9e1d2227-bde1-45e1-9221-759f1fbfa479",
+          "longname": "",
+          "campaigns": [
+            {
+              "id": "4030be70-b228-48a2-8a0b-557d53f6c55a",
+              "shortname": "IPHEx",
+              "longname": "Integrated Precipitation and Hydrology Experiment"
+            }
           ],
-          "dois": [
-            {"id": "da3b9711-9c6e-4825-9b72-9d6d3dc60d6"},
-            {"id": "93756098-2b99-4121-9071-ced7e236e91e"},
-            {"id": "5b300576-4346-4999-90d5-db58733b5f17"}
-         ],
-          "id": "704d3b91-7883-477c-be57-c50dd33f6165",
-          "longname": "University of Wyoming King Air",
-          "shortname": "UWKA"
+          "platforms": [
+            {
+              "id": "f9d60e34-0b86-442e-91e7-e6f793e26a37",
+              "shortname": "ER-2",
+              "longname": "NASA Earth Resources-2 aircraft"
+            }
+          ]
+        },
+        {
+          "cmrTitle": "CAMP2Ex P-3 Remotely Sensed Aerosol Data",
+          "doi": "10.5067/Airborne/CAMP2Ex_Aerosol_AircraftRemoteSensing_P3_Data_1",
+          "id": "e051ba5c-712b-49d3-b214-729ffadbdcd9",
+          "longname": "",
+          "campaigns": [
+            {
+              "id": "4539ae55-f263-4bfc-b7e1-137bfbf6750e",
+              "shortname": "CAMP2Ex",
+              "longname": "Clouds, Aerosol, and Monsoon Processes-Philippines Experiment"
+            }
+          ],
+          "platforms": [
+            {
+              "id": "c4fb875d-c7ee-4d38-ae3f-99b6df7be6ed",
+              "shortname": "P-3",
+              "longname": "P-3 Orion"
+            }
+          ]
+        },
+        {
+          "cmrTitle": "GPM GROUND VALIDATION ADVANCED MICROWAVE PRECIPITATION RADIOMETER (AMPR) MC3E V1",
+          "doi": "",
+          "id": "de6f9091-5cf1-4afb-8231-ec792aeeea6e",
+          "longname": "",
+          "campaigns": [
+            {
+              "id": "9e747e16-a5d2-4e67-9fb7-1e06a868bce9",
+              "shortname": "MC3E",
+              "longname": "Mid-latitude Continental Convective Clouds Experiment"
+            }
+          ],
+          "platforms": [
+            {
+              "id": "f9d60e34-0b86-442e-91e7-e6f793e26a37",
+              "shortname": "ER-2",
+              "longname": "NASA Earth Resources-2 aircraft"
+            }
+          ]
+        },
+        {
+          "cmrTitle": "GPM Ground Validation Advanced Microwave Precipitation Radiometer (AMPR) OLYMPEX V1",
+          "doi": "",
+          "id": "47e4abc2-3608-4789-9385-c91f6596a993",
+          "longname": "",
+          "campaigns": [
+            {
+              "id": "b4d3a465-6b78-4240-9003-c2d348066326",
+              "shortname": "OLYMPEX",
+              "longname": "Olympic Mountains Experiment"
+            }
+          ],
+          "platforms": [
+            {
+              "id": "f9d60e34-0b86-442e-91e7-e6f793e26a37",
+              "shortname": "ER-2",
+              "longname": "NASA Earth Resources-2 aircraft"
+            }
+          ]
+        },
+        {
+          "cmrTitle": "TCSP AMPR BRIGHTNESS TEMPERATURE (TB) V2",
+          "doi": "",
+          "id": "c1ff0925-1644-4103-b158-971ee26a1fa3",
+          "longname": "",
+          "campaigns": [
+            {
+              "id": "0ad5176c-0143-4846-90f2-2f20e3968e07",
+              "shortname": "TCSP",
+              "longname": "Tropical Cloud Systems and Processes"
+            }
+          ],
+          "platforms": [
+            {
+              "id": "f9d60e34-0b86-442e-91e7-e6f793e26a37",
+              "shortname": "ER-2",
+              "longname": "NASA Earth Resources-2 aircraft"
+            }
+          ]
         }
-      ],
-      "shortname": "10.5067/GPMGV/LPVEX/MULTPLE/DATA202"
-      }
-    ]
-  }
+      ]
+    }
+  },
+  "extensions": {}
 }

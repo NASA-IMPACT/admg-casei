@@ -82,9 +82,7 @@ const DateList = ({
 
   return (
     <>
-      <VisuallyHidden id={`${id}-hover-list`}>
-        view all deployment dates
-      </VisuallyHidden>
+      <VisuallyHidden>view all deployment dates</VisuallyHidden>
       <ListboxInput
         name={`${id}-hover-list`}
         aria-labelledby={`${id}-hover-list`}

@@ -10,6 +10,12 @@ export const selector = filterOptions => ({
   },
 })
 
+export const uniqueElementsById = arr =>
+  arr.reduce((acc, v) => {
+    if (!acc.some(x => x.id == v.id)) acc.push(v)
+    return acc
+  }, [])
+
 export const sortFunctions = {
   campaigns: {
     "a to z": (a, b) => a.shortname.localeCompare(b.shortname),
@@ -68,4 +74,19 @@ export function instrumentFilter(selectedFilterIds) {
               instrument.measurementType.id === filterId) ||
             instrument.measurementRegions.map(x => x.id).includes(filterId)
         )
+}
+
+export function doiFilter(selectedFilterIds) {
+  return doi =>
+    selectedFilterIds.length === 0
+      ? true
+      : doi.campaigns
+          ?.map(x => x.id)
+          .some(id => selectedFilterIds.includes(id)) ||
+        doi.platforms
+          ?.map(x => x.id)
+          .some(id => selectedFilterIds.includes(id)) ||
+        doi.instruments
+          ?.map(x => x.id)
+          .some(id => selectedFilterIds.includes(id))
 }

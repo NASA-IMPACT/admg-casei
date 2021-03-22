@@ -23,21 +23,6 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
     setIsClient(true)
   }, [])
 
-  // add platform id to list of campaignDois
-  const updatedCampaignDois = campaign.dois.map(campaignDoi => {
-    const matchedPlatform = campaign.platforms.filter(platform =>
-      platform.dois.map(x => x.id).includes(campaignDoi.id)
-    )
-    const matchedInstrument = campaign.instruments.filter(instrument =>
-      instrument.dois.map(x => x.id).includes(campaignDoi.id)
-    )
-    return {
-      ...campaignDoi,
-      platforms: matchedPlatform,
-      instruments: matchedInstrument,
-    }
-  })
-
   const sections = {
     overview: {
       nav: "Overview",
@@ -91,7 +76,7 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
       nav: "Data",
       component: DataSection,
       props: {
-        dois: updatedCampaignDois,
+        dois: campaign.dois,
       },
     },
     "program-info": {

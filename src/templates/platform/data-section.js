@@ -6,6 +6,11 @@ import { Section, SectionHeader, SectionContent } from "../../components/layout"
 import ExternalLink from "../../components/external-link"
 import Label from "../../components/label"
 import { NEGATIVE } from "../../utils/constants"
+import {
+  selector,
+  uniqueElementsById,
+  doiFilter,
+} from "../../utils/filter-utils"
 import { colors } from "../../theme"
 import FilterChips from "../../components/filter/filter-chips"
 import FilterBox from "../../components/filter/filter-box"
@@ -15,23 +20,23 @@ const DataSection = ({ id, dois }) => {
   let [selectedFilterIds, setSelectedFilterIds] = useState([])
 
   const clearFilters = () => setSelectedFilterIds([])
+
   const removeFilter = id =>
     setSelectedFilterIds(selectedFilterIds.filter(f => f !== id))
 
   const filteredDois = selectedFilterIds.length
-    ? dois.filter(
-        doi =>
-          doi.campaigns
-            .map(campaign => campaign.longname || campaign.shortname)
-            .some(id => selectedFilterIds.includes(id)) ||
-          doi.instruments
-            .map(instrument => instrument.longname || instrument.shortname)
-            .some(id => selectedFilterIds.includes(id))
-      )
+    ? dois.filter(doiFilter(selectedFilterIds))
     : dois
 
-  const campaignList = [...new Set(dois.map(doi => doi.campaigns).flat())]
-  const instrumentList = [...new Set(dois.map(doi => doi.instruments).flat())]
+  const campaignList = uniqueElementsById(dois.map(doi => doi.campaigns).flat())
+  const instrumentList = uniqueElementsById(
+    dois.map(doi => doi.instruments).flat()
+  )
+
+  const { getFilterLabelById } = selector({
+    campaign: { options: campaignList },
+    instrument: { options: instrumentList },
+  })
 
   return (
     <Section id={id}>
@@ -78,7 +83,7 @@ const DataSection = ({ id, dois }) => {
                   <Chip
                     key={f}
                     id="filter"
-                    label={f}
+                    label={getFilterLabelById ? getFilterLabelById(f) : f}
                     actionId={f}
                     removeAction={removeFilter}
                   />
@@ -110,11 +115,13 @@ const DataSection = ({ id, dois }) => {
                     <Label id="doi" color={colors[NEGATIVE].text}>
                       {doi.longname || doi.cmrTitle}
                     </Label>
-                    <ExternalLink
-                      label={doi.doi}
-                      url={`http://dx.doi.org/${doi.doi}`}
-                      id="doi"
-                    ></ExternalLink>
+                    {doi.doi && (
+                      <ExternalLink
+                        label={doi.doi}
+                        url={`http://dx.doi.org/${doi.doi}`}
+                        id="doi"
+                      ></ExternalLink>
+                    )}
                   </div>
 
                   {doi.campaigns.concat(doi.instruments).length ? (
@@ -184,6 +191,16 @@ export const platformDataFields = graphql`
       doi
       id
       longname: long_name
+      campaigns {
+        id
+        shortname: short_name
+        longname: long_name
+      }
+      instruments {
+        id
+        shortname: short_name
+        longname: long_name
+      }
     }
   }
 `
@@ -195,6 +212,20 @@ DataSection.propTypes = {
       doi: PropTypes.string.isRequired,
       id: PropTypes.string.isRequired,
       longname: PropTypes.string,
+      campaigns: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string.isRequired,
+          shortname: PropTypes.string.isRequired,
+          longname: PropTypes.string.isRequired,
+        })
+      ),
+      instruments: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string.isRequired,
+          shortname: PropTypes.string.isRequired,
+          longname: PropTypes.string.isRequired,
+        })
+      ),
     })
   ).isRequired,
 }

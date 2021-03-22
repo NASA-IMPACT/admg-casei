@@ -11,19 +11,6 @@ import Entities from "./entities"
 import DataSection from "./data-section"
 
 const InstrumentTemplate = ({ data: { instrument }, path }) => {
-  const updatedInstrumentDois = instrument.dois.map(instrumentDoi => {
-    const matchedCampaign = instrument.campaigns.filter(campaign =>
-      campaign.dois.map(x => x.id).includes(instrumentDoi.id)
-    )
-    const matchedPlatform = instrument.platforms.filter(platform =>
-      platform.dois.map(x => x.id).includes(instrumentDoi.id)
-    )
-    return {
-      ...instrumentDoi,
-      campaigns: matchedCampaign,
-      platforms: matchedPlatform,
-    }
-  })
   const sections = {
     overview: {
       nav: "Instrument Details",
@@ -60,7 +47,7 @@ const InstrumentTemplate = ({ data: { instrument }, path }) => {
       nav: "Data",
       component: DataSection,
       props: {
-        dois: updatedInstrumentDois,
+        dois: instrument.dois,
       },
     },
   }
@@ -98,22 +85,6 @@ export const query = graphql`
       ...instrumentDetailFields
       ...instrumentEntitiesFields
       ...instrumentDataFields
-      campaigns {
-        id
-        shortname: short_name
-        longname: long_name
-        dois {
-          id
-        }
-      }
-      platforms {
-        id
-        shortname: short_name
-        longname: long_name
-        dois {
-          id
-        }
-      }
     }
   }
 `
@@ -182,21 +153,11 @@ InstrumentTemplate.propTypes = {
           campaigns: PropTypes.arrayOf(
             PropTypes.shape({ shortname: PropTypes.string })
           ),
-          dois: PropTypes.arrayOf(
-            PropTypes.shape({
-              id: PropTypes.string.isRequired,
-            }).isRequired
-          ),
         })
       ),
       campaigns: PropTypes.arrayOf(
         PropTypes.shape({
           id: PropTypes.string,
-          dois: PropTypes.arrayOf(
-            PropTypes.shape({
-              id: PropTypes.string.isRequired,
-            }).isRequired
-          ),
         })
       ).isRequired,
     }).isRequired,
