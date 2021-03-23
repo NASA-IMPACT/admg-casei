@@ -124,8 +124,11 @@ export default function Explore({ data, location }) {
   }
 
   const resetSearch = () => {
-    // TODO: clear search for platforms and instruments as well
-    setSearchResult(allCampaign.list.map(c => c.shortname))
+    setSearchResult([
+      ...allCampaign.list.map(x => x.id),
+      ...allPlatform.list.map(x => x.id),
+      ...allInstrument.list.map(x => x.id),
+    ])
   }
 
   const { getFilterLabelById, getFilterOptionsById } = selector({
