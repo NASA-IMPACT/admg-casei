@@ -104,7 +104,7 @@ export default function useCampaignList(
   useEffect(() => {
     // update after entering text in the search bar
     const filteredCampaignBySearch = queryResult.filter(campaign =>
-      searchResult ? searchResult.includes(campaign.shortname) : true
+      searchResult ? searchResult.includes(campaign.id) : true
     )
     setCampaignList(prev => ({
       ...prev,

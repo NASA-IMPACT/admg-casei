@@ -42,11 +42,8 @@ export default function usePlatformList(
 
   useEffect(() => {
     // update after entering text in the search bar
-    const filteredPlatformBySearch = queryResult.filter(
-      () =>
-        // TODO: implement free text search for platforms
-        // searchResult ? searchResult.includes(platform.shortname) : true
-        true
+    const filteredPlatformBySearch = queryResult.filter(platform =>
+      searchResult ? searchResult.includes(platform.id) : true
     )
     setPlatformList(prev => ({
       ...prev,

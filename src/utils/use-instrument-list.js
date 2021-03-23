@@ -44,11 +44,8 @@ export default function useInstrumentList(
 
   useEffect(() => {
     // update after entering text in the search bar
-    const filteredInstrumentBySearch = queryResult.filter(
-      () =>
-        // TODO: implement free text search for instruments
-        // searchResult ? searchResult.includes(instrument.shortname) : true
-        true
+    const filteredInstrumentBySearch = queryResult.filter(instrument =>
+      searchResult ? searchResult.includes(instrument.id) : true
     )
     setInstrumentList(prev => ({
       ...prev,

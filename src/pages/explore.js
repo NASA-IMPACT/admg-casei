@@ -78,7 +78,6 @@ export default function Explore({ data, location }) {
     allPlatform.list,
     sortOrder.platforms,
     selectedFilterIds,
-    dateRange,
     searchResult
   )
 
@@ -86,7 +85,6 @@ export default function Explore({ data, location }) {
     allInstrument.list,
     sortOrder.instruments,
     selectedFilterIds,
-    dateRange,
     searchResult
   )
 
@@ -114,9 +112,14 @@ export default function Explore({ data, location }) {
     setLoading(true)
     e.preventDefault()
     let searchstring = inputElement.current.value
-    // TODO: search for platforms and instruments as well
-    const result = await api.fetchSearchResult("campaign", searchstring)
-    setSearchResult(result)
+
+    const result = await Promise.all(
+      ["campaign", "platform", "instrument"].map(category =>
+        api.fetchSearchResult(category, searchstring)
+      )
+    )
+
+    setSearchResult(result.flat())
     setLoading(false)
   }
 
