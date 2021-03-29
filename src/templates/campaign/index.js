@@ -134,7 +134,10 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
         ))}
         {isClient && (
           // the maintenance section is behind authentication and only accessible from the browser
-          <MaintenanceSection id={campaign.uuid} data={{ campaign }} />
+          <MaintenanceSection
+            shortname={campaign.shortname}
+            data={{ campaign }}
+          />
         )}
       </PageBody>
     </Layout>
@@ -205,7 +208,7 @@ CampaignTemplate.propTypes = {
       ),
       description: PropTypes.string.isRequired,
       startdate: PropTypes.string.isRequired,
-      enddate: PropTypes.string.isRequired,
+      enddate: PropTypes.string,
       region: PropTypes.string.isRequired,
       seasons: PropTypes.arrayOf(
         PropTypes.shape({

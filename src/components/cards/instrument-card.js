@@ -6,7 +6,7 @@ import Card from "./card"
 import CardFooterItem from "./card-footer-item"
 import { InstrumentIcon } from "../../icons"
 
-export default function InstrumentCard({ id }) {
+export default function InstrumentCard({ shortname }) {
   /*
    * We can not pass props directly into a static query because it is
    * compiled and doesn't support string interpolation in its template literal.
@@ -24,22 +24,23 @@ export default function InstrumentCard({ id }) {
         nodes {
           shortname: short_name
           longname: long_name
-          id
           description
           campaigns {
-            id
+            shortname: short_name
           }
         }
       }
     }
   `)
 
-  const instrument = data.allInstrument.nodes.find(x => x.id === id)
+  const instrument = data.allInstrument.nodes.find(
+    x => x.shortname === shortname
+  )
 
   return (
     <Card
       placeholder={InstrumentIcon}
-      link={`/instrument/${instrument.id}`}
+      link={`/instrument/${instrument.shortname}`}
       footerList={{
         campaign: {
           component: CardFooterItem,
@@ -64,5 +65,5 @@ export default function InstrumentCard({ id }) {
 }
 
 InstrumentCard.propTypes = {
-  id: PropTypes.string.isRequired,
+  shortname: PropTypes.string.isRequired,
 }

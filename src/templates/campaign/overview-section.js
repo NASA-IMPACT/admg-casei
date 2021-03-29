@@ -206,7 +206,7 @@ OverviewSection.propTypes = {
   ),
   description: PropTypes.string.isRequired,
   startdate: PropTypes.string.isRequired,
-  enddate: PropTypes.string.isRequired,
+  enddate: PropTypes.string,
   region: PropTypes.string.isRequired,
   seasonListing: PropTypes.string.isRequired,
   bounds: PropTypes.string.isRequired,

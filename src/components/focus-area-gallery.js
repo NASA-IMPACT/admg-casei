@@ -11,7 +11,7 @@ const FocusArea = ({ id, shortname, caption, size }) => {
 
   return (
     <Link
-      to={`/focus/${id}`}
+      to={`/focus/${shortname}`}
       state={{ selectedFilterId: id }} // Pass state as props to the linked page
       style={{
         textAlign: `center`,

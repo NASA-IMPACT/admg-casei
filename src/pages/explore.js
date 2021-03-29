@@ -242,15 +242,30 @@ export default function Explore({ data, location }) {
         <ExploreSection isLoading={isLoading}>
           {selectedCategory === "campaigns" &&
             campaignList.filtered.map(campaign => {
-              return <CampaignCard id={campaign.id} key={campaign.id} />
+              return (
+                <CampaignCard
+                  shortname={campaign.shortname}
+                  key={campaign.id}
+                />
+              )
             })}
           {selectedCategory === "platforms" &&
             platformList.filtered.map(platform => {
-              return <PlatformCard id={platform.id} key={platform.id} />
+              return (
+                <PlatformCard
+                  shortname={platform.shortname}
+                  key={platform.id}
+                />
+              )
             })}
           {selectedCategory === "instruments" &&
             instrumentList.filtered.map(instrument => {
-              return <InstrumentCard id={instrument.id} key={instrument.id} />
+              return (
+                <InstrumentCard
+                  shortname={instrument.shortname}
+                  key={instrument.id}
+                />
+              )
             })}
         </ExploreSection>
       </PageBody>
@@ -349,11 +364,11 @@ export const query = graphql`
     deployments {
       regions: geographical_regions {
         id # required for filter
-        # shortname: short_name
       }
     }
     platforms {
-      id # required for filter
+      id
+      # shortname: short_name # required for filter
     }
     fundingAgency: funding_agency # required for filter
     bounds: spatial_bounds # required for map
@@ -365,9 +380,11 @@ export const query = graphql`
     collectionPeriodIds: collection_periods # required for sort
     campaigns {
       id # required for sort
+      #shortname: short_name # required for filter
     }
     instruments {
       id # required for filter
+      #shortname: short_name # required for filter
     }
   }
 

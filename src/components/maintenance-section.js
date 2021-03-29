@@ -7,7 +7,7 @@ import { Section } from "./layout"
 import { NEGATIVE } from "../utils/constants"
 import { colors } from "../theme"
 
-const MaintenanceSection = ({ id, data }) => {
+const MaintenanceSection = ({ shortname, data }) => {
   const { isLoggedIn } = useContext(AuthContext)
 
   // TODO: this is temporary, build out edit functionality
@@ -16,7 +16,7 @@ const MaintenanceSection = ({ id, data }) => {
     isLoggedIn && (
       <Section id="maintenance">
         <Link
-          to={`/edit/campaign/${id}`}
+          to={`/edit/campaign/${shortname}`}
           state={{ data }}
           style={{
             border: `1px solid ${colors[NEGATIVE].text}`,
@@ -32,7 +32,7 @@ const MaintenanceSection = ({ id, data }) => {
 }
 
 MaintenanceSection.propTypes = {
-  id: PropTypes.string.isRequired,
+  shortname: PropTypes.string.isRequired,
   data: PropTypes.object,
 }
 

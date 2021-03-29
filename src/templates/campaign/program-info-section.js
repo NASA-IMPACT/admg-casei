@@ -132,9 +132,9 @@ ProgramInfoSection.propTypes = {
   programLead: PropTypes.string.isRequired,
   leadInvestigator: PropTypes.string.isRequired,
   dataManager: PropTypes.string.isRequired,
-  repositoryWebsite: PropTypes.string.isRequired,
+  repositoryWebsite: PropTypes.string,
   partnerOrgListing: PropTypes.string.isRequired,
-  publicationLink: PropTypes.string.isRequired,
+  publicationLink: PropTypes.string,
 }
 
 export default ProgramInfoSection

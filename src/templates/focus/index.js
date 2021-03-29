@@ -110,6 +110,7 @@ export const query = graphql`
       uuid
       campaigns {
         id
+        shortname: short_name
       }
       description: notes_public
       url
