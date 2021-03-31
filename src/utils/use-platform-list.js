@@ -3,11 +3,11 @@ import { useState, useEffect } from "react"
 import { sortFunctions, platformFilter } from "../utils/filter-utils"
 
 const groupByPlatformType = (acc, item) => {
-  if (!acc[item.platformType.shortname]) {
-    acc[item.platformType.shortname] = []
+  if (!acc[item.searchCategory]) {
+    acc[item.searchCategory] = []
   }
 
-  acc[item.platformType.shortname].push(item)
+  acc[item.searchCategory].push(item)
   return acc
 }
 

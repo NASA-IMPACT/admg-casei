@@ -389,6 +389,7 @@ export const query = graphql`
     instruments {
       id # required for filter
     }
+    searchCategory: search_category
     platformType: platform_type {
       id
       shortname: short_name # required for grouping
@@ -454,6 +455,12 @@ const platformShape = PropTypes.shape({
   collectionPeriodIds: PropTypes.arrayOf(PropTypes.string),
   campaigns: PropTypes.arrayOf(PropTypes.shape({ id: PropTypes.string })),
   instruments: PropTypes.arrayOf(PropTypes.shape({ id: PropTypes.string })),
+  searchCategory: PropTypes.string.isRequired,
+  platformType: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    shortname: PropTypes.string,
+    longname: PropTypes.string,
+  }).isRequired,
 })
 
 const instrumentShape = PropTypes.shape({
