@@ -1481,7 +1481,7 @@ exports[`Explore page renders correctly 1`] = `
                 >
                    
                   (
-                  26
+                  33
                   )
                 </span>
               </button>
@@ -1497,7 +1497,7 @@ exports[`Explore page renders correctly 1`] = `
                 >
                    
                   (
-                  47
+                  59
                   )
                 </span>
               </button>
@@ -1513,7 +1513,7 @@ exports[`Explore page renders correctly 1`] = `
                 >
                    
                   (
-                  289
+                  337
                   )
                 </span>
               </button>
@@ -1592,7 +1592,218 @@ exports[`Explore page renders correctly 1`] = `
         >
           <div>
             <a
-              href="/campaign/99bfae38-07c4-4f2e-a6c8-bc87af9341a7"
+              href="/campaign/4539ae55-f263-4bfc-b7e1-137bfbf6750e"
+            >
+              <div
+                className="c26"
+                data-cy="campaigns-card"
+              >
+                <div>
+                  <div
+                    className="c27"
+                  >
+                    <svg
+                      height="60"
+                      viewBox="0 0 65 69"
+                      width="60"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g
+                        fill="#e9eaec"
+                        fillRule="nonzero"
+                      >
+                        <path
+                          d="M57.57 17.157c.759-1.875 1.239-3.589 1.239-4.93C58.809 5.484 53.299 0 46.526 0c-4.326 0-8.13 2.244-10.318 5.618l-.028.045a18.788 18.788 0 00-3.337-.346l-.028-.002v-.007h-.025C15.147 5.308.791 19.589.791 37.154.791 54.718 15.147 69 32.791 69H32.817l.03-.002c17.62-.03 31.944-14.267 31.944-31.765 0-7.608-2.711-14.6-7.221-20.076zM26.146 7.623c-2.938 2.043-5.529 5.445-7.517 9.677-2.37-.586-4.585-1.32-6.593-2.198 3.894-3.612 8.736-6.284 14.11-7.48zm-15.273 8.619c2.16.987 4.556 1.816 7.133 2.467a42.558 42.558 0 00-2.092 6.423 9.635 9.635 0 00-1.38-.11c-5.329 0-9.664 4.315-9.664 9.62 0 .521.095 1.116.259 1.758-1.426.01-2.28.023-2.793.035.22-7.83 3.43-14.925 8.537-20.193zm6.168 10.694c3.265 1.055 5.634 4.109 5.634 7.707 0 .488-.113 1.075-.299 1.722-.136.474-.315.981-.53 1.518-1.102 2.726-3.122 6.125-4.96 8.94a102.86 102.86 0 01-2.352 3.444C12.455 47.363 8.85 41.9 7.228 37.895A15.495 15.495 0 016.7 36.39c-.191-.656-.307-1.253-.307-1.747 0-4.47 3.652-8.105 8.141-8.105.355 0 .703.03 1.045.075.503.064.992.171 1.462.323zM2.331 37.933c.6-.013 1.725-.023 3.274-.03 2.1 5.67 8.013 13.698 8.317 14.108l.612.828.613-.828c.073-.098.467-.634 1.05-1.463a41.96 41.96 0 001.808 5.32c-2.577.652-4.973 1.48-7.133 2.467-5.152-5.315-8.374-12.49-8.54-20.402zm9.704 21.541c2.009-.876 4.224-1.612 6.594-2.197 1.988 4.232 4.579 7.5 7.517 9.543-5.375-1.195-10.216-3.733-14.111-7.346zm20.019 8.116c-4.745-.394-9.032-4.447-11.978-10.648 3.721-.803 7.777-1.248 11.978-1.296V67.59zm0-13.46c-4.424.05-8.7.529-12.614 1.398a41.213 41.213 0 01-2.119-6.612c1.998-2.955 4.831-7.461 6.149-11.033l8.584.009v16.237zm0-17.757c-2.986-.004-5.677-.006-8.106-.008.159-.63.25-1.211.25-1.723 0-4.323-2.88-7.987-6.829-9.196a40.949 40.949 0 012.07-6.398c3.915.871 8.19 1.35 12.615 1.4v15.925zm0-17.441c-4.202-.05-8.257-.494-11.978-1.298 2.946-6.2 7.233-10.254 11.978-10.648v11.946zM36.736 7.81a10.643 10.643 0 011.17-1.964c1.962-2.621 5.091-4.33 8.62-4.33 5.932 0 10.76 4.805 10.76 10.71 0 .998-.312 2.25-.829 3.645a28.177 28.177 0 01-.642 1.575c-1.417 3.215-3.628 6.911-5.605 9.964a145.462 145.462 0 01-3.684 5.413c-1.474-2.059-5.285-7.529-7.95-12.616-.258-.491-.504-.98-.737-1.46-1.227-2.534-2.072-4.874-2.072-6.52 0-1.576.353-3.068.969-4.417zm-3.159-.824v-.02c.71.048 1.188.147 1.736.294l-.015.031a12.095 12.095 0 00-1.054 4.936c0 1.737.8 4.093 1.978 6.624-.874.045-1.756.072-2.645.082V6.986zm0 13.462a66.297 66.297 0 003.362-.12c3.343 6.602 8.65 13.804 8.974 14.243l.613.828.613-.828c.125-.167.974-1.321 2.16-3.044.172 1.585.273 3.215.3 4.878-6.075-.014-11.39-.023-16.022-.03V20.448zm0 17.445c5.329.008 10.817.018 16.025.028-.076 6.595-1.338 12.679-3.409 17.6-3.915-.867-8.191-1.344-12.616-1.392V37.893zm0 17.752c4.183.047 8.222.486 11.93 1.282-2.943 6.13-7.21 10.134-11.93 10.525V55.645zm5.932 11.092c2.906-2.024 5.47-5.314 7.446-9.48l.05.011c2.324.573 4.499 1.29 6.478 2.143a30.487 30.487 0 01-13.974 7.326zm15.226-8.541s-.055.088-.082.075c-2.132-.963-4.491-1.772-7.025-2.41 2.126-5.072 3.419-11.254 3.497-17.936 4.366.01 8.496.02 12.123.03-.185 7.789-3.345 14.857-8.4 20.125l-.113.116zm8.327-21.759s-8.193-.022-11.94-.03c-.038-2.33-.22-4.6-.538-6.781 2.06-3.1 4.59-7.188 6.298-10.887l.002-.003c3.808 4.876 5.964 10.932 6.174 17.516a7.5 7.5 0 01.004.132c.02.06 0 .053 0 .053z"
+                        />
+                        <path
+                          d="M46.606 6a4.83 4.83 0 00-2.995 1.046 5.024 5.024 0 00-1.685 2.423 5.1 5.1 0 00-.246 1.56c0 .108.009.212.016.318a5.03 5.03 0 002.952 4.294 4.824 4.824 0 001.847.412c.038 0 .075.006.113.006 2.054 0 3.816-1.29 4.555-3.119a5.084 5.084 0 00.359-1.645c.004-.088.012-.175.012-.265C51.533 8.256 49.323 6 46.606 6zm3.26 5.993c-.411 1.449-1.71 2.517-3.26 2.517-.37 0-.72-.076-1.053-.187a3.467 3.467 0 01-2.358-3.294c0-.042.01-.082.012-.123a3.488 3.488 0 01.768-2.065 3.4 3.4 0 011.46-1.069 3.307 3.307 0 011.172-.225c1.592 0 2.921 1.124 3.296 2.631.068.274.115.556.115.85-.001.337-.063.657-.151.965zM16.698 30.61a3.88 3.88 0 00-1.454-.482c-.157-.02-.311-.049-.473-.049-2.195 0-3.98 1.822-3.98 4.062 0 .988.362 1.883.939 2.587.73.893 1.815 1.474 3.04 1.474 1.23 0 2.317-.584 3.048-1.481a4.074 4.074 0 00.932-2.58 4.062 4.062 0 00-2.052-3.531zm-.428 5.511c-.417.33-.933.534-1.5.534l-.022-.002c-1.348-.014-2.44-1.134-2.44-2.512 0-1.387 1.104-2.515 2.463-2.515.098 0 .19.018.286.03.56.067 1.066.315 1.447.7.45.456.73 1.088.73 1.785a2.52 2.52 0 01-.964 1.98z"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                  <big
+                    data-cy="shortname"
+                    style={
+                      Object {
+                        "fontWeight": "bold",
+                        "marginTop": "0.5rem",
+                      }
+                    }
+                  >
+                    CAMP2Ex
+                  </big>
+                  <p
+                    data-cy="longname"
+                  >
+                    Clouds, Aerosol, and Monsoon Processes-Philippines Experiment
+                  </p>
+                  <div>
+                    <small
+                      data-cy="daterange"
+                    >
+                      2019
+                    </small>
+                  </div>
+                  <div>
+                    <small
+                      data-cy="region"
+                    >
+                      Philippines
+                    </small>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <div
+              className="c28"
+              data-cy="campaigns-card-footer"
+            >
+              <span
+                style={
+                  Object {
+                    "border": 0,
+                    "clip": "rect(0 0 0 0)",
+                    "height": "1px",
+                    "margin": "-1px",
+                    "overflow": "hidden",
+                    "padding": 0,
+                    "position": "absolute",
+                    "whiteSpace": "nowrap",
+                    "width": "1px",
+                    "wordWrap": "normal",
+                  }
+                }
+              >
+                view all deployment dates
+              </span>
+              <div
+                data-cy="4539ae55-f263-4bfc-b7e1-137bfbf6750e-hover-list"
+                data-reach-listbox-input=""
+                data-state="closed"
+                data-value={null}
+                id="listbox-input--35"
+              >
+                <span
+                  aria-haspopup="listbox"
+                  aria-labelledby="4539ae55-f263-4bfc-b7e1-137bfbf6750e-hover-list button--listbox-input--35"
+                  className="c29"
+                  data-reach-listbox-button=""
+                  id="button--listbox-input--35"
+                  onKeyDown={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  role="button"
+                  tabIndex={0}
+                >
+                  <small
+                    className="c30"
+                    data-cy="count1"
+                  >
+                    <strong>
+                      1
+                    </strong>
+                     
+                    Deployment
+                  </small>
+                </span>
+                <div
+                  _css2="#ffffff"
+                  className="c31 c32"
+                  data-reach-listbox-popover=""
+                  hidden={true}
+                  onBlur={[Function]}
+                  onKeyDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  tabIndex={-1}
+                >
+                  <ul
+                    aria-labelledby="4539ae55-f263-4bfc-b7e1-137bfbf6750e-hover-list"
+                    className="c33"
+                    data-reach-listbox-list=""
+                    id="listbox--listbox-input--35"
+                    role="listbox"
+                    tabIndex={-1}
+                  >
+                    <label
+                      className="c34"
+                    >
+                      Deployment Dates
+                    </label>
+                    <table
+                      className="c35"
+                    >
+                      <thead
+                        className="c36"
+                      >
+                        <tr
+                          className="c37"
+                        >
+                          <th
+                            className="c38"
+                          >
+                            <label>
+                              Start Date
+                            </label>
+                          </th>
+                          <th
+                            className="c39"
+                          >
+                            <label>
+                              End Date
+                            </label>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody
+                        className="c40"
+                        mode="lightTheme"
+                      >
+                        <tr>
+                          <td
+                            className="c41"
+                          >
+                            2019-08-20
+                          </td>
+                          <td
+                            className="c41"
+                          >
+                            2019-10-10
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </ul>
+                </div>
+              </div>
+              <input
+                data-reach-listbox-hidden-input=""
+                disabled={false}
+                name="4539ae55-f263-4bfc-b7e1-137bfbf6750e-hover-list"
+                readOnly={true}
+                tabIndex={-1}
+                type="hidden"
+                value=""
+              />
+              <small
+                className="c42"
+                data-cy="count2"
+              >
+                 · 
+                <strong>
+                  9
+                </strong>
+                 
+                Data Product
+                s
+              </small>
+            </div>
+          </div>
+          <div>
+            <a
+              href="/campaign/a2b7ce72-02ea-4b00-a784-ec72b7a9041a"
             >
               <div
                 className="c26"
@@ -1677,18 +1888,18 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="99bfae38-07c4-4f2e-a6c8-bc87af9341a7-hover-list"
+                data-cy="a2b7ce72-02ea-4b00-a784-ec72b7a9041a-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
-                id="listbox-input--31"
+                id="listbox-input--33"
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="99bfae38-07c4-4f2e-a6c8-bc87af9341a7-hover-list button--listbox-input--31"
+                  aria-labelledby="a2b7ce72-02ea-4b00-a784-ec72b7a9041a-hover-list button--listbox-input--33"
                   className="c29"
                   data-reach-listbox-button=""
-                  id="button--listbox-input--31"
+                  id="button--listbox-input--33"
                   onKeyDown={[Function]}
                   onMouseDown={[Function]}
                   onMouseEnter={[Function]}
@@ -1721,10 +1932,10 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="99bfae38-07c4-4f2e-a6c8-bc87af9341a7-hover-list"
+                    aria-labelledby="a2b7ce72-02ea-4b00-a784-ec72b7a9041a-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
-                    id="listbox--listbox-input--31"
+                    id="listbox--listbox-input--33"
                     role="listbox"
                     tabIndex={-1}
                   >
@@ -1765,42 +1976,62 @@ exports[`Explore page renders correctly 1`] = `
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2016-07-18
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2016-08-29
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2017-01-31
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2017-03-10
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2017-10-03
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2017-11-13
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2018-04-12
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2018-05-20
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2019-06-17
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2019-07-27
+                          </td>
                         </tr>
                       </tbody>
                     </table>
@@ -1810,7 +2041,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="99bfae38-07c4-4f2e-a6c8-bc87af9341a7-hover-list"
+                name="a2b7ce72-02ea-4b00-a784-ec72b7a9041a-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -1832,7 +2063,7 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/2a5f6d7b-2f5a-4c63-9199-62bebb98d2c4"
+              href="/campaign/e4621932-1353-4cab-a1ce-e73a577e546d"
             >
               <div
                 className="c26"
@@ -1917,18 +2148,18 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="2a5f6d7b-2f5a-4c63-9199-62bebb98d2c4-hover-list"
+                data-cy="e4621932-1353-4cab-a1ce-e73a577e546d-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
-                id="listbox-input--28"
+                id="listbox-input--10"
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="2a5f6d7b-2f5a-4c63-9199-62bebb98d2c4-hover-list button--listbox-input--28"
+                  aria-labelledby="e4621932-1353-4cab-a1ce-e73a577e546d-hover-list button--listbox-input--10"
                   className="c29"
                   data-reach-listbox-button=""
-                  id="button--listbox-input--28"
+                  id="button--listbox-input--10"
                   onKeyDown={[Function]}
                   onMouseDown={[Function]}
                   onMouseEnter={[Function]}
@@ -1960,10 +2191,10 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="2a5f6d7b-2f5a-4c63-9199-62bebb98d2c4-hover-list"
+                    aria-labelledby="e4621932-1353-4cab-a1ce-e73a577e546d-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
-                    id="listbox--listbox-input--28"
+                    id="listbox--listbox-input--10"
                     role="listbox"
                     tabIndex={-1}
                   >
@@ -2004,10 +2235,14 @@ exports[`Explore page renders correctly 1`] = `
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2017-10-19
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2017-11-09
+                          </td>
                         </tr>
                       </tbody>
                     </table>
@@ -2017,7 +2252,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="2a5f6d7b-2f5a-4c63-9199-62bebb98d2c4-hover-list"
+                name="e4621932-1353-4cab-a1ce-e73a577e546d-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -2039,7 +2274,7 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/2446841f-e21e-423b-b469-7c911a535a9b"
+              href="/campaign/497b78f3-50a6-4f1a-8a22-689f2a832778"
             >
               <div
                 className="c26"
@@ -2124,18 +2359,18 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="2446841f-e21e-423b-b469-7c911a535a9b-hover-list"
+                data-cy="497b78f3-50a6-4f1a-8a22-689f2a832778-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
-                id="listbox-input--15"
+                id="listbox-input--36"
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="2446841f-e21e-423b-b469-7c911a535a9b-hover-list button--listbox-input--15"
+                  aria-labelledby="497b78f3-50a6-4f1a-8a22-689f2a832778-hover-list button--listbox-input--36"
                   className="c29"
                   data-reach-listbox-button=""
-                  id="button--listbox-input--15"
+                  id="button--listbox-input--36"
                   onKeyDown={[Function]}
                   onMouseDown={[Function]}
                   onMouseEnter={[Function]}
@@ -2167,10 +2402,10 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="2446841f-e21e-423b-b469-7c911a535a9b-hover-list"
+                    aria-labelledby="497b78f3-50a6-4f1a-8a22-689f2a832778-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
-                    id="listbox--listbox-input--15"
+                    id="listbox--listbox-input--36"
                     role="listbox"
                     tabIndex={-1}
                   >
@@ -2211,10 +2446,14 @@ exports[`Explore page renders correctly 1`] = `
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2017-05-25
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2017-06-25
+                          </td>
                         </tr>
                       </tbody>
                     </table>
@@ -2224,7 +2463,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="2446841f-e21e-423b-b469-7c911a535a9b-hover-list"
+                name="497b78f3-50a6-4f1a-8a22-689f2a832778-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -2245,7 +2484,231 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/90e1f261-bd6b-4553-addc-041055fdfe4c"
+              href="/campaign/66cbd82f-dbd3-4903-94bf-eedce2750b1c"
+            >
+              <div
+                className="c26"
+                data-cy="campaigns-card"
+              >
+                <div>
+                  <div
+                    className="c27"
+                  >
+                    <svg
+                      height="60"
+                      viewBox="0 0 65 69"
+                      width="60"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g
+                        fill="#e9eaec"
+                        fillRule="nonzero"
+                      >
+                        <path
+                          d="M57.57 17.157c.759-1.875 1.239-3.589 1.239-4.93C58.809 5.484 53.299 0 46.526 0c-4.326 0-8.13 2.244-10.318 5.618l-.028.045a18.788 18.788 0 00-3.337-.346l-.028-.002v-.007h-.025C15.147 5.308.791 19.589.791 37.154.791 54.718 15.147 69 32.791 69H32.817l.03-.002c17.62-.03 31.944-14.267 31.944-31.765 0-7.608-2.711-14.6-7.221-20.076zM26.146 7.623c-2.938 2.043-5.529 5.445-7.517 9.677-2.37-.586-4.585-1.32-6.593-2.198 3.894-3.612 8.736-6.284 14.11-7.48zm-15.273 8.619c2.16.987 4.556 1.816 7.133 2.467a42.558 42.558 0 00-2.092 6.423 9.635 9.635 0 00-1.38-.11c-5.329 0-9.664 4.315-9.664 9.62 0 .521.095 1.116.259 1.758-1.426.01-2.28.023-2.793.035.22-7.83 3.43-14.925 8.537-20.193zm6.168 10.694c3.265 1.055 5.634 4.109 5.634 7.707 0 .488-.113 1.075-.299 1.722-.136.474-.315.981-.53 1.518-1.102 2.726-3.122 6.125-4.96 8.94a102.86 102.86 0 01-2.352 3.444C12.455 47.363 8.85 41.9 7.228 37.895A15.495 15.495 0 016.7 36.39c-.191-.656-.307-1.253-.307-1.747 0-4.47 3.652-8.105 8.141-8.105.355 0 .703.03 1.045.075.503.064.992.171 1.462.323zM2.331 37.933c.6-.013 1.725-.023 3.274-.03 2.1 5.67 8.013 13.698 8.317 14.108l.612.828.613-.828c.073-.098.467-.634 1.05-1.463a41.96 41.96 0 001.808 5.32c-2.577.652-4.973 1.48-7.133 2.467-5.152-5.315-8.374-12.49-8.54-20.402zm9.704 21.541c2.009-.876 4.224-1.612 6.594-2.197 1.988 4.232 4.579 7.5 7.517 9.543-5.375-1.195-10.216-3.733-14.111-7.346zm20.019 8.116c-4.745-.394-9.032-4.447-11.978-10.648 3.721-.803 7.777-1.248 11.978-1.296V67.59zm0-13.46c-4.424.05-8.7.529-12.614 1.398a41.213 41.213 0 01-2.119-6.612c1.998-2.955 4.831-7.461 6.149-11.033l8.584.009v16.237zm0-17.757c-2.986-.004-5.677-.006-8.106-.008.159-.63.25-1.211.25-1.723 0-4.323-2.88-7.987-6.829-9.196a40.949 40.949 0 012.07-6.398c3.915.871 8.19 1.35 12.615 1.4v15.925zm0-17.441c-4.202-.05-8.257-.494-11.978-1.298 2.946-6.2 7.233-10.254 11.978-10.648v11.946zM36.736 7.81a10.643 10.643 0 011.17-1.964c1.962-2.621 5.091-4.33 8.62-4.33 5.932 0 10.76 4.805 10.76 10.71 0 .998-.312 2.25-.829 3.645a28.177 28.177 0 01-.642 1.575c-1.417 3.215-3.628 6.911-5.605 9.964a145.462 145.462 0 01-3.684 5.413c-1.474-2.059-5.285-7.529-7.95-12.616-.258-.491-.504-.98-.737-1.46-1.227-2.534-2.072-4.874-2.072-6.52 0-1.576.353-3.068.969-4.417zm-3.159-.824v-.02c.71.048 1.188.147 1.736.294l-.015.031a12.095 12.095 0 00-1.054 4.936c0 1.737.8 4.093 1.978 6.624-.874.045-1.756.072-2.645.082V6.986zm0 13.462a66.297 66.297 0 003.362-.12c3.343 6.602 8.65 13.804 8.974 14.243l.613.828.613-.828c.125-.167.974-1.321 2.16-3.044.172 1.585.273 3.215.3 4.878-6.075-.014-11.39-.023-16.022-.03V20.448zm0 17.445c5.329.008 10.817.018 16.025.028-.076 6.595-1.338 12.679-3.409 17.6-3.915-.867-8.191-1.344-12.616-1.392V37.893zm0 17.752c4.183.047 8.222.486 11.93 1.282-2.943 6.13-7.21 10.134-11.93 10.525V55.645zm5.932 11.092c2.906-2.024 5.47-5.314 7.446-9.48l.05.011c2.324.573 4.499 1.29 6.478 2.143a30.487 30.487 0 01-13.974 7.326zm15.226-8.541s-.055.088-.082.075c-2.132-.963-4.491-1.772-7.025-2.41 2.126-5.072 3.419-11.254 3.497-17.936 4.366.01 8.496.02 12.123.03-.185 7.789-3.345 14.857-8.4 20.125l-.113.116zm8.327-21.759s-8.193-.022-11.94-.03c-.038-2.33-.22-4.6-.538-6.781 2.06-3.1 4.59-7.188 6.298-10.887l.002-.003c3.808 4.876 5.964 10.932 6.174 17.516a7.5 7.5 0 01.004.132c.02.06 0 .053 0 .053z"
+                        />
+                        <path
+                          d="M46.606 6a4.83 4.83 0 00-2.995 1.046 5.024 5.024 0 00-1.685 2.423 5.1 5.1 0 00-.246 1.56c0 .108.009.212.016.318a5.03 5.03 0 002.952 4.294 4.824 4.824 0 001.847.412c.038 0 .075.006.113.006 2.054 0 3.816-1.29 4.555-3.119a5.084 5.084 0 00.359-1.645c.004-.088.012-.175.012-.265C51.533 8.256 49.323 6 46.606 6zm3.26 5.993c-.411 1.449-1.71 2.517-3.26 2.517-.37 0-.72-.076-1.053-.187a3.467 3.467 0 01-2.358-3.294c0-.042.01-.082.012-.123a3.488 3.488 0 01.768-2.065 3.4 3.4 0 011.46-1.069 3.307 3.307 0 011.172-.225c1.592 0 2.921 1.124 3.296 2.631.068.274.115.556.115.85-.001.337-.063.657-.151.965zM16.698 30.61a3.88 3.88 0 00-1.454-.482c-.157-.02-.311-.049-.473-.049-2.195 0-3.98 1.822-3.98 4.062 0 .988.362 1.883.939 2.587.73.893 1.815 1.474 3.04 1.474 1.23 0 2.317-.584 3.048-1.481a4.074 4.074 0 00.932-2.58 4.062 4.062 0 00-2.052-3.531zm-.428 5.511c-.417.33-.933.534-1.5.534l-.022-.002c-1.348-.014-2.44-1.134-2.44-2.512 0-1.387 1.104-2.515 2.463-2.515.098 0 .19.018.286.03.56.067 1.066.315 1.447.7.45.456.73 1.088.73 1.785a2.52 2.52 0 01-.964 1.98z"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                  <big
+                    data-cy="shortname"
+                    style={
+                      Object {
+                        "fontWeight": "bold",
+                        "marginTop": "0.5rem",
+                      }
+                    }
+                  >
+                    CARAFE
+                  </big>
+                  <p
+                    data-cy="longname"
+                  >
+                    NASA Carbon Atmospheric Flux Experiment
+                  </p>
+                  <div>
+                    <small
+                      data-cy="daterange"
+                    >
+                      2016—2017
+                    </small>
+                  </div>
+                  <div>
+                    <small
+                      data-cy="region"
+                    >
+                      Eastern United States Coast, Mid-Atlantic Region
+                    </small>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <div
+              className="c28"
+              data-cy="campaigns-card-footer"
+            >
+              <span
+                style={
+                  Object {
+                    "border": 0,
+                    "clip": "rect(0 0 0 0)",
+                    "height": "1px",
+                    "margin": "-1px",
+                    "overflow": "hidden",
+                    "padding": 0,
+                    "position": "absolute",
+                    "whiteSpace": "nowrap",
+                    "width": "1px",
+                    "wordWrap": "normal",
+                  }
+                }
+              >
+                view all deployment dates
+              </span>
+              <div
+                data-cy="66cbd82f-dbd3-4903-94bf-eedce2750b1c-hover-list"
+                data-reach-listbox-input=""
+                data-state="closed"
+                data-value={null}
+                id="listbox-input--16"
+              >
+                <span
+                  aria-haspopup="listbox"
+                  aria-labelledby="66cbd82f-dbd3-4903-94bf-eedce2750b1c-hover-list button--listbox-input--16"
+                  className="c29"
+                  data-reach-listbox-button=""
+                  id="button--listbox-input--16"
+                  onKeyDown={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  role="button"
+                  tabIndex={0}
+                >
+                  <small
+                    className="c30"
+                    data-cy="count1"
+                  >
+                    <strong>
+                      2
+                    </strong>
+                     
+                    Deployment
+                    s
+                  </small>
+                </span>
+                <div
+                  _css2="#ffffff"
+                  className="c31 c32"
+                  data-reach-listbox-popover=""
+                  hidden={true}
+                  onBlur={[Function]}
+                  onKeyDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  tabIndex={-1}
+                >
+                  <ul
+                    aria-labelledby="66cbd82f-dbd3-4903-94bf-eedce2750b1c-hover-list"
+                    className="c33"
+                    data-reach-listbox-list=""
+                    id="listbox--listbox-input--16"
+                    role="listbox"
+                    tabIndex={-1}
+                  >
+                    <label
+                      className="c34"
+                    >
+                      Deployment Dates
+                    </label>
+                    <table
+                      className="c35"
+                    >
+                      <thead
+                        className="c36"
+                      >
+                        <tr
+                          className="c37"
+                        >
+                          <th
+                            className="c38"
+                          >
+                            <label>
+                              Start Date
+                            </label>
+                          </th>
+                          <th
+                            className="c39"
+                          >
+                            <label>
+                              End Date
+                            </label>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody
+                        className="c40"
+                        mode="lightTheme"
+                      >
+                        <tr>
+                          <td
+                            className="c41"
+                          >
+                            2016-09-07
+                          </td>
+                          <td
+                            className="c41"
+                          >
+                            2016-09-26
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            className="c41"
+                          >
+                            2017-05-03
+                          </td>
+                          <td
+                            className="c41"
+                          >
+                            2017-05-26
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </ul>
+                </div>
+              </div>
+              <input
+                data-reach-listbox-hidden-input=""
+                disabled={false}
+                name="66cbd82f-dbd3-4903-94bf-eedce2750b1c-hover-list"
+                readOnly={true}
+                tabIndex={-1}
+                type="hidden"
+                value=""
+              />
+              <small
+                className="c42"
+                data-cy="count2"
+              >
+                 · 
+                <strong>
+                  0
+                </strong>
+                 
+                Data Product
+                s
+              </small>
+            </div>
+          </div>
+          <div>
+            <a
+              href="/campaign/773ff9f0-d510-4912-9fa6-9e28caaba713"
             >
               <div
                 className="c26"
@@ -2322,18 +2785,18 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="90e1f261-bd6b-4553-addc-041055fdfe4c-hover-list"
+                data-cy="773ff9f0-d510-4912-9fa6-9e28caaba713-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
-                id="listbox-input--17"
+                id="listbox-input--22"
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="90e1f261-bd6b-4553-addc-041055fdfe4c-hover-list button--listbox-input--17"
+                  aria-labelledby="773ff9f0-d510-4912-9fa6-9e28caaba713-hover-list button--listbox-input--22"
                   className="c29"
                   data-reach-listbox-button=""
-                  id="button--listbox-input--17"
+                  id="button--listbox-input--22"
                   onKeyDown={[Function]}
                   onMouseDown={[Function]}
                   onMouseEnter={[Function]}
@@ -2365,10 +2828,10 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="90e1f261-bd6b-4553-addc-041055fdfe4c-hover-list"
+                    aria-labelledby="773ff9f0-d510-4912-9fa6-9e28caaba713-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
-                    id="listbox--listbox-input--17"
+                    id="listbox--listbox-input--22"
                     role="listbox"
                     tabIndex={-1}
                   >
@@ -2409,10 +2872,14 @@ exports[`Explore page renders correctly 1`] = `
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2017-03-21
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2017-05-17
+                          </td>
                         </tr>
                       </tbody>
                     </table>
@@ -2422,7 +2889,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="90e1f261-bd6b-4553-addc-041055fdfe4c-hover-list"
+                name="773ff9f0-d510-4912-9fa6-9e28caaba713-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -2444,7 +2911,7 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/c70a5920-5780-446d-916c-29cdb6594df0"
+              href="/campaign/b4d3a465-6b78-4240-9003-c2d348066326"
             >
               <div
                 className="c26"
@@ -2521,18 +2988,18 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="c70a5920-5780-446d-916c-29cdb6594df0-hover-list"
+                data-cy="b4d3a465-6b78-4240-9003-c2d348066326-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
-                id="listbox-input--34"
+                id="listbox-input--27"
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="c70a5920-5780-446d-916c-29cdb6594df0-hover-list button--listbox-input--34"
+                  aria-labelledby="b4d3a465-6b78-4240-9003-c2d348066326-hover-list button--listbox-input--27"
                   className="c29"
                   data-reach-listbox-button=""
-                  id="button--listbox-input--34"
+                  id="button--listbox-input--27"
                   onKeyDown={[Function]}
                   onMouseDown={[Function]}
                   onMouseEnter={[Function]}
@@ -2564,10 +3031,10 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="c70a5920-5780-446d-916c-29cdb6594df0-hover-list"
+                    aria-labelledby="b4d3a465-6b78-4240-9003-c2d348066326-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
-                    id="listbox--listbox-input--34"
+                    id="listbox--listbox-input--27"
                     role="listbox"
                     tabIndex={-1}
                   >
@@ -2608,10 +3075,14 @@ exports[`Explore page renders correctly 1`] = `
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2015-11-01
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2016-05-01
+                          </td>
                         </tr>
                       </tbody>
                     </table>
@@ -2621,7 +3092,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="c70a5920-5780-446d-916c-29cdb6594df0-hover-list"
+                name="b4d3a465-6b78-4240-9003-c2d348066326-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -2643,7 +3114,7 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/d9099ddb-e05e-44b7-b71f-4d64608ad45e"
+              href="/campaign/12e154b6-63bb-47b7-8563-d59abeb5774d"
             >
               <div
                 className="c26"
@@ -2728,7 +3199,7 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="d9099ddb-e05e-44b7-b71f-4d64608ad45e-hover-list"
+                data-cy="12e154b6-63bb-47b7-8563-d59abeb5774d-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
@@ -2736,7 +3207,7 @@ exports[`Explore page renders correctly 1`] = `
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="d9099ddb-e05e-44b7-b71f-4d64608ad45e-hover-list button--listbox-input--9"
+                  aria-labelledby="12e154b6-63bb-47b7-8563-d59abeb5774d-hover-list button--listbox-input--9"
                   className="c29"
                   data-reach-listbox-button=""
                   id="button--listbox-input--9"
@@ -2771,7 +3242,7 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="d9099ddb-e05e-44b7-b71f-4d64608ad45e-hover-list"
+                    aria-labelledby="12e154b6-63bb-47b7-8563-d59abeb5774d-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
                     id="listbox--listbox-input--9"
@@ -2815,10 +3286,14 @@ exports[`Explore page renders correctly 1`] = `
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2016-02-03
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2016-02-25
+                          </td>
                         </tr>
                       </tbody>
                     </table>
@@ -2828,7 +3303,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="d9099ddb-e05e-44b7-b71f-4d64608ad45e-hover-list"
+                name="12e154b6-63bb-47b7-8563-d59abeb5774d-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -2850,7 +3325,7 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/c00b9ed9-03dc-4068-8cc8-c7454f6c8076"
+              href="/campaign/49678da3-ac4c-44e4-85fe-eb5dec96d788"
             >
               <div
                 className="c26"
@@ -2927,18 +3402,18 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="c00b9ed9-03dc-4068-8cc8-c7454f6c8076-hover-list"
+                data-cy="49678da3-ac4c-44e4-85fe-eb5dec96d788-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
-                id="listbox-input--32"
+                id="listbox-input--17"
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="c00b9ed9-03dc-4068-8cc8-c7454f6c8076-hover-list button--listbox-input--32"
+                  aria-labelledby="49678da3-ac4c-44e4-85fe-eb5dec96d788-hover-list button--listbox-input--17"
                   className="c29"
                   data-reach-listbox-button=""
-                  id="button--listbox-input--32"
+                  id="button--listbox-input--17"
                   onKeyDown={[Function]}
                   onMouseDown={[Function]}
                   onMouseEnter={[Function]}
@@ -2971,10 +3446,10 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="c00b9ed9-03dc-4068-8cc8-c7454f6c8076-hover-list"
+                    aria-labelledby="49678da3-ac4c-44e4-85fe-eb5dec96d788-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
-                    id="listbox--listbox-input--32"
+                    id="listbox--listbox-input--17"
                     role="listbox"
                     tabIndex={-1}
                   >
@@ -3015,34 +3490,50 @@ exports[`Explore page renders correctly 1`] = `
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2012-05-23
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2012-10-30
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2013-02-05
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2013-11-25
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2014-02-13
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2014-11-09
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2015-02-10
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2015-11-12
+                          </td>
                         </tr>
                       </tbody>
                     </table>
@@ -3052,7 +3543,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="c00b9ed9-03dc-4068-8cc8-c7454f6c8076-hover-list"
+                name="49678da3-ac4c-44e4-85fe-eb5dec96d788-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -3074,7 +3565,7 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/e4e58a6d-ab2d-40e7-a6e9-a09c240e6fee"
+              href="/campaign/882f085a-50a7-4d7f-a3d5-cd96596f04e2"
             >
               <div
                 className="c26"
@@ -3151,18 +3642,18 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="e4e58a6d-ab2d-40e7-a6e9-a09c240e6fee-hover-list"
+                data-cy="882f085a-50a7-4d7f-a3d5-cd96596f04e2-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
-                id="listbox-input--26"
+                id="listbox-input--34"
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="e4e58a6d-ab2d-40e7-a6e9-a09c240e6fee-hover-list button--listbox-input--26"
+                  aria-labelledby="882f085a-50a7-4d7f-a3d5-cd96596f04e2-hover-list button--listbox-input--34"
                   className="c29"
                   data-reach-listbox-button=""
-                  id="button--listbox-input--26"
+                  id="button--listbox-input--34"
                   onKeyDown={[Function]}
                   onMouseDown={[Function]}
                   onMouseEnter={[Function]}
@@ -3195,10 +3686,10 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="e4e58a6d-ab2d-40e7-a6e9-a09c240e6fee-hover-list"
+                    aria-labelledby="882f085a-50a7-4d7f-a3d5-cd96596f04e2-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
-                    id="listbox--listbox-input--26"
+                    id="listbox--listbox-input--34"
                     role="listbox"
                     tabIndex={-1}
                   >
@@ -3239,274 +3730,410 @@ exports[`Explore page renders correctly 1`] = `
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2012-09-18
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2012-09-20
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2012-10-02
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2012-10-11
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2012-10-12
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2012-10-22
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2012-10-23
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2012-10-30
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2013-02-19
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2013-02-25
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2013-04-11
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2013-04-19
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2013-04-20
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2013-05-01
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2013-05-28
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2013-06-07
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2013-06-10
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2013-06-21
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2013-07-06
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2013-07-14
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2013-07-15
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2013-07-25
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2013-07-26
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2013-08-03
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2013-08-18
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2013-08-27
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2013-09-27
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2013-09-30
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2013-11-19
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2013-11-21
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2014-03-24
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2014-04-02
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2014-04-14
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2014-04-25
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2014-05-27
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2014-06-04
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2014-06-06
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2014-06-16
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2014-06-26
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2014-07-07
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2014-07-08
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2014-07-19
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2014-08-07
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2014-08-14
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2014-08-18
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2014-08-27
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2014-09-28
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2014-10-08
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2014-10-14
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2014-10-23
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2015-02-17
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2015-02-25
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2015-04-03
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2015-04-14
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2015-04-15
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2015-04-24
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2015-05-20
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2015-05-24
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2015-06-29
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2015-07-06
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2015-08-07
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2015-08-18
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2015-08-19
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2015-08-27
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2015-09-01
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2015-09-10
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2015-09-22
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2015-09-29
+                          </td>
                         </tr>
                       </tbody>
                     </table>
@@ -3516,7 +4143,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="e4e58a6d-ab2d-40e7-a6e9-a09c240e6fee-hover-list"
+                name="882f085a-50a7-4d7f-a3d5-cd96596f04e2-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -3538,7 +4165,7 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/b7c96321-1b7c-478e-97a4-47e105c8f20e"
+              href="/campaign/7ce3d933-1d78-470d-b710-ace5a8190a35"
             >
               <div
                 className="c26"
@@ -3623,18 +4250,18 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="b7c96321-1b7c-478e-97a4-47e105c8f20e-hover-list"
+                data-cy="7ce3d933-1d78-470d-b710-ace5a8190a35-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
-                id="listbox-input--25"
+                id="listbox-input--13"
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="b7c96321-1b7c-478e-97a4-47e105c8f20e-hover-list button--listbox-input--25"
+                  aria-labelledby="7ce3d933-1d78-470d-b710-ace5a8190a35-hover-list button--listbox-input--13"
                   className="c29"
                   data-reach-listbox-button=""
-                  id="button--listbox-input--25"
+                  id="button--listbox-input--13"
                   onKeyDown={[Function]}
                   onMouseDown={[Function]}
                   onMouseEnter={[Function]}
@@ -3667,10 +4294,10 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="b7c96321-1b7c-478e-97a4-47e105c8f20e-hover-list"
+                    aria-labelledby="7ce3d933-1d78-470d-b710-ace5a8190a35-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
-                    id="listbox--listbox-input--25"
+                    id="listbox--listbox-input--13"
                     role="listbox"
                     tabIndex={-1}
                   >
@@ -3711,34 +4338,50 @@ exports[`Explore page renders correctly 1`] = `
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2011-10-20
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2011-11-10
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2013-01-19
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2013-03-02
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2013-12-20
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2014-03-14
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2015-02-26
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2015-03-14
+                          </td>
                         </tr>
                       </tbody>
                     </table>
@@ -3748,7 +4391,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="b7c96321-1b7c-478e-97a4-47e105c8f20e-hover-list"
+                name="7ce3d933-1d78-470d-b710-ace5a8190a35-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -3770,7 +4413,7 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/e623d2ea-c300-48dd-bcde-d0b5b2677025"
+              href="/campaign/7afcc774-9239-4184-bbbc-df44c3942276"
             >
               <div
                 className="c26"
@@ -3847,18 +4490,18 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="e623d2ea-c300-48dd-bcde-d0b5b2677025-hover-list"
+                data-cy="7afcc774-9239-4184-bbbc-df44c3942276-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
-                id="listbox-input--16"
+                id="listbox-input--24"
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="e623d2ea-c300-48dd-bcde-d0b5b2677025-hover-list button--listbox-input--16"
+                  aria-labelledby="7afcc774-9239-4184-bbbc-df44c3942276-hover-list button--listbox-input--24"
                   className="c29"
                   data-reach-listbox-button=""
-                  id="button--listbox-input--16"
+                  id="button--listbox-input--24"
                   onKeyDown={[Function]}
                   onMouseDown={[Function]}
                   onMouseEnter={[Function]}
@@ -3891,10 +4534,10 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="e623d2ea-c300-48dd-bcde-d0b5b2677025-hover-list"
+                    aria-labelledby="7afcc774-9239-4184-bbbc-df44c3942276-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
-                    id="listbox--listbox-input--16"
+                    id="listbox--listbox-input--24"
                     role="listbox"
                     tabIndex={-1}
                   >
@@ -3935,26 +4578,38 @@ exports[`Explore page renders correctly 1`] = `
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2012-08-28
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2012-11-06
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2013-08-20
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2013-09-26
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2014-08-26
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2014-10-20
+                          </td>
                         </tr>
                       </tbody>
                     </table>
@@ -3964,7 +4619,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="e623d2ea-c300-48dd-bcde-d0b5b2677025-hover-list"
+                name="7afcc774-9239-4184-bbbc-df44c3942276-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -3986,7 +4641,7 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/aa0be934-0835-49ea-9248-d16be282b2e8"
+              href="/campaign/4030be70-b228-48a2-8a0b-557d53f6c55a"
             >
               <div
                 className="c26"
@@ -4071,18 +4726,18 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="aa0be934-0835-49ea-9248-d16be282b2e8-hover-list"
+                data-cy="4030be70-b228-48a2-8a0b-557d53f6c55a-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
-                id="listbox-input--13"
+                id="listbox-input--15"
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="aa0be934-0835-49ea-9248-d16be282b2e8-hover-list button--listbox-input--13"
+                  aria-labelledby="4030be70-b228-48a2-8a0b-557d53f6c55a-hover-list button--listbox-input--15"
                   className="c29"
                   data-reach-listbox-button=""
-                  id="button--listbox-input--13"
+                  id="button--listbox-input--15"
                   onKeyDown={[Function]}
                   onMouseDown={[Function]}
                   onMouseEnter={[Function]}
@@ -4114,10 +4769,10 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="aa0be934-0835-49ea-9248-d16be282b2e8-hover-list"
+                    aria-labelledby="4030be70-b228-48a2-8a0b-557d53f6c55a-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
-                    id="listbox--listbox-input--13"
+                    id="listbox--listbox-input--15"
                     role="listbox"
                     tabIndex={-1}
                   >
@@ -4158,10 +4813,14 @@ exports[`Explore page renders correctly 1`] = `
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2014-05-01
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2014-06-15
+                          </td>
                         </tr>
                       </tbody>
                     </table>
@@ -4171,7 +4830,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="aa0be934-0835-49ea-9248-d16be282b2e8-hover-list"
+                name="4030be70-b228-48a2-8a0b-557d53f6c55a-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -4193,7 +4852,7 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/276c9e71-52be-42f5-90d9-2a166a2c8a80"
+              href="/campaign/295a19d0-1a72-4da0-bbcf-1ddccec6099b"
             >
               <div
                 className="c26"
@@ -4278,18 +4937,18 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="276c9e71-52be-42f5-90d9-2a166a2c8a80-hover-list"
+                data-cy="295a19d0-1a72-4da0-bbcf-1ddccec6099b-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
-                id="listbox-input--30"
+                id="listbox-input--29"
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="276c9e71-52be-42f5-90d9-2a166a2c8a80-hover-list button--listbox-input--30"
+                  aria-labelledby="295a19d0-1a72-4da0-bbcf-1ddccec6099b-hover-list button--listbox-input--29"
                   className="c29"
                   data-reach-listbox-button=""
-                  id="button--listbox-input--30"
+                  id="button--listbox-input--29"
                   onKeyDown={[Function]}
                   onMouseDown={[Function]}
                   onMouseEnter={[Function]}
@@ -4321,10 +4980,10 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="276c9e71-52be-42f5-90d9-2a166a2c8a80-hover-list"
+                    aria-labelledby="295a19d0-1a72-4da0-bbcf-1ddccec6099b-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
-                    id="listbox--listbox-input--30"
+                    id="listbox--listbox-input--29"
                     role="listbox"
                     tabIndex={-1}
                   >
@@ -4365,10 +5024,14 @@ exports[`Explore page renders correctly 1`] = `
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2013-08-01
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2013-09-23
+                          </td>
                         </tr>
                       </tbody>
                     </table>
@@ -4378,7 +5041,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="276c9e71-52be-42f5-90d9-2a166a2c8a80-hover-list"
+                name="295a19d0-1a72-4da0-bbcf-1ddccec6099b-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -4400,7 +5063,429 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/390c9c9f-14d9-4e73-b327-0178e044c7d7"
+              href="/campaign/abe4e706-5dd7-45cd-ba54-4700f313e3b4"
+            >
+              <div
+                className="c26"
+                data-cy="campaigns-card"
+              >
+                <div>
+                  <div
+                    className="c27"
+                  >
+                    <svg
+                      height="60"
+                      viewBox="0 0 65 69"
+                      width="60"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g
+                        fill="#e9eaec"
+                        fillRule="nonzero"
+                      >
+                        <path
+                          d="M57.57 17.157c.759-1.875 1.239-3.589 1.239-4.93C58.809 5.484 53.299 0 46.526 0c-4.326 0-8.13 2.244-10.318 5.618l-.028.045a18.788 18.788 0 00-3.337-.346l-.028-.002v-.007h-.025C15.147 5.308.791 19.589.791 37.154.791 54.718 15.147 69 32.791 69H32.817l.03-.002c17.62-.03 31.944-14.267 31.944-31.765 0-7.608-2.711-14.6-7.221-20.076zM26.146 7.623c-2.938 2.043-5.529 5.445-7.517 9.677-2.37-.586-4.585-1.32-6.593-2.198 3.894-3.612 8.736-6.284 14.11-7.48zm-15.273 8.619c2.16.987 4.556 1.816 7.133 2.467a42.558 42.558 0 00-2.092 6.423 9.635 9.635 0 00-1.38-.11c-5.329 0-9.664 4.315-9.664 9.62 0 .521.095 1.116.259 1.758-1.426.01-2.28.023-2.793.035.22-7.83 3.43-14.925 8.537-20.193zm6.168 10.694c3.265 1.055 5.634 4.109 5.634 7.707 0 .488-.113 1.075-.299 1.722-.136.474-.315.981-.53 1.518-1.102 2.726-3.122 6.125-4.96 8.94a102.86 102.86 0 01-2.352 3.444C12.455 47.363 8.85 41.9 7.228 37.895A15.495 15.495 0 016.7 36.39c-.191-.656-.307-1.253-.307-1.747 0-4.47 3.652-8.105 8.141-8.105.355 0 .703.03 1.045.075.503.064.992.171 1.462.323zM2.331 37.933c.6-.013 1.725-.023 3.274-.03 2.1 5.67 8.013 13.698 8.317 14.108l.612.828.613-.828c.073-.098.467-.634 1.05-1.463a41.96 41.96 0 001.808 5.32c-2.577.652-4.973 1.48-7.133 2.467-5.152-5.315-8.374-12.49-8.54-20.402zm9.704 21.541c2.009-.876 4.224-1.612 6.594-2.197 1.988 4.232 4.579 7.5 7.517 9.543-5.375-1.195-10.216-3.733-14.111-7.346zm20.019 8.116c-4.745-.394-9.032-4.447-11.978-10.648 3.721-.803 7.777-1.248 11.978-1.296V67.59zm0-13.46c-4.424.05-8.7.529-12.614 1.398a41.213 41.213 0 01-2.119-6.612c1.998-2.955 4.831-7.461 6.149-11.033l8.584.009v16.237zm0-17.757c-2.986-.004-5.677-.006-8.106-.008.159-.63.25-1.211.25-1.723 0-4.323-2.88-7.987-6.829-9.196a40.949 40.949 0 012.07-6.398c3.915.871 8.19 1.35 12.615 1.4v15.925zm0-17.441c-4.202-.05-8.257-.494-11.978-1.298 2.946-6.2 7.233-10.254 11.978-10.648v11.946zM36.736 7.81a10.643 10.643 0 011.17-1.964c1.962-2.621 5.091-4.33 8.62-4.33 5.932 0 10.76 4.805 10.76 10.71 0 .998-.312 2.25-.829 3.645a28.177 28.177 0 01-.642 1.575c-1.417 3.215-3.628 6.911-5.605 9.964a145.462 145.462 0 01-3.684 5.413c-1.474-2.059-5.285-7.529-7.95-12.616-.258-.491-.504-.98-.737-1.46-1.227-2.534-2.072-4.874-2.072-6.52 0-1.576.353-3.068.969-4.417zm-3.159-.824v-.02c.71.048 1.188.147 1.736.294l-.015.031a12.095 12.095 0 00-1.054 4.936c0 1.737.8 4.093 1.978 6.624-.874.045-1.756.072-2.645.082V6.986zm0 13.462a66.297 66.297 0 003.362-.12c3.343 6.602 8.65 13.804 8.974 14.243l.613.828.613-.828c.125-.167.974-1.321 2.16-3.044.172 1.585.273 3.215.3 4.878-6.075-.014-11.39-.023-16.022-.03V20.448zm0 17.445c5.329.008 10.817.018 16.025.028-.076 6.595-1.338 12.679-3.409 17.6-3.915-.867-8.191-1.344-12.616-1.392V37.893zm0 17.752c4.183.047 8.222.486 11.93 1.282-2.943 6.13-7.21 10.134-11.93 10.525V55.645zm5.932 11.092c2.906-2.024 5.47-5.314 7.446-9.48l.05.011c2.324.573 4.499 1.29 6.478 2.143a30.487 30.487 0 01-13.974 7.326zm15.226-8.541s-.055.088-.082.075c-2.132-.963-4.491-1.772-7.025-2.41 2.126-5.072 3.419-11.254 3.497-17.936 4.366.01 8.496.02 12.123.03-.185 7.789-3.345 14.857-8.4 20.125l-.113.116zm8.327-21.759s-8.193-.022-11.94-.03c-.038-2.33-.22-4.6-.538-6.781 2.06-3.1 4.59-7.188 6.298-10.887l.002-.003c3.808 4.876 5.964 10.932 6.174 17.516a7.5 7.5 0 01.004.132c.02.06 0 .053 0 .053z"
+                        />
+                        <path
+                          d="M46.606 6a4.83 4.83 0 00-2.995 1.046 5.024 5.024 0 00-1.685 2.423 5.1 5.1 0 00-.246 1.56c0 .108.009.212.016.318a5.03 5.03 0 002.952 4.294 4.824 4.824 0 001.847.412c.038 0 .075.006.113.006 2.054 0 3.816-1.29 4.555-3.119a5.084 5.084 0 00.359-1.645c.004-.088.012-.175.012-.265C51.533 8.256 49.323 6 46.606 6zm3.26 5.993c-.411 1.449-1.71 2.517-3.26 2.517-.37 0-.72-.076-1.053-.187a3.467 3.467 0 01-2.358-3.294c0-.042.01-.082.012-.123a3.488 3.488 0 01.768-2.065 3.4 3.4 0 011.46-1.069 3.307 3.307 0 011.172-.225c1.592 0 2.921 1.124 3.296 2.631.068.274.115.556.115.85-.001.337-.063.657-.151.965zM16.698 30.61a3.88 3.88 0 00-1.454-.482c-.157-.02-.311-.049-.473-.049-2.195 0-3.98 1.822-3.98 4.062 0 .988.362 1.883.939 2.587.73.893 1.815 1.474 3.04 1.474 1.23 0 2.317-.584 3.048-1.481a4.074 4.074 0 00.932-2.58 4.062 4.062 0 00-2.052-3.531zm-.428 5.511c-.417.33-.933.534-1.5.534l-.022-.002c-1.348-.014-2.44-1.134-2.44-2.512 0-1.387 1.104-2.515 2.463-2.515.098 0 .19.018.286.03.56.067 1.066.315 1.447.7.45.456.73 1.088.73 1.785a2.52 2.52 0 01-.964 1.98z"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                  <big
+                    data-cy="shortname"
+                    style={
+                      Object {
+                        "fontWeight": "bold",
+                        "marginTop": "0.5rem",
+                      }
+                    }
+                  >
+                    IFloodS
+                  </big>
+                  <p
+                    data-cy="longname"
+                  >
+                    Iowa Flood Studies
+                  </p>
+                  <div>
+                    <small
+                      data-cy="daterange"
+                    >
+                      2013
+                    </small>
+                  </div>
+                  <div>
+                    <small
+                      data-cy="region"
+                    >
+                      Iowa
+                    </small>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <div
+              className="c28"
+              data-cy="campaigns-card-footer"
+            >
+              <span
+                style={
+                  Object {
+                    "border": 0,
+                    "clip": "rect(0 0 0 0)",
+                    "height": "1px",
+                    "margin": "-1px",
+                    "overflow": "hidden",
+                    "padding": 0,
+                    "position": "absolute",
+                    "whiteSpace": "nowrap",
+                    "width": "1px",
+                    "wordWrap": "normal",
+                  }
+                }
+              >
+                view all deployment dates
+              </span>
+              <div
+                data-cy="abe4e706-5dd7-45cd-ba54-4700f313e3b4-hover-list"
+                data-reach-listbox-input=""
+                data-state="closed"
+                data-value={null}
+                id="listbox-input--25"
+              >
+                <span
+                  aria-haspopup="listbox"
+                  aria-labelledby="abe4e706-5dd7-45cd-ba54-4700f313e3b4-hover-list button--listbox-input--25"
+                  className="c29"
+                  data-reach-listbox-button=""
+                  id="button--listbox-input--25"
+                  onKeyDown={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  role="button"
+                  tabIndex={0}
+                >
+                  <small
+                    className="c30"
+                    data-cy="count1"
+                  >
+                    <strong>
+                      1
+                    </strong>
+                     
+                    Deployment
+                  </small>
+                </span>
+                <div
+                  _css2="#ffffff"
+                  className="c31 c32"
+                  data-reach-listbox-popover=""
+                  hidden={true}
+                  onBlur={[Function]}
+                  onKeyDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  tabIndex={-1}
+                >
+                  <ul
+                    aria-labelledby="abe4e706-5dd7-45cd-ba54-4700f313e3b4-hover-list"
+                    className="c33"
+                    data-reach-listbox-list=""
+                    id="listbox--listbox-input--25"
+                    role="listbox"
+                    tabIndex={-1}
+                  >
+                    <label
+                      className="c34"
+                    >
+                      Deployment Dates
+                    </label>
+                    <table
+                      className="c35"
+                    >
+                      <thead
+                        className="c36"
+                      >
+                        <tr
+                          className="c37"
+                        >
+                          <th
+                            className="c38"
+                          >
+                            <label>
+                              Start Date
+                            </label>
+                          </th>
+                          <th
+                            className="c39"
+                          >
+                            <label>
+                              End Date
+                            </label>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody
+                        className="c40"
+                        mode="lightTheme"
+                      >
+                        <tr>
+                          <td
+                            className="c41"
+                          >
+                            2013-04-10
+                          </td>
+                          <td
+                            className="c41"
+                          >
+                            2013-06-15
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </ul>
+                </div>
+              </div>
+              <input
+                data-reach-listbox-hidden-input=""
+                disabled={false}
+                name="abe4e706-5dd7-45cd-ba54-4700f313e3b4-hover-list"
+                readOnly={true}
+                tabIndex={-1}
+                type="hidden"
+                value=""
+              />
+              <small
+                className="c42"
+                data-cy="count2"
+              >
+                 · 
+                <strong>
+                  33
+                </strong>
+                 
+                Data Product
+                s
+              </small>
+            </div>
+          </div>
+          <div>
+            <a
+              href="/campaign/820df880-b8b5-4248-a1db-70ccb285ef1e"
+            >
+              <div
+                className="c26"
+                data-cy="campaigns-card"
+              >
+                <div>
+                  <div
+                    className="c27"
+                  >
+                    <svg
+                      height="60"
+                      viewBox="0 0 65 69"
+                      width="60"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g
+                        fill="#e9eaec"
+                        fillRule="nonzero"
+                      >
+                        <path
+                          d="M57.57 17.157c.759-1.875 1.239-3.589 1.239-4.93C58.809 5.484 53.299 0 46.526 0c-4.326 0-8.13 2.244-10.318 5.618l-.028.045a18.788 18.788 0 00-3.337-.346l-.028-.002v-.007h-.025C15.147 5.308.791 19.589.791 37.154.791 54.718 15.147 69 32.791 69H32.817l.03-.002c17.62-.03 31.944-14.267 31.944-31.765 0-7.608-2.711-14.6-7.221-20.076zM26.146 7.623c-2.938 2.043-5.529 5.445-7.517 9.677-2.37-.586-4.585-1.32-6.593-2.198 3.894-3.612 8.736-6.284 14.11-7.48zm-15.273 8.619c2.16.987 4.556 1.816 7.133 2.467a42.558 42.558 0 00-2.092 6.423 9.635 9.635 0 00-1.38-.11c-5.329 0-9.664 4.315-9.664 9.62 0 .521.095 1.116.259 1.758-1.426.01-2.28.023-2.793.035.22-7.83 3.43-14.925 8.537-20.193zm6.168 10.694c3.265 1.055 5.634 4.109 5.634 7.707 0 .488-.113 1.075-.299 1.722-.136.474-.315.981-.53 1.518-1.102 2.726-3.122 6.125-4.96 8.94a102.86 102.86 0 01-2.352 3.444C12.455 47.363 8.85 41.9 7.228 37.895A15.495 15.495 0 016.7 36.39c-.191-.656-.307-1.253-.307-1.747 0-4.47 3.652-8.105 8.141-8.105.355 0 .703.03 1.045.075.503.064.992.171 1.462.323zM2.331 37.933c.6-.013 1.725-.023 3.274-.03 2.1 5.67 8.013 13.698 8.317 14.108l.612.828.613-.828c.073-.098.467-.634 1.05-1.463a41.96 41.96 0 001.808 5.32c-2.577.652-4.973 1.48-7.133 2.467-5.152-5.315-8.374-12.49-8.54-20.402zm9.704 21.541c2.009-.876 4.224-1.612 6.594-2.197 1.988 4.232 4.579 7.5 7.517 9.543-5.375-1.195-10.216-3.733-14.111-7.346zm20.019 8.116c-4.745-.394-9.032-4.447-11.978-10.648 3.721-.803 7.777-1.248 11.978-1.296V67.59zm0-13.46c-4.424.05-8.7.529-12.614 1.398a41.213 41.213 0 01-2.119-6.612c1.998-2.955 4.831-7.461 6.149-11.033l8.584.009v16.237zm0-17.757c-2.986-.004-5.677-.006-8.106-.008.159-.63.25-1.211.25-1.723 0-4.323-2.88-7.987-6.829-9.196a40.949 40.949 0 012.07-6.398c3.915.871 8.19 1.35 12.615 1.4v15.925zm0-17.441c-4.202-.05-8.257-.494-11.978-1.298 2.946-6.2 7.233-10.254 11.978-10.648v11.946zM36.736 7.81a10.643 10.643 0 011.17-1.964c1.962-2.621 5.091-4.33 8.62-4.33 5.932 0 10.76 4.805 10.76 10.71 0 .998-.312 2.25-.829 3.645a28.177 28.177 0 01-.642 1.575c-1.417 3.215-3.628 6.911-5.605 9.964a145.462 145.462 0 01-3.684 5.413c-1.474-2.059-5.285-7.529-7.95-12.616-.258-.491-.504-.98-.737-1.46-1.227-2.534-2.072-4.874-2.072-6.52 0-1.576.353-3.068.969-4.417zm-3.159-.824v-.02c.71.048 1.188.147 1.736.294l-.015.031a12.095 12.095 0 00-1.054 4.936c0 1.737.8 4.093 1.978 6.624-.874.045-1.756.072-2.645.082V6.986zm0 13.462a66.297 66.297 0 003.362-.12c3.343 6.602 8.65 13.804 8.974 14.243l.613.828.613-.828c.125-.167.974-1.321 2.16-3.044.172 1.585.273 3.215.3 4.878-6.075-.014-11.39-.023-16.022-.03V20.448zm0 17.445c5.329.008 10.817.018 16.025.028-.076 6.595-1.338 12.679-3.409 17.6-3.915-.867-8.191-1.344-12.616-1.392V37.893zm0 17.752c4.183.047 8.222.486 11.93 1.282-2.943 6.13-7.21 10.134-11.93 10.525V55.645zm5.932 11.092c2.906-2.024 5.47-5.314 7.446-9.48l.05.011c2.324.573 4.499 1.29 6.478 2.143a30.487 30.487 0 01-13.974 7.326zm15.226-8.541s-.055.088-.082.075c-2.132-.963-4.491-1.772-7.025-2.41 2.126-5.072 3.419-11.254 3.497-17.936 4.366.01 8.496.02 12.123.03-.185 7.789-3.345 14.857-8.4 20.125l-.113.116zm8.327-21.759s-8.193-.022-11.94-.03c-.038-2.33-.22-4.6-.538-6.781 2.06-3.1 4.59-7.188 6.298-10.887l.002-.003c3.808 4.876 5.964 10.932 6.174 17.516a7.5 7.5 0 01.004.132c.02.06 0 .053 0 .053z"
+                        />
+                        <path
+                          d="M46.606 6a4.83 4.83 0 00-2.995 1.046 5.024 5.024 0 00-1.685 2.423 5.1 5.1 0 00-.246 1.56c0 .108.009.212.016.318a5.03 5.03 0 002.952 4.294 4.824 4.824 0 001.847.412c.038 0 .075.006.113.006 2.054 0 3.816-1.29 4.555-3.119a5.084 5.084 0 00.359-1.645c.004-.088.012-.175.012-.265C51.533 8.256 49.323 6 46.606 6zm3.26 5.993c-.411 1.449-1.71 2.517-3.26 2.517-.37 0-.72-.076-1.053-.187a3.467 3.467 0 01-2.358-3.294c0-.042.01-.082.012-.123a3.488 3.488 0 01.768-2.065 3.4 3.4 0 011.46-1.069 3.307 3.307 0 011.172-.225c1.592 0 2.921 1.124 3.296 2.631.068.274.115.556.115.85-.001.337-.063.657-.151.965zM16.698 30.61a3.88 3.88 0 00-1.454-.482c-.157-.02-.311-.049-.473-.049-2.195 0-3.98 1.822-3.98 4.062 0 .988.362 1.883.939 2.587.73.893 1.815 1.474 3.04 1.474 1.23 0 2.317-.584 3.048-1.481a4.074 4.074 0 00.932-2.58 4.062 4.062 0 00-2.052-3.531zm-.428 5.511c-.417.33-.933.534-1.5.534l-.022-.002c-1.348-.014-2.44-1.134-2.44-2.512 0-1.387 1.104-2.515 2.463-2.515.098 0 .19.018.286.03.56.067 1.066.315 1.447.7.45.456.73 1.088.73 1.785a2.52 2.52 0 01-.964 1.98z"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                  <big
+                    data-cy="shortname"
+                    style={
+                      Object {
+                        "fontWeight": "bold",
+                        "marginTop": "0.5rem",
+                      }
+                    }
+                  >
+                    HyMeX
+                  </big>
+                  <p
+                    data-cy="longname"
+                  >
+                    The Hydrological Cycle in Mediterranean Experiment
+                  </p>
+                  <div>
+                    <small
+                      data-cy="daterange"
+                    >
+                      2012—2013
+                    </small>
+                  </div>
+                  <div>
+                    <small
+                      data-cy="region"
+                    >
+                      The Mediterranean
+                    </small>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <div
+              className="c28"
+              data-cy="campaigns-card-footer"
+            >
+              <span
+                style={
+                  Object {
+                    "border": 0,
+                    "clip": "rect(0 0 0 0)",
+                    "height": "1px",
+                    "margin": "-1px",
+                    "overflow": "hidden",
+                    "padding": 0,
+                    "position": "absolute",
+                    "whiteSpace": "nowrap",
+                    "width": "1px",
+                    "wordWrap": "normal",
+                  }
+                }
+              >
+                view all deployment dates
+              </span>
+              <div
+                data-cy="820df880-b8b5-4248-a1db-70ccb285ef1e-hover-list"
+                data-reach-listbox-input=""
+                data-state="closed"
+                data-value={null}
+                id="listbox-input--38"
+              >
+                <span
+                  aria-haspopup="listbox"
+                  aria-labelledby="820df880-b8b5-4248-a1db-70ccb285ef1e-hover-list button--listbox-input--38"
+                  className="c29"
+                  data-reach-listbox-button=""
+                  id="button--listbox-input--38"
+                  onKeyDown={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  role="button"
+                  tabIndex={0}
+                >
+                  <small
+                    className="c30"
+                    data-cy="count1"
+                  >
+                    <strong>
+                      1
+                    </strong>
+                     
+                    Deployment
+                  </small>
+                </span>
+                <div
+                  _css2="#ffffff"
+                  className="c31 c32"
+                  data-reach-listbox-popover=""
+                  hidden={true}
+                  onBlur={[Function]}
+                  onKeyDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  tabIndex={-1}
+                >
+                  <ul
+                    aria-labelledby="820df880-b8b5-4248-a1db-70ccb285ef1e-hover-list"
+                    className="c33"
+                    data-reach-listbox-list=""
+                    id="listbox--listbox-input--38"
+                    role="listbox"
+                    tabIndex={-1}
+                  >
+                    <label
+                      className="c34"
+                    >
+                      Deployment Dates
+                    </label>
+                    <table
+                      className="c35"
+                    >
+                      <thead
+                        className="c36"
+                      >
+                        <tr
+                          className="c37"
+                        >
+                          <th
+                            className="c38"
+                          >
+                            <label>
+                              Start Date
+                            </label>
+                          </th>
+                          <th
+                            className="c39"
+                          >
+                            <label>
+                              End Date
+                            </label>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody
+                        className="c40"
+                        mode="lightTheme"
+                      >
+                        <tr>
+                          <td
+                            className="c41"
+                          >
+                            2012-09-05
+                          </td>
+                          <td
+                            className="c41"
+                          >
+                            2012-11-06
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </ul>
+                </div>
+              </div>
+              <input
+                data-reach-listbox-hidden-input=""
+                disabled={false}
+                name="820df880-b8b5-4248-a1db-70ccb285ef1e-hover-list"
+                readOnly={true}
+                tabIndex={-1}
+                type="hidden"
+                value=""
+              />
+              <small
+                className="c42"
+                data-cy="count2"
+              >
+                 · 
+                <strong>
+                  3
+                </strong>
+                 
+                Data Product
+                s
+              </small>
+            </div>
+          </div>
+          <div>
+            <a
+              href="/campaign/80608ec7-ced3-46ca-8a18-90220b959650"
             >
               <div
                 className="c26"
@@ -4477,18 +5562,18 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="390c9c9f-14d9-4e73-b327-0178e044c7d7-hover-list"
+                data-cy="80608ec7-ced3-46ca-8a18-90220b959650-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
-                id="listbox-input--33"
+                id="listbox-input--20"
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="390c9c9f-14d9-4e73-b327-0178e044c7d7-hover-list button--listbox-input--33"
+                  aria-labelledby="80608ec7-ced3-46ca-8a18-90220b959650-hover-list button--listbox-input--20"
                   className="c29"
                   data-reach-listbox-button=""
-                  id="button--listbox-input--33"
+                  id="button--listbox-input--20"
                   onKeyDown={[Function]}
                   onMouseDown={[Function]}
                   onMouseEnter={[Function]}
@@ -4520,10 +5605,10 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="390c9c9f-14d9-4e73-b327-0178e044c7d7-hover-list"
+                    aria-labelledby="80608ec7-ced3-46ca-8a18-90220b959650-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
-                    id="listbox--listbox-input--33"
+                    id="listbox--listbox-input--20"
                     role="listbox"
                     tabIndex={-1}
                   >
@@ -4564,10 +5649,14 @@ exports[`Explore page renders correctly 1`] = `
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2012-05-18
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2012-06-30
+                          </td>
                         </tr>
                       </tbody>
                     </table>
@@ -4577,7 +5666,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="390c9c9f-14d9-4e73-b327-0178e044c7d7-hover-list"
+                name="80608ec7-ced3-46ca-8a18-90220b959650-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -4599,7 +5688,7 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/061f09d2-cafa-4ec5-905e-e484592d59c6"
+              href="/campaign/1956796d-97ae-4b60-8823-40748bc18e79"
             >
               <div
                 className="c26"
@@ -4676,18 +5765,18 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="061f09d2-cafa-4ec5-905e-e484592d59c6-hover-list"
+                data-cy="1956796d-97ae-4b60-8823-40748bc18e79-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
-                id="listbox-input--27"
+                id="listbox-input--21"
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="061f09d2-cafa-4ec5-905e-e484592d59c6-hover-list button--listbox-input--27"
+                  aria-labelledby="1956796d-97ae-4b60-8823-40748bc18e79-hover-list button--listbox-input--21"
                   className="c29"
                   data-reach-listbox-button=""
-                  id="button--listbox-input--27"
+                  id="button--listbox-input--21"
                   onKeyDown={[Function]}
                   onMouseDown={[Function]}
                   onMouseEnter={[Function]}
@@ -4719,10 +5808,10 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="061f09d2-cafa-4ec5-905e-e484592d59c6-hover-list"
+                    aria-labelledby="1956796d-97ae-4b60-8823-40748bc18e79-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
-                    id="listbox--listbox-input--27"
+                    id="listbox--listbox-input--21"
                     role="listbox"
                     tabIndex={-1}
                   >
@@ -4763,10 +5852,14 @@ exports[`Explore page renders correctly 1`] = `
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2012-01-15
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2012-03-04
+                          </td>
                         </tr>
                       </tbody>
                     </table>
@@ -4776,7 +5869,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="061f09d2-cafa-4ec5-905e-e484592d59c6-hover-list"
+                name="1956796d-97ae-4b60-8823-40748bc18e79-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -4798,7 +5891,218 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/ac9220f0-edde-47ee-ab0a-41e38221a104"
+              href="/campaign/9e747e16-a5d2-4e67-9fb7-1e06a868bce9"
+            >
+              <div
+                className="c26"
+                data-cy="campaigns-card"
+              >
+                <div>
+                  <div
+                    className="c27"
+                  >
+                    <svg
+                      height="60"
+                      viewBox="0 0 65 69"
+                      width="60"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g
+                        fill="#e9eaec"
+                        fillRule="nonzero"
+                      >
+                        <path
+                          d="M57.57 17.157c.759-1.875 1.239-3.589 1.239-4.93C58.809 5.484 53.299 0 46.526 0c-4.326 0-8.13 2.244-10.318 5.618l-.028.045a18.788 18.788 0 00-3.337-.346l-.028-.002v-.007h-.025C15.147 5.308.791 19.589.791 37.154.791 54.718 15.147 69 32.791 69H32.817l.03-.002c17.62-.03 31.944-14.267 31.944-31.765 0-7.608-2.711-14.6-7.221-20.076zM26.146 7.623c-2.938 2.043-5.529 5.445-7.517 9.677-2.37-.586-4.585-1.32-6.593-2.198 3.894-3.612 8.736-6.284 14.11-7.48zm-15.273 8.619c2.16.987 4.556 1.816 7.133 2.467a42.558 42.558 0 00-2.092 6.423 9.635 9.635 0 00-1.38-.11c-5.329 0-9.664 4.315-9.664 9.62 0 .521.095 1.116.259 1.758-1.426.01-2.28.023-2.793.035.22-7.83 3.43-14.925 8.537-20.193zm6.168 10.694c3.265 1.055 5.634 4.109 5.634 7.707 0 .488-.113 1.075-.299 1.722-.136.474-.315.981-.53 1.518-1.102 2.726-3.122 6.125-4.96 8.94a102.86 102.86 0 01-2.352 3.444C12.455 47.363 8.85 41.9 7.228 37.895A15.495 15.495 0 016.7 36.39c-.191-.656-.307-1.253-.307-1.747 0-4.47 3.652-8.105 8.141-8.105.355 0 .703.03 1.045.075.503.064.992.171 1.462.323zM2.331 37.933c.6-.013 1.725-.023 3.274-.03 2.1 5.67 8.013 13.698 8.317 14.108l.612.828.613-.828c.073-.098.467-.634 1.05-1.463a41.96 41.96 0 001.808 5.32c-2.577.652-4.973 1.48-7.133 2.467-5.152-5.315-8.374-12.49-8.54-20.402zm9.704 21.541c2.009-.876 4.224-1.612 6.594-2.197 1.988 4.232 4.579 7.5 7.517 9.543-5.375-1.195-10.216-3.733-14.111-7.346zm20.019 8.116c-4.745-.394-9.032-4.447-11.978-10.648 3.721-.803 7.777-1.248 11.978-1.296V67.59zm0-13.46c-4.424.05-8.7.529-12.614 1.398a41.213 41.213 0 01-2.119-6.612c1.998-2.955 4.831-7.461 6.149-11.033l8.584.009v16.237zm0-17.757c-2.986-.004-5.677-.006-8.106-.008.159-.63.25-1.211.25-1.723 0-4.323-2.88-7.987-6.829-9.196a40.949 40.949 0 012.07-6.398c3.915.871 8.19 1.35 12.615 1.4v15.925zm0-17.441c-4.202-.05-8.257-.494-11.978-1.298 2.946-6.2 7.233-10.254 11.978-10.648v11.946zM36.736 7.81a10.643 10.643 0 011.17-1.964c1.962-2.621 5.091-4.33 8.62-4.33 5.932 0 10.76 4.805 10.76 10.71 0 .998-.312 2.25-.829 3.645a28.177 28.177 0 01-.642 1.575c-1.417 3.215-3.628 6.911-5.605 9.964a145.462 145.462 0 01-3.684 5.413c-1.474-2.059-5.285-7.529-7.95-12.616-.258-.491-.504-.98-.737-1.46-1.227-2.534-2.072-4.874-2.072-6.52 0-1.576.353-3.068.969-4.417zm-3.159-.824v-.02c.71.048 1.188.147 1.736.294l-.015.031a12.095 12.095 0 00-1.054 4.936c0 1.737.8 4.093 1.978 6.624-.874.045-1.756.072-2.645.082V6.986zm0 13.462a66.297 66.297 0 003.362-.12c3.343 6.602 8.65 13.804 8.974 14.243l.613.828.613-.828c.125-.167.974-1.321 2.16-3.044.172 1.585.273 3.215.3 4.878-6.075-.014-11.39-.023-16.022-.03V20.448zm0 17.445c5.329.008 10.817.018 16.025.028-.076 6.595-1.338 12.679-3.409 17.6-3.915-.867-8.191-1.344-12.616-1.392V37.893zm0 17.752c4.183.047 8.222.486 11.93 1.282-2.943 6.13-7.21 10.134-11.93 10.525V55.645zm5.932 11.092c2.906-2.024 5.47-5.314 7.446-9.48l.05.011c2.324.573 4.499 1.29 6.478 2.143a30.487 30.487 0 01-13.974 7.326zm15.226-8.541s-.055.088-.082.075c-2.132-.963-4.491-1.772-7.025-2.41 2.126-5.072 3.419-11.254 3.497-17.936 4.366.01 8.496.02 12.123.03-.185 7.789-3.345 14.857-8.4 20.125l-.113.116zm8.327-21.759s-8.193-.022-11.94-.03c-.038-2.33-.22-4.6-.538-6.781 2.06-3.1 4.59-7.188 6.298-10.887l.002-.003c3.808 4.876 5.964 10.932 6.174 17.516a7.5 7.5 0 01.004.132c.02.06 0 .053 0 .053z"
+                        />
+                        <path
+                          d="M46.606 6a4.83 4.83 0 00-2.995 1.046 5.024 5.024 0 00-1.685 2.423 5.1 5.1 0 00-.246 1.56c0 .108.009.212.016.318a5.03 5.03 0 002.952 4.294 4.824 4.824 0 001.847.412c.038 0 .075.006.113.006 2.054 0 3.816-1.29 4.555-3.119a5.084 5.084 0 00.359-1.645c.004-.088.012-.175.012-.265C51.533 8.256 49.323 6 46.606 6zm3.26 5.993c-.411 1.449-1.71 2.517-3.26 2.517-.37 0-.72-.076-1.053-.187a3.467 3.467 0 01-2.358-3.294c0-.042.01-.082.012-.123a3.488 3.488 0 01.768-2.065 3.4 3.4 0 011.46-1.069 3.307 3.307 0 011.172-.225c1.592 0 2.921 1.124 3.296 2.631.068.274.115.556.115.85-.001.337-.063.657-.151.965zM16.698 30.61a3.88 3.88 0 00-1.454-.482c-.157-.02-.311-.049-.473-.049-2.195 0-3.98 1.822-3.98 4.062 0 .988.362 1.883.939 2.587.73.893 1.815 1.474 3.04 1.474 1.23 0 2.317-.584 3.048-1.481a4.074 4.074 0 00.932-2.58 4.062 4.062 0 00-2.052-3.531zm-.428 5.511c-.417.33-.933.534-1.5.534l-.022-.002c-1.348-.014-2.44-1.134-2.44-2.512 0-1.387 1.104-2.515 2.463-2.515.098 0 .19.018.286.03.56.067 1.066.315 1.447.7.45.456.73 1.088.73 1.785a2.52 2.52 0 01-.964 1.98z"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                  <big
+                    data-cy="shortname"
+                    style={
+                      Object {
+                        "fontWeight": "bold",
+                        "marginTop": "0.5rem",
+                      }
+                    }
+                  >
+                    MC3E
+                  </big>
+                  <p
+                    data-cy="longname"
+                  >
+                    Mid-latitude Continental Convective Clouds Experiment
+                  </p>
+                  <div>
+                    <small
+                      data-cy="daterange"
+                    >
+                      2011
+                    </small>
+                  </div>
+                  <div>
+                    <small
+                      data-cy="region"
+                    >
+                      Central Oklahoma, Southern Plains
+                    </small>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <div
+              className="c28"
+              data-cy="campaigns-card-footer"
+            >
+              <span
+                style={
+                  Object {
+                    "border": 0,
+                    "clip": "rect(0 0 0 0)",
+                    "height": "1px",
+                    "margin": "-1px",
+                    "overflow": "hidden",
+                    "padding": 0,
+                    "position": "absolute",
+                    "whiteSpace": "nowrap",
+                    "width": "1px",
+                    "wordWrap": "normal",
+                  }
+                }
+              >
+                view all deployment dates
+              </span>
+              <div
+                data-cy="9e747e16-a5d2-4e67-9fb7-1e06a868bce9-hover-list"
+                data-reach-listbox-input=""
+                data-state="closed"
+                data-value={null}
+                id="listbox-input--23"
+              >
+                <span
+                  aria-haspopup="listbox"
+                  aria-labelledby="9e747e16-a5d2-4e67-9fb7-1e06a868bce9-hover-list button--listbox-input--23"
+                  className="c29"
+                  data-reach-listbox-button=""
+                  id="button--listbox-input--23"
+                  onKeyDown={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  role="button"
+                  tabIndex={0}
+                >
+                  <small
+                    className="c30"
+                    data-cy="count1"
+                  >
+                    <strong>
+                      1
+                    </strong>
+                     
+                    Deployment
+                  </small>
+                </span>
+                <div
+                  _css2="#ffffff"
+                  className="c31 c32"
+                  data-reach-listbox-popover=""
+                  hidden={true}
+                  onBlur={[Function]}
+                  onKeyDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  tabIndex={-1}
+                >
+                  <ul
+                    aria-labelledby="9e747e16-a5d2-4e67-9fb7-1e06a868bce9-hover-list"
+                    className="c33"
+                    data-reach-listbox-list=""
+                    id="listbox--listbox-input--23"
+                    role="listbox"
+                    tabIndex={-1}
+                  >
+                    <label
+                      className="c34"
+                    >
+                      Deployment Dates
+                    </label>
+                    <table
+                      className="c35"
+                    >
+                      <thead
+                        className="c36"
+                      >
+                        <tr
+                          className="c37"
+                        >
+                          <th
+                            className="c38"
+                          >
+                            <label>
+                              Start Date
+                            </label>
+                          </th>
+                          <th
+                            className="c39"
+                          >
+                            <label>
+                              End Date
+                            </label>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody
+                        className="c40"
+                        mode="lightTheme"
+                      >
+                        <tr>
+                          <td
+                            className="c41"
+                          >
+                            2011-04-22
+                          </td>
+                          <td
+                            className="c41"
+                          >
+                            2011-06-06
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </ul>
+                </div>
+              </div>
+              <input
+                data-reach-listbox-hidden-input=""
+                disabled={false}
+                name="9e747e16-a5d2-4e67-9fb7-1e06a868bce9-hover-list"
+                readOnly={true}
+                tabIndex={-1}
+                type="hidden"
+                value=""
+              />
+              <small
+                className="c42"
+                data-cy="count2"
+              >
+                 · 
+                <strong>
+                  34
+                </strong>
+                 
+                Data Product
+                s
+              </small>
+            </div>
+          </div>
+          <div>
+            <a
+              href="/campaign/bfe6243f-99bc-4085-96d0-a2c7398b7255"
             >
               <div
                 className="c26"
@@ -4883,7 +6187,7 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="ac9220f0-edde-47ee-ab0a-41e38221a104-hover-list"
+                data-cy="bfe6243f-99bc-4085-96d0-a2c7398b7255-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
@@ -4891,7 +6195,7 @@ exports[`Explore page renders correctly 1`] = `
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="ac9220f0-edde-47ee-ab0a-41e38221a104-hover-list button--listbox-input--19"
+                  aria-labelledby="bfe6243f-99bc-4085-96d0-a2c7398b7255-hover-list button--listbox-input--19"
                   className="c29"
                   data-reach-listbox-button=""
                   id="button--listbox-input--19"
@@ -4926,7 +6230,7 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="ac9220f0-edde-47ee-ab0a-41e38221a104-hover-list"
+                    aria-labelledby="bfe6243f-99bc-4085-96d0-a2c7398b7255-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
                     id="listbox--listbox-input--19"
@@ -4970,10 +6274,14 @@ exports[`Explore page renders correctly 1`] = `
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2010-09-15
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2010-12-31
+                          </td>
                         </tr>
                       </tbody>
                     </table>
@@ -4983,7 +6291,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="ac9220f0-edde-47ee-ab0a-41e38221a104-hover-list"
+                name="bfe6243f-99bc-4085-96d0-a2c7398b7255-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -5005,7 +6313,7 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/aedd2eac-f34d-44a2-8e58-854aa64a28cd"
+              href="/campaign/d7d1efff-db40-495f-8f2c-cdaa67d96a80"
             >
               <div
                 className="c26"
@@ -5082,18 +6390,18 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="aedd2eac-f34d-44a2-8e58-854aa64a28cd-hover-list"
+                data-cy="d7d1efff-db40-495f-8f2c-cdaa67d96a80-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
-                id="listbox-input--29"
+                id="listbox-input--37"
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="aedd2eac-f34d-44a2-8e58-854aa64a28cd-hover-list button--listbox-input--29"
+                  aria-labelledby="d7d1efff-db40-495f-8f2c-cdaa67d96a80-hover-list button--listbox-input--37"
                   className="c29"
                   data-reach-listbox-button=""
-                  id="button--listbox-input--29"
+                  id="button--listbox-input--37"
                   onKeyDown={[Function]}
                   onMouseDown={[Function]}
                   onMouseEnter={[Function]}
@@ -5125,10 +6433,10 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="aedd2eac-f34d-44a2-8e58-854aa64a28cd-hover-list"
+                    aria-labelledby="d7d1efff-db40-495f-8f2c-cdaa67d96a80-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
-                    id="listbox--listbox-input--29"
+                    id="listbox--listbox-input--37"
                     role="listbox"
                     tabIndex={-1}
                   >
@@ -5169,10 +6477,14 @@ exports[`Explore page renders correctly 1`] = `
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2010-08-15
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2010-09-25
+                          </td>
                         </tr>
                       </tbody>
                     </table>
@@ -5182,7 +6494,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="aedd2eac-f34d-44a2-8e58-854aa64a28cd-hover-list"
+                name="d7d1efff-db40-495f-8f2c-cdaa67d96a80-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -5204,7 +6516,7 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/1dff441c-d5c8-45b2-9e13-8e3875c25263"
+              href="/campaign/4a3ff941-58bd-4d95-8ace-22c6c8c23a72"
             >
               <div
                 className="c26"
@@ -5281,18 +6593,18 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="1dff441c-d5c8-45b2-9e13-8e3875c25263-hover-list"
+                data-cy="4a3ff941-58bd-4d95-8ace-22c6c8c23a72-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
-                id="listbox-input--11"
+                id="listbox-input--12"
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="1dff441c-d5c8-45b2-9e13-8e3875c25263-hover-list button--listbox-input--11"
+                  aria-labelledby="4a3ff941-58bd-4d95-8ace-22c6c8c23a72-hover-list button--listbox-input--12"
                   className="c29"
                   data-reach-listbox-button=""
-                  id="button--listbox-input--11"
+                  id="button--listbox-input--12"
                   onKeyDown={[Function]}
                   onMouseDown={[Function]}
                   onMouseEnter={[Function]}
@@ -5325,10 +6637,10 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="1dff441c-d5c8-45b2-9e13-8e3875c25263-hover-list"
+                    aria-labelledby="4a3ff941-58bd-4d95-8ace-22c6c8c23a72-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
-                    id="listbox--listbox-input--11"
+                    id="listbox--listbox-input--12"
                     role="listbox"
                     tabIndex={-1}
                   >
@@ -5369,26 +6681,38 @@ exports[`Explore page renders correctly 1`] = `
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2008-04-01
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2008-04-21
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2008-06-18
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2008-06-24
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2008-06-26
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2008-07-14
+                          </td>
                         </tr>
                       </tbody>
                     </table>
@@ -5398,7 +6722,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="1dff441c-d5c8-45b2-9e13-8e3875c25263-hover-list"
+                name="4a3ff941-58bd-4d95-8ace-22c6c8c23a72-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -5420,7 +6744,7 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/1b0fd195-f46f-4d7a-8874-4225cec7c589"
+              href="/campaign/0b585c49-5298-4deb-8f4b-10cc7f693990"
             >
               <div
                 className="c26"
@@ -5505,18 +6829,18 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="1b0fd195-f46f-4d7a-8874-4225cec7c589-hover-list"
+                data-cy="0b585c49-5298-4deb-8f4b-10cc7f693990-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
-                id="listbox-input--14"
+                id="listbox-input--18"
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="1b0fd195-f46f-4d7a-8874-4225cec7c589-hover-list button--listbox-input--14"
+                  aria-labelledby="0b585c49-5298-4deb-8f4b-10cc7f693990-hover-list button--listbox-input--18"
                   className="c29"
                   data-reach-listbox-button=""
-                  id="button--listbox-input--14"
+                  id="button--listbox-input--18"
                   onKeyDown={[Function]}
                   onMouseDown={[Function]}
                   onMouseEnter={[Function]}
@@ -5548,10 +6872,10 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="1b0fd195-f46f-4d7a-8874-4225cec7c589-hover-list"
+                    aria-labelledby="0b585c49-5298-4deb-8f4b-10cc7f693990-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
-                    id="listbox--listbox-input--14"
+                    id="listbox--listbox-input--18"
                     role="listbox"
                     tabIndex={-1}
                   >
@@ -5592,10 +6916,14 @@ exports[`Explore page renders correctly 1`] = `
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2007-06-11
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2007-07-06
+                          </td>
                         </tr>
                       </tbody>
                     </table>
@@ -5605,7 +6933,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="1b0fd195-f46f-4d7a-8874-4225cec7c589-hover-list"
+                name="0b585c49-5298-4deb-8f4b-10cc7f693990-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -5627,7 +6955,7 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/b3c19240-0fd5-4471-b029-a4db2ef6b0fb"
+              href="/campaign/f2d9d5aa-89ec-4313-beca-14d43bd72c97"
             >
               <div
                 className="c26"
@@ -5712,18 +7040,18 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="b3c19240-0fd5-4471-b029-a4db2ef6b0fb-hover-list"
+                data-cy="f2d9d5aa-89ec-4313-beca-14d43bd72c97-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
-                id="listbox-input--18"
+                id="listbox-input--39"
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="b3c19240-0fd5-4471-b029-a4db2ef6b0fb-hover-list button--listbox-input--18"
+                  aria-labelledby="f2d9d5aa-89ec-4313-beca-14d43bd72c97-hover-list button--listbox-input--39"
                   className="c29"
                   data-reach-listbox-button=""
-                  id="button--listbox-input--18"
+                  id="button--listbox-input--39"
                   onKeyDown={[Function]}
                   onMouseDown={[Function]}
                   onMouseEnter={[Function]}
@@ -5755,10 +7083,10 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="b3c19240-0fd5-4471-b029-a4db2ef6b0fb-hover-list"
+                    aria-labelledby="f2d9d5aa-89ec-4313-beca-14d43bd72c97-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
-                    id="listbox--listbox-input--18"
+                    id="listbox--listbox-input--39"
                     role="listbox"
                     tabIndex={-1}
                   >
@@ -5799,10 +7127,14 @@ exports[`Explore page renders correctly 1`] = `
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2006-08-15
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2006-09-15
+                          </td>
                         </tr>
                       </tbody>
                     </table>
@@ -5812,7 +7144,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="b3c19240-0fd5-4471-b029-a4db2ef6b0fb-hover-list"
+                name="f2d9d5aa-89ec-4313-beca-14d43bd72c97-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -5834,7 +7166,7 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/bb3806f5-af3c-46cc-ae6f-6065aa51851d"
+              href="/campaign/0ad5176c-0143-4846-90f2-2f20e3968e07"
             >
               <div
                 className="c26"
@@ -5919,18 +7251,18 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="bb3806f5-af3c-46cc-ae6f-6065aa51851d-hover-list"
+                data-cy="0ad5176c-0143-4846-90f2-2f20e3968e07-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
-                id="listbox-input--23"
+                id="listbox-input--32"
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="bb3806f5-af3c-46cc-ae6f-6065aa51851d-hover-list button--listbox-input--23"
+                  aria-labelledby="0ad5176c-0143-4846-90f2-2f20e3968e07-hover-list button--listbox-input--32"
                   className="c29"
                   data-reach-listbox-button=""
-                  id="button--listbox-input--23"
+                  id="button--listbox-input--32"
                   onKeyDown={[Function]}
                   onMouseDown={[Function]}
                   onMouseEnter={[Function]}
@@ -5962,10 +7294,10 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="bb3806f5-af3c-46cc-ae6f-6065aa51851d-hover-list"
+                    aria-labelledby="0ad5176c-0143-4846-90f2-2f20e3968e07-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
-                    id="listbox--listbox-input--23"
+                    id="listbox--listbox-input--32"
                     role="listbox"
                     tabIndex={-1}
                   >
@@ -6006,10 +7338,14 @@ exports[`Explore page renders correctly 1`] = `
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2005-07-01
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2005-07-27
+                          </td>
                         </tr>
                       </tbody>
                     </table>
@@ -6019,7 +7355,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="bb3806f5-af3c-46cc-ae6f-6065aa51851d-hover-list"
+                name="0ad5176c-0143-4846-90f2-2f20e3968e07-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -6041,7 +7377,7 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/1418ec45-2a77-4d47-99ec-6f95c553aaba"
+              href="/campaign/5097b27f-e024-4c31-9813-6ddfd1471f01"
             >
               <div
                 className="c26"
@@ -6118,18 +7454,18 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="1418ec45-2a77-4d47-99ec-6f95c553aaba-hover-list"
+                data-cy="5097b27f-e024-4c31-9813-6ddfd1471f01-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
-                id="listbox-input--10"
+                id="listbox-input--11"
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="1418ec45-2a77-4d47-99ec-6f95c553aaba-hover-list button--listbox-input--10"
+                  aria-labelledby="5097b27f-e024-4c31-9813-6ddfd1471f01-hover-list button--listbox-input--11"
                   className="c29"
                   data-reach-listbox-button=""
-                  id="button--listbox-input--10"
+                  id="button--listbox-input--11"
                   onKeyDown={[Function]}
                   onMouseDown={[Function]}
                   onMouseEnter={[Function]}
@@ -6161,10 +7497,10 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="1418ec45-2a77-4d47-99ec-6f95c553aaba-hover-list"
+                    aria-labelledby="5097b27f-e024-4c31-9813-6ddfd1471f01-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
-                    id="listbox--listbox-input--10"
+                    id="listbox--listbox-input--11"
                     role="listbox"
                     tabIndex={-1}
                   >
@@ -6205,10 +7541,14 @@ exports[`Explore page renders correctly 1`] = `
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2002-08-02
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2002-08-30
+                          </td>
                         </tr>
                       </tbody>
                     </table>
@@ -6218,7 +7558,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="1418ec45-2a77-4d47-99ec-6f95c553aaba-hover-list"
+                name="5097b27f-e024-4c31-9813-6ddfd1471f01-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -6240,7 +7580,7 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/6fd4df89-03fd-4971-ba4b-fa20dbaefb9b"
+              href="/campaign/096da159-cd73-4af6-abb0-e1465b1ae193"
             >
               <div
                 className="c26"
@@ -6325,18 +7665,18 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="6fd4df89-03fd-4971-ba4b-fa20dbaefb9b-hover-list"
+                data-cy="096da159-cd73-4af6-abb0-e1465b1ae193-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
-                id="listbox-input--12"
+                id="listbox-input--14"
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="6fd4df89-03fd-4971-ba4b-fa20dbaefb9b-hover-list button--listbox-input--12"
+                  aria-labelledby="096da159-cd73-4af6-abb0-e1465b1ae193-hover-list button--listbox-input--14"
                   className="c29"
                   data-reach-listbox-button=""
-                  id="button--listbox-input--12"
+                  id="button--listbox-input--14"
                   onKeyDown={[Function]}
                   onMouseDown={[Function]}
                   onMouseEnter={[Function]}
@@ -6369,10 +7709,10 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="6fd4df89-03fd-4971-ba4b-fa20dbaefb9b-hover-list"
+                    aria-labelledby="096da159-cd73-4af6-abb0-e1465b1ae193-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
-                    id="listbox--listbox-input--12"
+                    id="listbox--listbox-input--14"
                     role="listbox"
                     tabIndex={-1}
                   >
@@ -6413,18 +7753,26 @@ exports[`Explore page renders correctly 1`] = `
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            1994-02-02
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            1994-09-19
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            1996-02-27
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            1996-10-21
+                          </td>
                         </tr>
                       </tbody>
                     </table>
@@ -6434,7 +7782,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="6fd4df89-03fd-4971-ba4b-fa20dbaefb9b-hover-list"
+                name="096da159-cd73-4af6-abb0-e1465b1ae193-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -6456,7 +7804,7 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/a7cef2b3-43ff-4d63-929e-49447bd718f5"
+              href="/campaign/274b9162-2b68-497f-a908-43f133c45744"
             >
               <div
                 className="c26"
@@ -6541,18 +7889,18 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="a7cef2b3-43ff-4d63-929e-49447bd718f5-hover-list"
+                data-cy="274b9162-2b68-497f-a908-43f133c45744-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
-                id="listbox-input--22"
+                id="listbox-input--31"
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="a7cef2b3-43ff-4d63-929e-49447bd718f5-hover-list button--listbox-input--22"
+                  aria-labelledby="274b9162-2b68-497f-a908-43f133c45744-hover-list button--listbox-input--31"
                   className="c29"
                   data-reach-listbox-button=""
-                  id="button--listbox-input--22"
+                  id="button--listbox-input--31"
                   onKeyDown={[Function]}
                   onMouseDown={[Function]}
                   onMouseEnter={[Function]}
@@ -6584,10 +7932,10 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="a7cef2b3-43ff-4d63-929e-49447bd718f5-hover-list"
+                    aria-labelledby="274b9162-2b68-497f-a908-43f133c45744-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
-                    id="listbox--listbox-input--22"
+                    id="listbox--listbox-input--31"
                     role="listbox"
                     tabIndex={-1}
                   >
@@ -6628,10 +7976,14 @@ exports[`Explore page renders correctly 1`] = `
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            1996-07-07
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            1996-07-31
+                          </td>
                         </tr>
                       </tbody>
                     </table>
@@ -6641,7 +7993,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="a7cef2b3-43ff-4d63-929e-49447bd718f5-hover-list"
+                name="274b9162-2b68-497f-a908-43f133c45744-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -6663,7 +8015,243 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/8f8732f2-f9c4-4457-ad4a-ad99e92e1766"
+              href="/campaign/36f07139-c2b1-4f6f-8ec1-0a5f87de3401"
+            >
+              <div
+                className="c26"
+                data-cy="campaigns-card"
+              >
+                <div>
+                  <div
+                    className="c27"
+                  >
+                    <svg
+                      height="60"
+                      viewBox="0 0 65 69"
+                      width="60"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g
+                        fill="#e9eaec"
+                        fillRule="nonzero"
+                      >
+                        <path
+                          d="M57.57 17.157c.759-1.875 1.239-3.589 1.239-4.93C58.809 5.484 53.299 0 46.526 0c-4.326 0-8.13 2.244-10.318 5.618l-.028.045a18.788 18.788 0 00-3.337-.346l-.028-.002v-.007h-.025C15.147 5.308.791 19.589.791 37.154.791 54.718 15.147 69 32.791 69H32.817l.03-.002c17.62-.03 31.944-14.267 31.944-31.765 0-7.608-2.711-14.6-7.221-20.076zM26.146 7.623c-2.938 2.043-5.529 5.445-7.517 9.677-2.37-.586-4.585-1.32-6.593-2.198 3.894-3.612 8.736-6.284 14.11-7.48zm-15.273 8.619c2.16.987 4.556 1.816 7.133 2.467a42.558 42.558 0 00-2.092 6.423 9.635 9.635 0 00-1.38-.11c-5.329 0-9.664 4.315-9.664 9.62 0 .521.095 1.116.259 1.758-1.426.01-2.28.023-2.793.035.22-7.83 3.43-14.925 8.537-20.193zm6.168 10.694c3.265 1.055 5.634 4.109 5.634 7.707 0 .488-.113 1.075-.299 1.722-.136.474-.315.981-.53 1.518-1.102 2.726-3.122 6.125-4.96 8.94a102.86 102.86 0 01-2.352 3.444C12.455 47.363 8.85 41.9 7.228 37.895A15.495 15.495 0 016.7 36.39c-.191-.656-.307-1.253-.307-1.747 0-4.47 3.652-8.105 8.141-8.105.355 0 .703.03 1.045.075.503.064.992.171 1.462.323zM2.331 37.933c.6-.013 1.725-.023 3.274-.03 2.1 5.67 8.013 13.698 8.317 14.108l.612.828.613-.828c.073-.098.467-.634 1.05-1.463a41.96 41.96 0 001.808 5.32c-2.577.652-4.973 1.48-7.133 2.467-5.152-5.315-8.374-12.49-8.54-20.402zm9.704 21.541c2.009-.876 4.224-1.612 6.594-2.197 1.988 4.232 4.579 7.5 7.517 9.543-5.375-1.195-10.216-3.733-14.111-7.346zm20.019 8.116c-4.745-.394-9.032-4.447-11.978-10.648 3.721-.803 7.777-1.248 11.978-1.296V67.59zm0-13.46c-4.424.05-8.7.529-12.614 1.398a41.213 41.213 0 01-2.119-6.612c1.998-2.955 4.831-7.461 6.149-11.033l8.584.009v16.237zm0-17.757c-2.986-.004-5.677-.006-8.106-.008.159-.63.25-1.211.25-1.723 0-4.323-2.88-7.987-6.829-9.196a40.949 40.949 0 012.07-6.398c3.915.871 8.19 1.35 12.615 1.4v15.925zm0-17.441c-4.202-.05-8.257-.494-11.978-1.298 2.946-6.2 7.233-10.254 11.978-10.648v11.946zM36.736 7.81a10.643 10.643 0 011.17-1.964c1.962-2.621 5.091-4.33 8.62-4.33 5.932 0 10.76 4.805 10.76 10.71 0 .998-.312 2.25-.829 3.645a28.177 28.177 0 01-.642 1.575c-1.417 3.215-3.628 6.911-5.605 9.964a145.462 145.462 0 01-3.684 5.413c-1.474-2.059-5.285-7.529-7.95-12.616-.258-.491-.504-.98-.737-1.46-1.227-2.534-2.072-4.874-2.072-6.52 0-1.576.353-3.068.969-4.417zm-3.159-.824v-.02c.71.048 1.188.147 1.736.294l-.015.031a12.095 12.095 0 00-1.054 4.936c0 1.737.8 4.093 1.978 6.624-.874.045-1.756.072-2.645.082V6.986zm0 13.462a66.297 66.297 0 003.362-.12c3.343 6.602 8.65 13.804 8.974 14.243l.613.828.613-.828c.125-.167.974-1.321 2.16-3.044.172 1.585.273 3.215.3 4.878-6.075-.014-11.39-.023-16.022-.03V20.448zm0 17.445c5.329.008 10.817.018 16.025.028-.076 6.595-1.338 12.679-3.409 17.6-3.915-.867-8.191-1.344-12.616-1.392V37.893zm0 17.752c4.183.047 8.222.486 11.93 1.282-2.943 6.13-7.21 10.134-11.93 10.525V55.645zm5.932 11.092c2.906-2.024 5.47-5.314 7.446-9.48l.05.011c2.324.573 4.499 1.29 6.478 2.143a30.487 30.487 0 01-13.974 7.326zm15.226-8.541s-.055.088-.082.075c-2.132-.963-4.491-1.772-7.025-2.41 2.126-5.072 3.419-11.254 3.497-17.936 4.366.01 8.496.02 12.123.03-.185 7.789-3.345 14.857-8.4 20.125l-.113.116zm8.327-21.759s-8.193-.022-11.94-.03c-.038-2.33-.22-4.6-.538-6.781 2.06-3.1 4.59-7.188 6.298-10.887l.002-.003c3.808 4.876 5.964 10.932 6.174 17.516a7.5 7.5 0 01.004.132c.02.06 0 .053 0 .053z"
+                        />
+                        <path
+                          d="M46.606 6a4.83 4.83 0 00-2.995 1.046 5.024 5.024 0 00-1.685 2.423 5.1 5.1 0 00-.246 1.56c0 .108.009.212.016.318a5.03 5.03 0 002.952 4.294 4.824 4.824 0 001.847.412c.038 0 .075.006.113.006 2.054 0 3.816-1.29 4.555-3.119a5.084 5.084 0 00.359-1.645c.004-.088.012-.175.012-.265C51.533 8.256 49.323 6 46.606 6zm3.26 5.993c-.411 1.449-1.71 2.517-3.26 2.517-.37 0-.72-.076-1.053-.187a3.467 3.467 0 01-2.358-3.294c0-.042.01-.082.012-.123a3.488 3.488 0 01.768-2.065 3.4 3.4 0 011.46-1.069 3.307 3.307 0 011.172-.225c1.592 0 2.921 1.124 3.296 2.631.068.274.115.556.115.85-.001.337-.063.657-.151.965zM16.698 30.61a3.88 3.88 0 00-1.454-.482c-.157-.02-.311-.049-.473-.049-2.195 0-3.98 1.822-3.98 4.062 0 .988.362 1.883.939 2.587.73.893 1.815 1.474 3.04 1.474 1.23 0 2.317-.584 3.048-1.481a4.074 4.074 0 00.932-2.58 4.062 4.062 0 00-2.052-3.531zm-.428 5.511c-.417.33-.933.534-1.5.534l-.022-.002c-1.348-.014-2.44-1.134-2.44-2.512 0-1.387 1.104-2.515 2.463-2.515.098 0 .19.018.286.03.56.067 1.066.315 1.447.7.45.456.73 1.088.73 1.785a2.52 2.52 0 01-.964 1.98z"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                  <big
+                    data-cy="shortname"
+                    style={
+                      Object {
+                        "fontWeight": "bold",
+                        "marginTop": "0.5rem",
+                      }
+                    }
+                  >
+                    OTTER
+                  </big>
+                  <p
+                    data-cy="longname"
+                  >
+                    Oregon Transect Ecosystem Research Project
+                  </p>
+                  <div>
+                    <small
+                      data-cy="daterange"
+                    >
+                      1989—1991
+                    </small>
+                  </div>
+                  <div>
+                    <small
+                      data-cy="region"
+                    >
+                      western coniferous forest in Oregon
+                    </small>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <div
+              className="c28"
+              data-cy="campaigns-card-footer"
+            >
+              <span
+                style={
+                  Object {
+                    "border": 0,
+                    "clip": "rect(0 0 0 0)",
+                    "height": "1px",
+                    "margin": "-1px",
+                    "overflow": "hidden",
+                    "padding": 0,
+                    "position": "absolute",
+                    "whiteSpace": "nowrap",
+                    "width": "1px",
+                    "wordWrap": "normal",
+                  }
+                }
+              >
+                view all deployment dates
+              </span>
+              <div
+                data-cy="36f07139-c2b1-4f6f-8ec1-0a5f87de3401-hover-list"
+                data-reach-listbox-input=""
+                data-state="closed"
+                data-value={null}
+                id="listbox-input--26"
+              >
+                <span
+                  aria-haspopup="listbox"
+                  aria-labelledby="36f07139-c2b1-4f6f-8ec1-0a5f87de3401-hover-list button--listbox-input--26"
+                  className="c29"
+                  data-reach-listbox-button=""
+                  id="button--listbox-input--26"
+                  onKeyDown={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  role="button"
+                  tabIndex={0}
+                >
+                  <small
+                    className="c30"
+                    data-cy="count1"
+                  >
+                    <strong>
+                      3
+                    </strong>
+                     
+                    Deployment
+                    s
+                  </small>
+                </span>
+                <div
+                  _css2="#ffffff"
+                  className="c31 c32"
+                  data-reach-listbox-popover=""
+                  hidden={true}
+                  onBlur={[Function]}
+                  onKeyDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  tabIndex={-1}
+                >
+                  <ul
+                    aria-labelledby="36f07139-c2b1-4f6f-8ec1-0a5f87de3401-hover-list"
+                    className="c33"
+                    data-reach-listbox-list=""
+                    id="listbox--listbox-input--26"
+                    role="listbox"
+                    tabIndex={-1}
+                  >
+                    <label
+                      className="c34"
+                    >
+                      Deployment Dates
+                    </label>
+                    <table
+                      className="c35"
+                    >
+                      <thead
+                        className="c36"
+                      >
+                        <tr
+                          className="c37"
+                        >
+                          <th
+                            className="c38"
+                          >
+                            <label>
+                              Start Date
+                            </label>
+                          </th>
+                          <th
+                            className="c39"
+                          >
+                            <label>
+                              End Date
+                            </label>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody
+                        className="c40"
+                        mode="lightTheme"
+                      >
+                        <tr>
+                          <td
+                            className="c41"
+                          >
+                            1989-05-27
+                          </td>
+                          <td
+                            className="c41"
+                          >
+                            1989-08-23
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            className="c41"
+                          >
+                            1990-02-22
+                          </td>
+                          <td
+                            className="c41"
+                          >
+                            1991-01-07
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            className="c41"
+                          >
+                            1991-05-15
+                          </td>
+                          <td
+                            className="c41"
+                          >
+                            1991-08-24
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </ul>
+                </div>
+              </div>
+              <input
+                data-reach-listbox-hidden-input=""
+                disabled={false}
+                name="36f07139-c2b1-4f6f-8ec1-0a5f87de3401-hover-list"
+                readOnly={true}
+                tabIndex={-1}
+                type="hidden"
+                value=""
+              />
+              <small
+                className="c42"
+                data-cy="count2"
+              >
+                 · 
+                <strong>
+                  14
+                </strong>
+                 
+                Data Product
+                s
+              </small>
+            </div>
+          </div>
+          <div>
+            <a
+              href="/campaign/01cecfc1-bca4-41a3-922c-c1ee5408dc0d"
             >
               <div
                 className="c26"
@@ -6748,18 +8336,18 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="8f8732f2-f9c4-4457-ad4a-ad99e92e1766-hover-list"
+                data-cy="01cecfc1-bca4-41a3-922c-c1ee5408dc0d-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
-                id="listbox-input--24"
+                id="listbox-input--40"
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="8f8732f2-f9c4-4457-ad4a-ad99e92e1766-hover-list button--listbox-input--24"
+                  aria-labelledby="01cecfc1-bca4-41a3-922c-c1ee5408dc0d-hover-list button--listbox-input--40"
                   className="c29"
                   data-reach-listbox-button=""
-                  id="button--listbox-input--24"
+                  id="button--listbox-input--40"
                   onKeyDown={[Function]}
                   onMouseDown={[Function]}
                   onMouseEnter={[Function]}
@@ -6792,10 +8380,10 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="8f8732f2-f9c4-4457-ad4a-ad99e92e1766-hover-list"
+                    aria-labelledby="01cecfc1-bca4-41a3-922c-c1ee5408dc0d-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
-                    id="listbox--listbox-input--24"
+                    id="listbox--listbox-input--40"
                     role="listbox"
                     tabIndex={-1}
                   >
@@ -6836,18 +8424,26 @@ exports[`Explore page renders correctly 1`] = `
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            1983-05-05
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            1983-10-27
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            1984-05-10
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            1984-09-23
+                          </td>
                         </tr>
                       </tbody>
                     </table>
@@ -6857,7 +8453,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="8f8732f2-f9c4-4457-ad4a-ad99e92e1766-hover-list"
+                name="01cecfc1-bca4-41a3-922c-c1ee5408dc0d-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -6879,7 +8475,7 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/7f91d323-1df3-4255-bfa6-18ede7fb3c71"
+              href="/campaign/6c0de220-ab03-4965-9b03-af49ba0c9f04"
             >
               <div
                 className="c26"
@@ -6970,18 +8566,18 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="7f91d323-1df3-4255-bfa6-18ede7fb3c71-hover-list"
+                data-cy="6c0de220-ab03-4965-9b03-af49ba0c9f04-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
-                id="listbox-input--20"
+                id="listbox-input--28"
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="7f91d323-1df3-4255-bfa6-18ede7fb3c71-hover-list button--listbox-input--20"
+                  aria-labelledby="6c0de220-ab03-4965-9b03-af49ba0c9f04-hover-list button--listbox-input--28"
                   className="c29"
                   data-reach-listbox-button=""
-                  id="button--listbox-input--20"
+                  id="button--listbox-input--28"
                   onKeyDown={[Function]}
                   onMouseDown={[Function]}
                   onMouseEnter={[Function]}
@@ -7014,10 +8610,10 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="7f91d323-1df3-4255-bfa6-18ede7fb3c71-hover-list"
+                    aria-labelledby="6c0de220-ab03-4965-9b03-af49ba0c9f04-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
-                    id="listbox--listbox-input--20"
+                    id="listbox--listbox-input--28"
                     role="listbox"
                     tabIndex={-1}
                   >
@@ -7058,82 +8654,122 @@ exports[`Explore page renders correctly 1`] = `
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2015-07-25
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2015-09-21
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2016-03-20
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2016-03-31
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2016-09-13
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2016-10-10
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2017-03-11
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2017-03-22
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2017-10-14
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2017-10-23
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2018-03-06
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2018-03-20
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2018-08-22
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2018-09-11
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2019-03-05
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2019-04-16
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2019-08-12
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2019-09-05
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2020-03-27
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2020-04-15
+                          </td>
                         </tr>
                       </tbody>
                     </table>
@@ -7143,7 +8779,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="7f91d323-1df3-4255-bfa6-18ede7fb3c71-hover-list"
+                name="6c0de220-ab03-4965-9b03-af49ba0c9f04-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -7165,7 +8801,249 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/2c0c6e51-ce55-4afd-b269-18c05a75a581"
+              href="/campaign/da840a28-51b2-4b7a-92ac-929da4f9cee9"
+            >
+              <div
+                className="c26"
+                data-cy="campaigns-card"
+              >
+                <div>
+                  <div
+                    className="c27"
+                  >
+                    <svg
+                      height="60"
+                      viewBox="0 0 65 69"
+                      width="60"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g
+                        fill="#e9eaec"
+                        fillRule="nonzero"
+                      >
+                        <path
+                          d="M57.57 17.157c.759-1.875 1.239-3.589 1.239-4.93C58.809 5.484 53.299 0 46.526 0c-4.326 0-8.13 2.244-10.318 5.618l-.028.045a18.788 18.788 0 00-3.337-.346l-.028-.002v-.007h-.025C15.147 5.308.791 19.589.791 37.154.791 54.718 15.147 69 32.791 69H32.817l.03-.002c17.62-.03 31.944-14.267 31.944-31.765 0-7.608-2.711-14.6-7.221-20.076zM26.146 7.623c-2.938 2.043-5.529 5.445-7.517 9.677-2.37-.586-4.585-1.32-6.593-2.198 3.894-3.612 8.736-6.284 14.11-7.48zm-15.273 8.619c2.16.987 4.556 1.816 7.133 2.467a42.558 42.558 0 00-2.092 6.423 9.635 9.635 0 00-1.38-.11c-5.329 0-9.664 4.315-9.664 9.62 0 .521.095 1.116.259 1.758-1.426.01-2.28.023-2.793.035.22-7.83 3.43-14.925 8.537-20.193zm6.168 10.694c3.265 1.055 5.634 4.109 5.634 7.707 0 .488-.113 1.075-.299 1.722-.136.474-.315.981-.53 1.518-1.102 2.726-3.122 6.125-4.96 8.94a102.86 102.86 0 01-2.352 3.444C12.455 47.363 8.85 41.9 7.228 37.895A15.495 15.495 0 016.7 36.39c-.191-.656-.307-1.253-.307-1.747 0-4.47 3.652-8.105 8.141-8.105.355 0 .703.03 1.045.075.503.064.992.171 1.462.323zM2.331 37.933c.6-.013 1.725-.023 3.274-.03 2.1 5.67 8.013 13.698 8.317 14.108l.612.828.613-.828c.073-.098.467-.634 1.05-1.463a41.96 41.96 0 001.808 5.32c-2.577.652-4.973 1.48-7.133 2.467-5.152-5.315-8.374-12.49-8.54-20.402zm9.704 21.541c2.009-.876 4.224-1.612 6.594-2.197 1.988 4.232 4.579 7.5 7.517 9.543-5.375-1.195-10.216-3.733-14.111-7.346zm20.019 8.116c-4.745-.394-9.032-4.447-11.978-10.648 3.721-.803 7.777-1.248 11.978-1.296V67.59zm0-13.46c-4.424.05-8.7.529-12.614 1.398a41.213 41.213 0 01-2.119-6.612c1.998-2.955 4.831-7.461 6.149-11.033l8.584.009v16.237zm0-17.757c-2.986-.004-5.677-.006-8.106-.008.159-.63.25-1.211.25-1.723 0-4.323-2.88-7.987-6.829-9.196a40.949 40.949 0 012.07-6.398c3.915.871 8.19 1.35 12.615 1.4v15.925zm0-17.441c-4.202-.05-8.257-.494-11.978-1.298 2.946-6.2 7.233-10.254 11.978-10.648v11.946zM36.736 7.81a10.643 10.643 0 011.17-1.964c1.962-2.621 5.091-4.33 8.62-4.33 5.932 0 10.76 4.805 10.76 10.71 0 .998-.312 2.25-.829 3.645a28.177 28.177 0 01-.642 1.575c-1.417 3.215-3.628 6.911-5.605 9.964a145.462 145.462 0 01-3.684 5.413c-1.474-2.059-5.285-7.529-7.95-12.616-.258-.491-.504-.98-.737-1.46-1.227-2.534-2.072-4.874-2.072-6.52 0-1.576.353-3.068.969-4.417zm-3.159-.824v-.02c.71.048 1.188.147 1.736.294l-.015.031a12.095 12.095 0 00-1.054 4.936c0 1.737.8 4.093 1.978 6.624-.874.045-1.756.072-2.645.082V6.986zm0 13.462a66.297 66.297 0 003.362-.12c3.343 6.602 8.65 13.804 8.974 14.243l.613.828.613-.828c.125-.167.974-1.321 2.16-3.044.172 1.585.273 3.215.3 4.878-6.075-.014-11.39-.023-16.022-.03V20.448zm0 17.445c5.329.008 10.817.018 16.025.028-.076 6.595-1.338 12.679-3.409 17.6-3.915-.867-8.191-1.344-12.616-1.392V37.893zm0 17.752c4.183.047 8.222.486 11.93 1.282-2.943 6.13-7.21 10.134-11.93 10.525V55.645zm5.932 11.092c2.906-2.024 5.47-5.314 7.446-9.48l.05.011c2.324.573 4.499 1.29 6.478 2.143a30.487 30.487 0 01-13.974 7.326zm15.226-8.541s-.055.088-.082.075c-2.132-.963-4.491-1.772-7.025-2.41 2.126-5.072 3.419-11.254 3.497-17.936 4.366.01 8.496.02 12.123.03-.185 7.789-3.345 14.857-8.4 20.125l-.113.116zm8.327-21.759s-8.193-.022-11.94-.03c-.038-2.33-.22-4.6-.538-6.781 2.06-3.1 4.59-7.188 6.298-10.887l.002-.003c3.808 4.876 5.964 10.932 6.174 17.516a7.5 7.5 0 01.004.132c.02.06 0 .053 0 .053z"
+                        />
+                        <path
+                          d="M46.606 6a4.83 4.83 0 00-2.995 1.046 5.024 5.024 0 00-1.685 2.423 5.1 5.1 0 00-.246 1.56c0 .108.009.212.016.318a5.03 5.03 0 002.952 4.294 4.824 4.824 0 001.847.412c.038 0 .075.006.113.006 2.054 0 3.816-1.29 4.555-3.119a5.084 5.084 0 00.359-1.645c.004-.088.012-.175.012-.265C51.533 8.256 49.323 6 46.606 6zm3.26 5.993c-.411 1.449-1.71 2.517-3.26 2.517-.37 0-.72-.076-1.053-.187a3.467 3.467 0 01-2.358-3.294c0-.042.01-.082.012-.123a3.488 3.488 0 01.768-2.065 3.4 3.4 0 011.46-1.069 3.307 3.307 0 011.172-.225c1.592 0 2.921 1.124 3.296 2.631.068.274.115.556.115.85-.001.337-.063.657-.151.965zM16.698 30.61a3.88 3.88 0 00-1.454-.482c-.157-.02-.311-.049-.473-.049-2.195 0-3.98 1.822-3.98 4.062 0 .988.362 1.883.939 2.587.73.893 1.815 1.474 3.04 1.474 1.23 0 2.317-.584 3.048-1.481a4.074 4.074 0 00.932-2.58 4.062 4.062 0 00-2.052-3.531zm-.428 5.511c-.417.33-.933.534-1.5.534l-.022-.002c-1.348-.014-2.44-1.134-2.44-2.512 0-1.387 1.104-2.515 2.463-2.515.098 0 .19.018.286.03.56.067 1.066.315 1.447.7.45.456.73 1.088.73 1.785a2.52 2.52 0 01-.964 1.98z"
+                        />
+                      </g>
+                    </svg>
+                    <div
+                      className="c44"
+                      data-cy="ongoing-tag"
+                    >
+                      Ongoing
+                    </div>
+                  </div>
+                  <big
+                    data-cy="shortname"
+                    style={
+                      Object {
+                        "fontWeight": "bold",
+                        "marginTop": "0.5rem",
+                      }
+                    }
+                  >
+                    ABoVE
+                  </big>
+                  <p
+                    data-cy="longname"
+                  >
+                    Arctic-Boreal Vulnerability Experiment
+                  </p>
+                  <div>
+                    <small
+                      data-cy="daterange"
+                    >
+                      2017 — Ongoing
+                    </small>
+                  </div>
+                  <div>
+                    <small
+                      data-cy="region"
+                    >
+                      Alaska, western Canada
+                    </small>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <div
+              className="c28"
+              data-cy="campaigns-card-footer"
+            >
+              <span
+                style={
+                  Object {
+                    "border": 0,
+                    "clip": "rect(0 0 0 0)",
+                    "height": "1px",
+                    "margin": "-1px",
+                    "overflow": "hidden",
+                    "padding": 0,
+                    "position": "absolute",
+                    "whiteSpace": "nowrap",
+                    "width": "1px",
+                    "wordWrap": "normal",
+                  }
+                }
+              >
+                view all deployment dates
+              </span>
+              <div
+                data-cy="da840a28-51b2-4b7a-92ac-929da4f9cee9-hover-list"
+                data-reach-listbox-input=""
+                data-state="closed"
+                data-value={null}
+                id="listbox-input--30"
+              >
+                <span
+                  aria-haspopup="listbox"
+                  aria-labelledby="da840a28-51b2-4b7a-92ac-929da4f9cee9-hover-list button--listbox-input--30"
+                  className="c29"
+                  data-reach-listbox-button=""
+                  id="button--listbox-input--30"
+                  onKeyDown={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  role="button"
+                  tabIndex={0}
+                >
+                  <small
+                    className="c30"
+                    data-cy="count1"
+                  >
+                    <strong>
+                      3
+                    </strong>
+                     
+                    Deployment
+                    s
+                  </small>
+                </span>
+                <div
+                  _css2="#ffffff"
+                  className="c31 c32"
+                  data-reach-listbox-popover=""
+                  hidden={true}
+                  onBlur={[Function]}
+                  onKeyDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  tabIndex={-1}
+                >
+                  <ul
+                    aria-labelledby="da840a28-51b2-4b7a-92ac-929da4f9cee9-hover-list"
+                    className="c33"
+                    data-reach-listbox-list=""
+                    id="listbox--listbox-input--30"
+                    role="listbox"
+                    tabIndex={-1}
+                  >
+                    <label
+                      className="c34"
+                    >
+                      Deployment Dates
+                    </label>
+                    <table
+                      className="c35"
+                    >
+                      <thead
+                        className="c36"
+                      >
+                        <tr
+                          className="c37"
+                        >
+                          <th
+                            className="c38"
+                          >
+                            <label>
+                              Start Date
+                            </label>
+                          </th>
+                          <th
+                            className="c39"
+                          >
+                            <label>
+                              End Date
+                            </label>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody
+                        className="c40"
+                        mode="lightTheme"
+                      >
+                        <tr>
+                          <td
+                            className="c41"
+                          >
+                            2017-04-27
+                          </td>
+                          <td
+                            className="c41"
+                          >
+                            2017-11-04
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            className="c41"
+                          >
+                            2018-07-21
+                          </td>
+                          <td
+                            className="c41"
+                          >
+                            2018-09-01
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            className="c41"
+                          >
+                            2019-06-30
+                          </td>
+                          <td
+                            className="c41"
+                          >
+                            2019-09-17
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </ul>
+                </div>
+              </div>
+              <input
+                data-reach-listbox-hidden-input=""
+                disabled={false}
+                name="da840a28-51b2-4b7a-92ac-929da4f9cee9-hover-list"
+                readOnly={true}
+                tabIndex={-1}
+                type="hidden"
+                value=""
+              />
+              <small
+                className="c42"
+                data-cy="count2"
+              >
+                 · 
+                <strong>
+                  72
+                </strong>
+                 
+                Data Product
+                s
+              </small>
+            </div>
+          </div>
+          <div>
+            <a
+              href="/campaign/d400db17-826b-4f5e-b98f-23b0a3b1985f"
             >
               <div
                 className="c26"
@@ -7256,18 +9134,18 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="2c0c6e51-ce55-4afd-b269-18c05a75a581-hover-list"
+                data-cy="d400db17-826b-4f5e-b98f-23b0a3b1985f-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
-                id="listbox-input--21"
+                id="listbox-input--41"
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="2c0c6e51-ce55-4afd-b269-18c05a75a581-hover-list button--listbox-input--21"
+                  aria-labelledby="d400db17-826b-4f5e-b98f-23b0a3b1985f-hover-list button--listbox-input--41"
                   className="c29"
                   data-reach-listbox-button=""
-                  id="button--listbox-input--21"
+                  id="button--listbox-input--41"
                   onKeyDown={[Function]}
                   onMouseDown={[Function]}
                   onMouseEnter={[Function]}
@@ -7300,10 +9178,10 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="2c0c6e51-ce55-4afd-b269-18c05a75a581-hover-list"
+                    aria-labelledby="d400db17-826b-4f5e-b98f-23b0a3b1985f-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
-                    id="listbox--listbox-input--21"
+                    id="listbox--listbox-input--41"
                     role="listbox"
                     tabIndex={-1}
                   >
@@ -7344,18 +9222,26 @@ exports[`Explore page renders correctly 1`] = `
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2016-09-26
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2017-02-26
+                          </td>
                         </tr>
                         <tr>
                           <td
                             className="c41"
-                          />
+                          >
+                            2019-12-19
+                          </td>
                           <td
                             className="c41"
-                          />
+                          >
+                            2019-12-20
+                          </td>
                         </tr>
                       </tbody>
                     </table>
@@ -7365,7 +9251,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="2c0c6e51-ce55-4afd-b269-18c05a75a581-hover-list"
+                name="d400db17-826b-4f5e-b98f-23b0a3b1985f-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
