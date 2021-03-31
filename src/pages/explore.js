@@ -367,8 +367,7 @@ export const query = graphql`
       }
     }
     platforms {
-      id
-      # shortname: short_name # required for filter
+      id # required for filter
     }
     fundingAgency: funding_agency # required for filter
     bounds: spatial_bounds # required for map
@@ -380,11 +379,9 @@ export const query = graphql`
     collectionPeriodIds: collection_periods # required for sort
     campaigns {
       id # required for sort
-      #shortname: short_name # required for filter
     }
     instruments {
       id # required for filter
-      #shortname: short_name # required for filter
     }
   }
 

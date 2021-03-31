@@ -131,11 +131,14 @@ const OverviewSection = ({
         {websites &&
           websites
             .sort((a, b) => a.priority - b.priority)
-            .map(({ website }) => (
-              <ListLink key={website.url} mode={POSITIVE} to={website.url}>
-                {website.title}
-              </ListLink>
-            ))}
+            .map(
+              ({ website }, index) =>
+                website?.url && (
+                  <ListLink key={index} mode={POSITIVE} to={website.url}>
+                    {website.title}
+                  </ListLink>
+                )
+            )}
       </ul>
     </SectionContent>
 
