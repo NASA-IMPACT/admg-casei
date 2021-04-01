@@ -27,41 +27,33 @@ InpageLink.propTypes = {
 const PlatformNav = ({ items }) => (
   <div
     css={`
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+      margin: 0 -6rem;
+      padding: 0 6rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     `}
     data-cy="inpage-nav"
   >
-    <div
-      css={`
-        margin: 0 -6rem;
-        padding: 0 6rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      `}
-    >
-      <nav aria-label="inpage-scroll">
-        <ul
-          css={`
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-            align-items: center;
-            margin: 0;
-            padding: 0.25rem 0;
-            list-style: none;
-          `}
-        >
-          {items.map(item => (
-            <InpageLink key={item} id={item}>
-              {item}
-            </InpageLink>
-          ))}
-        </ul>
-      </nav>
-    </div>
+    <nav aria-label="inpage-scroll">
+      <ul
+        css={`
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+          margin: 0;
+          padding: 0.25rem 0;
+          list-style: none;
+        `}
+      >
+        {items.map(item => (
+          <InpageLink key={item} id={item}>
+            {item}
+          </InpageLink>
+        ))}
+      </ul>
+    </nav>
   </div>
 )
 
