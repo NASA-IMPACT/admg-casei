@@ -6,6 +6,7 @@ import { format } from "date-fns"
 
 import api from "../utils/api"
 import { NEGATIVE } from "../utils/constants"
+import { ArrowIcon } from "../icons"
 import { colors } from "../theme"
 import { selector } from "../utils/filter-utils"
 import useCampaignList from "../utils/use-campaign-list"
@@ -254,14 +255,34 @@ export default function Explore({ data, location }) {
             Object.entries(platformList.grouped).map(
               ([platformType, platforms]) => (
                 <React.Fragment key={platformType}>
-                  <h3
-                    id={platformType}
+                  <div
                     css={`
-                      grid-column: 1/-1;
+                      grid-column: 1 / -1;
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: baseline;
                     `}
                   >
-                    {platformType} <small>({platforms.length})</small>
-                  </h3>
+                    <h3
+                      id={platformType}
+                      css={`
+                        grid-column: 1/-1;
+                      `}
+                    >
+                      {platformType} <small>({platforms.length})</small>
+                    </h3>
+                    <a
+                      href="#top"
+                      css={`
+                        grid-column: -2;
+                        align-self: center;
+                      `}
+                      data-cy={`top-inpage-link`}
+                    >
+                      to top <ArrowIcon direction="up" />
+                    </a>
+                  </div>
+
                   {platforms.map(platform => {
                     return <PlatformCard id={platform.id} key={platform.id} />
                   })}
