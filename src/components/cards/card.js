@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import Image from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 import { POSITIVE, NEGATIVE } from "../../utils/constants"
 import { colors } from "../../theme"
@@ -48,9 +48,9 @@ const Card = ({
         <div>
           <CardHeader>
             {image && image.logoImg ? (
-              <Image
+              <GatsbyImage
+                image={image.logoImg.childImageSharp.gatsbyImageData}
                 alt={image.logoAlt}
-                fixed={image.logoImg.childImageSharp.fixed}
                 css={`
                    {
                     margin: 0;

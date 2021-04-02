@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
-import Image from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import Hero from "../../components/hero"
 import { PlatformIcon } from "../../icons"
@@ -25,9 +25,9 @@ export default function PlatformHero({
       id="platform"
     >
       {image && image.gatsbyImg ? (
-        <Image
+        <GatsbyImage
+          image={image.gatsbyImg.childImageSharp.gatsbyImageData}
           alt={image.description}
-          fluid={image.gatsbyImg.childImageSharp.fluid}
         />
       ) : (
         <PlatformIcon size="huge" />
@@ -47,9 +47,7 @@ export const platformHeroFields = graphql`
       description
       gatsbyImg {
         childImageSharp {
-          fluid(maxWidth: 600) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(width: 600, layout: CONSTRAINED)
         }
       }
     }

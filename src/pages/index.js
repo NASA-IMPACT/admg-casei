@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { graphql, Link } from "gatsby"
-import Image from "gatsby-image"
+import { StaticImage } from "gatsby-plugin-image"
 
 import Layout, { PageBody } from "../components/layout"
 import SEO from "../components/seo"
@@ -75,9 +75,11 @@ const Home = ({ data }) => {
 
         <Section id="platforms" isSpaced>
           <SectionContent columns={[1, 6]}>
-            <Image
+            <StaticImage
+              image={
+                data.platformPlaceholder.nasaImg.childImageSharp.gatsbyImageData
+              }
               alt={data.platformPlaceholder.nasaImgAlt}
-              fluid={data.platformPlaceholder.nasaImg.childImageSharp.fluid}
             />
           </SectionContent>
           <SectionContent columns={[7, 6]}>
@@ -140,9 +142,7 @@ export const query = graphql`
       nasaImgAlt
       nasaImg {
         childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid_withWebp
-          }
+          gatsbyImageData(layout: FULL_WIDTH)
         }
       }
     }
@@ -162,9 +162,7 @@ export const query = graphql`
           nasaImgAlt
           nasaImg {
             childImageSharp {
-              fluid(maxHeight: 550) {
-                ...GatsbyImageSharpFluid
-              }
+              gatsbyImageData(height: 550, layout: FULL_WIDTH)
             }
           }
         }
@@ -189,9 +187,7 @@ export const query = graphql`
       nasaImgAlt
       nasaImg {
         childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(layout: FULL_WIDTH)
         }
       }
     }

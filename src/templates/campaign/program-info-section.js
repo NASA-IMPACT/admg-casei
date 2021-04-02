@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
-import Image from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import {
   Section,
@@ -64,9 +64,9 @@ const ProgramInfoSection = ({
                 }}
                 data-cy="campaign-logo"
               >
-                <Image
+                <GatsbyImage
+                  image={logo.logoImg.childImageSharp.gatsbyImageData}
                   alt={logo.logoAlt}
-                  fluid={logo.logoImg.childImageSharp.fluid}
                 />
               </div>
             ) : (
@@ -97,9 +97,7 @@ export const fundingFields = graphql`
       logoAlt
       logoImg {
         childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(layout: FULL_WIDTH)
         }
       }
     }

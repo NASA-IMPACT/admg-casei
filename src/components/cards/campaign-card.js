@@ -21,37 +21,34 @@ export default function CampaignCard({ id, mode }) {
    * - https://noahgilmore.com/blog/easy-gatsby-image-components/
    * - https://spectrum.chat/gatsby-js/general/using-variables-in-a-staticquery~abee4d1d-6bc4-4202-afb2-38326d91bd05
    */
-  const data = useStaticQuery(graphql`
-    query {
-      allCampaign {
-        nodes {
-          id
-          logo {
-            logoAlt
-            logoImg {
-              childImageSharp {
-                fixed(height: 100) {
-                  ...GatsbyImageSharpFixed
-                }
-              }
-            }
+  const data = useStaticQuery(graphql`{
+  allCampaign {
+    nodes {
+      id
+      logo {
+        logoAlt
+        logoImg {
+          childImageSharp {
+            gatsbyImageData(height: 100, layout: FIXED)
           }
-          ongoing
-          shortname: short_name
-          longname: long_name
-          startdate: start_date
-          enddate: end_date
-          region: region_description
-          deployments {
-            id
-            startdate: start_date
-            enddate: end_date
-          }
-          countDataProducts: number_data_products
         }
       }
+      ongoing
+      shortname: short_name
+      longname: long_name
+      startdate: start_date
+      enddate: end_date
+      region: region_description
+      deployments {
+        id
+        startdate: start_date
+        enddate: end_date
+      }
+      countDataProducts: number_data_products
     }
-  `)
+  }
+}
+`)
 
   const campaign = data.allCampaign.nodes.find(x => x.id === id)
 

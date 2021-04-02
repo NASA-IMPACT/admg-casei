@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
-import Image from "gatsby-image"
+import { StaticImage } from "gatsby-plugin-image"
 import Carousel from "nuka-carousel"
 
 import Button from "../button"
@@ -87,9 +87,9 @@ export const RegionCarousel = ({ regions }) => {
                 }}
               >
                 {region.image.nasaImg && (
-                  <Image
+                  <StaticImage
+                    image={region.image.nasaImg.childImageSharp.gatsbyImageData}
                     alt={region.image.nasaImgAlt}
-                    fluid={region.image.nasaImg.childImageSharp.fluid}
                     style={{ height: 550 }}
                   />
                 )}

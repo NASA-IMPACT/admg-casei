@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
-import Image from "gatsby-image"
+import { StaticImage } from "gatsby-plugin-image"
 
 import { DiscoveryIcon, MetadataIcon, AccountingIcon } from "../icons"
 
@@ -112,10 +112,10 @@ const About = ({ data }) => {
 
         <Section id="about-image">
           <SectionContent columns={[1, 12]}>
-            <Image
+            <StaticImage
+              image={data.bodyImage.nasaImg.childImageSharp.gatsbyImageData}
               style={{ maxHeight: `400px` }}
               alt={data.bodyImage.nasaImgAlt}
-              fluid={data.bodyImage.nasaImg.childImageSharp.fluid}
             />
           </SectionContent>
         </Section>
@@ -161,9 +161,7 @@ export const query = graphql`
       nasaImgAlt
       nasaImg {
         childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(layout: FULL_WIDTH)
         }
       }
     }
@@ -171,9 +169,7 @@ export const query = graphql`
       nasaImgAlt
       nasaImg {
         childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(layout: FULL_WIDTH)
         }
       }
     }

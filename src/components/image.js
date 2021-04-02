@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -29,16 +29,14 @@ import Img from "gatsby-image"
 
 const Image = props => {
   const data = useStaticQuery(graphql`
-    query {
+    {
       images: allFile {
         edges {
           node {
             relativePath
             name
             childImageSharp {
-              fluid(maxWidth: 600) {
-                ...GatsbyImageSharpFluid
-              }
+              gatsbyImageData(width: 600, layout: CONSTRAINED)
             }
           }
         }
@@ -53,8 +51,8 @@ const Image = props => {
     return null
   }
 
-  const imageFluid = image.node.childImageSharp.fluid
-  return <Img alt={props.alt} fluid={imageFluid} />
+  const imageFluid = image.node.childImageSharp.gatsbyImageData
+  return <GatsbyImage image={imageFluid} alt={props.alt} />
 }
 
 Image.propTypes = {

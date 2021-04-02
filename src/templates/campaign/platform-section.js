@@ -44,9 +44,7 @@ export const platformSectionFields = graphql`
         description
         gatsbyImg {
           childImageSharp {
-            fluid(maxWidth: 600, maxHeight: 400) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(width: 600, height: 400, layout: CONSTRAINED)
           }
         }
       }
@@ -61,9 +59,7 @@ export const platformSectionFields = graphql`
           description
           gatsbyImg {
             childImageSharp {
-              fixed(height: 100) {
-                ...GatsbyImageSharpFixed
-              }
+              gatsbyImageData(height: 100, layout: FIXED)
             }
           }
         }
