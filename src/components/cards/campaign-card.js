@@ -29,9 +29,7 @@ export default function CampaignCard({ shortname, mode }) {
             logoAlt
             logoImg {
               childImageSharp {
-                fixed(height: 100) {
-                  ...GatsbyImageSharpFixed
-                }
+                gatsbyImageData(height: 100, layout: FIXED)
               }
             }
           }

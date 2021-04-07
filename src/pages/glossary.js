@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
-import Image from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import VisuallyHidden from "@reach/visually-hidden"
 
 import Layout, {
@@ -72,9 +72,9 @@ export default function Glossary({ data }) {
               href="https://earthdata.nasa.gov/esds/impact/admg/admg-definitions"
             >
               <figure>
-                <Image
+                <GatsbyImage
+                  image={data.image.childImageSharp.gatsbyImageData}
                   alt="terminology map"
-                  fluid={data.image.childImageSharp.fluid}
                 />
                 <figcaption>
                   Source:{" "}
@@ -187,7 +187,7 @@ export default function Glossary({ data }) {
 }
 
 export const query = graphql`
-  query {
+  {
     allGlossaryJson {
       nodes {
         term
@@ -197,9 +197,7 @@ export const query = graphql`
     }
     image: file(relativePath: { eq: "glossary-map.png" }) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
   }

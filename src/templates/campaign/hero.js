@@ -2,7 +2,7 @@ import React, { useRef } from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 import styled from "styled-components"
-import Image from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import * as turf from "@turf/turf"
 import parse from "wellknown"
 
@@ -93,9 +93,9 @@ const CampaignHero = ({
         <div style={{ flex: `2`, padding: `0 ${layout.pageMargin}` }}>
           <div style={{ marginBottom: `6rem` }}>
             {logo && logo.logoImg ? (
-              <Image
+              <GatsbyImage
+                image={logo.logoImg.childImageSharp.gatsbyImageData}
                 alt={logo.logoAlt}
-                fixed={logo.logoImg.childImageSharp.fixed}
                 style={{ margin: `0` }}
               />
             ) : (
@@ -128,9 +128,7 @@ export const heroFields = graphql`
       logoAlt
       logoImg {
         childImageSharp {
-          fixed(height: 150) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(height: 150, layout: FIXED)
         }
       }
     }
