@@ -1,0 +1,143 @@
+import { renderHook } from "@testing-library/react-hooks"
+
+import usePlatformList from "../use-platform-list"
+import { exploreQuery } from "../../../test/__fixtures__"
+
+it("the default platform list (without filters)", () => {
+  const list = exploreQuery.data.allPlatform.list
+  const sortOrder = "most used"
+  const selectedFilterIds = []
+  const searchResult = null
+  const { result } = renderHook(() =>
+    usePlatformList(list, sortOrder, selectedFilterIds, searchResult)
+  )
+
+  const platformList = result.current
+  const firstPlatform = platformList.filtered[0]
+  const lastPlatform = platformList.filtered[platformList.filtered.length - 1]
+  const platformGroups = Object.keys(platformList.grouped)
+  const firstGroup = platformList.grouped[platformGroups[0]]
+
+  expect(platformList.filtered.length).toEqual(list.length)
+  expect(platformGroups.length).toBeGreaterThanOrEqual(5)
+  expect(firstPlatform.campaigns.length).toBeGreaterThan(
+    lastPlatform.campaigns.length
+  )
+  expect(lastPlatform.campaigns.length).toBeLessThan(
+    firstPlatform.campaigns.length
+  )
+  expect(firstGroup.length).toBeLessThan(list.length)
+  expect(firstGroup[0].campaigns.length).toBeGreaterThan(
+    firstGroup[firstGroup.length - 1].campaigns.length
+  )
+  expect(firstGroup[firstGroup.length - 1].campaigns.length).toBeLessThan(
+    firstGroup[0].campaigns.length
+  )
+})
+
+it("the platform list sorted a > z (without filters)", () => {
+  const list = exploreQuery.data.allPlatform.list
+  const sortOrder = "a to z"
+  const selectedFilterIds = []
+  const searchResult = null
+  const { result } = renderHook(() =>
+    usePlatformList(list, sortOrder, selectedFilterIds, searchResult)
+  )
+
+  const platformList = result.current
+  const firstPlatform = platformList.filtered[0]
+  const lastPlatform = platformList.filtered[platformList.filtered.length - 1]
+  const platformGroups = Object.keys(platformList.grouped)
+  const firstGroup = platformList.grouped[platformGroups[0]]
+
+  expect(platformList.filtered.length).toEqual(list.length)
+  expect(platformGroups.length).toBeGreaterThanOrEqual(5)
+  expect(firstPlatform.shortname.charCodeAt(0)).toBeLessThan(
+    lastPlatform.shortname.charCodeAt(0)
+  )
+  expect(lastPlatform.shortname.charCodeAt(0)).toBeGreaterThan(
+    firstPlatform.shortname.charCodeAt(0)
+  )
+  expect(firstGroup.length).toBeLessThan(list.length)
+  expect(firstGroup[0].shortname.charCodeAt(0)).toBeLessThan(
+    firstGroup[firstGroup.length - 1].shortname.charCodeAt(0)
+  )
+  expect(
+    firstGroup[firstGroup.length - 1].shortname.charCodeAt(0)
+  ).toBeGreaterThan(firstGroup[0].shortname.charCodeAt(0))
+})
+
+it("the platform list sorted z > a (without filters)", () => {
+  const list = exploreQuery.data.allPlatform.list
+  const sortOrder = "z to a"
+  const selectedFilterIds = []
+  const searchResult = null
+  const { result } = renderHook(() =>
+    usePlatformList(list, sortOrder, selectedFilterIds, searchResult)
+  )
+
+  const platformList = result.current
+  const firstPlatform = platformList.filtered[0]
+  const lastPlatform = platformList.filtered[platformList.filtered.length - 1]
+  const platformGroups = Object.keys(platformList.grouped)
+  const firstGroup = platformList.grouped[platformGroups[0]]
+
+  expect(platformList.filtered.length).toEqual(list.length)
+  expect(platformGroups.length).toBeGreaterThanOrEqual(5)
+  expect(firstPlatform.shortname.charCodeAt(0)).toBeGreaterThan(
+    lastPlatform.shortname.charCodeAt(0)
+  )
+  expect(lastPlatform.shortname.charCodeAt(0)).toBeLessThan(
+    firstPlatform.shortname.charCodeAt(0)
+  )
+  expect(firstGroup.length).toBeLessThan(list.length)
+  expect(firstGroup[0].shortname.charCodeAt(0)).toBeGreaterThan(
+    firstGroup[firstGroup.length - 1].shortname.charCodeAt(0)
+  )
+  expect(
+    firstGroup[firstGroup.length - 1].shortname.charCodeAt(0)
+  ).toBeLessThan(firstGroup[0].shortname.charCodeAt(0))
+})
+
+it("the platform list with a filter selected", () => {
+  const instrumentId = exploreQuery.data.allPlatform.list[0].instruments[0].id
+
+  const list = exploreQuery.data.allPlatform.list
+  const sortOrder = "most used"
+  const selectedFilterIds = [instrumentId]
+  const searchResult = null
+  const { result } = renderHook(() =>
+    usePlatformList(list, sortOrder, selectedFilterIds, searchResult)
+  )
+
+  const platformList = result.current
+  const firstPlatform = platformList.filtered[0]
+  const lastPlatform = platformList.filtered[platformList.filtered.length - 1]
+  const platformGroups = Object.keys(platformList.grouped)
+  const firstGroup = platformList.grouped[platformGroups[0]]
+
+  expect(platformList.filtered.length).toBeLessThan(list.length)
+  expect(platformGroups.length).toBeGreaterThanOrEqual(5)
+  expect(firstPlatform.campaigns.length).toBeGreaterThan(
+    lastPlatform.campaigns.length
+  )
+  expect(lastPlatform.campaigns.length).toBeLessThan(
+    firstPlatform.campaigns.length
+  )
+  expect(firstGroup.length).toBeLessThan(list.length)
+  expect(firstGroup[0].campaigns.length).toBeGreaterThan(
+    firstGroup[firstGroup.length - 1].campaigns.length
+  )
+  expect(firstGroup[firstGroup.length - 1].campaigns.length).toBeLessThan(
+    firstGroup[0].campaigns.length
+  )
+
+  platformList.filtered.forEach(platform => {
+    expect(platform.instruments.map(x => x.id)).toContain(instrumentId)
+  })
+  platformGroups.forEach(group => {
+    platformList.grouped[group].forEach(platform => {
+      expect(platform.instruments.map(x => x.id)).toContain(instrumentId)
+    })
+  })
+})
