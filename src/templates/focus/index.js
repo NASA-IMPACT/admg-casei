@@ -21,7 +21,7 @@ import { colors } from "../../theme"
 import { getFocusIcon } from "../../icons/utils"
 
 const FocusTemplate = ({ data: { focusArea, allFocusArea }, path }) => {
-  const Icon = getFocusIcon(focusArea.uuid)
+  const Icon = getFocusIcon(focusArea.shortname)
   return (
     <Layout>
       <SEO title={focusArea.shortname} lang="en" />

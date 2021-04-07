@@ -95,6 +95,7 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
           .map(x => x.shortname)
           .join(", "),
         partnerWebsite: campaign.partnerWebsite,
+        websites: campaign.websites,
       },
     },
     // "other-resources": {

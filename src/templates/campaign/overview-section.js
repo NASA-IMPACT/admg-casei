@@ -131,14 +131,11 @@ const OverviewSection = ({
         {websites &&
           websites
             .sort((a, b) => a.priority - b.priority)
-            .map(
-              ({ website }, index) =>
-                website?.url && (
-                  <ListLink key={index} mode={POSITIVE} to={website.url}>
-                    {website.title}
-                  </ListLink>
-                )
-            )}
+            .map(website => (
+              <ListLink key={website.url} mode={POSITIVE} to={website.url}>
+                {website.title}
+              </ListLink>
+            ))}
       </ul>
     </SectionContent>
 
@@ -188,14 +185,10 @@ export const overviewFields = graphql`
       longname: long_name
       url: notes_public
     }
-    websites {
-      priority
-      website {
-        title
-        url
-        description
-        notes_public
-      }
+    websites: website_details {
+      priority: order_priority
+      title
+      url
     }
   }
 `
@@ -225,7 +218,7 @@ OverviewSection.propTypes = {
   ).isRequired,
   websites: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string.isRequired,
+      priority: PropTypes.number.isRequired,
       title: PropTypes.string.isRequired,
       url: PropTypes.string.isRequired,
     }).isRequired
