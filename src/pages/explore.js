@@ -179,10 +179,12 @@ export default function Explore({ data, location }) {
             allData={campaignList.all.map(c => ({
               id: c.id,
               bounds: c.bounds,
+              shortname: c.shortname,
             }))}
             filteredData={campaignList.filtered.map(c => ({
               id: c.id,
               bounds: c.bounds,
+              shortname: c.shortname,
             }))}
             setGeoFilter={setGeoFilter}
             aoi={aoi}
@@ -248,15 +250,30 @@ export default function Explore({ data, location }) {
         <ExploreSection isLoading={isLoading}>
           {selectedCategory === "campaigns" &&
             campaignList.filtered.map(campaign => {
-              return <CampaignCard id={campaign.id} key={campaign.id} />
+              return (
+                <CampaignCard
+                  shortname={campaign.shortname}
+                  key={campaign.id}
+                />
+              )
             })}
           {selectedCategory === "platforms" &&
             platformList.filtered.map(platform => {
-              return <PlatformCard id={platform.id} key={platform.id} />
+              return (
+                <PlatformCard
+                  shortname={platform.shortname}
+                  key={platform.id}
+                />
+              )
             })}
           {selectedCategory === "instruments" &&
             instrumentList.filtered.map(instrument => {
-              return <InstrumentCard id={instrument.id} key={instrument.id} />
+              return (
+                <InstrumentCard
+                  shortname={instrument.shortname}
+                  key={instrument.id}
+                />
+              )
             })}
         </ExploreSection>
       </PageBody>
@@ -355,7 +372,6 @@ export const query = graphql`
     deployments {
       regions: geographical_regions {
         id # required for filter
-        # shortname: short_name
       }
     }
     platforms {

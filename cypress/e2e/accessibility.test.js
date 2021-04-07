@@ -43,7 +43,7 @@ describe("Accessibility tests", () => {
   // a11y error!aria-hidden-focus on 1 Node
   it.skip("Navigates to page for a /platform and checks for accessibility violations", () => {
     // cy.visit("/explore")
-    cy.visit("/platform/f8cc224d-102f-4204-a7c7-492d95480ce7")
+    cy.visit("/platform/G-III")
 
     // cy.get("[data-cy=tabbar]")
     //   .findByText(/Platforms/i)
@@ -62,7 +62,7 @@ describe("Accessibility tests", () => {
 
   it("Navigates to page for a /instrument and checks for accessibility violations", () => {
     // cy.visit("/explore")
-    cy.visit("/instrument/482c482f-4fcb-456e-815f-4296977c9bf6")
+    cy.visit("/instrument/UAVSAR")
 
     // cy.get("[data-cy=tabbar]")
     //   .findByText(/Instruments/i)

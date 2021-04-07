@@ -7,7 +7,7 @@ import CardFooterItem from "./card-footer-item"
 import { PlatformIcon } from "../../icons"
 import { POSITIVE, NEGATIVE } from "../../utils/constants"
 
-export default function PlatformCard({ id, mode }) {
+export default function PlatformCard({ shortname, mode }) {
   /*
    * We can not pass props directly into a static query because it is
    * compiled and doesn't support string interpolation in its template literal.
@@ -25,14 +25,13 @@ export default function PlatformCard({ id, mode }) {
         nodes {
           shortname: short_name
           longname: long_name
-          id
           description
           collectionPeriodIds: collection_periods
           campaigns {
-            id
+            shortname: short_name
           }
           instruments {
-            id
+            shortname: short_name
           }
           stationary
         }
@@ -40,13 +39,12 @@ export default function PlatformCard({ id, mode }) {
     }
   `)
 
-  const platform = data.allPlatform.nodes.find(x => x.id === id)
-
+  const platform = data.allPlatform.nodes.find(x => x.shortname === shortname)
   return (
     <Card
       placeholder={PlatformIcon}
       tag={platform.stationary && "Stationary"}
-      link={`/platform/${platform.id}`}
+      link={`/platform/${platform.shortname}`}
       footerList={{
         campaign: {
           component: CardFooterItem,
@@ -86,6 +84,6 @@ export default function PlatformCard({ id, mode }) {
 }
 
 PlatformCard.propTypes = {
-  id: PropTypes.string.isRequired,
+  shortname: PropTypes.string.isRequired,
   mode: PropTypes.oneOf([POSITIVE, NEGATIVE]),
 }

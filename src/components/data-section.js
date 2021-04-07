@@ -150,7 +150,7 @@ const DataSection = ({ id, dois, filterBy, category }) => {
                             {doi.campaigns.map(campaign => (
                               <Link
                                 key={campaign.id}
-                                to={`/campaign/${campaign.id}`}
+                                to={`/campaign/${campaign.shortname}`}
                               >
                                 <small>
                                   {campaign.longname || campaign.shortname}
@@ -168,7 +168,7 @@ const DataSection = ({ id, dois, filterBy, category }) => {
                             {doi.platforms.map(platform => (
                               <Link
                                 key={platform.id}
-                                to={`/platform/${platform.id}`}
+                                to={`/platform/${platform.shortname}`}
                               >
                                 <small>
                                   {platform.longname || platform.shortname}
@@ -186,7 +186,7 @@ const DataSection = ({ id, dois, filterBy, category }) => {
                             {doi.instruments.map(instrument => (
                               <Link
                                 key={instrument.id}
-                                to={`/instrument/${instrument.id}`}
+                                to={`/instrument/${instrument.shortname}`}
                               >
                                 <small>
                                   {instrument.longname || instrument.shortname}
