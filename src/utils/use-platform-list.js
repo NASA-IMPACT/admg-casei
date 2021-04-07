@@ -8,12 +8,19 @@ const searchCategories = {
   "Mobile land-based platforms": [],
   "Stationary land sites": [],
   "Water-based platforms": [],
+  Other: [],
 }
 
-const groupByPlatformType = (acc, item) => ({
-  ...acc,
-  [item.searchCategory]: [...(acc[item.searchCategory] || []), item],
-})
+const groupByPlatformType = (acc, item) =>
+  item.searchCategory
+    ? {
+        ...acc,
+        [item.searchCategory]: [...(acc[item.searchCategory] || []), item],
+      }
+    : {
+        ...acc,
+        ["Other"]: [...(acc["Other"] || []), item],
+      }
 
 export default function usePlatformList(
   queryResult,
