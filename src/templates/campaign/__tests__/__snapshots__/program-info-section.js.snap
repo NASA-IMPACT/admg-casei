@@ -233,20 +233,10 @@ exports[`Program Info Section renders logo when present in props 1`] = `
           >
             NASA Data Repository
           </label>
-          <p>
-            <a
-              data-cy="program-info-content-link"
-              href="https://www.test-campaign.io"
-              rel="noopener noreferrer"
-              style={
-                Object {
-                  "color": "#aac9ff",
-                }
-              }
-              target="_blank"
-            >
-              https://www.test-campaign.io
-            </a>
+          <p
+            data-cy="program-info-content-text"
+          >
+            N/A
           </p>
         </div>
         <div
@@ -281,20 +271,10 @@ exports[`Program Info Section renders logo when present in props 1`] = `
           >
             Overview Publication
           </label>
-          <p>
-            <a
-              data-cy="program-info-content-link"
-              href="https://www.test-campaign.io"
-              rel="noopener noreferrer"
-              style={
-                Object {
-                  "color": "#aac9ff",
-                }
-              }
-              target="_blank"
-            >
-              https://www.test-campaign.io
-            </a>
+          <p
+            data-cy="program-info-content-text"
+          >
+            N/A
           </p>
         </div>
       </div>
@@ -525,20 +505,10 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
           >
             NASA Data Repository
           </label>
-          <p>
-            <a
-              data-cy="program-info-content-link"
-              href="https://www.test-campaign.io"
-              rel="noopener noreferrer"
-              style={
-                Object {
-                  "color": "#aac9ff",
-                }
-              }
-              target="_blank"
-            >
-              https://www.test-campaign.io
-            </a>
+          <p
+            data-cy="program-info-content-text"
+          >
+            N/A
           </p>
         </div>
         <div
@@ -573,20 +543,10 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
           >
             Overview Publication
           </label>
-          <p>
-            <a
-              data-cy="program-info-content-link"
-              href="https://www.test-campaign.io"
-              rel="noopener noreferrer"
-              style={
-                Object {
-                  "color": "#aac9ff",
-                }
-              }
-              target="_blank"
-            >
-              https://www.test-campaign.io
-            </a>
+          <p
+            data-cy="program-info-content-text"
+          >
+            N/A
           </p>
         </div>
       </div>
