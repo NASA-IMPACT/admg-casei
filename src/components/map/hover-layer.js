@@ -41,7 +41,7 @@ export default function HoverLayer({ id, map, sourceId, isDrawing }) {
     const onClick = e => {
       // only make features clickable when not drawing
       if (!isDrawing) {
-        navigate(`/campaign/${e.features[0].properties.id}`)
+        navigate(`/campaign/${e.features[0].properties.shortname}`)
       }
     }
 

@@ -27,6 +27,7 @@ const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
         geometry: parse(d.bounds),
         properties: {
           id: d.id,
+          shortname: d.shortname,
         },
       }))
       .sort(sortFeaturesBySize),
@@ -41,6 +42,7 @@ const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
       geometry: parse(d.bounds),
       properties: {
         id: d.id,
+        shortname: d.shortname,
       },
     }))
 
@@ -60,6 +62,7 @@ const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
           geometry: parse(d.bounds),
           properties: {
             id: d.id,
+            shortname: d.shortname,
           },
         }))
         .filter(feature => (aoi ? !turf.booleanDisjoint(feature, aoi) : true))
@@ -94,6 +97,7 @@ ExploreMap.propTypes = {
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       bounds: PropTypes.string.isRequired,
+      shortname: PropTypes.string.isRequired,
     }).isRequired
   ).isRequired,
   aoi: PropTypes.shape({

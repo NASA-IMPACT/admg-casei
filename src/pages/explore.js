@@ -173,10 +173,12 @@ export default function Explore({ data, location }) {
             allData={campaignList.all.map(c => ({
               id: c.id,
               bounds: c.bounds,
+              shortname: c.shortname,
             }))}
             filteredData={campaignList.filtered.map(c => ({
               id: c.id,
               bounds: c.bounds,
+              shortname: c.shortname,
             }))}
             setGeoFilter={setGeoFilter}
             aoi={aoi}
