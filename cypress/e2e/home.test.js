@@ -115,7 +115,7 @@ describe("Homepage", () => {
     //   .should("have.length", 1)
     //   .and("have.text", "region: mountains")
 
-    cy.get("[data-cy=campaigns-card]").should("have.length", 3)
+    cy.get("[data-cy=campaigns-card]").should("have.length.gte", 5)
   })
 
   it("geophysical concepts can be selected", () => {

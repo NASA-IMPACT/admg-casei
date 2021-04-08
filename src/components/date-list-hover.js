@@ -48,7 +48,7 @@ const DateText = styled.td`
   padding-right: 0;
 `
 const DateList = ({
-  id,
+  shortname,
   index,
   title,
   dates,
@@ -82,13 +82,11 @@ const DateList = ({
 
   return (
     <>
-      <VisuallyHidden id={`${id}-hover-list`}>
-        view all deployment dates
-      </VisuallyHidden>
+      <VisuallyHidden>view all deployment dates</VisuallyHidden>
       <ListboxInput
-        name={`${id}-hover-list`}
-        aria-labelledby={`${id}-hover-list`}
-        data-cy={`${id}-hover-list`}
+        name={`${shortname}-hover-list`}
+        aria-labelledby={`${shortname}-hover-list`}
+        data-cy={`${shortname}-hover-list`}
         ref={triggerRef}
       >
         <ListTrigger
@@ -205,7 +203,7 @@ const DateList = ({
 }
 
 DateList.propTypes = {
-  id: PropTypes.string.isRequired,
+  shortname: PropTypes.string.isRequired,
   index: PropTypes.number,
   isStat: PropTypes.bool,
   isCustomSpacing: PropTypes.bool,

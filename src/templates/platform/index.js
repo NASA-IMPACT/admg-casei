@@ -8,22 +8,9 @@ import PlatformHero from "./hero"
 import InpageNav from "../../components/inpage-nav"
 import OverviewSection from "./overview-section"
 import CampaignsAndInstruments from "./campaigns-instruments"
-import DataSection from "./data-section"
+import DataSection from "../../components/data-section"
 
 export default function PlatformTemplate({ data: { platform }, path }) {
-  const updatedPlatformDois = platform.dois.map(platformDoi => {
-    const matchedCampaign = platform.campaigns.filter(campaign =>
-      campaign.dois.map(x => x.id).includes(platformDoi.id)
-    )
-    const matchedInstrument = platform.instruments.filter(instrument =>
-      instrument.dois.map(x => x.id).includes(platformDoi.id)
-    )
-    return {
-      ...platformDoi,
-      campaigns: matchedCampaign,
-      instruments: matchedInstrument,
-    }
-  })
   const sections = {
     overview: {
       nav: "Overview",
@@ -49,7 +36,9 @@ export default function PlatformTemplate({ data: { platform }, path }) {
       nav: "Data",
       component: DataSection,
       props: {
-        dois: updatedPlatformDois,
+        dois: platform.dois,
+        filterBy: ["campaigns", "instruments"],
+        category: "platform",
       },
     },
   }
@@ -88,7 +77,27 @@ export const query = graphql`
     platform: platform(id: { eq: $slug }) {
       ...platformHeroFields
       ...platformOverviewFields
-      ...platformDataFields
+      dois {
+        cmrTitle: cmr_entry_title
+        doi
+        id
+        longname: long_name
+        campaigns {
+          id
+          shortname: short_name
+          longname: long_name
+        }
+        platforms {
+          id
+          shortname: short_name
+          longname: long_name
+        }
+        instruments {
+          id
+          shortname: short_name
+          longname: long_name
+        }
+      }
       campaigns {
         id
         shortname: short_name
@@ -141,8 +150,9 @@ PlatformTemplate.propTypes = {
       onlineInformation: PropTypes.string,
       dois: PropTypes.arrayOf(
         PropTypes.shape({
+          cmrTitle: PropTypes.string.isRequired,
+          doi: PropTypes.string.isRequired,
           id: PropTypes.string.isRequired,
-          shortname: PropTypes.string.isRequired,
           longname: PropTypes.string,
         })
       ).isRequired,

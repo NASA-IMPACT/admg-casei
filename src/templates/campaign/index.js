@@ -11,9 +11,9 @@ import MissionSection from "./mission-section"
 import FocusSection from "./focus-section"
 import PlatformSection from "./platform-section"
 import TimelineSection from "./timeline-section"
-import DataSection from "./data-section"
+import DataSection from "../../components/data-section"
 import ProgramInfoSection from "./program-info-section"
-import OtherResourcesSection from "./other-resources-section"
+// import OtherResourcesSection from "./other-resources-section"
 import MaintenanceSection from "../../components/maintenance-section"
 
 const CampaignTemplate = ({ data: { campaign }, path }) => {
@@ -22,21 +22,6 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
     // useEffect only runs client-side after rehyration
     setIsClient(true)
   }, [])
-
-  // add platform id to list of campaignDois
-  const updatedCampaignDois = campaign.dois.map(campaignDoi => {
-    const matchedPlatform = campaign.platforms.filter(platform =>
-      platform.dois.map(x => x.id).includes(campaignDoi.id)
-    )
-    const matchedInstrument = campaign.instruments.filter(instrument =>
-      instrument.dois.map(x => x.id).includes(campaignDoi.id)
-    )
-    return {
-      ...campaignDoi,
-      platforms: matchedPlatform,
-      instruments: matchedInstrument,
-    }
-  })
 
   const sections = {
     overview: {
@@ -51,12 +36,9 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
         seasonListing: campaign.seasons.map(x => x.shortname).join(", "),
         bounds: campaign.bounds,
         doi: campaign.doi,
-        projectWebsite: campaign.projectWebsite,
-        repositoryWebsite: campaign.repositoryWebsite,
-        tertiaryWebsite: campaign.tertiaryWebsite,
-        publicationLink: campaign.publicationLink,
         notesPublic: campaign.notesPublic,
         repositories: campaign.repositories,
+        websites: campaign.websites,
       },
     },
     missions: {
@@ -94,7 +76,9 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
       nav: "Data",
       component: DataSection,
       props: {
-        dois: updatedCampaignDois,
+        dois: campaign.dois,
+        filterBy: ["platforms", "instruments"],
+        category: "campaign",
       },
     },
     "program-info": {
@@ -107,21 +91,20 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
         programLead: campaign.programLead,
         leadInvestigator: campaign.leadInvestigator,
         dataManager: campaign.dataManager,
-        repositoryWebsite: campaign.repositoryWebsite,
         partnerOrgListing: campaign.partnerOrgs
           .map(x => x.shortname)
           .join(", "),
         partnerWebsite: campaign.partnerWebsite,
-        publicationLink: campaign.publicationLink,
+        websites: campaign.websites,
       },
     },
-    "other-resources": {
-      nav: "Other",
-      component: OtherResourcesSection,
-      props: {
-        resources: campaign.resources.split("\n").filter(x => x),
-      },
-    },
+    // "other-resources": {
+    //   nav: "Other",
+    //   component: OtherResourcesSection,
+    //   props: {
+    //     resources: campaign.resources.split("\n").filter(x => x),
+    //   },
+    // },
   }
 
   return (
@@ -152,7 +135,10 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
         ))}
         {isClient && (
           // the maintenance section is behind authentication and only accessible from the browser
-          <MaintenanceSection id={campaign.uuid} data={{ campaign }} />
+          <MaintenanceSection
+            shortname={campaign.shortname}
+            data={{ campaign }}
+          />
         )}
       </PageBody>
     </Layout>
@@ -168,9 +154,28 @@ export const query = graphql`
       ...focusFields
       ...platformSectionFields
       ...deploymentFields
-      ...dataFields
+      dois {
+        cmrTitle: cmr_entry_title
+        doi
+        id
+        longname: long_name
+        campaigns {
+          id
+          shortname: short_name
+          longname: long_name
+        }
+        platforms {
+          id
+          shortname: short_name
+          longname: long_name
+        }
+        instruments {
+          id
+          shortname: short_name
+          longname: long_name
+        }
+      }
       ...fundingFields
-      ...resourceFields
       uuid
     }
   }
@@ -204,7 +209,7 @@ CampaignTemplate.propTypes = {
       ),
       description: PropTypes.string.isRequired,
       startdate: PropTypes.string.isRequired,
-      enddate: PropTypes.string.isRequired,
+      enddate: PropTypes.string,
       region: PropTypes.string.isRequired,
       seasons: PropTypes.arrayOf(
         PropTypes.shape({
@@ -213,16 +218,19 @@ CampaignTemplate.propTypes = {
         })
       ).isRequired,
       doi: PropTypes.string.isRequired,
-      projectWebsite: PropTypes.string.isRequired,
-      repositoryWebsite: PropTypes.string.isRequired,
-      tertiaryWebsite: PropTypes.string.isRequired,
-      publicationLink: PropTypes.string.isRequired,
       notesPublic: PropTypes.string.isRequired,
       repositories: PropTypes.arrayOf(
         PropTypes.shape({
           id: PropTypes.string.isRequired,
           shortname: PropTypes.string.isRequired,
           longname: PropTypes.string.isRequired,
+          url: PropTypes.string.isRequired,
+        }).isRequired
+      ).isRequired,
+      websites: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string.isRequired,
+          title: PropTypes.string.isRequired,
           url: PropTypes.string.isRequired,
         }).isRequired
       ).isRequired,
@@ -279,8 +287,9 @@ CampaignTemplate.propTypes = {
       ).isRequired,
       dois: PropTypes.arrayOf(
         PropTypes.shape({
+          cmrTitle: PropTypes.string.isRequired,
+          doi: PropTypes.string.isRequired,
           id: PropTypes.string.isRequired,
-          shortname: PropTypes.string.isRequired,
           longname: PropTypes.string,
         })
       ).isRequired,

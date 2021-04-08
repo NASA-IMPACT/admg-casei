@@ -6,6 +6,7 @@ import { format } from "date-fns"
 
 import api from "../utils/api"
 import { NEGATIVE } from "../utils/constants"
+import { ArrowIcon } from "../icons"
 import { colors } from "../theme"
 import { selector } from "../utils/filter-utils"
 import useCampaignList from "../utils/use-campaign-list"
@@ -15,14 +16,15 @@ import useInstrumentList from "../utils/use-instrument-list"
 import Layout, { PageBody } from "../components/layout"
 import SEO from "../components/seo"
 import ExploreTools from "../components/explore/explore-tools"
+import ExploreMap from "../components/explore/explore-map"
 import FilterChips from "../components/filter/filter-chips"
+import Chip from "../components/chip"
+import ExploreMenu from "../components/explore/explore-menu"
+import PlatformNav from "../components/explore/platform-nav"
 import ExploreSection from "../components/explore/explore-section"
 import CampaignCard from "../components/cards/campaign-card"
-import ExploreMap from "../components/explore/explore-map"
-import Chip from "../components/chip"
-import InstrumentCard from "../components/cards/instrument-card"
 import PlatformCard from "../components/cards/platform-card"
-import ExploreMenu from "../components/explore/explore-menu"
+import InstrumentCard from "../components/cards/instrument-card"
 
 export default function Explore({ data, location }) {
   const {
@@ -65,6 +67,7 @@ export default function Explore({ data, location }) {
       setFilter([])
     }
   }, [selectedFilterId])
+
   const campaignList = useCampaignList(
     allCampaign.list,
     sortOrder.campaigns,
@@ -78,7 +81,6 @@ export default function Explore({ data, location }) {
     allPlatform.list,
     sortOrder.platforms,
     selectedFilterIds,
-    dateRange,
     searchResult
   )
 
@@ -86,7 +88,6 @@ export default function Explore({ data, location }) {
     allInstrument.list,
     sortOrder.instruments,
     selectedFilterIds,
-    dateRange,
     searchResult
   )
 
@@ -114,15 +115,23 @@ export default function Explore({ data, location }) {
     setLoading(true)
     e.preventDefault()
     let searchstring = inputElement.current.value
-    // TODO: search for platforms and instruments as well
-    const result = await api.fetchSearchResult("campaign", searchstring)
-    setSearchResult(result)
+
+    const result = await Promise.all(
+      ["campaign", "platform", "instrument"].map(category =>
+        api.fetchSearchResult(category, searchstring)
+      )
+    )
+
+    setSearchResult(result.flat())
     setLoading(false)
   }
 
   const resetSearch = () => {
-    // TODO: clear search for platforms and instruments as well
-    setSearchResult(allCampaign.list.map(c => c.shortname))
+    setSearchResult([
+      ...allCampaign.list.map(x => x.id),
+      ...allPlatform.list.map(x => x.id),
+      ...allInstrument.list.map(x => x.id),
+    ])
   }
 
   const { getFilterLabelById, getFilterOptionsById } = selector({
@@ -173,10 +182,12 @@ export default function Explore({ data, location }) {
             allData={campaignList.all.map(c => ({
               id: c.id,
               bounds: c.bounds,
+              shortname: c.shortname,
             }))}
             filteredData={campaignList.filtered.map(c => ({
               id: c.id,
               bounds: c.bounds,
+              shortname: c.shortname,
             }))}
             setGeoFilter={setGeoFilter}
             aoi={aoi}
@@ -237,20 +248,78 @@ export default function Explore({ data, location }) {
           }}
           sortOrder={sortOrder[selectedCategory]}
           setSortOrder={setSortOrder}
-        />
+        >
+          {selectedCategory === "platforms" && (
+            <PlatformNav
+              items={Object.keys(platformList.grouped).map(group => ({
+                id: group,
+                label: `${group} (${platformList.grouped[group].length})`,
+              }))}
+            />
+          )}
+        </ExploreMenu>
 
         <ExploreSection isLoading={isLoading}>
           {selectedCategory === "campaigns" &&
             campaignList.filtered.map(campaign => {
-              return <CampaignCard id={campaign.id} key={campaign.id} />
+              return (
+                <CampaignCard
+                  shortname={campaign.shortname}
+                  key={campaign.id}
+                />
+              )
             })}
           {selectedCategory === "platforms" &&
-            platformList.filtered.map(platform => {
-              return <PlatformCard id={platform.id} key={platform.id} />
-            })}
+            Object.entries(platformList.grouped).map(
+              ([platformType, platforms]) => (
+                <React.Fragment key={platformType}>
+                  <div
+                    css={`
+                      grid-column: 1 / -1;
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: baseline;
+                    `}
+                  >
+                    <h3
+                      id={platformType}
+                      css={`
+                        grid-column: 1/-1;
+                      `}
+                    >
+                      {platformType} <small>({platforms.length})</small>
+                    </h3>
+                    <a
+                      href="#top"
+                      css={`
+                        grid-column: -2;
+                        align-self: center;
+                      `}
+                      data-cy={`top-inpage-link`}
+                    >
+                      to top <ArrowIcon direction="up" />
+                    </a>
+                  </div>
+
+                  {platforms.map(platform => {
+                    return (
+                      <PlatformCard
+                        shortname={platform.shortname}
+                        key={platform.id}
+                      />
+                    )
+                  })}
+                </React.Fragment>
+              )
+            )}
           {selectedCategory === "instruments" &&
             instrumentList.filtered.map(instrument => {
-              return <InstrumentCard id={instrument.id} key={instrument.id} />
+              return (
+                <InstrumentCard
+                  shortname={instrument.shortname}
+                  key={instrument.id}
+                />
+              )
             })}
         </ExploreSection>
       </PageBody>
@@ -349,7 +418,6 @@ export const query = graphql`
     deployments {
       regions: geographical_regions {
         id # required for filter
-        # shortname: short_name
       }
     }
     platforms {
@@ -368,6 +436,12 @@ export const query = graphql`
     }
     instruments {
       id # required for filter
+    }
+    searchCategory: search_category
+    platformType: platform_type {
+      id
+      shortname: short_name # required for grouping
+      longname: long_name
     }
   }
 
@@ -429,6 +503,12 @@ const platformShape = PropTypes.shape({
   collectionPeriodIds: PropTypes.arrayOf(PropTypes.string),
   campaigns: PropTypes.arrayOf(PropTypes.shape({ id: PropTypes.string })),
   instruments: PropTypes.arrayOf(PropTypes.shape({ id: PropTypes.string })),
+  searchCategory: PropTypes.string,
+  platformType: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    shortname: PropTypes.string,
+    longname: PropTypes.string,
+  }),
 })
 
 const instrumentShape = PropTypes.shape({

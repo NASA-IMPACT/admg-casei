@@ -46,8 +46,8 @@ const RelatedCampaignsSection = ({ id, campaigns }) => {
                   style={{ width: `16rem`, height: `100%` }}
                   data-cy="related-campaign"
                 >
-                  <Link to={`/campaign/${campaign.id}`}>
-                    <CampaignCard id={campaign.id} />
+                  <Link to={`/campaign/${campaign.shortname}`}>
+                    <CampaignCard shortname={campaign.shortname} />
                   </Link>
                 </div>
               ))}

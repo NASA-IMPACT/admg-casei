@@ -35,6 +35,14 @@ exports.createSchemaCustomization = ({ actions }) => {
       iops: [iop] @link
       significant_events: [significant_event] @link
     }
+    type doi implements Node {
+      cmr_entry_title: String
+      doi: String
+      long_name: String
+      campaigns: [campaign] @link
+      instruments: [instrument] @link
+      platforms: [platform] @link
+    }
     type focus_area implements Node {
       campaigns: [campaign] @link
     }
@@ -56,6 +64,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       image: image @link
       instruments: [instrument] @link
       dois: [doi] @link
+      platform_type: platform_type @link
     }
     type NasaImagesJson implements Node {
       nasaImg: File @link(from: "nasaImg___NODE")
@@ -197,21 +206,25 @@ exports.createPages = async ({ graphql, actions }) => {
       allCampaign {
         nodes {
           id
+          short_name
         }
       }
       allInstrument {
         nodes {
           id
+          short_name
         }
       }
       allPlatform {
         nodes {
           id
+          short_name
         }
       }
       allFocusArea {
         nodes {
           id
+          short_name
         }
       }
     }
@@ -219,7 +232,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   result.data.allCampaign.nodes.forEach(node => {
     createPage({
-      path: `campaign/${node.id}`,
+      path: `campaign/${node.short_name}`,
       component: path.resolve(`./src/templates/campaign/index.js`),
       context: {
         slug: node.id,
@@ -228,7 +241,7 @@ exports.createPages = async ({ graphql, actions }) => {
   })
   result.data.allInstrument.nodes.forEach(node => {
     createPage({
-      path: `instrument/${node.id}`,
+      path: `instrument/${node.short_name}`,
       component: path.resolve(`./src/templates/instrument/index.js`),
       context: {
         slug: node.id,
@@ -237,7 +250,7 @@ exports.createPages = async ({ graphql, actions }) => {
   })
   result.data.allPlatform.nodes.forEach(node => {
     createPage({
-      path: `platform/${node.id}`,
+      path: `platform/${node.short_name}`,
       component: path.resolve(`./src/templates/platform/index.js`),
       context: {
         slug: node.id,
@@ -246,7 +259,7 @@ exports.createPages = async ({ graphql, actions }) => {
   })
   result.data.allFocusArea.nodes.forEach(node => {
     createPage({
-      path: `focus/${node.id}`,
+      path: `focus/${node.short_name}`,
       component: path.resolve(`./src/templates/focus/index.js`),
       context: {
         slug: node.id,

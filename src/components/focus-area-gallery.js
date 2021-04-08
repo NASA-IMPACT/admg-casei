@@ -6,12 +6,12 @@ import { getFocusIcon } from "../icons/utils"
 import { NEGATIVE } from "../utils/constants"
 import { colors } from "../theme"
 
-const FocusArea = ({ id, caption, size }) => {
-  const Icon = getFocusIcon(id)
+const FocusArea = ({ id, shortname, caption, size }) => {
+  const Icon = getFocusIcon(shortname)
 
   return (
     <Link
-      to={`/focus/${id}`}
+      to={`/focus/${shortname}`}
       state={{ selectedFilterId: id }} // Pass state as props to the linked page
       style={{
         textAlign: `center`,
@@ -30,6 +30,7 @@ const FocusArea = ({ id, caption, size }) => {
 
 FocusArea.propTypes = {
   id: PropTypes.string.isRequired,
+  shortname: PropTypes.string.isRequired,
   caption: PropTypes.string.isRequired,
   size: PropTypes.string,
 }
@@ -51,6 +52,7 @@ const FocusAreaGallery = ({ focusAreas, size = "large" }) => {
         <FocusArea
           key={focus.id}
           id={focus.id}
+          shortname={focus.shortname}
           caption={focus.shortname}
           size={size}
         />

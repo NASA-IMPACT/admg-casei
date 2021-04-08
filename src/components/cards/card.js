@@ -94,10 +94,10 @@ const Card = ({
         `}
         data-cy={`${category}-card-footer`}
       >
-        {Object.entries(footerList).map(([id, footeritem], index) => (
+        {Object.entries(footerList).map(([shortname, footeritem], index) => (
           <footeritem.component
             key={index}
-            id={id}
+            shortname={shortname}
             index={index}
             {...footeritem.props}
           />

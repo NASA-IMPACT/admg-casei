@@ -9,7 +9,7 @@ import { formatYearRange } from "../../utils/helpers"
 import CardFooterItem from "./card-footer-item"
 import DateList from "../../components/date-list-hover"
 
-export default function CampaignCard({ id, mode }) {
+export default function CampaignCard({ shortname, mode }) {
   /*
    * We can not pass props directly into a static query because it is
    * compiled and doesn't support string interpolation in its template literal.
@@ -25,7 +25,6 @@ export default function CampaignCard({ id, mode }) {
     query {
       allCampaign {
         nodes {
-          id
           logo {
             logoAlt
             logoImg {
@@ -53,21 +52,20 @@ export default function CampaignCard({ id, mode }) {
     }
   `)
 
-  const campaign = data.allCampaign.nodes.find(x => x.id === id)
-
+  const campaign = data.allCampaign.nodes.find(x => x.shortname === shortname)
   return (
     <Card
       image={campaign.logo}
       placeholder={CampaignIcon}
       tag={campaign.ongoing && "Ongoing"}
-      link={`/campaign/${campaign.id}`}
+      link={`/campaign/${campaign.shortname}`}
       footerList={{
         deployment: {
           component: DateList,
           props: {
-            id: id,
+            shortname: shortname,
             title: "Deployment",
-            dates: campaign.deployments || [],
+            dates: campaign.deployments,
             cardMode: mode,
           },
         },
@@ -102,6 +100,6 @@ export default function CampaignCard({ id, mode }) {
 }
 
 CampaignCard.propTypes = {
-  id: PropTypes.string.isRequired,
+  shortname: PropTypes.string.isRequired,
   mode: PropTypes.oneOf([POSITIVE, NEGATIVE]),
 }

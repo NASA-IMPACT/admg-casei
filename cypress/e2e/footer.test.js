@@ -19,13 +19,13 @@ describe("Footer", () => {
     cy.visit("/contact")
     cy.get("[data-cy=page]").find("[data-cy=page-footer]")
     // campaign
-    cy.visit("/campaign/c70a5920-5780-446d-916c-29cdb6594df0")
+    cy.visit("/campaign/SnowEx")
     cy.get("[data-cy=page]").find("[data-cy=page-footer]")
     // platform
-    cy.visit("/platform/668c200a-6025-4a89-b6a3-ca9ab5608b60")
+    cy.visit("/platform/G-III")
     cy.get("[data-cy=page]").find("[data-cy=page-footer]")
     // instrument
-    cy.visit("/instrument/b972227c-1773-42f7-9391-6ee4195ef366")
+    cy.visit("/instrument/UAVSAR")
     cy.get("[data-cy=page]").find("[data-cy=page-footer]")
   })
 

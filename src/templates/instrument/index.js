@@ -8,22 +8,9 @@ import InstrumentHero from "./hero"
 import InpageNav from "../../components/inpage-nav"
 import OverviewSection from "./overview-section"
 import Entities from "./entities"
-import DataSection from "./data-section"
+import DataSection from "../../components/data-section"
 
 const InstrumentTemplate = ({ data: { instrument }, path }) => {
-  const updatedInstrumentDois = instrument.dois.map(instrumentDoi => {
-    const matchedCampaign = instrument.campaigns.filter(campaign =>
-      campaign.dois.map(x => x.id).includes(instrumentDoi.id)
-    )
-    const matchedPlatform = instrument.platforms.filter(platform =>
-      platform.dois.map(x => x.id).includes(instrumentDoi.id)
-    )
-    return {
-      ...instrumentDoi,
-      campaigns: matchedCampaign,
-      platforms: matchedPlatform,
-    }
-  })
   const sections = {
     overview: {
       nav: "Instrument Details",
@@ -60,7 +47,9 @@ const InstrumentTemplate = ({ data: { instrument }, path }) => {
       nav: "Data",
       component: DataSection,
       props: {
-        dois: updatedInstrumentDois,
+        dois: instrument.dois,
+        filterBy: ["campaigns", "platforms"],
+        category: "instrument",
       },
     },
   }
@@ -97,21 +86,25 @@ export const query = graphql`
       ...instrumentHeroFields
       ...instrumentDetailFields
       ...instrumentEntitiesFields
-      ...instrumentDataFields
-      campaigns {
+      dois {
+        cmrTitle: cmr_entry_title
+        doi
         id
-        shortname: short_name
         longname: long_name
-        dois {
+        campaigns {
           id
+          shortname: short_name
+          longname: long_name
         }
-      }
-      platforms {
-        id
-        shortname: short_name
-        longname: long_name
-        dois {
+        platforms {
           id
+          shortname: short_name
+          longname: long_name
+        }
+        instruments {
+          id
+          shortname: short_name
+          longname: long_name
         }
       }
     }
@@ -126,8 +119,9 @@ InstrumentTemplate.propTypes = {
       description: PropTypes.string.isRequired,
       dois: PropTypes.arrayOf(
         PropTypes.shape({
+          cmrTitle: PropTypes.string.isRequired,
+          doi: PropTypes.string.isRequired,
           id: PropTypes.string.isRequired,
-          shortname: PropTypes.string.isRequired,
           longname: PropTypes.string,
         })
       ).isRequired,
@@ -181,21 +175,11 @@ InstrumentTemplate.propTypes = {
           campaigns: PropTypes.arrayOf(
             PropTypes.shape({ shortname: PropTypes.string })
           ),
-          dois: PropTypes.arrayOf(
-            PropTypes.shape({
-              id: PropTypes.string.isRequired,
-            }).isRequired
-          ),
         })
       ),
       campaigns: PropTypes.arrayOf(
         PropTypes.shape({
           id: PropTypes.string,
-          dois: PropTypes.arrayOf(
-            PropTypes.shape({
-              id: PropTypes.string.isRequired,
-            }).isRequired
-          ),
         })
       ).isRequired,
     }).isRequired,

@@ -20,10 +20,16 @@ const ProgramInfoSection = ({
   programLead,
   leadInvestigator,
   dataManager,
-  repositoryWebsite,
   partnerOrgListing,
-  publicationLink,
+  websites,
 }) => {
+  const repositoryWebsite = websites?.find(
+    x => x.description[0] === "Repository Website"
+  )
+  const publicationLink = websites?.find(
+    x => x.description[0] === "Overview Publication"
+  )
+
   const contentList = [
     { label: "Funding Agency", info: fundingAgency },
     { label: "Funding Program", info: fundingProgram },
@@ -32,14 +38,14 @@ const ProgramInfoSection = ({
     { label: "Data Manager / Technical Contact", info: dataManager },
     {
       label: "NASA Data Repository",
-      info: repositoryWebsite,
-      link: repositoryWebsite,
+      info: repositoryWebsite?.url,
+      link: repositoryWebsite?.url,
     },
     { label: "Partner Organizations", info: partnerOrgListing },
     {
       label: "Overview Publication",
-      info: publicationLink,
-      link: publicationLink,
+      info: publicationLink?.url,
+      link: publicationLink?.url,
     },
   ]
 
@@ -105,17 +111,19 @@ export const fundingFields = graphql`
     }
     fundingAgency: funding_agency
     fundingProgram: funding_program
-    # supportedMission: Supported_NASA_Mission_s_
 
     programLead: funding_program_lead
     leadInvestigator: lead_investigator
     dataManager: technical_contact
 
-    repositoryWebsite: repository_website
     partnerOrgs: partner_orgs {
       shortname: short_name
     }
-    publicationLink: publication_links
+
+    websites: website_details {
+      url
+      description: website_types
+    }
   }
 `
 
@@ -132,9 +140,13 @@ ProgramInfoSection.propTypes = {
   programLead: PropTypes.string.isRequired,
   leadInvestigator: PropTypes.string.isRequired,
   dataManager: PropTypes.string.isRequired,
-  repositoryWebsite: PropTypes.string.isRequired,
   partnerOrgListing: PropTypes.string.isRequired,
-  publicationLink: PropTypes.string.isRequired,
+  websites: PropTypes.arrayOf(
+    PropTypes.shape({
+      url: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
+    })
+  ),
 }
 
 export default ProgramInfoSection
