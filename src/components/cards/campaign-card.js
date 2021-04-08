@@ -42,7 +42,7 @@ export default function CampaignCard({ shortname, mode }) {
           enddate: end_date
           region: region_description
           deployments {
-            shortname: short_name
+            id
             startdate: start_date
             enddate: end_date
           }

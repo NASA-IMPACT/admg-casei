@@ -503,12 +503,12 @@ const platformShape = PropTypes.shape({
   collectionPeriodIds: PropTypes.arrayOf(PropTypes.string),
   campaigns: PropTypes.arrayOf(PropTypes.shape({ id: PropTypes.string })),
   instruments: PropTypes.arrayOf(PropTypes.shape({ id: PropTypes.string })),
-  searchCategory: PropTypes.string.isRequired,
+  searchCategory: PropTypes.string,
   platformType: PropTypes.shape({
     id: PropTypes.string.isRequired,
     shortname: PropTypes.string,
     longname: PropTypes.string,
-  }).isRequired,
+  }),
 })
 
 const instrumentShape = PropTypes.shape({
