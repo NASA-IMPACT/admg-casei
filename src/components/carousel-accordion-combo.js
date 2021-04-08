@@ -98,10 +98,13 @@ export default function CarouselAccordionCombo({
                 `}
               >
                 <Link
-                  to={`/${id}/${carouselItem.id}`}
+                  to={`/${id}/${carouselItem.shortname}`}
                   data-cy={`carousel-${id}-card-link`}
                 >
-                  <CategoryCard id={carouselItem.id} mode={POSITIVE} />
+                  <CategoryCard
+                    shortname={carouselItem.shortname}
+                    mode={POSITIVE}
+                  />
                 </Link>
 
                 <Accordion folds={folds[carouselItem.id]} id="instrument" />

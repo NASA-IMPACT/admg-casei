@@ -105,7 +105,7 @@ exports[`Focus Section displays content 1`] = `
         >
           <a
             data-cy="focus-area"
-            href="/focus/f1bd646f-876f-4e9f-896e-f7d4571ecc00"
+            href="/focus/Carbon Cycle & Ecosystems"
             state={
               Object {
                 "selectedFilterId": "f1bd646f-876f-4e9f-896e-f7d4571ecc00",

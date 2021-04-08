@@ -296,7 +296,7 @@ exports[`Data Section matches snapshot 1`] = `
               Campaigns
             </label>
             <a
-              href="/campaign/4030be70-b228-48a2-8a0b-557d53f6c55a"
+              href="/campaign/IPHEx"
             >
               <small>
                 Integrated Precipitation and Hydrology Experiment
@@ -319,7 +319,7 @@ exports[`Data Section matches snapshot 1`] = `
               Platforms
             </label>
             <a
-              href="/platform/f9d60e34-0b86-442e-91e7-e6f793e26a37"
+              href="/platform/ER-2"
             >
               <small>
                 NASA Earth Resources-2 aircraft
@@ -378,7 +378,7 @@ exports[`Data Section matches snapshot 1`] = `
               Campaigns
             </label>
             <a
-              href="/campaign/4539ae55-f263-4bfc-b7e1-137bfbf6750e"
+              href="/campaign/CAMP2Ex"
             >
               <small>
                 Clouds, Aerosol, and Monsoon Processes-Philippines Experiment
@@ -401,7 +401,7 @@ exports[`Data Section matches snapshot 1`] = `
               Platforms
             </label>
             <a
-              href="/platform/c4fb875d-c7ee-4d38-ae3f-99b6df7be6ed"
+              href="/platform/P-3"
             >
               <small>
                 P-3 Orion
@@ -448,7 +448,7 @@ exports[`Data Section matches snapshot 1`] = `
               Campaigns
             </label>
             <a
-              href="/campaign/9e747e16-a5d2-4e67-9fb7-1e06a868bce9"
+              href="/campaign/MC3E"
             >
               <small>
                 Mid-latitude Continental Convective Clouds Experiment
@@ -471,7 +471,7 @@ exports[`Data Section matches snapshot 1`] = `
               Platforms
             </label>
             <a
-              href="/platform/f9d60e34-0b86-442e-91e7-e6f793e26a37"
+              href="/platform/ER-2"
             >
               <small>
                 NASA Earth Resources-2 aircraft
@@ -518,7 +518,7 @@ exports[`Data Section matches snapshot 1`] = `
               Campaigns
             </label>
             <a
-              href="/campaign/b4d3a465-6b78-4240-9003-c2d348066326"
+              href="/campaign/OLYMPEX"
             >
               <small>
                 Olympic Mountains Experiment
@@ -541,7 +541,7 @@ exports[`Data Section matches snapshot 1`] = `
               Platforms
             </label>
             <a
-              href="/platform/f9d60e34-0b86-442e-91e7-e6f793e26a37"
+              href="/platform/ER-2"
             >
               <small>
                 NASA Earth Resources-2 aircraft
@@ -588,7 +588,7 @@ exports[`Data Section matches snapshot 1`] = `
               Campaigns
             </label>
             <a
-              href="/campaign/0ad5176c-0143-4846-90f2-2f20e3968e07"
+              href="/campaign/TCSP"
             >
               <small>
                 Tropical Cloud Systems and Processes
@@ -611,7 +611,7 @@ exports[`Data Section matches snapshot 1`] = `
               Platforms
             </label>
             <a
-              href="/platform/f9d60e34-0b86-442e-91e7-e6f793e26a37"
+              href="/platform/ER-2"
             >
               <small>
                 NASA Earth Resources-2 aircraft

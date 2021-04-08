@@ -81,7 +81,6 @@ export default function Explore({ data, location }) {
     allPlatform.list,
     sortOrder.platforms,
     selectedFilterIds,
-    dateRange,
     searchResult
   )
 
@@ -89,7 +88,6 @@ export default function Explore({ data, location }) {
     allInstrument.list,
     sortOrder.instruments,
     selectedFilterIds,
-    dateRange,
     searchResult
   )
 
@@ -117,15 +115,23 @@ export default function Explore({ data, location }) {
     setLoading(true)
     e.preventDefault()
     let searchstring = inputElement.current.value
-    // TODO: search for platforms and instruments as well
-    const result = await api.fetchSearchResult("campaign", searchstring)
-    setSearchResult(result)
+
+    const result = await Promise.all(
+      ["campaign", "platform", "instrument"].map(category =>
+        api.fetchSearchResult(category, searchstring)
+      )
+    )
+
+    setSearchResult(result.flat())
     setLoading(false)
   }
 
   const resetSearch = () => {
-    // TODO: clear search for platforms and instruments as well
-    setSearchResult(allCampaign.list.map(c => c.shortname))
+    setSearchResult([
+      ...allCampaign.list.map(x => x.id),
+      ...allPlatform.list.map(x => x.id),
+      ...allInstrument.list.map(x => x.id),
+    ])
   }
 
   const { getFilterLabelById, getFilterOptionsById } = selector({
@@ -176,10 +182,12 @@ export default function Explore({ data, location }) {
             allData={campaignList.all.map(c => ({
               id: c.id,
               bounds: c.bounds,
+              shortname: c.shortname,
             }))}
             filteredData={campaignList.filtered.map(c => ({
               id: c.id,
               bounds: c.bounds,
+              shortname: c.shortname,
             }))}
             setGeoFilter={setGeoFilter}
             aoi={aoi}
@@ -249,7 +257,12 @@ export default function Explore({ data, location }) {
         <ExploreSection isLoading={isLoading}>
           {selectedCategory === "campaigns" &&
             campaignList.filtered.map(campaign => {
-              return <CampaignCard id={campaign.id} key={campaign.id} />
+              return (
+                <CampaignCard
+                  shortname={campaign.shortname}
+                  key={campaign.id}
+                />
+              )
             })}
           {selectedCategory === "platforms" &&
             Object.entries(platformList.grouped).map(
@@ -284,14 +297,24 @@ export default function Explore({ data, location }) {
                   </div>
 
                   {platforms.map(platform => {
-                    return <PlatformCard id={platform.id} key={platform.id} />
+                    return (
+                      <PlatformCard
+                        shortname={platform.shortname}
+                        key={platform.id}
+                      />
+                    )
                   })}
                 </React.Fragment>
               )
             )}
           {selectedCategory === "instruments" &&
             instrumentList.filtered.map(instrument => {
-              return <InstrumentCard id={instrument.id} key={instrument.id} />
+              return (
+                <InstrumentCard
+                  shortname={instrument.shortname}
+                  key={instrument.id}
+                />
+              )
             })}
         </ExploreSection>
       </PageBody>
@@ -390,7 +413,6 @@ export const query = graphql`
     deployments {
       regions: geographical_regions {
         id # required for filter
-        # shortname: short_name
       }
     }
     platforms {

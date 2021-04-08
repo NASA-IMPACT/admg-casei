@@ -147,7 +147,7 @@ export default function Accordion({ folds, id }) {
               </div>
             )}
             <Link
-              to={`/instrument/${fold.id}`}
+              to={`/instrument/${fold.shortname}`}
               css={`
                  {
                   color: ${colors[NEGATIVE].linkText};

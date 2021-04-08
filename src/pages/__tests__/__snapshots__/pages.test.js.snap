@@ -1592,7 +1592,7 @@ exports[`Explore page renders correctly 1`] = `
         >
           <div>
             <a
-              href="/campaign/4539ae55-f263-4bfc-b7e1-137bfbf6750e"
+              href="/campaign/CAMP2Ex"
             >
               <div
                 className="c26"
@@ -1677,7 +1677,7 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="4539ae55-f263-4bfc-b7e1-137bfbf6750e-hover-list"
+                data-cy="CAMP2Ex-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
@@ -1685,7 +1685,7 @@ exports[`Explore page renders correctly 1`] = `
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="4539ae55-f263-4bfc-b7e1-137bfbf6750e-hover-list button--listbox-input--35"
+                  aria-labelledby="CAMP2Ex-hover-list button--listbox-input--35"
                   className="c29"
                   data-reach-listbox-button=""
                   id="button--listbox-input--35"
@@ -1720,7 +1720,7 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="4539ae55-f263-4bfc-b7e1-137bfbf6750e-hover-list"
+                    aria-labelledby="CAMP2Ex-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
                     id="listbox--listbox-input--35"
@@ -1781,7 +1781,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="4539ae55-f263-4bfc-b7e1-137bfbf6750e-hover-list"
+                name="CAMP2Ex-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -1803,7 +1803,7 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/a2b7ce72-02ea-4b00-a784-ec72b7a9041a"
+              href="/campaign/ACT-America"
             >
               <div
                 className="c26"
@@ -1888,7 +1888,7 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="a2b7ce72-02ea-4b00-a784-ec72b7a9041a-hover-list"
+                data-cy="ACT-America-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
@@ -1896,7 +1896,7 @@ exports[`Explore page renders correctly 1`] = `
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="a2b7ce72-02ea-4b00-a784-ec72b7a9041a-hover-list button--listbox-input--33"
+                  aria-labelledby="ACT-America-hover-list button--listbox-input--33"
                   className="c29"
                   data-reach-listbox-button=""
                   id="button--listbox-input--33"
@@ -1932,7 +1932,7 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="a2b7ce72-02ea-4b00-a784-ec72b7a9041a-hover-list"
+                    aria-labelledby="ACT-America-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
                     id="listbox--listbox-input--33"
@@ -2041,7 +2041,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="a2b7ce72-02ea-4b00-a784-ec72b7a9041a-hover-list"
+                name="ACT-America-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -2063,7 +2063,7 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/e4621932-1353-4cab-a1ce-e73a577e546d"
+              href="/campaign/ACEPOL"
             >
               <div
                 className="c26"
@@ -2148,7 +2148,7 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="e4621932-1353-4cab-a1ce-e73a577e546d-hover-list"
+                data-cy="ACEPOL-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
@@ -2156,7 +2156,7 @@ exports[`Explore page renders correctly 1`] = `
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="e4621932-1353-4cab-a1ce-e73a577e546d-hover-list button--listbox-input--10"
+                  aria-labelledby="ACEPOL-hover-list button--listbox-input--10"
                   className="c29"
                   data-reach-listbox-button=""
                   id="button--listbox-input--10"
@@ -2191,7 +2191,7 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="e4621932-1353-4cab-a1ce-e73a577e546d-hover-list"
+                    aria-labelledby="ACEPOL-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
                     id="listbox--listbox-input--10"
@@ -2252,7 +2252,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="e4621932-1353-4cab-a1ce-e73a577e546d-hover-list"
+                name="ACEPOL-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -2274,7 +2274,7 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/497b78f3-50a6-4f1a-8a22-689f2a832778"
+              href="/campaign/CPEX"
             >
               <div
                 className="c26"
@@ -2359,7 +2359,7 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="497b78f3-50a6-4f1a-8a22-689f2a832778-hover-list"
+                data-cy="CPEX-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
@@ -2367,7 +2367,7 @@ exports[`Explore page renders correctly 1`] = `
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="497b78f3-50a6-4f1a-8a22-689f2a832778-hover-list button--listbox-input--36"
+                  aria-labelledby="CPEX-hover-list button--listbox-input--36"
                   className="c29"
                   data-reach-listbox-button=""
                   id="button--listbox-input--36"
@@ -2402,7 +2402,7 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="497b78f3-50a6-4f1a-8a22-689f2a832778-hover-list"
+                    aria-labelledby="CPEX-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
                     id="listbox--listbox-input--36"
@@ -2463,7 +2463,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="497b78f3-50a6-4f1a-8a22-689f2a832778-hover-list"
+                name="CPEX-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -2484,7 +2484,7 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/66cbd82f-dbd3-4903-94bf-eedce2750b1c"
+              href="/campaign/CARAFE"
             >
               <div
                 className="c26"
@@ -2569,7 +2569,7 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="66cbd82f-dbd3-4903-94bf-eedce2750b1c-hover-list"
+                data-cy="CARAFE-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
@@ -2577,7 +2577,7 @@ exports[`Explore page renders correctly 1`] = `
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="66cbd82f-dbd3-4903-94bf-eedce2750b1c-hover-list button--listbox-input--16"
+                  aria-labelledby="CARAFE-hover-list button--listbox-input--16"
                   className="c29"
                   data-reach-listbox-button=""
                   id="button--listbox-input--16"
@@ -2613,7 +2613,7 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="66cbd82f-dbd3-4903-94bf-eedce2750b1c-hover-list"
+                    aria-labelledby="CARAFE-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
                     id="listbox--listbox-input--16"
@@ -2686,7 +2686,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="66cbd82f-dbd3-4903-94bf-eedce2750b1c-hover-list"
+                name="CARAFE-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -2708,7 +2708,7 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/773ff9f0-d510-4912-9fa6-9e28caaba713"
+              href="/campaign/GOES-R PLT"
             >
               <div
                 className="c26"
@@ -2785,7 +2785,7 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="773ff9f0-d510-4912-9fa6-9e28caaba713-hover-list"
+                data-cy="GOES-R PLT-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
@@ -2793,7 +2793,7 @@ exports[`Explore page renders correctly 1`] = `
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="773ff9f0-d510-4912-9fa6-9e28caaba713-hover-list button--listbox-input--22"
+                  aria-labelledby="GOES-R PLT-hover-list button--listbox-input--22"
                   className="c29"
                   data-reach-listbox-button=""
                   id="button--listbox-input--22"
@@ -2828,7 +2828,7 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="773ff9f0-d510-4912-9fa6-9e28caaba713-hover-list"
+                    aria-labelledby="GOES-R PLT-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
                     id="listbox--listbox-input--22"
@@ -2889,7 +2889,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="773ff9f0-d510-4912-9fa6-9e28caaba713-hover-list"
+                name="GOES-R PLT-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -2911,7 +2911,7 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/b4d3a465-6b78-4240-9003-c2d348066326"
+              href="/campaign/OLYMPEX"
             >
               <div
                 className="c26"
@@ -2988,7 +2988,7 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="b4d3a465-6b78-4240-9003-c2d348066326-hover-list"
+                data-cy="OLYMPEX-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
@@ -2996,7 +2996,7 @@ exports[`Explore page renders correctly 1`] = `
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="b4d3a465-6b78-4240-9003-c2d348066326-hover-list button--listbox-input--27"
+                  aria-labelledby="OLYMPEX-hover-list button--listbox-input--27"
                   className="c29"
                   data-reach-listbox-button=""
                   id="button--listbox-input--27"
@@ -3031,7 +3031,7 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="b4d3a465-6b78-4240-9003-c2d348066326-hover-list"
+                    aria-labelledby="OLYMPEX-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
                     id="listbox--listbox-input--27"
@@ -3092,7 +3092,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="b4d3a465-6b78-4240-9003-c2d348066326-hover-list"
+                name="OLYMPEX-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -3114,7 +3114,7 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/12e154b6-63bb-47b7-8563-d59abeb5774d"
+              href="/campaign/AfriSAR"
             >
               <div
                 className="c26"
@@ -3199,7 +3199,7 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="12e154b6-63bb-47b7-8563-d59abeb5774d-hover-list"
+                data-cy="AfriSAR-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
@@ -3207,7 +3207,7 @@ exports[`Explore page renders correctly 1`] = `
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="12e154b6-63bb-47b7-8563-d59abeb5774d-hover-list button--listbox-input--9"
+                  aria-labelledby="AfriSAR-hover-list button--listbox-input--9"
                   className="c29"
                   data-reach-listbox-button=""
                   id="button--listbox-input--9"
@@ -3242,7 +3242,7 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="12e154b6-63bb-47b7-8563-d59abeb5774d-hover-list"
+                    aria-labelledby="AfriSAR-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
                     id="listbox--listbox-input--9"
@@ -3303,7 +3303,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="12e154b6-63bb-47b7-8563-d59abeb5774d-hover-list"
+                name="AfriSAR-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -3325,7 +3325,7 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/49678da3-ac4c-44e4-85fe-eb5dec96d788"
+              href="/campaign/CARVE"
             >
               <div
                 className="c26"
@@ -3402,7 +3402,7 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="49678da3-ac4c-44e4-85fe-eb5dec96d788-hover-list"
+                data-cy="CARVE-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
@@ -3410,7 +3410,7 @@ exports[`Explore page renders correctly 1`] = `
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="49678da3-ac4c-44e4-85fe-eb5dec96d788-hover-list button--listbox-input--17"
+                  aria-labelledby="CARVE-hover-list button--listbox-input--17"
                   className="c29"
                   data-reach-listbox-button=""
                   id="button--listbox-input--17"
@@ -3446,7 +3446,7 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="49678da3-ac4c-44e4-85fe-eb5dec96d788-hover-list"
+                    aria-labelledby="CARVE-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
                     id="listbox--listbox-input--17"
@@ -3543,7 +3543,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="49678da3-ac4c-44e4-85fe-eb5dec96d788-hover-list"
+                name="CARVE-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -3565,7 +3565,7 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/882f085a-50a7-4d7f-a3d5-cd96596f04e2"
+              href="/campaign/AirMOSS"
             >
               <div
                 className="c26"
@@ -3642,7 +3642,7 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="882f085a-50a7-4d7f-a3d5-cd96596f04e2-hover-list"
+                data-cy="AirMOSS-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
@@ -3650,7 +3650,7 @@ exports[`Explore page renders correctly 1`] = `
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="882f085a-50a7-4d7f-a3d5-cd96596f04e2-hover-list button--listbox-input--34"
+                  aria-labelledby="AirMOSS-hover-list button--listbox-input--34"
                   className="c29"
                   data-reach-listbox-button=""
                   id="button--listbox-input--34"
@@ -3686,7 +3686,7 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="882f085a-50a7-4d7f-a3d5-cd96596f04e2-hover-list"
+                    aria-labelledby="AirMOSS-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
                     id="listbox--listbox-input--34"
@@ -4143,7 +4143,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="882f085a-50a7-4d7f-a3d5-cd96596f04e2-hover-list"
+                name="AirMOSS-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -4165,7 +4165,7 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/7ce3d933-1d78-470d-b710-ace5a8190a35"
+              href="/campaign/ATTREX"
             >
               <div
                 className="c26"
@@ -4250,7 +4250,7 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="7ce3d933-1d78-470d-b710-ace5a8190a35-hover-list"
+                data-cy="ATTREX-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
@@ -4258,7 +4258,7 @@ exports[`Explore page renders correctly 1`] = `
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="7ce3d933-1d78-470d-b710-ace5a8190a35-hover-list button--listbox-input--13"
+                  aria-labelledby="ATTREX-hover-list button--listbox-input--13"
                   className="c29"
                   data-reach-listbox-button=""
                   id="button--listbox-input--13"
@@ -4294,7 +4294,7 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="7ce3d933-1d78-470d-b710-ace5a8190a35-hover-list"
+                    aria-labelledby="ATTREX-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
                     id="listbox--listbox-input--13"
@@ -4391,7 +4391,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="7ce3d933-1d78-470d-b710-ace5a8190a35-hover-list"
+                name="ATTREX-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -4413,7 +4413,7 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/7afcc774-9239-4184-bbbc-df44c3942276"
+              href="/campaign/HS3"
             >
               <div
                 className="c26"
@@ -4490,7 +4490,7 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="7afcc774-9239-4184-bbbc-df44c3942276-hover-list"
+                data-cy="HS3-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
@@ -4498,7 +4498,7 @@ exports[`Explore page renders correctly 1`] = `
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="7afcc774-9239-4184-bbbc-df44c3942276-hover-list button--listbox-input--24"
+                  aria-labelledby="HS3-hover-list button--listbox-input--24"
                   className="c29"
                   data-reach-listbox-button=""
                   id="button--listbox-input--24"
@@ -4534,7 +4534,7 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="7afcc774-9239-4184-bbbc-df44c3942276-hover-list"
+                    aria-labelledby="HS3-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
                     id="listbox--listbox-input--24"
@@ -4619,7 +4619,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="7afcc774-9239-4184-bbbc-df44c3942276-hover-list"
+                name="HS3-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -4641,7 +4641,7 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/4030be70-b228-48a2-8a0b-557d53f6c55a"
+              href="/campaign/IPHEx"
             >
               <div
                 className="c26"
@@ -4726,7 +4726,7 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="4030be70-b228-48a2-8a0b-557d53f6c55a-hover-list"
+                data-cy="IPHEx-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
@@ -4734,7 +4734,7 @@ exports[`Explore page renders correctly 1`] = `
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="4030be70-b228-48a2-8a0b-557d53f6c55a-hover-list button--listbox-input--15"
+                  aria-labelledby="IPHEx-hover-list button--listbox-input--15"
                   className="c29"
                   data-reach-listbox-button=""
                   id="button--listbox-input--15"
@@ -4769,7 +4769,7 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="4030be70-b228-48a2-8a0b-557d53f6c55a-hover-list"
+                    aria-labelledby="IPHEx-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
                     id="listbox--listbox-input--15"
@@ -4830,7 +4830,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="4030be70-b228-48a2-8a0b-557d53f6c55a-hover-list"
+                name="IPHEx-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -4852,7 +4852,7 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/295a19d0-1a72-4da0-bbcf-1ddccec6099b"
+              href="/campaign/SEAC4RS"
             >
               <div
                 className="c26"
@@ -4937,7 +4937,7 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="295a19d0-1a72-4da0-bbcf-1ddccec6099b-hover-list"
+                data-cy="SEAC4RS-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
@@ -4945,7 +4945,7 @@ exports[`Explore page renders correctly 1`] = `
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="295a19d0-1a72-4da0-bbcf-1ddccec6099b-hover-list button--listbox-input--29"
+                  aria-labelledby="SEAC4RS-hover-list button--listbox-input--29"
                   className="c29"
                   data-reach-listbox-button=""
                   id="button--listbox-input--29"
@@ -4980,7 +4980,7 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="295a19d0-1a72-4da0-bbcf-1ddccec6099b-hover-list"
+                    aria-labelledby="SEAC4RS-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
                     id="listbox--listbox-input--29"
@@ -5041,7 +5041,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="295a19d0-1a72-4da0-bbcf-1ddccec6099b-hover-list"
+                name="SEAC4RS-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -5063,7 +5063,7 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/abe4e706-5dd7-45cd-ba54-4700f313e3b4"
+              href="/campaign/IFloodS"
             >
               <div
                 className="c26"
@@ -5148,7 +5148,7 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="abe4e706-5dd7-45cd-ba54-4700f313e3b4-hover-list"
+                data-cy="IFloodS-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
@@ -5156,7 +5156,7 @@ exports[`Explore page renders correctly 1`] = `
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="abe4e706-5dd7-45cd-ba54-4700f313e3b4-hover-list button--listbox-input--25"
+                  aria-labelledby="IFloodS-hover-list button--listbox-input--25"
                   className="c29"
                   data-reach-listbox-button=""
                   id="button--listbox-input--25"
@@ -5191,7 +5191,7 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="abe4e706-5dd7-45cd-ba54-4700f313e3b4-hover-list"
+                    aria-labelledby="IFloodS-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
                     id="listbox--listbox-input--25"
@@ -5252,7 +5252,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="abe4e706-5dd7-45cd-ba54-4700f313e3b4-hover-list"
+                name="IFloodS-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -5274,7 +5274,7 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/820df880-b8b5-4248-a1db-70ccb285ef1e"
+              href="/campaign/HyMeX"
             >
               <div
                 className="c26"
@@ -5359,7 +5359,7 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="820df880-b8b5-4248-a1db-70ccb285ef1e-hover-list"
+                data-cy="HyMeX-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
@@ -5367,7 +5367,7 @@ exports[`Explore page renders correctly 1`] = `
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="820df880-b8b5-4248-a1db-70ccb285ef1e-hover-list button--listbox-input--38"
+                  aria-labelledby="HyMeX-hover-list button--listbox-input--38"
                   className="c29"
                   data-reach-listbox-button=""
                   id="button--listbox-input--38"
@@ -5402,7 +5402,7 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="820df880-b8b5-4248-a1db-70ccb285ef1e-hover-list"
+                    aria-labelledby="HyMeX-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
                     id="listbox--listbox-input--38"
@@ -5463,7 +5463,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="820df880-b8b5-4248-a1db-70ccb285ef1e-hover-list"
+                name="HyMeX-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -5485,7 +5485,7 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/80608ec7-ced3-46ca-8a18-90220b959650"
+              href="/campaign/DC3"
             >
               <div
                 className="c26"
@@ -5562,7 +5562,7 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="80608ec7-ced3-46ca-8a18-90220b959650-hover-list"
+                data-cy="DC3-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
@@ -5570,7 +5570,7 @@ exports[`Explore page renders correctly 1`] = `
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="80608ec7-ced3-46ca-8a18-90220b959650-hover-list button--listbox-input--20"
+                  aria-labelledby="DC3-hover-list button--listbox-input--20"
                   className="c29"
                   data-reach-listbox-button=""
                   id="button--listbox-input--20"
@@ -5605,7 +5605,7 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="80608ec7-ced3-46ca-8a18-90220b959650-hover-list"
+                    aria-labelledby="DC3-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
                     id="listbox--listbox-input--20"
@@ -5666,7 +5666,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="80608ec7-ced3-46ca-8a18-90220b959650-hover-list"
+                name="DC3-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -5688,7 +5688,7 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/1956796d-97ae-4b60-8823-40748bc18e79"
+              href="/campaign/GCPEx"
             >
               <div
                 className="c26"
@@ -5765,7 +5765,7 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="1956796d-97ae-4b60-8823-40748bc18e79-hover-list"
+                data-cy="GCPEx-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
@@ -5773,7 +5773,7 @@ exports[`Explore page renders correctly 1`] = `
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="1956796d-97ae-4b60-8823-40748bc18e79-hover-list button--listbox-input--21"
+                  aria-labelledby="GCPEx-hover-list button--listbox-input--21"
                   className="c29"
                   data-reach-listbox-button=""
                   id="button--listbox-input--21"
@@ -5808,7 +5808,7 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="1956796d-97ae-4b60-8823-40748bc18e79-hover-list"
+                    aria-labelledby="GCPEx-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
                     id="listbox--listbox-input--21"
@@ -5869,7 +5869,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="1956796d-97ae-4b60-8823-40748bc18e79-hover-list"
+                name="GCPEx-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -5891,7 +5891,7 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/9e747e16-a5d2-4e67-9fb7-1e06a868bce9"
+              href="/campaign/MC3E"
             >
               <div
                 className="c26"
@@ -5976,7 +5976,7 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="9e747e16-a5d2-4e67-9fb7-1e06a868bce9-hover-list"
+                data-cy="MC3E-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
@@ -5984,7 +5984,7 @@ exports[`Explore page renders correctly 1`] = `
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="9e747e16-a5d2-4e67-9fb7-1e06a868bce9-hover-list button--listbox-input--23"
+                  aria-labelledby="MC3E-hover-list button--listbox-input--23"
                   className="c29"
                   data-reach-listbox-button=""
                   id="button--listbox-input--23"
@@ -6019,7 +6019,7 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="9e747e16-a5d2-4e67-9fb7-1e06a868bce9-hover-list"
+                    aria-labelledby="MC3E-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
                     id="listbox--listbox-input--23"
@@ -6080,7 +6080,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="9e747e16-a5d2-4e67-9fb7-1e06a868bce9-hover-list"
+                name="MC3E-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -6102,7 +6102,7 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/bfe6243f-99bc-4085-96d0-a2c7398b7255"
+              href="/campaign/LPVEx"
             >
               <div
                 className="c26"
@@ -6187,7 +6187,7 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="bfe6243f-99bc-4085-96d0-a2c7398b7255-hover-list"
+                data-cy="LPVEx-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
@@ -6195,7 +6195,7 @@ exports[`Explore page renders correctly 1`] = `
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="bfe6243f-99bc-4085-96d0-a2c7398b7255-hover-list button--listbox-input--19"
+                  aria-labelledby="LPVEx-hover-list button--listbox-input--19"
                   className="c29"
                   data-reach-listbox-button=""
                   id="button--listbox-input--19"
@@ -6230,7 +6230,7 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="bfe6243f-99bc-4085-96d0-a2c7398b7255-hover-list"
+                    aria-labelledby="LPVEx-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
                     id="listbox--listbox-input--19"
@@ -6291,7 +6291,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="bfe6243f-99bc-4085-96d0-a2c7398b7255-hover-list"
+                name="LPVEx-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -6313,7 +6313,7 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/d7d1efff-db40-495f-8f2c-cdaa67d96a80"
+              href="/campaign/GRIP"
             >
               <div
                 className="c26"
@@ -6390,7 +6390,7 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="d7d1efff-db40-495f-8f2c-cdaa67d96a80-hover-list"
+                data-cy="GRIP-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
@@ -6398,7 +6398,7 @@ exports[`Explore page renders correctly 1`] = `
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="d7d1efff-db40-495f-8f2c-cdaa67d96a80-hover-list button--listbox-input--37"
+                  aria-labelledby="GRIP-hover-list button--listbox-input--37"
                   className="c29"
                   data-reach-listbox-button=""
                   id="button--listbox-input--37"
@@ -6433,7 +6433,7 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="d7d1efff-db40-495f-8f2c-cdaa67d96a80-hover-list"
+                    aria-labelledby="GRIP-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
                     id="listbox--listbox-input--37"
@@ -6494,7 +6494,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="d7d1efff-db40-495f-8f2c-cdaa67d96a80-hover-list"
+                name="GRIP-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -6516,7 +6516,7 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/4a3ff941-58bd-4d95-8ace-22c6c8c23a72"
+              href="/campaign/ARCTAS"
             >
               <div
                 className="c26"
@@ -6593,7 +6593,7 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="4a3ff941-58bd-4d95-8ace-22c6c8c23a72-hover-list"
+                data-cy="ARCTAS-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
@@ -6601,7 +6601,7 @@ exports[`Explore page renders correctly 1`] = `
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="4a3ff941-58bd-4d95-8ace-22c6c8c23a72-hover-list button--listbox-input--12"
+                  aria-labelledby="ARCTAS-hover-list button--listbox-input--12"
                   className="c29"
                   data-reach-listbox-button=""
                   id="button--listbox-input--12"
@@ -6637,7 +6637,7 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="4a3ff941-58bd-4d95-8ace-22c6c8c23a72-hover-list"
+                    aria-labelledby="ARCTAS-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
                     id="listbox--listbox-input--12"
@@ -6722,7 +6722,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="4a3ff941-58bd-4d95-8ace-22c6c8c23a72-hover-list"
+                name="ARCTAS-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -6744,7 +6744,7 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/0b585c49-5298-4deb-8f4b-10cc7f693990"
+              href="/campaign/CLASIC07"
             >
               <div
                 className="c26"
@@ -6829,7 +6829,7 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="0b585c49-5298-4deb-8f4b-10cc7f693990-hover-list"
+                data-cy="CLASIC07-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
@@ -6837,7 +6837,7 @@ exports[`Explore page renders correctly 1`] = `
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="0b585c49-5298-4deb-8f4b-10cc7f693990-hover-list button--listbox-input--18"
+                  aria-labelledby="CLASIC07-hover-list button--listbox-input--18"
                   className="c29"
                   data-reach-listbox-button=""
                   id="button--listbox-input--18"
@@ -6872,7 +6872,7 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="0b585c49-5298-4deb-8f4b-10cc7f693990-hover-list"
+                    aria-labelledby="CLASIC07-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
                     id="listbox--listbox-input--18"
@@ -6933,7 +6933,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="0b585c49-5298-4deb-8f4b-10cc7f693990-hover-list"
+                name="CLASIC07-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -6955,7 +6955,7 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/f2d9d5aa-89ec-4313-beca-14d43bd72c97"
+              href="/campaign/NAMMA"
             >
               <div
                 className="c26"
@@ -7040,7 +7040,7 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="f2d9d5aa-89ec-4313-beca-14d43bd72c97-hover-list"
+                data-cy="NAMMA-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
@@ -7048,7 +7048,7 @@ exports[`Explore page renders correctly 1`] = `
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="f2d9d5aa-89ec-4313-beca-14d43bd72c97-hover-list button--listbox-input--39"
+                  aria-labelledby="NAMMA-hover-list button--listbox-input--39"
                   className="c29"
                   data-reach-listbox-button=""
                   id="button--listbox-input--39"
@@ -7083,7 +7083,7 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="f2d9d5aa-89ec-4313-beca-14d43bd72c97-hover-list"
+                    aria-labelledby="NAMMA-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
                     id="listbox--listbox-input--39"
@@ -7144,7 +7144,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="f2d9d5aa-89ec-4313-beca-14d43bd72c97-hover-list"
+                name="NAMMA-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -7166,7 +7166,7 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/0ad5176c-0143-4846-90f2-2f20e3968e07"
+              href="/campaign/TCSP"
             >
               <div
                 className="c26"
@@ -7251,7 +7251,7 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="0ad5176c-0143-4846-90f2-2f20e3968e07-hover-list"
+                data-cy="TCSP-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
@@ -7259,7 +7259,7 @@ exports[`Explore page renders correctly 1`] = `
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="0ad5176c-0143-4846-90f2-2f20e3968e07-hover-list button--listbox-input--32"
+                  aria-labelledby="TCSP-hover-list button--listbox-input--32"
                   className="c29"
                   data-reach-listbox-button=""
                   id="button--listbox-input--32"
@@ -7294,7 +7294,7 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="0ad5176c-0143-4846-90f2-2f20e3968e07-hover-list"
+                    aria-labelledby="TCSP-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
                     id="listbox--listbox-input--32"
@@ -7355,7 +7355,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="0ad5176c-0143-4846-90f2-2f20e3968e07-hover-list"
+                name="TCSP-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -7377,7 +7377,7 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/5097b27f-e024-4c31-9813-6ddfd1471f01"
+              href="/campaign/ACES"
             >
               <div
                 className="c26"
@@ -7454,7 +7454,7 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="5097b27f-e024-4c31-9813-6ddfd1471f01-hover-list"
+                data-cy="ACES-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
@@ -7462,7 +7462,7 @@ exports[`Explore page renders correctly 1`] = `
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="5097b27f-e024-4c31-9813-6ddfd1471f01-hover-list button--listbox-input--11"
+                  aria-labelledby="ACES-hover-list button--listbox-input--11"
                   className="c29"
                   data-reach-listbox-button=""
                   id="button--listbox-input--11"
@@ -7497,7 +7497,7 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="5097b27f-e024-4c31-9813-6ddfd1471f01-hover-list"
+                    aria-labelledby="ACES-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
                     id="listbox--listbox-input--11"
@@ -7558,7 +7558,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="5097b27f-e024-4c31-9813-6ddfd1471f01-hover-list"
+                name="ACES-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -7580,7 +7580,7 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/096da159-cd73-4af6-abb0-e1465b1ae193"
+              href="/campaign/BOREAS"
             >
               <div
                 className="c26"
@@ -7665,7 +7665,7 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="096da159-cd73-4af6-abb0-e1465b1ae193-hover-list"
+                data-cy="BOREAS-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
@@ -7673,7 +7673,7 @@ exports[`Explore page renders correctly 1`] = `
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="096da159-cd73-4af6-abb0-e1465b1ae193-hover-list button--listbox-input--14"
+                  aria-labelledby="BOREAS-hover-list button--listbox-input--14"
                   className="c29"
                   data-reach-listbox-button=""
                   id="button--listbox-input--14"
@@ -7709,7 +7709,7 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="096da159-cd73-4af6-abb0-e1465b1ae193-hover-list"
+                    aria-labelledby="BOREAS-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
                     id="listbox--listbox-input--14"
@@ -7782,7 +7782,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="096da159-cd73-4af6-abb0-e1465b1ae193-hover-list"
+                name="BOREAS-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -7804,7 +7804,7 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/274b9162-2b68-497f-a908-43f133c45744"
+              href="/campaign/TARFOX"
             >
               <div
                 className="c26"
@@ -7889,7 +7889,7 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="274b9162-2b68-497f-a908-43f133c45744-hover-list"
+                data-cy="TARFOX-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
@@ -7897,7 +7897,7 @@ exports[`Explore page renders correctly 1`] = `
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="274b9162-2b68-497f-a908-43f133c45744-hover-list button--listbox-input--31"
+                  aria-labelledby="TARFOX-hover-list button--listbox-input--31"
                   className="c29"
                   data-reach-listbox-button=""
                   id="button--listbox-input--31"
@@ -7932,7 +7932,7 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="274b9162-2b68-497f-a908-43f133c45744-hover-list"
+                    aria-labelledby="TARFOX-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
                     id="listbox--listbox-input--31"
@@ -7993,7 +7993,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="274b9162-2b68-497f-a908-43f133c45744-hover-list"
+                name="TARFOX-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -8015,7 +8015,7 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/36f07139-c2b1-4f6f-8ec1-0a5f87de3401"
+              href="/campaign/OTTER"
             >
               <div
                 className="c26"
@@ -8100,7 +8100,7 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="36f07139-c2b1-4f6f-8ec1-0a5f87de3401-hover-list"
+                data-cy="OTTER-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
@@ -8108,7 +8108,7 @@ exports[`Explore page renders correctly 1`] = `
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="36f07139-c2b1-4f6f-8ec1-0a5f87de3401-hover-list button--listbox-input--26"
+                  aria-labelledby="OTTER-hover-list button--listbox-input--26"
                   className="c29"
                   data-reach-listbox-button=""
                   id="button--listbox-input--26"
@@ -8144,7 +8144,7 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="36f07139-c2b1-4f6f-8ec1-0a5f87de3401-hover-list"
+                    aria-labelledby="OTTER-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
                     id="listbox--listbox-input--26"
@@ -8229,7 +8229,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="36f07139-c2b1-4f6f-8ec1-0a5f87de3401-hover-list"
+                name="OTTER-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -8251,7 +8251,7 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/01cecfc1-bca4-41a3-922c-c1ee5408dc0d"
+              href="/campaign/SNF"
             >
               <div
                 className="c26"
@@ -8336,7 +8336,7 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="01cecfc1-bca4-41a3-922c-c1ee5408dc0d-hover-list"
+                data-cy="SNF-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
@@ -8344,7 +8344,7 @@ exports[`Explore page renders correctly 1`] = `
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="01cecfc1-bca4-41a3-922c-c1ee5408dc0d-hover-list button--listbox-input--40"
+                  aria-labelledby="SNF-hover-list button--listbox-input--40"
                   className="c29"
                   data-reach-listbox-button=""
                   id="button--listbox-input--40"
@@ -8380,7 +8380,7 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="01cecfc1-bca4-41a3-922c-c1ee5408dc0d-hover-list"
+                    aria-labelledby="SNF-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
                     id="listbox--listbox-input--40"
@@ -8453,7 +8453,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="01cecfc1-bca4-41a3-922c-c1ee5408dc0d-hover-list"
+                name="SNF-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -8475,7 +8475,7 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/6c0de220-ab03-4965-9b03-af49ba0c9f04"
+              href="/campaign/OMG"
             >
               <div
                 className="c26"
@@ -8566,7 +8566,7 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="6c0de220-ab03-4965-9b03-af49ba0c9f04-hover-list"
+                data-cy="OMG-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
@@ -8574,7 +8574,7 @@ exports[`Explore page renders correctly 1`] = `
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="6c0de220-ab03-4965-9b03-af49ba0c9f04-hover-list button--listbox-input--28"
+                  aria-labelledby="OMG-hover-list button--listbox-input--28"
                   className="c29"
                   data-reach-listbox-button=""
                   id="button--listbox-input--28"
@@ -8610,7 +8610,7 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="6c0de220-ab03-4965-9b03-af49ba0c9f04-hover-list"
+                    aria-labelledby="OMG-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
                     id="listbox--listbox-input--28"
@@ -8779,7 +8779,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="6c0de220-ab03-4965-9b03-af49ba0c9f04-hover-list"
+                name="OMG-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -8801,7 +8801,7 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/da840a28-51b2-4b7a-92ac-929da4f9cee9"
+              href="/campaign/ABoVE"
             >
               <div
                 className="c26"
@@ -8892,7 +8892,7 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="da840a28-51b2-4b7a-92ac-929da4f9cee9-hover-list"
+                data-cy="ABoVE-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
@@ -8900,7 +8900,7 @@ exports[`Explore page renders correctly 1`] = `
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="da840a28-51b2-4b7a-92ac-929da4f9cee9-hover-list button--listbox-input--30"
+                  aria-labelledby="ABoVE-hover-list button--listbox-input--30"
                   className="c29"
                   data-reach-listbox-button=""
                   id="button--listbox-input--30"
@@ -8936,7 +8936,7 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="da840a28-51b2-4b7a-92ac-929da4f9cee9-hover-list"
+                    aria-labelledby="ABoVE-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
                     id="listbox--listbox-input--30"
@@ -9021,7 +9021,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="da840a28-51b2-4b7a-92ac-929da4f9cee9-hover-list"
+                name="ABoVE-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -9043,7 +9043,7 @@ exports[`Explore page renders correctly 1`] = `
           </div>
           <div>
             <a
-              href="/campaign/d400db17-826b-4f5e-b98f-23b0a3b1985f"
+              href="/campaign/SnowEx"
             >
               <div
                 className="c26"
@@ -9134,7 +9134,7 @@ exports[`Explore page renders correctly 1`] = `
                 view all deployment dates
               </span>
               <div
-                data-cy="d400db17-826b-4f5e-b98f-23b0a3b1985f-hover-list"
+                data-cy="SnowEx-hover-list"
                 data-reach-listbox-input=""
                 data-state="closed"
                 data-value={null}
@@ -9142,7 +9142,7 @@ exports[`Explore page renders correctly 1`] = `
               >
                 <span
                   aria-haspopup="listbox"
-                  aria-labelledby="d400db17-826b-4f5e-b98f-23b0a3b1985f-hover-list button--listbox-input--41"
+                  aria-labelledby="SnowEx-hover-list button--listbox-input--41"
                   className="c29"
                   data-reach-listbox-button=""
                   id="button--listbox-input--41"
@@ -9178,7 +9178,7 @@ exports[`Explore page renders correctly 1`] = `
                   tabIndex={-1}
                 >
                   <ul
-                    aria-labelledby="d400db17-826b-4f5e-b98f-23b0a3b1985f-hover-list"
+                    aria-labelledby="SnowEx-hover-list"
                     className="c33"
                     data-reach-listbox-list=""
                     id="listbox--listbox-input--41"
@@ -9251,7 +9251,7 @@ exports[`Explore page renders correctly 1`] = `
               <input
                 data-reach-listbox-hidden-input=""
                 disabled={false}
-                name="d400db17-826b-4f5e-b98f-23b0a3b1985f-hover-list"
+                name="SnowEx-hover-list"
                 readOnly={true}
                 tabIndex={-1}
                 type="hidden"
@@ -12073,7 +12073,7 @@ exports[`Home page renders correctly 1`] = `
           >
             <a
               data-cy="focus-area"
-              href="/focus/df6847ab-9443-4fdb-a990-d5bf1daca3b7"
+              href="/focus/Atmospheric Composition"
               state={
                 Object {
                   "selectedFilterId": "df6847ab-9443-4fdb-a990-d5bf1daca3b7",
@@ -12110,7 +12110,7 @@ exports[`Home page renders correctly 1`] = `
             </a>
             <a
               data-cy="focus-area"
-              href="/focus/6d719465-f32c-4808-9efb-da5ad2bae135"
+              href="/focus/Weather"
               state={
                 Object {
                   "selectedFilterId": "6d719465-f32c-4808-9efb-da5ad2bae135",
@@ -12147,7 +12147,7 @@ exports[`Home page renders correctly 1`] = `
             </a>
             <a
               data-cy="focus-area"
-              href="/focus/cd62c68f-a9f7-456a-ae15-53ef79ed5118"
+              href="/focus/Climate Variability & Change"
               state={
                 Object {
                   "selectedFilterId": "cd62c68f-a9f7-456a-ae15-53ef79ed5118",
@@ -12184,7 +12184,7 @@ exports[`Home page renders correctly 1`] = `
             </a>
             <a
               data-cy="focus-area"
-              href="/focus/fd5c0baa-d6a4-45d7-b201-0eb2a5505dc7"
+              href="/focus/Global Water & Energy Cycle"
               state={
                 Object {
                   "selectedFilterId": "fd5c0baa-d6a4-45d7-b201-0eb2a5505dc7",
@@ -12221,7 +12221,7 @@ exports[`Home page renders correctly 1`] = `
             </a>
             <a
               data-cy="focus-area"
-              href="/focus/f1bd646f-876f-4e9f-896e-f7d4571ecc00"
+              href="/focus/Carbon Cycle & Ecosystems"
               state={
                 Object {
                   "selectedFilterId": "f1bd646f-876f-4e9f-896e-f7d4571ecc00",
@@ -12258,7 +12258,7 @@ exports[`Home page renders correctly 1`] = `
             </a>
             <a
               data-cy="focus-area"
-              href="/focus/2231a3f1-3430-4f89-86a2-94938aa000a5"
+              href="/focus/Earth Surface & Interior"
               state={
                 Object {
                   "selectedFilterId": "2231a3f1-3430-4f89-86a2-94938aa000a5",

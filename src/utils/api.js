@@ -12,7 +12,7 @@ export default {
       const json = await response.json()
 
       if (json.success) {
-        return json.data.map(c => c.short_name)
+        return json.data.map(x => x.uuid)
       }
     } catch (error) {
       new Error(error)

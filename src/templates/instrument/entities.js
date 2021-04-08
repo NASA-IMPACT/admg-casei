@@ -41,8 +41,8 @@ export default function Entities({ id, campaigns, platforms }) {
               <tr key={platform.id}>
                 <td style={{ verticalAlign: `top` }}>
                   <div data-cy="related-platform">
-                    <Link to={`/platform/${platform.id}`}>
-                      <PlatformCard id={platform.id} />
+                    <Link to={`/platform/${platform.shortname}`}>
+                      <PlatformCard shortname={platform.shortname} />
                     </Link>
                   </div>
                 </td>
@@ -59,8 +59,8 @@ export default function Entities({ id, campaigns, platforms }) {
                     )
                     .map(campaign => (
                       <div key={campaign.id} data-cy="related-campaign">
-                        <Link to={`/campaign/${campaign.id}`}>
-                          <CampaignCard id={campaign.id} />
+                        <Link to={`/campaign/${campaign.shortname}`}>
+                          <CampaignCard shortname={campaign.shortname} />
                         </Link>
                       </div>
                     ))}
@@ -78,8 +78,10 @@ export const instrumentEntitiesFields = graphql`
   fragment instrumentEntitiesFields on instrument {
     platforms {
       id
+      shortname: short_name
       campaigns {
         id
+        shortname: short_name
       }
     }
     campaigns {
@@ -93,11 +95,13 @@ Entities.propTypes = {
   campaigns: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,
+      shortname: PropTypes.string,
     })
   ).isRequired,
   platforms: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
+      shortname: PropTypes.string.isRequired,
       campaigns: PropTypes.arrayOf(PropTypes.shape({ id: PropTypes.string })),
     })
   ),
