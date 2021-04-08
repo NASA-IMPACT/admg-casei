@@ -250,7 +250,12 @@ export default function Explore({ data, location }) {
           setSortOrder={setSortOrder}
         >
           {selectedCategory === "platforms" && (
-            <PlatformNav items={Object.keys(platformList.grouped)} />
+            <PlatformNav
+              items={Object.keys(platformList.grouped).map(group => ({
+                id: group,
+                label: `${group} (${platformList.grouped[group].length})`,
+              }))}
+            />
           )}
         </ExploreMenu>
 

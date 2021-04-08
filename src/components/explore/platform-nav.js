@@ -48,8 +48,8 @@ const PlatformNav = ({ items }) => (
         `}
       >
         {items.map(item => (
-          <InpageLink key={item} id={item}>
-            {item}
+          <InpageLink key={item.id} id={item.id}>
+            {item.label}
           </InpageLink>
         ))}
       </ul>
