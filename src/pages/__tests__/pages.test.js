@@ -9,7 +9,7 @@ import Glossary from "../glossary"
 import {
   homeQuery,
   glossaryQuery,
-  campaignQuery,
+  exploreQuery,
   location,
   site,
   images,
@@ -33,7 +33,7 @@ describe("Home page", () => {
 describe("Explore page", () => {
   it("renders correctly", () => {
     const tree = renderer
-      .create(<Explore data={campaignQuery.data} location={location} />)
+      .create(<Explore data={exploreQuery.data} location={location} />)
       .toJSON()
     expect(tree).toMatchSnapshot()
   })
