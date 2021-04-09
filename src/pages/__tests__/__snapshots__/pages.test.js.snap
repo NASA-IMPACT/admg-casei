@@ -12065,7 +12065,7 @@ exports[`Home page renders correctly 1`] = `
               Object {
                 "display": "grid",
                 "gap": "1rem",
-                "gridTemplateColumns": "repeat(auto-fit, minmax(10rem, 1fr))",
+                "gridTemplateColumns": "repeat(auto-fit, minmax(7rem, 1fr))",
                 "justifyItems": "center",
                 "paddingTop": "1rem",
               }

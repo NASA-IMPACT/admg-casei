@@ -41,7 +41,7 @@ const FocusAreaGallery = ({ focusAreas, size = "large" }) => {
       style={{
         display: `grid`,
         gridTemplateColumns: `repeat(auto-fit, minmax(${
-          size === "small" ? "5rem" : "10rem"
+          size === "small" ? "5rem" : "7rem"
         }, 1fr))`,
         justifyItems: `center`,
         gap: `1rem`,
