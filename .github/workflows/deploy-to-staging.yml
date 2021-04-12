@@ -1,4 +1,4 @@
-name: Deploy
+name: Deploy to staging
 
 on:
   workflow_run:
