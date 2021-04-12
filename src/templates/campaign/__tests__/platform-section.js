@@ -3,10 +3,6 @@ import { create } from "react-test-renderer"
 import * as Gatsby from "gatsby"
 
 import PlatformSection from "../platform-section"
-jest.mock("../../../components/image", () => {
-  const mockImage = () => <img />
-  return mockImage
-})
 
 const testArray = [
   {
