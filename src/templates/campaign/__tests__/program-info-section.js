@@ -7,9 +7,9 @@ const testString = "test string"
 const testUrl = "https://www.test-campaign.io"
 const testImage = {
   shortname: "ACES",
-  logoAlt: "logo",
+  description: "logo",
   category: "logo",
-  logoImg: {
+  gatsbyImg: {
     childImageSharp: {
       fluid: {
         tracedSVG:
@@ -53,7 +53,9 @@ describe("Program Info Section", () => {
     )
     const tree = component.toJSON()
     const instance = component.root
-    expect(instance.findAllByType("img")[0].props.alt).toBe(testImage.logoAlt)
+    expect(instance.findAllByType("img")[0].props.alt).toBe(
+      testImage.description
+    )
     expect(tree).toMatchSnapshot()
   })
   it("renders placeholder when no logo is available", () => {
@@ -62,9 +64,9 @@ describe("Program Info Section", () => {
         id="program-info"
         logo={{
           shortname: "GOES-R PLT",
-          logoAlt: "GOES-R PLT logo",
+          description: "GOES-R PLT logo",
           category: "logo",
-          logoImg: null,
+          gatsbyImg: null,
         }}
         shortname={testString}
         fundingAgency={testString}

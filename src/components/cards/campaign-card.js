@@ -26,8 +26,8 @@ export default function CampaignCard({ shortname, mode }) {
       allCampaign {
         nodes {
           logo {
-            logoAlt
-            logoImg {
+            description
+            gatsbyImg {
               childImageSharp {
                 gatsbyImageData(height: 100, layout: FIXED)
               }

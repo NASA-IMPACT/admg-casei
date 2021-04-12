@@ -47,10 +47,10 @@ const Card = ({
       >
         <div>
           <CardHeader>
-            {image && image.logoImg ? (
+            {image && image.gatsbyImg ? (
               <GatsbyImage
-                image={image.logoImg.childImageSharp.gatsbyImageData}
-                alt={image.logoAlt}
+                image={image.gatsbyImg.childImageSharp.gatsbyImageData}
+                alt={image.description}
                 css={`
                    {
                     margin: 0;
@@ -113,8 +113,8 @@ Card.propTypes = {
     PropTypes.arrayOf(PropTypes.element),
   ]),
   image: PropTypes.shape({
-    logoAlt: PropTypes.string,
-    logoImg: PropTypes.shape({
+    description: PropTypes.string,
+    gatsbyImg: PropTypes.shape({
       childImageSharp: PropTypes.object,
     }),
   }),

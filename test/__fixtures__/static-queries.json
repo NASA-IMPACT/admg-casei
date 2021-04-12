@@ -40,10 +40,10 @@
         {
           "id": "e7477510-226d-4876-ad82-937f8646ffb0",
           "logo": {
-            "logoAlt": "GCPEx logo",
-            "logoImg": {
+            "description": "GCPEx logo",
+            "gatsbyImg": {
               "childImageSharp": {
-                "fixed": {
+                "gatsbyImageData": {
                   "src": "/static/aee23860a3428c35081ea98fb6630d60/6c838/GCPEx.png"
                 }
               }
@@ -65,10 +65,10 @@
         {
           "id": "40aa5fbf-043f-4a68-a181-0993c1db05ef",
           "logo": {
-            "logoAlt": "GOES-R PLT logo",
-            "logoImg": {
+            "description": "GOES-R PLT logo",
+            "gatsbyImg": {
               "childImageSharp": {
-                "fixed": {
+                "gatsbyImageData": {
                   "src": "/static/57d85e673f190d05d7668e49c8361d50/6c838/GOES-R_PLT.png"
                 }
               }
@@ -201,10 +201,10 @@
         {
           "id": "84b6cfe0-b357-4666-badd-43ac616b2440",
           "logo": {
-            "logoAlt": "CARVE logo",
-            "logoImg": {
+            "description": "CARVE logo",
+            "gatsbyImg": {
               "childImageSharp": {
-                "fixed": {
+                "gatsbyImageData": {
                   "src": "/static/b3225ddde77639b3e07a3cf470a9aa33/6c838/CARVE.png"
                 }
               }
@@ -299,10 +299,10 @@
         {
           "id": "7352850d-8f94-486a-bebd-91eee880532c",
           "logo": {
-            "logoAlt": "OLYMPEX logo",
-            "logoImg": {
+            "description": "OLYMPEX logo",
+            "gatsbyImg": {
               "childImageSharp": {
-                "fixed": {
+                "gatsbyImageData": {
                   "src": "/static/cf547712f5b3512ff39fb1cf64f5e2e4/6c838/olympex.png"
                 }
               }
@@ -340,10 +340,10 @@
         {
           "id": "1037faf8-ac54-4c1a-a3f6-9b78578ea3c2",
           "logo": {
-            "logoAlt": "DC3 logo",
-            "logoImg": {
+            "description": "DC3 logo",
+            "gatsbyImg": {
               "childImageSharp": {
-                "fixed": {
+                "gatsbyImageData": {
                   "src": "/static/c566f0db523525874c608cdace0d5c91/6c838/dc3.png"
                 }
               }
@@ -365,10 +365,10 @@
         {
           "id": "76971af6-f228-4f34-bb05-56196788accc",
           "logo": {
-            "logoAlt": "GRIP logo",
-            "logoImg": {
+            "description": "GRIP logo",
+            "gatsbyImg": {
               "childImageSharp": {
-                "fixed": {
+                "gatsbyImageData": {
                   "src": "/static/aed8706356fd2b3a2bcb162e1e678a9f/6c838/grip.png"
                 }
               }
@@ -390,10 +390,10 @@
         {
           "id": "b2ee4239-e7fe-4c8c-9939-b9e236d2142a",
           "logo": {
-            "logoAlt": "ACES logo",
-            "logoImg": {
+            "description": "ACES logo",
+            "gatsbyImg": {
               "childImageSharp": {
-                "fixed": {
+                "gatsbyImageData": {
                   "src": "/static/3d17ba6135efff1e39e6b4d97157a123/6c838/aces.png"
                 }
               }
@@ -415,10 +415,10 @@
         {
           "id": "202b3ee6-9d9c-46cd-8e51-6889e727d105",
           "logo": {
-            "logoAlt": "AirMOSS logo",
-            "logoImg": {
+            "description": "AirMOSS logo",
+            "gatsbyImg": {
               "childImageSharp": {
-                "fixed": {
+                "gatsbyImageData": {
                   "src": "/static/0d8b9bce5b2fabe7daa6ad4e8e418ba8/6c838/airmoss.png"
                 }
               }
@@ -539,10 +539,10 @@
         {
           "id": "b92c47a8-448f-4718-bcaf-b1354cc510ea",
           "logo": {
-            "logoAlt": "ARCTAS logo",
-            "logoImg": {
+            "description": "ARCTAS logo",
+            "gatsbyImg": {
               "childImageSharp": {
-                "fixed": {
+                "gatsbyImageData": {
                   "src": "/static/16a8d79d7980aad3e45338142b6d08d2/6c838/arctas.png"
                 }
               }
@@ -570,10 +570,10 @@
         {
           "id": "3671a147-4531-459e-92cf-3b15c0409426",
           "logo": {
-            "logoAlt": "HS3 logo",
-            "logoImg": {
+            "description": "HS3 logo",
+            "gatsbyImg": {
               "childImageSharp": {
-                "fixed": {
+                "gatsbyImageData": {
                   "src": "/static/bbd26b5234ecb45a352901f95787b0b3/6c838/HS3.png"
                 }
               }
