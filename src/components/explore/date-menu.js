@@ -21,6 +21,7 @@ import {
 
 import { NEGATIVE } from "../../utils/constants"
 import { colors } from "../../theme"
+import { breakpoints } from "../../theme/style-helpers"
 
 const FilterButton = styled(ListboxButton)`
   flex-grow: 0;
@@ -32,13 +33,13 @@ const FilterButton = styled(ListboxButton)`
   padding: 0.5rem;
   cursor: pointer;
   text-transform: uppercase;
-  @media screen and (max-width: 1400px) {
+  @media screen and (max-width: ${breakpoints["lg"]}) {
     height: 2.5rem;
   }
-  @media screen and (max-width: 1280px) {
+  @media screen and (max-width: ${breakpoints["md"]}) {
     height: 4.5rem;
   }
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: ${breakpoints["sm"]}) {
     height: 2.5rem;
   }
 `

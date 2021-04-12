@@ -29,3 +29,8 @@ export const scrollFade = css`
   background-attachment: local, local, scroll, scroll;
   background-size: 100% 45px, 100% 45px, 100% 15px, 100% 15px;
 `
+export const breakpoints = {
+  sm: "800px",
+  md: "1280px",
+  lg: "1400px",
+}

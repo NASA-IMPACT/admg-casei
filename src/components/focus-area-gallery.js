@@ -5,6 +5,7 @@ import { Link } from "gatsby"
 import { getFocusIcon } from "../icons/utils"
 import { NEGATIVE } from "../utils/constants"
 import { colors } from "../theme"
+import { breakpoints } from "../theme/style-helpers"
 
 const FocusArea = ({ id, shortname, caption, size }) => {
   const Icon = getFocusIcon(shortname)
@@ -13,13 +14,20 @@ const FocusArea = ({ id, shortname, caption, size }) => {
     <Link
       to={`/focus/${shortname}`}
       state={{ selectedFilterId: id }} // Pass state as props to the linked page
-      style={{
-        textAlign: `center`,
-        display: `flex`,
-        flexDirection: `column`,
-        alignItems: `center`,
-        gap: `1rem`,
-      }}
+      css={`
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-column: span 1;
+        @media screen and (max-width: ${breakpoints["md"]}) {
+          grid-column: span 2;
+        }
+        @media screen and (max-width: ${breakpoints["sm"]}) {
+          grid-column: span 3;
+        }
+        gap: 1rem;
+      `}
       data-cy="focus-area"
     >
       <Icon color={colors[NEGATIVE].text} size={size} />
@@ -38,15 +46,13 @@ FocusArea.propTypes = {
 const FocusAreaGallery = ({ focusAreas, size = "large" }) => {
   return (
     <div
-      style={{
-        display: `grid`,
-        gridTemplateColumns: `repeat(auto-fit, minmax(${
-          size === "small" ? "5rem" : "7rem"
-        }, 1fr))`,
-        justifyItems: `center`,
-        gap: `1rem`,
-        paddingTop: `1rem`,
-      }}
+      css={`
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        justify-items: center;
+        gap: 1rem;
+        padding-top: 1rem;
+      `}
     >
       {focusAreas.map(focus => (
         <FocusArea
