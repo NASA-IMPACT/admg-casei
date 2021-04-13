@@ -11,24 +11,28 @@ const testImage = {
   category: "logo",
   gatsbyImg: {
     childImageSharp: {
-      fluid: {
-        tracedSVG:
-          "data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'",
-        srcWebp:
-          "/static/070840eb6299020cd65fd46e27c54400/36436/aces_logo.webp",
-        srcSetWebp:
-          "/static/070840eb6299020cd65fd46e27c54400/36436/aces_logo.webp 141w",
-        srcSet:
-          "/static/070840eb6299020cd65fd46e27c54400/29ce4/aces_logo.png 141w",
-        sizes: "(max-width: 141px) 100vw, 141px",
-        src: "/static/070840eb6299020cd65fd46e27c54400/29ce4/aces_logo.png",
-        presentationHeight: 139,
-        presentationWidth: 141,
-        originalName: "aces_logo.png",
-        originalImg:
-          "/static/070840eb6299020cd65fd46e27c54400/29ce4/aces_logo.png",
-        base64: "data:image/png;base64,iVBOR",
-        aspectRatio: 1.014388489208633,
+      gatsbyImageData: {
+        layout: "fullWidth",
+        backgroundColor: "#080808",
+        images: {
+          fallback: {
+            src:
+              "/static/3d17ba6135efff1e39e6b4d97157a123/893c2/3b06165b-7033-4357-8f15-d2b68cbd84ff.png",
+            srcSet:
+              "/static/3d17ba6135efff1e39e6b4d97157a123/893c2/3b06165b-7033-4357-8f15-d2b68cbd84ff.png 129w",
+            sizes: "100vw",
+          },
+          sources: [
+            {
+              srcSet:
+                "/static/3d17ba6135efff1e39e6b4d97157a123/23c0e/3b06165b-7033-4357-8f15-d2b68cbd84ff.webp 129w",
+              type: "image/webp",
+              sizes: "100vw",
+            },
+          ],
+        },
+        width: 1,
+        height: 0.9922480620155039,
       },
     },
   },
@@ -39,7 +43,7 @@ describe("Program Info Section", () => {
     const component = create(
       <ProgramInfoSection
         id="program-info"
-        logo={testImage}
+        logoFullWidth={testImage}
         shortname="AirMOSS"
         fundingAgency={testString}
         fundingProgram={testString}
@@ -53,6 +57,7 @@ describe("Program Info Section", () => {
     )
     const tree = component.toJSON()
     const instance = component.root
+
     expect(instance.findAllByType("img")[0].props.alt).toBe(
       testImage.description
     )

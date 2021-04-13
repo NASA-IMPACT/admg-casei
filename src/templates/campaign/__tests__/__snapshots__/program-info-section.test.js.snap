@@ -92,26 +92,117 @@ exports[`Program Info Section renders logo when present in props 1`] = `
             }
           }
         >
-          <img
-            alt="logo"
-            fluid={
+          <div
+            className="gatsby-image-wrapper"
+            data-gatsby-image-wrapper=""
+            style={
               Object {
-                "aspectRatio": 1.014388489208633,
-                "base64": "data:image/png;base64,iVBOR",
-                "originalImg": "/static/070840eb6299020cd65fd46e27c54400/29ce4/aces_logo.png",
-                "originalName": "aces_logo.png",
-                "presentationHeight": 139,
-                "presentationWidth": 141,
-                "sizes": "(max-width: 141px) 100vw, 141px",
-                "src": "/static/070840eb6299020cd65fd46e27c54400/29ce4/aces_logo.png",
-                "srcSet": "/static/070840eb6299020cd65fd46e27c54400/29ce4/aces_logo.png 141w",
-                "srcSetWebp": "/static/070840eb6299020cd65fd46e27c54400/36436/aces_logo.webp 141w",
-                "srcWebp": "/static/070840eb6299020cd65fd46e27c54400/36436/aces_logo.webp",
-                "tracedSVG": "data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'",
+                "backgroundColor": undefined,
+                "overflow": "hidden",
+                "position": "relative",
               }
             }
-            src="test-image.png"
-          />
+          >
+            <div
+              aria-hidden={true}
+              style={
+                Object {
+                  "paddingTop": "99.2248062015504%",
+                }
+              }
+            />
+            <div
+              aria-hidden={true}
+              data-placeholder-image=""
+              style={
+                Object {
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+            />
+            <picture>
+              <source
+                sizes="100vw"
+                srcSet="/static/3d17ba6135efff1e39e6b4d97157a123/23c0e/3b06165b-7033-4357-8f15-d2b68cbd84ff.webp 129w"
+                type="image/webp"
+              />
+              <img
+                alt="logo"
+                data-gatsby-image-ssr=""
+                data-main-image=""
+                data-src="/static/3d17ba6135efff1e39e6b4d97157a123/893c2/3b06165b-7033-4357-8f15-d2b68cbd84ff.png"
+                data-srcset="/static/3d17ba6135efff1e39e6b4d97157a123/893c2/3b06165b-7033-4357-8f15-d2b68cbd84ff.png 129w"
+                decoding="async"
+                loading="lazy"
+                onLoad={[Function]}
+                sizes="100vw"
+                style={
+                  Object {
+                    "backgroundColor": undefined,
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": undefined,
+                    "objectPosition": undefined,
+                    "opacity": 0,
+                    "position": "absolute",
+                    "top": 0,
+                    "transform": "translateZ(0)",
+                    "transition": "opacity 250ms linear",
+                    "width": "100%",
+                    "willChange": "opacity",
+                  }
+                }
+              />
+            </picture>
+            <noscript>
+              <picture>
+                <source
+                  sizes="100vw"
+                  srcSet="/static/3d17ba6135efff1e39e6b4d97157a123/23c0e/3b06165b-7033-4357-8f15-d2b68cbd84ff.webp 129w"
+                  type="image/webp"
+                />
+                <img
+                  alt="logo"
+                  data-gatsby-image-ssr=""
+                  data-main-image=""
+                  decoding="async"
+                  loading="lazy"
+                  onLoad={[Function]}
+                  sizes="100vw"
+                  src="/static/3d17ba6135efff1e39e6b4d97157a123/893c2/3b06165b-7033-4357-8f15-d2b68cbd84ff.png"
+                  srcSet="/static/3d17ba6135efff1e39e6b4d97157a123/893c2/3b06165b-7033-4357-8f15-d2b68cbd84ff.png 129w"
+                  style={
+                    Object {
+                      "backgroundColor": undefined,
+                      "height": "100%",
+                      "left": 0,
+                      "objectFit": undefined,
+                      "objectPosition": undefined,
+                      "opacity": 0,
+                      "position": "absolute",
+                      "top": 0,
+                      "transform": "translateZ(0)",
+                      "transition": "opacity 250ms linear",
+                      "width": "100%",
+                      "willChange": "opacity",
+                    }
+                  }
+                />
+              </picture>
+            </noscript>
+            <script
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "const t=\\"undefined\\"!=typeof HTMLImageElement&&\\"loading\\"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll(\\"img[data-main-image]\\");for(let e of t)e.dataset.src&&(e.setAttribute(\\"src\\",e.dataset.src),e.removeAttribute(\\"data-src\\")),e.dataset.srcset&&(e.setAttribute(\\"srcset\\",e.dataset.srcset),e.removeAttribute(\\"data-srcset\\")),e.complete&&(e.style.opacity=1)}",
+                }
+              }
+              type="module"
+            />
+          </div>
         </div>
       </div>
       <div
