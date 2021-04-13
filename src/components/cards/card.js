@@ -51,6 +51,7 @@ const Card = ({
               <GatsbyImage
                 image={image.gatsbyImg.childImageSharp.gatsbyImageData}
                 alt={image.description}
+                style={{ height: 100 }}
               />
             ) : (
               <Placeholder size="small" color={colors[mode].text} />

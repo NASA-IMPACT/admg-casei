@@ -5464,7 +5464,7 @@ exports[`Explore page renders correctly 1`] = `
                       style={
                         Object {
                           "backgroundColor": undefined,
-                          "height": 101,
+                          "height": 100,
                           "overflow": "hidden",
                           "position": "relative",
                           "width": 98,

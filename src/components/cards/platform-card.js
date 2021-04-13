@@ -23,6 +23,14 @@ export default function PlatformCard({ shortname, mode }) {
     query {
       allPlatform {
         nodes {
+          image {
+            description
+            gatsbyImg {
+              childImageSharp {
+                gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+              }
+            }
+          }
           shortname: short_name
           longname: long_name
           description
@@ -42,6 +50,7 @@ export default function PlatformCard({ shortname, mode }) {
   const platform = data.allPlatform.nodes.find(x => x.shortname === shortname)
   return (
     <Card
+      image={platform.image}
       placeholder={PlatformIcon}
       tag={platform.stationary && "Stationary"}
       link={`/platform/${platform.shortname}`}
