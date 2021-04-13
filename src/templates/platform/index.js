@@ -121,7 +121,11 @@ export const query = graphql`
             description
             gatsbyImg {
               childImageSharp {
-                gatsbyImageData(height: 100, layout: FIXED)
+                gatsbyImageData(
+                  height: 100
+                  layout: FIXED
+                  placeholder: BLURRED
+                )
               }
             }
           }

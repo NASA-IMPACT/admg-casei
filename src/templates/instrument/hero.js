@@ -41,7 +41,7 @@ export const instrumentHeroFields = graphql`
       description
       gatsbyImg {
         childImageSharp {
-          gatsbyImageData(height: 200, layout: FIXED)
+          gatsbyImageData(height: 200, layout: FIXED, placeholder: BLURRED)
         }
       }
     }

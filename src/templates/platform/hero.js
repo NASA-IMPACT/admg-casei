@@ -47,7 +47,7 @@ export const platformHeroFields = graphql`
       description
       gatsbyImg {
         childImageSharp {
-          gatsbyImageData(width: 600, layout: CONSTRAINED)
+          gatsbyImageData(width: 600, layout: CONSTRAINED, placeholder: BLURRED)
         }
       }
     }

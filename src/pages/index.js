@@ -142,7 +142,7 @@ export const query = graphql`
       nasaImgAlt
       nasaImg {
         childImageSharp {
-          gatsbyImageData(layout: FULL_WIDTH)
+          gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
         }
       }
     }
@@ -162,7 +162,11 @@ export const query = graphql`
           nasaImgAlt
           nasaImg {
             childImageSharp {
-              gatsbyImageData(height: 550, layout: FULL_WIDTH)
+              gatsbyImageData(
+                height: 550
+                layout: FULL_WIDTH
+                placeholder: BLURRED
+              )
             }
           }
         }
@@ -187,7 +191,7 @@ export const query = graphql`
       nasaImgAlt
       nasaImg {
         childImageSharp {
-          gatsbyImageData(layout: FULL_WIDTH)
+          gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
         }
       }
     }

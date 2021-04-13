@@ -29,7 +29,11 @@ export default function CampaignCard({ shortname, mode }) {
             description
             gatsbyImg {
               childImageSharp {
-                gatsbyImageData(height: 100, layout: FIXED)
+                gatsbyImageData(
+                  height: 100
+                  layout: FIXED
+                  placeholder: BLURRED
+                )
               }
             }
           }

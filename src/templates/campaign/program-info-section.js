@@ -105,7 +105,7 @@ export const fundingFields = graphql`
       description
       gatsbyImg {
         childImageSharp {
-          gatsbyImageData(layout: FULL_WIDTH)
+          gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
         }
       }
     }

@@ -197,7 +197,7 @@ export const query = graphql`
     }
     image: file(relativePath: { eq: "glossary-map.png" }) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH)
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
       }
     }
   }
