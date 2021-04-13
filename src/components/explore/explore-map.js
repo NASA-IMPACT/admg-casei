@@ -72,12 +72,12 @@ const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
 
   return (
     <Map style={{ height: 500 }}>
-      {/* <AoiControl
+      <AoiControl
         isDrawing={isDrawing}
         setIsDrawing={setIsDrawing}
         aoi={aoi}
         setAoi={setAoi}
-      /> */}
+      />
       <GeoJsonSource geojson={geojson} id="explore">
         <HoverLayer id="explore" isDrawing={isDrawing} />
         <BboxLayer id="explore" bbox={bbox} />
