@@ -1,22 +1,16 @@
-name: Deploy
+name: Deploy to production
 
 on:
-  workflow_run:
-    workflows: ["End-to-End Test"]
-    branches: [develop]
-    types:
-      - completed
-  workflow_dispatch:
+  push:
+    branches:
+      - production
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
-
     env:
       ADMG_ACCESS_TOKEN: ${{ secrets.ADMG_ACCESS_TOKEN }}
-      CYPRESS_password: ${{ secrets.CYPRESS_password }}
       GATSBY_ADMG_CLIENT_ID: ${{ secrets.GATSBY_ADMG_CLIENT_ID }}
       GATSBY_ADMG_CLIENT_SECRET: ${{ secrets.GATSBY_ADMG_CLIENT_SECRET }}
       GATSBY_CPU_COUNT: 1
@@ -46,9 +40,17 @@ jobs:
       - name: Build
         run: |
           yarn install
-          yarn build
+          yarn build --prefix-paths
+
+      - name: Configure AWS CLI
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-west-2
 
       - name: Deploy 🚀
         run: |
-          npm install -g surge
-          surge --project ./public --domain ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
+          aws s3 rm s3://${{ secrets.PRODUCTION_BUCKET }} --recursive
+          aws s3 cp ./public/ s3://${{ secrets.PRODUCTION_BUCKET }}/casei --recursive
+          aws s3 cp ./public/index.html s3://${{ secrets.PRODUCTION_BUCKET }}

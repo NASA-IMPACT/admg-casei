@@ -178,7 +178,7 @@ const DateList = ({
                   `}
                 >
                   {dates.map(date => (
-                    <tr key={date.shortname}>
+                    <tr key={date.id}>
                       <DateText>{date.startdate || date.start}</DateText>
                       <DateText>{date.enddate || date.end}</DateText>
                     </tr>

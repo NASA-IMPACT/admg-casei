@@ -40,7 +40,7 @@ export default function CampaignCard({ shortname, mode }) {
           enddate: end_date
           region: region_description
           deployments {
-            shortname: short_name
+            id
             startdate: start_date
             enddate: end_date
           }
@@ -63,7 +63,7 @@ export default function CampaignCard({ shortname, mode }) {
           props: {
             shortname: shortname,
             title: "Deployment",
-            dates: campaign.deployments || [],
+            dates: campaign.deployments,
             cardMode: mode,
           },
         },

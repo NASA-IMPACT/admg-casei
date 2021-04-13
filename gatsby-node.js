@@ -64,6 +64,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       image: image @link
       instruments: [instrument] @link
       dois: [doi] @link
+      platform_type: platform_type @link
     }
     type NasaImagesJson implements Node {
       nasaImg: File @link(from: "nasaImg___NODE")

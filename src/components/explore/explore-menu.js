@@ -11,7 +11,7 @@ const TabButton = styled.button`
   display: inline-block;
   text-align: center;
   vertical-align: middle;
-  padding: 0.25rem 0.75rem;
+  padding: 0.25rem 0;
   min-width: 2rem;
   background: none;
   text-shadow: none;
@@ -39,64 +39,79 @@ const ExploreMenu = ({
   filteredCount,
   sortOrder,
   setSortOrder,
+  children,
 }) => (
   <div
-    style={{
-      display: `flex`,
-      justifyContent: `space-between`,
-      padding: `2rem 0`,
-      marginBottom: `2rem`,
-    }}
+    css={`
+      margin-bottom: 2rem;
+    `}
   >
-    <ul
+    <div
       style={{
         display: `flex`,
-        flexDirection: `row`,
-        margin: 0,
-        listStyle: `none`,
-        alignItems: "center",
+        justifyContent: `space-between`,
+        padding: `2rem 0`,
       }}
-      data-cy="tabbar"
     >
-      <li>
-        <TabButton
-          onClick={() => setSelectedCategory("campaigns")}
-          isSelected={selectedCategory === "campaigns"}
-        >
-          Campaigns
-          <span data-cy="campaigns-count"> ({filteredCount["campaigns"]})</span>
-        </TabButton>
-      </li>
+      <ul
+        style={{
+          display: `flex`,
+          flexDirection: `row`,
+          gap: `2rem`,
+          margin: 0,
+          listStyle: `none`,
+          alignItems: "center",
+        }}
+        data-cy="tabbar"
+      >
+        <li>
+          <TabButton
+            onClick={() => setSelectedCategory("campaigns")}
+            isSelected={selectedCategory === "campaigns"}
+          >
+            Campaigns
+            <span data-cy="campaigns-count">
+              {" "}
+              ({filteredCount["campaigns"]})
+            </span>
+          </TabButton>
+        </li>
 
-      <li>
-        <TabButton
-          onClick={() => setSelectedCategory("platforms")}
-          isSelected={selectedCategory === "platforms"}
-        >
-          Platforms
-          <span data-cy="platforms-count"> ({filteredCount["platforms"]})</span>
-        </TabButton>
-      </li>
+        <li>
+          <TabButton
+            onClick={() => setSelectedCategory("platforms")}
+            isSelected={selectedCategory === "platforms"}
+          >
+            Platforms
+            <span data-cy="platforms-count">
+              {" "}
+              ({filteredCount["platforms"]})
+            </span>
+          </TabButton>
+        </li>
 
-      <li>
-        <TabButton
-          onClick={() => setSelectedCategory("instruments")}
-          isSelected={selectedCategory === "instruments"}
-        >
-          Instruments
-          <span data-cy="instruments-count">
-            {" "}
-            ({filteredCount["instruments"]})
-          </span>
-        </TabButton>
-      </li>
-    </ul>
+        <li>
+          <TabButton
+            onClick={() => setSelectedCategory("instruments")}
+            isSelected={selectedCategory === "instruments"}
+          >
+            Instruments
+            <span data-cy="instruments-count">
+              {" "}
+              ({filteredCount["instruments"]})
+            </span>
+          </TabButton>
+        </li>
+      </ul>
 
-    <SortMenu
-      sortOrder={sortOrder}
-      setSortOrder={setSortOrder}
-      category={selectedCategory}
-    />
+      <SortMenu
+        sortOrder={sortOrder}
+        setSortOrder={setSortOrder}
+        category={selectedCategory}
+      />
+    </div>
+
+    {children}
   </div>
 )
 
@@ -111,6 +126,11 @@ ExploreMenu.propTypes = {
   }).isRequired,
   sortOrder: PropTypes.string.isRequired,
   setSortOrder: PropTypes.func.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.element,
+    PropTypes.arrayOf(PropTypes.element),
+  ]),
 }
 
 export default ExploreMenu
