@@ -11,7 +11,7 @@ import FocusAreaGallery from "../components/focus-area-gallery"
 import { RegionCarousel } from "../components/home/region-carousel"
 import { GeophysicsGrid } from "../components/home/geophysics-grid"
 import { InstrumentsGrid } from "../components/home/instruments-grid"
-import { NEGATIVE } from "../utils/constants"
+import { NEGATIVE, POSITIVE } from "../utils/constants"
 import { colors } from "../theme"
 
 const Home = ({ data }) => {
@@ -29,7 +29,22 @@ const Home = ({ data }) => {
         backgroundImage={data.heroImage}
         textToImageRatio={[6, 6]}
         id="home"
-      />
+      >
+        <Link
+          to="/explore"
+          css={`
+            margin-top: 10rem;
+            color: ${colors[POSITIVE].text};
+            background-color: ${colors[POSITIVE].background};
+            font-weight: bold;
+            padding: 1rem 5rem;
+            text-transform: uppercase;
+          `}
+          data-cy="explore-link"
+        >
+          Go to Explore page
+        </Link>
+      </Hero>
       <PageBody id="home">
         <Section id="focus-area" isSpaced>
           <SectionHeader

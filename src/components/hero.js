@@ -113,6 +113,8 @@ export default function Hero({
         {children && (
           <div
             css={`
+              align-self: center;
+              justify-self: end;
               grid-area: 1 / 2 / 3 / 3;
             `}
           >
