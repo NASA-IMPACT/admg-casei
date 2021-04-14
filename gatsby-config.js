@@ -3,6 +3,7 @@ require("dotenv").config({
 })
 
 module.exports = {
+  pathPrefix: `/casei`,
   siteMetadata: {
     title: `Catalog of Archived Suborbital Earth Science Investigations`,
     shortname: `NASA | CASEI`,
@@ -28,6 +29,7 @@ module.exports = {
     `gatsby-transformer-json`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-image`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

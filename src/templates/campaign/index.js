@@ -85,7 +85,7 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
       nav: "Program Info",
       component: ProgramInfoSection,
       props: {
-        logo: campaign.logo,
+        logoFullWidth: campaign.logoFullWidth,
         fundingAgency: campaign.fundingAgency,
         fundingProgram: campaign.fundingProgram,
         programLead: campaign.programLead,
@@ -119,7 +119,7 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
         countCollectionPeriods={campaign.countCollectionPeriods}
         countDataProducts={campaign.countDataProducts}
         deployments={campaign.deployments}
-        logo={campaign.logo}
+        logo150h={campaign.logo150h}
       />
       <PageBody id="campaign">
         <InpageNav
@@ -293,9 +293,15 @@ CampaignTemplate.propTypes = {
           longname: PropTypes.string,
         })
       ).isRequired,
-      logo: PropTypes.shape({
-        logoAlt: PropTypes.string.isRequired,
-        logoImg: PropTypes.shape({
+      logo150h: PropTypes.shape({
+        description: PropTypes.string.isRequired,
+        gatsbyImg: PropTypes.shape({
+          childImageSharp: PropTypes.object,
+        }),
+      }),
+      logoFullWidth: PropTypes.shape({
+        description: PropTypes.string.isRequired,
+        gatsbyImg: PropTypes.shape({
           childImageSharp: PropTypes.object,
         }),
       }),

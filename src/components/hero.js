@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Image from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import { layout } from "../theme"
 import DateList from "./date-list-hover"
@@ -139,10 +139,11 @@ export default function Hero({
             z-index: -1;
           `}
         >
-          <Image
+          <GatsbyImage
+            image={backgroundImage.nasaImg.childImageSharp.gatsbyImageData}
             alt={backgroundImage.nasaImgAlt}
-            fluid={backgroundImage.nasaImg.childImageSharp.fluid}
-            objectPosition={"center top"} // TODO: does not take effect
+            // TODO: does not take effect
+            objectPosition={"center top"}
             css={`
               max-height: 35rem;
               min-width: 55rem;
