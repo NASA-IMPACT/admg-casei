@@ -66,7 +66,15 @@ const Card = ({
             objectPosition={cover ? "center top" : "left top"}
           />
         ) : (
-          <Placeholder size="large" color={colors[mode].text} />
+          <div
+            css={`
+               {
+                grid-area: 1 / 1;
+              }
+            `}
+          >
+            <Placeholder size="large" color={colors[mode].text} />
+          </div>
         )}
         {tag && (
           <div
