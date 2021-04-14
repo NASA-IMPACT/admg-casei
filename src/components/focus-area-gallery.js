@@ -49,7 +49,7 @@ const FocusAreaGallery = ({ focusAreas, size = "large" }) => {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         justify-items: center;
-        gap: 1rem;
+        gap: 2rem;
         padding-top: 1rem;
       `}
     >
