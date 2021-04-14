@@ -27,7 +27,11 @@ export default function PlatformCard({ shortname, mode }) {
             description
             gatsbyImg {
               childImageSharp {
-                gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+                gatsbyImageData(
+                  layout: CONSTRAINED
+                  placeholder: BLURRED
+                  transformOptions: { fit: COVER }
+                )
               }
             }
           }
@@ -51,6 +55,7 @@ export default function PlatformCard({ shortname, mode }) {
   return (
     <Card
       image={platform.image}
+      cover={true}
       placeholder={PlatformIcon}
       tag={platform.stationary && "Stationary"}
       link={`/platform/${platform.shortname}`}

@@ -26,7 +26,11 @@ export default function InstrumentCard({ shortname }) {
             description
             gatsbyImg {
               childImageSharp {
-                gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+                gatsbyImageData(
+                  layout: CONSTRAINED
+                  placeholder: BLURRED
+                  transformOptions: { fit: COVER }
+                )
               }
             }
           }
@@ -48,6 +52,7 @@ export default function InstrumentCard({ shortname }) {
   return (
     <Card
       image={instrument.image}
+      cover={true}
       placeholder={InstrumentIcon}
       link={`/instrument/${instrument.shortname}`}
       footerList={{

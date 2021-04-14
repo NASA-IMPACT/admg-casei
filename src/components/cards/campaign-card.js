@@ -30,9 +30,10 @@ export default function CampaignCard({ shortname, mode }) {
             gatsbyImg {
               childImageSharp {
                 gatsbyImageData(
-                  height: 100
-                  layout: FIXED
+                  height: 150
+                  layout: CONSTRAINED
                   placeholder: BLURRED
+                  transformOptions: { fit: CONTAIN }
                 )
               }
             }
@@ -58,6 +59,7 @@ export default function CampaignCard({ shortname, mode }) {
   return (
     <Card
       image={campaign.logo}
+      cover={false}
       placeholder={CampaignIcon}
       tag={campaign.ongoing && "Ongoing"}
       link={`/campaign/${campaign.shortname}`}
