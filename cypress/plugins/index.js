@@ -22,6 +22,19 @@ module.exports = (on, config) => {
   require("@cypress/code-coverage/task")(on, config)
   // include any other plugin code...
 
+  on("task", {
+    log(message) {
+      console.log(message)
+
+      return null
+    },
+    table(message) {
+      console.table(message)
+
+      return null
+    },
+  })
+
   // It's IMPORTANT to return the config object
   // with any changed environment variables
   return config

@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import Image from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import {
   Accordion as ReachAccordion,
@@ -90,14 +90,14 @@ export default function Accordion({ folds, id }) {
               data-cy={`${id}-accordion-content`}
             >
               {fold.image && (
-                <Image
+                <GatsbyImage
+                  image={fold.image.gatsbyImg.childImageSharp.gatsbyImageData}
                   css={`
                      {
                       grid-column: 1 / 2;
                     }
                   `}
                   alt={fold.image.description}
-                  fixed={fold.image.gatsbyImg.childImageSharp.fixed}
                   data-cy={`${id}-accordion-image`}
                 />
               )}
