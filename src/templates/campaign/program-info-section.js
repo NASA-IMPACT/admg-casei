@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
-import Image from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import {
   Section,
@@ -14,7 +14,7 @@ import { CampaignIcon } from "../../icons"
 
 const ProgramInfoSection = ({
   id,
-  logo,
+  logoFullWidth,
   fundingAgency,
   fundingProgram,
   programLead,
@@ -63,16 +63,18 @@ const ProgramInfoSection = ({
               padding: `1rem`,
             }}
           >
-            {logo && logo.logoImg ? (
+            {logoFullWidth && logoFullWidth.gatsbyImg ? (
               <div
                 style={{
                   width: `100%` /* gatsby-image wants width, for it to be visible */,
                 }}
                 data-cy="campaign-logo"
               >
-                <Image
-                  alt={logo.logoAlt}
-                  fluid={logo.logoImg.childImageSharp.fluid}
+                <GatsbyImage
+                  image={
+                    logoFullWidth.gatsbyImg.childImageSharp.gatsbyImageData
+                  }
+                  alt={logoFullWidth.description}
                 />
               </div>
             ) : (
@@ -99,13 +101,11 @@ const ProgramInfoSection = ({
 
 export const fundingFields = graphql`
   fragment fundingFields on campaign {
-    logo {
-      logoAlt
-      logoImg {
+    logoFullWidth: logo {
+      description
+      gatsbyImg {
         childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
         }
       }
     }
@@ -129,9 +129,9 @@ export const fundingFields = graphql`
 
 ProgramInfoSection.propTypes = {
   id: PropTypes.string.isRequired,
-  logo: PropTypes.shape({
-    logoAlt: PropTypes.string.isRequired,
-    logoImg: PropTypes.shape({
+  logoFullWidth: PropTypes.shape({
+    description: PropTypes.string.isRequired,
+    gatsbyImg: PropTypes.shape({
       childImageSharp: PropTypes.object,
     }),
   }),

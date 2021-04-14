@@ -2,7 +2,7 @@ import React, { useRef } from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 import styled from "styled-components"
-import Image from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import * as turf from "@turf/turf"
 import parse from "wellknown"
 
@@ -36,7 +36,7 @@ const BackgroundGradient = styled.div`
 `
 
 const CampaignHero = ({
-  logo,
+  logo150h,
   bounds,
   longname,
   shortname,
@@ -92,10 +92,10 @@ const CampaignHero = ({
       >
         <div style={{ flex: `2`, padding: `0 ${layout.pageMargin}` }}>
           <div style={{ marginBottom: `6rem` }}>
-            {logo && logo.logoImg ? (
-              <Image
-                alt={logo.logoAlt}
-                fixed={logo.logoImg.childImageSharp.fixed}
+            {logo150h && logo150h.gatsbyImg ? (
+              <GatsbyImage
+                image={logo150h.gatsbyImg.childImageSharp.gatsbyImageData}
+                alt={logo150h.description}
                 style={{ margin: `0` }}
               />
             ) : (
@@ -124,13 +124,11 @@ const CampaignHero = ({
 
 export const heroFields = graphql`
   fragment heroFields on campaign {
-    logo: logo {
-      logoAlt
-      logoImg {
+    logo150h: logo {
+      description
+      gatsbyImg {
         childImageSharp {
-          fixed(height: 150) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(height: 150, layout: FIXED, placeholder: BLURRED)
         }
       }
     }
@@ -147,9 +145,9 @@ export const heroFields = graphql`
 `
 
 CampaignHero.propTypes = {
-  logo: PropTypes.shape({
-    logoAlt: PropTypes.string.isRequired,
-    logoImg: PropTypes.shape({
+  logo150h: PropTypes.shape({
+    description: PropTypes.string.isRequired,
+    gatsbyImg: PropTypes.shape({
       childImageSharp: PropTypes.object,
     }),
   }),
