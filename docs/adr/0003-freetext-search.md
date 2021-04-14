@@ -26,6 +26,8 @@ Do we need to or want to improve the search experience for our users?
 
 - Option C) combine those two approaches A+B
 
+- Option D) Use Aloglia to handle search functionality
+
 ## Decision Outcome
 
 Chosen option: "[option 1]", because [justification. e.g., only option, which meets k.o. criterion decision driver | which resolves force force | … | comes out best (see below)].
@@ -57,12 +59,26 @@ Since all the pages for all the campaigns/platforms/instruments are rendered ser
 - Good, because it offers the potential of nuanced search that google search offers
 - Bad, because we have less control over the display of search results -- this needs to be confirmed
 
-### Combination
+### Google Combination
 
 We can offer the complete google search to get back any results for any pages on a dedicated search page, and use the javascript filter method to search on a specific field such as the short name to limit the list of cards.
 
 - Good, because ?
 - Bad, because ?
+
+### Algolia
+
+[Algolia](https://www.algolia.com/) is a tool that handles search for frontend interfaces. They use webhooks to watch for changes to your db and [caches data in an algolia account? I'm actually not sure how they are accessin the data they are searching].
+On the frontend, we can then access the algolia search api to access suggested queries from recent searches, autocompletion, popular searcher (it's all customizable) and access results from a submited user query. In addition to the search suggestion options, we also will get url query params out of the box.
+
+The first 10,000 searches are free. After that, it is $1 per 1,000 search requests per month.
+
+- Good, because it offers reliable, extensive search features
+- Good, because it integrates well with Gatsby
+- Good, because we don't have to really write or maintain any code
+- Good, because it is very easy to scale up search funcationality. I doubt we want natural language processing, but maybe we do down the road
+- Bad, because there is a cost associated, but given the amount of traffic we expect, I think it is quite worth the money
+- Bad, because it might be a bit too powerful for what we are after. I think we can keep costs low by opting in to only the basics
 
 ## Links <!-- optional -->
 
