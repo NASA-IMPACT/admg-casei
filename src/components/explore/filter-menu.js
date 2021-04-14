@@ -14,7 +14,7 @@ import { NEGATIVE } from "../../utils/constants"
 import { IconButton } from "../button"
 import { CloseIcon } from "../../icons"
 import { colors } from "../../theme"
-import { breakpoints } from "../../theme/style-helpers"
+import { breakpoints } from "../../theme"
 
 const FilterButton = styled(ListboxButton)`
   flex-grow: 0;
