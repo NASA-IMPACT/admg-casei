@@ -25,7 +25,7 @@ describe("Card", () => {
   it("renders plain card", () => {
     const tree = renderer
       .create(
-        <Card placeholder={CampaignIcon} category="campaigns">
+        <Card placeholder={CampaignIcon} cover={false} category="campaigns">
           <CardContent />
         </Card>
       )
@@ -35,7 +35,12 @@ describe("Card", () => {
   it("renders card with tag", () => {
     const tree = renderer
       .create(
-        <Card placeholder={CampaignIcon} category="campaigns" tag={testTag}>
+        <Card
+          placeholder={CampaignIcon}
+          cover={false}
+          category="campaigns"
+          tag={testTag}
+        >
           <CardContent />
         </Card>
       )
@@ -47,6 +52,7 @@ describe("Card", () => {
       .create(
         <Card
           placeholder={CampaignIcon}
+          cover={false}
           category="campaigns"
           testFooterList={testFooterList}
         >

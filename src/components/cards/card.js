@@ -123,6 +123,7 @@ Card.propTypes = {
       childImageSharp: PropTypes.object,
     }),
   }),
+  cover: PropTypes.bool.isRequired,
   placeholder: PropTypes.func.isRequired,
   height: PropTypes.string,
   link: PropTypes.string,
