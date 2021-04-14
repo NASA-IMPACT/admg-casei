@@ -534,18 +534,9 @@ exports[`Explore page renders correctly 1`] = `
 }
 
 .c28.c28 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   min-height: 180px;
 }
 
@@ -576,14 +567,22 @@ exports[`Explore page renders correctly 1`] = `
 }
 
 .c29.c29 {
+  grid-area: 1 / 1;
   height: 180px;
   margin: 0;
 }
 
 .c45.c45 {
+  grid-area: 1 / 1;
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  justify-self: flex-end;
   text-transform: uppercase;
   border: 1px solid;
   padding: 0.25rem;
+  background-color: #303641;
+  z-index: 1;
 }
 
 .c30.c30 {

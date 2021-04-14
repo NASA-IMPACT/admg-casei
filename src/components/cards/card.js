@@ -7,9 +7,9 @@ import { POSITIVE, NEGATIVE } from "../../utils/constants"
 import { colors } from "../../theme"
 
 const CardHeader = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   min-height: 180px;
 `
 
@@ -57,6 +57,7 @@ const Card = ({
             alt={image.description}
             css={`
                {
+                grid-area: 1 / 1;
                 height: 180px;
                 margin: ${cover ? `-1rem -1rem 0 -1rem` : 0};
               }
@@ -71,9 +72,14 @@ const Card = ({
           <div
             css={`
                {
+                grid-area: 1 / 1;
+                align-self: flex-end;
+                justify-self: flex-end;
                 text-transform: uppercase;
                 border: 1px solid;
                 padding: 0.25rem;
+                background-color: ${colors[mode].background};
+                z-index: 1;
               }
             `}
             data-cy={`${tag.toLowerCase()}-tag`}
