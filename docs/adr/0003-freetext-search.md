@@ -28,6 +28,25 @@ Do we need to or want to improve the search experience for our users?
 
 - Option D) Use Aloglia to handle search functionality
 
+## Desired Outcome
+
+At **minimum**, we want users to be able to successfully search with
+
+- partial queries
+- queries with light typos
+- url search params
+
+An **ideal** outcome might include
+
+- access recent search queries
+- auto-complete
+- search analytics - see what most people are searching. Identify areas for improvement for other userflows.
+
+What we **don't** want
+
+- clunky search results
+- search queries that pull results using references from page content - search should be limited to short and long names
+
 ## Decision Outcome
 
 Chosen option: "[option 1]", because [justification. e.g., only option, which meets k.o. criterion decision driver | which resolves force force | … | comes out best (see below)].
