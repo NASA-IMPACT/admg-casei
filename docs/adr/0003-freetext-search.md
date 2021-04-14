@@ -20,13 +20,11 @@ Do we need to or want to improve the search experience for our users?
 
 ## Considered Options
 
-- Option A) implementing a search via javascript on the client. We have all the data available from the build process. Just like we currently sort and filter, we can search for a string or substring on the frontend. We might need to be careful with performance, but so far sort and filter are super fast and I don't see why search would not be almost as fast.
-  With this option, we might be able to get live-updating search results while a user is typing.
-  With this option, we can be very explicit about the fields we are searching on. We could have a field to search be short name, and another field where a user can type the region they are interested in.
+- Option A) implementing a search via javascript on the client.
 
-- Option B) leverage google search to build into our site. Since all the pages for all the campaigns/platforms/instruments are rendered server side, all the content that is displayed to a user will be searchable by google. We can embed a simple google search bar and display the search results (see https://support.google.com/programmable-search/answer/4513903?hl=en).
+- Option B) leverage google search to build into our site.
 
-- Option C) combine those two approaches A+B. We can offer the complete google search to get back any results for any pages on a dedicated search page, and use the javascript filter method to search on a specific field such as the short name to limit the list of cards.
+- Option C) combine those two approaches A+B
 
 ## Decision Outcome
 
@@ -44,32 +42,27 @@ Chosen option: "[option 1]", because [justification. e.g., only option, which me
 
 ## Pros and Cons of the Options <!-- optional -->
 
-### [option 1]
+### A: JS Search on Client
 
-[example | description | pointer to more information | …] <!-- optional -->
+We have all the data available from the build process. Just like we currently sort and filter, we can search for a string or substring on the frontend. We might need to be careful with performance, but so far, sort and filter are super fast and I don't see why search would not be almost as fast. One key reason being that our database isn't expected to grow to a point where performance is going to be an issue.
 
-- Good, because [argument a]
-- Good, because [argument b]
-- Bad, because [argument c]
-- … <!-- numbers of pros and cons can vary -->
+- Good, because we might be able to get live-updating search results while a user is typing.
+- Good, because we can be very explicit about the fields we are searching on. We could have a field to search be short name, and another field where a user can type the region they are interested in.
+- Bad, because it will be on us to implement, test and maintain
 
-### [option 2]
+### Google Search
 
-[example | description | pointer to more information | …] <!-- optional -->
+Since all the pages for all the campaigns/platforms/instruments are rendered server side, all the content that is displayed to a user will be searchable by google. We can embed a simple google search bar and display the search results (see https://support.google.com/programmable-search/answer/4513903?hl=en).
 
-- Good, because [argument a]
-- Good, because [argument b]
-- Bad, because [argument c]
-- … <!-- numbers of pros and cons can vary -->
+- Good, because it offers the potential of nuanced search that google search offers
+- Bad, because we have less control over the display of search results -- this needs to be confirmed
 
-### [option 3]
+### Combination
 
-[example | description | pointer to more information | …] <!-- optional -->
+We can offer the complete google search to get back any results for any pages on a dedicated search page, and use the javascript filter method to search on a specific field such as the short name to limit the list of cards.
 
-- Good, because [argument a]
-- Good, because [argument b]
-- Bad, because [argument c]
-- … <!-- numbers of pros and cons can vary -->
+- Good, because ?
+- Bad, because ?
 
 ## Links <!-- optional -->
 
