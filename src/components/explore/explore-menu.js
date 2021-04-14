@@ -2,7 +2,6 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 
-import SortMenu from "./sort-menu"
 import { NEGATIVE } from "../../utils/constants"
 import { colors } from "../../theme"
 
@@ -37,82 +36,54 @@ const ExploreMenu = ({
   selectedCategory,
   setSelectedCategory,
   filteredCount,
-  sortOrder,
-  setSortOrder,
-  children,
 }) => (
-  <div
+  <ul
     css={`
-      margin-bottom: 2rem;
+       {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        margin: 0;
+        list-style: none;
+        align-items: center;
+        justify-content: center;
+      }
     `}
+    data-cy="tabbar"
   >
-    <div
-      style={{
-        display: `flex`,
-        justifyContent: `space-between`,
-        padding: `2rem 0`,
-      }}
-    >
-      <ul
-        style={{
-          display: `flex`,
-          flexDirection: `row`,
-          gap: `2rem`,
-          margin: 0,
-          listStyle: `none`,
-          alignItems: "center",
-        }}
-        data-cy="tabbar"
+    <li>
+      <TabButton
+        onClick={() => setSelectedCategory("campaigns")}
+        isSelected={selectedCategory === "campaigns"}
       >
-        <li>
-          <TabButton
-            onClick={() => setSelectedCategory("campaigns")}
-            isSelected={selectedCategory === "campaigns"}
-          >
-            Campaigns
-            <span data-cy="campaigns-count">
-              {" "}
-              ({filteredCount["campaigns"]})
-            </span>
-          </TabButton>
-        </li>
+        Campaigns
+        <span data-cy="campaigns-count"> ({filteredCount["campaigns"]})</span>
+      </TabButton>
+    </li>
 
-        <li>
-          <TabButton
-            onClick={() => setSelectedCategory("platforms")}
-            isSelected={selectedCategory === "platforms"}
-          >
-            Platforms
-            <span data-cy="platforms-count">
-              {" "}
-              ({filteredCount["platforms"]})
-            </span>
-          </TabButton>
-        </li>
+    <li>
+      <TabButton
+        onClick={() => setSelectedCategory("platforms")}
+        isSelected={selectedCategory === "platforms"}
+      >
+        Platforms
+        <span data-cy="platforms-count"> ({filteredCount["platforms"]})</span>
+      </TabButton>
+    </li>
 
-        <li>
-          <TabButton
-            onClick={() => setSelectedCategory("instruments")}
-            isSelected={selectedCategory === "instruments"}
-          >
-            Instruments
-            <span data-cy="instruments-count">
-              {" "}
-              ({filteredCount["instruments"]})
-            </span>
-          </TabButton>
-        </li>
-      </ul>
-
-      <SortMenu
-        sortOrder={sortOrder}
-        setSortOrder={setSortOrder}
-        category={selectedCategory}
-      />
-    </div>
-
-    {children}
-  </div>
+    <li>
+      <TabButton
+        onClick={() => setSelectedCategory("instruments")}
+        isSelected={selectedCategory === "instruments"}
+      >
+        Instruments
+        <span data-cy="instruments-count">
+          {" "}
+          ({filteredCount["instruments"]})
+        </span>
+      </TabButton>
+    </li>
+  </ul>
 )
 
 ExploreMenu.propTypes = {
@@ -124,13 +95,6 @@ ExploreMenu.propTypes = {
     platforms: PropTypes.number.isRequired,
     instruments: PropTypes.number.isRequired,
   }).isRequired,
-  sortOrder: PropTypes.string.isRequired,
-  setSortOrder: PropTypes.func.isRequired,
-  children: PropTypes.oneOfType([
-    PropTypes.bool,
-    PropTypes.element,
-    PropTypes.arrayOf(PropTypes.element),
-  ]),
 }
 
 export default ExploreMenu

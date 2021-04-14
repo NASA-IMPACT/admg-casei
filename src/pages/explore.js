@@ -21,6 +21,7 @@ import FilterChips from "../components/filter/filter-chips"
 import Chip from "../components/chip"
 import ExploreMenu from "../components/explore/explore-menu"
 import PlatformNav from "../components/explore/platform-nav"
+import SortMenu from "../components/explore/sort-menu"
 import ExploreSection from "../components/explore/explore-section"
 import CampaignCard from "../components/cards/campaign-card"
 import PlatformCard from "../components/cards/platform-card"
@@ -163,6 +164,17 @@ export default function Explore({ data, location }) {
         <VisuallyHidden>
           <h1 data-cy={`h1-${selectedCategory}`}>Explore {selectedCategory}</h1>
         </VisuallyHidden>
+
+        <ExploreMenu
+          selectedCategory={selectedCategory}
+          setSelectedCategory={setSelectedCategory}
+          filteredCount={{
+            campaigns: campaignList.filtered.length,
+            platforms: platformList.filtered.length,
+            instruments: instrumentList.filtered.length,
+          }}
+        ></ExploreMenu>
+
         <ExploreTools
           ref={inputElement}
           dateRange={dateRange}
@@ -238,26 +250,20 @@ export default function Explore({ data, location }) {
           </>
         )}
 
-        <ExploreMenu
-          selectedCategory={selectedCategory}
-          setSelectedCategory={setSelectedCategory}
-          filteredCount={{
-            campaigns: campaignList.filtered.length,
-            platforms: platformList.filtered.length,
-            instruments: instrumentList.filtered.length,
-          }}
+        <SortMenu
           sortOrder={sortOrder[selectedCategory]}
           setSortOrder={setSortOrder}
-        >
-          {selectedCategory === "platforms" && (
-            <PlatformNav
-              items={Object.keys(platformList.grouped).map(group => ({
-                id: group,
-                label: `${group} (${platformList.grouped[group].length})`,
-              }))}
-            />
-          )}
-        </ExploreMenu>
+          category={selectedCategory}
+        />
+
+        {selectedCategory === "platforms" && (
+          <PlatformNav
+            items={Object.keys(platformList.grouped).map(group => ({
+              id: group,
+              label: `${group} (${platformList.grouped[group].length})`,
+            }))}
+          />
+        )}
 
         <ExploreSection isLoading={isLoading}>
           {selectedCategory === "campaigns" &&

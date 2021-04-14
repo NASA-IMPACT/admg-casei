@@ -27,8 +27,7 @@ InpageLink.propTypes = {
 const PlatformNav = ({ items }) => (
   <div
     css={`
-      margin: 0 -6rem;
-      padding: 0 6rem;
+      margin: 2rem 0;
       display: flex;
       justify-content: space-between;
       align-items: center;
