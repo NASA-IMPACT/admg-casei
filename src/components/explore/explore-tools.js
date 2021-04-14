@@ -8,6 +8,7 @@ import DateMenu from "./date-menu"
 import { FilterIcon } from "../../icons"
 import { NEGATIVE } from "../../utils/constants"
 import { colors } from "../../theme"
+import { breakpoints } from "../../theme"
 
 const ExploreTools = React.forwardRef(
   (
@@ -103,7 +104,7 @@ const ExploreTools = React.forwardRef(
               css={`
                 display: inherit;
                 flex-grow: 1;
-                @media screen and (max-width: 800px) {
+                @media screen and (max-width: ${breakpoints["sm"]}) {
                   display: block;
                 }
               `}
