@@ -3,7 +3,6 @@
     "allCampaign": {
       "nodes": [
         {
-          "id": "12e154b6-63bb-47b7-8563-d59abeb5774d",
           "logo": null,
           "ongoing": false,
           "shortname": "AfriSAR",
@@ -13,7 +12,7 @@
           "region": "Gabon tropical forests",
           "deployments": [
             {
-              "id": "2020aa2b-9e2d-4846-9234-5be4eac10a4b",
+              "id": "b41837e1-5a43-4187-aa42-edb909c24858",
               "startdate": "2016-02-03",
               "enddate": "2016-02-25"
             }
@@ -21,8 +20,33 @@
           "countDataProducts": 9
         },
         {
-          "id": "e4621932-1353-4cab-a1ce-e73a577e546d",
-          "logo": null,
+          "logo": {
+            "description": "ACEPOL",
+            "gatsbyImg": {
+              "childImageSharp": {
+                "gatsbyImageData": {
+                  "layout": "fixed",
+                  "backgroundColor": "#7898b8",
+                  "images": {
+                    "fallback": {
+                      "src": "/static/b9bdbb80bf6ab445a11cfe0b14f19ba3/15e42/ce92ab12-5bcd-4682-b83b-10becb1eafcb.png",
+                      "srcSet": "/static/b9bdbb80bf6ab445a11cfe0b14f19ba3/15e42/ce92ab12-5bcd-4682-b83b-10becb1eafcb.png 100w,\n/static/b9bdbb80bf6ab445a11cfe0b14f19ba3/5aead/ce92ab12-5bcd-4682-b83b-10becb1eafcb.png 200w",
+                      "sizes": "100px"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/b9bdbb80bf6ab445a11cfe0b14f19ba3/d8057/ce92ab12-5bcd-4682-b83b-10becb1eafcb.webp 100w,\n/static/b9bdbb80bf6ab445a11cfe0b14f19ba3/2e34e/ce92ab12-5bcd-4682-b83b-10becb1eafcb.webp 200w",
+                        "type": "image/webp",
+                        "sizes": "100px"
+                      }
+                    ]
+                  },
+                  "width": 100,
+                  "height": 100
+                }
+              }
+            }
+          },
           "ongoing": false,
           "shortname": "ACEPOL",
           "longname": "Aerosol Characterization from Polarimeter and Lidar",
@@ -31,7 +55,7 @@
           "region": "Western United States",
           "deployments": [
             {
-              "id": "4b7b6a0a-0971-4f98-b589-cbe0715bdc94",
+              "id": "f7173940-b93e-4c92-94cc-1883e9fe8917",
               "startdate": "2017-10-19",
               "enddate": "2017-11-09"
             }
@@ -39,13 +63,29 @@
           "countDataProducts": 6
         },
         {
-          "id": "5097b27f-e024-4c31-9813-6ddfd1471f01",
           "logo": {
-            "logoAlt": "ACES logo",
-            "logoImg": {
+            "description": "ACES",
+            "gatsbyImg": {
               "childImageSharp": {
-                "fixed": {
-                  "src": "/static/3d17ba6135efff1e39e6b4d97157a123/6c838/aces.png"
+                "gatsbyImageData": {
+                  "layout": "fixed",
+                  "backgroundColor": "#080808",
+                  "images": {
+                    "fallback": {
+                      "src": "/static/3d17ba6135efff1e39e6b4d97157a123/4de46/3b06165b-7033-4357-8f15-d2b68cbd84ff.png",
+                      "srcSet": "/static/3d17ba6135efff1e39e6b4d97157a123/4de46/3b06165b-7033-4357-8f15-d2b68cbd84ff.png 101w",
+                      "sizes": "101px"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/3d17ba6135efff1e39e6b4d97157a123/bbc1e/3b06165b-7033-4357-8f15-d2b68cbd84ff.webp 101w",
+                        "type": "image/webp",
+                        "sizes": "101px"
+                      }
+                    ]
+                  },
+                  "width": 101,
+                  "height": 100
                 }
               }
             }
@@ -58,7 +98,7 @@
           "region": "Florida Everglades",
           "deployments": [
             {
-              "id": "0f90e748-d3e7-472e-895a-d29a1f7b9020",
+              "id": "683e80a8-6561-4dcf-bbb8-f42fc0fbcdcf",
               "startdate": "2002-08-02",
               "enddate": "2002-08-30"
             }
@@ -66,13 +106,92 @@
           "countDataProducts": 5
         },
         {
-          "id": "4a3ff941-58bd-4d95-8ace-22c6c8c23a72",
           "logo": {
-            "logoAlt": "ARCTAS logo",
-            "logoImg": {
+            "description": "ACT-America",
+            "gatsbyImg": {
               "childImageSharp": {
-                "fixed": {
-                  "src": "/static/16a8d79d7980aad3e45338142b6d08d2/6c838/arctas.png"
+                "gatsbyImageData": {
+                  "layout": "fixed",
+                  "backgroundColor": "#f8f8f8",
+                  "images": {
+                    "fallback": {
+                      "src": "/static/7439a7d21e764b2eb9ac51bc340da7d7/15e42/37f600e5-23f6-4a80-b821-6fa752f760ac.png",
+                      "srcSet": "/static/7439a7d21e764b2eb9ac51bc340da7d7/15e42/37f600e5-23f6-4a80-b821-6fa752f760ac.png 100w,\n/static/7439a7d21e764b2eb9ac51bc340da7d7/5aead/37f600e5-23f6-4a80-b821-6fa752f760ac.png 200w",
+                      "sizes": "100px"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/7439a7d21e764b2eb9ac51bc340da7d7/d8057/37f600e5-23f6-4a80-b821-6fa752f760ac.webp 100w,\n/static/7439a7d21e764b2eb9ac51bc340da7d7/2e34e/37f600e5-23f6-4a80-b821-6fa752f760ac.webp 200w",
+                        "type": "image/webp",
+                        "sizes": "100px"
+                      }
+                    ]
+                  },
+                  "width": 100,
+                  "height": 100
+                }
+              }
+            }
+          },
+          "ongoing": false,
+          "shortname": "ACT-America",
+          "longname": "Atmospheric Carbon and Transport – America",
+          "startdate": "2016-05-27",
+          "enddate": "2019-07-27",
+          "region": "Midwest, Mid-Atlantic, Southern US",
+          "deployments": [
+            {
+              "id": "393b1eb3-3347-400b-946e-7dfe5b1e9015",
+              "startdate": "2016-07-18",
+              "enddate": "2016-08-29"
+            },
+            {
+              "id": "ee05e5fd-675b-4a72-8ed3-46a063af6ad3",
+              "startdate": "2017-01-31",
+              "enddate": "2017-03-10"
+            },
+            {
+              "id": "4376a56e-25e8-4594-bbf6-625e095416e2",
+              "startdate": "2017-10-03",
+              "enddate": "2017-11-13"
+            },
+            {
+              "id": "3b224ad8-8c8f-4501-a599-cb5867451879",
+              "startdate": "2018-04-12",
+              "enddate": "2018-05-20"
+            },
+            {
+              "id": "a8a7f058-fc45-48b9-88a4-b4c4af4caa86",
+              "startdate": "2019-06-17",
+              "enddate": "2019-07-27"
+            }
+          ],
+          "countDataProducts": 8
+        },
+        {
+          "logo": {
+            "description": "ARCTAS",
+            "gatsbyImg": {
+              "childImageSharp": {
+                "gatsbyImageData": {
+                  "layout": "fixed",
+                  "backgroundColor": "#080808",
+                  "images": {
+                    "fallback": {
+                      "src": "/static/16a8d79d7980aad3e45338142b6d08d2/ab12d/02e4ddc0-0933-40b5-9600-a4a775a9dac7.png",
+                      "srcSet": "/static/16a8d79d7980aad3e45338142b6d08d2/ab12d/02e4ddc0-0933-40b5-9600-a4a775a9dac7.png 80w,\n/static/16a8d79d7980aad3e45338142b6d08d2/3b3e9/02e4ddc0-0933-40b5-9600-a4a775a9dac7.png 160w",
+                      "sizes": "80px"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/16a8d79d7980aad3e45338142b6d08d2/c6b8d/02e4ddc0-0933-40b5-9600-a4a775a9dac7.webp 80w,\n/static/16a8d79d7980aad3e45338142b6d08d2/3883e/02e4ddc0-0933-40b5-9600-a4a775a9dac7.webp 160w",
+                        "type": "image/webp",
+                        "sizes": "80px"
+                      }
+                    ]
+                  },
+                  "width": 80,
+                  "height": 100
                 }
               }
             }
@@ -85,17 +204,17 @@
           "region": "Alaska, Western Canada, California",
           "deployments": [
             {
-              "id": "d47bb112-4cd6-4bf6-8f8d-a5c675a6b42b",
+              "id": "52b8e154-15ff-4345-961b-2e9603449232",
               "startdate": "2008-04-01",
               "enddate": "2008-04-21"
             },
             {
-              "id": "954e9beb-b802-426d-858c-2e875a636396",
+              "id": "344bdad2-279e-45d5-8c04-97709d49affa",
               "startdate": "2008-06-18",
               "enddate": "2008-06-24"
             },
             {
-              "id": "0f5e9cc3-9645-43e9-8ef7-9bee6b5789d2",
+              "id": "dd29ed86-8424-4e93-9666-9d1326486a86",
               "startdate": "2008-06-26",
               "enddate": "2008-07-14"
             }
@@ -103,8 +222,33 @@
           "countDataProducts": 8
         },
         {
-          "id": "7ce3d933-1d78-470d-b710-ace5a8190a35",
-          "logo": null,
+          "logo": {
+            "description": "ATTREX",
+            "gatsbyImg": {
+              "childImageSharp": {
+                "gatsbyImageData": {
+                  "layout": "fixed",
+                  "backgroundColor": "#e8e8e8",
+                  "images": {
+                    "fallback": {
+                      "src": "/static/ba7ed43aa19989a215bb8aab39f921d0/9e60d/2f7affe5-823f-4b0f-9e4a-11c708e33cc0.png",
+                      "srcSet": "/static/ba7ed43aa19989a215bb8aab39f921d0/9e60d/2f7affe5-823f-4b0f-9e4a-11c708e33cc0.png 82w,\n/static/ba7ed43aa19989a215bb8aab39f921d0/f1731/2f7affe5-823f-4b0f-9e4a-11c708e33cc0.png 164w",
+                      "sizes": "82px"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/ba7ed43aa19989a215bb8aab39f921d0/93fca/2f7affe5-823f-4b0f-9e4a-11c708e33cc0.webp 82w,\n/static/ba7ed43aa19989a215bb8aab39f921d0/98903/2f7affe5-823f-4b0f-9e4a-11c708e33cc0.webp 164w",
+                        "type": "image/webp",
+                        "sizes": "82px"
+                      }
+                    ]
+                  },
+                  "width": 82,
+                  "height": 100
+                }
+              }
+            }
+          },
           "ongoing": false,
           "shortname": "ATTREX",
           "longname": "Airborne Tropical Tropopause Experiment",
@@ -113,22 +257,22 @@
           "region": "California, Guam, Tropics",
           "deployments": [
             {
-              "id": "81b73aa8-bd56-4323-848f-8463490a6b33",
+              "id": "a9af67bb-e5bd-4de0-a664-e9e34d3a6935",
               "startdate": "2011-10-20",
               "enddate": "2011-11-10"
             },
             {
-              "id": "eff83e49-a379-46f4-9fb2-329f59c2252f",
+              "id": "90fd94a2-d84c-414e-8373-fef13b138ee1",
               "startdate": "2013-01-19",
               "enddate": "2013-03-02"
             },
             {
-              "id": "6bc1a341-847a-4af4-9b68-d228f5a8d529",
+              "id": "02d19fd9-304f-4c11-8bb3-0eaef3da5a52",
               "startdate": "2013-12-20",
               "enddate": "2014-03-14"
             },
             {
-              "id": "178b1e79-a903-4670-a41b-8ad0e3320fb9",
+              "id": "8f710672-418a-4797-b769-4290ccb70393",
               "startdate": "2015-02-26",
               "enddate": "2015-03-14"
             }
@@ -136,48 +280,49 @@
           "countDataProducts": 5
         },
         {
-          "id": "096da159-cd73-4af6-abb0-e1465b1ae193",
-          "logo": null,
+          "logo": {
+            "description": "IFloodS",
+            "gatsbyImg": {
+              "childImageSharp": {
+                "gatsbyImageData": {
+                  "layout": "fixed",
+                  "backgroundColor": "#f8f8f8",
+                  "images": {
+                    "fallback": {
+                      "src": "/static/a5e6947284804afdaae12ae783dba418/0cf64/eb6afc2a-01e5-410a-bb30-1de1a7f58949.png",
+                      "srcSet": "/static/a5e6947284804afdaae12ae783dba418/0cf64/eb6afc2a-01e5-410a-bb30-1de1a7f58949.png 126w,\n/static/a5e6947284804afdaae12ae783dba418/94fbf/eb6afc2a-01e5-410a-bb30-1de1a7f58949.png 252w",
+                      "sizes": "126px"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/a5e6947284804afdaae12ae783dba418/712c5/eb6afc2a-01e5-410a-bb30-1de1a7f58949.webp 126w,\n/static/a5e6947284804afdaae12ae783dba418/a08d9/eb6afc2a-01e5-410a-bb30-1de1a7f58949.webp 252w",
+                        "type": "image/webp",
+                        "sizes": "126px"
+                      }
+                    ]
+                  },
+                  "width": 126,
+                  "height": 100
+                }
+              }
+            }
+          },
           "ongoing": false,
-          "shortname": "BOREAS",
-          "longname": "Boreal Ecosystem-Atmosphere Study",
-          "startdate": "1994-02-02",
-          "enddate": "1996-10-21",
-          "region": "Boreal forests of central Canada",
+          "shortname": "IFloodS",
+          "longname": "Iowa Flood Studies",
+          "startdate": "2013-04-10",
+          "enddate": "2013-06-15",
+          "region": "Iowa",
           "deployments": [
             {
-              "id": "6e14b933-fd4e-449e-add9-cea59bc95b5d",
-              "startdate": "1994-02-02",
-              "enddate": "1994-09-19"
-            },
-            {
-              "id": "a68d1dd3-7ea3-4524-8af9-6b6512e1ea4b",
-              "startdate": "1996-02-27",
-              "enddate": "1996-10-21"
+              "id": "04dc7fcc-0546-4105-b6e4-b37bc26a480e",
+              "startdate": "2013-04-10",
+              "enddate": "2013-06-15"
             }
           ],
-          "countDataProducts": 303
+          "countDataProducts": 33
         },
         {
-          "id": "4030be70-b228-48a2-8a0b-557d53f6c55a",
-          "logo": null,
-          "ongoing": false,
-          "shortname": "IPHEx",
-          "longname": "Integrated Precipitation and Hydrology Experiment",
-          "startdate": "2014-05-01",
-          "enddate": "2014-06-15",
-          "region": "Southern Appalachians, including portions of North Carolina, South Carolina, Tennessee, Georgia",
-          "deployments": [
-            {
-              "id": "ffa85734-ecdc-422d-ba20-1f0fd12d9d5e",
-              "startdate": "2014-05-01",
-              "enddate": "2014-06-15"
-            }
-          ],
-          "countDataProducts": 46
-        },
-        {
-          "id": "66cbd82f-dbd3-4903-94bf-eedce2750b1c",
           "logo": null,
           "ongoing": false,
           "shortname": "CARAFE",
@@ -187,12 +332,12 @@
           "region": "Eastern United States Coast, Mid-Atlantic Region",
           "deployments": [
             {
-              "id": "5af34ed9-3c91-4677-82c1-b0f5fd50f090",
+              "id": "9dfd0d60-6c31-4415-802d-48f11e2b0e53",
               "startdate": "2016-09-07",
               "enddate": "2016-09-26"
             },
             {
-              "id": "001943d8-76cb-45f4-92b8-4fe46af3eaa6",
+              "id": "071c25bc-a646-4051-9906-abcbae7dfdc7",
               "startdate": "2017-05-03",
               "enddate": "2017-05-26"
             }
@@ -200,13 +345,46 @@
           "countDataProducts": 0
         },
         {
-          "id": "49678da3-ac4c-44e4-85fe-eb5dec96d788",
+          "logo": null,
+          "ongoing": false,
+          "shortname": "CLASIC07",
+          "longname": "Cloud and Land Surface Interaction Campaign 2007",
+          "startdate": "2007-06-11",
+          "enddate": "2007-07-06",
+          "region": "Southern Great Plains, Oklahoma, Kansas",
+          "deployments": [
+            {
+              "id": "74a19862-95c8-419c-8408-c3ff28f3a435",
+              "startdate": "2007-06-11",
+              "enddate": "2007-07-06"
+            }
+          ],
+          "countDataProducts": 7
+        },
+        {
           "logo": {
-            "logoAlt": "CARVE logo",
-            "logoImg": {
+            "description": "CARVE",
+            "gatsbyImg": {
               "childImageSharp": {
-                "fixed": {
-                  "src": "/static/b3225ddde77639b3e07a3cf470a9aa33/6c838/CARVE.png"
+                "gatsbyImageData": {
+                  "layout": "fixed",
+                  "backgroundColor": "#080808",
+                  "images": {
+                    "fallback": {
+                      "src": "/static/b3225ddde77639b3e07a3cf470a9aa33/052c0/6b7ec127-6abb-4e4e-997b-1b87897b9242.png",
+                      "srcSet": "/static/b3225ddde77639b3e07a3cf470a9aa33/052c0/6b7ec127-6abb-4e4e-997b-1b87897b9242.png 119w,\n/static/b3225ddde77639b3e07a3cf470a9aa33/a8f4f/6b7ec127-6abb-4e4e-997b-1b87897b9242.png 238w",
+                      "sizes": "119px"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/b3225ddde77639b3e07a3cf470a9aa33/d3087/6b7ec127-6abb-4e4e-997b-1b87897b9242.webp 119w,\n/static/b3225ddde77639b3e07a3cf470a9aa33/171cd/6b7ec127-6abb-4e4e-997b-1b87897b9242.webp 238w",
+                        "type": "image/webp",
+                        "sizes": "119px"
+                      }
+                    ]
+                  },
+                  "width": 119,
+                  "height": 100
                 }
               }
             }
@@ -219,22 +397,22 @@
           "region": "Alaska",
           "deployments": [
             {
-              "id": "6d2a27a5-9882-48bc-8d4c-63c52fddb231",
+              "id": "c928d486-f43f-4dd9-bfd2-f982c8ed4685",
               "startdate": "2012-05-23",
               "enddate": "2012-10-30"
             },
             {
-              "id": "5bb81d12-e925-4706-bbb7-9fffc41328ec",
+              "id": "9ca7ed37-fbcb-4379-a4fc-e4e83e7ce860",
               "startdate": "2013-02-05",
               "enddate": "2013-11-25"
             },
             {
-              "id": "9151e450-adba-43d0-b5c4-48c24564f88e",
+              "id": "a5d0377a-aec4-4ecd-9c2c-24c3df76e27a",
               "startdate": "2014-02-13",
               "enddate": "2014-11-09"
             },
             {
-              "id": "d4b0baf6-cf19-4d75-b7e7-b727a246ec78",
+              "id": "e23cd92a-8c82-4d08-bd94-c163d9124338",
               "startdate": "2015-02-10",
               "enddate": "2015-11-12"
             }
@@ -242,49 +420,72 @@
           "countDataProducts": 28
         },
         {
-          "id": "0b585c49-5298-4deb-8f4b-10cc7f693990",
-          "logo": null,
-          "ongoing": false,
-          "shortname": "CLASIC07",
-          "longname": "Cloud and Land Surface Interaction Campaign 2007",
-          "startdate": "2007-06-11",
-          "enddate": "2007-07-06",
-          "region": "Southern Great Plains, Oklahoma, Kansas",
-          "deployments": [
-            {
-              "id": "c1b22415-b5ee-4cc5-b51b-868d95cb4417",
-              "startdate": "2007-06-11",
-              "enddate": "2007-07-06"
-            }
-          ],
-          "countDataProducts": 7
-        },
-        {
-          "id": "bfe6243f-99bc-4085-96d0-a2c7398b7255",
-          "logo": null,
-          "ongoing": false,
-          "shortname": "LPVEx",
-          "longname": "Light Precipitation Evaluation Experiment",
-          "startdate": "2010-09-15",
-          "enddate": "2010-12-31",
-          "region": "Gulf of Finland",
-          "deployments": [
-            {
-              "id": "f5339de2-d3f7-421e-8231-146b6fbe231d",
-              "startdate": "2010-09-15",
-              "enddate": "2010-12-31"
-            }
-          ],
-          "countDataProducts": 22
-        },
-        {
-          "id": "80608ec7-ced3-46ca-8a18-90220b959650",
           "logo": {
-            "logoAlt": "DC3 logo",
-            "logoImg": {
+            "description": "IPHEx",
+            "gatsbyImg": {
               "childImageSharp": {
-                "fixed": {
-                  "src": "/static/c566f0db523525874c608cdace0d5c91/6c838/dc3.png"
+                "gatsbyImageData": {
+                  "layout": "fixed",
+                  "backgroundColor": "#f8f8f8",
+                  "images": {
+                    "fallback": {
+                      "src": "/static/55494f92a7996ad81d767d05d89065bf/e07e1/ff5cb523-8464-4a73-9a41-ec98d32e68f4.jpg",
+                      "srcSet": "/static/55494f92a7996ad81d767d05d89065bf/e07e1/ff5cb523-8464-4a73-9a41-ec98d32e68f4.jpg 100w,\n/static/55494f92a7996ad81d767d05d89065bf/dd515/ff5cb523-8464-4a73-9a41-ec98d32e68f4.jpg 200w",
+                      "sizes": "100px"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/55494f92a7996ad81d767d05d89065bf/d8057/ff5cb523-8464-4a73-9a41-ec98d32e68f4.webp 100w,\n/static/55494f92a7996ad81d767d05d89065bf/2e34e/ff5cb523-8464-4a73-9a41-ec98d32e68f4.webp 200w",
+                        "type": "image/webp",
+                        "sizes": "100px"
+                      }
+                    ]
+                  },
+                  "width": 100,
+                  "height": 100
+                }
+              }
+            }
+          },
+          "ongoing": false,
+          "shortname": "IPHEx",
+          "longname": "Integrated Precipitation and Hydrology Experiment",
+          "startdate": "2014-05-01",
+          "enddate": "2014-06-15",
+          "region": "Southern Appalachians, including portions of North Carolina, South Carolina, Tennessee, Georgia",
+          "deployments": [
+            {
+              "id": "c026a2a9-23bb-4749-99a0-fa47df485691",
+              "startdate": "2014-05-01",
+              "enddate": "2014-06-15"
+            }
+          ],
+          "countDataProducts": 46
+        },
+        {
+          "logo": {
+            "description": "DC3",
+            "gatsbyImg": {
+              "childImageSharp": {
+                "gatsbyImageData": {
+                  "layout": "fixed",
+                  "backgroundColor": "#080808",
+                  "images": {
+                    "fallback": {
+                      "src": "/static/c566f0db523525874c608cdace0d5c91/15e42/782f0113-94dd-4ee2-8057-d0ea174e7c45.png",
+                      "srcSet": "/static/c566f0db523525874c608cdace0d5c91/15e42/782f0113-94dd-4ee2-8057-d0ea174e7c45.png 100w,\n/static/c566f0db523525874c608cdace0d5c91/5aead/782f0113-94dd-4ee2-8057-d0ea174e7c45.png 200w",
+                      "sizes": "100px"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/c566f0db523525874c608cdace0d5c91/d8057/782f0113-94dd-4ee2-8057-d0ea174e7c45.webp 100w,\n/static/c566f0db523525874c608cdace0d5c91/2e34e/782f0113-94dd-4ee2-8057-d0ea174e7c45.webp 200w",
+                        "type": "image/webp",
+                        "sizes": "100px"
+                      }
+                    ]
+                  },
+                  "width": 100,
+                  "height": 100
                 }
               }
             }
@@ -297,7 +498,7 @@
           "region": "Northeastern Colorado, West Texas to Central Oklahoma, Northern Alabama",
           "deployments": [
             {
-              "id": "c91f5f11-c205-4950-9fda-4573956a8d44",
+              "id": "f7aeaa4e-0666-4dc6-8847-c58afc1a6d7c",
               "startdate": "2012-05-18",
               "enddate": "2012-06-30"
             }
@@ -305,13 +506,135 @@
           "countDataProducts": 0
         },
         {
-          "id": "1956796d-97ae-4b60-8823-40748bc18e79",
           "logo": {
-            "logoAlt": "GCPEx logo",
-            "logoImg": {
+            "description": "DISCOVER-AQ",
+            "gatsbyImg": {
               "childImageSharp": {
-                "fixed": {
-                  "src": "/static/aee23860a3428c35081ea98fb6630d60/6c838/GCPEx.png"
+                "gatsbyImageData": {
+                  "layout": "fixed",
+                  "backgroundColor": "#e8e8d8",
+                  "images": {
+                    "fallback": {
+                      "src": "/static/e6b2689e0cce5f7a0ca0a99a9611bfec/d4f7e/24f93493-08f3-4283-93c7-362a622964bd.jpg",
+                      "srcSet": "/static/e6b2689e0cce5f7a0ca0a99a9611bfec/d4f7e/24f93493-08f3-4283-93c7-362a622964bd.jpg 520w,\n/static/e6b2689e0cce5f7a0ca0a99a9611bfec/7f4a7/24f93493-08f3-4283-93c7-362a622964bd.jpg 1040w",
+                      "sizes": "520px"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/e6b2689e0cce5f7a0ca0a99a9611bfec/898f2/24f93493-08f3-4283-93c7-362a622964bd.webp 520w,\n/static/e6b2689e0cce5f7a0ca0a99a9611bfec/e8a6b/24f93493-08f3-4283-93c7-362a622964bd.webp 1040w",
+                        "type": "image/webp",
+                        "sizes": "520px"
+                      }
+                    ]
+                  },
+                  "width": 520,
+                  "height": 100
+                }
+              }
+            }
+          },
+          "ongoing": false,
+          "shortname": "DISCOVER-AQ",
+          "longname": "Deriving Information on Surface Conditions from COlumn and VERtically Resolved Observations Relevant to Air Quality",
+          "startdate": "2011-06-27",
+          "enddate": "2014-08-16",
+          "region": "Baltimore MD, San Joaquin Valley CA, Houston TX, Denver CO",
+          "deployments": [
+            {
+              "id": "2f0ba4f2-1dcf-4133-b981-5a2c93c21c37",
+              "startdate": "2011-06-27",
+              "enddate": "2011-07-31"
+            },
+            {
+              "id": "dc119243-4b16-40b4-9a32-ad9aad516596",
+              "startdate": "2013-01-16",
+              "enddate": "2013-02-11"
+            },
+            {
+              "id": "3cd76dcf-068f-49ea-86d1-1cba8e6ce47e",
+              "startdate": "2013-09-01",
+              "enddate": "2013-10-01"
+            },
+            {
+              "id": "116dc492-7b1c-4a19-bbf8-36a1684afcd1",
+              "startdate": "2014-07-16",
+              "enddate": "2014-08-16"
+            }
+          ],
+          "countDataProducts": 12
+        },
+        {
+          "logo": {
+            "description": "FIFE",
+            "gatsbyImg": {
+              "childImageSharp": {
+                "gatsbyImageData": {
+                  "layout": "fixed",
+                  "backgroundColor": "#080808",
+                  "images": {
+                    "fallback": {
+                      "src": "/static/09f45811e54534f6f99642cd0b6bac76/a83ae/f8da96b2-fc6e-4bb5-a144-3fb08d1c7ca6.png",
+                      "srcSet": "/static/09f45811e54534f6f99642cd0b6bac76/a83ae/f8da96b2-fc6e-4bb5-a144-3fb08d1c7ca6.png 144w,\n/static/09f45811e54534f6f99642cd0b6bac76/38d76/f8da96b2-fc6e-4bb5-a144-3fb08d1c7ca6.png 288w",
+                      "sizes": "144px"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/09f45811e54534f6f99642cd0b6bac76/94070/f8da96b2-fc6e-4bb5-a144-3fb08d1c7ca6.webp 144w,\n/static/09f45811e54534f6f99642cd0b6bac76/00e11/f8da96b2-fc6e-4bb5-a144-3fb08d1c7ca6.webp 288w",
+                        "type": "image/webp",
+                        "sizes": "144px"
+                      }
+                    ]
+                  },
+                  "width": 144,
+                  "height": 100
+                }
+              }
+            }
+          },
+          "ongoing": false,
+          "shortname": "FIFE",
+          "longname": "First International Satellite Land Surface Climatology Project (ISLSCP) Field Experiment",
+          "startdate": "1987-05-26",
+          "enddate": "1989-08-12",
+          "region": "Central Kansas",
+          "deployments": [
+            {
+              "id": "d1f60a32-cbd0-4984-b6a7-a323b81e3b4f",
+              "startdate": "1987-05-26",
+              "enddate": "1987-10-16"
+            },
+            {
+              "id": "1373b210-281f-43aa-9f2f-8a5003a37436",
+              "startdate": "1989-07-24",
+              "enddate": "1989-08-12"
+            }
+          ],
+          "countDataProducts": 115
+        },
+        {
+          "logo": {
+            "description": "GCPEx",
+            "gatsbyImg": {
+              "childImageSharp": {
+                "gatsbyImageData": {
+                  "layout": "fixed",
+                  "backgroundColor": "#f8f8f8",
+                  "images": {
+                    "fallback": {
+                      "src": "/static/aee23860a3428c35081ea98fb6630d60/c4e22/420d652b-1e5e-439e-aec2-a99dbee3c219.png",
+                      "srcSet": "/static/aee23860a3428c35081ea98fb6630d60/c4e22/420d652b-1e5e-439e-aec2-a99dbee3c219.png 95w,\n/static/aee23860a3428c35081ea98fb6630d60/e762e/420d652b-1e5e-439e-aec2-a99dbee3c219.png 190w",
+                      "sizes": "95px"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/aee23860a3428c35081ea98fb6630d60/985af/420d652b-1e5e-439e-aec2-a99dbee3c219.webp 95w,\n/static/aee23860a3428c35081ea98fb6630d60/a5f99/420d652b-1e5e-439e-aec2-a99dbee3c219.webp 190w",
+                        "type": "image/webp",
+                        "sizes": "95px"
+                      }
+                    ]
+                  },
+                  "width": 95,
+                  "height": 100
                 }
               }
             }
@@ -324,7 +647,7 @@
           "region": "Ontario, Canada and northern portions of the United States (e.g., New York state, the New England area, etc.)",
           "deployments": [
             {
-              "id": "4311a9ec-4aea-47cd-9057-c844623dc605",
+              "id": "7c62ad3f-e882-4767-967c-44f18ea29fb0",
               "startdate": "2012-01-15",
               "enddate": "2012-03-04"
             }
@@ -332,58 +655,29 @@
           "countDataProducts": 44
         },
         {
-          "id": "773ff9f0-d510-4912-9fa6-9e28caaba713",
           "logo": {
-            "logoAlt": "GOES-R PLT logo",
-            "logoImg": {
+            "description": "HS3",
+            "gatsbyImg": {
               "childImageSharp": {
-                "fixed": {
-                  "src": "/static/57d85e673f190d05d7668e49c8361d50/6c838/GOES-R_PLT.png"
-                }
-              }
-            }
-          },
-          "ongoing": false,
-          "shortname": "GOES-R PLT",
-          "longname": "GOES-R Post Launch Test",
-          "startdate": "2017-03-21",
-          "enddate": "2017-05-17",
-          "region": "Continental United States",
-          "deployments": [
-            {
-              "id": "b4a97fc3-debb-4bab-bc9c-9e4446d1eae0",
-              "startdate": "2017-03-21",
-              "enddate": "2017-05-17"
-            }
-          ],
-          "countDataProducts": 17
-        },
-        {
-          "id": "9e747e16-a5d2-4e67-9fb7-1e06a868bce9",
-          "logo": null,
-          "ongoing": false,
-          "shortname": "MC3E",
-          "longname": "Mid-latitude Continental Convective Clouds Experiment",
-          "startdate": "2011-04-22",
-          "enddate": "2011-06-06",
-          "region": "Central Oklahoma, Southern Plains",
-          "deployments": [
-            {
-              "id": "9192a7e4-68ea-4c89-a5ee-fcfb2d434b46",
-              "startdate": "2011-04-22",
-              "enddate": "2011-06-06"
-            }
-          ],
-          "countDataProducts": 34
-        },
-        {
-          "id": "7afcc774-9239-4184-bbbc-df44c3942276",
-          "logo": {
-            "logoAlt": "HS3 logo",
-            "logoImg": {
-              "childImageSharp": {
-                "fixed": {
-                  "src": "/static/bbd26b5234ecb45a352901f95787b0b3/6c838/HS3.png"
+                "gatsbyImageData": {
+                  "layout": "fixed",
+                  "backgroundColor": "#f8f8f8",
+                  "images": {
+                    "fallback": {
+                      "src": "/static/bbd26b5234ecb45a352901f95787b0b3/4daea/574dfea0-b3d1-4a60-b8e5-0e28fdecdaac.png",
+                      "srcSet": "/static/bbd26b5234ecb45a352901f95787b0b3/4daea/574dfea0-b3d1-4a60-b8e5-0e28fdecdaac.png 98w,\n/static/bbd26b5234ecb45a352901f95787b0b3/e81fd/574dfea0-b3d1-4a60-b8e5-0e28fdecdaac.png 196w",
+                      "sizes": "98px"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/bbd26b5234ecb45a352901f95787b0b3/f860e/574dfea0-b3d1-4a60-b8e5-0e28fdecdaac.webp 98w,\n/static/bbd26b5234ecb45a352901f95787b0b3/e7b4c/574dfea0-b3d1-4a60-b8e5-0e28fdecdaac.webp 196w",
+                        "type": "image/webp",
+                        "sizes": "98px"
+                      }
+                    ]
+                  },
+                  "width": 98,
+                  "height": 101
                 }
               }
             }
@@ -396,17 +690,17 @@
           "region": "Subtropical Atlantic Ocean and Gulf of Mexico",
           "deployments": [
             {
-              "id": "fad7e033-92b6-4db7-a750-2570307d2550",
+              "id": "5ff42de4-6125-43ae-a0a3-a402996c8b1a",
               "startdate": "2012-08-28",
               "enddate": "2012-11-06"
             },
             {
-              "id": "a7978a58-b02c-4270-8571-8bf25d2d9dea",
+              "id": "942de45d-7e94-4b34-bb43-c71f64ec42f4",
               "startdate": "2013-08-20",
               "enddate": "2013-09-26"
             },
             {
-              "id": "60c77186-cef0-4406-91b6-8b860c577159",
+              "id": "24138a79-6c3d-4dbb-88a1-f29ad6b0f911",
               "startdate": "2014-08-26",
               "enddate": "2014-10-20"
             }
@@ -414,59 +708,137 @@
           "countDataProducts": 15
         },
         {
-          "id": "abe4e706-5dd7-45cd-ba54-4700f313e3b4",
-          "logo": null,
-          "ongoing": false,
-          "shortname": "IFloodS",
-          "longname": "Iowa Flood Studies",
-          "startdate": "2013-04-10",
-          "enddate": "2013-06-15",
-          "region": "Iowa",
-          "deployments": [
-            {
-              "id": "40955c2d-2b7f-4689-96a3-1f55661e8068",
-              "startdate": "2013-04-10",
-              "enddate": "2013-06-15"
-            }
-          ],
-          "countDataProducts": 33
-        },
-        {
-          "id": "36f07139-c2b1-4f6f-8ec1-0a5f87de3401",
-          "logo": null,
-          "ongoing": false,
-          "shortname": "OTTER",
-          "longname": "Oregon Transect Ecosystem Research Project",
-          "startdate": "1989-05-27",
-          "enddate": "1991-08-24",
-          "region": "western coniferous forest in Oregon",
-          "deployments": [
-            {
-              "id": "95d95822-0a30-4aec-8bd6-e33d6fbd042f",
-              "startdate": "1989-05-27",
-              "enddate": "1989-08-23"
-            },
-            {
-              "id": "edba2133-03fe-48fa-9257-77a462b3eee7",
-              "startdate": "1990-02-22",
-              "enddate": "1991-01-07"
-            },
-            {
-              "id": "0c60a430-4b08-48ff-9b13-d646f6e230e7",
-              "startdate": "1991-05-15",
-              "enddate": "1991-08-24"
-            }
-          ],
-          "countDataProducts": 14
-        },
-        {
-          "id": "b4d3a465-6b78-4240-9003-c2d348066326",
           "logo": {
-            "logoAlt": "OLYMPEX logo",
-            "logoImg": {
+            "description": "ICE-POP",
+            "gatsbyImg": {
               "childImageSharp": {
-                "fixed": {
-                  "src": "/static/cf547712f5b3512ff39fb1cf64f5e2e4/6c838/olympex.png"
+                "gatsbyImageData": {
+                  "layout": "fixed",
+                  "backgroundColor": "#88d8e8",
+                  "images": {
+                    "fallback": {
+                      "src": "/static/e0fcfda1882a50475bd77893d03e4116/15e42/117b4d51-9954-4cd1-bf41-a0957cb5e3eb.png",
+                      "srcSet": "/static/e0fcfda1882a50475bd77893d03e4116/15e42/117b4d51-9954-4cd1-bf41-a0957cb5e3eb.png 100w,\n/static/e0fcfda1882a50475bd77893d03e4116/5aead/117b4d51-9954-4cd1-bf41-a0957cb5e3eb.png 200w",
+                      "sizes": "100px"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/e0fcfda1882a50475bd77893d03e4116/d8057/117b4d51-9954-4cd1-bf41-a0957cb5e3eb.webp 100w,\n/static/e0fcfda1882a50475bd77893d03e4116/2e34e/117b4d51-9954-4cd1-bf41-a0957cb5e3eb.webp 200w",
+                        "type": "image/webp",
+                        "sizes": "100px"
+                      }
+                    ]
+                  },
+                  "width": 100,
+                  "height": 100
+                }
+              }
+            }
+          },
+          "ongoing": false,
+          "shortname": "ICE-POP",
+          "longname": "International Collaborative Experiment for PyeongChang Olympic and Paralympics",
+          "startdate": "2017-11-01",
+          "enddate": "2018-03-17",
+          "region": "South Korea",
+          "deployments": [
+            {
+              "id": "952b7e19-c469-4e2c-8725-87d6a34e9f9b",
+              "startdate": "2017-11-01",
+              "enddate": "2018-03-17"
+            }
+          ],
+          "countDataProducts": 5
+        },
+        {
+          "logo": null,
+          "ongoing": false,
+          "shortname": "LISTOS",
+          "longname": "Long Island Sound Tropospheric Ozone Study",
+          "startdate": "2017-05-17",
+          "enddate": "2019-07-31",
+          "region": "New York City metropolitan and Long Island Sound area, Northeastern U.S.",
+          "deployments": [
+            {
+              "id": "25ce51b8-264d-46ba-8572-f434371f1aa0",
+              "startdate": "2017-05-17",
+              "enddate": "2017-05-18"
+            },
+            {
+              "id": "5c01b172-f5b8-4cdb-87b5-c2b9a6573b4d",
+              "startdate": "2018-01-01",
+              "enddate": "2019-07-29"
+            }
+          ],
+          "countDataProducts": 16
+        },
+        {
+          "logo": {
+            "description": "MC3E",
+            "gatsbyImg": {
+              "childImageSharp": {
+                "gatsbyImageData": {
+                  "layout": "fixed",
+                  "backgroundColor": "#f8f8f8",
+                  "images": {
+                    "fallback": {
+                      "src": "/static/3679cdf678680ea485eadffe7af3fe0b/a2670/f6dc085a-6d36-4eda-84d9-0ff5e80d4668.jpg",
+                      "srcSet": "/static/3679cdf678680ea485eadffe7af3fe0b/a2670/f6dc085a-6d36-4eda-84d9-0ff5e80d4668.jpg 126w",
+                      "sizes": "126px"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/3679cdf678680ea485eadffe7af3fe0b/712c5/f6dc085a-6d36-4eda-84d9-0ff5e80d4668.webp 126w",
+                        "type": "image/webp",
+                        "sizes": "126px"
+                      }
+                    ]
+                  },
+                  "width": 126,
+                  "height": 100
+                }
+              }
+            }
+          },
+          "ongoing": false,
+          "shortname": "MC3E",
+          "longname": "Mid-latitude Continental Convective Clouds Experiment",
+          "startdate": "2011-04-22",
+          "enddate": "2011-06-06",
+          "region": "Central Oklahoma, Southern Plains",
+          "deployments": [
+            {
+              "id": "adfb83b2-7604-4629-858f-ca9987217313",
+              "startdate": "2011-04-22",
+              "enddate": "2011-06-06"
+            }
+          ],
+          "countDataProducts": 34
+        },
+        {
+          "logo": {
+            "description": "OLYMPEX",
+            "gatsbyImg": {
+              "childImageSharp": {
+                "gatsbyImageData": {
+                  "layout": "fixed",
+                  "backgroundColor": "#080808",
+                  "images": {
+                    "fallback": {
+                      "src": "/static/cf547712f5b3512ff39fb1cf64f5e2e4/052c0/ec7560c6-6d08-4108-a6ef-ee0ffeddfcdd.png",
+                      "srcSet": "/static/cf547712f5b3512ff39fb1cf64f5e2e4/052c0/ec7560c6-6d08-4108-a6ef-ee0ffeddfcdd.png 119w,\n/static/cf547712f5b3512ff39fb1cf64f5e2e4/a8f4f/ec7560c6-6d08-4108-a6ef-ee0ffeddfcdd.png 238w",
+                      "sizes": "119px"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/cf547712f5b3512ff39fb1cf64f5e2e4/d3087/ec7560c6-6d08-4108-a6ef-ee0ffeddfcdd.webp 119w,\n/static/cf547712f5b3512ff39fb1cf64f5e2e4/171cd/ec7560c6-6d08-4108-a6ef-ee0ffeddfcdd.webp 238w",
+                        "type": "image/webp",
+                        "sizes": "119px"
+                      }
+                    ]
+                  },
+                  "width": 119,
+                  "height": 100
                 }
               }
             }
@@ -479,7 +851,7 @@
           "region": "Olympic Peninsula in U.S. Washington State",
           "deployments": [
             {
-              "id": "c1075754-fa99-41c4-8c04-3f089deefa5a",
+              "id": "707d6a39-ff3b-4661-a99c-6ef6b8dfc636",
               "startdate": "2015-11-01",
               "enddate": "2016-05-01"
             }
@@ -487,196 +859,56 @@
           "countDataProducts": 36
         },
         {
-          "id": "6c0de220-ab03-4965-9b03-af49ba0c9f04",
-          "logo": null,
-          "ongoing": true,
-          "shortname": "OMG",
-          "longname": "Oceans Melting Greenland",
-          "startdate": "2015-07-25",
-          "enddate": null,
-          "region": "Greenland",
-          "deployments": [
-            {
-              "id": "9d88057d-a3c8-48d3-9c4b-2b4970b37ce3",
-              "startdate": "2015-07-25",
-              "enddate": "2015-09-21"
-            },
-            {
-              "id": "469897fa-ed86-4aca-b8c0-661b2cd30b64",
-              "startdate": "2016-03-20",
-              "enddate": "2016-03-31"
-            },
-            {
-              "id": "45577838-b1b3-44e6-941b-71d035732de4",
-              "startdate": "2016-09-13",
-              "enddate": "2016-10-10"
-            },
-            {
-              "id": "be73e5c9-ae4d-4333-b5e9-5749cdfc3ffc",
-              "startdate": "2017-03-11",
-              "enddate": "2017-03-22"
-            },
-            {
-              "id": "1d1f2301-d050-4216-ae02-7a353fec69e7",
-              "startdate": "2017-10-14",
-              "enddate": "2017-10-23"
-            },
-            {
-              "id": "25d2acc9-25b8-40a6-9c94-05953cfcbd6f",
-              "startdate": "2018-03-06",
-              "enddate": "2018-03-20"
-            },
-            {
-              "id": "78d111fc-8b0d-4dee-9f44-beea918294c8",
-              "startdate": "2018-08-22",
-              "enddate": "2018-09-11"
-            },
-            {
-              "id": "5cfc97dd-0d9e-4f7a-b2a6-0575d611a9dd",
-              "startdate": "2019-03-05",
-              "enddate": "2019-04-16"
-            },
-            {
-              "id": "2997121d-6863-42f1-865b-1526a18d271f",
-              "startdate": "2019-08-12",
-              "enddate": "2019-09-05"
-            },
-            {
-              "id": "7d932129-f241-4c02-a3fa-ad33a4b6bc2d",
-              "startdate": "2020-03-27",
-              "enddate": "2020-04-15"
-            }
-          ],
-          "countDataProducts": 5
-        },
-        {
-          "id": "295a19d0-1a72-4da0-bbcf-1ddccec6099b",
           "logo": null,
           "ongoing": false,
-          "shortname": "SEAC4RS",
-          "longname": "Studies of Emissions and Atmospheric Composition, Clouds and Climate Coupling by Regional Surveys",
-          "startdate": "2013-08-01",
-          "enddate": "2013-09-23",
-          "region": "North America including portions of Canada, Mexico and the Gulf of Mexico",
+          "shortname": "OTTER",
+          "longname": "Oregon Transect Ecosystem Research Project",
+          "startdate": "1989-05-27",
+          "enddate": "1991-08-24",
+          "region": "western coniferous forest in Oregon",
           "deployments": [
             {
-              "id": "25974bd5-8157-4951-a89f-cdb86463434d",
-              "startdate": "2013-08-01",
-              "enddate": "2013-09-23"
-            }
-          ],
-          "countDataProducts": 2
-        },
-        {
-          "id": "da840a28-51b2-4b7a-92ac-929da4f9cee9",
-          "logo": null,
-          "ongoing": true,
-          "shortname": "ABoVE",
-          "longname": "Arctic-Boreal Vulnerability Experiment",
-          "startdate": "2017-04-27",
-          "enddate": null,
-          "region": "Alaska, western Canada",
-          "deployments": [
-            {
-              "id": "7cdfe943-621a-4924-aaef-23f79eca3a05",
-              "startdate": "2017-04-27",
-              "enddate": "2017-11-04"
+              "id": "f546d042-8b91-42b2-b55b-b19e329f3ee8",
+              "startdate": "1989-05-27",
+              "enddate": "1989-08-23"
             },
             {
-              "id": "80aed5c2-6ddb-4ee2-9823-d822a7db6df1",
-              "startdate": "2018-07-21",
-              "enddate": "2018-09-01"
+              "id": "400e8fd8-e8c9-469f-9b78-477b2e318e88",
+              "startdate": "1990-02-22",
+              "enddate": "1991-01-07"
             },
             {
-              "id": "b68f92cb-e4a7-416b-8308-05f8fc4cc03b",
-              "startdate": "2019-06-30",
-              "enddate": "2019-09-17"
-            }
-          ],
-          "countDataProducts": 72
-        },
-        {
-          "id": "274b9162-2b68-497f-a908-43f133c45744",
-          "logo": null,
-          "ongoing": false,
-          "shortname": "TARFOX",
-          "longname": "Tropospheric Aerosol Radiative Forcing Observational Experiment",
-          "startdate": "1996-07-07",
-          "enddate": "1996-07-31",
-          "region": "Western Atlantic Ocean, US Eastern Seaboard",
-          "deployments": [
-            {
-              "id": "64204c84-4461-4775-a4fe-9f62e9c7c340",
-              "startdate": "1996-07-07",
-              "enddate": "1996-07-31"
-            }
-          ],
-          "countDataProducts": 5
-        },
-        {
-          "id": "0ad5176c-0143-4846-90f2-2f20e3968e07",
-          "logo": null,
-          "ongoing": false,
-          "shortname": "TCSP",
-          "longname": "Tropical Cloud Systems and Processes",
-          "startdate": "2005-07-01",
-          "enddate": "2005-07-27",
-          "region": "Costa Rica, Caribbean, Gulf of Mexico, eastern North Pacific",
-          "deployments": [
-            {
-              "id": "582bd853-a4eb-4f8b-bf1d-b720ea541f54",
-              "startdate": "2005-07-01",
-              "enddate": "2005-07-27"
+              "id": "0251dd40-2808-4d16-8ed9-a6e30ade79d0",
+              "startdate": "1991-05-15",
+              "enddate": "1991-08-24"
             }
           ],
           "countDataProducts": 14
         },
         {
-          "id": "a2b7ce72-02ea-4b00-a784-ec72b7a9041a",
-          "logo": null,
-          "ongoing": false,
-          "shortname": "ACT-America",
-          "longname": "Atmospheric Carbon and Transport – America",
-          "startdate": "2016-05-27",
-          "enddate": "2019-07-27",
-          "region": "Midwest, Mid-Atlantic, Southern US",
-          "deployments": [
-            {
-              "id": "38fe79fc-390a-46c9-88d2-a2c6afa099bf",
-              "startdate": "2016-07-18",
-              "enddate": "2016-08-29"
-            },
-            {
-              "id": "aaca1c77-dce2-4a06-a8cc-eca173e677a2",
-              "startdate": "2017-01-31",
-              "enddate": "2017-03-10"
-            },
-            {
-              "id": "8628e1f5-f7ee-4baa-b7e8-898ac8f5d4cc",
-              "startdate": "2017-10-03",
-              "enddate": "2017-11-13"
-            },
-            {
-              "id": "842194cc-8439-4142-8197-f90be5a4a8e2",
-              "startdate": "2018-04-12",
-              "enddate": "2018-05-20"
-            },
-            {
-              "id": "14f252e6-869d-441f-b897-e8152497c8c8",
-              "startdate": "2019-06-17",
-              "enddate": "2019-07-27"
-            }
-          ],
-          "countDataProducts": 8
-        },
-        {
-          "id": "882f085a-50a7-4d7f-a3d5-cd96596f04e2",
           "logo": {
-            "logoAlt": "AirMOSS logo",
-            "logoImg": {
+            "description": "AirMOSS",
+            "gatsbyImg": {
               "childImageSharp": {
-                "fixed": {
-                  "src": "/static/0d8b9bce5b2fabe7daa6ad4e8e418ba8/6c838/airmoss.png"
+                "gatsbyImageData": {
+                  "layout": "fixed",
+                  "backgroundColor": "#080808",
+                  "images": {
+                    "fallback": {
+                      "src": "/static/0d8b9bce5b2fabe7daa6ad4e8e418ba8/15e42/44647cc4-0121-4149-935e-56b615cd64ae.png",
+                      "srcSet": "/static/0d8b9bce5b2fabe7daa6ad4e8e418ba8/15e42/44647cc4-0121-4149-935e-56b615cd64ae.png 100w,\n/static/0d8b9bce5b2fabe7daa6ad4e8e418ba8/5aead/44647cc4-0121-4149-935e-56b615cd64ae.png 200w",
+                      "sizes": "100px"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/0d8b9bce5b2fabe7daa6ad4e8e418ba8/d8057/44647cc4-0121-4149-935e-56b615cd64ae.webp 100w,\n/static/0d8b9bce5b2fabe7daa6ad4e8e418ba8/2e34e/44647cc4-0121-4149-935e-56b615cd64ae.webp 200w",
+                        "type": "image/webp",
+                        "sizes": "100px"
+                      }
+                    ]
+                  },
+                  "width": 100,
+                  "height": 100
                 }
               }
             }
@@ -689,172 +921,172 @@
           "region": "North America",
           "deployments": [
             {
-              "id": "9cdd13f4-d160-4e1f-bb27-484d12b853c8",
+              "id": "88007755-aeea-445d-91c9-e78db4c5d628",
               "startdate": "2012-09-18",
               "enddate": "2012-09-20"
             },
             {
-              "id": "a473512c-0dd4-4455-a823-77f2fa89e000",
+              "id": "20150f9b-2d3a-456d-8740-723a14b6847e",
               "startdate": "2012-10-02",
               "enddate": "2012-10-11"
             },
             {
-              "id": "26483512-7dce-4083-a5e1-72e5086fccf6",
+              "id": "9b8f2f05-9c28-401b-bee9-0afc71e6cd32",
               "startdate": "2012-10-12",
               "enddate": "2012-10-22"
             },
             {
-              "id": "76d728a7-29f4-4098-8210-89aa5da6a285",
+              "id": "4ba4b566-1d05-4cef-b8ad-572e4032f247",
               "startdate": "2012-10-23",
               "enddate": "2012-10-30"
             },
             {
-              "id": "477c0192-5b2e-4479-81ad-41db986dc3c8",
+              "id": "34f969cd-d3f9-4c1c-8ec5-bb0f86475e5d",
               "startdate": "2013-02-19",
               "enddate": "2013-02-25"
             },
             {
-              "id": "f21a3826-489e-4920-81e7-16c7313f7bb6",
+              "id": "71299d71-0d88-4774-8f8d-c8d1d10d1679",
               "startdate": "2013-04-11",
               "enddate": "2013-04-19"
             },
             {
-              "id": "604b67f7-abfc-4e19-b350-e9b9557fff52",
+              "id": "203e2498-902a-4e28-b904-87b2f2e21846",
               "startdate": "2013-04-20",
               "enddate": "2013-05-01"
             },
             {
-              "id": "30d42ec7-8bff-4064-979f-540c4b90ce5c",
+              "id": "5dcae51a-8069-417e-82d4-845c8ff7eb53",
               "startdate": "2013-05-28",
               "enddate": "2013-06-07"
             },
             {
-              "id": "784abf6d-3bf7-4d9e-9e44-c3b27d6997ca",
+              "id": "e686979f-8f2a-4d3f-bd7a-c4fc6f93d66b",
               "startdate": "2013-06-10",
               "enddate": "2013-06-21"
             },
             {
-              "id": "f95f9d03-545e-46b8-96d1-5d45e283b195",
+              "id": "1e12263a-59a2-4770-8f22-321328586f5d",
               "startdate": "2013-07-06",
               "enddate": "2013-07-14"
             },
             {
-              "id": "9f41f21a-bde9-4ce0-9994-a55931071536",
+              "id": "3f7b26ad-aeee-491b-a539-fef1df7d4ffd",
               "startdate": "2013-07-15",
               "enddate": "2013-07-25"
             },
             {
-              "id": "0bf8c6e5-678c-4d8b-9c84-470293c8474c",
+              "id": "d41d9faf-589e-45d8-be7c-10e96418d373",
               "startdate": "2013-07-26",
               "enddate": "2013-08-03"
             },
             {
-              "id": "72398ef0-df17-4d5e-863d-5c3dc4395bef",
+              "id": "3adfd83c-6c0a-49c3-a577-04a8d172eae2",
               "startdate": "2013-08-18",
               "enddate": "2013-08-27"
             },
             {
-              "id": "5e6af516-50b6-46b5-84b1-b7db3f18d715",
+              "id": "65e0bb12-f3a5-4095-a1bd-a2b511fd30f5",
               "startdate": "2013-09-27",
               "enddate": "2013-09-30"
             },
             {
-              "id": "405a8c0f-9a85-430a-a4fa-17dca19bb87d",
+              "id": "70a72295-1112-4057-a249-0742ddde3b86",
               "startdate": "2013-11-19",
               "enddate": "2013-11-21"
             },
             {
-              "id": "dd014173-edca-428d-be93-aff4afb5c13b",
+              "id": "56dc1580-ec5b-475a-993f-5a2c4e10aaa2",
               "startdate": "2014-03-24",
               "enddate": "2014-04-02"
             },
             {
-              "id": "b90dfdee-7440-4f16-a1be-b115cd4db597",
+              "id": "4ff38ace-dffc-4389-b6d0-6280171a7e2e",
               "startdate": "2014-04-14",
               "enddate": "2014-04-25"
             },
             {
-              "id": "fcd96f12-1d69-4498-ac57-88fff5c56b58",
+              "id": "24f8c464-3569-4186-8939-f4ed2d97d0df",
               "startdate": "2014-05-27",
               "enddate": "2014-06-04"
             },
             {
-              "id": "db356d82-234f-4e31-9924-a913ef8494b9",
+              "id": "ea7d32cf-4ba9-4ba1-9a09-e02c5348fcf7",
               "startdate": "2014-06-06",
               "enddate": "2014-06-16"
             },
             {
-              "id": "6cc0357d-149b-4ee0-b1ce-13803e5a50c8",
+              "id": "1807a59f-4aea-45b7-99bb-e4ae1a578e68",
               "startdate": "2014-06-26",
               "enddate": "2014-07-07"
             },
             {
-              "id": "7f0ab542-dd80-496d-8430-93c3201fe6dd",
+              "id": "2f320b05-cab1-4246-98c7-06e1cb347de9",
               "startdate": "2014-07-08",
               "enddate": "2014-07-19"
             },
             {
-              "id": "2a15caf0-fa27-40a7-adb5-43c5c6660969",
+              "id": "db7c84d2-b55b-4a15-b58b-d569e36bc15b",
               "startdate": "2014-08-07",
               "enddate": "2014-08-14"
             },
             {
-              "id": "9e3907c4-f726-4ff8-97df-69211e5d35c9",
+              "id": "9beea569-51a4-4d19-b87d-efc165cb094b",
               "startdate": "2014-08-18",
               "enddate": "2014-08-27"
             },
             {
-              "id": "e216081e-204b-47f7-9d18-2f2879fb919b",
+              "id": "d2c221d9-a0f9-4a0c-be20-87b12c6f3812",
               "startdate": "2014-09-28",
               "enddate": "2014-10-08"
             },
             {
-              "id": "48680749-a8ee-4f40-88b1-77d62b5ecd9e",
+              "id": "c9584427-590e-439e-8cd4-0da2749dca2a",
               "startdate": "2014-10-14",
               "enddate": "2014-10-23"
             },
             {
-              "id": "0e3e89d6-efad-4fc4-bd5e-a061560b236d",
+              "id": "231b5ac5-0c90-4e31-814d-635a41a449c7",
               "startdate": "2015-02-17",
               "enddate": "2015-02-25"
             },
             {
-              "id": "64b654ac-323e-4380-9f7f-de202556f16d",
+              "id": "97882ef2-e135-4775-8a46-b87912e0c869",
               "startdate": "2015-04-03",
               "enddate": "2015-04-14"
             },
             {
-              "id": "13fd9def-83d3-44f8-b3f3-cc68b95c97c4",
+              "id": "389208a6-4862-4119-980b-6744ab8eebd7",
               "startdate": "2015-04-15",
               "enddate": "2015-04-24"
             },
             {
-              "id": "5849f92e-20de-4bae-a0f6-60a089c3824d",
+              "id": "7dcfb267-9d0f-424f-83e2-a0fdbdb574f0",
               "startdate": "2015-05-20",
               "enddate": "2015-05-24"
             },
             {
-              "id": "6536cdc3-be4b-4c44-b4cd-1632e09b2fd3",
+              "id": "d2da9212-3ec1-4bbe-a30f-b4407ff99a59",
               "startdate": "2015-06-29",
               "enddate": "2015-07-06"
             },
             {
-              "id": "7690a31e-d44b-4a46-9412-9a39f4cf760e",
+              "id": "3d68fa94-a164-4c04-8c93-cbd8011712dd",
               "startdate": "2015-08-07",
               "enddate": "2015-08-18"
             },
             {
-              "id": "60dbd92b-00f6-4e20-a578-966a37f12c29",
+              "id": "99974d25-db41-4f5c-83c4-14a97e17820b",
               "startdate": "2015-08-19",
               "enddate": "2015-08-27"
             },
             {
-              "id": "7a51fd54-1e34-4041-8f71-5d79e34f30ef",
+              "id": "e4bf0647-7fde-4581-8439-bd46a329e234",
               "startdate": "2015-09-01",
               "enddate": "2015-09-10"
             },
             {
-              "id": "d088577c-28d5-4947-b25b-ce817d31dc73",
+              "id": "ea42a06c-f6c8-4f5c-a08e-73dc6f560cbe",
               "startdate": "2015-09-22",
               "enddate": "2015-09-29"
             }
@@ -862,8 +1094,290 @@
           "countDataProducts": 23
         },
         {
-          "id": "4539ae55-f263-4bfc-b7e1-137bfbf6750e",
+          "logo": {
+            "description": "SEAC4RS",
+            "gatsbyImg": {
+              "childImageSharp": {
+                "gatsbyImageData": {
+                  "layout": "fixed",
+                  "backgroundColor": "#f8f8f8",
+                  "images": {
+                    "fallback": {
+                      "src": "/static/96b285cba08dc38ec6653c0f48ad9d02/280f4/5a680651-f13f-4851-b0d5-82d960092628.png",
+                      "srcSet": "/static/96b285cba08dc38ec6653c0f48ad9d02/280f4/5a680651-f13f-4851-b0d5-82d960092628.png 109w,\n/static/96b285cba08dc38ec6653c0f48ad9d02/73634/5a680651-f13f-4851-b0d5-82d960092628.png 218w",
+                      "sizes": "109px"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/96b285cba08dc38ec6653c0f48ad9d02/5b0a0/5a680651-f13f-4851-b0d5-82d960092628.webp 109w,\n/static/96b285cba08dc38ec6653c0f48ad9d02/a39a9/5a680651-f13f-4851-b0d5-82d960092628.webp 218w",
+                        "type": "image/webp",
+                        "sizes": "109px"
+                      }
+                    ]
+                  },
+                  "width": 109,
+                  "height": 100
+                }
+              }
+            }
+          },
+          "ongoing": false,
+          "shortname": "SEAC4RS",
+          "longname": "Studies of Emissions and Atmospheric Composition, Clouds and Climate Coupling by Regional Surveys",
+          "startdate": "2013-08-01",
+          "enddate": "2013-09-23",
+          "region": "North America including portions of Canada, Mexico and the Gulf of Mexico",
+          "deployments": [
+            {
+              "id": "7a82574f-d2ec-4874-a1b3-243f98a9433c",
+              "startdate": "2013-08-01",
+              "enddate": "2013-09-23"
+            }
+          ],
+          "countDataProducts": 2
+        },
+        {
+          "logo": {
+            "description": "SNF",
+            "gatsbyImg": {
+              "childImageSharp": {
+                "gatsbyImageData": {
+                  "layout": "fixed",
+                  "backgroundColor": "#a8b8c8",
+                  "images": {
+                    "fallback": {
+                      "src": "/static/c62628f14e0d06fa768e19abc3ba810f/15e42/e5854061-754a-455d-856f-24d2fda8bdf7.png",
+                      "srcSet": "/static/c62628f14e0d06fa768e19abc3ba810f/15e42/e5854061-754a-455d-856f-24d2fda8bdf7.png 100w",
+                      "sizes": "100px"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/c62628f14e0d06fa768e19abc3ba810f/d8057/e5854061-754a-455d-856f-24d2fda8bdf7.webp 100w",
+                        "type": "image/webp",
+                        "sizes": "100px"
+                      }
+                    ]
+                  },
+                  "width": 100,
+                  "height": 100
+                }
+              }
+            }
+          },
+          "ongoing": false,
+          "shortname": "SNF",
+          "longname": "Superior National Forest Project",
+          "startdate": "1983-05-05",
+          "enddate": "1984-09-23",
+          "region": "Superior National Forest near Ely, Minnesota",
+          "deployments": [
+            {
+              "id": "f64d235a-4cf3-45f1-99bf-a1e80c1ee4e7",
+              "startdate": "1983-05-05",
+              "enddate": "1983-10-27"
+            },
+            {
+              "id": "66b12610-9cbc-4f5c-81af-465c87ebc487",
+              "startdate": "1984-05-10",
+              "enddate": "1984-09-23"
+            }
+          ],
+          "countDataProducts": 37
+        },
+        {
           "logo": null,
+          "ongoing": false,
+          "shortname": "TEFLUN",
+          "longname": "TExas and FLorida UNderflights",
+          "startdate": "1998-04-01",
+          "enddate": "1998-09-30",
+          "region": "Texas, Florida",
+          "deployments": [
+            {
+              "id": "26ef974c-1629-4b96-9def-9eb44989c649",
+              "startdate": "1998-04-01",
+              "enddate": "1998-05-15"
+            },
+            {
+              "id": "5d45f37d-c548-4896-9f75-59e77cfc8f00",
+              "startdate": "1998-08-01",
+              "enddate": "1998-09-30"
+            }
+          ],
+          "countDataProducts": 1
+        },
+        {
+          "logo": {
+            "description": "ABoVE",
+            "gatsbyImg": {
+              "childImageSharp": {
+                "gatsbyImageData": {
+                  "layout": "fixed",
+                  "backgroundColor": "#f8f8f8",
+                  "images": {
+                    "fallback": {
+                      "src": "/static/38ae6d91e4b9fca18981724e1da30b23/c22a3/63019743-68cd-401c-981f-f1a53a824c17.png",
+                      "srcSet": "/static/38ae6d91e4b9fca18981724e1da30b23/c22a3/63019743-68cd-401c-981f-f1a53a824c17.png 273w,\n/static/38ae6d91e4b9fca18981724e1da30b23/32256/63019743-68cd-401c-981f-f1a53a824c17.png 546w",
+                      "sizes": "273px"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/38ae6d91e4b9fca18981724e1da30b23/9e3e0/63019743-68cd-401c-981f-f1a53a824c17.webp 273w,\n/static/38ae6d91e4b9fca18981724e1da30b23/92a47/63019743-68cd-401c-981f-f1a53a824c17.webp 546w",
+                        "type": "image/webp",
+                        "sizes": "273px"
+                      }
+                    ]
+                  },
+                  "width": 273,
+                  "height": 100
+                }
+              }
+            }
+          },
+          "ongoing": true,
+          "shortname": "ABoVE",
+          "longname": "Arctic-Boreal Vulnerability Experiment",
+          "startdate": "2017-04-27",
+          "enddate": null,
+          "region": "Alaska, western Canada",
+          "deployments": [
+            {
+              "id": "e4c3d205-323a-40f6-9546-143bb2985895",
+              "startdate": "2017-04-27",
+              "enddate": "2017-11-04"
+            },
+            {
+              "id": "6bbe4c0c-799c-4ca1-b952-71ee6a3bf17d",
+              "startdate": "2018-07-21",
+              "enddate": "2018-09-01"
+            },
+            {
+              "id": "d20c3c7b-2ed2-40ad-b8c2-43badfc291f9",
+              "startdate": "2019-06-30",
+              "enddate": "2019-09-17"
+            }
+          ],
+          "countDataProducts": 72
+        },
+        {
+          "logo": {
+            "description": "TARFOX",
+            "gatsbyImg": {
+              "childImageSharp": {
+                "gatsbyImageData": {
+                  "layout": "fixed",
+                  "backgroundColor": "#f8f8f8",
+                  "images": {
+                    "fallback": {
+                      "src": "/static/42d73b53182138a2c45973ea6d99a3a5/06d22/aa9e1f63-80aa-47e1-8baf-bb234fbe3136.jpg",
+                      "srcSet": "/static/42d73b53182138a2c45973ea6d99a3a5/06d22/aa9e1f63-80aa-47e1-8baf-bb234fbe3136.jpg 134w",
+                      "sizes": "134px"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/42d73b53182138a2c45973ea6d99a3a5/4e057/aa9e1f63-80aa-47e1-8baf-bb234fbe3136.webp 134w",
+                        "type": "image/webp",
+                        "sizes": "134px"
+                      }
+                    ]
+                  },
+                  "width": 134,
+                  "height": 100
+                }
+              }
+            }
+          },
+          "ongoing": false,
+          "shortname": "TARFOX",
+          "longname": "Tropospheric Aerosol Radiative Forcing Observational Experiment",
+          "startdate": "1996-07-07",
+          "enddate": "1996-07-31",
+          "region": "Western Atlantic Ocean, US Eastern Seaboard",
+          "deployments": [
+            {
+              "id": "6dad9874-f4d0-4fa5-b416-3f795113940a",
+              "startdate": "1996-07-07",
+              "enddate": "1996-07-31"
+            }
+          ],
+          "countDataProducts": 5
+        },
+        {
+          "logo": {
+            "description": "BOREAS",
+            "gatsbyImg": {
+              "childImageSharp": {
+                "gatsbyImageData": {
+                  "layout": "fixed",
+                  "backgroundColor": "#f8f8f8",
+                  "images": {
+                    "fallback": {
+                      "src": "/static/7addfb83fc452c4c43d6d7f708f4b409/15e42/8d60b6d1-72e8-4133-8fe2-12244b20c3e6.png",
+                      "srcSet": "/static/7addfb83fc452c4c43d6d7f708f4b409/15e42/8d60b6d1-72e8-4133-8fe2-12244b20c3e6.png 100w",
+                      "sizes": "100px"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/7addfb83fc452c4c43d6d7f708f4b409/d8057/8d60b6d1-72e8-4133-8fe2-12244b20c3e6.webp 100w",
+                        "type": "image/webp",
+                        "sizes": "100px"
+                      }
+                    ]
+                  },
+                  "width": 100,
+                  "height": 100
+                }
+              }
+            }
+          },
+          "ongoing": false,
+          "shortname": "BOREAS",
+          "longname": "Boreal Ecosystem-Atmosphere Study",
+          "startdate": "1994-02-02",
+          "enddate": "1996-10-21",
+          "region": "Boreal forests of central Canada",
+          "deployments": [
+            {
+              "id": "fb9afaf2-5e52-42f8-8858-68edf7863e86",
+              "startdate": "1994-02-02",
+              "enddate": "1994-09-19"
+            },
+            {
+              "id": "c6f5b0c4-da16-4800-9da0-bc4f96850afa",
+              "startdate": "1996-02-27",
+              "enddate": "1996-10-21"
+            }
+          ],
+          "countDataProducts": 303
+        },
+        {
+          "logo": {
+            "description": "CAMP2Ex",
+            "gatsbyImg": {
+              "childImageSharp": {
+                "gatsbyImageData": {
+                  "layout": "fixed",
+                  "backgroundColor": "#f8f8f8",
+                  "images": {
+                    "fallback": {
+                      "src": "/static/adcfb9176ab4f106aa2a865e0d36d739/c1572/18cbb2aa-c702-482f-8182-fd66dff7ca84.jpg",
+                      "srcSet": "/static/adcfb9176ab4f106aa2a865e0d36d739/c1572/18cbb2aa-c702-482f-8182-fd66dff7ca84.jpg 147w,\n/static/adcfb9176ab4f106aa2a865e0d36d739/24970/18cbb2aa-c702-482f-8182-fd66dff7ca84.jpg 294w",
+                      "sizes": "147px"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/adcfb9176ab4f106aa2a865e0d36d739/ca856/18cbb2aa-c702-482f-8182-fd66dff7ca84.webp 147w,\n/static/adcfb9176ab4f106aa2a865e0d36d739/c7787/18cbb2aa-c702-482f-8182-fd66dff7ca84.webp 294w",
+                        "type": "image/webp",
+                        "sizes": "147px"
+                      }
+                    ]
+                  },
+                  "width": 147,
+                  "height": 100
+                }
+              }
+            }
+          },
           "ongoing": false,
           "shortname": "CAMP2Ex",
           "longname": "Clouds, Aerosol, and Monsoon Processes-Philippines Experiment",
@@ -872,7 +1386,7 @@
           "region": "Philippines",
           "deployments": [
             {
-              "id": "1b28aa80-f5c1-4197-bcaf-d40d25a671fc",
+              "id": "52e26fae-f73d-4ccf-b692-763fa42cc764",
               "startdate": "2019-08-20",
               "enddate": "2019-10-10"
             }
@@ -880,8 +1394,33 @@
           "countDataProducts": 9
         },
         {
-          "id": "497b78f3-50a6-4f1a-8a22-689f2a832778",
-          "logo": null,
+          "logo": {
+            "description": "CPEX",
+            "gatsbyImg": {
+              "childImageSharp": {
+                "gatsbyImageData": {
+                  "layout": "fixed",
+                  "backgroundColor": "#f8f8f8",
+                  "images": {
+                    "fallback": {
+                      "src": "/static/44506be77bf2a316a0094b892f7c4b8b/a63f4/36870ad1-5afb-4d36-b98f-20220fbed19b.png",
+                      "srcSet": "/static/44506be77bf2a316a0094b892f7c4b8b/a63f4/36870ad1-5afb-4d36-b98f-20220fbed19b.png 103w,\n/static/44506be77bf2a316a0094b892f7c4b8b/2ac0a/36870ad1-5afb-4d36-b98f-20220fbed19b.png 206w",
+                      "sizes": "103px"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/44506be77bf2a316a0094b892f7c4b8b/259a1/36870ad1-5afb-4d36-b98f-20220fbed19b.webp 103w,\n/static/44506be77bf2a316a0094b892f7c4b8b/72b22/36870ad1-5afb-4d36-b98f-20220fbed19b.webp 206w",
+                        "type": "image/webp",
+                        "sizes": "103px"
+                      }
+                    ]
+                  },
+                  "width": 103,
+                  "height": 100
+                }
+              }
+            }
+          },
           "ongoing": false,
           "shortname": "CPEX",
           "longname": "Convective Processes Experiment",
@@ -890,7 +1429,7 @@
           "region": "North Atlantic, Gulf of Mexico, Caribbean Oceanic region",
           "deployments": [
             {
-              "id": "81a95d30-2ee2-49fa-b5ed-5e390b6fc7bc",
+              "id": "2c8e102a-8a14-4daf-a93f-90be4eb7310d",
               "startdate": "2017-05-25",
               "enddate": "2017-06-25"
             }
@@ -898,13 +1437,29 @@
           "countDataProducts": 1
         },
         {
-          "id": "d7d1efff-db40-495f-8f2c-cdaa67d96a80",
           "logo": {
-            "logoAlt": "GRIP logo",
-            "logoImg": {
+            "description": "GRIP",
+            "gatsbyImg": {
               "childImageSharp": {
-                "fixed": {
-                  "src": "/static/aed8706356fd2b3a2bcb162e1e678a9f/6c838/grip.png"
+                "gatsbyImageData": {
+                  "layout": "fixed",
+                  "backgroundColor": "#f8f8f8",
+                  "images": {
+                    "fallback": {
+                      "src": "/static/2803312240ff21bec233dee65f422031/9a4e7/be782f84-cc3b-4a45-9244-05a6c9ac615f.jpg",
+                      "srcSet": "/static/2803312240ff21bec233dee65f422031/9a4e7/be782f84-cc3b-4a45-9244-05a6c9ac615f.jpg 144w,\n/static/2803312240ff21bec233dee65f422031/aaf0d/be782f84-cc3b-4a45-9244-05a6c9ac615f.jpg 288w",
+                      "sizes": "144px"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/2803312240ff21bec233dee65f422031/94070/be782f84-cc3b-4a45-9244-05a6c9ac615f.webp 144w,\n/static/2803312240ff21bec233dee65f422031/00e11/be782f84-cc3b-4a45-9244-05a6c9ac615f.webp 288w",
+                        "type": "image/webp",
+                        "sizes": "144px"
+                      }
+                    ]
+                  },
+                  "width": 144,
+                  "height": 100
                 }
               }
             }
@@ -917,7 +1472,7 @@
           "region": "Tropical Atlantic, Gulf of Mexico, Eastern North Pacific, Caribbean Sea",
           "deployments": [
             {
-              "id": "b3144c8d-a8b5-4d56-b12f-d1c9b1b4ce6a",
+              "id": "122ab714-c96c-4015-a666-46ff0a64ff5b",
               "startdate": "2010-08-15",
               "enddate": "2010-09-25"
             }
@@ -925,8 +1480,33 @@
           "countDataProducts": 23
         },
         {
-          "id": "820df880-b8b5-4248-a1db-70ccb285ef1e",
-          "logo": null,
+          "logo": {
+            "description": "HyMeX",
+            "gatsbyImg": {
+              "childImageSharp": {
+                "gatsbyImageData": {
+                  "layout": "fixed",
+                  "backgroundColor": "#182878",
+                  "images": {
+                    "fallback": {
+                      "src": "/static/80174fb33abdbef4619584a07962887d/1154e/be94e9d5-07af-4684-ad01-f11c70657248.png",
+                      "srcSet": "/static/80174fb33abdbef4619584a07962887d/1154e/be94e9d5-07af-4684-ad01-f11c70657248.png 150w",
+                      "sizes": "150px"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/80174fb33abdbef4619584a07962887d/49f80/be94e9d5-07af-4684-ad01-f11c70657248.webp 150w",
+                        "type": "image/webp",
+                        "sizes": "150px"
+                      }
+                    ]
+                  },
+                  "width": 183,
+                  "height": 100
+                }
+              }
+            }
+          },
           "ongoing": false,
           "shortname": "HyMeX",
           "longname": "The Hydrological Cycle in Mediterranean Experiment",
@@ -935,7 +1515,7 @@
           "region": "The Mediterranean",
           "deployments": [
             {
-              "id": "f51ada5e-94ed-43f7-a796-39ae6cb31202",
+              "id": "2a278d73-f282-4d6f-9481-b125e1221b6a",
               "startdate": "2012-09-05",
               "enddate": "2012-11-06"
             }
@@ -943,8 +1523,76 @@
           "countDataProducts": 3
         },
         {
-          "id": "f2d9d5aa-89ec-4313-beca-14d43bd72c97",
-          "logo": null,
+          "logo": {
+            "description": "LPVEx",
+            "gatsbyImg": {
+              "childImageSharp": {
+                "gatsbyImageData": {
+                  "layout": "fixed",
+                  "backgroundColor": "#f8f8f8",
+                  "images": {
+                    "fallback": {
+                      "src": "/static/8a87fdd5574c24f9f55e00e4682d563b/ae65b/5cdd2fa6-551d-4d50-8359-aeb796eee461.jpg",
+                      "srcSet": "/static/8a87fdd5574c24f9f55e00e4682d563b/ae65b/5cdd2fa6-551d-4d50-8359-aeb796eee461.jpg 104w,\n/static/8a87fdd5574c24f9f55e00e4682d563b/2d332/5cdd2fa6-551d-4d50-8359-aeb796eee461.jpg 208w",
+                      "sizes": "104px"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/8a87fdd5574c24f9f55e00e4682d563b/480da/5cdd2fa6-551d-4d50-8359-aeb796eee461.webp 104w,\n/static/8a87fdd5574c24f9f55e00e4682d563b/a53d6/5cdd2fa6-551d-4d50-8359-aeb796eee461.webp 208w",
+                        "type": "image/webp",
+                        "sizes": "104px"
+                      }
+                    ]
+                  },
+                  "width": 104,
+                  "height": 100
+                }
+              }
+            }
+          },
+          "ongoing": false,
+          "shortname": "LPVEx",
+          "longname": "Light Precipitation Evaluation Experiment",
+          "startdate": "2010-09-15",
+          "enddate": "2010-12-31",
+          "region": "Gulf of Finland",
+          "deployments": [
+            {
+              "id": "a853eae1-43fd-4be0-a53b-ee2d823a4dc5",
+              "startdate": "2010-09-15",
+              "enddate": "2010-12-31"
+            }
+          ],
+          "countDataProducts": 22
+        },
+        {
+          "logo": {
+            "description": "NAMMA",
+            "gatsbyImg": {
+              "childImageSharp": {
+                "gatsbyImageData": {
+                  "layout": "fixed",
+                  "backgroundColor": "#f8f8f8",
+                  "images": {
+                    "fallback": {
+                      "src": "/static/4401e4df50022eb8b33889594b4c828d/2871c/9da7ccbe-6711-47bb-9fba-2af50d6dfe73.png",
+                      "srcSet": "/static/4401e4df50022eb8b33889594b4c828d/2871c/9da7ccbe-6711-47bb-9fba-2af50d6dfe73.png 131w,\n/static/4401e4df50022eb8b33889594b4c828d/b1ffd/9da7ccbe-6711-47bb-9fba-2af50d6dfe73.png 262w",
+                      "sizes": "131px"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/4401e4df50022eb8b33889594b4c828d/abd87/9da7ccbe-6711-47bb-9fba-2af50d6dfe73.webp 131w,\n/static/4401e4df50022eb8b33889594b4c828d/f614e/9da7ccbe-6711-47bb-9fba-2af50d6dfe73.webp 262w",
+                        "type": "image/webp",
+                        "sizes": "131px"
+                      }
+                    ]
+                  },
+                  "width": 131,
+                  "height": 100
+                }
+              }
+            }
+          },
           "ongoing": false,
           "shortname": "NAMMA",
           "longname": "NASA African Monsoon Multidisciplinary Analyses",
@@ -953,7 +1601,7 @@
           "region": "Cape Verde Islands, Atlantic Ocean",
           "deployments": [
             {
-              "id": "b7f0e248-6e7c-4ddc-a254-4bf5c55fb110",
+              "id": "114bbb25-3d09-489d-bc0c-82668595d446",
               "startdate": "2006-08-15",
               "enddate": "2006-09-15"
             }
@@ -961,31 +1609,121 @@
           "countDataProducts": 23
         },
         {
-          "id": "01cecfc1-bca4-41a3-922c-c1ee5408dc0d",
-          "logo": null,
-          "ongoing": false,
-          "shortname": "SNF",
-          "longname": "Superior National Forest Project",
-          "startdate": "1983-05-05",
-          "enddate": "1984-09-23",
-          "region": "Superior National Forest near Ely, Minnesota",
+          "logo": {
+            "description": "OMG",
+            "gatsbyImg": {
+              "childImageSharp": {
+                "gatsbyImageData": {
+                  "layout": "fixed",
+                  "backgroundColor": "#487888",
+                  "images": {
+                    "fallback": {
+                      "src": "/static/7147b5295eaef72034d4b4c7e80a79c4/15e42/4a0ecf56-15ad-4063-9fe1-9490aa191c6e.png",
+                      "srcSet": "/static/7147b5295eaef72034d4b4c7e80a79c4/15e42/4a0ecf56-15ad-4063-9fe1-9490aa191c6e.png 100w,\n/static/7147b5295eaef72034d4b4c7e80a79c4/5aead/4a0ecf56-15ad-4063-9fe1-9490aa191c6e.png 200w",
+                      "sizes": "100px"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/7147b5295eaef72034d4b4c7e80a79c4/d8057/4a0ecf56-15ad-4063-9fe1-9490aa191c6e.webp 100w,\n/static/7147b5295eaef72034d4b4c7e80a79c4/2e34e/4a0ecf56-15ad-4063-9fe1-9490aa191c6e.webp 200w",
+                        "type": "image/webp",
+                        "sizes": "100px"
+                      }
+                    ]
+                  },
+                  "width": 100,
+                  "height": 100
+                }
+              }
+            }
+          },
+          "ongoing": true,
+          "shortname": "OMG",
+          "longname": "Oceans Melting Greenland",
+          "startdate": "2015-07-25",
+          "enddate": null,
+          "region": "Greenland",
           "deployments": [
             {
-              "id": "25031f9a-d47c-49ee-8a21-127bea34f6d7",
-              "startdate": "1983-05-05",
-              "enddate": "1983-10-27"
+              "id": "f91e87b5-10d9-4e12-ad50-94a8b5e38d93",
+              "startdate": "2015-07-25",
+              "enddate": "2015-09-21"
             },
             {
-              "id": "2a55420d-3066-4d38-aa3b-b0ad1f80175f",
-              "startdate": "1984-05-10",
-              "enddate": "1984-09-23"
+              "id": "258adf05-dadf-443e-8a4d-518b730a49d5",
+              "startdate": "2016-03-20",
+              "enddate": "2016-03-31"
+            },
+            {
+              "id": "6630d426-dab5-455c-affc-28462b28c2db",
+              "startdate": "2016-09-13",
+              "enddate": "2016-10-10"
+            },
+            {
+              "id": "16025ea0-2ed3-4a02-9de8-fcf615ae88f2",
+              "startdate": "2017-03-11",
+              "enddate": "2017-03-22"
+            },
+            {
+              "id": "c33bb9e1-fffd-4b2a-a725-d94ac1da9363",
+              "startdate": "2017-10-14",
+              "enddate": "2017-10-23"
+            },
+            {
+              "id": "a67ec4fb-8649-4a92-bda1-54f1bf8aa67f",
+              "startdate": "2018-03-06",
+              "enddate": "2018-03-20"
+            },
+            {
+              "id": "f29a95e1-7cb3-4098-9cb4-e16f28fb98b7",
+              "startdate": "2018-08-22",
+              "enddate": "2018-09-11"
+            },
+            {
+              "id": "1b667dd8-bb55-45f4-954d-f145fa769636",
+              "startdate": "2019-03-05",
+              "enddate": "2019-04-16"
+            },
+            {
+              "id": "51438816-5d3b-4617-85ca-7d7c585276c7",
+              "startdate": "2019-08-12",
+              "enddate": "2019-09-05"
+            },
+            {
+              "id": "32609776-6b56-4db5-b3c6-3e3056af101f",
+              "startdate": "2020-03-27",
+              "enddate": "2020-04-15"
             }
           ],
-          "countDataProducts": 37
+          "countDataProducts": 5
         },
         {
-          "id": "d400db17-826b-4f5e-b98f-23b0a3b1985f",
-          "logo": null,
+          "logo": {
+            "description": "SnowEx",
+            "gatsbyImg": {
+              "childImageSharp": {
+                "gatsbyImageData": {
+                  "layout": "fixed",
+                  "backgroundColor": "#f8f8f8",
+                  "images": {
+                    "fallback": {
+                      "src": "/static/0e2b12d19d240c81214f4926b7363cd3/50a54/ebf817f4-19e2-4981-8ae0-acd33c1b9d2c.png",
+                      "srcSet": "/static/0e2b12d19d240c81214f4926b7363cd3/50a54/ebf817f4-19e2-4981-8ae0-acd33c1b9d2c.png 151w,\n/static/0e2b12d19d240c81214f4926b7363cd3/a3fb9/ebf817f4-19e2-4981-8ae0-acd33c1b9d2c.png 302w",
+                      "sizes": "151px"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/0e2b12d19d240c81214f4926b7363cd3/31c90/ebf817f4-19e2-4981-8ae0-acd33c1b9d2c.webp 151w,\n/static/0e2b12d19d240c81214f4926b7363cd3/6895c/ebf817f4-19e2-4981-8ae0-acd33c1b9d2c.webp 302w",
+                        "type": "image/webp",
+                        "sizes": "151px"
+                      }
+                    ]
+                  },
+                  "width": 151,
+                  "height": 100
+                }
+              }
+            }
+          },
           "ongoing": true,
           "shortname": "SnowEx",
           "longname": "",
@@ -994,17 +1732,60 @@
           "region": "Grand Mesa, CO & Senator Beck Basin, CO",
           "deployments": [
             {
-              "id": "a9781387-ebad-496a-ae3f-6e4694ffeea1",
+              "id": "53ac26a0-057e-4ad1-a445-01f6b2ce6d07",
               "startdate": "2016-09-26",
               "enddate": "2017-02-26"
             },
             {
-              "id": "3db9e42a-6d42-4f76-bcb6-58ba9cfc5521",
+              "id": "aea06a7f-c700-4de1-b576-981a84accd4d",
               "startdate": "2019-12-19",
               "enddate": "2019-12-20"
             }
           ],
           "countDataProducts": 3
+        },
+        {
+          "logo": {
+            "description": "TCSP",
+            "gatsbyImg": {
+              "childImageSharp": {
+                "gatsbyImageData": {
+                  "layout": "fixed",
+                  "backgroundColor": "#f8f8f8",
+                  "images": {
+                    "fallback": {
+                      "src": "/static/9507b8d99af5368985574dddecd6982b/ecafa/8ddeb069-bc61-4bea-a84f-740e2cd10bb0.png",
+                      "srcSet": "/static/9507b8d99af5368985574dddecd6982b/ecafa/8ddeb069-bc61-4bea-a84f-740e2cd10bb0.png 138w,\n/static/9507b8d99af5368985574dddecd6982b/1a2b3/8ddeb069-bc61-4bea-a84f-740e2cd10bb0.png 276w",
+                      "sizes": "138px"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/9507b8d99af5368985574dddecd6982b/845b8/8ddeb069-bc61-4bea-a84f-740e2cd10bb0.webp 138w,\n/static/9507b8d99af5368985574dddecd6982b/6bddf/8ddeb069-bc61-4bea-a84f-740e2cd10bb0.webp 276w",
+                        "type": "image/webp",
+                        "sizes": "138px"
+                      }
+                    ]
+                  },
+                  "width": 138,
+                  "height": 100
+                }
+              }
+            }
+          },
+          "ongoing": false,
+          "shortname": "TCSP",
+          "longname": "Tropical Cloud Systems and Processes",
+          "startdate": "2005-07-01",
+          "enddate": "2005-07-27",
+          "region": "Costa Rica, Caribbean, Gulf of Mexico, eastern North Pacific",
+          "deployments": [
+            {
+              "id": "fcde3c82-99e5-42fa-9ced-05e40b252262",
+              "startdate": "2005-07-01",
+              "enddate": "2005-07-27"
+            }
+          ],
+          "countDataProducts": 14
         }
       ]
     }
