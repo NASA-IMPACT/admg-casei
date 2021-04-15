@@ -63,13 +63,28 @@ Chosen option: "[option 1]", because [justification. e.g., only option, which me
 
 ## Pros and Cons of the Options <!-- optional -->
 
-### A: JS Search on Client
+### Manual JS Search on Client
 
 We have all the data available from the build process. Just like we currently sort and filter, we can search for a string or substring on the frontend. We might need to be careful with performance, but so far, sort and filter are super fast and I don't see why search would not be almost as fast. One key reason being that our database isn't expected to grow to a point where performance is going to be an issue.
 
 - Good, because we might be able to get live-updating search results while a user is typing.
 - Good, because we can be very explicit about the fields we are searching on. We could have a field to search be short name, and another field where a user can type the region they are interested in.
 - Bad, because it will be on us to implement, test and maintain
+  
+### Client-side search tools
+
+There are a number of mature client-side search tools available, such as [Lunr.js], [Fuse.js](https://fusejs.io/), [Elasticlunr.js](http://elasticlunr.com/), [FlexSearch.js](https://github.com/nextapps-de/flexsearch).  These tools would be used to generate an index of the data on which we will enable search.  The index can be packaged with our application and utilized when performing client-side searches.
+
+- Good, because they all offer features that we likely wouldn't have the time to implement, such as:
+  * [stemming](https://lunrjs.com/guides/core_concepts.html#stemming), i.e. searching for "aerosols" will return positive results for alternatives like "aerosol" (singular).
+  * [scoring](https://lunrjs.com/guides/searching.html#scoring)/[boosts](https://lunrjs.com/guides/searching.html#boosts), placing different value on where the matched records are stored, e.g. we could prioritize matches in the `short_name` higher than matches found in the `long_name`
+  * [fields](https://lunrjs.com/guides/searching.html#fields), i.e. search specific fields for a string, such as `type:instrument` to find only instruments matching a term.
+  * [fuzzy matching](https://lunrjs.com/guides/searching.html#fuzzy-matches), will help gloss over typos
+- Good, because Gatsby has plugins to assist in integration (e.g. [gatsby-plugin-local-search](https://www.gatsbyjs.com/plugins/gatsby-plugin-local-search/?=flexsearch), [gatsby-plugin-lunr
+](https://www.gatsbyjs.com/plugins/gatsby-plugin-lunr/), [@gatsby-contrib/gatsby-plugin-elasticlunr-search](https://www.gatsbyjs.com/plugins/@gatsby-contrib/gatsby-plugin-elasticlunr-search/), [@draftbox-co/gatsby-plugin-fusejs](https://www.gatsbyjs.com/plugins/@draftbox-co/gatsby-plugin-fusejs/)).
+- Good, because no external infrastructure requirements
+- Bad, because more complex build process.
+
 
 ### Google Search
 
