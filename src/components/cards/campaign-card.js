@@ -3,10 +3,10 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Card from "./card"
+import CardFooterItem from "./card-footer-item"
 import { CampaignIcon } from "../../icons"
 import { POSITIVE, NEGATIVE } from "../../utils/constants"
 import { formatYearRange } from "../../utils/helpers"
-import CardFooterItem from "./card-footer-item"
 import DateList from "../../components/date-list-hover"
 
 export default function CampaignCard({ shortname, mode }) {
@@ -30,8 +30,8 @@ export default function CampaignCard({ shortname, mode }) {
             gatsbyImg {
               childImageSharp {
                 gatsbyImageData(
-                  height: 150
                   layout: CONSTRAINED
+                  height: 120
                   placeholder: BLURRED
                   transformOptions: { fit: CONTAIN }
                 )
@@ -59,7 +59,6 @@ export default function CampaignCard({ shortname, mode }) {
   return (
     <Card
       image={campaign.logo}
-      cover={false}
       placeholder={CampaignIcon}
       tag={campaign.ongoing && "Ongoing"}
       link={`/campaign/${campaign.shortname}`}

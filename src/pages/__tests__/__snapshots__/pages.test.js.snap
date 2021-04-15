@@ -58,7 +58,7 @@ exports[`Explore page renders correctly 1`] = `
   transform: translate(0,1px);
 }
 
-.c55.c55 {
+.c56.c56 {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -76,7 +76,7 @@ exports[`Explore page renders correctly 1`] = `
   white-space: nowrap;
 }
 
-.c56.c56 {
+.c57.c57 {
   position: fixed;
   top: 0;
   right: 0;
@@ -98,7 +98,7 @@ exports[`Explore page renders correctly 1`] = `
   transition: opacity 400ms ease-in;
 }
 
-.c57.c57 {
+.c58.c58 {
   width: 400px;
   position: relative;
   padding: 32px;
@@ -107,23 +107,23 @@ exports[`Explore page renders correctly 1`] = `
   pointer-events: auto;
 }
 
-.c53.c53 {
+.c54.c54 {
   list-style: none;
   margin: 0;
 }
 
-.c52.c52 {
+.c53.c53 {
   margin: 0 0 1.5rem 0;
   font-weight: bold;
   line-height: 3rem;
 }
 
-.c47.c47 {
+.c48.c48 {
   margin-top: 5rem;
   background-color: #303641;
 }
 
-.c48.c48 {
+.c49.c49 {
   margin: 5rem auto;
   max-width: 1280px;
   padding: 2rem 4rem;
@@ -135,11 +135,11 @@ exports[`Explore page renders correctly 1`] = `
   grid-template-columns: repeat(12,1fr);
 }
 
-.c49.c49 {
+.c50.c50 {
   grid-column: 1 / span 3;
 }
 
-.c50.c50 {
+.c51.c51 {
   text-transform: uppercase;
   font-weight: 900;
   font-size: 30px;
@@ -147,28 +147,28 @@ exports[`Explore page renders correctly 1`] = `
   margin-bottom: 0.5rem;
 }
 
-.c51.c51 {
+.c52.c52 {
   grid-column: 5 / span 2;
 }
 
-.c54.c54 {
+.c55.c55 {
   grid-column: 7 / span 2;
 }
 
-.c58.c58 {
+.c59.c59 {
   grid-column: 9 / span 2;
 }
 
-.c59.c59 {
+.c60.c60 {
   grid-column: 11 / span 2;
 }
 
-.c60.c60 {
+.c61.c61 {
   grid-column: 1 / span 12;
   background-color: rgba(255,255,255,0.2);
 }
 
-.c61.c61 {
+.c62.c62 {
   grid-column: 1 / span 12;
   display: -webkit-box;
   display: -webkit-flex;
@@ -180,7 +180,7 @@ exports[`Explore page renders correctly 1`] = `
   justify-content: space-between;
 }
 
-.c62.c62 {
+.c63.c63 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -192,7 +192,7 @@ exports[`Explore page renders correctly 1`] = `
   font-weight: bold;
 }
 
-.c63.c63 {
+.c64.c64 {
   background-image: url("https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png");
   background-size: cover;
   background-position: center;
@@ -200,11 +200,11 @@ exports[`Explore page renders correctly 1`] = `
   height: 100px;
 }
 
-.c64.c64 {
+.c65.c65 {
   font-weight: normal;
 }
 
-.c65.c65 {
+.c66.c66 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -216,7 +216,7 @@ exports[`Explore page renders correctly 1`] = `
   text-transform: uppercase;
 }
 
-.c66.c66 {
+.c67.c67 {
   text-align: center;
 }
 
@@ -568,7 +568,13 @@ exports[`Explore page renders correctly 1`] = `
 
 .c29.c29 {
   grid-area: 1 / 1;
-  height: 180px;
+  height: 100px;
+  margin: 0;
+}
+
+.c46.c46 {
+  grid-area: 1 / 1;
+  height: 101px;
   margin: 0;
 }
 
@@ -576,7 +582,7 @@ exports[`Explore page renders correctly 1`] = `
   grid-area: 1 / 1;
 }
 
-.c46.c46 {
+.c47.c47 {
   grid-area: 1 / 1;
   -webkit-align-self: flex-end;
   -ms-flex-item-align: end;
@@ -1642,7 +1648,8 @@ exports[`Explore page renders correctly 1`] = `
                       type="image/webp"
                     />
                     <img
-                      _css3={0}
+                      _css3={100}
+                      _css4={0}
                       alt="CAMP2Ex"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -1678,7 +1685,8 @@ exports[`Explore page renders correctly 1`] = `
                         type="image/webp"
                       />
                       <img
-                        _css3={0}
+                        _css3={100}
+                        _css4={0}
                         alt="CAMP2Ex"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -2168,7 +2176,8 @@ exports[`Explore page renders correctly 1`] = `
                       type="image/webp"
                     />
                     <img
-                      _css3={0}
+                      _css3={100}
+                      _css4={0}
                       alt="ACT-America"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -2204,7 +2213,8 @@ exports[`Explore page renders correctly 1`] = `
                         type="image/webp"
                       />
                       <img
-                        _css3={0}
+                        _css3={100}
+                        _css4={0}
                         alt="ACT-America"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -2516,7 +2526,8 @@ exports[`Explore page renders correctly 1`] = `
                       type="image/webp"
                     />
                     <img
-                      _css3={0}
+                      _css3={100}
+                      _css4={0}
                       alt="ICE-POP"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -2552,7 +2563,8 @@ exports[`Explore page renders correctly 1`] = `
                         type="image/webp"
                       />
                       <img
-                        _css3={0}
+                        _css3={100}
+                        _css4={0}
                         alt="ICE-POP"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -2815,7 +2827,8 @@ exports[`Explore page renders correctly 1`] = `
                       type="image/webp"
                     />
                     <img
-                      _css3={0}
+                      _css3={100}
+                      _css4={0}
                       alt="ACEPOL"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -2851,7 +2864,8 @@ exports[`Explore page renders correctly 1`] = `
                         type="image/webp"
                       />
                       <img
-                        _css3={0}
+                        _css3={100}
+                        _css4={0}
                         alt="ACEPOL"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -3114,7 +3128,8 @@ exports[`Explore page renders correctly 1`] = `
                       type="image/webp"
                     />
                     <img
-                      _css3={0}
+                      _css3={100}
+                      _css4={0}
                       alt="CPEX"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -3150,7 +3165,8 @@ exports[`Explore page renders correctly 1`] = `
                         type="image/webp"
                       />
                       <img
-                        _css3={0}
+                        _css3={100}
+                        _css4={0}
                         alt="CPEX"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -3639,7 +3655,8 @@ exports[`Explore page renders correctly 1`] = `
                       type="image/webp"
                     />
                     <img
-                      _css3={0}
+                      _css3={100}
+                      _css4={0}
                       alt="OLYMPEX"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -3675,7 +3692,8 @@ exports[`Explore page renders correctly 1`] = `
                         type="image/webp"
                       />
                       <img
-                        _css3={0}
+                        _css3={100}
+                        _css4={0}
                         alt="OLYMPEX"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -4152,7 +4170,8 @@ exports[`Explore page renders correctly 1`] = `
                       type="image/webp"
                     />
                     <img
-                      _css3={0}
+                      _css3={100}
+                      _css4={0}
                       alt="CARVE"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -4188,7 +4207,8 @@ exports[`Explore page renders correctly 1`] = `
                         type="image/webp"
                       />
                       <img
-                        _css3={0}
+                        _css3={100}
+                        _css4={0}
                         alt="CARVE"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -4488,7 +4508,8 @@ exports[`Explore page renders correctly 1`] = `
                       type="image/webp"
                     />
                     <img
-                      _css3={0}
+                      _css3={100}
+                      _css4={0}
                       alt="AirMOSS"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -4524,7 +4545,8 @@ exports[`Explore page renders correctly 1`] = `
                         type="image/webp"
                       />
                       <img
-                        _css3={0}
+                        _css3={100}
+                        _css4={0}
                         alt="AirMOSS"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -5184,7 +5206,8 @@ exports[`Explore page renders correctly 1`] = `
                       type="image/webp"
                     />
                     <img
-                      _css3={0}
+                      _css3={100}
+                      _css4={0}
                       alt="ATTREX"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -5220,7 +5243,8 @@ exports[`Explore page renders correctly 1`] = `
                         type="image/webp"
                       />
                       <img
-                        _css3={0}
+                        _css3={100}
+                        _css4={0}
                         alt="ATTREX"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -5488,7 +5512,7 @@ exports[`Explore page renders correctly 1`] = `
                 className="c28"
               >
                 <div
-                  className="gatsby-image-wrapper c29"
+                  className="gatsby-image-wrapper c46"
                   data-gatsby-image-wrapper=""
                   style={
                     Object {
@@ -5520,7 +5544,8 @@ exports[`Explore page renders correctly 1`] = `
                       type="image/webp"
                     />
                     <img
-                      _css3={0}
+                      _css3={101}
+                      _css4={0}
                       alt="HS3"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -5556,7 +5581,8 @@ exports[`Explore page renders correctly 1`] = `
                         type="image/webp"
                       />
                       <img
-                        _css3={0}
+                        _css3={101}
+                        _css4={0}
                         alt="HS3"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -5844,7 +5870,8 @@ exports[`Explore page renders correctly 1`] = `
                       type="image/webp"
                     />
                     <img
-                      _css3={0}
+                      _css3={100}
+                      _css4={0}
                       alt="DISCOVER-AQ"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -5880,7 +5907,8 @@ exports[`Explore page renders correctly 1`] = `
                         type="image/webp"
                       />
                       <img
-                        _css3={0}
+                        _css3={100}
+                        _css4={0}
                         alt="DISCOVER-AQ"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -6180,7 +6208,8 @@ exports[`Explore page renders correctly 1`] = `
                       type="image/webp"
                     />
                     <img
-                      _css3={0}
+                      _css3={100}
+                      _css4={0}
                       alt="IPHEx"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -6216,7 +6245,8 @@ exports[`Explore page renders correctly 1`] = `
                         type="image/webp"
                       />
                       <img
-                        _css3={0}
+                        _css3={100}
+                        _css4={0}
                         alt="IPHEx"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -6479,7 +6509,8 @@ exports[`Explore page renders correctly 1`] = `
                       type="image/webp"
                     />
                     <img
-                      _css3={0}
+                      _css3={100}
+                      _css4={0}
                       alt="SEAC4RS"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -6515,7 +6546,8 @@ exports[`Explore page renders correctly 1`] = `
                         type="image/webp"
                       />
                       <img
-                        _css3={0}
+                        _css3={100}
+                        _css4={0}
                         alt="SEAC4RS"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -6778,7 +6810,8 @@ exports[`Explore page renders correctly 1`] = `
                       type="image/webp"
                     />
                     <img
-                      _css3={0}
+                      _css3={100}
+                      _css4={0}
                       alt="IFloodS"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -6814,7 +6847,8 @@ exports[`Explore page renders correctly 1`] = `
                         type="image/webp"
                       />
                       <img
-                        _css3={0}
+                        _css3={100}
+                        _css4={0}
                         alt="IFloodS"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -7077,7 +7111,8 @@ exports[`Explore page renders correctly 1`] = `
                       type="image/webp"
                     />
                     <img
-                      _css3={0}
+                      _css3={100}
+                      _css4={0}
                       alt="HyMeX"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -7113,7 +7148,8 @@ exports[`Explore page renders correctly 1`] = `
                         type="image/webp"
                       />
                       <img
-                        _css3={0}
+                        _css3={100}
+                        _css4={0}
                         alt="HyMeX"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -7376,7 +7412,8 @@ exports[`Explore page renders correctly 1`] = `
                       type="image/webp"
                     />
                     <img
-                      _css3={0}
+                      _css3={100}
+                      _css4={0}
                       alt="DC3"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -7412,7 +7449,8 @@ exports[`Explore page renders correctly 1`] = `
                         type="image/webp"
                       />
                       <img
-                        _css3={0}
+                        _css3={100}
+                        _css4={0}
                         alt="DC3"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -7675,7 +7713,8 @@ exports[`Explore page renders correctly 1`] = `
                       type="image/webp"
                     />
                     <img
-                      _css3={0}
+                      _css3={100}
+                      _css4={0}
                       alt="GCPEx"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -7711,7 +7750,8 @@ exports[`Explore page renders correctly 1`] = `
                         type="image/webp"
                       />
                       <img
-                        _css3={0}
+                        _css3={100}
+                        _css4={0}
                         alt="GCPEx"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -7974,7 +8014,8 @@ exports[`Explore page renders correctly 1`] = `
                       type="image/webp"
                     />
                     <img
-                      _css3={0}
+                      _css3={100}
+                      _css4={0}
                       alt="MC3E"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -8010,7 +8051,8 @@ exports[`Explore page renders correctly 1`] = `
                         type="image/webp"
                       />
                       <img
-                        _css3={0}
+                        _css3={100}
+                        _css4={0}
                         alt="MC3E"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -8273,7 +8315,8 @@ exports[`Explore page renders correctly 1`] = `
                       type="image/webp"
                     />
                     <img
-                      _css3={0}
+                      _css3={100}
+                      _css4={0}
                       alt="LPVEx"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -8309,7 +8352,8 @@ exports[`Explore page renders correctly 1`] = `
                         type="image/webp"
                       />
                       <img
-                        _css3={0}
+                        _css3={100}
+                        _css4={0}
                         alt="LPVEx"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -8572,7 +8616,8 @@ exports[`Explore page renders correctly 1`] = `
                       type="image/webp"
                     />
                     <img
-                      _css3={0}
+                      _css3={100}
+                      _css4={0}
                       alt="GRIP"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -8608,7 +8653,8 @@ exports[`Explore page renders correctly 1`] = `
                         type="image/webp"
                       />
                       <img
-                        _css3={0}
+                        _css3={100}
+                        _css4={0}
                         alt="GRIP"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -8871,7 +8917,8 @@ exports[`Explore page renders correctly 1`] = `
                       type="image/webp"
                     />
                     <img
-                      _css3={0}
+                      _css3={100}
+                      _css4={0}
                       alt="ARCTAS"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -8907,7 +8954,8 @@ exports[`Explore page renders correctly 1`] = `
                         type="image/webp"
                       />
                       <img
-                        _css3={0}
+                        _css3={100}
+                        _css4={0}
                         alt="ARCTAS"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -9409,7 +9457,8 @@ exports[`Explore page renders correctly 1`] = `
                       type="image/webp"
                     />
                     <img
-                      _css3={0}
+                      _css3={100}
+                      _css4={0}
                       alt="NAMMA"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -9445,7 +9494,8 @@ exports[`Explore page renders correctly 1`] = `
                         type="image/webp"
                       />
                       <img
-                        _css3={0}
+                        _css3={100}
+                        _css4={0}
                         alt="NAMMA"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -9708,7 +9758,8 @@ exports[`Explore page renders correctly 1`] = `
                       type="image/webp"
                     />
                     <img
-                      _css3={0}
+                      _css3={100}
+                      _css4={0}
                       alt="TCSP"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -9744,7 +9795,8 @@ exports[`Explore page renders correctly 1`] = `
                         type="image/webp"
                       />
                       <img
-                        _css3={0}
+                        _css3={100}
+                        _css4={0}
                         alt="TCSP"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -10007,7 +10059,8 @@ exports[`Explore page renders correctly 1`] = `
                       type="image/webp"
                     />
                     <img
-                      _css3={0}
+                      _css3={100}
+                      _css4={0}
                       alt="ACES"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -10043,7 +10096,8 @@ exports[`Explore page renders correctly 1`] = `
                         type="image/webp"
                       />
                       <img
-                        _css3={0}
+                        _css3={100}
+                        _css4={0}
                         alt="ACES"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -10532,7 +10586,8 @@ exports[`Explore page renders correctly 1`] = `
                       type="image/webp"
                     />
                     <img
-                      _css3={0}
+                      _css3={100}
+                      _css4={0}
                       alt="BOREAS"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -10568,7 +10623,8 @@ exports[`Explore page renders correctly 1`] = `
                         type="image/webp"
                       />
                       <img
-                        _css3={0}
+                        _css3={100}
+                        _css4={0}
                         alt="BOREAS"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -10844,7 +10900,8 @@ exports[`Explore page renders correctly 1`] = `
                       type="image/webp"
                     />
                     <img
-                      _css3={0}
+                      _css3={100}
+                      _css4={0}
                       alt="TARFOX"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -10880,7 +10937,8 @@ exports[`Explore page renders correctly 1`] = `
                         type="image/webp"
                       />
                       <img
-                        _css3={0}
+                        _css3={100}
+                        _css4={0}
                         alt="TARFOX"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -11382,7 +11440,8 @@ exports[`Explore page renders correctly 1`] = `
                       type="image/webp"
                     />
                     <img
-                      _css3={0}
+                      _css3={100}
+                      _css4={0}
                       alt="FIFE"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -11418,7 +11477,8 @@ exports[`Explore page renders correctly 1`] = `
                         type="image/webp"
                       />
                       <img
-                        _css3={0}
+                        _css3={100}
+                        _css4={0}
                         alt="FIFE"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -11694,7 +11754,8 @@ exports[`Explore page renders correctly 1`] = `
                       type="image/webp"
                     />
                     <img
-                      _css3={0}
+                      _css3={100}
+                      _css4={0}
                       alt="SNF"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -11730,7 +11791,8 @@ exports[`Explore page renders correctly 1`] = `
                         type="image/webp"
                       />
                       <img
-                        _css3={0}
+                        _css3={100}
+                        _css4={0}
                         alt="SNF"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -12006,7 +12068,8 @@ exports[`Explore page renders correctly 1`] = `
                       type="image/webp"
                     />
                     <img
-                      _css3={0}
+                      _css3={100}
+                      _css4={0}
                       alt="ABoVE"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -12042,7 +12105,8 @@ exports[`Explore page renders correctly 1`] = `
                         type="image/webp"
                       />
                       <img
-                        _css3={0}
+                        _css3={100}
+                        _css4={0}
                         alt="ABoVE"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -12081,7 +12145,7 @@ exports[`Explore page renders correctly 1`] = `
                   />
                 </div>
                 <div
-                  className="c46"
+                  className="c47"
                   data-cy="ongoing-tag"
                 >
                   Ongoing
@@ -12336,7 +12400,8 @@ exports[`Explore page renders correctly 1`] = `
                       type="image/webp"
                     />
                     <img
-                      _css3={0}
+                      _css3={100}
+                      _css4={0}
                       alt="OMG"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -12372,7 +12437,8 @@ exports[`Explore page renders correctly 1`] = `
                         type="image/webp"
                       />
                       <img
-                        _css3={0}
+                        _css3={100}
+                        _css4={0}
                         alt="OMG"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -12411,7 +12477,7 @@ exports[`Explore page renders correctly 1`] = `
                   />
                 </div>
                 <div
-                  className="c46"
+                  className="c47"
                   data-cy="ongoing-tag"
                 >
                   Ongoing
@@ -12750,7 +12816,8 @@ exports[`Explore page renders correctly 1`] = `
                       type="image/webp"
                     />
                     <img
-                      _css3={0}
+                      _css3={100}
+                      _css4={0}
                       alt="SnowEx"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -12786,7 +12853,8 @@ exports[`Explore page renders correctly 1`] = `
                         type="image/webp"
                       />
                       <img
-                        _css3={0}
+                        _css3={100}
+                        _css4={0}
                         alt="SnowEx"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -12825,7 +12893,7 @@ exports[`Explore page renders correctly 1`] = `
                   />
                 </div>
                 <div
-                  className="c46"
+                  className="c47"
                   data-cy="ongoing-tag"
                 >
                   Ongoing
@@ -13027,17 +13095,17 @@ exports[`Explore page renders correctly 1`] = `
     </div>
   </main>
   <footer
-    className="c47"
+    className="c48"
     data-cy="page-footer"
   >
     <div
-      className="c48"
+      className="c49"
     >
       <div
-        className="c49"
+        className="c50"
       >
         <div
-          className="c50"
+          className="c51"
           data-cy="footer-title"
         >
           NASA | CASEI
@@ -13050,16 +13118,16 @@ exports[`Explore page renders correctly 1`] = `
         </p>
       </div>
       <div
-        className="c51"
+        className="c52"
         data-cy="footer-explore"
       >
         <p
-          className="c52"
+          className="c53"
         >
           Explore
         </p>
         <ul
-          className="c53"
+          className="c54"
         >
           <li>
             <a
@@ -13103,16 +13171,16 @@ exports[`Explore page renders correctly 1`] = `
         </ul>
       </div>
       <div
-        className="c54"
+        className="c55"
         data-cy="footer-resources"
       >
         <p
-          className="c52"
+          className="c53"
         >
           Resources
         </p>
         <ul
-          className="c53"
+          className="c54"
         >
           <li>
             <a
@@ -13123,17 +13191,17 @@ exports[`Explore page renders correctly 1`] = `
           </li>
           <li>
             <button
-              className="c21 c55"
+              className="c21 c56"
               onClick={[Function]}
             >
               Maintenance login
             </button>
             <div
-              className="c56"
+              className="c57"
               onClick={[Function]}
             >
               <div
-                className="c57"
+                className="c58"
               >
                 <form
                   data-cy="login-form"
@@ -13175,16 +13243,16 @@ exports[`Explore page renders correctly 1`] = `
         </ul>
       </div>
       <div
-        className="c58"
+        className="c59"
         data-cy="footer-quick-links"
       >
         <p
-          className="c52"
+          className="c53"
         >
           Quick Links
         </p>
         <ul
-          className="c53"
+          className="c54"
         >
           <li>
             <a
@@ -13203,16 +13271,16 @@ exports[`Explore page renders correctly 1`] = `
         </ul>
       </div>
       <div
-        className="c59"
+        className="c60"
         data-cy="footer-organizations"
       >
         <p
-          className="c52"
+          className="c53"
         >
           Organizations
         </p>
         <ul
-          className="c53"
+          className="c54"
         >
           <li>
             <a
@@ -13247,17 +13315,17 @@ exports[`Explore page renders correctly 1`] = `
         </ul>
       </div>
       <hr
-        className="c60"
+        className="c61"
       />
       <div
-        className="c61"
+        className="c62"
       >
         <div
-          className="c62"
+          className="c63"
         >
           <div
             aria-hidden="true"
-            className="c63"
+            className="c64"
           />
           <div
             data-cy="footer-credits"
@@ -13273,7 +13341,7 @@ exports[`Explore page renders correctly 1`] = `
               NASA Official:
                
               <span
-                className="c64"
+                className="c65"
               >
                 Rahul Ramachandran
               </span>
@@ -13281,12 +13349,12 @@ exports[`Explore page renders correctly 1`] = `
           </div>
         </div>
         <div
-          className="c65"
+          className="c66"
         />
       </div>
     </div>
     <div
-      className="c66"
+      className="c67"
       data-cy="footer-credit-devseed"
     >
       © 

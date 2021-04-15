@@ -58,12 +58,13 @@ const Card = ({
             css={`
                {
                 grid-area: 1 / 1;
-                height: 180px;
+                height: ${image.gatsbyImg.childImageSharp.gatsbyImageData
+                  .height}px;
                 margin: ${cover ? `-1rem -1rem 0 -1rem` : 0};
               }
             `}
             objectFit={cover ? "cover" : "contain"}
-            objectPosition={cover ? "center top" : "left top"}
+            objectPosition={cover ? "center center" : "left top"}
           />
         ) : (
           <div
@@ -137,7 +138,7 @@ Card.propTypes = {
       childImageSharp: PropTypes.object,
     }),
   }),
-  cover: PropTypes.bool.isRequired,
+  cover: PropTypes.bool,
   placeholder: PropTypes.func.isRequired,
   height: PropTypes.string,
   link: PropTypes.string,

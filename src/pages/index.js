@@ -162,11 +162,7 @@ export const query = graphql`
           nasaImgAlt
           nasaImg {
             childImageSharp {
-              gatsbyImageData(
-                height: 550
-                layout: FULL_WIDTH
-                placeholder: BLURRED
-              )
+              gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
             }
           }
         }

@@ -28,8 +28,9 @@ export default function InstrumentCard({ shortname }) {
               childImageSharp {
                 gatsbyImageData(
                   layout: CONSTRAINED
+                  height: 180
                   placeholder: BLURRED
-                  transformOptions: { fit: COVER }
+                  transformOptions: { fit: CONTAIN }
                 )
               }
             }

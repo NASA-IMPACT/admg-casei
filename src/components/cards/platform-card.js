@@ -29,8 +29,9 @@ export default function PlatformCard({ shortname, mode }) {
               childImageSharp {
                 gatsbyImageData(
                   layout: CONSTRAINED
+                  height: 180
                   placeholder: BLURRED
-                  transformOptions: { fit: COVER }
+                  transformOptions: { fit: CONTAIN }
                 )
               }
             }
