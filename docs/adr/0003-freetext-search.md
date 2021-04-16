@@ -73,7 +73,7 @@ We have all the data available from the build process. Just like we currently so
   
 ### Client-side search tools
 
-There are a number of mature client-side search tools available, such as [Lunr.js], [Fuse.js](https://fusejs.io/), [Elasticlunr.js](http://elasticlunr.com/), [FlexSearch.js](https://github.com/nextapps-de/flexsearch).  These tools would be used to generate an index of the data on which we will enable search.  The index can be packaged with our application and utilized when performing client-side searches.
+There are a number of mature client-side search tools available, such as [Lunr.js](https://lunrjs.com), [Fuse.js](https://fusejs.io/), [Elasticlunr.js](http://elasticlunr.com/), [FlexSearch.js](https://github.com/nextapps-de/flexsearch).  These tools would be used to generate an index of the data on which we will enable search.  The index can be packaged with our application and utilized when performing client-side searches.
 
 - Good, because they all offer features that we likely wouldn't have the time to implement, such as:
   * [stemming](https://lunrjs.com/guides/core_concepts.html#stemming), i.e. searching for "aerosols" will return positive results for alternatives like "aerosol" (singular).
