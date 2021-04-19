@@ -30,10 +30,9 @@ const FocusTemplate = ({ data: { focusArea, allFocusArea }, path }) => {
         tagTitle="Focus Area"
         title={focusArea.shortname}
         textToImageRatio={[8, 4]}
+        image={<Icon color={colors[NEGATIVE].text} size="huge" />}
         id="focus"
-      >
-        <Icon color={colors[NEGATIVE].text} size="huge" />
-      </Hero>
+      />
 
       <PageBody id="focus">
         <InpageNav

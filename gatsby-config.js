@@ -7,7 +7,7 @@ module.exports = {
   siteMetadata: {
     title: `Catalog of Archived Suborbital Earth Science Investigations`,
     shortname: `NASA | CASEI`,
-    description: `Explore NASA’s catalog of airborne and field campaign observations.`,
+    description: `NASA's collection of suborbital field campaigns: airborne, marine, mobile, and stationary.`,
     author: `@developmentseed`,
   },
   plugins: [

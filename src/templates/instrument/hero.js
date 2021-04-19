@@ -18,18 +18,19 @@ export default function InstrumentHero({
       title={shortname}
       subTitle={longname}
       description={description}
+      image={
+        image && image.gatsbyImg ? (
+          <GatsbyImage
+            image={image.gatsbyImg.childImageSharp.gatsbyImageData}
+            alt={image.description}
+          />
+        ) : (
+          <InstrumentIcon size="huge" />
+        )
+      }
       textToImageRatio={[5, 3]}
       id="instrument"
-    >
-      {image && image.gatsbyImg ? (
-        <GatsbyImage
-          image={image.gatsbyImg.childImageSharp.gatsbyImageData}
-          alt={image.description}
-        />
-      ) : (
-        <InstrumentIcon size="huge" />
-      )}
-    </Hero>
+    />
   )
 }
 export const instrumentHeroFields = graphql`

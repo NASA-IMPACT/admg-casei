@@ -17,22 +17,23 @@ export default function PlatformHero({
     <Hero
       tagTitle={shortname}
       title={longname}
+      image={
+        image && image.gatsbyImg ? (
+          <GatsbyImage
+            image={image.gatsbyImg.childImageSharp.gatsbyImageData}
+            alt={image.description}
+          />
+        ) : (
+          <PlatformIcon size="huge" />
+        )
+      }
       textToImageRatio={[5, 3]}
       stats={[
         { label: "Campaigns", number: campaigns },
         { label: "Flights", number: collectionPeriods },
       ]}
       id="platform"
-    >
-      {image && image.gatsbyImg ? (
-        <GatsbyImage
-          image={image.gatsbyImg.childImageSharp.gatsbyImageData}
-          alt={image.description}
-        />
-      ) : (
-        <PlatformIcon size="huge" />
-      )}
-    </Hero>
+    />
   )
 }
 export const platformHeroFields = graphql`
