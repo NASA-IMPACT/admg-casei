@@ -99,13 +99,15 @@ export default function Hero({
             grid-area: title;
           `}
         >
-          <p
-            css={`
-              text-transform: uppercase;
-            `}
-          >
-            {tagTitle}
-          </p>
+          {tagTitle && (
+            <p
+              css={`
+                text-transform: uppercase;
+              `}
+            >
+              {tagTitle}
+            </p>
+          )}
           <h1>{title}</h1>
           {blockTitle && <h2>{blockTitle}</h2>}
           {subTitle && <p>{subTitle}</p>}
@@ -174,7 +176,7 @@ export default function Hero({
 
 Hero.propTypes = {
   tagTitle: PropTypes.string,
-  title: PropTypes.string,
+  title: PropTypes.string.isRequired,
   blockTitle: PropTypes.string,
   subTitle: PropTypes.string,
   description: PropTypes.string,

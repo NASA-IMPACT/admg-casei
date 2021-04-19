@@ -20,7 +20,6 @@ const Home = ({ data }) => {
       <SEO title="Home" lang="en" />
 
       <Hero
-        tagTitle={data.site.siteMetadata.shortname}
         title={data.site.siteMetadata.title.replace(
           "Earth Science",
           "Earth\u00a0Science" // add non-breaking space
