@@ -2,56 +2,52 @@
 
 exports[`Header renders correctly 1`] = `
 .c0.c0 {
+  display: grid;
+  grid-template-columns: 1fr minmax(auto,1280px) 1fr;
+  width: 100vw;
+  min-height: 35rem;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  margin-bottom: 6rem;
+}
+
+.c1.c1 {
   grid-area: 1 / 2 / 1 / 2;
   display: grid;
   grid-template-columns: 3fr 5fr;
+  grid-template-areas: "title image" "extras image";
   grid-gap: 0.5rem;
   padding: 0 4rem;
 }
 
-.c1.c1 {
+.c2.c2 {
   -webkit-align-self: end;
   -ms-flex-item-align: end;
   align-self: end;
-  grid-area: 1 / 1 / 1 / 1;
-}
-
-.c2.c2 {
-  text-transform: uppercase;
+  grid-area: title;
 }
 
 .c3.c3 {
-  -webkit-align-self: start;
-  -ms-flex-item-align: start;
-  align-self: start;
-  grid-area: 2 / 1 / 2 / 1;
+  text-transform: uppercase;
 }
 
 .c4.c4 {
-  grid-area: 1 / 2 / 3 / 3;
+  grid-area: extras;
 }
 
 <section
+  className="c0"
   data-cy="test-hero"
-  style={
-    Object {
-      "alignContent": "center",
-      "display": "grid",
-      "gridTemplateColumns": "1fr minmax(auto,  1280px) 1fr",
-      "marginBottom": "6rem",
-      "minHeight": "35rem",
-      "width": "100vw",
-    }
-  }
 >
   <div
-    className="c0"
+    className="c1"
   >
     <div
-      className="c1"
+      className="c2"
     >
       <p
-        className="c2"
+        className="c3"
       >
         Instrument
       </p>
@@ -63,18 +59,11 @@ exports[`Header renders correctly 1`] = `
       </p>
     </div>
     <div
-      className="c3"
+      className="c4"
     >
       <p>
         The 2DC probe records images of hydrometeors...
       </p>
-    </div>
-    <div
-      className="c4"
-    >
-      <div>
-        children
-      </div>
     </div>
   </div>
 </section>
@@ -82,56 +71,52 @@ exports[`Header renders correctly 1`] = `
 
 exports[`Header renders with adjust ratios 1`] = `
 .c0.c0 {
+  display: grid;
+  grid-template-columns: 1fr minmax(auto,1280px) 1fr;
+  width: 100vw;
+  min-height: 35rem;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  margin-bottom: 6rem;
+}
+
+.c1.c1 {
   grid-area: 1 / 2 / 1 / 2;
   display: grid;
   grid-template-columns: 5fr 3fr;
+  grid-template-areas: "title image" "extras image";
   grid-gap: 0.5rem;
   padding: 0 4rem;
 }
 
-.c1.c1 {
+.c2.c2 {
   -webkit-align-self: end;
   -ms-flex-item-align: end;
   align-self: end;
-  grid-area: 1 / 1 / 1 / 1;
-}
-
-.c2.c2 {
-  text-transform: uppercase;
+  grid-area: title;
 }
 
 .c3.c3 {
-  -webkit-align-self: start;
-  -ms-flex-item-align: start;
-  align-self: start;
-  grid-area: 2 / 1 / 2 / 1;
+  text-transform: uppercase;
 }
 
 .c4.c4 {
-  grid-area: 1 / 2 / 3 / 3;
+  grid-area: extras;
 }
 
 <section
+  className="c0"
   data-cy="undefined-hero"
-  style={
-    Object {
-      "alignContent": "center",
-      "display": "grid",
-      "gridTemplateColumns": "1fr minmax(auto,  1280px) 1fr",
-      "marginBottom": "6rem",
-      "minHeight": "35rem",
-      "width": "100vw",
-    }
-  }
 >
   <div
-    className="c0"
+    className="c1"
   >
     <div
-      className="c1"
+      className="c2"
     >
       <p
-        className="c2"
+        className="c3"
       >
         Instrument
       </p>
@@ -143,18 +128,11 @@ exports[`Header renders with adjust ratios 1`] = `
       </p>
     </div>
     <div
-      className="c3"
+      className="c4"
     >
       <p>
         The 2DC probe records images of hydrometeors...
       </p>
-    </div>
-    <div
-      className="c4"
-    >
-      <div>
-        children
-      </div>
     </div>
   </div>
 </section>
