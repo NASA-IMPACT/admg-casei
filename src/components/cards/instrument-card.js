@@ -53,7 +53,6 @@ export default function InstrumentCard({ shortname }) {
   return (
     <Card
       image={instrument.image}
-      cover={true}
       placeholder={InstrumentIcon}
       link={`/instrument/${instrument.shortname}`}
       footerList={{

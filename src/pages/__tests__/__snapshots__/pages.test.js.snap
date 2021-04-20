@@ -537,6 +537,11 @@ exports[`Explore page renders correctly 1`] = `
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  justify-items: flex-start;
   min-height: 180px;
 }
 
@@ -569,13 +574,11 @@ exports[`Explore page renders correctly 1`] = `
 .c29.c29 {
   grid-area: 1 / 1;
   height: 100px;
-  margin: 0;
 }
 
 .c46.c46 {
   grid-area: 1 / 1;
   height: 101px;
-  margin: 0;
 }
 
 .c45.c45 {
@@ -587,10 +590,11 @@ exports[`Explore page renders correctly 1`] = `
   -webkit-align-self: flex-end;
   -ms-flex-item-align: end;
   align-self: flex-end;
-  justify-self: flex-end;
+  justify-self: flex-start;
   text-transform: uppercase;
   border: 1px solid;
   padding: 0.25rem;
+  margin: 1rem 0;
   background-color: #303641;
   z-index: 1;
 }
@@ -1649,7 +1653,6 @@ exports[`Explore page renders correctly 1`] = `
                     />
                     <img
                       _css3={100}
-                      _css4={0}
                       alt="CAMP2Ex"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -1686,7 +1689,6 @@ exports[`Explore page renders correctly 1`] = `
                       />
                       <img
                         _css3={100}
-                        _css4={0}
                         alt="CAMP2Ex"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -1920,9 +1922,9 @@ exports[`Explore page renders correctly 1`] = `
                   className="c45"
                 >
                   <svg
-                    height="120"
+                    height="80"
                     viewBox="0 0 65 69"
-                    width="120"
+                    width="80"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <g
@@ -2177,7 +2179,6 @@ exports[`Explore page renders correctly 1`] = `
                     />
                     <img
                       _css3={100}
-                      _css4={0}
                       alt="ACT-America"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -2214,7 +2215,6 @@ exports[`Explore page renders correctly 1`] = `
                       />
                       <img
                         _css3={100}
-                        _css4={0}
                         alt="ACT-America"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -2527,7 +2527,6 @@ exports[`Explore page renders correctly 1`] = `
                     />
                     <img
                       _css3={100}
-                      _css4={0}
                       alt="ICE-POP"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -2564,7 +2563,6 @@ exports[`Explore page renders correctly 1`] = `
                       />
                       <img
                         _css3={100}
-                        _css4={0}
                         alt="ICE-POP"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -2828,7 +2826,6 @@ exports[`Explore page renders correctly 1`] = `
                     />
                     <img
                       _css3={100}
-                      _css4={0}
                       alt="ACEPOL"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -2865,7 +2862,6 @@ exports[`Explore page renders correctly 1`] = `
                       />
                       <img
                         _css3={100}
-                        _css4={0}
                         alt="ACEPOL"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -3129,7 +3125,6 @@ exports[`Explore page renders correctly 1`] = `
                     />
                     <img
                       _css3={100}
-                      _css4={0}
                       alt="CPEX"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -3166,7 +3161,6 @@ exports[`Explore page renders correctly 1`] = `
                       />
                       <img
                         _css3={100}
-                        _css4={0}
                         alt="CPEX"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -3399,9 +3393,9 @@ exports[`Explore page renders correctly 1`] = `
                   className="c45"
                 >
                   <svg
-                    height="120"
+                    height="80"
                     viewBox="0 0 65 69"
-                    width="120"
+                    width="80"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <g
@@ -3656,7 +3650,6 @@ exports[`Explore page renders correctly 1`] = `
                     />
                     <img
                       _css3={100}
-                      _css4={0}
                       alt="OLYMPEX"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -3693,7 +3686,6 @@ exports[`Explore page renders correctly 1`] = `
                       />
                       <img
                         _css3={100}
-                        _css4={0}
                         alt="OLYMPEX"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -3927,9 +3919,9 @@ exports[`Explore page renders correctly 1`] = `
                   className="c45"
                 >
                   <svg
-                    height="120"
+                    height="80"
                     viewBox="0 0 65 69"
-                    width="120"
+                    width="80"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <g
@@ -4171,7 +4163,6 @@ exports[`Explore page renders correctly 1`] = `
                     />
                     <img
                       _css3={100}
-                      _css4={0}
                       alt="CARVE"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -4208,7 +4199,6 @@ exports[`Explore page renders correctly 1`] = `
                       />
                       <img
                         _css3={100}
-                        _css4={0}
                         alt="CARVE"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -4509,7 +4499,6 @@ exports[`Explore page renders correctly 1`] = `
                     />
                     <img
                       _css3={100}
-                      _css4={0}
                       alt="AirMOSS"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -4546,7 +4535,6 @@ exports[`Explore page renders correctly 1`] = `
                       />
                       <img
                         _css3={100}
-                        _css4={0}
                         alt="AirMOSS"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -5207,7 +5195,6 @@ exports[`Explore page renders correctly 1`] = `
                     />
                     <img
                       _css3={100}
-                      _css4={0}
                       alt="ATTREX"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -5244,7 +5231,6 @@ exports[`Explore page renders correctly 1`] = `
                       />
                       <img
                         _css3={100}
-                        _css4={0}
                         alt="ATTREX"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -5545,7 +5531,6 @@ exports[`Explore page renders correctly 1`] = `
                     />
                     <img
                       _css3={101}
-                      _css4={0}
                       alt="HS3"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -5582,7 +5567,6 @@ exports[`Explore page renders correctly 1`] = `
                       />
                       <img
                         _css3={101}
-                        _css4={0}
                         alt="HS3"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -5871,7 +5855,6 @@ exports[`Explore page renders correctly 1`] = `
                     />
                     <img
                       _css3={100}
-                      _css4={0}
                       alt="DISCOVER-AQ"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -5908,7 +5891,6 @@ exports[`Explore page renders correctly 1`] = `
                       />
                       <img
                         _css3={100}
-                        _css4={0}
                         alt="DISCOVER-AQ"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -6209,7 +6191,6 @@ exports[`Explore page renders correctly 1`] = `
                     />
                     <img
                       _css3={100}
-                      _css4={0}
                       alt="IPHEx"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -6246,7 +6227,6 @@ exports[`Explore page renders correctly 1`] = `
                       />
                       <img
                         _css3={100}
-                        _css4={0}
                         alt="IPHEx"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -6510,7 +6490,6 @@ exports[`Explore page renders correctly 1`] = `
                     />
                     <img
                       _css3={100}
-                      _css4={0}
                       alt="SEAC4RS"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -6547,7 +6526,6 @@ exports[`Explore page renders correctly 1`] = `
                       />
                       <img
                         _css3={100}
-                        _css4={0}
                         alt="SEAC4RS"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -6811,7 +6789,6 @@ exports[`Explore page renders correctly 1`] = `
                     />
                     <img
                       _css3={100}
-                      _css4={0}
                       alt="IFloodS"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -6848,7 +6825,6 @@ exports[`Explore page renders correctly 1`] = `
                       />
                       <img
                         _css3={100}
-                        _css4={0}
                         alt="IFloodS"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -7112,7 +7088,6 @@ exports[`Explore page renders correctly 1`] = `
                     />
                     <img
                       _css3={100}
-                      _css4={0}
                       alt="HyMeX"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -7149,7 +7124,6 @@ exports[`Explore page renders correctly 1`] = `
                       />
                       <img
                         _css3={100}
-                        _css4={0}
                         alt="HyMeX"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -7413,7 +7387,6 @@ exports[`Explore page renders correctly 1`] = `
                     />
                     <img
                       _css3={100}
-                      _css4={0}
                       alt="DC3"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -7450,7 +7423,6 @@ exports[`Explore page renders correctly 1`] = `
                       />
                       <img
                         _css3={100}
-                        _css4={0}
                         alt="DC3"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -7714,7 +7686,6 @@ exports[`Explore page renders correctly 1`] = `
                     />
                     <img
                       _css3={100}
-                      _css4={0}
                       alt="GCPEx"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -7751,7 +7722,6 @@ exports[`Explore page renders correctly 1`] = `
                       />
                       <img
                         _css3={100}
-                        _css4={0}
                         alt="GCPEx"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -8015,7 +7985,6 @@ exports[`Explore page renders correctly 1`] = `
                     />
                     <img
                       _css3={100}
-                      _css4={0}
                       alt="MC3E"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -8052,7 +8021,6 @@ exports[`Explore page renders correctly 1`] = `
                       />
                       <img
                         _css3={100}
-                        _css4={0}
                         alt="MC3E"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -8316,7 +8284,6 @@ exports[`Explore page renders correctly 1`] = `
                     />
                     <img
                       _css3={100}
-                      _css4={0}
                       alt="LPVEx"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -8353,7 +8320,6 @@ exports[`Explore page renders correctly 1`] = `
                       />
                       <img
                         _css3={100}
-                        _css4={0}
                         alt="LPVEx"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -8617,7 +8583,6 @@ exports[`Explore page renders correctly 1`] = `
                     />
                     <img
                       _css3={100}
-                      _css4={0}
                       alt="GRIP"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -8654,7 +8619,6 @@ exports[`Explore page renders correctly 1`] = `
                       />
                       <img
                         _css3={100}
-                        _css4={0}
                         alt="GRIP"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -8918,7 +8882,6 @@ exports[`Explore page renders correctly 1`] = `
                     />
                     <img
                       _css3={100}
-                      _css4={0}
                       alt="ARCTAS"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -8955,7 +8918,6 @@ exports[`Explore page renders correctly 1`] = `
                       />
                       <img
                         _css3={100}
-                        _css4={0}
                         alt="ARCTAS"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -9214,9 +9176,9 @@ exports[`Explore page renders correctly 1`] = `
                   className="c45"
                 >
                   <svg
-                    height="120"
+                    height="80"
                     viewBox="0 0 65 69"
-                    width="120"
+                    width="80"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <g
@@ -9458,7 +9420,6 @@ exports[`Explore page renders correctly 1`] = `
                     />
                     <img
                       _css3={100}
-                      _css4={0}
                       alt="NAMMA"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -9495,7 +9456,6 @@ exports[`Explore page renders correctly 1`] = `
                       />
                       <img
                         _css3={100}
-                        _css4={0}
                         alt="NAMMA"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -9759,7 +9719,6 @@ exports[`Explore page renders correctly 1`] = `
                     />
                     <img
                       _css3={100}
-                      _css4={0}
                       alt="TCSP"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -9796,7 +9755,6 @@ exports[`Explore page renders correctly 1`] = `
                       />
                       <img
                         _css3={100}
-                        _css4={0}
                         alt="TCSP"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -10060,7 +10018,6 @@ exports[`Explore page renders correctly 1`] = `
                     />
                     <img
                       _css3={100}
-                      _css4={0}
                       alt="ACES"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -10097,7 +10054,6 @@ exports[`Explore page renders correctly 1`] = `
                       />
                       <img
                         _css3={100}
-                        _css4={0}
                         alt="ACES"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -10331,9 +10287,9 @@ exports[`Explore page renders correctly 1`] = `
                   className="c45"
                 >
                   <svg
-                    height="120"
+                    height="80"
                     viewBox="0 0 65 69"
-                    width="120"
+                    width="80"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <g
@@ -10587,7 +10543,6 @@ exports[`Explore page renders correctly 1`] = `
                     />
                     <img
                       _css3={100}
-                      _css4={0}
                       alt="BOREAS"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -10624,7 +10579,6 @@ exports[`Explore page renders correctly 1`] = `
                       />
                       <img
                         _css3={100}
-                        _css4={0}
                         alt="BOREAS"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -10901,7 +10855,6 @@ exports[`Explore page renders correctly 1`] = `
                     />
                     <img
                       _css3={100}
-                      _css4={0}
                       alt="TARFOX"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -10938,7 +10891,6 @@ exports[`Explore page renders correctly 1`] = `
                       />
                       <img
                         _css3={100}
-                        _css4={0}
                         alt="TARFOX"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -11172,9 +11124,9 @@ exports[`Explore page renders correctly 1`] = `
                   className="c45"
                 >
                   <svg
-                    height="120"
+                    height="80"
                     viewBox="0 0 65 69"
-                    width="120"
+                    width="80"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <g
@@ -11441,7 +11393,6 @@ exports[`Explore page renders correctly 1`] = `
                     />
                     <img
                       _css3={100}
-                      _css4={0}
                       alt="FIFE"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -11478,7 +11429,6 @@ exports[`Explore page renders correctly 1`] = `
                       />
                       <img
                         _css3={100}
-                        _css4={0}
                         alt="FIFE"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -11755,7 +11705,6 @@ exports[`Explore page renders correctly 1`] = `
                     />
                     <img
                       _css3={100}
-                      _css4={0}
                       alt="SNF"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -11792,7 +11741,6 @@ exports[`Explore page renders correctly 1`] = `
                       />
                       <img
                         _css3={100}
-                        _css4={0}
                         alt="SNF"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -12069,7 +12017,6 @@ exports[`Explore page renders correctly 1`] = `
                     />
                     <img
                       _css3={100}
-                      _css4={0}
                       alt="ABoVE"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -12106,7 +12053,6 @@ exports[`Explore page renders correctly 1`] = `
                       />
                       <img
                         _css3={100}
-                        _css4={0}
                         alt="ABoVE"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -12401,7 +12347,6 @@ exports[`Explore page renders correctly 1`] = `
                     />
                     <img
                       _css3={100}
-                      _css4={0}
                       alt="OMG"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -12438,7 +12383,6 @@ exports[`Explore page renders correctly 1`] = `
                       />
                       <img
                         _css3={100}
-                        _css4={0}
                         alt="OMG"
                         data-gatsby-image-ssr=""
                         data-main-image=""
@@ -12817,7 +12761,6 @@ exports[`Explore page renders correctly 1`] = `
                     />
                     <img
                       _css3={100}
-                      _css4={0}
                       alt="SnowEx"
                       data-gatsby-image-ssr=""
                       data-main-image=""
@@ -12854,7 +12797,6 @@ exports[`Explore page renders correctly 1`] = `
                       />
                       <img
                         _css3={100}
-                        _css4={0}
                         alt="SnowEx"
                         data-gatsby-image-ssr=""
                         data-main-image=""

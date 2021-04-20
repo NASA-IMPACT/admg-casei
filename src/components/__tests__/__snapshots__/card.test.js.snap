@@ -5,6 +5,11 @@ exports[`Card renders card with tag 1`] = `
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  justify-items: flex-start;
   min-height: 180px;
 }
 
@@ -43,10 +48,11 @@ exports[`Card renders card with tag 1`] = `
   -webkit-align-self: flex-end;
   -ms-flex-item-align: end;
   align-self: flex-end;
-  justify-self: flex-end;
+  justify-self: flex-start;
   text-transform: uppercase;
   border: 1px solid;
   padding: 0.25rem;
+  margin: 1rem 0;
   background-color: #303641;
   z-index: 1;
 }
@@ -67,9 +73,9 @@ exports[`Card renders card with tag 1`] = `
         className="c3"
       >
         <svg
-          height="120"
+          height="80"
           viewBox="0 0 65 69"
-          width="120"
+          width="80"
           xmlns="http://www.w3.org/2000/svg"
         >
           <g
@@ -124,6 +130,11 @@ exports[`Card renders plain card 1`] = `
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  justify-items: flex-start;
   min-height: 180px;
 }
 
@@ -173,9 +184,9 @@ exports[`Card renders plain card 1`] = `
         className="c3"
       >
         <svg
-          height="120"
+          height="80"
           viewBox="0 0 65 69"
-          width="120"
+          width="80"
           xmlns="http://www.w3.org/2000/svg"
         >
           <g
@@ -224,6 +235,11 @@ exports[`Card renders with footer list 1`] = `
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  justify-items: flex-start;
   min-height: 180px;
 }
 
@@ -273,9 +289,9 @@ exports[`Card renders with footer list 1`] = `
         className="c3"
       >
         <svg
-          height="120"
+          height="80"
           viewBox="0 0 65 69"
-          width="120"
+          width="80"
           xmlns="http://www.w3.org/2000/svg"
         >
           <g

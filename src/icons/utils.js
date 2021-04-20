@@ -42,6 +42,7 @@ export const sizes = {
   text: { width: "16", height: "16" },
   tiny: { width: "30", height: "30" },
   small: { width: "60", height: "60" },
+  medium: { width: "80", height: "80" },
   large: { width: "120", height: "120" },
   huge: { width: "360", height: "360" },
 }

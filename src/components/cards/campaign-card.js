@@ -60,6 +60,7 @@ export default function CampaignCard({ shortname, mode }) {
     <Card
       image={campaign.logo}
       placeholder={CampaignIcon}
+      imagePosition="left top"
       tag={campaign.ongoing && "Ongoing"}
       link={`/campaign/${campaign.shortname}`}
       footerList={{

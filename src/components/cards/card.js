@@ -10,14 +10,18 @@ const CardHeader = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
+  align-items: ${({ imagePosition }) =>
+    imagePosition === "left top" ? "flex-start" : "center"};
+  justify-items: ${({ imagePosition }) =>
+    imagePosition === "left top" ? "flex-start" : "center"};
   min-height: 180px;
 `
 
 const Card = ({
   children,
   image,
-  cover,
   placeholder: Placeholder,
+  imagePosition,
   tag,
   link,
   footerList,
@@ -50,7 +54,7 @@ const Card = ({
       `}
       data-cy={`${category}-card`}
     >
-      <CardHeader>
+      <CardHeader imagePosition={image ? imagePosition : "left top"}>
         {image && image.gatsbyImg ? (
           <GatsbyImage
             image={image.gatsbyImg.childImageSharp.gatsbyImageData}
@@ -60,11 +64,10 @@ const Card = ({
                 grid-area: 1 / 1;
                 height: ${image.gatsbyImg.childImageSharp.gatsbyImageData
                   .height}px;
-                margin: ${cover ? `-1rem -1rem 0 -1rem` : 0};
               }
             `}
-            objectFit={cover ? "cover" : "contain"}
-            objectPosition={cover ? "center center" : "left top"}
+            objectFit="contain"
+            objectPosition={imagePosition || "center center"}
           />
         ) : (
           <div
@@ -74,7 +77,7 @@ const Card = ({
               }
             `}
           >
-            <Placeholder size="large" color={colors[mode].text} />
+            <Placeholder size="medium" color={colors[mode].text} />
           </div>
         )}
         {tag && (
@@ -83,10 +86,11 @@ const Card = ({
                {
                 grid-area: 1 / 1;
                 align-self: flex-end;
-                justify-self: flex-end;
+                justify-self: flex-start;
                 text-transform: uppercase;
                 border: 1px solid;
                 padding: 0.25rem;
+                margin: 1rem 0;
                 background-color: ${colors[mode].background};
                 z-index: 1;
               }
@@ -138,8 +142,8 @@ Card.propTypes = {
       childImageSharp: PropTypes.object,
     }),
   }),
-  cover: PropTypes.bool,
   placeholder: PropTypes.func.isRequired,
+  imagePosition: PropTypes.oneOf(["left top"]),
   height: PropTypes.string,
   link: PropTypes.string,
   tag: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),

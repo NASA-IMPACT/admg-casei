@@ -113,6 +113,11 @@ exports[`Platform Section displays content 1`] = `
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  justify-items: flex-start;
   min-height: 180px;
 }
 
@@ -252,9 +257,9 @@ exports[`Platform Section displays content 1`] = `
                     className="c12"
                   >
                     <svg
-                      height="120"
+                      height="80"
                       viewBox="0 0 69 71"
-                      width="120"
+                      width="80"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <g
@@ -360,9 +365,9 @@ exports[`Platform Section displays content 1`] = `
                     className="c12"
                   >
                     <svg
-                      height="120"
+                      height="80"
                       viewBox="0 0 69 71"
-                      width="120"
+                      width="80"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <g
@@ -469,9 +474,9 @@ exports[`Platform Section displays content 1`] = `
                     className="c12"
                   >
                     <svg
-                      height="120"
+                      height="80"
                       viewBox="0 0 69 71"
-                      width="120"
+                      width="80"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <g
