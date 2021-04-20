@@ -32,6 +32,11 @@ const TabButton = styled.button`
   }
 `
 
+const Count = styled.span`
+  font-weight: lighter;
+  font-size: smaller;
+`
+
 const ExploreMenu = ({
   selectedCategory,
   setSelectedCategory,
@@ -57,7 +62,7 @@ const ExploreMenu = ({
         isSelected={selectedCategory === "campaigns"}
       >
         Campaigns
-        <span data-cy="campaigns-count"> ({filteredCount["campaigns"]})</span>
+        <Count data-cy="campaigns-count"> ({filteredCount["campaigns"]})</Count>
       </TabButton>
     </li>
 
@@ -67,7 +72,7 @@ const ExploreMenu = ({
         isSelected={selectedCategory === "platforms"}
       >
         Platforms
-        <span data-cy="platforms-count"> ({filteredCount["platforms"]})</span>
+        <Count data-cy="platforms-count"> ({filteredCount["platforms"]})</Count>
       </TabButton>
     </li>
 
@@ -77,10 +82,10 @@ const ExploreMenu = ({
         isSelected={selectedCategory === "instruments"}
       >
         Instruments
-        <span data-cy="instruments-count">
+        <Count data-cy="instruments-count">
           {" "}
           ({filteredCount["instruments"]})
-        </span>
+        </Count>
       </TabButton>
     </li>
   </ul>
