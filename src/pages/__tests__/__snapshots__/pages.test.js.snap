@@ -15274,21 +15274,21 @@ exports[`Home page renders correctly 1`] = `
   color: #e9eaec;
 }
 
-.c22.c22 {
+.c24.c24 {
   grid-column: 1 / span 6;
 }
 
-.c22.c22 > *,
-.c22.c22 h3 {
+.c24.c24 > *,
+.c24.c24 h3 {
   color: #e9eaec;
 }
 
-.c23.c23 {
+.c25.c25 {
   grid-column: 7 / span 6;
 }
 
-.c23.c23 > *,
-.c23.c23 h3 {
+.c25.c25 > *,
+.c25.c25 h3 {
   color: #e9eaec;
 }
 
@@ -15354,17 +15354,17 @@ exports[`Home page renders correctly 1`] = `
   display: flex;
 }
 
-.c19.c19:hover {
+.c21.c21:hover {
   opacity: 0.64;
 }
 
-.c19.c19:active {
+.c21.c21:active {
   -webkit-transform: translate(0,1px);
   -ms-transform: translate(0,1px);
   transform: translate(0,1px);
 }
 
-.c20.c20 {
+.c22.c22 {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -15382,7 +15382,7 @@ exports[`Home page renders correctly 1`] = `
   white-space: nowrap;
 }
 
-.c21.c21 {
+.c23.c23 {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -15400,23 +15400,23 @@ exports[`Home page renders correctly 1`] = `
   white-space: nowrap;
 }
 
-.c32.c32 {
+.c34.c34 {
   list-style: none;
   margin: 0;
 }
 
-.c31.c31 {
+.c33.c33 {
   margin: 0 0 1.5rem 0;
   font-weight: bold;
   line-height: 3rem;
 }
 
-.c26.c26 {
+.c28.c28 {
   margin-top: 5rem;
   background-color: #303641;
 }
 
-.c27.c27 {
+.c29.c29 {
   margin: 5rem auto;
   max-width: 1280px;
   padding: 2rem 4rem;
@@ -15428,11 +15428,11 @@ exports[`Home page renders correctly 1`] = `
   grid-template-columns: repeat(12,1fr);
 }
 
-.c28.c28 {
+.c30.c30 {
   grid-column: 1 / span 3;
 }
 
-.c29.c29 {
+.c31.c31 {
   text-transform: uppercase;
   font-weight: 900;
   font-size: 30px;
@@ -15440,28 +15440,28 @@ exports[`Home page renders correctly 1`] = `
   margin-bottom: 0.5rem;
 }
 
-.c30.c30 {
+.c32.c32 {
   grid-column: 5 / span 2;
 }
 
-.c33.c33 {
+.c35.c35 {
   grid-column: 7 / span 2;
 }
 
-.c34.c34 {
+.c36.c36 {
   grid-column: 9 / span 2;
 }
 
-.c35.c35 {
+.c37.c37 {
   grid-column: 11 / span 2;
 }
 
-.c36.c36 {
+.c38.c38 {
   grid-column: 1 / span 12;
   background-color: rgba(255,255,255,0.2);
 }
 
-.c37.c37 {
+.c39.c39 {
   grid-column: 1 / span 12;
   display: -webkit-box;
   display: -webkit-flex;
@@ -15473,7 +15473,7 @@ exports[`Home page renders correctly 1`] = `
   justify-content: space-between;
 }
 
-.c38.c38 {
+.c40.c40 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -15485,7 +15485,7 @@ exports[`Home page renders correctly 1`] = `
   font-weight: bold;
 }
 
-.c39.c39 {
+.c41.c41 {
   background-image: url("https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png");
   background-size: cover;
   background-position: center;
@@ -15493,11 +15493,11 @@ exports[`Home page renders correctly 1`] = `
   height: 100px;
 }
 
-.c40.c40 {
+.c42.c42 {
   font-weight: normal;
 }
 
-.c41.c41 {
+.c43.c43 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -15509,7 +15509,7 @@ exports[`Home page renders correctly 1`] = `
   text-transform: uppercase;
 }
 
-.c42.c42 {
+.c44.c44 {
   text-align: center;
 }
 
@@ -15562,7 +15562,32 @@ exports[`Home page renders correctly 1`] = `
   object-position: center top;
 }
 
+.c19.c19 {
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-column: span 1;
+  gap: 1rem;
+}
+
 .c18.c18 {
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  justify-items: center;
+  gap: 2rem;
+  padding-top: 1rem;
+}
+
+.c20.c20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -15572,7 +15597,7 @@ exports[`Home page renders correctly 1`] = `
   margin: 1rem 0;
 }
 
-.c24.c24 {
+.c26.c26 {
   height: 100%;
   display: grid;
   gap: 2.5rem;
@@ -15582,10 +15607,22 @@ exports[`Home page renders correctly 1`] = `
   padding: 1rem;
 }
 
-.c25.c25 {
+.c27.c27 {
   border: 1px solid #e9eaec;
   padding: 1rem 5rem;
   text-transform: uppercase;
+}
+
+@media screen and (max-width:1280px) {
+  .c19.c19 {
+    grid-column: span 2;
+  }
+}
+
+@media screen and (max-width:800px) {
+  .c19.c19 {
+    grid-column: span 3;
+  }
 }
 
 <div
@@ -15934,31 +15971,17 @@ exports[`Home page renders correctly 1`] = `
           mode="darkTheme"
         >
           <div
-            style={
-              Object {
-                "display": "grid",
-                "gap": "1rem",
-                "gridTemplateColumns": "repeat(auto-fit, minmax(10rem, 1fr))",
-                "justifyItems": "center",
-                "paddingTop": "1rem",
-              }
-            }
+            className="c18"
           >
             <a
+              _css="1280px"
+              _css2="800px"
+              className="c19"
               data-cy="focus-area"
               href="/focus/Atmospheric Composition"
               state={
                 Object {
                   "selectedFilterId": "59c9c09d-f5ab-4909-9c09-22da671c1c26",
-                }
-              }
-              style={
-                Object {
-                  "alignItems": "center",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "gap": "1rem",
-                  "textAlign": "center",
                 }
               }
             >
@@ -15982,20 +16005,14 @@ exports[`Home page renders correctly 1`] = `
               </label>
             </a>
             <a
+              _css="1280px"
+              _css2="800px"
+              className="c19"
               data-cy="focus-area"
               href="/focus/Weather"
               state={
                 Object {
                   "selectedFilterId": "a6ebfd25-d751-4b12-8a95-08572e498354",
-                }
-              }
-              style={
-                Object {
-                  "alignItems": "center",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "gap": "1rem",
-                  "textAlign": "center",
                 }
               }
             >
@@ -16019,20 +16036,14 @@ exports[`Home page renders correctly 1`] = `
               </label>
             </a>
             <a
+              _css="1280px"
+              _css2="800px"
+              className="c19"
               data-cy="focus-area"
               href="/focus/Climate Variability & Change"
               state={
                 Object {
                   "selectedFilterId": "8630847a-3da8-46ac-b511-07035809ff59",
-                }
-              }
-              style={
-                Object {
-                  "alignItems": "center",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "gap": "1rem",
-                  "textAlign": "center",
                 }
               }
             >
@@ -16056,20 +16067,14 @@ exports[`Home page renders correctly 1`] = `
               </label>
             </a>
             <a
+              _css="1280px"
+              _css2="800px"
+              className="c19"
               data-cy="focus-area"
               href="/focus/Global Water & Energy Cycle"
               state={
                 Object {
                   "selectedFilterId": "ed32508f-156e-4151-9ab2-2613e098be94",
-                }
-              }
-              style={
-                Object {
-                  "alignItems": "center",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "gap": "1rem",
-                  "textAlign": "center",
                 }
               }
             >
@@ -16093,20 +16098,14 @@ exports[`Home page renders correctly 1`] = `
               </label>
             </a>
             <a
+              _css="1280px"
+              _css2="800px"
+              className="c19"
               data-cy="focus-area"
               href="/focus/Carbon Cycle & Ecosystems"
               state={
                 Object {
                   "selectedFilterId": "30c09a1b-7892-4d1a-a2fa-64102e9f68a3",
-                }
-              }
-              style={
-                Object {
-                  "alignItems": "center",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "gap": "1rem",
-                  "textAlign": "center",
                 }
               }
             >
@@ -16130,20 +16129,14 @@ exports[`Home page renders correctly 1`] = `
               </label>
             </a>
             <a
+              _css="1280px"
+              _css2="800px"
+              className="c19"
               data-cy="focus-area"
               href="/focus/Earth Surface & Interior"
               state={
                 Object {
                   "selectedFilterId": "05c34337-c0c4-44bc-b83f-07d5718c375d",
-                }
-              }
-              style={
-                Object {
-                  "alignItems": "center",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "gap": "1rem",
-                  "textAlign": "center",
                 }
               }
             >
@@ -16207,101 +16200,101 @@ exports[`Home page renders correctly 1`] = `
           mode="darkTheme"
         >
           <div
-            className="c18"
+            className="c20"
             data-cy="region-text-control"
           >
             <button
-              className="c19 c20"
+              className="c21 c22"
               onClick={[Function]}
             >
               continental
             </button>
             <button
-              className="c19 c21"
+              className="c21 c23"
               onClick={[Function]}
             >
               maritime
             </button>
             <button
-              className="c19 c20"
+              className="c21 c22"
               onClick={[Function]}
             >
               coastal
             </button>
             <button
-              className="c19 c20"
+              className="c21 c22"
               onClick={[Function]}
             >
               mountains
             </button>
             <button
-              className="c19 c20"
+              className="c21 c22"
               onClick={[Function]}
             >
               island
             </button>
             <button
-              className="c19 c20"
+              className="c21 c22"
               onClick={[Function]}
             >
               desert
             </button>
             <button
-              className="c19 c20"
+              className="c21 c22"
               onClick={[Function]}
             >
               forest
             </button>
             <button
-              className="c19 c20"
+              className="c21 c22"
               onClick={[Function]}
             >
               urban
             </button>
             <button
-              className="c19 c20"
+              className="c21 c22"
               onClick={[Function]}
             >
               agricultural
             </button>
             <button
-              className="c19 c20"
+              className="c21 c22"
               onClick={[Function]}
             >
               equitorial
             </button>
             <button
-              className="c19 c20"
+              className="c21 c22"
               onClick={[Function]}
             >
               tropical
             </button>
             <button
-              className="c19 c20"
+              className="c21 c22"
               onClick={[Function]}
             >
               mid-latitude
             </button>
             <button
-              className="c19 c20"
+              className="c21 c22"
               onClick={[Function]}
             >
               polar
             </button>
             <button
-              className="c19 c20"
+              className="c21 c22"
               onClick={[Function]}
             >
               sea ice
             </button>
             <button
-              className="c19 c20"
+              className="c21 c22"
               onClick={[Function]}
             >
               coral
             </button>
             <button
-              className="c19 c20"
+              className="c21 c22"
               onClick={[Function]}
             >
               rainforest
@@ -19676,7 +19669,7 @@ exports[`Home page renders correctly 1`] = `
           id="platforms"
         />
         <div
-          className="c22"
+          className="c24"
           mode="darkTheme"
         >
           <div
@@ -19795,11 +19788,11 @@ exports[`Home page renders correctly 1`] = `
           </div>
         </div>
         <div
-          className="c23"
+          className="c25"
           mode="darkTheme"
         >
           <div
-            className="c24"
+            className="c26"
           >
             <div
               className="c14"
@@ -19827,7 +19820,7 @@ exports[`Home page renders correctly 1`] = `
             </div>
             <a
               _css="#e9eaec"
-              className="c25"
+              className="c27"
               data-cy="explore-platforms-link"
               href="/explore"
               state={
@@ -20554,17 +20547,17 @@ exports[`Home page renders correctly 1`] = `
     </div>
   </main>
   <footer
-    className="c26"
+    className="c28"
     data-cy="page-footer"
   >
     <div
-      className="c27"
+      className="c29"
     >
       <div
-        className="c28"
+        className="c30"
       >
         <div
-          className="c29"
+          className="c31"
           data-cy="footer-title"
         >
           NASA | CASEI
@@ -20577,16 +20570,16 @@ exports[`Home page renders correctly 1`] = `
         </p>
       </div>
       <div
-        className="c30"
+        className="c32"
         data-cy="footer-explore"
       >
         <p
-          className="c31"
+          className="c33"
         >
           Explore
         </p>
         <ul
-          className="c32"
+          className="c34"
         >
           <li>
             <a
@@ -20630,16 +20623,16 @@ exports[`Home page renders correctly 1`] = `
         </ul>
       </div>
       <div
-        className="c33"
+        className="c35"
         data-cy="footer-resources"
       >
         <p
-          className="c31"
+          className="c33"
         >
           Resources
         </p>
         <ul
-          className="c32"
+          className="c34"
         >
           <li>
             <a
@@ -20652,16 +20645,16 @@ exports[`Home page renders correctly 1`] = `
         </ul>
       </div>
       <div
-        className="c34"
+        className="c36"
         data-cy="footer-quick-links"
       >
         <p
-          className="c31"
+          className="c33"
         >
           Quick Links
         </p>
         <ul
-          className="c32"
+          className="c34"
         >
           <li>
             <a
@@ -20680,16 +20673,16 @@ exports[`Home page renders correctly 1`] = `
         </ul>
       </div>
       <div
-        className="c35"
+        className="c37"
         data-cy="footer-organizations"
       >
         <p
-          className="c31"
+          className="c33"
         >
           Organizations
         </p>
         <ul
-          className="c32"
+          className="c34"
         >
           <li>
             <a
@@ -20724,17 +20717,17 @@ exports[`Home page renders correctly 1`] = `
         </ul>
       </div>
       <hr
-        className="c36"
+        className="c38"
       />
       <div
-        className="c37"
+        className="c39"
       >
         <div
-          className="c38"
+          className="c40"
         >
           <div
             aria-hidden="true"
-            className="c39"
+            className="c41"
           />
           <div
             data-cy="footer-credits"
@@ -20750,7 +20743,7 @@ exports[`Home page renders correctly 1`] = `
               NASA Official:
                
               <span
-                className="c40"
+                className="c42"
               >
                 Rahul Ramachandran
               </span>
@@ -20758,12 +20751,12 @@ exports[`Home page renders correctly 1`] = `
           </div>
         </div>
         <div
-          className="c41"
+          className="c43"
         />
       </div>
     </div>
     <div
-      className="c42"
+      className="c44"
       data-cy="footer-credit-devseed"
     >
       © 

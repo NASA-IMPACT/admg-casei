@@ -41,4 +41,10 @@ const layout = {
   maxWidth: "1280px",
 }
 
-export { colors, shape, layout }
+const breakpoints = {
+  sm: "800px",
+  md: "1280px",
+  lg: "1400px",
+}
+
+export { colors, shape, layout, breakpoints }
