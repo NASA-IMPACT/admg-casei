@@ -166,6 +166,7 @@ export default function Hero({
             alt={backgroundImage.nasaImgAlt}
             objectPosition={"center top"}
             css={`
+              min-height: 100%;
               max-height: 60vh;
               min-width: 55rem;
             `}
