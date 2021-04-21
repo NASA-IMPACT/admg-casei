@@ -15760,7 +15760,7 @@ exports[`Home page renders correctly 1`] = `
           </a>
           <p
             className="c16"
-            data-cy="section-subline"
+            data-cy="section-description"
           >
             NASA’s Earth Science Research and Analysis Program supports investigations related to six broad Focus Areas:
           </p>
@@ -15989,7 +15989,7 @@ exports[`Home page renders correctly 1`] = `
           </a>
           <p
             className="c16"
-            data-cy="section-subline"
+            data-cy="section-description"
           >
             Choose a type of geographical region to explore
           </p>
@@ -16853,7 +16853,7 @@ exports[`Home page renders correctly 1`] = `
           </a>
           <p
             className="c16"
-            data-cy="section-subline"
+            data-cy="section-description"
           >
             NASA investigates a myriad of factors that comprise Earth’s properties, systems, and processes.
           </p>
@@ -17641,7 +17641,7 @@ exports[`Home page renders correctly 1`] = `
               </a>
               <p
                 className="c16"
-                data-cy="section-subline"
+                data-cy="section-description"
               >
                 Learn about the variety of air and Earth-based platforms NASA uses to study our home planet.
               </p>

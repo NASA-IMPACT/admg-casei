@@ -36,7 +36,7 @@ const Home = ({ data }) => {
           <SectionHeader
             tagline="view"
             headline="Earth Science Focus Areas"
-            subline="NASA’s Earth Science Research and Analysis Program supports
+            description="NASA’s Earth Science Research and Analysis Program supports
             investigations related to six broad Focus Areas:"
             id="focus"
           />
@@ -52,7 +52,7 @@ const Home = ({ data }) => {
           <SectionHeader
             tagline="explore campaigns by"
             headline="Region Type"
-            subline="Choose a type of geographical region to explore"
+            description="Choose a type of geographical region to explore"
             id="region-type"
           />
           <SectionContent>
@@ -64,7 +64,7 @@ const Home = ({ data }) => {
           <SectionHeader
             tagline="explore campaigns by"
             headline="Geophysical Concepts"
-            subline="NASA investigates a myriad of factors that comprise Earth’s properties, systems, and processes."
+            description="NASA investigates a myriad of factors that comprise Earth’s properties, systems, and processes."
             id="geophysical-concepts"
           />
           <SectionContent>
@@ -96,7 +96,7 @@ const Home = ({ data }) => {
               <SectionHeader
                 tagline="explore"
                 headline="Platforms"
-                subline="Learn about the variety of air and Earth-based platforms NASA uses to study our home planet."
+                description="Learn about the variety of air and Earth-based platforms NASA uses to study our home planet."
                 id="platforms"
               />
               <Link
