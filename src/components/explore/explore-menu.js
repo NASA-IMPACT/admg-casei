@@ -73,7 +73,8 @@ const ExploreMenu = ({
   setSelectedCategory,
   filteredCount,
 }) => (
-  <ul
+  <div
+    role="tablist"
     css={`
        {
         display: flex;
@@ -87,39 +88,33 @@ const ExploreMenu = ({
     `}
     data-cy="tabbar"
   >
-    <li>
-      <TabButton
-        onClick={() => setSelectedCategory("campaigns")}
-        isSelected={selectedCategory === "campaigns"}
-      >
-        Campaigns
-        <Count data-cy="campaigns-count"> ({filteredCount["campaigns"]})</Count>
-      </TabButton>
-    </li>
+    <TabButton
+      onClick={() => setSelectedCategory("campaigns")}
+      isSelected={selectedCategory === "campaigns"}
+    >
+      Campaigns
+      <Count data-cy="campaigns-count"> ({filteredCount["campaigns"]})</Count>
+    </TabButton>
 
-    <li>
-      <TabButton
-        onClick={() => setSelectedCategory("platforms")}
-        isSelected={selectedCategory === "platforms"}
-      >
-        Platforms
-        <Count data-cy="platforms-count"> ({filteredCount["platforms"]})</Count>
-      </TabButton>
-    </li>
+    <TabButton
+      onClick={() => setSelectedCategory("platforms")}
+      isSelected={selectedCategory === "platforms"}
+    >
+      Platforms
+      <Count data-cy="platforms-count"> ({filteredCount["platforms"]})</Count>
+    </TabButton>
 
-    <li>
-      <TabButton
-        onClick={() => setSelectedCategory("instruments")}
-        isSelected={selectedCategory === "instruments"}
-      >
-        Instruments
-        <Count data-cy="instruments-count">
-          {" "}
-          ({filteredCount["instruments"]})
-        </Count>
-      </TabButton>
-    </li>
-  </ul>
+    <TabButton
+      onClick={() => setSelectedCategory("instruments")}
+      isSelected={selectedCategory === "instruments"}
+    >
+      Instruments
+      <Count data-cy="instruments-count">
+        {" "}
+        ({filteredCount["instruments"]})
+      </Count>
+    </TabButton>
+  </div>
 )
 
 ExploreMenu.propTypes = {

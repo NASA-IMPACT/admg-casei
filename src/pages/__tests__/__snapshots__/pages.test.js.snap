@@ -929,63 +929,58 @@ exports[`Explore page renders correctly 1`] = `
           campaigns
         </h1>
       </span>
-      <ul
+      <div
         className="c6"
         data-cy="tabbar"
+        role="tablist"
       >
-        <li>
-          <button
-            className="c7"
-            onClick={[Function]}
-            role="tab"
+        <button
+          className="c7"
+          onClick={[Function]}
+          role="tab"
+        >
+          Campaigns
+          <span
+            className="c8"
+            data-cy="campaigns-count"
           >
-            Campaigns
-            <span
-              className="c8"
-              data-cy="campaigns-count"
-            >
-               (
-              37
-              )
-            </span>
-          </button>
-        </li>
-        <li>
-          <button
-            className="c9"
-            onClick={[Function]}
-            role="tab"
+             (
+            37
+            )
+          </span>
+        </button>
+        <button
+          className="c9"
+          onClick={[Function]}
+          role="tab"
+        >
+          Platforms
+          <span
+            className="c8"
+            data-cy="platforms-count"
           >
-            Platforms
-            <span
-              className="c8"
-              data-cy="platforms-count"
-            >
-               (
-              62
-              )
-            </span>
-          </button>
-        </li>
-        <li>
-          <button
-            className="c9"
-            onClick={[Function]}
-            role="tab"
+             (
+            62
+            )
+          </span>
+        </button>
+        <button
+          className="c9"
+          onClick={[Function]}
+          role="tab"
+        >
+          Instruments
+          <span
+            className="c8"
+            data-cy="instruments-count"
           >
-            Instruments
-            <span
-              className="c8"
-              data-cy="instruments-count"
-            >
-               
-              (
-              361
-              )
-            </span>
-          </button>
-        </li>
-      </ul>
+             
+            (
+            361
+            )
+          </span>
+        </button>
+      </div>
       <form
         className="c10"
         data-cy="explore-tools"
