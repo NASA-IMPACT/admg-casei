@@ -53,10 +53,9 @@ exports[`Header renders correctly 1`] = `
       </p>
       <h1>
         2D-C/P
-      </h1>
-      <p>
+         
         2D-C/P Hydrometeor Imaging Probe
-      </p>
+      </h1>
     </div>
     <div
       className="c4"
@@ -122,10 +121,9 @@ exports[`Header renders with adjust ratios 1`] = `
       </p>
       <h1>
         2D-C/P
-      </h1>
-      <p>
+         
         2D-C/P Hydrometeor Imaging Probe
-      </p>
+      </h1>
     </div>
     <div
       className="c4"

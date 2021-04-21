@@ -15,7 +15,7 @@ export default function PlatformHero({
 }) {
   return (
     <Hero
-      tagTitle={shortname}
+      tagline={shortname}
       title={longname}
       image={
         image && image.gatsbyImg ? (

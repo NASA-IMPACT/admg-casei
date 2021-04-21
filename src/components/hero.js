@@ -59,10 +59,8 @@ const Container = styled.section`
 `
 
 export default function Hero({
-  tagTitle,
+  tagline,
   title,
-  blockTitle,
-  subTitle,
   description,
   stats,
   cta,
@@ -99,18 +97,16 @@ export default function Hero({
             grid-area: title;
           `}
         >
-          {tagTitle && (
+          {tagline && (
             <p
               css={`
                 text-transform: uppercase;
               `}
             >
-              {tagTitle}
+              {tagline}
             </p>
           )}
           <h1>{title}</h1>
-          {blockTitle && <h2>{blockTitle}</h2>}
-          {subTitle && <p>{subTitle}</p>}
         </div>
 
         <div
@@ -175,10 +171,8 @@ export default function Hero({
 }
 
 Hero.propTypes = {
-  tagTitle: PropTypes.string,
-  title: PropTypes.string.isRequired,
-  blockTitle: PropTypes.string,
-  subTitle: PropTypes.string,
+  tagline: PropTypes.string,
+  title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
   description: PropTypes.string,
   stats: PropTypes.arrayOf(
     PropTypes.shape({ number: PropTypes.number, label: PropTypes.string })
