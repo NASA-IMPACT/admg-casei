@@ -21,6 +21,7 @@ const SortMenu = ({ sortOrder, setSortOrder, category }) => {
           display: flex;
           justify-content: flex-end;
           margin: 2rem 0;
+          white-space: nowrap;
         }
       `}
     >

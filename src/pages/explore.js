@@ -250,21 +250,29 @@ export default function Explore({ data, location }) {
           </>
         )}
 
-        <SortMenu
-          sortOrder={sortOrder[selectedCategory]}
-          setSortOrder={setSortOrder}
-          category={selectedCategory}
-        />
-
-        {selectedCategory === "platforms" && (
-          <PlatformNav
-            items={Object.keys(platformList.grouped).map(group => ({
-              id: group,
-              label: `${group} (${platformList.grouped[group].length})`,
-            }))}
+        <div
+          css={`
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: baseline;
+          `}
+        >
+          <SortMenu
+            sortOrder={sortOrder[selectedCategory]}
+            setSortOrder={setSortOrder}
+            category={selectedCategory}
           />
-        )}
 
+          {selectedCategory === "platforms" && (
+            <PlatformNav
+              items={Object.keys(platformList.grouped).map(group => ({
+                id: group,
+                label: `${group} (${platformList.grouped[group].length})`,
+              }))}
+            />
+          )}
+        </div>
         <ExploreSection isLoading={isLoading}>
           {selectedCategory === "campaigns" &&
             campaignList.filtered.map(campaign => {
