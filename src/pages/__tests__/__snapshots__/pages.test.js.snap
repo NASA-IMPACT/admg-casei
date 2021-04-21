@@ -473,33 +473,57 @@ exports[`Explore page renders correctly 1`] = `
   flex-grow: 1;
 }
 
+.c8.c8 {
+  font-weight: lighter;
+  font-size: smaller;
+}
+
 .c7.c7 {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  display: inline-block;
-  text-align: center;
-  vertical-align: middle;
-  padding: 0.25rem 0;
-  min-width: 2rem;
   background: none;
   text-shadow: none;
-  border: 0;
-  cursor: pointer;
-  height: 2.5rem;
+  color: #e9eaec;
+  border: none;
+  cursor: default;
   text-transform: uppercase;
   font-weight: bold;
-  color: #e9eaec;
+  padding: 0.5rem;
+  position: relative;
 }
 
 .c7.c7::after {
   content: "";
   display: block;
-  border-bottom: 1px solid #e9eaec;
-  width: 100%;
-  position: relative;
-  bottom: -0.25rem;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  margin-left: -1.5rem;
+  width: 3rem;
+  border-bottom: 2px solid #e9eaec;
+  -webkit-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transition: 0.5s -webkit-transform cubic-bezier(0,0,0.1,1);
+  -webkit-transition: 0.5s transform cubic-bezier(0,0,0.1,1);
+  transition: 0.5s transform cubic-bezier(0,0,0.1,1);
+}
+
+.c7.c7:hover {
+  opacity: inherit;
+}
+
+.c7.c7:hover::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  margin-left: -1.5rem;
+  width: 3rem;
+  border-bottom: 2px solid #e9eaec;
 }
 
 .c9.c9 {
@@ -507,31 +531,45 @@ exports[`Explore page renders correctly 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  display: inline-block;
-  text-align: center;
-  vertical-align: middle;
-  padding: 0.25rem 0;
-  min-width: 2rem;
   background: none;
   text-shadow: none;
-  border: 0;
-  cursor: pointer;
-  height: 2.5rem;
-  text-transform: uppercase;
   color: #e9eaec;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 0.5rem;
+  position: relative;
 }
 
 .c9.c9::after {
   content: "";
   display: block;
-  width: 100%;
-  position: relative;
-  bottom: -0.25rem;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  margin-left: -1.5rem;
+  width: 3rem;
+  -webkit-transform: scaleX(0.05);
+  -ms-transform: scaleX(0.05);
+  transform: scaleX(0.05);
+  -webkit-transition: 0.5s -webkit-transform cubic-bezier(0,0,0.1,1);
+  -webkit-transition: 0.5s transform cubic-bezier(0,0,0.1,1);
+  transition: 0.5s transform cubic-bezier(0,0,0.1,1);
 }
 
-.c8.c8 {
-  font-weight: lighter;
-  font-size: smaller;
+.c9.c9:hover {
+  opacity: 0.64;
+}
+
+.c9.c9:hover::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  margin-left: -1.5rem;
+  width: 3rem;
+  border-bottom: 2px solid #e9eaec;
 }
 
 .c6.c6 {
@@ -880,6 +918,7 @@ exports[`Explore page renders correctly 1`] = `
           <button
             className="c7"
             onClick={[Function]}
+            role="tab"
           >
             Campaigns
             <span
@@ -896,6 +935,7 @@ exports[`Explore page renders correctly 1`] = `
           <button
             className="c9"
             onClick={[Function]}
+            role="tab"
           >
             Platforms
             <span
@@ -912,6 +952,7 @@ exports[`Explore page renders correctly 1`] = `
           <button
             className="c9"
             onClick={[Function]}
+            role="tab"
           >
             Instruments
             <span

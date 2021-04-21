@@ -5,37 +5,68 @@ import styled from "styled-components"
 import { NEGATIVE } from "../../utils/constants"
 import { colors } from "../../theme"
 
-const TabButton = styled.button`
-  user-select: none;
-  display: inline-block;
-  text-align: center;
-  vertical-align: middle;
-  padding: 0.25rem 0;
-  min-width: 2rem;
-  background: none;
-  text-shadow: none;
-  border: 0;
-  cursor: pointer;
-  height: 2.5rem;
-  text-transform: uppercase;
-  font-weight: ${({ isSelected }) => isSelected && "bold"};
-  color: ${colors[NEGATIVE].text};
-
-  ::after {
-    content: "";
-    display: block;
-    border-bottom: ${({ isSelected }) =>
-      isSelected && `1px solid ${colors[NEGATIVE].text}`};
-    width: 100%;
-    position: relative;
-    bottom: -0.25rem;
-  }
-`
-
 const Count = styled.span`
   font-weight: lighter;
   font-size: smaller;
 `
+
+const TabButton = ({ onClick, isSelected, children }) => {
+  const afterElement = `
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  margin-left: -1.5rem;
+  width: 3rem;
+`
+  return (
+    <button
+      role="tab"
+      css={`
+        /* remove default button style */
+        user-select: none;
+        background: none;
+        text-shadow: none;
+        color: ${colors[NEGATIVE].text};
+        border: none;
+
+        /* add tab button style */
+        cursor: ${isSelected ? "default" : "pointer"};
+        text-transform: uppercase;
+        font-weight: ${isSelected && "bold"};
+        padding: 0.5rem;
+        position: relative;
+
+        &::after {
+          ${afterElement};
+          border-bottom: ${isSelected && `2px solid ${colors[NEGATIVE].text}`};
+
+          transform: ${isSelected ? `scaleX(1)` : `scaleX(0.05)`};
+          transition: 0.5s transform cubic-bezier(0, 0, 0.1, 1);
+        }
+
+        &:hover {
+          opacity: ${isSelected ? `inherit` : 0.64};
+
+          &::after {
+            ${afterElement};
+            border-bottom: 2px solid ${colors[NEGATIVE].text};
+          }
+        }
+      `}
+      onClick={onClick}
+    >
+      {children}
+    </button>
+  )
+}
+
+TabButton.propTypes = {
+  onClick: PropTypes.func.isRequired,
+  isSelected: PropTypes.bool.isRequired,
+  children: PropTypes.node.isRequired,
+}
 
 const ExploreMenu = ({
   selectedCategory,
