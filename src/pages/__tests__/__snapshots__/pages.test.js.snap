@@ -15155,7 +15155,7 @@ exports[`Glossary page renders correctly 1`] = `
 `;
 
 exports[`Home page renders correctly 1`] = `
-.c12.c12 {
+.c13.c13 {
   display: grid;
   grid-template-columns: repeat(12,1fr);
   -webkit-column-gap: 1rem;
@@ -15168,36 +15168,27 @@ exports[`Home page renders correctly 1`] = `
   background-color: none;
 }
 
-.c12.c12 > *,
-.c12.c12 h3 {
+.c13.c13 > *,
+.c13.c13 h3 {
   color: #e9eaec;
 }
 
-.c13.c13 {
+.c14.c14 {
   position: absolute;
   top: -80px;
 }
 
-.c17.c17 {
+.c18.c18 {
   grid-column: 1 / span 12;
 }
 
-.c17.c17 > *,
-.c17.c17 h3 {
-  color: #e9eaec;
-}
-
-.c24.c24 {
-  grid-column: 1 / span 6;
-}
-
-.c24.c24 > *,
-.c24.c24 h3 {
+.c18.c18 > *,
+.c18.c18 h3 {
   color: #e9eaec;
 }
 
 .c25.c25 {
-  grid-column: 7 / span 6;
+  grid-column: 1 / span 6;
 }
 
 .c25.c25 > *,
@@ -15205,18 +15196,27 @@ exports[`Home page renders correctly 1`] = `
   color: #e9eaec;
 }
 
-.c14.c14 {
+.c26.c26 {
+  grid-column: 7 / span 6;
+}
+
+.c26.c26 > *,
+.c26.c26 h3 {
+  color: #e9eaec;
+}
+
+.c15.c15 {
   grid-column: 1 / span 6;
   -webkit-align-self: end;
   -ms-flex-item-align: end;
   align-self: end;
 }
 
-.c15.c15 {
+.c16.c16 {
   text-transform: uppercase;
 }
 
-.c16.c16 {
+.c17.c17 {
   margin-top: -1rem;
 }
 
@@ -15267,17 +15267,17 @@ exports[`Home page renders correctly 1`] = `
   display: flex;
 }
 
-.c21.c21:hover {
+.c22.c22:hover {
   opacity: 0.64;
 }
 
-.c21.c21:active {
+.c22.c22:active {
   -webkit-transform: translate(0,1px);
   -ms-transform: translate(0,1px);
   transform: translate(0,1px);
 }
 
-.c22.c22 {
+.c23.c23 {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -15295,7 +15295,7 @@ exports[`Home page renders correctly 1`] = `
   white-space: nowrap;
 }
 
-.c23.c23 {
+.c24.c24 {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -15313,23 +15313,23 @@ exports[`Home page renders correctly 1`] = `
   white-space: nowrap;
 }
 
-.c34.c34 {
+.c35.c35 {
   list-style: none;
   margin: 0;
 }
 
-.c33.c33 {
+.c34.c34 {
   margin: 0 0 1.5rem 0;
   font-weight: bold;
   line-height: 3rem;
 }
 
-.c28.c28 {
+.c29.c29 {
   margin-top: 5rem;
   background-color: #303641;
 }
 
-.c29.c29 {
+.c30.c30 {
   margin: 5rem auto;
   max-width: 1280px;
   padding: 2rem 4rem;
@@ -15341,11 +15341,11 @@ exports[`Home page renders correctly 1`] = `
   grid-template-columns: repeat(12,1fr);
 }
 
-.c30.c30 {
+.c31.c31 {
   grid-column: 1 / span 3;
 }
 
-.c31.c31 {
+.c32.c32 {
   text-transform: uppercase;
   font-weight: 900;
   font-size: 30px;
@@ -15353,28 +15353,28 @@ exports[`Home page renders correctly 1`] = `
   margin-bottom: 0.5rem;
 }
 
-.c32.c32 {
+.c33.c33 {
   grid-column: 5 / span 2;
 }
 
-.c35.c35 {
+.c36.c36 {
   grid-column: 7 / span 2;
 }
 
-.c36.c36 {
+.c37.c37 {
   grid-column: 9 / span 2;
 }
 
-.c37.c37 {
+.c38.c38 {
   grid-column: 11 / span 2;
 }
 
-.c38.c38 {
+.c39.c39 {
   grid-column: 1 / span 12;
   background-color: rgba(255,255,255,0.2);
 }
 
-.c39.c39 {
+.c40.c40 {
   grid-column: 1 / span 12;
   display: -webkit-box;
   display: -webkit-flex;
@@ -15386,7 +15386,7 @@ exports[`Home page renders correctly 1`] = `
   justify-content: space-between;
 }
 
-.c40.c40 {
+.c41.c41 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -15398,7 +15398,7 @@ exports[`Home page renders correctly 1`] = `
   font-weight: bold;
 }
 
-.c41.c41 {
+.c42.c42 {
   background-image: url("https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png");
   background-size: cover;
   background-position: center;
@@ -15406,11 +15406,11 @@ exports[`Home page renders correctly 1`] = `
   height: 100px;
 }
 
-.c42.c42 {
+.c43.c43 {
   font-weight: normal;
 }
 
-.c43.c43 {
+.c44.c44 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -15422,7 +15422,7 @@ exports[`Home page renders correctly 1`] = `
   text-transform: uppercase;
 }
 
-.c44.c44 {
+.c45.c45 {
   text-align: center;
 }
 
@@ -15478,19 +15478,23 @@ exports[`Home page renders correctly 1`] = `
 }
 
 .c10.c10 {
+  height: 3rem;
+}
+
+.c11.c11 {
   color: #262a31 !important;
   background-color: #ffffff;
   font-weight: bold;
   padding: 1rem 5rem;
 }
 
-.c11.c11 {
+.c12.c12 {
   grid-row: 1 / span 1;
   grid-column: 1 / span 3;
   z-index: -1;
 }
 
-.c19.c19 {
+.c20.c20 {
   text-align: center;
   display: -webkit-box;
   display: -webkit-flex;
@@ -15507,7 +15511,7 @@ exports[`Home page renders correctly 1`] = `
   gap: 1rem;
 }
 
-.c18.c18 {
+.c19.c19 {
   display: grid;
   grid-template-columns: repeat(6,1fr);
   justify-items: center;
@@ -15515,7 +15519,7 @@ exports[`Home page renders correctly 1`] = `
   padding-top: 1rem;
 }
 
-.c20.c20 {
+.c21.c21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -15525,7 +15529,7 @@ exports[`Home page renders correctly 1`] = `
   margin: 1rem 0;
 }
 
-.c26.c26 {
+.c27.c27 {
   height: 100%;
   display: grid;
   gap: 2.5rem;
@@ -15535,20 +15539,20 @@ exports[`Home page renders correctly 1`] = `
   padding: 1rem;
 }
 
-.c27.c27 {
+.c28.c28 {
   border: 1px solid #e9eaec;
   padding: 1rem 5rem;
   text-transform: uppercase;
 }
 
 @media screen and (max-width:1280px) {
-  .c19.c19 {
+  .c20.c20 {
     grid-column: span 2;
   }
 }
 
 @media screen and (max-width:800px) {
-  .c19.c19 {
+  .c20.c20 {
     grid-column: span 3;
   }
 }
@@ -15714,11 +15718,13 @@ exports[`Home page renders correctly 1`] = `
           <p>
             Explore NASA’s catalog of airborne and field campaign observations.
           </p>
-          <div>
+          <div
+            className="c10"
+          >
             <a
               _css4="#262a31"
               _css5="#ffffff"
-              className="c10"
+              className="c11"
               data-cy="cta-link"
               href="/explore"
             >
@@ -15728,7 +15734,7 @@ exports[`Home page renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="c11"
+        className="c12"
       />
     </section>
     <div
@@ -15743,20 +15749,20 @@ exports[`Home page renders correctly 1`] = `
       }
     >
       <section
-        className="c12"
+        className="c13"
         data-cy="focus-area-section"
         mode="darkTheme"
       >
         <div
-          className="c13"
+          className="c14"
           id="focus-area"
         />
         <div
-          className="c14"
+          className="c15"
           data-cy="focus-section-header"
         >
           <div
-            className="c15"
+            className="c16"
             data-cy="section-tagline"
           >
             view
@@ -15769,23 +15775,23 @@ exports[`Home page renders correctly 1`] = `
             </h2>
           </a>
           <p
-            className="c16"
+            className="c17"
             data-cy="section-description"
           >
             NASA’s Earth Science Research and Analysis Program supports investigations related to six broad Focus Areas:
           </p>
         </div>
         <div
-          className="c17"
+          className="c18"
           mode="darkTheme"
         >
           <div
-            className="c18"
+            className="c19"
           >
             <a
               _css="1280px"
               _css2="800px"
-              className="c19"
+              className="c20"
               data-cy="focus-area"
               href="/focus/Atmospheric Composition"
               state={
@@ -15816,7 +15822,7 @@ exports[`Home page renders correctly 1`] = `
             <a
               _css="1280px"
               _css2="800px"
-              className="c19"
+              className="c20"
               data-cy="focus-area"
               href="/focus/Weather"
               state={
@@ -15847,7 +15853,7 @@ exports[`Home page renders correctly 1`] = `
             <a
               _css="1280px"
               _css2="800px"
-              className="c19"
+              className="c20"
               data-cy="focus-area"
               href="/focus/Climate Variability & Change"
               state={
@@ -15878,7 +15884,7 @@ exports[`Home page renders correctly 1`] = `
             <a
               _css="1280px"
               _css2="800px"
-              className="c19"
+              className="c20"
               data-cy="focus-area"
               href="/focus/Global Water & Energy Cycle"
               state={
@@ -15909,7 +15915,7 @@ exports[`Home page renders correctly 1`] = `
             <a
               _css="1280px"
               _css2="800px"
-              className="c19"
+              className="c20"
               data-cy="focus-area"
               href="/focus/Carbon Cycle & Ecosystems"
               state={
@@ -15940,7 +15946,7 @@ exports[`Home page renders correctly 1`] = `
             <a
               _css="1280px"
               _css2="800px"
-              className="c19"
+              className="c20"
               data-cy="focus-area"
               href="/focus/Earth Surface & Interior"
               state={
@@ -15972,20 +15978,20 @@ exports[`Home page renders correctly 1`] = `
         </div>
       </section>
       <section
-        className="c12"
+        className="c13"
         data-cy="region-type-section"
         mode="darkTheme"
       >
         <div
-          className="c13"
+          className="c14"
           id="region-type"
         />
         <div
-          className="c14"
+          className="c15"
           data-cy="region-type-section-header"
         >
           <div
-            className="c15"
+            className="c16"
             data-cy="section-tagline"
           >
             explore campaigns by
@@ -15998,112 +16004,112 @@ exports[`Home page renders correctly 1`] = `
             </h2>
           </a>
           <p
-            className="c16"
+            className="c17"
             data-cy="section-description"
           >
             Choose a type of geographical region to explore
           </p>
         </div>
         <div
-          className="c17"
+          className="c18"
           mode="darkTheme"
         >
           <div
-            className="c20"
+            className="c21"
             data-cy="region-text-control"
           >
             <button
-              className="c21 c22"
+              className="c22 c23"
               onClick={[Function]}
             >
               continental
             </button>
             <button
-              className="c21 c23"
+              className="c22 c24"
               onClick={[Function]}
             >
               maritime
             </button>
             <button
-              className="c21 c22"
+              className="c22 c23"
               onClick={[Function]}
             >
               coastal
             </button>
             <button
-              className="c21 c22"
+              className="c22 c23"
               onClick={[Function]}
             >
               mountains
             </button>
             <button
-              className="c21 c22"
+              className="c22 c23"
               onClick={[Function]}
             >
               island
             </button>
             <button
-              className="c21 c22"
+              className="c22 c23"
               onClick={[Function]}
             >
               desert
             </button>
             <button
-              className="c21 c22"
+              className="c22 c23"
               onClick={[Function]}
             >
               forest
             </button>
             <button
-              className="c21 c22"
+              className="c22 c23"
               onClick={[Function]}
             >
               urban
             </button>
             <button
-              className="c21 c22"
+              className="c22 c23"
               onClick={[Function]}
             >
               agricultural
             </button>
             <button
-              className="c21 c22"
+              className="c22 c23"
               onClick={[Function]}
             >
               equitorial
             </button>
             <button
-              className="c21 c22"
+              className="c22 c23"
               onClick={[Function]}
             >
               tropical
             </button>
             <button
-              className="c21 c22"
+              className="c22 c23"
               onClick={[Function]}
             >
               mid-latitude
             </button>
             <button
-              className="c21 c22"
+              className="c22 c23"
               onClick={[Function]}
             >
               polar
             </button>
             <button
-              className="c21 c22"
+              className="c22 c23"
               onClick={[Function]}
             >
               sea ice
             </button>
             <button
-              className="c21 c22"
+              className="c22 c23"
               onClick={[Function]}
             >
               coral
             </button>
             <button
-              className="c21 c22"
+              className="c22 c23"
               onClick={[Function]}
             >
               rainforest
@@ -16836,20 +16842,20 @@ exports[`Home page renders correctly 1`] = `
         </div>
       </section>
       <section
-        className="c12"
+        className="c13"
         data-cy="geophysical-concepts-section"
         mode="darkTheme"
       >
         <div
-          className="c13"
+          className="c14"
           id="geophysical-concepts"
         />
         <div
-          className="c14"
+          className="c15"
           data-cy="geophysical-concepts-section-header"
         >
           <div
-            className="c15"
+            className="c16"
             data-cy="section-tagline"
           >
             explore campaigns by
@@ -16862,14 +16868,14 @@ exports[`Home page renders correctly 1`] = `
             </h2>
           </a>
           <p
-            className="c16"
+            className="c17"
             data-cy="section-description"
           >
             NASA investigates a myriad of factors that comprise Earth’s properties, systems, and processes.
           </p>
         </div>
         <div
-          className="c17"
+          className="c18"
           mode="darkTheme"
         >
           <div
@@ -17613,31 +17619,31 @@ exports[`Home page renders correctly 1`] = `
         </div>
       </section>
       <section
-        className="c12"
+        className="c13"
         data-cy="platforms-section"
         mode="darkTheme"
       >
         <div
-          className="c13"
+          className="c14"
           id="platforms"
-        />
-        <div
-          className="c24"
-          mode="darkTheme"
         />
         <div
           className="c25"
           mode="darkTheme"
+        />
+        <div
+          className="c26"
+          mode="darkTheme"
         >
           <div
-            className="c26"
+            className="c27"
           >
             <div
-              className="c14"
+              className="c15"
               data-cy="platforms-section-header"
             >
               <div
-                className="c15"
+                className="c16"
                 data-cy="section-tagline"
               >
                 explore
@@ -17650,7 +17656,7 @@ exports[`Home page renders correctly 1`] = `
                 </h2>
               </a>
               <p
-                className="c16"
+                className="c17"
                 data-cy="section-description"
               >
                 Learn about the variety of air and Earth-based platforms NASA uses to study our home planet.
@@ -17658,7 +17664,7 @@ exports[`Home page renders correctly 1`] = `
             </div>
             <a
               _css="#e9eaec"
-              className="c27"
+              className="c28"
               data-cy="explore-platforms-link"
               href="/explore"
               state={
@@ -17673,20 +17679,20 @@ exports[`Home page renders correctly 1`] = `
         </div>
       </section>
       <section
-        className="c12"
+        className="c13"
         data-cy="instruments-section"
         mode="darkTheme"
       >
         <div
-          className="c13"
+          className="c14"
           id="instruments"
         />
         <div
-          className="c14"
+          className="c15"
           data-cy="instruments-section-header"
         >
           <div
-            className="c15"
+            className="c16"
             data-cy="section-tagline"
           >
             explore instruments by
@@ -17700,7 +17706,7 @@ exports[`Home page renders correctly 1`] = `
           </a>
         </div>
         <div
-          className="c17"
+          className="c18"
           mode="darkTheme"
         >
           <div
@@ -18472,17 +18478,17 @@ exports[`Home page renders correctly 1`] = `
     </div>
   </main>
   <footer
-    className="c28"
+    className="c29"
     data-cy="page-footer"
   >
     <div
-      className="c29"
+      className="c30"
     >
       <div
-        className="c30"
+        className="c31"
       >
         <div
-          className="c31"
+          className="c32"
           data-cy="footer-title"
         >
           NASA | CASEI
@@ -18495,16 +18501,16 @@ exports[`Home page renders correctly 1`] = `
         </p>
       </div>
       <div
-        className="c32"
+        className="c33"
         data-cy="footer-explore"
       >
         <p
-          className="c33"
+          className="c34"
         >
           Explore
         </p>
         <ul
-          className="c34"
+          className="c35"
         >
           <li>
             <a
@@ -18548,16 +18554,16 @@ exports[`Home page renders correctly 1`] = `
         </ul>
       </div>
       <div
-        className="c35"
+        className="c36"
         data-cy="footer-resources"
       >
         <p
-          className="c33"
+          className="c34"
         >
           Resources
         </p>
         <ul
-          className="c34"
+          className="c35"
         >
           <li>
             <a
@@ -18570,16 +18576,16 @@ exports[`Home page renders correctly 1`] = `
         </ul>
       </div>
       <div
-        className="c36"
+        className="c37"
         data-cy="footer-quick-links"
       >
         <p
-          className="c33"
+          className="c34"
         >
           Quick Links
         </p>
         <ul
-          className="c34"
+          className="c35"
         >
           <li>
             <a
@@ -18598,16 +18604,16 @@ exports[`Home page renders correctly 1`] = `
         </ul>
       </div>
       <div
-        className="c37"
+        className="c38"
         data-cy="footer-organizations"
       >
         <p
-          className="c33"
+          className="c34"
         >
           Organizations
         </p>
         <ul
-          className="c34"
+          className="c35"
         >
           <li>
             <a
@@ -18642,17 +18648,17 @@ exports[`Home page renders correctly 1`] = `
         </ul>
       </div>
       <hr
-        className="c38"
+        className="c39"
       />
       <div
-        className="c39"
+        className="c40"
       >
         <div
-          className="c40"
+          className="c41"
         >
           <div
             aria-hidden="true"
-            className="c41"
+            className="c42"
           />
           <div
             data-cy="footer-credits"
@@ -18668,7 +18674,7 @@ exports[`Home page renders correctly 1`] = `
               NASA Official:
                
               <span
-                className="c42"
+                className="c43"
               >
                 Rahul Ramachandran
               </span>
@@ -18676,12 +18682,12 @@ exports[`Home page renders correctly 1`] = `
           </div>
         </div>
         <div
-          className="c43"
+          className="c44"
         />
       </div>
     </div>
     <div
-      className="c44"
+      className="c45"
       data-cy="footer-credit-devseed"
     >
       © 

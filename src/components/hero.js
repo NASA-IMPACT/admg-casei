@@ -123,7 +123,11 @@ export default function Hero({
           {stats && <HeroStats statList={stats} />}
 
           {cta && (
-            <div>
+            <div
+              css={`
+                height: 3rem;
+              `}
+            >
               <Link
                 to="/explore"
                 css={`
