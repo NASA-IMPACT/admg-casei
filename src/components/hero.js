@@ -106,12 +106,16 @@ export default function Hero({
               {tagline}
             </p>
           )}
+
           <h1>{title}</h1>
         </div>
 
         <div
           css={`
             grid-area: extras;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
           `}
         >
           {description && <p>{description}</p>}
@@ -119,18 +123,20 @@ export default function Hero({
           {stats && <HeroStats statList={stats} />}
 
           {cta && (
-            <Link
-              to="/explore"
-              css={`
-                color: ${colors[POSITIVE].text};
-                background-color: ${colors[POSITIVE].background};
-                font-weight: bold;
-                padding: 1rem 5rem;
-              `}
-              data-cy="cta-link"
-            >
-              {cta}
-            </Link>
+            <div>
+              <Link
+                to="/explore"
+                css={`
+                  color: ${colors[POSITIVE].text} !important;
+                  background-color: ${colors[POSITIVE].background};
+                  font-weight: bold;
+                  padding: 1rem 5rem;
+                `}
+                data-cy="cta-link"
+              >
+                {cta}
+              </Link>
+            </div>
           )}
         </div>
 

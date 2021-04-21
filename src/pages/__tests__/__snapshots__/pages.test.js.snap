@@ -15467,10 +15467,18 @@ exports[`Home page renders correctly 1`] = `
 
 .c9.c9 {
   grid-area: extras;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 3rem;
 }
 
 .c10.c10 {
-  color: #262a31;
+  color: #262a31 !important;
   background-color: #ffffff;
   font-weight: bold;
   padding: 1rem 5rem;
@@ -15706,15 +15714,17 @@ exports[`Home page renders correctly 1`] = `
           <p>
             Explore NASA’s catalog of airborne and field campaign observations.
           </p>
-          <a
-            _css4="#262a31"
-            _css5="#ffffff"
-            className="c10"
-            data-cy="cta-link"
-            href="/explore"
-          >
-            Explore CASEI
-          </a>
+          <div>
+            <a
+              _css4="#262a31"
+              _css5="#ffffff"
+              className="c10"
+              data-cy="cta-link"
+              href="/explore"
+            >
+              Explore CASEI
+            </a>
+          </div>
         </div>
       </div>
       <div

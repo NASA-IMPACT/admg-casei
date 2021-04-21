@@ -34,6 +34,14 @@ exports[`Header renders correctly 1`] = `
 
 .c4.c4 {
   grid-area: extras;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 3rem;
 }
 
 <section
@@ -102,6 +110,14 @@ exports[`Header renders with adjust ratios 1`] = `
 
 .c4.c4 {
   grid-area: extras;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 3rem;
 }
 
 <section
