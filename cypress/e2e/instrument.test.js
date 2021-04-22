@@ -14,16 +14,14 @@ describe("Instrument", () => {
 
   it("explains the instrument", () => {
     // has a hero
+    cy.get("[data-cy=instrument-hero]").first().find("p").should("exist")
     cy.get("[data-cy=instrument-hero]").first().find("p").contains("Instrument")
-
-    cy.get("[data-cy=instrument-hero]").first().find("h1").contains("CPL")
 
     cy.get("[data-cy=instrument-hero]")
       .first()
-      .find("p")
-      .contains("Cloud Physics LIDAR")
-
-    cy.get("[data-cy=instrument-hero]").first().find("p").should("exist")
+      .find("h1")
+      .should("contain", "CPL")
+      .and("contain", "Cloud Physics LIDAR")
 
     cy.get("[data-cy=instrument-hero]").first().find("img").should("exist")
     cy.get("[data-cy=instrument-hero]").first().find("img").should("be.visible")

@@ -52,9 +52,9 @@ const About = ({ data }) => {
       <SEO title="About" lang="en" />
 
       <Hero
-        tagTitle="About"
+        tagline="About"
         title="NASA"
-        subTitle="conducts and supports Earth Science field investigations, including airborne campaigns, to supplement space-borne observations and advance scientific understanding and predictive capability of our home planet’s natural processes."
+        description="conducts and supports Earth Science field investigations, including airborne campaigns, to supplement space-borne observations and advance scientific understanding and predictive capability of our home planet’s natural processes."
         textToImageRatio={[12, 0]}
         backgroundImage={data.heroImage}
         id="about"

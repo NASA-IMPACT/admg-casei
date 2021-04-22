@@ -14,9 +14,12 @@ describe("Header", () => {
     const tree = renderer
       .create(
         <Hero
-          tagTitle={testTagTitle}
-          title={testTitle}
-          subTitle={testSubTitle}
+          tagline={testTagTitle}
+          title={
+            <>
+              {testTitle} {testSubTitle}
+            </>
+          }
           description={testDescription}
           id={testId}
         >
@@ -30,9 +33,12 @@ describe("Header", () => {
     const tree = renderer
       .create(
         <Hero
-          tagTitle={testTagTitle}
-          title={testTitle}
-          subTitle={testSubTitle}
+          tagline={testTagTitle}
+          title={
+            <>
+              {testTitle} {testSubTitle}
+            </>
+          }
           description={testDescription}
           textToImageRatio={testTextToImageRatio}
         >
