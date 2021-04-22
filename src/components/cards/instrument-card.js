@@ -22,6 +22,19 @@ export default function InstrumentCard({ shortname }) {
     query {
       allInstrument {
         nodes {
+          image {
+            description
+            gatsbyImg {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED
+                  height: 180
+                  placeholder: BLURRED
+                  transformOptions: { fit: CONTAIN }
+                )
+              }
+            }
+          }
           shortname: short_name
           longname: long_name
           description
@@ -39,6 +52,7 @@ export default function InstrumentCard({ shortname }) {
 
   return (
     <Card
+      image={instrument.image}
       placeholder={InstrumentIcon}
       link={`/instrument/${instrument.shortname}`}
       footerList={{

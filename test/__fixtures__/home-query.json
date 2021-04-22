@@ -8,11 +8,30 @@
       }
     },
     "heroImage": {
-      "nasaImgAlt": "NASA's DC-8 flying laboratory passes Antarctica's tallest peak, Mount Vinson, on Oct. 22, 2012, during a flight over the continent to measure changes in the massive ice sheet and sea ice. Credit: NASA/Michael Studinger",
+      "nasaImgAlt": "NASA's DC-8 flying laboratory passes Antarctica's tallest peak, Mount Vinson, on Oct. 22, 2012, during a flight over the continent to measure changes in the massive ice sheet and sea ice. Credit: NASA/Michael Studinger (Photography courtesy NASA Images)",
       "nasaImg": {
         "childImageSharp": {
-          "fluid": {
-            "src": "/static/068436cd6fd00ecb9d2d3e6309d590d0/14b42/699943main_ice_bridge_full_full.jpg"
+          "gatsbyImageData": {
+            "layout": "fullWidth",
+            "placeholder": {
+              "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAQBAgMF/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQL/2gAMAwEAAhADEAAAAXMGqVMHME//xAAaEAEAAgMBAAAAAAAAAAAAAAACAAEDEhMR/9oACAEBAAEFAuRi0Mqj4zsOdRq8b//EABcRAQADAAAAAAAAAAAAAAAAAAABEiH/2gAIAQMBAT8BrDH/xAAXEQEAAwAAAAAAAAAAAAAAAAAAARIh/9oACAECAQE/AbS1/8QAGRAAAgMBAAAAAAAAAAAAAAAAAAECITEQ/9oACAEBAAY/AjONF2OKw//EABsQAAMAAgMAAAAAAAAAAAAAAAABESExYZGh/9oACAEBAAE/IXwEdrc0N1fCkuUTHe40rHg//9oADAMBAAIAAwAAABBrz//EABcRAQADAAAAAAAAAAAAAAAAAAABUXH/2gAIAQMBAT8Qohl//8QAFxEBAAMAAAAAAAAAAAAAAAAAABFRYf/aAAgBAgEBPxDRN3//xAAaEAEAAwEBAQAAAAAAAAAAAAABABExIVFx/9oACAEBAAE/EOdQBqkyGbIM1PSFBYYJMBqz7cLd9VQiXrrOD2p//9k="
+            },
+            "images": {
+              "fallback": {
+                "src": "/static/cc615e0141fde7a8fd097548c4c05c6b/45171/699943main_ice_bridge_full_full.jpg",
+                "srcSet": "/static/cc615e0141fde7a8fd097548c4c05c6b/a1f66/699943main_ice_bridge_full_full.jpg 750w,\n/static/cc615e0141fde7a8fd097548c4c05c6b/df080/699943main_ice_bridge_full_full.jpg 1080w,\n/static/cc615e0141fde7a8fd097548c4c05c6b/73892/699943main_ice_bridge_full_full.jpg 1366w,\n/static/cc615e0141fde7a8fd097548c4c05c6b/45171/699943main_ice_bridge_full_full.jpg 1920w",
+                "sizes": "100vw"
+              },
+              "sources": [
+                {
+                  "srcSet": "/static/cc615e0141fde7a8fd097548c4c05c6b/f80d9/699943main_ice_bridge_full_full.webp 750w,\n/static/cc615e0141fde7a8fd097548c4c05c6b/292a9/699943main_ice_bridge_full_full.webp 1080w,\n/static/cc615e0141fde7a8fd097548c4c05c6b/0dd88/699943main_ice_bridge_full_full.webp 1366w,\n/static/cc615e0141fde7a8fd097548c4c05c6b/ddcb4/699943main_ice_bridge_full_full.webp 1920w",
+                  "type": "image/webp",
+                  "sizes": "100vw"
+                }
+              ]
+            },
+            "width": 1,
+            "height": 0.6625
           }
         }
       }
@@ -20,27 +39,27 @@
     "allFocusArea": {
       "nodes": [
         {
-          "id": "df6847ab-9443-4fdb-a990-d5bf1daca3b7",
+          "id": "59c9c09d-f5ab-4909-9c09-22da671c1c26",
           "shortname": "Atmospheric Composition"
         },
         {
-          "id": "6d719465-f32c-4808-9efb-da5ad2bae135",
+          "id": "a6ebfd25-d751-4b12-8a95-08572e498354",
           "shortname": "Weather"
         },
         {
-          "id": "cd62c68f-a9f7-456a-ae15-53ef79ed5118",
+          "id": "8630847a-3da8-46ac-b511-07035809ff59",
           "shortname": "Climate Variability & Change"
         },
         {
-          "id": "fd5c0baa-d6a4-45d7-b201-0eb2a5505dc7",
+          "id": "ed32508f-156e-4151-9ab2-2613e098be94",
           "shortname": "Global Water & Energy Cycle"
         },
         {
-          "id": "f1bd646f-876f-4e9f-896e-f7d4571ecc00",
+          "id": "30c09a1b-7892-4d1a-a2fa-64102e9f68a3",
           "shortname": "Carbon Cycle & Ecosystems"
         },
         {
-          "id": "2231a3f1-3430-4f89-86a2-94938aa000a5",
+          "id": "05c34337-c0c4-44bc-b83f-07d5718c375d",
           "shortname": "Earth Surface & Interior"
         }
       ]
@@ -48,103 +67,217 @@
     "allGeographicalRegion": {
       "nodes": [
         {
-          "id": "2f6e780d-3d8c-47bc-8382-bcb6e4e68927",
+          "id": "b40c3bee-7335-4b43-9fbc-c6e26fead3b8",
           "shortname": "continental",
           "example": "Kansas",
           "image": {
             "nasaImgUrl": "https://eoimages.gsfc.nasa.gov/images/imagerecords/145000/145932/iss060e035401_lrg.jpg",
-            "nasaImgAlt": "A network of farms and ranches surrounds the cities and small towns near the Nebraska–Iowa border.",
+            "nasaImgAlt": "A network of farms and ranches surrounds the cities and small towns near the Nebraska–Iowa border. (Photography courtesy NASA/GSFC)",
             "nasaImg": {
               "childImageSharp": {
-                "fluid": {
-                  "src": "/static/012dfd5e04753c3cd37730951ec6fef9/13200/iss060e035401_lrg.jpg"
+                "gatsbyImageData": {
+                  "layout": "fullWidth",
+                  "placeholder": {
+                    "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAARABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAIBAwT/xAAWAQEBAQAAAAAAAAAAAAAAAAABAAL/2gAMAwEAAhADEAAAAfPWZnMJRdicAX//xAAaEAACAgMAAAAAAAAAAAAAAAAAAQIQESEy/9oACAEBAAEFAkTji9u10f/EABURAQEAAAAAAAAAAAAAAAAAABAB/9oACAEDAQE/ASH/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AR//xAAWEAADAAAAAAAAAAAAAAAAAAAQICH/2gAIAQEABj8CMb//xAAaEAACAwEBAAAAAAAAAAAAAAAAAREhMRBR/9oACAEBAAE/IUnNGRbRRUJtZQ1M+cRlz//aAAwDAQACAAMAAAAQGM9+/8QAGREAAgMBAAAAAAAAAAAAAAAAAAEQETFB/9oACAEDAQE/EE+FmlH/xAAXEQADAQAAAAAAAAAAAAAAAAAAARAR/9oACAECAQE/EGbf/8QAHBABAAICAwEAAAAAAAAAAAAAAQARITFBUWGh/9oACAEBAAE/EEYJLYuqZgjHdMsGbjRD36iL8GRz7C64ms+6O2f/2Q=="
+                  },
+                  "images": {
+                    "fallback": {
+                      "src": "/static/012dfd5e04753c3cd37730951ec6fef9/ee09c/iss060e035401_lrg.jpg",
+                      "srcSet": "/static/012dfd5e04753c3cd37730951ec6fef9/ee09c/iss060e035401_lrg.jpg 720w",
+                      "sizes": "100vw"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/012dfd5e04753c3cd37730951ec6fef9/75146/iss060e035401_lrg.webp 720w",
+                        "type": "image/webp",
+                        "sizes": "100vw"
+                      }
+                    ]
+                  },
+                  "width": 1,
+                  "height": 0.8333333333333334
                 }
               }
             }
           }
         },
         {
-          "id": "a801d32b-4395-40c3-a4ea-6655e3c0679d",
+          "id": "e371194c-2a5c-4077-9213-a5c1e18371dc",
           "shortname": "maritime",
           "example": "Atlantic Ocean",
           "image": {
             "nasaImgUrl": "https://climate.nasa.gov/system/resources/detail_files/170_gulfoffinland_full.jpg",
-            "nasaImgAlt": "Phytoplankton blooms across the northern basins of the North Atlantic and Arctic Oceans.",
+            "nasaImgAlt": "Phytoplankton blooms across the northern basins of the North Atlantic and Arctic Oceans. (Photography courtesy NASA/Climate)",
             "nasaImg": {
               "childImageSharp": {
-                "fluid": {
-                  "src": "/static/d9cb547d00b032403bbe48747a17690c/13200/170_gulfoffinland_full.jpg"
+                "gatsbyImageData": {
+                  "layout": "fullWidth",
+                  "placeholder": {
+                    "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGQABAAIDAAAAAAAAAAAAAAAAAAEDAgQF/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgH/2gAMAwEAAhADEAAAAeLNqjBsApoGJEf/xAAbEAABBAMAAAAAAAAAAAAAAAABAAIRIRAiMf/aAAgBAQABBQKFcADHSGKNXCiv/8QAFREBAQAAAAAAAAAAAAAAAAAAEAH/2gAIAQMBAT8BIf/EABYRAQEBAAAAAAAAAAAAAAAAABEAEP/aAAgBAgEBPwEnf//EABcQAQADAAAAAAAAAAAAAAAAABARIEH/2gAIAQEABj8CNIr/AP/EABkQAAIDAQAAAAAAAAAAAAAAAAABESExQf/aAAgBAQABPyFiapoeQhdMkYmNZCwhFb14f//aAAwDAQACAAMAAAAQ98+8/8QAFxEBAAMAAAAAAAAAAAAAAAAAAQAQIf/aAAgBAwEBPxAZtv/EABcRAQEBAQAAAAAAAAAAAAAAAAABETH/2gAIAQIBAT8QphU4/8QAGxAAAwADAQEAAAAAAAAAAAAAAAERITFRQXH/2gAIAQEAAT8Qh1wpr8la02ewirGcEUZT34KLGLtY6IjUMY+mGtCLZ//Z"
+                  },
+                  "images": {
+                    "fallback": {
+                      "src": "/static/d9cb547d00b032403bbe48747a17690c/869a6/170_gulfoffinland_full.jpg",
+                      "srcSet": "/static/d9cb547d00b032403bbe48747a17690c/0f5ce/170_gulfoffinland_full.jpg 750w,\n/static/d9cb547d00b032403bbe48747a17690c/b74b1/170_gulfoffinland_full.jpg 1080w,\n/static/d9cb547d00b032403bbe48747a17690c/6e2bb/170_gulfoffinland_full.jpg 1366w,\n/static/d9cb547d00b032403bbe48747a17690c/869a6/170_gulfoffinland_full.jpg 1920w",
+                      "sizes": "100vw"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/d9cb547d00b032403bbe48747a17690c/4f03f/170_gulfoffinland_full.webp 750w,\n/static/d9cb547d00b032403bbe48747a17690c/4f506/170_gulfoffinland_full.webp 1080w,\n/static/d9cb547d00b032403bbe48747a17690c/f0a0a/170_gulfoffinland_full.webp 1366w,\n/static/d9cb547d00b032403bbe48747a17690c/26222/170_gulfoffinland_full.webp 1920w",
+                        "type": "image/webp",
+                        "sizes": "100vw"
+                      }
+                    ]
+                  },
+                  "width": 1,
+                  "height": 1
                 }
               }
             }
           }
         },
         {
-          "id": "f2a54d61-c532-4042-8c68-c1286a9f417f",
+          "id": "62066b3c-5e66-4ce1-aa93-d8fd6994ce7e",
           "shortname": "coastal",
           "example": "US Gulf coast, Pacific NW, FL Everglades",
           "image": {
             "nasaImgUrl": "https://images-assets.nasa.gov/image/KSC-04pd1634/KSC-04pd1634~orig.jpg",
-            "nasaImgAlt": "The pristine sand dunes near the launch pads at KSC are gently washed by the calm blue Atlantic Ocean.",
+            "nasaImgAlt": "Pristine sand dunes near the launch pads at Kennedy Space Center in Florida. (Photography courtesy NASA Images)",
             "nasaImg": {
               "childImageSharp": {
-                "fluid": {
-                  "src": "/static/8bb8e953c0bfe01d9b50d33bc50a1498/13200/KSC-04pd1634~orig.jpg"
+                "gatsbyImageData": {
+                  "layout": "fullWidth",
+                  "placeholder": {
+                    "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIEAwX/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/aAAwDAQACEAMQAAABZsOnUxlYn//EABoQAAIDAQEAAAAAAAAAAAAAAAABAhETEiL/2gAIAQEAAQUCzszaKYvBGXSo/8QAFhEAAwAAAAAAAAAAAAAAAAAAAAES/9oACAEDAQE/AYRCP//EABYRAAMAAAAAAAAAAAAAAAAAAAABE//aAAgBAgEBPwGjKM//xAAdEAABAwUBAAAAAAAAAAAAAAAAAQKhEBEhMTJB/9oACAEBAAY/AsWU1JzI1ye1/8QAGxAAAwACAwAAAAAAAAAAAAAAAAERIUFRgeH/2gAIAQEAAT8hWCu440Q8h2jsmmijHkf/2gAMAwEAAgADAAAAEHPf/8QAFREBAQAAAAAAAAAAAAAAAAAAEBH/2gAIAQMBAT8QqX//xAAWEQADAAAAAAAAAAAAAAAAAAABEDH/2gAIAQIBAT8QE0f/xAAcEAEAAgIDAQAAAAAAAAAAAAABABExUUFhgeH/2gAIAQEAAT8QfMQVUCM718RZS/IJRVoNkyRoGx3C5T//2Q=="
+                  },
+                  "images": {
+                    "fallback": {
+                      "src": "/static/8bb8e953c0bfe01d9b50d33bc50a1498/3a899/KSC-04pd1634~orig.jpg",
+                      "srcSet": "/static/8bb8e953c0bfe01d9b50d33bc50a1498/53c59/KSC-04pd1634~orig.jpg 750w,\n/static/8bb8e953c0bfe01d9b50d33bc50a1498/7d544/KSC-04pd1634~orig.jpg 1080w,\n/static/8bb8e953c0bfe01d9b50d33bc50a1498/e7538/KSC-04pd1634~orig.jpg 1366w,\n/static/8bb8e953c0bfe01d9b50d33bc50a1498/3a899/KSC-04pd1634~orig.jpg 1920w",
+                      "sizes": "100vw"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/8bb8e953c0bfe01d9b50d33bc50a1498/3970f/KSC-04pd1634~orig.webp 750w,\n/static/8bb8e953c0bfe01d9b50d33bc50a1498/80634/KSC-04pd1634~orig.webp 1080w,\n/static/8bb8e953c0bfe01d9b50d33bc50a1498/e175f/KSC-04pd1634~orig.webp 1366w,\n/static/8bb8e953c0bfe01d9b50d33bc50a1498/2fc3f/KSC-04pd1634~orig.webp 1920w",
+                        "type": "image/webp",
+                        "sizes": "100vw"
+                      }
+                    ]
+                  },
+                  "width": 1,
+                  "height": 0.6651041666666666
                 }
               }
             }
           }
         },
         {
-          "id": "ef949f62-c078-4886-9006-3829c0983d0b",
+          "id": "603ad838-4326-4058-8eb2-f34b39febd4d",
           "shortname": "mountains",
           "example": "Rockies, Andes, Alps",
           "image": {
             "nasaImgUrl": "https://images-assets.nasa.gov/image/ED04-0056-099/ED04-0056-099~orig.jpg",
-            "nasaImgAlt": "The Cuernos del Paine mountains in Torres del Paine National Park, Chile, during NASA's AirSAR 2004 campaign.",
+            "nasaImgAlt": "The Cuernos del Paine mountains in Torres del Paine National Park, Chile, during NASA's AirSAR 2004 campaign. (Photography courtesy NASA Images)",
             "nasaImg": {
               "childImageSharp": {
-                "fluid": {
-                  "src": "/static/740fb6cdee15c3bed7886e02e870aa48/13200/ED04-0056-099~orig.jpg"
+                "gatsbyImageData": {
+                  "layout": "fullWidth",
+                  "placeholder": {
+                    "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEAv/EABYBAQEBAAAAAAAAAAAAAAAAAAEAAv/aAAwDAQACEAMQAAAB0pC9FREF/8QAGRABAQEAAwAAAAAAAAAAAAAAAQAEAhET/9oACAEBAAEFAve5aVDQhN3f/8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAIAQMBAT8BR//EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oACAECAQE/Aar/xAAZEAACAwEAAAAAAAAAAAAAAAAAEQEgITH/2gAIAQEABj8C6I2HT//EABsQAQACAgMAAAAAAAAAAAAAAAEAESExQVHR/9oACAEBAAE/ITKnxNnb3CIKOWN9xoXcMJ//2gAMAwEAAgADAAAAECP/AP/EABURAQEAAAAAAAAAAAAAAAAAABEQ/9oACAEDAQE/EAj/xAAVEQEBAAAAAAAAAAAAAAAAAAAQIf/aAAgBAgEBPxCz/8QAGxABAAMAAwEAAAAAAAAAAAAAAQARIUFhocH/2gAIAQEAAT8QXYDjGkSA6GZDHZWVsVktKq8xUP2f/9k="
+                  },
+                  "images": {
+                    "fallback": {
+                      "src": "/static/740fb6cdee15c3bed7886e02e870aa48/5ded1/ED04-0056-099~orig.jpg",
+                      "srcSet": "/static/740fb6cdee15c3bed7886e02e870aa48/2d8f4/ED04-0056-099~orig.jpg 750w,\n/static/740fb6cdee15c3bed7886e02e870aa48/c3c54/ED04-0056-099~orig.jpg 1080w,\n/static/740fb6cdee15c3bed7886e02e870aa48/10187/ED04-0056-099~orig.jpg 1366w,\n/static/740fb6cdee15c3bed7886e02e870aa48/5ded1/ED04-0056-099~orig.jpg 1920w",
+                      "sizes": "100vw"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/740fb6cdee15c3bed7886e02e870aa48/3df03/ED04-0056-099~orig.webp 750w,\n/static/740fb6cdee15c3bed7886e02e870aa48/cd184/ED04-0056-099~orig.webp 1080w,\n/static/740fb6cdee15c3bed7886e02e870aa48/aec48/ED04-0056-099~orig.webp 1366w,\n/static/740fb6cdee15c3bed7886e02e870aa48/c515c/ED04-0056-099~orig.webp 1920w",
+                        "type": "image/webp",
+                        "sizes": "100vw"
+                      }
+                    ]
+                  },
+                  "width": 1,
+                  "height": 0.6604166666666667
                 }
               }
             }
           }
         },
         {
-          "id": "f3905325-695d-41ff-984b-b3e192c03c5b",
+          "id": "abe1ab2c-77f4-4056-a223-94e4b5ffe014",
           "shortname": "island",
           "example": "Puerto Rico, St Croix, Hawaii",
           "image": {
             "nasaImgUrl": "https://climate.nasa.gov/system/resources/detail_files/218_PIA21166_hires-768px-v2.jpg",
-            "nasaImgAlt": "The Republic of Maldives with its twenty-six atolls, and 1192 coral islands, with an average ground elevation of 1.5 meters (about 5 feet).",
+            "nasaImgAlt": "The Republic of Maldives with its twenty-six atolls, and 1192 coral islands, with an average ground elevation of 1.5 meters (about 5 feet). (Photography courtesy NASA/Climate)",
             "nasaImg": {
               "childImageSharp": {
-                "fluid": {
-                  "src": "/static/ac27142e538661d074ff7912147d7b00/235ae/218_PIA21166_hires-768px-v2.jpg"
+                "gatsbyImageData": {
+                  "layout": "fullWidth",
+                  "placeholder": {
+                    "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMBAgX/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAv/aAAwDAQACEAMQAAABz7QuoaJD/8QAGRAAAgMBAAAAAAAAAAAAAAAAAAEQERIh/9oACAEBAAEFArF00adabj//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAYEAACAwAAAAAAAAAAAAAAAAABEAARQf/aAAgBAQAGPwJmVgX/xAAcEAEAAgEFAAAAAAAAAAAAAAABABExEEFRYaH/2gAIAQEAAT8hi2EpsFdkM75EAngNP//aAAwDAQACAAMAAAAQsM//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAZEAEBAAMBAAAAAAAAAAAAAAABEQAhMWH/2gAIAQEAAT8QU9eGBmTQrWaO5LTw6ks9yigQIgJu5SOHDmVz/9k="
+                  },
+                  "images": {
+                    "fallback": {
+                      "src": "/static/ac27142e538661d074ff7912147d7b00/22991/218_PIA21166_hires-768px-v2.jpg",
+                      "srcSet": "/static/ac27142e538661d074ff7912147d7b00/37bba/218_PIA21166_hires-768px-v2.jpg 750w,\n/static/ac27142e538661d074ff7912147d7b00/22991/218_PIA21166_hires-768px-v2.jpg 768w",
+                      "sizes": "100vw"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/ac27142e538661d074ff7912147d7b00/a66aa/218_PIA21166_hires-768px-v2.webp 750w,\n/static/ac27142e538661d074ff7912147d7b00/c0224/218_PIA21166_hires-768px-v2.webp 768w",
+                        "type": "image/webp",
+                        "sizes": "100vw"
+                      }
+                    ]
+                  },
+                  "width": 1,
+                  "height": 0.5625
                 }
               }
             }
           }
         },
         {
-          "id": "793324dc-4710-4144-9925-e55ee707a380",
+          "id": "7a63d565-e2fd-40b7-a2c9-957c5ff0a751",
           "shortname": "desert",
           "example": "Sahara, Sonoran regions of SW US",
           "image": {
             "nasaImgUrl": "https://earthobservatory.nasa.gov/blogs/fromthefield/wp-content/uploads/sites/2/2018/01/desert-plant-and-lidar.jpg",
-            "nasaImgAlt": "The lidar on its tripod. NASA/GSFC",
+            "nasaImgAlt": "The lidar on its tripod. (Photography courtesy NASA/GSFC)",
             "nasaImg": {
               "childImageSharp": {
-                "fluid": {
-                  "src": "/static/4c11912352d4c7904aea691c195b1bd6/f6c18/desert-plant-and-lidar.jpg"
+                "gatsbyImageData": {
+                  "layout": "fullWidth",
+                  "placeholder": {
+                    "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAUCBP/EABYBAQEBAAAAAAAAAAAAAAAAAAABAv/aAAwDAQACEAMQAAAB7E3FzWTh/8QAGhAAAgMBAQAAAAAAAAAAAAAAAAIBERMDEP/aAAgBAQABBQKvKJ6uatJox//EABURAQEAAAAAAAAAAAAAAAAAAAAS/9oACAEDAQE/AZS//8QAFREBAQAAAAAAAAAAAAAAAAAAABL/2gAIAQIBAT8BpT//xAAWEAEBAQAAAAAAAAAAAAAAAAAAMSD/2gAIAQEABj8CxVf/xAAZEAEBAQADAAAAAAAAAAAAAAABABEhQfD/2gAIAQEAAT8hwFxsaNu0wieJf//aAAwDAQACAAMAAAAQnD//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/EA//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAaEAEBAQADAQAAAAAAAAAAAAABEQAhMWFB/9oACAEBAAE/EAOB1lMM4LiKJfNVRCHzWZXE63CVHkb/2Q=="
+                  },
+                  "images": {
+                    "fallback": {
+                      "src": "/static/4c11912352d4c7904aea691c195b1bd6/6098e/desert-plant-and-lidar.jpg",
+                      "srcSet": "/static/4c11912352d4c7904aea691c195b1bd6/6098e/desert-plant-and-lidar.jpg 720w",
+                      "sizes": "100vw"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/4c11912352d4c7904aea691c195b1bd6/82ad9/desert-plant-and-lidar.webp 720w",
+                        "type": "image/webp",
+                        "sizes": "100vw"
+                      }
+                    ]
+                  },
+                  "width": 1,
+                  "height": 0.7486111111111111
                 }
               }
             }
           }
         },
         {
-          "id": "e8ba2642-3145-45a9-b8ff-e88d538d17a5",
+          "id": "f0a33310-40a6-45cd-aebe-ff761a1537ac",
           "shortname": "forest",
           "example": "Pisgah Forest (NC), Bankhead Forest (AL)",
           "image": {
@@ -152,152 +285,342 @@
             "nasaImgAlt": "Tropical forests, such as those in Gabon, Africa, are an important reservoir of carbon. (Photography courtesy Sassan Saatchi, NASA/JPL-Caltech.)",
             "nasaImg": {
               "childImageSharp": {
-                "fluid": {
-                  "src": "/static/f902e06833c91735cfa81507901f14fa/b94b5/gabon_forest.jpg"
+                "gatsbyImageData": {
+                  "layout": "fullWidth",
+                  "placeholder": {
+                    "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAEEAv/EABUBAQEAAAAAAAAAAAAAAAAAAAED/9oADAMBAAIQAxAAAAFuXEWsgE//xAAaEAACAgMAAAAAAAAAAAAAAAAAAQMxAgQU/9oACAEBAAEFAlPmLYZ0SMoos//EABURAQEAAAAAAAAAAAAAAAAAAAAh/9oACAEDAQE/AYj/xAAXEQADAQAAAAAAAAAAAAAAAAAAAREC/9oACAECAQE/Aay6P//EABgQAAIDAAAAAAAAAAAAAAAAAAAxECEy/9oACAEBAAY/AmaKlH//xAAaEAEAAwEBAQAAAAAAAAAAAAABABExIWGB/9oACAEBAAE/IcKPkTfSheTYCvY8Q4sNlkP/2gAMAwEAAgADAAAAEEcf/8QAGBEAAgMAAAAAAAAAAAAAAAAAAEEBESH/2gAIAQMBAT8Qyipo/8QAGBEAAgMAAAAAAAAAAAAAAAAAAAERMWH/2gAIAQIBAT8QnVs2P//EAB0QAQADAAIDAQAAAAAAAAAAAAEAESExUUFxodH/2gAIAQEAAT8QUlmFtOP2VIJEUDj1AFD4V35EAA4dxA0NNdRfbozF2f/Z"
+                  },
+                  "images": {
+                    "fallback": {
+                      "src": "/static/f902e06833c91735cfa81507901f14fa/f7872/gabon_forest.jpg",
+                      "srcSet": "/static/f902e06833c91735cfa81507901f14fa/f7872/gabon_forest.jpg 720w",
+                      "sizes": "100vw"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/f902e06833c91735cfa81507901f14fa/4da88/gabon_forest.webp 720w",
+                        "type": "image/webp",
+                        "sizes": "100vw"
+                      }
+                    ]
+                  },
+                  "width": 1,
+                  "height": 0.6666666666666666
                 }
               }
             }
           }
         },
         {
-          "id": "96721a9e-2c61-496f-b31c-daf241d429a8",
+          "id": "5c6df1e9-4ee3-4095-97c0-9ce86a8073b5",
           "shortname": "urban",
           "example": "Huntsville, New York City",
           "image": {
             "nasaImgUrl": "https://eoimages.gsfc.nasa.gov/images/imagerecords/83000/83828/ISS039-E-018538_lrg.jpg",
-            "nasaImgAlt": "The narrow island of Manhattan, located between the Hudson River and the East River.",
+            "nasaImgAlt": "The narrow island of Manhattan, located between the Hudson River and the East River. (Photography courtesy NASA/GSFC)",
             "nasaImg": {
               "childImageSharp": {
-                "fluid": {
-                  "src": "/static/a6e68f36b5ad3b600b03c9c14761cd53/13200/ISS039-E-018538_lrg.jpg"
+                "gatsbyImageData": {
+                  "layout": "fullWidth",
+                  "placeholder": {
+                    "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAgAD/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQD/2gAMAwEAAhADEAAAAVoUKsYv/8QAGRAAAgMBAAAAAAAAAAAAAAAAABIBAhEh/9oACAEBAAEFAmWa3Y0Uwnh//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAFxAAAwEAAAAAAAAAAAAAAAAAACAhMf/aAAgBAQAGPwKGL//EABsQAQEAAQUAAAAAAAAAAAAAAAEAESExUXGh/9oACAEBAAE/Ieg8h4GFAxmEu9q4v//aAAwDAQACAAMAAAAQI8//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAgEBPxBX/8QAGxABAQADAAMAAAAAAAAAAAAAAREAIUExccH/2gAIAQEAAT8Qd0xFYeXzDtcCrgDST3kBLsIHMQC6dhly7Jc//9k="
+                  },
+                  "images": {
+                    "fallback": {
+                      "src": "/static/a6e68f36b5ad3b600b03c9c14761cd53/69eac/ISS039-E-018538_lrg.jpg",
+                      "srcSet": "/static/a6e68f36b5ad3b600b03c9c14761cd53/7284f/ISS039-E-018538_lrg.jpg 750w,\n/static/a6e68f36b5ad3b600b03c9c14761cd53/29ba9/ISS039-E-018538_lrg.jpg 1080w,\n/static/a6e68f36b5ad3b600b03c9c14761cd53/c8896/ISS039-E-018538_lrg.jpg 1366w,\n/static/a6e68f36b5ad3b600b03c9c14761cd53/69eac/ISS039-E-018538_lrg.jpg 1440w",
+                      "sizes": "100vw"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/a6e68f36b5ad3b600b03c9c14761cd53/57584/ISS039-E-018538_lrg.webp 750w,\n/static/a6e68f36b5ad3b600b03c9c14761cd53/984df/ISS039-E-018538_lrg.webp 1080w,\n/static/a6e68f36b5ad3b600b03c9c14761cd53/4a276/ISS039-E-018538_lrg.webp 1366w,\n/static/a6e68f36b5ad3b600b03c9c14761cd53/31706/ISS039-E-018538_lrg.webp 1440w",
+                        "type": "image/webp",
+                        "sizes": "100vw"
+                      }
+                    ]
+                  },
+                  "width": 1,
+                  "height": 0.6666666666666666
                 }
               }
             }
           }
         },
         {
-          "id": "d78d5a37-e703-4e4f-bf7a-debb7950b0f6",
+          "id": "4bb8cd01-f398-4e4e-8537-a3971b54f64b",
           "shortname": "agricultural",
           "example": "corn fields in Iowa",
           "image": {
             "nasaImgUrl": "https://eoimages.gsfc.nasa.gov/images/imagerecords/5000/5772/kansas_AST_2001175_lrg.jpg",
-            "nasaImgAlt": "Variegated green crop circles cover what was once shortgrass prairie in southwestern Kansas.",
+            "nasaImgAlt": "Variegated green crop circles cover what was once shortgrass prairie in southwestern Kansas. (Photography courtesy NASA/GSFC)",
             "nasaImg": {
               "childImageSharp": {
-                "fluid": {
-                  "src": "/static/4722bcd2e261bd732e5ca17c48e012fd/13200/kansas_AST_2001175_lrg.jpg"
+                "gatsbyImageData": {
+                  "layout": "fullWidth",
+                  "placeholder": {
+                    "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAATABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAID/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAMB/9oADAMBAAIQAxAAAAGstohMzF6BA1//xAAcEAEAAQQDAAAAAAAAAAAAAAABAAIREjEhQUL/2gAIAQEAAQUCpJUWcmLabOJ34d//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/AR//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AR//xAAaEAACAgMAAAAAAAAAAAAAAAABERAgMUFh/9oACAEBAAY/Aiw4w+1e4//EAB0QAQACAgIDAAAAAAAAAAAAAAEAESFBMWFxgdH/2gAIAQEAAT8hFOggYMeIHj7ogqaPTUTZb6LguGrnDPAmNCf/2gAMAwEAAgADAAAAEHw3QP/EABYRAQEBAAAAAAAAAAAAAAAAAAEQEf/aAAgBAwEBPxDCE//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8QH//EAB0QAQADAQACAwAAAAAAAAAAAAEAESExYbFRcYH/2gAIAQEAAT8QSFIUBwWD1WedVnuFuwdgQrgZtA/kFJ3dWab+fO+YxxjuC/u52GhYZeQC8CKb8XyAcKM9T//Z"
+                  },
+                  "images": {
+                    "fallback": {
+                      "src": "/static/4722bcd2e261bd732e5ca17c48e012fd/4d5d6/kansas_AST_2001175_lrg.jpg",
+                      "srcSet": "/static/4722bcd2e261bd732e5ca17c48e012fd/b4747/kansas_AST_2001175_lrg.jpg 750w,\n/static/4722bcd2e261bd732e5ca17c48e012fd/c67c6/kansas_AST_2001175_lrg.jpg 1080w,\n/static/4722bcd2e261bd732e5ca17c48e012fd/43ab2/kansas_AST_2001175_lrg.jpg 1366w,\n/static/4722bcd2e261bd732e5ca17c48e012fd/4d5d6/kansas_AST_2001175_lrg.jpg 1920w",
+                      "sizes": "100vw"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/4722bcd2e261bd732e5ca17c48e012fd/d2e7e/kansas_AST_2001175_lrg.webp 750w,\n/static/4722bcd2e261bd732e5ca17c48e012fd/23c6f/kansas_AST_2001175_lrg.webp 1080w,\n/static/4722bcd2e261bd732e5ca17c48e012fd/35bb5/kansas_AST_2001175_lrg.webp 1366w,\n/static/4722bcd2e261bd732e5ca17c48e012fd/967b5/kansas_AST_2001175_lrg.webp 1920w",
+                        "type": "image/webp",
+                        "sizes": "100vw"
+                      }
+                    ]
+                  },
+                  "width": 1,
+                  "height": 0.9583333333333334
                 }
               }
             }
           }
         },
         {
-          "id": "7e75c46c-cdd8-4d7f-a3a9-18ffdecefa68",
+          "id": "60872c59-285a-4acc-ab11-5700a4251f80",
           "shortname": "equitorial",
           "example": "Singapore, Indonesia, portions of central Africa",
           "image": {
             "nasaImgUrl": "https://images-assets.nasa.gov/image/sts054-95-042/sts054-95-042~orig.jpg",
-            "nasaImgAlt": "Equatorial Wave Line, Pacific Ocean.",
+            "nasaImgAlt": "Equatorial Wave Line, Pacific Ocean. (Photography courtesy NASA Images)",
             "nasaImg": {
               "childImageSharp": {
-                "fluid": {
-                  "src": "/static/4f881cb74284bad8567c0dc93528ae95/13200/sts054-95-042~orig.jpg"
+                "gatsbyImageData": {
+                  "layout": "fullWidth",
+                  "placeholder": {
+                    "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAQCA//EABUBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAAGGnFSRKwyVicBL/8QAGhAAAwADAQAAAAAAAAAAAAAAAAECEBIhQf/aAAgBAQABBQKJNBwRmDxvv//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8BH//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8BH//EABQQAQAAAAAAAAAAAAAAAAAAADD/2gAIAQEABj8CH//EABoQAQEAAgMAAAAAAAAAAAAAAAABESExQWH/2gAIAQEAAT8hyvGq2uDpV3C3BY//2gAMAwEAAgADAAAAEKMAQv/EABYRAQEBAAAAAAAAAAAAAAAAAAEQIf/aAAgBAwEBPxA2E//EABURAQEAAAAAAAAAAAAAAAAAAAEQ/9oACAECAQE/EGM//8QAGRABAQEBAQEAAAAAAAAAAAAAAREAITFB/9oACAEBAAE/EOKl0EUh9MLUt9ylUwD70jlAuQJhru//2Q=="
+                  },
+                  "images": {
+                    "fallback": {
+                      "src": "/static/4f881cb74284bad8567c0dc93528ae95/869a6/sts054-95-042~orig.jpg",
+                      "srcSet": "/static/4f881cb74284bad8567c0dc93528ae95/0f5ce/sts054-95-042~orig.jpg 750w,\n/static/4f881cb74284bad8567c0dc93528ae95/b74b1/sts054-95-042~orig.jpg 1080w,\n/static/4f881cb74284bad8567c0dc93528ae95/6e2bb/sts054-95-042~orig.jpg 1366w,\n/static/4f881cb74284bad8567c0dc93528ae95/869a6/sts054-95-042~orig.jpg 1920w",
+                      "sizes": "100vw"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/4f881cb74284bad8567c0dc93528ae95/4f03f/sts054-95-042~orig.webp 750w,\n/static/4f881cb74284bad8567c0dc93528ae95/4f506/sts054-95-042~orig.webp 1080w,\n/static/4f881cb74284bad8567c0dc93528ae95/f0a0a/sts054-95-042~orig.webp 1366w,\n/static/4f881cb74284bad8567c0dc93528ae95/26222/sts054-95-042~orig.webp 1920w",
+                        "type": "image/webp",
+                        "sizes": "100vw"
+                      }
+                    ]
+                  },
+                  "width": 1,
+                  "height": 1
                 }
               }
             }
           }
         },
         {
-          "id": "edd6e841-7106-4dfa-bfa9-c126c87cd37c",
+          "id": "a11e585d-12ac-4240-a7d5-6b67a7d37f3b",
           "shortname": "tropical",
           "example": "Caribbean Sea, most of Central America, portions of South America, Indonesia, Philippines",
           "image": {
             "nasaImgUrl": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e001630/GSFC_20171208_Archive_e001630~orig.jpg",
-            "nasaImgAlt": "An archipelago in the Andaman Sea surrounded by extensive coral reefs",
+            "nasaImgAlt": "An archipelago in the Andaman Sea surrounded by extensive coral reefs (Photography courtesy NASA/GSFC)",
             "nasaImg": {
               "childImageSharp": {
-                "fluid": {
-                  "src": "/static/22146df783be742696493dedef5912d0/13200/GSFC_20171208_Archive_e001630~orig.jpg"
+                "gatsbyImageData": {
+                  "layout": "fullWidth",
+                  "placeholder": {
+                    "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAMEBQH/xAAWAQEBAQAAAAAAAAAAAAAAAAAEAwL/2gAMAwEAAhADEAAAAaVzL0bGjUR68mFThBd//8QAHBAAAgICAwAAAAAAAAAAAAAAAQIAAxIhETEy/9oACAEBAAEFAqJboArwj4wPmW20TtvX/8QAGBEAAgMAAAAAAAAAAAAAAAAAAhARMTL/2gAIAQMBAT8ByUoqX//EABcRAAMBAAAAAAAAAAAAAAAAAAECESD/2gAIAQIBAT8BcXH/xAAbEAACAgMBAAAAAAAAAAAAAAAAARAhAhFRYf/aAAgBAQAGPwIqsuFvUeDcs//EABsQAAICAwEAAAAAAAAAAAAAAAABESExQVGh/9oACAEBAAE/IbLGRlagUaShTIcGQrRQNzSuMtETPTAzTRuj3n//2gAMAwEAAgADAAAAENg3gf/EABkRAAEFAAAAAAAAAAAAAAAAAAEAEBEhMf/aAAgBAwEBPxCyFilz/8QAFxEAAwEAAAAAAAAAAAAAAAAAAAERMf/aAAgBAgEBPxCCIqHoz//EAB0QAQADAAIDAQAAAAAAAAAAAAEAESExgUFRYbH/2gAIAQEAAT8QINlAlM46Vgj4Vz2w+XW2SF0SYCPv4V8oPyXMhK6FdQwBDJVYseppk8+J/9k="
+                  },
+                  "images": {
+                    "fallback": {
+                      "src": "/static/22146df783be742696493dedef5912d0/869a6/GSFC_20171208_Archive_e001630~orig.jpg",
+                      "srcSet": "/static/22146df783be742696493dedef5912d0/0f5ce/GSFC_20171208_Archive_e001630~orig.jpg 750w,\n/static/22146df783be742696493dedef5912d0/b74b1/GSFC_20171208_Archive_e001630~orig.jpg 1080w,\n/static/22146df783be742696493dedef5912d0/6e2bb/GSFC_20171208_Archive_e001630~orig.jpg 1366w,\n/static/22146df783be742696493dedef5912d0/869a6/GSFC_20171208_Archive_e001630~orig.jpg 1920w",
+                      "sizes": "100vw"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/22146df783be742696493dedef5912d0/4f03f/GSFC_20171208_Archive_e001630~orig.webp 750w,\n/static/22146df783be742696493dedef5912d0/4f506/GSFC_20171208_Archive_e001630~orig.webp 1080w,\n/static/22146df783be742696493dedef5912d0/f0a0a/GSFC_20171208_Archive_e001630~orig.webp 1366w,\n/static/22146df783be742696493dedef5912d0/26222/GSFC_20171208_Archive_e001630~orig.webp 1920w",
+                        "type": "image/webp",
+                        "sizes": "100vw"
+                      }
+                    ]
+                  },
+                  "width": 1,
+                  "height": 1
                 }
               }
             }
           }
         },
         {
-          "id": "d9bb3b94-90db-47d6-926d-d91a7f2654c1",
+          "id": "f1fb8b5e-1fd0-461e-900e-5e5729beff96",
           "shortname": "mid-latitude",
           "example": "most of the contiguous US, Europe and extreme northern Africa",
           "image": {
             "nasaImgUrl": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e000236/GSFC_20171208_Archive_e000236~orig.jpg",
-            "nasaImgAlt": "Yosemite Valley",
+            "nasaImgAlt": "Yosemite Valley (Photography courtesy NASA/GSFC)",
             "nasaImg": {
               "childImageSharp": {
-                "fluid": {
-                  "src": "/static/05f7edb53330c26394a4a1e5ca30e6d3/13200/GSFC_20171208_Archive_e000236~orig.jpg"
+                "gatsbyImageData": {
+                  "layout": "fullWidth",
+                  "placeholder": {
+                    "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAZABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIDBP/EABYBAQEBAAAAAAAAAAAAAAAAAAABAv/aAAwDAQACEAMQAAABlTBqKCkuSjQ1mggf/8QAGRAAAwEBAQAAAAAAAAAAAAAAAAECESEQ/9oACAEBAAEFAptKeNc8jGVx0sIvB2yxCP/EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8BH//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8BH//EABkQAAIDAQAAAAAAAAAAAAAAAAAhEBEgMf/aAAgBAQAGPwKoYyp4PH//xAAcEAEAAgIDAQAAAAAAAAAAAAABABEhMUFRccH/2gAIAQEAAT8hIsbOZdY3x7BGyMpvocyiZD2QYPkTaUWsqgmhbNJqez6n/9oADAMBAAIAAwAAABAoJ4D/xAAXEQEBAQEAAAAAAAAAAAAAAAAAAREx/9oACAEDAQE/EJWuVtf/xAAYEQEBAAMAAAAAAAAAAAAAAAABABARIf/aAAgBAgEBPxBMPbRf/8QAHxABAAICAgIDAAAAAAAAAAAAAQARITFBUWFxobHB/9oACAEBAAE/ECMuBi4hgjaBtgavHDcrCkxFqgTIvDbwsC6qhlyz7hRgnfMNwWpe7bxKWu6p9M+e/Jo+0//Z"
+                  },
+                  "images": {
+                    "fallback": {
+                      "src": "/static/05f7edb53330c26394a4a1e5ca30e6d3/35b7c/GSFC_20171208_Archive_e000236~orig.jpg",
+                      "srcSet": "/static/05f7edb53330c26394a4a1e5ca30e6d3/4423a/GSFC_20171208_Archive_e000236~orig.jpg 750w,\n/static/05f7edb53330c26394a4a1e5ca30e6d3/68d35/GSFC_20171208_Archive_e000236~orig.jpg 1080w,\n/static/05f7edb53330c26394a4a1e5ca30e6d3/b9043/GSFC_20171208_Archive_e000236~orig.jpg 1366w,\n/static/05f7edb53330c26394a4a1e5ca30e6d3/35b7c/GSFC_20171208_Archive_e000236~orig.jpg 1920w",
+                      "sizes": "100vw"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/05f7edb53330c26394a4a1e5ca30e6d3/3131c/GSFC_20171208_Archive_e000236~orig.webp 750w,\n/static/05f7edb53330c26394a4a1e5ca30e6d3/017df/GSFC_20171208_Archive_e000236~orig.webp 1080w,\n/static/05f7edb53330c26394a4a1e5ca30e6d3/714e6/GSFC_20171208_Archive_e000236~orig.webp 1366w,\n/static/05f7edb53330c26394a4a1e5ca30e6d3/efdc5/GSFC_20171208_Archive_e000236~orig.webp 1920w",
+                        "type": "image/webp",
+                        "sizes": "100vw"
+                      }
+                    ]
+                  },
+                  "width": 1,
+                  "height": 1.25
                 }
               }
             }
           }
         },
         {
-          "id": "7d054686-cde0-4c25-aa3f-a34643958940",
+          "id": "f4631df5-7935-4a55-8ce9-b4fe9a32cd3e",
           "shortname": "polar",
           "example": "Antarctica; portions of AK, Canada",
           "image": {
             "nasaImgUrl": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e001793/GSFC_20171208_Archive_e001793~orig.jpg",
-            "nasaImgAlt": "A NASA scientific balloon awaits launch in McMurdo, Antarctica.",
+            "nasaImgAlt": "A NASA scientific balloon awaits launch in McMurdo, Antarctica. (Photography courtesy NASA/GSFC)",
             "nasaImg": {
               "childImageSharp": {
-                "fluid": {
-                  "src": "/static/937a42268fe119a9cc4c07c9395c0d8e/13200/GSFC_20171208_Archive_e001793~orig.jpg"
+                "gatsbyImageData": {
+                  "layout": "fullWidth",
+                  "placeholder": {
+                    "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIFAQT/xAAVAQEBAAAAAAAAAAAAAAAAAAABA//aAAwDAQACEAMQAAABde/KyllIT//EABkQAAMAAwAAAAAAAAAAAAAAAAABAhASIf/aAAgBAQABBQJSxyaZ4f/EABURAQEAAAAAAAAAAAAAAAAAAAAS/9oACAEDAQE/AZQ//8QAFREBAQAAAAAAAAAAAAAAAAAAABL/2gAIAQIBAT8Btb//xAAUEAEAAAAAAAAAAAAAAAAAAAAg/9oACAEBAAY/Al//xAAYEAEBAQEBAAAAAAAAAAAAAAABABExUf/aAAgBAQABPyEnJ3sveRmSHkmr/9oADAMBAAIAAwAAABC7H//EABYRAAMAAAAAAAAAAAAAAAAAAAARUf/aAAgBAwEBPxB6NT//xAAVEQEBAAAAAAAAAAAAAAAAAAAAcf/aAAgBAgEBPxCEP//EABsQAAICAwEAAAAAAAAAAAAAAAERADEQIVHR/9oACAEBAAE/EAKCwqh7QsdxByqA+odSf//Z"
+                  },
+                  "images": {
+                    "fallback": {
+                      "src": "/static/937a42268fe119a9cc4c07c9395c0d8e/3832f/GSFC_20171208_Archive_e001793~orig.jpg",
+                      "srcSet": "/static/937a42268fe119a9cc4c07c9395c0d8e/6c918/GSFC_20171208_Archive_e001793~orig.jpg 750w,\n/static/937a42268fe119a9cc4c07c9395c0d8e/49438/GSFC_20171208_Archive_e001793~orig.jpg 1080w,\n/static/937a42268fe119a9cc4c07c9395c0d8e/f4534/GSFC_20171208_Archive_e001793~orig.jpg 1366w,\n/static/937a42268fe119a9cc4c07c9395c0d8e/3832f/GSFC_20171208_Archive_e001793~orig.jpg 1920w",
+                      "sizes": "100vw"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/937a42268fe119a9cc4c07c9395c0d8e/66907/GSFC_20171208_Archive_e001793~orig.webp 750w,\n/static/937a42268fe119a9cc4c07c9395c0d8e/27610/GSFC_20171208_Archive_e001793~orig.webp 1080w,\n/static/937a42268fe119a9cc4c07c9395c0d8e/90004/GSFC_20171208_Archive_e001793~orig.webp 1366w,\n/static/937a42268fe119a9cc4c07c9395c0d8e/e4c47/GSFC_20171208_Archive_e001793~orig.webp 1920w",
+                        "type": "image/webp",
+                        "sizes": "100vw"
+                      }
+                    ]
+                  },
+                  "width": 1,
+                  "height": 0.75
                 }
               }
             }
           }
         },
         {
-          "id": "4e10c854-5602-477a-8f13-49702c71a281",
+          "id": "4fdd7267-830b-4a4d-a747-2a5fc1af0053",
           "shortname": "sea ice",
           "example": "Greenland's periphery",
           "image": {
             "nasaImgUrl": "https://eoimages.gsfc.nasa.gov/images/imagerecords/146000/146974/greenlandseaice_amo_2020184_lrg.jpg",
-            "nasaImgAlt": "Sea ice hugging the coast of East Greenland.",
+            "nasaImgAlt": "Sea ice hugging the coast of East Greenland. (Photography courtesy NASA/GSFC)",
             "nasaImg": {
               "childImageSharp": {
-                "fluid": {
-                  "src": "/static/a56a22a2de7672f1166cee91fa6b4e3d/13200/greenlandseaice_amo_2020184_lrg.jpg"
+                "gatsbyImageData": {
+                  "layout": "fullWidth",
+                  "placeholder": {
+                    "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAWABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUD/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhADEAAAAbU2hNNEFZYiBkLP/8QAHBAAAwACAwEAAAAAAAAAAAAAAQIDABMEEBIx/9oACAEBAAEFAn+Jhsq5UEqBrNj7rbl66Uq1Ov/EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8BH//EABYRAAMAAAAAAAAAAAAAAAAAAAAQEf/aAAgBAgEBPwEj/8QAGxAAAwEAAwEAAAAAAAAAAAAAAAERAhAhIkH/2gAIAQEABj8CNUjcOjV0N/B5jPXH/8QAGhABAQEAAwEAAAAAAAAAAAAAAREAIUFhUf/aAAgBAQABPyH1moaNG5KJe6LIt7yyTeXzGWnxuZQNHrg603//2gAMAwEAAgADAAAAEDDgvf/EABYRAAMAAAAAAAAAAAAAAAAAAAAQEf/aAAgBAwEBPxAr/8QAFREBAQAAAAAAAAAAAAAAAAAAARD/2gAIAQIBAT8QgJ//xAAdEAACAgMBAQEAAAAAAAAAAAABEQAxIUFRwWGB/9oACAEBAAE/EDR4F9leHBmgZurqKYFCNPZeGWAgHwO1HmgrPQgipEWQnl+r8iKHSFPp6Y7uf//Z"
+                  },
+                  "images": {
+                    "fallback": {
+                      "src": "/static/a56a22a2de7672f1166cee91fa6b4e3d/6e2e7/greenlandseaice_amo_2020184_lrg.jpg",
+                      "srcSet": "/static/a56a22a2de7672f1166cee91fa6b4e3d/796e0/greenlandseaice_amo_2020184_lrg.jpg 750w,\n/static/a56a22a2de7672f1166cee91fa6b4e3d/7ead0/greenlandseaice_amo_2020184_lrg.jpg 1080w,\n/static/a56a22a2de7672f1166cee91fa6b4e3d/aef54/greenlandseaice_amo_2020184_lrg.jpg 1366w,\n/static/a56a22a2de7672f1166cee91fa6b4e3d/6e2e7/greenlandseaice_amo_2020184_lrg.jpg 1920w",
+                      "sizes": "100vw"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/a56a22a2de7672f1166cee91fa6b4e3d/8ae25/greenlandseaice_amo_2020184_lrg.webp 750w,\n/static/a56a22a2de7672f1166cee91fa6b4e3d/8ce7b/greenlandseaice_amo_2020184_lrg.webp 1080w,\n/static/a56a22a2de7672f1166cee91fa6b4e3d/cafc3/greenlandseaice_amo_2020184_lrg.webp 1366w,\n/static/a56a22a2de7672f1166cee91fa6b4e3d/adaed/greenlandseaice_amo_2020184_lrg.webp 1920w",
+                        "type": "image/webp",
+                        "sizes": "100vw"
+                      }
+                    ]
+                  },
+                  "width": 1,
+                  "height": 1.1109375000000001
                 }
               }
             }
           }
         },
         {
-          "id": "b7bfb341-cb4c-45d7-9bc7-b3fdc71f20d1",
+          "id": "7212f86b-2732-4c4c-bf58-75772f186510",
           "shortname": "coral",
           "example": "NE coast of Queensland, Australia",
           "image": {
             "nasaImgUrl": "https://eoimages.gsfc.nasa.gov/images/imagerecords/88000/88109/iss045e056257_lrg.jpg",
-            "nasaImgAlt": "Great Barrier Reef near Whitsunday Islands.",
+            "nasaImgAlt": "Great Barrier Reef near Whitsunday Islands. (Photography courtesy NASA/GSFC)",
             "nasaImg": {
               "childImageSharp": {
-                "fluid": {
-                  "src": "/static/0e894c84cabec1bf105b95b675d37687/13200/iss045e056257_lrg.jpg"
+                "gatsbyImageData": {
+                  "layout": "fullWidth",
+                  "placeholder": {
+                    "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIDBP/EABYBAQEBAAAAAAAAAAAAAAAAAAMBBP/aAAwDAQACEAMQAAABxutXxwEKn//EABkQAQADAQEAAAAAAAAAAAAAAAEAAhEDEv/aAAgBAQABBQKhseRErvnISzr/AP/EABURAQEAAAAAAAAAAAAAAAAAABAR/9oACAEDAQE/Aaf/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAZEAADAAMAAAAAAAAAAAAAAAAAAREgIVH/2gAIAQEABj8CKjdXMP/EABsQAAICAwEAAAAAAAAAAAAAAAEhADERUWGB/9oACAEBAAE/IRE71DMl8EDJI0tQodxCtRtXMz//2gAMAwEAAgADAAAAEO8//8QAFxEAAwEAAAAAAAAAAAAAAAAAAAEhEf/aAAgBAwEBPxBXDUf/xAAWEQEBAQAAAAAAAAAAAAAAAAABAEH/2gAIAQIBAT8QXSBv/8QAGhABAAMBAQEAAAAAAAAAAAAAAQARITFxsf/aAAgBAQABPxAsItijEhBgGupX0ihZLo8G8uCxrxA7apvO5OKSAA4n/9k="
+                  },
+                  "images": {
+                    "fallback": {
+                      "src": "/static/0e894c84cabec1bf105b95b675d37687/62e45/iss045e056257_lrg.jpg",
+                      "srcSet": "/static/0e894c84cabec1bf105b95b675d37687/53c59/iss045e056257_lrg.jpg 750w,\n/static/0e894c84cabec1bf105b95b675d37687/64b93/iss045e056257_lrg.jpg 1080w,\n/static/0e894c84cabec1bf105b95b675d37687/9b47f/iss045e056257_lrg.jpg 1366w,\n/static/0e894c84cabec1bf105b95b675d37687/62e45/iss045e056257_lrg.jpg 1920w",
+                      "sizes": "100vw"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/0e894c84cabec1bf105b95b675d37687/3970f/iss045e056257_lrg.webp 750w,\n/static/0e894c84cabec1bf105b95b675d37687/90a5d/iss045e056257_lrg.webp 1080w,\n/static/0e894c84cabec1bf105b95b675d37687/cebd1/iss045e056257_lrg.webp 1366w,\n/static/0e894c84cabec1bf105b95b675d37687/d8f44/iss045e056257_lrg.webp 1920w",
+                        "type": "image/webp",
+                        "sizes": "100vw"
+                      }
+                    ]
+                  },
+                  "width": 1,
+                  "height": 0.665625
                 }
               }
             }
           }
         },
         {
-          "id": "6695bbce-1c74-4b00-a8cb-07a488a7f8cd",
+          "id": "b626f101-e916-4078-b043-4f36325cf999",
           "shortname": "rainforest",
           "example": "Olympic Pennisula, Amazon Rainforest",
           "image": {
             "nasaImgUrl": "https://images-assets.nasa.gov/image/ED04-0056-057/ED04-0056-057~orig.jpg",
-            "nasaImgAlt": "A stream in the La Selva region of the Costa Rican rain forest, taken during NASA's AirSAR 2004 campaign.",
+            "nasaImgAlt": "A stream in the La Selva region of the Costa Rican rain forest, taken during NASA's AirSAR 2004 campaign. (Photography courtesy NASA Images)",
             "nasaImg": {
               "childImageSharp": {
-                "fluid": {
-                  "src": "/static/b607daaedc59f4944d27a2f0b2675fbc/13200/ED04-0056-057~orig.jpg"
+                "gatsbyImageData": {
+                  "layout": "fullWidth",
+                  "placeholder": {
+                    "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAeABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIDBAH/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAgH/2gAMAwEAAhADEAAAAc1EjM2EBL86rcYzM//EABwQAAMBAAIDAAAAAAAAAAAAAAECEQADEBIiMf/aAAgBAQABBQKw29cnyTKrkD2OD+KjXF33/8QAFhEAAwAAAAAAAAAAAAAAAAAAABAR/9oACAEDAQE/AXD/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AR//xAAbEAACAgMBAAAAAAAAAAAAAAAAARAhETFBYf/aAAgBAQAGPwLQzkUdPISxNM//xAAcEAADAQADAQEAAAAAAAAAAAAAAREhMUFxUWH/2gAIAQEAAT8hpdiGmuRrcx6I1WP6fq4KpJvCgNUQovO20cFBL2r6NTJQ/9oADAMBAAIAAwAAABBPOcz/xAAYEQACAwAAAAAAAAAAAAAAAAAAARARIf/aAAgBAwEBPxBbDRY//8QAGBEAAgMAAAAAAAAAAAAAAAAAAAEQETH/2gAIAQIBAT8QUYij/8QAHhABAAMBAAIDAQAAAAAAAAAAAQARITFBcVGBsaH/2gAIAQEAAT8Q98DfHdhYAABflr4lVHAS2UiRLOZ77Cu8kYmfsGiOXx+R2FTqiVA2j+TIaK2A/TMhjQoKIBsU4UvwzIogB7P/2Q=="
+                  },
+                  "images": {
+                    "fallback": {
+                      "src": "/static/b607daaedc59f4944d27a2f0b2675fbc/0d0d5/ED04-0056-057~orig.jpg",
+                      "srcSet": "/static/b607daaedc59f4944d27a2f0b2675fbc/4741a/ED04-0056-057~orig.jpg 750w,\n/static/b607daaedc59f4944d27a2f0b2675fbc/270e5/ED04-0056-057~orig.jpg 1080w,\n/static/b607daaedc59f4944d27a2f0b2675fbc/1a546/ED04-0056-057~orig.jpg 1366w,\n/static/b607daaedc59f4944d27a2f0b2675fbc/0d0d5/ED04-0056-057~orig.jpg 1920w",
+                      "sizes": "100vw"
+                    },
+                    "sources": [
+                      {
+                        "srcSet": "/static/b607daaedc59f4944d27a2f0b2675fbc/44b8e/ED04-0056-057~orig.webp 750w,\n/static/b607daaedc59f4944d27a2f0b2675fbc/5a8b7/ED04-0056-057~orig.webp 1080w,\n/static/b607daaedc59f4944d27a2f0b2675fbc/63153/ED04-0056-057~orig.webp 1366w,\n/static/b607daaedc59f4944d27a2f0b2675fbc/1e005/ED04-0056-057~orig.webp 1920w",
+                        "type": "image/webp",
+                        "sizes": "100vw"
+                      }
+                    ]
+                  },
+                  "width": 1,
+                  "height": 1.5135416666666668
                 }
               }
             }
@@ -308,107 +631,107 @@
     "allGeophysicalConcept": {
       "nodes": [
         {
-          "id": "5923576e-acc9-4e76-ad37-74b3530cfada",
+          "id": "cde176e2-1d03-4514-9739-c6cc08349ec5",
           "longname": "Aerosols"
         },
         {
-          "id": "74492dcb-ef79-443a-9947-33d3be22d9c8",
+          "id": "c7dfe330-aea0-496b-8555-d0cae00eb7df",
           "longname": "Air Quality"
         },
         {
-          "id": "501d6b02-9a5e-4c46-9883-2d80433dc1b3",
+          "id": "c93a7df9-c795-4e5d-b503-1b1b96c974e9",
           "longname": "Atmospheric Chemicals & Trace Gases"
         },
         {
-          "id": "62ce3aea-f50b-4776-a3bd-83887e4dfdf6",
+          "id": "1d898714-42b8-45a6-800b-15cb53ecdf69",
           "longname": "Upper Atmospheric Chemistry"
         },
         {
-          "id": "08e0f217-6d0d-401c-8e1f-591066fc4bbf",
+          "id": "6cafc0be-a287-41ff-ad54-9634f4ca7ea4",
           "longname": "Radiation & Energy Budget"
         },
         {
-          "id": "16e2ea33-cbcb-4809-93a5-9539c8ae3d31",
+          "id": "d7357901-9ddc-48ce-86a4-e2265b18bfdc",
           "longname": "Clouds-Properties & Processes & Dynamics"
         },
         {
-          "id": "e16d0782-f294-4034-a197-f339dc76c533",
+          "id": "78496c56-bb73-44da-9b35-b410bafe1f01",
           "longname": "Boundary Layer Processes"
         },
         {
-          "id": "4458e6f8-3c5e-48b5-befd-fc785a82845b",
+          "id": "ade79de0-a4de-41f7-802b-313e5864553f",
           "longname": "Atmospheric Electricity & Lightning"
         },
         {
-          "id": "751f7659-0e9e-40e8-be47-cfe2c6c230f0",
+          "id": "9855ca99-5016-4ea6-9ca4-fcc8387daa61",
           "longname": "Tropical Cyclones"
         },
         {
-          "id": "6bc3d82d-3438-4f98-8604-589712c382f7",
+          "id": "87fd3213-9473-4b2b-94ee-bf74393f9c65",
           "longname": "Mesoscale Convection & Severe Weather"
         },
         {
-          "id": "78063d7d-8e3c-497d-b770-e0cda20c09f3",
+          "id": "90c3f392-d7ac-4fd7-b19c-0ea6fe27c0dd",
           "longname": "Mid-latitude Cyclones"
         },
         {
-          "id": "7782afeb-a46b-4e73-8e88-ec23b92873af",
+          "id": "71615bb4-0179-4d30-8157-ee6c4bfa12b0",
           "longname": "Precipitation"
         },
         {
-          "id": "848abab6-42f5-4812-be34-709b7062d604",
+          "id": "94a63da6-f482-4391-ba97-7fde4462d938",
           "longname": "Terrestrial Hydrology"
         },
         {
-          "id": "b7f2f7e3-3911-43af-8126-89172a61ac4e",
+          "id": "10ebebbe-7f62-4e02-9826-7d693417d0fd",
           "longname": "Ice and Glacial Properties & Processes"
         },
         {
-          "id": "9ff20734-1c6e-4890-814e-7e7e89410ba7",
+          "id": "3017bb4e-74b6-4b52-9690-64b940edb36c",
           "longname": "Ocean Properties & Processes"
         },
         {
-          "id": "cf88d4e4-f16b-42cc-adb5-f6b7a8ee3c28",
+          "id": "75e7cade-18d7-4dea-8f41-b6017dc1e856",
           "longname": "Ecosystems/Biogeochemical Interactions"
         },
         {
-          "id": "0f79d0d1-b5df-418a-88b8-228569a12990",
+          "id": "d82103de-1654-4928-b4e0-d2265de5188f",
           "longname": "Biodiversity"
         },
         {
-          "id": "7ee027b9-cfe4-4db3-b31d-adee136944a1",
+          "id": "2b08e8e0-15aa-475c-af3f-83334631435b",
           "longname": "Carbon Storage & Processes"
         },
         {
-          "id": "e2792eb0-8ca1-4c8d-b18d-f799b06fdd4f",
+          "id": "cdf80f34-5114-4071-86fb-bdf511412724",
           "longname": "Soil Properties"
         },
         {
-          "id": "ac788e6e-d5d2-46d5-a172-6a3d8c953c95",
+          "id": "3933f136-781f-48aa-a448-82c2c67bdd24",
           "longname": "Land Characteristics"
         },
         {
-          "id": "42391e2f-fbd8-4293-81a3-b40eddc0af61",
+          "id": "bef5e6b9-c7f0-4f36-88c1-07f9ab7e6401",
           "longname": "Tectonic Processes"
         },
         {
-          "id": "310aee9a-3f45-42e5-97cc-cc3954ab93ec",
+          "id": "f54e992b-02da-487e-b43d-9f77b66e4040",
           "longname": "Volcanic Processes"
         },
         {
-          "id": "87377927-0567-4ad7-a2e8-84896b0604cb",
+          "id": "cad8efd7-3d38-4092-a5e8-548215de1368",
           "longname": "Earth's Magnetic Field"
         },
         {
-          "id": "fcf87eb8-f745-4aaf-9667-a5e1e1f3fa4e",
+          "id": "eedbfbbf-c0c0-4947-a924-44382357f75b",
           "longname": "Earth's Interior"
         },
         {
-          "id": "3bd80dd0-6a62-4941-862f-1b28de77b01f",
+          "id": "dfc645fc-114f-4fee-b6b6-ac3a982e5064",
           "longname": "Earth/Climate Interactions"
         },
         {
-          "id": "afb5ecc5-7005-4136-97b4-a4a63d080ad3",
+          "id": "403e1d23-54ae-4b19-8106-2f1a49f47789",
           "longname": "Geodesy"
         }
       ]
@@ -416,143 +739,147 @@
     "allMeasurementType": {
       "nodes": [
         {
-          "id": "e9fd8ba0-c28f-4ff9-8cb7-97b15ac01d48",
-          "shortname": "Altimeter",
-          "longname": ""
-        },
-        {
-          "id": "3c343468-b9b8-43d2-99e1-330abb71bc3f",
-          "shortname": "Conductivity Sensor",
-          "longname": ""
-        },
-        {
-          "id": "37f7c535-e126-49ee-8183-8232b40d4bee",
-          "shortname": "Corer",
-          "longname": ""
-        },
-        {
-          "id": "165ec513-81b4-4b2c-a3d1-608d3e750811",
-          "shortname": "Gauge",
-          "longname": ""
-        },
-        {
-          "id": "db96733f-b7c0-48a1-9c6d-b39e2a347000",
-          "shortname": "Imaging Radar",
-          "longname": ""
-        },
-        {
-          "id": "4db6ee1c-5ce6-4d3c-8440-b5519c1d2052",
-          "shortname": "Magnetic/Electric",
-          "longname": "Magnetic/Electric Field"
-        },
-        {
-          "id": "432bf19b-9d48-4ae2-8882-807a414978dd",
-          "shortname": "Meter/Analyzer",
-          "longname": ""
-        },
-        {
-          "id": "78e60e92-c00e-4455-ab8e-e6079adde347",
-          "shortname": "Multi",
-          "longname": ""
-        },
-        {
-          "id": "dabd2183-d0a1-4f5b-b409-342b3254eecc",
-          "shortname": "Photon/Optical Detector",
-          "longname": ""
-        },
-        {
-          "id": "9fc1f7a4-3c32-44af-950d-bcbbcfad00b1",
-          "shortname": "Particle Detector",
-          "longname": ""
-        },
-        {
-          "id": "13bd515b-bdc1-4929-b113-5667bc4e751d",
-          "shortname": "Position/Navigation",
-          "longname": ""
-        },
-        {
-          "id": "e69125c3-5df4-42d0-a466-5727b338996d",
-          "shortname": "Pressure/Height",
-          "longname": ""
-        },
-        {
-          "id": "4eef72e1-9e34-4084-9161-7328a2951f59",
-          "shortname": "Probe",
-          "longname": ""
-        },
-        {
-          "id": "dd8dcf19-ca22-4fa5-9d0a-8977a37fe5a6",
-          "shortname": "Profiler/Sounder",
-          "longname": ""
-        },
-        {
-          "id": "116dbe53-de71-4250-aebf-c86eef02c745",
-          "shortname": "Radio Wave Detector",
-          "longname": ""
-        },
-        {
-          "id": "56a22454-2efb-473d-8454-8ad48d8c33d4",
-          "shortname": "Recorder/Logger",
-          "longname": ""
-        },
-        {
-          "id": "b6466a79-3440-460a-a096-c1b72ffaef87",
+          "id": "16d02d8b-4d5d-40ba-8b23-888a70a72c86",
           "shortname": "Sampler",
-          "longname": ""
+          "longname": "Sampler"
         },
         {
-          "id": "b2148710-0fcb-48ad-a52f-a150ed08f5ea",
-          "shortname": "Scatterometer",
-          "longname": ""
+          "id": "24a75cdd-766d-458e-972a-a54738c01377",
+          "shortname": "Meter/Analyzer",
+          "longname": "Meter/Analyzer"
         },
         {
-          "id": "0d4f8c4c-a23d-4424-b553-af0862553974",
-          "shortname": "Spectrometer/Radiometer",
-          "longname": ""
-        },
-        {
-          "id": "04225d35-d087-484c-bc7e-57ae18610ec3",
+          "id": "66d95447-3247-4974-8043-1dacc58c3de9",
           "shortname": "Temp/Humidity",
-          "longname": ""
+          "longname": "Temperature/Humidity"
         },
         {
-          "id": "a58af291-9106-41d9-afa9-db38410e5db9",
-          "shortname": "Thermal/Radiation Detector",
-          "longname": ""
+          "id": "d8946a87-a4fc-4fd6-aa0f-b6fbdb3319a2",
+          "shortname": "Pressure/Height/Depth",
+          "longname": "Pressure/Height/Depth"
         },
         {
-          "id": "4b3f0d78-170e-4d7b-9aee-f6f3c0994838",
-          "shortname": "Ultraviolet",
-          "longname": ""
+          "id": "be48b7f1-298a-4ec3-96f5-3394f063a73e",
+          "shortname": "Optical/Photon",
+          "longname": "Optical/Photon"
         },
         {
-          "id": "17c21cb2-2e4e-469c-a4f3-28b2e75e32bc",
-          "shortname": "Visible/Infrared",
-          "longname": ""
-        },
-        {
-          "id": "00c318c9-af74-4e02-88b8-441b08b96002",
+          "id": "650e8f30-f136-4e79-b3ad-2c4b15dc7205",
           "shortname": "Wind/Current",
-          "longname": ""
+          "longname": "Wind/Current"
         },
         {
-          "id": "084d1452-c97e-4fba-a24e-b028c8c54e68",
-          "shortname": "X-ray/Gamma",
-          "longname": ""
+          "id": "5d3b52e8-07b3-4346-a942-f9544536e3b7",
+          "shortname": "Magnetic/Electric",
+          "longname": "Magnetic/Electric"
         },
         {
-          "id": "c48c70cc-6fd4-45f2-b0dc-41db28ee1c6d",
+          "id": "381df76d-e95c-458b-81d6-faff9ee6691b",
+          "shortname": "Gauge",
+          "longname": "Gauge"
+        },
+        {
+          "id": "6a3552c3-996c-417c-97fc-05764e29ccf9",
+          "shortname": "Scatterometer",
+          "longname": "Scatterometer"
+        },
+        {
+          "id": "1135e742-5bad-40c8-a6a7-ee9aeb385763",
+          "shortname": "Spectrometer/Radiometer",
+          "longname": "Spectrometer/Radiometer"
+        },
+        {
+          "id": "ede20bd9-dd11-4da6-a192-f9efdc21048a",
+          "shortname": "Radiation",
+          "longname": "Radiation"
+        },
+        {
+          "id": "a3b2a9d7-2247-45a9-a183-d91098f8bc49",
+          "shortname": "Radar",
+          "longname": "Radar"
+        },
+        {
+          "id": "46a8d313-6a8b-4318-9acc-ff8e159ea93d",
+          "shortname": "Lidar",
+          "longname": "Lidar"
+        },
+        {
+          "id": "773334ad-e055-4df2-a970-61c1999c902a",
+          "shortname": "VIS/IR",
+          "longname": "Visible/Infrared"
+        },
+        {
+          "id": "3f7f42b5-9e16-4304-8e40-85892af4ba1a",
+          "shortname": "MW",
+          "longname": "Microwave"
+        },
+        {
+          "id": "51f7c273-9c7e-4f1d-913f-9fc826d8bbd3",
+          "shortname": "UV",
+          "longname": "Ultraviolet"
+        },
+        {
+          "id": "2191a510-ff20-49eb-beb6-5e6cc777fa98",
+          "shortname": "X-/Gamma Ray",
+          "longname": "X-ray / Gamma Ray"
+        },
+        {
+          "id": "da01b4ee-78dc-4729-b9f1-c8e8c55c37df",
+          "shortname": "Acoustic",
+          "longname": "Acoustic"
+        },
+        {
+          "id": "9df04b94-8e01-4f8d-88ea-3015b5b1599b",
+          "shortname": "Position/Navigation",
+          "longname": "Position/Navigation"
+        },
+        {
+          "id": "028ec0ec-56b4-4ff6-b066-54554e96699f",
+          "shortname": "Multi",
+          "longname": "Multi"
+        },
+        {
+          "id": "f296a526-8a46-45eb-b6b1-520800236f3a",
+          "shortname": "Data Analysis",
+          "longname": "Data Analysis"
+        },
+        {
+          "id": "f029d5d5-56c8-417e-b2e1-65a6644808b9",
+          "shortname": "Spaceborne",
+          "longname": "Spaceborne"
+        },
+        {
+          "id": "24056140-0a95-4bcd-9dd8-9df51df2a296",
           "shortname": "Other",
-          "longname": ""
+          "longname": "Other"
         }
       ]
     },
     "platformPlaceholder": {
-      "nasaImgAlt": "NASA’s ER-2",
+      "nasaImgAlt": "NASA’s ER-2 (Photography courtesy NASA Images)",
       "nasaImg": {
         "childImageSharp": {
-          "fluid": {
-            "src": "/static/7ddd9c149f4e945b3f973cd4f681a847/14b42/EC98-44435-2~orig.jpg"
+          "gatsbyImageData": {
+            "layout": "fullWidth",
+            "placeholder": {
+              "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAQABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAECAwX/xAAXAQADAQAAAAAAAAAAAAAAAAAAAQID/9oADAMBAAIQAxAAAAHn03rGZYL/xAAYEAADAQEAAAAAAAAAAAAAAAAAAREQEv/aAAgBAQABBQKU5Y1iqz//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAWEAEBAQAAAAAAAAAAAAAAAAAhECD/2gAIAQEABj8CwE//xAAZEAADAQEBAAAAAAAAAAAAAAAAAREhUYH/2gAIAQEAAT8hTtiptqlINrgsdGZW8EP/2gAMAwEAAgADAAAAELM//8QAFxEAAwEAAAAAAAAAAAAAAAAAARARQf/aAAgBAwEBPxATV//EABcRAAMBAAAAAAAAAAAAAAAAAAEQEUH/2gAIAQIBAT8QNxf/xAAZEAEBAQEBAQAAAAAAAAAAAAABEQAhMVH/2gAIAQEAAT8QlHXwyYrClyOiKiPo4oj07kdRvecpa1frv//Z"
+            },
+            "images": {
+              "fallback": {
+                "src": "/static/7ddd9c149f4e945b3f973cd4f681a847/26248/EC98-44435-2~orig.jpg",
+                "srcSet": "/static/7ddd9c149f4e945b3f973cd4f681a847/cd108/EC98-44435-2~orig.jpg 750w,\n/static/7ddd9c149f4e945b3f973cd4f681a847/e1fac/EC98-44435-2~orig.jpg 1080w,\n/static/7ddd9c149f4e945b3f973cd4f681a847/58540/EC98-44435-2~orig.jpg 1366w,\n/static/7ddd9c149f4e945b3f973cd4f681a847/26248/EC98-44435-2~orig.jpg 1920w",
+                "sizes": "100vw"
+              },
+              "sources": [
+                {
+                  "srcSet": "/static/7ddd9c149f4e945b3f973cd4f681a847/8e9fd/EC98-44435-2~orig.webp 750w,\n/static/7ddd9c149f4e945b3f973cd4f681a847/7b4f0/EC98-44435-2~orig.webp 1080w,\n/static/7ddd9c149f4e945b3f973cd4f681a847/0a270/EC98-44435-2~orig.webp 1366w,\n/static/7ddd9c149f4e945b3f973cd4f681a847/60a29/EC98-44435-2~orig.webp 1920w",
+                  "type": "image/webp",
+                  "sizes": "100vw"
+                }
+              ]
+            },
+            "width": 1,
+            "height": 0.7994791666666667
           }
         }
       }
