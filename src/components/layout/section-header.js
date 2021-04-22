@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-export default function SectionHeader({ tagline, headline, subline, id }) {
+export default function SectionHeader({ tagline, headline, description, id }) {
   return (
     <div
       css={`
@@ -23,14 +23,14 @@ export default function SectionHeader({ tagline, headline, subline, id }) {
       <a href={`#${id}`}>
         <h2>{headline}</h2>
       </a>
-      {subline && (
+      {description && (
         <p
           css={`
             margin-top: -1rem;
           `}
-          data-cy="section-subline"
+          data-cy="section-description"
         >
-          {subline}
+          {description}
         </p>
       )}
     </div>
@@ -40,6 +40,6 @@ export default function SectionHeader({ tagline, headline, subline, id }) {
 SectionHeader.propTypes = {
   tagline: PropTypes.string,
   headline: PropTypes.string.isRequired,
-  subline: PropTypes.string,
+  description: PropTypes.string,
   id: PropTypes.string.isRequired,
 }
