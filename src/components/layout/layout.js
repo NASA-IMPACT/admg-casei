@@ -20,6 +20,8 @@ import Header from "../header"
 import Nav from "../nav"
 import Footer from "../footer"
 
+import { POSITIVE } from "../../utils/constants"
+
 const Container = styled.div`
   display: flex;
   min-height: 100vh;
@@ -40,10 +42,16 @@ const Layout = ({ children }) => {
 
   return (
     <Container id="top" data-cy="page">
-      <Header shortname={data.site.siteMetadata.shortname}>
-        <Nav />
+      <Header shortname={data.site.siteMetadata.shortname} mode={POSITIVE}>
+        <Nav mode={POSITIVE} />
       </Header>
-      <main style={{ flexGrow: 1 }}>{children}</main>
+      <main
+        css={`
+          flex-grow: 1;
+        `}
+      >
+        {children}
+      </main>
       <Footer shortname={data.site.siteMetadata.shortname} />
     </Container>
   )

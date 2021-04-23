@@ -2,11 +2,16 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-import { layout } from "../theme"
+import { layout, colors } from "../theme"
 import { CaseiLogoIcon } from "../icons"
 
-const Header = ({ shortname, children }) => (
-  <header>
+const Header = ({ shortname, children, mode }) => (
+  <header
+    css={`
+      background-color: ${colors[mode].background};
+      z-index: 1;
+    `}
+  >
     <div
       css={`
         margin: 0 auto;
@@ -33,10 +38,11 @@ const Header = ({ shortname, children }) => (
             align-items: center;
           `}
         >
-          <CaseiLogoIcon size="small" />
+          <CaseiLogoIcon size="small" color={colors[mode].text} />
           <div
             css={`
               font-size: 1.5rem;
+              color: ${colors[mode].text};
             `}
           >
             {shortname}
@@ -57,6 +63,7 @@ const Header = ({ shortname, children }) => (
 Header.propTypes = {
   shortname: PropTypes.string.isRequired,
   children: PropTypes.element,
+  mode: PropTypes.string.isRequired,
 }
 
 export default Header
