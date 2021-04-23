@@ -556,8 +556,8 @@ exports[`Explore page renders correctly 1`] = `
 }
 
 .c27.c27 {
-  color: #e9eaec;
-  background-color: #303641;
+  color: #262a31;
+  background-color: #ffffff;
   box-shadow: rgba(68,63,63,0.08) 0px -1px 1px 0px,rgba(68,63,63,0.08) 0px 2px 6px 0px;
   padding: 1rem;
   min-height: 20rem;
@@ -595,13 +595,13 @@ exports[`Explore page renders correctly 1`] = `
   border: 1px solid;
   padding: 0.25rem;
   margin: 1rem 0;
-  background-color: #303641;
+  background-color: #ffffff;
   z-index: 1;
 }
 
 .c30.c30 {
-  color: #e9eaec;
-  background-color: #303641;
+  color: #262a31;
+  background-color: #ffffff;
   box-shadow: rgba(68,63,63,0.08) 0px -1px 1px 0px,rgba(68,63,63,0.08) 0px 2px 6px 0px;
   padding: 1rem 0.5rem;
   -webkit-box-pack: center;
@@ -1610,8 +1610,8 @@ exports[`Explore page renders correctly 1`] = `
             className="c26"
           >
             <a
-              _css="#e9eaec"
-              _css2="#303641"
+              _css="#262a31"
+              _css2="#ffffff"
               className="c27"
               data-cy="campaigns-card"
               href="/campaign/CAMP2Ex"
@@ -1909,8 +1909,8 @@ exports[`Explore page renders correctly 1`] = `
             className="c26"
           >
             <a
-              _css="#e9eaec"
-              _css2="#303641"
+              _css="#262a31"
+              _css2="#ffffff"
               className="c27"
               data-cy="campaigns-card"
               href="/campaign/LISTOS"
@@ -1928,7 +1928,7 @@ exports[`Explore page renders correctly 1`] = `
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <g
-                      fill="#e9eaec"
+                      fill="#262a31"
                       fillRule="nonzero"
                     >
                       <path
@@ -2136,8 +2136,8 @@ exports[`Explore page renders correctly 1`] = `
             className="c26"
           >
             <a
-              _css="#e9eaec"
-              _css2="#303641"
+              _css="#262a31"
+              _css2="#ffffff"
               className="c27"
               data-cy="campaigns-card"
               href="/campaign/ACT-America"
@@ -2484,8 +2484,8 @@ exports[`Explore page renders correctly 1`] = `
             className="c26"
           >
             <a
-              _css="#e9eaec"
-              _css2="#303641"
+              _css="#262a31"
+              _css2="#ffffff"
               className="c27"
               data-cy="campaigns-card"
               href="/campaign/ICE-POP"
@@ -2783,8 +2783,8 @@ exports[`Explore page renders correctly 1`] = `
             className="c26"
           >
             <a
-              _css="#e9eaec"
-              _css2="#303641"
+              _css="#262a31"
+              _css2="#ffffff"
               className="c27"
               data-cy="campaigns-card"
               href="/campaign/ACEPOL"
@@ -3082,8 +3082,8 @@ exports[`Explore page renders correctly 1`] = `
             className="c26"
           >
             <a
-              _css="#e9eaec"
-              _css2="#303641"
+              _css="#262a31"
+              _css2="#ffffff"
               className="c27"
               data-cy="campaigns-card"
               href="/campaign/CPEX"
@@ -3380,8 +3380,8 @@ exports[`Explore page renders correctly 1`] = `
             className="c26"
           >
             <a
-              _css="#e9eaec"
-              _css2="#303641"
+              _css="#262a31"
+              _css2="#ffffff"
               className="c27"
               data-cy="campaigns-card"
               href="/campaign/CARAFE"
@@ -3399,7 +3399,7 @@ exports[`Explore page renders correctly 1`] = `
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <g
-                      fill="#e9eaec"
+                      fill="#262a31"
                       fillRule="nonzero"
                     >
                       <path
@@ -3607,8 +3607,8 @@ exports[`Explore page renders correctly 1`] = `
             className="c26"
           >
             <a
-              _css="#e9eaec"
-              _css2="#303641"
+              _css="#262a31"
+              _css2="#ffffff"
               className="c27"
               data-cy="campaigns-card"
               href="/campaign/OLYMPEX"
@@ -3906,8 +3906,8 @@ exports[`Explore page renders correctly 1`] = `
             className="c26"
           >
             <a
-              _css="#e9eaec"
-              _css2="#303641"
+              _css="#262a31"
+              _css2="#ffffff"
               className="c27"
               data-cy="campaigns-card"
               href="/campaign/AfriSAR"
@@ -3925,7 +3925,7 @@ exports[`Explore page renders correctly 1`] = `
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <g
-                      fill="#e9eaec"
+                      fill="#262a31"
                       fillRule="nonzero"
                     >
                       <path
@@ -4120,8 +4120,8 @@ exports[`Explore page renders correctly 1`] = `
             className="c26"
           >
             <a
-              _css="#e9eaec"
-              _css2="#303641"
+              _css="#262a31"
+              _css2="#ffffff"
               className="c27"
               data-cy="campaigns-card"
               href="/campaign/CARVE"
@@ -4456,8 +4456,8 @@ exports[`Explore page renders correctly 1`] = `
             className="c26"
           >
             <a
-              _css="#e9eaec"
-              _css2="#303641"
+              _css="#262a31"
+              _css2="#ffffff"
               className="c27"
               data-cy="campaigns-card"
               href="/campaign/AirMOSS"
@@ -5152,8 +5152,8 @@ exports[`Explore page renders correctly 1`] = `
             className="c26"
           >
             <a
-              _css="#e9eaec"
-              _css2="#303641"
+              _css="#262a31"
+              _css2="#ffffff"
               className="c27"
               data-cy="campaigns-card"
               href="/campaign/ATTREX"
@@ -5488,8 +5488,8 @@ exports[`Explore page renders correctly 1`] = `
             className="c26"
           >
             <a
-              _css="#e9eaec"
-              _css2="#303641"
+              _css="#262a31"
+              _css2="#ffffff"
               className="c27"
               data-cy="campaigns-card"
               href="/campaign/HS3"
@@ -5812,8 +5812,8 @@ exports[`Explore page renders correctly 1`] = `
             className="c26"
           >
             <a
-              _css="#e9eaec"
-              _css2="#303641"
+              _css="#262a31"
+              _css2="#ffffff"
               className="c27"
               data-cy="campaigns-card"
               href="/campaign/DISCOVER-AQ"
@@ -6148,8 +6148,8 @@ exports[`Explore page renders correctly 1`] = `
             className="c26"
           >
             <a
-              _css="#e9eaec"
-              _css2="#303641"
+              _css="#262a31"
+              _css2="#ffffff"
               className="c27"
               data-cy="campaigns-card"
               href="/campaign/IPHEx"
@@ -6447,8 +6447,8 @@ exports[`Explore page renders correctly 1`] = `
             className="c26"
           >
             <a
-              _css="#e9eaec"
-              _css2="#303641"
+              _css="#262a31"
+              _css2="#ffffff"
               className="c27"
               data-cy="campaigns-card"
               href="/campaign/SEAC4RS"
@@ -6746,8 +6746,8 @@ exports[`Explore page renders correctly 1`] = `
             className="c26"
           >
             <a
-              _css="#e9eaec"
-              _css2="#303641"
+              _css="#262a31"
+              _css2="#ffffff"
               className="c27"
               data-cy="campaigns-card"
               href="/campaign/IFloodS"
@@ -7045,8 +7045,8 @@ exports[`Explore page renders correctly 1`] = `
             className="c26"
           >
             <a
-              _css="#e9eaec"
-              _css2="#303641"
+              _css="#262a31"
+              _css2="#ffffff"
               className="c27"
               data-cy="campaigns-card"
               href="/campaign/HyMeX"
@@ -7344,8 +7344,8 @@ exports[`Explore page renders correctly 1`] = `
             className="c26"
           >
             <a
-              _css="#e9eaec"
-              _css2="#303641"
+              _css="#262a31"
+              _css2="#ffffff"
               className="c27"
               data-cy="campaigns-card"
               href="/campaign/DC3"
@@ -7643,8 +7643,8 @@ exports[`Explore page renders correctly 1`] = `
             className="c26"
           >
             <a
-              _css="#e9eaec"
-              _css2="#303641"
+              _css="#262a31"
+              _css2="#ffffff"
               className="c27"
               data-cy="campaigns-card"
               href="/campaign/GCPEx"
@@ -7942,8 +7942,8 @@ exports[`Explore page renders correctly 1`] = `
             className="c26"
           >
             <a
-              _css="#e9eaec"
-              _css2="#303641"
+              _css="#262a31"
+              _css2="#ffffff"
               className="c27"
               data-cy="campaigns-card"
               href="/campaign/MC3E"
@@ -8241,8 +8241,8 @@ exports[`Explore page renders correctly 1`] = `
             className="c26"
           >
             <a
-              _css="#e9eaec"
-              _css2="#303641"
+              _css="#262a31"
+              _css2="#ffffff"
               className="c27"
               data-cy="campaigns-card"
               href="/campaign/LPVEx"
@@ -8540,8 +8540,8 @@ exports[`Explore page renders correctly 1`] = `
             className="c26"
           >
             <a
-              _css="#e9eaec"
-              _css2="#303641"
+              _css="#262a31"
+              _css2="#ffffff"
               className="c27"
               data-cy="campaigns-card"
               href="/campaign/GRIP"
@@ -8839,8 +8839,8 @@ exports[`Explore page renders correctly 1`] = `
             className="c26"
           >
             <a
-              _css="#e9eaec"
-              _css2="#303641"
+              _css="#262a31"
+              _css2="#ffffff"
               className="c27"
               data-cy="campaigns-card"
               href="/campaign/ARCTAS"
@@ -9163,8 +9163,8 @@ exports[`Explore page renders correctly 1`] = `
             className="c26"
           >
             <a
-              _css="#e9eaec"
-              _css2="#303641"
+              _css="#262a31"
+              _css2="#ffffff"
               className="c27"
               data-cy="campaigns-card"
               href="/campaign/CLASIC07"
@@ -9182,7 +9182,7 @@ exports[`Explore page renders correctly 1`] = `
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <g
-                      fill="#e9eaec"
+                      fill="#262a31"
                       fillRule="nonzero"
                     >
                       <path
@@ -9377,8 +9377,8 @@ exports[`Explore page renders correctly 1`] = `
             className="c26"
           >
             <a
-              _css="#e9eaec"
-              _css2="#303641"
+              _css="#262a31"
+              _css2="#ffffff"
               className="c27"
               data-cy="campaigns-card"
               href="/campaign/NAMMA"
@@ -9676,8 +9676,8 @@ exports[`Explore page renders correctly 1`] = `
             className="c26"
           >
             <a
-              _css="#e9eaec"
-              _css2="#303641"
+              _css="#262a31"
+              _css2="#ffffff"
               className="c27"
               data-cy="campaigns-card"
               href="/campaign/TCSP"
@@ -9975,8 +9975,8 @@ exports[`Explore page renders correctly 1`] = `
             className="c26"
           >
             <a
-              _css="#e9eaec"
-              _css2="#303641"
+              _css="#262a31"
+              _css2="#ffffff"
               className="c27"
               data-cy="campaigns-card"
               href="/campaign/ACES"
@@ -10274,8 +10274,8 @@ exports[`Explore page renders correctly 1`] = `
             className="c26"
           >
             <a
-              _css="#e9eaec"
-              _css2="#303641"
+              _css="#262a31"
+              _css2="#ffffff"
               className="c27"
               data-cy="campaigns-card"
               href="/campaign/TEFLUN"
@@ -10293,7 +10293,7 @@ exports[`Explore page renders correctly 1`] = `
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <g
-                      fill="#e9eaec"
+                      fill="#262a31"
                       fillRule="nonzero"
                     >
                       <path
@@ -10500,8 +10500,8 @@ exports[`Explore page renders correctly 1`] = `
             className="c26"
           >
             <a
-              _css="#e9eaec"
-              _css2="#303641"
+              _css="#262a31"
+              _css2="#ffffff"
               className="c27"
               data-cy="campaigns-card"
               href="/campaign/BOREAS"
@@ -10812,8 +10812,8 @@ exports[`Explore page renders correctly 1`] = `
             className="c26"
           >
             <a
-              _css="#e9eaec"
-              _css2="#303641"
+              _css="#262a31"
+              _css2="#ffffff"
               className="c27"
               data-cy="campaigns-card"
               href="/campaign/TARFOX"
@@ -11111,8 +11111,8 @@ exports[`Explore page renders correctly 1`] = `
             className="c26"
           >
             <a
-              _css="#e9eaec"
-              _css2="#303641"
+              _css="#262a31"
+              _css2="#ffffff"
               className="c27"
               data-cy="campaigns-card"
               href="/campaign/OTTER"
@@ -11130,7 +11130,7 @@ exports[`Explore page renders correctly 1`] = `
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <g
-                      fill="#e9eaec"
+                      fill="#262a31"
                       fillRule="nonzero"
                     >
                       <path
@@ -11350,8 +11350,8 @@ exports[`Explore page renders correctly 1`] = `
             className="c26"
           >
             <a
-              _css="#e9eaec"
-              _css2="#303641"
+              _css="#262a31"
+              _css2="#ffffff"
               className="c27"
               data-cy="campaigns-card"
               href="/campaign/FIFE"
@@ -11662,8 +11662,8 @@ exports[`Explore page renders correctly 1`] = `
             className="c26"
           >
             <a
-              _css="#e9eaec"
-              _css2="#303641"
+              _css="#262a31"
+              _css2="#ffffff"
               className="c27"
               data-cy="campaigns-card"
               href="/campaign/SNF"
@@ -11974,8 +11974,8 @@ exports[`Explore page renders correctly 1`] = `
             className="c26"
           >
             <a
-              _css="#e9eaec"
-              _css2="#303641"
+              _css="#262a31"
+              _css2="#ffffff"
               className="c27"
               data-cy="campaigns-card"
               href="/campaign/ABoVE"
@@ -12304,8 +12304,8 @@ exports[`Explore page renders correctly 1`] = `
             className="c26"
           >
             <a
-              _css="#e9eaec"
-              _css2="#303641"
+              _css="#262a31"
+              _css2="#ffffff"
               className="c27"
               data-cy="campaigns-card"
               href="/campaign/OMG"
@@ -12718,8 +12718,8 @@ exports[`Explore page renders correctly 1`] = `
             className="c26"
           >
             <a
-              _css="#e9eaec"
-              _css2="#303641"
+              _css="#262a31"
+              _css2="#ffffff"
               className="c27"
               data-cy="campaigns-card"
               href="/campaign/SnowEx"
