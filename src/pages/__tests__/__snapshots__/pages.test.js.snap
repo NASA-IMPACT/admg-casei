@@ -13236,6 +13236,28 @@ exports[`Explore page renders correctly 1`] = `
               }
               target="_blank"
             >
+              <svg
+                height="16"
+                role="img"
+                version="1.1"
+                viewBox="0 0 16 16"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>
+                  External Link
+                </title>
+                <rect
+                  fill="none"
+                  height="16"
+                  width="16"
+                />
+                <path
+                  d="M3,5h4V3H1v12h12V9h-2v4H3V5z M16,8V0L8,0v2h4.587L6.294,8.294l1.413,1.413L14,3.413V8H16z"
+                  fill="#9e9e9e"
+                />
+              </svg>
+               
               ADMG Website
             </a>
           </li>
@@ -13251,6 +13273,28 @@ exports[`Explore page renders correctly 1`] = `
               }
               target="_blank"
             >
+              <svg
+                height="16"
+                role="img"
+                version="1.1"
+                viewBox="0 0 16 16"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>
+                  External Link
+                </title>
+                <rect
+                  fill="none"
+                  height="16"
+                  width="16"
+                />
+                <path
+                  d="M3,5h4V3H1v12h12V9h-2v4H3V5z M16,8V0L8,0v2h4.587L6.294,8.294l1.413,1.413L14,3.413V8H16z"
+                  fill="#9e9e9e"
+                />
+              </svg>
+               
               Impact Website
             </a>
           </li>
@@ -13314,6 +13358,28 @@ exports[`Explore page renders correctly 1`] = `
         }
         target="_blank"
       >
+        <svg
+          height="16"
+          role="img"
+          version="1.1"
+          viewBox="0 0 16 16"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            External Link
+          </title>
+          <rect
+            fill="none"
+            height="16"
+            width="16"
+          />
+          <path
+            d="M3,5h4V3H1v12h12V9h-2v4H3V5z M16,8V0L8,0v2h4.587L6.294,8.294l1.413,1.413L14,3.413V8H16z"
+            fill="#9e9e9e"
+          />
+        </svg>
+         
         Development Seed
       </a>
       .
@@ -15155,6 +15221,28 @@ exports[`Glossary page renders correctly 1`] = `
               }
               target="_blank"
             >
+              <svg
+                height="16"
+                role="img"
+                version="1.1"
+                viewBox="0 0 16 16"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>
+                  External Link
+                </title>
+                <rect
+                  fill="none"
+                  height="16"
+                  width="16"
+                />
+                <path
+                  d="M3,5h4V3H1v12h12V9h-2v4H3V5z M16,8V0L8,0v2h4.587L6.294,8.294l1.413,1.413L14,3.413V8H16z"
+                  fill="#9e9e9e"
+                />
+              </svg>
+               
               ADMG Website
             </a>
           </li>
@@ -15170,6 +15258,28 @@ exports[`Glossary page renders correctly 1`] = `
               }
               target="_blank"
             >
+              <svg
+                height="16"
+                role="img"
+                version="1.1"
+                viewBox="0 0 16 16"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>
+                  External Link
+                </title>
+                <rect
+                  fill="none"
+                  height="16"
+                  width="16"
+                />
+                <path
+                  d="M3,5h4V3H1v12h12V9h-2v4H3V5z M16,8V0L8,0v2h4.587L6.294,8.294l1.413,1.413L14,3.413V8H16z"
+                  fill="#9e9e9e"
+                />
+              </svg>
+               
               Impact Website
             </a>
           </li>
@@ -15233,6 +15343,28 @@ exports[`Glossary page renders correctly 1`] = `
         }
         target="_blank"
       >
+        <svg
+          height="16"
+          role="img"
+          version="1.1"
+          viewBox="0 0 16 16"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            External Link
+          </title>
+          <rect
+            fill="none"
+            height="16"
+            width="16"
+          />
+          <path
+            d="M3,5h4V3H1v12h12V9h-2v4H3V5z M16,8V0L8,0v2h4.587L6.294,8.294l1.413,1.413L14,3.413V8H16z"
+            fill="#9e9e9e"
+          />
+        </svg>
+         
         Development Seed
       </a>
       .
@@ -20719,6 +20851,28 @@ exports[`Home page renders correctly 1`] = `
               }
               target="_blank"
             >
+              <svg
+                height="16"
+                role="img"
+                version="1.1"
+                viewBox="0 0 16 16"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>
+                  External Link
+                </title>
+                <rect
+                  fill="none"
+                  height="16"
+                  width="16"
+                />
+                <path
+                  d="M3,5h4V3H1v12h12V9h-2v4H3V5z M16,8V0L8,0v2h4.587L6.294,8.294l1.413,1.413L14,3.413V8H16z"
+                  fill="#9e9e9e"
+                />
+              </svg>
+               
               ADMG Website
             </a>
           </li>
@@ -20734,6 +20888,28 @@ exports[`Home page renders correctly 1`] = `
               }
               target="_blank"
             >
+              <svg
+                height="16"
+                role="img"
+                version="1.1"
+                viewBox="0 0 16 16"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>
+                  External Link
+                </title>
+                <rect
+                  fill="none"
+                  height="16"
+                  width="16"
+                />
+                <path
+                  d="M3,5h4V3H1v12h12V9h-2v4H3V5z M16,8V0L8,0v2h4.587L6.294,8.294l1.413,1.413L14,3.413V8H16z"
+                  fill="#9e9e9e"
+                />
+              </svg>
+               
               Impact Website
             </a>
           </li>
@@ -20797,6 +20973,28 @@ exports[`Home page renders correctly 1`] = `
         }
         target="_blank"
       >
+        <svg
+          height="16"
+          role="img"
+          version="1.1"
+          viewBox="0 0 16 16"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            External Link
+          </title>
+          <rect
+            fill="none"
+            height="16"
+            width="16"
+          />
+          <path
+            d="M3,5h4V3H1v12h12V9h-2v4H3V5z M16,8V0L8,0v2h4.587L6.294,8.294l1.413,1.413L14,3.413V8H16z"
+            fill="#9e9e9e"
+          />
+        </svg>
+         
         Development Seed
       </a>
       .

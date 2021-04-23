@@ -5,6 +5,7 @@ import ExclamationIcon from "./exclamation-icon.js"
 import SearchIcon from "./search-icon"
 import TrashIcon from "./trash-icon"
 import FilterIcon from "./filter-icon"
+import ExternalLinkIcon from "./external-link-icon"
 
 import CampaignIcon from "./campaign-icon"
 import InstrumentIcon from "./instrument-icon"
@@ -23,6 +24,7 @@ export {
   SearchIcon,
   TrashIcon,
   FilterIcon,
+  ExternalLinkIcon,
 }
 
 export { CampaignIcon, InstrumentIcon, PlatformIcon, CaseiLogoIcon }
