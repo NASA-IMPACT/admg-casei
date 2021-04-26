@@ -73,10 +73,10 @@ const Count = styled.span`
   }
 `
 
-const Tab = ({ onClick, isSelected, label, count }) => (
+const Tab = ({ id, onClick, isSelected, label, count }) => (
   <TabButton role="tab" onClick={onClick} isSelected={isSelected}>
     <Label isSelected={isSelected}>{label}</Label>
-    <Count isSelected={isSelected} data-cy="campaigns-count">
+    <Count isSelected={isSelected} data-cy={`${id}-count`}>
       {" "}
       ({count})
     </Count>
@@ -86,6 +86,7 @@ const Tab = ({ onClick, isSelected, label, count }) => (
 Tab.propTypes = {
   onClick: PropTypes.func.isRequired,
   isSelected: PropTypes.bool.isRequired,
+  id: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   count: PropTypes.number.isRequired,
 }
@@ -113,12 +114,14 @@ const ExploreMenu = ({
     <Tab
       onClick={() => setSelectedCategory("campaigns")}
       isSelected={selectedCategory === "campaigns"}
+      id="campaigns"
       label="Campaigns"
       count={filteredCount["campaigns"]}
     />
     <Tab
       onClick={() => setSelectedCategory("platforms")}
       isSelected={selectedCategory === "platforms"}
+      id="platforms"
       label="Platforms"
       count={filteredCount["platforms"]}
     />
@@ -126,6 +129,7 @@ const ExploreMenu = ({
     <Tab
       onClick={() => setSelectedCategory("instruments")}
       isSelected={selectedCategory === "instruments"}
+      id="instruments"
       label="Instruments"
       count={filteredCount["instruments"]}
     />
