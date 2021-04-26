@@ -211,8 +211,8 @@ ExploreTools.propTypes = {
   dateRange: PropTypes.shape({
     start: PropTypes.instanceOf(Date),
     end: PropTypes.instanceOf(Date),
-  }).isRequired,
-  setDateRange: PropTypes.func.isRequired,
+  }),
+  setDateRange: PropTypes.func,
   submitSearch: PropTypes.func.isRequired,
   resetSearch: PropTypes.func.isRequired,
   selectedFilterIds: PropTypes.arrayOf(PropTypes.string),
@@ -221,8 +221,8 @@ ExploreTools.propTypes = {
   removeFilter: PropTypes.func.isRequired,
   category: PropTypes.oneOf(["campaigns", "platforms", "instruments"])
     .isRequired,
-  toggleMap: PropTypes.func.isRequired,
-  isDisplayingMap: PropTypes.bool.isRequired,
+  toggleMap: PropTypes.func,
+  isDisplayingMap: PropTypes.bool,
 }
 
 // https://reactjs.org/docs/forwarding-refs.html#displaying-a-custom-name-in-devtools
