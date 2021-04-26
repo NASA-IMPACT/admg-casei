@@ -1011,7 +1011,7 @@ exports[`Explore page renders correctly 1`] = `
           </span>
           <span
             className="c13"
-            data-cy="campaigns-count"
+            data-cy="platforms-count"
           >
              
             (
@@ -1031,7 +1031,7 @@ exports[`Explore page renders correctly 1`] = `
           </span>
           <span
             className="c13"
-            data-cy="campaigns-count"
+            data-cy="instruments-count"
           >
              
             (
