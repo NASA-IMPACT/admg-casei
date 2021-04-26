@@ -45,12 +45,12 @@ exports[`Overview Section displays content 1`] = `
   color: #262a31;
 }
 
-.c7.c7 {
+.c6.c6 {
   grid-column: 10 / span 3;
 }
 
-.c7.c7 > *,
-.c7.c7 h3 {
+.c6.c6 > *,
+.c6.c6 h3 {
   color: #262a31;
 }
 
@@ -63,30 +63,10 @@ exports[`Overview Section displays content 1`] = `
 
 .c5.c5 {
   color: #15418c;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
-.c8.c8 {
+.c7.c7 {
   color: #aac9ff;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c6.c6 {
-  padding-left: 4px;
 }
 
 <section
@@ -283,9 +263,7 @@ exports[`Overview Section displays content 1`] = `
                 fill="#15418c"
               />
             </svg>
-            <span
-              className="c6"
-            >
+            <span>
               http://dx.doi.org/10.5067/calibration
             </span>
           </a>
@@ -346,9 +324,7 @@ exports[`Overview Section displays content 1`] = `
                     fill="#15418c"
                   />
                 </svg>
-                <span
-                  className="c6"
-                >
+                <span>
                   http://www.example.com
                 </span>
               </a>
@@ -359,7 +335,7 @@ exports[`Overview Section displays content 1`] = `
     </section>
   </div>
   <div
-    className="c7"
+    className="c6"
     mode="lightTheme"
   >
     <ul
@@ -474,7 +450,7 @@ exports[`Overview Section displays content 1`] = `
           DOI:
            
           <a
-            className="c8"
+            className="c7"
             data-cy="instrument-doi-link"
             href="http://dx.doi.org/10.5067/instrument"
             rel="noopener noreferrer"
@@ -501,9 +477,7 @@ exports[`Overview Section displays content 1`] = `
                 fill="#aac9ff"
               />
             </svg>
-            <span
-              className="c6"
-            >
+            <span>
               http://dx.doi.org/10.5067/instrument
             </span>
           </a>
@@ -591,9 +565,7 @@ exports[`Overview Section displays content 1`] = `
                   fill="#15418c"
                 />
               </svg>
-              <span
-                className="c6"
-              >
+              <span>
                 test
               </span>
             </a>
@@ -633,9 +605,7 @@ exports[`Overview Section displays content 1`] = `
                   fill="#15418c"
                 />
               </svg>
-              <span
-                className="c6"
-              >
+              <span>
                 test2
               </span>
             </a>

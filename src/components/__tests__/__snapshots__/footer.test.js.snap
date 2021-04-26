@@ -3,18 +3,6 @@
 exports[`Footer renders correctly 1`] = `
 .c10.c10 {
   color: #aac9ff;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c11.c11 {
-  padding-left: 4px;
 }
 
 .c6.c6 {
@@ -73,12 +61,12 @@ exports[`Footer renders correctly 1`] = `
   grid-column: 11 / span 2;
 }
 
-.c12.c12 {
+.c11.c11 {
   grid-column: 1 / span 12;
   background-color: rgba(255,255,255,0.2);
 }
 
-.c13.c13 {
+.c12.c12 {
   grid-column: 1 / span 12;
   display: -webkit-box;
   display: -webkit-flex;
@@ -90,7 +78,7 @@ exports[`Footer renders correctly 1`] = `
   justify-content: space-between;
 }
 
-.c14.c14 {
+.c13.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -102,7 +90,7 @@ exports[`Footer renders correctly 1`] = `
   font-weight: bold;
 }
 
-.c15.c15 {
+.c14.c14 {
   background-image: url("https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png");
   background-size: cover;
   background-position: center;
@@ -110,11 +98,11 @@ exports[`Footer renders correctly 1`] = `
   height: 100px;
 }
 
-.c16.c16 {
+.c15.c15 {
   font-weight: normal;
 }
 
-.c17.c17 {
+.c16.c16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -126,7 +114,7 @@ exports[`Footer renders correctly 1`] = `
   text-transform: uppercase;
 }
 
-.c18.c18 {
+.c17.c17 {
   text-align: center;
 }
 
@@ -297,9 +285,7 @@ exports[`Footer renders correctly 1`] = `
                 fill="#aac9ff"
               />
             </svg>
-            <span
-              className="c11"
-            >
+            <span>
               ADMG Website
             </span>
           </a>
@@ -333,9 +319,7 @@ exports[`Footer renders correctly 1`] = `
                 fill="#aac9ff"
               />
             </svg>
-            <span
-              className="c11"
-            >
+            <span>
               Impact Website
             </span>
           </a>
@@ -343,17 +327,17 @@ exports[`Footer renders correctly 1`] = `
       </ul>
     </div>
     <hr
-      className="c12"
+      className="c11"
     />
     <div
-      className="c13"
+      className="c12"
     >
       <div
-        className="c14"
+        className="c13"
       >
         <div
           aria-hidden="true"
-          className="c15"
+          className="c14"
         />
         <div
           data-cy="footer-credits"
@@ -369,7 +353,7 @@ exports[`Footer renders correctly 1`] = `
             NASA Official:
              
             <span
-              className="c16"
+              className="c15"
             >
               Rahul Ramachandran
             </span>
@@ -377,12 +361,12 @@ exports[`Footer renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="c17"
+        className="c16"
       />
     </div>
   </div>
   <div
-    className="c18"
+    className="c17"
     data-cy="footer-credit-devseed"
   >
     © 
@@ -417,9 +401,7 @@ exports[`Footer renders correctly 1`] = `
           fill="#aac9ff"
         />
       </svg>
-      <span
-        className="c11"
-      >
+      <span>
         Development Seed
       </span>
     </a>

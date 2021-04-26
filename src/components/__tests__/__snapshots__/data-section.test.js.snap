@@ -42,18 +42,6 @@ exports[`Data Section matches snapshot 1`] = `
 
 .c8.c8 {
   color: #aac9ff;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c9.c9 {
-  padding-left: 4px;
 }
 
 .c4.c4 {
@@ -389,9 +377,7 @@ exports[`Data Section matches snapshot 1`] = `
                 fill="#aac9ff"
               />
             </svg>
-            <span
-              className="c9"
-            >
+            <span>
               10.5067/Airborne/CAMP2Ex_Aerosol_AircraftRemoteSensing_P3_Data_1
             </span>
           </a>

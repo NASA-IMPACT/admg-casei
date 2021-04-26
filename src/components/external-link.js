@@ -20,19 +20,11 @@ export default function ExternalLink({
       href={url}
       css={`
         color: ${colors[mode].linkText};
-        display: flex;
-        align-items: center;
       `}
       data-cy={`${id}-link`}
     >
       <ExternalLinkIcon color={colors[mode].linkText} />
-      <span
-        css={`
-          padding-left: 4px;
-        `}
-      >
-        {label || children}
-      </span>
+      <span>{label || children}</span>
     </a>
   )
 }

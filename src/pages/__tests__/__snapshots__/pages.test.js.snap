@@ -3,18 +3,6 @@
 exports[`Explore page renders correctly 1`] = `
 .c61.c61 {
   color: #aac9ff;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c62.c62 {
-  padding-left: 4px;
 }
 
 .c1.c1 {
@@ -179,12 +167,12 @@ exports[`Explore page renders correctly 1`] = `
   grid-column: 11 / span 2;
 }
 
-.c63.c63 {
+.c62.c62 {
   grid-column: 1 / span 12;
   background-color: rgba(255,255,255,0.2);
 }
 
-.c64.c64 {
+.c63.c63 {
   grid-column: 1 / span 12;
   display: -webkit-box;
   display: -webkit-flex;
@@ -196,7 +184,7 @@ exports[`Explore page renders correctly 1`] = `
   justify-content: space-between;
 }
 
-.c65.c65 {
+.c64.c64 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -208,7 +196,7 @@ exports[`Explore page renders correctly 1`] = `
   font-weight: bold;
 }
 
-.c66.c66 {
+.c65.c65 {
   background-image: url("https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png");
   background-size: cover;
   background-position: center;
@@ -216,11 +204,11 @@ exports[`Explore page renders correctly 1`] = `
   height: 100px;
 }
 
-.c67.c67 {
+.c66.c66 {
   font-weight: normal;
 }
 
-.c68.c68 {
+.c67.c67 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -232,7 +220,7 @@ exports[`Explore page renders correctly 1`] = `
   text-transform: uppercase;
 }
 
-.c69.c69 {
+.c68.c68 {
   text-align: center;
 }
 
@@ -13269,9 +13257,7 @@ exports[`Explore page renders correctly 1`] = `
                   fill="#aac9ff"
                 />
               </svg>
-              <span
-                className="c62"
-              >
+              <span>
                 ADMG Website
               </span>
             </a>
@@ -13305,9 +13291,7 @@ exports[`Explore page renders correctly 1`] = `
                   fill="#aac9ff"
                 />
               </svg>
-              <span
-                className="c62"
-              >
+              <span>
                 Impact Website
               </span>
             </a>
@@ -13315,17 +13299,17 @@ exports[`Explore page renders correctly 1`] = `
         </ul>
       </div>
       <hr
-        className="c63"
+        className="c62"
       />
       <div
-        className="c64"
+        className="c63"
       >
         <div
-          className="c65"
+          className="c64"
         >
           <div
             aria-hidden="true"
-            className="c66"
+            className="c65"
           />
           <div
             data-cy="footer-credits"
@@ -13341,7 +13325,7 @@ exports[`Explore page renders correctly 1`] = `
               NASA Official:
                
               <span
-                className="c67"
+                className="c66"
               >
                 Rahul Ramachandran
               </span>
@@ -13349,12 +13333,12 @@ exports[`Explore page renders correctly 1`] = `
           </div>
         </div>
         <div
-          className="c68"
+          className="c67"
         />
       </div>
     </div>
     <div
-      className="c69"
+      className="c68"
       data-cy="footer-credit-devseed"
     >
       © 
@@ -13389,9 +13373,7 @@ exports[`Explore page renders correctly 1`] = `
             fill="#aac9ff"
           />
         </svg>
-        <span
-          className="c62"
-        >
+        <span>
           Development Seed
         </span>
       </a>
@@ -13473,18 +13455,6 @@ exports[`Glossary page renders correctly 1`] = `
 
 .c32.c32 {
   color: #aac9ff;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c33.c33 {
-  padding-left: 4px;
 }
 
 .c1.c1 {
@@ -13649,12 +13619,12 @@ exports[`Glossary page renders correctly 1`] = `
   grid-column: 11 / span 2;
 }
 
-.c34.c34 {
+.c33.c33 {
   grid-column: 1 / span 12;
   background-color: rgba(255,255,255,0.2);
 }
 
-.c35.c35 {
+.c34.c34 {
   grid-column: 1 / span 12;
   display: -webkit-box;
   display: -webkit-flex;
@@ -13666,7 +13636,7 @@ exports[`Glossary page renders correctly 1`] = `
   justify-content: space-between;
 }
 
-.c36.c36 {
+.c35.c35 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -13678,7 +13648,7 @@ exports[`Glossary page renders correctly 1`] = `
   font-weight: bold;
 }
 
-.c37.c37 {
+.c36.c36 {
   background-image: url("https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png");
   background-size: cover;
   background-position: center;
@@ -13686,11 +13656,11 @@ exports[`Glossary page renders correctly 1`] = `
   height: 100px;
 }
 
-.c38.c38 {
+.c37.c37 {
   font-weight: normal;
 }
 
-.c39.c39 {
+.c38.c38 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -13702,7 +13672,7 @@ exports[`Glossary page renders correctly 1`] = `
   text-transform: uppercase;
 }
 
-.c40.c40 {
+.c39.c39 {
   text-align: center;
 }
 
@@ -15267,9 +15237,7 @@ exports[`Glossary page renders correctly 1`] = `
                   fill="#aac9ff"
                 />
               </svg>
-              <span
-                className="c33"
-              >
+              <span>
                 ADMG Website
               </span>
             </a>
@@ -15303,9 +15271,7 @@ exports[`Glossary page renders correctly 1`] = `
                   fill="#aac9ff"
                 />
               </svg>
-              <span
-                className="c33"
-              >
+              <span>
                 Impact Website
               </span>
             </a>
@@ -15313,17 +15279,17 @@ exports[`Glossary page renders correctly 1`] = `
         </ul>
       </div>
       <hr
-        className="c34"
+        className="c33"
       />
       <div
-        className="c35"
+        className="c34"
       >
         <div
-          className="c36"
+          className="c35"
         >
           <div
             aria-hidden="true"
-            className="c37"
+            className="c36"
           />
           <div
             data-cy="footer-credits"
@@ -15339,7 +15305,7 @@ exports[`Glossary page renders correctly 1`] = `
               NASA Official:
                
               <span
-                className="c38"
+                className="c37"
               >
                 Rahul Ramachandran
               </span>
@@ -15347,12 +15313,12 @@ exports[`Glossary page renders correctly 1`] = `
           </div>
         </div>
         <div
-          className="c39"
+          className="c38"
         />
       </div>
     </div>
     <div
-      className="c40"
+      className="c39"
       data-cy="footer-credit-devseed"
     >
       © 
@@ -15387,9 +15353,7 @@ exports[`Glossary page renders correctly 1`] = `
             fill="#aac9ff"
           />
         </svg>
-        <span
-          className="c33"
-        >
+        <span>
           Development Seed
         </span>
       </a>
@@ -15467,18 +15431,6 @@ exports[`Home page renders correctly 1`] = `
 
 .c40.c40 {
   color: #aac9ff;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c41.c41 {
-  padding-left: 4px;
 }
 
 .c1.c1 {
@@ -15630,12 +15582,12 @@ exports[`Home page renders correctly 1`] = `
   grid-column: 11 / span 2;
 }
 
-.c42.c42 {
+.c41.c41 {
   grid-column: 1 / span 12;
   background-color: rgba(255,255,255,0.2);
 }
 
-.c43.c43 {
+.c42.c42 {
   grid-column: 1 / span 12;
   display: -webkit-box;
   display: -webkit-flex;
@@ -15647,7 +15599,7 @@ exports[`Home page renders correctly 1`] = `
   justify-content: space-between;
 }
 
-.c44.c44 {
+.c43.c43 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -15659,7 +15611,7 @@ exports[`Home page renders correctly 1`] = `
   font-weight: bold;
 }
 
-.c45.c45 {
+.c44.c44 {
   background-image: url("https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png");
   background-size: cover;
   background-position: center;
@@ -15667,11 +15619,11 @@ exports[`Home page renders correctly 1`] = `
   height: 100px;
 }
 
-.c46.c46 {
+.c45.c45 {
   font-weight: normal;
 }
 
-.c47.c47 {
+.c46.c46 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -15683,7 +15635,7 @@ exports[`Home page renders correctly 1`] = `
   text-transform: uppercase;
 }
 
-.c48.c48 {
+.c47.c47 {
   text-align: center;
 }
 
@@ -20910,9 +20862,7 @@ exports[`Home page renders correctly 1`] = `
                   fill="#aac9ff"
                 />
               </svg>
-              <span
-                className="c41"
-              >
+              <span>
                 ADMG Website
               </span>
             </a>
@@ -20946,9 +20896,7 @@ exports[`Home page renders correctly 1`] = `
                   fill="#aac9ff"
                 />
               </svg>
-              <span
-                className="c41"
-              >
+              <span>
                 Impact Website
               </span>
             </a>
@@ -20956,17 +20904,17 @@ exports[`Home page renders correctly 1`] = `
         </ul>
       </div>
       <hr
-        className="c42"
+        className="c41"
       />
       <div
-        className="c43"
+        className="c42"
       >
         <div
-          className="c44"
+          className="c43"
         >
           <div
             aria-hidden="true"
-            className="c45"
+            className="c44"
           />
           <div
             data-cy="footer-credits"
@@ -20982,7 +20930,7 @@ exports[`Home page renders correctly 1`] = `
               NASA Official:
                
               <span
-                className="c46"
+                className="c45"
               >
                 Rahul Ramachandran
               </span>
@@ -20990,12 +20938,12 @@ exports[`Home page renders correctly 1`] = `
           </div>
         </div>
         <div
-          className="c47"
+          className="c46"
         />
       </div>
     </div>
     <div
-      className="c48"
+      className="c47"
       data-cy="footer-credit-devseed"
     >
       © 
@@ -21030,9 +20978,7 @@ exports[`Home page renders correctly 1`] = `
             fill="#aac9ff"
           />
         </svg>
-        <span
-          className="c41"
-        >
+        <span>
           Development Seed
         </span>
       </a>
