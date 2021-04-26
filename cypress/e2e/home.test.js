@@ -7,9 +7,6 @@ describe("Homepage", () => {
     cy.visit("/")
   })
   it("renders correctly", () => {
-    cy.get("[data-cy=home-hero]")
-      .find("p")
-      .contains(site.siteMetadata.shortname)
     cy.get("[data-cy=home-hero]").find("h1").contains(site.siteMetadata.title)
     cy.get("[data-cy=home-hero]")
       .find("p")

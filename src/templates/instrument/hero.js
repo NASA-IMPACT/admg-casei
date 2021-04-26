@@ -14,22 +14,36 @@ export default function InstrumentHero({
 }) {
   return (
     <Hero
-      tagTitle="Instrument"
-      title={shortname}
-      subTitle={longname}
+      tagline="Instrument"
+      title={
+        <>
+          {shortname}
+          <br />
+          <span
+            css={`
+              font-size: 1.5rem;
+              line-height: 1.75rem;
+              font-weight: normal;
+            `}
+          >
+            {longname}
+          </span>
+        </>
+      }
       description={description}
+      image={
+        image && image.gatsbyImg ? (
+          <GatsbyImage
+            image={image.gatsbyImg.childImageSharp.gatsbyImageData}
+            alt={image.description}
+          />
+        ) : (
+          <InstrumentIcon size="huge" />
+        )
+      }
       textToImageRatio={[5, 3]}
       id="instrument"
-    >
-      {image && image.gatsbyImg ? (
-        <GatsbyImage
-          image={image.gatsbyImg.childImageSharp.gatsbyImageData}
-          alt={image.description}
-        />
-      ) : (
-        <InstrumentIcon size="huge" />
-      )}
-    </Hero>
+    />
   )
 }
 export const instrumentHeroFields = graphql`

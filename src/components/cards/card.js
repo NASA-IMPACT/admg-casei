@@ -7,72 +7,101 @@ import { POSITIVE, NEGATIVE } from "../../utils/constants"
 import { colors } from "../../theme"
 
 const CardHeader = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0.5rem 0 2rem 0;
-  min-height: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  align-items: ${({ imagePosition }) =>
+    imagePosition === "left top" ? "flex-start" : "center"};
+  justify-items: ${({ imagePosition }) =>
+    imagePosition === "left top" ? "flex-start" : "center"};
+  min-height: 180px;
 `
 
 const Card = ({
   children,
   image,
-  link,
   placeholder: Placeholder,
+  imagePosition,
   tag,
+  link,
   footerList,
   category,
   mode = NEGATIVE,
 }) => (
-  <div>
-    <Link to={link}>
-      <div
-        css={`
-           {
-            color: ${colors[mode].text};
-            background-color: ${colors[mode].background};
-            box-shadow: rgba(68, 63, 63, 0.08) 0px -1px 1px 0px,
-              rgba(68, 63, 63, 0.08) 0px 2px 6px 0px;
-            padding: 1rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            min-height: 24rem;
-            :hover {
-              opacity: 0.64;
-            }
+  <div
+    css={`
+       {
+        display: flex;
+        flex-direction: column;
+      }
+    `}
+  >
+    <Link
+      to={link}
+      css={`
+         {
+          color: ${colors[mode].text};
+          background-color: ${colors[mode].background};
+          box-shadow: rgba(68, 63, 63, 0.08) 0px -1px 1px 0px,
+            rgba(68, 63, 63, 0.08) 0px 2px 6px 0px;
+          padding: 1rem;
+          min-height: 20rem;
+          flex-grow: 1;
+          :hover {
+            opacity: 0.64;
           }
-        `}
-        data-cy={`${category}-card`}
-      >
-        <div>
-          <CardHeader>
-            {image && image.gatsbyImg ? (
-              <GatsbyImage
-                image={image.gatsbyImg.childImageSharp.gatsbyImageData}
-                alt={image.description}
-              />
-            ) : (
-              <Placeholder size="small" color={colors[mode].text} />
-            )}
-            {tag && (
-              <div
-                css={`
-                   {
-                    text-transform: uppercase;
-                    border: 1px solid;
-                    padding: 0.25rem;
-                  }
-                `}
-                data-cy={`${tag.toLowerCase()}-tag`}
-              >
-                {tag}
-              </div>
-            )}
-          </CardHeader>
-          {children}
-        </div>
-      </div>
+        }
+      `}
+      data-cy={`${category}-card`}
+    >
+      <CardHeader imagePosition={image ? imagePosition : "left top"}>
+        {image && image.gatsbyImg ? (
+          <GatsbyImage
+            image={image.gatsbyImg.childImageSharp.gatsbyImageData}
+            alt={image.description}
+            css={`
+               {
+                grid-area: 1 / 1;
+                height: ${image.gatsbyImg.childImageSharp.gatsbyImageData
+                  .height}px;
+              }
+            `}
+            objectFit="contain"
+            objectPosition={imagePosition || "center center"}
+          />
+        ) : (
+          <div
+            css={`
+               {
+                grid-area: 1 / 1;
+              }
+            `}
+          >
+            <Placeholder size="medium" color={colors[mode].text} />
+          </div>
+        )}
+        {tag && (
+          <div
+            css={`
+               {
+                grid-area: 1 / 1;
+                align-self: flex-end;
+                justify-self: flex-start;
+                text-transform: uppercase;
+                border: 1px solid;
+                padding: 0.25rem;
+                margin: 1rem 0;
+                background-color: ${colors[mode].background};
+                z-index: 1;
+              }
+            `}
+            data-cy={`${tag.toLowerCase()}-tag`}
+          >
+            {tag}
+          </div>
+        )}
+      </CardHeader>
+      {children}
     </Link>
     {footerList && (
       <div
@@ -114,6 +143,7 @@ Card.propTypes = {
     }),
   }),
   placeholder: PropTypes.func.isRequired,
+  imagePosition: PropTypes.oneOf(["left top"]),
   height: PropTypes.string,
   link: PropTypes.string,
   tag: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),

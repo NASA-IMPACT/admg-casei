@@ -247,7 +247,7 @@ describe("Explore", () => {
 
       cy.url().should("include", "/instrument/")
 
-      cy.get("h1").should("have.text", "CPL")
+      cy.get("h1").should("contain", "CPL")
     })
   })
 })

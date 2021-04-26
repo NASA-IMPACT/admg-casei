@@ -28,19 +28,9 @@
           "note": null
         },
         {
-          "term": "Golden Case",
-          "definition": "An event or short time period during an IOP that is notable for having all or nearly all of a field investigation’s selected instrument(s) or platform(s) operating successfully, and/or a significant event which has data available from most of the deployed instruments/platforms.  It is possible for a significant event to also be a golden case.",
-          "note": null
-        },
-        {
           "term": "Partner Organization",
           "definition": "An institution that participates in a field investigation with non-NASA separate funding resources allocated specifically for the field investigation. Includes any organization that provided specific platforms or instruments without NASA funding, including co-participating/ cooperating field campaigns. Also, if investigation data are archived by a non-NASA entity, the archiving organization is a partner organization, regardless of the funding pathway. For example,University X coordinates with NASA during a field investigation to collect data that University X is willing to share with NASA as part of the field investigation, despite University X not receiving any funding from NASA for this effort.  University Y also participates in the field investigation, but is receiving NASA funding, and thus is not considered a partner organization, but rather is an investigation participant.  The $ for University Y's participation is coming from NASA, the /$ for University X's participation is not.",
           "note": "Partner organizations are not limited to universities and may include, for example, other government agencies or departments, organizations from other countries, or private companies."
-        },
-        {
-          "term": "Significant Participant",
-          "definition": "The following requirements must be met for NASA to be considered a significant participant: At least one aircraft or instrument (not a satellite instrument), is funded by NASA to participate in the field investigation and one of the following conditions is true",
-          "note": "Field investigations led by non-NASA organizations (such as NOAA, NSF, ESA, regional organizations) are only included in the ADMG inventory when NASA is a significant participant in the campaign."
         },
         {
           "term": "Platform",
@@ -86,8 +76,27 @@
     },
     "image": {
       "childImageSharp": {
-        "fluid": {
-          "src": "/static/cc377dc42c8612124e621078fb0d0e23/ee604/glossary-map.png"
+        "gatsbyImageData": {
+          "layout": "fullWidth",
+          "placeholder": {
+            "fallback": "data:image/png;base64,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"
+          },
+          "images": {
+            "fallback": {
+              "src": "/static/cc377dc42c8612124e621078fb0d0e23/3b484/glossary-map.png",
+              "srcSet": "/static/cc377dc42c8612124e621078fb0d0e23/bfbde/glossary-map.png 750w,\n/static/cc377dc42c8612124e621078fb0d0e23/05287/glossary-map.png 1080w,\n/static/cc377dc42c8612124e621078fb0d0e23/3def8/glossary-map.png 1366w,\n/static/cc377dc42c8612124e621078fb0d0e23/3b484/glossary-map.png 1920w",
+              "sizes": "100vw"
+            },
+            "sources": [
+              {
+                "srcSet": "/static/cc377dc42c8612124e621078fb0d0e23/ec08f/glossary-map.webp 750w,\n/static/cc377dc42c8612124e621078fb0d0e23/59ae2/glossary-map.webp 1080w,\n/static/cc377dc42c8612124e621078fb0d0e23/feb4d/glossary-map.webp 1366w,\n/static/cc377dc42c8612124e621078fb0d0e23/c1cb6/glossary-map.webp 1920w",
+                "type": "image/webp",
+                "sizes": "100vw"
+              }
+            ]
+          },
+          "width": 1,
+          "height": 1.0760416666666666
         }
       }
     }
