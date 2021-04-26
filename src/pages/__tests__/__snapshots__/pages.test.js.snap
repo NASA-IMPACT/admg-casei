@@ -506,9 +506,6 @@ exports[`Explore page renders correctly 1`] = `
   -webkit-transform: scaleX(1);
   -ms-transform: scaleX(1);
   transform: scaleX(1);
-  -webkit-transition: 0.5s -webkit-transform cubic-bezier(0,0,0.1,1);
-  -webkit-transition: 0.5s transform cubic-bezier(0,0,0.1,1);
-  transition: 0.5s transform cubic-bezier(0,0,0.1,1);
 }
 
 .c7.c7:hover {
@@ -524,6 +521,12 @@ exports[`Explore page renders correctly 1`] = `
   margin-left: -1.5rem;
   width: 3rem;
   border-bottom: 2px solid #e9eaec;
+  -webkit-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transition: 0.5s -webkit-transform cubic-bezier(0,0,0.1,1);
+  -webkit-transition: 0.5s transform cubic-bezier(0,0,0.1,1);
+  transition: 0.5s transform cubic-bezier(0,0,0.1,1);
 }
 
 .c9.c9 {
@@ -552,9 +555,6 @@ exports[`Explore page renders correctly 1`] = `
   -webkit-transform: scaleX(0.05);
   -ms-transform: scaleX(0.05);
   transform: scaleX(0.05);
-  -webkit-transition: 0.5s -webkit-transform cubic-bezier(0,0,0.1,1);
-  -webkit-transition: 0.5s transform cubic-bezier(0,0,0.1,1);
-  transition: 0.5s transform cubic-bezier(0,0,0.1,1);
 }
 
 .c9.c9:hover {
@@ -570,6 +570,12 @@ exports[`Explore page renders correctly 1`] = `
   margin-left: -1.5rem;
   width: 3rem;
   border-bottom: 2px solid #e9eaec;
+  -webkit-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transition: 0.5s -webkit-transform cubic-bezier(0,0,0.1,1);
+  -webkit-transition: 0.5s transform cubic-bezier(0,0,0.1,1);
+  transition: 0.5s transform cubic-bezier(0,0,0.1,1);
 }
 
 .c6.c6 {

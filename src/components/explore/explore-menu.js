@@ -43,7 +43,6 @@ const TabButton = ({ onClick, isSelected, children }) => {
           border-bottom: ${isSelected && `2px solid ${colors[NEGATIVE].text}`};
 
           transform: ${isSelected ? `scaleX(1)` : `scaleX(0.05)`};
-          transition: 0.5s transform cubic-bezier(0, 0, 0.1, 1);
         }
 
         &:hover {
@@ -52,6 +51,8 @@ const TabButton = ({ onClick, isSelected, children }) => {
           &::after {
             ${afterElement};
             border-bottom: 2px solid ${colors[NEGATIVE].text};
+            transform: scaleX(1);
+            transition: 0.5s transform cubic-bezier(0, 0, 0.1, 1);
           }
         }
       `}
