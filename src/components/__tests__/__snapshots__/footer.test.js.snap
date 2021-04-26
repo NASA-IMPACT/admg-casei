@@ -156,12 +156,7 @@ exports[`Footer renders correctly 1`] = `
         <li>
           <a
             data-cy="footer-campaigns-link"
-            href="/explore"
-            state={
-              Object {
-                "defaultExploreCategory": "campaigns",
-              }
-            }
+            href="/explore/campaigns"
           >
             Campaigns
           </a>
@@ -169,12 +164,7 @@ exports[`Footer renders correctly 1`] = `
         <li>
           <a
             data-cy="footer-platforms-link"
-            href="/explore"
-            state={
-              Object {
-                "defaultExploreCategory": "platforms",
-              }
-            }
+            href="/explore/platforms"
           >
             Platforms
           </a>
@@ -182,12 +172,7 @@ exports[`Footer renders correctly 1`] = `
         <li>
           <a
             data-cy="footer-instruments-link"
-            href="/explore"
-            state={
-              Object {
-                "defaultExploreCategory": "instruments",
-              }
-            }
+            href="/explore/instruments"
           >
             Instruments
           </a>
