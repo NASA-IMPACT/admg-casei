@@ -18,12 +18,21 @@ export default function ExternalLink({
       target="_blank"
       rel="noopener noreferrer"
       href={url}
-      style={{
-        color: colors[mode].linkText,
-      }}
+      css={`
+        color: ${colors[mode].linkText};
+        display: flex;
+        align-items: center;
+      `}
       data-cy={`${id}-link`}
     >
-      <ExternalLinkIcon color={colors[mode].altText} /> {label || children}
+      <ExternalLinkIcon color={colors[mode].linkText} />
+      <span
+        css={`
+          padding-left: 4px;
+        `}
+      >
+        {label || children}
+      </span>
     </a>
   )
 }

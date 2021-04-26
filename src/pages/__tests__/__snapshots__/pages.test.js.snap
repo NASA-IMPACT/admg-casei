@@ -1,6 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Explore page renders correctly 1`] = `
+.c61.c61 {
+  color: #aac9ff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c62.c62 {
+  padding-left: 4px;
+}
+
 .c1.c1 {
   margin: 0 auto;
   max-width: 1280px;
@@ -163,12 +179,12 @@ exports[`Explore page renders correctly 1`] = `
   grid-column: 11 / span 2;
 }
 
-.c61.c61 {
+.c63.c63 {
   grid-column: 1 / span 12;
   background-color: rgba(255,255,255,0.2);
 }
 
-.c62.c62 {
+.c64.c64 {
   grid-column: 1 / span 12;
   display: -webkit-box;
   display: -webkit-flex;
@@ -180,7 +196,7 @@ exports[`Explore page renders correctly 1`] = `
   justify-content: space-between;
 }
 
-.c63.c63 {
+.c65.c65 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -192,7 +208,7 @@ exports[`Explore page renders correctly 1`] = `
   font-weight: bold;
 }
 
-.c64.c64 {
+.c66.c66 {
   background-image: url("https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png");
   background-size: cover;
   background-position: center;
@@ -200,11 +216,11 @@ exports[`Explore page renders correctly 1`] = `
   height: 100px;
 }
 
-.c65.c65 {
+.c67.c67 {
   font-weight: normal;
 }
 
-.c66.c66 {
+.c68.c68 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -216,7 +232,7 @@ exports[`Explore page renders correctly 1`] = `
   text-transform: uppercase;
 }
 
-.c67.c67 {
+.c69.c69 {
   text-align: center;
 }
 
@@ -13226,14 +13242,10 @@ exports[`Explore page renders correctly 1`] = `
         >
           <li>
             <a
+              className="c61"
               data-cy="admg-website-link"
               href="https://earthdata.nasa.gov/esds/impact/admg"
               rel="noopener noreferrer"
-              style={
-                Object {
-                  "color": "#aac9ff",
-                }
-              }
               target="_blank"
             >
               <svg
@@ -13254,23 +13266,22 @@ exports[`Explore page renders correctly 1`] = `
                 />
                 <path
                   d="M3,5h4V3H1v12h12V9h-2v4H3V5z M16,8V0L8,0v2h4.587L6.294,8.294l1.413,1.413L14,3.413V8H16z"
-                  fill="#9e9e9e"
+                  fill="#aac9ff"
                 />
               </svg>
-               
-              ADMG Website
+              <span
+                className="c62"
+              >
+                ADMG Website
+              </span>
             </a>
           </li>
           <li>
             <a
+              className="c61"
               data-cy="impact-website-link"
               href="https://earthdata.nasa.gov/esds/impact"
               rel="noopener noreferrer"
-              style={
-                Object {
-                  "color": "#aac9ff",
-                }
-              }
               target="_blank"
             >
               <svg
@@ -13291,27 +13302,30 @@ exports[`Explore page renders correctly 1`] = `
                 />
                 <path
                   d="M3,5h4V3H1v12h12V9h-2v4H3V5z M16,8V0L8,0v2h4.587L6.294,8.294l1.413,1.413L14,3.413V8H16z"
-                  fill="#9e9e9e"
+                  fill="#aac9ff"
                 />
               </svg>
-               
-              Impact Website
+              <span
+                className="c62"
+              >
+                Impact Website
+              </span>
             </a>
           </li>
         </ul>
       </div>
       <hr
-        className="c61"
+        className="c63"
       />
       <div
-        className="c62"
+        className="c64"
       >
         <div
-          className="c63"
+          className="c65"
         >
           <div
             aria-hidden="true"
-            className="c64"
+            className="c66"
           />
           <div
             data-cy="footer-credits"
@@ -13327,7 +13341,7 @@ exports[`Explore page renders correctly 1`] = `
               NASA Official:
                
               <span
-                className="c65"
+                className="c67"
               >
                 Rahul Ramachandran
               </span>
@@ -13335,12 +13349,12 @@ exports[`Explore page renders correctly 1`] = `
           </div>
         </div>
         <div
-          className="c66"
+          className="c68"
         />
       </div>
     </div>
     <div
-      className="c67"
+      className="c69"
       data-cy="footer-credit-devseed"
     >
       © 
@@ -13348,14 +13362,10 @@ exports[`Explore page renders correctly 1`] = `
       , Built by
        
       <a
+        className="c61"
         data-cy="devseed-website-link"
         href="https://www.developmentseed.org"
         rel="noopener noreferrer"
-        style={
-          Object {
-            "color": "#aac9ff",
-          }
-        }
         target="_blank"
       >
         <svg
@@ -13376,11 +13386,14 @@ exports[`Explore page renders correctly 1`] = `
           />
           <path
             d="M3,5h4V3H1v12h12V9h-2v4H3V5z M16,8V0L8,0v2h4.587L6.294,8.294l1.413,1.413L14,3.413V8H16z"
-            fill="#9e9e9e"
+            fill="#aac9ff"
           />
         </svg>
-         
-        Development Seed
+        <span
+          className="c62"
+        >
+          Development Seed
+        </span>
       </a>
       .
     </div>
@@ -13456,6 +13469,22 @@ exports[`Glossary page renders correctly 1`] = `
   -webkit-align-self: end;
   -ms-flex-item-align: end;
   align-self: end;
+}
+
+.c32.c32 {
+  color: #aac9ff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c33.c33 {
+  padding-left: 4px;
 }
 
 .c1.c1 {
@@ -13620,12 +13649,12 @@ exports[`Glossary page renders correctly 1`] = `
   grid-column: 11 / span 2;
 }
 
-.c32.c32 {
+.c34.c34 {
   grid-column: 1 / span 12;
   background-color: rgba(255,255,255,0.2);
 }
 
-.c33.c33 {
+.c35.c35 {
   grid-column: 1 / span 12;
   display: -webkit-box;
   display: -webkit-flex;
@@ -13637,7 +13666,7 @@ exports[`Glossary page renders correctly 1`] = `
   justify-content: space-between;
 }
 
-.c34.c34 {
+.c36.c36 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -13649,7 +13678,7 @@ exports[`Glossary page renders correctly 1`] = `
   font-weight: bold;
 }
 
-.c35.c35 {
+.c37.c37 {
   background-image: url("https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png");
   background-size: cover;
   background-position: center;
@@ -13657,11 +13686,11 @@ exports[`Glossary page renders correctly 1`] = `
   height: 100px;
 }
 
-.c36.c36 {
+.c38.c38 {
   font-weight: normal;
 }
 
-.c37.c37 {
+.c39.c39 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -13673,7 +13702,7 @@ exports[`Glossary page renders correctly 1`] = `
   text-transform: uppercase;
 }
 
-.c38.c38 {
+.c40.c40 {
   text-align: center;
 }
 
@@ -15211,14 +15240,10 @@ exports[`Glossary page renders correctly 1`] = `
         >
           <li>
             <a
+              className="c32"
               data-cy="admg-website-link"
               href="https://earthdata.nasa.gov/esds/impact/admg"
               rel="noopener noreferrer"
-              style={
-                Object {
-                  "color": "#aac9ff",
-                }
-              }
               target="_blank"
             >
               <svg
@@ -15239,23 +15264,22 @@ exports[`Glossary page renders correctly 1`] = `
                 />
                 <path
                   d="M3,5h4V3H1v12h12V9h-2v4H3V5z M16,8V0L8,0v2h4.587L6.294,8.294l1.413,1.413L14,3.413V8H16z"
-                  fill="#9e9e9e"
+                  fill="#aac9ff"
                 />
               </svg>
-               
-              ADMG Website
+              <span
+                className="c33"
+              >
+                ADMG Website
+              </span>
             </a>
           </li>
           <li>
             <a
+              className="c32"
               data-cy="impact-website-link"
               href="https://earthdata.nasa.gov/esds/impact"
               rel="noopener noreferrer"
-              style={
-                Object {
-                  "color": "#aac9ff",
-                }
-              }
               target="_blank"
             >
               <svg
@@ -15276,27 +15300,30 @@ exports[`Glossary page renders correctly 1`] = `
                 />
                 <path
                   d="M3,5h4V3H1v12h12V9h-2v4H3V5z M16,8V0L8,0v2h4.587L6.294,8.294l1.413,1.413L14,3.413V8H16z"
-                  fill="#9e9e9e"
+                  fill="#aac9ff"
                 />
               </svg>
-               
-              Impact Website
+              <span
+                className="c33"
+              >
+                Impact Website
+              </span>
             </a>
           </li>
         </ul>
       </div>
       <hr
-        className="c32"
+        className="c34"
       />
       <div
-        className="c33"
+        className="c35"
       >
         <div
-          className="c34"
+          className="c36"
         >
           <div
             aria-hidden="true"
-            className="c35"
+            className="c37"
           />
           <div
             data-cy="footer-credits"
@@ -15312,7 +15339,7 @@ exports[`Glossary page renders correctly 1`] = `
               NASA Official:
                
               <span
-                className="c36"
+                className="c38"
               >
                 Rahul Ramachandran
               </span>
@@ -15320,12 +15347,12 @@ exports[`Glossary page renders correctly 1`] = `
           </div>
         </div>
         <div
-          className="c37"
+          className="c39"
         />
       </div>
     </div>
     <div
-      className="c38"
+      className="c40"
       data-cy="footer-credit-devseed"
     >
       © 
@@ -15333,14 +15360,10 @@ exports[`Glossary page renders correctly 1`] = `
       , Built by
        
       <a
+        className="c32"
         data-cy="devseed-website-link"
         href="https://www.developmentseed.org"
         rel="noopener noreferrer"
-        style={
-          Object {
-            "color": "#aac9ff",
-          }
-        }
         target="_blank"
       >
         <svg
@@ -15361,11 +15384,14 @@ exports[`Glossary page renders correctly 1`] = `
           />
           <path
             d="M3,5h4V3H1v12h12V9h-2v4H3V5z M16,8V0L8,0v2h4.587L6.294,8.294l1.413,1.413L14,3.413V8H16z"
-            fill="#9e9e9e"
+            fill="#aac9ff"
           />
         </svg>
-         
-        Development Seed
+        <span
+          className="c33"
+        >
+          Development Seed
+        </span>
       </a>
       .
     </div>
@@ -15437,6 +15463,22 @@ exports[`Home page renders correctly 1`] = `
 
 .c18.c18 {
   margin-top: -1rem;
+}
+
+.c40.c40 {
+  color: #aac9ff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c41.c41 {
+  padding-left: 4px;
 }
 
 .c1.c1 {
@@ -15588,12 +15630,12 @@ exports[`Home page renders correctly 1`] = `
   grid-column: 11 / span 2;
 }
 
-.c40.c40 {
+.c42.c42 {
   grid-column: 1 / span 12;
   background-color: rgba(255,255,255,0.2);
 }
 
-.c41.c41 {
+.c43.c43 {
   grid-column: 1 / span 12;
   display: -webkit-box;
   display: -webkit-flex;
@@ -15605,7 +15647,7 @@ exports[`Home page renders correctly 1`] = `
   justify-content: space-between;
 }
 
-.c42.c42 {
+.c44.c44 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -15617,7 +15659,7 @@ exports[`Home page renders correctly 1`] = `
   font-weight: bold;
 }
 
-.c43.c43 {
+.c45.c45 {
   background-image: url("https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png");
   background-size: cover;
   background-position: center;
@@ -15625,11 +15667,11 @@ exports[`Home page renders correctly 1`] = `
   height: 100px;
 }
 
-.c44.c44 {
+.c46.c46 {
   font-weight: normal;
 }
 
-.c45.c45 {
+.c47.c47 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -15641,7 +15683,7 @@ exports[`Home page renders correctly 1`] = `
   text-transform: uppercase;
 }
 
-.c46.c46 {
+.c48.c48 {
   text-align: center;
 }
 
@@ -20841,14 +20883,10 @@ exports[`Home page renders correctly 1`] = `
         >
           <li>
             <a
+              className="c40"
               data-cy="admg-website-link"
               href="https://earthdata.nasa.gov/esds/impact/admg"
               rel="noopener noreferrer"
-              style={
-                Object {
-                  "color": "#aac9ff",
-                }
-              }
               target="_blank"
             >
               <svg
@@ -20869,23 +20907,22 @@ exports[`Home page renders correctly 1`] = `
                 />
                 <path
                   d="M3,5h4V3H1v12h12V9h-2v4H3V5z M16,8V0L8,0v2h4.587L6.294,8.294l1.413,1.413L14,3.413V8H16z"
-                  fill="#9e9e9e"
+                  fill="#aac9ff"
                 />
               </svg>
-               
-              ADMG Website
+              <span
+                className="c41"
+              >
+                ADMG Website
+              </span>
             </a>
           </li>
           <li>
             <a
+              className="c40"
               data-cy="impact-website-link"
               href="https://earthdata.nasa.gov/esds/impact"
               rel="noopener noreferrer"
-              style={
-                Object {
-                  "color": "#aac9ff",
-                }
-              }
               target="_blank"
             >
               <svg
@@ -20906,27 +20943,30 @@ exports[`Home page renders correctly 1`] = `
                 />
                 <path
                   d="M3,5h4V3H1v12h12V9h-2v4H3V5z M16,8V0L8,0v2h4.587L6.294,8.294l1.413,1.413L14,3.413V8H16z"
-                  fill="#9e9e9e"
+                  fill="#aac9ff"
                 />
               </svg>
-               
-              Impact Website
+              <span
+                className="c41"
+              >
+                Impact Website
+              </span>
             </a>
           </li>
         </ul>
       </div>
       <hr
-        className="c40"
+        className="c42"
       />
       <div
-        className="c41"
+        className="c43"
       >
         <div
-          className="c42"
+          className="c44"
         >
           <div
             aria-hidden="true"
-            className="c43"
+            className="c45"
           />
           <div
             data-cy="footer-credits"
@@ -20942,7 +20982,7 @@ exports[`Home page renders correctly 1`] = `
               NASA Official:
                
               <span
-                className="c44"
+                className="c46"
               >
                 Rahul Ramachandran
               </span>
@@ -20950,12 +20990,12 @@ exports[`Home page renders correctly 1`] = `
           </div>
         </div>
         <div
-          className="c45"
+          className="c47"
         />
       </div>
     </div>
     <div
-      className="c46"
+      className="c48"
       data-cy="footer-credit-devseed"
     >
       © 
@@ -20963,14 +21003,10 @@ exports[`Home page renders correctly 1`] = `
       , Built by
        
       <a
+        className="c40"
         data-cy="devseed-website-link"
         href="https://www.developmentseed.org"
         rel="noopener noreferrer"
-        style={
-          Object {
-            "color": "#aac9ff",
-          }
-        }
         target="_blank"
       >
         <svg
@@ -20991,11 +21027,14 @@ exports[`Home page renders correctly 1`] = `
           />
           <path
             d="M3,5h4V3H1v12h12V9h-2v4H3V5z M16,8V0L8,0v2h4.587L6.294,8.294l1.413,1.413L14,3.413V8H16z"
-            fill="#9e9e9e"
+            fill="#aac9ff"
           />
         </svg>
-         
-        Development Seed
+        <span
+          className="c41"
+        >
+          Development Seed
+        </span>
       </a>
       .
     </div>
