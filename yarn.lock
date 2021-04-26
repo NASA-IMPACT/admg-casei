@@ -6217,6 +6217,11 @@ chrome-trace-event@^1.0.2:
   dependencies:
     tslib "^1.9.0"
 
+ci-env@^1.9.0:
+  version "1.16.0"
+  resolved "https://registry.yarnpkg.com/ci-env/-/ci-env-1.16.0.tgz#e97f3b5001a8daf7da6e46f418bc6892a238704d"
+  integrity sha512-ucF9caQEX5wQlY449KZBIJPx91+kRg9tJ3tWSc4+KzrvC5KNiPm/3g1noP8VhdI3046+Vw3jLmKAD0fjCRJTmw==
+
 ci-info@2.0.0, ci-info@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ci-info/-/ci-info-2.0.0.tgz#67a9e964be31a51e15e5010d58e6f12834002f46"
@@ -9579,6 +9584,13 @@ gatsby-plugin-utils@^1.2.0:
   integrity sha512-9+kKeyQdXJtQ/9pthfP4LTiem7coOdBt+8wRTwa+DF331qfzunjekl0uWlZSZBnQpG1uS7GX4R/4tei72cVVmw==
   dependencies:
     joi "^17.2.1"
+
+gatsby-plugin-webpack-size@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-webpack-size/-/gatsby-plugin-webpack-size-2.0.1.tgz#e8e581c70f478e4fcca14c12710be2aabd0f7516"
+  integrity sha512-8AejQwPGG7ut07ChBeYubWyMnPXYSOGgwHG25kDea2D9bm8NlgXCn0QnpZo7PE8ZvPTL7sFV+NtYYLxt9so/VA==
+  dependencies:
+    size-plugin "^3.0.0"
 
 gatsby-react-router-scroll@^4.2.0:
   version "4.2.0"
@@ -15199,7 +15211,7 @@ prettier@^2.0.5, prettier@^2.2.1:
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.2.1.tgz#795a1a78dd52f073da0cd42b21f9c91381923ff5"
   integrity sha512-PqyhM2yCjg/oKkFPtTGUojv7gnZAoG80ttl45O6x2Ug/rMJw4wcc9k6aaf2hibP7BGVCCM33gZoGjyvt9mm16Q==
 
-pretty-bytes@^5.1.0, pretty-bytes@^5.4.1:
+pretty-bytes@^5.1.0, pretty-bytes@^5.3.0, pretty-bytes@^5.4.1:
   version "5.6.0"
   resolved "https://registry.yarnpkg.com/pretty-bytes/-/pretty-bytes-5.6.0.tgz#356256f643804773c82f64723fe78c92c62beaeb"
   integrity sha512-FFw039TmrBqFK8ma/7OL3sDz/VytdtJr044/QUJtH0wK9lb9jLq9tJyIxUwtQJHwar2BqtiA4iCWSwo9JLkzFg==
@@ -16768,6 +16780,20 @@ sisteransi@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/sisteransi/-/sisteransi-1.0.5.tgz#134d681297756437cc05ca01370d3a7a571075ed"
   integrity sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==
+
+size-plugin@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/size-plugin/-/size-plugin-3.0.0.tgz#9f4a842c27924a46da7d91fc7a62a54f361099c4"
+  integrity sha512-RPMSkgbvmS1e5XUwPNFZre7DLqcK9MhWARIm8UmGLgbUCAs173JLI6DPHco68wvo0cUdft8+GGRaJtNl5RWfew==
+  dependencies:
+    axios "^0.21.1"
+    chalk "^2.4.2"
+    ci-env "^1.9.0"
+    escape-string-regexp "^1.0.5"
+    glob "^7.1.4"
+    minimatch "^3.0.4"
+    pretty-bytes "^5.3.0"
+    util.promisify "^1.0.0"
 
 skmeans@0.9.7:
   version "0.9.7"
@@ -18589,7 +18615,7 @@ util-deprecate@^1.0.1, util-deprecate@^1.0.2, util-deprecate@~1.0.1:
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
   integrity sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=
 
-util.promisify@^1.0.1:
+util.promisify@^1.0.0, util.promisify@^1.0.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/util.promisify/-/util.promisify-1.1.1.tgz#77832f57ced2c9478174149cae9b96e9918cd54b"
   integrity sha512-/s3UsZUrIfa6xDhr7zZhnE9SLQ5RIXyYfiVnMMyMDzOc8WhWN4Nbh36H842OyurKbCDAesZOJaVyvmSl6fhGQw==

@@ -55,5 +55,6 @@ module.exports = {
       resolve: `gatsby-plugin-create-client-paths`,
       options: { prefixes: [`/edit/*`] },
     },
+    `gatsby-plugin-webpack-size`,
   ],
 }
