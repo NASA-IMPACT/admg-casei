@@ -4,6 +4,7 @@ import PropTypes from "prop-types"
 import { POSITIVE, NEGATIVE } from "../utils/constants"
 import { PropTypeIsUrl } from "../utils/helpers"
 import { colors } from "../theme"
+import { ExternalLinkIcon } from "../icons"
 
 export default function ExternalLink({
   label,
@@ -17,12 +18,13 @@ export default function ExternalLink({
       target="_blank"
       rel="noopener noreferrer"
       href={url}
-      style={{
-        color: colors[mode].linkText,
-      }}
+      css={`
+        color: ${colors[mode].linkText};
+      `}
       data-cy={`${id}-link`}
     >
-      {label || children}
+      <ExternalLinkIcon color={colors[mode].linkText} />
+      <span>{label || children}</span>
     </a>
   )
 }
