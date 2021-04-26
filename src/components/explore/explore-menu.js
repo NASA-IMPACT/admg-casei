@@ -5,37 +5,34 @@ import styled from "styled-components"
 import { NEGATIVE } from "../../utils/constants"
 import { colors } from "../../theme"
 
-const Count = styled.span`
-  font-weight: lighter;
-  font-size: smaller;
+const TabButton = styled.button`
+  /* remove default button style */
+  user-select: none;
+  background: none;
+  text-shadow: none;
+  color: ${colors[NEGATIVE].text};
+  border: none;
+
+  /* add tab button style */
+  cursor: ${({ isSelected }) => (isSelected ? "default" : "pointer")};
+  text-transform: uppercase;
+  font-weight: ${({ isSelected }) => isSelected && "bold"};
+  padding: 0.5rem;
 `
 
-const TabButton = ({ onClick, isSelected, children }) => {
+const Label = ({ isSelected, children }) => {
   const afterElement = `
   content: "";
   display: block;
   position: absolute;
   left: 50%;
-  bottom: 0;
+  bottom: -0.5rem;
   margin-left: -1.5rem;
   width: 3rem;
 `
   return (
-    <button
-      role="tab"
+    <span
       css={`
-        /* remove default button style */
-        user-select: none;
-        background: none;
-        text-shadow: none;
-        color: ${colors[NEGATIVE].text};
-        border: none;
-
-        /* add tab button style */
-        cursor: ${isSelected ? "default" : "pointer"};
-        text-transform: uppercase;
-        font-weight: ${isSelected && "bold"};
-        padding: 0.5rem;
         position: relative;
 
         &::after {
@@ -45,7 +42,7 @@ const TabButton = ({ onClick, isSelected, children }) => {
           transform: ${isSelected ? `scaleX(1)` : `scaleX(0.05)`};
         }
 
-        &:hover {
+        ${TabButton}:hover & {
           opacity: ${isSelected ? `inherit` : 0.64};
 
           &::after {
@@ -56,17 +53,41 @@ const TabButton = ({ onClick, isSelected, children }) => {
           }
         }
       `}
-      onClick={onClick}
     >
       {children}
-    </button>
+    </span>
   )
 }
 
-TabButton.propTypes = {
-  onClick: PropTypes.func.isRequired,
+Label.propTypes = {
   isSelected: PropTypes.bool.isRequired,
   children: PropTypes.node.isRequired,
+}
+
+const Count = styled.span`
+  font-weight: lighter;
+  font-size: smaller;
+
+  ${TabButton}:hover & {
+    opacity: ${({ isSelected }) => (isSelected ? `inherit` : 0.64)};
+  }
+`
+
+const Tab = ({ onClick, isSelected, label, count }) => (
+  <TabButton role="tab" onClick={onClick} isSelected={isSelected}>
+    <Label isSelected={isSelected}>{label}</Label>
+    <Count isSelected={isSelected} data-cy="campaigns-count">
+      {" "}
+      ({count})
+    </Count>
+  </TabButton>
+)
+
+Tab.propTypes = {
+  onClick: PropTypes.func.isRequired,
+  isSelected: PropTypes.bool.isRequired,
+  label: PropTypes.string.isRequired,
+  count: PropTypes.number.isRequired,
 }
 
 const ExploreMenu = ({
@@ -89,32 +110,25 @@ const ExploreMenu = ({
     `}
     data-cy="tabbar"
   >
-    <TabButton
+    <Tab
       onClick={() => setSelectedCategory("campaigns")}
       isSelected={selectedCategory === "campaigns"}
-    >
-      Campaigns
-      <Count data-cy="campaigns-count"> ({filteredCount["campaigns"]})</Count>
-    </TabButton>
-
-    <TabButton
+      label="Campaigns"
+      count={filteredCount["campaigns"]}
+    />
+    <Tab
       onClick={() => setSelectedCategory("platforms")}
       isSelected={selectedCategory === "platforms"}
-    >
-      Platforms
-      <Count data-cy="platforms-count"> ({filteredCount["platforms"]})</Count>
-    </TabButton>
+      label="Platforms"
+      count={filteredCount["platforms"]}
+    />
 
-    <TabButton
+    <Tab
       onClick={() => setSelectedCategory("instruments")}
       isSelected={selectedCategory === "instruments"}
-    >
-      Instruments
-      <Count data-cy="instruments-count">
-        {" "}
-        ({filteredCount["instruments"]})
-      </Count>
-    </TabButton>
+      label="Instruments"
+      count={filteredCount["instruments"]}
+    />
   </div>
 )
 
