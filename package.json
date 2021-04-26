@@ -10,7 +10,6 @@
   "dependencies": {
     "@mapbox/geo-viewport": "^0.4.1",
     "@mapbox/mapbox-gl-draw": "^1.2.0",
-    "@quickbaseoss/babel-plugin-styled-components-css-namespace": "^1.0.1",
     "@reach/accordion": "^0.12.1",
     "@reach/listbox": "^0.12.1",
     "@reach/visually-hidden": "^0.12.0",
@@ -32,7 +31,6 @@
     "gatsby-transformer-json": "^3.2.0",
     "gatsby-transformer-sharp": "^3.2.0",
     "lodash.debounce": "^4.0.8",
-    "mapbox": "^1.0.0-beta10",
     "mapbox-gl": "^1.13.0",
     "nuka-carousel": "^4.7.4",
     "path-browserify": "^1.0.1",
@@ -49,6 +47,7 @@
   },
   "devDependencies": {
     "@cypress/code-coverage": "^3.9.4",
+    "@quickbaseoss/babel-plugin-styled-components-css-namespace": "^1.0.1",
     "@testing-library/cypress": "^7.0.5",
     "@testing-library/react-hooks": "^5.1.1",
     "axe-core": "^4.1.4",
