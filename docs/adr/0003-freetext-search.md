@@ -1,10 +1,9 @@
 # 3. Free text search improvements
 
 - Status: proposed
-- Deciders: @rwegener2 W @necoline @tania-pires @AliceR
-- Date: 2021-04-14
+- Deciders: @rwegener2 W @necoline @tania-pires @AliceR @aluckach
+- Date: 2021-04-27
 
-Technical Story: https://github.com/NASA-IMPACT/admg-inventory/issues/257
 
 ## Context and Problem Statement
 
@@ -18,15 +17,14 @@ The frontend currently sends an api request to the backend, where the search is 
 
 Do we need to or want to improve the search experience for our users?
 
+Note: A real search experience differs from [filtering cards by text input](https://github.com/NASA-IMPACT/admg-inventory/issues/257).
+
 ## Considered Options
 
-- Option A) implementing a search via javascript on the client.
-
-- Option B) leverage google search to build into our site.
-
-- Option C) combine those two approaches A+B
-
-- Option D) Use Aloglia to handle search functionality
+- Manual Search on Client
+- Lunr
+- Google search
+- Algolia
 
 ## Desired Outcome
 
@@ -68,12 +66,15 @@ Chosen option: "[option 1]", because [justification. e.g., only option, which me
 We have all the data available from the build process. Just like we currently sort and filter, we can search for a string or substring on the frontend. We might need to be careful with performance, but so far, sort and filter are super fast and I don't see why search would not be almost as fast. One key reason being that our database isn't expected to grow to a point where performance is going to be an issue.
 
 - Good, because we might be able to get live-updating search results while a user is typing.
-- Good, because we can be very explicit about the fields we are searching on. We could have a field to search be short name, and another field where a user can type the region they are interested in.
 - Bad, because it will be on us to implement, test and maintain
   
-### Client-side search tools
+## Client-side search tools
 
 There are a number of mature client-side search tools available, such as [Lunr.js](https://lunrjs.com), [Fuse.js](https://fusejs.io/), [Elasticlunr.js](http://elasticlunr.com/), [FlexSearch.js](https://github.com/nextapps-de/flexsearch).  These tools would be used to generate an index of the data on which we will enable search.  The index can be packaged with our application and utilized when performing client-side searches.
+
+### Lunr
+
+[Lunr.js](https://lunrjs.com)
 
 - Good, because they all offer features that we likely wouldn't have the time to implement, such as:
   * [stemming](https://lunrjs.com/guides/core_concepts.html#stemming), i.e. searching for "aerosols" will return positive results for alternatives like "aerosol" (singular).
@@ -93,12 +94,6 @@ Since all the pages for all the campaigns/platforms/instruments are rendered ser
 - Good, because it offers the potential of nuanced search that google search offers
 - Bad, because we have less control over the display of search results -- this needs to be confirmed
 
-### Google Combination
-
-We can offer the complete google search to get back any results for any pages on a dedicated search page, and use the javascript filter method to search on a specific field such as the short name to limit the list of cards.
-
-- Good, because ?
-- Bad, because ?
 
 ### Algolia
 
@@ -114,7 +109,3 @@ The first 10,000 searches are free. After that, it is $1 per 1,000 search reques
 - Bad, because there is a cost associated, but given the amount of traffic we expect, I think it is quite worth the money
 - Bad, because it might be a bit too powerful for what we are after. I think we can keep costs low by opting in to only the basics
 
-## Links <!-- optional -->
-
-- [Link type][link to adr] <!-- example: Refined by [ADR-0005](0005-example.md) -->
-- … <!-- numbers of links can vary -->
