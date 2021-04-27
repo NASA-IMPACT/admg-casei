@@ -22,10 +22,9 @@ Note: A real search experience differs from [filtering cards by text input](http
 ## Considered Options
 
 - Manual Search on Client
-- Lunr
+- Client-side search tools (Lunr, Fuse, JS Search, etc)
 - Google search
 - Algolia
-- [JS Search](https://github.com/bvaughn/js-search)
 
 ## Desired Outcome
 
