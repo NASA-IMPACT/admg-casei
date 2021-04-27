@@ -1,7 +1,7 @@
 # 3. Free text search improvements
 
 - Status: proposed
-- Deciders: @rwegener2 W @necoline @tania-pires @AliceR @aluckach
+- Deciders: @rwegener2 W @necoline @tania-pires @AliceR @alukach
 - Date: 2021-04-27
 
 
@@ -74,13 +74,13 @@ There are a number of mature client-side search tools available.  These tools wo
 
 #### Overview
 
-Library | ⭐️ 
+Library | ⭐️s
 --- | ---
-[Lunr.js](https://lunrjs.com) | [7.5k](https://github.com/olivernn/lunr.js)
 [Fuse.js](https://fusejs.io/) | [12.4k](https://github.com/krisk/fuse)
-[Elasticlunr.js](http://elasticlunr.com/) | (1.7k)[https://github.com/weixsong/elasticlunr.js]
-[FlexSearch.js](https://github.com/nextapps-de/flexsearch) | [7k](https://github.com/nextapps-de/flexsearch)
+[Lunr.js](https://lunrjs.com) | [7.5k](https://github.com/olivernn/lunr.js)
+[FlexSearch.js](https://github.com/nextapps-de/flexsearch) | (7k)[https://github.com/nextapps-de/flexsearch]
 [JS Search](https://bvaughn.github.io/js-search/) | [1.8k](https://github.com/bvaughn/js-search)
+[Elasticlunr.js](http://elasticlunr.com/) | (1.7k)[https://github.com/weixsong/elasticlunr.js]
 
 
 - Good, because they all offer features that we likely wouldn't have the time to implement, such as:
