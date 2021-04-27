@@ -72,7 +72,7 @@
     "prettier": "^2.2.1",
     "react-test-renderer": "^17.0.1",
     "start-server-and-test": "^1.12.1",
-    "surge": "^0.21.7"
+    "surge": "^0.23.0"
   },
   "license": "MIT",
   "scripts": {
