@@ -25,6 +25,7 @@ Note: A real search experience differs from [filtering cards by text input](http
 - Lunr
 - Google search
 - Algolia
+- [JS Search](https://github.com/bvaughn/js-search)
 
 ## Desired Outcome
 
@@ -108,4 +109,3 @@ The first 10,000 searches are free. After that, it is $1 per 1,000 search reques
 - Good, because it is very easy to scale up search funcationality. I doubt we want natural language processing, but maybe we do down the road
 - Bad, because there is a cost associated, but given the amount of traffic we expect, I think it is quite worth the money
 - Bad, because it might be a bit too powerful for what we are after. I think we can keep costs low by opting in to only the basics
-
