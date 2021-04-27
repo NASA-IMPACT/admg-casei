@@ -82,15 +82,12 @@ Library | ⭐️
 [FlexSearch.js](https://github.com/nextapps-de/flexsearch) | [7k](https://github.com/nextapps-de/flexsearch)
 [JS Search](https://bvaughn.github.io/js-search/) | [1.8k](https://github.com/bvaughn/js-search)
 
-#### Lunr
-
-[Lunr.js](https://lunrjs.com)
 
 - Good, because they all offer features that we likely wouldn't have the time to implement, such as:
-  * [stemming](https://lunrjs.com/guides/core_concepts.html#stemming), i.e. searching for "aerosols" will return positive results for alternatives like "aerosol" (singular).
-  * [scoring](https://lunrjs.com/guides/searching.html#scoring)/[boosts](https://lunrjs.com/guides/searching.html#boosts), placing different value on where the matched records are stored, e.g. we could prioritize matches in the `short_name` higher than matches found in the `long_name`
-  * [fields](https://lunrjs.com/guides/searching.html#fields), i.e. search specific fields for a string, such as `type:instrument` to find only instruments matching a term.
-  * [fuzzy matching](https://lunrjs.com/guides/searching.html#fuzzy-matches), will help gloss over typos
+  * stemming, i.e. searching for "aerosols" will return positive results for alternatives like "aerosol" (singular).
+  * scoring/boosts, placing different value on where the matched records are stored, e.g. we could prioritize matches in the `short_name` higher than matches found in the `long_name`
+  * fields, i.e. search specific fields for a string, such as `type:instrument` to find only instruments matching a term.
+  * fuzzy matching, will help gloss over typos
 - Good, because Gatsby has plugins to assist in integration (e.g. [gatsby-plugin-local-search](https://www.gatsbyjs.com/plugins/gatsby-plugin-local-search/?=flexsearch), [gatsby-plugin-lunr
 ](https://www.gatsbyjs.com/plugins/gatsby-plugin-lunr/), [@gatsby-contrib/gatsby-plugin-elasticlunr-search](https://www.gatsbyjs.com/plugins/@gatsby-contrib/gatsby-plugin-elasticlunr-search/), [@draftbox-co/gatsby-plugin-fusejs](https://www.gatsbyjs.com/plugins/@draftbox-co/gatsby-plugin-fusejs/)).
 - Good, because no external infrastructure requirements
