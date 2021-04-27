@@ -27,16 +27,16 @@ export default function CampaignCard({ shortname, mode }) {
         nodes {
           logo {
             description
-            gatsbyImg {
-              childImageSharp {
-                gatsbyImageData(
-                  layout: CONSTRAINED
-                  height: 120
-                  placeholder: BLURRED
-                  transformOptions: { fit: CONTAIN }
-                )
-              }
-            }
+            # gatsbyImg {
+            #   childImageSharp {
+            #     gatsbyImageData(
+            #       layout: CONSTRAINED
+            #       height: 120
+            #       placeholder: BLURRED
+            #       transformOptions: { fit: CONTAIN }
+            #     )
+            #   }
+            # }
           }
           ongoing
           shortname: short_name
