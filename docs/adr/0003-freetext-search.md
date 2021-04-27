@@ -69,11 +69,11 @@ We have all the data available from the build process. Just like we currently so
 - Good, because we might be able to get live-updating search results while a user is typing.
 - Bad, because it will be on us to implement, test and maintain
   
-## Client-side search tools
+### Client-side search tools
 
 There are a number of mature client-side search tools available, such as [Lunr.js](https://lunrjs.com), [Fuse.js](https://fusejs.io/), [Elasticlunr.js](http://elasticlunr.com/), [FlexSearch.js](https://github.com/nextapps-de/flexsearch).  These tools would be used to generate an index of the data on which we will enable search.  The index can be packaged with our application and utilized when performing client-side searches.
 
-### Lunr
+#### Lunr
 
 [Lunr.js](https://lunrjs.com)
 
