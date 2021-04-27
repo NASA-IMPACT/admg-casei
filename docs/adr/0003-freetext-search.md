@@ -78,9 +78,9 @@ Library | ⭐️s
 --- | ---
 [Fuse.js](https://fusejs.io/) | [12.4k](https://github.com/krisk/fuse)
 [Lunr.js](https://lunrjs.com) | [7.5k](https://github.com/olivernn/lunr.js)
-[FlexSearch.js](https://github.com/nextapps-de/flexsearch) | (7k)[https://github.com/nextapps-de/flexsearch]
+[FlexSearch.js](https://github.com/nextapps-de/flexsearch) | [7k](https://github.com/nextapps-de/flexsearch)
 [JS Search](https://bvaughn.github.io/js-search/) | [1.8k](https://github.com/bvaughn/js-search)
-[Elasticlunr.js](http://elasticlunr.com/) | (1.7k)[https://github.com/weixsong/elasticlunr.js]
+[Elasticlunr.js](http://elasticlunr.com/) | [1.7k](https://github.com/weixsong/elasticlunr.js)
 
 
 - Good, because they all offer features that we likely wouldn't have the time to implement, such as:
