@@ -3281,9 +3281,7 @@
         {
           "shortname": "ATR-42",
           "id": "d3ccf701-bf96-4d48-95f7-4ad4276fc0ac",
-          "collectionPeriodIds": [
-            "d9cfed50-785d-4443-934f-7aaf403d7f7c"
-          ],
+          "collectionPeriodIds": ["d9cfed50-785d-4443-934f-7aaf403d7f7c"],
           "campaigns": [
             {
               "id": "a3024588-2e5a-4ccc-b9f2-79a76104666d"
@@ -3355,9 +3353,7 @@
         {
           "shortname": "Aerosonde",
           "id": "3e7d10b5-54f3-49b1-972d-0a79ee1d4c59",
-          "collectionPeriodIds": [
-            "2e50cf71-c1d7-4d7e-9326-856e89a1362d"
-          ],
+          "collectionPeriodIds": ["2e50cf71-c1d7-4d7e-9326-856e89a1362d"],
           "campaigns": [
             {
               "id": "6220f4ee-3689-4dee-a03e-83b604f9e476"
@@ -3440,9 +3436,7 @@
         {
           "shortname": "ALTUS II",
           "id": "c4109100-8a80-4f97-82de-6d0883b605f0",
-          "collectionPeriodIds": [
-            "9a2fce5b-1066-4114-944f-dbec289bfad1"
-          ],
+          "collectionPeriodIds": ["9a2fce5b-1066-4114-944f-dbec289bfad1"],
           "campaigns": [
             {
               "id": "de7d81e4-750c-4f08-8fb8-e0006930d034"
@@ -3484,9 +3478,7 @@
         {
           "shortname": "ASO",
           "id": "8356db0c-a49a-4606-bd44-9c1277213d64",
-          "collectionPeriodIds": [
-            "3761c4eb-8d58-4c1d-9437-c24acfa96443"
-          ],
+          "collectionPeriodIds": ["3761c4eb-8d58-4c1d-9437-c24acfa96443"],
           "campaigns": [
             {
               "id": "54900fe8-e11b-4c48-acf8-6035c16ec1ce"
@@ -3599,9 +3591,7 @@
         {
           "shortname": "C-131A",
           "id": "da08870c-024d-4d43-8476-25d6f493b587",
-          "collectionPeriodIds": [
-            "cf53e2f7-c9a8-4e9f-9eb3-45c822055f36"
-          ],
+          "collectionPeriodIds": ["cf53e2f7-c9a8-4e9f-9eb3-45c822055f36"],
           "campaigns": [
             {
               "id": "03011e0d-3c1e-4f99-ae76-701c5bcff7c0"
@@ -3728,9 +3718,7 @@
         {
           "shortname": "Cessna 206",
           "id": "d4d229f4-5770-4bf1-8936-5a5e9b1ba3b0",
-          "collectionPeriodIds": [
-            "e9294f55-a199-4c6e-8bb6-3f30690ab419"
-          ],
+          "collectionPeriodIds": ["e9294f55-a199-4c6e-8bb6-3f30690ab419"],
           "campaigns": [
             {
               "id": "7a5511f1-6cdf-4960-af27-257be0e89317"
@@ -3751,9 +3739,7 @@
         {
           "shortname": "Cessna 208B",
           "id": "a9ca05f3-3224-4e4b-8e3f-eda0be50048c",
-          "collectionPeriodIds": [
-            "c2008707-1885-4583-9dd8-fbacd906db80"
-          ],
+          "collectionPeriodIds": ["c2008707-1885-4583-9dd8-fbacd906db80"],
           "campaigns": [
             {
               "id": "98a84fdf-1293-486a-abe0-546398a1af8b"
@@ -3801,9 +3787,7 @@
         {
           "shortname": "Cessna Pelican",
           "id": "fb2357a9-56f7-4de9-aa1f-e059d29e7a18",
-          "collectionPeriodIds": [
-            "5d3c1c67-82db-4ea5-8ad8-03fe8aac4ff9"
-          ],
+          "collectionPeriodIds": ["5d3c1c67-82db-4ea5-8ad8-03fe8aac4ff9"],
           "campaigns": [
             {
               "id": "03011e0d-3c1e-4f99-ae76-701c5bcff7c0"
@@ -4028,9 +4012,7 @@
         {
           "shortname": "DO128",
           "id": "ce947f8e-7b55-4741-a5c2-44960b129eab",
-          "collectionPeriodIds": [
-            "55dfdcdd-259a-452d-8d63-890a5302a798"
-          ],
+          "collectionPeriodIds": ["55dfdcdd-259a-452d-8d63-890a5302a798"],
           "campaigns": [
             {
               "id": "a3024588-2e5a-4ccc-b9f2-79a76104666d"
@@ -4081,9 +4063,7 @@
         {
           "shortname": "DO-228",
           "id": "b1e2d8b1-d7d8-47cb-8cb8-ca543beddb9f",
-          "collectionPeriodIds": [
-            "ebde050b-d018-48dd-bff0-1b0ba97fcc0c"
-          ],
+          "collectionPeriodIds": ["ebde050b-d018-48dd-bff0-1b0ba97fcc0c"],
           "campaigns": [
             {
               "id": "c0ff74ac-1d34-4688-94b5-2fe68c608d6c"
@@ -4104,9 +4084,7 @@
         {
           "shortname": "Electra",
           "id": "d01dfe5b-b071-48d6-ba02-08126342cf7d",
-          "collectionPeriodIds": [
-            "3a462b00-8515-46ea-8480-92f18a3349f0"
-          ],
+          "collectionPeriodIds": ["3a462b00-8515-46ea-8480-92f18a3349f0"],
           "campaigns": [
             {
               "id": "bb3ba4d5-6298-48d3-8b98-c45e1c011cc8"
@@ -4501,9 +4479,7 @@
         {
           "shortname": "G-IV",
           "id": "9c538af2-3091-49d0-9463-ea60424752df",
-          "collectionPeriodIds": [
-            "a1b34816-8524-4768-81e3-c1dc3227317c"
-          ],
+          "collectionPeriodIds": ["a1b34816-8524-4768-81e3-c1dc3227317c"],
           "campaigns": [
             {
               "id": "5e629b2e-8d6f-42c4-9f52-b8cce1b157e3"
@@ -4596,9 +4572,7 @@
         {
           "shortname": "HU-25",
           "id": "566c1038-3b7d-4f5b-a1dd-6b7c01a34e69",
-          "collectionPeriodIds": [
-            "aeada7f7-d026-486c-b907-43d8f7ba1741"
-          ],
+          "collectionPeriodIds": ["aeada7f7-d026-486c-b907-43d8f7ba1741"],
           "campaigns": [
             {
               "id": "a692bb67-3ab2-485a-9d90-9f77959fe949"
@@ -4699,9 +4673,7 @@
         {
           "shortname": "HOP",
           "id": "ef2ce9e3-00a9-4213-8ad0-e7e978d30744",
-          "collectionPeriodIds": [
-            "38627cc3-40f3-4bed-a715-a1395bf17d5f"
-          ],
+          "collectionPeriodIds": ["38627cc3-40f3-4bed-a715-a1395bf17d5f"],
           "campaigns": [
             {
               "id": "7a5511f1-6cdf-4960-af27-257be0e89317"
@@ -4725,9 +4697,7 @@
         {
           "shortname": "J-31",
           "id": "da0a5020-cd63-4f93-a1dd-5187a0af6a71",
-          "collectionPeriodIds": [
-            "f0267e63-6922-44f3-8c55-fe7a256a784c"
-          ],
+          "collectionPeriodIds": ["f0267e63-6922-44f3-8c55-fe7a256a784c"],
           "campaigns": [
             {
               "id": "7a5511f1-6cdf-4960-af27-257be0e89317"
@@ -4781,9 +4751,7 @@
         {
           "shortname": "Mooney",
           "id": "5ce6f65e-fc76-49eb-8a82-0cd356891c08",
-          "collectionPeriodIds": [
-            "6abd71b7-48b6-47e6-943a-7a3b02e32fe1"
-          ],
+          "collectionPeriodIds": ["6abd71b7-48b6-47e6-943a-7a3b02e32fe1"],
           "campaigns": [
             {
               "id": "0f1cdcb1-ddf2-4200-8f72-425646928929"
@@ -4988,9 +4956,7 @@
         {
           "shortname": "PA-34",
           "id": "e297ac32-a7bd-4425-8687-8d26f89ff4c3",
-          "collectionPeriodIds": [
-            "54a672ce-4da9-430b-93cf-dcf9773256c0"
-          ],
+          "collectionPeriodIds": ["54a672ce-4da9-430b-93cf-dcf9773256c0"],
           "campaigns": [
             {
               "id": "bb3ba4d5-6298-48d3-8b98-c45e1c011cc8"
@@ -5260,9 +5226,7 @@
         {
           "shortname": "Aranda",
           "id": "4abf0a9e-110d-40e4-9286-324f8b339988",
-          "collectionPeriodIds": [
-            "cb36d036-ab34-40fe-90e5-46e9ede347b9"
-          ],
+          "collectionPeriodIds": ["cb36d036-ab34-40fe-90e5-46e9ede347b9"],
           "campaigns": [
             {
               "id": "24afe419-ae96-4dd6-a7b2-500e073eb134"
@@ -5321,9 +5285,7 @@
         {
           "shortname": "MV Park City",
           "id": "51b1023d-40e1-4c28-ad1b-8fe8197bf1e6",
-          "collectionPeriodIds": [
-            "6163699c-afbd-4997-8764-1c2ecc373864"
-          ],
+          "collectionPeriodIds": ["6163699c-afbd-4997-8764-1c2ecc373864"],
           "campaigns": [
             {
               "id": "a692bb67-3ab2-485a-9d90-9f77959fe949"
@@ -5742,9 +5704,7 @@
         {
           "shortname": "Campaign S",
           "id": "fd2d8715-6870-41b0-9da1-5d24864aa8e4",
-          "collectionPeriodIds": [
-            "23318d45-9469-45c8-9b8d-c2fd8d1755b4"
-          ],
+          "collectionPeriodIds": ["23318d45-9469-45c8-9b8d-c2fd8d1755b4"],
           "campaigns": [
             {
               "id": "a3024588-2e5a-4ccc-b9f2-79a76104666d"
@@ -6116,9 +6076,7 @@
         {
           "shortname": "Campaign PW",
           "id": "8a3d7a34-db1f-4a1b-94f6-3bbece3c6265",
-          "collectionPeriodIds": [
-            "b504e6f7-dbd3-4074-b85e-bad2efcfa2b5"
-          ],
+          "collectionPeriodIds": ["b504e6f7-dbd3-4074-b85e-bad2efcfa2b5"],
           "campaigns": [
             {
               "id": "a3024588-2e5a-4ccc-b9f2-79a76104666d"
@@ -6145,9 +6103,7 @@
         {
           "shortname": "A90",
           "id": "525afd6e-383c-49c5-b71d-7ec51685b730",
-          "collectionPeriodIds": [
-            "fdf667e9-8964-4650-981b-c3282567998d"
-          ],
+          "collectionPeriodIds": ["fdf667e9-8964-4650-981b-c3282567998d"],
           "campaigns": [
             {
               "id": "cda47a9e-eae1-4516-a236-43df70495606"
@@ -6342,9 +6298,7 @@
         {
           "shortname": "Zenith",
           "id": "6e8bed55-1548-4193-b54b-22a9ea902777",
-          "collectionPeriodIds": [
-            "cfcfb123-2c6d-4271-af53-99fa851ade88"
-          ],
+          "collectionPeriodIds": ["cfcfb123-2c6d-4271-af53-99fa851ade88"],
           "campaigns": [
             {
               "id": "03011e0d-3c1e-4f99-ae76-701c5bcff7c0"
@@ -6389,9 +6343,7 @@
         {
           "shortname": "Le Provence",
           "id": "5bc214fb-ca19-4a1e-833d-109fc4c0d0e7",
-          "collectionPeriodIds": [
-            "ddf30186-d7f7-4771-b825-80658c1d51d5"
-          ],
+          "collectionPeriodIds": ["ddf30186-d7f7-4771-b825-80658c1d51d5"],
           "campaigns": [
             {
               "id": "a3024588-2e5a-4ccc-b9f2-79a76104666d"
@@ -6412,9 +6364,7 @@
         {
           "shortname": "Meridian",
           "id": "10a4222d-7d11-4548-a563-4d0e99190eba",
-          "collectionPeriodIds": [
-            "b662afe0-8cbe-481f-ac02-84bb35957590"
-          ],
+          "collectionPeriodIds": ["b662afe0-8cbe-481f-ac02-84bb35957590"],
           "campaigns": [
             {
               "id": "03011e0d-3c1e-4f99-ae76-701c5bcff7c0"
@@ -6900,9 +6850,7 @@
         {
           "shortname": "Tethys-2",
           "id": "626cf59d-b9b5-4ca7-884f-4d1ce238b973",
-          "collectionPeriodIds": [
-            "8524c9cc-232a-42d1-8d03-4ecd0c1088f6"
-          ],
+          "collectionPeriodIds": ["8524c9cc-232a-42d1-8d03-4ecd0c1088f6"],
           "campaigns": [
             {
               "id": "a3024588-2e5a-4ccc-b9f2-79a76104666d"
