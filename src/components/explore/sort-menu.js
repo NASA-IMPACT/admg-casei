@@ -15,7 +15,16 @@ import { sortFunctions } from "../../utils/filter-utils"
 
 const SortMenu = ({ sortOrder, setSortOrder, category }) => {
   return (
-    <>
+    <div
+      css={`
+         {
+          display: flex;
+          justify-content: flex-end;
+          margin: 2rem 0;
+          white-space: nowrap;
+        }
+      `}
+    >
       <VisuallyHidden id="sort-order">Select sort order</VisuallyHidden>
       <ListboxInput
         aria-labelledby="sort order"
@@ -27,20 +36,28 @@ const SortMenu = ({ sortOrder, setSortOrder, category }) => {
       >
         <ListboxButton
           arrow="▼"
-          style={{
-            height: `2.5rem`,
-            WebkitAppearance: `none`,
-            background: `transparent`,
-            border: `1px solid ${colors[NEGATIVE].text}`,
-            borderRadius: shape.rounded,
-            color: colors[NEGATIVE].text,
-            padding: `0.5rem`,
-            cursor: `pointer`,
-          }}
+          css={`
+             {
+              height: 2.5rem;
+              -webkit-appearance: none;
+              background: transparent;
+              border: 1px solid ${colors[NEGATIVE].text};
+              border-radius: ${shape.rounded};
+              color: ${colors[NEGATIVE].text};
+              padding: 0.5rem;
+              cursor: pointer;
+            }
+          `}
         >
           {sortOrder.toUpperCase()}
         </ListboxButton>
-        <ListboxPopover style={{ background: colors[NEGATIVE].altBackground }}>
+        <ListboxPopover
+          css={`
+             {
+              background: ${colors[NEGATIVE].altBackground};
+            }
+          `}
+        >
           <ListboxList data-cy="sort-options">
             {Object.keys(sortFunctions[category]).map(o => (
               <ListboxOption key={o} value={o} data-cy="sort-option">
@@ -50,7 +67,7 @@ const SortMenu = ({ sortOrder, setSortOrder, category }) => {
           </ListboxList>
         </ListboxPopover>
       </ListboxInput>
-    </>
+    </div>
   )
 }
 

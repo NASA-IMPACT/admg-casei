@@ -21,6 +21,7 @@ import FilterChips from "../components/filter/filter-chips"
 import Chip from "../components/chip"
 import ExploreMenu from "../components/explore/explore-menu"
 import PlatformNav from "../components/explore/platform-nav"
+import SortMenu from "../components/explore/sort-menu"
 import ExploreSection from "../components/explore/explore-section"
 import CampaignCard from "../components/cards/campaign-card"
 import PlatformCard from "../components/cards/platform-card"
@@ -163,6 +164,17 @@ export default function Explore({ data, location }) {
         <VisuallyHidden>
           <h1 data-cy={`h1-${selectedCategory}`}>Explore {selectedCategory}</h1>
         </VisuallyHidden>
+
+        <ExploreMenu
+          selectedCategory={selectedCategory}
+          setSelectedCategory={setSelectedCategory}
+          filteredCount={{
+            campaigns: campaignList.filtered.length,
+            platforms: platformList.filtered.length,
+            instruments: instrumentList.filtered.length,
+          }}
+        ></ExploreMenu>
+
         <ExploreTools
           ref={inputElement}
           dateRange={dateRange}
@@ -238,17 +250,20 @@ export default function Explore({ data, location }) {
           </>
         )}
 
-        <ExploreMenu
-          selectedCategory={selectedCategory}
-          setSelectedCategory={setSelectedCategory}
-          filteredCount={{
-            campaigns: campaignList.filtered.length,
-            platforms: platformList.filtered.length,
-            instruments: instrumentList.filtered.length,
-          }}
-          sortOrder={sortOrder[selectedCategory]}
-          setSortOrder={setSortOrder}
+        <div
+          css={`
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: baseline;
+          `}
         >
+          <SortMenu
+            sortOrder={sortOrder[selectedCategory]}
+            setSortOrder={setSortOrder}
+            category={selectedCategory}
+          />
+
           {selectedCategory === "platforms" && (
             <PlatformNav
               items={Object.keys(platformList.grouped).map(group => ({
@@ -257,8 +272,7 @@ export default function Explore({ data, location }) {
               }))}
             />
           )}
-        </ExploreMenu>
-
+        </div>
         <ExploreSection isLoading={isLoading}>
           {selectedCategory === "campaigns" &&
             campaignList.filtered.map(campaign => {
