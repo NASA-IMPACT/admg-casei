@@ -11,7 +11,7 @@ The current free text search
 
 - only searches on whole words
 - is strict with typos
-- searches on defined database columns (not sure which ones)
+- searches on defined database columns (short name, long name, and description)
 
 The frontend currently sends an api request to the backend, where the search is executed and sends back the matching items. This is executed as one request per type (i.e. `/campaign?search=string`, `/platform?search=string`, `/instrument?search=string`, ...). After some seconds, the results can be displayed in the UI. It does not feel very performant, and seems to be an unnecessary dependency.
 
