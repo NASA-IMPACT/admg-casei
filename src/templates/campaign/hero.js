@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 import styled from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
-import * as turf from "@turf/turf"
+import turfBbox from "@turf/bbox"
 import parse from "wellknown"
 
 import { HeroStats } from "../../components/hero"
@@ -50,7 +50,7 @@ const CampaignHero = ({
     type: "Feature",
     geometry: parse(bounds),
   }
-  const bbox = turf.bbox(geojson)
+  const bbox = turfBbox(geojson)
 
   const containerRef = useRef()
   const { height } = useContainerDimensions(containerRef)
