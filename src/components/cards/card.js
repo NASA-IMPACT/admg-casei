@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 import { POSITIVE, NEGATIVE } from "../../utils/constants"
 import { colors } from "../../theme"
@@ -55,19 +55,15 @@ const Card = ({
       data-cy={`${category}-card`}
     >
       <CardHeader imagePosition={image ? imagePosition : "left top"}>
-        {image && image.gatsbyImg ? (
+        {image ? (
           <GatsbyImage
-            image={image.gatsbyImg.childImageSharp.gatsbyImageData}
+            image={getImage(image.gatsbyImg)}
             alt={image.description}
             css={`
                {
                 grid-area: 1 / 1;
-                height: ${image.gatsbyImg.childImageSharp.gatsbyImageData
-                  .height}px;
               }
             `}
-            objectFit="contain"
-            objectPosition={imagePosition || "center center"}
           />
         ) : (
           <div

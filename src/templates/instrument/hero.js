@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import Hero from "../../components/hero"
 import { InstrumentIcon } from "../../icons"
@@ -32,9 +32,9 @@ export default function InstrumentHero({
       }
       description={description}
       image={
-        image && image.gatsbyImg ? (
+        image ? (
           <GatsbyImage
-            image={image.gatsbyImg.childImageSharp.gatsbyImageData}
+            image={getImage(image.gatsbyImg)}
             alt={image.description}
           />
         ) : (
@@ -55,7 +55,11 @@ export const instrumentHeroFields = graphql`
       description
       gatsbyImg {
         childImageSharp {
-          gatsbyImageData(height: 200, layout: FIXED, placeholder: BLURRED)
+          gatsbyImageData(
+            height: 400
+            layout: CONSTRAINED
+            placeholder: BLURRED
+          )
         }
       }
     }

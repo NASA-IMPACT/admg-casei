@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import Hero from "../../components/hero"
 import { PlatformIcon } from "../../icons"
@@ -18,9 +18,9 @@ export default function PlatformHero({
       tagline={shortname}
       title={longname}
       image={
-        image && image.gatsbyImg ? (
+        image ? (
           <GatsbyImage
-            image={image.gatsbyImg.childImageSharp.gatsbyImageData}
+            image={getImage(image.gatsbyImg)}
             alt={image.description}
           />
         ) : (
