@@ -54,8 +54,8 @@ const Card = ({
       `}
       data-cy={`${category}-card`}
     >
-      <CardHeader imagePosition={image ? imagePosition : "left top"}>
-        {image ? (
+      <CardHeader imagePosition={image?.gatsbyImg ? imagePosition : "left top"}>
+        {image?.gatsbyImg ? (
           <GatsbyImage
             image={getImage(image.gatsbyImg)}
             alt={image.description}

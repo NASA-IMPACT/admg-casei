@@ -34,5 +34,6 @@ Chosen option: [Option 2], because encourages us to draw distinctions between co
 [Gatsby Typography.js Plugin](https://web.archive.org/web/20201025193022/https://www.gatsbyjs.com/docs/using-typography-js/)
 
 ### Related conversations
+
 [Issue: Typography Update](https://github.com/developmentseed/admg-inventory/issues/156),
 [PR: Clean up and tune typography #104](https://github.com/developmentseed/admg-inventory/pull/104)
