@@ -167,7 +167,7 @@ export const overviewFields = graphql`
     aliases: aliases {
       shortname: short_name
     }
-    description: description_long
+    description: description_short
     startdate: start_date
     enddate: end_date
     region: region_description
