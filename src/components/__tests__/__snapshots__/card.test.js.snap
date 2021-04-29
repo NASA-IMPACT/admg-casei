@@ -24,8 +24,8 @@ exports[`Card renders card with tag 1`] = `
 }
 
 .c1.c1 {
-  color: #e9eaec;
-  background-color: #303641;
+  color: #262a31;
+  background-color: #ffffff;
   box-shadow: rgba(68,63,63,0.08) 0px -1px 1px 0px,rgba(68,63,63,0.08) 0px 2px 6px 0px;
   padding: 1rem;
   min-height: 20rem;
@@ -53,7 +53,7 @@ exports[`Card renders card with tag 1`] = `
   border: 1px solid;
   padding: 0.25rem;
   margin: 1rem 0;
-  background-color: #303641;
+  background-color: #ffffff;
   z-index: 1;
 }
 
@@ -61,8 +61,8 @@ exports[`Card renders card with tag 1`] = `
   className="c0"
 >
   <a
-    _css="#e9eaec"
-    _css2="#303641"
+    _css="#262a31"
+    _css2="#ffffff"
     className="c1"
     data-cy="campaigns-card"
   >
@@ -79,7 +79,7 @@ exports[`Card renders card with tag 1`] = `
           xmlns="http://www.w3.org/2000/svg"
         >
           <g
-            fill="#e9eaec"
+            fill="#262a31"
             fillRule="nonzero"
           >
             <path
@@ -149,8 +149,8 @@ exports[`Card renders plain card 1`] = `
 }
 
 .c1.c1 {
-  color: #e9eaec;
-  background-color: #303641;
+  color: #262a31;
+  background-color: #ffffff;
   box-shadow: rgba(68,63,63,0.08) 0px -1px 1px 0px,rgba(68,63,63,0.08) 0px 2px 6px 0px;
   padding: 1rem;
   min-height: 20rem;
@@ -172,8 +172,8 @@ exports[`Card renders plain card 1`] = `
   className="c0"
 >
   <a
-    _css="#e9eaec"
-    _css2="#303641"
+    _css="#262a31"
+    _css2="#ffffff"
     className="c1"
     data-cy="campaigns-card"
   >
@@ -190,7 +190,7 @@ exports[`Card renders plain card 1`] = `
           xmlns="http://www.w3.org/2000/svg"
         >
           <g
-            fill="#e9eaec"
+            fill="#262a31"
             fillRule="nonzero"
           >
             <path
@@ -254,8 +254,8 @@ exports[`Card renders with footer list 1`] = `
 }
 
 .c1.c1 {
-  color: #e9eaec;
-  background-color: #303641;
+  color: #262a31;
+  background-color: #ffffff;
   box-shadow: rgba(68,63,63,0.08) 0px -1px 1px 0px,rgba(68,63,63,0.08) 0px 2px 6px 0px;
   padding: 1rem;
   min-height: 20rem;
@@ -277,8 +277,8 @@ exports[`Card renders with footer list 1`] = `
   className="c0"
 >
   <a
-    _css="#e9eaec"
-    _css2="#303641"
+    _css="#262a31"
+    _css2="#ffffff"
     className="c1"
     data-cy="campaigns-card"
   >
@@ -295,7 +295,7 @@ exports[`Card renders with footer list 1`] = `
           xmlns="http://www.w3.org/2000/svg"
         >
           <g
-            fill="#e9eaec"
+            fill="#262a31"
             fillRule="nonzero"
           >
             <path

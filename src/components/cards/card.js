@@ -26,7 +26,7 @@ const Card = ({
   link,
   footerList,
   category,
-  mode = NEGATIVE,
+  mode = POSITIVE,
 }) => (
   <div
     css={`

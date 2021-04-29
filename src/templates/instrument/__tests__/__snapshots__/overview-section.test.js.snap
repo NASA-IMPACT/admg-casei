@@ -45,12 +45,12 @@ exports[`Overview Section displays content 1`] = `
   color: #262a31;
 }
 
-.c5.c5 {
+.c6.c6 {
   grid-column: 10 / span 3;
 }
 
-.c5.c5 > *,
-.c5.c5 h3 {
+.c6.c6 > *,
+.c6.c6 h3 {
   color: #262a31;
 }
 
@@ -59,6 +59,14 @@ exports[`Overview Section displays content 1`] = `
   -webkit-align-self: end;
   -ms-flex-item-align: end;
   align-self: end;
+}
+
+.c5.c5 {
+  color: #15418c;
+}
+
+.c7.c7 {
+  color: #aac9ff;
 }
 
 <section
@@ -228,17 +236,36 @@ exports[`Overview Section displays content 1`] = `
           style={Object {}}
         >
           <a
+            className="c5"
             data-cy="calibration-doi-link"
             href="http://dx.doi.org/10.5067/calibration"
             rel="noopener noreferrer"
-            style={
-              Object {
-                "color": "#15418c",
-              }
-            }
             target="_blank"
           >
-            http://dx.doi.org/10.5067/calibration
+            <svg
+              height="16"
+              role="img"
+              version="1.1"
+              viewBox="0 0 16 16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>
+                External Link
+              </title>
+              <rect
+                fill="none"
+                height="16"
+                width="16"
+              />
+              <path
+                d="M3,5h4V3H1v12h12V9h-2v4H3V5z M16,8V0L8,0v2h4.587L6.294,8.294l1.413,1.413L14,3.413V8H16z"
+                fill="#15418c"
+              />
+            </svg>
+            <span>
+              http://dx.doi.org/10.5067/calibration
+            </span>
           </a>
         </dd>
         <dt>
@@ -270,17 +297,36 @@ exports[`Overview Section displays content 1`] = `
               }
             >
               <a
+                className="c5"
                 data-cy="online-information-link"
                 href="http://www.example.com"
                 rel="noopener noreferrer"
-                style={
-                  Object {
-                    "color": "#15418c",
-                  }
-                }
                 target="_blank"
               >
-                http://www.example.com
+                <svg
+                  height="16"
+                  role="img"
+                  version="1.1"
+                  viewBox="0 0 16 16"
+                  width="16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>
+                    External Link
+                  </title>
+                  <rect
+                    fill="none"
+                    height="16"
+                    width="16"
+                  />
+                  <path
+                    d="M3,5h4V3H1v12h12V9h-2v4H3V5z M16,8V0L8,0v2h4.587L6.294,8.294l1.413,1.413L14,3.413V8H16z"
+                    fill="#15418c"
+                  />
+                </svg>
+                <span>
+                  http://www.example.com
+                </span>
               </a>
             </li>
           </ul>
@@ -289,7 +335,7 @@ exports[`Overview Section displays content 1`] = `
     </section>
   </div>
   <div
-    className="c5"
+    className="c6"
     mode="lightTheme"
   >
     <ul
@@ -404,17 +450,36 @@ exports[`Overview Section displays content 1`] = `
           DOI:
            
           <a
+            className="c7"
             data-cy="instrument-doi-link"
             href="http://dx.doi.org/10.5067/instrument"
             rel="noopener noreferrer"
-            style={
-              Object {
-                "color": "#aac9ff",
-              }
-            }
             target="_blank"
           >
-            http://dx.doi.org/10.5067/instrument
+            <svg
+              height="16"
+              role="img"
+              version="1.1"
+              viewBox="0 0 16 16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>
+                External Link
+              </title>
+              <rect
+                fill="none"
+                height="16"
+                width="16"
+              />
+              <path
+                d="M3,5h4V3H1v12h12V9h-2v4H3V5z M16,8V0L8,0v2h4.587L6.294,8.294l1.413,1.413L14,3.413V8H16z"
+                fill="#aac9ff"
+              />
+            </svg>
+            <span>
+              http://dx.doi.org/10.5067/instrument
+            </span>
           </a>
         </p>
       </div>
@@ -473,17 +538,36 @@ exports[`Overview Section displays content 1`] = `
             }
           >
             <a
+              className="c5"
               data-cy="test-link"
               href="http://www.example.com"
               rel="noopener noreferrer"
-              style={
-                Object {
-                  "color": "#15418c",
-                }
-              }
               target="_blank"
             >
-              test
+              <svg
+                height="16"
+                role="img"
+                version="1.1"
+                viewBox="0 0 16 16"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>
+                  External Link
+                </title>
+                <rect
+                  fill="none"
+                  height="16"
+                  width="16"
+                />
+                <path
+                  d="M3,5h4V3H1v12h12V9h-2v4H3V5z M16,8V0L8,0v2h4.587L6.294,8.294l1.413,1.413L14,3.413V8H16z"
+                  fill="#15418c"
+                />
+              </svg>
+              <span>
+                test
+              </span>
             </a>
           </li>
           <li
@@ -494,17 +578,36 @@ exports[`Overview Section displays content 1`] = `
             }
           >
             <a
+              className="c5"
               data-cy="test2-link"
               href="http://www.example.com"
               rel="noopener noreferrer"
-              style={
-                Object {
-                  "color": "#15418c",
-                }
-              }
               target="_blank"
             >
-              test2
+              <svg
+                height="16"
+                role="img"
+                version="1.1"
+                viewBox="0 0 16 16"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>
+                  External Link
+                </title>
+                <rect
+                  fill="none"
+                  height="16"
+                  width="16"
+                />
+                <path
+                  d="M3,5h4V3H1v12h12V9h-2v4H3V5z M16,8V0L8,0v2h4.587L6.294,8.294l1.413,1.413L14,3.413V8H16z"
+                  fill="#15418c"
+                />
+              </svg>
+              <span>
+                test2
+              </span>
             </a>
           </li>
         </ul>
