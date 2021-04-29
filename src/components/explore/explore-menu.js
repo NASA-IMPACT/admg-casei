@@ -103,7 +103,7 @@ const ExploreMenu = ({
         display: flex;
         flex-direction: row;
         gap: 2rem;
-        margin: 0;
+        margin-top: 2rem;
         list-style: none;
         align-items: center;
         justify-content: center;

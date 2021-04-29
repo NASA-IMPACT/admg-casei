@@ -28,7 +28,7 @@ const Container = styled.div`
   flex-direction: column;
 `
 
-const Layout = ({ children }) => {
+const Layout = ({ children, isHeaderFixed }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -42,7 +42,11 @@ const Layout = ({ children }) => {
 
   return (
     <Container id="top" data-cy="page">
-      <Header shortname={data.site.siteMetadata.shortname} mode={POSITIVE}>
+      <Header
+        shortname={data.site.siteMetadata.shortname}
+        mode={POSITIVE}
+        isHeaderFixed={isHeaderFixed}
+      >
         <Nav mode={POSITIVE} />
       </Header>
       <main
@@ -59,6 +63,10 @@ const Layout = ({ children }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  isHeaderFixed: PropTypes.bool,
+}
+Layout.defaultProps = {
+  isHeaderFixed: false,
 }
 
 export default Layout

@@ -23,7 +23,7 @@ import { getFocusIcon } from "../../icons/utils"
 const FocusTemplate = ({ data: { focusArea, allFocusArea }, path }) => {
   const Icon = getFocusIcon(focusArea.shortname)
   return (
-    <Layout>
+    <Layout isHeaderFixed>
       <SEO title={focusArea.shortname} lang="en" />
 
       <Hero

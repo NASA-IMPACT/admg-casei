@@ -5,11 +5,15 @@ import React from "react"
 import { layout, colors } from "../theme"
 import { CaseiLogoIcon } from "../icons"
 
-const Header = ({ shortname, children, mode }) => (
+const Header = ({ shortname, children, mode, isHeaderFixed }) => (
   <header
     css={`
       background-color: ${colors[mode].background};
-      z-index: 1;
+      z-index: 99;
+      position: ${isHeaderFixed ? "inherit" : "sticky"};
+      top: 0;
+      box-shadow: rgba(68, 63, 63, 0.08) 0px -1px 1px 0px,
+        rgba(68, 63, 63, 0.08) 0px 2px 6px 0px;
     `}
   >
     <div
@@ -64,6 +68,7 @@ Header.propTypes = {
   shortname: PropTypes.string.isRequired,
   children: PropTypes.element,
   mode: PropTypes.string.isRequired,
+  isHeaderFixed: PropTypes.bool,
 }
 
 export default Header
