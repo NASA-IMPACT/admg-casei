@@ -165,7 +165,7 @@ exports[`Overview Section displays content 1`] = `
               }
             }
           >
-            Measurement Regions
+            Vertical Measurement Regions
           </label>
         </dt>
         <dd
