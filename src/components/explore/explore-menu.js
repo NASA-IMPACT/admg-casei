@@ -34,6 +34,7 @@ const Label = ({ isSelected, children }) => {
     <span
       css={`
         position: relative;
+        font-size: medium;
 
         &::after {
           ${afterElement};
@@ -66,7 +67,6 @@ Label.propTypes = {
 
 const Count = styled.span`
   font-weight: lighter;
-  font-size: smaller;
 
   ${TabButton}:hover & {
     opacity: ${({ isSelected }) => (isSelected ? `inherit` : 0.64)};
