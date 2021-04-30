@@ -126,6 +126,8 @@ export default function Hero({
             <div
               css={`
                 height: 3rem;
+                /* to match h1 default margin-top */
+                margin-bottom: 1.5rem;
               `}
             >
               <Link
