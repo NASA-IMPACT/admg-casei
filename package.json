@@ -8,6 +8,7 @@
     "Alice Rühl <alice@developmentseed.org>"
   ],
   "dependencies": {
+    "@fontsource/titillium-web": "^4.2.2",
     "@mapbox/geo-viewport": "^0.4.1",
     "@mapbox/mapbox-gl-draw": "^1.2.0",
     "@reach/accordion": "^0.12.1",
