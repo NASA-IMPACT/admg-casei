@@ -116,12 +116,6 @@ const Footer = ({ shortname }) => {
             <li>
               <Link to="/glossary/">Glossary</Link>
             </li>
-            <li>
-              {isClient && (
-                // the login button is only visible for the client (the browser), not in ssr
-                <Login />
-              )}
-            </li>
           </Ul>
         </div>
 
@@ -222,6 +216,10 @@ const Footer = ({ shortname }) => {
               color: ${colors[NEGATIVE].link};
             `}
           >
+            {isClient && (
+              // the login button is only visible for the client (the browser), not in ssr
+              <Login />
+            )}
             {/* TODO: Add back in with real links */}
             {/* <div style={{ marginLeft: `3rem` }}>
               Privacy
