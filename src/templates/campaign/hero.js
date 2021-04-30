@@ -138,7 +138,7 @@ export const heroFields = graphql`
     focus: focus_areas {
       shortname: short_name
     }
-    countCollectionPeriods: number_collection_periods
+    countCollectionPeriods: number_ventures
     countDataProducts: number_data_products
     countDeployments: number_deployments
   }
