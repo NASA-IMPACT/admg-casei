@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
-import * as turf from "@turf/turf"
+import turfArea from "@turf/area"
+import turfBbox from "@turf/bbox"
+import turfBooleanDisjoint from "@turf/boolean-disjoint"
 import parse from "wellknown"
 
 import Map from "../map"
@@ -13,7 +15,7 @@ const sortFeaturesBySize = (a, b) => {
   // this is required by the hover effect:
   // to be able to select small features contained within others,
   // they need to be added to the map last
-  return turf.area(b.geometry) - turf.area(a.geometry)
+  return turfArea(b.geometry) - turfArea(a.geometry)
 }
 
 const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
@@ -32,7 +34,7 @@ const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
       }))
       .sort(sortFeaturesBySize),
   }))
-  const [bbox] = useState(() => turf.bbox(geojson))
+  const [bbox] = useState(() => turfBbox(geojson))
 
   useEffect(() => {
     // updates the map after a filter was changed
@@ -65,7 +67,7 @@ const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
             shortname: d.shortname,
           },
         }))
-        .filter(feature => (aoi ? !turf.booleanDisjoint(feature, aoi) : true))
+        .filter(feature => (aoi ? !turfBooleanDisjoint(feature, aoi) : true))
         .map(f => f.properties.id)
     )
   }, [aoi])

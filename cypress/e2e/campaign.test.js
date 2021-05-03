@@ -33,8 +33,8 @@ describe("Campaign", () => {
       .should($stat => {
         expect($stat, "3 items").to.have.length(3)
         expect($stat.eq(0), "first item").to.contain("1")
-        expect($stat.eq(1), "second item").to.contain("58")
-        expect($stat.eq(2), "third item").to.contain("36")
+        expect($stat.eq(1), "second item").to.contain("62")
+        expect($stat.eq(2), "third item").to.exist
       })
 
     cy.get("[data-cy=mapboxgl-map]").should("exist")

@@ -24,16 +24,16 @@ export default function InstrumentCard({ shortname }) {
         nodes {
           image {
             description
-            # gatsbyImg {
-            #   childImageSharp {
-            #     gatsbyImageData(
-            #       layout: CONSTRAINED
-            #       height: 180
-            #       placeholder: BLURRED
-            #       transformOptions: { fit: CONTAIN }
-            #     )
-            #   }
-            # }
+            gatsbyImg {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED
+                  height: 180
+                  placeholder: BLURRED
+                  transformOptions: { fit: CONTAIN }
+                )
+              }
+            }
           }
           shortname: short_name
           longname: long_name
