@@ -1,5 +1,12 @@
 import Typography from "typography"
+
 import "@fontsource/titillium-web"
+/**
+ * Titillium Web v9
+ * 2 Styles: italic, normal
+ * 2 Subsets: latin, latin-ext
+ * 6 Weights: 200, 300, 400, 600, 700, 900
+ */
 
 import { NEGATIVE } from "../utils/constants"
 import { colors } from "../theme"
@@ -7,12 +14,6 @@ import { colors } from "../theme"
 const typography = new Typography({
   baseFontSize: "16px",
   baseLineHeight: 1.5,
-  googleFonts: [
-    {
-      name: "Titillium Web",
-      styles: ["400", "600", "700"],
-    },
-  ],
   headerFontFamily: ["Titillium Web", "sans-serif"],
   bodyFontFamily: ["Titillium Web", "sans-serif"],
   headerColor: colors[NEGATIVE].text,
