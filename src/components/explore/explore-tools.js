@@ -196,7 +196,7 @@ const ExploreTools = React.forwardRef(
                 selectedFilterIds={selectedFilterIds}
                 addFilter={addFilter}
                 removeFilter={removeFilter}
-                label="Measurement Region"
+                label="Vertical Measurement Region"
                 options={getFilterOptionsById("vertical")}
               />
             </>

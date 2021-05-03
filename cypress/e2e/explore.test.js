@@ -11,27 +11,26 @@ describe("Explore", () => {
 
     it("displays campaign cards and navigates to the selected campaign", () => {
       cy.get("[data-cy=tabbar]")
-        .find("li")
-        .should($li => {
-          expect($li).to.have.length(3)
+        .find("button")
+        .should($tabs => {
+          expect($tabs).to.have.length(3)
         })
-        .then($li => {
-          expect($li[0], "text content").to.contain("Campaigns")
-          expect($li[0].firstChild, "Campaigns weight is bold").to.have.css(
+        .then($tabs => {
+          expect($tabs[0], "text content").to.contain("Campaigns")
+          expect($tabs[0], "Campaigns weight is bold").to.have.css(
             "font-weight",
             "700"
           )
-          expect($li[1], "text content").to.contain("Platforms")
-          expect(
-            $li[1].firstChild,
-            "Platforms weight is not bold"
-          ).not.to.have.css("font-weight", "700")
-          expect($li[2], "text content").to.contain("Instruments")
-
-          expect(
-            $li[2].firstChild,
-            "Instruments weight is not bold"
-          ).not.to.have.css("font-weight", "700")
+          expect($tabs[1], "text content").to.contain("Platforms")
+          expect($tabs[1], "Platforms weight is not bold").not.to.have.css(
+            "font-weight",
+            "700"
+          )
+          expect($tabs[2], "text content").to.contain("Instruments")
+          expect($tabs[2], "Instruments weight is not bold").not.to.have.css(
+            "font-weight",
+            "700"
+          )
         })
 
       cy.get("[data-cy=explore-tools]").should("exist")
@@ -106,26 +105,26 @@ describe("Explore", () => {
         .and("not.be.visible")
 
       cy.get("[data-cy=tabbar]")
-        .find("li")
-        .should($li => {
-          expect($li).to.have.length(3)
+        .find("button")
+        .should($tabs => {
+          expect($tabs).to.have.length(3)
         })
-        .then($li => {
-          expect($li[0], "text content").to.contain("Campaigns")
-          expect(
-            $li[0].firstChild,
-            "Campaigns weight is not bold"
-          ).not.to.have.css("font-weight", "700")
-          expect($li[1], "text content").to.contain("Platforms")
-          expect($li[1].firstChild, "Platforms weight is bold").to.have.css(
+        .then($tabs => {
+          expect($tabs[0], "text content").to.contain("Campaigns")
+          expect($tabs[0], "Campaigns weight is not bold").not.to.have.css(
             "font-weight",
             "700"
           )
-          expect($li[2], "text content").to.contain("Instruments")
-          expect(
-            $li[2].firstChild,
-            "Instruments weight is not bold"
-          ).not.to.have.css("font-weight", "700")
+          expect($tabs[1], "text content").to.contain("Platforms")
+          expect($tabs[1], "Platforms weight is bold").to.have.css(
+            "font-weight",
+            "700"
+          )
+          expect($tabs[2], "text content").to.contain("Instruments")
+          expect($tabs[2], "Instruments weight is not bold").not.to.have.css(
+            "font-weight",
+            "700"
+          )
         })
 
       cy.get("[data-cy=explore-tools]").should("exist")
@@ -188,24 +187,24 @@ describe("Explore", () => {
         .and("not.be.visible")
 
       cy.get("[data-cy=tabbar]")
-        .find("li")
-        .should($li => {
-          expect($li).to.have.length(3)
+        .find("button")
+        .should($tabs => {
+          expect($tabs).to.have.length(3)
         })
-        .then($li => {
-          expect($li[0], "text content").to.contain("Campaigns")
-          expect(
-            $li[0].firstChild,
-            "Campaigns weight is not bold"
-          ).not.to.have.css("font-weight", "700")
-          expect($li[1], "text content").to.contain("Platforms")
-          expect(
-            $li[1].firstChild,
-            "Platforms weight is not bold"
-          ).not.to.have.css("font-weight", "700")
-          expect($li[2], "text content").to.contain("Instruments")
+        .then($tabs => {
+          expect($tabs[0], "text content").to.contain("Campaigns")
+          expect($tabs[0], "Campaigns weight is not bold").not.to.have.css(
+            "font-weight",
+            "700"
+          )
+          expect($tabs[1], "text content").to.contain("Platforms")
+          expect($tabs[1], "Platforms weight is not bold").not.to.have.css(
+            "font-weight",
+            "700"
+          )
+          expect($tabs[2], "text content").to.contain("Instruments")
 
-          expect($li[2].firstChild, "Instruments weight is bold").to.have.css(
+          expect($tabs[2], "Instruments weight is bold").to.have.css(
             "font-weight",
             "700"
           )
@@ -248,7 +247,7 @@ describe("Explore", () => {
 
       cy.url().should("include", "/instrument/")
 
-      cy.get("h1").should("have.text", "CPL")
+      cy.get("h1").should("contain", "CPL")
     })
   })
 })

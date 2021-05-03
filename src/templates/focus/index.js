@@ -27,13 +27,12 @@ const FocusTemplate = ({ data: { focusArea, allFocusArea }, path }) => {
       <SEO title={focusArea.shortname} lang="en" />
 
       <Hero
-        tagTitle="Focus Area"
+        tagline="Focus Area"
         title={focusArea.shortname}
         textToImageRatio={[8, 4]}
+        image={<Icon color={colors[NEGATIVE].text} size="huge" />}
         id="focus"
-      >
-        <Icon color={colors[NEGATIVE].text} size="huge" />
-      </Hero>
+      />
 
       <PageBody id="focus">
         <InpageNav

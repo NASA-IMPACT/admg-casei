@@ -214,5 +214,5 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 The project is set up to deploy with [Github Actions](https://github.com/developmentseed/admg-inventory/actions) when changes are merged into the branch `develop`. The configuration lives at [.github/workflows/deploy.yml](.github/workflows/deploy.yml).
 
 To manually deploy the project, fill the .env credentials in `.env.production` (more on .env variables above in the above section [Start developing](https://github.com/NASA-IMPACT/admg-inventory/blob/develop/README.md#-start-developing)) and run `yarn build`. This step will create a folder `./public` that can be deployed to a web server. Test if the project has been build correcly with `yarn serve`, which serves the result to a local webserver on `http://localhost:9000/`.
- 
- Running `yarn deploy` will deploy to project to surge. If you skip the CI pipeline and want to deploy to surge, you need to be added as a collaborator to the surge domain first.
+
+Running `yarn deploy` will deploy to project to surge. If you skip the CI pipeline and want to deploy to surge, you need to be added as a collaborator to the surge domain first.

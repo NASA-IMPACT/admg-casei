@@ -2,116 +2,137 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 
-import SortMenu from "./sort-menu"
 import { NEGATIVE } from "../../utils/constants"
 import { colors } from "../../theme"
 
 const TabButton = styled.button`
+  /* remove default button style */
   user-select: none;
-  display: inline-block;
-  text-align: center;
-  vertical-align: middle;
-  padding: 0.25rem 0;
-  min-width: 2rem;
   background: none;
   text-shadow: none;
-  border: 0;
-  cursor: pointer;
-  height: 2.5rem;
+  color: ${colors[NEGATIVE].text};
+  border: none;
+
+  /* add tab button style */
+  cursor: ${({ isSelected }) => (isSelected ? "default" : "pointer")};
   text-transform: uppercase;
   font-weight: ${({ isSelected }) => isSelected && "bold"};
-  color: ${colors[NEGATIVE].text};
+  padding: 0.5rem;
+`
 
-  ::after {
-    content: "";
-    display: block;
-    border-bottom: ${({ isSelected }) =>
-      isSelected && `1px solid ${colors[NEGATIVE].text}`};
-    width: 100%;
-    position: relative;
-    bottom: -0.25rem;
+const Label = ({ isSelected, children }) => {
+  const afterElement = `
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: -0.5rem;
+  margin-left: -1.5rem;
+  width: 3rem;
+`
+  return (
+    <span
+      css={`
+        position: relative;
+
+        &::after {
+          ${afterElement};
+          border-bottom: ${isSelected && `2px solid ${colors[NEGATIVE].text}`};
+
+          transform: ${isSelected ? `scaleX(1)` : `scaleX(0.05)`};
+        }
+
+        ${TabButton}:hover & {
+          opacity: ${isSelected ? `inherit` : 0.64};
+
+          &::after {
+            ${afterElement};
+            border-bottom: 2px solid ${colors[NEGATIVE].text};
+            transform: scaleX(1);
+            transition: 0.5s transform cubic-bezier(0, 0, 0.1, 1);
+          }
+        }
+      `}
+    >
+      {children}
+    </span>
+  )
+}
+
+Label.propTypes = {
+  isSelected: PropTypes.bool.isRequired,
+  children: PropTypes.node.isRequired,
+}
+
+const Count = styled.span`
+  font-weight: lighter;
+  font-size: smaller;
+
+  ${TabButton}:hover & {
+    opacity: ${({ isSelected }) => (isSelected ? `inherit` : 0.64)};
   }
 `
+
+const Tab = ({ id, onClick, isSelected, label, count }) => (
+  <TabButton role="tab" onClick={onClick} isSelected={isSelected}>
+    <Label isSelected={isSelected}>{label}</Label>
+    <Count isSelected={isSelected} data-cy={`${id}-count`}>
+      {" "}
+      ({count})
+    </Count>
+  </TabButton>
+)
+
+Tab.propTypes = {
+  onClick: PropTypes.func.isRequired,
+  isSelected: PropTypes.bool.isRequired,
+  id: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  count: PropTypes.number.isRequired,
+}
 
 const ExploreMenu = ({
   selectedCategory,
   setSelectedCategory,
   filteredCount,
-  sortOrder,
-  setSortOrder,
-  children,
 }) => (
   <div
+    role="tablist"
     css={`
-      margin-bottom: 2rem;
+       {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        margin: 0;
+        list-style: none;
+        align-items: center;
+        justify-content: center;
+      }
     `}
+    data-cy="tabbar"
   >
-    <div
-      style={{
-        display: `flex`,
-        justifyContent: `space-between`,
-        padding: `2rem 0`,
-      }}
-    >
-      <ul
-        style={{
-          display: `flex`,
-          flexDirection: `row`,
-          gap: `2rem`,
-          margin: 0,
-          listStyle: `none`,
-          alignItems: "center",
-        }}
-        data-cy="tabbar"
-      >
-        <li>
-          <TabButton
-            onClick={() => setSelectedCategory("campaigns")}
-            isSelected={selectedCategory === "campaigns"}
-          >
-            Campaigns
-            <span data-cy="campaigns-count">
-              {" "}
-              ({filteredCount["campaigns"]})
-            </span>
-          </TabButton>
-        </li>
+    <Tab
+      onClick={() => setSelectedCategory("campaigns")}
+      isSelected={selectedCategory === "campaigns"}
+      id="campaigns"
+      label="Campaigns"
+      count={filteredCount["campaigns"]}
+    />
+    <Tab
+      onClick={() => setSelectedCategory("platforms")}
+      isSelected={selectedCategory === "platforms"}
+      id="platforms"
+      label="Platforms"
+      count={filteredCount["platforms"]}
+    />
 
-        <li>
-          <TabButton
-            onClick={() => setSelectedCategory("platforms")}
-            isSelected={selectedCategory === "platforms"}
-          >
-            Platforms
-            <span data-cy="platforms-count">
-              {" "}
-              ({filteredCount["platforms"]})
-            </span>
-          </TabButton>
-        </li>
-
-        <li>
-          <TabButton
-            onClick={() => setSelectedCategory("instruments")}
-            isSelected={selectedCategory === "instruments"}
-          >
-            Instruments
-            <span data-cy="instruments-count">
-              {" "}
-              ({filteredCount["instruments"]})
-            </span>
-          </TabButton>
-        </li>
-      </ul>
-
-      <SortMenu
-        sortOrder={sortOrder}
-        setSortOrder={setSortOrder}
-        category={selectedCategory}
-      />
-    </div>
-
-    {children}
+    <Tab
+      onClick={() => setSelectedCategory("instruments")}
+      isSelected={selectedCategory === "instruments"}
+      id="instruments"
+      label="Instruments"
+      count={filteredCount["instruments"]}
+    />
   </div>
 )
 
@@ -124,13 +145,6 @@ ExploreMenu.propTypes = {
     platforms: PropTypes.number.isRequired,
     instruments: PropTypes.number.isRequired,
   }).isRequired,
-  sortOrder: PropTypes.string.isRequired,
-  setSortOrder: PropTypes.func.isRequired,
-  children: PropTypes.oneOfType([
-    PropTypes.bool,
-    PropTypes.element,
-    PropTypes.arrayOf(PropTypes.element),
-  ]),
 }
 
 export default ExploreMenu

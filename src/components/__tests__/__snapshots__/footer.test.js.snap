@@ -1,6 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Footer renders correctly 1`] = `
+.c10.c10 {
+  color: #aac9ff;
+}
+
 .c6.c6 {
   list-style: none;
   margin: 0;
@@ -57,12 +61,12 @@ exports[`Footer renders correctly 1`] = `
   grid-column: 11 / span 2;
 }
 
-.c10.c10 {
+.c11.c11 {
   grid-column: 1 / span 12;
   background-color: rgba(255,255,255,0.2);
 }
 
-.c11.c11 {
+.c12.c12 {
   grid-column: 1 / span 12;
   display: -webkit-box;
   display: -webkit-flex;
@@ -74,7 +78,7 @@ exports[`Footer renders correctly 1`] = `
   justify-content: space-between;
 }
 
-.c12.c12 {
+.c13.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -86,7 +90,7 @@ exports[`Footer renders correctly 1`] = `
   font-weight: bold;
 }
 
-.c13.c13 {
+.c14.c14 {
   background-image: url("https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png");
   background-size: cover;
   background-position: center;
@@ -94,11 +98,11 @@ exports[`Footer renders correctly 1`] = `
   height: 100px;
 }
 
-.c14.c14 {
+.c15.c15 {
   font-weight: normal;
 }
 
-.c15.c15 {
+.c16.c16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -110,7 +114,7 @@ exports[`Footer renders correctly 1`] = `
   text-transform: uppercase;
 }
 
-.c16.c16 {
+.c17.c17 {
   text-align: center;
 }
 
@@ -254,48 +258,86 @@ exports[`Footer renders correctly 1`] = `
       >
         <li>
           <a
+            className="c10"
             data-cy="admg-website-link"
             href="https://earthdata.nasa.gov/esds/impact/admg"
             rel="noopener noreferrer"
-            style={
-              Object {
-                "color": "#aac9ff",
-              }
-            }
             target="_blank"
           >
-            ADMG Website
+            <svg
+              height="16"
+              role="img"
+              version="1.1"
+              viewBox="0 0 16 16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>
+                External Link
+              </title>
+              <rect
+                fill="none"
+                height="16"
+                width="16"
+              />
+              <path
+                d="M3,5h4V3H1v12h12V9h-2v4H3V5z M16,8V0L8,0v2h4.587L6.294,8.294l1.413,1.413L14,3.413V8H16z"
+                fill="#aac9ff"
+              />
+            </svg>
+            <span>
+              ADMG Website
+            </span>
           </a>
         </li>
         <li>
           <a
+            className="c10"
             data-cy="impact-website-link"
             href="https://earthdata.nasa.gov/esds/impact"
             rel="noopener noreferrer"
-            style={
-              Object {
-                "color": "#aac9ff",
-              }
-            }
             target="_blank"
           >
-            Impact Website
+            <svg
+              height="16"
+              role="img"
+              version="1.1"
+              viewBox="0 0 16 16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>
+                External Link
+              </title>
+              <rect
+                fill="none"
+                height="16"
+                width="16"
+              />
+              <path
+                d="M3,5h4V3H1v12h12V9h-2v4H3V5z M16,8V0L8,0v2h4.587L6.294,8.294l1.413,1.413L14,3.413V8H16z"
+                fill="#aac9ff"
+              />
+            </svg>
+            <span>
+              Impact Website
+            </span>
           </a>
         </li>
       </ul>
     </div>
     <hr
-      className="c10"
+      className="c11"
     />
     <div
-      className="c11"
+      className="c12"
     >
       <div
-        className="c12"
+        className="c13"
       >
         <div
           aria-hidden="true"
-          className="c13"
+          className="c14"
         />
         <div
           data-cy="footer-credits"
@@ -311,7 +353,7 @@ exports[`Footer renders correctly 1`] = `
             NASA Official:
              
             <span
-              className="c14"
+              className="c15"
             >
               Rahul Ramachandran
             </span>
@@ -319,12 +361,12 @@ exports[`Footer renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="c15"
+        className="c16"
       />
     </div>
   </div>
   <div
-    className="c16"
+    className="c17"
     data-cy="footer-credit-devseed"
   >
     © 
@@ -332,17 +374,36 @@ exports[`Footer renders correctly 1`] = `
     , Built by
      
     <a
+      className="c10"
       data-cy="devseed-website-link"
       href="https://www.developmentseed.org"
       rel="noopener noreferrer"
-      style={
-        Object {
-          "color": "#aac9ff",
-        }
-      }
       target="_blank"
     >
-      Development Seed
+      <svg
+        height="16"
+        role="img"
+        version="1.1"
+        viewBox="0 0 16 16"
+        width="16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>
+          External Link
+        </title>
+        <rect
+          fill="none"
+          height="16"
+          width="16"
+        />
+        <path
+          d="M3,5h4V3H1v12h12V9h-2v4H3V5z M16,8V0L8,0v2h4.587L6.294,8.294l1.413,1.413L14,3.413V8H16z"
+          fill="#aac9ff"
+        />
+      </svg>
+      <span>
+        Development Seed
+      </span>
     </a>
     .
   </div>

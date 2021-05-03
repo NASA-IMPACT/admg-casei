@@ -40,6 +40,10 @@ exports[`Data Section matches snapshot 1`] = `
   align-self: end;
 }
 
+.c8.c8 {
+  color: #aac9ff;
+}
+
 .c4.c4 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -346,17 +350,36 @@ exports[`Data Section matches snapshot 1`] = `
             CAMP2Ex P-3 Remotely Sensed Aerosol Data
           </label>
           <a
+            className="c8"
             data-cy="doi-link"
             href="http://dx.doi.org/10.5067/Airborne/CAMP2Ex_Aerosol_AircraftRemoteSensing_P3_Data_1"
             rel="noopener noreferrer"
-            style={
-              Object {
-                "color": "#aac9ff",
-              }
-            }
             target="_blank"
           >
-            10.5067/Airborne/CAMP2Ex_Aerosol_AircraftRemoteSensing_P3_Data_1
+            <svg
+              height="16"
+              role="img"
+              version="1.1"
+              viewBox="0 0 16 16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>
+                External Link
+              </title>
+              <rect
+                fill="none"
+                height="16"
+                width="16"
+              />
+              <path
+                d="M3,5h4V3H1v12h12V9h-2v4H3V5z M16,8V0L8,0v2h4.587L6.294,8.294l1.413,1.413L14,3.413V8H16z"
+                fill="#aac9ff"
+              />
+            </svg>
+            <span>
+              10.5067/Airborne/CAMP2Ex_Aerosol_AircraftRemoteSensing_P3_Data_1
+            </span>
           </a>
         </div>
         <div

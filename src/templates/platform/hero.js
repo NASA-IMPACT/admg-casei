@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import Hero from "../../components/hero"
 import { PlatformIcon } from "../../icons"
@@ -15,24 +15,25 @@ export default function PlatformHero({
 }) {
   return (
     <Hero
-      tagTitle={shortname}
+      tagline={shortname}
       title={longname}
+      image={
+        image ? (
+          <GatsbyImage
+            image={getImage(image.gatsbyImg)}
+            alt={image.description}
+          />
+        ) : (
+          <PlatformIcon size="huge" />
+        )
+      }
       textToImageRatio={[5, 3]}
       stats={[
         { label: "Campaigns", number: campaigns },
         { label: "Flights", number: collectionPeriods },
       ]}
       id="platform"
-    >
-      {image && image.gatsbyImg ? (
-        <GatsbyImage
-          image={image.gatsbyImg.childImageSharp.gatsbyImageData}
-          alt={image.description}
-        />
-      ) : (
-        <PlatformIcon size="huge" />
-      )}
-    </Hero>
+    />
   )
 }
 export const platformHeroFields = graphql`

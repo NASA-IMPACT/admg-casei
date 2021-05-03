@@ -175,7 +175,7 @@ export default function OverviewSection({
                   .join(", ") || "N/A",
             },
             {
-              title: "Measurement Regions",
+              title: "Vertical Measurement Regions",
               content:
                 measurementRegions.map(x => x.longname).join(", ") || "N/A",
             },

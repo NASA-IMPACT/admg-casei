@@ -7,7 +7,7 @@ module.exports = {
   siteMetadata: {
     title: `Catalog of Archived Suborbital Earth Science Investigations`,
     shortname: `NASA | CASEI`,
-    description: `Explore NASA’s catalog of airborne and field campaign observations.`,
+    description: `An inventory of NASA’s airborne and field campaigns`,
     author: `@developmentseed`,
   },
   plugins: [
@@ -54,6 +54,16 @@ module.exports = {
     {
       resolve: `gatsby-plugin-create-client-paths`,
       options: { prefixes: [`/edit/*`] },
+    },
+    // bundle analysis
+    `gatsby-plugin-perf-budgets`, // located at /_report.html
+    {
+      resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
+      options: {
+        // devMode: true,
+        // disable: true,
+        analyzerPort: 8001,
+      },
     },
   ],
 }

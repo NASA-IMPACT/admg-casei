@@ -10,6 +10,12 @@ const { createRemoteFileNode } = require("gatsby-source-filesystem")
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions
   const typeDefs = `
+    type website_detail implements Node {
+      order_priority: String
+      title: String
+      url: String
+      website_types: String
+    }
     type campaign implements Node {
       aliases: [alias] @link
       deployments: [deployment] @link
@@ -24,6 +30,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       repositories: [repository] @link
       seasons: [season] @link
       significant_events: [significant_event] @link
+      website_details: website_detail
       logo: image @link
     }
     type collection_period implements Node {
@@ -266,9 +273,6 @@ exports.createPages = async ({ graphql, actions }) => {
 }
 
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
-  actions.setWebpackConfig({
-    node: { fs: "empty" },
-  })
   if (stage === "build-html") {
     actions.setWebpackConfig({
       module: {

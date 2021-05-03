@@ -1,8 +1,11 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { Link } from "gatsby"
+import styled from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
 
-import { layout } from "../theme"
+import { POSITIVE } from "../utils/constants"
+import { colors, layout } from "../theme"
 import DateList from "./date-list-hover"
 
 export const HeroStats = ({ statList }) => (
@@ -40,45 +43,50 @@ HeroStats.propTypes = {
   ).isRequired,
 }
 
+const Container = styled.section`
+  display: grid;
+  grid-template-columns: 1fr minmax(auto, ${layout.maxWidth}) 1fr;
+  width: 100vw;
+  min-height: 35rem;
+  align-content: center;
+  margin-bottom: 6rem;
+  background: ${({ backgroundImage, ratioInPercent }) =>
+    backgroundImage
+      ? `linear-gradient(90deg, rgba(12,21,32, 0.8) 0%, rgba(12,21,32, 0.7)${
+          ratioInPercent - 20
+        }%, rgba(12,21,32, 0.0)${ratioInPercent + 20}%)`
+      : null};
+`
+
 export default function Hero({
-  tagTitle,
+  tagline,
   title,
-  blockTitle,
-  subTitle,
   description,
   stats,
-  children,
+  cta,
+  image,
   textToImageRatio = [3, 5],
   backgroundImage,
   id,
 }) {
   const ratioInPercent =
     (100 / (textToImageRatio[0] + textToImageRatio[1])) * textToImageRatio[0]
-  const imageStyle = backgroundImage
-    ? {
-        background: `linear-gradient(90deg, rgba(12,21,32, 0.8) 0%, rgba(12,21,32, 0.7)${
-          ratioInPercent - 20
-        }%, rgba(12,21,32, 0.0)${ratioInPercent + 20}%)`,
-      }
-    : null
+
   return (
-    <section
-      style={{
-        ...imageStyle,
-        display: `grid`,
-        gridTemplateColumns: `1fr minmax(auto,  ${layout.maxWidth}) 1fr`,
-        width: `100vw`,
-        minHeight: `35rem`,
-        alignContent: `center`,
-        marginBottom: `6rem`,
-      }}
+    <Container
       data-cy={`${id}-hero`}
+      backgroundImage={backgroundImage}
+      ratioInPercent={ratioInPercent}
     >
       <div
         css={`
           grid-area: 1 / 2 / 1 / 2;
+
           display: grid;
           grid-template-columns: ${textToImageRatio[0]}fr ${textToImageRatio[1]}fr;
+          grid-template-areas:
+            "title image"
+            "extras image";
           grid-gap: 0.5rem;
           padding: 0 ${layout.pageMargin};
         `}
@@ -86,47 +94,65 @@ export default function Hero({
         <div
           css={`
             align-self: end;
-            grid-area: 1 / 1 / 1 / 1;
+            grid-area: title;
           `}
         >
-          <p
-            css={`
-              text-transform: uppercase;
-            `}
-          >
-            {tagTitle}
-          </p>
+          {tagline && (
+            <p
+              css={`
+                text-transform: uppercase;
+              `}
+            >
+              {tagline}
+            </p>
+          )}
+
           <h1>{title}</h1>
-          {blockTitle && <h2>{blockTitle}</h2>}
-          {subTitle && <p>{subTitle}</p>}
         </div>
 
         <div
           css={`
-            align-self: start;
-            grid-area: 2 / 1 / 2 / 1;
+            grid-area: extras;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
           `}
         >
           {description && <p>{description}</p>}
+
+          {stats && <HeroStats statList={stats} />}
+
+          {cta && (
+            <div
+              css={`
+                height: 3rem;
+              `}
+            >
+              <Link
+                to="/explore"
+                css={`
+                  color: ${colors[POSITIVE].text} !important;
+                  background-color: ${colors[POSITIVE].background};
+                  font-weight: bold;
+                  padding: 1rem 5rem;
+                `}
+                data-cy="cta-link"
+              >
+                {cta}
+              </Link>
+            </div>
+          )}
         </div>
 
-        {children && (
+        {image && (
           <div
             css={`
-              grid-area: 1 / 2 / 3 / 3;
+              align-self: center;
+              justify-self: end;
+              grid-area: image;
             `}
           >
-            {children}
-          </div>
-        )}
-
-        {stats && (
-          <div
-            css={`
-              grid-area: 2 / 1 / 2 / 1;
-            `}
-          >
-            <HeroStats statList={stats} />
+            {image}
           </div>
         )}
       </div>
@@ -142,31 +168,29 @@ export default function Hero({
           <GatsbyImage
             image={backgroundImage.nasaImg.childImageSharp.gatsbyImageData}
             alt={backgroundImage.nasaImgAlt}
-            // TODO: does not take effect
             objectPosition={"center top"}
             css={`
-              max-height: 35rem;
+              min-height: 100%;
+              max-height: 60vh;
               min-width: 55rem;
-              object-position: center top; /* TODO: does not take effect */
             `}
           />
         </div>
       )}
-    </section>
+    </Container>
   )
 }
 
 Hero.propTypes = {
-  tagTitle: PropTypes.string,
-  title: PropTypes.string,
-  blockTitle: PropTypes.string,
-  subTitle: PropTypes.string,
+  tagline: PropTypes.string,
+  title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
   description: PropTypes.string,
   stats: PropTypes.arrayOf(
     PropTypes.shape({ number: PropTypes.number, label: PropTypes.string })
   ),
-  children: PropTypes.node,
+  cta: PropTypes.node,
   textToImageRatio: PropTypes.arrayOf(PropTypes.number),
+  image: PropTypes.node,
   backgroundImage: PropTypes.shape({
     nasaImgAlt: PropTypes.string.isRequired,
     nasaImg: PropTypes.shape({

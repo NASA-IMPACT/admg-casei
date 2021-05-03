@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import Hero from "../../components/hero"
 import { InstrumentIcon } from "../../icons"
@@ -14,22 +14,36 @@ export default function InstrumentHero({
 }) {
   return (
     <Hero
-      tagTitle="Instrument"
-      title={shortname}
-      subTitle={longname}
+      tagline="Instrument"
+      title={
+        <>
+          {shortname}
+          <br />
+          <span
+            css={`
+              font-size: 1.5rem;
+              line-height: 1.75rem;
+              font-weight: normal;
+            `}
+          >
+            {longname}
+          </span>
+        </>
+      }
       description={description}
+      image={
+        image ? (
+          <GatsbyImage
+            image={getImage(image.gatsbyImg)}
+            alt={image.description}
+          />
+        ) : (
+          <InstrumentIcon size="huge" />
+        )
+      }
       textToImageRatio={[5, 3]}
       id="instrument"
-    >
-      {image && image.gatsbyImg ? (
-        <GatsbyImage
-          image={image.gatsbyImg.childImageSharp.gatsbyImageData}
-          alt={image.description}
-        />
-      ) : (
-        <InstrumentIcon size="huge" />
-      )}
-    </Hero>
+    />
   )
 }
 export const instrumentHeroFields = graphql`
@@ -41,7 +55,11 @@ export const instrumentHeroFields = graphql`
       description
       gatsbyImg {
         childImageSharp {
-          gatsbyImageData(height: 200, layout: FIXED, placeholder: BLURRED)
+          gatsbyImageData(
+            height: 400
+            layout: CONSTRAINED
+            placeholder: BLURRED
+          )
         }
       }
     }
