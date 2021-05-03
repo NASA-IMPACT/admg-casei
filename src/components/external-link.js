@@ -24,7 +24,13 @@ export default function ExternalLink({
       data-cy={`${id}-link`}
     >
       <ExternalLinkIcon color={colors[mode].linkText} />
-      <span>{label || children}</span>
+      <span
+        css={`
+          padding-left: 0.25rem;
+        `}
+      >
+        {label || children}
+      </span>
     </a>
   )
 }
