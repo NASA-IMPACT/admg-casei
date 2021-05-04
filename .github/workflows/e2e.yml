@@ -73,7 +73,7 @@ jobs:
         run: yarn install
 
       - name: Build
-        run: yarn build:incremental
+        run: yarn build
 
       - name: Test End-to-end
         uses: cypress-io/github-action@v2
