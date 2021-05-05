@@ -4,7 +4,6 @@ import { graphql } from "gatsby"
 import VisuallyHidden from "@reach/visually-hidden"
 import { format } from "date-fns"
 
-import api from "../utils/api"
 import { NEGATIVE } from "../utils/constants"
 import { ArrowIcon } from "../icons"
 import { colors } from "../theme"
@@ -41,7 +40,6 @@ export default function Explore({ data, location }) {
   } = data
   const { selectedFilterId, defaultExploreCategory } = location.state || {}
 
-  const [isLoading, setLoading] = useState(false)
   const [selectedCategory, setSelectedCategory] = useState(
     defaultExploreCategory || "campaigns"
   )
@@ -112,19 +110,23 @@ export default function Explore({ data, location }) {
 
   const inputElement = useRef(null)
 
-  const submitSearch = async e => {
-    setLoading(true)
+  const submitSearch = e => {
     e.preventDefault()
     let searchstring = inputElement.current.value
 
-    const result = await Promise.all(
-      ["campaign", "platform", "instrument"].map(category =>
-        api.fetchSearchResult(category, searchstring)
-      )
-    )
+    const result = [
+      allCampaign.list
+        .filter(campaign => campaign.shortname.includes(searchstring))
+        .map(x => x.id),
+      allPlatform.list
+        .filter(platform => platform.shortname.includes(searchstring))
+        .map(x => x.id),
+      allInstrument.list
+        .filter(instrument => instrument.shortname.includes(searchstring))
+        .map(x => x.id),
+    ]
 
     setSearchResult(result.flat())
-    setLoading(false)
   }
 
   const resetSearch = () => {
@@ -273,7 +275,7 @@ export default function Explore({ data, location }) {
             />
           )}
         </div>
-        <ExploreSection isLoading={isLoading}>
+        <ExploreSection>
           {selectedCategory === "campaigns" &&
             campaignList.filtered.map(campaign => {
               return (
