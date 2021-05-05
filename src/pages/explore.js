@@ -110,19 +110,24 @@ export default function Explore({ data, location }) {
 
   const inputElement = useRef(null)
 
-  const submitSearch = e => {
-    e.preventDefault()
-    let searchstring = inputElement.current.value
-
+  const submitSearch = searchstring => {
     const result = [
       allCampaign.list
-        .filter(campaign => campaign.shortname.includes(searchstring))
+        .filter(campaign =>
+          campaign.shortname.toLowerCase().includes(searchstring.toLowerCase())
+        )
         .map(x => x.id),
       allPlatform.list
-        .filter(platform => platform.shortname.includes(searchstring))
+        .filter(platform =>
+          platform.shortname.toLowerCase().includes(searchstring.toLowerCase())
+        )
         .map(x => x.id),
       allInstrument.list
-        .filter(instrument => instrument.shortname.includes(searchstring))
+        .filter(instrument =>
+          instrument.shortname
+            .toLowerCase()
+            .includes(searchstring.toLowerCase())
+        )
         .map(x => x.id),
     ]
 

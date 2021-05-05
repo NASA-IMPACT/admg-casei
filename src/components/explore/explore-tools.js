@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import FilterMenu from "./filter-menu"
-import Searchbar from "./searchbar"
+import FilterByTextInput from "./filter-by-textinput"
 import DateMenu from "./date-menu"
 
 import { FilterIcon } from "../../icons"
@@ -29,7 +29,7 @@ const ExploreTools = React.forwardRef(
   ) => {
     return (
       <form
-        onSubmit={submitSearch}
+        onSubmit={e => e.preventDefault()}
         onReset={resetSearch}
         css={`
           display: flex;
@@ -44,10 +44,9 @@ const ExploreTools = React.forwardRef(
             display: flex;
           `}
         >
-          <Searchbar
+          <FilterByTextInput
             ref={ref}
-            toggleMap={toggleMap}
-            isDisplayingMap={isDisplayingMap}
+            submitSearch={submitSearch}
             category={category}
           />
           {category === "campaigns" && (
