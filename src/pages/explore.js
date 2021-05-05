@@ -111,6 +111,7 @@ export default function Explore({ data, location }) {
   const inputElement = useRef(null)
 
   const submitSearch = searchstring => {
+    // TODO: refactor
     const result = [
       allCampaign.list
         .filter(campaign =>
