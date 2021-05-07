@@ -406,6 +406,7 @@ export const query = graphql`
   fragment campaignFields on campaign {
     id
     shortname: short_name # required for sort
+    longname: long_name # required for filter by text
     seasons {
       id # required for filter
     }
@@ -431,6 +432,7 @@ export const query = graphql`
 
   fragment platformFields on platform {
     shortname: short_name # required for sort
+    longname: long_name # required for filter by text
     id
     collectionPeriodIds: collection_periods # required for sort
     campaigns {
@@ -449,6 +451,7 @@ export const query = graphql`
 
   fragment instrumentFields on instrument {
     shortname: short_name # required for sort
+    longname: long_name # required for filter by text
     id
     measurementType: measurement_type {
       id # required for filter
@@ -465,6 +468,7 @@ export const query = graphql`
 const campaignShape = PropTypes.shape({
   id: PropTypes.string.isRequired,
   shortname: PropTypes.string.isRequired,
+  longname: PropTypes.string,
   seasons: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
@@ -501,6 +505,7 @@ const campaignShape = PropTypes.shape({
 
 const platformShape = PropTypes.shape({
   shortname: PropTypes.string.isRequired,
+  longname: PropTypes.string,
   id: PropTypes.string.isRequired,
   collectionPeriodIds: PropTypes.arrayOf(PropTypes.string),
   campaigns: PropTypes.arrayOf(PropTypes.shape({ id: PropTypes.string })),
@@ -515,6 +520,7 @@ const platformShape = PropTypes.shape({
 
 const instrumentShape = PropTypes.shape({
   shortname: PropTypes.string.isRequired,
+  longname: PropTypes.string,
   id: PropTypes.string.isRequired,
   measurementType: PropTypes.shape({
     id: PropTypes.string.isRequired,

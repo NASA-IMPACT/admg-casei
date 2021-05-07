@@ -48,7 +48,8 @@ export default function useInstrumentList(
       searchResult
         ? instrument.shortname
             .toLowerCase()
-            .includes(searchResult.toLowerCase())
+            .includes(searchResult.toLowerCase()) ||
+          instrument.longname.toLowerCase().includes(searchResult.toLowerCase())
         : true
     )
     setInstrumentList(prev => ({

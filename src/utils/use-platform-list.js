@@ -76,7 +76,10 @@ export default function usePlatformList(
     // update after entering text in the search bar
     const filteredPlatformBySearch = queryResult.filter(platform =>
       searchResult
-        ? platform.shortname.toLowerCase().includes(searchResult.toLowerCase())
+        ? platform.shortname
+            .toLowerCase()
+            .includes(searchResult.toLowerCase()) ||
+          platform.longname.toLowerCase().includes(searchResult.toLowerCase())
         : true
     )
 

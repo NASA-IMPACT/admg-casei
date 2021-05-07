@@ -105,7 +105,10 @@ export default function useCampaignList(
     // update after entering text in the 'filter by name' field
     const filteredCampaignBySearch = queryResult.filter(campaign =>
       searchResult
-        ? campaign.shortname.toLowerCase().includes(searchResult.toLowerCase())
+        ? campaign.shortname
+            .toLowerCase()
+            .includes(searchResult.toLowerCase()) ||
+          campaign.longname?.toLowerCase().includes(searchResult.toLowerCase())
         : true
     )
 
