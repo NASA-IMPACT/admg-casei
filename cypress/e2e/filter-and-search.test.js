@@ -1,8 +1,6 @@
 /* eslint-disable jest/no-conditional-expect */
 /// <reference types="Cypress" />
 
-import api from "../../src/utils/api"
-
 // TODO: this test is having issues with reach portals
 // that are used to create the filter dropdown menus
 // see https://github.com/reach/reach-ui/issues/629
@@ -216,54 +214,6 @@ describe("Filter, Search and Sort", () => {
               expect(first > last).to.be.true
             })
         }
-      })
-    })
-  })
-
-  let searchApiStub
-  // Turns out, dealing with fetch requests in cypress isn't that easy:
-  // https://github.com/cypress-io/cypress/issues/95
-  describe.skip("the free text search", () => {
-    before(() => {
-      searchApiStub = cy
-        .stub(api, "fetchSearchResult")
-        .as("fetchSearchResultStub")
-
-      cy.get("[data-cy=explore-tools]").find("input").type("arctic")
-
-      cy.get("[data-cy=submit]").click()
-    })
-
-    it("should indicate the loading", () => {
-      cy.get("[data-cy=loading-indicator]").should("be.visible")
-    })
-
-    describe("on api success", () => {
-      before(() => {
-        searchApiStub.resolves(["id1", "id2"])
-      })
-
-      it("call the api and get a successfull response", () => {
-        // TODO: why does it claim not to be called? Why does it still call the implementation? What's going on with the stubbing here?
-        expect(api.fetchSearchResult).to.be.called
-
-        cy.get("[data-cy=loading-indicator]").should("not.be.visible")
-
-        cy.get("[data-cy=explore-tools]")
-          .find("input")
-          .should("have.value", "arctic")
-
-        cy.get(`[data-cy=campaigns-card]`).should("have.length.greaterThan", 1)
-      })
-    })
-
-    describe("on api failure", () => {
-      before(() => {
-        searchApiStub.returns(new Error("UUUPS, there was an error"))
-      })
-
-      it("displays an error message", () => {
-        cy.get("[data-cy=error-indicator]").should("be.visible")
       })
     })
   })
