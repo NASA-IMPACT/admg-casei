@@ -7,8 +7,17 @@ import { colors, layout } from "../theme"
 import { CaseiLogoIcon } from "../icons"
 import { NEGATIVE } from "../utils/constants"
 
-const Header = ({ shortname, children }) => (
-  <header>
+const Header = ({ shortname, children, mode, isHeaderFixed }) => (
+  <header
+    css={`
+      background-color: ${colors[mode].background};
+      z-index: 99;
+      position: ${isHeaderFixed ? "inherit" : "sticky"};
+      top: 0;
+      box-shadow: rgba(68, 63, 63, 0.08) 0px -1px 1px 0px,
+        rgba(68, 63, 63, 0.08) 0px 2px 6px 0px;
+    `}
+  >
     <div
       css={`
         margin: 0 auto;
@@ -54,10 +63,11 @@ const Header = ({ shortname, children }) => (
             align-items: center;
           `}
         >
-          <CaseiLogoIcon size="small" />
+          <CaseiLogoIcon size="small" color={colors[mode].text} />
           <div
             css={`
               font-size: 1.5rem;
+              color: ${colors[mode].text};
             `}
           >
             {shortname}
@@ -78,6 +88,8 @@ const Header = ({ shortname, children }) => (
 Header.propTypes = {
   shortname: PropTypes.string.isRequired,
   children: PropTypes.element,
+  mode: PropTypes.string.isRequired,
+  isHeaderFixed: PropTypes.bool,
 }
 
 export default Header

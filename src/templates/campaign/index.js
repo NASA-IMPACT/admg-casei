@@ -108,7 +108,7 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
   }
 
   return (
-    <Layout>
+    <Layout isHeaderFixed>
       <SEO title={campaign.shortname} lang="en" />
       <CampaignHero
         bounds={campaign.bounds}

@@ -1,6 +1,7 @@
 import React from "react"
 import renderer from "react-test-renderer"
 import Header from "../header"
+import { POSITIVE } from "../../utils/constants"
 
 describe("Header", () => {
   it("renders correctly", () => {
@@ -9,6 +10,7 @@ describe("Header", () => {
         <Header
           siteTitle="Site title from props"
           shortname="Shortname from props"
+          mode={POSITIVE}
         />
       )
       .toJSON()
