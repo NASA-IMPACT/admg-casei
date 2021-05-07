@@ -51,7 +51,7 @@ const FilterByTextInput = React.forwardRef(
             data-cy="explore-input"
             aria-label={`Filter ${category} by name`}
             name="filter by name"
-            placeholder="Enter name"
+            placeholder={`Enter ${category} name`}
             onChange={e => {
               e.preventDefault()
               setInputsize(Math.min(e.target.value.length, 140))
