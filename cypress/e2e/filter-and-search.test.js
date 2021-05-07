@@ -36,16 +36,16 @@ describe("Filter, Search and Sort", () => {
 
     cy.get("[data-cy=main-filter-label").should("exist").contains("Filter By")
 
-    cy.get(`[data-cy=season-filter-select]`).scrollTo("top").click()
+    // cy.get(`[data-cy=season-filter-select]`).scrollTo("top").click()
 
-    cy.get("[data-cy=filter-options]")
-      .scrollTo("top")
-      .contains("li", "boreal winter")
-      .click()
+    // cy.get("[data-cy=filter-options]")
+    //   .scrollTo("top")
+    //   .contains("li", "boreal winter")
+    //   .click()
 
-    cy.get("[data-cy=submit]").click()
+    // cy.get("[data-cy=submit]").click()
 
-    cy.window().should("have.prop", "beforeReload", true)
+    // cy.window().should("have.prop", "beforeReload", true)
 
     cy.get("[data-cy=explore-input]")
       .type("submitting some text")
@@ -105,36 +105,36 @@ describe("Filter, Search and Sort", () => {
 
         cy.get("[data-cy=sort-select]").should("exist")
 
-        cy.get(`[data-cy=${x.category}-card]`).then($cards => {
-          x.filterExamples.forEach(filterExample => {
-            const numBefore = $cards.length
+        // cy.get(`[data-cy=${x.category}-card]`).then($cards => {
+        //   x.filterExamples.forEach(filterExample => {
+        //     const numBefore = $cards.length
 
-            cy.get(`[data-cy=${filterExample.id}-filter-select]`).click()
-            cy.get("[data-cy=filter-options]")
-              .contains("li", filterExample.value)
-              .click()
+        //     cy.get(`[data-cy=${filterExample.id}-filter-select]`).click()
+        //     cy.get("[data-cy=filter-options]")
+        //       .contains("li", filterExample.value)
+        //       .click()
 
-            cy.get("[data-cy=filter-chip]").should("exist")
+        //     cy.get("[data-cy=filter-chip]").should("exist")
 
-            cy.get(`[data-cy=${x.category}-count]`)
-              .invoke("text")
-              .then(text => {
-                expect(Number(text.slice(2, -1))).to.be.lessThan(numBefore)
-              })
+        //     cy.get(`[data-cy=${x.category}-count]`)
+        //       .invoke("text")
+        //       .then(text => {
+        //         expect(Number(text.slice(2, -1))).to.be.lessThan(numBefore)
+        //       })
 
-            cy.get(`[data-cy=${x.category}-card]`)
-              .its("length")
-              .should("be.lt", numBefore)
+        //     cy.get(`[data-cy=${x.category}-card]`)
+        //       .its("length")
+        //       .should("be.lt", numBefore)
 
-            cy.get("[data-cy=filter-chip]").find("button").click()
+        //     cy.get("[data-cy=filter-chip]").find("button").click()
 
-            cy.get("[data-cy=filter-chip]").should("not.exist")
+        //     cy.get("[data-cy=filter-chip]").should("not.exist")
 
-            cy.get(`[data-cy=${x.category}-card]`)
-              .its("length")
-              .should("be.eq", numBefore)
-          })
-        })
+        //     cy.get(`[data-cy=${x.category}-card]`)
+        //       .its("length")
+        //       .should("be.eq", numBefore)
+        //   })
+        // })
       })
 
       it(`clear all ${x.category}`, () => {
