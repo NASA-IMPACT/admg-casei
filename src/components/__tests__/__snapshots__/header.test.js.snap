@@ -31,9 +31,24 @@ exports[`Header renders correctly 1`] = `
 .c2.c2 {
   margin: 0;
   z-index: 100;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 .c3.c3 {
+  background-color: #e9eaec;
+  height: 1.5rem;
+  width: 1px;
+}
+
+.c4.c4 {
   -webkit-text-decoration: none;
   text-decoration: none;
   display: grid;
@@ -46,12 +61,12 @@ exports[`Header renders correctly 1`] = `
   align-items: center;
 }
 
-.c4.c4 {
+.c5.c5 {
   font-size: 1.5rem;
   color: #262a31;
 }
 
-.c5.c5 {
+.c6.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -67,8 +82,11 @@ exports[`Header renders correctly 1`] = `
     <div
       className="c2"
     >
-      <a
+      <div
         className="c3"
+      />
+      <a
+        className="c4"
         href="/"
       >
         <svg
@@ -101,14 +119,14 @@ exports[`Header renders correctly 1`] = `
           </g>
         </svg>
         <div
-          className="c4"
+          className="c5"
         >
           Shortname from props
         </div>
       </a>
     </div>
     <div
-      className="c5"
+      className="c6"
     />
   </div>
 </header>

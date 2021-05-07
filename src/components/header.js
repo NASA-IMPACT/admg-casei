@@ -1,9 +1,11 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
+import PropTypes from "prop-types"
+import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 
-import { layout, colors } from "../theme"
+import { colors, layout } from "../theme"
 import { CaseiLogoIcon } from "../icons"
+import { NEGATIVE } from "../utils/constants"
 
 const Header = ({ shortname, children, mode, isHeaderFixed }) => (
   <header
@@ -30,8 +32,27 @@ const Header = ({ shortname, children, mode, isHeaderFixed }) => (
         css={`
           margin: 0;
           z-index: 100;
+          display: flex;
+          align-items: center;
+          gap: 1rem;
         `}
       >
+        <StaticImage
+          src="https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png"
+          alt="NASA's red, white and blue insignia, nicknamed the 'meatball'"
+          width={78} // make the blue circle match the svg logo of size 60
+          height={78} // make the blue circle match the svg logo of size 60
+          data-cy="nasa-logo"
+        />
+
+        <div
+          css={`
+            background-color: ${colors[NEGATIVE].text};
+            height: 1.5rem;
+            width: 1px;
+          `}
+        />
+
         <Link
           to="/"
           css={`
