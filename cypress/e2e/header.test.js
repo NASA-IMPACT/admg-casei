@@ -8,6 +8,14 @@ describe("Header", () => {
   })
   it("renders correctly", () => {
     cy.get("header").contains(site.siteMetadata.shortname)
+
+    cy.get("[data-cy=nasa-logo]").should($img => {
+      expect($img).to.have.attr(
+        "alt",
+        "NASA's red, white and blue insignia, nicknamed the 'meatball'"
+      )
+    })
+
     cy.get("nav")
       .find("li")
       .should($li => {
