@@ -1,4 +1,5 @@
 import Typography from "typography"
+import "@fontsource/titillium-web"
 
 import { NEGATIVE } from "../utils/constants"
 import { colors } from "../theme"

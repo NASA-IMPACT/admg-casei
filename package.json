@@ -8,6 +8,7 @@
     "Alice Rühl <alice@developmentseed.org>"
   ],
   "dependencies": {
+    "@fontsource/titillium-web": "^4.2.2",
     "@mapbox/geo-viewport": "^0.4.1",
     "@mapbox/mapbox-gl-draw": "^1.2.0",
     "@reach/accordion": "^0.12.1",
@@ -80,7 +81,6 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "build:incremental": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
     "deploy": "surge --project ./public --domain airborne-inventory.surge.sh",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
