@@ -2304,6 +2304,14 @@
     "@reach/utils" "0.12.1"
     tslib "^2.0.0"
 
+"@reach/auto-id@0.15.0":
+  version "0.15.0"
+  resolved "https://registry.yarnpkg.com/@reach/auto-id/-/auto-id-0.15.0.tgz#f46afebfc140b2099b95c7aec1f049d167d3833d"
+  integrity sha512-iACaCcZeqAhDf4OOwJpmHHS/LaRj9z3Ip8JmlhpCrFWV2YOIiiZk42amlBZX6CKH66Md+eriYZQk3TyAjk6Oxg==
+  dependencies:
+    "@reach/utils" "0.15.0"
+    tslib "^2.1.0"
+
 "@reach/descendants@0.12.1":
   version "0.12.1"
   resolved "https://registry.yarnpkg.com/@reach/descendants/-/descendants-0.12.1.tgz#dd124e15ee66327692043fea798cc4b6232c1522"
@@ -2311,6 +2319,17 @@
   dependencies:
     "@reach/utils" "0.12.1"
     tslib "^2.0.0"
+
+"@reach/disclosure@^0.15.0":
+  version "0.15.0"
+  resolved "https://registry.yarnpkg.com/@reach/disclosure/-/disclosure-0.15.0.tgz#8d9e42bf3f3217ec1a791004ece21de5a7d769fd"
+  integrity sha512-FOWgZHRA+HF3IDuaCS7XnXv/e4Cn+x3rvzzlF7Inyk9iXCgahxV7FMzpO7131ORKnjNF5J9ELQuuu2wHdglA4g==
+  dependencies:
+    "@reach/auto-id" "0.15.0"
+    "@reach/utils" "0.15.0"
+    prop-types "^15.7.2"
+    tiny-warning "^1.0.3"
+    tslib "^2.1.0"
 
 "@reach/listbox@^0.12.1":
   version "0.12.1"
@@ -2375,6 +2394,14 @@
     "@types/warning" "^3.0.0"
     tslib "^2.0.0"
     warning "^4.0.3"
+
+"@reach/utils@0.15.0":
+  version "0.15.0"
+  resolved "https://registry.yarnpkg.com/@reach/utils/-/utils-0.15.0.tgz#5b183d668f9bb900b2dec7a33c028a2a828d27b2"
+  integrity sha512-JHHN7T5ucFiuQbqkgv8ECbRWKfRiJxrO/xHR3fHf+f2C7mVs/KkJHhYtovS1iEapR4silygX9PY0+QUmHPOTYw==
+  dependencies:
+    tiny-warning "^1.0.3"
+    tslib "^2.1.0"
 
 "@reach/visually-hidden@^0.12.0":
   version "0.12.0"
@@ -16887,6 +16914,11 @@ timsort@^0.3.0:
   resolved "https://registry.yarnpkg.com/timsort/-/timsort-0.3.0.tgz#405411a8e7e6339fe64db9a234de11dc31e02bd4"
   integrity sha1-QFQRqOfmM5/mTbmiNN4R3DHgK9Q=
 
+tiny-warning@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/tiny-warning/-/tiny-warning-1.0.3.tgz#94a30db453df4c643d0fd566060d60a875d84754"
+  integrity sha512-lBN9zLN/oAf68o3zNXYrdCt1kP8WsiGW8Oo2ka41b2IM5JL/S1CTyX1rW0mb/zSuJun0ZUrDxx4sqvYS2FWzPA==
+
 tinycolor2@^1.4.1:
   version "1.4.2"
   resolved "https://registry.yarnpkg.com/tinycolor2/-/tinycolor2-1.4.2.tgz#3f6a4d1071ad07676d7fa472e1fac40a719d8803"
@@ -17089,7 +17121,7 @@ tslib@^1.10.0, tslib@^1.8.1, tslib@^1.9.0:
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
   integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
 
-tslib@^2, tslib@^2.0.0, tslib@^2.0.3, tslib@~2.2.0:
+tslib@^2, tslib@^2.0.0, tslib@^2.0.3, tslib@^2.1.0, tslib@~2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.2.0.tgz#fb2c475977e35e241311ede2693cee1ec6698f5c"
   integrity sha512-gS9GVHRU+RGn5KQM2rllAlR3dU6m7AcpJKdtH8gFvQiC4Otgk98XnmMU+nZenHt/+VhnBPWwgrJsyrdcw6i23w==

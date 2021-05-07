@@ -2,6 +2,11 @@ import React, { useState, useRef, useEffect } from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 import { format } from "date-fns"
+import {
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+} from "@reach/disclosure"
 
 import api from "../../utils/api"
 import { NEGATIVE } from "../../utils/constants"
@@ -223,12 +228,40 @@ export default function ExploreCampaigns({ data, location }) {
       </div>
 
       <ExploreSection isLoading={isLoading}>
-        {campaignList.filtered.map(campaign => {
+        {campaignList.filtered.slice(0, 20).map(campaign => {
           return (
             <CampaignCard shortname={campaign.shortname} key={campaign.id} />
           )
         })}
       </ExploreSection>
+
+      <Disclosure>
+        <DisclosureButton
+          css={`
+            background-color: transparent;
+            color: ${colors[NEGATIVE].text};
+            border: 1px solid ${colors[NEGATIVE].text};
+            margin: 3rem;
+            padding: 1rem 5rem;
+            text-transform: uppercase;
+          `}
+        >
+          Show all
+        </DisclosureButton>
+
+        <DisclosurePanel>
+          <ExploreSection isLoading={isLoading}>
+            {campaignList.filtered.slice(20).map(campaign => {
+              return (
+                <CampaignCard
+                  shortname={campaign.shortname}
+                  key={campaign.id}
+                />
+              )
+            })}
+          </ExploreSection>
+        </DisclosurePanel>
+      </Disclosure>
     </ExploreLayout>
   )
 }
