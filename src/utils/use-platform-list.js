@@ -75,7 +75,9 @@ export default function usePlatformList(
   useEffect(() => {
     // update after entering text in the search bar
     const filteredPlatformBySearch = queryResult.filter(platform =>
-      searchResult ? searchResult.includes(platform.id) : true
+      searchResult
+        ? platform.shortname.toLowerCase().includes(searchResult.toLowerCase())
+        : true
     )
 
     setPlatformList(prev => {

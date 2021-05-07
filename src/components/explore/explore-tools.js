@@ -14,7 +14,7 @@ const ExploreTools = React.forwardRef(
     {
       dateRange,
       setDateRange,
-      submitSearch,
+      setSearchResult,
       resetSearch,
       selectedFilterIds,
       addFilter,
@@ -55,7 +55,7 @@ const ExploreTools = React.forwardRef(
 
         <FilterByTextInput
           ref={ref}
-          submitSearch={submitSearch}
+          setSearchResult={setSearchResult}
           category={category}
         />
 
@@ -186,7 +186,7 @@ ExploreTools.propTypes = {
     end: PropTypes.instanceOf(Date),
   }).isRequired,
   setDateRange: PropTypes.func.isRequired,
-  submitSearch: PropTypes.func.isRequired,
+  setSearchResult: PropTypes.func.isRequired,
   resetSearch: PropTypes.func.isRequired,
   selectedFilterIds: PropTypes.arrayOf(PropTypes.string),
   addFilter: PropTypes.func.isRequired,

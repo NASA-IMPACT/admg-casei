@@ -55,8 +55,12 @@ export default function Explore({ data, location }) {
     start: null,
     end: null,
   })
-  const [searchResult, setSearchResult] = useState()
-  const [isDisplayingMap, toggleMap] = useState(true)
+  const [searchResult, setSearchResult] = useState({
+    campaigns: null,
+    platforms: null,
+    instruments: null,
+  })
+  const [isDisplayingMap, toggleMap] = useState(false)
 
   useEffect(() => {
     // update based on passed state
@@ -73,74 +77,50 @@ export default function Explore({ data, location }) {
     selectedFilterIds,
     geoFilterResult,
     dateRange,
-    searchResult
+    searchResult.campaigns
   )
 
   const platformList = usePlatformList(
     allPlatform.list,
     sortOrder.platforms,
     selectedFilterIds,
-    searchResult
+    searchResult.platforms
   )
 
   const instrumentList = useInstrumentList(
     allInstrument.list,
     sortOrder.instruments,
     selectedFilterIds,
-    searchResult
+    searchResult.instruments
   )
 
   const addFilter = id => setFilter([...selectedFilterIds, id])
+
   const removeFilter = id => setFilter(selectedFilterIds.filter(f => f !== id))
+
   const removeDateRange = () =>
     setDateRange({
       start: null,
       end: null,
     })
+
   const removeAoi = () => {
     setAoi(null)
     setGeoFilter(null)
   }
+
   const clearFilters = () => {
     setFilter([])
     removeDateRange()
     setAoi(null)
     setGeoFilter(null)
+    setSearchResult({ campaigns: null, platforms: null, instruments: null })
   }
 
   const inputElement = useRef(null)
 
-  const submitSearch = searchstring => {
-    // TODO: refactor
-    const result = [
-      allCampaign.list
-        .filter(campaign =>
-          campaign.shortname.toLowerCase().includes(searchstring.toLowerCase())
-        )
-        .map(x => x.id),
-      allPlatform.list
-        .filter(platform =>
-          platform.shortname.toLowerCase().includes(searchstring.toLowerCase())
-        )
-        .map(x => x.id),
-      allInstrument.list
-        .filter(instrument =>
-          instrument.shortname
-            .toLowerCase()
-            .includes(searchstring.toLowerCase())
-        )
-        .map(x => x.id),
-    ]
-
-    setSearchResult(result.flat())
-  }
-
   const resetSearch = () => {
-    setSearchResult([
-      ...allCampaign.list.map(x => x.id),
-      ...allPlatform.list.map(x => x.id),
-      ...allInstrument.list.map(x => x.id),
-    ])
+    setSearchResult({ campaigns: null, platforms: null, instruments: null })
   }
 
   const { getFilterLabelById, getFilterOptionsById } = selector({
@@ -187,7 +167,7 @@ export default function Explore({ data, location }) {
           ref={inputElement}
           dateRange={dateRange}
           setDateRange={setDateRange}
-          submitSearch={submitSearch}
+          setSearchResult={setSearchResult}
           resetSearch={resetSearch}
           selectedFilterIds={selectedFilterIds}
           addFilter={addFilter}
