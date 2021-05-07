@@ -1,6 +1,5 @@
 import Typography from "typography"
 
-import "@fontsource/titillium-web"
 /**
  * Titillium Web v9
  * 2 Styles: italic, normal

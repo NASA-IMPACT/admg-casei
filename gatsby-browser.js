@@ -9,6 +9,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 
+import "@fontsource/titillium-web"
+
 import AuthProvider from "./src/components/auth-provider"
 
 export const shouldUpdateScroll = ({ routerProps: { location } }) => {
