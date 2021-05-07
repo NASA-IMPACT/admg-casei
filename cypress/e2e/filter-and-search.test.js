@@ -36,9 +36,9 @@ describe("Filter, Search and Sort", () => {
 
     cy.get("[data-cy=main-filter-label").should("exist").contains("Filter By")
 
-    cy.get(`[data-cy=season-filter-select]`).click()
+    cy.get(`[data-cy=season-filter-select]`).scrollIntoView().click()
 
-    cy.get("[data-cy=filter-options]").contains("li", "boreal fall").click()
+    cy.get("[data-cy=filter-options]").contains("li", "boreal winter").click()
 
     cy.get("[data-cy=submit]").click()
 
@@ -56,7 +56,7 @@ describe("Filter, Search and Sort", () => {
       filterExamples: [
         { id: "focus", value: "Weather" },
         { id: "geophysical", value: "Clouds" },
-        { id: "season", value: "boreal fall" },
+        { id: "season", value: "boreal winter" },
         { id: "region", value: "rainforest" },
         { id: "platform", value: "C-23 Sherpa" },
       ],
