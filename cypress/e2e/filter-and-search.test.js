@@ -36,9 +36,12 @@ describe("Filter, Search and Sort", () => {
 
     cy.get("[data-cy=main-filter-label").should("exist").contains("Filter By")
 
-    cy.get(`[data-cy=season-filter-select]`).scrollIntoView().click()
+    cy.get(`[data-cy=season-filter-select]`).scrollTo("top").click()
 
-    cy.get("[data-cy=filter-options]").contains("li", "boreal winter").click()
+    cy.get("[data-cy=filter-options]")
+      .scrollTo("top")
+      .contains("li", "boreal winter")
+      .click()
 
     cy.get("[data-cy=submit]").click()
 
