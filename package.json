@@ -86,7 +86,7 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "lint": "eslint --ignore-path .gitignore \"**/*.{js,jsx}\"",
     "lint:fix": "eslint --ignore-path .gitignore \"**/*.{js,jsx}\" --fix",
-    "start": "npm run develop",
+    "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "jest",
