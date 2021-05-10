@@ -23,7 +23,7 @@ const FilterByTextInput = React.forwardRef(
           border: 1px solid ${colors[NEGATIVE].text};
           padding: 0.25rem;
           flex-grow: 1;
-          min-width: 20rem;
+          width: 30rem;
           display: flex;
           align-content: stretch;
         `}
@@ -48,9 +48,10 @@ const FilterByTextInput = React.forwardRef(
           aria-label={`Filter ${category.slice(0, -1)} by name`}
           name="filter by name"
           placeholder={`Enter ${category.slice(0, -1)} name`}
+          maxLength="50"
           onChange={e => {
             e.preventDefault()
-            setInputsize(Math.min(e.target.value.length, 140))
+            setInputsize(Math.min(e.target.value.length, 50))
             debounced(e.target.value)
           }}
           size={inputsize}
