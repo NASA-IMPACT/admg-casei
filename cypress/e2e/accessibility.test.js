@@ -24,6 +24,9 @@ function terminalLog(violations) {
 describe("Accessibility tests", () => {
   it("Has no detectable accessibility violations on load", () => {
     cy.visit("/")
+
+    cy.get("h1").should("exist")
+
     cy.injectAxe()
 
     cy.checkA11y(null, null, terminalLog)
@@ -31,9 +34,10 @@ describe("Accessibility tests", () => {
 
   it("Navigates to page /explore and checks for accessibility violations", () => {
     cy.visit("/explore")
-    cy.injectAxe()
 
     cy.get("[data-cy=tabbar]").should("exist")
+
+    cy.injectAxe()
 
     cy.checkA11y(null, null, terminalLog)
   })
