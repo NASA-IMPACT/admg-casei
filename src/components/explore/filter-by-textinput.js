@@ -45,7 +45,7 @@ const FilterByTextInput = React.forwardRef(
         <input
           autoComplete="off"
           data-cy="explore-input"
-          aria-label={`Filter ${category.slice(0, -1)} by name`}
+          aria-label={`Filter ${category} by name`}
           name="filter by name"
           placeholder={`Enter ${category.slice(0, -1)} name`}
           maxLength="50"
