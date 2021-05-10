@@ -98,6 +98,7 @@ const Home = ({ data }) => {
                 headline="Platforms"
                 description="Learn about the variety of air and Earth-based platforms NASA uses to study our home planet."
                 id="platforms"
+                spanWidth={3}
               />
               <Link
                 to="/explore"

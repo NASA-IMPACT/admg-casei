@@ -2,6 +2,15 @@
 
 exports[`Header renders correctly 1`] = `
 .c0.c0 {
+  background-color: #ffffff;
+  z-index: 99;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  box-shadow: rgba(68,63,63,0.08) 0px -1px 1px 0px,rgba(68,63,63,0.08) 0px 2px 6px 0px;
+}
+
+.c1.c1 {
   margin: 0 auto;
   max-width: 1280px;
   padding: 1.5rem 4rem;
@@ -19,12 +28,27 @@ exports[`Header renders correctly 1`] = `
   align-items: center;
 }
 
-.c1.c1 {
+.c2.c2 {
   margin: 0;
   z-index: 100;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1rem;
 }
 
-.c2.c2 {
+.c3.c3 {
+  background-color: #e9eaec;
+  height: 1.5rem;
+  width: 1px;
+}
+
+.c4.c4 {
   -webkit-text-decoration: none;
   text-decoration: none;
   display: grid;
@@ -37,26 +61,32 @@ exports[`Header renders correctly 1`] = `
   align-items: center;
 }
 
-.c3.c3 {
+.c5.c5 {
   font-size: 1.5rem;
+  color: #262a31;
 }
 
-.c4.c4 {
+.c6.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-<header>
+<header
+  className="c0"
+>
   <div
-    className="c0"
+    className="c1"
   >
     <div
-      className="c1"
+      className="c2"
     >
+      <div
+        className="c3"
+      />
       <a
-        className="c2"
+        className="c4"
         href="/"
       >
         <svg
@@ -76,9 +106,9 @@ exports[`Header renders correctly 1`] = `
             strokeWidth="1"
           >
             <g
-              fill="#FFF"
+              fill="#262a31"
               fillRule="nonzero"
-              stroke="#FFF"
+              stroke="#262a31"
               strokeWidth="0.5"
               transform="translate(-132.000000, -29.000000)"
             >
@@ -89,14 +119,14 @@ exports[`Header renders correctly 1`] = `
           </g>
         </svg>
         <div
-          className="c3"
+          className="c5"
         >
           Shortname from props
         </div>
       </a>
     </div>
     <div
-      className="c4"
+      className="c6"
     />
   </div>
 </header>

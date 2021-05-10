@@ -46,7 +46,6 @@ HeroStats.propTypes = {
 const Container = styled.section`
   display: grid;
   grid-template-columns: 1fr minmax(auto, ${layout.maxWidth}) 1fr;
-  width: 100vw;
   min-height: 35rem;
   align-content: center;
   margin-bottom: 6rem;
@@ -126,6 +125,8 @@ export default function Hero({
             <div
               css={`
                 height: 3rem;
+                /* to match h1 default margin-top */
+                margin-bottom: 1.5rem;
               `}
             >
               <Link
@@ -172,7 +173,6 @@ export default function Hero({
             css={`
               min-height: 100%;
               max-height: 60vh;
-              min-width: 55rem;
             `}
           />
         </div>

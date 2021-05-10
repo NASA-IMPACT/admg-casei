@@ -4,7 +4,6 @@ exports[`Header renders correctly 1`] = `
 .c0.c0 {
   display: grid;
   grid-template-columns: 1fr minmax(auto,1280px) 1fr;
-  width: 100vw;
   min-height: 35rem;
   -webkit-align-content: center;
   -ms-flex-line-pack: center;
@@ -80,7 +79,6 @@ exports[`Header renders with adjust ratios 1`] = `
 .c0.c0 {
   display: grid;
   grid-template-columns: 1fr minmax(auto,1280px) 1fr;
-  width: 100vw;
   min-height: 35rem;
   -webkit-align-content: center;
   -ms-flex-line-pack: center;

@@ -1,11 +1,17 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-export default function SectionHeader({ tagline, headline, description, id }) {
+export default function SectionHeader({
+  tagline,
+  headline,
+  description,
+  id,
+  spanWidth = 6,
+}) {
   return (
     <div
       css={`
-        grid-column: 1 / span 6;
+        grid-column: 1 / span ${spanWidth};
         align-self: end;
       `}
       data-cy={`${id}-section-header`}
@@ -42,4 +48,5 @@ SectionHeader.propTypes = {
   headline: PropTypes.string.isRequired,
   description: PropTypes.string,
   id: PropTypes.string.isRequired,
+  spanWidth: PropTypes.number,
 }

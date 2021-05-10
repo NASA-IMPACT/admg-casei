@@ -8,7 +8,7 @@ import { colors } from "../../theme"
 const List = styled.dl`
   display: grid;
   grid-gap: 0.5rem;
-  grid-template-columns: min-content 1fr;
+  grid-template-columns: 100%;
   grid-auto-rows: auto;
 
   dt {

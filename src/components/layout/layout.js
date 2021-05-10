@@ -20,13 +20,15 @@ import Header from "../header"
 import Nav from "../nav"
 import Footer from "../footer"
 
+import { POSITIVE } from "../../utils/constants"
+
 const Container = styled.div`
   display: flex;
   min-height: 100vh;
   flex-direction: column;
 `
 
-const Layout = ({ children }) => {
+const Layout = ({ children, isHeaderFixed }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -40,10 +42,20 @@ const Layout = ({ children }) => {
 
   return (
     <Container id="top" data-cy="page">
-      <Header shortname={data.site.siteMetadata.shortname}>
-        <Nav />
+      <Header
+        shortname={data.site.siteMetadata.shortname}
+        mode={POSITIVE}
+        isHeaderFixed={isHeaderFixed}
+      >
+        <Nav mode={POSITIVE} />
       </Header>
-      <main style={{ flexGrow: 1 }}>{children}</main>
+      <main
+        css={`
+          flex-grow: 1;
+        `}
+      >
+        {children}
+      </main>
       <Footer shortname={data.site.siteMetadata.shortname} />
     </Container>
   )
@@ -51,6 +63,10 @@ const Layout = ({ children }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  isHeaderFixed: PropTypes.bool,
+}
+Layout.defaultProps = {
+  isHeaderFixed: false,
 }
 
 export default Layout
