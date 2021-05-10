@@ -95,7 +95,7 @@ describe("Filter, Search and Sort", () => {
         cy.get("[data-cy=explore-input]").should(
           "have.attr",
           "aria-label",
-          "Search for campaigns, platforms or instruments"
+          `Filter ${x.category} by name`
         )
 
         cy.get("[data-cy=submit]").should("exist")
