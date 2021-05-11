@@ -23,18 +23,3 @@ import "./assertions"
 import "@cypress/code-coverage/support"
 import "cypress-axe"
 import "@testing-library/cypress/add-commands"
-
-// https://github.com/cypress-io/cypress/issues/95#issuecomment-347607198
-Cypress.on("window:before:load", win => {
-  win.fetch = (url, options) =>
-    new Promise(resolve => {
-      setTimeout(function () {
-        resolve({
-          ok: true,
-          json: () => {
-            url, options
-          },
-        })
-      }, 250)
-    })
-})
