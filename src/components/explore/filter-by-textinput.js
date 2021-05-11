@@ -1,30 +1,34 @@
 import React, { useState } from "react"
+import PropTypes from "prop-types"
+import { useDebouncedCallback } from "use-debounce"
 
 import { CloseIcon, SearchIcon } from "../../icons"
 import { NEGATIVE } from "../../utils/constants"
 import { colors } from "../../theme"
 
-const Searchbar = React.forwardRef((_props, ref) => {
-  const [inputsize, setInputsize] = useState(50)
+const FilterByTextInput = React.forwardRef(
+  ({ setSearchResult, category }, ref) => {
+    const [inputsize, setInputsize] = useState(50)
 
-  return (
-    <div
-      css={`
-        flex-grow: 1;
-        display: flex;
-        height: 2.5rem;
-        align-content: stretch;
-      `}
-    >
+    const debounced = useDebouncedCallback(
+      // function
+      value => setSearchResult(prev => ({ ...prev, [category]: value })),
+      // delay in ms
+      400
+    )
+
+    return (
       <div
         css={`
           border: 1px solid ${colors[NEGATIVE].text};
           padding: 0.25rem;
           flex-grow: 1;
+          width: 30rem;
+          display: flex;
+          align-content: stretch;
         `}
       >
         <button
-          type="submit"
           css={`
             border: none;
             flex-grow: 0;
@@ -41,10 +45,15 @@ const Searchbar = React.forwardRef((_props, ref) => {
         <input
           autoComplete="off"
           data-cy="explore-input"
-          aria-label="Search for campaigns, platforms or instruments"
-          name="search"
-          placeholder="Search for campaigns, platforms or instruments"
-          onChange={e => setInputsize(Math.min(e.target.value.length, 140))}
+          aria-label={`Filter ${category} by name`}
+          name="filter by name"
+          placeholder={`Enter ${category.slice(0, -1)} name`}
+          maxLength="50"
+          onChange={e => {
+            e.preventDefault()
+            setInputsize(Math.min(e.target.value.length, 50))
+            debounced(e.target.value)
+          }}
           size={inputsize}
           css={`
             border: none;
@@ -74,11 +83,16 @@ const Searchbar = React.forwardRef((_props, ref) => {
           </button>
         )}
       </div>
-    </div>
-  )
-})
+    )
+  }
+)
+
+FilterByTextInput.propTypes = {
+  setSearchResult: PropTypes.func.isRequired,
+  category: PropTypes.oneOf(["campaigns", "platforms", "instruments"]),
+}
 
 // https://reactjs.org/docs/forwarding-refs.html#displaying-a-custom-name-in-devtools
-Searchbar.displayName = "Searchbar"
+FilterByTextInput.displayName = "FilterByTextInput"
 
-export default Searchbar
+export default FilterByTextInput

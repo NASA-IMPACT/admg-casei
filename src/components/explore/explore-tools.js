@@ -2,20 +2,19 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import FilterMenu from "./filter-menu"
-import Searchbar from "./searchbar"
-import DateMenu from "./date-menu"
+import FilterByTextInput from "./filter-by-textinput"
+import FilterByDate from "./filter-by-date"
 
 import { FilterIcon } from "../../icons"
 import { NEGATIVE } from "../../utils/constants"
 import { colors } from "../../theme"
-import { breakpoints } from "../../theme"
 
 const ExploreTools = React.forwardRef(
   (
     {
       dateRange,
       setDateRange,
-      submitSearch,
+      setSearchResult,
       resetSearch,
       selectedFilterIds,
       addFilter,
@@ -29,179 +28,153 @@ const ExploreTools = React.forwardRef(
   ) => {
     return (
       <form
-        onSubmit={submitSearch}
+        onSubmit={e => e.preventDefault()}
         onReset={resetSearch}
         css={`
           display: flex;
           margin: 2rem 0;
-          flex-flow: column wrap;
+          flex-wrap: wrap;
+          align-content: stretch;
           border: 1px solid ${colors[NEGATIVE].text};
         `}
         data-cy="explore-tools"
       >
         <div
           css={`
+            padding: 0.25rem 0.75rem;
+            border: 1px solid ${colors[NEGATIVE].text};
             display: flex;
+            align-items: center;
+            gap: 0.55rem;
           `}
+          data-cy="main-filter-label"
         >
-          <Searchbar
-            ref={ref}
-            toggleMap={toggleMap}
-            isDisplayingMap={isDisplayingMap}
-            category={category}
-          />
-          {category === "campaigns" && (
-            <div
-              css={`
-                border: 1px solid ${colors[NEGATIVE].text};
-                padding: 0.25rem;
-              `}
-            >
-              <button
-                css={`
-                  border: none;
-                  flex-grow: 0;
-                  background: transparent;
-                  color: ${colors[NEGATIVE].text};
-                  vertical-align: middle;
-                  cursor: pointer;
-                `}
-                data-cy="map-toggle-btn"
-                onClick={e => {
-                  e.preventDefault()
-                  toggleMap(!isDisplayingMap)
-                }}
-              >
-                <span>{isDisplayingMap ? "Hide" : "Show"} Map</span>
-              </button>
-            </div>
-          )}
+          <FilterIcon color={colors[NEGATIVE].text} />
+          <strong>Filter By</strong>
         </div>
 
-        <div
-          css={`
-            flex-grow: 1;
-            display: flex;
-            align-content: stretch;
-          `}
-        >
-          <div
-            css={`
-              padding: 0.25rem 0.75rem;
-              border: 1px solid ${colors[NEGATIVE].text};
-              display: flex;
-              align-items: center;
-              gap: 0.55rem;
-            `}
-            data-cy="main-filter-label"
-          >
-            <FilterIcon color={colors[NEGATIVE].text} />
-            <strong>Filter By</strong>
-          </div>
+        <FilterByTextInput
+          ref={ref}
+          setSearchResult={setSearchResult}
+          category={category}
+        />
 
-          {category === "campaigns" && (
-            <div
-              css={`
-                display: inherit;
-                flex-grow: 1;
-                @media screen and (max-width: ${breakpoints["sm"]}) {
-                  display: block;
-                }
-              `}
-            >
-              <DateMenu
-                id="date"
-                label="Date range"
-                dateRange={dateRange}
-                setDateRange={setDateRange}
-              />
-              <FilterMenu
-                id="focus"
-                selectedFilterIds={selectedFilterIds}
-                addFilter={addFilter}
-                removeFilter={removeFilter}
-                label="Focus Area"
-                options={getFilterOptionsById("focus")}
-                category={category}
-              />
-              <FilterMenu
-                id="geophysical"
-                selectedFilterIds={selectedFilterIds}
-                addFilter={addFilter}
-                removeFilter={removeFilter}
-                label="Geophysical Concept"
-                options={getFilterOptionsById("geophysical")}
-                category={category}
-              />
-              <FilterMenu
-                id="season"
-                selectedFilterIds={selectedFilterIds}
-                addFilter={addFilter}
-                removeFilter={removeFilter}
-                label="Season"
-                options={getFilterOptionsById("season")}
-                category={category}
-              />
-              <FilterMenu
-                id="region"
-                selectedFilterIds={selectedFilterIds}
-                addFilter={addFilter}
-                removeFilter={removeFilter}
-                label="Geographical Region"
-                options={getFilterOptionsById("region")}
-                category={category}
-              />
-              <FilterMenu
-                id="platform"
-                selectedFilterIds={selectedFilterIds}
-                addFilter={addFilter}
-                removeFilter={removeFilter}
-                label="Platform"
-                options={getFilterOptionsById("platform")}
-                category={category}
-              />
-              <FilterMenu
-                id="funding"
-                selectedFilterIds={selectedFilterIds}
-                addFilter={addFilter}
-                removeFilter={removeFilter}
-                label="Funding Agency"
-                options={getFilterOptionsById("funding")}
-                category={category}
-              />
-            </div>
-          )}
-          {category === "platforms" && (
+        {category === "campaigns" && (
+          <>
+            <FilterByDate
+              id="date"
+              label="Date range"
+              dateRange={dateRange}
+              setDateRange={setDateRange}
+            />
             <FilterMenu
-              id="instrument"
+              id="focus"
               selectedFilterIds={selectedFilterIds}
               addFilter={addFilter}
               removeFilter={removeFilter}
-              label="Instrument"
-              options={getFilterOptionsById("instrument")}
+              label="Focus Area"
+              options={getFilterOptionsById("focus")}
+              category={category}
             />
-          )}
-          {category === "instruments" && (
-            <>
-              <FilterMenu
-                id="type"
-                selectedFilterIds={selectedFilterIds}
-                addFilter={addFilter}
-                removeFilter={removeFilter}
-                label="Measurement Type"
-                options={getFilterOptionsById("type")}
-              />
-              <FilterMenu
-                id="vertical"
-                selectedFilterIds={selectedFilterIds}
-                addFilter={addFilter}
-                removeFilter={removeFilter}
-                label="Vertical Measurement Region"
-                options={getFilterOptionsById("vertical")}
-              />
-            </>
-          )}
-        </div>
+            <FilterMenu
+              id="geophysical"
+              selectedFilterIds={selectedFilterIds}
+              addFilter={addFilter}
+              removeFilter={removeFilter}
+              label="Geophysical Concept"
+              options={getFilterOptionsById("geophysical")}
+              category={category}
+            />
+            <FilterMenu
+              id="season"
+              selectedFilterIds={selectedFilterIds}
+              addFilter={addFilter}
+              removeFilter={removeFilter}
+              label="Season"
+              options={getFilterOptionsById("season")}
+              category={category}
+            />
+            <FilterMenu
+              id="region"
+              selectedFilterIds={selectedFilterIds}
+              addFilter={addFilter}
+              removeFilter={removeFilter}
+              label="Geographical Region"
+              options={getFilterOptionsById("region")}
+              category={category}
+            />
+            <FilterMenu
+              id="platform"
+              selectedFilterIds={selectedFilterIds}
+              addFilter={addFilter}
+              removeFilter={removeFilter}
+              label="Platform"
+              options={getFilterOptionsById("platform")}
+              category={category}
+            />
+            <FilterMenu
+              id="funding"
+              selectedFilterIds={selectedFilterIds}
+              addFilter={addFilter}
+              removeFilter={removeFilter}
+              label="Funding Agency"
+              options={getFilterOptionsById("funding")}
+              category={category}
+            />
+
+            <button
+              css={`
+                flex-grow: 1;
+                border: 1px solid ${colors[NEGATIVE].text};
+                padding: 0.25rem;
+
+                flex-grow: 0;
+                background: transparent;
+                color: ${colors[NEGATIVE].text};
+                vertical-align: middle;
+                cursor: pointer;
+              `}
+              data-cy="map-toggle-btn"
+              onClick={e => {
+                e.preventDefault()
+                toggleMap(!isDisplayingMap)
+              }}
+            >
+              <span>{isDisplayingMap ? "Hide" : "Show"} Map</span>
+            </button>
+          </>
+        )}
+
+        {category === "platforms" && (
+          <FilterMenu
+            id="instrument"
+            selectedFilterIds={selectedFilterIds}
+            addFilter={addFilter}
+            removeFilter={removeFilter}
+            label="Instrument"
+            options={getFilterOptionsById("instrument")}
+          />
+        )}
+        {category === "instruments" && (
+          <>
+            <FilterMenu
+              id="type"
+              selectedFilterIds={selectedFilterIds}
+              addFilter={addFilter}
+              removeFilter={removeFilter}
+              label="Measurement Type"
+              options={getFilterOptionsById("type")}
+            />
+            <FilterMenu
+              id="vertical"
+              selectedFilterIds={selectedFilterIds}
+              addFilter={addFilter}
+              removeFilter={removeFilter}
+              label="Vertical Measurement Region"
+              options={getFilterOptionsById("vertical")}
+            />
+          </>
+        )}
       </form>
     )
   }
@@ -213,7 +186,7 @@ ExploreTools.propTypes = {
     end: PropTypes.instanceOf(Date),
   }).isRequired,
   setDateRange: PropTypes.func.isRequired,
-  submitSearch: PropTypes.func.isRequired,
+  setSearchResult: PropTypes.func.isRequired,
   resetSearch: PropTypes.func.isRequired,
   selectedFilterIds: PropTypes.arrayOf(PropTypes.string),
   addFilter: PropTypes.func.isRequired,

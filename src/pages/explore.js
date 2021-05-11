@@ -4,7 +4,6 @@ import { graphql } from "gatsby"
 import VisuallyHidden from "@reach/visually-hidden"
 import { format } from "date-fns"
 
-import api from "../utils/api"
 import { NEGATIVE } from "../utils/constants"
 import { ArrowIcon } from "../icons"
 import { colors } from "../theme"
@@ -41,7 +40,6 @@ export default function Explore({ data, location }) {
   } = data
   const { selectedFilterId, defaultExploreCategory } = location.state || {}
 
-  const [isLoading, setLoading] = useState(false)
   const [selectedCategory, setSelectedCategory] = useState(
     defaultExploreCategory || "campaigns"
   )
@@ -57,8 +55,12 @@ export default function Explore({ data, location }) {
     start: null,
     end: null,
   })
-  const [searchResult, setSearchResult] = useState()
-  const [isDisplayingMap, toggleMap] = useState(true)
+  const [searchResult, setSearchResult] = useState({
+    campaigns: null,
+    platforms: null,
+    instruments: null,
+  })
+  const [isDisplayingMap, toggleMap] = useState(false)
 
   useEffect(() => {
     // update based on passed state
@@ -75,64 +77,50 @@ export default function Explore({ data, location }) {
     selectedFilterIds,
     geoFilterResult,
     dateRange,
-    searchResult
+    searchResult.campaigns
   )
 
   const platformList = usePlatformList(
     allPlatform.list,
     sortOrder.platforms,
     selectedFilterIds,
-    searchResult
+    searchResult.platforms
   )
 
   const instrumentList = useInstrumentList(
     allInstrument.list,
     sortOrder.instruments,
     selectedFilterIds,
-    searchResult
+    searchResult.instruments
   )
 
   const addFilter = id => setFilter([...selectedFilterIds, id])
+
   const removeFilter = id => setFilter(selectedFilterIds.filter(f => f !== id))
+
   const removeDateRange = () =>
     setDateRange({
       start: null,
       end: null,
     })
+
   const removeAoi = () => {
     setAoi(null)
     setGeoFilter(null)
   }
+
   const clearFilters = () => {
     setFilter([])
     removeDateRange()
     setAoi(null)
     setGeoFilter(null)
+    setSearchResult({ campaigns: null, platforms: null, instruments: null })
   }
 
   const inputElement = useRef(null)
 
-  const submitSearch = async e => {
-    setLoading(true)
-    e.preventDefault()
-    let searchstring = inputElement.current.value
-
-    const result = await Promise.all(
-      ["campaign", "platform", "instrument"].map(category =>
-        api.fetchSearchResult(category, searchstring)
-      )
-    )
-
-    setSearchResult(result.flat())
-    setLoading(false)
-  }
-
   const resetSearch = () => {
-    setSearchResult([
-      ...allCampaign.list.map(x => x.id),
-      ...allPlatform.list.map(x => x.id),
-      ...allInstrument.list.map(x => x.id),
-    ])
+    setSearchResult({ campaigns: null, platforms: null, instruments: null })
   }
 
   const { getFilterLabelById, getFilterOptionsById } = selector({
@@ -179,7 +167,7 @@ export default function Explore({ data, location }) {
           ref={inputElement}
           dateRange={dateRange}
           setDateRange={setDateRange}
-          submitSearch={submitSearch}
+          setSearchResult={setSearchResult}
           resetSearch={resetSearch}
           selectedFilterIds={selectedFilterIds}
           addFilter={addFilter}
@@ -273,7 +261,7 @@ export default function Explore({ data, location }) {
             />
           )}
         </div>
-        <ExploreSection isLoading={isLoading}>
+        <ExploreSection>
           {selectedCategory === "campaigns" &&
             campaignList.filtered.map(campaign => {
               return (
@@ -418,6 +406,7 @@ export const query = graphql`
   fragment campaignFields on campaign {
     id
     shortname: short_name # required for sort
+    longname: long_name # required for filter by text
     seasons {
       id # required for filter
     }
@@ -443,6 +432,7 @@ export const query = graphql`
 
   fragment platformFields on platform {
     shortname: short_name # required for sort
+    longname: long_name # required for filter by text
     id
     collectionPeriodIds: collection_periods # required for sort
     campaigns {
@@ -461,6 +451,7 @@ export const query = graphql`
 
   fragment instrumentFields on instrument {
     shortname: short_name # required for sort
+    longname: long_name # required for filter by text
     id
     measurementType: measurement_type {
       id # required for filter
@@ -477,6 +468,7 @@ export const query = graphql`
 const campaignShape = PropTypes.shape({
   id: PropTypes.string.isRequired,
   shortname: PropTypes.string.isRequired,
+  longname: PropTypes.string,
   seasons: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
@@ -513,6 +505,7 @@ const campaignShape = PropTypes.shape({
 
 const platformShape = PropTypes.shape({
   shortname: PropTypes.string.isRequired,
+  longname: PropTypes.string,
   id: PropTypes.string.isRequired,
   collectionPeriodIds: PropTypes.arrayOf(PropTypes.string),
   campaigns: PropTypes.arrayOf(PropTypes.shape({ id: PropTypes.string })),
@@ -527,6 +520,7 @@ const platformShape = PropTypes.shape({
 
 const instrumentShape = PropTypes.shape({
   shortname: PropTypes.string.isRequired,
+  longname: PropTypes.string,
   id: PropTypes.string.isRequired,
   measurementType: PropTypes.shape({
     id: PropTypes.string.isRequired,

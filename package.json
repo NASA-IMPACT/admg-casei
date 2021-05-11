@@ -40,10 +40,10 @@
     "react-datepicker": "^3.3.0",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
-    "react-spinkit": "^3.0.0",
     "react-typography": "^0.16.19",
     "styled-components": "^5.2.1",
     "typography": "^0.16.19",
+    "use-debounce": "^6.0.1",
     "wellknown": "^0.5.0"
   },
   "devDependencies": {
