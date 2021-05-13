@@ -22,7 +22,7 @@ const Header = ({ shortname, children, mode, isHeaderFixed }) => (
       css={`
         margin: 0 auto;
         max-width: ${layout.maxWidth};
-        padding: 1.5rem ${layout.pageMargin};
+        padding: 0.25rem ${layout.pageMargin};
         display: flex;
         justify-content: space-between;
         align-items: center;
