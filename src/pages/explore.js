@@ -37,12 +37,11 @@ const NoResultsMessage = () => (
         padding-bottom: 3rem;
       `}
     >
-      {" "}
-      Sorry, we couldn't find any results matching your search criteria.
+      Sorry, we couldn&apos;t find any results matching your search criteria.
     </h2>
     <h3>Search Tips</h3>
     <ul>
-      <li> Try using fewer filters</li>
+      <li>Try using fewer filters</li>
       <li>
         Try exploring the list of results before using the free text search
       </li>
