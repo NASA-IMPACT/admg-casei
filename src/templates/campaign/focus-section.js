@@ -21,7 +21,7 @@ const FocusSection = ({ id, focus, geophysical, focusPhenomena }) => (
           <Label showBorder id="focus-content">
             Focus Area
           </Label>
-          <FocusAreaGallery focusAreas={focus} size="small" />
+          <FocusAreaGallery focusAreas={focus} size="small" isCompact />
         </div>
         <div data-cy="focus-content">
           <Label showBorder id="focus-content">
