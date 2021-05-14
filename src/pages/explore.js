@@ -42,7 +42,7 @@ const NoResultsMessage = () => (
     <h3>Search Tips</h3>
     <ul>
       <li>Try using fewer filters</li>
-      <li>Check spelling of your text input</li>
+      <li>Check the spelling of your text input</li>
     </ul>
   </div>
 )
