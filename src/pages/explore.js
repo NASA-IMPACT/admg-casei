@@ -26,6 +26,27 @@ import CampaignCard from "../components/cards/campaign-card"
 import PlatformCard from "../components/cards/platform-card"
 import InstrumentCard from "../components/cards/instrument-card"
 
+const NoResultsMessage = () => (
+  <div
+    css={`
+      grid-column: span 3;
+    `}
+  >
+    <h2
+      css={`
+        padding-bottom: 3rem;
+      `}
+    >
+      Sorry, we couldn&apos;t find any results matching your search criteria.
+    </h2>
+    <h3>Search Tips</h3>
+    <ul>
+      <li>Try using fewer filters</li>
+      <li>Check the spelling of your text input</li>
+    </ul>
+  </div>
+)
+
 export default function Explore({ data, location }) {
   const {
     allCampaign,
@@ -271,49 +292,54 @@ export default function Explore({ data, location }) {
                 />
               )
             })}
-          {selectedCategory === "platforms" &&
-            Object.entries(platformList.grouped).map(
-              ([platformType, platforms]) => (
-                <React.Fragment key={platformType}>
-                  <div
-                    css={`
-                      grid-column: 1 / -1;
-                      display: flex;
-                      justify-content: space-between;
-                      align-items: baseline;
-                    `}
-                  >
-                    <h3
-                      id={platformType}
+          {selectedCategory === "campaigns" &&
+            !campaignList.filtered.length && <NoResultsMessage />}
+          {selectedCategory === "platforms" && platformList.filtered.length
+            ? Object.entries(platformList.grouped).map(
+                ([platformType, platforms]) => (
+                  <React.Fragment key={platformType}>
+                    <div
                       css={`
-                        grid-column: 1/-1;
+                        grid-column: 1 / -1;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: baseline;
                       `}
                     >
-                      {platformType} <small>({platforms.length})</small>
-                    </h3>
-                    <a
-                      href="#top"
-                      css={`
-                        grid-column: -2;
-                        align-self: center;
-                      `}
-                      data-cy={`top-inpage-link`}
-                    >
-                      to top <ArrowIcon direction="up" />
-                    </a>
-                  </div>
+                      <h3
+                        id={platformType}
+                        css={`
+                          grid-column: 1/-1;
+                        `}
+                      >
+                        {platformType} <small>({platforms.length})</small>
+                      </h3>
+                      <a
+                        href="#top"
+                        css={`
+                          grid-column: -2;
+                          align-self: center;
+                        `}
+                        data-cy={`top-inpage-link`}
+                      >
+                        to top <ArrowIcon direction="up" />
+                      </a>
+                    </div>
 
-                  {platforms.map(platform => {
-                    return (
-                      <PlatformCard
-                        shortname={platform.shortname}
-                        key={platform.id}
-                      />
-                    )
-                  })}
-                </React.Fragment>
+                    {platforms.map(platform => {
+                      return (
+                        <PlatformCard
+                          shortname={platform.shortname}
+                          key={platform.id}
+                        />
+                      )
+                    })}
+                  </React.Fragment>
+                )
               )
-            )}
+            : null}
+          {selectedCategory === "platforms" &&
+            !platformList.filtered.length && <NoResultsMessage />}
           {selectedCategory === "instruments" &&
             instrumentList.filtered.map(instrument => {
               return (
@@ -323,6 +349,8 @@ export default function Explore({ data, location }) {
                 />
               )
             })}
+          {selectedCategory === "instruments" &&
+            !instrumentList.filtered.length && <NoResultsMessage />}
         </ExploreSection>
       </PageBody>
     </Layout>
