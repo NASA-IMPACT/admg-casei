@@ -13,7 +13,7 @@ exports[`Header renders correctly 1`] = `
 .c1.c1 {
   margin: 0 auto;
   max-width: 1280px;
-  padding: 1.5rem 4rem;
+  padding: 0.25rem 4rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
