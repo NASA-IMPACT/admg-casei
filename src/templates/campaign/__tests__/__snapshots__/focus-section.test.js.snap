@@ -182,7 +182,7 @@ exports[`Focus Section displays content 1`] = `
         </label>
         <a
           data-cy="geophysical-concept"
-          href="/explore"
+          href="/explore/campaigns"
           state={
             Object {
               "selectedFilterId": "f1bd646f-876f-4e9f-896e-f7d4571ecc00",

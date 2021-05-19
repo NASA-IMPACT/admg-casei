@@ -101,8 +101,7 @@ const Home = ({ data }) => {
                 spanWidth={3}
               />
               <Link
-                to="/explore"
-                state={{ defaultExploreCategory: "platforms" }}
+                to="/explore/platforms"
                 css={`
                   border: 1px solid ${colors[NEGATIVE].text};
                   padding: 1rem 5rem;
