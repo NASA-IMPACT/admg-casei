@@ -86,7 +86,7 @@ function Background({
             mode={POSITIVE}
           />
         ) : (
-          <p>Currently unavailable</p>
+          "Currently unavailable"
         )}
       </BackgroundListItem>
       <li style={{ padding: `1rem 0` }} data-cy="repositories-label">

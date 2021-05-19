@@ -511,9 +511,7 @@ exports[`Overview Section displays content 1`] = `
           Data Locations
         </label>
         <p>
-          <p>
-            Currently unavailable
-          </p>
+          Currently unavailable
         </p>
       </li>
       <li
