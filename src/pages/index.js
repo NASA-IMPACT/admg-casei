@@ -64,7 +64,12 @@ const Home = ({ data }) => {
           <SectionContent>
             <Ul data-cy={`explore-link-list`}>
               {["campaigns", "platforms", "instruments"].map(category => (
-                <li key={category}>
+                <li
+                  key={category}
+                  css={`
+                    padding-bottom: 1rem;
+                  `}
+                >
                   <Link
                     to="/explore"
                     state={{ defaultExploreCategory: `${category}` }}
