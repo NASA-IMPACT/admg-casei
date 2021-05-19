@@ -20,11 +20,7 @@ export default function ExplorePlatforms({ data, location }) {
   const { allCampaign, allPlatform, allInstrument } = data
   const { selectedFilterId } = location.state || {}
 
-  const [sortOrder, setSortOrder] = useState({
-    campaigns: "most recent",
-    instruments: "most used",
-    platforms: "most used",
-  })
+  const [sortOrder, setSortOrder] = useState("most used")
 
   const [selectedFilterIds, setFilter] = useState([])
 
@@ -41,7 +37,7 @@ export default function ExplorePlatforms({ data, location }) {
 
   const platformList = usePlatformList(
     allPlatform.list,
-    sortOrder.platforms,
+    sortOrder,
     selectedFilterIds,
     searchResult
   )
@@ -115,7 +111,7 @@ export default function ExplorePlatforms({ data, location }) {
         `}
       >
         <SortMenu
-          sortOrder={sortOrder["platforms"]}
+          sortOrder={sortOrder}
           setSortOrder={setSortOrder}
           category={"platforms"}
         />

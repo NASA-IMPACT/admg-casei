@@ -25,11 +25,7 @@ export default function ExploreInstruments({ data, location }) {
   } = data
   const { selectedFilterId } = location.state || {}
 
-  const [sortOrder, setSortOrder] = useState({
-    campaigns: "most recent",
-    instruments: "most used",
-    platforms: "most used",
-  })
+  const [sortOrder, setSortOrder] = useState("most used")
   const [selectedFilterIds, setFilter] = useState([])
 
   const [searchResult, setSearchResult] = useState(null)
@@ -45,7 +41,7 @@ export default function ExploreInstruments({ data, location }) {
 
   const instrumentList = useInstrumentList(
     allInstrument.list,
-    sortOrder.instruments,
+    sortOrder,
     selectedFilterIds,
     searchResult
   )
@@ -117,7 +113,7 @@ export default function ExploreInstruments({ data, location }) {
         `}
       >
         <SortMenu
-          sortOrder={sortOrder["instruments"]}
+          sortOrder={sortOrder}
           setSortOrder={setSortOrder}
           category={"instruments"}
         />

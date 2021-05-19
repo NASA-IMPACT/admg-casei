@@ -29,11 +29,7 @@ export default function ExploreCampaigns({ data, location }) {
   } = data
   const { selectedFilterId } = location.state || {}
 
-  const [sortOrder, setSortOrder] = useState({
-    campaigns: "most recent",
-    instruments: "most used",
-    platforms: "most used",
-  })
+  const [sortOrder, setSortOrder] = useState("most recent")
 
   const [selectedFilterIds, setFilter] = useState([])
   const [aoi, setAoi] = useState(null)
@@ -56,7 +52,7 @@ export default function ExploreCampaigns({ data, location }) {
 
   const campaignList = useCampaignList(
     allCampaign.list,
-    sortOrder.campaigns,
+    sortOrder,
     selectedFilterIds,
     geoFilterResult,
     dateRange,
@@ -202,7 +198,7 @@ export default function ExploreCampaigns({ data, location }) {
         `}
       >
         <SortMenu
-          sortOrder={sortOrder["campaigns"]}
+          sortOrder={sortOrder}
           setSortOrder={setSortOrder}
           category={"campaigns"}
         />
