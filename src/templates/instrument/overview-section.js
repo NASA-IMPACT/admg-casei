@@ -30,7 +30,7 @@ BackgroundListItem.propTypes = {
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
 }
 BackgroundListItem.defaultProps = {
-  children: "N/A",
+  children: "Currently unavailable",
 }
 
 function Background({
@@ -48,16 +48,16 @@ function Background({
       data-cy="instrument-background"
     >
       <BackgroundListItem id="lead-investigator" label="Lead Investigator">
-        {leadInvestigator}
+        {leadInvestigator || "Currently unavailable"}
       </BackgroundListItem>
       <BackgroundListItem id="technical-contact" label="Technical Contact">
-        {technicalContact}
+        {technicalContact || "Currently unavailable"}
       </BackgroundListItem>
       <BackgroundListItem id="instrument-manufacturer" label="Instrument Maker">
-        {instrumentManufacturer}
+        {instrumentManufacturer || "Currently unavailable"}
       </BackgroundListItem>
       <BackgroundListItem id="funding-source" label="Funding Source">
-        {fundingSource}
+        {fundingSource || "Currently unavailable"}
       </BackgroundListItem>
       {instrumentDoi && (
         <div style={{ padding: `1rem 0` }}>
@@ -78,7 +78,7 @@ function Background({
         </div>
       )}
       <BackgroundListItem id="data-locations" label="Data Locations">
-        {isUrl(overviewPublication) ? (
+        {overviewPublication && isUrl(overviewPublication) ? (
           <ExternalLink
             label="Overview Publication"
             url={overviewPublication}
@@ -86,7 +86,7 @@ function Background({
             mode={POSITIVE}
           />
         ) : (
-          "N/A"
+          <p>Currently unavailable</p>
         )}
       </BackgroundListItem>
       <li style={{ padding: `1rem 0` }} data-cy="repositories-label">
@@ -105,7 +105,7 @@ function Background({
             ))}
           </ul>
         ) : (
-          <p>No repository available</p>
+          <p>Currently unavailable</p>
         )}
       </li>
     </ul>
@@ -161,7 +161,7 @@ export default function OverviewSection({
               content:
                 measurementType && measurementType.longname
                   ? measurementType.longname
-                  : "N/A",
+                  : "Currently unavailble",
             },
             {
               title: "Measurement/Variables",
@@ -172,24 +172,25 @@ export default function OverviewSection({
                       .filter(x => x)
                       .join(", ")
                   )
-                  .join(", ") || "N/A",
+                  .join(", ") || "Currently unavailble",
             },
             {
               title: "Vertical Measurement Regions",
               content:
-                measurementRegions.map(x => x.longname).join(", ") || "N/A",
+                measurementRegions.map(x => x.longname).join(", ") ||
+                "Currently unavailble",
             },
             {
               title: "Temporal Resolution",
-              content: temporalResolution || "N/A",
+              content: temporalResolution || "Currently unavailble",
             },
             {
               title: "Spatial Resolution",
-              content: spatialResolution || "N/A",
+              content: spatialResolution || "Currently unavailble",
             },
             {
               title: "Measurement Frequency",
-              content: radiometricFrequency || "N/A",
+              content: radiometricFrequency || "Currently unavailble",
             },
             {
               title: "Calibration Details",
@@ -201,31 +202,32 @@ export default function OverviewSection({
                   mode={POSITIVE}
                 />
               ) : (
-                "N/A"
+                "Currently unavailble"
               ),
             },
             {
               title: "Online Information",
-              content: onlineInformation ? (
-                <ul style={{ margin: `0` }}>
-                  {onlineInformation.map(link => (
-                    <li key={link} style={{ listStyle: `none` }}>
-                      {isUrl(link) ? (
-                        <ExternalLink
-                          label={link}
-                          url={link}
-                          id="online-information"
-                          mode={POSITIVE}
-                        />
-                      ) : (
-                        <p className="placeholder">{link}</p> // fallback for invalid url
-                      )}
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                "N/A"
-              ),
+              content:
+                onlineInformation && onlineInformation.length ? (
+                  <ul style={{ margin: `0` }}>
+                    {onlineInformation.map(link => (
+                      <li key={link} style={{ listStyle: `none` }}>
+                        {isUrl(link) ? (
+                          <ExternalLink
+                            label={link}
+                            url={link}
+                            id="online-information"
+                            mode={POSITIVE}
+                          />
+                        ) : (
+                          <p className="placeholder">{link}</p> // fallback for invalid url
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  "Currently unavailble"
+                ),
             },
           ]}
         />
