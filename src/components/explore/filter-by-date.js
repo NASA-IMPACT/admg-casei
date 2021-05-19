@@ -20,7 +20,7 @@ import {
 } from "date-fns"
 
 import { NEGATIVE } from "../../utils/constants"
-import { colors, breakpoints } from "../../theme"
+import { colors } from "../../theme"
 
 const FilterButton = styled(ListboxButton)`
   flex-grow: 0;
@@ -32,15 +32,6 @@ const FilterButton = styled(ListboxButton)`
   padding: 0.5rem;
   cursor: pointer;
   text-transform: uppercase;
-  @media screen and (max-width: ${breakpoints["lg"]}) {
-    height: 2.5rem;
-  }
-  @media screen and (max-width: ${breakpoints["md"]}) {
-    height: 4.5rem;
-  }
-  @media screen and (max-width: ${breakpoints["sm"]}) {
-    height: 2.5rem;
-  }
 `
 
 const TimeRangeButton = styled.button`
@@ -57,7 +48,6 @@ const TimeRangeButton = styled.button`
 
 const ApplyButton = styled(ListboxOption)`
   flex-grow: 0;
-  height: 2.5rem;
   width: 100%;
   -webkit-appearance: none;
   background: transparent;
@@ -70,7 +60,7 @@ const ApplyButton = styled(ListboxOption)`
   text-transform: uppercase;
 `
 
-const DateMenu = ({ id, label, dateRange, setDateRange }) => {
+const FilterByDate = ({ id, label, dateRange, setDateRange }) => {
   const [startDate, setStartDate] = useState(dateRange.start || new Date())
   const [endDate, setEndDate] = useState(dateRange.end || new Date())
 
@@ -192,7 +182,7 @@ const DateMenu = ({ id, label, dateRange, setDateRange }) => {
   )
 }
 
-DateMenu.propTypes = {
+FilterByDate.propTypes = {
   id: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   dateRange: PropTypes.shape({
@@ -202,4 +192,4 @@ DateMenu.propTypes = {
   setDateRange: PropTypes.func.isRequired,
 }
 
-export default DateMenu
+export default FilterByDate

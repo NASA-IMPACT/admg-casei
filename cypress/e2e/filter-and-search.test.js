@@ -1,8 +1,6 @@
 /* eslint-disable jest/no-conditional-expect */
 /// <reference types="Cypress" />
 
-import api from "../../src/utils/api"
-
 // TODO: this test is having issues with reach portals
 // that are used to create the filter dropdown menus
 // see https://github.com/reach/reach-ui/issues/629
@@ -14,7 +12,7 @@ describe("Filter, Search and Sort", () => {
     // should show map on intitial load
     cy.get("[data-cy=main-explore]")
       .find("[data-cy=mapboxgl-map]")
-      .should("exist")
+      .should("not.exist")
 
     cy.get("[data-cy=tabbar]")
 
@@ -26,13 +24,15 @@ describe("Filter, Search and Sort", () => {
     cy.get("[data-cy=explore-tools]")
 
     // should toggle map on button click
-    cy.get(`[data-cy=map-toggle-btn]`).contains("Hide Map").click()
+    cy.get(`[data-cy=map-toggle-btn]`).contains("Show Map").click()
+
     cy.window().should("have.prop", "beforeReload", true)
 
-    cy.get(`[data-cy=map-toggle-btn]`).contains("Show Map")
+    cy.get(`[data-cy=map-toggle-btn]`).contains("Hide Map")
+
     cy.get("[data-cy=main-explore]")
       .find("[data-cy=mapboxgl-map]")
-      .should("not.exist")
+      .should("exist")
 
     cy.get("[data-cy=main-filter-label").should("exist").contains("Filter By")
 
@@ -98,7 +98,7 @@ describe("Filter, Search and Sort", () => {
         cy.get("[data-cy=explore-input]").should(
           "have.attr",
           "aria-label",
-          "Search for campaigns, platforms or instruments"
+          `Filter ${x.category} by name`
         )
 
         cy.get("[data-cy=submit]").should("exist")
@@ -219,54 +219,6 @@ describe("Filter, Search and Sort", () => {
               expect(first > last).to.be.true
             })
         }
-      })
-    })
-  })
-
-  let searchApiStub
-  // Turns out, dealing with fetch requests in cypress isn't that easy:
-  // https://github.com/cypress-io/cypress/issues/95
-  describe.skip("the free text search", () => {
-    before(() => {
-      searchApiStub = cy
-        .stub(api, "fetchSearchResult")
-        .as("fetchSearchResultStub")
-
-      cy.get("[data-cy=explore-tools]").find("input").type("arctic")
-
-      cy.get("[data-cy=submit]").click()
-    })
-
-    it("should indicate the loading", () => {
-      cy.get("[data-cy=loading-indicator]").should("be.visible")
-    })
-
-    describe("on api success", () => {
-      before(() => {
-        searchApiStub.resolves(["id1", "id2"])
-      })
-
-      it("call the api and get a successfull response", () => {
-        // TODO: why does it claim not to be called? Why does it still call the implementation? What's going on with the stubbing here?
-        expect(api.fetchSearchResult).to.be.called
-
-        cy.get("[data-cy=loading-indicator]").should("not.be.visible")
-
-        cy.get("[data-cy=explore-tools]")
-          .find("input")
-          .should("have.value", "arctic")
-
-        cy.get(`[data-cy=campaigns-card]`).should("have.length.greaterThan", 1)
-      })
-    })
-
-    describe("on api failure", () => {
-      before(() => {
-        searchApiStub.returns(new Error("UUUPS, there was an error"))
-      })
-
-      it("displays an error message", () => {
-        cy.get("[data-cy=error-indicator]").should("be.visible")
       })
     })
   })

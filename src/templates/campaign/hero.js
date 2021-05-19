@@ -30,7 +30,6 @@ const BackgroundGradient = styled.div`
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  margin-top: -7rem;
   z-index: 0;
   grid-area: 1 / 1 / 1 / 4;
 `
@@ -59,44 +58,58 @@ const CampaignHero = ({
     <section
       ref={containerRef}
       data-cy="campaign-hero"
-      style={{
-        display: `grid`,
-        gridTemplateColumns: `1fr minmax(auto,  ${layout.maxWidth}) 1fr`,
-        width: `100vw`,
-        minHeight: `35rem`,
-        alignContent: `center`,
-      }}
+      css={`
+         {
+          display: grid;
+          grid-template-columns: ${`1fr minmax(auto, ${layout.maxWidth}) 1fr`};
+          width: 100vw;
+          min-height: 35rem;
+          align-content: center;
+        }
+      `}
     >
-      <Map
-        style={{
-          height: `calc(${height}px + 7rem`,
-          marginTop: `-7rem`,
-          zIndex: -1,
-          gridArea: `1 / 1 / 1 / 4`,
-        }}
-      >
+      <Map height={height}>
         <GeoJsonSource geojson={geojson} id="campaign">
           <BboxLayer id="campaign" bbox={bbox} />
         </GeoJsonSource>
       </Map>
 
-      <BackgroundGradient height={height} />
+      <BackgroundGradient />
 
       <div
-        style={{
-          gridArea: `1 / 2 / 1 / 2`,
-          display: `flex`,
-          paddingTop: `7rem`,
-          zIndex: 1,
-        }}
+        css={`
+           {
+            grid-area: 1 / 2 / 1 / 2;
+            display: flex;
+            padding: 7rem 0;
+            z-index: 1;
+          }
+        `}
       >
-        <div style={{ flex: `2`, padding: `0 ${layout.pageMargin}` }}>
-          <div style={{ marginBottom: `6rem` }}>
+        <div
+          css={`
+             {
+              flex: 2;
+              padding: ${`0 ${layout.pageMargin}`};
+            }
+          `}
+        >
+          <div
+            css={`
+               {
+                margin-bottom: 6rem;
+              }
+            `}
+          >
             {logo150h && logo150h.gatsbyImg ? (
               <GatsbyImage
                 image={logo150h.gatsbyImg.childImageSharp.gatsbyImageData}
                 alt={logo150h.description}
-                style={{ margin: `0` }}
+                css={`
+                   {
+                    margin: 0;
+                  }
+                `}
               />
             ) : (
               <CampaignIcon />
@@ -116,7 +129,13 @@ const CampaignHero = ({
             ]}
           />
         </div>
-        <div style={{ flex: `1` }}></div>
+        <div
+          css={`
+             {
+              flex: 1;
+            }
+          `}
+        ></div>
       </div>
     </section>
   )

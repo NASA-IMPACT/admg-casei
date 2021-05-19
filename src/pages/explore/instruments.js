@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
-import api from "../../utils/api"
 import { NEGATIVE } from "../../utils/constants"
 import { colors } from "../../theme"
 import { selector } from "../../utils/filter-utils"
@@ -15,6 +14,7 @@ import Chip from "../../components/chip"
 import SortMenu from "../../components/explore/sort-menu"
 import ExploreSection from "../../components/explore/explore-section"
 import InstrumentCard from "../../components/cards/instrument-card"
+import { NoResultsMessage } from "../../components/no-results-message"
 
 export default function ExploreInstruments({ data, location }) {
   const {
@@ -26,8 +26,6 @@ export default function ExploreInstruments({ data, location }) {
   } = data
   const { selectedFilterId } = location.state || {}
 
-  const [isLoading, setLoading] = useState(false)
-
   const [sortOrder, setSortOrder] = useState({
     campaigns: "most recent",
     instruments: "most used",
@@ -35,7 +33,7 @@ export default function ExploreInstruments({ data, location }) {
   })
   const [selectedFilterIds, setFilter] = useState([])
 
-  const [searchResult, setSearchResult] = useState()
+  const [searchResult, setSearchResult] = useState(null)
 
   useEffect(() => {
     // update based on passed state
@@ -59,23 +57,13 @@ export default function ExploreInstruments({ data, location }) {
 
   const clearFilters = () => {
     setFilter([])
+    setSearchResult(null)
   }
 
   const inputElement = useRef(null)
 
-  const submitSearch = async e => {
-    setLoading(true)
-    e.preventDefault()
-    let searchstring = inputElement.current.value
-
-    const result = await api.fetchSearchResult("instrument", searchstring)
-
-    setSearchResult(result.flat())
-    setLoading(false)
-  }
-
   const resetSearch = () => {
-    setSearchResult([...allInstrument.list.map(x => x.id)])
+    setSearchResult(null)
   }
 
   const { getFilterLabelById, getFilterOptionsById } = selector({
@@ -93,7 +81,7 @@ export default function ExploreInstruments({ data, location }) {
     >
       <ExploreTools
         ref={inputElement}
-        submitSearch={submitSearch}
+        setSearchResult={setSearchResult}
         resetSearch={resetSearch}
         selectedFilterIds={selectedFilterIds}
         addFilter={addFilter}
@@ -138,16 +126,20 @@ export default function ExploreInstruments({ data, location }) {
         />
       </div>
 
-      <ExploreSection isLoading={isLoading}>
-        {instrumentList.filtered.map(instrument => {
-          return (
-            <InstrumentCard
-              shortname={instrument.shortname}
-              key={instrument.id}
-            />
-          )
-        })}
-      </ExploreSection>
+      {instrumentList.filtered.length ? (
+        <ExploreSection>
+          {instrumentList.filtered.map(instrument => {
+            return (
+              <InstrumentCard
+                shortname={instrument.shortname}
+                key={instrument.id}
+              />
+            )
+          })}
+        </ExploreSection>
+      ) : (
+        <NoResultsMessage />
+      )}
     </ExploreLayout>
   )
 }
@@ -184,6 +176,7 @@ export const query = graphql`
 
   fragment instrumentFields on instrument {
     shortname: short_name # required for sort
+    longname: long_name # required for filter by text
     id
     measurementType: measurement_type {
       id # required for filter

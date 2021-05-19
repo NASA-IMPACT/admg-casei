@@ -42,12 +42,12 @@ FocusArea.propTypes = {
   size: PropTypes.string,
 }
 
-const FocusAreaGallery = ({ focusAreas, size = "large" }) => {
+const FocusAreaGallery = ({ focusAreas, size = "large", isCompact }) => {
   return (
     <div
       css={`
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: repeat(${isCompact ? 2 : 6}, 1fr);
         justify-items: center;
         gap: 2rem;
         padding-top: 1rem;
@@ -76,4 +76,5 @@ FocusAreaGallery.propTypes = {
     }).isRequired
   ).isRequired,
   size: PropTypes.string,
+  isCompact: PropTypes.bool,
 }

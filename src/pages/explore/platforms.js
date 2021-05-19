@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
-import api from "../../utils/api"
 import { NEGATIVE } from "../../utils/constants"
 import { ArrowIcon } from "../../icons"
 import { colors } from "../../theme"
@@ -17,12 +16,11 @@ import SortMenu from "../../components/explore/sort-menu"
 import PlatformNav from "../../components/explore/platform-nav"
 import ExploreSection from "../../components/explore/explore-section"
 import PlatformCard from "../../components/cards/platform-card"
+import { NoResultsMessage } from "../../components/no-results-message"
 
 export default function ExplorePlatforms({ data, location }) {
   const { allCampaign, allPlatform, allInstrument } = data
   const { selectedFilterId } = location.state || {}
-
-  const [isLoading, setLoading] = useState(false)
 
   const [sortOrder, setSortOrder] = useState({
     campaigns: "most recent",
@@ -32,7 +30,7 @@ export default function ExplorePlatforms({ data, location }) {
 
   const [selectedFilterIds, setFilter] = useState([])
 
-  const [searchResult, setSearchResult] = useState()
+  const [searchResult, setSearchResult] = useState(null)
 
   useEffect(() => {
     // update based on passed state
@@ -56,23 +54,13 @@ export default function ExplorePlatforms({ data, location }) {
 
   const clearFilters = () => {
     setFilter([])
+    setSearchResult(null)
   }
 
   const inputElement = useRef(null)
 
-  const submitSearch = async e => {
-    setLoading(true)
-    e.preventDefault()
-    let searchstring = inputElement.current.value
-
-    const result = await api.fetchSearchResult("platform", searchstring)
-
-    setSearchResult(result.flat())
-    setLoading(false)
-  }
-
   const resetSearch = () => {
-    setSearchResult([...allPlatform.list.map(x => x.id)])
+    setSearchResult(null)
   }
 
   const { getFilterLabelById, getFilterOptionsById } = selector({
@@ -90,7 +78,7 @@ export default function ExplorePlatforms({ data, location }) {
     >
       <ExploreTools
         ref={inputElement}
-        submitSearch={submitSearch}
+        setSearchResult={setSearchResult}
         resetSearch={resetSearch}
         selectedFilterIds={selectedFilterIds}
         addFilter={addFilter}
@@ -141,50 +129,54 @@ export default function ExplorePlatforms({ data, location }) {
         />
       </div>
 
-      <ExploreSection isLoading={isLoading}>
-        {Object.entries(platformList.grouped).map(
-          ([platformType, platforms]) => (
-            <React.Fragment key={platformType}>
-              <div
-                css={`
-                  grid-column: 1 / -1;
-                  display: flex;
-                  justify-content: space-between;
-                  align-items: baseline;
-                `}
-              >
-                <h3
-                  id={platformType}
+      {platformList.filtered.length ? (
+        <ExploreSection>
+          {Object.entries(platformList.grouped).map(
+            ([platformType, platforms]) => (
+              <React.Fragment key={platformType}>
+                <div
                   css={`
-                    grid-column: 1/-1;
+                    grid-column: 1 / -1;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: baseline;
                   `}
                 >
-                  {platformType} <small>({platforms.length})</small>
-                </h3>
-                <a
-                  href="#top"
-                  css={`
-                    grid-column: -2;
-                    align-self: center;
-                  `}
-                  data-cy={`top-inpage-link`}
-                >
-                  to top <ArrowIcon direction="up" />
-                </a>
-              </div>
+                  <h3
+                    id={platformType}
+                    css={`
+                      grid-column: 1/-1;
+                    `}
+                  >
+                    {platformType} <small>({platforms.length})</small>
+                  </h3>
+                  <a
+                    href="#top"
+                    css={`
+                      grid-column: -2;
+                      align-self: center;
+                    `}
+                    data-cy={`top-inpage-link`}
+                  >
+                    to top <ArrowIcon direction="up" />
+                  </a>
+                </div>
 
-              {platforms.map(platform => {
-                return (
-                  <PlatformCard
-                    shortname={platform.shortname}
-                    key={platform.id}
-                  />
-                )
-              })}
-            </React.Fragment>
-          )
-        )}
-      </ExploreSection>
+                {platforms.map(platform => {
+                  return (
+                    <PlatformCard
+                      shortname={platform.shortname}
+                      key={platform.id}
+                    />
+                  )
+                })}
+              </React.Fragment>
+            )
+          )}
+        </ExploreSection>
+      ) : (
+        <NoResultsMessage />
+      )}
     </ExploreLayout>
   )
 }
@@ -217,6 +209,7 @@ export const query = graphql`
 
   fragment platformFields on platform {
     shortname: short_name # required for sort
+    longname: long_name # required for filter by text
     id
     collectionPeriodIds: collection_periods # required for sort
     campaigns {

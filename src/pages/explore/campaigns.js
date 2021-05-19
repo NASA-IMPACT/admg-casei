@@ -8,7 +8,6 @@ import {
   DisclosurePanel,
 } from "@reach/disclosure"
 
-import api from "../../utils/api"
 import { NEGATIVE } from "../../utils/constants"
 import { colors } from "../../theme"
 import { selector } from "../../utils/filter-utils"
@@ -22,6 +21,7 @@ import Chip from "../../components/chip"
 import SortMenu from "../../components/explore/sort-menu"
 import ExploreSection from "../../components/explore/explore-section"
 import CampaignCard from "../../components/cards/campaign-card"
+import { NoResultsMessage } from "../../components/no-results-message"
 
 export default function ExploreCampaigns({ data, location }) {
   const {
@@ -34,8 +34,6 @@ export default function ExploreCampaigns({ data, location }) {
     allInstrument,
   } = data
   const { selectedFilterId } = location.state || {}
-
-  const [isLoading, setLoading] = useState(false)
 
   const [sortOrder, setSortOrder] = useState({
     campaigns: "most recent",
@@ -50,7 +48,7 @@ export default function ExploreCampaigns({ data, location }) {
     start: null,
     end: null,
   })
-  const [searchResult, setSearchResult] = useState()
+  const [searchResult, setSearchResult] = useState(null)
   const [isDisplayingMap, toggleMap] = useState(true)
 
   useEffect(() => {
@@ -95,19 +93,8 @@ export default function ExploreCampaigns({ data, location }) {
 
   const inputElement = useRef(null)
 
-  const submitSearch = async e => {
-    setLoading(true)
-    e.preventDefault()
-    let searchstring = inputElement.current.value
-
-    const result = await api.fetchSearchResult("campaign", searchstring)
-
-    setSearchResult(result.flat())
-    setLoading(false)
-  }
-
   const resetSearch = () => {
-    setSearchResult([...allCampaign.list.map(x => x.id)])
+    setSearchResult(null)
   }
 
   const { getFilterLabelById, getFilterOptionsById } = selector({
@@ -141,7 +128,7 @@ export default function ExploreCampaigns({ data, location }) {
         ref={inputElement}
         dateRange={dateRange}
         setDateRange={setDateRange}
-        submitSearch={submitSearch}
+        setSearchResult={setSearchResult}
         resetSearch={resetSearch}
         selectedFilterIds={selectedFilterIds}
         addFilter={addFilter}
@@ -227,13 +214,17 @@ export default function ExploreCampaigns({ data, location }) {
         />
       </div>
 
-      <ExploreSection isLoading={isLoading}>
-        {campaignList.filtered.slice(0, 20).map(campaign => {
-          return (
-            <CampaignCard shortname={campaign.shortname} key={campaign.id} />
-          )
-        })}
-      </ExploreSection>
+      {campaignList.filtered.length ? (
+        <ExploreSection>
+          {campaignList.filtered.slice(0, 20).map(campaign => {
+            return (
+              <CampaignCard shortname={campaign.shortname} key={campaign.id} />
+            )
+          })}
+        </ExploreSection>
+      ) : (
+        <NoResultsMessage />
+      )}
 
       <Disclosure>
         <DisclosureButton
@@ -250,7 +241,7 @@ export default function ExploreCampaigns({ data, location }) {
         </DisclosureButton>
 
         <DisclosurePanel>
-          <ExploreSection isLoading={isLoading}>
+          <ExploreSection>
             {campaignList.filtered.slice(20).map(campaign => {
               return (
                 <CampaignCard
@@ -318,6 +309,7 @@ export const query = graphql`
   fragment campaignFields on campaign {
     id
     shortname: short_name # required for sort
+    longname: long_name # required for filter by text
     seasons {
       id # required for filter
     }
