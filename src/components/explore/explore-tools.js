@@ -184,7 +184,7 @@ ExploreTools.propTypes = {
   dateRange: PropTypes.shape({
     start: PropTypes.instanceOf(Date),
     end: PropTypes.instanceOf(Date),
-  }).isRequired,
+  }),
   setDateRange: PropTypes.func,
   setSearchResult: PropTypes.func.isRequired,
   resetSearch: PropTypes.func.isRequired,

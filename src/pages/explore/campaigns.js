@@ -2,11 +2,6 @@ import React, { useState, useRef, useEffect } from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 import { format } from "date-fns"
-import {
-  Disclosure,
-  DisclosureButton,
-  DisclosurePanel,
-} from "@reach/disclosure"
 
 import { NEGATIVE } from "../../utils/constants"
 import { colors } from "../../theme"
@@ -21,7 +16,6 @@ import Chip from "../../components/chip"
 import SortMenu from "../../components/explore/sort-menu"
 import ExploreSection from "../../components/explore/explore-section"
 import CampaignCard from "../../components/cards/campaign-card"
-import { NoResultsMessage } from "../../components/no-results-message"
 
 export default function ExploreCampaigns({ data, location }) {
   const {
@@ -214,45 +208,10 @@ export default function ExploreCampaigns({ data, location }) {
         />
       </div>
 
-      {campaignList.filtered.length ? (
-        <ExploreSection>
-          {campaignList.filtered.slice(0, 20).map(campaign => {
-            return (
-              <CampaignCard shortname={campaign.shortname} key={campaign.id} />
-            )
-          })}
-        </ExploreSection>
-      ) : (
-        <NoResultsMessage />
-      )}
-
-      <Disclosure>
-        <DisclosureButton
-          css={`
-            background-color: transparent;
-            color: ${colors[NEGATIVE].text};
-            border: 1px solid ${colors[NEGATIVE].text};
-            margin: 3rem;
-            padding: 1rem 5rem;
-            text-transform: uppercase;
-          `}
-        >
-          Show all
-        </DisclosureButton>
-
-        <DisclosurePanel>
-          <ExploreSection>
-            {campaignList.filtered.slice(20).map(campaign => {
-              return (
-                <CampaignCard
-                  shortname={campaign.shortname}
-                  key={campaign.id}
-                />
-              )
-            })}
-          </ExploreSection>
-        </DisclosurePanel>
-      </Disclosure>
+      <ExploreSection
+        list={campaignList.filtered}
+        card={{ component: CampaignCard }}
+      />
     </ExploreLayout>
   )
 }

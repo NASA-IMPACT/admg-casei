@@ -14,7 +14,6 @@ import Chip from "../../components/chip"
 import SortMenu from "../../components/explore/sort-menu"
 import ExploreSection from "../../components/explore/explore-section"
 import InstrumentCard from "../../components/cards/instrument-card"
-import { NoResultsMessage } from "../../components/no-results-message"
 
 export default function ExploreInstruments({ data, location }) {
   const {
@@ -89,7 +88,6 @@ export default function ExploreInstruments({ data, location }) {
         removeFilter={removeFilter}
         category={"instruments"}
       />
-
       {selectedFilterIds.length > 0 && (
         <>
           <FilterChips clearFilters={clearFilters}>
@@ -110,7 +108,6 @@ export default function ExploreInstruments({ data, location }) {
           />
         </>
       )}
-
       <div
         css={`
           display: flex;
@@ -126,20 +123,10 @@ export default function ExploreInstruments({ data, location }) {
         />
       </div>
 
-      {instrumentList.filtered.length ? (
-        <ExploreSection>
-          {instrumentList.filtered.map(instrument => {
-            return (
-              <InstrumentCard
-                shortname={instrument.shortname}
-                key={instrument.id}
-              />
-            )
-          })}
-        </ExploreSection>
-      ) : (
-        <NoResultsMessage />
-      )}
+      <ExploreSection
+        list={instrumentList.filtered}
+        card={{ component: InstrumentCard }}
+      />
     </ExploreLayout>
   )
 }

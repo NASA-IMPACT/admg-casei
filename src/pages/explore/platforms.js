@@ -3,7 +3,6 @@ import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
 import { NEGATIVE } from "../../utils/constants"
-import { ArrowIcon } from "../../icons"
 import { colors } from "../../theme"
 import { selector } from "../../utils/filter-utils"
 import usePlatformList from "../../utils/use-platform-list"
@@ -16,7 +15,6 @@ import SortMenu from "../../components/explore/sort-menu"
 import PlatformNav from "../../components/explore/platform-nav"
 import ExploreSection from "../../components/explore/explore-section"
 import PlatformCard from "../../components/cards/platform-card"
-import { NoResultsMessage } from "../../components/no-results-message"
 
 export default function ExplorePlatforms({ data, location }) {
   const { allCampaign, allPlatform, allInstrument } = data
@@ -129,54 +127,11 @@ export default function ExplorePlatforms({ data, location }) {
         />
       </div>
 
-      {platformList.filtered.length ? (
-        <ExploreSection>
-          {Object.entries(platformList.grouped).map(
-            ([platformType, platforms]) => (
-              <React.Fragment key={platformType}>
-                <div
-                  css={`
-                    grid-column: 1 / -1;
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: baseline;
-                  `}
-                >
-                  <h3
-                    id={platformType}
-                    css={`
-                      grid-column: 1/-1;
-                    `}
-                  >
-                    {platformType} <small>({platforms.length})</small>
-                  </h3>
-                  <a
-                    href="#top"
-                    css={`
-                      grid-column: -2;
-                      align-self: center;
-                    `}
-                    data-cy={`top-inpage-link`}
-                  >
-                    to top <ArrowIcon direction="up" />
-                  </a>
-                </div>
-
-                {platforms.map(platform => {
-                  return (
-                    <PlatformCard
-                      shortname={platform.shortname}
-                      key={platform.id}
-                    />
-                  )
-                })}
-              </React.Fragment>
-            )
-          )}
-        </ExploreSection>
-      ) : (
-        <NoResultsMessage />
-      )}
+      <ExploreSection
+        list={platformList.filtered}
+        groups={Object.entries(platformList.grouped)}
+        card={{ component: PlatformCard }}
+      />
     </ExploreLayout>
   )
 }

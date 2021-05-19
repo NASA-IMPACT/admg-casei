@@ -102,10 +102,8 @@ export default function useCampaignList(
   }, [dateRange])
 
   useEffect(() => {
-    console.log(searchResult)
     // update after entering text in the 'filter by name' field
     const filteredCampaignBySearch = queryResult.filter(campaign => {
-      console.log(campaign)
       return searchResult
         ? campaign.shortname
             .toLowerCase()
