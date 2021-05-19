@@ -7,7 +7,7 @@
 
 describe("Filter, Search and Sort", () => {
   it("should not reload on button click nor type and enter", () => {
-    cy.visit("/explore")
+    cy.visit("/explore/campaigns")
 
     // should show map on intitial load
     cy.get("[data-cy=main-explore]")
@@ -87,10 +87,8 @@ describe("Filter, Search and Sort", () => {
     describe(`${x.category}`, () => {
       beforeEach(() => {
         // a fresh reload before ever test helps avoiding the reach-ui/portal issue
-        cy.visit("/explore")
-        cy.get("[data-cy=tabbar]")
-          .contains("button", x.category, { matchCase: false })
-          .click()
+        cy.visit(`/explore/${x.category}`)
+        cy.get("h1").contains(`Explore ${x.category}`)
       })
       it(`filter ${x.category}`, () => {
         cy.get("[data-cy=explore-tools]").should("exist")

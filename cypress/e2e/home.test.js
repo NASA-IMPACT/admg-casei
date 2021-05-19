@@ -103,7 +103,7 @@ describe("Homepage", () => {
 
     cy.get(".slide-visible > [data-cy=region-type]").click()
 
-    cy.url().should("include", "/explore")
+    cy.url().should("include", "/explore/campaigns")
 
     cy.get("h1").should("have.text", "Explore campaigns")
 
@@ -136,7 +136,7 @@ describe("Homepage", () => {
       .contains("Biodiversity")
       .click()
 
-    cy.url().should("include", "/explore")
+    cy.url().should("include", "/explore/campaigns")
 
     cy.get("h1").should("have.text", "Explore campaigns")
 
@@ -160,7 +160,7 @@ describe("Homepage", () => {
 
     cy.get("[data-cy=explore-platforms-link]").click()
 
-    cy.location("pathname").should("include", "/explore")
+    cy.location("pathname").should("include", "/explore/platforms")
     // TODO: skipping, can't get it to pass on ci
 
     // cy.get("[data-cy=h1-platforms]")
@@ -189,7 +189,7 @@ describe("Homepage", () => {
       .contains("Spectrometer/Radiometer")
       .click()
 
-    cy.location("pathname").should("include", "/explore")
+    cy.location("pathname").should("include", "/explore/instruments")
     // TODO: skipping, can't get it to pass on ci
 
     // cy.get("[data-cy=h1-instruments]")

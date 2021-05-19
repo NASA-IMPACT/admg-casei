@@ -2,8 +2,7 @@
 
 describe("Instrument", () => {
   before(() => {
-    cy.visit("/explore")
-    cy.get("[data-cy=tabbar]").contains("button", "Instruments").click()
+    cy.visit("/explore/instruments")
     cy.get("[data-cy=instruments-card]")
       .find("big")
       .contains("CPL")

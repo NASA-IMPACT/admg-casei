@@ -41,18 +41,18 @@ describe("Footer", () => {
     // Explore links
     cy.get("[data-cy=footer-explore]").find("p").contains("Explore")
     cy.get("[data-cy=footer-campaigns-link]").contains("Campaigns").click()
-    cy.url().should("include", "/explore")
+    cy.url().should("include", "/explore/campaigns")
     cy.get("h1").should("have.text", "Explore campaigns")
     cy.go("back")
 
     cy.get("[data-cy=footer-platforms-link]").contains("Platforms").click()
-    cy.url().should("include", "/explore")
+    cy.url().should("include", "/explore/platforms")
 
     cy.get("h1").should("have.text", "Explore platforms")
     cy.go("back")
 
     cy.get("[data-cy=footer-instruments-link]").contains("Instruments").click()
-    cy.url().should("include", "/explore")
+    cy.url().should("include", "/explore/instruments")
 
     cy.get("h1").should("have.text", "Explore instruments")
     cy.go("back")

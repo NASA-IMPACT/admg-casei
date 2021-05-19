@@ -2,8 +2,7 @@
 
 describe("Platform", () => {
   before(() => {
-    cy.visit("/explore")
-    cy.get("[data-cy=tabbar]").contains("button", "Platforms").click()
+    cy.visit("/explore/platforms")
     cy.get("[data-cy=platforms-card]")
       .find("big")
       .contains("DC-8")
