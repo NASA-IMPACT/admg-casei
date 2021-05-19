@@ -7,7 +7,6 @@ describe("Instrument", () => {
       .find("big")
       .contains("CPL")
       .parent()
-      .parent()
       .click()
   })
 

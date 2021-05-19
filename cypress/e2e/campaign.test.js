@@ -7,7 +7,6 @@ describe("Campaign", () => {
       .find("big")
       .contains("OLYMPEX")
       .parent()
-      .parent()
       .click()
   })
 
@@ -231,7 +230,6 @@ describe("Campaign", () => {
         .find("big")
         .contains("AirMOSS")
         .parent()
-        .parent()
         .click()
     })
 
@@ -270,7 +268,6 @@ describe("Campaign", () => {
       cy.get("[data-cy=campaigns-card]")
         .find("big")
         .contains("CAMP2Ex")
-        .parent()
         .parent()
         .click()
     })

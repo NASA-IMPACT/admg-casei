@@ -11,7 +11,7 @@ describe("Explore", () => {
 
     it("displays campaign cards and navigates to the selected campaign", () => {
       cy.get("[data-cy=tabbar]")
-        .find("button")
+        .find("a")
         .should($tabs => {
           expect($tabs).to.have.length(3)
         })
@@ -100,7 +100,7 @@ describe("Explore", () => {
 
     it("displays platform cards and navigates to the selected platform", () => {
       cy.get("[data-cy=tabbar]")
-        .find("button")
+        .find("a")
         .should($tabs => {
           expect($tabs).to.have.length(3)
         })
@@ -177,7 +177,7 @@ describe("Explore", () => {
 
     it("displays instrument cards and navigates to the selected instrument", () => {
       cy.get("[data-cy=tabbar]")
-        .find("button")
+        .find("a")
         .should($tabs => {
           expect($tabs).to.have.length(3)
         })

@@ -6,8 +6,14 @@ describe("Footer", () => {
     // home
     cy.visit("/")
     cy.get("[data-cy=page]").find("[data-cy=page-footer]")
-    // explore
-    cy.visit("/explore")
+    // explore campaigns
+    cy.visit("/explore/campaigns")
+    cy.get("[data-cy=page]").find("[data-cy=page-footer]")
+    // explore platforms
+    cy.visit("/explore/platforms")
+    cy.get("[data-cy=page]").find("[data-cy=page-footer]")
+    // explore instruments
+    cy.visit("/explore/instruments")
     cy.get("[data-cy=page]").find("[data-cy=page-footer]")
     // about
     cy.visit("/about")

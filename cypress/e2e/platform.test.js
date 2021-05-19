@@ -7,7 +7,6 @@ describe("Platform", () => {
       .find("big")
       .contains("DC-8")
       .parent()
-      .parent()
       .click()
   })
 

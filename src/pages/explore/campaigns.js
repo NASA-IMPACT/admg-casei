@@ -39,7 +39,7 @@ export default function ExploreCampaigns({ data, location }) {
     end: null,
   })
   const [searchResult, setSearchResult] = useState(null)
-  const [isDisplayingMap, toggleMap] = useState(true)
+  const [isDisplayingMap, toggleMap] = useState(false)
 
   useEffect(() => {
     // update based on passed state
