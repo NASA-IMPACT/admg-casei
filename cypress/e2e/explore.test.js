@@ -163,7 +163,7 @@ describe("Explore", () => {
 
       cy.url().should("include", "/platform/")
 
-      cy.get("h1").should("have.text", "Global Hawk UAV")
+      cy.get("h1").should("have.text", "GHGlobal Hawk UAV")
     })
   })
 
