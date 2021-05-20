@@ -15,8 +15,22 @@ export default function PlatformHero({
 }) {
   return (
     <Hero
-      tagline={shortname}
-      title={longname}
+      tagline="Platform"
+      title={
+        <>
+          {shortname}
+          <br />
+          <span
+            css={`
+              font-size: 1.5rem;
+              line-height: 1.75rem;
+              font-weight: normal;
+            `}
+          >
+            {longname}
+          </span>
+        </>
+      }
       image={
         image ? (
           <GatsbyImage
