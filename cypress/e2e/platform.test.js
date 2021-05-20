@@ -12,7 +12,7 @@ describe("Platform", () => {
   })
 
   it("explains the platform", () => {
-    cy.get("[data-cy=platform-hero]").first().find("p").contains("DC-8")
+    cy.get("[data-cy=platform-hero]").first().find("p").contains("Platform")
 
     cy.get("[data-cy=platform-hero]")
       .first()

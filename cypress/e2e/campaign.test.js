@@ -229,6 +229,7 @@ describe("Campaign", () => {
   describe("the timeline section", () => {
     before(() => {
       cy.visit("/explore/campaigns")
+      cy.wait(0)
       cy.get("[data-cy=campaigns-card]")
         .find("big")
         .contains("AirMOSS")
@@ -268,6 +269,7 @@ describe("Campaign", () => {
   describe("the data section", () => {
     before(() => {
       cy.visit("/explore/campaigns")
+      cy.wait(0)
       cy.get("[data-cy=campaigns-card]")
         .find("big")
         .contains("CAMP2Ex")
