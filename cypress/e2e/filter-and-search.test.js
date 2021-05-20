@@ -5,7 +5,7 @@
 // that are used to create the filter dropdown menus
 // see https://github.com/reach/reach-ui/issues/629
 
-describe("Filter, Search and Sort", () => {
+describe.skip("Filter, Search and Sort", () => {
   it("should not reload on button click nor type and enter", () => {
     cy.visit("/explore/campaigns")
 
