@@ -8,7 +8,7 @@ import { colors } from "../../theme"
 export default function ContentItem({
   id,
   label,
-  info = "N/A",
+  info = "Currently unavailable",
   link,
   mode = NEGATIVE,
 }) {
@@ -28,7 +28,7 @@ export default function ContentItem({
           <ExternalLink id={id} label={info} url={link} />
         </p>
       ) : (
-        <p data-cy={`${id}-text`}>{info || "N/A"}</p>
+        <p data-cy={`${id}-text`}>{info || "Currently unavailable"}</p>
       )}
     </div>
   )

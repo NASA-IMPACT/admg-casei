@@ -143,7 +143,7 @@ export default function Accordion({ folds, id }) {
                       .filter(x => x)
                       .join(" > ")
                   )
-                  .join(" > ") || "N/A"}
+                  .join(" > ") || "Currently unavailble"}
               </div>
             )}
             <Link
