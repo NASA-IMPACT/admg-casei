@@ -82,14 +82,15 @@ const GroupedList = ({ groups, card }) => {
           align-items: baseline;
         `}
       >
-        <h3
+        <h2
           id={type}
           css={`
             grid-column: 1/-1;
+            font-size: 2.25rem; /* match h3 */
           `}
         >
           {type} <small>({items.length})</small>
-        </h3>
+        </h2>
         <a
           href="#top"
           css={`
