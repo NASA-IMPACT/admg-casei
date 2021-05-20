@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 import VisuallyHidden from "@reach/visually-hidden"
+import parse from "wellknown"
 
 import {
   Section,
@@ -27,140 +28,167 @@ const OverviewSection = ({
   notesPublic,
   repositories,
   websites,
-}) => (
-  <Section id={id} mode={POSITIVE}>
-    <VisuallyHidden>
-      <SectionHeader headline="Overview" id={id} />
-    </VisuallyHidden>
-    <SectionContent mode={POSITIVE} columns={[1, 8]}>
-      <h3>The Campaign</h3>
+}) => {
+  const convertBoundsToNSWE = () => {
+    // gets coordinates from WKT string
+    const coords = parse(bounds).coordinates[0]
+    // transforms coordinates to readable bounds
+    const stringified = (coord, latlong) => {
+      const pos = latlong === "long" ? "N" : "E"
+      const neg = latlong === "long" ? "S" : "W"
+      return coord < 0
+        ? Math.abs(coord).toString() + "\u00b0" + neg
+        : coord.toString() + "\u00b0" + pos
+    }
+    return {
+      N: stringified(coords[2][1], "long"),
+      S: stringified(coords[1][1], "long"),
+      W: stringified(coords[0][0], "lat"),
+      E: stringified(coords[1][0], "lat"),
+    }
+  }
 
-      <p data-cy="description">{description}</p>
+  return (
+    <Section id={id} mode={POSITIVE}>
+      <VisuallyHidden>
+        <SectionHeader headline="Overview" id={id} />
+      </VisuallyHidden>
+      <SectionContent mode={POSITIVE} columns={[1, 8]}>
+        <h3>The Campaign</h3>
 
-      {aliases.length ? (
-        <p
-          css={`
-            margin-top: 2rem;
-          `}
-          data-cy="aliases"
-        >
-          <label
+        <p data-cy="description">{description}</p>
+
+        {aliases.length ? (
+          <p
             css={`
-              color: ${colors[POSITIVE].altText};
+              margin-top: 2rem;
             `}
+            data-cy="aliases"
           >
-            {aliases.length === 1 ? "Alias" : "Aliases"}:{" "}
-          </label>
-          {aliases.map((a, i) => (i > 0 ? `, ${a.shortname}` : a.shortname))}
-        </p>
-      ) : null}
-
-      <div
-        css={`
-          margin-top: 3rem;
-          display: grid;
-          column-gap: 2rem;
-          grid-auto-flow: column;
-          grid-template-columns: 1fr 1fr;
-          grid-template-rows: 1fr auto 1fr;
-        `}
-      >
-        <ContentItem
-          id="overview-content"
-          label="Study dates"
-          info={`${startdate} — ${enddate || "ongoing"}`}
-          mode={POSITIVE}
-        />
-        <hr />
-        <ContentItem
-          id="overview-content"
-          label="Region"
-          info={region}
-          mode={POSITIVE}
-        />
-
-        <ContentItem
-          id="overview-content"
-          label="Season of Study"
-          info={seasonListing}
-          mode={POSITIVE}
-        />
-        <hr />
-        <ContentItem
-          id="overview-content"
-          label="Spatial bounds (WKT)"
-          info={bounds}
-          mode={POSITIVE}
-        />
-      </div>
-    </SectionContent>
-
-    <SectionContent mode={POSITIVE} columns={[10, 3]}>
-      <ul
-        css={`
-          margin: 0;
-          list-style: none;
-        `}
-        data-cy="link-list"
-      >
-        <li
-          css={`
-            padding: 1rem;
-            border: 1px solid ${colors[POSITIVE].border};
-            margin-bottom: 3rem;
-          `}
-        >
-          {doi ? (
-            <p
+            <label
               css={`
-                white-space: nowrap;
-                overflow: hidden;
-                line-height: 1.5rem;
-                text-overflow: ellipsis;
+                color: ${colors[POSITIVE].altText};
               `}
             >
-              Campaign DOI:
-              <br />
-              <ExternalLink label={doi} url={doi} id="doi" mode={POSITIVE} />
-            </p>
-          ) : (
-            <p data-cy="doi-link">no campaign DOI available</p>
-          )}
-        </li>
+              {aliases.length === 1 ? "Alias" : "Aliases"}:{" "}
+            </label>
+            {aliases.map((a, i) => (i > 0 ? `, ${a.shortname}` : a.shortname))}
+          </p>
+        ) : null}
 
-        {websites &&
-          websites
-            .sort((a, b) => a.priority - b.priority)
-            .map(website => (
-              <ListLink key={website.url} mode={POSITIVE} to={website.url}>
-                {website.title}
-              </ListLink>
-            ))}
-      </ul>
-    </SectionContent>
+        <div
+          css={`
+            margin-top: 3rem;
+            display: grid;
+            column-gap: 2rem;
+            grid-auto-flow: column;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr auto 1fr;
+          `}
+        >
+          <ContentItem
+            id="overview-content"
+            label="Study dates"
+            info={`${startdate} — ${enddate || "ongoing"}`}
+            mode={POSITIVE}
+          />
+          <hr />
+          <ContentItem
+            id="overview-content"
+            label="Region"
+            info={region}
+            mode={POSITIVE}
+          />
 
-    <SectionContent mode={POSITIVE} columns={[1, 8]}>
-      <h3>Additional Notes</h3>
-      <p data-cy="notes-public">{notesPublic}</p>
-    </SectionContent>
-    <SectionContent mode={POSITIVE} columns={[1, 8]}>
-      <h3>Repositories</h3>
-      <ul
-        css={`
-          margin: 0;
-          list-style: none;
-        `}
-        data-cy="repo-list"
-      >
-        {repositories.map(repo => (
-          <ListLink key={repo.id} to={repo.url} mode={POSITIVE} noPadding>
-            {repo.longname}
-          </ListLink>
-        ))}
-      </ul>
-    </SectionContent>
-  </Section>
-)
+          <ContentItem
+            id="overview-content"
+            label="Season of Study"
+            info={seasonListing}
+            mode={POSITIVE}
+          />
+          <hr />
+          <ContentItem
+            id="overview-content"
+            label="Spatial bounds"
+            info={Object.entries(convertBoundsToNSWE()).map(
+              ([label, coord]) => (
+                <p>
+                  {label}: {coord}
+                </p>
+              )
+            )}
+            mode={POSITIVE}
+          />
+        </div>
+      </SectionContent>
+
+      <SectionContent mode={POSITIVE} columns={[10, 3]}>
+        <ul
+          css={`
+            margin: 0;
+            list-style: none;
+          `}
+          data-cy="link-list"
+        >
+          <li
+            css={`
+              padding: 1rem;
+              border: 1px solid ${colors[POSITIVE].border};
+              margin-bottom: 3rem;
+            `}
+          >
+            {doi ? (
+              <p
+                css={`
+                  white-space: nowrap;
+                  overflow: hidden;
+                  line-height: 1.5rem;
+                  text-overflow: ellipsis;
+                `}
+              >
+                Campaign DOI:
+                <br />
+                <ExternalLink label={doi} url={doi} id="doi" mode={POSITIVE} />
+              </p>
+            ) : (
+              <p data-cy="doi-link">no campaign DOI available</p>
+            )}
+          </li>
+
+          {websites &&
+            websites
+              .sort((a, b) => a.priority - b.priority)
+              .map(website => (
+                <ListLink key={website.url} mode={POSITIVE} to={website.url}>
+                  {website.title}
+                </ListLink>
+              ))}
+        </ul>
+      </SectionContent>
+
+      <SectionContent mode={POSITIVE} columns={[1, 8]}>
+        <h3>Additional Notes</h3>
+        <p data-cy="notes-public">{notesPublic}</p>
+      </SectionContent>
+      <SectionContent mode={POSITIVE} columns={[1, 8]}>
+        <h3>Repositories</h3>
+        <ul
+          css={`
+            margin: 0;
+            list-style: none;
+          `}
+          data-cy="repo-list"
+        >
+          {repositories.map(repo => (
+            <ListLink key={repo.id} to={repo.url} mode={POSITIVE} noPadding>
+              {repo.longname}
+            </ListLink>
+          ))}
+        </ul>
+      </SectionContent>
+    </Section>
+  )
+}
 
 export const overviewFields = graphql`
   fragment overviewFields on campaign {
