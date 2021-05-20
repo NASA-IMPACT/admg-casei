@@ -28,7 +28,7 @@ describe("Platform", () => {
       .should($stat => {
         expect($stat, "2 items").to.have.length(2)
         expect($stat.eq(0), "first item").to.contain("Campaigns")
-        expect($stat.eq(1), "second item").to.contain("Flights")
+        expect($stat.eq(1), "second item").to.contain("Collection Periods")
       })
 
     // displays inpage nav
