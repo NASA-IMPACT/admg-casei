@@ -112,7 +112,7 @@ const OverviewSection = ({
             label="Spatial bounds"
             info={Object.entries(convertBoundsToNSWE()).map(
               ([label, coord]) => (
-                <p>
+                <p key={label}>
                   {label}: {coord}
                 </p>
               )
