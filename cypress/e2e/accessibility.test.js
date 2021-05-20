@@ -76,9 +76,7 @@ describe("Accessibility tests", () => {
     cy.checkA11y(null, null, terminalLog)
   })
 
-  // TODO: carousel contains Focusable content (campaign card as link) that is hidden on the other slides
-  // a11y error!aria-hidden-focus on 1 Node
-  it.skip("Navigates to page for a /platform and checks for accessibility violations", () => {
+  it("Navigates to page for a /platform and checks for accessibility violations", () => {
     cy.visit("/explore/platforms")
 
     cy.get("h1").should("contain.text", "Explore platforms")
