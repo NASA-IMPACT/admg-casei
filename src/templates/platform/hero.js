@@ -44,7 +44,7 @@ export default function PlatformHero({
       textToImageRatio={[5, 3]}
       stats={[
         { label: "Campaigns", number: campaigns },
-        { label: "Flights", number: collectionPeriods },
+        { label: "Collection Periods", number: collectionPeriods },
       ]}
       id="platform"
     />
