@@ -41,8 +41,8 @@ const OverviewSection = ({
         : coord.toString() + "\u00b0" + pos
     }
     return {
-      N: stringified(coords[2][1], "long"),
-      S: stringified(coords[1][1], "long"),
+      N: stringified(coords[0][1], "long"),
+      S: stringified(coords[2][1], "long"),
       W: stringified(coords[0][0], "lat"),
       E: stringified(coords[1][0], "lat"),
     }
