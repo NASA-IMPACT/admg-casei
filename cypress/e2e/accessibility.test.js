@@ -67,6 +67,8 @@ describe("Accessibility tests", () => {
 
     cy.get("h1").should("contain.text", "Explore campaigns")
 
+    cy.wait(0)
+
     cy.get("[data-cy=campaigns-card]").first().click()
 
     cy.get("h1").should("exist")
@@ -81,6 +83,8 @@ describe("Accessibility tests", () => {
 
     cy.get("h1").should("contain.text", "Explore platforms")
 
+    cy.wait(0)
+
     cy.get("[data-cy=platforms-card]").last().click()
 
     cy.get("h1").should("exist")
@@ -94,6 +98,8 @@ describe("Accessibility tests", () => {
     cy.visit("/explore/instruments")
 
     cy.get("h1").should("contain.text", "Explore instruments")
+
+    cy.wait(0)
 
     cy.get("[data-cy=instruments-card]").first().click()
 

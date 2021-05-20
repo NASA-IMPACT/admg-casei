@@ -3,6 +3,7 @@
 describe("Instrument", () => {
   before(() => {
     cy.visit("/explore/instruments")
+    cy.wait(0)
     cy.get("[data-cy=instruments-card]")
       .find("big")
       .contains("CPL")

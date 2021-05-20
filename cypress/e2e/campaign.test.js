@@ -3,6 +3,7 @@
 describe("Campaign", () => {
   before(() => {
     cy.visit("/explore/campaigns")
+    cy.wait(0)
     cy.get("[data-cy=campaigns-card]")
       .find("big")
       .contains("OLYMPEX")
@@ -39,6 +40,7 @@ describe("Campaign", () => {
     cy.get("[data-cy=mapboxgl-map]").should("exist")
 
     cy.get("[data-cy=inpage-nav]").find("[data-cy=home-link]").should("exist")
+    cy.wait(0)
     cy.get("[data-cy=home-link]").click()
 
     cy.url().should("eq", "http://localhost:8000/")
@@ -63,6 +65,7 @@ describe("Campaign", () => {
       })
     ;["program-info", "platform", "overview", "timeline", "focus"].forEach(
       id => {
+        cy.wait(0)
         cy.get(`[data-cy=${id}-inpage-link]`).click()
 
         cy.url().should("include", id)

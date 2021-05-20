@@ -3,6 +3,7 @@
 describe("Platform", () => {
   before(() => {
     cy.visit("/explore/platforms")
+    cy.wait(0)
     cy.get("[data-cy=platforms-card]")
       .find("big")
       .contains("DC-8")
