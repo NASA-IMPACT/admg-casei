@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
-import { colors, layout } from "../theme"
+import { colors, layout, breakpoints } from "../theme"
 import { CaseiLogoIcon } from "../icons"
 import { NEGATIVE } from "../utils/constants"
 
@@ -23,6 +23,9 @@ const Header = ({ shortname, children, mode, isHeaderFixed }) => (
         margin: 0 auto;
         max-width: ${layout.maxWidth};
         padding: 0.25rem ${layout.pageMargin};
+        @media screen and (max-width: ${breakpoints["sm"]}) {
+          padding: 0.25rem ${layout.smallPageMargin};
+        }
         display: flex;
         justify-content: space-between;
         align-items: center;
