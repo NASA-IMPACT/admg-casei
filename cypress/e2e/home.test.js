@@ -49,6 +49,26 @@ describe("Homepage", () => {
 
     cy.get("h1").should("contain", "Weather")
   })
+  it("there is an explore section", () => {
+    cy.get("[data-cy=explore-section]")
+      .find("h2")
+      .should($h2 => {
+        expect($h2).to.have.length(1)
+      })
+      .then($h2 => {
+        expect($h2, "text content").to.have.text("CASEI")
+      })
+
+    cy.get("[data-cy=explore-link-list]")
+      .should("exist")
+      .find("li")
+      .should($li => {
+        expect($li, "3 items").to.have.length(3)
+        expect($li.eq(0), "first item").to.contain("Explore campaigns")
+        expect($li.eq(1), "second item").to.contain("Explore platforms")
+        expect($li.eq(2), "third item").to.contain("Explore instruments")
+      })
+  })
 
   // Note: it cannot access _this when using arrow function
   it("region types can be selected", function () {
@@ -146,28 +166,6 @@ describe("Homepage", () => {
     //   .and("have.text", "geophysical: Biodiversity")
 
     // cy.get("[data-cy=campaigns-card]").should("have.length", 2)
-  })
-
-  it("there is a platform section", () => {
-    cy.get("[data-cy=platforms-section]")
-      .find("h2")
-      .should($h2 => {
-        expect($h2).to.have.length(1)
-      })
-      .then($h2 => {
-        expect($h2, "text content").to.have.text("Platforms")
-      })
-
-    cy.get("[data-cy=explore-platforms-link]").click()
-
-    cy.location("pathname").should("include", "/explore")
-    // TODO: skipping, can't get it to pass on ci
-
-    // cy.get("[data-cy=h1-platforms]")
-    //   .should("exist")
-    //   .should("have.text", "Explore platforms")
-
-    // cy.get("[data-cy=platforms-card]").find("big").contains("B-200")
   })
 
   it("an intrument can be selected", () => {
