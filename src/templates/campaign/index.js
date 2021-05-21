@@ -102,7 +102,7 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
     //   nav: "Other",
     //   component: OtherResourcesSection,
     //   props: {
-    //     resources: campaign.resources.split("\n").filter(x => x),
+    //     resources: parseTextToList(campaign.resources),
     //   },
     // },
   }

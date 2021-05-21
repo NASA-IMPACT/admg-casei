@@ -9,6 +9,7 @@ import InpageNav from "../../components/inpage-nav"
 import OverviewSection from "./overview-section"
 import Entities from "./entities"
 import DataSection from "../../components/data-section"
+import { parseTextToList } from "../../utils/helpers"
 
 const InstrumentTemplate = ({ data: { instrument }, path }) => {
   const sections = {
@@ -28,9 +29,7 @@ const InstrumentTemplate = ({ data: { instrument }, path }) => {
         fundingSource: instrument.fundingSource,
         leadInvestigator: instrument.leadInvestigator,
         technicalContact: instrument.technicalContact,
-        onlineInformation: instrument.onlineInformation
-          .split("\n")
-          .filter(x => x),
+        onlineInformation: parseTextToList(instrument.onlineInformation),
         overviewPublication: instrument.overviewPublication,
         repositories: instrument.repositories,
       },
