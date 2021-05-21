@@ -12,6 +12,8 @@ it("converts bounds to NSWE", () => {
     "SRID=4326;POLYGON ((-80 -22, -70 -22, -70 -15, -80 -15, -80 -22))",
     // Cross hemisphere test case
     "SRID=4326;POLYGON ((-10 -12, 15 -12, 15 6, -10 6, -10 -12))",
+    // Null island
+    "SRID=4326;POLYGON ((0 0, 0 0, 0 0, 0 0, 0 0))",
   ]
 
   const output = [
@@ -44,6 +46,12 @@ it("converts bounds to NSWE", () => {
       S: "12°S",
       W: "10°W",
       E: "15°E",
+    },
+    {
+      N: "0°N",
+      S: "0°S",
+      W: "0°W",
+      E: "0°E",
     },
   ]
 
