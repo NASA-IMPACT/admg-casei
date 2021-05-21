@@ -40,13 +40,19 @@ const Header = ({ shortname, children, mode, isHeaderFixed }) => (
           gap: 1rem;
         `}
       >
-        <StaticImage
-          src="https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png"
-          alt="NASA's red, white and blue insignia, nicknamed the 'meatball'"
-          width={78} // make the blue circle match the svg logo of size 60
-          height={78} // make the blue circle match the svg logo of size 60
-          data-cy="nasa-logo"
-        />
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.nasa.gov"
+        >
+          <StaticImage
+            src="https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png"
+            alt="NASA's red, white and blue insignia, nicknamed the 'meatball'"
+            width={78} // make the blue circle match the svg logo of size 60
+            height={78} // make the blue circle match the svg logo of size 60
+            data-cy="nasa-logo"
+          />
+        </a>
 
         <div
           css={`
