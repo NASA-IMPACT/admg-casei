@@ -8,7 +8,12 @@ import CampaignCard from "../../components/cards/campaign-card"
 const CampaignsAndInstruments = ({ id, campaigns, instruments }) => {
   return (
     <Section id={id}>
-      <SectionHeader headline="Related Campaigns & Instruments" id={id} />
+      <SectionHeader
+        headline="Related Campaigns & Instruments"
+        id={id}
+        description="Review the instruments operated on this platform for each of these
+          field campaigns"
+      />
       <SectionContent>
         <CarouselAccordionCombo
           id="campaign"

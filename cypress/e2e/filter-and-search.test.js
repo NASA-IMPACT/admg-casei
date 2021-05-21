@@ -5,9 +5,9 @@
 // that are used to create the filter dropdown menus
 // see https://github.com/reach/reach-ui/issues/629
 
-describe("Filter, Search and Sort", () => {
+describe.skip("Filter, Search and Sort", () => {
   it("should not reload on button click nor type and enter", () => {
-    cy.visit("/explore")
+    cy.visit("/explore/campaigns")
 
     // should show map on intitial load
     cy.get("[data-cy=main-explore]")
@@ -87,10 +87,8 @@ describe("Filter, Search and Sort", () => {
     describe(`${x.category}`, () => {
       beforeEach(() => {
         // a fresh reload before ever test helps avoiding the reach-ui/portal issue
-        cy.visit("/explore")
-        cy.get("[data-cy=tabbar]")
-          .contains("button", x.category, { matchCase: false })
-          .click()
+        cy.visit(`/explore/${x.category}`)
+        cy.get("h1").contains(`Explore ${x.category}`)
       })
       it(`filter ${x.category}`, () => {
         cy.get("[data-cy=explore-tools]").should("exist")
@@ -139,24 +137,28 @@ describe("Filter, Search and Sort", () => {
 
       it(`clear all ${x.category}`, () => {
         cy.get(`[data-cy=${x.filterExamples[0].id}-filter-select]`).click()
+        cy.wait(0)
         cy.get("[data-cy=filter-options]")
           .contains("li", x.filterExamples[0].value)
-          .click({ force: true })
-
+          .click()
+        cy.wait(0)
         cy.get(`[data-cy=${x.filterExamples[1].id}-filter-select]`).click()
+        cy.wait(0)
         cy.get("[data-cy=filter-options]")
           .contains("li", x.filterExamples[1].value)
-          .click({ force: true })
-
+          .click()
+        cy.wait(0)
         cy.get("[data-cy=clear-filters]").should("exist")
         cy.get("[data-cy=clear-filters]").click()
+        cy.wait(0)
         cy.get("[data-cy=filter-chip]").should("not.exist")
       })
 
       it(`sort ${x.category}`, () => {
         cy.get("[data-cy=sort-select]").click()
+        cy.wait(0)
         cy.get("[data-cy=sort-options]").contains("li", "A TO Z").click()
-
+        cy.wait(0)
         cy.get(`[data-cy=${x.category}-card]`)
           .find("big")
           .should($big => {
@@ -165,12 +167,13 @@ describe("Filter, Search and Sort", () => {
 
             expect(first < last).to.be.true
           })
-      })
+        // })
 
-      it.skip(`TODO: the portal is kicked out and can't be clicked anymore`, () => {
+        // it.skip(`TODO: the portal is kicked out and can't be clicked anymore`, () => {
         cy.get("[data-cy=sort-select]").click()
+        cy.wait(0)
         cy.get("[data-cy=sort-options]").contains("li", "Z TO A").click()
-
+        cy.wait(0)
         cy.get(`[data-cy=${x.category}-card]`)
           .find("big")
           .should($big => {
@@ -182,6 +185,7 @@ describe("Filter, Search and Sort", () => {
 
         if (x.category === "campaigns") {
           cy.get("[data-cy=sort-select]").click()
+          cy.wait(0)
           cy.get("[data-cy=sort-options]").contains("li", "MOST RECENT").click()
 
           cy.get(`[data-cy=${x.category}-card]`)
@@ -194,8 +198,9 @@ describe("Filter, Search and Sort", () => {
             })
 
           cy.get("[data-cy=sort-select]").click()
+          cy.wait(0)
           cy.get("[data-cy=sort-options]").contains("li", "OLDEST").click()
-
+          cy.wait(0)
           cy.get(`[data-cy=${x.category}-card]`)
             .find("[data-cy=daterange]")
             .should($small => {
@@ -208,8 +213,9 @@ describe("Filter, Search and Sort", () => {
 
         if (x.category === "platforms" || x.category === "instruments") {
           cy.get("[data-cy=sort-select]").click()
+          cy.wait(0)
           cy.get("[data-cy=sort-options]").contains("li", "MOST USED").click()
-
+          cy.wait(0)
           cy.get(`[data-cy=${x.category}-card]`)
             .find("[data-cy=count1]")
             .should($small => {

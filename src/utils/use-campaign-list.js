@@ -103,14 +103,16 @@ export default function useCampaignList(
 
   useEffect(() => {
     // update after entering text in the 'filter by name' field
-    const filteredCampaignBySearch = queryResult.filter(campaign =>
-      searchResult
+    const filteredCampaignBySearch = queryResult.filter(campaign => {
+      return searchResult
         ? campaign.shortname
             .toLowerCase()
             .includes(searchResult.toLowerCase()) ||
-          campaign.longname?.toLowerCase().includes(searchResult.toLowerCase())
+            campaign.longname
+              ?.toLowerCase()
+              .includes(searchResult.toLowerCase())
         : true
-    )
+    })
 
     setCampaignList(prev => ({
       ...prev,

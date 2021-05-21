@@ -15,7 +15,7 @@ export const GeophysicsGrid = ({ geophysicalConcepts }) => (
   >
     {geophysicalConcepts.map(concept => (
       <Link
-        to="/explore"
+        to="/explore/campaigns"
         state={{ selectedFilterId: concept.id }} // Pass state as props to the linked page
         style={{ flexGrow: 1 }}
         data-cy="geophysical-concept"

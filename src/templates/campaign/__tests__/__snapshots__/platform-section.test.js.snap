@@ -233,6 +233,7 @@ exports[`Platform Section displays content 1`] = `
         data-test="mocked-nuka-carousel"
       >
         <div
+          aria-hidden="false"
           className="c8"
           data-cy="platform"
         >
@@ -341,6 +342,7 @@ exports[`Platform Section displays content 1`] = `
           />
         </div>
         <div
+          aria-hidden="false"
           className="c8"
           data-cy="platform"
         >
@@ -450,6 +452,7 @@ exports[`Platform Section displays content 1`] = `
           />
         </div>
         <div
+          aria-hidden="false"
           className="c8"
           data-cy="platform"
         >

@@ -12,7 +12,7 @@ const FilterByTextInput = React.forwardRef(
 
     const debounced = useDebouncedCallback(
       // function
-      value => setSearchResult(prev => ({ ...prev, [category]: value })),
+      value => setSearchResult(value),
       // delay in ms
       400
     )

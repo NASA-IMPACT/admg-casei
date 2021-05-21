@@ -130,7 +130,7 @@ export default function Hero({
               `}
             >
               <Link
-                to="/explore"
+                to="/explore/campaigns"
                 css={`
                   color: ${colors[POSITIVE].text} !important;
                   background-color: ${colors[POSITIVE].background};

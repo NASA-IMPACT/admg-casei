@@ -1,7 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { graphql, Link } from "gatsby"
-import styled from "styled-components"
 
 import Layout, { PageBody } from "../components/layout"
 import SEO from "../components/seo"
@@ -15,11 +14,6 @@ import { InstrumentsGrid } from "../components/home/instruments-grid"
 import { ArrowIcon } from "../icons"
 import { NEGATIVE } from "../utils/constants"
 import { colors } from "../theme"
-
-const Ul = styled.ul`
-  list-style: none;
-  margin: 0;
-`
 
 const Home = ({ data }) => {
   return (
@@ -62,7 +56,13 @@ const Home = ({ data }) => {
             id="focus"
           />
           <SectionContent>
-            <Ul data-cy={`explore-link-list`}>
+            <ul
+              css={`
+                list-style: none;
+                margin: 0;
+              `}
+              data-cy={`explore-link-list`}
+            >
               {["campaigns", "platforms", "instruments"].map(category => (
                 <li
                   key={category}
@@ -71,8 +71,7 @@ const Home = ({ data }) => {
                   `}
                 >
                   <Link
-                    to="/explore"
-                    state={{ defaultExploreCategory: `${category}` }}
+                    to={`/explore/${category}`}
                     css={`
                       text-transform: uppercase;
                     `}
@@ -89,7 +88,7 @@ const Home = ({ data }) => {
                   </Link>
                 </li>
               ))}
-            </Ul>
+            </ul>
           </SectionContent>
         </Section>
 

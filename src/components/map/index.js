@@ -46,7 +46,6 @@ export default function Map({ height, children }) {
   return (
     <div
       css={`
-        z-index: -1;
         grid-area: 1 / 1 / 1 / 4;
         height: ${height}px;
         position: relative;

@@ -32,6 +32,7 @@ module.exports = {
     {
       files: ["**/cypress/**"],
       rules: {
+        "cypress/no-unnecessary-waiting": "warn",
         "jest/expect-expect": "off",
         "jest/no-commented-out-tests": "off",
         "jest/no-disabled-tests": "off",
