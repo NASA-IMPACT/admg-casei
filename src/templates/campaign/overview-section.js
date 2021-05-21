@@ -2,7 +2,6 @@ import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 import VisuallyHidden from "@reach/visually-hidden"
-import parse from "wellknown"
 
 import {
   Section,
@@ -13,6 +12,7 @@ import {
 } from "../../components/layout"
 import ExternalLink from "../../components/external-link"
 import { POSITIVE } from "../../utils/constants"
+import { convertBoundsToNSWE } from "../../utils/helpers"
 import { colors } from "../../theme"
 
 const OverviewSection = ({
@@ -29,25 +29,6 @@ const OverviewSection = ({
   repositories,
   websites,
 }) => {
-  const convertBoundsToNSWE = () => {
-    // gets coordinates from WKT string
-    const coords = parse(bounds).coordinates[0]
-    // transforms coordinates to readable bounds
-    const stringified = (coord, latlong) => {
-      const pos = latlong === "long" ? "N" : "E"
-      const neg = latlong === "long" ? "S" : "W"
-      return coord < 0
-        ? Math.abs(coord).toString() + "\u00b0" + neg
-        : coord.toString() + "\u00b0" + pos
-    }
-    return {
-      N: stringified(coords[0][1], "long"),
-      S: stringified(coords[2][1], "long"),
-      W: stringified(coords[0][0], "lat"),
-      E: stringified(coords[1][0], "lat"),
-    }
-  }
-
   return (
     <Section id={id} mode={POSITIVE}>
       <VisuallyHidden>
@@ -110,7 +91,7 @@ const OverviewSection = ({
           <ContentItem
             id="overview-content"
             label="Spatial bounds"
-            info={Object.entries(convertBoundsToNSWE()).map(
+            info={Object.entries(convertBoundsToNSWE(bounds)).map(
               ([label, coord]) => (
                 <p key={label}>
                   {label}: {coord}

@@ -1,3 +1,5 @@
+import parse from "wellknown"
+
 const urlRegex = /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{2,256}\.[a-z]{2,4}/s
 const mailtoRegex = /^mailto:(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i
 
@@ -65,4 +67,23 @@ export function formatDateRange(start, end) {
   }
 
   return `${formatDateString(startdate)} — ${formatDateString(enddate)}`
+}
+
+export function convertBoundsToNSWE(bounds) {
+  // gets coordinates from WKT string
+  const coords = parse(bounds).coordinates[0]
+  // transforms coordinates to readable bounds
+  const stringified = (coord, latlong) => {
+    const pos = latlong === "long" ? "N" : "E"
+    const neg = latlong === "long" ? "S" : "W"
+    return coord < 0
+      ? Math.abs(coord).toString() + "\u00b0" + neg
+      : coord.toString() + "\u00b0" + pos
+  }
+  return {
+    N: stringified(coords[0][1], "long"),
+    S: stringified(coords[2][1], "long"),
+    W: stringified(coords[0][0], "lat"),
+    E: stringified(coords[1][0], "lat"),
+  }
 }
