@@ -73,29 +73,29 @@ export function convertBoundsToNSWE(bounds) {
   // gets coordinates from WKT string
   const coords = parse(bounds).coordinates[0]
   // seperate lats from lons
-  var lons = coords.map(function(arr) {
-    return arr[0];
-  });
-  var lats = coords.map(function(arr) {
-    return arr[1];
-  });
+  var lons = coords.map(function (arr) {
+    return arr[0]
+  })
+  var lats = coords.map(function (arr) {
+    return arr[1]
+  })
   // get min and max values
-  let minx = Math.min(...lons);
-  let maxx = Math.max(...lons);
-  let miny = Math.min(...lats);
-  let maxy = Math.max(...lats);
+  let minx = Math.min(...lons)
+  let maxx = Math.max(...lons)
+  let miny = Math.min(...lats)
+  let maxy = Math.max(...lats)
   // format output and return values
   const stringified = (coord, latlong) => {
     if (coord > 0 && latlong == "lat") {
-      return  Math.abs(coord).toString() + "\u00b0" + "N";
+      return Math.abs(coord).toString() + "\u00b0" + "N"
     } else if (coord > 0 && latlong == "lon") {
-      return  Math.abs(coord).toString() + "\u00b0" + "E";
+      return Math.abs(coord).toString() + "\u00b0" + "E"
     } else if (coord < 0 && latlong == "lat") {
-      return  Math.abs(coord).toString() + "\u00b0" + "S";
+      return Math.abs(coord).toString() + "\u00b0" + "S"
     } else if (coord < 0 && latlong == "lon") {
-      return  Math.abs(coord).toString() + "\u00b0" + "W";
+      return Math.abs(coord).toString() + "\u00b0" + "W"
     } else {
-      console.log('problems are here');
+      console.log("problems are here")
     }
   }
   return {
