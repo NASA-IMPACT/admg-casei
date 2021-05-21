@@ -72,18 +72,38 @@ export function formatDateRange(start, end) {
 export function convertBoundsToNSWE(bounds) {
   // gets coordinates from WKT string
   const coords = parse(bounds).coordinates[0]
-  // transforms coordinates to readable bounds
+  console.log('test test tes ssss', coords)
+  // seperate lats from lons
+  var lons = coords.map(function(arr) {
+    return arr[0];
+  });
+  var lats = coords.map(function(arr) {
+    return arr[1];
+  });
+  // get min and max values
+  let minx = Math.min(...lons);
+  let maxx = Math.max(...lons);
+  let miny = Math.min(...lats);
+  let maxy = Math.max(...lats);
+  console.log(minx, maxx, miny, maxy)
+  // format output and return values
   const stringified = (coord, latlong) => {
-    const pos = latlong === "long" ? "N" : "E"
-    const neg = latlong === "long" ? "S" : "W"
-    return coord < 0
-      ? Math.abs(coord).toString() + "\u00b0" + neg
-      : coord.toString() + "\u00b0" + pos
+    if (coord > 0 && latlong == "lat") {
+      return  Math.abs(coord).toString() + "\u00b0" + "N";
+    } else if (coord > 0 && latlong == "lon") {
+      return  Math.abs(coord).toString() + "\u00b0" + "E";
+    } else if (coord < 0 && latlong == "lat") {
+      return  Math.abs(coord).toString() + "\u00b0" + "S";
+    } else if (coord < 0 && latlong == "lon") {
+      return  Math.abs(coord).toString() + "\u00b0" + "W";
+    } else {
+      console.log('problems are here');
+    }
   }
   return {
-    N: stringified(coords[0][1], "long"),
-    S: stringified(coords[2][1], "long"),
-    W: stringified(coords[0][0], "lat"),
-    E: stringified(coords[1][0], "lat"),
+    N: stringified(maxy, "lat"),
+    S: stringified(miny, "lat"),
+    W: stringified(minx, "lon"),
+    E: stringified(maxx, "lon"),
   }
 }
