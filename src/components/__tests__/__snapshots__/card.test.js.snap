@@ -21,6 +21,7 @@ exports[`Card renders card with tag 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  height: 100%;
 }
 
 .c1.c1 {
@@ -146,6 +147,7 @@ exports[`Card renders plain card 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  height: 100%;
 }
 
 .c1.c1 {
@@ -251,6 +253,7 @@ exports[`Card renders with footer list 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  height: 100%;
 }
 
 .c1.c1 {
