@@ -321,16 +321,6 @@ exports[`Platform Section displays content 1`] = `
                     1
                   </strong>
                    
-                  Collection Period
-                </small>
-                <small
-                  className="c14"
-                  data-cy="count3"
-                >
-                  <strong>
-                    1
-                  </strong>
-                   
                   Instrument
                 </small>
               </div>
@@ -426,16 +416,6 @@ exports[`Platform Section displays content 1`] = `
                   data-cy="count2"
                 >
                    · 
-                  <strong>
-                    1
-                  </strong>
-                   
-                  Collection Period
-                </small>
-                <small
-                  className="c14"
-                  data-cy="count3"
-                >
                   <strong>
                     2
                   </strong>
@@ -536,17 +516,6 @@ exports[`Platform Section displays content 1`] = `
                   data-cy="count2"
                 >
                    · 
-                  <strong>
-                    4
-                  </strong>
-                   
-                  Collection Period
-                  s
-                </small>
-                <small
-                  className="c14"
-                  data-cy="count3"
-                >
                   <strong>
                     6
                   </strong>
