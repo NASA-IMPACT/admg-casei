@@ -70,22 +70,21 @@ const Home = ({ data }) => {
                     padding-bottom: 1rem;
                   `}
                 >
-                  <Link
-                    to={`/explore/${category}`}
-                    css={`
-                      text-transform: uppercase;
-                    `}
-                    data-cy={`explore-${category}-link`}
-                  >
-                    <Label
-                      id="explore-link"
-                      display="flex"
-                      color={colors[NEGATIVE].linkText}
+                  <Label id="explore-link" display="flex">
+                    <Link
+                      to={`/explore/${category}`}
+                      css={`
+                        text-transform: uppercase;
+                        color: ${colors[NEGATIVE].linkText} !important;
+                        display: flex;
+                        align-items: end;
+                      `}
+                      data-cy={`explore-${category}-link`}
                     >
                       Explore {category}
                       <ArrowIcon color={colors[NEGATIVE].linkText} />
-                    </Label>
-                  </Link>
+                    </Link>
+                  </Label>
                 </li>
               ))}
             </ul>
