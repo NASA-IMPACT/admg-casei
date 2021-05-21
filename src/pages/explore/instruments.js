@@ -25,7 +25,7 @@ export default function ExploreInstruments({ data, location }) {
   } = data
   const { selectedFilterId } = location.state || {}
 
-  const [sortOrder, setSortOrder] = useState("most used")
+  const [sortOrder, setSortOrder] = useState("a to z")
   const [selectedFilterIds, setFilter] = useState([])
 
   const [searchResult, setSearchResult] = useState(null)
