@@ -72,7 +72,6 @@ export function formatDateRange(start, end) {
 export function convertBoundsToNSWE(bounds) {
   // gets coordinates from WKT string
   const coords = parse(bounds).coordinates[0]
-  console.log('test test tes ssss', coords)
   // seperate lats from lons
   var lons = coords.map(function(arr) {
     return arr[0];
@@ -85,7 +84,6 @@ export function convertBoundsToNSWE(bounds) {
   let maxx = Math.max(...lons);
   let miny = Math.min(...lats);
   let maxy = Math.max(...lats);
-  console.log(minx, maxx, miny, maxy)
   // format output and return values
   const stringified = (coord, latlong) => {
     if (coord > 0 && latlong == "lat") {
