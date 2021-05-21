@@ -129,6 +129,7 @@ exports[`Platform Section displays content 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  height: 100%;
 }
 
 .c10.c10 {
@@ -233,6 +234,7 @@ exports[`Platform Section displays content 1`] = `
         data-test="mocked-nuka-carousel"
       >
         <div
+          aria-hidden="false"
           className="c8"
           data-cy="platform"
         >
@@ -341,6 +343,7 @@ exports[`Platform Section displays content 1`] = `
           />
         </div>
         <div
+          aria-hidden="false"
           className="c8"
           data-cy="platform"
         >
@@ -450,6 +453,7 @@ exports[`Platform Section displays content 1`] = `
           />
         </div>
         <div
+          aria-hidden="false"
           className="c8"
           data-cy="platform"
         >

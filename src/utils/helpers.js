@@ -3,6 +3,29 @@ import parse from "wellknown"
 const urlRegex = /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{2,256}\.[a-z]{2,4}/s
 const mailtoRegex = /^mailto:(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i
 
+const trailingCommaRegex = /(^,)|(,$)/g
+/* 1st Alternative, 1st Capturing Group (^,)
+ * ^ asserts position at start of the string
+ * , matches the character , literally (case sensitive)
+ * 2nd Alternative, 2nd Capturing Group (,$)
+ * , matches the character , literally (case sensitive)
+ * $ asserts position at the end of the string, or before the line terminator right at the end of the string (if any)
+ * Global pattern flags
+ * g modifier: global. All matches (don't return after first match)
+ */
+
+/**
+ * A funtion to parse text input into an array
+ * @param {string} input a string to be parsed
+ * @return {array} list with separated strings
+ */
+export function parseTextToList(input) {
+  return input
+    .split("\n")
+    .filter(x => x)
+    .map(str => str.trim().replace(trailingCommaRegex, ""))
+}
+
 /**
  * A funtion to validate that a prop contains a link to an external page
  * @param {string} url a string to be validated

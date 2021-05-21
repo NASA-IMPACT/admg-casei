@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
 import { colors } from "../theme"
+import { POSITIVE, NEGATIVE } from "../utils/constants"
 
 const ListLink = ({ to, children, mode }) => (
   <li style={{ margin: `0 1rem 0 0`, textTransform: `uppercase` }}>
@@ -37,7 +38,7 @@ ListLink.propTypes = {
     }
   },
   children: PropTypes.string.isRequired,
-  mode: PropTypes.string.isRequired,
+  mode: PropTypes.oneOf([POSITIVE, NEGATIVE]),
 }
 
 const Nav = ({ mode }) => {
@@ -56,7 +57,7 @@ const Nav = ({ mode }) => {
           list-style: none;
         `}
       >
-        <ListLink to="/explore" mode={mode}>
+        <ListLink to="/explore/campaigns" mode={mode}>
           Explore
         </ListLink>
         <ListLink to="/glossary" mode={mode}>
