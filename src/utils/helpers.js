@@ -95,7 +95,7 @@ export function convertBoundsToNSWE(bounds) {
     } else if (coord < 0 && latlong == "lon") {
       return Math.abs(coord).toString() + "\u00b0" + "W"
     } else {
-      console.log("problems are here")
+      return "0" + "\u00b0"
     }
   }
   return {
