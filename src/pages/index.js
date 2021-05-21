@@ -1,7 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { graphql, Link } from "gatsby"
-import styled from "styled-components"
 
 import Layout, { PageBody } from "../components/layout"
 import SEO from "../components/seo"
@@ -58,7 +57,7 @@ const Home = ({ data }) => {
           />
           <SectionContent>
             <ul
-              css={`             
+              css={`
                 list-style: none;
                 margin: 0;
               `}
@@ -72,7 +71,7 @@ const Home = ({ data }) => {
                   `}
                 >
                   <Link
-                    to="/explore"
+                    to={`/explore/${category}`}
                     css={`
                       text-transform: uppercase;
                     `}
