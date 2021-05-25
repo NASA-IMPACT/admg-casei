@@ -227,14 +227,14 @@ describe("Explore", () => {
 
       cy.get("[data-cy=instruments-card]")
         .find("big")
-        .contains("CPL")
+        .contains("ACAM")
         .parent()
         .parent()
         .click()
 
       cy.url().should("include", "/instrument/")
 
-      cy.get("h1").should("contain", "CPL")
+      cy.get("h1").should("contain", "ACAM")
     })
   })
 })
