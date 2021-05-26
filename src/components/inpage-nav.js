@@ -38,7 +38,7 @@ const InpageNav = ({ shortname, items }) => {
     //ensure that feedback module is loaded and inititalized (external script)
     if (window.feedback) {
       if (!window.feedback.showForm) {
-        window.feedback.init()
+        window.feedback.init({ showIcon: false })
       }
       setIsFBMLoaded(true)
     }

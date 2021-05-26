@@ -18,7 +18,7 @@ const Contact = () => {
     // (external script added via gatsby-plugin-load-script)
     if (window.feedback) {
       if (!window.feedback.showForm) {
-        window.feedback.init()
+        window.feedback.init({ showIcon: false })
       }
       setIsFBMLoaded(true)
     }

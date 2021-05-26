@@ -17,7 +17,7 @@ module.exports = {
       options: {
         src: `https://fbm.earthdata.nasa.gov/for/CASEI/feedback.js`,
         onLoad: `() => {
-          window.feedback.init()
+          window.feedback.init({showIcon: false})
         }`,
       },
     },
