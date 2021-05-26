@@ -55,7 +55,6 @@ exports[`Card renders card with tag 1`] = `
   padding: 0.25rem;
   margin: 1rem 0;
   background-color: #ffffff;
-  z-index: 1;
 }
 
 <div
