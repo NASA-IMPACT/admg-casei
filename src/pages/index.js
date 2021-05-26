@@ -53,7 +53,7 @@ const Home = ({ data }) => {
             tagline="explore"
             headline="CASEI"
             description="From campaigns to instruments, it takes a lot to understand the earth. Start your discovery journey now:"
-            id="focus"
+            id="explore"
           />
           <SectionContent>
             <ul
