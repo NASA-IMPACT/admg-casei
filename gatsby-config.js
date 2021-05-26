@@ -13,6 +13,15 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
+      resolve: `gatsby-plugin-load-script`,
+      options: {
+        src: `https://fbm.earthdata.nasa.gov/for/CASEI/feedback.js`,
+        onLoad: `() => {
+          window.feedback.init()
+        }`,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
