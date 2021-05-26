@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 
 import { NEGATIVE } from "../utils/constants"
@@ -170,16 +171,19 @@ const Footer = ({ shortname }) => {
               font-weight: bold;
             `}
           >
-            <div
-              css={`
-                background-image: url("https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png");
-                background-size: cover;
-                background-position: center;
-                width: 100px;
-                height: 100px;
-              `}
-              aria-hidden="true" // purely decorative content
-            ></div>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.nasa.gov"
+            >
+              <StaticImage
+                src="https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png"
+                alt="NASA's red, white and blue insignia, nicknamed the 'meatball'"
+                width={100} // make the blue circle match the svg logo of size 60
+                height={100} // make the blue circle match the svg logo of size 60
+                data-cy="nasa-logo"
+              />
+            </a>
             <div data-cy="footer-credits">
               <div data-cy="footer-credit-org">
                 National Aeronautics and Space Administration

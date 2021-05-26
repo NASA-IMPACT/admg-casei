@@ -95,18 +95,10 @@ exports[`Footer renders correctly 1`] = `
 }
 
 .c15.c15 {
-  background-image: url("https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png");
-  background-size: cover;
-  background-position: center;
-  width: 100px;
-  height: 100px;
-}
-
-.c16.c16 {
   font-weight: normal;
 }
 
-.c17.c17 {
+.c16.c16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -118,7 +110,7 @@ exports[`Footer renders correctly 1`] = `
   text-transform: uppercase;
 }
 
-.c18.c18 {
+.c17.c17 {
   text-align: center;
 }
 
@@ -327,9 +319,10 @@ exports[`Footer renders correctly 1`] = `
       <div
         className="c14"
       >
-        <div
-          aria-hidden="true"
-          className="c15"
+        <a
+          href="https://www.nasa.gov"
+          rel="noopener noreferrer"
+          target="_blank"
         />
         <div
           data-cy="footer-credits"
@@ -345,7 +338,7 @@ exports[`Footer renders correctly 1`] = `
             NASA Official:
              
             <span
-              className="c16"
+              className="c15"
             >
               Rahul Ramachandran
             </span>
@@ -353,12 +346,12 @@ exports[`Footer renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="c17"
+        className="c16"
       />
     </div>
   </div>
   <div
-    className="c18"
+    className="c17"
     data-cy="footer-credit-devseed"
   >
     © 
