@@ -148,10 +148,7 @@ describe("Explore", () => {
         .should("exist")
         .should($small => {
           expect($small.find("[data-cy=count1]")).to.contain("Campaigns")
-          expect($small.find("[data-cy=count2]")).to.contain(
-            "Collection Periods"
-          )
-          expect($small.find("[data-cy=count3]")).to.contain("Instruments")
+          expect($small.find("[data-cy=count2]")).to.contain("Instruments")
         })
 
       cy.get("[data-cy=platforms-card]")

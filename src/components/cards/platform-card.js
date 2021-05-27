@@ -68,13 +68,6 @@ export default function PlatformCard({ shortname, mode }) {
             title: "Campaign",
           },
         },
-        collectionPeriod: {
-          component: CardFooterItem,
-          props: {
-            count: platform.collectionPeriodIds.length,
-            title: "Collection Period",
-          },
-        },
         instrument: {
           component: CardFooterItem,
           props: {

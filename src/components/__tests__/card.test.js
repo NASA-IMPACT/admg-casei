@@ -17,7 +17,7 @@ const CardContent = () => (
 )
 const testTag = "Stationary"
 const testFooterList = [
-  { count: 1, title: "Collection Periods" },
+  { count: 1, title: "Deployments" },
   { count: 0, title: "Data Products" },
 ]
 
