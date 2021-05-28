@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
+import React, { useEffect } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
@@ -39,6 +39,16 @@ const Layout = ({ children, isHeaderFixed }) => {
       }
     }
   `)
+
+  useEffect(() => {
+    // ensure that feedback module is loaded and inititalized
+    // (external script added via gatsby-plugin-load-script)
+    if (window.feedback) {
+      if (!window.feedback.showForm) {
+        window.feedback.init({ showIcon: false })
+      }
+    }
+  }, [])
 
   return (
     <Container id="top" data-cy="page">
