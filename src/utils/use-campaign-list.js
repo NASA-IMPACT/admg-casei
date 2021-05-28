@@ -102,10 +102,18 @@ export default function useCampaignList(
   }, [dateRange])
 
   useEffect(() => {
-    // update after entering text in the search bar
-    const filteredCampaignBySearch = queryResult.filter(campaign =>
-      searchResult ? searchResult.includes(campaign.id) : true
-    )
+    // update after entering text in the 'filter by name' field
+    const filteredCampaignBySearch = queryResult.filter(campaign => {
+      return searchResult
+        ? campaign.shortname
+            .toLowerCase()
+            .includes(searchResult.toLowerCase()) ||
+            campaign.longname
+              ?.toLowerCase()
+              .includes(searchResult.toLowerCase())
+        : true
+    })
+
     setCampaignList(prev => ({
       ...prev,
       filtered: prev.all.filter(

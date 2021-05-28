@@ -102,13 +102,13 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
     //   nav: "Other",
     //   component: OtherResourcesSection,
     //   props: {
-    //     resources: campaign.resources.split("\n").filter(x => x),
+    //     resources: parseTextToList(campaign.resources),
     //   },
     // },
   }
 
   return (
-    <Layout>
+    <Layout isHeaderFixed>
       <SEO title={campaign.shortname} lang="en" />
       <CampaignHero
         bounds={campaign.bounds}

@@ -33,6 +33,7 @@ const Card = ({
        {
         display: flex;
         flex-direction: column;
+        height: 100%;
       }
     `}
   >
@@ -88,7 +89,6 @@ const Card = ({
                 padding: 0.25rem;
                 margin: 1rem 0;
                 background-color: ${colors[mode].background};
-                z-index: 1;
               }
             `}
             data-cy={`${tag.toLowerCase()}-tag`}

@@ -21,7 +21,7 @@ const FocusSection = ({ id, focus, geophysical, focusPhenomena }) => (
           <Label showBorder id="focus-content">
             Focus Area
           </Label>
-          <FocusAreaGallery focusAreas={focus} size="small" />
+          <FocusAreaGallery focusAreas={focus} size="small" isCompact />
         </div>
         <div data-cy="focus-content">
           <Label showBorder id="focus-content">
@@ -30,7 +30,7 @@ const FocusSection = ({ id, focus, geophysical, focusPhenomena }) => (
           {geophysical.map(concept => (
             <React.Fragment key={concept.id}>
               <Link
-                to="/explore"
+                to="/explore/campaigns"
                 state={{ selectedFilterId: concept.id }} // Pass state as props to the linked page
                 data-cy="geophysical-concept"
                 key={concept.id}

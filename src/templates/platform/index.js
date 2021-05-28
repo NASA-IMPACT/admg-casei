@@ -9,6 +9,7 @@ import InpageNav from "../../components/inpage-nav"
 import OverviewSection from "./overview-section"
 import CampaignsAndInstruments from "./campaigns-instruments"
 import DataSection from "../../components/data-section"
+import { parseTextToList } from "../../utils/helpers"
 
 export default function PlatformTemplate({ data: { platform }, path }) {
   const sections = {
@@ -18,9 +19,7 @@ export default function PlatformTemplate({ data: { platform }, path }) {
       props: {
         description: platform.description,
         shortname: platform.shortname,
-        onlineInformation: platform.onlineInformation
-          .split("\n")
-          .filter(x => x),
+        onlineInformation: parseTextToList(platform.onlineInformation),
       },
     },
     "campaigns-instruments": {
@@ -44,7 +43,7 @@ export default function PlatformTemplate({ data: { platform }, path }) {
   }
 
   return (
-    <Layout>
+    <Layout isHeaderFixed>
       <SEO title={platform.shortname} lang="en" />
 
       <PlatformHero

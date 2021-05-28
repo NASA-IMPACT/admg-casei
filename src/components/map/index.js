@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import mapbox from "mapbox-gl"
 
-export default function Map({ style, children }) {
+export default function Map({ height, children }) {
   const containerRef = useRef()
 
   const [map, setMap] = useState(null)
@@ -32,8 +32,27 @@ export default function Map({ style, children }) {
     }
   }, [])
 
+  useEffect(() => {
+    if (map) {
+      map.resize()
+    }
+    return () => {
+      if (map) {
+        map.remove()
+      }
+    }
+  }, [height])
+
   return (
-    <div style={style} ref={containerRef} data-cy="mapboxgl-map">
+    <div
+      css={`
+        grid-area: 1 / 1 / 1 / 4;
+        height: ${height}px;
+        position: relative;
+      `}
+      ref={containerRef}
+      data-cy="mapboxgl-map"
+    >
       {map &&
         children &&
         React.Children.map(children, child =>
@@ -46,10 +65,7 @@ export default function Map({ style, children }) {
 }
 
 Map.propTypes = {
-  style: PropTypes.shape({
-    height: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
-      .isRequired,
-  }),
+  height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
   children: PropTypes.oneOfType([
     PropTypes.element,
     PropTypes.arrayOf(PropTypes.element),

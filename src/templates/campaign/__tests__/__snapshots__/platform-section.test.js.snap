@@ -129,6 +129,7 @@ exports[`Platform Section displays content 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  height: 100%;
 }
 
 .c10.c10 {
@@ -233,6 +234,7 @@ exports[`Platform Section displays content 1`] = `
         data-test="mocked-nuka-carousel"
       >
         <div
+          aria-hidden="false"
           className="c8"
           data-cy="platform"
         >
@@ -319,16 +321,6 @@ exports[`Platform Section displays content 1`] = `
                     1
                   </strong>
                    
-                  Collection Period
-                </small>
-                <small
-                  className="c14"
-                  data-cy="count3"
-                >
-                  <strong>
-                    1
-                  </strong>
-                   
                   Instrument
                 </small>
               </div>
@@ -341,6 +333,7 @@ exports[`Platform Section displays content 1`] = `
           />
         </div>
         <div
+          aria-hidden="false"
           className="c8"
           data-cy="platform"
         >
@@ -424,16 +417,6 @@ exports[`Platform Section displays content 1`] = `
                 >
                    · 
                   <strong>
-                    1
-                  </strong>
-                   
-                  Collection Period
-                </small>
-                <small
-                  className="c14"
-                  data-cy="count3"
-                >
-                  <strong>
                     2
                   </strong>
                    
@@ -450,6 +433,7 @@ exports[`Platform Section displays content 1`] = `
           />
         </div>
         <div
+          aria-hidden="false"
           className="c8"
           data-cy="platform"
         >
@@ -532,17 +516,6 @@ exports[`Platform Section displays content 1`] = `
                   data-cy="count2"
                 >
                    · 
-                  <strong>
-                    4
-                  </strong>
-                   
-                  Collection Period
-                  s
-                </small>
-                <small
-                  className="c14"
-                  data-cy="count3"
-                >
                   <strong>
                     6
                   </strong>

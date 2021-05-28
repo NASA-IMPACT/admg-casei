@@ -2,12 +2,11 @@
 
 describe("Instrument", () => {
   before(() => {
-    cy.visit("/explore")
-    cy.get("[data-cy=tabbar]").contains("button", "Instruments").click()
+    cy.visit("/explore/instruments")
+    cy.wait(0)
     cy.get("[data-cy=instruments-card]")
       .find("big")
-      .contains("CPL")
-      .parent()
+      .contains("ACAM")
       .parent()
       .click()
   })
@@ -20,8 +19,8 @@ describe("Instrument", () => {
     cy.get("[data-cy=instrument-hero]")
       .first()
       .find("h1")
-      .should("contain", "CPL")
-      .and("contain", "Cloud Physics LIDAR")
+      .should("contain", "ACAM")
+      .and("contain", "Airborne Compact Atmospheric Mapper")
 
     cy.get("[data-cy=instrument-hero]").first().find("img").should("exist")
     cy.get("[data-cy=instrument-hero]").first().find("img").should("be.visible")

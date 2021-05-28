@@ -5,6 +5,10 @@ exports[`Footer renders correctly 1`] = `
   color: #aac9ff;
 }
 
+.c11.c11 {
+  padding-left: 0.25rem;
+}
+
 .c6.c6 {
   list-style: none;
   margin: 0;
@@ -61,12 +65,12 @@ exports[`Footer renders correctly 1`] = `
   grid-column: 11 / span 2;
 }
 
-.c11.c11 {
+.c12.c12 {
   grid-column: 1 / span 12;
   background-color: rgba(255,255,255,0.2);
 }
 
-.c12.c12 {
+.c13.c13 {
   grid-column: 1 / span 12;
   display: -webkit-box;
   display: -webkit-flex;
@@ -78,7 +82,7 @@ exports[`Footer renders correctly 1`] = `
   justify-content: space-between;
 }
 
-.c13.c13 {
+.c14.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -88,14 +92,6 @@ exports[`Footer renders correctly 1`] = `
   -ms-flex-align: center;
   align-items: center;
   font-weight: bold;
-}
-
-.c14.c14 {
-  background-image: url("https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png");
-  background-size: cover;
-  background-position: center;
-  width: 100px;
-  height: 100px;
 }
 
 .c15.c15 {
@@ -156,12 +152,7 @@ exports[`Footer renders correctly 1`] = `
         <li>
           <a
             data-cy="footer-campaigns-link"
-            href="/explore"
-            state={
-              Object {
-                "defaultExploreCategory": "campaigns",
-              }
-            }
+            href="/explore/campaigns"
           >
             Campaigns
           </a>
@@ -169,12 +160,7 @@ exports[`Footer renders correctly 1`] = `
         <li>
           <a
             data-cy="footer-platforms-link"
-            href="/explore"
-            state={
-              Object {
-                "defaultExploreCategory": "platforms",
-              }
-            }
+            href="/explore/platforms"
           >
             Platforms
           </a>
@@ -182,12 +168,7 @@ exports[`Footer renders correctly 1`] = `
         <li>
           <a
             data-cy="footer-instruments-link"
-            href="/explore"
-            state={
-              Object {
-                "defaultExploreCategory": "instruments",
-              }
-            }
+            href="/explore/instruments"
           >
             Instruments
           </a>
@@ -213,7 +194,6 @@ exports[`Footer renders correctly 1`] = `
             Glossary
           </a>
         </li>
-        <li />
       </ul>
     </div>
     <div
@@ -285,7 +265,9 @@ exports[`Footer renders correctly 1`] = `
                 fill="#aac9ff"
               />
             </svg>
-            <span>
+            <span
+              className="c11"
+            >
               ADMG Website
             </span>
           </a>
@@ -319,7 +301,9 @@ exports[`Footer renders correctly 1`] = `
                 fill="#aac9ff"
               />
             </svg>
-            <span>
+            <span
+              className="c11"
+            >
               Impact Website
             </span>
           </a>
@@ -327,17 +311,18 @@ exports[`Footer renders correctly 1`] = `
       </ul>
     </div>
     <hr
-      className="c11"
+      className="c12"
     />
     <div
-      className="c12"
+      className="c13"
     >
       <div
-        className="c13"
+        className="c14"
       >
-        <div
-          aria-hidden="true"
-          className="c14"
+        <a
+          href="https://www.nasa.gov"
+          rel="noopener noreferrer"
+          target="_blank"
         />
         <div
           data-cy="footer-credits"
@@ -401,7 +386,9 @@ exports[`Footer renders correctly 1`] = `
           fill="#aac9ff"
         />
       </svg>
-      <span>
+      <span
+        className="c11"
+      >
         Development Seed
       </span>
     </a>

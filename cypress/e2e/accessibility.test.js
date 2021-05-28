@@ -24,26 +24,50 @@ function terminalLog(violations) {
 describe("Accessibility tests", () => {
   it("Has no detectable accessibility violations on load", () => {
     cy.visit("/")
+
+    cy.get("h1").should("exist")
+
     cy.injectAxe()
 
     cy.checkA11y(null, null, terminalLog)
   })
 
-  it("Navigates to page /explore and checks for accessibility violations", () => {
-    cy.visit("/explore")
+  it("Navigates to page /explore/campaigns and checks for accessibility violations", () => {
+    cy.visit("/explore/campaigns")
+
+    cy.get("h1").should("contain.text", "Explore campaigns")
+
     cy.injectAxe()
 
-    cy.get("[data-cy=tabbar]").should("exist")
+    cy.checkA11y(null, null, terminalLog)
+  })
+
+  it("Navigates to page /explore/platforms and checks for accessibility violations", () => {
+    cy.visit("/explore/platforms")
+
+    cy.get("h1").should("contain.text", "Explore platforms")
+
+    cy.injectAxe()
+
+    cy.checkA11y(null, null, terminalLog)
+  })
+
+  it("Navigates to page /explore/instruments and checks for accessibility violations", () => {
+    cy.visit("/explore/instruments")
+
+    cy.get("h1").should("contain.text", "Explore instruments")
+
+    cy.injectAxe()
 
     cy.checkA11y(null, null, terminalLog)
   })
 
   it("Navigates to page for a /campaign and checks for accessibility violations", () => {
-    cy.visit("/explore")
+    cy.visit("/explore/campaigns")
 
-    cy.get("[data-cy=tabbar]")
-      .findByText(/Campaigns/i)
-      .click()
+    cy.get("h1").should("contain.text", "Explore campaigns")
+
+    cy.wait(0)
 
     cy.get("[data-cy=campaigns-card]").first().click()
 
@@ -54,17 +78,14 @@ describe("Accessibility tests", () => {
     cy.checkA11y(null, null, terminalLog)
   })
 
-  // TODO: carousel contains Focusable content (campaign card as link) that is hidden on the other slides
-  // a11y error!aria-hidden-focus on 1 Node
-  it.skip("Navigates to page for a /platform and checks for accessibility violations", () => {
-    // cy.visit("/explore")
-    cy.visit("/platform/G-III")
+  it("Navigates to page for a /platform and checks for accessibility violations", () => {
+    cy.visit("/explore/platforms")
 
-    // cy.get("[data-cy=tabbar]")
-    //   .findByText(/Platforms/i)
-    //   .click()
-    // TODO: understand why this is brittle on ci
-    // cy.get("[data-cy=platforms-card]").last().click()
+    cy.get("h1").should("contain.text", "Explore platforms")
+
+    cy.wait(0)
+
+    cy.get("[data-cy=platforms-card]").last().click()
 
     cy.get("h1").should("exist")
 
@@ -74,14 +95,13 @@ describe("Accessibility tests", () => {
   })
 
   it("Navigates to page for a /instrument and checks for accessibility violations", () => {
-    // cy.visit("/explore")
-    cy.visit("/instrument/UAVSAR")
+    cy.visit("/explore/instruments")
 
-    // cy.get("[data-cy=tabbar]")
-    //   .findByText(/Instruments/i)
-    //   .click()
-    // TODO: understand why this is brittle on ci
-    // cy.get("[data-cy=instruments-card]").first().click()
+    cy.get("h1").should("contain.text", "Explore instruments")
+
+    cy.wait(0)
+
+    cy.get("[data-cy=instruments-card]").first().click()
 
     cy.get("h1").should("exist")
 
@@ -93,7 +113,7 @@ describe("Accessibility tests", () => {
   it("Navigates to page /glossary and checks for accessibility violations", () => {
     cy.visit("/glossary")
 
-    cy.get("h1").should("exist")
+    cy.get("h1").should("contain.text", "Glossary")
 
     cy.injectAxe()
 
@@ -103,7 +123,7 @@ describe("Accessibility tests", () => {
   it("Navigates to page /about and checks for accessibility violations", () => {
     cy.visit("/about")
 
-    cy.get("h1").should("exist")
+    cy.get("h1").should("contain.text", "NASA")
 
     cy.injectAxe()
 
@@ -113,7 +133,7 @@ describe("Accessibility tests", () => {
   it("Navigates to page /contact and checks for accessibility violations", () => {
     cy.visit("/contact")
 
-    cy.get("h1").should("exist")
+    cy.get("h1").should("contain.text", "We appreciate your feedback!")
 
     cy.injectAxe()
 

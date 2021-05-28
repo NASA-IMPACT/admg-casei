@@ -11,6 +11,7 @@ import Layout, {
   SectionContent,
 } from "../components/layout"
 import SEO from "../components/seo"
+import ExternalLink from "../components/external-link"
 import { ArrowIcon } from "../icons"
 import { colors } from "../theme"
 import { ALPHABET, POSITIVE, NEGATIVE } from "../utils/constants"
@@ -66,22 +67,29 @@ export default function Glossary({ data }) {
           <SectionHeader id="glossary-img" headline="Terminology map" />
 
           <SectionContent withPadding>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://earthdata.nasa.gov/esds/impact/admg/admg-definitions"
+            <figure
+              css={`
+                text-align: center;
+              `}
             >
-              <figure>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://earthdata.nasa.gov/esds/impact/admg/admg-definitions"
+              >
                 <GatsbyImage
                   image={data.image.childImageSharp.gatsbyImageData}
                   alt="terminology map"
                 />
-                <figcaption>
-                  Source:{" "}
-                  https://earthdata.nasa.gov/esds/impact/admg/admg-definitions
-                </figcaption>
-              </figure>
-            </a>
+              </a>
+              <figcaption>
+                Source:{" "}
+                <ExternalLink
+                  label="https://earthdata.nasa.gov/esds/impact/admg/admg-definitions"
+                  url="https://earthdata.nasa.gov/esds/impact/admg/admg-definitions"
+                />
+              </figcaption>
+            </figure>
           </SectionContent>
         </Section>
 
@@ -90,12 +98,12 @@ export default function Glossary({ data }) {
             <SectionHeader id="letter-navigation" headline="Jump to letter" />
           </VisuallyHidden>
 
-          <SectionContent columns={[1, 11]}>
+          <SectionContent columns={[1, 12]}>
             <nav
               aria-label="letter selection"
               css={`
-                font-size: x-large;
                 color: ${colors[NEGATIVE].altText};
+                text-align: center;
               `}
             >
               {ALPHABET.map((letter, i) =>
@@ -105,20 +113,13 @@ export default function Glossary({ data }) {
                       href={`#${letter}`}
                       css={`
                         font-weight: 600;
+                        font-size: x-large;
                       `}
                       data-cy={`${letter}-inpage-link`}
                     >
                       {letter}
                     </a>{" "}
-                    {i !== ALPHABET.length - 1 && (
-                      <span
-                        css={`
-                          color: ${colors[NEGATIVE].text};
-                        `}
-                      >
-                        &mdash;{" "}
-                      </span>
-                    )}
+                    {i !== ALPHABET.length - 1 && <span>&mdash; </span>}
                   </React.Fragment>
                 ) : (
                   <React.Fragment key={letter}>
@@ -197,7 +198,7 @@ export const query = graphql`
     }
     image: file(relativePath: { eq: "glossary-map.png" }) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
+        gatsbyImageData(layout: CONSTRAINED, width: 600, placeholder: BLURRED)
       }
     }
   }

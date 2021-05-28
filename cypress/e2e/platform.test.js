@@ -2,18 +2,17 @@
 
 describe("Platform", () => {
   before(() => {
-    cy.visit("/explore")
-    cy.get("[data-cy=tabbar]").contains("button", "Platforms").click()
+    cy.visit("/explore/platforms")
+    cy.wait(0)
     cy.get("[data-cy=platforms-card]")
       .find("big")
       .contains("DC-8")
-      .parent()
       .parent()
       .click()
   })
 
   it("explains the platform", () => {
-    cy.get("[data-cy=platform-hero]").first().find("p").contains("DC-8")
+    cy.get("[data-cy=platform-hero]").first().find("p").contains("Platform")
 
     cy.get("[data-cy=platform-hero]")
       .first()
@@ -29,7 +28,7 @@ describe("Platform", () => {
       .should($stat => {
         expect($stat, "2 items").to.have.length(2)
         expect($stat.eq(0), "first item").to.contain("Campaigns")
-        expect($stat.eq(1), "second item").to.contain("Flights")
+        expect($stat.eq(1), "second item").to.contain("Collection Periods")
       })
 
     // displays inpage nav

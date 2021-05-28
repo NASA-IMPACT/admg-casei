@@ -15,7 +15,7 @@ describe("Map", () => {
   beforeEach(() => {
     renderer.act(() => {
       mapWrapper = renderer.create(
-        <Map style={{ height: 200 }}>
+        <Map height={200}>
           <GeoJsonSource id="test">
             <BboxLayer id="test" bbox={[32, 5, 35, 10]} />
           </GeoJsonSource>

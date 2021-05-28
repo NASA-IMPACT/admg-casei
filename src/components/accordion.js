@@ -77,6 +77,7 @@ export default function Accordion({ folds, id }) {
             css={`
                {
                 padding: 0.5rem 1rem;
+                cursor: default;
               }
             `}
           >
@@ -134,36 +135,35 @@ export default function Accordion({ folds, id }) {
                   }
                 `}
               >
-                <Label id="accordion-measurements">
-                  Measurements/Variables
-                </Label>
+                <Label id="accordion-measurements">Parameters</Label>
                 {fold.gcmdPhenomenas
                   .map(x =>
                     Object.values(x)
                       .filter(x => x)
                       .join(" > ")
                   )
-                  .join(" > ") || "N/A"}
+                  .join(" > ") || "Currently unavailble"}
               </div>
             )}
-            <Link
-              to={`/instrument/${fold.shortname}`}
-              css={`
-                 {
-                  color: ${colors[NEGATIVE].linkText};
-                }
-              `}
-              data-cy="accordion-link"
+            <Label
+              id="accordion-link"
+              display="flex"
+              color={colors[NEGATIVE].linkText}
             >
-              <Label
-                id="accordion-link"
-                display="flex"
-                color={colors[NEGATIVE].linkText}
+              <Link
+                to={`/instrument/${fold.shortname}`}
+                css={`
+                   {
+                    color: ${colors[NEGATIVE].linkText};
+                    cursor: pointer;
+                  }
+                `}
+                data-cy="accordion-link"
               >
                 Learn More
                 <ArrowIcon color={colors[NEGATIVE].linkText} />
-              </Label>
-            </Link>
+              </Link>
+            </Label>
           </AccordionPanel>
         </AccordionItem>
       ))}

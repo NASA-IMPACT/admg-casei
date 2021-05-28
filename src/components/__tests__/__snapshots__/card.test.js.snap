@@ -21,6 +21,7 @@ exports[`Card renders card with tag 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  height: 100%;
 }
 
 .c1.c1 {
@@ -54,7 +55,6 @@ exports[`Card renders card with tag 1`] = `
   padding: 0.25rem;
   margin: 1rem 0;
   background-color: #ffffff;
-  z-index: 1;
 }
 
 <div
@@ -146,6 +146,7 @@ exports[`Card renders plain card 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  height: 100%;
 }
 
 .c1.c1 {
@@ -251,6 +252,7 @@ exports[`Card renders with footer list 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  height: 100%;
 }
 
 .c1.c1 {

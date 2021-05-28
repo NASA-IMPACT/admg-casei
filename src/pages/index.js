@@ -1,16 +1,17 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { graphql, Link } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
 
 import Layout, { PageBody } from "../components/layout"
 import SEO from "../components/seo"
 import { Section, SectionHeader, SectionContent } from "../components/layout"
 import Hero from "../components/hero"
+import Label from "../components/label"
 import FocusAreaGallery from "../components/focus-area-gallery"
 import { RegionCarousel } from "../components/home/region-carousel"
 import { GeophysicsGrid } from "../components/home/geophysics-grid"
 import { InstrumentsGrid } from "../components/home/instruments-grid"
+import { ArrowIcon } from "../icons"
 import { NEGATIVE } from "../utils/constants"
 import { colors } from "../theme"
 
@@ -47,6 +48,48 @@ const Home = ({ data }) => {
             />
           </SectionContent>
         </Section>
+        <Section id="explore" isSpaced>
+          <SectionHeader
+            tagline="explore"
+            headline="CASEI"
+            description="From campaigns to instruments, it takes a lot to understand the earth. Start your discovery journey now:"
+            id="explore"
+          />
+          <SectionContent>
+            <ul
+              css={`
+                list-style: none;
+                margin: 0;
+              `}
+              data-cy={`explore-link-list`}
+            >
+              {["campaigns", "platforms", "instruments"].map(category => (
+                <li
+                  key={category}
+                  css={`
+                    padding-bottom: 1rem;
+                  `}
+                >
+                  <Label id="explore-link" display="flex">
+                    <Link
+                      to={`/explore/${category}`}
+                      css={`
+                        text-transform: uppercase;
+                        color: ${colors[NEGATIVE].linkText} !important;
+                        display: flex;
+                        align-items: end;
+                      `}
+                      data-cy={`explore-${category}-link`}
+                    >
+                      Explore {category}
+                      <ArrowIcon color={colors[NEGATIVE].linkText} />
+                    </Link>
+                  </Label>
+                </li>
+              ))}
+            </ul>
+          </SectionContent>
+        </Section>
 
         <Section id="region-type" isSpaced>
           <SectionHeader
@@ -57,6 +100,17 @@ const Home = ({ data }) => {
           />
           <SectionContent>
             <RegionCarousel regions={data.allGeographicalRegion.nodes} />
+          </SectionContent>
+        </Section>
+
+        <Section id="instruments" isSpaced>
+          <SectionHeader
+            tagline="explore instruments by"
+            headline="Measurement Type"
+            id="instruments"
+          />
+          <SectionContent>
+            <InstrumentsGrid measurementTypes={data.allMeasurementType.nodes} />
           </SectionContent>
         </Section>
 
@@ -71,58 +125,6 @@ const Home = ({ data }) => {
             <GeophysicsGrid
               geophysicalConcepts={data.allGeophysicalConcept.nodes}
             />
-          </SectionContent>
-        </Section>
-
-        <Section id="platforms" isSpaced>
-          <SectionContent columns={[1, 6]}>
-            <GatsbyImage
-              image={
-                data.platformPlaceholder.nasaImg.childImageSharp.gatsbyImageData
-              }
-              alt={data.platformPlaceholder.nasaImgAlt}
-            />
-          </SectionContent>
-          <SectionContent columns={[7, 6]}>
-            <div
-              css={`
-                height: 100%;
-                display: grid;
-                gap: 2.5rem;
-                align-content: center;
-                padding: 1rem;
-              `}
-            >
-              <SectionHeader
-                tagline="explore"
-                headline="Platforms"
-                description="Learn about the variety of air and Earth-based platforms NASA uses to study our home planet."
-                id="platforms"
-              />
-              <Link
-                to="/explore"
-                state={{ defaultExploreCategory: "platforms" }}
-                css={`
-                  border: 1px solid ${colors[NEGATIVE].text};
-                  padding: 1rem 5rem;
-                  text-transform: uppercase;
-                `}
-                data-cy="explore-platforms-link"
-              >
-                Explore
-              </Link>
-            </div>
-          </SectionContent>
-        </Section>
-
-        <Section id="instruments" isSpaced>
-          <SectionHeader
-            tagline="explore instruments by"
-            headline="Measurement Type"
-            id="instruments"
-          />
-          <SectionContent>
-            <InstrumentsGrid measurementTypes={data.allMeasurementType.nodes} />
           </SectionContent>
         </Section>
       </PageBody>

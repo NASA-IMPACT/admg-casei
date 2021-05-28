@@ -2,20 +2,23 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
-import { NEGATIVE } from "../utils/constants"
 import { colors } from "../theme"
+import { POSITIVE, NEGATIVE } from "../utils/constants"
 
-const ListLink = props => (
+const ListLink = ({ to, children, mode }) => (
   <li style={{ margin: `0 1rem 0 0`, textTransform: `uppercase` }}>
     <Link
-      to={props.to}
+      to={to}
       activeStyle={{
-        borderBottom: `1px solid ${colors[NEGATIVE].text}`,
+        borderBottom: `1px solid ${colors[mode].text}`,
         fontWeight: `bold`,
       }}
+      css={`
+        color: ${colors[mode].text};
+      `}
       partiallyActive={true}
     >
-      {props.children}
+      {children}
     </Link>
   </li>
 )
@@ -35,27 +38,44 @@ ListLink.propTypes = {
     }
   },
   children: PropTypes.string.isRequired,
+  mode: PropTypes.oneOf([POSITIVE, NEGATIVE]),
 }
 
-const Nav = () => {
+const Nav = ({ mode }) => {
   return (
-    <nav style={{ zIndex: 100 }}>
+    <nav
+      css={`
+        z-index: 100;
+      `}
+    >
       <ul
-        style={{
-          display: `flex`,
-          flexDirection: `row`,
-          justifyContent: `flex-end`,
-          margin: 0,
-          listStyle: `none`,
-        }}
+        css={`
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
+          margin: 0;
+          list-style: none;
+        `}
       >
-        <ListLink to="/explore">Explore</ListLink>
-        <ListLink to="/glossary">Glossary</ListLink>
-        <ListLink to="/about">About</ListLink>
-        <ListLink to="/contact">Contact</ListLink>
+        <ListLink to="/explore/campaigns" mode={mode}>
+          Explore
+        </ListLink>
+        <ListLink to="/glossary" mode={mode}>
+          Glossary
+        </ListLink>
+        <ListLink to="/about" mode={mode}>
+          About
+        </ListLink>
+        <ListLink to="/contact" mode={mode}>
+          Contact
+        </ListLink>
       </ul>
     </nav>
   )
 }
 
 export default Nav
+
+Nav.propTypes = {
+  mode: PropTypes.string.isRequired,
+}

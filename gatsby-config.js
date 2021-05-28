@@ -7,11 +7,20 @@ module.exports = {
   siteMetadata: {
     title: `Catalog of Archived Suborbital Earth Science Investigations`,
     shortname: `NASA | CASEI`,
-    description: `An inventory of NASA’s airborne and field campaigns`,
+    description: `An inventory of NASA’s airborne and field campaigns for Earth Science`,
     author: `@developmentseed`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-load-script`,
+      options: {
+        src: `https://fbm.earthdata.nasa.gov/for/CASEI/feedback.js`,
+        onLoad: `() => {
+          window.feedback.init({showIcon: false})
+        }`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

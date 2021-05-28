@@ -2,11 +2,11 @@
 
 describe("Campaign", () => {
   before(() => {
-    cy.visit("/explore")
+    cy.visit("/explore/campaigns")
+    cy.wait(0)
     cy.get("[data-cy=campaigns-card]")
       .find("big")
       .contains("OLYMPEX")
-      .parent()
       .parent()
       .click()
   })
@@ -40,6 +40,7 @@ describe("Campaign", () => {
     cy.get("[data-cy=mapboxgl-map]").should("exist")
 
     cy.get("[data-cy=inpage-nav]").find("[data-cy=home-link]").should("exist")
+    cy.wait(0)
     cy.get("[data-cy=home-link]").click()
 
     cy.url().should("eq", "http://localhost:8000/")
@@ -64,6 +65,7 @@ describe("Campaign", () => {
       })
     ;["program-info", "platform", "overview", "timeline", "focus"].forEach(
       id => {
+        cy.wait(0)
         cy.get(`[data-cy=${id}-inpage-link]`).click()
 
         cy.url().should("include", id)
@@ -151,7 +153,7 @@ describe("Campaign", () => {
       .contains("Hydrology")
       .click()
 
-    cy.url().should("include", "/explore")
+    cy.url().should("include", "/explore/campaigns")
 
     cy.get("[data-cy=filter-chip]")
       .should("have.length", 1)
@@ -226,11 +228,11 @@ describe("Campaign", () => {
 
   describe("the timeline section", () => {
     before(() => {
-      cy.visit("/explore")
+      cy.visit("/explore/campaigns")
+      cy.wait(0)
       cy.get("[data-cy=campaigns-card]")
         .find("big")
         .contains("AirMOSS")
-        .parent()
         .parent()
         .click()
     })
@@ -266,11 +268,11 @@ describe("Campaign", () => {
 
   describe("the data section", () => {
     before(() => {
-      cy.visit("/explore")
+      cy.visit("/explore/campaigns")
+      cy.wait(0)
       cy.get("[data-cy=campaigns-card]")
         .find("big")
         .contains("CAMP2Ex")
-        .parent()
         .parent()
         .click()
     })

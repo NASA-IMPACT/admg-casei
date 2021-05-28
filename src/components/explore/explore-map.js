@@ -73,7 +73,7 @@ const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
   }, [aoi])
 
   return (
-    <Map style={{ height: 500 }}>
+    <Map height={500}>
       <AoiControl
         isDrawing={isDrawing}
         setIsDrawing={setIsDrawing}

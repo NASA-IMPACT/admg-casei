@@ -1,11 +1,12 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
+import { Link } from "gatsby"
 
 import { NEGATIVE } from "../../utils/constants"
 import { colors } from "../../theme"
 
-const TabButton = styled.button`
+const TabButton = styled(Link)`
   /* remove default button style */
   user-select: none;
   background: none;
@@ -14,9 +15,9 @@ const TabButton = styled.button`
   border: none;
 
   /* add tab button style */
-  cursor: ${({ isSelected }) => (isSelected ? "default" : "pointer")};
+  cursor: ${({ $isSelected }) => ($isSelected ? "default" : "pointer")};
   text-transform: uppercase;
-  font-weight: ${({ isSelected }) => isSelected && "bold"};
+  font-weight: ${({ $isSelected }) => $isSelected && "bold"};
   padding: 0.5rem;
 `
 
@@ -34,6 +35,7 @@ const Label = ({ isSelected, children }) => {
     <span
       css={`
         position: relative;
+        font-size: medium;
 
         &::after {
           ${afterElement};
@@ -66,36 +68,33 @@ Label.propTypes = {
 
 const Count = styled.span`
   font-weight: lighter;
-  font-size: smaller;
 
   ${TabButton}:hover & {
     opacity: ${({ isSelected }) => (isSelected ? `inherit` : 0.64)};
   }
 `
 
-const Tab = ({ id, onClick, isSelected, label, count }) => (
-  <TabButton role="tab" onClick={onClick} isSelected={isSelected}>
+const Tab = ({ id, to, isSelected, label, count }) => (
+  <TabButton role="tab" to={to} $isSelected={isSelected}>
     <Label isSelected={isSelected}>{label}</Label>
-    <Count isSelected={isSelected} data-cy={`${id}-count`}>
-      {" "}
-      ({count})
-    </Count>
+    {count && (
+      <Count isSelected={isSelected} data-cy={`${id}-count`}>
+        {" "}
+        ({count})
+      </Count>
+    )}
   </TabButton>
 )
 
 Tab.propTypes = {
-  onClick: PropTypes.func.isRequired,
-  isSelected: PropTypes.bool.isRequired,
   id: PropTypes.string.isRequired,
+  to: PropTypes.string.isRequired,
+  isSelected: PropTypes.bool.isRequired,
   label: PropTypes.string.isRequired,
-  count: PropTypes.number.isRequired,
+  count: PropTypes.number,
 }
 
-const ExploreMenu = ({
-  selectedCategory,
-  setSelectedCategory,
-  filteredCount,
-}) => (
+const ExploreMenu = ({ selectedCategory, filteredCount }) => (
   <div
     role="tablist"
     css={`
@@ -103,7 +102,7 @@ const ExploreMenu = ({
         display: flex;
         flex-direction: row;
         gap: 2rem;
-        margin: 0;
+        margin-top: 2rem;
         list-style: none;
         align-items: center;
         justify-content: center;
@@ -112,14 +111,14 @@ const ExploreMenu = ({
     data-cy="tabbar"
   >
     <Tab
-      onClick={() => setSelectedCategory("campaigns")}
+      to="/explore/campaigns"
       isSelected={selectedCategory === "campaigns"}
       id="campaigns"
       label="Campaigns"
       count={filteredCount["campaigns"]}
     />
     <Tab
-      onClick={() => setSelectedCategory("platforms")}
+      to="/explore/platforms"
       isSelected={selectedCategory === "platforms"}
       id="platforms"
       label="Platforms"
@@ -127,7 +126,7 @@ const ExploreMenu = ({
     />
 
     <Tab
-      onClick={() => setSelectedCategory("instruments")}
+      to="/explore/instruments"
       isSelected={selectedCategory === "instruments"}
       id="instruments"
       label="Instruments"
@@ -139,12 +138,11 @@ const ExploreMenu = ({
 ExploreMenu.propTypes = {
   selectedCategory: PropTypes.oneOf(["campaigns", "platforms", "instruments"])
     .isRequired,
-  setSelectedCategory: PropTypes.func.isRequired,
   filteredCount: PropTypes.shape({
-    campaigns: PropTypes.number.isRequired,
-    platforms: PropTypes.number.isRequired,
-    instruments: PropTypes.number.isRequired,
-  }).isRequired,
+    campaigns: PropTypes.number,
+    platforms: PropTypes.number,
+    instruments: PropTypes.number,
+  }),
 }
 
 export default ExploreMenu

@@ -69,7 +69,7 @@ export const RegionCarousel = ({ regions }) => {
         {regions.map(region => (
           <React.Fragment key={region.id}>
             <Link
-              to="/explore"
+              to="/explore/campaigns"
               state={{ selectedFilterId: region.id }}
               data-cy="region-type"
               style={{

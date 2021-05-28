@@ -3,7 +3,7 @@
 describe("Explore", () => {
   describe("campaigns", () => {
     before(() => {
-      cy.visit("/explore")
+      cy.visit("/explore/campaigns")
       cy.get("[data-cy=h1-campaigns]")
         .should("have.text", "Explore campaigns")
         .and("not.be.visible")
@@ -11,7 +11,7 @@ describe("Explore", () => {
 
     it("displays campaign cards and navigates to the selected campaign", () => {
       cy.get("[data-cy=tabbar]")
-        .find("button")
+        .find("a")
         .should($tabs => {
           expect($tabs).to.have.length(3)
         })
@@ -92,20 +92,15 @@ describe("Explore", () => {
 
   describe("platforms", () => {
     before(() => {
-      cy.visit("/explore")
-      cy.get("[data-cy=h1-campaigns]")
-        .should("have.text", "Explore campaigns")
+      cy.visit("/explore/platforms")
+      cy.get("[data-cy=h1-platforms]")
+        .should("have.text", "Explore platforms")
         .and("not.be.visible")
     })
 
     it("displays platform cards and navigates to the selected platform", () => {
-      cy.get("[data-cy=tabbar]").contains("button", "Platforms").click()
-      cy.get("[data-cy=h1-platforms]")
-        .should("have.text", "Explore platforms")
-        .and("not.be.visible")
-
       cy.get("[data-cy=tabbar]")
-        .find("button")
+        .find("a")
         .should($tabs => {
           expect($tabs).to.have.length(3)
         })
@@ -153,10 +148,7 @@ describe("Explore", () => {
         .should("exist")
         .should($small => {
           expect($small.find("[data-cy=count1]")).to.contain("Campaigns")
-          expect($small.find("[data-cy=count2]")).to.contain(
-            "Collection Periods"
-          )
-          expect($small.find("[data-cy=count3]")).to.contain("Instruments")
+          expect($small.find("[data-cy=count2]")).to.contain("Instruments")
         })
 
       cy.get("[data-cy=platforms-card]")
@@ -168,26 +160,21 @@ describe("Explore", () => {
 
       cy.url().should("include", "/platform/")
 
-      cy.get("h1").should("have.text", "Global Hawk UAV")
+      cy.get("h1").should("have.text", "GHGlobal Hawk UAV")
     })
   })
 
   describe("instruments", () => {
     before(() => {
-      cy.visit("/explore")
-      cy.get("[data-cy=h1-campaigns]")
-        .should("have.text", "Explore campaigns")
+      cy.visit("/explore/instruments")
+      cy.get("[data-cy=h1-instruments]")
+        .should("have.text", "Explore instruments")
         .and("not.be.visible")
     })
 
     it("displays instrument cards and navigates to the selected instrument", () => {
-      cy.get("[data-cy=tabbar]").contains("button", "Instruments").click()
-      cy.get("[data-cy=h1-instruments]")
-        .should("have.text", "Explore instruments")
-        .and("not.be.visible")
-
       cy.get("[data-cy=tabbar]")
-        .find("button")
+        .find("a")
         .should($tabs => {
           expect($tabs).to.have.length(3)
         })
@@ -240,14 +227,14 @@ describe("Explore", () => {
 
       cy.get("[data-cy=instruments-card]")
         .find("big")
-        .contains("CPL")
+        .contains("ACAM")
         .parent()
         .parent()
         .click()
 
       cy.url().should("include", "/instrument/")
 
-      cy.get("h1").should("contain", "CPL")
+      cy.get("h1").should("contain", "ACAM")
     })
   })
 })
