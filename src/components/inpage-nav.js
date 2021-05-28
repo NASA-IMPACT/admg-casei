@@ -4,13 +4,14 @@ import { Link } from "gatsby"
 
 import { CaseiLogoIcon } from "../icons"
 import { POSITIVE } from "../utils/constants"
-import { colors } from "../theme"
+import { colors, breakpoints } from "../theme"
 import Button from "../components/button"
 
 const InpageLink = props => (
   <li
     css={`
       margin: 0 1rem 0 0;
+      width: fit-content;
     `}
   >
     <a
@@ -53,67 +54,73 @@ const InpageNav = ({ shortname, items }) => {
       `}
       data-cy="inpage-nav"
     >
-      <div
+      <nav
+        aria-label="inpage-scroll"
         css={`
           margin: 0 -6rem;
           padding: 0 6rem;
+          @media screen and (max-width: ${breakpoints["sm"]}) {
+            padding: 0 2.5rem;
+          }
           display: flex;
           justify-content: space-between;
           align-items: center;
           background-color: ${colors[POSITIVE].background};
           color: ${colors[POSITIVE].text};
         `}
+        data-cy="inpage-nav"
       >
-        <nav aria-label="inpage-scroll">
-          <ul
+        <ul
+          css={`
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            margin: 0;
+            padding: 0.25rem 0;
+            list-style: none;
+          `}
+        >
+          <li>
+            <Link
+              to="/"
+              css={`
+                text-decoration: none;
+                display: grid;
+                grid-template-columns: 3rem auto;
+                align-items: center;
+              `}
+              data-cy="home-link"
+            >
+              <CaseiLogoIcon color={colors[POSITIVE].text} size="tiny" />
+            </Link>
+          </li>
+          <li
             css={`
-              display: flex;
-              flex-direction: row;
-              justify-content: flex-start;
-              align-items: center;
-              margin: 0;
-              padding: 0.25rem 0;
-              list-style: none;
+              margin: 0 1rem 0 0;
             `}
           >
-            <li>
-              <Link
-                to="/"
-                css={`
-                  text-decoration: none;
-                  display: grid;
-                  grid-template-columns: 3rem auto;
-                  align-items: center;
-                `}
-                data-cy="home-link"
-              >
-                <CaseiLogoIcon color={colors[POSITIVE].text} size="tiny" />
-              </Link>
-            </li>
-            <li
+            <a
+              href="#top"
               css={`
-                margin: 0 1rem 0 0;
+                padding-right: 1rem;
+                @media screen and (max-width: ${breakpoints["sm"]}) {
+                  padding-right: 0;
+                }
+                font-size: 2rem;
+                color: ${colors[POSITIVE].text};
               `}
+              data-cy={`top-inpage-link`}
             >
-              <a
-                href="#top"
-                css={`
-                  padding-right: 1rem;
-                  font-size: 2rem;
-                  color: ${colors[POSITIVE].text};
-                `}
-                data-cy={`top-inpage-link`}
-              >
-                {shortname}
-              </a>
-            </li>
-            {items.map(item => (
-              <InpageLink key={item.id} id={item.id}>
-                {item.label}
-              </InpageLink>
-            ))}
-          </ul>
-        </nav>
+              {shortname}
+            </a>
+          </li>
+          {items.map(item => (
+            <InpageLink key={item.id} id={item.id}>
+              {item.label}
+            </InpageLink>
+          ))}
+        </ul>
         {isFBMLoaded && (
           <Button
             action={() => {
@@ -124,7 +131,7 @@ const InpageNav = ({ shortname, items }) => {
             Feedback
           </Button>
         )}
-      </div>
+      </nav>
     </div>
   )
 }

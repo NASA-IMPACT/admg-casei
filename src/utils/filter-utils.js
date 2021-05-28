@@ -20,7 +20,9 @@ export const sortFunctions = {
   campaigns: {
     "a to z": (a, b) => a.shortname.localeCompare(b.shortname),
     "z to a": (a, b) => b.shortname.localeCompare(a.shortname),
-    oldest: (a, b) => new Date(a.enddate) - new Date(b.enddate),
+    oldest: (a, b) =>
+      (a.enddate ? new Date(a.enddate) : new Date()) -
+      (b.enddate ? new Date(b.enddate) : new Date()), // if there is no enddate, use today
     "most recent": (a, b) => new Date(b.enddate) - new Date(a.enddate),
   },
   platforms: {

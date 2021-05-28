@@ -88,6 +88,11 @@ exports[`Header renders correctly 1`] = `
     <div
       className="c2"
     >
+      <a
+        href="https://www.nasa.gov"
+        rel="noopener noreferrer"
+        target="_blank"
+      />
       <div
         className="c3"
       />
