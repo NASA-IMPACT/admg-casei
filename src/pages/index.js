@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import { graphql, Link } from "gatsby"
 
@@ -7,6 +7,7 @@ import SEO from "../components/seo"
 import { Section, SectionHeader, SectionContent } from "../components/layout"
 import Hero from "../components/hero"
 import Label from "../components/label"
+import Button from "../components/button"
 import FocusAreaGallery from "../components/focus-area-gallery"
 import { RegionCarousel } from "../components/home/region-carousel"
 import { GeophysicsGrid } from "../components/home/geophysics-grid"
@@ -16,6 +17,19 @@ import { NEGATIVE } from "../utils/constants"
 import { colors } from "../theme"
 
 const Home = ({ data }) => {
+  const [isFBMLoaded, setIsFBMLoaded] = useState(false)
+
+  useEffect(() => {
+    // ensure that feedback module is loaded and inititalized
+    // (external script added via gatsby-plugin-load-script)
+    if (window.feedback) {
+      if (!window.feedback.showForm) {
+        window.feedback.init({ showIcon: false })
+      }
+      setIsFBMLoaded(true)
+    }
+  }, [])
+
   return (
     <Layout>
       <SEO title="Home" lang="en" />
@@ -127,6 +141,21 @@ const Home = ({ data }) => {
             />
           </SectionContent>
         </Section>
+
+        {isFBMLoaded && (
+          <Section id="feedback" isSpaced>
+            <SectionHeader headline="Provide Feedback" id="feedback" />
+            <SectionContent>
+              <Button
+                action={() => {
+                  window.feedback.showForm()
+                }}
+              >
+                How can we improve CASEI?
+              </Button>
+            </SectionContent>
+          </Section>
+        )}
       </PageBody>
     </Layout>
   )
