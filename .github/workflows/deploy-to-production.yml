@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - production
+  workflow_dispatch:  # Support manual deployments, https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow
 
 jobs:
   build-and-deploy:
