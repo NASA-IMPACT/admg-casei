@@ -55,3 +55,4 @@ jobs:
           aws s3 rm s3://${{ secrets.PRODUCTION_BUCKET }} --recursive
           aws s3 cp ./public/ s3://${{ secrets.PRODUCTION_BUCKET }}/casei --recursive
           aws s3 cp ./public/index.html s3://${{ secrets.PRODUCTION_BUCKET }}
+          aws cloudfront create-invalidation --distribution-id ${{ secrets.PRODUCTION_DISTRIBUTION }} --paths "/*"
