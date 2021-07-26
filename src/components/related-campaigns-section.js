@@ -43,7 +43,10 @@ const RelatedCampaignsSection = ({ id, campaigns }) => {
               {campaigns.map(campaign => (
                 <div
                   key={campaign.id}
-                  style={{ width: `16rem`, height: `100%` }}
+                  css={`
+                    width: 16rem;
+                    height: 100%;
+                  `}
                   data-cy="related-campaign"
                 >
                   <Link to={`/campaign/${campaign.shortname}`}>

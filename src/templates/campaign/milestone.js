@@ -9,27 +9,46 @@ import { colors } from "../../theme"
 const Milestone = ({ type, daterange, name, details, region }) => {
   return (
     <div
-      style={{ padding: `3rem`, minHeight: `400px`, display: `flex` }}
+      css={`
+        padding: 3rem;
+        min-height: 400px;
+        display: flex;
+      `}
       data-cy="milestone"
     >
       <label
-        style={{
-          color: colors[NEGATIVE].altBackground,
-          backgroundColor: colors[NEGATIVE].highlight,
-          position: `absolute`,
-          top: `4rem`,
-          left: `4rem`,
-          padding: `.25rem`,
-          zIndex: `1`,
-        }}
+        css={`
+          color: ${colors[NEGATIVE].altBackground};
+          background-color: ${colors[NEGATIVE].highlight};
+          position: absolute;
+          top: 4rem;
+          left: 4rem;
+          padding: 0.25rem;
+          z-index: 1;
+        `}
       >
         {type}
       </label>
-      <div style={{ flex: 1, display: `grid`, gridTemplateColumns: `1fr 3fr` }}>
-        <div style={{ justifySelf: `center`, alignSelf: `center` }}>
+      <div
+        css={`
+          flex: 1;
+          display: grid;
+          grid-template-columns: 1fr 3fr;
+        `}
+      >
+        <div
+          css={`
+            justify-self: center;
+            align-self: center;
+          `}
+        >
           <PlatformIcon />
         </div>
-        <div style={{ padding: `1rem` }}>
+        <div
+          css={`
+            padding: 1rem;
+          `}
+        >
           <Label id="timeline-milestone-date">{daterange}</Label>
           <h3>{name}</h3>
           <p>{details}</p>

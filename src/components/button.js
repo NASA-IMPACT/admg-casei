@@ -68,15 +68,15 @@ export const IconButton = ({ id, icon, action }) => (
   <Clickable
     type="button"
     onClick={action}
-    style={{
-      background: "none",
-      border: "none",
-      flexGrow: 0,
-      cursor: `pointer`,
-      color: colors[NEGATIVE].text,
-      verticalAlign: `middle`,
-      marginLeft: `0.5rem`,
-    }}
+    css={`
+      background: none;
+      border: none;
+      flex-grow: 0;
+      cursor: pointer;
+      color: ${colors[NEGATIVE].text};
+      vertical-align: middle;
+      margin-left: 0.5rem;
+    `}
     data-cy={id}
   >
     <span role="img" aria-label={`${id}-icon`}>

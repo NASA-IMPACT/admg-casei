@@ -13,14 +13,19 @@ const OtherResourcesSection = ({ id, resources }) => (
     <SectionHeader headline="Other Resources" id={id} />
 
     <SectionContent
-      style={{
-        display: `grid`,
-        gridTemplateColumns: `repeat(auto-fit, minmax(15rem, 1fr))`,
-        gap: `1rem`,
-      }}
+      css={`
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        gap: 1rem;
+      `}
     >
       {resources.length > 0 ? (
-        <ul style={{ margin: 0, listStyle: `none` }}>
+        <ul
+          css={`
+            margin: 0;
+            list-style: none;
+          `}
+        >
           {resources.map(resource => (
             <ListLink key={resource} to={resource}>
               {resource}

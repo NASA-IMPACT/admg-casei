@@ -22,7 +22,9 @@ const ArrowIcon = ({ color = "#FFF", direction = "right" }) => {
 
   return (
     <svg
-      style={{ marginLeft: `.5rem` }}
+      css={`
+        margin-left: 0.5rem;
+      `}
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
       width="16"
