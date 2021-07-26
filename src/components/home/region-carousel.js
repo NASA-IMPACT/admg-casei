@@ -86,7 +86,7 @@ export const RegionCarousel = ({ regions }) => {
                   height: 550,
                 }}
               >
-                {region.image.nasaImg && (
+                {region.image?.nasaImg && (
                   <GatsbyImage
                     image={region.image.nasaImg.childImageSharp.gatsbyImageData}
                     alt={region.image.nasaImgAlt}
@@ -108,7 +108,7 @@ export const RegionCarousel = ({ regions }) => {
               >
                 {region.shortname}
               </div>
-              <span>{region.image.nasaImgAlt}</span>
+              <span>{region.image ? region.image.nasaImgAlt : "No image available."}</span>
             </Link>
           </React.Fragment>
         ))}
