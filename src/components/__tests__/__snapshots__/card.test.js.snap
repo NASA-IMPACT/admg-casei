@@ -57,6 +57,11 @@ exports[`Card renders card with tag 1`] = `
   background-color: #ffffff;
 }
 
+.c5.c5 {
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
 <div
   className="c0"
 >
@@ -100,13 +105,8 @@ exports[`Card renders card with tag 1`] = `
     </div>
     <div>
       <big
+        className="c5"
         data-cy="shortname"
-        style={
-          Object {
-            "fontWeight": "bold",
-            "marginTop": "0.5rem",
-          }
-        }
       >
         GCPEx
       </big>
@@ -169,6 +169,11 @@ exports[`Card renders plain card 1`] = `
   grid-area: 1 / 1;
 }
 
+.c4.c4 {
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
 <div
   className="c0"
 >
@@ -206,13 +211,8 @@ exports[`Card renders plain card 1`] = `
     </div>
     <div>
       <big
+        className="c4"
         data-cy="shortname"
-        style={
-          Object {
-            "fontWeight": "bold",
-            "marginTop": "0.5rem",
-          }
-        }
       >
         GCPEx
       </big>
@@ -275,6 +275,11 @@ exports[`Card renders with footer list 1`] = `
   grid-area: 1 / 1;
 }
 
+.c4.c4 {
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
 <div
   className="c0"
 >
@@ -312,13 +317,8 @@ exports[`Card renders with footer list 1`] = `
     </div>
     <div>
       <big
+        className="c4"
         data-cy="shortname"
-        style={
-          Object {
-            "fontWeight": "bold",
-            "marginTop": "0.5rem",
-          }
-        }
       >
         GCPEx
       </big>

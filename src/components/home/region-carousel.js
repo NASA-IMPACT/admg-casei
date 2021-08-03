@@ -72,38 +72,40 @@ export const RegionCarousel = ({ regions }) => {
               to="/explore/campaigns"
               state={{ selectedFilterId: region.id }}
               data-cy="region-type"
-              style={{
-                display: `grid`,
-                gridTemplateColumns: `1fr`,
-                gridTemplateRows: `1fr`,
-                alignItems: `center`,
-              }}
+              css={`
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr;
+                align-items: center;
+              `}
             >
               <div
-                style={{
-                  gridArea: `1 / 1 / 1 / 1`,
-                  zIndex: -1,
-                  height: 550,
-                }}
+                css={`
+                  grid-area: 1 / 1 / 1 / 1;
+                  z-index: -1;
+                  height: 550px;
+                `}
               >
                 {region.image?.nasaImg && (
                   <GatsbyImage
                     image={region.image.nasaImg.childImageSharp.gatsbyImageData}
                     alt={region.image.nasaImgAlt}
-                    style={{ height: 550 }}
+                    css={`
+                      height: 550px;
+                    `}
                   />
                 )}
               </div>
 
               <div
-                style={{
-                  gridArea: `1 / 1 / 1 / 1`,
-                  justifySelf: `center`,
-                  fontSize: `xxx-large`,
-                  fontWeight: `bold`,
-                  textTransform: `uppercase`,
-                  textShadow: `3px 3px 10px #333`,
-                }}
+                css={`
+                  grid-area: 1 / 1 / 1 / 1;
+                  justify-self: center;
+                  font-size: xxx-large;
+                  font-weight: bold;
+                  text-transform: uppercase;
+                  text-shadow: 3px 3px 10px #333;
+                `}
                 data-cy="region-type-name"
               >
                 {region.shortname}
@@ -127,7 +129,7 @@ RegionCarousel.propTypes = {
       image: PropTypes.shape({
         nasaImgUrl: PropTypes.string.isRequired,
         nasaImgAlt: PropTypes.string.isRequired,
-      }).isRequired,
+      }),
     }).isRequired
   ),
 }

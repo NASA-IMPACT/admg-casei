@@ -41,7 +41,39 @@ exports[`Focus Section displays content 1`] = `
   align-self: end;
 }
 
+.c4.c4 {
+  -webkit-flex: 2.618;
+  -ms-flex: 2.618;
+  flex: 2.618;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);
+  padding: 2rem;
+}
+
 .c5.c5 {
+  color: #9e9e9e;
+  border-bottom: 1px solid #9e9e9e;
+  display: block;
+}
+
+.c8.c8 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #0c1520;
+  color: #e9eaec;
+  border-radius: 0.2rem;
+  padding: 0.25rem 0.5rem;
+  margin: 0.25rem 0.5rem;
+}
+
+.c7.c7 {
   text-align: center;
   display: -webkit-box;
   display: -webkit-flex;
@@ -58,7 +90,7 @@ exports[`Focus Section displays content 1`] = `
   gap: 1rem;
 }
 
-.c4.c4 {
+.c6.c6 {
   display: grid;
   grid-template-columns: repeat(2,1fr);
   justify-items: center;
@@ -67,13 +99,13 @@ exports[`Focus Section displays content 1`] = `
 }
 
 @media screen and (max-width:1280px) {
-  .c5.c5 {
+  .c7.c7 {
     grid-column: span 2;
   }
 }
 
 @media screen and (max-width:800px) {
-  .c5.c5 {
+  .c7.c7 {
     grid-column: span 3;
   }
 }
@@ -104,38 +136,24 @@ exports[`Focus Section displays content 1`] = `
     mode="darkTheme"
   >
     <div
-      style={
-        Object {
-          "display": "grid",
-          "flex": "2.618",
-          "gap": "1.5rem",
-          "gridTemplateColumns": "minmax(0,1fr) minmax(0,1fr) minmax(0,1fr)",
-          "padding": "2rem",
-        }
-      }
+      className="c4"
     >
       <div
         data-cy="focus-content"
       >
         <label
+          className="c5"
           data-cy="focus-content-label"
-          style={
-            Object {
-              "borderBottom": "1px solid #9e9e9e",
-              "color": "#9e9e9e",
-              "display": "block",
-            }
-          }
         >
           Focus Area
         </label>
         <div
-          className="c4"
+          className="c6"
         >
           <a
             _css="1280px"
             _css2="800px"
-            className="c5"
+            className="c7"
             data-cy="focus-area"
             href="/focus/Carbon Cycle & Ecosystems"
             state={
@@ -169,14 +187,8 @@ exports[`Focus Section displays content 1`] = `
         data-cy="focus-content"
       >
         <label
+          className="c5"
           data-cy="focus-content-label"
-          style={
-            Object {
-              "borderBottom": "1px solid #9e9e9e",
-              "color": "#9e9e9e",
-              "display": "block",
-            }
-          }
         >
           Geophysical Concept
         </label>
@@ -190,18 +202,8 @@ exports[`Focus Section displays content 1`] = `
           }
         >
           <div
+            className="c8"
             data-cy="geophysical-concept-chip"
-            style={
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "#0c1520",
-                "borderRadius": "0.2rem",
-                "color": "#e9eaec",
-                "display": "inline-flex",
-                "margin": "0.25rem 0.5rem",
-                "padding": "0.25rem 0.5rem",
-              }
-            }
           >
             <small
               title=""
@@ -215,30 +217,14 @@ exports[`Focus Section displays content 1`] = `
         data-cy="focus-content"
       >
         <label
+          className="c5"
           data-cy="focus-content-label"
-          style={
-            Object {
-              "borderBottom": "1px solid #9e9e9e",
-              "color": "#9e9e9e",
-              "display": "block",
-            }
-          }
         >
           Focus Phenomena
         </label>
         <div
+          className="c8"
           data-cy="focus-phenomena-chip"
-          style={
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "#0c1520",
-              "borderRadius": "0.2rem",
-              "color": "#e9eaec",
-              "display": "inline-flex",
-              "margin": "0.25rem 0.5rem",
-              "padding": "0.25rem 0.5rem",
-            }
-          }
         >
           <small
             title=""

@@ -53,21 +53,26 @@ const ProgramInfoSection = ({
     <Section id={id}>
       <SectionHeader headline="Program Info" id={id} />
       <SectionContent withBackground>
-        <div style={{ display: `flex` }}>
+        <div
+          css={`
+            display: flex;
+          `}
+        >
           <div
-            style={{
-              flex: `0.618`,
-              display: `flex`,
-              justifyContent: `center`,
-              alignItems: `center`,
-              padding: `1rem`,
-            }}
+            css={`
+              flex: 0.618;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              padding: 1rem;
+            `}
           >
             {logoFullWidth && logoFullWidth.gatsbyImg ? (
               <div
-                style={{
-                  width: `100%` /* gatsby-image wants width, for it to be visible */,
-                }}
+                css={`
+                  width: 100%
+                    /* gatsby-image wants width, for it to be visible */;
+                `}
                 data-cy="campaign-logo"
               >
                 <GatsbyImage

@@ -17,8 +17,19 @@ import { colors } from "../../theme"
 
 function BackgroundListItem({ id, label, children }) {
   return (
-    <li style={{ padding: `1rem 0` }} data-cy={`${id}-label`}>
-      <label style={{ color: colors[POSITIVE].altText }}>{label}</label>
+    <li
+      css={`
+        padding: 1rem 0;
+      `}
+      data-cy={`${id}-label`}
+    >
+      <label
+        css={`
+          color: ${colors[POSITIVE].altText};
+        `}
+      >
+        {label}
+      </label>
       <p>{children}</p>
     </li>
   )
@@ -44,7 +55,10 @@ function Background({
 }) {
   return (
     <ul
-      style={{ margin: 0, listStyle: `none` }}
+      css={`
+        margin: 0;
+        list-style: none;
+      `}
       data-cy="instrument-background"
     >
       <BackgroundListItem id="lead-investigator" label="Lead Investigator">
@@ -60,13 +74,17 @@ function Background({
         {fundingSource || "Currently unavailable"}
       </BackgroundListItem>
       {instrumentDoi && (
-        <div style={{ padding: `1rem 0` }}>
+        <div
+          css={`
+            padding: 1rem 0;
+          `}
+        >
           <p
-            style={{
-              whiteSpace: `nowrap`,
-              overflow: `hidden`,
-              textOverflow: `ellipsis`,
-            }}
+            css={`
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            `}
           >
             DOI:{" "}
             <ExternalLink
@@ -89,13 +107,25 @@ function Background({
           "Currently unavailable"
         )}
       </BackgroundListItem>
-      <li style={{ padding: `1rem 0` }} data-cy="repositories-label">
-        <label style={{ color: colors[POSITIVE].altText }}>
+      <li
+        css={`
+          padding: 1rem 0;
+        `}
+        data-cy="repositories-label"
+      >
+        <label
+          css={`
+            color: ${colors[POSITIVE].altText};
+          `}
+        >
           {repositories.length === 1 ? "Repository" : "Repositories"}
         </label>
         {repositories.length > 0 ? (
           <ul
-            style={{ margin: 0, listStyle: `none` }}
+            css={`
+              margin: 0;
+              list-style: none;
+            `}
             data-cy="repository-list"
           >
             {repositories.map(repo => (
@@ -209,9 +239,18 @@ export default function OverviewSection({
               title: "Online Information",
               content:
                 onlineInformation && onlineInformation.length ? (
-                  <ul style={{ margin: `0` }}>
+                  <ul
+                    css={`
+                      margin: 0;
+                    `}
+                  >
                     {onlineInformation.map(link => (
-                      <li key={link} style={{ listStyle: `none` }}>
+                      <li
+                        key={link}
+                        css={`
+                          list-style: none;
+                        `}
+                      >
                         {isUrl(link) ? (
                           <ExternalLink
                             label={link}

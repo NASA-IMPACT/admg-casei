@@ -80,7 +80,10 @@ export default function PlatformCard({ shortname, mode }) {
       mode={mode}
     >
       <big
-        style={{ fontWeight: `bold`, marginTop: `0.5rem` }}
+        css={`
+          font-weight: bold;
+          margin-top: 0.5rem;
+        `}
         data-cy="shortname"
       >
         {platform.shortname}

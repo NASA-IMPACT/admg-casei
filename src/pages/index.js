@@ -258,7 +258,7 @@ Home.propTypes = {
           image: PropTypes.shape({
             nasaImgUrl: PropTypes.string.isRequired,
             nasaImgAlt: PropTypes.string.isRequired,
-          }).isRequired,
+          }),
         })
       ),
     }),

@@ -28,7 +28,13 @@ export default function OverviewSection({
       {onlineInformation.length && (
         <SectionContent mode={POSITIVE} columns={[1, 8]}>
           <h3>Online information</h3>
-          <ul style={{ margin: 0, listStyle: `none` }} data-cy="link-list">
+          <ul
+            css={`
+              margin: 0;
+              list-style: none;
+            `}
+            data-cy="link-list"
+          >
             {onlineInformation.map(link => (
               <ListLink key={link} to={link} mode={POSITIVE} noPadding>
                 {link}

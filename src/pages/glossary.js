@@ -172,7 +172,10 @@ export default function Glossary({ data }) {
                     {x.note && (
                       <p
                         data-cy="glossary-definition-note"
-                        style={{ fontStyle: `italic`, marginTop: `1rem` }}
+                        css={`
+                          font-style: italic;
+                          margin-top: 1rem;
+                        `}
                       >
                         Note: {x.note}
                       </p>
