@@ -67,7 +67,10 @@ export default function InstrumentCard({ shortname }) {
       category="instruments"
     >
       <big
-        style={{ fontWeight: `bold`, marginTop: `0.5rem` }}
+        css={`
+          font-weight: bold;
+          margin-top: 0.5rem;
+        `}
         data-cy="shortname"
       >
         {instrument.shortname}

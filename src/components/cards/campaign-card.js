@@ -85,7 +85,10 @@ export default function CampaignCard({ shortname, mode }) {
       mode={mode}
     >
       <big
-        style={{ fontWeight: `bold`, marginTop: `0.5rem` }}
+        css={`
+          font-weight: bold;
+          margin-top: 0.5rem;
+        `}
         data-cy="shortname"
       >
         {campaign.shortname}

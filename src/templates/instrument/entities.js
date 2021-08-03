@@ -26,7 +26,9 @@ export default function Entities({ id, campaigns, platforms }) {
         <Table data-cy={`instrument-related-entities-table`}>
           <tbody>
             <tr
-              style={{ borderBottom: `2px solid ${colors[NEGATIVE].altText}` }}
+              css={`
+                border-bottom: 2px solid ${colors[NEGATIVE].altText};
+              `}
             >
               <th>
                 <label>Platform</label>
@@ -39,7 +41,11 @@ export default function Entities({ id, campaigns, platforms }) {
             </tr>
             {platforms.map(platform => (
               <tr key={platform.id}>
-                <td style={{ verticalAlign: `top` }}>
+                <td
+                  css={`
+                    vertical-align: top;
+                  `}
+                >
                   <div data-cy="related-platform">
                     <Link to={`/platform/${platform.shortname}`}>
                       <PlatformCard shortname={platform.shortname} />
@@ -47,11 +53,14 @@ export default function Entities({ id, campaigns, platforms }) {
                   </div>
                 </td>
                 <td
-                  style={{
-                    display: `grid`,
-                    gridTemplateColumns: `repeat(auto-fill, minmax(13rem, 1fr))`,
-                    gap: `1rem`,
-                  }}
+                  css={`
+                    display: grid;
+                    grid-template-columns: repeat(
+                      auto-fill,
+                      minmax(13rem, 1fr)
+                    );
+                    gap: 1rem;
+                  `}
                 >
                   {platform.campaigns
                     .filter(campaign =>

@@ -6,7 +6,11 @@ import { POSITIVE, NEGATIVE } from "../../utils/constants"
 import { isUrl, PropTypeIsUrl } from "../../utils/helpers"
 
 const ListLink = props => (
-  <li style={{ padding: props.noPadding ? 0 : `1rem 0` }}>
+  <li
+    css={`
+      padding: ${props.noPadding ? `0` : ` 1rem 0`};
+    `}
+  >
     {isUrl(props.to) ? (
       <ExternalLink url={props.to} id={props.children} mode={props.mode}>
         {props.children}

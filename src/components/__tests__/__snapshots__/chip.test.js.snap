@@ -1,29 +1,48 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Chip renders with action 1`] = `
-.c0.c0:hover {
+.c1.c1:hover {
   opacity: 0.64;
 }
 
-.c0.c0:active {
+.c1.c1:active {
   -webkit-transform: translate(0,1px);
   -ms-transform: translate(0,1px);
   transform: translate(0,1px);
 }
 
+.c2.c2 {
+  background: none;
+  border: none;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  cursor: pointer;
+  color: #e9eaec;
+  vertical-align: middle;
+  margin-left: 0.5rem;
+}
+
+.c0.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #303641;
+  color: #e9eaec;
+  border-radius: 0.2rem;
+  padding: 0.25rem 0.5rem;
+  margin: 0.25rem 0.5rem;
+}
+
 <div
+  className="c0"
   data-cy="filter-chip"
-  style={
-    Object {
-      "alignItems": "center",
-      "backgroundColor": "#303641",
-      "borderRadius": "0.2rem",
-      "color": "#e9eaec",
-      "display": "flex",
-      "margin": "0.25rem 0.5rem",
-      "padding": "0.25rem 0.5rem",
-    }
-  }
 >
   <small
     title=""
@@ -31,20 +50,9 @@ exports[`Chip renders with action 1`] = `
     Weather
   </small>
   <button
-    className="c0"
+    className="c1 c2"
     data-cy="remove-filter"
     onClick={[Function]}
-    style={
-      Object {
-        "background": "none",
-        "border": "none",
-        "color": "#e9eaec",
-        "cursor": "pointer",
-        "flexGrow": 0,
-        "marginLeft": "0.5rem",
-        "verticalAlign": "middle",
-      }
-    }
     type="button"
   >
     <span
@@ -68,19 +76,25 @@ exports[`Chip renders with action 1`] = `
 `;
 
 exports[`Chip renders without action 1`] = `
+.c0.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #303641;
+  color: #e9eaec;
+  border-radius: 0.2rem;
+  padding: 0.25rem 0.5rem;
+  margin: 0.25rem 0.5rem;
+}
+
 <div
+  className="c0"
   data-cy="filter-chip"
-  style={
-    Object {
-      "alignItems": "center",
-      "backgroundColor": "#303641",
-      "borderRadius": "0.2rem",
-      "color": "#e9eaec",
-      "display": "flex",
-      "margin": "0.25rem 0.5rem",
-      "padding": "0.25rem 0.5rem",
-    }
-  }
 >
   <small
     title=""

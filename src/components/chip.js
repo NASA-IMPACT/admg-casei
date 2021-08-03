@@ -16,17 +16,17 @@ const Chip = ({
   hoverText,
 }) => (
   <div
-    style={{
-      display: isInline ? `inline-flex` : `flex`,
-      alignItems: `center`,
-      backgroundColor: isDark
+    css={`
+      display: ${isInline ? "inline-flex" : "flex"};
+      align-items: center;
+      background-color: ${isDark
         ? colors[NEGATIVE].altBackground
-        : colors[NEGATIVE].background,
-      color: colors[NEGATIVE].text,
-      borderRadius: shape.rounded,
-      padding: `0.25rem 0.5rem`,
-      margin: `0.25rem 0.5rem`,
-    }}
+        : colors[NEGATIVE].background};
+      color: ${colors[NEGATIVE].text};
+      border-radius: ${shape.rounded};
+      padding: 0.25rem 0.5rem;
+      margin: 0.25rem 0.5rem;
+    `}
     data-cy={`${id}-chip`}
   >
     <small title={hoverText}>{label}</small>
