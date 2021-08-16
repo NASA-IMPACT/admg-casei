@@ -9,13 +9,27 @@ import { colors, layout } from "../theme"
 import DateList from "./date-list-hover"
 
 export const HeroStats = ({ statList }) => (
-  <dl style={{ display: `grid` }} data-cy="stats">
+  <dl
+    css={`
+      display: grid;
+    `}
+    data-cy="stats"
+  >
     {statList.map(stat => (
       <React.Fragment key={stat.label}>
-        <dt style={{ fontSize: `4rem` }}>
+        <dt
+          css={`
+            font-size: 4rem;
+          `}
+        >
           {!stat.number && stat.number !== 0 ? "--" : stat.number}
         </dt>
-        <dd style={{ gridRowStart: 2, textTransform: `uppercase` }}>
+        <dd
+          css={`
+            grid-row-start: 2;
+            text-transform: uppercase;
+          `}
+        >
           {stat.dates ? (
             <DateList
               id={stat.label}

@@ -7,12 +7,12 @@ import { colors } from "../../theme"
 export default function FilterChips({ clearFilters, children }) {
   return (
     <div
-      style={{
-        display: `flex`,
-        flexWrap: `wrap`,
-        margin: `2rem 0`,
-        alignItems: `center`,
-      }}
+      css={`
+        display: flex;
+        flex-wrap: wrap;
+        margin: 2rem 0;
+        align-items: center;
+      `}
     >
       Active filters:
       {children}

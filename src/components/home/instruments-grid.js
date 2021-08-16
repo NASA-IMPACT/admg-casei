@@ -16,11 +16,11 @@ export const InstrumentsGrid = ({ measurementTypes }) => {
 
   return (
     <div
-      style={{
-        display: `flex`,
-        flexWrap: `wrap`,
-        border: `1px solid ${colors[NEGATIVE].text}`,
-      }}
+      css={`
+        display: flex;
+        flex-wrap: wrap;
+        border: 1px solid ${colors[NEGATIVE].text};
+      `}
     >
       {measurementTypes.map(measurementType => (
         <Link
@@ -28,16 +28,18 @@ export const InstrumentsGrid = ({ measurementTypes }) => {
           state={{
             selectedFilterId: measurementType.id,
           }}
-          style={{ flexGrow: 1 }}
+          css={`
+            flex-grow: 1;
+          `}
           data-cy="instrument-type"
           key={measurementType.id}
         >
           <div
-            style={{
-              border: `1px solid ${colors[NEGATIVE].text}`,
-              padding: `1rem`,
-              textAlign: `center`,
-            }}
+            css={`
+              border: 1px solid ${colors[NEGATIVE].text};
+              padding: 1rem;
+              textalign: center;
+            `}
           >
             <label>
               {measurementType.longname || measurementType.shortname}

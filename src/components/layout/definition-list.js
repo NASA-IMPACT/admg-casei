@@ -24,26 +24,36 @@ export default function DefinitionList({
   mode = NEGATIVE,
 }) {
   return (
-    <section style={{ padding: `1rem` }} data-cy={`${id}-definition-list`}>
+    <section
+      css={`
+        padding: 1rem;
+      `}
+      data-cy={`${id}-definition-list`}
+    >
       <List>
         {list.map(row => (
           <React.Fragment key={row.title}>
             <dt>
               <label
-                style={{
-                  color: colors[mode].altText,
-                }}
+                css={`
+                  color: ${colors[mode].altText};
+                `}
               >
                 {row.title}
               </label>
             </dt>
-            <dd
-              style={
-                isCentered ? { display: `flex`, justifyContent: `center` } : {}
-              }
-            >
-              {row.content}
-            </dd>
+            {isCentered ? (
+              <dd
+                css={`
+                  display: flex;
+                  justify-content: center;
+                `}
+              >
+                {row.content}
+              </dd>
+            ) : (
+              <dd>{row.content}</dd>
+            )}
           </React.Fragment>
         ))}
       </List>

@@ -7,26 +7,26 @@ import { colors } from "../../theme"
 
 export const GeophysicsGrid = ({ geophysicalConcepts }) => (
   <div
-    style={{
-      display: `flex`,
-      flexWrap: `wrap`,
-      border: `1px solid ${colors[NEGATIVE].text}`,
-    }}
+    css={`
+      display: flex;
+      flex-wrap: wrap;
+      border: 1px solid ${colors[NEGATIVE].text};
+    `}
   >
     {geophysicalConcepts.map(concept => (
       <Link
         to="/explore/campaigns"
         state={{ selectedFilterId: concept.id }} // Pass state as props to the linked page
-        style={{ flexGrow: 1 }}
+        css={{ flexGrow: 1 }}
         data-cy="geophysical-concept"
         key={concept.id}
       >
         <div
-          style={{
-            border: `1px solid ${colors[NEGATIVE].text}`,
-            padding: `1rem`,
-            textAlign: `center`,
-          }}
+          css={`
+            border: 1px solid ${colors[NEGATIVE].text};
+            padding: 1rem;
+            text-align: center;
+          `}
         >
           <label>{concept.longname}</label>
         </div>

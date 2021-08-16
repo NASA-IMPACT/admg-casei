@@ -18,11 +18,11 @@ const MaintenanceSection = ({ shortname, data }) => {
         <Link
           to={`/edit/campaign/${shortname}`}
           state={{ data }}
-          style={{
-            border: `1px solid ${colors[NEGATIVE].text}`,
-            padding: `1rem 5rem`,
-            textTransform: `uppercase`,
-          }}
+          css={`
+            border: 1px solid ${colors[NEGATIVE].text};
+            padding: 1rem 5rem;
+            text-transform: uppercase;
+          `}
         >
           Edit
         </Link>

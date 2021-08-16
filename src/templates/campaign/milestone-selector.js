@@ -34,56 +34,63 @@ export default function MilestoneSelector({
   return (
     <section
       data-cy="milestone-timeline"
-      style={{ whiteSpace: `nowrap`, borderTop: `1px solid gray` }}
+      css={`
+        white-space: nowrap;
+        border-top: 1px solid gray;
+      `}
     >
       <ol
-        style={{
-          maxWidth: `100%`,
-          padding: `8rem 0 2rem 0`,
-          height: `200px`,
-          margin: `0`,
-          display: `flex`,
-          overflowX: `scroll`,
-        }}
+        css={`
+          max-width: 100%;
+          padding: 8rem 0 2rem 0;
+          height: 200px;
+          margin: 0;
+          display: flex;
+          overflow-x: scroll;
+        `}
       >
         {events.map(event => (
           <li
             key={event.id}
-            style={{
-              position: `relative`,
-              display: `flex`,
-              listStyleType: `none`,
-              height: `2px`,
-              background: colors[NEGATIVE].text,
-              flex: `1 0 25%`,
-            }}
+            css={`
+              position: relative;
+              display: flex;
+              list-style-type: none;
+              height: 2px;
+              background: ${colors[NEGATIVE].text};
+              flex: 1 0 25%;
+            `}
           >
             <div
-              style={{
-                position: `absolute`,
-                bottom: `0rem`,
-                height: `2rem`,
-                width: `1px`,
-                background: colors[NEGATIVE].text,
-              }}
+              css={`
+                position: absolute;
+                bottom: 0rem;
+                height: 2rem;
+                width: 1px;
+                background: ${colors[NEGATIVE].text};
+              `}
             ></div>
             <button
-              style={{
-                position: `absolute`,
-                bottom: `2rem`,
-                width: `12rem`,
-                padding: `.5rem`,
-                color: `black`,
-                background: colors[NEGATIVE].text,
-                opacity: activeMilestone === event.id ? 1 : 0.7,
-                border: `none`,
-              }}
+              css={`
+                position: absolute;
+                bottom: 2rem;
+                width: 12rem;
+                padding: 0.5rem;
+                color: black;
+                background: ${colors[NEGATIVE].text};
+                opacity: ${activeMilestone === event.id ? 1 : 0.7};
+                border: none;
+              `}
               onClick={() => timelineAction(event.id)}
               data-cy="milestone-timeline-card"
             >
               <CardContent data-cy="milestone-timeline-card-content">
                 {/* TODO: replace with the correct icon */}
-                <div style={{ gridArea: `icon` }}>
+                <div
+                  css={`
+                    grid-area: icon;
+                  `}
+                >
                   <AirborneRemoteSensors
                     color={
                       activeMilestone === event.id
@@ -93,25 +100,37 @@ export default function MilestoneSelector({
                     size="tiny"
                   />
                 </div>
-                <CardTitle style={{ gridArea: `title` }}>
+                <CardTitle
+                  css={`
+                    grid-area: title;
+                  `}
+                >
                   {event.longname || event.shortname || "missing region"}
                 </CardTitle>
-                <CardSubTitle style={{ gridArea: `subTitle` }}>
+                <CardSubTitle
+                  css={`
+                    grid-area: subTitle;
+                  `}
+                >
                   {event.name || "missing details"}
                 </CardSubTitle>
-                <CardSubTitle style={{ gridArea: `flights` }}>
+                <CardSubTitle
+                  css={`
+                    grid-area: flights;
+                  `}
+                >
                   {`${event.collectionPeriods.length} CDCPs` || "missing CDCPs"}
                 </CardSubTitle>
               </CardContent>
             </button>
             <p
-              style={{
-                position: `absolute`,
-                width: `100%`,
-                height: `40px`,
-                top: `1rem`,
-                color: colors[NEGATIVE].text,
-              }}
+              css={`
+                position: absolute;
+                width: 100%;
+                height: 40px;
+                top: 1rem;
+                color: ${colors[NEGATIVE].text};
+              `}
             >
               {event.end}
             </p>

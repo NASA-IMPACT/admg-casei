@@ -86,7 +86,7 @@ exports[`Platform Section displays content 1`] = `
   white-space: nowrap;
 }
 
-.c15.c15 {
+.c16.c16 {
   max-height: 30rem;
   overflow-y: auto;
 }
@@ -152,7 +152,7 @@ exports[`Platform Section displays content 1`] = `
   grid-area: 1 / 1;
 }
 
-.c13.c13 {
+.c14.c14 {
   color: #262a31;
   background-color: #ffffff;
   box-shadow: rgba(68,63,63,0.08) 0px -1px 1px 0px,rgba(68,63,63,0.08) 0px 2px 6px 0px;
@@ -174,9 +174,14 @@ exports[`Platform Section displays content 1`] = `
   align-items: center;
 }
 
-.c14.c14 {
+.c15.c15 {
   padding-right: 0.25rem;
   white-space: nowrap;
+}
+
+.c13.c13 {
+  font-weight: bold;
+  margin-top: 0.5rem;
 }
 
 <section
@@ -282,13 +287,8 @@ exports[`Platform Section displays content 1`] = `
                   </div>
                 </div>
                 <big
+                  className="c13"
                   data-cy="shortname"
-                  style={
-                    Object {
-                      "fontWeight": "bold",
-                      "marginTop": "0.5rem",
-                    }
-                  }
                 >
                   J-31
                 </big>
@@ -299,11 +299,11 @@ exports[`Platform Section displays content 1`] = `
                 </p>
               </a>
               <div
-                className="c13"
+                className="c14"
                 data-cy="platforms-card-footer"
               >
                 <small
-                  className="c14"
+                  className="c15"
                   data-cy="count1"
                 >
                   <strong>
@@ -313,7 +313,7 @@ exports[`Platform Section displays content 1`] = `
                   Campaign
                 </small>
                 <small
-                  className="c14"
+                  className="c15"
                   data-cy="count2"
                 >
                    · 
@@ -327,7 +327,7 @@ exports[`Platform Section displays content 1`] = `
             </div>
           </a>
           <div
-            className="c15"
+            className="c16"
             data-cy="instrument-accordion"
             data-reach-accordion=""
           />
@@ -381,13 +381,8 @@ exports[`Platform Section displays content 1`] = `
                   </div>
                 </div>
                 <big
+                  className="c13"
                   data-cy="shortname"
-                  style={
-                    Object {
-                      "fontWeight": "bold",
-                      "marginTop": "0.5rem",
-                    }
-                  }
                 >
                   Aerosonde
                 </big>
@@ -398,11 +393,11 @@ exports[`Platform Section displays content 1`] = `
                 </p>
               </a>
               <div
-                className="c13"
+                className="c14"
                 data-cy="platforms-card-footer"
               >
                 <small
-                  className="c14"
+                  className="c15"
                   data-cy="count1"
                 >
                   <strong>
@@ -412,7 +407,7 @@ exports[`Platform Section displays content 1`] = `
                   Campaign
                 </small>
                 <small
-                  className="c14"
+                  className="c15"
                   data-cy="count2"
                 >
                    · 
@@ -427,7 +422,7 @@ exports[`Platform Section displays content 1`] = `
             </div>
           </a>
           <div
-            className="c15"
+            className="c16"
             data-cy="instrument-accordion"
             data-reach-accordion=""
           />
@@ -481,13 +476,8 @@ exports[`Platform Section displays content 1`] = `
                   </div>
                 </div>
                 <big
+                  className="c13"
                   data-cy="shortname"
-                  style={
-                    Object {
-                      "fontWeight": "bold",
-                      "marginTop": "0.5rem",
-                    }
-                  }
                 >
                   C-23 Sherpa
                 </big>
@@ -498,11 +488,11 @@ exports[`Platform Section displays content 1`] = `
                 </p>
               </a>
               <div
-                className="c13"
+                className="c14"
                 data-cy="platforms-card-footer"
               >
                 <small
-                  className="c14"
+                  className="c15"
                   data-cy="count1"
                 >
                   <strong>
@@ -512,7 +502,7 @@ exports[`Platform Section displays content 1`] = `
                   Campaign
                 </small>
                 <small
-                  className="c14"
+                  className="c15"
                   data-cy="count2"
                 >
                    · 
@@ -527,7 +517,7 @@ exports[`Platform Section displays content 1`] = `
             </div>
           </a>
           <div
-            className="c15"
+            className="c16"
             data-cy="instrument-accordion"
             data-reach-accordion=""
           />

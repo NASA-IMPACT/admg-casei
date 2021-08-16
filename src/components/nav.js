@@ -6,7 +6,12 @@ import { colors } from "../theme"
 import { POSITIVE, NEGATIVE } from "../utils/constants"
 
 const ListLink = ({ to, children, mode }) => (
-  <li style={{ margin: `0 1rem 0 0`, textTransform: `uppercase` }}>
+  <li
+    css={`
+      margin: 0 1rem 0 0;
+      text-transform: uppercase;
+    `}
+  >
     <Link
       to={to}
       activeStyle={{

@@ -11,23 +11,23 @@ const MissionSection = ({ id, missions }) => (
     <SectionHeader headline="Supported NASA Missions" id={id} />
 
     <SectionContent
-      style={{
-        display: `grid`,
-        gridTemplateColumns: `repeat(auto-fit, minmax(15rem, 1fr))`,
-        gap: `1rem`,
-      }}
+      css={`
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        gap: 1rem;
+      `}
     >
       {missions.length > 0 ? (
         missions.map(mission => (
           <div
             key={mission}
-            style={{
-              padding: `1.5rem`,
-              display: `flex`,
-              gap: `1.5rem`,
-              alignItems: `center`,
-              backgroundColor: colors[NEGATIVE].background,
-            }}
+            css={`
+              padding: 1.5rem;
+              display: flex;
+              gap: 1.5rem;
+              align-items: center;
+              background-color: ${colors[NEGATIVE].background};
+            `}
             data-cy="linked-mission"
           >
             <label>{mission}</label>
