@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - production
+  workflow_dispatch:  # Support manual deployments, https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow
 
 jobs:
   build-and-deploy:
@@ -54,3 +55,4 @@ jobs:
           aws s3 rm s3://${{ secrets.PRODUCTION_BUCKET }} --recursive
           aws s3 cp ./public/ s3://${{ secrets.PRODUCTION_BUCKET }}/casei --recursive
           aws s3 cp ./public/index.html s3://${{ secrets.PRODUCTION_BUCKET }}
+          aws cloudfront create-invalidation --distribution-id ${{ secrets.PRODUCTION_DISTRIBUTION_ID }} --paths "/*"

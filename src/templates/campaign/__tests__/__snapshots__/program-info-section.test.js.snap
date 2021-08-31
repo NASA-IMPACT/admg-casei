@@ -41,6 +41,50 @@ exports[`Program Info Section renders logo when present in props 1`] = `
   align-self: end;
 }
 
+.c7.c7 {
+  -webkit-flex: 2.618;
+  -ms-flex: 2.618;
+  flex: 2.618;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);
+  padding: 2rem;
+}
+
+.c8.c8 {
+  color: #9e9e9e;
+}
+
+.c4.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c5.c5 {
+  -webkit-flex: 0.618;
+  -ms-flex: 0.618;
+  flex: 0.618;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.c6.c6 {
+  width: 100%;
+}
+
 <section
   className="c0"
   data-cy="program-info-section"
@@ -67,30 +111,14 @@ exports[`Program Info Section renders logo when present in props 1`] = `
     mode="darkTheme"
   >
     <div
-      style={
-        Object {
-          "display": "flex",
-        }
-      }
+      className="c4"
     >
       <div
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flex": "0.618",
-            "justifyContent": "center",
-            "padding": "1rem",
-          }
-        }
+        className="c5"
       >
         <div
+          className="c6"
           data-cy="campaign-logo"
-          style={
-            Object {
-              "width": "100%",
-            }
-          }
         >
           <div
             className="gatsby-image-wrapper"
@@ -206,26 +234,14 @@ exports[`Program Info Section renders logo when present in props 1`] = `
         </div>
       </div>
       <div
-        style={
-          Object {
-            "display": "grid",
-            "flex": "2.618",
-            "gap": "1.5rem",
-            "gridTemplateColumns": "minmax(0,1fr) minmax(0,1fr) minmax(0,1fr)",
-            "padding": "2rem",
-          }
-        }
+        className="c7"
       >
         <div
           data-cy="program-info-content"
         >
           <label
+            className="c8"
             data-cy="program-info-content-label"
-            style={
-              Object {
-                "color": "#9e9e9e",
-              }
-            }
           >
             Funding Agency
           </label>
@@ -239,12 +255,8 @@ exports[`Program Info Section renders logo when present in props 1`] = `
           data-cy="program-info-content"
         >
           <label
+            className="c8"
             data-cy="program-info-content-label"
-            style={
-              Object {
-                "color": "#9e9e9e",
-              }
-            }
           >
             Funding Program
           </label>
@@ -258,12 +270,8 @@ exports[`Program Info Section renders logo when present in props 1`] = `
           data-cy="program-info-content"
         >
           <label
+            className="c8"
             data-cy="program-info-content-label"
-            style={
-              Object {
-                "color": "#9e9e9e",
-              }
-            }
           >
             Funding Program Lead
           </label>
@@ -277,12 +285,8 @@ exports[`Program Info Section renders logo when present in props 1`] = `
           data-cy="program-info-content"
         >
           <label
+            className="c8"
             data-cy="program-info-content-label"
-            style={
-              Object {
-                "color": "#9e9e9e",
-              }
-            }
           >
             Principle Investigator(s)
           </label>
@@ -296,12 +300,8 @@ exports[`Program Info Section renders logo when present in props 1`] = `
           data-cy="program-info-content"
         >
           <label
+            className="c8"
             data-cy="program-info-content-label"
-            style={
-              Object {
-                "color": "#9e9e9e",
-              }
-            }
           >
             Data Manager / Technical Contact
           </label>
@@ -315,12 +315,8 @@ exports[`Program Info Section renders logo when present in props 1`] = `
           data-cy="program-info-content"
         >
           <label
+            className="c8"
             data-cy="program-info-content-label"
-            style={
-              Object {
-                "color": "#9e9e9e",
-              }
-            }
           >
             NASA Data Repository
           </label>
@@ -334,12 +330,8 @@ exports[`Program Info Section renders logo when present in props 1`] = `
           data-cy="program-info-content"
         >
           <label
+            className="c8"
             data-cy="program-info-content-label"
-            style={
-              Object {
-                "color": "#9e9e9e",
-              }
-            }
           >
             Partner Organizations
           </label>
@@ -353,12 +345,8 @@ exports[`Program Info Section renders logo when present in props 1`] = `
           data-cy="program-info-content"
         >
           <label
+            className="c8"
             data-cy="program-info-content-label"
-            style={
-              Object {
-                "color": "#9e9e9e",
-              }
-            }
           >
             Overview Publication
           </label>
@@ -415,6 +403,46 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
   align-self: end;
 }
 
+.c6.c6 {
+  -webkit-flex: 2.618;
+  -ms-flex: 2.618;
+  flex: 2.618;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);
+  padding: 2rem;
+}
+
+.c7.c7 {
+  color: #9e9e9e;
+}
+
+.c4.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c5.c5 {
+  -webkit-flex: 0.618;
+  -ms-flex: 0.618;
+  flex: 0.618;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1rem;
+}
+
 <section
   className="c0"
   data-cy="program-info-section"
@@ -441,22 +469,10 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
     mode="darkTheme"
   >
     <div
-      style={
-        Object {
-          "display": "flex",
-        }
-      }
+      className="c4"
     >
       <div
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flex": "0.618",
-            "justifyContent": "center",
-            "padding": "1rem",
-          }
-        }
+        className="c5"
       >
         <svg
           height="120"
@@ -478,26 +494,14 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
         </svg>
       </div>
       <div
-        style={
-          Object {
-            "display": "grid",
-            "flex": "2.618",
-            "gap": "1.5rem",
-            "gridTemplateColumns": "minmax(0,1fr) minmax(0,1fr) minmax(0,1fr)",
-            "padding": "2rem",
-          }
-        }
+        className="c6"
       >
         <div
           data-cy="program-info-content"
         >
           <label
+            className="c7"
             data-cy="program-info-content-label"
-            style={
-              Object {
-                "color": "#9e9e9e",
-              }
-            }
           >
             Funding Agency
           </label>
@@ -511,12 +515,8 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
           data-cy="program-info-content"
         >
           <label
+            className="c7"
             data-cy="program-info-content-label"
-            style={
-              Object {
-                "color": "#9e9e9e",
-              }
-            }
           >
             Funding Program
           </label>
@@ -530,12 +530,8 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
           data-cy="program-info-content"
         >
           <label
+            className="c7"
             data-cy="program-info-content-label"
-            style={
-              Object {
-                "color": "#9e9e9e",
-              }
-            }
           >
             Funding Program Lead
           </label>
@@ -549,12 +545,8 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
           data-cy="program-info-content"
         >
           <label
+            className="c7"
             data-cy="program-info-content-label"
-            style={
-              Object {
-                "color": "#9e9e9e",
-              }
-            }
           >
             Principle Investigator(s)
           </label>
@@ -568,12 +560,8 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
           data-cy="program-info-content"
         >
           <label
+            className="c7"
             data-cy="program-info-content-label"
-            style={
-              Object {
-                "color": "#9e9e9e",
-              }
-            }
           >
             Data Manager / Technical Contact
           </label>
@@ -587,12 +575,8 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
           data-cy="program-info-content"
         >
           <label
+            className="c7"
             data-cy="program-info-content-label"
-            style={
-              Object {
-                "color": "#9e9e9e",
-              }
-            }
           >
             NASA Data Repository
           </label>
@@ -606,12 +590,8 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
           data-cy="program-info-content"
         >
           <label
+            className="c7"
             data-cy="program-info-content-label"
-            style={
-              Object {
-                "color": "#9e9e9e",
-              }
-            }
           >
             Partner Organizations
           </label>
@@ -625,12 +605,8 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
           data-cy="program-info-content"
         >
           <label
+            className="c7"
             data-cy="program-info-content-label"
-            style={
-              Object {
-                "color": "#9e9e9e",
-              }
-            }
           >
             Overview Publication
           </label>

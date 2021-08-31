@@ -6,12 +6,12 @@ import { layout } from "../../theme"
 export default function PageBody({ children, id }) {
   return (
     <div
-      style={{
-        width: `100%`,
-        maxWidth: layout.maxWidth,
-        margin: `0 auto`,
-        padding: `0 ${layout.pageMargin}`,
-      }}
+      css={`
+        width: 100%;
+        max-width: ${layout.maxWidth};
+        margin: 0 auto;
+        padding: 0 ${layout.pageMargin};
+      `}
       data-cy={`main-${id}`}
     >
       {children}

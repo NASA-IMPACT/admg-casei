@@ -1,94 +1,122 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Timeline renders correctly 1`] = `
-.c0.c0 {
+.c5.c5 {
   display: grid;
   grid-template-columns: 30px 120px;
   grid-template-areas: "icon title" "icon subTitle" "icon flights";
 }
 
-.c1.c1 {
+.c7.c7 {
   margin: 0;
   font-size: small;
   text-align: start;
 }
 
-.c2.c2 {
+.c8.c8 {
+  grid-area: title;
+}
+
+.c9.c9 {
   margin: 0;
   font-size: x-small;
   text-align: start;
 }
 
+.c11.c11 {
+  grid-area: flights;
+}
+
+.c10.c10 {
+  grid-area: subTitle;
+}
+
+.c0.c0 {
+  white-space: nowrap;
+  border-top: 1px solid gray;
+}
+
+.c1.c1 {
+  max-width: 100%;
+  padding: 8rem 0 2rem 0;
+  height: 200px;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: scroll;
+}
+
+.c2.c2 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  height: 2px;
+  background: #e9eaec;
+  -webkit-flex: 1 0 25%;
+  -ms-flex: 1 0 25%;
+  flex: 1 0 25%;
+}
+
+.c3.c3 {
+  position: absolute;
+  bottom: 0rem;
+  height: 2rem;
+  width: 1px;
+  background: #e9eaec;
+}
+
+.c4.c4 {
+  position: absolute;
+  bottom: 2rem;
+  width: 12rem;
+  padding: 0.5rem;
+  color: black;
+  background: #e9eaec;
+  opacity: 0.7;
+  border: none;
+}
+
+.c6.c6 {
+  grid-area: icon;
+}
+
+.c12.c12 {
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  top: 1rem;
+  color: #e9eaec;
+}
+
 <section
+  className="c0"
   data-cy="milestone-timeline"
-  style={
-    Object {
-      "borderTop": "1px solid gray",
-      "whiteSpace": "nowrap",
-    }
-  }
 >
   <ol
-    style={
-      Object {
-        "display": "flex",
-        "height": "200px",
-        "margin": "0",
-        "maxWidth": "100%",
-        "overflowX": "scroll",
-        "padding": "8rem 0 2rem 0",
-      }
-    }
+    className="c1"
   >
     <li
-      style={
-        Object {
-          "background": "#e9eaec",
-          "display": "flex",
-          "flex": "1 0 25%",
-          "height": "2px",
-          "listStyleType": "none",
-          "position": "relative",
-        }
-      }
+      className="c2"
     >
       <div
-        style={
-          Object {
-            "background": "#e9eaec",
-            "bottom": "0rem",
-            "height": "2rem",
-            "position": "absolute",
-            "width": "1px",
-          }
-        }
+        className="c3"
       />
       <button
+        className="c4"
         data-cy="milestone-timeline-card"
         onClick={[Function]}
-        style={
-          Object {
-            "background": "#e9eaec",
-            "border": "none",
-            "bottom": "2rem",
-            "color": "black",
-            "opacity": 0.7,
-            "padding": ".5rem",
-            "position": "absolute",
-            "width": "12rem",
-          }
-        }
       >
         <div
-          className="c0"
+          className="c5"
           data-cy="milestone-timeline-card-content"
         >
           <div
-            style={
-              Object {
-                "gridArea": "icon",
-              }
-            }
+            className="c6"
           >
             <svg
               height="30"
@@ -104,100 +132,45 @@ exports[`Timeline renders correctly 1`] = `
             </svg>
           </div>
           <p
-            className="c1"
-            style={
-              Object {
-                "gridArea": "title",
-              }
-            }
+            className="c7 c8"
           >
             Western US Fall 2012
           </p>
           <p
-            className="c2"
-            style={
-              Object {
-                "gridArea": "subTitle",
-              }
-            }
+            className="c9 c10"
           >
             missing details
           </p>
           <p
-            className="c2"
-            style={
-              Object {
-                "gridArea": "flights",
-              }
-            }
+            className="c9 c11"
           >
             3 CDCPs
           </p>
         </div>
       </button>
       <p
-        style={
-          Object {
-            "color": "#e9eaec",
-            "height": "40px",
-            "position": "absolute",
-            "top": "1rem",
-            "width": "100%",
-          }
-        }
+        className="c12"
       >
         2012-09-20
       </p>
     </li>
     <li
-      style={
-        Object {
-          "background": "#e9eaec",
-          "display": "flex",
-          "flex": "1 0 25%",
-          "height": "2px",
-          "listStyleType": "none",
-          "position": "relative",
-        }
-      }
+      className="c2"
     >
       <div
-        style={
-          Object {
-            "background": "#e9eaec",
-            "bottom": "0rem",
-            "height": "2rem",
-            "position": "absolute",
-            "width": "1px",
-          }
-        }
+        className="c3"
       />
       <button
+        className="c4"
         data-cy="milestone-timeline-card"
         onClick={[Function]}
-        style={
-          Object {
-            "background": "#e9eaec",
-            "border": "none",
-            "bottom": "2rem",
-            "color": "black",
-            "opacity": 0.7,
-            "padding": ".5rem",
-            "position": "absolute",
-            "width": "12rem",
-          }
-        }
       >
         <div
-          className="c0"
+          className="c5"
           data-cy="milestone-timeline-card-content"
         >
           <div
-            style={
-              Object {
-                "gridArea": "icon",
-              }
-            }
+            className="c6"
           >
             <svg
               height="30"
@@ -213,47 +186,24 @@ exports[`Timeline renders correctly 1`] = `
             </svg>
           </div>
           <p
-            className="c1"
-            style={
-              Object {
-                "gridArea": "title",
-              }
-            }
+            className="c7 c8"
           >
             Canada, Oregon Fall 2012
           </p>
           <p
-            className="c2"
-            style={
-              Object {
-                "gridArea": "subTitle",
-              }
-            }
+            className="c9 c10"
           >
             missing details
           </p>
           <p
-            className="c2"
-            style={
-              Object {
-                "gridArea": "flights",
-              }
-            }
+            className="c9 c11"
           >
             2 CDCPs
           </p>
         </div>
       </button>
       <p
-        style={
-          Object {
-            "color": "#e9eaec",
-            "height": "40px",
-            "position": "absolute",
-            "top": "1rem",
-            "width": "100%",
-          }
-        }
+        className="c12"
       >
         2012-10-20
       </p>

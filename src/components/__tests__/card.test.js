@@ -6,7 +6,10 @@ import { CampaignIcon } from "../../icons"
 const CardContent = () => (
   <div>
     <big
-      style={{ fontWeight: `bold`, marginTop: `0.5rem` }}
+      css={`
+        font-weight: bold;
+        margin-top: 0.5rem;
+      `}
       data-cy="shortname"
     >
       GCPEx

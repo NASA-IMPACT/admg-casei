@@ -13,13 +13,13 @@ export default function Label({
 }) {
   return (
     <label
-      style={{
-        color: color,
-        borderBottom: showBorder
+      css={`
+        color: ${color};
+        border-bottom: ${showBorder
           ? `1px solid ${colors[NEGATIVE].altText}`
-          : `none`,
-        display,
-      }}
+          : `none`};
+        display: ${display};
+      `}
       data-cy={`${id}-label`}
     >
       {children}
@@ -28,7 +28,11 @@ export default function Label({
 }
 
 Label.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.string, PropTypes.array]).isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.element,
+    PropTypes.array,
+  ]).isRequired,
   id: PropTypes.string.isRequired,
   color: PropTypes.string,
   showBorder: PropTypes.bool,

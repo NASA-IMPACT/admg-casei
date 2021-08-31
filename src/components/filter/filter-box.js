@@ -30,7 +30,11 @@ export default function FilterBox({
   }
 
   return (
-    <div style={{ marginRight: `2rem` }}>
+    <div
+      css={`
+        margin-right: 2rem;
+      `}
+    >
       <VisuallyHidden id={filterName}>{filterName}</VisuallyHidden>
       <ListboxInput
         aria-labelledby={filterName}
@@ -40,20 +44,24 @@ export default function FilterBox({
       >
         <ListboxButton
           arrow="▼"
-          style={{
-            height: `2.5rem`,
-            WebkitAppearance: `none`,
-            background: `transparent`,
-            border: `1px solid ${colors[NEGATIVE].text}`,
-            borderRadius: `${shape.rounded} `,
-            color: colors[NEGATIVE].text,
-            padding: `0.5rem`,
-            cursor: `pointer`,
-          }}
+          css={`
+            height: 2.5rem;
+            webkit-appearance: none;
+            background: transparent;
+            border: 1px solid ${colors[NEGATIVE].text};
+            border-radius: ${shape.rounded};
+            color: ${colors[NEGATIVE].text};
+            padding: 0.5rem;
+            cursor: pointer;
+          `}
         >
           {filterName.toUpperCase()}
         </ListboxButton>
-        <ListboxPopover style={{ background: colors[NEGATIVE].altBackground }}>
+        <ListboxPopover
+          css={`
+            background: ${colors[NEGATIVE].altBackground};
+          `}
+        >
           <ListboxList data-cy="data-products-filter-options">
             {filterOptions.map(o => {
               return (

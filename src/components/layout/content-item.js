@@ -15,9 +15,9 @@ export default function ContentItem({
   return (
     <div data-cy={id}>
       <label
-        style={{
-          color: colors[mode].altText,
-        }}
+        css={`
+          color: ${colors[mode].altText};
+        `}
         data-cy={`${id}-label`}
       >
         {label}
