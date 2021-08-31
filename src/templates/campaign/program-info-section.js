@@ -24,10 +24,10 @@ const ProgramInfoSection = ({
   websites,
 }) => {
   const repositoryWebsite = websites?.find(
-    x => x.description[0] === "Repository Website"
+    x => x.type.name === "Repository Website"
   )
   const publicationLink = websites?.find(
-    x => x.description[0] === "Overview Publication"
+    x => x.type.name === "Overview Publication"
   )
 
   const contentList = [
@@ -125,9 +125,11 @@ export const fundingFields = graphql`
       shortname: short_name
     }
 
-    websites: website_details {
+    websites {
       url
-      description: website_types
+      type: website_type {
+        name: long_name
+      }
     }
   }
 `
@@ -149,7 +151,9 @@ ProgramInfoSection.propTypes = {
   websites: PropTypes.arrayOf(
     PropTypes.shape({
       url: PropTypes.string.isRequired,
-      description: PropTypes.string.isRequired,
+      type: PropTypes.shape({
+        name: PropTypes.string.isRequired,
+      }),
     })
   ),
 }
