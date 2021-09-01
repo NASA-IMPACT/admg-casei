@@ -56,3 +56,11 @@ jobs:
           aws s3 cp ./public/ s3://${{ secrets.PRODUCTION_BUCKET }}/casei --recursive
           aws s3 cp ./public/index.html s3://${{ secrets.PRODUCTION_BUCKET }}
           aws cloudfront create-invalidation --distribution-id ${{ secrets.PRODUCTION_DISTRIBUTION_ID }} --paths "/*"
+          
+      - name: Notify Slack 💃
+        id: slack
+        uses: slackapi/slack-github-action@v1.14.0
+        with:
+          payload: "{\"text\":\"Successfully deployed CASEI! <https://impact.earthdata.nasa.gov/casei/|Click here> to take a look!\"}"
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}
