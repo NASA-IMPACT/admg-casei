@@ -10,12 +10,6 @@ const { createRemoteFileNode } = require("gatsby-source-filesystem")
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions
   const typeDefs = `
-    type website_detail implements Node {
-      order_priority: String
-      title: String
-      url: String
-      website_types: String
-    }
     type campaign implements Node {
       aliases: [alias] @link
       deployments: [deployment] @link
@@ -30,8 +24,11 @@ exports.createSchemaCustomization = ({ actions }) => {
       repositories: [repository] @link
       seasons: [season] @link
       significant_events: [significant_event] @link
-      website_details: website_detail
+      websites: [website] @link
       logo: image @link
+    }
+    type campaign_website implements Node {
+      website: website @link
     }
     type collection_period implements Node {
       dois: [doi] @link
@@ -72,6 +69,9 @@ exports.createSchemaCustomization = ({ actions }) => {
       instruments: [instrument] @link
       dois: [doi] @link
       platform_type: platform_type @link
+    }
+    type website implements Node {
+      website_type: website_type @link
     }
     type NasaImagesJson implements Node {
       nasaImg: File @link(from: "nasaImg___NODE")
@@ -137,6 +137,7 @@ exports.sourceNodes = async ({ actions, createContentDigest }) => {
     const endpoints = [
       "alias",
       "campaign",
+      "campaign_website",
       "collection_period",
       "deployment",
       "doi",
@@ -155,6 +156,8 @@ exports.sourceNodes = async ({ actions, createContentDigest }) => {
       "repository",
       "season",
       "significant_event",
+      "website",
+      "website_type",
     ]
 
     let responses = await Promise.all(endpoints.map(key => fetchData(key)))
