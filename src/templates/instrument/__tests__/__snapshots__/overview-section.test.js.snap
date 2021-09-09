@@ -348,32 +348,6 @@ exports[`Overview Section displays content 1`] = `
     >
       <li
         className="c13"
-        data-cy="lead-investigator-label"
-      >
-        <label
-          className="c14"
-        >
-          Lead Investigator
-        </label>
-        <p>
-          test
-        </p>
-      </li>
-      <li
-        className="c13"
-        data-cy="technical-contact-label"
-      >
-        <label
-          className="c14"
-        >
-          Technical Contact
-        </label>
-        <p>
-          test
-        </p>
-      </li>
-      <li
-        className="c13"
         data-cy="instrument-manufacturer-label"
       >
         <label

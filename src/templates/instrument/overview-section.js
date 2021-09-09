@@ -48,8 +48,6 @@ function Background({
   instrumentDoi,
   instrumentManufacturer,
   fundingSource,
-  leadInvestigator,
-  technicalContact,
   overviewPublication,
   repositories,
 }) {
@@ -61,12 +59,6 @@ function Background({
       `}
       data-cy="instrument-background"
     >
-      <BackgroundListItem id="lead-investigator" label="Lead Investigator">
-        {leadInvestigator || "Currently unavailable"}
-      </BackgroundListItem>
-      <BackgroundListItem id="technical-contact" label="Technical Contact">
-        {technicalContact || "Currently unavailable"}
-      </BackgroundListItem>
       <BackgroundListItem id="instrument-manufacturer" label="Instrument Maker">
         {instrumentManufacturer || "Currently unavailable"}
       </BackgroundListItem>
@@ -146,8 +138,6 @@ Background.propTypes = {
   instrumentDoi: PropTypes.string,
   instrumentManufacturer: PropTypes.string,
   fundingSource: PropTypes.string,
-  leadInvestigator: PropTypes.string,
-  technicalContact: PropTypes.string,
   overviewPublication: PropTypes.string,
   repositories: PropTypes.arrayOf(
     PropTypes.shape({
@@ -169,8 +159,6 @@ export default function OverviewSection({
   instrumentDoi,
   instrumentManufacturer,
   fundingSource,
-  leadInvestigator,
-  technicalContact,
   onlineInformation,
   overviewPublication,
   repositories,
@@ -276,8 +264,6 @@ export default function OverviewSection({
           instrumentDoi={instrumentDoi}
           instrumentManufacturer={instrumentManufacturer}
           fundingSource={fundingSource}
-          leadInvestigator={leadInvestigator}
-          technicalContact={technicalContact}
           onlineInformation={onlineInformation}
           overviewPublication={overviewPublication}
           repositories={repositories}
@@ -316,8 +302,6 @@ OverviewSection.propTypes = {
   instrumentDoi: PropTypes.string,
   instrumentManufacturer: PropTypes.string,
   fundingSource: PropTypes.string,
-  leadInvestigator: PropTypes.string,
-  technicalContact: PropTypes.string,
   onlineInformation: PropTypes.arrayOf(PropTypes.string),
   overviewPublication: PropTypes.string,
   repositories: PropTypes.arrayOf(
@@ -355,8 +339,6 @@ export const instrumentDetailFields = graphql`
     instrumentDoi: instrument_doi
     instrumentManufacturer: instrument_manufacturer
     fundingSource: funding_source
-    leadInvestigator: lead_investigator
-    technicalContact: technical_contact
     onlineInformation: online_information
     overviewPublication: overview_publication
     repositories {

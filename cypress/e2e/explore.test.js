@@ -136,7 +136,6 @@ describe("Explore", () => {
         .parent()
         .parent()
         .should($card => {
-          expect($card.find("[data-cy=stationary-tag]")).not.to.exist
           expect($card.find("[data-cy=shortname]")).to.contain("B-200")
           expect($card.find("[data-cy=longname]")).to.contain(
             "Beechcraft King Air B-200"

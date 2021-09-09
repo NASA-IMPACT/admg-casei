@@ -18,7 +18,6 @@ const CardContent = () => (
     <p data-cy="description">description....</p>
   </div>
 )
-const testTag = "Stationary"
 const testFooterList = [
   { count: 1, title: "Deployments" },
   { count: 0, title: "Data Products" },
@@ -38,7 +37,7 @@ describe("Card", () => {
   it("renders card with tag", () => {
     const tree = renderer
       .create(
-        <Card placeholder={CampaignIcon} category="campaigns" tag={testTag}>
+        <Card placeholder={CampaignIcon} category="campaigns">
           <CardContent />
         </Card>
       )

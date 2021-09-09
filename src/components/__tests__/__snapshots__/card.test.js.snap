@@ -45,19 +45,6 @@ exports[`Card renders card with tag 1`] = `
 }
 
 .c4.c4 {
-  grid-area: 1 / 1;
-  -webkit-align-self: flex-end;
-  -ms-flex-item-align: end;
-  align-self: flex-end;
-  justify-self: flex-start;
-  text-transform: uppercase;
-  border: 1px solid;
-  padding: 0.25rem;
-  margin: 1rem 0;
-  background-color: #ffffff;
-}
-
-.c5.c5 {
   font-weight: bold;
   margin-top: 0.5rem;
 }
@@ -96,16 +83,10 @@ exports[`Card renders card with tag 1`] = `
           </g>
         </svg>
       </div>
-      <div
-        className="c4"
-        data-cy="stationary-tag"
-      >
-        Stationary
-      </div>
     </div>
     <div>
       <big
-        className="c5"
+        className="c4"
         data-cy="shortname"
       >
         GCPEx
