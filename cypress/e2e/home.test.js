@@ -98,18 +98,23 @@ describe("Homepage", () => {
 
     cy.get("[data-cy=region-type-section]")
       .find("[data-cy=region-type]")
-      .contains(/Mountains/i)
+      .contains(/Island/i)
       .should("not.be.visible")
 
     cy.get("[data-cy=region-text-control]")
-      .findByText(/Mountains/i)
+      .findByText(/Island/i)
       .as("btn")
       .click()
 
     cy.get("[data-cy=region-type-section]")
       .find("[data-cy=region-type-name]")
+      .contains(/Island/i)
+      .should("be.visible")
+
+    cy.get("[data-cy=region-type-section]")
+      .find("[data-cy=region-type]")
       .contains(/Mountains/i)
-    // .should("be.visible")
+      .should("not.be.visible")
 
     cy.get("[data-cy=region-text-control]")
       .findByText(/Mountains/i)

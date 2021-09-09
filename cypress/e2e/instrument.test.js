@@ -66,8 +66,6 @@ describe("Instrument", () => {
 
     cy.get("[data-cy=instrument-background]").should("exist")
 
-    cy.get("[data-cy=lead-investigator-label]").should("exist")
-    cy.get("[data-cy=technical-contact-label]").should("exist")
     cy.get("[data-cy=instrument-manufacturer-label]").should("exist")
     cy.get("[data-cy=funding-source-label]").should("exist")
     cy.get("[data-cy=data-locations-label]").should("exist")
@@ -84,32 +82,30 @@ describe("Instrument", () => {
       .find("h2")
       .should("have.text", "Data Products")
 
-    // TODO: add back once database is populated again
+    cy.get("[data-cy=data-product]").should($div => {
+      expect($div).to.have.length.of.at.least(1)
+    })
+    cy.get("[data-cy=data-product]")
+      .first()
+      .find("[data-cy=doi-label]")
+      .should("exist")
 
-    // cy.get("[data-cy=data-product]").should($div => {
-    //   expect($div).to.have.length.of.at.least(2)
-    // })
-    // cy.get("[data-cy=data-product]")
-    //   .first()
-    //   .find("[data-cy=doi-label]")
-    //   .should("exist")
+    cy.get("[data-cy=data-product]")
+      .first()
+      .find("[data-cy=doi-link]")
+      .should("exist")
 
-    // cy.get("[data-cy=data-product]")
-    //   .first()
-    //   .find("[data-cy=doi-link]")
-    //   .should("exist")
+    cy.get("[data-cy=data-product-campaigns]")
+      .first()
+      .find("[data-cy=doi-campaign-label]")
+      .should("exist")
+      .and("have.text", "Campaigns")
 
-    // cy.get("[data-cy=data-product-campaigns]")
-    //   .first()
-    //   .find("[data-cy=doi-campaign-label]")
-    //   .should("exist")
-    //   .and("have.text", "Campaigns")
-
-    // cy.get("[data-cy=data-product-platforms]")
-    //   .first()
-    //   .find("[data-cy=doi-platform-label]")
-    //   .should("exist")
-    //   .and("have.text", "Platforms")
+    cy.get("[data-cy=data-product-platforms]")
+      .first()
+      .find("[data-cy=doi-platform-label]")
+      .should("exist")
+      .and("have.text", "Platforms")
 
     cy.get("[data-cy=entities-section]").should("exist")
 
