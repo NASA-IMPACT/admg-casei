@@ -23,6 +23,7 @@ const testArray = [
         shortname: "CAR",
       },
     ],
+    stationary: false,
   },
   {
     shortname: "Aerosonde",
@@ -46,6 +47,7 @@ const testArray = [
         shortname: "Vaisala RS902 sonde",
       },
     ],
+    stationary: false,
   },
   {
     shortname: "C-23 Sherpa",
@@ -90,6 +92,7 @@ const testArray = [
         shortname: "DADS",
       },
     ],
+    stationary: false,
   },
 ]
 

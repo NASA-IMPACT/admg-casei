@@ -46,6 +46,7 @@ export default function PlatformCard({ shortname, mode }) {
           instruments {
             shortname: short_name
           }
+          stationary
         }
       }
     }
@@ -57,6 +58,7 @@ export default function PlatformCard({ shortname, mode }) {
       image={platform.image}
       cover={true}
       placeholder={PlatformIcon}
+      tag={platform.stationary && "Stationary"}
       link={`/platform/${platform.shortname}`}
       footerList={{
         campaign: {
