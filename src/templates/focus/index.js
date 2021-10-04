@@ -104,7 +104,7 @@ const FocusTemplate = ({ data: { focusArea, allFocusArea }, path }) => {
 }
 
 export const query = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     focusArea(id: { eq: $slug }) {
       uuid
       campaigns {

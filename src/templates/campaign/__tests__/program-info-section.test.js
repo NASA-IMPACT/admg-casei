@@ -16,8 +16,7 @@ const testImage = {
         backgroundColor: "#080808",
         images: {
           fallback: {
-            src:
-              "/static/3d17ba6135efff1e39e6b4d97157a123/893c2/3b06165b-7033-4357-8f15-d2b68cbd84ff.png",
+            src: "/static/3d17ba6135efff1e39e6b4d97157a123/893c2/3b06165b-7033-4357-8f15-d2b68cbd84ff.png",
             srcSet:
               "/static/3d17ba6135efff1e39e6b4d97157a123/893c2/3b06165b-7033-4357-8f15-d2b68cbd84ff.png 129w",
             sizes: "100vw",
