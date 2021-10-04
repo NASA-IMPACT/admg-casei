@@ -5,6 +5,7 @@ module.exports = {
   moduleNameMapper: {
     ".+\\.(css|styl|less|sass|scss)$": `identity-obj-proxy`,
     ".+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": `<rootDir>/test/__mocks__/file-mock.js`,
+    "styled-components": `<rootDir>/node_modules/styled-components/dist/styled-components.cjs.js`, // https://github.com/styled-components/styled-components/issues/1451#issuecomment-361661563
   },
   testPathIgnorePatterns: [
     `node_modules`,
@@ -17,8 +18,5 @@ module.exports = {
     __PATH_PREFIX__: ``,
   },
   testURL: `http://localhost`,
-  setupFiles: [`<rootDir>/test/loadershim.js`],
-
-  // The paths to modules that run some code to configure or set up the testing environment before each test.
-  setupFilesAfterEnv: ["<rootDir>/test/jest.setup.js"],
+  setupFiles: [`<rootDir>/test/jest.setup.js`, `<rootDir>/test/loadershim.js`],
 }

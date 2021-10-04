@@ -1,92 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header renders correctly 1`] = `
-.c0.c0 {
-  background-color: #ffffff;
-  z-index: 99;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  box-shadow: rgba(68,63,63,0.08) 0px -1px 1px 0px,rgba(68,63,63,0.08) 0px 2px 6px 0px;
-}
-
-.c1.c1 {
-  margin: 0 auto;
-  max-width: 1280px;
-  padding: 0.25rem 4rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c2.c2 {
-  margin: 0;
-  z-index: 100;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 1rem;
-}
-
-.c3.c3 {
-  background-color: #e9eaec;
-  height: 1.5rem;
-  width: 1px;
-}
-
-.c4.c4 {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: grid;
-  grid-template-columns: 3rem auto;
-  -webkit-column-gap: 2rem;
-  column-gap: 2rem;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c5.c5 {
-  font-size: 1.5rem;
-  color: #262a31;
-}
-
-.c6.c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-@media screen and (max-width:800px) {
-  .c1.c1 {
-    padding: 0.25rem 2rem;
-  }
-}
-
 <header
-  className="c0"
+  className="header___StyledHeader-sc-4sefiz-0 gtzAPX"
 >
   <div
-    className="c1"
+    className="header___StyledDiv-sc-4sefiz-1 vvGKR"
   >
     <div
-      className="c2"
+      className="header___StyledDiv2-sc-4sefiz-2 ieyUeC"
     >
       <a
         href="https://www.nasa.gov"
@@ -94,10 +16,10 @@ exports[`Header renders correctly 1`] = `
         target="_blank"
       />
       <div
-        className="c3"
+        className="header___StyledDiv3-sc-4sefiz-3 quUrd"
       />
       <a
-        className="c4"
+        className="header___StyledLink-sc-4sefiz-4 gpWdMP"
         href="/"
       >
         <svg
@@ -130,14 +52,14 @@ exports[`Header renders correctly 1`] = `
           </g>
         </svg>
         <div
-          className="c5"
+          className="header___StyledDiv4-sc-4sefiz-5 kaOxZy"
         >
           Shortname from props
         </div>
       </a>
     </div>
     <div
-      className="c6"
+      className="header___StyledDiv5-sc-4sefiz-6 jItSAb"
     />
   </div>
 </header>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
@@ -6,7 +6,6 @@ import styled from "styled-components"
 
 import { NEGATIVE } from "../utils/constants"
 import { colors, layout } from "../theme"
-import Login from "./login"
 import ExternalLink from "./external-link"
 
 const Ul = styled.ul`
@@ -20,11 +19,6 @@ const Headline = styled.p`
 `
 
 const Footer = ({ shortname }) => {
-  const [isClient, setIsClient] = useState(false)
-  useEffect(() => {
-    setIsClient(true)
-  }, [])
-
   return (
     <footer
       css={`
@@ -199,26 +193,6 @@ const Footer = ({ shortname }) => {
                 </span>
               </div>
             </div>
-          </div>
-          <div
-            css={`
-              display: flex;
-              align-items: center;
-              text-transform: uppercase;
-              color: ${colors[NEGATIVE].link};
-            `}
-          >
-            {isClient && (
-              // the login button is only visible for the client (the browser), not in ssr
-              <Login />
-            )}
-            {/* TODO: Add back in with real links */}
-            {/* <div css={` margin-left: 3rem; `}>
-              Privacy
-            </div>
-            <div css={` margin-left: 3rem; `}>
-              Contact NASA
-            </div> */}
           </div>
         </div>
       </div>

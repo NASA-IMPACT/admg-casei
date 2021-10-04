@@ -1,200 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Platform Section displays content 1`] = `
-.c0.c0 {
-  display: grid;
-  grid-template-columns: repeat(12,1fr);
-  -webkit-column-gap: 1rem;
-  column-gap: 1rem;
-  row-gap: 2rem;
-  position: relative;
-  margin: 0;
-  padding: 0;
-  margin-bottom: 6rem;
-  background-color: none;
-}
-
-.c0.c0 > *,
-.c0.c0 h3 {
-  color: #e9eaec;
-}
-
-.c1.c1 {
-  position: absolute;
-  top: -80px;
-}
-
-.c3.c3 {
-  grid-column: 1 / span 12;
-}
-
-.c3.c3 > *,
-.c3.c3 h3 {
-  color: #e9eaec;
-}
-
-.c2.c2 {
-  grid-column: 1 / span 6;
-  -webkit-align-self: end;
-  -ms-flex-item-align: end;
-  align-self: end;
-}
-
-.c5.c5:hover {
-  opacity: 0.64;
-}
-
-.c5.c5:active {
-  -webkit-transform: translate(0,1px);
-  -ms-transform: translate(0,1px);
-  transform: translate(0,1px);
-}
-
-.c6.c6 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  color: #262a31;
-  text-align: center;
-  vertical-align: middle;
-  padding: 0.25rem 0.75rem;
-  background: none;
-  text-shadow: none;
-  border: 1px solid #262a31;
-  cursor: pointer;
-  background-color: #ffffff;
-  font-weight: bold;
-  white-space: nowrap;
-}
-
-.c7.c7 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  color: #e9eaec;
-  text-align: center;
-  vertical-align: middle;
-  padding: 0.25rem 0.75rem;
-  background: none;
-  text-shadow: none;
-  border: 1px solid #e9eaec;
-  cursor: pointer;
-  background-color: transparent;
-  font-weight: bold;
-  white-space: nowrap;
-}
-
-.c16.c16 {
-  max-height: 30rem;
-  overflow-y: auto;
-}
-
-.c4.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  overflow: auto;
-  gap: 0.5rem;
-  margin: 1rem 0;
-}
-
-.c8.c8 {
-  display: grid;
-  grid-template-columns: minmax(15rem,1fr) minmax(auto,3fr);
-  gap: 2rem;
-  height: 100%;
-  max-height: 30rem;
-}
-
-.c11.c11 {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  justify-items: flex-start;
-  min-height: 180px;
-}
-
-.c9.c9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: 100%;
-}
-
-.c10.c10 {
-  color: #262a31;
-  background-color: #ffffff;
-  box-shadow: rgba(68,63,63,0.08) 0px -1px 1px 0px,rgba(68,63,63,0.08) 0px 2px 6px 0px;
-  padding: 1rem;
-  min-height: 20rem;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-}
-
-.c10.c10:hover {
-  opacity: 0.64;
-}
-
-.c12.c12 {
-  grid-area: 1 / 1;
-}
-
-.c14.c14 {
-  color: #262a31;
-  background-color: #ffffff;
-  box-shadow: rgba(68,63,63,0.08) 0px -1px 1px 0px,rgba(68,63,63,0.08) 0px 2px 6px 0px;
-  padding: 1rem 0.5rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c15.c15 {
-  padding-right: 0.25rem;
-  white-space: nowrap;
-}
-
-.c13.c13 {
-  font-weight: bold;
-  margin-top: 0.5rem;
-}
-
 <section
-  className="c0"
+  className="section__Container-sc-1oozlr5-0 hnlTsG"
   data-cy="platform-section"
   mode="darkTheme"
 >
   <div
-    className="c1"
+    className="section__Buffer-sc-1oozlr5-1 dMJVzf"
     id="platform"
   />
   <div
-    className="c2"
+    className="section-header___StyledDiv-sc-1i4pe2i-0 bgiGcO"
     data-cy="platform-section-header"
   >
     <a
@@ -206,30 +23,30 @@ exports[`Platform Section displays content 1`] = `
     </a>
   </div>
   <div
-    className="c3"
+    className="section__SectionContent-sc-1oozlr5-2 bgcrwl"
     mode="darkTheme"
   >
     <div
       data-cy="platform-carousel"
     >
       <div
-        className="c4"
+        className="carousel-accordion-combo___StyledDiv-sc-ll7d04-0 jLEOdD"
         data-cy="carousel-list-text-control"
       >
         <button
-          className="c5 c6"
+          className="button__Clickable-sc-1yw7vig-0 button___StyledClickable-sc-1yw7vig-2 fuGm ckROky"
           onClick={[Function]}
         >
           J-31
         </button>
         <button
-          className="c5 c7"
+          className="button__Clickable-sc-1yw7vig-0 button___StyledClickable-sc-1yw7vig-2 fuGm dmIopz"
           onClick={[Function]}
         >
           Aerosonde
         </button>
         <button
-          className="c5 c7"
+          className="button__Clickable-sc-1yw7vig-0 button___StyledClickable-sc-1yw7vig-2 fuGm dmIopz"
           onClick={[Function]}
         >
           C-23 Sherpa
@@ -240,7 +57,7 @@ exports[`Platform Section displays content 1`] = `
       >
         <div
           aria-hidden="false"
-          className="c8"
+          className="carousel-accordion-combo___StyledDiv2-sc-ll7d04-1 cYRZOX"
           data-cy="platform"
         >
           <a
@@ -248,20 +65,18 @@ exports[`Platform Section displays content 1`] = `
             href="/platform/J-31"
           >
             <div
-              className="c9"
+              className="card___StyledDiv-sc-16fz0z7-1 ewaiPp"
             >
               <a
-                _css="#262a31"
-                _css2="#ffffff"
-                className="c10"
+                className="card___StyledLink-sc-16fz0z7-2 cOoZcM"
                 data-cy="platforms-card"
                 href="/platform/J-31"
               >
                 <div
-                  className="c11"
+                  className="card__CardHeader-sc-16fz0z7-0 bVktVe"
                 >
                   <div
-                    className="c12"
+                    className="card___StyledDiv2-sc-16fz0z7-4 eDJqAU"
                   >
                     <svg
                       height="80"
@@ -287,7 +102,7 @@ exports[`Platform Section displays content 1`] = `
                   </div>
                 </div>
                 <big
-                  className="c13"
+                  className="platform-card___StyledBig-sc-1w8j1zf-0 cxjATa"
                   data-cy="shortname"
                 >
                   J-31
@@ -299,11 +114,11 @@ exports[`Platform Section displays content 1`] = `
                 </p>
               </a>
               <div
-                className="c14"
+                className="card___StyledDiv4-sc-16fz0z7-6 czSZFl"
                 data-cy="platforms-card-footer"
               >
                 <small
-                  className="c15"
+                  className="card-footer-item___StyledSmall-sc-1gz7r6e-0 gxlSqG"
                   data-cy="count1"
                 >
                   <strong>
@@ -313,7 +128,7 @@ exports[`Platform Section displays content 1`] = `
                   Campaign
                 </small>
                 <small
-                  className="c15"
+                  className="card-footer-item___StyledSmall-sc-1gz7r6e-0 gxlSqG"
                   data-cy="count2"
                 >
                    · 
@@ -327,14 +142,14 @@ exports[`Platform Section displays content 1`] = `
             </div>
           </a>
           <div
-            className="c16"
+            className="accordion___StyledReachAccordion-sc-1dzvn26-1 exNUeI"
             data-cy="instrument-accordion"
             data-reach-accordion=""
           />
         </div>
         <div
           aria-hidden="false"
-          className="c8"
+          className="carousel-accordion-combo___StyledDiv2-sc-ll7d04-1 cYRZOX"
           data-cy="platform"
         >
           <a
@@ -342,20 +157,18 @@ exports[`Platform Section displays content 1`] = `
             href="/platform/Aerosonde"
           >
             <div
-              className="c9"
+              className="card___StyledDiv-sc-16fz0z7-1 ewaiPp"
             >
               <a
-                _css="#262a31"
-                _css2="#ffffff"
-                className="c10"
+                className="card___StyledLink-sc-16fz0z7-2 cOoZcM"
                 data-cy="platforms-card"
                 href="/platform/Aerosonde"
               >
                 <div
-                  className="c11"
+                  className="card__CardHeader-sc-16fz0z7-0 bVktVe"
                 >
                   <div
-                    className="c12"
+                    className="card___StyledDiv2-sc-16fz0z7-4 eDJqAU"
                   >
                     <svg
                       height="80"
@@ -381,7 +194,7 @@ exports[`Platform Section displays content 1`] = `
                   </div>
                 </div>
                 <big
-                  className="c13"
+                  className="platform-card___StyledBig-sc-1w8j1zf-0 cxjATa"
                   data-cy="shortname"
                 >
                   Aerosonde
@@ -393,11 +206,11 @@ exports[`Platform Section displays content 1`] = `
                 </p>
               </a>
               <div
-                className="c14"
+                className="card___StyledDiv4-sc-16fz0z7-6 czSZFl"
                 data-cy="platforms-card-footer"
               >
                 <small
-                  className="c15"
+                  className="card-footer-item___StyledSmall-sc-1gz7r6e-0 gxlSqG"
                   data-cy="count1"
                 >
                   <strong>
@@ -407,7 +220,7 @@ exports[`Platform Section displays content 1`] = `
                   Campaign
                 </small>
                 <small
-                  className="c15"
+                  className="card-footer-item___StyledSmall-sc-1gz7r6e-0 gxlSqG"
                   data-cy="count2"
                 >
                    · 
@@ -422,14 +235,14 @@ exports[`Platform Section displays content 1`] = `
             </div>
           </a>
           <div
-            className="c16"
+            className="accordion___StyledReachAccordion-sc-1dzvn26-1 exNUeI"
             data-cy="instrument-accordion"
             data-reach-accordion=""
           />
         </div>
         <div
           aria-hidden="false"
-          className="c8"
+          className="carousel-accordion-combo___StyledDiv2-sc-ll7d04-1 cYRZOX"
           data-cy="platform"
         >
           <a
@@ -437,20 +250,18 @@ exports[`Platform Section displays content 1`] = `
             href="/platform/C-23 Sherpa"
           >
             <div
-              className="c9"
+              className="card___StyledDiv-sc-16fz0z7-1 ewaiPp"
             >
               <a
-                _css="#262a31"
-                _css2="#ffffff"
-                className="c10"
+                className="card___StyledLink-sc-16fz0z7-2 cOoZcM"
                 data-cy="platforms-card"
                 href="/platform/C-23 Sherpa"
               >
                 <div
-                  className="c11"
+                  className="card__CardHeader-sc-16fz0z7-0 bVktVe"
                 >
                   <div
-                    className="c12"
+                    className="card___StyledDiv2-sc-16fz0z7-4 eDJqAU"
                   >
                     <svg
                       height="80"
@@ -476,7 +287,7 @@ exports[`Platform Section displays content 1`] = `
                   </div>
                 </div>
                 <big
-                  className="c13"
+                  className="platform-card___StyledBig-sc-1w8j1zf-0 cxjATa"
                   data-cy="shortname"
                 >
                   C-23 Sherpa
@@ -488,11 +299,11 @@ exports[`Platform Section displays content 1`] = `
                 </p>
               </a>
               <div
-                className="c14"
+                className="card___StyledDiv4-sc-16fz0z7-6 czSZFl"
                 data-cy="platforms-card-footer"
               >
                 <small
-                  className="c15"
+                  className="card-footer-item___StyledSmall-sc-1gz7r6e-0 gxlSqG"
                   data-cy="count1"
                 >
                   <strong>
@@ -502,7 +313,7 @@ exports[`Platform Section displays content 1`] = `
                   Campaign
                 </small>
                 <small
-                  className="c15"
+                  className="card-footer-item___StyledSmall-sc-1gz7r6e-0 gxlSqG"
                   data-cy="count2"
                 >
                    · 
@@ -517,7 +328,7 @@ exports[`Platform Section displays content 1`] = `
             </div>
           </a>
           <div
-            className="c16"
+            className="accordion___StyledReachAccordion-sc-1dzvn26-1 exNUeI"
             data-cy="instrument-accordion"
             data-reach-accordion=""
           />
