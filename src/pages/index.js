@@ -21,7 +21,7 @@ const Home = ({ data }) => {
 
   useEffect(() => {
     // ensure that feedback module is loaded and inititalized
-    // (external script added via gatsby-plugin-load-script)
+    // (external script added via Helmet (see seo.js))
     if (window.feedback) {
       if (!window.feedback.showForm) {
         window.feedback.init({ showIcon: false })
