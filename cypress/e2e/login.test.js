@@ -1,4 +1,4 @@
-describe("Login", () => {
+describe.skip("Login", () => {
   before(() => {
     cy.visit("/campaign/SnowEx", {
       // using onLoad to overwrite fetch from cypress/support/index.json - is there a better way?
