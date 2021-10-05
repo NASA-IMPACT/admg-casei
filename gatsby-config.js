@@ -65,14 +65,14 @@ module.exports = {
       options: { prefixes: [`/edit/*`] },
     },
     // bundle analysis
-    `gatsby-plugin-perf-budgets`, // located at /_report.html
-    {
-      resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
-      options: {
-        // devMode: true,
-        // disable: true,
-        analyzerPort: 8001,
-      },
-    },
+    // `gatsby-plugin-perf-budgets`, // located at /_report.html
+    // {
+    //   resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
+    //   options: {
+    //     // devMode: true,
+    //     // disable: true,
+    //     analyzerPort: 8001,
+    //   },
+    // },
   ],
 }
