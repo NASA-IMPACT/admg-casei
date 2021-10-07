@@ -268,7 +268,7 @@ describe("Campaign", () => {
     })
   })
 
-  describe("the data section", () => {
+  describe.skip("the data section", () => {
     before(() => {
       cy.visit("/explore/campaigns")
       cy.wait(0)
