@@ -72,7 +72,7 @@ describe("Accessibility tests", () => {
     cy.checkA11y(null, null, terminalLog)
   })
 
-  it("Navigates to page for a /platform and checks for accessibility violations", () => {
+  it.skip("Navigates to page for a /platform and checks for accessibility violations", () => {
     cy.visit("/platform/B-200")
 
     cy.get("h1").should("exist")
