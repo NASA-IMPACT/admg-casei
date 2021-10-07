@@ -56,9 +56,9 @@ exports[`Platform Section displays content 1`] = `
         data-test="mocked-nuka-carousel"
       >
         <div
-          aria-hidden="false"
           className="carousel-accordion-combo___StyledDiv2-sc-ll7d04-1 cYRZOX"
           data-cy="platform"
+          role="group"
         >
           <a
             data-cy="carousel-platform-card-link"
@@ -148,9 +148,9 @@ exports[`Platform Section displays content 1`] = `
           />
         </div>
         <div
-          aria-hidden="false"
           className="carousel-accordion-combo___StyledDiv2-sc-ll7d04-1 cYRZOX"
           data-cy="platform"
+          role="group"
         >
           <a
             data-cy="carousel-platform-card-link"
@@ -241,9 +241,9 @@ exports[`Platform Section displays content 1`] = `
           />
         </div>
         <div
-          aria-hidden="false"
           className="carousel-accordion-combo___StyledDiv2-sc-ll7d04-1 cYRZOX"
           data-cy="platform"
+          role="group"
         >
           <a
             data-cy="carousel-platform-card-link"
