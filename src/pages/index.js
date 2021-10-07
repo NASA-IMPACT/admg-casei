@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useContext } from "react"
 import PropTypes from "prop-types"
 import { graphql, Link } from "gatsby"
 
@@ -15,20 +15,10 @@ import { InstrumentsGrid } from "../components/home/instruments-grid"
 import { ArrowIcon } from "../icons"
 import { NEGATIVE } from "../utils/constants"
 import { colors } from "../theme"
+import { FBMContext } from "../components/fbm-provider"
 
 const Home = ({ data }) => {
-  const [isFBMLoaded, setIsFBMLoaded] = useState(false)
-
-  useEffect(() => {
-    // ensure that feedback module is loaded and inititalized
-    // (external script added via Helmet (see seo.js))
-    if (window.feedback) {
-      if (!window.feedback.showForm) {
-        window.feedback.init({ showIcon: false })
-      }
-      setIsFBMLoaded(true)
-    }
-  }, [])
+  const { isFBMLoaded } = useContext(FBMContext)
 
   return (
     <Layout>

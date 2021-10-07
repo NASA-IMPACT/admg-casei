@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useContext } from "react"
 
 import Layout, {
   PageBody,
@@ -9,20 +9,10 @@ import Layout, {
 import SEO from "../components/seo"
 import ExternalLink from "../components/external-link"
 import Button from "../components/button"
+import { FBMContext } from "../components/fbm-provider"
 
 const Contact = () => {
-  const [isFBMLoaded, setIsFBMLoaded] = useState(false)
-
-  useEffect(() => {
-    // ensure that feedback module is loaded and inititalized
-    // (external script added via Helmet (see seo.js))
-    if (window.feedback) {
-      if (!window.feedback.showForm) {
-        window.feedback.init({ showIcon: false })
-      }
-      setIsFBMLoaded(true)
-    }
-  }, [])
+  const { isFBMLoaded } = useContext(FBMContext)
 
   return (
     <Layout>
