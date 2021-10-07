@@ -228,7 +228,7 @@ describe("Campaign", () => {
     })
   })
 
-  describe("the timeline section", () => {
+  describe.skip("the timeline section", () => {
     before(() => {
       cy.visit("/explore/campaigns")
       cy.wait(0)
