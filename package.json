@@ -98,6 +98,11 @@
     "test:cov": "nyc report --reporter=lcov --reporter=text",
     "test:cov:summary": "nyc report --reporter=text-summary"
   },
+  "resolutions": {
+    "graphql": "^15.6.1",
+    "graphql-compose": "^9.0.3",
+    "webpack": "^5.24.2"
+  },
   "repository": {
     "type": "git",
     "url": "http://github.com/developmentseed/airborne-metadata-catalog-internal"
