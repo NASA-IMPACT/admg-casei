@@ -23,6 +23,11 @@ jobs:
       GATSBY_MAPBOX_TOKEN: ${{ secrets.GATSBY_MAPBOX_TOKEN }}
 
     steps:
+      - name: Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.8.0
+        with:
+          access_token: ${{ github.token }}
+
       - name: Checkout
         uses: actions/checkout@v2
 
@@ -56,5 +61,5 @@ jobs:
           AWS_S3_BUCKET: ${{ secrets.STAGING_BUCKET }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID_ALICER_DEVSEED }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY_ALICER_DEVSEED }}
-          AWS_REGION: 'us-east-1'   # optional: defaults to us-east-1
-          SOURCE_DIR: 'public'      # optional: defaults to entire repository
+          AWS_REGION: "us-east-1" # optional: defaults to us-east-1
+          SOURCE_DIR: "public" # optional: defaults to entire repository
