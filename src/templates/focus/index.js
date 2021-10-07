@@ -25,6 +25,7 @@ const FocusTemplate = ({ data: { focusArea, allFocusArea }, path }) => {
 
       <PageBody id="focus">
         <div
+          data-cy="focus-hero"
           css={`
             padding: ${layout.pageMargin} 0;
           `}
