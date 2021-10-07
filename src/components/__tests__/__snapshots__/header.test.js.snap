@@ -11,6 +11,7 @@ exports[`Header renders correctly 1`] = `
       className="header___StyledDiv2-sc-4sefiz-2 ieyUeC"
     >
       <a
+        aria-label="Visit nasa.gov (opens in a new window)"
         href="https://www.nasa.gov"
         rel="noopener noreferrer"
         target="_blank"

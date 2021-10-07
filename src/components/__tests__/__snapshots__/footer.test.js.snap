@@ -207,6 +207,7 @@ exports[`Footer renders correctly 1`] = `
         className="footer___StyledDiv9-sc-p4lrvs-12 pmyJy"
       >
         <a
+          aria-label="Visit nasa.gov (opens in a new window)"
           href="https://www.nasa.gov"
           rel="noopener noreferrer"
           target="_blank"
