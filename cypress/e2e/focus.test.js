@@ -2,11 +2,7 @@
 
 describe("Focus Area", () => {
   before(() => {
-    cy.visit("/")
-    cy.get("[data-cy=focus-area-section]")
-      .find("[data-cy=focus-area]")
-      .contains("Global Water & Energy Cycle")
-      .click()
+    cy.visit("/focus/Global%20Water%20&%20Energy%20Cycle")
   })
   it("explains the focus area Global Water & Energy Cycle", () => {
     cy.get("[data-cy=focus-hero]").first().find("p").contains("Focus Area")
