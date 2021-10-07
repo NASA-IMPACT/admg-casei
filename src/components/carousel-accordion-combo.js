@@ -46,7 +46,6 @@ export default function CarouselAccordionCombo({
           </div>
 
           <Carousel
-            aria-hidden="false"
             slideIndex={slideIndex}
             afterSlide={slideIndex => {
               setSlideIndex(slideIndex)
@@ -56,7 +55,7 @@ export default function CarouselAccordionCombo({
                 inline: "nearest",
               })
             }}
-            renderBottomCenterControls={null}
+            renderBottomCenterControls={false}
             defaultControlsConfig={{
               nextButtonText: `⦊`,
               nextButtonStyle: controlButtonLRStyle,
@@ -86,7 +85,7 @@ export default function CarouselAccordionCombo({
           >
             {carouselList.map(carouselItem => (
               <div
-                aria-hidden="false"
+                role="group"
                 key={carouselItem.id}
                 data-cy={id}
                 css={`
