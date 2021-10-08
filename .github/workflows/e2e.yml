@@ -44,25 +44,25 @@ jobs:
             ${{ runner.os }}-build-
             ${{ runner.os }}-
 
-      - name: Cache Gatsby .cache folder
-        uses: actions/cache@v2
-        env:
-          cache-name: gatsby-cache-folder
-        with:
-          path: .cache
-          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-${{ env.cache-name }}
+      # - name: Cache Gatsby .cache folder
+      #   uses: actions/cache@v2
+      #   env:
+      #     cache-name: gatsby-cache-folder
+      #   with:
+      #     path: .cache
+      #     key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
+      #     restore-keys: |
+      #       ${{ runner.os }}-${{ env.cache-name }}
 
-      - name: Cache Gatsby public folder
-        uses: actions/cache@v2
-        env:
-          cache-name: gatsby-public-folder
-        with:
-          path: public/
-          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-${{ env.cache-name }}
+      # - name: Cache Gatsby public folder
+      #   uses: actions/cache@v2
+      #   env:
+      #     cache-name: gatsby-public-folder
+      #   with:
+      #     path: public/
+      #     key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
+      #     restore-keys: |
+      #       ${{ runner.os }}-${{ env.cache-name }}
 
       - name: Cache Cypress .cache folder
         uses: actions/cache@v2
