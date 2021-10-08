@@ -16,7 +16,7 @@ import ProgramInfoSection from "./program-info-section"
 // import OtherResourcesSection from "./other-resources-section"
 import MaintenanceSection from "../../components/maintenance-section"
 
-const CampaignTemplate = ({ data: { campaign }, path }) => {
+const CampaignTemplate = ({ data: { campaign, allCampaignWebsite }, path }) => {
   const [isClient, setIsClient] = useState(false)
   useEffect(() => {
     // useEffect only runs client-side after rehyration
@@ -38,7 +38,7 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
         doi: campaign.doi,
         notesPublic: campaign.notesPublic,
         repositories: campaign.repositories,
-        websites: campaign.websites,
+        websites: allCampaignWebsite.nodes,
       },
     },
     missions: {
@@ -178,6 +178,15 @@ export const query = graphql`
       ...fundingFields
       uuid
     }
+    allCampaignWebsite(filter: { campaign: { eq: $slug } }) {
+      nodes {
+        priority: order_priority
+        website {
+          url
+          title
+        }
+      }
+    }
   }
 `
 
@@ -229,8 +238,9 @@ CampaignTemplate.propTypes = {
       ).isRequired,
       websites: PropTypes.arrayOf(
         PropTypes.shape({
-          id: PropTypes.string.isRequired,
-          title: PropTypes.string.isRequired,
+          type: PropTypes.shape({
+            name: PropTypes.string.isRequired,
+          }).isRequired,
           url: PropTypes.string.isRequired,
         }).isRequired
       ).isRequired,
@@ -318,6 +328,17 @@ CampaignTemplate.propTypes = {
       partnerWebsite: PropTypes.string,
       resources: PropTypes.string,
       uuid: PropTypes.string.isRequired,
+    }).isRequired,
+    allCampaignWebsite: PropTypes.shape({
+      nodes: PropTypes.arrayOf(
+        PropTypes.shape({
+          priority: PropTypes.number.isRequired,
+          website: PropTypes.shape({
+            title: PropTypes.string.isRequired,
+            url: PropTypes.string.isRequired,
+          }).isRequired,
+        }).isRequired
+      ).isRequired,
     }).isRequired,
   }).isRequired,
   path: PropTypes.string.isRequired,
