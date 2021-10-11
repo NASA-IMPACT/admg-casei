@@ -101,7 +101,7 @@
   "resolutions": {
     "graphql": "^15.6.1",
     "graphql-compose": "^9.0.3",
-    "webpack": "^5.24.2"
+    "webpack": "^5.58.1"
   },
   "repository": {
     "type": "git",
