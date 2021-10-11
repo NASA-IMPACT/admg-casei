@@ -15,11 +15,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Use Node.js 14
+      - name: Read .nvmrc
+        run: echo ::set-output name=NVMRC::$(cat .nvmrc)
+        id: nvm
+
+      - name: Use Node.js 16
         uses: actions/setup-node@v1
         with:
-          node-version: 14
-
+          node-version: "${{ steps.nvm.outputs.NVMRC }}"
       - name: Cache node modules
         uses: actions/cache@v2
         env:
@@ -45,10 +48,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Use Node.js 14
+      - name: Read .nvmrc
+        run: echo ::set-output name=NVMRC::$(cat .nvmrc)
+        id: nvm
+
+      - name: Use Node.js 16
         uses: actions/setup-node@v1
         with:
-          node-version: 14
+          node-version: "${{ steps.nvm.outputs.NVMRC }}"
 
       - name: Cache node modules
         uses: actions/cache@v2
