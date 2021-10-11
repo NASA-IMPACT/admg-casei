@@ -70,15 +70,15 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-${{ env.cache-name }}
 
-      - name: Cache Cypress .cache folder
-        uses: actions/cache@v2
-        env:
-          cache-name: cypress-cache-folder
-        with:
-          path: ~/.cache/Cypress
-          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-${{ env.cache-name }}
+      # - name: Cache Cypress .cache folder
+      #   uses: actions/cache@v2
+      #   env:
+      #     cache-name: cypress-cache-folder
+      #   with:
+      #     path: ~/.cache/Cypress
+      #     key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
+      #     restore-keys: |
+      #       ${{ runner.os }}-${{ env.cache-name }}
 
       - name: Install
         run: yarn install
