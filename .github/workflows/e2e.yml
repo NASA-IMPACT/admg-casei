@@ -81,7 +81,7 @@ jobs:
             ${{ runner.os }}-${{ env.cache-name }}
 
       - name: Install
-        run: yarn install
+        run: yarn install && yarn cypress install
 
       - name: Build
         run: yarn build
