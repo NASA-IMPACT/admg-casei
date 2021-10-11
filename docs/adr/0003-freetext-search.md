@@ -4,7 +4,6 @@
 - Deciders: @rwegener2 W @necoline @tania-pires @AliceR @alukach
 - Date: 2021-04-27
 
-
 ## Context and Problem Statement
 
 The current free text search
@@ -67,32 +66,30 @@ We have all the data available from the build process. Just like we currently so
 
 - Good, because we might be able to get live-updating search results while a user is typing.
 - Bad, because it will be on us to implement, test and maintain
-  
+
 ### Client-side search tools
 
-There are a number of mature client-side search tools available.  These tools would be used to generate an index of the data on which we will enable search.  The index can be packaged with our application and utilized when performing client-side searches.
+There are a number of mature client-side search tools available. These tools would be used to generate an index of the data on which we will enable search. The index can be packaged with our application and utilized when performing client-side searches.
 
 #### Overview
 
-Library | ⭐️s
---- | ---
-[Fuse.js](https://fusejs.io/) | [12.4k](https://github.com/krisk/fuse)
-[Lunr.js](https://lunrjs.com) | [7.5k](https://github.com/olivernn/lunr.js)
-[FlexSearch.js](https://github.com/nextapps-de/flexsearch) | [7k](https://github.com/nextapps-de/flexsearch)
-[JS Search](https://bvaughn.github.io/js-search/) | [1.8k](https://github.com/bvaughn/js-search)
-[Elasticlunr.js](http://elasticlunr.com/) | [1.7k](https://github.com/weixsong/elasticlunr.js)
-
+| Library                                                    | ⭐️s                                               |
+| ---------------------------------------------------------- | -------------------------------------------------- |
+| [Fuse.js](https://fusejs.io/)                              | [12.4k](https://github.com/krisk/fuse)             |
+| [Lunr.js](https://lunrjs.com)                              | [7.5k](https://github.com/olivernn/lunr.js)        |
+| [FlexSearch.js](https://github.com/nextapps-de/flexsearch) | [7k](https://github.com/nextapps-de/flexsearch)    |
+| [JS Search](https://bvaughn.github.io/js-search/)          | [1.8k](https://github.com/bvaughn/js-search)       |
+| [Elasticlunr.js](http://elasticlunr.com/)                  | [1.7k](https://github.com/weixsong/elasticlunr.js) |
 
 - Good, because they all offer features that we likely wouldn't have the time to implement, such as:
-  * stemming, i.e. searching for "aerosols" will return positive results for alternatives like "aerosol" (singular).
-  * scoring/boosts, placing different value on where the matched records are stored, e.g. we could prioritize matches in the `short_name` higher than matches found in the `long_name`
-  * fields, i.e. search specific fields for a string, such as `type:instrument` to find only instruments matching a term.
-  * fuzzy matching, will help gloss over typos
+  - stemming, i.e. searching for "aerosols" will return positive results for alternatives like "aerosol" (singular).
+  - scoring/boosts, placing different value on where the matched records are stored, e.g. we could prioritize matches in the `short_name` higher than matches found in the `long_name`
+  - fields, i.e. search specific fields for a string, such as `type:instrument` to find only instruments matching a term.
+  - fuzzy matching, will help gloss over typos
 - Good, because Gatsby has plugins to assist in integration (e.g. [gatsby-plugin-local-search](https://www.gatsbyjs.com/plugins/gatsby-plugin-local-search/?=flexsearch), [gatsby-plugin-lunr
-](https://www.gatsbyjs.com/plugins/gatsby-plugin-lunr/), [@gatsby-contrib/gatsby-plugin-elasticlunr-search](https://www.gatsbyjs.com/plugins/@gatsby-contrib/gatsby-plugin-elasticlunr-search/), [@draftbox-co/gatsby-plugin-fusejs](https://www.gatsbyjs.com/plugins/@draftbox-co/gatsby-plugin-fusejs/)).
+  ](https://www.gatsbyjs.com/plugins/gatsby-plugin-lunr/), [@gatsby-contrib/gatsby-plugin-elasticlunr-search](https://www.gatsbyjs.com/plugins/@gatsby-contrib/gatsby-plugin-elasticlunr-search/), [@draftbox-co/gatsby-plugin-fusejs](https://www.gatsbyjs.com/plugins/@draftbox-co/gatsby-plugin-fusejs/)).
 - Good, because no external infrastructure requirements
 - Bad, because more complex build process.
-
 
 ### Google Search
 
@@ -100,7 +97,6 @@ Since all the pages for all the campaigns/platforms/instruments are rendered ser
 
 - Good, because it offers the potential of nuanced search that google search offers
 - Bad, because we have less control over the display of search results -- this needs to be confirmed
-
 
 ### Algolia
 

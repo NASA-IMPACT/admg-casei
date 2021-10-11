@@ -30,6 +30,7 @@ const TimelineSection = ({ id, deployments }) => {
       <SectionContent withBackground>
         <div data-cy="milestone-carousel">
           <Carousel
+            aria-label="milestone-carousel"
             defaultControlsConfig={{
               nextButtonText: `⦊`,
               nextButtonStyle: controlButtonLRStyle,
@@ -39,6 +40,7 @@ const TimelineSection = ({ id, deployments }) => {
                 fill: "none",
               },
             }}
+            renderBottomCenterControls={false}
             slideIndex={currentSlide}
             afterSlide={slideIndex => setCurrentSlide(slideIndex)}
           >

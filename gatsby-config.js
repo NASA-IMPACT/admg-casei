@@ -13,15 +13,6 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-plugin-load-script`,
-      options: {
-        src: `https://fbm.earthdata.nasa.gov/for/CASEI/feedback.js`,
-        onLoad: `() => {
-          window.feedback.init({showIcon: false})
-        }`,
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
@@ -65,14 +56,14 @@ module.exports = {
       options: { prefixes: [`/edit/*`] },
     },
     // bundle analysis
-    `gatsby-plugin-perf-budgets`, // located at /_report.html
-    {
-      resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
-      options: {
-        // devMode: true,
-        // disable: true,
-        analyzerPort: 8001,
-      },
-    },
+    // `gatsby-plugin-perf-budgets`, // located at /_report.html
+    // {
+    //   resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
+    //   options: {
+    //     // devMode: true,
+    //     // disable: true,
+    //     analyzerPort: 8001,
+    //   },
+    // },
   ],
 }

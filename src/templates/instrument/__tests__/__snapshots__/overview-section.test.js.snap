@@ -1,141 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Overview Section displays content 1`] = `
-.c5.c5 {
-  display: grid;
-  grid-gap: 0.5rem;
-  grid-template-columns: 100%;
-  grid-auto-rows: auto;
-}
-
-.c5.c5 dt {
-  width: 12rem;
-  color: #9e9e9e;
-}
-
-.c4.c4 {
-  padding: 1rem;
-}
-
-.c6.c6 {
-  color: #5f5f5f;
-}
-
-.c0.c0 {
-  display: grid;
-  grid-template-columns: repeat(12,1fr);
-  -webkit-column-gap: 1rem;
-  column-gap: 1rem;
-  row-gap: 2rem;
-  position: relative;
-  margin: 0 -6rem;
-  padding: 6rem;
-  margin-bottom: 6rem;
-  background-color: #ffffff;
-}
-
-.c0.c0 > *,
-.c0.c0 h3 {
-  color: #262a31;
-}
-
-.c1.c1 {
-  position: absolute;
-  top: -80px;
-}
-
-.c3.c3 {
-  grid-column: 1 / span 8;
-}
-
-.c3.c3 > *,
-.c3.c3 h3 {
-  color: #262a31;
-}
-
-.c11.c11 {
-  grid-column: 10 / span 3;
-}
-
-.c11.c11 > *,
-.c11.c11 h3 {
-  color: #262a31;
-}
-
-.c2.c2 {
-  grid-column: 1 / span 6;
-  -webkit-align-self: end;
-  -ms-flex-item-align: end;
-  align-self: end;
-}
-
-.c7.c7 {
-  color: #15418c;
-}
-
-.c17.c17 {
-  color: #aac9ff;
-}
-
-.c8.c8 {
-  padding-left: 0.25rem;
-}
-
-.c21.c21 {
-  padding: 0;
-}
-
-.c13.c13 {
-  padding: 1rem 0;
-}
-
-.c14.c14 {
-  color: #5f5f5f;
-}
-
-.c12.c12 {
-  margin: 0;
-  list-style: none;
-}
-
-.c15.c15 {
-  padding: 1rem 0;
-}
-
-.c16.c16 {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.c18.c18 {
-  padding: 1rem 0;
-}
-
-.c19.c19 {
-  color: #5f5f5f;
-}
-
-.c20.c20 {
-  margin: 0;
-  list-style: none;
-}
-
-.c9.c9 {
-  margin: 0;
-}
-
-.c10.c10 {
-  list-style: none;
-}
-
 <section
-  className="c0"
+  className="section__Container-sc-1oozlr5-0 eZapJB"
   data-cy="unique-id-section"
   mode="lightTheme"
 >
   <div
-    className="c1"
+    className="section__Buffer-sc-1oozlr5-1 dMJVzf"
     id="unique-id"
   />
   <span
@@ -155,7 +27,7 @@ exports[`Overview Section displays content 1`] = `
     }
   >
     <div
-      className="c2"
+      className="section-header___StyledDiv-sc-1i4pe2i-0 bgiGcO"
       data-cy="unique-id-section-header"
     >
       <a
@@ -168,22 +40,22 @@ exports[`Overview Section displays content 1`] = `
     </div>
   </span>
   <div
-    className="c3"
+    className="section__SectionContent-sc-1oozlr5-2 jIICGd"
     mode="lightTheme"
   >
     <h3>
       Instrument Details
     </h3>
     <section
-      className="c4"
+      className="definition-list___StyledSection-sc-t6i6ug-1 kjHZUB"
       data-cy="instrument-definition-list"
     >
       <dl
-        className="c5"
+        className="definition-list__List-sc-t6i6ug-0 ioJqgM"
       >
         <dt>
           <label
-            className="c6"
+            className="definition-list___StyledLabel-sc-t6i6ug-2 dAVngt"
           >
             Measurement Type
           </label>
@@ -193,7 +65,7 @@ exports[`Overview Section displays content 1`] = `
         </dd>
         <dt>
           <label
-            className="c6"
+            className="definition-list___StyledLabel-sc-t6i6ug-2 dAVngt"
           >
             Measurement/Variables
           </label>
@@ -203,7 +75,7 @@ exports[`Overview Section displays content 1`] = `
         </dd>
         <dt>
           <label
-            className="c6"
+            className="definition-list___StyledLabel-sc-t6i6ug-2 dAVngt"
           >
             Vertical Measurement Regions
           </label>
@@ -213,7 +85,7 @@ exports[`Overview Section displays content 1`] = `
         </dd>
         <dt>
           <label
-            className="c6"
+            className="definition-list___StyledLabel-sc-t6i6ug-2 dAVngt"
           >
             Temporal Resolution
           </label>
@@ -223,7 +95,7 @@ exports[`Overview Section displays content 1`] = `
         </dd>
         <dt>
           <label
-            className="c6"
+            className="definition-list___StyledLabel-sc-t6i6ug-2 dAVngt"
           >
             Spatial Resolution
           </label>
@@ -233,7 +105,7 @@ exports[`Overview Section displays content 1`] = `
         </dd>
         <dt>
           <label
-            className="c6"
+            className="definition-list___StyledLabel-sc-t6i6ug-2 dAVngt"
           >
             Measurement Frequency
           </label>
@@ -243,14 +115,14 @@ exports[`Overview Section displays content 1`] = `
         </dd>
         <dt>
           <label
-            className="c6"
+            className="definition-list___StyledLabel-sc-t6i6ug-2 dAVngt"
           >
             Calibration Details
           </label>
         </dt>
         <dd>
           <a
-            className="c7"
+            className="external-link___StyledA-sc-3ezy1s-0 hfzTdz"
             data-cy="calibration-doi-link"
             href="http://dx.doi.org/10.5067/calibration"
             rel="noopener noreferrer"
@@ -278,7 +150,7 @@ exports[`Overview Section displays content 1`] = `
               />
             </svg>
             <span
-              className="c8"
+              className="external-link___StyledSpan-sc-3ezy1s-1 eAOIiQ"
             >
               http://dx.doi.org/10.5067/calibration
             </span>
@@ -286,20 +158,20 @@ exports[`Overview Section displays content 1`] = `
         </dd>
         <dt>
           <label
-            className="c6"
+            className="definition-list___StyledLabel-sc-t6i6ug-2 dAVngt"
           >
             Online Information
           </label>
         </dt>
         <dd>
           <ul
-            className="c9"
+            className="overview-section___StyledUl3-sc-1oemh85-8 fgTUta"
           >
             <li
-              className="c10"
+              className="overview-section___StyledLi3-sc-1oemh85-9 jbqmDz"
             >
               <a
-                className="c7"
+                className="external-link___StyledA-sc-3ezy1s-0 hfzTdz"
                 data-cy="online-information-link"
                 href="http://www.example.com"
                 rel="noopener noreferrer"
@@ -327,7 +199,7 @@ exports[`Overview Section displays content 1`] = `
                   />
                 </svg>
                 <span
-                  className="c8"
+                  className="external-link___StyledSpan-sc-3ezy1s-1 eAOIiQ"
                 >
                   http://www.example.com
                 </span>
@@ -339,19 +211,19 @@ exports[`Overview Section displays content 1`] = `
     </section>
   </div>
   <div
-    className="c11"
+    className="section__SectionContent-sc-1oozlr5-2 peHlm"
     mode="lightTheme"
   >
     <ul
-      className="c12"
+      className="overview-section___StyledUl-sc-1oemh85-2 XGxbY"
       data-cy="instrument-background"
     >
       <li
-        className="c13"
+        className="overview-section___StyledLi-sc-1oemh85-0 cbZBnl"
         data-cy="lead-investigator-label"
       >
         <label
-          className="c14"
+          className="overview-section___StyledLabel-sc-1oemh85-1 jxxLUX"
         >
           Lead Investigator
         </label>
@@ -360,11 +232,11 @@ exports[`Overview Section displays content 1`] = `
         </p>
       </li>
       <li
-        className="c13"
+        className="overview-section___StyledLi-sc-1oemh85-0 cbZBnl"
         data-cy="technical-contact-label"
       >
         <label
-          className="c14"
+          className="overview-section___StyledLabel-sc-1oemh85-1 jxxLUX"
         >
           Technical Contact
         </label>
@@ -373,11 +245,11 @@ exports[`Overview Section displays content 1`] = `
         </p>
       </li>
       <li
-        className="c13"
+        className="overview-section___StyledLi-sc-1oemh85-0 cbZBnl"
         data-cy="instrument-manufacturer-label"
       >
         <label
-          className="c14"
+          className="overview-section___StyledLabel-sc-1oemh85-1 jxxLUX"
         >
           Instrument Maker
         </label>
@@ -386,11 +258,11 @@ exports[`Overview Section displays content 1`] = `
         </p>
       </li>
       <li
-        className="c13"
+        className="overview-section___StyledLi-sc-1oemh85-0 cbZBnl"
         data-cy="funding-source-label"
       >
         <label
-          className="c14"
+          className="overview-section___StyledLabel-sc-1oemh85-1 jxxLUX"
         >
           Funding Source
         </label>
@@ -399,15 +271,15 @@ exports[`Overview Section displays content 1`] = `
         </p>
       </li>
       <div
-        className="c15"
+        className="overview-section___StyledDiv-sc-1oemh85-3 bdNdLU"
       >
         <p
-          className="c16"
+          className="overview-section___StyledP-sc-1oemh85-4 iqmmMy"
         >
           DOI:
            
           <a
-            className="c17"
+            className="external-link___StyledA-sc-3ezy1s-0 kBenCL"
             data-cy="instrument-doi-link"
             href="http://dx.doi.org/10.5067/instrument"
             rel="noopener noreferrer"
@@ -435,7 +307,7 @@ exports[`Overview Section displays content 1`] = `
               />
             </svg>
             <span
-              className="c8"
+              className="external-link___StyledSpan-sc-3ezy1s-1 eAOIiQ"
             >
               http://dx.doi.org/10.5067/instrument
             </span>
@@ -443,11 +315,11 @@ exports[`Overview Section displays content 1`] = `
         </p>
       </div>
       <li
-        className="c13"
+        className="overview-section___StyledLi-sc-1oemh85-0 cbZBnl"
         data-cy="data-locations-label"
       >
         <label
-          className="c14"
+          className="overview-section___StyledLabel-sc-1oemh85-1 jxxLUX"
         >
           Data Locations
         </label>
@@ -456,23 +328,23 @@ exports[`Overview Section displays content 1`] = `
         </p>
       </li>
       <li
-        className="c18"
+        className="overview-section___StyledLi2-sc-1oemh85-5 guQMru"
         data-cy="repositories-label"
       >
         <label
-          className="c19"
+          className="overview-section___StyledLabel2-sc-1oemh85-6 bvEgou"
         >
           Repositories
         </label>
         <ul
-          className="c20"
+          className="overview-section___StyledUl2-sc-1oemh85-7 iQxPD"
           data-cy="repository-list"
         >
           <li
-            className="c21"
+            className="list-link___StyledLi-sc-xxtxki-0 gIDccA"
           >
             <a
-              className="c7"
+              className="external-link___StyledA-sc-3ezy1s-0 hfzTdz"
               data-cy="test-link"
               href="http://www.example.com"
               rel="noopener noreferrer"
@@ -500,17 +372,17 @@ exports[`Overview Section displays content 1`] = `
                 />
               </svg>
               <span
-                className="c8"
+                className="external-link___StyledSpan-sc-3ezy1s-1 eAOIiQ"
               >
                 test
               </span>
             </a>
           </li>
           <li
-            className="c21"
+            className="list-link___StyledLi-sc-xxtxki-0 gIDccA"
           >
             <a
-              className="c7"
+              className="external-link___StyledA-sc-3ezy1s-0 hfzTdz"
               data-cy="test2-link"
               href="http://www.example.com"
               rel="noopener noreferrer"
@@ -538,7 +410,7 @@ exports[`Overview Section displays content 1`] = `
                 />
               </svg>
               <span
-                className="c8"
+                className="external-link___StyledSpan-sc-3ezy1s-1 eAOIiQ"
               >
                 test2
               </span>

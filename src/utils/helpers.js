@@ -1,7 +1,8 @@
 import parse from "wellknown"
 
 const urlRegex = /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{2,256}\.[a-z]{2,4}/s
-const mailtoRegex = /^mailto:(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i
+const mailtoRegex =
+  /^mailto:(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i
 
 const trailingCommaRegex = /(^,)|(,$)/g
 /* 1st Alternative, 1st Capturing Group (^,)

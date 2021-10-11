@@ -11,7 +11,7 @@ import PropTypes from "prop-types"
 
 import "@fontsource/titillium-web"
 
-import AuthProvider from "./src/components/auth-provider"
+import FBMProvider from "./src/components/fbm-provider"
 
 export const shouldUpdateScroll = ({ routerProps: { location } }) => {
   if (location.hash) {
@@ -22,7 +22,7 @@ export const shouldUpdateScroll = ({ routerProps: { location } }) => {
 }
 
 export const wrapRootElement = ({ element }) => {
-  return <AuthProvider>{element}</AuthProvider>
+  return <FBMProvider>{element}</FBMProvider>
 }
 
 wrapRootElement.propTypes = {

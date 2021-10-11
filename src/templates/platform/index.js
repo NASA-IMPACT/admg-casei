@@ -72,7 +72,7 @@ export default function PlatformTemplate({ data: { platform }, path }) {
 }
 
 export const query = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     platform: platform(id: { eq: $slug }) {
       ...platformHeroFields
       ...platformOverviewFields

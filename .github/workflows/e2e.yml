@@ -15,17 +15,26 @@ jobs:
       CYPRESS_password: ${{ secrets.CYPRESS_password }}
       GATSBY_ADMG_CLIENT_ID: ${{ secrets.GATSBY_ADMG_CLIENT_ID }}
       GATSBY_ADMG_CLIENT_SECRET: ${{ secrets.GATSBY_ADMG_CLIENT_SECRET }}
-      GATSBY_CPU_COUNT: 1
+      # GATSBY_CPU_COUNT: 1
       GATSBY_MAPBOX_TOKEN: ${{ secrets.GATSBY_MAPBOX_TOKEN }}
 
     steps:
+      - name: Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.8.0
+        with:
+          access_token: ${{ github.token }}
+
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Use Node.js 14
+      - name: Read .nvmrc
+        run: echo ::set-output name=NVMRC::$(cat .nvmrc)
+        id: nvm
+
+      - name: Use Node.js 16
         uses: actions/setup-node@v1
         with:
-          node-version: 14
+          node-version: "${{ steps.nvm.outputs.NVMRC }}"
 
       - name: Cache node modules
         uses: actions/cache@v2
@@ -39,25 +48,25 @@ jobs:
             ${{ runner.os }}-build-
             ${{ runner.os }}-
 
-      - name: Cache Gatsby .cache folder
-        uses: actions/cache@v2
-        env:
-          cache-name: gatsby-cache-folder
-        with:
-          path: .cache
-          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-${{ env.cache-name }}
+      # - name: Cache Gatsby .cache folder
+      #   uses: actions/cache@v2
+      #   env:
+      #     cache-name: gatsby-cache-folder
+      #   with:
+      #     path: .cache
+      #     key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
+      #     restore-keys: |
+      #       ${{ runner.os }}-${{ env.cache-name }}
 
-      - name: Cache Gatsby public folder
-        uses: actions/cache@v2
-        env:
-          cache-name: gatsby-public-folder
-        with:
-          path: public/
-          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-${{ env.cache-name }}
+      # - name: Cache Gatsby public folder
+      #   uses: actions/cache@v2
+      #   env:
+      #     cache-name: gatsby-public-folder
+      #   with:
+      #     path: public/
+      #     key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
+      #     restore-keys: |
+      #       ${{ runner.os }}-${{ env.cache-name }}
 
       - name: Cache Cypress .cache folder
         uses: actions/cache@v2

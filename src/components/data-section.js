@@ -147,15 +147,15 @@ const DataSection = ({ id, dois, filterBy, category }) => {
                             <Label id="doi-campaign" showBorder>
                               Campaigns
                             </Label>
-                            {doi.campaigns.map(campaign => (
-                              <Link
-                                key={campaign.id}
-                                to={`/campaign/${campaign.shortname}`}
-                              >
-                                <small>
-                                  {campaign.longname || campaign.shortname}
-                                </small>
-                              </Link>
+                            {doi.campaigns.map((campaign, index) => (
+                              <React.Fragment key={campaign.id}>
+                                <Link to={`/campaign/${campaign.shortname}`}>
+                                  <small>
+                                    {campaign.longname || campaign.shortname}
+                                  </small>
+                                </Link>
+                                {index !== doi.campaigns.length - 1 && ", "}
+                              </React.Fragment>
                             ))}
                           </div>
                         )}
@@ -165,15 +165,15 @@ const DataSection = ({ id, dois, filterBy, category }) => {
                             <Label id="doi-platform" showBorder>
                               Platforms
                             </Label>
-                            {doi.platforms.map(platform => (
-                              <Link
-                                key={platform.id}
-                                to={`/platform/${platform.shortname}`}
-                              >
-                                <small>
-                                  {platform.longname || platform.shortname}
-                                </small>
-                              </Link>
+                            {doi.platforms.map((platform, index) => (
+                              <React.Fragment key={platform.id}>
+                                <Link to={`/platform/${platform.shortname}`}>
+                                  <small>
+                                    {platform.longname || platform.shortname}
+                                  </small>
+                                </Link>
+                                {index !== doi.platforms.length - 1 && ", "}
+                              </React.Fragment>
                             ))}
                           </div>
                         )}
@@ -183,15 +183,18 @@ const DataSection = ({ id, dois, filterBy, category }) => {
                             <Label id="doi-instrument" showBorder>
                               Instruments
                             </Label>
-                            {doi.instruments.map(instrument => (
-                              <Link
-                                key={instrument.id}
-                                to={`/instrument/${instrument.shortname}`}
-                              >
-                                <small>
-                                  {instrument.longname || instrument.shortname}
-                                </small>
-                              </Link>
+                            {doi.instruments.map((instrument, index) => (
+                              <React.Fragment key={instrument.id}>
+                                <Link
+                                  to={`/instrument/${instrument.shortname}`}
+                                >
+                                  <small>
+                                    {instrument.longname ||
+                                      instrument.shortname}
+                                  </small>
+                                </Link>
+                                {index !== doi.instruments.length - 1 && ", "}
+                              </React.Fragment>
                             ))}
                           </div>
                         )}

@@ -44,6 +44,7 @@ const Header = ({ shortname, children, mode, isHeaderFixed }) => (
           target="_blank"
           rel="noopener noreferrer"
           href="https://www.nasa.gov"
+          aria-label="Visit nasa.gov (opens in a new window)"
         >
           <StaticImage
             src="https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png"
