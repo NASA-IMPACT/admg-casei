@@ -34,7 +34,6 @@
     "lodash.debounce": "^4.0.8",
     "mapbox-gl": "1.13.1",
     "nuka-carousel": "^4.8.0",
-    "path-browserify": "^1.0.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-datepicker": "^4.2.1",
