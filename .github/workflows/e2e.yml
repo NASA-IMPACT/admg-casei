@@ -2,12 +2,6 @@ name: End-to-End Test
 
 on:
   pull_request:
-    branches:
-      - "**"
-      - "!develop"
-  push:
-    branches:
-      - develop
 
 jobs:
   build-and-test-e2e:
