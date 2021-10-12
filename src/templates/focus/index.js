@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import VisuallyHidden from "@reach/visually-hidden"
 
 import Layout, {
@@ -15,8 +15,9 @@ import InpageNav from "../../components/inpage-nav"
 import RelatedCampaignsSection from "../../components/related-campaigns-section"
 import FocusAreaGallery from "../../components/focus-area-gallery"
 
-import { POSITIVE } from "../../utils/constants"
+import { NEGATIVE, POSITIVE } from "../../utils/constants"
 import { colors, layout } from "../../theme"
+import { ArrowIcon } from "../../icons"
 
 const FocusTemplate = ({ data: { focusArea, allFocusArea }, path }) => {
   return (
@@ -30,6 +31,23 @@ const FocusTemplate = ({ data: { focusArea, allFocusArea }, path }) => {
             padding: ${layout.pageMargin} 0;
           `}
         >
+          <Link
+            to="/"
+            css={`
+               {
+                color: ${colors[NEGATIVE].linkText};
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                margin-bottom: 6rem;
+              }
+            `}
+            data-cy="back-link"
+          >
+            <ArrowIcon color={colors[NEGATIVE].linkText} direction="left" />
+            Back to Home
+          </Link>
+
           <p
             css={`
               text-transform: uppercase;

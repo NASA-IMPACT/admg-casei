@@ -15,6 +15,7 @@ export default function PlatformHero({
 }) {
   return (
     <Hero
+      backlink="/explore/platforms"
       tagline="Platform"
       title={
         <>

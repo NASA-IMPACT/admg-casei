@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 const ArrowIcon = ({ color = "#FFF", direction = "right" }) => {
-  let rotation
+  let rotation, margin
   switch (direction) {
     case "up":
       rotation = {
@@ -14,16 +14,26 @@ const ArrowIcon = ({ color = "#FFF", direction = "right" }) => {
         transform: "rotate(90) translate(0, -16)",
       }
       break
+    case "left":
+      rotation = {
+        transform: "rotate(180) translate(-16, -16)",
+      }
+      margin = "0 0.5rem 0 0"
+      break
     case "right":
+      rotation = null
+      margin = "0 0 0 0.5rem"
+      break
     default:
       rotation = null
+      margin = 0
       break
   }
 
   return (
     <svg
       css={`
-        margin-left: 0.5rem;
+        margin: ${margin};
       `}
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
