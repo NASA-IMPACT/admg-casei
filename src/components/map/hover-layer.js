@@ -1,11 +1,49 @@
-import { useState, useEffect } from "react"
+import React, { useState, useEffect } from "react"
+import ReactDOM from "react-dom"
 import PropTypes from "prop-types"
-import { navigate } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
+import mapbox from "mapbox-gl"
 
-import { NEGATIVE } from "../../utils/constants"
+import { NEGATIVE, POSITIVE } from "../../utils/constants"
 import { colors } from "../../theme"
+import PopupCard from "../cards/popup-card"
 
 export default function HoverLayer({ id, map, sourceId, isDrawing }) {
+  /*
+   * We can not pass props directly into a static query because it is
+   * compiled and doesn't support string interpolation in its template literal.
+   * This is a workaround to still build a reuseable component:
+   * It first queries all the images with graphql, and then uses javascript to filter
+   * them based on the provided props.
+   *
+   * Read more here on this topic:
+   * - https://noahgilmore.com/blog/easy-gatsby-image-components/
+   * - https://spectrum.chat/gatsby-js/general/using-variables-in-a-staticquery~abee4d1d-6bc4-4202-afb2-38326d91bd05
+   */
+  const data = useStaticQuery(graphql`
+    query {
+      allCampaign {
+        nodes {
+          logo {
+            description
+            gatsbyImg {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED
+                  height: 60
+                  placeholder: BLURRED
+                  transformOptions: { fit: CONTAIN }
+                )
+              }
+            }
+          }
+          shortname: short_name
+          longname: long_name
+        }
+      }
+    }
+  `)
+
   const [layer, setLayer] = useState(null)
 
   // TODO: why does this not work with setState?
@@ -39,9 +77,28 @@ export default function HoverLayer({ id, map, sourceId, isDrawing }) {
     let hoveredId // why does this not work with setState?
 
     const onClick = e => {
+      const campaign = data.allCampaign.nodes.find(
+        x => x.shortname === e.features[0].properties.shortname
+      )
+
       // only make features clickable when not drawing
-      if (!isDrawing) {
-        navigate(`/campaign/${e.features[0].properties.shortname}`)
+      if (campaign && !isDrawing) {
+        const placeholder = document.createElement("div")
+        ReactDOM.render(
+          <PopupCard
+            shortname={campaign.shortname}
+            longname={campaign.longname}
+            logo={campaign.logo}
+            mode={POSITIVE}
+          />,
+          placeholder
+        )
+
+        new mapbox.Popup({ closeOnMove: true })
+          .setLngLat(e.lngLat)
+          // .setHTML(description)
+          .setDOMContent(placeholder)
+          .addTo(map)
       }
     }
 
