@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import mapbox from "mapbox-gl"
 
-import { NEGATIVE, POSITIVE } from "../../utils/constants"
+import { POSITIVE } from "../../utils/constants"
 import { colors } from "../../theme"
 import PopupCard from "../cards/popup-card"
 
@@ -56,7 +56,7 @@ export default function HoverLayer({ id, map, sourceId, isDrawing }) {
       source: sourceId,
       layout: {},
       paint: {
-        "fill-color": colors[NEGATIVE].background,
+        "fill-color": colors[POSITIVE].linkText,
         "fill-opacity": [
           "case",
           ["boolean", ["feature-state", "hover"], false],
