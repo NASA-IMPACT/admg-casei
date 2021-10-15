@@ -9,6 +9,8 @@ const palette = {
   "spanish gray": "#9e9e9e",
   "baby blue eyes": "#aac9ff",
   "red ryb": "#f93c21",
+  "caribbean green": "#3AD6AB",
+  "medium slate blue": "#6F5FE9",
 }
 
 const colors = {
@@ -29,6 +31,8 @@ const colors = {
     linkText: palette["baby blue eyes"],
     highlight: palette["red ryb"],
     division: palette["davys grey"],
+    dataVizOne: palette["caribbean green"],
+    dataVizTwo: palette["medium slate blue"],
   },
 }
 
