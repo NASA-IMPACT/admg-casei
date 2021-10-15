@@ -40,13 +40,13 @@ exports[`Platform Section displays content 1`] = `
           J-31
         </button>
         <button
-          className="button__Clickable-sc-1yw7vig-0 button___StyledClickable-sc-1yw7vig-2 fuGm dmIopz"
+          className="button__Clickable-sc-1yw7vig-0 button___StyledClickable-sc-1yw7vig-2 fuGm hzdpTV"
           onClick={[Function]}
         >
           Aerosonde
         </button>
         <button
-          className="button__Clickable-sc-1yw7vig-0 button___StyledClickable-sc-1yw7vig-2 fuGm dmIopz"
+          className="button__Clickable-sc-1yw7vig-0 button___StyledClickable-sc-1yw7vig-2 fuGm hzdpTV"
           onClick={[Function]}
         >
           C-23 Sherpa
