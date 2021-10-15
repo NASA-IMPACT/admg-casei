@@ -62,14 +62,8 @@ describe("Accessibility tests", () => {
     cy.checkA11y(null, null, terminalLog)
   })
 
-  it("Navigates to page for a /campaign and checks for accessibility violations", () => {
-    cy.visit("/explore/campaigns")
-
-    cy.get("h1").should("contain.text", "Explore campaigns")
-
-    cy.wait(0)
-
-    cy.get("[data-cy=campaigns-card]").first().click()
+  it.skip("Navigates to page for a /campaign and checks for accessibility violations", () => {
+    cy.visit("/campaign/AirMOSS")
 
     cy.get("h1").should("exist")
 
@@ -78,14 +72,8 @@ describe("Accessibility tests", () => {
     cy.checkA11y(null, null, terminalLog)
   })
 
-  it("Navigates to page for a /platform and checks for accessibility violations", () => {
-    cy.visit("/explore/platforms")
-
-    cy.get("h1").should("contain.text", "Explore platforms")
-
-    cy.wait(0)
-
-    cy.get("[data-cy=platforms-card]").last().click()
+  it.skip("Navigates to page for a /platform and checks for accessibility violations", () => {
+    cy.visit("/platform/B-200")
 
     cy.get("h1").should("exist")
 
@@ -95,13 +83,7 @@ describe("Accessibility tests", () => {
   })
 
   it("Navigates to page for a /instrument and checks for accessibility violations", () => {
-    cy.visit("/explore/instruments")
-
-    cy.get("h1").should("contain.text", "Explore instruments")
-
-    cy.wait(0)
-
-    cy.get("[data-cy=instruments-card]").first().click()
+    cy.visit("/instrument/2D-S")
 
     cy.get("h1").should("exist")
 

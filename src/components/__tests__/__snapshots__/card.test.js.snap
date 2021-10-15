@@ -1,81 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Card renders card with tag 1`] = `
-.c2.c2 {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  justify-items: flex-start;
-  min-height: 180px;
-}
-
-.c0.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: 100%;
-}
-
-.c1.c1 {
-  color: #262a31;
-  background-color: #ffffff;
-  box-shadow: rgba(68,63,63,0.08) 0px -1px 1px 0px,rgba(68,63,63,0.08) 0px 2px 6px 0px;
-  padding: 1rem;
-  min-height: 20rem;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-}
-
-.c1.c1:hover {
-  opacity: 0.64;
-}
-
-.c3.c3 {
-  grid-area: 1 / 1;
-}
-
-.c4.c4 {
-  grid-area: 1 / 1;
-  -webkit-align-self: flex-end;
-  -ms-flex-item-align: end;
-  align-self: flex-end;
-  justify-self: flex-start;
-  text-transform: uppercase;
-  border: 1px solid;
-  padding: 0.25rem;
-  margin: 1rem 0;
-  background-color: #ffffff;
-}
-
-.c5.c5 {
-  font-weight: bold;
-  margin-top: 0.5rem;
-}
-
 <div
-  className="c0"
+  className="card___StyledDiv-sc-16fz0z7-1 ewaiPp"
 >
   <a
-    _css="#262a31"
-    _css2="#ffffff"
-    className="c1"
+    className="card___StyledLink-sc-16fz0z7-2 cOoZcM"
     data-cy="campaigns-card"
   >
     <div
-      className="c2"
+      className="card__CardHeader-sc-16fz0z7-0 bVktVe"
     >
       <div
-        className="c3"
+        className="card___StyledDiv2-sc-16fz0z7-4 eDJqAU"
       >
         <svg
           height="80"
@@ -97,7 +34,7 @@ exports[`Card renders card with tag 1`] = `
         </svg>
       </div>
       <div
-        className="c4"
+        className="card___StyledDiv3-sc-16fz0z7-5 iUGsDm"
         data-cy="stationary-tag"
       >
         Stationary
@@ -105,7 +42,7 @@ exports[`Card renders card with tag 1`] = `
     </div>
     <div>
       <big
-        className="c5"
+        className="cardtest___StyledBig-sc-1cx8i5d-0 Mvnjp"
         data-cy="shortname"
       >
         GCPEx
@@ -126,68 +63,18 @@ exports[`Card renders card with tag 1`] = `
 `;
 
 exports[`Card renders plain card 1`] = `
-.c2.c2 {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  justify-items: flex-start;
-  min-height: 180px;
-}
-
-.c0.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: 100%;
-}
-
-.c1.c1 {
-  color: #262a31;
-  background-color: #ffffff;
-  box-shadow: rgba(68,63,63,0.08) 0px -1px 1px 0px,rgba(68,63,63,0.08) 0px 2px 6px 0px;
-  padding: 1rem;
-  min-height: 20rem;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-}
-
-.c1.c1:hover {
-  opacity: 0.64;
-}
-
-.c3.c3 {
-  grid-area: 1 / 1;
-}
-
-.c4.c4 {
-  font-weight: bold;
-  margin-top: 0.5rem;
-}
-
 <div
-  className="c0"
+  className="card___StyledDiv-sc-16fz0z7-1 ewaiPp"
 >
   <a
-    _css="#262a31"
-    _css2="#ffffff"
-    className="c1"
+    className="card___StyledLink-sc-16fz0z7-2 cOoZcM"
     data-cy="campaigns-card"
   >
     <div
-      className="c2"
+      className="card__CardHeader-sc-16fz0z7-0 bVktVe"
     >
       <div
-        className="c3"
+        className="card___StyledDiv2-sc-16fz0z7-4 eDJqAU"
       >
         <svg
           height="80"
@@ -211,7 +98,7 @@ exports[`Card renders plain card 1`] = `
     </div>
     <div>
       <big
-        className="c4"
+        className="cardtest___StyledBig-sc-1cx8i5d-0 Mvnjp"
         data-cy="shortname"
       >
         GCPEx
@@ -232,68 +119,18 @@ exports[`Card renders plain card 1`] = `
 `;
 
 exports[`Card renders with footer list 1`] = `
-.c2.c2 {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  justify-items: flex-start;
-  min-height: 180px;
-}
-
-.c0.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: 100%;
-}
-
-.c1.c1 {
-  color: #262a31;
-  background-color: #ffffff;
-  box-shadow: rgba(68,63,63,0.08) 0px -1px 1px 0px,rgba(68,63,63,0.08) 0px 2px 6px 0px;
-  padding: 1rem;
-  min-height: 20rem;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-}
-
-.c1.c1:hover {
-  opacity: 0.64;
-}
-
-.c3.c3 {
-  grid-area: 1 / 1;
-}
-
-.c4.c4 {
-  font-weight: bold;
-  margin-top: 0.5rem;
-}
-
 <div
-  className="c0"
+  className="card___StyledDiv-sc-16fz0z7-1 ewaiPp"
 >
   <a
-    _css="#262a31"
-    _css2="#ffffff"
-    className="c1"
+    className="card___StyledLink-sc-16fz0z7-2 cOoZcM"
     data-cy="campaigns-card"
   >
     <div
-      className="c2"
+      className="card__CardHeader-sc-16fz0z7-0 bVktVe"
     >
       <div
-        className="c3"
+        className="card___StyledDiv2-sc-16fz0z7-4 eDJqAU"
       >
         <svg
           height="80"
@@ -317,7 +154,7 @@ exports[`Card renders with footer list 1`] = `
     </div>
     <div>
       <big
-        className="c4"
+        className="cardtest___StyledBig-sc-1cx8i5d-0 Mvnjp"
         data-cy="shortname"
       >
         GCPEx

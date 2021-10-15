@@ -5,10 +5,11 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
+import React, { useContext } from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import { FBMContext } from "./fbm-provider"
 
 function SEO({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
@@ -26,6 +27,22 @@ function SEO({ description, lang, meta, title }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
+
+  const FBM_URL = `https://fbm.earthdata.nasa.gov/for/CASEI/feedback.js`
+
+  const { setIsFBMLoaded } = useContext(FBMContext)
+
+  const handleChangeClientState = (newState, addedTags) => {
+    if (addedTags && addedTags.scriptTags) {
+      const foundScript = addedTags.scriptTags.find(
+        ({ src }) => src === FBM_URL
+      )
+      if (foundScript) {
+        foundScript.onload = () => window.feedback.init({ showIcon: false })
+        setIsFBMLoaded(true)
+      }
+    }
+  }
 
   return (
     <Helmet
@@ -68,7 +85,12 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+      onChangeClientState={handleChangeClientState}
+    >
+      {typeof window !== "undefined" && (
+        <script async src={FBM_URL} type="text/javascript" />
+      )}
+    </Helmet>
   )
 }
 

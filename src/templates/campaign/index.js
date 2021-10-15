@@ -146,7 +146,7 @@ const CampaignTemplate = ({ data: { campaign, allCampaignWebsite }, path }) => {
 }
 
 export const query = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     campaign: campaign(id: { eq: $slug }) {
       ...heroFields
       ...overviewFields

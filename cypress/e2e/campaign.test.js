@@ -2,13 +2,7 @@
 
 describe("Campaign", () => {
   before(() => {
-    cy.visit("/explore/campaigns")
-    cy.wait(0)
-    cy.get("[data-cy=campaigns-card]")
-      .find("big")
-      .contains("OLYMPEX")
-      .parent()
-      .click()
+    cy.visit("/campaign/OLYMPEX")
   })
 
   it("provides information on the campaign", () => {
@@ -228,7 +222,7 @@ describe("Campaign", () => {
     })
   })
 
-  describe("the timeline section", () => {
+  describe.skip("the timeline section", () => {
     before(() => {
       cy.visit("/explore/campaigns")
       cy.wait(0)
@@ -268,7 +262,7 @@ describe("Campaign", () => {
     })
   })
 
-  describe("the data section", () => {
+  describe.skip("the data section", () => {
     before(() => {
       cy.visit("/explore/campaigns")
       cy.wait(0)

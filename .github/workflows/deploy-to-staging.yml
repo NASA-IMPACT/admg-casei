@@ -19,17 +19,26 @@ jobs:
       CYPRESS_password: ${{ secrets.CYPRESS_password }}
       GATSBY_ADMG_CLIENT_ID: ${{ secrets.GATSBY_ADMG_CLIENT_ID }}
       GATSBY_ADMG_CLIENT_SECRET: ${{ secrets.GATSBY_ADMG_CLIENT_SECRET }}
-      GATSBY_CPU_COUNT: 1
+      # GATSBY_CPU_COUNT: 1
       GATSBY_MAPBOX_TOKEN: ${{ secrets.GATSBY_MAPBOX_TOKEN }}
 
     steps:
+      - name: Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.8.0
+        with:
+          access_token: ${{ github.token }}
+
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Use Node.js 14
+      - name: Read .nvmrc
+        run: echo ::set-output name=NVMRC::$(cat .nvmrc)
+        id: nvm
+
+      - name: Use Node.js ${{ steps.nvm.outputs.NVMRC }}
         uses: actions/setup-node@v1
         with:
-          node-version: 14
+          node-version: ${{ steps.nvm.outputs.NVMRC }}
 
       - name: Cache node modules
         uses: actions/cache@v2
@@ -56,5 +65,5 @@ jobs:
           AWS_S3_BUCKET: ${{ secrets.STAGING_BUCKET }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID_ALICER_DEVSEED }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY_ALICER_DEVSEED }}
-          AWS_REGION: 'us-east-1'   # optional: defaults to us-east-1
-          SOURCE_DIR: 'public'      # optional: defaults to entire repository
+          AWS_REGION: "us-east-1" # optional: defaults to us-east-1
+          SOURCE_DIR: "public" # optional: defaults to entire repository

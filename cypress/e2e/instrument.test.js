@@ -2,13 +2,7 @@
 
 describe("Instrument", () => {
   before(() => {
-    cy.visit("/explore/instruments")
-    cy.wait(0)
-    cy.get("[data-cy=instruments-card]")
-      .find("big")
-      .contains("ACAM")
-      .parent()
-      .click()
+    cy.visit("/instrument/ACAM")
   })
 
   it("explains the instrument", () => {

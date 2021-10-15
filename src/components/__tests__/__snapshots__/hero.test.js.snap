@@ -1,60 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header renders correctly 1`] = `
-.c0.c0 {
-  display: grid;
-  grid-template-columns: 1fr minmax(auto,1280px) 1fr;
-  min-height: 35rem;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
-  margin-bottom: 6rem;
-}
-
-.c1.c1 {
-  grid-area: 1 / 2 / 1 / 2;
-  display: grid;
-  grid-template-columns: 3fr 5fr;
-  grid-template-areas: "title image" "extras image";
-  grid-gap: 0.5rem;
-  padding: 0 4rem;
-}
-
-.c2.c2 {
-  -webkit-align-self: end;
-  -ms-flex-item-align: end;
-  align-self: end;
-  grid-area: title;
-}
-
-.c3.c3 {
-  text-transform: uppercase;
-}
-
-.c4.c4 {
-  grid-area: extras;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 3rem;
-}
-
 <section
-  className="c0"
+  className="hero__Container-sc-qftwzr-0 jAYccg"
   data-cy="test-hero"
 >
   <div
-    className="c1"
+    className="hero___StyledDiv-sc-qftwzr-4 jdjFHP"
   >
     <div
-      className="c2"
+      className="hero___StyledDiv2-sc-qftwzr-5 bBCSWu"
     >
       <p
-        className="c3"
+        className="hero___StyledP-sc-qftwzr-7 lhlKbH"
       >
         Instrument
       </p>
@@ -65,7 +23,7 @@ exports[`Header renders correctly 1`] = `
       </h1>
     </div>
     <div
-      className="c4"
+      className="hero___StyledDiv3-sc-qftwzr-8 fXtyXL"
     >
       <p>
         The 2DC probe records images of hydrometeors...
@@ -76,60 +34,18 @@ exports[`Header renders correctly 1`] = `
 `;
 
 exports[`Header renders with adjust ratios 1`] = `
-.c0.c0 {
-  display: grid;
-  grid-template-columns: 1fr minmax(auto,1280px) 1fr;
-  min-height: 35rem;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
-  margin-bottom: 6rem;
-}
-
-.c1.c1 {
-  grid-area: 1 / 2 / 1 / 2;
-  display: grid;
-  grid-template-columns: 5fr 3fr;
-  grid-template-areas: "title image" "extras image";
-  grid-gap: 0.5rem;
-  padding: 0 4rem;
-}
-
-.c2.c2 {
-  -webkit-align-self: end;
-  -ms-flex-item-align: end;
-  align-self: end;
-  grid-area: title;
-}
-
-.c3.c3 {
-  text-transform: uppercase;
-}
-
-.c4.c4 {
-  grid-area: extras;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 3rem;
-}
-
 <section
-  className="c0"
+  className="hero__Container-sc-qftwzr-0 jAYccg"
   data-cy="undefined-hero"
 >
   <div
-    className="c1"
+    className="hero___StyledDiv-sc-qftwzr-4 cdZOdX"
   >
     <div
-      className="c2"
+      className="hero___StyledDiv2-sc-qftwzr-5 bBCSWu"
     >
       <p
-        className="c3"
+        className="hero___StyledP-sc-qftwzr-7 lhlKbH"
       >
         Instrument
       </p>
@@ -140,7 +56,7 @@ exports[`Header renders with adjust ratios 1`] = `
       </h1>
     </div>
     <div
-      className="c4"
+      className="hero___StyledDiv3-sc-qftwzr-8 fXtyXL"
     >
       <p>
         The 2DC probe records images of hydrometeors...

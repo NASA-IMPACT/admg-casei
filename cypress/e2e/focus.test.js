@@ -2,11 +2,7 @@
 
 describe("Focus Area", () => {
   before(() => {
-    cy.visit("/")
-    cy.get("[data-cy=focus-area-section]")
-      .find("[data-cy=focus-area]")
-      .contains("Global Water & Energy Cycle")
-      .click()
+    cy.visit("/focus/Global%20Water%20&%20Energy%20Cycle")
   })
   it("explains the focus area Global Water & Energy Cycle", () => {
     cy.get("[data-cy=focus-hero]").first().find("p").contains("Focus Area")
@@ -15,18 +11,6 @@ describe("Focus Area", () => {
       .first()
       .find("h1")
       .contains("Global Water & Energy Cycle")
-
-    cy.get("[data-cy=focus-hero]").first().find("svg").should("exist")
-    cy.get("[data-cy=focus-hero]")
-      .first()
-      .find("svg")
-      .should("be.visible")
-      .then($svg => {
-        expect(
-          $svg,
-          "should not display the fallback exclamation icon (indicated by its viewBox). If this fails, make sure all the id's provided with the focus areas match those in src/icons/utils.js"
-        ).to.not.have.attr("viewBox", "0 0 16 16")
-      })
 
     // displays inpage nav
     cy.get("[data-cy=inpage-nav]").find("[data-cy=home-link]").should("exist")

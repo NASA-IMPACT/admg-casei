@@ -1,122 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Timeline renders correctly 1`] = `
-.c5.c5 {
-  display: grid;
-  grid-template-columns: 30px 120px;
-  grid-template-areas: "icon title" "icon subTitle" "icon flights";
-}
-
-.c7.c7 {
-  margin: 0;
-  font-size: small;
-  text-align: start;
-}
-
-.c8.c8 {
-  grid-area: title;
-}
-
-.c9.c9 {
-  margin: 0;
-  font-size: x-small;
-  text-align: start;
-}
-
-.c11.c11 {
-  grid-area: flights;
-}
-
-.c10.c10 {
-  grid-area: subTitle;
-}
-
-.c0.c0 {
-  white-space: nowrap;
-  border-top: 1px solid gray;
-}
-
-.c1.c1 {
-  max-width: 100%;
-  padding: 8rem 0 2rem 0;
-  height: 200px;
-  margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  overflow-x: scroll;
-}
-
-.c2.c2 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  list-style-type: none;
-  height: 2px;
-  background: #e9eaec;
-  -webkit-flex: 1 0 25%;
-  -ms-flex: 1 0 25%;
-  flex: 1 0 25%;
-}
-
-.c3.c3 {
-  position: absolute;
-  bottom: 0rem;
-  height: 2rem;
-  width: 1px;
-  background: #e9eaec;
-}
-
-.c4.c4 {
-  position: absolute;
-  bottom: 2rem;
-  width: 12rem;
-  padding: 0.5rem;
-  color: black;
-  background: #e9eaec;
-  opacity: 0.7;
-  border: none;
-}
-
-.c6.c6 {
-  grid-area: icon;
-}
-
-.c12.c12 {
-  position: absolute;
-  width: 100%;
-  height: 40px;
-  top: 1rem;
-  color: #e9eaec;
-}
-
 <section
-  className="c0"
+  className="milestone-selector___StyledSection-sc-15drlbu-6 cMjeZr"
   data-cy="milestone-timeline"
 >
   <ol
-    className="c1"
+    className="milestone-selector___StyledOl-sc-15drlbu-7 ksSaTi"
   >
     <li
-      className="c2"
+      className="milestone-selector___StyledLi-sc-15drlbu-8 kkBVer"
     >
       <div
-        className="c3"
+        className="milestone-selector___StyledDiv-sc-15drlbu-9 gIIsIs"
       />
       <button
-        className="c4"
+        className="milestone-selector___StyledButton-sc-15drlbu-10 jhWimG"
         data-cy="milestone-timeline-card"
         onClick={[Function]}
       >
         <div
-          className="c5"
+          className="milestone-selector__CardContent-sc-15drlbu-0 ccXyqD"
           data-cy="milestone-timeline-card-content"
         >
           <div
-            className="c6"
+            className="milestone-selector___StyledDiv2-sc-15drlbu-11 bXRGLN"
           >
             <svg
               height="30"
@@ -132,45 +40,45 @@ exports[`Timeline renders correctly 1`] = `
             </svg>
           </div>
           <p
-            className="c7 c8"
+            className="milestone-selector__CardTitle-sc-15drlbu-1 milestone-selector___StyledCardTitle-sc-15drlbu-2 bPRJrX ingDhZ"
           >
             Western US Fall 2012
           </p>
           <p
-            className="c9 c10"
+            className="milestone-selector__CardSubTitle-sc-15drlbu-3 milestone-selector___StyledCardSubTitle-sc-15drlbu-5 gWvRQU gRbBHK"
           >
             missing details
           </p>
           <p
-            className="c9 c11"
+            className="milestone-selector__CardSubTitle-sc-15drlbu-3 milestone-selector___StyledCardSubTitle2-sc-15drlbu-4 gWvRQU fAAUvW"
           >
             3 CDCPs
           </p>
         </div>
       </button>
       <p
-        className="c12"
+        className="milestone-selector___StyledP-sc-15drlbu-12 gdniFi"
       >
         2012-09-20
       </p>
     </li>
     <li
-      className="c2"
+      className="milestone-selector___StyledLi-sc-15drlbu-8 kkBVer"
     >
       <div
-        className="c3"
+        className="milestone-selector___StyledDiv-sc-15drlbu-9 gIIsIs"
       />
       <button
-        className="c4"
+        className="milestone-selector___StyledButton-sc-15drlbu-10 jhWimG"
         data-cy="milestone-timeline-card"
         onClick={[Function]}
       >
         <div
-          className="c5"
+          className="milestone-selector__CardContent-sc-15drlbu-0 ccXyqD"
           data-cy="milestone-timeline-card-content"
         >
           <div
-            className="c6"
+            className="milestone-selector___StyledDiv2-sc-15drlbu-11 bXRGLN"
           >
             <svg
               height="30"
@@ -186,24 +94,24 @@ exports[`Timeline renders correctly 1`] = `
             </svg>
           </div>
           <p
-            className="c7 c8"
+            className="milestone-selector__CardTitle-sc-15drlbu-1 milestone-selector___StyledCardTitle-sc-15drlbu-2 bPRJrX ingDhZ"
           >
             Canada, Oregon Fall 2012
           </p>
           <p
-            className="c9 c10"
+            className="milestone-selector__CardSubTitle-sc-15drlbu-3 milestone-selector___StyledCardSubTitle-sc-15drlbu-5 gWvRQU gRbBHK"
           >
             missing details
           </p>
           <p
-            className="c9 c11"
+            className="milestone-selector__CardSubTitle-sc-15drlbu-3 milestone-selector___StyledCardSubTitle2-sc-15drlbu-4 gWvRQU fAAUvW"
           >
             2 CDCPs
           </p>
         </div>
       </button>
       <p
-        className="c12"
+        className="milestone-selector___StyledP-sc-15drlbu-12 gdniFi"
       >
         2012-10-20
       </p>

@@ -14,6 +14,7 @@ export default function InstrumentHero({
 }) {
   return (
     <Hero
+      backlink="/explore/instruments"
       tagline="Instrument"
       title={
         <>

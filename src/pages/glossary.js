@@ -76,6 +76,7 @@ export default function Glossary({ data }) {
                 target="_blank"
                 rel="noopener noreferrer"
                 href="https://earthdata.nasa.gov/esds/impact/admg/admg-definitions"
+                aria-label="Visit the admg page with the terminology map (opens in a new window)"
               >
                 <GatsbyImage
                   image={data.image.childImageSharp.gatsbyImageData}

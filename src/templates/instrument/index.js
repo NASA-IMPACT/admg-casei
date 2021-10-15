@@ -80,7 +80,7 @@ const InstrumentTemplate = ({ data: { instrument }, path }) => {
 }
 
 export const query = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     instrument: instrument(id: { eq: $slug }) {
       ...instrumentHeroFields
       ...instrumentDetailFields
