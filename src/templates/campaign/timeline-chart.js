@@ -46,7 +46,7 @@ export const TimelineChart = ({ deployments }) => {
             fill={colors[NEGATIVE].background}
           />
 
-          {deployments.map(({ start, end, id, shortname }) => {
+          {deployments.map(({ start, end, events, id, shortname }) => {
             const xPosition = xScale(new Date(start))
             const yPosition = dms.boundedHeight - 20
             const width = xScale(new Date(end)) - xScale(new Date(start))
@@ -66,6 +66,30 @@ export const TimelineChart = ({ deployments }) => {
                     fill={colors[NEGATIVE].dataVizOne}
                   />
                 </g>
+
+                {events.map(event => {
+                  const eventStart = new Date(event.start)
+                  const eventEnd = new Date(event.end)
+                  eventEnd.setUTCHours(23, 59, 59, 999)
+
+                  const eventXPosition = xScale(eventStart)
+                  const eventYPosition = yPosition - 20
+
+                  const eventWidth = xScale(eventEnd) - xScale(eventStart)
+
+                  return (
+                    <g
+                      key={event.id}
+                      transform={`translate(${eventXPosition}, ${eventYPosition})`}
+                    >
+                      <rect
+                        width={eventWidth - 1}
+                        height={20}
+                        fill={colors[NEGATIVE].dataVizTwo}
+                      />
+                    </g>
+                  )
+                })}
 
                 <g transform={`translate(${xPosition}, ${labelOffset})`}>
                   <line
