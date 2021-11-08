@@ -1,6 +1,6 @@
 import React, { useRef } from "react"
 import PropTypes from "prop-types"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import styled from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
 import turfBbox from "@turf/bbox"
@@ -10,9 +10,10 @@ import { HeroStats } from "../../components/hero"
 import Map from "../../components/map"
 import BboxLayer from "../../components/map/bbox-layer"
 import GeoJsonSource from "../../components/map/geojson-source"
-import { CampaignIcon } from "../../icons"
-import { layout } from "../../theme"
+import { ArrowIcon, CampaignIcon } from "../../icons"
+import { colors, layout } from "../../theme"
 import { useContainerDimensions } from "../../utils/use-container-dimensions"
+import { NEGATIVE } from "../../utils/constants"
 
 const BackgroundGradient = styled.div`
   background-image: linear-gradient(
@@ -81,7 +82,7 @@ const CampaignHero = ({
            {
             grid-area: 1 / 2 / 1 / 2;
             display: flex;
-            padding: 7rem 0;
+            padding: 0 0 7rem 0;
             z-index: 1;
           }
         `}
@@ -90,10 +91,27 @@ const CampaignHero = ({
           css={`
              {
               flex: 2;
-              padding: ${`0 ${layout.pageMargin}`};
+              padding: ${`3rem ${layout.pageMargin}`};
             }
           `}
         >
+          <Link
+            to="/explore/campaigns"
+            css={`
+               {
+                color: ${colors[NEGATIVE].linkText};
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                margin-bottom: 6rem;
+              }
+            `}
+            data-cy="back-link"
+          >
+            <ArrowIcon color={colors[NEGATIVE].linkText} direction="left" />
+            Back to Explore
+          </Link>
+
           <div
             css={`
                {
