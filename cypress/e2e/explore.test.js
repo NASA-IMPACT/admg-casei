@@ -43,17 +43,19 @@ describe("Explore", () => {
 
       cy.get("[data-cy=campaigns-card]")
         .find("big")
-        .contains("AirMOSS")
+        .contains("CPEX-AW")
         .parent()
-        .parent() // is there a better way to select the AirMOSS card?
+        .parent() // is there a better way to select the card?
         .should($card => {
-          expect($card.find("[data-cy=ongoing-tag]")).not.to.exist
-          expect($card.find("[data-cy=shortname]")).to.contain("AirMOSS")
+          expect($card.find("[data-cy=ongoing-tag]")).to.exist
+          expect($card.find("[data-cy=shortname]")).to.contain("CPEX-AW")
           expect($card.find("[data-cy=longname]")).to.contain(
-            "Airborne Microwave Observatory of Subcanopy and Subsurface"
+            "Convective Processes Experiment – Aerosols & Winds"
           )
-          expect($card.find("[data-cy=daterange]")).to.contain("2012—2015")
-          expect($card.find("[data-cy=region]")).to.contain("North America")
+          expect($card.find("[data-cy=daterange]")).to.contain("2021")
+          expect($card.find("[data-cy=region]")).to.contain(
+            "St. Croix, U.S. Virgin Islands; Western Atlantic and Caribbean Sea"
+          )
         })
 
       cy.get("[data-cy=campaigns-card-footer]")
@@ -76,7 +78,7 @@ describe("Explore", () => {
 
       cy.get("[data-cy=campaigns-card]")
         .find("big")
-        .contains("AirMOSS")
+        .contains("CPEX-AW")
         .parent()
         .parent()
         .click()
@@ -85,7 +87,7 @@ describe("Explore", () => {
 
       cy.get("h1").should(
         "have.text",
-        "Airborne Microwave Observatory of Subcanopy and Subsurface"
+        "Convective Processes Experiment – Aerosols & Winds"
       )
     })
   })
