@@ -10,7 +10,7 @@ import { controlButtonLRStyle } from "../carousel-styles"
 export const RegionCarousel = ({ regions }) => {
   const controlTextRef = useRef(null)
 
-  const [slideIndex, setSlideIndex] = useState(1)
+  const [slideIndex, setSlideIndex] = useState(0)
 
   return (
     <>

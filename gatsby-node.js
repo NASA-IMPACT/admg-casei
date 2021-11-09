@@ -51,6 +51,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       campaigns: [campaign] @link
     }
     type geographical_region implements Node {
+      order_priority: String
       image: NasaImagesJson @link(by: "shortname", from: "short_name")
     }
     type instrument implements Node {
