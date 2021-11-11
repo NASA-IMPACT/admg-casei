@@ -48,7 +48,6 @@ module.exports = {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/theme/typography`,
-
       },
     },
     `gatsby-plugin-styled-components`,
@@ -78,11 +77,12 @@ module.exports = {
         mergeDefaultDirectives: false,
         directives: {
           "default-src": "'self'",
-          "script-src": "'unsafe-eval' 'unsafe-inline' 'self' *.earthdata.nasa.gov https://www.googletagmanager.com https://fbm.earthdata.nasa.gov https://www.google.com/recaptcha https://www.gstatic.com/recaptcha https://fonts.gstatic.com",
+          "script-src":
+            "'unsafe-eval' 'unsafe-inline' 'self' *.earthdata.nasa.gov https://www.googletagmanager.com https://fbm.earthdata.nasa.gov https://www.google.com/recaptcha https://www.gstatic.com/recaptcha https://fonts.gstatic.com",
           "style-src": "'unsafe-inline' 'self' data: *.earthdata.nasa.gov",
           "font-src": "data: 'self'",
           "img-src": "data: 'self'",
-          "frame-src": "*.earthdata.nasa.gov"
+          "frame-src": "*.earthdata.nasa.gov",
         },
       },
     },
