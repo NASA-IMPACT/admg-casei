@@ -174,7 +174,7 @@ export const query = graphql`
         shortname: short_name
       }
     }
-    allGeographicalRegion {
+    allGeographicalRegion(sort: { fields: order_priority }) {
       nodes {
         id
         shortname: short_name
