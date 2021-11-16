@@ -52,7 +52,7 @@ describe("Accessibility tests", () => {
     cy.checkA11y(null, null, terminalLog)
   })
 
-  it("Navigates to page /explore/instruments and checks for accessibility violations", () => {
+  it.skip("Navigates to page /explore/instruments and checks for accessibility violations", () => {
     cy.visit("/explore/instruments")
 
     cy.get("h1").should("contain.text", "Explore instruments")
