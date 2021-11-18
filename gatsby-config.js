@@ -83,6 +83,7 @@ module.exports = {
           "font-src": "data: 'self'",
           "img-src": "data: 'self'",
           "frame-src": "*.earthdata.nasa.gov",
+          "worker-src": "'self' blob:",
         },
       },
     },
