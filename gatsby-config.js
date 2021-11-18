@@ -84,7 +84,7 @@ module.exports = {
           "img-src": "data: 'self'",
           "frame-src": "*.earthdata.nasa.gov",
           "worker-src": "'self' blob:",
-          "connect-src": "'self' https://api.mapbox.com",
+          "connect-src": "'self' https://api.mapbox.com https://events.mapbox.com",
         },
       },
     },
