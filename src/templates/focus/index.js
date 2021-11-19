@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import VisuallyHidden from "@reach/visually-hidden"
 
 import Layout, {
@@ -10,31 +10,54 @@ import Layout, {
   SectionContent,
 } from "../../components/layout"
 import SEO from "../../components/seo"
-import Hero from "../../components/hero"
 import ExternalLink from "../../components/external-link"
 import InpageNav from "../../components/inpage-nav"
 import RelatedCampaignsSection from "../../components/related-campaigns-section"
 import FocusAreaGallery from "../../components/focus-area-gallery"
 
 import { NEGATIVE, POSITIVE } from "../../utils/constants"
-import { colors } from "../../theme"
-import { getFocusIcon } from "../../icons/utils"
+import { colors, layout } from "../../theme"
+import { ArrowIcon } from "../../icons"
 
 const FocusTemplate = ({ data: { focusArea, allFocusArea }, path }) => {
-  const Icon = getFocusIcon(focusArea.shortname)
   return (
     <Layout isHeaderFixed>
       <SEO title={focusArea.shortname} lang="en" />
 
-      <Hero
-        tagline="Focus Area"
-        title={focusArea.shortname}
-        textToImageRatio={[8, 4]}
-        image={<Icon color={colors[NEGATIVE].text} size="huge" />}
-        id="focus"
-      />
-
       <PageBody id="focus">
+        <div
+          data-cy="focus-hero"
+          css={`
+            padding: ${layout.pageMargin} 0;
+          `}
+        >
+          <Link
+            to="/"
+            css={`
+               {
+                color: ${colors[NEGATIVE].linkText};
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                margin-bottom: 6rem;
+              }
+            `}
+            data-cy="back-link"
+          >
+            <ArrowIcon color={colors[NEGATIVE].linkText} direction="left" />
+            Back to Home
+          </Link>
+
+          <p
+            css={`
+              text-transform: uppercase;
+            `}
+          >
+            Focus Area
+          </p>
+
+          <h1>{focusArea.shortname}</h1>
+        </div>
         <InpageNav
           shortname={focusArea.shortname}
           items={[
@@ -104,7 +127,7 @@ const FocusTemplate = ({ data: { focusArea, allFocusArea }, path }) => {
 }
 
 export const query = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     focusArea(id: { eq: $slug }) {
       uuid
       campaigns {

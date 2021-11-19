@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - production
-  workflow_dispatch:  # Support manual deployments, https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow
+  workflow_dispatch: # Support manual deployments, https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow
 
 jobs:
   build-and-deploy:
@@ -14,17 +14,26 @@ jobs:
       ADMG_ACCESS_TOKEN: ${{ secrets.ADMG_ACCESS_TOKEN }}
       GATSBY_ADMG_CLIENT_ID: ${{ secrets.GATSBY_ADMG_CLIENT_ID }}
       GATSBY_ADMG_CLIENT_SECRET: ${{ secrets.GATSBY_ADMG_CLIENT_SECRET }}
-      GATSBY_CPU_COUNT: 1
+      GATSBY_CPU_COUNT: 4
       GATSBY_MAPBOX_TOKEN: ${{ secrets.GATSBY_MAPBOX_TOKEN }}
 
     steps:
+      - name: Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.8.0
+        with:
+          access_token: ${{ github.token }}
+
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Use Node.js 14
+      - name: Read .nvmrc
+        run: echo ::set-output name=NVMRC::$(cat .nvmrc)
+        id: nvm
+
+      - name: Use Node.js ${{ steps.nvm.outputs.NVMRC }}
         uses: actions/setup-node@v1
         with:
-          node-version: 14
+          node-version: ${{ steps.nvm.outputs.NVMRC }}
 
       - name: Cache node modules
         uses: actions/cache@v2
@@ -56,11 +65,11 @@ jobs:
           aws s3 cp ./public/ s3://${{ secrets.PRODUCTION_BUCKET }}/casei --recursive
           aws s3 cp ./public/index.html s3://${{ secrets.PRODUCTION_BUCKET }}
           aws cloudfront create-invalidation --distribution-id ${{ secrets.PRODUCTION_DISTRIBUTION_ID }} --paths "/*"
-          
+
       - name: Notify Slack 💃
         id: slack
         uses: slackapi/slack-github-action@v1.14.0
         with:
-          payload: "{\"text\":\"Successfully deployed CASEI! <https://impact.earthdata.nasa.gov/casei/|Click here> to take a look!\"}"
+          payload: '{"text":"Successfully deployed CASEI! <https://impact.earthdata.nasa.gov/casei/|Click here> to take a look!"}'
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}

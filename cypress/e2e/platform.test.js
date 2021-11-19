@@ -2,13 +2,7 @@
 
 describe("Platform", () => {
   before(() => {
-    cy.visit("/explore/platforms")
-    cy.wait(0)
-    cy.get("[data-cy=platforms-card]")
-      .find("big")
-      .contains("DC-8")
-      .parent()
-      .click()
+    cy.visit("/platform/DC-8")
   })
 
   it("explains the platform", () => {
@@ -74,33 +68,31 @@ describe("Platform", () => {
       .find("h2")
       .should("have.text", "Data Products")
 
-    // TODO: add back once database is populated again
+    cy.get("[data-cy=data-product]").should($div => {
+      expect($div).to.have.length.of.at.least(5)
+    })
 
-    // cy.get("[data-cy=data-product]").should($div => {
-    //   expect($div).to.have.length.of.at.least(5)
-    // })
+    cy.get("[data-cy=data-product]")
+      .first()
+      .find("[data-cy=doi-label]")
+      .should("exist")
 
-    // cy.get("[data-cy=data-product]")
-    //   .first()
-    //   .find("[data-cy=doi-label]")
-    //   .should("exist")
+    cy.get("[data-cy=data-product]")
+      .first()
+      .find("[data-cy=doi-link]")
+      .should("exist")
 
-    // cy.get("[data-cy=data-product]")
-    //   .first()
-    //   .find("[data-cy=doi-link]")
-    //   .should("exist")
+    cy.get("[data-cy=data-product-campaigns]")
+      .first()
+      .find("[data-cy=doi-campaign-label]")
+      .should("exist")
+      .and("have.text", "Campaigns")
 
-    // cy.get("[data-cy=data-product-campaigns]")
-    //   .first()
-    //   .find("[data-cy=doi-campaign-label]")
-    //   .should("exist")
-    //   .and("have.text", "Campaigns")
-
-    // cy.get("[data-cy=data-product-instruments]")
-    //   .first()
-    //   .find("[data-cy=doi-instrument-label]")
-    //   .should("exist")
-    //   .and("have.text", "Instruments")
+    cy.get("[data-cy=data-product-instruments]")
+      .first()
+      .find("[data-cy=doi-instrument-label]")
+      .should("exist")
+      .and("have.text", "Instruments")
 
     cy.get("[data-cy=campaigns-instruments-section]").should("exist")
 

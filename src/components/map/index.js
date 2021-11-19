@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import mapbox from "mapbox-gl"
 
-export default function Map({ height, children }) {
+export default function Map({ height, basemap, children }) {
   const containerRef = useRef()
 
   const [map, setMap] = useState(null)
@@ -11,7 +11,7 @@ export default function Map({ height, children }) {
     mapbox.accessToken = process.env.GATSBY_MAPBOX_TOKEN
     const m = new mapbox.Map({
       container: containerRef.current,
-      style: `mapbox://styles/mapbox/satellite-streets-v11/`,
+      style: basemap || "mapbox://styles/mapbox/satellite-streets-v11/",
       zoom: 1,
       center: [0, 0],
     })
@@ -66,6 +66,7 @@ export default function Map({ height, children }) {
 
 Map.propTypes = {
   height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
+  basemap: PropTypes.string,
   children: PropTypes.oneOfType([
     PropTypes.element,
     PropTypes.arrayOf(PropTypes.element),

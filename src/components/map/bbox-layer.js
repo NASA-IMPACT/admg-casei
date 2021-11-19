@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 
-import { NEGATIVE } from "../../utils/constants"
+import { POSITIVE } from "../../utils/constants"
 import { colors } from "../../theme"
 
 export default function BboxLayer({ id, bbox, map, sourceId }) {
@@ -14,9 +14,19 @@ export default function BboxLayer({ id, bbox, map, sourceId }) {
       source: sourceId,
       layout: {},
       paint: {
-        "line-color": colors[NEGATIVE].text,
+        "line-color": colors[POSITIVE].linkText,
         "line-opacity": 0.8,
         "line-width": 2,
+      },
+    })
+    map.addLayer({
+      id: `${id}-fill-layer`,
+      type: "fill",
+      source: sourceId,
+      layout: {},
+      paint: {
+        "fill-color": colors[POSITIVE].linkText,
+        "fill-opacity": 0.1,
       },
     })
 

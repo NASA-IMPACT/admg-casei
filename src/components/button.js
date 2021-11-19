@@ -39,7 +39,7 @@ const Button = React.forwardRef(
             border: 1px solid ${colors[overrideMode].text};
             cursor: pointer;
             background-color: ${isSecondary
-              ? "transparent"
+              ? colors[mode].background
               : colors[overrideMode].background};
             font-weight: bold;
             white-space: nowrap;

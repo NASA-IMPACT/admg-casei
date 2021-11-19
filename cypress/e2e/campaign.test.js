@@ -2,13 +2,7 @@
 
 describe("Campaign", () => {
   before(() => {
-    cy.visit("/explore/campaigns")
-    cy.wait(0)
-    cy.get("[data-cy=campaigns-card]")
-      .find("big")
-      .contains("OLYMPEX")
-      .parent()
-      .click()
+    cy.visit("/campaign/OLYMPEX")
   })
 
   it("provides information on the campaign", () => {
@@ -103,13 +97,15 @@ describe("Campaign", () => {
         expect($label.eq(3), "first item").to.contain("Spatial bounds")
       })
 
-    // TODO: add back when we have the data
-    // cy.get("[data-cy=link-list]").find("li").should("have.length.within", 2, 5)
+    cy.get("[data-cy=link-list]").find("li").should("have.length.within", 2, 10)
 
-    // cy.get("[data-cy=link-list]")
-    //   .find("[data-cy=doi-link]")
-    //   .should("exist")
-    //   .and("have.text", "http://dx.doi.org/10.5067/GPMGV/OLYMPEX/DATA101")
+    cy.get("[data-cy=link-list]")
+      .find("[data-cy=doi-link]")
+      .should("exist")
+      .and(
+        "have.text",
+        "External Linkhttp://dx.doi.org/10.5067/GPMGV/OLYMPEX/DATA101"
+      )
 
     cy.get("[data-cy=notes-public]").should("exist")
     cy.get("[data-cy=repo-list]").should("exist")
@@ -226,7 +222,7 @@ describe("Campaign", () => {
     })
   })
 
-  describe("the timeline section", () => {
+  describe.skip("the timeline section", () => {
     before(() => {
       cy.visit("/explore/campaigns")
       cy.wait(0)
@@ -266,7 +262,7 @@ describe("Campaign", () => {
     })
   })
 
-  describe("the data section", () => {
+  describe.skip("the data section", () => {
     before(() => {
       cy.visit("/explore/campaigns")
       cy.wait(0)
@@ -284,32 +280,30 @@ describe("Campaign", () => {
         .find("h2")
         .should("have.text", "Data Products")
 
-      // TODO: add back once database is populated again
+      cy.get("[data-cy=data-product]").should($div => {
+        expect($div, "3 or more data products").to.have.length.gte(3)
+      })
+      cy.get("[data-cy=data-product]")
+        .first()
+        .find("[data-cy=doi-label]")
+        .should("exist")
 
-      // cy.get("[data-cy=data-product]").should($div => {
-      //   expect($div, "3 or more data products").to.have.length.gte(3)
-      // })
-      // cy.get("[data-cy=data-product]")
-      //   .first()
-      //   .find("[data-cy=doi-label]")
-      //   .should("exist")
+      cy.get("[data-cy=data-product]")
+        .first()
+        .find("[data-cy=doi-link]")
+        .should("exist")
 
-      // cy.get("[data-cy=data-product]")
-      //   .first()
-      //   .find("[data-cy=doi-link]")
-      //   .should("exist")
+      cy.get("[data-cy=data-product-platforms]")
+        .first()
+        .find("[data-cy=doi-platform-label]")
+        .should("exist")
+        .and("have.text", "Platforms")
 
-      // cy.get("[data-cy=data-product-platforms]")
-      //   .first()
-      //   .find("[data-cy=doi-platform-label]")
-      //   .should("exist")
-      //   .and("have.text", "Platforms")
-
-      // cy.get("[data-cy=data-product-instruments]")
-      //   .first()
-      //   .find("[data-cy=doi-instrument-label]")
-      //   .should("exist")
-      //   .and("have.text", "Instruments")
+      cy.get("[data-cy=data-product-instruments]")
+        .first()
+        .find("[data-cy=doi-instrument-label]")
+        .should("exist")
+        .and("have.text", "Instruments")
     })
   })
 })

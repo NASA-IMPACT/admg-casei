@@ -4,9 +4,10 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
 
-import { POSITIVE } from "../utils/constants"
+import { NEGATIVE, POSITIVE } from "../utils/constants"
 import { colors, layout } from "../theme"
 import DateList from "./date-list-hover"
+import { ArrowIcon } from "../icons"
 
 export const HeroStats = ({ statList }) => (
   <dl
@@ -72,6 +73,7 @@ const Container = styled.section`
 `
 
 export default function Hero({
+  backlink,
   tagline,
   title,
   description,
@@ -110,6 +112,25 @@ export default function Hero({
             grid-area: title;
           `}
         >
+          {backlink && (
+            <Link
+              to={backlink}
+              css={`
+                 {
+                  color: ${colors[NEGATIVE].linkText};
+                  cursor: pointer;
+                  display: flex;
+                  align-items: center;
+                  margin-top: 3rem;
+                  margin-bottom: 6rem;
+                }
+              `}
+              data-cy="back-link"
+            >
+              <ArrowIcon color={colors[NEGATIVE].linkText} direction="left" />
+              Back to Explore
+            </Link>
+          )}
           {tagline && (
             <p
               css={`
@@ -196,6 +217,7 @@ export default function Hero({
 }
 
 Hero.propTypes = {
+  backlink: PropTypes.string,
   tagline: PropTypes.string,
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
   description: PropTypes.string,

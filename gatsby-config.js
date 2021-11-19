@@ -13,15 +13,6 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-plugin-load-script`,
-      options: {
-        src: `https://fbm.earthdata.nasa.gov/for/CASEI/feedback.js`,
-        onLoad: `() => {
-          window.feedback.init({showIcon: false})
-        }`,
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
@@ -65,13 +56,37 @@ module.exports = {
       options: { prefixes: [`/edit/*`] },
     },
     // bundle analysis
-    `gatsby-plugin-perf-budgets`, // located at /_report.html
+    // `gatsby-plugin-perf-budgets`, // located at /_report.html
+    // {
+    //   resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
+    //   options: {
+    //     // devMode: true,
+    //     // disable: true,
+    //     analyzerPort: 8001,
+    //   },
+    // },
+    // for csp headers
+    // `gatsby-plugin-csp`,
     {
-      resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
+      resolve: `gatsby-plugin-csp`,
       options: {
-        // devMode: true,
-        // disable: true,
-        analyzerPort: 8001,
+        disableOnDev: false,
+        reportOnly: false, // Changes header to Content-Security-Policy-Report-Only for csp testing purposes
+        mergeScriptHashes: false, // you can disable scripts sha256 hashes
+        mergeStyleHashes: false, // you can disable styles sha256 hashes
+        mergeDefaultDirectives: false,
+        directives: {
+          "default-src": "'self'",
+          "script-src":
+            "'unsafe-eval' 'unsafe-inline' 'self' *.earthdata.nasa.gov https://www.googletagmanager.com https://fbm.earthdata.nasa.gov https://www.google.com/recaptcha https://www.gstatic.com/recaptcha https://fonts.gstatic.com",
+          "style-src": "'unsafe-inline' 'self' data: *.earthdata.nasa.gov",
+          "font-src": "data: 'self'",
+          "img-src": "data: 'self'",
+          "frame-src": "*.earthdata.nasa.gov",
+          "worker-src": "'self' blob:",
+          "connect-src":
+            "'self' https://api.mapbox.com https://events.mapbox.com",
+        },
       },
     },
   ],

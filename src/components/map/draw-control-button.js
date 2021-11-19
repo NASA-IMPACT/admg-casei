@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import Button from "../button"
+import { POSITIVE } from "../../utils/constants"
 
 const DrawControlButton = ({
   drawControl,
@@ -71,7 +72,11 @@ const DrawControlButton = ({
           }
         `}
       >
-        <Button isSecondary={!isDrawing} action={handlePolygonClick}>
+        <Button
+          isSecondary={!isDrawing}
+          mode={POSITIVE}
+          action={handlePolygonClick}
+        >
           {isDrawing
             ? "Save"
             : hasDrawing
@@ -80,7 +85,7 @@ const DrawControlButton = ({
         </Button>
 
         {hasDrawing && (
-          <Button isSecondary action={handleDeleteClick}>
+          <Button isSecondary mode={POSITIVE} action={handleDeleteClick}>
             {isDrawing ? "Cancel" : "Delete Polygon"}
           </Button>
         )}

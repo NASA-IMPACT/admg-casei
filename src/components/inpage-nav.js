@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useContext } from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
@@ -6,6 +6,7 @@ import { CaseiLogoIcon } from "../icons"
 import { POSITIVE } from "../utils/constants"
 import { colors, breakpoints } from "../theme"
 import Button from "../components/button"
+import { FBMContext } from "./fbm-provider"
 
 const InpageLink = props => (
   <li
@@ -33,17 +34,7 @@ InpageLink.propTypes = {
 }
 
 const InpageNav = ({ shortname, items }) => {
-  const [isFBMLoaded, setIsFBMLoaded] = useState(false)
-
-  useEffect(() => {
-    //ensure that feedback module is loaded and inititalized (external script)
-    if (window.feedback) {
-      if (!window.feedback.showForm) {
-        window.feedback.init({ showIcon: false })
-      }
-      setIsFBMLoaded(true)
-    }
-  }, [])
+  const { isFBMLoaded } = useContext(FBMContext)
 
   return (
     <div
