@@ -43,18 +43,17 @@ describe("Campaign", () => {
     cy.get("[data-cy=inpage-nav]")
       .find("a")
       .should($anchor => {
-        expect($anchor, "9 items").to.have.length(9)
+        expect($anchor, "8 items").to.have.length(8)
         expect($anchor.eq(0), "first item").to.contain("CASEI Logo")
         expect($anchor.eq(1), "second item").to.exist
         expect($anchor.eq(2), "third item").to.contain("Overview")
-        expect($anchor.eq(3), "fourth item").to.contain("Missions")
-        expect($anchor.eq(4), "fifth item").to.contain("Focus")
-        expect($anchor.eq(5), "sixth item").to.contain(
+        expect($anchor.eq(3), "fourth item").to.contain("Focus")
+        expect($anchor.eq(4), "fifth item").to.contain(
           "Platforms & Instruments"
         )
-        expect($anchor.eq(6), "seventh item").to.contain("Timeline")
-        expect($anchor.eq(7), "eigth item").to.contain("Data")
-        expect($anchor.eq(8), "ninth item").to.contain("Program Info")
+        expect($anchor.eq(5), "sixth item").to.contain("Timeline")
+        expect($anchor.eq(6), "seventh item").to.contain("Data")
+        expect($anchor.eq(7), "eighth item").to.contain("Program Info")
         // expect($anchor.eq(9), "tenth item").to.contain("Other")
       })
     ;["program-info", "platform", "overview", "timeline", "focus"].forEach(
@@ -115,22 +114,17 @@ describe("Campaign", () => {
         expect($li, "at least 1").to.have.length.gte(1)
       })
 
-    cy.get("[data-cy=missions-section]").should("exist")
-    cy.get("[data-cy=linked-mission]").should($div => {
-      expect($div, "2 missions").to.have.length(2)
-    })
-
     cy.get("[data-cy=focus-section]").should("exist")
 
     cy.get("[data-cy=focus-section]").find("h2").should("have.text", "Focus")
 
     cy.get("[data-cy=focus-content]").should($div => {
-      expect($div, "3 info items").to.have.length(3)
+      expect($div, "3 info items").to.have.length.gte(3)
     })
     cy.get("[data-cy=focus-content-label]").should($label => {
-      expect($label, "3 labels").to.have.length(3)
+      expect($label, "3 labels").to.have.length.gte(3)
     })
-    cy.get("[data-cy=geophysical-concept-chip]").should("exist")
+    cy.get("[data-cy=geophysical-concept-link]").should("exist")
     cy.get("[data-cy=focus-phenomena-chip]").should("exist")
 
     cy.get("[data-cy=focus-section]")
@@ -145,7 +139,7 @@ describe("Campaign", () => {
     cy.go("back")
 
     cy.get("[data-cy=focus-section]")
-      .find("[data-cy=geophysical-concept]")
+      .find("[data-cy=geophysical-concept-link]")
       .contains("Hydrology")
       .click()
 

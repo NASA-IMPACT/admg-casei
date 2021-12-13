@@ -3,7 +3,7 @@ import { create } from "react-test-renderer"
 
 import FocusSection from "../focus-section"
 
-const testString = "test string"
+const testString = ["test string a", "test string b"]
 const testArray = [
   {
     id: "f1bd646f-876f-4e9f-896e-f7d4571ecc00",
@@ -20,6 +20,7 @@ describe("Focus Section", () => {
         focus={testArray}
         geophysical={testArray}
         focusPhenomena={testString}
+        missions={testString}
       />
     ).toJSON()
     expect(tree).toMatchSnapshot()
