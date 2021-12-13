@@ -17,7 +17,7 @@ import Layout, {
 import SEO from "../components/seo"
 import { ChevronIcon } from "../icons"
 import { colors } from "../theme"
-import { NEGATIVE, POSITIVE } from "../utils/constants"
+import { NEGATIVE } from "../utils/constants"
 
 const Question = styled(DisclosureButton)`
   background-color: transparent;
