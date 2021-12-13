@@ -1,0 +1,12 @@
+[
+  {
+    "section": "Section Title 1",
+    "question": "What is a Mission?",
+    "answer": "A NASA-funded program containing one or more satellites and/or field investigation projects. Missions target a relatively broad set of science requirements, while supporting projects each tend to investigate a more narrow set of mission-supporting objectives and/or specific research questions.  Examples include the Aqua mission, the Precipitation Measurement mission, and the Earth Venture-Suborbital program."
+  },
+  {
+    "section": "Section Title 2",
+    "question": "What is a Field Investigation?",
+    "answer": "An observational study during which individuals/programs/agencies/institutions utilize preselected, specific sensors or sets of sensors to acquire targeted observations in a natural, non-laboratory setting in support of common, clearly defined, science or research objectives.  Field investigations usually occur over a designated geographical space and/or period of time.  Sensors can include in-situ and/or remote sensing instruments operating on airborne, ground-based, and/or other non-satellite platform(s).  Satellite-based observations may be included in, but are not collected specifically as part of, a field investigation."
+  }
+]
