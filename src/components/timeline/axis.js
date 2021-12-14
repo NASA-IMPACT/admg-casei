@@ -4,7 +4,7 @@ import * as d3 from "d3"
 
 export const Axis = ({ domain, range, chartSettings }) => {
   const xScale = d3.scaleUtc().domain(domain).range(range).nice()
-
+  const dependency = `${domain.join("-")}, ${range.join("-")}`
   const timeFormat = d3.utcFormat("%b %Y")
 
   const weekTicks = useMemo(() => {
@@ -12,21 +12,21 @@ export const Axis = ({ domain, range, chartSettings }) => {
       value,
       xOffset: xScale(value),
     }))
-  }, [domain.join("-"), range.join("-")])
+  }, [dependency])
 
   const monthTicks = useMemo(() => {
     return xScale.ticks(d3.utcMonth).map(value => ({
       value,
       xOffset: xScale(value),
     }))
-  }, [domain.join("-"), range.join("-")])
+  }, [dependency])
 
   const labels = useMemo(() => {
-    return xScale.ticks(d3.utcMonth.every(3)).map(value => ({
+    return xScale.ticks(d3.utcMonth).map(value => ({
       value,
       xOffset: xScale(value),
     }))
-  }, [domain.join("-"), range.join("-")])
+  }, [dependency])
 
   return (
     <>
@@ -58,7 +58,6 @@ export const Axis = ({ domain, range, chartSettings }) => {
       {labels.map(({ value, xOffset }) => (
         <g key={value} transform={`translate(${xOffset}, 0)`}>
           <text
-            key={value}
             fill="currentColor"
             style={{
               fontSize: "10px",

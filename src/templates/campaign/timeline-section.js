@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
 import { Section, SectionHeader, SectionContent } from "../../components/layout"
-import { TimelineChart } from "./timeline-chart"
+import { TimelineChart } from "../../components/timeline"
 
 const TimelineSection = ({ id, deployments }) => {
   return (
@@ -32,6 +32,12 @@ export const deploymentFields = graphql`
       longname: long_name
       end: end_date
       start: start_date
+      events: significant_events {
+        end: end_date
+        start: start_date
+        shortname: short_name
+        id
+      }
     }
   }
 `
@@ -48,6 +54,14 @@ TimelineSection.propTypes = {
       longname: PropTypes.string.isRequired,
       end: PropTypes.string.isRequired,
       start: PropTypes.string.isRequired,
+      events: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string.isRequired,
+          shortname: PropTypes.string.isRequired,
+          end: PropTypes.string.isRequired,
+          start: PropTypes.string.isRequired,
+        }).isRequired
+      ),
     })
   ),
 }
