@@ -2,15 +2,38 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
+import styled from "styled-components"
 
 import { Section, SectionHeader, SectionContent } from "../../components/layout"
 import { TimelineChart } from "../../components/timeline"
+import { colors } from "../../theme"
+import { NEGATIVE } from "../../utils/constants"
+
+const Swatch = styled.div`
+  width: 10px;
+  height: 10px;
+  background-color: ${({ color }) => color};
+`
+
+const Legend = styled.div`
+  display: grid;
+  grid-template-columns: 10px auto 10px auto;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 1rem;
+`
 
 const TimelineSection = ({ id, deployments }) => {
   return (
     <Section id={id}>
       <SectionHeader headline="Timeline" id={id} />
       <SectionContent>
+        <Legend>
+          <Swatch color={colors[NEGATIVE].dataVizOne} />
+          Deployment
+          <Swatch color={colors[NEGATIVE].dataVizTwo} />
+          Significant Event
+        </Legend>
         <TimelineChart {...{ deployments }} />
       </SectionContent>
     </Section>
