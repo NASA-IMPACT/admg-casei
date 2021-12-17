@@ -2,7 +2,7 @@
 
 exports[`Chip renders with action 1`] = `
 <div
-  className="chip___StyledDiv-sc-4ga8fx-0 dJOgjB"
+  className="chip___StyledDiv-sc-4ga8fx-0 gfwMNl"
   data-cy="filter-chip"
 >
   <small
@@ -38,7 +38,7 @@ exports[`Chip renders with action 1`] = `
 
 exports[`Chip renders without action 1`] = `
 <div
-  className="chip___StyledDiv-sc-4ga8fx-0 dJOgjB"
+  className="chip___StyledDiv-sc-4ga8fx-0 gfwMNl"
   data-cy="filter-chip"
 >
   <small
