@@ -9,6 +9,7 @@ import { colors, layout } from "../../theme"
 import { useChartDimensions } from "../../utils/use-chart-dimensions"
 import { occlusion } from "./occlusion"
 import { Deployment } from "./deployment"
+import { ScrollShadow } from "./scroll-shadow"
 
 const chartSettings = {
   marginTop: 1,
@@ -19,7 +20,7 @@ const chartSettings = {
 }
 
 export const TimelineChart = ({ deployments }) => {
-  const [ref, dms] = useChartDimensions(chartSettings)
+  const [containerRef, dms] = useChartDimensions(chartSettings)
 
   const minDate = new Date(
     d3.min(
@@ -55,10 +56,10 @@ export const TimelineChart = ({ deployments }) => {
       return
     }
 
-    const svg = d3.select(ref.current)
+    const svg = d3.select(containerRef.current)
     // test  labels for collision
     occlusion(svg)
-  }, [ref.current, count])
+  }, [containerRef.current, count])
 
   const update = id => {
     setCount(prev => prev + 1)
@@ -66,9 +67,11 @@ export const TimelineChart = ({ deployments }) => {
     setPriority(prev => ({ ...prev, [id]: count }))
   }
 
+  const scrollRef = useRef()
+
   return (
     <div
-      ref={ref}
+      ref={containerRef}
       css={`
         height: 200px;
         max-width: ${layout.maxWidth};
@@ -83,7 +86,10 @@ export const TimelineChart = ({ deployments }) => {
       <svg // background
         width={dms.width}
         height={dms.height}
-        style={{ position: "absolute", zIndex: 1 }}
+        css={`
+          position: absolute;
+          z-index: 1;
+        `}
       >
         <rect
           width={dms.boundedWidth + chartSettings.paddingX * 2}
@@ -91,50 +97,53 @@ export const TimelineChart = ({ deployments }) => {
           fill={colors[NEGATIVE].background}
         />
       </svg>
-      <div
-        style={{
-          overflow: "hidden",
-          overflowX: "scroll",
-          WebkitOverflowScrolling: "touch",
-        }}
-      >
-        <svg // scrollable chart
-          className="scrollable"
-          width={range[1] + chartSettings.paddingX * 2}
-          height={dms.height}
-          style={{
-            position: "relative", // required for zIndex
-            zIndex: 2, // place chart above background
-          }}
+      <ScrollShadow scrollRef={scrollRef}>
+        <div
+          ref={scrollRef}
+          css={`
+            overflow: hidden;
+            overflow-x: scroll;
+            -webkit-overflow-scrolling: touch;
+          `}
         >
-          <g
-            transform={`translate(${[dms.marginLeft, dms.marginTop].join(
-              ","
-            )})`}
+          <svg // scrollable chart
+            className="scrollable"
+            width={range[1] + chartSettings.paddingX * 2}
+            height={dms.height}
+            css={`
+              position: relative; /* required for zIndex */
+              z-index: 2; /* place chart above background */
+            `}
           >
-            {deployments.map(({ start, end, events, id, shortname }) => (
-              <Deployment
-                key={id}
-                {...{
-                  id,
-                  shortname,
-                  start,
-                  end,
-                  events,
-                  xScale,
-                  update,
-                }}
-                yPosition={dms.boundedHeight - 20}
-                priority={priority[id] || 0}
-              />
-            ))}
+            <g
+              transform={`translate(${[dms.marginLeft, dms.marginTop].join(
+                ","
+              )})`}
+            >
+              {deployments.map(({ start, end, events, id, shortname }) => (
+                <Deployment
+                  key={id}
+                  {...{
+                    id,
+                    shortname,
+                    start,
+                    end,
+                    events,
+                    xScale,
+                    update,
+                  }}
+                  yPosition={dms.boundedHeight - 20}
+                  priority={priority[id] || 0}
+                />
+              ))}
 
-            <g transform={`translate(${[0, dms.boundedHeight].join(",")})`}>
-              <Axis {...{ domain, range, chartSettings }} />
+              <g transform={`translate(${[0, dms.boundedHeight].join(",")})`}>
+                <Axis {...{ domain, range, chartSettings }} />
+              </g>
             </g>
-          </g>
-        </svg>
-      </div>
+          </svg>
+        </div>
+      </ScrollShadow>
     </div>
   )
 }
