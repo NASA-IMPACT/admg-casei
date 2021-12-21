@@ -24,15 +24,24 @@ const Legend = styled.div`
 `
 
 const TimelineSection = ({ id, deployments }) => {
+  const events = deployments.reduce(
+    (prev, deployment) => [...prev, ...deployment.events],
+    []
+  )
+
   return (
     <Section id={id}>
       <SectionHeader headline="Timeline" id={id} />
       <SectionContent>
         <Legend>
           <Swatch color={colors[NEGATIVE].dataVizOne} />
-          Deployment
-          <Swatch color={colors[NEGATIVE].dataVizTwo} />
-          Significant Event
+          {deployments.length} Deployment{deployments.length > 1 ? "s" : ""}
+          {events.length > 0 ? (
+            <>
+              <Swatch color={colors[NEGATIVE].dataVizTwo} />
+              {events.length} Significant Event{events.length > 1 ? "s" : ""}
+            </>
+          ) : null}
         </Legend>
         <TimelineChart {...{ deployments }} />
       </SectionContent>
