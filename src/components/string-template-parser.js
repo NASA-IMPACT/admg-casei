@@ -54,7 +54,11 @@ export const StringTemplateParser = ({ expression, replacements }) => {
           {link.text}
         </Link>
       ) : (
-        <ExternalLink label={link.text} url={link.url}></ExternalLink>
+        <ExternalLink
+          label={link.text}
+          url={link.url}
+          id={link.id}
+        ></ExternalLink>
       )
     }
 
