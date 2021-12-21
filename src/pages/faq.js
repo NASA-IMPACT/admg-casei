@@ -18,6 +18,7 @@ import SEO from "../components/seo"
 import { ChevronIcon } from "../icons"
 import { colors } from "../theme"
 import { NEGATIVE } from "../utils/constants"
+import { RotatingContainer } from "../components/accordion"
 import { StringTemplateParser } from "../components/string-template-parser"
 
 const Border = styled.div`
@@ -39,10 +40,6 @@ const Question = styled(DisclosureButton)`
   align-items: center;
   text-align: left;
   padding: 1.25rem 0;
-
-  h3 {
-    margin: 0;
-  }
 `
 
 const Answer = styled(DisclosurePanel)`
@@ -86,23 +83,7 @@ export default function FAQ({ data }) {
 
               <SectionContent columns={[1, 8]}>
                 {nodes.map(x => (
-                  <Disclosure key={x.question}>
-                    <Border>
-                      <Question>
-                        <h3>{x.question}</h3>
-
-                        <ChevronIcon role="img" aria-label="chevron-icon" />
-                      </Question>
-                      <Answer>
-                        <p>
-                          <StringTemplateParser
-                            expression={x.answer}
-                            replacements={{ links: x.links, images: x.images }}
-                          />
-                        </p>
-                      </Answer>
-                    </Border>
-                  </Disclosure>
+                  <QandA key={x.question} {...x} />
                 ))}
               </SectionContent>
             </Section>
@@ -166,4 +147,55 @@ FAQ.propTypes = {
     }).isRequired,
   }),
   // location: PropTypes.object.isRequired,
+}
+
+const QandA = ({ question, answer, links, images }) => {
+  const [isOpen, setOpen] = React.useState(false)
+
+  return (
+    <Disclosure key={question} open={isOpen} onChange={() => setOpen(!isOpen)}>
+      <Border>
+        <Question>
+          <h3
+            css={`
+              margin: 0;
+              max-width: 80%;
+            `}
+          >
+            {question}
+          </h3>
+
+          <RotatingContainer isExpanded={isOpen}>
+            <ChevronIcon role="img" aria-label="chevron-icon" />
+          </RotatingContainer>
+        </Question>
+        <Answer>
+          <p>
+            <StringTemplateParser
+              expression={answer}
+              replacements={{ links, images }}
+            />
+          </p>
+        </Answer>
+      </Border>
+    </Disclosure>
+  )
+}
+
+QandA.propTypes = {
+  question: PropTypes.string.isRequired,
+  answer: PropTypes.string.isRequired,
+  links: PropTypes.PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      text: PropTypes.string.isRequired,
+      url: PropTypes.string.isRequired,
+    })
+  ),
+  images: PropTypes.PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      alt: PropTypes.string.isRequired,
+    })
+  ),
 }
