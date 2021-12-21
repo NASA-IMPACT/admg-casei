@@ -1,12 +1,29 @@
 [
   {
-    "section": "Section Title 1",
-    "question": "What is a Mission?",
-    "answer": "A NASA-funded program containing one or more satellites and/or field investigation projects. Missions target a relatively broad set of science requirements, while supporting projects each tend to investigate a more narrow set of mission-supporting objectives and/or specific research questions.  Examples include the Aqua mission, the Precipitation Measurement mission, and the Earth Venture-Suborbital program."
+    "section": "General Info",
+    "question": "What is CASEI?",
+    "answer": "The Catalog of Archived Suborbital Earth Science Investigations (CASEI) is a curated  inventory with information pertaining to NASA airborne and field campaigns, as well as information about the platforms and instruments used during the campaigns. CASEI also provides links to campaign data products via their digital object identifiers (DOIs). CASEI was designed to assist with data discoverability and accessibility. For more information, see the {{link.about}} for CASEI.",
+    "links": [
+      {
+        "id": "link.about",
+        "text": "About page",
+        "url": "/about"
+      }
+    ]
   },
   {
-    "section": "Section Title 2",
-    "question": "What is a Field Investigation?",
-    "answer": "An observational study during which individuals/programs/agencies/institutions utilize preselected, specific sensors or sets of sensors to acquire targeted observations in a natural, non-laboratory setting in support of common, clearly defined, science or research objectives.  Field investigations usually occur over a designated geographical space and/or period of time.  Sensors can include in-situ and/or remote sensing instruments operating on airborne, ground-based, and/or other non-satellite platform(s).  Satellite-based observations may be included in, but are not collected specifically as part of, a field investigation."
+    "section": "General Info",
+    "question": "How is CASEI different from other NASA data resources?",
+    "answer": "CASEI is unique in that it is an information portal that collates metadata from across all NASA data centers and projects. It is often overwhelming to figure out the appropriate source to download data from or which information to trust. CASEI team members have already vetted and verified the information included in CASEI, removing the guesswork and reducing the struggle to search for airborne and field data. {{linebreak}} Each campaign, platform, and instrument is intensively curated by three team members to ensure metadata quality and accuracy. This “human element” to the metadata curation makes it as thorough and accurate as possible."
+  },
+  {
+    "section": "General Info",
+    "question": "Does CASEI archive data?",
+    "answer": "No, CASEI does not archive or store data. CASEI provides data product Digital Object Identifiers (DOI) that link to the data archived at the NASA Distributed Active Archive Centers (DAACs). The NASA DAACs are the official data centers, meaning they distribute and preserve the data and support data users."
+  },
+  {
+    "section": "General Info",
+    "question": "What science topics does CASEI cover?",
+    "answer": "Using the data linked in CASEI, scientists can study a variety of phenomena such as hurricanes, lightning, atmospheric chemistry, air quality, precipitation, algal blooms, sea ice, surface water, and land cover, to name a few."
   }
 ]

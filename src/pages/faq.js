@@ -18,6 +18,16 @@ import SEO from "../components/seo"
 import { ChevronIcon } from "../icons"
 import { colors } from "../theme"
 import { NEGATIVE } from "../utils/constants"
+import { StringTemplateParser } from "../components/string-template-parser"
+
+const Border = styled.div`
+  border-top: 1px solid ${colors[NEGATIVE].altText};
+  border-bottom: 1px solid ${colors[NEGATIVE].altText};
+
+  & + div {
+    border-top: 0; /* prevent doubled border between 2 neighboring components*/
+  }
+`
 
 const Question = styled(DisclosureButton)`
   background-color: transparent;
@@ -27,6 +37,12 @@ const Question = styled(DisclosureButton)`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-align: left;
+  padding: 1.25rem 0;
+
+  h3 {
+    margin: 0;
+  }
 `
 
 const Answer = styled(DisclosurePanel)`
@@ -64,23 +80,24 @@ export default function FAQ({ data }) {
             <Section id={section} key={section}>
               <SectionHeader id={section} headline={section} />
 
-              <SectionContent
-                columns={[1, 8]}
-                css={`
-                  border-top: 1px solid ${colors[NEGATIVE].altText};
-                  border-bottom: 1px solid ${colors[NEGATIVE].altText};
-                `}
-              >
+              <SectionContent columns={[1, 8]}>
                 {nodes.map(x => (
                   <Disclosure key={x.question}>
-                    <Question>
-                      <h3>{x.question}</h3>
+                    <Border>
+                      <Question>
+                        <h3>{x.question}</h3>
 
-                      <ChevronIcon role="img" aria-label="chevron-icon" />
-                    </Question>
-                    <Answer>
-                      <p>{x.answer}</p>
-                    </Answer>
+                        <ChevronIcon role="img" aria-label="chevron-icon" />
+                      </Question>
+                      <Answer>
+                        <p>
+                          <StringTemplateParser
+                            expression={x.answer}
+                            replacements={{ links: x.links, images: [] }}
+                          />
+                        </p>
+                      </Answer>
+                    </Border>
                   </Disclosure>
                 ))}
               </SectionContent>
@@ -99,6 +116,12 @@ export const query = graphql`
         nodes {
           question
           answer
+          links {
+            id
+            text
+            url
+          }
+          # images
         }
         section: fieldValue
       }
@@ -113,9 +136,15 @@ FAQ.propTypes = {
         PropTypes.shape({
           nodes: PropTypes.arrayOf(
             PropTypes.shape({
-              term: PropTypes.string.isRequired,
-              definition: PropTypes.string.isRequired,
-              note: PropTypes.string,
+              question: PropTypes.string.isRequired,
+              answer: PropTypes.string.isRequired,
+              links: PropTypes.PropTypes.arrayOf(
+                PropTypes.shape({
+                  id: PropTypes.string.isRequired,
+                  text: PropTypes.string.isRequired,
+                  url: PropTypes.string.isRequired,
+                })
+              ),
             })
           ),
           section: PropTypes.string.isRequired,
