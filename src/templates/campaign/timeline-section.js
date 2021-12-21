@@ -1,72 +1,49 @@
-import React, { useState } from "react"
+/* eslint-disable react/prop-types */
+import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
-import Carousel from "nuka-carousel"
+import styled from "styled-components"
 
-import MilestoneSelector from "./milestone-selector"
-import Milestone from "./milestone"
 import { Section, SectionHeader, SectionContent } from "../../components/layout"
-import { formatDateRange } from "../../utils/helpers"
-import { controlButtonLRStyle } from "../../components/carousel-styles"
+import { TimelineChart } from "../../components/timeline"
+import { colors } from "../../theme"
+import { NEGATIVE } from "../../utils/constants"
+
+const Swatch = styled.div`
+  width: 10px;
+  height: 10px;
+  background-color: ${({ color }) => color};
+`
+
+const Legend = styled.div`
+  display: grid;
+  grid-template-columns: 10px auto 10px auto;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 1rem;
+`
 
 const TimelineSection = ({ id, deployments }) => {
-  const [currentSlide, setCurrentSlide] = useState(0)
-
-  /**
-   * Finds the index of the milestone given the id.
-   * @param {string} id - of milestone
-   */
-  const setSelectedMilestone = deploymentId =>
-    // TODO: replace deployments array with the new array that will combine deployments with other carousel data
-    setCurrentSlide(
-      deployments.findIndex(deployment => deployment.id == deploymentId)
-    )
-
-  const selectedMilestoneId = deployments[currentSlide].id
+  const events = deployments.reduce(
+    (prev, deployment) => [...prev, ...deployment.events],
+    []
+  )
 
   return (
     <Section id={id}>
       <SectionHeader headline="Timeline" id={id} />
-      <SectionContent withBackground>
-        <div data-cy="milestone-carousel">
-          <Carousel
-            aria-label="milestone-carousel"
-            defaultControlsConfig={{
-              nextButtonText: `⦊`,
-              nextButtonStyle: controlButtonLRStyle,
-              prevButtonText: `⦉`,
-              prevButtonStyle: controlButtonLRStyle,
-              pagingDotsStyle: {
-                fill: "none",
-              },
-            }}
-            renderBottomCenterControls={false}
-            slideIndex={currentSlide}
-            afterSlide={slideIndex => setCurrentSlide(slideIndex)}
-          >
-            {deployments.map(deployment => (
-              <Milestone
-                key={deployment.id}
-                type="deployment"
-                daterange={formatDateRange(deployment.start, deployment.end)}
-                name={
-                  deployment.longname
-                    ? `${deployment.longname} (${deployment.shortname})`
-                    : deployment.shortname
-                }
-                details={`${deployment.collectionPeriods.length} CDCPs`}
-                region={deployment.regions.map(x => x.longname).join(", ")}
-              />
-            ))}
-          </Carousel>
-        </div>
-        {deployments.length > 1 && (
-          <MilestoneSelector
-            events={deployments}
-            timelineAction={setSelectedMilestone}
-            activeMilestone={selectedMilestoneId}
-          />
-        )}
+      <SectionContent>
+        <Legend>
+          <Swatch color={colors[NEGATIVE].dataVizOne} />
+          {deployments.length} Deployment{deployments.length > 1 ? "s" : ""}
+          {events.length > 0 ? (
+            <>
+              <Swatch color={colors[NEGATIVE].dataVizTwo} />
+              {events.length} Significant Event{events.length > 1 ? "s" : ""}
+            </>
+          ) : null}
+        </Legend>
+        <TimelineChart {...{ deployments }} />
       </SectionContent>
     </Section>
   )
@@ -87,6 +64,12 @@ export const deploymentFields = graphql`
       longname: long_name
       end: end_date
       start: start_date
+      events: significant_events {
+        end: end_date
+        start: start_date
+        shortname: short_name
+        id
+      }
     }
   }
 `
@@ -103,6 +86,14 @@ TimelineSection.propTypes = {
       longname: PropTypes.string.isRequired,
       end: PropTypes.string.isRequired,
       start: PropTypes.string.isRequired,
+      events: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string.isRequired,
+          shortname: PropTypes.string.isRequired,
+          end: PropTypes.string.isRequired,
+          start: PropTypes.string.isRequired,
+        }).isRequired
+      ),
     })
   ),
 }
