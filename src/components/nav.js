@@ -31,7 +31,9 @@ const ListLink = ({ to, children, mode }) => (
 ListLink.propTypes = {
   to: function (props, propName, componentName) {
     // validate that prop `to` links to an existing page
-    if (!/(\/explore|\/glossary|\/about|\/contact)/.test(props[propName])) {
+    if (
+      !/(\/explore|\/glossary|\/about|\/faq|\/contact)/.test(props[propName])
+    ) {
       return new Error(
         "Invalid prop `" +
           propName +
@@ -70,6 +72,9 @@ const Nav = ({ mode }) => {
         </ListLink>
         <ListLink to="/about" mode={mode}>
           About
+        </ListLink>
+        <ListLink to="/faq" mode={mode}>
+          FAQS
         </ListLink>
         <ListLink to="/contact" mode={mode}>
           Contact

@@ -2254,10 +2254,10 @@
     "@reach/utils" "0.16.0"
     tslib "^2.3.0"
 
-"@reach/disclosure@^0.16.0":
-  version "0.16.0"
-  resolved "https://registry.yarnpkg.com/@reach/disclosure/-/disclosure-0.16.0.tgz#2bcbc32f21c6207e267372ffb58bc091ad0a12ca"
-  integrity sha512-WE2w7fVilUDrgy97w0Egab6EP1ckwq4+phTlHBiPuAHaMLp4SNcXxSy+lu7ANMEPX/Rp4O2leCVxNxD67jWWZA==
+"@reach/disclosure@^0.16.2":
+  version "0.16.2"
+  resolved "https://registry.yarnpkg.com/@reach/disclosure/-/disclosure-0.16.2.tgz#1b225c5e14bc7d70a602441dd6ac40f96697f405"
+  integrity sha512-6uVVFXIWAVZOu62iuijKxQSJyMMEuFKbWw9K+9/myNXKfgvvnkrXDlDYYAyqnk6Lz9uGixB/3J1KgkXZ8Iebug==
   dependencies:
     "@reach/auto-id" "0.16.0"
     "@reach/utils" "0.16.0"

@@ -112,6 +112,16 @@ describe("Accessibility tests", () => {
     cy.checkA11y(null, null, terminalLog)
   })
 
+  it("Navigates to page /faq and checks for accessibility violations", () => {
+    cy.visit("/faq")
+
+    cy.get("h1").should("contain.text", "FAQs")
+
+    cy.injectAxe()
+
+    cy.checkA11y(null, null, terminalLog)
+  })
+
   it("Navigates to page /contact and checks for accessibility violations", () => {
     cy.visit("/contact")
 
