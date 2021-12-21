@@ -15,6 +15,26 @@ export const StringTemplateParser = ({ expression, replacements }) => {
           gatsbyImageData(layout: CONSTRAINED, width: 600, placeholder: BLURRED)
         }
       }
+      explore: file(relativePath: { eq: "guide-explore.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: CONSTRAINED, width: 600, placeholder: BLURRED)
+        }
+      }
+      filter1: file(relativePath: { eq: "guide-filter1.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: CONSTRAINED, width: 600, placeholder: BLURRED)
+        }
+      }
+      filter2: file(relativePath: { eq: "guide-filter2.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: CONSTRAINED, width: 600, placeholder: BLURRED)
+        }
+      }
+      filtermap: file(relativePath: { eq: "guide-filtermap.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: CONSTRAINED, width: 600, placeholder: BLURRED)
+        }
+      }
     }
   `)
 
@@ -24,7 +44,15 @@ export const StringTemplateParser = ({ expression, replacements }) => {
     const link = replacements.links?.find(link => link.id === part)
     if (link) {
       return link.url.startsWith("/") ? (
-        <Link to={link.url}>{link.text}</Link>
+        <Link
+          to={link.url}
+          css={`
+            text-decoration: underline;
+            text-underline-offset: 2px;
+          `}
+        >
+          {link.text}
+        </Link>
       ) : (
         <ExternalLink label={link.text} url={link.url}></ExternalLink>
       )
