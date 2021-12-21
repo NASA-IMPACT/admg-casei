@@ -78,7 +78,7 @@ export default function FAQ({ data }) {
         {data.allFaqJson.group.map(({ nodes, section }) => {
           return (
             <Section id={section} key={section}>
-              <SectionHeader id={section} headline={section} />
+              <SectionHeader id={section} headline={section} spanWidth={7} />
 
               <SectionContent columns={[1, 8]}>
                 {nodes.map(x => (
