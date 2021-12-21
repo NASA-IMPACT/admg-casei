@@ -25,5 +25,65 @@
     "section": "General Info",
     "question": "What science topics does CASEI cover?",
     "answer": "Using the data linked in CASEI, scientists can study a variety of phenomena such as hurricanes, lightning, atmospheric chemistry, air quality, precipitation, algal blooms, sea ice, surface water, and land cover, to name a few."
+  },
+  {
+    "section": "Inventory Content/What’s New",
+    "question": "What kind of data can CASEI be used to discover?",
+    "answer": "CASEI guides users to data collected during and associated with NASA airborne and field campaigns. These campaigns include different combinations of airborne data, field or ground-based data, ocean or water-based data, and also relevant or related satellite data and/or model outputs."
+  },
+  {
+    "section": "Inventory Content/What’s New",
+    "question": "What are Geophysical Concepts?",
+    "answer": "Geophysical concepts are terms that correlate to the six NASA Earth Science Focus Areas and the Global Change Master Directory (GCMD) Earth Science Keywords, bridging the gap between the general and specific terms used to describe scientific studies and data. {{concepts}}",
+    "images": [
+      {
+        "id": "concepts",
+        "alt": "Relationship between geophysical concepts, NASA Earth Science Focus Areas, and GCMD Earth Science Keywords"
+      }
+    ]
+  },
+  {
+    "section": "Inventory Content/What’s New",
+    "question": "What does “suborbital” mean?",
+    "answer": "For CASEI, suborbital means anything that is not in orbit around the Earth.  Therefore, suborbital includes measurements made in the air, on land, and on or within water."
+  },
+  {
+    "section": "Inventory Content/What’s New",
+    "question": "What is airborne data?",
+    "answer": "Airborne data is that collected from instruments on board or attached to airplanes, drones, rockets, and balloons. Aircraft can be manned or unmanned. The term “balloons” refers to weather balloons, which usually carry instruments called “sondes” attached to the balloons by heavy duty string. Examples of these balloon payloads are ozonesondes or radiosondes, which measure ozone concentrations and vertical profiles of the atmosphere (like temperature, pressure, humidity), respectively. "
+  },
+  {
+    "section": "Inventory Content/What’s New",
+    "question": "What is ocean data?",
+    "answer": "Ocean or water data is that collected from instruments on board or attached to ships, boats, buoys, {{link.saildrones}}, or {{link.wavegliders}}. Sometimes ships are deployed on the ocean, but sometimes small boats are deployed on a lake, in a river, or in a swamp to collect water samples for use in  analyzing water quality, for example.",
+    "links": [
+      {
+        "id": "link.saildrones",
+        "text": "saildrones",
+        "url": "https://podaac.jpl.nasa.gov/Saildrone"
+      },
+      {
+        "id": "link.wavegliders",
+        "text": "wave gliders",
+        "url": "https://www.liquid-robotics.com/wave-glider/overview/"
+      }
+    ]
+  },
+  {
+    "section": "Inventory Content/What’s New",
+    "question": "What is ground-based data?",
+    "answer": "Ground-based data is that collected from instruments on board or attached to vehicles, trailers, observation towers (such as weather or {{link.carbonfluxtowers}}), temporary field stations, or permanent instrument networks (such as {{link.LIPNetwork}}) . These are all known as ground-based platforms because they are located on land, and do not drop, fly, float, or sail.",
+    "links": [
+      {
+        "id": "link.carbonfluxtowers",
+        "text": "carbon flux towers",
+        "url": "https://daac.ornl.gov/cgi-bin/dataset_lister.pl?p=9"
+      },
+      {
+        "id": "link.LIPNetwork",
+        "text": "Lightning Instrument Package (LIP) Network",
+        "url": "https://ghrc.nsstc.nasa.gov/home/micro-articles/instrument-lightning-instrument-package-lip"
+      }
+    ]
   }
 ]

@@ -93,7 +93,7 @@ export default function FAQ({ data }) {
                         <p>
                           <StringTemplateParser
                             expression={x.answer}
-                            replacements={{ links: x.links, images: [] }}
+                            replacements={{ links: x.links, images: x.images }}
                           />
                         </p>
                       </Answer>
@@ -121,7 +121,10 @@ export const query = graphql`
             text
             url
           }
-          # images
+          images {
+            id
+            alt
+          }
         }
         section: fieldValue
       }
@@ -143,6 +146,12 @@ FAQ.propTypes = {
                   id: PropTypes.string.isRequired,
                   text: PropTypes.string.isRequired,
                   url: PropTypes.string.isRequired,
+                })
+              ),
+              images: PropTypes.PropTypes.arrayOf(
+                PropTypes.shape({
+                  id: PropTypes.string.isRequired,
+                  alt: PropTypes.string.isRequired,
                 })
               ),
             })
