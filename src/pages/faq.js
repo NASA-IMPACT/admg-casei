@@ -43,7 +43,7 @@ const Question = styled(DisclosureButton)`
 `
 
 const Answer = styled(DisclosurePanel)`
-  padding-bottom: 1rem;
+  padding-bottom: 3rem;
 `
 
 export default function FAQ({ data }) {
@@ -54,7 +54,7 @@ export default function FAQ({ data }) {
         <h1>FAQs</h1>
 
         <Section id="intro">
-          <SectionContent columns={[1, 4]}>
+          <SectionContent columns={[1, 8]}>
             <p>
               These are the most frequently asked questions. If you have any
               other questions, please{" "}
@@ -81,7 +81,7 @@ export default function FAQ({ data }) {
                 spanWidth={7}
               />
 
-              <SectionContent columns={[1, 8]}>
+              <SectionContent>
                 {nodes.map(x => (
                   <QandA key={x.question} {...x} />
                 ))}
@@ -170,12 +170,24 @@ const QandA = ({ question, answer, links, images }) => {
           </RotatingContainer>
         </Question>
         <Answer>
-          <p>
-            <StringTemplateParser
-              expression={answer}
-              replacements={{ links, images }}
-            />
-          </p>
+          <div
+            css={`
+              display: grid;
+              grid-template-columns: repeat(12, 1fr);
+              column-gap: 1rem;
+            `}
+          >
+            <p
+              css={`
+                grid-column: 1 / span 8;
+              `}
+            >
+              <StringTemplateParser
+                expression={answer}
+                replacements={{ links, images }}
+              />
+            </p>
+          </div>
         </Answer>
       </Border>
     </Disclosure>
