@@ -32,7 +32,7 @@ const Home = ({ data }) => {
         description={data.site.siteMetadata.description}
         cta="Explore CASEI"
         backgroundImage={data.heroImage}
-        textToImageRatio={[6, 6]}
+        textToImageRatio={[5, 7]}
         id="home"
       />
 
