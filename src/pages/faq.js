@@ -39,6 +39,7 @@ const Question = styled(DisclosureButton)`
   justify-content: space-between;
   align-items: center;
   text-align: left;
+  cursor: pointer;
   padding: 1.25rem 0;
 `
 
