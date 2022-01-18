@@ -38,22 +38,17 @@ const typography = new Typography({
         color: colors[NEGATIVE].text,
       },
       h1: {
-        fontSize: rhythm(3),
-        marginTop: rhythm(1),
+        fontSize: rhythm(2.5),
+        marginTop: rhythm(2),
         marginBottom: rhythm(1),
       },
       h2: {
-        fontSize: rhythm(2),
-        marginTop: rhythm(0.5),
-        marginBottom: rhythm(1),
-      },
-      h3: {
         fontSize: rhythm(1.5),
         marginTop: rhythm(0.5),
         marginBottom: rhythm(1),
       },
-      "h4,h5,h6": {
-        fontSize: rhythm(1.5),
+      "h3,h4,h5,h6": {
+        fontSize: rhythm(1.2),
         marginTop: rhythm(0.5),
         marginBottom: rhythm(1),
       },
