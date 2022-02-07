@@ -10,6 +10,7 @@ import { useChartDimensions } from "../../utils/use-chart-dimensions"
 import { occlusion } from "./occlusion"
 import { Deployment } from "./deployment"
 import { ScrollShadow } from "./scroll-shadow"
+import { Details } from "./details"
 
 const chartSettings = {
   marginTop: 1,
@@ -48,6 +49,8 @@ export const TimelineChart = ({ deployments }) => {
   const isFirstRun = useRef(true)
   const [count, setCount] = useState(1)
   const [priority, setPriority] = useState({})
+  const [focussedDeployment, setFocussedDeployment] = useState(null)
+  const [clickPosition, setClickPosition] = useState(null)
 
   useEffect(() => {
     //wait for first render to get correct measures
@@ -65,6 +68,16 @@ export const TimelineChart = ({ deployments }) => {
     setCount(prev => prev + 1)
 
     setPriority(prev => ({ ...prev, [id]: count }))
+  }
+
+  const updateFocus = (id, xPosition, yPosition) => {
+    setFocussedDeployment(id)
+    setClickPosition([xPosition, yPosition])
+  }
+
+  const clearFocus = () => {
+    setFocussedDeployment(null)
+    setClickPosition(null)
   }
 
   const scrollRef = useRef()
@@ -104,8 +117,18 @@ export const TimelineChart = ({ deployments }) => {
             overflow: hidden;
             overflow-x: scroll;
             -webkit-overflow-scrolling: touch;
+            position: relative;
+            isolation: isolate; /* z-index on Details */
           `}
         >
+          {focussedDeployment && (
+            <Details
+              xPosition={clickPosition[0]}
+              yPosition={clickPosition[1]}
+              id={focussedDeployment}
+              close={clearFocus}
+            />
+          )}
           <svg // scrollable chart
             className="scrollable"
             width={range[1] + chartSettings.paddingX * 2}
@@ -134,6 +157,9 @@ export const TimelineChart = ({ deployments }) => {
                   }}
                   yPosition={dms.boundedHeight - 20}
                   priority={priority[id] || 0}
+                  isFocussed={focussedDeployment === id}
+                  isAnyFocussed={!!focussedDeployment}
+                  updateFocus={updateFocus}
                 />
               ))}
 

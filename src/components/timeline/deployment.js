@@ -16,6 +16,9 @@ export const Deployment = ({
   update,
   priority,
   yPosition,
+  isFocussed,
+  isAnyFocussed,
+  updateFocus,
 }) => {
   const xPosition = useMemo(() => {
     return xScale(new Date(start))
@@ -28,23 +31,40 @@ export const Deployment = ({
   const labelOffset = yPosition - 60
 
   return (
-    <g key={id}>
+    <g
+      key={id}
+      onClick={e => {
+        // TODO: use deployment position on page
+        // instead of mouse click position
+        updateFocus(id, e.pageX, e.pageY)
+      }}
+      css={`
+        cursor: pointer;
+      `}
+    >
       <g
         className="deployment"
         transform={`translate(${xPosition}, ${yPosition})`}
         onMouseEnter={() => update(id)}
       >
-        <rect width={width} height={20} fill={colors[NEGATIVE].dataVizOne} />
+        <rect
+          width={width}
+          height={20}
+          fill={colors[NEGATIVE].dataVizOne}
+          stroke={isFocussed ? "white" : "none"}
+        />
       </g>
 
       <Events events={events} xScale={xScale} yPosition={yPosition} />
 
-      <Label
-        x={xPosition}
-        y={labelOffset}
-        text={shortname}
-        priority={priority}
-      />
+      {!isAnyFocussed && (
+        <Label
+          x={xPosition}
+          y={labelOffset}
+          text={shortname}
+          priority={priority}
+        />
+      )}
     </g>
   )
 }
@@ -66,4 +86,7 @@ Deployment.propTypes = {
   update: PropTypes.func.isRequired,
   priority: PropTypes.number.isRequired,
   yPosition: PropTypes.number.isRequired,
+  isFocussed: PropTypes.bool.isRequired,
+  isAnyFocussed: PropTypes.bool.isRequired,
+  updateFocus: PropTypes.func.isRequired,
 }
