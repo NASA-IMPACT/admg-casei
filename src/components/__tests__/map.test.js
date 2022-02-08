@@ -5,7 +5,7 @@ import mapbox from "mapbox-gl"
 import Map from "../map"
 import GeoJsonSource from "../map/geojson-source"
 import BboxLayer from "../map/bbox-layer"
-import { POSITIVE, NEGATIVE } from "../../utils/constants"
+import { NEGATIVE } from "../../utils/constants"
 import { colors } from "../../theme"
 
 let mapWrapper
