@@ -21,6 +21,9 @@ export const Events = ({ events, xScale, yPosition }) => (
         <g
           key={event.id}
           transform={`translate(${eventX1Position}, ${eventYPosition})`}
+          css={`
+            cursor: default;
+          `}
         >
           <rect
             width={duration}
