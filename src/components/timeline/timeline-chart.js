@@ -123,7 +123,11 @@ export const TimelineChart = ({ deployments }) => {
         >
           {focussedDeployment && (
             <Details
-              xPosition={xPosition + chartSettings.marginLeft}
+              xPosition={
+                xPosition +
+                chartSettings.marginLeft -
+                scrollRef.current.scrollLeft
+              }
               yPosition={dms.boundedHeight - 80}
               id={focussedDeployment}
               close={clearFocus}
