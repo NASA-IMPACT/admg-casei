@@ -117,7 +117,7 @@ export const TimelineChart = ({ deployments }) => {
             overflow: hidden;
             overflow-x: scroll;
             -webkit-overflow-scrolling: touch;
-            position: relative;
+            position: static;
             isolation: isolate; /* z-index on Details */
           `}
         >
