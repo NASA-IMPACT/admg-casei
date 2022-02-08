@@ -124,13 +124,6 @@ export const fundingFields = graphql`
     partnerOrgs: partner_orgs {
       shortname: short_name
     }
-
-    websites {
-      url
-      type: website_type {
-        name: long_name
-      }
-    }
   }
 `
 

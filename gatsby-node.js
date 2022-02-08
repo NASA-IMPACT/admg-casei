@@ -27,9 +27,6 @@ exports.createSchemaCustomization = ({ actions }) => {
       websites: [website] @link
       logo: image @link
     }
-    type campaign_website implements Node {
-      website: website @link
-    }
     type collection_period implements Node {
       dois: [doi] @link
     }
@@ -140,7 +137,6 @@ exports.sourceNodes = async ({ actions, createContentDigest }) => {
     const endpoints = [
       "alias",
       "campaign",
-      "campaign_website",
       "collection_period",
       "deployment",
       "doi",
