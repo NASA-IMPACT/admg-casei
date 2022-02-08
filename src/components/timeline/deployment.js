@@ -33,10 +33,8 @@ export const Deployment = ({
   return (
     <g
       key={id}
-      onClick={e => {
-        // TODO: use deployment position on page
-        // instead of mouse click position
-        updateFocus(id, e.pageX, e.pageY)
+      onClick={() => {
+        updateFocus(id, xPosition)
       }}
       css={`
         cursor: pointer;

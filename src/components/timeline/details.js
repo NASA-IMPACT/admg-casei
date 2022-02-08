@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react"
 import PropTypes from "prop-types"
 import { graphql, useStaticQuery } from "gatsby"
-import Portal from "@reach/portal"
 import styled from "styled-components"
 
 import { colors } from "../../theme"
@@ -65,58 +64,56 @@ export const Details = ({ xPosition, yPosition, id, close }) => {
   }, [ref.current])
 
   return (
-    <Portal>
+    <div
+      ref={ref}
+      css={`
+        position: absolute;
+        z-index: 10;
+        left: ${xPosition}px;
+        bottom: ${yPosition}px;
+        background-color: ${colors[POSITIVE].background};
+        color: black;
+        font-weight: 600;
+        border-radius: 2px;
+        padding: 5px 10px;
+        max-width: 300px;
+      `}
+    >
       <div
-        ref={ref}
         css={`
-          position: absolute;
-          z-index: 10;
-          left: ${xPosition - width / 2}px;
-          top: ${yPosition - height - 20}px;
-          background-color: ${colors[POSITIVE].background};
-          color: black;
-          font-weight: 600;
-          border-radius: 2px;
-          padding: 5px 10px;
-          max-width: 300px;
+          display: flex;
+          justify-content: flex-end;
+          margin-top: 5px;
         `}
       >
-        <div
-          css={`
-            display: flex;
-            justify-content: flex-end;
-            margin-top: 5px;
-          `}
-        >
-          <IconButton
-            id="close-popup"
-            action={() => close()}
-            icon={<CloseIcon color={colors[POSITIVE].text} />}
-          />
-        </div>
-
-        <Label>Name</Label>
-        <p>
-          {deployment.longname
-            ? deployment.longname + " (" + deployment.shortname + ")"
-            : deployment.shortname}
-        </p>
-
-        {deployment.aliases.length > 0 && (
-          <>
-            <Label>Alias{deployment.aliases.length > 1 && "es"}</Label>
-            <p>{deployment.aliases.map(x => x.shortname).join(", ")}</p>
-          </>
-        )}
-
-        {deployment.regions.length > 0 && (
-          <>
-            <Label>Region{deployment.regions.length > 1 && "s"}</Label>
-            <p>{deployment.regions.map(x => x.shortname).join(", ")}</p>
-          </>
-        )}
+        <IconButton
+          id="close-popup"
+          action={() => close()}
+          icon={<CloseIcon color={colors[POSITIVE].text} />}
+        />
       </div>
-    </Portal>
+
+      <Label>Name</Label>
+      <p>
+        {deployment.longname
+          ? deployment.longname + " (" + deployment.shortname + ")"
+          : deployment.shortname}
+      </p>
+
+      {deployment.aliases.length > 0 && (
+        <>
+          <Label>Alias{deployment.aliases.length > 1 && "es"}</Label>
+          <p>{deployment.aliases.map(x => x.shortname).join(", ")}</p>
+        </>
+      )}
+
+      {deployment.regions.length > 0 && (
+        <>
+          <Label>Region{deployment.regions.length > 1 && "s"}</Label>
+          <p>{deployment.regions.map(x => x.shortname).join(", ")}</p>
+        </>
+      )}
+    </div>
   )
 }
 

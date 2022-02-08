@@ -50,7 +50,7 @@ export const TimelineChart = ({ deployments }) => {
   const [count, setCount] = useState(1)
   const [priority, setPriority] = useState({})
   const [focussedDeployment, setFocussedDeployment] = useState(null)
-  const [clickPosition, setClickPosition] = useState(null)
+  const [xPosition, setXPosition] = useState(null)
 
   useEffect(() => {
     //wait for first render to get correct measures
@@ -70,14 +70,14 @@ export const TimelineChart = ({ deployments }) => {
     setPriority(prev => ({ ...prev, [id]: count }))
   }
 
-  const updateFocus = (id, xPosition, yPosition) => {
+  const updateFocus = (id, xPosition) => {
     setFocussedDeployment(id)
-    setClickPosition([xPosition, yPosition])
+    setXPosition(xPosition)
   }
 
   const clearFocus = () => {
     setFocussedDeployment(null)
-    setClickPosition(null)
+    setXPosition(null)
   }
 
   const scrollRef = useRef()
@@ -123,8 +123,8 @@ export const TimelineChart = ({ deployments }) => {
         >
           {focussedDeployment && (
             <Details
-              xPosition={clickPosition[0]}
-              yPosition={clickPosition[1]}
+              xPosition={xPosition + chartSettings.marginLeft}
+              yPosition={dms.boundedHeight - 80}
               id={focussedDeployment}
               close={clearFocus}
             />
