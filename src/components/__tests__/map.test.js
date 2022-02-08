@@ -5,7 +5,7 @@ import mapbox from "mapbox-gl"
 import Map from "../map"
 import GeoJsonSource from "../map/geojson-source"
 import BboxLayer from "../map/bbox-layer"
-import { POSITIVE } from "../../utils/constants"
+import { POSITIVE, NEGATIVE } from "../../utils/constants"
 import { colors } from "../../theme"
 
 let mapWrapper
@@ -89,7 +89,7 @@ describe("BboxLayer", () => {
       id: `${layerId}-layer`,
       layout: {},
       paint: {
-        "line-color": colors[POSITIVE].linkText,
+        "line-color": colors[NEGATIVE].text,
         "line-opacity": 0.8,
         "line-width": 2,
       },
