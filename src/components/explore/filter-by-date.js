@@ -117,6 +117,7 @@ const FilterByDate = ({ id, label, dateRange, setDateRange }) => {
         aria-labelledby={`${id}-filter-select`}
         data-cy={`${id}-filter-select`}
         onChange={() => setDateRange({ start: startDate, end: endDate })}
+        value="unset"
       >
         <FilterButton arrow="▼">{label}</FilterButton>
         <ListboxPopover
