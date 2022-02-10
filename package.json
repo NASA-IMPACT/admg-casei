@@ -15,7 +15,6 @@
     "@reach/accordion": "^0.16.1",
     "@reach/disclosure": "^0.16.2",
     "@reach/listbox": "^0.16.1",
-    "@reach/portal": "^0.16.2",
     "@reach/visually-hidden": "^0.16.0",
     "@turf/area": "^6.5.0",
     "@turf/bbox": "^6.5.0",
