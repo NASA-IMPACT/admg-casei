@@ -139,7 +139,7 @@ const OverviewSection = ({
           {websites &&
             websites
               .sort((a, b) => a.priority - b.priority)
-              .map(({ website }) => (
+              .map(website => (
                 <ListLink key={website.url} mode={POSITIVE} to={website.url}>
                   {website.title}
                 </ListLink>
@@ -193,6 +193,15 @@ export const overviewFields = graphql`
       shortname: short_name
       longname: long_name
       url: notes_public
+    }
+
+    websites {
+      url
+      title
+      type: website_type {
+        name: long_name
+      }
+      priority: order_priority
     }
   }
 `
