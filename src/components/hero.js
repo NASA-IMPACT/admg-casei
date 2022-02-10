@@ -193,7 +193,7 @@ export default function Hero({
         )}
       </div>
 
-      {backgroundImage && (
+      {backgroundImage && backgroundImage.nasaImg && (
         <div
           css={`
             grid-row: 1 / span 1;

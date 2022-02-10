@@ -112,13 +112,15 @@ const About = ({ data }) => {
 
         <Section id="about-image">
           <SectionContent columns={[1, 12]}>
-            <GatsbyImage
-              image={data.bodyImage.nasaImg.childImageSharp.gatsbyImageData}
-              css={`
-                max-height: 400px;
-              `}
-              alt={data.bodyImage.nasaImgAlt}
-            />
+            {data.bodyImage.nasaImg && (
+              <GatsbyImage
+                image={data.bodyImage.nasaImg.childImageSharp.gatsbyImageData}
+                css={`
+                  max-height: 400px;
+                `}
+                alt={data.bodyImage.nasaImgAlt}
+              />
+            )}
           </SectionContent>
         </Section>
 
