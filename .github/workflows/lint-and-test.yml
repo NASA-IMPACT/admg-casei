@@ -6,6 +6,9 @@ jobs:
   lint:
     runs-on: ubuntu-latest
 
+    env:
+      NODE_ENV: test
+
     steps:
       - name: Cancel Previous Runs
         uses: styfle/cancel-workflow-action@0.8.0
@@ -43,6 +46,9 @@ jobs:
 
   test:
     runs-on: ubuntu-latest
+
+    env:
+      NODE_ENV: test
 
     steps:
       - name: Checkout
