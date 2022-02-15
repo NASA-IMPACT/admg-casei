@@ -10,118 +10,101 @@ const { createRemoteFileNode } = require("gatsby-source-filesystem")
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions
   const typeDefs = `
-    type campaign implements Node {
-      aliases: [alias] @link
-      deployments: [deployment] @link
-      dois: [doi] @link
-      focus_areas: [focus_area] @link
-      geophysical_concepts: [geophysical_concept] @link
-      instruments: [instrument] @link
-      iops: [iop] @link
-      partner_orgs: [partner_org] @link
-      platform_types: [platform_type] @link
-      platforms: [platform] @link
-      repositories: [repository] @link
-      seasons: [season] @link
-      significant_events: [significant_event] @link
-      websites: [website] @link
-      logo: image @link
-    }
-    type collection_period implements Node {
-      dois: [doi] @link
-    }
-    type deployment implements Node {
-      collection_periods: [collection_period] @link
-      geographical_regions: [geographical_region] @link
-      iops: [iop] @link
-      significant_events: [significant_event] @link
-    }
-    type doi implements Node {
-      cmr_entry_title: String
-      doi: String
-      long_name: String
-      campaigns: [campaign] @link
-      instruments: [instrument] @link
-      platforms: [platform] @link
-    }
-    type focus_area implements Node {
-      campaigns: [campaign] @link
-    }
-    type geographical_region implements Node {
-      order_priority: String
-      image: NasaImagesJson @link(by: "shortname", from: "short_name")
-    }
-    type instrument implements Node {
-      campaigns: [campaign] @link
-      gcmd_phenomenas: [gcmd_phenomena] @link
-      image: image @link
-      measurement_type: measurement_type @link
-      measurement_regions: [measurement_region] @link
-      platforms: [platform] @link
-      repositories: [repository] @link
-      dois: [doi] @link
-    }
-    type platform implements Node {
-      campaigns: [campaign] @link
-      image: image @link
-      instruments: [instrument] @link
-      dois: [doi] @link
-      platform_type: platform_type @link
-    }
-    type website implements Node {
-      website_type: website_type @link
-    }
-    type NasaImagesJson implements Node {
-      nasaImg: File @link(from: "nasaImg___NODE")
-    }
-  `
+     type campaign implements Node {
+       aliases: [alias] @link
+       deployments: [deployment] @link
+       dois: [doi] @link
+       focus_areas: [focus_area] @link
+       geophysical_concepts: [geophysical_concept] @link
+       instruments: [instrument] @link
+       iops: [iop] @link
+       partner_orgs: [partner_org] @link
+       platform_types: [platform_type] @link
+       platforms: [platform] @link
+       repositories: [repository] @link
+       seasons: [season] @link
+       significant_events: [significant_event] @link
+       websites: [website] @link
+       logo: image @link
+     }
+     type collection_period implements Node {
+       dois: [doi] @link
+     }
+     type deployment implements Node {
+       collection_periods: [collection_period] @link
+       geographical_regions: [geographical_region] @link
+       iops: [iop] @link
+       significant_events: [significant_event] @link
+     }
+     type doi implements Node {
+       cmr_entry_title: String
+       doi: String
+       long_name: String
+       campaigns: [campaign] @link
+       instruments: [instrument] @link
+       platforms: [platform] @link
+     }
+     type focus_area implements Node {
+       campaigns: [campaign] @link
+     }
+     type geographical_region implements Node {
+       order_priority: String
+       image: NasaImagesJson @link(by: "shortname", from: "short_name")
+     }
+     type instrument implements Node {
+       campaigns: [campaign] @link
+       gcmd_phenomenas: [gcmd_phenomena] @link
+       image: image @link
+       measurement_type: measurement_type @link
+       measurement_regions: [measurement_region] @link
+       platforms: [platform] @link
+       repositories: [repository] @link
+       dois: [doi] @link
+     }
+     type platform implements Node {
+       campaigns: [campaign] @link
+       image: image @link
+       instruments: [instrument] @link
+       dois: [doi] @link
+       platform_type: platform_type @link
+     }
+     type website implements Node {
+       website_type: website_type @link
+     }
+     type NasaImagesJson implements Node {
+      gatsbyImg: File @link(from: "fields.gatsbyImg")
+     }
+     type image implements Node {
+      gatsbyImg: File @link(from: "fields.gatsbyImg")
+     }
+   `
 
   createTypes(typeDefs)
 }
 
 exports.onCreateNode = async ({
   node,
-  actions: { createNode },
-  store,
-  cache,
+  actions: { createNode, createNodeField },
   createNodeId,
+  getCache,
 }) => {
-  if (node.internal.type === "NasaImagesJson" && !!node.nasaImgUrl) {
-    try {
-      let fileNode = await createRemoteFileNode({
-        url: node.nasaImgUrl, // string that points to the URL of the image
-        parentNodeId: node.id, // id of the parent node of the fileNode you are going to create
-        createNode, // helper function in gatsby-node to generate the node
-        createNodeId, // helper function in gatsby-node to generate the node id
-        cache, // Gatsby's cache
-        store, // Gatsby's redux store
-      })
-
-      // if the file was created, attach the new node (=File) to the parent node (=NasaImagesJson)
-      if (fileNode) {
-        node.nasaImg___NODE = fileNode.id
-      }
-    } catch (error) {
-      console.log(error)
-    }
-  }
-
-  if (node.internal.type === "image") {
+  if (
+    node.internal.type === "image" ||
+    (node.internal.type === "NasaImagesJson" && node.image !== null)
+  ) {
     if (node.image.includes(".gif")) return // .gif format breaks gatsby build
 
     try {
-      let fileNode = await createRemoteFileNode({
+      const fileNode = await createRemoteFileNode({
         url: node.image, // string that points to the URL of the image
         parentNodeId: node.id, // id of the parent node of the fileNode you are going to create
         createNode, // helper function in gatsby-node to generate the node
         createNodeId, // helper function in gatsby-node to generate the node id
-        cache, // Gatsby's cache
-        store, // Gatsby's redux store
+        getCache,
       })
-
-      // if the file was created, attach the new node (=File) to the parent node (=image)
+      // if the file was created, extend the node with "localFile"
       if (fileNode) {
-        node.gatsbyImg___NODE = fileNode.id
+        createNodeField({ node, name: "gatsbyImg", value: fileNode.id })
       }
     } catch (error) {
       console.log(error)
