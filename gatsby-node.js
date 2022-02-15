@@ -31,6 +31,8 @@ exports.createSchemaCustomization = ({ actions }) => {
       dois: [doi] @link
     }
     type deployment implements Node {
+      aliases: [alias] @link
+      campaign: campaign @link
       collection_periods: [collection_period] @link
       geographical_regions: [geographical_region] @link
       iops: [iop] @link

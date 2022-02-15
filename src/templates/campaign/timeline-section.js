@@ -57,11 +57,6 @@ export const deploymentFields = graphql`
       collectionPeriods: collection_periods {
         id
       }
-      regions: geographical_regions {
-        longname: long_name
-      }
-      campaign
-      longname: long_name
       end: end_date
       start: start_date
       events: significant_events {
