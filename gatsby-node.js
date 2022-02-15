@@ -31,11 +31,13 @@ exports.createSchemaCustomization = ({ actions }) => {
        dois: [doi] @link
      }
      type deployment implements Node {
-       collection_periods: [collection_period] @link
-       geographical_regions: [geographical_region] @link
-       iops: [iop] @link
-       significant_events: [significant_event] @link
-     }
+      aliases: [alias] @link
+      campaign: campaign @link
+      collection_periods: [collection_period] @link
+      geographical_regions: [geographical_region] @link
+      iops: [iop] @link
+      significant_events: [significant_event] @link
+    }
      type doi implements Node {
        cmr_entry_title: String
        doi: String
@@ -77,7 +79,7 @@ exports.createSchemaCustomization = ({ actions }) => {
      type image implements Node {
       gatsbyImg: File @link(from: "fields.gatsbyImg")
      }
-   `
+  `
 
   createTypes(typeDefs)
 }

@@ -10,6 +10,7 @@ import { useChartDimensions } from "../../utils/use-chart-dimensions"
 import { occlusion } from "./occlusion"
 import { Deployment } from "./deployment"
 import { ScrollShadow } from "./scroll-shadow"
+import { Details } from "./details"
 
 const chartSettings = {
   marginTop: 1,
@@ -48,6 +49,8 @@ export const TimelineChart = ({ deployments }) => {
   const isFirstRun = useRef(true)
   const [count, setCount] = useState(1)
   const [priority, setPriority] = useState({})
+  const [focussedDeployment, setFocussedDeployment] = useState(null)
+  const [xPosition, setXPosition] = useState(null)
 
   useEffect(() => {
     //wait for first render to get correct measures
@@ -65,6 +68,16 @@ export const TimelineChart = ({ deployments }) => {
     setCount(prev => prev + 1)
 
     setPriority(prev => ({ ...prev, [id]: count }))
+  }
+
+  const updateFocus = (id, xPosition) => {
+    setFocussedDeployment(id)
+    setXPosition(xPosition)
+  }
+
+  const clearFocus = () => {
+    setFocussedDeployment(null)
+    setXPosition(null)
   }
 
   const scrollRef = useRef()
@@ -104,8 +117,22 @@ export const TimelineChart = ({ deployments }) => {
             overflow: hidden;
             overflow-x: scroll;
             -webkit-overflow-scrolling: touch;
+            position: static;
+            isolation: isolate; /* z-index on Details */
           `}
         >
+          {focussedDeployment && (
+            <Details
+              xPosition={
+                xPosition +
+                chartSettings.marginLeft -
+                scrollRef.current.scrollLeft
+              }
+              yPosition={dms.boundedHeight - 80}
+              id={focussedDeployment}
+              close={clearFocus}
+            />
+          )}
           <svg // scrollable chart
             className="scrollable"
             width={range[1] + chartSettings.paddingX * 2}
@@ -134,6 +161,9 @@ export const TimelineChart = ({ deployments }) => {
                   }}
                   yPosition={dms.boundedHeight - 20}
                   priority={priority[id] || 0}
+                  isFocussed={focussedDeployment === id}
+                  isAnyFocussed={!!focussedDeployment}
+                  updateFocus={updateFocus}
                 />
               ))}
 
