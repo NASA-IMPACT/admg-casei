@@ -112,10 +112,10 @@ export const RegionCarousel = ({ regions }) => {
               >
                 {region.shortname}
               </div>
-              <span>
-                {region.image ? region.image.nasaImgAlt : "No image available."}
-              </span>
             </Link>
+            <span>
+              {region.image ? region.image.nasaImgAlt : "No image available."}
+            </span>
           </React.Fragment>
         ))}
       </Carousel>
