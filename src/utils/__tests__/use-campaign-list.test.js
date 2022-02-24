@@ -170,6 +170,6 @@ describe("use campaign list", () => {
     const campaignList = result.current
 
     expect(campaignList.filtered.length).toBeLessThan(list.length)
-    expect(campaignList.filtered.length).toBeGreaterThan(1)
+    expect(campaignList.filtered.length).toBeGreaterThan(6)
   })
 })
