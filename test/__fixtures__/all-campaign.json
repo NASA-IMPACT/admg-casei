@@ -1,0 +1,2656 @@
+{
+  "nodes": [
+    {
+      "logo": null,
+      "ongoing": true,
+      "shortname": "Aeolus Cal/Val",
+      "longname": "NASA Aeolus Calibration/Validation Test Flight Campaign",
+      "startdate": "2019-04-17",
+      "enddate": "2019-04-30",
+      "region": "Eastern Pacific Ocean",
+      "deployments": [
+        {
+          "id": "30ebf313-e84c-4c56-bb1a-ebaaa42968e8",
+          "startdate": "2019-04-17",
+          "enddate": "2019-04-30"
+        }
+      ],
+      "countDataProducts": 4
+    },
+    {
+      "logo": {
+        "description": "ACEPOL logo",
+        "gatsbyImg": {
+          "childImageSharp": {
+            "gatsbyImageData": {
+              "layout": "constrained",
+              "placeholder": {
+                "fallback": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAC4jAAAuIwF4pT92AAAFv0lEQVQ4yyWUe0xb9xXHT2BNVJIlytQ2m7q0m7ZIy5p2U7Vm61pCB0vbZG3WNGlZurFSQsfDBuPn9ROwDebh9732vTbGjhMoJRAocQLGhmAabEPS7FFFaTpVXaZt6jR1+6NSJm27+PedIP9/z/d8vtL5Hjpc7yJ67DYRgfLJ/eWvK5wEEJ1U9Ff1OV4LxAarb4x4n/482vfjf0b6fvJhwHVcqlN1v7ChaVTr6b8LZWX0wL+pvGqejjV2EdGBj4nKQbhLW1JDz9FPG/inogOHl5ejX8NqtALXYvfjw3M7UUx8FdcTu7E6VIFcZA9G/FUfvPwbV82tyX2bAPTETaqomaVNMtylsjsX95La2NZ8KbQfV8PbMCs9XopH1HKXP14yeCdZh3mQvdVuLfECJ0/yB9cL0lYUEo/CbG204hbdM33kX0RXz3y3fFKsoTZDe3NWfBQr0nbwgQ5ZH8iyWsMEqt4MsH1HnOzEKQ07bUgwDV+AUVhi3oBFzkd3sZXYHnDmxs5bE98kLFEZva7ooeoG4Qdp6TvIR7bDHXStq3x5qH3zzORLsAajD7XaJJQ976JTysIaSjMjP890wiqcQbG0LO0u5eOP4GSr/YhSr7qHGhl4Prca3bpJpvIXoPdfYhrvLHpiWTiHl9ATX4ZnpADPyAq6o1dgCWfRKaaZPrSGAX+3vBE/6Tl0kwjlVF3vr8yEv4456UBJ689sbjcJGXB8Fs7AWXiSi+iO5uAfzcM7WoRVXAAXTGNDYxbmmY5fYROhQ/LtsQo0a9UnqLe71nN9uALDUrus5QvggrPMfW4FvrFrsAsXIAwlYI/lwPEZ6Dzvoe9sEf7xG+AnbsARyzFLpAhRtMofje1Br6N+nGKDNWvXh++HxRMv6fklZg5lYOLTMPJpOOIFqI02WJ0udIlz0Fj7YB4YhtElwWQfgM5ohlqnYUoNx1KhH2HYe/QzSnqe+Sw/9BVwvvNMF1hgvncKcJ0pgnNFYXKPQKk14uWXXkBr69tQKU+jtakOiqZfoVXRBJXRAW5wlJmCF9nnl3dgaXg/o0hf5d9Xorth4aeYXlhhxkAKxv44NHrd5rCyuQ6n646jpfEUlKoOKDQcLO44+PFVDIyswTaUZzYxgzvTD7Ls0AFQ0vvcB1/MfQlcT6CktfYzrUYJlbIBHeo2tHW0w9jpBNcrwe7shjD+PjpjBfSeuQrfO0X0xnMwhXPM4Jtkv09+GbGByn+Qr/eV4Lz0PXRZW2SVLQBtT5R1CdMIny/CEc3AJMxBLxah7vRDDLvhdAswOIKwhOdhCmWZms/DE3LJn4yVY9B+bIqq6rzVdy7swh8mD5RafAVmCC0yU/gKnPH30SUtQhtchNqVhMbiQLveCJs7Cp1nGrpgBqZwhnHiGnsvUi3P8w9Codee2jzssWBV8T9pgjdglBXePDj+MtMG5vGKYxanXZdg9qeg96dglpagDy3BLC3DJmWYLnwNoah7fTW6DQF71R+JsI3eUFrp+QZv5ULkWygO7WRWT7ikEdbwtifNKrVTrN40DoM3hTqdhLo2F95otrJfK7qYhi/CFhwtXR3as34x8A3Ud5hPWG2NRB+NP1Q2Ix6kdkOr/jK/F3+5sI0JUrfcNJhjB9WXcdSxwLRCjjUPLDCN9xJTuqbR0ptibmFw/dPJXevZ0EPgTG95Pp3YSfgtlRHdh43YW76YK6cOQwt3892HgUXClbOH1h3+flnnPc+soSlmE1PMFp5hHomXZxLH5f9lCZ9MPoDOzjfduHvvDVLlKhE9u0z02J82TXOJJ+iZX/pqZsQf/m4m9ORGv3FRfAoJ32Esxr+PQnIfUuHHce3sXkyFnv741Sbbq/KV+zbNdhxOb/n28VGiIw0OomeXiLaD/jq9o+xkk2VDsOUXreZjvfbac96en/9Z6Du6Lva/yIKul/7mstdONHZoaomwValtIdymMnryBj38szF6rdlM/wctx5pbMTPx1wAAAABJRU5ErkJggg=="
+              },
+              "images": {
+                "fallback": {
+                  "src": "/static/b9bdbb80bf6ab445a11cfe0b14f19ba3/d6731/7dde7d78-076e-4283-a93a-ac4932109fb2.png",
+                  "srcSet": "/static/b9bdbb80bf6ab445a11cfe0b14f19ba3/9274b/7dde7d78-076e-4283-a93a-ac4932109fb2.png 30w,\n/static/b9bdbb80bf6ab445a11cfe0b14f19ba3/9d5b3/7dde7d78-076e-4283-a93a-ac4932109fb2.png 60w,\n/static/b9bdbb80bf6ab445a11cfe0b14f19ba3/d6731/7dde7d78-076e-4283-a93a-ac4932109fb2.png 120w,\n/static/b9bdbb80bf6ab445a11cfe0b14f19ba3/39f46/7dde7d78-076e-4283-a93a-ac4932109fb2.png 240w",
+                  "sizes": "(min-width: 120px) 120px, 100vw"
+                },
+                "sources": [
+                  {
+                    "srcSet": "/static/b9bdbb80bf6ab445a11cfe0b14f19ba3/d6c2c/7dde7d78-076e-4283-a93a-ac4932109fb2.webp 30w,\n/static/b9bdbb80bf6ab445a11cfe0b14f19ba3/b8ad1/7dde7d78-076e-4283-a93a-ac4932109fb2.webp 60w,\n/static/b9bdbb80bf6ab445a11cfe0b14f19ba3/47534/7dde7d78-076e-4283-a93a-ac4932109fb2.webp 120w,\n/static/b9bdbb80bf6ab445a11cfe0b14f19ba3/bde7b/7dde7d78-076e-4283-a93a-ac4932109fb2.webp 240w",
+                    "type": "image/webp",
+                    "sizes": "(min-width: 120px) 120px, 100vw"
+                  }
+                ]
+              },
+              "width": 120,
+              "height": 120
+            }
+          }
+        }
+      },
+      "ongoing": false,
+      "shortname": "ACEPOL",
+      "longname": "Aerosol Characterization from Polarimeter and Lidar",
+      "startdate": "2017-10-19",
+      "enddate": "2017-11-09",
+      "region": "Western United States",
+      "deployments": [
+        {
+          "id": "6f280cfa-13fe-4912-891f-5be72e644536",
+          "startdate": "2017-10-19",
+          "enddate": "2017-11-09"
+        }
+      ],
+      "countDataProducts": 6
+    },
+    {
+      "logo": {
+        "description": "ACES logo",
+        "gatsbyImg": {
+          "childImageSharp": {
+            "gatsbyImageData": {
+              "layout": "constrained",
+              "placeholder": {
+                "fallback": "data:image/png;base64,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"
+              },
+              "images": {
+                "fallback": {
+                  "src": "/static/3d17ba6135efff1e39e6b4d97157a123/fbb9e/c11c4f40-e60f-4f0c-9948-29b158b93ec6.png",
+                  "srcSet": "/static/3d17ba6135efff1e39e6b4d97157a123/9274b/c11c4f40-e60f-4f0c-9948-29b158b93ec6.png 30w,\n/static/3d17ba6135efff1e39e6b4d97157a123/e212b/c11c4f40-e60f-4f0c-9948-29b158b93ec6.png 61w,\n/static/3d17ba6135efff1e39e6b4d97157a123/fbb9e/c11c4f40-e60f-4f0c-9948-29b158b93ec6.png 121w",
+                  "sizes": "(min-width: 121px) 121px, 100vw"
+                },
+                "sources": [
+                  {
+                    "srcSet": "/static/3d17ba6135efff1e39e6b4d97157a123/d6c2c/c11c4f40-e60f-4f0c-9948-29b158b93ec6.webp 30w,\n/static/3d17ba6135efff1e39e6b4d97157a123/58778/c11c4f40-e60f-4f0c-9948-29b158b93ec6.webp 61w,\n/static/3d17ba6135efff1e39e6b4d97157a123/1e055/c11c4f40-e60f-4f0c-9948-29b158b93ec6.webp 121w",
+                    "type": "image/webp",
+                    "sizes": "(min-width: 121px) 121px, 100vw"
+                  }
+                ]
+              },
+              "width": 121,
+              "height": 120
+            }
+          }
+        }
+      },
+      "ongoing": false,
+      "shortname": "ACES",
+      "longname": "Altus Cumulus Electrification Study",
+      "startdate": "2002-08-02",
+      "enddate": "2002-08-30",
+      "region": "Florida Everglades",
+      "deployments": [
+        {
+          "id": "25fabb57-9090-486e-b585-70dc4c3fb9bf",
+          "startdate": "2002-08-02",
+          "enddate": "2002-08-30"
+        }
+      ],
+      "countDataProducts": 6
+    },
+    {
+      "logo": null,
+      "ongoing": false,
+      "shortname": "AfriSAR",
+      "longname": "",
+      "startdate": "2015-06-30",
+      "enddate": "2016-02-25",
+      "region": "Gabon tropical forests",
+      "deployments": [
+        {
+          "id": "713093ab-b440-47bb-b7e9-79a33deb3d5c",
+          "startdate": "2016-02-03",
+          "enddate": "2016-02-25"
+        }
+      ],
+      "countDataProducts": 11
+    },
+    {
+      "logo": {
+        "description": "ARCTAS Logo 1, ARCTAS Logo 2",
+        "gatsbyImg": {
+          "childImageSharp": {
+            "gatsbyImageData": {
+              "layout": "constrained",
+              "placeholder": {
+                "fallback": "data:image/png;base64,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"
+              },
+              "images": {
+                "fallback": {
+                  "src": "/static/16a8d79d7980aad3e45338142b6d08d2/397bc/304b232a-fe3b-47e7-84d0-296d13fdf10d.png",
+                  "srcSet": "/static/16a8d79d7980aad3e45338142b6d08d2/3ff2f/304b232a-fe3b-47e7-84d0-296d13fdf10d.png 24w,\n/static/16a8d79d7980aad3e45338142b6d08d2/587f3/304b232a-fe3b-47e7-84d0-296d13fdf10d.png 48w,\n/static/16a8d79d7980aad3e45338142b6d08d2/397bc/304b232a-fe3b-47e7-84d0-296d13fdf10d.png 96w,\n/static/16a8d79d7980aad3e45338142b6d08d2/59725/304b232a-fe3b-47e7-84d0-296d13fdf10d.png 192w",
+                  "sizes": "(min-width: 96px) 96px, 100vw"
+                },
+                "sources": [
+                  {
+                    "srcSet": "/static/16a8d79d7980aad3e45338142b6d08d2/c7eac/304b232a-fe3b-47e7-84d0-296d13fdf10d.webp 24w,\n/static/16a8d79d7980aad3e45338142b6d08d2/7564e/304b232a-fe3b-47e7-84d0-296d13fdf10d.webp 48w,\n/static/16a8d79d7980aad3e45338142b6d08d2/efa2f/304b232a-fe3b-47e7-84d0-296d13fdf10d.webp 96w,\n/static/16a8d79d7980aad3e45338142b6d08d2/b59dc/304b232a-fe3b-47e7-84d0-296d13fdf10d.webp 192w",
+                    "type": "image/webp",
+                    "sizes": "(min-width: 96px) 96px, 100vw"
+                  }
+                ]
+              },
+              "width": 96,
+              "height": 120
+            }
+          }
+        }
+      },
+      "ongoing": false,
+      "shortname": "ARCTAS",
+      "longname": "Arctic Research of the Composition of the Troposphere from Aircraft and Satellites",
+      "startdate": "2008-04-01",
+      "enddate": "2008-07-14",
+      "region": "Alaska, Western Canada, California",
+      "deployments": [
+        {
+          "id": "85b0ca1e-a034-4bae-9d44-6c48f7d43477",
+          "startdate": "2008-04-01",
+          "enddate": "2008-04-21"
+        },
+        {
+          "id": "2104163b-c1d5-4e4d-9a55-ab3894195bb5",
+          "startdate": "2008-06-18",
+          "enddate": "2008-06-24"
+        },
+        {
+          "id": "b92f07d5-52fc-44fd-8de6-965282ea88ad",
+          "startdate": "2008-06-26",
+          "enddate": "2008-07-14"
+        }
+      ],
+      "countDataProducts": 5
+    },
+    {
+      "logo": {
+        "description": "ATTREX logo",
+        "gatsbyImg": {
+          "childImageSharp": {
+            "gatsbyImageData": {
+              "layout": "constrained",
+              "placeholder": {
+                "fallback": "data:image/png;base64,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"
+              },
+              "images": {
+                "fallback": {
+                  "src": "/static/ba7ed43aa19989a215bb8aab39f921d0/e43e1/4ca4adb1-e3f7-46f0-97e8-57a3a8786670.png",
+                  "srcSet": "/static/ba7ed43aa19989a215bb8aab39f921d0/6e37b/4ca4adb1-e3f7-46f0-97e8-57a3a8786670.png 25w,\n/static/ba7ed43aa19989a215bb8aab39f921d0/140de/4ca4adb1-e3f7-46f0-97e8-57a3a8786670.png 49w,\n/static/ba7ed43aa19989a215bb8aab39f921d0/e43e1/4ca4adb1-e3f7-46f0-97e8-57a3a8786670.png 98w,\n/static/ba7ed43aa19989a215bb8aab39f921d0/33ed4/4ca4adb1-e3f7-46f0-97e8-57a3a8786670.png 196w",
+                  "sizes": "(min-width: 98px) 98px, 100vw"
+                },
+                "sources": [
+                  {
+                    "srcSet": "/static/ba7ed43aa19989a215bb8aab39f921d0/98077/4ca4adb1-e3f7-46f0-97e8-57a3a8786670.webp 25w,\n/static/ba7ed43aa19989a215bb8aab39f921d0/c06ff/4ca4adb1-e3f7-46f0-97e8-57a3a8786670.webp 49w,\n/static/ba7ed43aa19989a215bb8aab39f921d0/cab80/4ca4adb1-e3f7-46f0-97e8-57a3a8786670.webp 98w,\n/static/ba7ed43aa19989a215bb8aab39f921d0/aeb61/4ca4adb1-e3f7-46f0-97e8-57a3a8786670.webp 196w",
+                    "type": "image/webp",
+                    "sizes": "(min-width: 98px) 98px, 100vw"
+                  }
+                ]
+              },
+              "width": 98,
+              "height": 120
+            }
+          }
+        }
+      },
+      "ongoing": false,
+      "shortname": "ATTREX",
+      "longname": "Airborne Tropical Tropopause Experiment",
+      "startdate": "2011-10-20",
+      "enddate": "2015-03-14",
+      "region": "California, Guam, Tropics",
+      "deployments": [
+        {
+          "id": "f106d4ec-2074-4876-958a-5405c07f5e31",
+          "startdate": "2011-10-20",
+          "enddate": "2011-11-10"
+        },
+        {
+          "id": "2511264d-1780-4abc-9757-f201eddc0e62",
+          "startdate": "2013-01-19",
+          "enddate": "2013-03-02"
+        },
+        {
+          "id": "3dceacfb-c37c-48f4-9d37-c27e0b3b8244",
+          "startdate": "2013-12-20",
+          "enddate": "2014-03-14"
+        },
+        {
+          "id": "0eb57258-532f-4f4a-94ad-7c00e9edcd4c",
+          "startdate": "2015-02-26",
+          "enddate": "2015-03-14"
+        }
+      ],
+      "countDataProducts": 3
+    },
+    {
+      "logo": null,
+      "ongoing": false,
+      "shortname": "CARAFE",
+      "longname": "NASA Carbon Atmospheric Flux Experiment",
+      "startdate": "2016-09-07",
+      "enddate": "2017-05-26",
+      "region": "Eastern United States Coast, Mid-Atlantic Region",
+      "deployments": [
+        {
+          "id": "0fb65a7f-ad5e-4546-b391-0842987eae34",
+          "startdate": "2016-09-07",
+          "enddate": "2016-09-26"
+        },
+        {
+          "id": "99a12867-ff40-4512-8687-23eac7c33efb",
+          "startdate": "2017-05-03",
+          "enddate": "2017-05-26"
+        }
+      ],
+      "countDataProducts": 0
+    },
+    {
+      "logo": null,
+      "ongoing": false,
+      "shortname": "CLASIC07",
+      "longname": "Cloud and Land Surface Interaction Campaign 2007",
+      "startdate": "2007-06-11",
+      "enddate": "2007-07-06",
+      "region": "Southern Great Plains, Oklahoma, Kansas",
+      "deployments": [
+        {
+          "id": "6c82e5bd-c762-4f7b-8994-00da13c25265",
+          "startdate": "2007-06-11",
+          "enddate": "2007-07-06"
+        }
+      ],
+      "countDataProducts": 7
+    },
+    {
+      "logo": null,
+      "ongoing": false,
+      "shortname": "LMOS",
+      "longname": "Lake Michigan Ozone Study",
+      "startdate": "2017-05-22",
+      "enddate": "2017-06-22",
+      "region": "Lake Michigan",
+      "deployments": [
+        {
+          "id": "589293e3-2f1f-4cf4-af85-36ef49547e8e",
+          "startdate": "2017-05-22",
+          "enddate": "2017-06-22"
+        }
+      ],
+      "countDataProducts": 14
+    },
+    {
+      "logo": {
+        "description": "CARVE logo",
+        "gatsbyImg": {
+          "childImageSharp": {
+            "gatsbyImageData": {
+              "layout": "constrained",
+              "placeholder": {
+                "fallback": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAAAsTAAALEwEAmpwYAAAEoUlEQVQ4y43TW2yTBRgG4LfrQHahRo03khCIBKIkegUR46ZM4kBQFBkCc+xAu/N53di6HrZ2XdttXena0XPX9u/fjnaH0nXdqVuHmXMKmikSCcTDsgTjDQkhMYR2/2c2L4yHGN/ku31uvvcF/haTxQ211gCHxQoiQktNLUrFDpSJLZgdsYIdjmH157vwB8fwvzLoZtCpNcDpcm6Ceaff41dJ7Hk1Uutx8+XiNLX9avroyhpEej/cbOS/sehEDB29tk1o46LR6Qo3G1k0++fI6pukoWDkutPu3L04OYphv5+3S3QNIlHTv2MejxdK5zxWhnpRFn7AyzOvwMJEpvuYGfJfGXtssvlTBnae9JZAaad5GHLz1fTz6nGYAnPIyMj4J2j3T6H3cgh1vSN8kTaAdp03+5NLifVsoYrbtvWJ9R07dq3nNNrpXO/MQ4vRsUdv9KHDNJIWZIfgH574KzY6FkGR+SZM1gBvVFYLf8GbGRJm+U61cYK2v7A9lZWZSdu2bqGnn3k+WWlO0EXHQnxLgoAQIeiywzXxLZRK5Z+gNzSJXPkkxIFv+LLQLWiYhEo39SPlCRsfH//wYxKePsudyy/kCooFnNEXTRriq6SyRYtkjnkoPIt8ZmgGA87gH1g4HAZOzqPfO8lT673QG5y7jfG135i52zS1sLQeGJ/nfM3tnKnPzWlso9Qs1aeUzDJZEmurktwjT+qa6uFirvIGx5Zw4MAB4Fz+BQAMVHMP+P1fE/oj3zmM8/foaHFTcufhM/TS/kyu+tWXKT/7IB19/xB36MhrVN0mfuz68iHprnze2h39AdrwbX50YhG+0AwwFruOfvcET633QN0zsMe+8Msj5WCQdr6Vxe098jZXc+YgOcuyyNOYQ2zLB5yvs4CziY6t671TZJpbW9MLP3pqQC4DeyXGi8/NAUuffY823w2+PHgTKuaapidyi7JO5Sf35WRRSctRrrzhBCm6BCStP0HKhlzq61ZwVkUhZ7RrktrIHVK7YhdabHE0W2f5N65/CkSjcdwPqnFP/voWqWfx1nmZlV7cvy9VcPFdrkF7iivRirgaSzdXYVRzlfp2rtGk4ro99ZxnRJoUO2LU5pifFoQfoTL8Ky8cDgLiXl9a1yUf1PrBV05IWDpWr6MCsSDVbSxNdRqKkj3OuqSRUSY7rG3J/oA1yUQ9yRpNSco74kkJtUOUXWe/v/7TynOrX32BsfEEDzK9jxcKRRGLzjz7hqAnUdbJUoM6REKpmyo7Bqmlx0dNag81qpwk6WOpWslSuZyhRm2QcptslCnoYYmIvzHV4fAMUK9hINf5eBrT0OZ+86u69lZIB47VdTgEZW02UaXcKS+TOJVlEpeypsMlK201N5a3mYuq2s3v1Lb27dqo3t3lG1iIJeDf+HJrXwAKPQudOcjbAE8KVcgp6kLhRSuKW5xo6GRRq2BRp2DRrGFR2GzBqcpLOFyogqBBt9nl20vLiI/HERydBYTCElTIXGjqYmB0DCOvwcATii1pVXIHv1xiT6/vdKfXKtzpNR2D6SK1J71CaueXiK38C2JLWr6on+f1j8NgDkHW7cXU9Cx+B7RceYW80tkcAAAAAElFTkSuQmCC"
+              },
+              "images": {
+                "fallback": {
+                  "src": "/static/b3225ddde77639b3e07a3cf470a9aa33/027dc/af319fc4-f814-48e3-babe-e6ca2987947e.png",
+                  "srcSet": "/static/b3225ddde77639b3e07a3cf470a9aa33/c9f5d/af319fc4-f814-48e3-babe-e6ca2987947e.png 36w,\n/static/b3225ddde77639b3e07a3cf470a9aa33/eb3e1/af319fc4-f814-48e3-babe-e6ca2987947e.png 71w,\n/static/b3225ddde77639b3e07a3cf470a9aa33/027dc/af319fc4-f814-48e3-babe-e6ca2987947e.png 142w,\n/static/b3225ddde77639b3e07a3cf470a9aa33/4bb1d/af319fc4-f814-48e3-babe-e6ca2987947e.png 284w",
+                  "sizes": "(min-width: 142px) 142px, 100vw"
+                },
+                "sources": [
+                  {
+                    "srcSet": "/static/b3225ddde77639b3e07a3cf470a9aa33/665ed/af319fc4-f814-48e3-babe-e6ca2987947e.webp 36w,\n/static/b3225ddde77639b3e07a3cf470a9aa33/9ecfe/af319fc4-f814-48e3-babe-e6ca2987947e.webp 71w,\n/static/b3225ddde77639b3e07a3cf470a9aa33/40534/af319fc4-f814-48e3-babe-e6ca2987947e.webp 142w,\n/static/b3225ddde77639b3e07a3cf470a9aa33/c5cbc/af319fc4-f814-48e3-babe-e6ca2987947e.webp 284w",
+                    "type": "image/webp",
+                    "sizes": "(min-width: 142px) 142px, 100vw"
+                  }
+                ]
+              },
+              "width": 142,
+              "height": 120
+            }
+          }
+        }
+      },
+      "ongoing": false,
+      "shortname": "CARVE",
+      "longname": "Carbon in Arctic Reservoirs Vulnerability Experiment",
+      "startdate": "2012-05-23",
+      "enddate": "2015-11-12",
+      "region": "Alaska",
+      "deployments": [
+        {
+          "id": "a463b0ba-f344-46bf-8ba7-4d05b99c94d0",
+          "startdate": "2012-05-23",
+          "enddate": "2012-10-30"
+        },
+        {
+          "id": "be268d12-ba8b-4bec-8647-0bc4873a5726",
+          "startdate": "2013-02-05",
+          "enddate": "2013-11-25"
+        },
+        {
+          "id": "30ac7dff-0c00-4cde-a77b-8602c183b895",
+          "startdate": "2014-02-13",
+          "enddate": "2014-11-09"
+        },
+        {
+          "id": "11e87b1a-dfdf-463c-bcbf-10b49e8202f4",
+          "startdate": "2015-02-10",
+          "enddate": "2015-11-12"
+        }
+      ],
+      "countDataProducts": 26
+    },
+    {
+      "logo": {
+        "description": "DC3 Logo",
+        "gatsbyImg": {
+          "childImageSharp": {
+            "gatsbyImageData": {
+              "layout": "constrained",
+              "placeholder": {
+                "fallback": "data:image/png;base64,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"
+              },
+              "images": {
+                "fallback": {
+                  "src": "/static/c566f0db523525874c608cdace0d5c91/d6731/e30543cf-59eb-40da-814c-61a4c61f253e.png",
+                  "srcSet": "/static/c566f0db523525874c608cdace0d5c91/9274b/e30543cf-59eb-40da-814c-61a4c61f253e.png 30w,\n/static/c566f0db523525874c608cdace0d5c91/9d5b3/e30543cf-59eb-40da-814c-61a4c61f253e.png 60w,\n/static/c566f0db523525874c608cdace0d5c91/d6731/e30543cf-59eb-40da-814c-61a4c61f253e.png 120w",
+                  "sizes": "(min-width: 120px) 120px, 100vw"
+                },
+                "sources": [
+                  {
+                    "srcSet": "/static/c566f0db523525874c608cdace0d5c91/d6c2c/e30543cf-59eb-40da-814c-61a4c61f253e.webp 30w,\n/static/c566f0db523525874c608cdace0d5c91/b8ad1/e30543cf-59eb-40da-814c-61a4c61f253e.webp 60w,\n/static/c566f0db523525874c608cdace0d5c91/47534/e30543cf-59eb-40da-814c-61a4c61f253e.webp 120w",
+                    "type": "image/webp",
+                    "sizes": "(min-width: 120px) 120px, 100vw"
+                  }
+                ]
+              },
+              "width": 120,
+              "height": 120
+            }
+          }
+        }
+      },
+      "ongoing": false,
+      "shortname": "DC3",
+      "longname": "Deep Convective Clouds & Chemistry",
+      "startdate": "2012-05-18",
+      "enddate": "2012-06-30",
+      "region": "Northeastern Colorado, West Texas to Central Oklahoma, Northern Alabama",
+      "deployments": [
+        {
+          "id": "66cadfa8-7108-4772-9127-3e5afa693e4c",
+          "startdate": "2012-05-18",
+          "enddate": "2012-06-30"
+        }
+      ],
+      "countDataProducts": 19
+    },
+    {
+      "logo": {
+        "description": "DISCOVER-AQ Banner",
+        "gatsbyImg": {
+          "childImageSharp": {
+            "gatsbyImageData": {
+              "layout": "constrained",
+              "placeholder": {
+                "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAEABQDASIAAhEBAxEB/8QAFwABAAMAAAAAAAAAAAAAAAAAAAIDBf/EABUBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAAHTiBYJr//EABcQAAMBAAAAAAAAAAAAAAAAAAABMQL/2gAIAQEAAQUC3FD/xAAVEQEBAAAAAAAAAAAAAAAAAAABEP/aAAgBAwEBPwFn/8QAFREBAQAAAAAAAAAAAAAAAAAAARD/2gAIAQIBAT8BJ//EABgQAAIDAAAAAAAAAAAAAAAAAAABECEx/9oACAEBAAY/AtFbj//EABkQAAIDAQAAAAAAAAAAAAAAAAERABAhYf/aAAgBAQABPyEC2hH5Vf/aAAwDAQACAAMAAAAQh9//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/EB//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAZEAEBAAMBAAAAAAAAAAAAAAABEQAhQaH/2gAIAQEAAT8QQ5MccG4lC1H2YrqvM//Z"
+              },
+              "images": {
+                "fallback": {
+                  "src": "/static/e6b2689e0cce5f7a0ca0a99a9611bfec/d172f/95236432-c417-4381-8446-21a21e7d3dcb.jpg",
+                  "srcSet": "/static/e6b2689e0cce5f7a0ca0a99a9611bfec/90c28/95236432-c417-4381-8446-21a21e7d3dcb.jpg 156w,\n/static/e6b2689e0cce5f7a0ca0a99a9611bfec/d38e3/95236432-c417-4381-8446-21a21e7d3dcb.jpg 312w,\n/static/e6b2689e0cce5f7a0ca0a99a9611bfec/d172f/95236432-c417-4381-8446-21a21e7d3dcb.jpg 624w",
+                  "sizes": "(min-width: 624px) 624px, 100vw"
+                },
+                "sources": [
+                  {
+                    "srcSet": "/static/e6b2689e0cce5f7a0ca0a99a9611bfec/6032f/95236432-c417-4381-8446-21a21e7d3dcb.webp 156w,\n/static/e6b2689e0cce5f7a0ca0a99a9611bfec/c99d8/95236432-c417-4381-8446-21a21e7d3dcb.webp 312w,\n/static/e6b2689e0cce5f7a0ca0a99a9611bfec/400c9/95236432-c417-4381-8446-21a21e7d3dcb.webp 624w",
+                    "type": "image/webp",
+                    "sizes": "(min-width: 624px) 624px, 100vw"
+                  }
+                ]
+              },
+              "width": 624,
+              "height": 120
+            }
+          }
+        }
+      },
+      "ongoing": false,
+      "shortname": "DISCOVER-AQ",
+      "longname": "Deriving Information on Surface Conditions from COlumn and VERtically Resolved Observations Relevant to Air Quality",
+      "startdate": "2011-06-27",
+      "enddate": "2014-08-16",
+      "region": "Baltimore MD, San Joaquin Valley CA, Houston TX, Denver CO",
+      "deployments": [
+        {
+          "id": "453b6835-4bfc-4590-b880-dddea9c06654",
+          "startdate": "2011-06-27",
+          "enddate": "2011-07-31"
+        },
+        {
+          "id": "5b43829f-13a2-4daa-8491-342858123084",
+          "startdate": "2013-01-16",
+          "enddate": "2013-02-11"
+        },
+        {
+          "id": "300e2273-9294-47eb-b788-ce99eacb0e6a",
+          "startdate": "2013-09-01",
+          "enddate": "2013-10-01"
+        },
+        {
+          "id": "c0a63609-64a8-4c57-8257-af21c24d0046",
+          "startdate": "2014-07-16",
+          "enddate": "2014-08-16"
+        }
+      ],
+      "countDataProducts": 12
+    },
+    {
+      "logo": {
+        "description": "FIFE Logo",
+        "gatsbyImg": {
+          "childImageSharp": {
+            "gatsbyImageData": {
+              "layout": "constrained",
+              "placeholder": {
+                "fallback": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAAAsTAAALEwEAmpwYAAAD/UlEQVQ4y4WSaUyTBxjH/29byiVUOspNaUvLW2ihLQXacTlgA2uFKaDjPsoNzoPDchlSZdBoAHUeDGIc0YyEmDm2eUGyJZJsCca4YbKETbb4aVnc8UEDG7TvsxTdpy3Z/+OTPL/88jx/4D8SEaP0CRRLQnh8oQxgpACjBvhRAF/KF3hFCgT8YB+hIBD/E0YsCRV5+wVEAxAB8PEMjZEQSoMgUYggAeAPwA+AmA9EefHBMjyeGGD+BQsU7RTLXoG8W7v7ze+0dfVbKttu5pY0rmRYq9fMb5X+lGYueHygxHZHG6edxA6FCdgpAhg5AKVn7x9YsK+fvw6A1+i5ybhDzo/m82oc7rS37ZRkOU7afDvp9gySdvcAGfKPUbKlm8osOeQs8iWDPOhTfyFfCwbBDMB6WAgQiaREhNn5ef35uS/+qHNcJ/vYHHdp9u7m0PglV351v0tT0Os27+93pxQedxmsva6cokNbYy153N7icopQGTbkQcwuQCTk8ZjIbUUP8MNbXy0fPnuTbi3/8Oc3T3/nHqz9wj38/ik3OHaFK6gboeGJKWrrcXDD45e55h4nNQ1c5HSVE38ZK0coPDz8R5UIPp4D45OFBVy/MRc1s/BoK2/gc3duzxyX8e4Ml9E2xWVXDVHygZNUePg85dhOUWPfOFkahqi85wJX1enkEuunKGdw0RUTb6RgIcxi3is7IhI2d9pXzQePUsq+zs0sazulWVpJmlXHqSzt3C5rC2VbW0ht6SCt9Rin33uUkot7yVjcu2WqcFCEVPFc4o1wsQCAIVXP0xkTESQSFKnjZaRkWRqxJ299e1fvamo1uC3pCvfSQX/ufokvl6Fl3apYnTteoXGxsYlb8bFqYhUqiomO7pJGSiGLkvG2DZPT0z2yUKmS8o35yasddhNNT2dQlS2VstIS6PZQLN05o6bUFA3pzYlkeF1LOpOGtPr4X9VsXFNoSDAiVCFI0iYAu/Pyth8TFhbGC5GIgUy5LyNW1RclSWc7sqUrfXnRP19ukLv22YxkKjc8Sy9jVzMrdJ9llWiPQMEEmWShSInyZQKUcrCxUkDFKtDfWMd0NTWgtbZa42yue3ih3fb1aIXl5FVdQOGVzLDmcrWXAQFg2/L1NU8eLxeVJiTahhyjt1cmJ5Z6AGs/gIvxUTxWqXzZ7KGGWt5gazN6WpoSnTVlvzlrK56dyU2ic3GvkV0dS1W1to+XRuzX5mqLnz+anqDhN0w0MDC4/uD90247UG4HcJaN4G9svHgJ1Nz7EvWb6yhde8JgT4U3xolxaBSVI5FBJ06/mXH12oluWnR00o0jdYvf3b93aqZif3elTin54L0+Ubt0h7AlzAvdaXFYX3+BvwF0oHU0aaRC4AAAAABJRU5ErkJggg=="
+              },
+              "images": {
+                "fallback": {
+                  "src": "/static/09f45811e54534f6f99642cd0b6bac76/8bcec/d46b0475-5443-4f8c-972d-66f6849500be.png",
+                  "srcSet": "/static/09f45811e54534f6f99642cd0b6bac76/b62a8/d46b0475-5443-4f8c-972d-66f6849500be.png 43w,\n/static/09f45811e54534f6f99642cd0b6bac76/9d360/d46b0475-5443-4f8c-972d-66f6849500be.png 87w,\n/static/09f45811e54534f6f99642cd0b6bac76/8bcec/d46b0475-5443-4f8c-972d-66f6849500be.png 173w,\n/static/09f45811e54534f6f99642cd0b6bac76/84663/d46b0475-5443-4f8c-972d-66f6849500be.png 346w",
+                  "sizes": "(min-width: 173px) 173px, 100vw"
+                },
+                "sources": [
+                  {
+                    "srcSet": "/static/09f45811e54534f6f99642cd0b6bac76/0c70f/d46b0475-5443-4f8c-972d-66f6849500be.webp 43w,\n/static/09f45811e54534f6f99642cd0b6bac76/681e5/d46b0475-5443-4f8c-972d-66f6849500be.webp 87w,\n/static/09f45811e54534f6f99642cd0b6bac76/0e177/d46b0475-5443-4f8c-972d-66f6849500be.webp 173w,\n/static/09f45811e54534f6f99642cd0b6bac76/d181c/d46b0475-5443-4f8c-972d-66f6849500be.webp 346w",
+                    "type": "image/webp",
+                    "sizes": "(min-width: 173px) 173px, 100vw"
+                  }
+                ]
+              },
+              "width": 173,
+              "height": 120
+            }
+          }
+        }
+      },
+      "ongoing": false,
+      "shortname": "FIFE",
+      "longname": "First International Satellite Land Surface Climatology Project (ISLSCP) Field Experiment",
+      "startdate": "1987-05-26",
+      "enddate": "1989-08-12",
+      "region": "Central Kansas",
+      "deployments": [
+        {
+          "id": "f7e61bac-9a60-418e-81e8-0e6e060790fc",
+          "startdate": "1987-05-26",
+          "enddate": "1987-10-16"
+        },
+        {
+          "id": "56f8569c-946b-48e7-8e14-f9ecd30f9296",
+          "startdate": "1989-07-24",
+          "enddate": "1989-08-12"
+        }
+      ],
+      "countDataProducts": 101
+    },
+    {
+      "logo": {
+        "description": "ACT-America logo",
+        "gatsbyImg": {
+          "childImageSharp": {
+            "gatsbyImageData": {
+              "layout": "constrained",
+              "placeholder": {
+                "fallback": "data:image/png;base64,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"
+              },
+              "images": {
+                "fallback": {
+                  "src": "/static/7439a7d21e764b2eb9ac51bc340da7d7/d6731/a610fe36-cff8-422f-a1ba-b0d7759fe1ef.png",
+                  "srcSet": "/static/7439a7d21e764b2eb9ac51bc340da7d7/9274b/a610fe36-cff8-422f-a1ba-b0d7759fe1ef.png 30w,\n/static/7439a7d21e764b2eb9ac51bc340da7d7/9d5b3/a610fe36-cff8-422f-a1ba-b0d7759fe1ef.png 60w,\n/static/7439a7d21e764b2eb9ac51bc340da7d7/d6731/a610fe36-cff8-422f-a1ba-b0d7759fe1ef.png 120w,\n/static/7439a7d21e764b2eb9ac51bc340da7d7/39f46/a610fe36-cff8-422f-a1ba-b0d7759fe1ef.png 240w",
+                  "sizes": "(min-width: 120px) 120px, 100vw"
+                },
+                "sources": [
+                  {
+                    "srcSet": "/static/7439a7d21e764b2eb9ac51bc340da7d7/d6c2c/a610fe36-cff8-422f-a1ba-b0d7759fe1ef.webp 30w,\n/static/7439a7d21e764b2eb9ac51bc340da7d7/b8ad1/a610fe36-cff8-422f-a1ba-b0d7759fe1ef.webp 60w,\n/static/7439a7d21e764b2eb9ac51bc340da7d7/47534/a610fe36-cff8-422f-a1ba-b0d7759fe1ef.webp 120w,\n/static/7439a7d21e764b2eb9ac51bc340da7d7/bde7b/a610fe36-cff8-422f-a1ba-b0d7759fe1ef.webp 240w",
+                    "type": "image/webp",
+                    "sizes": "(min-width: 120px) 120px, 100vw"
+                  }
+                ]
+              },
+              "width": 120,
+              "height": 120
+            }
+          }
+        }
+      },
+      "ongoing": false,
+      "shortname": "ACT-America",
+      "longname": "Atmospheric Carbon and Transport – America",
+      "startdate": "2016-05-27",
+      "enddate": "2019-07-27",
+      "region": "Midwest, Mid-Atlantic, Southern US",
+      "deployments": [
+        {
+          "id": "2c8cbab6-a73e-4640-b89a-ee3ad74b9f5d",
+          "startdate": "2016-07-18",
+          "enddate": "2016-08-29"
+        },
+        {
+          "id": "426a986e-fae2-4296-8cd4-34da0b14f72a",
+          "startdate": "2017-01-31",
+          "enddate": "2017-03-10"
+        },
+        {
+          "id": "1e3116b0-b1f0-4678-9dbd-6644e352c6c2",
+          "startdate": "2017-10-03",
+          "enddate": "2017-11-13"
+        },
+        {
+          "id": "9c43b1d1-b104-4683-9b8b-a680e45f2931",
+          "startdate": "2018-04-12",
+          "enddate": "2018-05-20"
+        },
+        {
+          "id": "173cca75-1786-4ee0-b6fd-4dd1a1f22289",
+          "startdate": "2019-06-17",
+          "enddate": "2019-07-27"
+        }
+      ],
+      "countDataProducts": 10
+    },
+    {
+      "logo": {
+        "description": "",
+        "gatsbyImg": {
+          "childImageSharp": {
+            "gatsbyImageData": {
+              "layout": "constrained",
+              "placeholder": {
+                "fallback": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAC4jAAAuIwF4pT92AAAD+klEQVQ4yy2TbVATdBzHf1sk68G7CB/iBO1MmmVAiRICBsilHBp2JoEZrQJDJB1hSYokHhhzByHsAdjF3IMMNxvyYKyBwERsCrGAbZAY04SEAqyuN+m2/7eD88X3/ef7RAHVDlois3P67/3LWVHjIADEK+3dsK7O8UWE7tfmGP34zW2Nt2e2N9/9I6npN0d0w5j+xdqhHCrsftk0+ZD8pHZ6t+U2l1cxRP4yO9GKGgeXSm2ksE1RgPTnlG1Gl1XQPcdyeuaQ2jSGnYZRZDaN4B1tH/YYnRBapnHY+jc+tsw9SPjOZV4uG45/++I4UfRF4lUMcYhKB4iKfno67vyYMcsyg31tLkQeq2X+m3c9jH9vv6dAXOUtOqNkh05UssBXY7zcQL4nKOlDd2xJPdIu3kScYRzrVc6qeWeUayWitE6fsLMjVwQdU4gtPufmLF3leZzLYfEJO5lKo8TRwmyWf6IAhwrEyMwTsdUvBIOI2Ly2ZOS7D3bc9WR2TiNcPar65NIY0QbNaOEH5t+Re8n5QKNWs82RG+G3bBXTGi+zSnE+TolzIdcokf2lCKkHSlBYUo7Q4EAWG85n1mYpymVyb9zpRvfe9mn4V9rSaEfzXef7hkEcLRZ5+q9boVSpWX7BSZxvNKGhoR5iqRqtpi40tZpR+LUEXT09sGsPoU/xBoZMMWztyifgExTi3t3iQqTu1ve09/LMXLzIsGBjf3YOu261QlylQkm5AmKZFnKNAfq2dliudOLzk2U4VaWBTVeEjnOZEKavwPPLeGzxsiDv1rofsavt3gAlt044U3Q2EGeRh4ggzM1lcuUFRKUch+CIBNXnO9Ez0A/FORES02IgyCuDTncBkZuiFyACnnkKvNVh7t3NLkQ33LpEa2qHCzK6ZxCSc/rBo7CR/NYOdvB4Ffu0uB41egtazBZkHU7BkeJCVMi1WBcSslAKhwhEXG+s6II7zTyNQKktlei1hsc2an/pPnBlFnFFZ93c51bPkzIel1h4xBbkHqtgOmMnRGUSfLRPyF7hB4P7qGVf/gZ3ksTk/ezafaxXjShF1yaI6GQfkfDqk69rRgyZPfexXT2IRMFX8I/e+TAgNMKTni30Zhw8zILWhjLyXez1WfmSZ0lCujs8tRTJWicyLLMIrbNXLOwwvYvITzLMpeM3SND3Dy2SDu/a/e1A777yXu+e9mnk9c4ix3wHERILttZZkf3DbQiv/olE4yRSj3b8F3XmRptvtT02uX2SKKyRfMoHObRc7qClMjvn7OhfHH+5kxrbxmmJ3LZ+jcKeF1V/05hodDkj9XemNunv3HvT6BqM0o3V8xVD++mbAX5W7XV6tmaU9pgmuL7zX5ba6X8DIj/BJp6LfwAAAABJRU5ErkJggg=="
+              },
+              "images": {
+                "fallback": {
+                  "src": "/static/57d85e673f190d05d7668e49c8361d50/f40b3/2de32e74-19b9-4402-9551-4f86f75fb5e1.png",
+                  "srcSet": "/static/57d85e673f190d05d7668e49c8361d50/ffc52/2de32e74-19b9-4402-9551-4f86f75fb5e1.png 47w,\n/static/57d85e673f190d05d7668e49c8361d50/59f32/2de32e74-19b9-4402-9551-4f86f75fb5e1.png 94w,\n/static/57d85e673f190d05d7668e49c8361d50/f40b3/2de32e74-19b9-4402-9551-4f86f75fb5e1.png 188w,\n/static/57d85e673f190d05d7668e49c8361d50/b7056/2de32e74-19b9-4402-9551-4f86f75fb5e1.png 376w",
+                  "sizes": "(min-width: 188px) 188px, 100vw"
+                },
+                "sources": [
+                  {
+                    "srcSet": "/static/57d85e673f190d05d7668e49c8361d50/0ff4f/2de32e74-19b9-4402-9551-4f86f75fb5e1.webp 47w,\n/static/57d85e673f190d05d7668e49c8361d50/41a5a/2de32e74-19b9-4402-9551-4f86f75fb5e1.webp 94w,\n/static/57d85e673f190d05d7668e49c8361d50/53bd8/2de32e74-19b9-4402-9551-4f86f75fb5e1.webp 188w,\n/static/57d85e673f190d05d7668e49c8361d50/5ca24/2de32e74-19b9-4402-9551-4f86f75fb5e1.webp 376w",
+                    "type": "image/webp",
+                    "sizes": "(min-width: 188px) 188px, 100vw"
+                  }
+                ]
+              },
+              "width": 188,
+              "height": 120
+            }
+          }
+        }
+      },
+      "ongoing": false,
+      "shortname": "GOES-R PLT",
+      "longname": "GOES-R Post Launch Test",
+      "startdate": "2017-03-21",
+      "enddate": "2017-05-17",
+      "region": "Continental United States",
+      "deployments": [
+        {
+          "id": "2df1bdbd-31a6-4d58-aaca-4e9085998317",
+          "startdate": "2017-03-21",
+          "enddate": "2017-05-17"
+        }
+      ],
+      "countDataProducts": 24
+    },
+    {
+      "logo": {
+        "description": "HS3 Logo",
+        "gatsbyImg": {
+          "childImageSharp": {
+            "gatsbyImageData": {
+              "layout": "constrained",
+              "placeholder": {
+                "fallback": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAVCAYAAABG1c6oAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFeElEQVQ4y1WVa0xbZRjHj2JizL4YjYu3L8YYNzY1fkJNTMwSdcnmh7ng8LJlF52bLLgNtzlFITAuGzJuha5lQIGWAi1QKBuXQgcFWi6ltOXSCxQY2AHl0kG5tef0+ZvTsAWf5M05Oee8v/M75zzv/zAAmB3j2R37r7FBOkdEDQBmACz52eDoyiYrAvAlgGdanQvM26mtT+esbrHMTlgYvyWiXQBuBYP0GNvVNeFFvNqG7+RmfFM6gNOVZvzZaDdbH60ejiztZ/jib8DP/x9sa5MLJyIHy1EI5Nvi2L8bx7iIHD29n9BM711VB8Oz2tm9t9q4/elaHC3pQ/vYwk3mRNlTsZ2PuReAd1vK7wtwwZ9rRuiDTB0i8jrpw5xO2n9FTftOSPFJgZ4OlPSwEUId96PKgmnvxm354Azzi8ry7BPyC3qdxzblWsOSZ8tvNi0jt2WKjqcb6YiwD99nGBF7fwyJ2ofYG36Ldr0RT3uOSXAwozX4cVw9m29w8RJRIcNZ9yazsc6lFggciIs1+hsUD/HrpQGKvjFI58/04totK1KuD8HtWcTs/ByaGi2IOavAW++m0e7dcfjoWwl3vs4E58LqJIBdvN2rW5vBZW27A0pVf3B4aJqkHW76QWDEdZkNE1Or0GjNkKvaIFNpoGrpwrJvGbX2Zew/q6CD8Q04Xd3PNrrmeMszPPDsxOQ80tN62YI7ZqqucFF8xgiu3DCjuHwSVeWjKK+woapiHCUFDgiyLCiuVGP60SNcbHZhX1wDjqbe54Q6W6gheGBdQ1sXpKomrrWjF1bXAi5JR3G5yganawna7lEsu+YwPboIrzcIm90NiUKDBx1GyA2zOJBnoHPVRiSpjOTb8HOMPxCYEZYpUVilpgd6A1ntHlxMtCApewTSkkm0VVjhKVOjOFGP2nwj2nUeFIqsUMhtEOTZkZFnp8sqC7KNDlrdCoBZ9a1t5EgqUKRQk6ajm6yTHkSVWvBHvQPTPg4zGZlYV7diuMmBeznN6Br1oaFhEIUl7ejqdSNKbEKkrIdEA05ssCwxvrX1hdviCuSX1dI9rY7GZ+ZwsmoEh+/2w8MBGDDAnSRATc08RHXTUNRNQVJghVjUjzLJOA7k9tBXcj1kIxNERGACbKDjrrwe1+KLuDJlC03PTEHY7UZEph4Z2slQl28traOrfQ4pinF09syjrt6E8ko92g1u/HTHQrGlg6Qf8/CXPuQ/yvXG9m4kC4rZU6dEJK9qpRUK4ELDGA6VWhBTb0dynQsxCYNQq2ZQp3RCXGhAvXoQksopik4xQVLtYkcsoUV2kwfuGRx2BHLLynEsKotefv43OnZISCXKIXweex9HhP2IVjnR7PTCYPgXTdoBZIsaIb7TTbmqKTouNlKyYBi+lQD/gsKZEaeL8a74SmWqRiRmFvnPXxAj8msB7X3zLzoZKcaQ4xEer6/C1D+B6NM6xJzVISGhhS6c6iOJ2IVJ+6o/MdYC++iKOC1++GnavG4ati9mF8uRL6sI1LRqIKlsoaRkJVVUa9Hc2YkiqQ4CkQbJN9VUVz9MCuk0BnoX/U1qN5TlDydBeHHNxzLMovdx2Db0M01nb/AfsRQpAok/X6YIimS1FJ8iQ1pWFWUVlVNijhiaLj2fbUEAge1kWgawf9a9wXjmNsOYbqOFsdrGwuYXlhiW4z5t0fW4RbJqpOZJkJRbyCXn32V/TxZyqbllXJ95hA3BCAgGiR8mlg2+wwstzG+GmfqWQmHLnLmayAwM2cIWlx/zpi+ZRx2ZHT0DCy2dvWjr7ofV7sT6xkZIh+81IpoAcIWIntsZ0E8Tmy+hVMmMT82ETlTd0/DHXwEQCSAdQBMAFctx8UT0BZ+fTwBEtPM/xPwHwTYAoY4sqw8AAAAASUVORK5CYII="
+              },
+              "images": {
+                "fallback": {
+                  "src": "/static/bbd26b5234ecb45a352901f95787b0b3/065e9/ab3a3aee-a768-470a-8296-792ad0c2615a.png",
+                  "srcSet": "/static/bbd26b5234ecb45a352901f95787b0b3/75ae7/ab3a3aee-a768-470a-8296-792ad0c2615a.png 29w,\n/static/bbd26b5234ecb45a352901f95787b0b3/0f04f/ab3a3aee-a768-470a-8296-792ad0c2615a.png 59w,\n/static/bbd26b5234ecb45a352901f95787b0b3/065e9/ab3a3aee-a768-470a-8296-792ad0c2615a.png 117w,\n/static/bbd26b5234ecb45a352901f95787b0b3/2fb53/ab3a3aee-a768-470a-8296-792ad0c2615a.png 234w",
+                  "sizes": "(min-width: 117px) 117px, 100vw"
+                },
+                "sources": [
+                  {
+                    "srcSet": "/static/bbd26b5234ecb45a352901f95787b0b3/390b0/ab3a3aee-a768-470a-8296-792ad0c2615a.webp 29w,\n/static/bbd26b5234ecb45a352901f95787b0b3/c8df2/ab3a3aee-a768-470a-8296-792ad0c2615a.webp 59w,\n/static/bbd26b5234ecb45a352901f95787b0b3/58239/ab3a3aee-a768-470a-8296-792ad0c2615a.webp 117w,\n/static/bbd26b5234ecb45a352901f95787b0b3/bfb9c/ab3a3aee-a768-470a-8296-792ad0c2615a.webp 234w",
+                    "type": "image/webp",
+                    "sizes": "(min-width: 117px) 117px, 100vw"
+                  }
+                ]
+              },
+              "width": 117,
+              "height": 120
+            }
+          }
+        }
+      },
+      "ongoing": false,
+      "shortname": "HS3",
+      "longname": "Hurricane and Severe Storm Sentinel",
+      "startdate": "2012-08-28",
+      "enddate": "2014-10-20",
+      "region": "Subtropical Atlantic Ocean and Gulf of Mexico",
+      "deployments": [
+        {
+          "id": "91e22f4c-59af-46de-8edd-31ac062d2aed",
+          "startdate": "2012-08-28",
+          "enddate": "2012-11-06"
+        },
+        {
+          "id": "4bcc8486-6da6-46b0-9f33-48b78f0817f0",
+          "startdate": "2013-08-20",
+          "enddate": "2013-09-26"
+        },
+        {
+          "id": "d6505ed9-5633-4995-a757-2a30e681835e",
+          "startdate": "2014-08-26",
+          "enddate": "2014-10-20"
+        }
+      ],
+      "countDataProducts": 15
+    },
+    {
+      "logo": null,
+      "ongoing": false,
+      "shortname": "LISTOS",
+      "longname": "Long Island Sound Tropospheric Ozone Study",
+      "startdate": "2017-05-17",
+      "enddate": "2019-07-31",
+      "region": "New York City metropolitan and Long Island Sound area, Northeastern U.S.",
+      "deployments": [
+        {
+          "id": "83ce1170-6684-43a9-986e-e30edf2c9af9",
+          "startdate": "2017-05-17",
+          "enddate": "2017-05-18"
+        },
+        {
+          "id": "898db211-7d2d-4b2c-821e-c0505ab82d5a",
+          "startdate": "2018-01-01",
+          "enddate": "2019-07-29"
+        }
+      ],
+      "countDataProducts": 16
+    },
+    {
+      "logo": {
+        "description": "IFloodS Logo",
+        "gatsbyImg": {
+          "childImageSharp": {
+            "gatsbyImageData": {
+              "layout": "constrained",
+              "placeholder": {
+                "fallback": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEpklEQVQ4yy1TaUwTdhz90QL1igdMBauUq4igUlDoCgq0BaGOUq5yU65C6cFlBcpRjlJauWTiUdhQnNnigYnDi4UsWZYtmg3nt5kt2z64zS3Lkm0xy5ZS+38LuPflveTlvbwvjwggcq2Qj1jB9SMiuvEzcYgiKa3ITNUDd6nB+QM1jb8k3ehL0o58T1r7IslKzAFEEfTwL1pHspJLs09ovYsegajcwuUIDtAOoiDK0V0my/y/vP7rCO29gvDafgRKy8DP0SLGNI6dWid8u66AWl3/UL5xjoh2U9xxIo2VSx97iEjdzuWI0siPtzGVmiZ+22BbQGy5EQnlPZ7kKodHuHuft0ZrYsqyenYoUOBV7InylGfmerJ638b2prPwLzn9K/EjjpFUTVTWySVOYDDxfCiJWi+uRk7dQ/fQmFt5UsVONlpZRa8LMSIxS83XsXRlFQvZd4jFieRwjDjY8t3LLDuz2C0os4JXPeCmHbsSKTKOSEC0gbSOZ9vst2FqaFw93WdGp32Imawu9v6NZeQUahARKkJcSDwkMcmQREvQae1nrtkZVhAjRrJIthpeaoG/yvA1EfHIJ16qI+c97BDGrQaEHYCivZ/NTE8x55lJdFttKKzQ4kB0InLkuUiMOgh1shzn567hUNclFpRSwCR8AaKOZq5yBxdACTItUd3wA2q/BD8iDwULmWriKpufccHUbsbNWwuwO5w4N30ew7YhjI2PY3xiHPap86BcPXxzG9geQSgL27fXwxm8CdJY7xG1TH/nrx1C8Fbybg4PYymlNVBkpEAqTYXeYEBungotrSbk5atgbm9BWWEuNFWVCD6WBb6qFonHU1mcMNS76dQFkPHst0T6yW+CLC6IRRFeftJRtislFUHxYsRlKVFRVYmOjg7IsuRoNegQknYCUcWNEErl2J5dDJG6Hulv5TJ5SqI3wDoPapp4RlTZe9uv9z0kJUR7IiVixBZp2OHyRuxNz4KxzYQmgx6DgwMwmXQIlqRAqNbiiLoKscX1CC+oYzmVNTjd1uLZeOYuqKTjFnGFolKyL0JcZ/RM2rrZypePmfvvl6ynuwv5pUWQKrKw9GARXz19jIICBaYcQ2hvbsGIrZ8ZjXVsfKCbqRwzHrLdgX/kYfXru1R0fxbQ8y5sY6Puq9fmMH/zOvqGrUyrr0KDQYc///gdAMPy0n0Mj9hZYX0zs09OYnbWBceld9x7nAugEvOnr6/3GmHRhfW/pFtGoWk3u+WyeG+LqYaVVWuYvlnHlpaX2Yf37zObfYS1dZxi0tI61jc07B24MOeW951FbGHtCyIKXW/adFDMpQ2b12RkbL7maYJ5FEWGNnT1dL16/tOL1S8+f/RqetTp/eSjO94Prs6+UpaUrEoKKrwZzT1IarNjf3bhEyKK4G3ZRlsPJnFpq7KOfBOk3P+X+vkmnrDsL9X/KGmyoMZ+Ds1js1AYO3FxcQk9ritQmCyQmXoRW6Z/7nsko4uIfNeCGxPSuG/kVBPxiw1Ex/KI+ELOmsErNa/RFhLEqHhvZk8EyvKX+KralSBp3spOaf5DfkbBBDdkv4qINnPyDOsrfPiRHL8UJQmKm+g/YWErk/AVfc8AAAAASUVORK5CYII="
+              },
+              "images": {
+                "fallback": {
+                  "src": "/static/a5e6947284804afdaae12ae783dba418/305c3/d734b7d4-f09c-4cc2-bd76-0a8579267965.png",
+                  "srcSet": "/static/a5e6947284804afdaae12ae783dba418/1f961/d734b7d4-f09c-4cc2-bd76-0a8579267965.png 38w,\n/static/a5e6947284804afdaae12ae783dba418/f2fbd/d734b7d4-f09c-4cc2-bd76-0a8579267965.png 76w,\n/static/a5e6947284804afdaae12ae783dba418/305c3/d734b7d4-f09c-4cc2-bd76-0a8579267965.png 152w,\n/static/a5e6947284804afdaae12ae783dba418/619c7/d734b7d4-f09c-4cc2-bd76-0a8579267965.png 304w",
+                  "sizes": "(min-width: 152px) 152px, 100vw"
+                },
+                "sources": [
+                  {
+                    "srcSet": "/static/a5e6947284804afdaae12ae783dba418/8fda4/d734b7d4-f09c-4cc2-bd76-0a8579267965.webp 38w,\n/static/a5e6947284804afdaae12ae783dba418/63452/d734b7d4-f09c-4cc2-bd76-0a8579267965.webp 76w,\n/static/a5e6947284804afdaae12ae783dba418/552aa/d734b7d4-f09c-4cc2-bd76-0a8579267965.webp 152w,\n/static/a5e6947284804afdaae12ae783dba418/a2f71/d734b7d4-f09c-4cc2-bd76-0a8579267965.webp 304w",
+                    "type": "image/webp",
+                    "sizes": "(min-width: 152px) 152px, 100vw"
+                  }
+                ]
+              },
+              "width": 152,
+              "height": 120
+            }
+          }
+        }
+      },
+      "ongoing": false,
+      "shortname": "IFloodS",
+      "longname": "Iowa Flood Studies",
+      "startdate": "2013-04-10",
+      "enddate": "2013-06-15",
+      "region": "Iowa",
+      "deployments": [
+        {
+          "id": "66f82fd7-f882-40d7-8bcd-96e9582c921f",
+          "startdate": "2013-04-10",
+          "enddate": "2013-06-15"
+        }
+      ],
+      "countDataProducts": 33
+    },
+    {
+      "logo": {
+        "description": "IPHEx Logo",
+        "gatsbyImg": {
+          "childImageSharp": {
+            "gatsbyImageData": {
+              "layout": "constrained",
+              "placeholder": {
+                "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAUEAgP/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAgH/2gAMAwEAAhADEAAAAeserzmayebSnBbFb//EABsQAQEBAAIDAAAAAAAAAAAAAAECAwAEERIj/9oACAEBAAEFAt9qtikrLsFR6PLlJnO9jeDxl9bAD//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8BH//EABgRAAMBAQAAAAAAAAAAAAAAAAABERAx/9oACAECAQE/AaVj7n//xAAcEAACAgMBAQAAAAAAAAAAAAAAAQIREiFRIkH/2gAIAQEABj8Cai6SFUmunp7HFySxIy1vhkZ/UVIpH//EABwQAAIDAQEBAQAAAAAAAAAAAAABESFBMbFRYf/aAAgBAQABPyH3KI5VlnViq1L0LoQpNaQe/HopmMG342Wi/JmaUC2iEsP/2gAMAwEAAgADAAAAEI8XAP/EABkRAAMAAwAAAAAAAAAAAAAAAAABERAhMf/aAAgBAwEBPxCzZWPuP//EABkRAAEFAAAAAAAAAAAAAAAAAAABECExYf/aAAgBAgEBPxCSUYOf/8QAHRABAQACAgMBAAAAAAAAAAAAAREAITFRQWFxgf/aAAgBAQABPxBndQAx9/fzFWS0OnQmBsenU+p4xrYBSVHjqOXCibdgev38zcZLQvWGmzOjhxR5za3JZK/ZZgJzQHjP/9k="
+              },
+              "images": {
+                "fallback": {
+                  "src": "/static/55494f92a7996ad81d767d05d89065bf/e17a8/5926f401-d3ff-439d-9e7c-bb2745c9679c.jpg",
+                  "srcSet": "/static/55494f92a7996ad81d767d05d89065bf/d2653/5926f401-d3ff-439d-9e7c-bb2745c9679c.jpg 30w,\n/static/55494f92a7996ad81d767d05d89065bf/b1d29/5926f401-d3ff-439d-9e7c-bb2745c9679c.jpg 60w,\n/static/55494f92a7996ad81d767d05d89065bf/e17a8/5926f401-d3ff-439d-9e7c-bb2745c9679c.jpg 120w",
+                  "sizes": "(min-width: 120px) 120px, 100vw"
+                },
+                "sources": [
+                  {
+                    "srcSet": "/static/55494f92a7996ad81d767d05d89065bf/d6c2c/5926f401-d3ff-439d-9e7c-bb2745c9679c.webp 30w,\n/static/55494f92a7996ad81d767d05d89065bf/b8ad1/5926f401-d3ff-439d-9e7c-bb2745c9679c.webp 60w,\n/static/55494f92a7996ad81d767d05d89065bf/47534/5926f401-d3ff-439d-9e7c-bb2745c9679c.webp 120w",
+                    "type": "image/webp",
+                    "sizes": "(min-width: 120px) 120px, 100vw"
+                  }
+                ]
+              },
+              "width": 120,
+              "height": 120
+            }
+          }
+        }
+      },
+      "ongoing": false,
+      "shortname": "IPHEx",
+      "longname": "Integrated Precipitation and Hydrology Experiment",
+      "startdate": "2014-05-01",
+      "enddate": "2014-06-15",
+      "region": "Southern Appalachians, including portions of North Carolina, South Carolina, Tennessee, Georgia",
+      "deployments": [
+        {
+          "id": "5c4b6b31-f269-4197-aeee-d0859a2bd719",
+          "startdate": "2014-05-01",
+          "enddate": "2014-06-15"
+        }
+      ],
+      "countDataProducts": 47
+    },
+    {
+      "logo": {
+        "description": "MC3E Logo",
+        "gatsbyImg": {
+          "childImageSharp": {
+            "gatsbyImageData": {
+              "layout": "constrained",
+              "placeholder": {
+                "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAQABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUD/8QAFAEBAAAAAAAAAAAAAAAAAAAAAv/aAAwDAQACEAMQAAAB1n08EbYK/8QAGxAAAQUBAQAAAAAAAAAAAAAAAgEDBBESEwD/2gAIAQEAAQUClPL0B3n4C0MhujS9AOQ//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAHRAAAgIBBQAAAAAAAAAAAAAAAAECEVEDEiFBkf/aAAgBAQAGPwLYrpFqXPYnkcnG0xR0YqvRLB//xAAdEAACAQQDAAAAAAAAAAAAAAAAAREhMVFhQXGR/9oACAEBAAE/IZxyYBqp6D6CFvCTOL9EiKSlvRotB//aAAwDAQACAAMAAAAQd8//xAAWEQADAAAAAAAAAAAAAAAAAAAQIUH/2gAIAQMBAT8QrH//xAAXEQADAQAAAAAAAAAAAAAAAAAAAREh/9oACAECAQE/ELFgz//EABsQAQEAAgMBAAAAAAAAAAAAAAERACExQVGx/9oACAEBAAE/EFFMKnS93Z7xl5EhuxqE7wDoBHmG8HKF3OfnOOtIRAq7twAWwr3P/9k="
+              },
+              "images": {
+                "fallback": {
+                  "src": "/static/3679cdf678680ea485eadffe7af3fe0b/bb953/5169cacd-5b64-423b-a115-7516885607d0.jpg",
+                  "srcSet": "/static/3679cdf678680ea485eadffe7af3fe0b/8dc68/5169cacd-5b64-423b-a115-7516885607d0.jpg 38w,\n/static/3679cdf678680ea485eadffe7af3fe0b/5a683/5169cacd-5b64-423b-a115-7516885607d0.jpg 76w,\n/static/3679cdf678680ea485eadffe7af3fe0b/bb953/5169cacd-5b64-423b-a115-7516885607d0.jpg 152w",
+                  "sizes": "(min-width: 152px) 152px, 100vw"
+                },
+                "sources": [
+                  {
+                    "srcSet": "/static/3679cdf678680ea485eadffe7af3fe0b/8fda4/5169cacd-5b64-423b-a115-7516885607d0.webp 38w,\n/static/3679cdf678680ea485eadffe7af3fe0b/63452/5169cacd-5b64-423b-a115-7516885607d0.webp 76w,\n/static/3679cdf678680ea485eadffe7af3fe0b/552aa/5169cacd-5b64-423b-a115-7516885607d0.webp 152w",
+                    "type": "image/webp",
+                    "sizes": "(min-width: 152px) 152px, 100vw"
+                  }
+                ]
+              },
+              "width": 152,
+              "height": 120
+            }
+          }
+        }
+      },
+      "ongoing": false,
+      "shortname": "MC3E",
+      "longname": "Mid-latitude Continental Convective Clouds Experiment",
+      "startdate": "2011-04-22",
+      "enddate": "2011-06-06",
+      "region": "Central Oklahoma, Southern Plains",
+      "deployments": [
+        {
+          "id": "fa0c6408-d544-4d62-bf6d-5b4421317657",
+          "startdate": "2011-04-22",
+          "enddate": "2011-06-06"
+        }
+      ],
+      "countDataProducts": 34
+    },
+    {
+      "logo": {
+        "description": "SEAC4RS Logo",
+        "gatsbyImg": {
+          "childImageSharp": {
+            "gatsbyImageData": {
+              "layout": "constrained",
+              "placeholder": {
+                "fallback": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAACXBIWXMAAB7CAAAewgFu0HU+AAAE1UlEQVQ4yzXTaUwTZhgH8H9btEAFRh0glIKFch9qBQRabKEgFJD7GodSGLBNbjuYICIDYQ4UQVTUTN31ZWaL0xnNTNzM3LJPU5ItWbYsmi1b9sUohkjo8f4XhL3fng/vL88JAJg6s4ig8hWQDlgHn0KZ6ZCi6IkMIDBFoJ1AK4F8AsO3JHLLC1l4hgsBSsIzyQlNgR3rj0jIsUOS4cSGTMIvyylB1aIUpYSkjiABTNIXLdSgmUHI5caQCQK1BDIImZkynq1ERRMRVrGyBiLDDmQTkj2Uuu0h0Ey4VTPFp5Cn/POfPQy1LDzRmn94Hm7+cVGd++ivV/eKL+U1bEISPVFGoJpSnZEIy+M6mMZVUAojsTmVvooKfhKc8x0jYnqpUW2nUuFPbzcFvd296OcTyAhNPqNN5+m/598/NhSzBE0EhiiJ1a2DGwyUQk9sSmWIT97Sb4nJw0zSqETwZold6ePu9FXIXABcUjeZy89P6fL19XDsjFY5duss1OTfoWc9bThCoIvSl6CXDxENbvQpWP4peecb3GuMXWnu6hDl+/fR8NaAiO+eEvrdJibGx4iUtF1CJpNR4a0USckJDn83CG32bcprWImq/0uuJDyq2B+jP8V9xekrZy9d4fuXLorXBvpEQXcXjQdHWNrRzcrKUprMFuozc0SIOkhY8suoCot0RAVGU1395yMYqFgDIyjzN//9IDXeyEOH+5xf3Lwh2vu7xejkUXaNHqFpcI7mRiuLOjtpqbIyOauG9Q1viqaGNqGJWZ0MHJFJJ+jewvI1MI+hmrx7i2mxYZycmxfz58+IxtZG9tgO8OBgJ2sGh2kbepvqkY9ZOzbL07OX2dY7Tm1UpAAgMnYlOovLx+hRyIk1sIHaMNOt5eSIYI5/el3Mf3BB2HoPsP/IAA8O97Gzs5YNfT1UXHzIiuEZ3rz+NYvq+qmJTV1tmrB1tzka6k5Qrn8+vQaW8xW1duHxtqBg2mYvuD68vyDeG+sTR8eGaB06SsvINOOOf0bl5V9Y3trLtp6TDE9pYlCEXmwJCGBJodGRFv8u3aLY/hL0DSICYvlR1JYK6tNj7NN3Fjjz+XXRPXFMeN54Tum3pN/8A+b0HGNHVy9z6ieo3vG6iErQM82gF0ZdPINVX9k9TYxcy1BHyA2MU2+970iNDGf74GFHw/g8mw4dEqq5b4Rm8Bx3dYwyPy+bJRV1wjowI5Jz61lSvV+MDrWu7DWeoULLOWxcXxvpVsqwlfDcRqs27BpPjs2zb+S0PbNwn6uguFZk59ULq7WLw2OzYmfKbpFTXCCOz007Tk8OOHJTx+ijefq98h3KYVkHp24/A7wpxSYCWtbE7fh9sbnpLisaz9NSOy6stnOOkWPD9rLGt+1V+9udyXEatlT3Mz35Gj1Cl68qW6hAEiFLWL+U+BIi+zAB9xdSBBKIZMgmzdJsTOLP/xQV3WWr9Sprqq4wyzjNPPM5Ggz3lhWBj+8hkmXAr4CBQAylCF/PUGtwIL1+NZgFVEIGNQH5U8CXXuFmZmWXuFqKal220np2mipZCR0jgEJAtfpnRuKdRIkkktgY5lo/PQCBSU54RSwDoYTfdqdErn4mhYIINxN5xXaY8l0oKCdyaghsJwokGsi1QmaqWIKuhNiic8I2svQS/A8qImS/nZAEcgAAAABJRU5ErkJggg=="
+              },
+              "images": {
+                "fallback": {
+                  "src": "/static/96b285cba08dc38ec6653c0f48ad9d02/fe226/bdc54ef6-a42c-426c-859a-4c266f767779.png",
+                  "srcSet": "/static/96b285cba08dc38ec6653c0f48ad9d02/56ae2/bdc54ef6-a42c-426c-859a-4c266f767779.png 33w,\n/static/96b285cba08dc38ec6653c0f48ad9d02/b6ebb/bdc54ef6-a42c-426c-859a-4c266f767779.png 65w,\n/static/96b285cba08dc38ec6653c0f48ad9d02/fe226/bdc54ef6-a42c-426c-859a-4c266f767779.png 130w,\n/static/96b285cba08dc38ec6653c0f48ad9d02/24a01/bdc54ef6-a42c-426c-859a-4c266f767779.png 260w",
+                  "sizes": "(min-width: 130px) 130px, 100vw"
+                },
+                "sources": [
+                  {
+                    "srcSet": "/static/96b285cba08dc38ec6653c0f48ad9d02/e6a3f/bdc54ef6-a42c-426c-859a-4c266f767779.webp 33w,\n/static/96b285cba08dc38ec6653c0f48ad9d02/43d83/bdc54ef6-a42c-426c-859a-4c266f767779.webp 65w,\n/static/96b285cba08dc38ec6653c0f48ad9d02/53819/bdc54ef6-a42c-426c-859a-4c266f767779.webp 130w,\n/static/96b285cba08dc38ec6653c0f48ad9d02/aceb9/bdc54ef6-a42c-426c-859a-4c266f767779.webp 260w",
+                    "type": "image/webp",
+                    "sizes": "(min-width: 130px) 130px, 100vw"
+                  }
+                ]
+              },
+              "width": 130,
+              "height": 120.00000000000001
+            }
+          }
+        }
+      },
+      "ongoing": false,
+      "shortname": "SEAC4RS",
+      "longname": "Studies of Emissions and Atmospheric Composition, Clouds and Climate Coupling by Regional Surveys",
+      "startdate": "2013-08-01",
+      "enddate": "2013-09-23",
+      "region": "North America including portions of Canada, Mexico and the Gulf of Mexico",
+      "deployments": [
+        {
+          "id": "7b17af0f-efd0-4444-8134-fa894c604641",
+          "startdate": "2013-08-01",
+          "enddate": "2013-09-23"
+        }
+      ],
+      "countDataProducts": 0
+    },
+    {
+      "logo": {
+        "description": "OLYMPEX logo",
+        "gatsbyImg": {
+          "childImageSharp": {
+            "gatsbyImageData": {
+              "layout": "constrained",
+              "placeholder": {
+                "fallback": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAAAsTAAALEwEAmpwYAAAFLElEQVQ4yxXBB1ATBhQA0A/Y1p6ntqe2tUUtDhQHHMreNuwVQIhoANkQpoQVSSCxhLADkQQkAhJNWbaRvUFkFFo5Fc87a9VaJ8UreJ69q0D4v9f3YKd7Pay3lAKYFOj4ptzUXWclB/fEGYBvc79ab63w2eOlyjzIVBfvcK4v8DmlbC3O730s5He8T45pMnMOVkFoYtc6Z6ZM1/qQJ+wzlQBsY9TCJ9YyHYCt4BDaA3oWMss9Pupmp/D2t1mF48QvnyJByQSx+WNUrpig5NRmys1uo/DIxvub7OS2Otat4OQuBf0NRuDgmgfwmVOVDhjw4H8HfBorHKO7SVwzS9WdT+hK+4M1efcfq9VN91b4l+6sqLserebVT6xFRFzUpkTXkamvira4NqpO+Vce2rzRZKOde6kewIbTAF9v193t2tAdyhuhtoHHeLFpbrWg9TfM732J4okl/H7sbyqcWkLR0AIWTr9FjvwGcdLU2tq6ybUTCT+Rq2/Zey83riQuPgvANmwQvmA0VPOl09Qy+mxZdu0Bts/M08zrZVz4gDj/L9LUgpa6n61Q65Nl6nu+gsN/rWFl5xw9evgUnz5a/HBJ2UOsUHGLRikF2OZYZcNM7qWomttrvJpZjG55QtzBeSwYf0N5NxepfGaJzo+9IcnUIonGF6lsepEu3nlHFU2TeL2pAytkCpSWVGjd2HIC80sesMtL3ZhXNU2S2vFVW66GrM73oHVuJ5kJuuioaIDMRQNkVTlLNpWzZFsyTrYVt8hCcZ8YwnZiJZWjh08KMZlxqz6CMTIO6+gC9xjNc17lKHmlqHBflAyNEy+TcZKKjJMa6QhHScaJDWSaoiLzNDXZZLWRTaaanIUaOp53nSwE3cTN60Hh9/3oK79L9gn9/4BXvEZb1tBHHlGhaHgmHW2zr5J5ShGZxInpIKeOHHhKdEqNQIOTHNwfmU/6TD8yTaoia14nWXFriR1RidncLnLjXUGH5H6CYxFdS8FpHPLl7EAXjiWah9jRSZ4N+WdYkCnbBVk5buSbakSW7L1k6GNIR/x3kHmYH4WJCympNIgCIwPQIyAGj0cHkn1ijxZsE4b6T3CVFJmSqD2bHkepCWdQKIzCktJIzM0LIS6PjclZIZhyLgiZ4a4Uk+5PwfEM8g63JTPmEfRLOozesd9oGXEcsokfmYVdPldP+/NvUn5990qkSEmhfAVGCKox/JwcucIiEuWnY1FBFl4o5aG0KJPkkhy8UJRBImE8nhcl4DWFhEZUipWTOf1kGHw9EYgIzKK6J1miYeI3dC2zC1TknqXAQFE9WsaJ0ZEjoOAsCUbyxcQR5FOOpBBLysoxv1iK5RVSaqmTLwulg3QsZuAeAHwEn9vLYJNlwW6r2P759Jq71Df7dFnU2L1W0jKKqqE5DBGr0TOrBt0zavC7s1V4LKYEnZLK0CW1ZI2ZUbkccK6TzGIH3n15vNx4l3c9gEmoRm+3nwq2OhTvNQ3vvOvNGyN+/a9U3XlLOzz3bHXywUutZur+WtPobRTUtWt9s2WrrmkyrVu6mly4g2QZ0/+7PqPC2IjVDBYxvXrAyPwFTMM79HZ6KgFA/+M9Ac0C8+jeV47JAxRe+DNJmh5Sw8ArUva+oGzlbQoSjhDj7BDZJwwvmIRoCuBTlw0GvpfBOq5Pjy39EyBC/hLskm6AEesHXQA7OBo9DGCQsPlAUDPLkPWjwjBYM2zIanthGNT22uh0+6jpmc7a/YHNbNBP2MLIuAWwPRYOn2rR9eTPQvEYwX8wvOYZtc1iegAAAABJRU5ErkJggg=="
+              },
+              "images": {
+                "fallback": {
+                  "src": "/static/cf547712f5b3512ff39fb1cf64f5e2e4/027dc/0d5261ab-7af8-4e6e-ab07-a7942cfcc519.png",
+                  "srcSet": "/static/cf547712f5b3512ff39fb1cf64f5e2e4/c9f5d/0d5261ab-7af8-4e6e-ab07-a7942cfcc519.png 36w,\n/static/cf547712f5b3512ff39fb1cf64f5e2e4/eb3e1/0d5261ab-7af8-4e6e-ab07-a7942cfcc519.png 71w,\n/static/cf547712f5b3512ff39fb1cf64f5e2e4/027dc/0d5261ab-7af8-4e6e-ab07-a7942cfcc519.png 142w,\n/static/cf547712f5b3512ff39fb1cf64f5e2e4/37d8c/0d5261ab-7af8-4e6e-ab07-a7942cfcc519.png 284w",
+                  "sizes": "(min-width: 142px) 142px, 100vw"
+                },
+                "sources": [
+                  {
+                    "srcSet": "/static/cf547712f5b3512ff39fb1cf64f5e2e4/665ed/0d5261ab-7af8-4e6e-ab07-a7942cfcc519.webp 36w,\n/static/cf547712f5b3512ff39fb1cf64f5e2e4/9ecfe/0d5261ab-7af8-4e6e-ab07-a7942cfcc519.webp 71w,\n/static/cf547712f5b3512ff39fb1cf64f5e2e4/40534/0d5261ab-7af8-4e6e-ab07-a7942cfcc519.webp 142w,\n/static/cf547712f5b3512ff39fb1cf64f5e2e4/509ce/0d5261ab-7af8-4e6e-ab07-a7942cfcc519.webp 284w",
+                    "type": "image/webp",
+                    "sizes": "(min-width: 142px) 142px, 100vw"
+                  }
+                ]
+              },
+              "width": 142,
+              "height": 120
+            }
+          }
+        }
+      },
+      "ongoing": false,
+      "shortname": "OLYMPEX",
+      "longname": "Olympic Mountains Experiment",
+      "startdate": "2015-11-01",
+      "enddate": "2016-05-01",
+      "region": "Olympic Peninsula in U.S. Washington State",
+      "deployments": [
+        {
+          "id": "f8a70256-b480-48aa-86a7-0c52f3064fc5",
+          "startdate": "2015-11-01",
+          "enddate": "2016-05-01"
+        }
+      ],
+      "countDataProducts": 35
+    },
+    {
+      "logo": null,
+      "ongoing": false,
+      "shortname": "OTTER",
+      "longname": "Oregon Transect Ecosystem Research Project",
+      "startdate": "1989-05-27",
+      "enddate": "1991-08-24",
+      "region": "western coniferous forest in Oregon",
+      "deployments": [
+        {
+          "id": "2ba5bc3b-8aea-4880-91cb-fb858c6f376c",
+          "startdate": "1989-05-27",
+          "enddate": "1989-08-23"
+        },
+        {
+          "id": "c2b49e13-d7b9-482d-b3f5-396a87c07478",
+          "startdate": "1990-02-22",
+          "enddate": "1991-01-07"
+        },
+        {
+          "id": "94e8a33d-5979-4244-9304-a4f6e147caef",
+          "startdate": "1991-05-15",
+          "enddate": "1991-08-24"
+        }
+      ],
+      "countDataProducts": 14
+    },
+    {
+      "logo": {
+        "description": "OWLETS Logo",
+        "gatsbyImg": {
+          "childImageSharp": {
+            "gatsbyImageData": {
+              "layout": "constrained",
+              "placeholder": {
+                "fallback": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABYlAAAWJQFJUiTwAAABS0lEQVQY0zXQvU7bUABAYT8U79C5CxJv0IU3qQRDK3VCICFSASNVkchSWSAEAakBEschiX39f/F1bF8nBMfhoBbxLWc/xmvTUGpNmJWsmgZnNOK4dYBUOWGas6pr5ouKssrQuqLQKYVWVFVJNZvyT9MsyYuMZd1gmJZHPZ9xcj3k6Mbh6489NjfW2TFv+GknWEnOXCssp0OqJD2njVQ+tnvNtJDMFoqyUohwgB/bGN/Oh5QNnE0kp8OUL9st1j59Zqvd5a/U/B4o1LRHV/ziZflMZ3RApgMeg0tEfE9c3vIYmVxZh0Sqj9FXFbv9kGM7pH5Z0LYCzrs2d5MYIVP2/zzQczqYd9/xYgtLXPyv2d0jUS6sQBWC23ELmQ8w3h+84gcxwvNxkgzf94iTJ6LIJX0SeCLAdT3GkzEyjRGujzNxkSpiYPdYPNd8eANA3GfQy8U/lQAAAABJRU5ErkJggg=="
+              },
+              "images": {
+                "fallback": {
+                  "src": "/static/511e6b799f748429812bd23b994c86bc/b159c/bbe4e007-09cb-4ad8-b6b4-6c828a9a80ed.png",
+                  "srcSet": "/static/511e6b799f748429812bd23b994c86bc/9f6bd/bbe4e007-09cb-4ad8-b6b4-6c828a9a80ed.png 122w,\n/static/511e6b799f748429812bd23b994c86bc/8c537/bbe4e007-09cb-4ad8-b6b4-6c828a9a80ed.png 244w,\n/static/511e6b799f748429812bd23b994c86bc/b159c/bbe4e007-09cb-4ad8-b6b4-6c828a9a80ed.png 487w,\n/static/511e6b799f748429812bd23b994c86bc/30ade/bbe4e007-09cb-4ad8-b6b4-6c828a9a80ed.png 974w",
+                  "sizes": "(min-width: 487px) 487px, 100vw"
+                },
+                "sources": [
+                  {
+                    "srcSet": "/static/511e6b799f748429812bd23b994c86bc/893be/bbe4e007-09cb-4ad8-b6b4-6c828a9a80ed.webp 122w,\n/static/511e6b799f748429812bd23b994c86bc/a83bd/bbe4e007-09cb-4ad8-b6b4-6c828a9a80ed.webp 244w,\n/static/511e6b799f748429812bd23b994c86bc/e3ea0/bbe4e007-09cb-4ad8-b6b4-6c828a9a80ed.webp 487w,\n/static/511e6b799f748429812bd23b994c86bc/9d444/bbe4e007-09cb-4ad8-b6b4-6c828a9a80ed.webp 974w",
+                    "type": "image/webp",
+                    "sizes": "(min-width: 487px) 487px, 100vw"
+                  }
+                ]
+              },
+              "width": 487,
+              "height": 120
+            }
+          }
+        }
+      },
+      "ongoing": false,
+      "shortname": "OWLETS",
+      "longname": "Ozone Water-Land Environmental Transition Study",
+      "startdate": "2017-07-05",
+      "enddate": "2018-07-19",
+      "region": "Chesapeake Bay",
+      "deployments": [
+        {
+          "id": "04c982f5-0f1a-467c-9c9b-d1307df65a99",
+          "startdate": "2017-07-05",
+          "enddate": "2017-08-24"
+        },
+        {
+          "id": "27354f67-95b4-4ef0-833d-2fcd44fc33ca",
+          "startdate": "2018-05-08",
+          "enddate": "2018-07-19"
+        }
+      ],
+      "countDataProducts": 12
+    },
+    {
+      "logo": {
+        "description": "SAFARI 2000 Logo",
+        "gatsbyImg": {
+          "childImageSharp": {
+            "gatsbyImageData": {
+              "layout": "constrained",
+              "placeholder": {
+                "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAKABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIDAQT/xAAVAQEBAAAAAAAAAAAAAAAAAAACA//aAAwDAQACEAMQAAAB5prtDYYC/8QAGhAAAQUBAAAAAAAAAAAAAAAAAQACAyExMv/aAAgBAQABBQLTabQKdsfP/8QAFhEBAQEAAAAAAAAAAAAAAAAAAAER/9oACAEDAQE/AdSP/8QAGBEAAgMAAAAAAAAAAAAAAAAAAAECISL/2gAIAQIBAT8Ba0OVn//EABcQAAMBAAAAAAAAAAAAAAAAABAgIUH/2gAIAQEABj8C0VP/xAAbEAACAgMBAAAAAAAAAAAAAAAAAREhEGGBsf/aAAgBAQABPyGEzbkDcqY9DWUbjB6H/9oADAMBAAIAAwAAABDEH//EABcRAAMBAAAAAAAAAAAAAAAAAAABESH/2gAIAQMBAT8QTQwP/8QAFxEAAwEAAAAAAAAAAAAAAAAAAAERIf/aAAgBAgEBPxDNpNlD/8QAHhABAAMAAQUBAAAAAAAAAAAAAQARITFBUXGhscH/2gAIAQEAAT8QQCrbiP6XvuMVNPVap8wMXfi1+TsTUyJWqrV7EmV5T//Z"
+              },
+              "images": {
+                "fallback": {
+                  "src": "/static/c8b34c9e10bd06af6341a89d13c456ef/0f514/ca25d647-4000-4f21-b4fc-d25e1e9efb98.jpg",
+                  "srcSet": "/static/c8b34c9e10bd06af6341a89d13c456ef/2be7c/ca25d647-4000-4f21-b4fc-d25e1e9efb98.jpg 60w,\n/static/c8b34c9e10bd06af6341a89d13c456ef/2e2e1/ca25d647-4000-4f21-b4fc-d25e1e9efb98.jpg 120w,\n/static/c8b34c9e10bd06af6341a89d13c456ef/0f514/ca25d647-4000-4f21-b4fc-d25e1e9efb98.jpg 240w,\n/static/c8b34c9e10bd06af6341a89d13c456ef/6c707/ca25d647-4000-4f21-b4fc-d25e1e9efb98.jpg 480w",
+                  "sizes": "(min-width: 240px) 240px, 100vw"
+                },
+                "sources": [
+                  {
+                    "srcSet": "/static/c8b34c9e10bd06af6341a89d13c456ef/bae15/ca25d647-4000-4f21-b4fc-d25e1e9efb98.webp 60w,\n/static/c8b34c9e10bd06af6341a89d13c456ef/b8657/ca25d647-4000-4f21-b4fc-d25e1e9efb98.webp 120w,\n/static/c8b34c9e10bd06af6341a89d13c456ef/700dd/ca25d647-4000-4f21-b4fc-d25e1e9efb98.webp 240w,\n/static/c8b34c9e10bd06af6341a89d13c456ef/475c9/ca25d647-4000-4f21-b4fc-d25e1e9efb98.webp 480w",
+                    "type": "image/webp",
+                    "sizes": "(min-width: 240px) 240px, 100vw"
+                  }
+                ]
+              },
+              "width": 240,
+              "height": 120
+            }
+          }
+        }
+      },
+      "ongoing": false,
+      "shortname": "SAFARI 2000",
+      "longname": "Southern African Regional Science Initiative",
+      "startdate": "1999-08-01",
+      "enddate": "2001-03-31",
+      "region": "Southern Africa",
+      "deployments": [
+        {
+          "id": "7ca1d26e-8815-405f-8239-f00866641a72",
+          "startdate": "1999-08-01",
+          "enddate": "1999-09-30"
+        },
+        {
+          "id": "4be99ae9-7a88-428c-97d7-d0ad1e21bc3f",
+          "startdate": "2000-02-01",
+          "enddate": "2000-03-31"
+        },
+        {
+          "id": "8fa7621b-1083-4e8e-9af0-729c0f3bcafc",
+          "startdate": "2000-08-01",
+          "enddate": "2000-09-30"
+        },
+        {
+          "id": "79ff1e5c-6e34-49d3-bc65-621bc085f5e7",
+          "startdate": "2001-03-01",
+          "enddate": "2001-03-31"
+        }
+      ],
+      "countDataProducts": 117
+    },
+    {
+      "logo": {
+        "description": "SNF logo",
+        "gatsbyImg": {
+          "childImageSharp": {
+            "gatsbyImageData": {
+              "layout": "constrained",
+              "placeholder": {
+                "fallback": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEsUlEQVQ4yy2NWVMaBwCA963TST1huRRELoHlcGVx2V2WG2GJiCIqKiZGowgqEVGrtWpM0jgxl0OSSRo1UWPUaFrUgBFqvNLGSWw6nbbT6UN/TCeZznwP39P3AbPJzONkei6VnktlZlOZz5KeTe7OJncfv0o/2kw/THzi/sud+y937m2k4uvJmbXtOyubt58ngPnU4ZOdw4Xd48X028X024Xd44Xd46evj57sHMynDuaS+/Op/2X21Zvvt356tJl5mEg/+OF1fD0JrOydrB28f/7mZO3gw+qbk42j05fHv63tf3hxeLp+dLpx9HF5791S5ufFzKf0k53D+c/Rx9t7jzYzANUfahwbcETDzv5eoqvdM/x1aPqmd2igdmSoejA2GI8/fb2/uv9psHrw4cXhrxvHH1f23z/fO1nZOwFAF5rlQPIpLJvSnaEwjtvEcpFfmXRMhz6vAmNXGhRNXm1bS+1wrGlsKDZzNzpz99bKxp3VHyfnlgD6WSL3rI7u0OXokSyjtpAysihjvhET2MxsvY7tsuSbsC/KlF9aUdClL6q2FbgMUh8F+av4HjtAw9QMRA7aUbAcoqtk+Sp5DgxxSa241lVoJvNIlGbGGBo1TaPOwdE8I55l0GVb8RwjlosiAEMmBAU8ukTALBEwyuRMhYQlFQqsZB6K0LUwA4EZUjFTLGSUiGhKJaiQg7A6F1aBUhmL1AFgqRhUiJl8Lg0SMU0oT6NkSoQ8u5mjgFg6hEGg7CIug1/I4BXkQbJshTxPIspVlHA0SiamAhhQMViuYJZKC5yGLAt+phzOKhbmEwi9mEtDlAUmlAdJBUpIolaJsXIZicsxnZwkOVAJk8cBQC4NlAroiJpvMbD1hDbQFLlyeXB6auzWjav34jdmH07GH0SvXg9+M9x6qY9wUeGR4ftLixyJiCkqAkAenVXMo6lVWWq1xEX5w73LW1vv/vhr9+0v25mt0akpvbfWdr7GHWzQeiu4UkmFtzoci+B2OygTAHQumyMWcmANS6PB6xu6v708s/Ds9M/f//n37+X1pY7YoKPFT/gd6io96qOi4+OEzaoiiNpzrbjTDrgbm/2doejEtYErU6M3Z+LPVhcSW0uJ7eXE9txq4u7c2qWJSdxHSSzlZW5bcHSib3J68PrMxdiI60IzQNZVOwLN3o4uX7A7EOkPjkz0Xr4evTYdu3qzb/y7zoHRmlALXu/gY7DcbjAH6r1dHe2xseqOXq4BBvh6WGrVK50WTVWFrbnJF+w+Hx0MjY6HRsaCQ8OBSK8p4JFROqZSWEyUCg0ac7OnJdIfiAyJKQIQG8vFZp3EjEptGOJxmhobKlsvBC5F/d093mBH5cVG0u+W23GmlFuIiAUmNVqDGZ0azKXlmWUAn4AlFh1UYUA8Lszn0dd7bYHWmo6ems6uhq6IN9yJ1tkFJg1bJWBDRcUWSGQQ8iA2u5St9eGA1EooKsxwpROv85mbzlV19vr72uti9e5uf0V7qzd0scxDSqxIgVpAEzGKSEGRhpvNpYmMYqLNDMBn7QZ/PdV2oS7c4+8LuXvqnGECbyvTnkOlXsR63gq5ED4JcVEJn5TwbGIOymeUsBAPKnfB/wHlzqSYNK3A2gAAAABJRU5ErkJggg=="
+              },
+              "images": {
+                "fallback": {
+                  "src": "/static/c62628f14e0d06fa768e19abc3ba810f/d6731/c752ddbd-e766-44ad-91b7-a5b521b5c6bb.png",
+                  "srcSet": "/static/c62628f14e0d06fa768e19abc3ba810f/9274b/c752ddbd-e766-44ad-91b7-a5b521b5c6bb.png 30w,\n/static/c62628f14e0d06fa768e19abc3ba810f/9d5b3/c752ddbd-e766-44ad-91b7-a5b521b5c6bb.png 60w,\n/static/c62628f14e0d06fa768e19abc3ba810f/d6731/c752ddbd-e766-44ad-91b7-a5b521b5c6bb.png 120w",
+                  "sizes": "(min-width: 120px) 120px, 100vw"
+                },
+                "sources": [
+                  {
+                    "srcSet": "/static/c62628f14e0d06fa768e19abc3ba810f/d6c2c/c752ddbd-e766-44ad-91b7-a5b521b5c6bb.webp 30w,\n/static/c62628f14e0d06fa768e19abc3ba810f/b8ad1/c752ddbd-e766-44ad-91b7-a5b521b5c6bb.webp 60w,\n/static/c62628f14e0d06fa768e19abc3ba810f/47534/c752ddbd-e766-44ad-91b7-a5b521b5c6bb.webp 120w",
+                    "type": "image/webp",
+                    "sizes": "(min-width: 120px) 120px, 100vw"
+                  }
+                ]
+              },
+              "width": 120,
+              "height": 120
+            }
+          }
+        }
+      },
+      "ongoing": false,
+      "shortname": "SNF",
+      "longname": "Superior National Forest Project",
+      "startdate": "1983-05-05",
+      "enddate": "1984-09-23",
+      "region": "Superior National Forest near Ely, Minnesota",
+      "deployments": [
+        {
+          "id": "602ab2c4-0da2-4518-860e-04c897174203",
+          "startdate": "1983-05-05",
+          "enddate": "1983-10-27"
+        },
+        {
+          "id": "9b0d6cc4-cbaf-48ec-928f-7c517b22e141",
+          "startdate": "1984-05-10",
+          "enddate": "1984-09-23"
+        }
+      ],
+      "countDataProducts": 37
+    },
+    {
+      "logo": null,
+      "ongoing": false,
+      "shortname": "TEFLUN",
+      "longname": "TExas and FLorida UNderflights",
+      "startdate": "1998-04-01",
+      "enddate": "1998-09-30",
+      "region": "Texas, Florida",
+      "deployments": [
+        {
+          "id": "d70fd881-9279-4e2d-87de-93dd74244fab",
+          "startdate": "1998-04-01",
+          "enddate": "1998-05-15"
+        },
+        {
+          "id": "9a5e97f5-c94f-4eb0-bc82-46a5bd9919f6",
+          "startdate": "1998-08-01",
+          "enddate": "1998-09-30"
+        }
+      ],
+      "countDataProducts": 0
+    },
+    {
+      "logo": {
+        "description": "ABoVE logo",
+        "gatsbyImg": {
+          "childImageSharp": {
+            "gatsbyImageData": {
+              "layout": "constrained",
+              "placeholder": {
+                "fallback": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABcSAAAXEgFnn9JSAAAB6UlEQVQozzXNz2sTQRjG8YkVD0pDsmmz78SCJ2/i0Wzi7jtitARsaQ8tFaWNbLN53200JUXbNGkbDWItQg8WvaioiBStiNWDYg/1JlLoHyBF/AkevQgiysim8fBlmIH5PAKQQqbDIm7zHkD6IRVdBiQhFYng3XRIAHLIRAqBQzuDe6sQOCy2o2ZCCC0AqQ1U8InKnYdZd6T8r1JRV9zmNtPhKDgcBuQA3cYd3mE6tKs1FLQbkKNB/0Gxv89tj1n+p4OnczozNaRjlr8GSB8A6Q0gvwbkAiB3AfI4ILsm8mprYAIcXgPkpybSzSYYt1kkjlA5lvR17nbPb/9RVnem+QsgBb0E5IeA/ACQVwB5uTWwBcgIyK8AeROQ5wG51ATtUQ53WGOfD5w8o6fXj/4trmT1vu6CNm1/Uyp+LBXfkIqfS8WrCcU1iXxfKp6QyB8l8oZE3kooXpSKLzTBcHL0XDRJuvdK/6+5t6jPPsv83Nvt/jEs+m6kvUbE8pailrcesbx7Rtp7b6S8OxHLmzTS3jcj5b0LzvZD+fmIla80wQH/Yr1vrLIw98Sdmn0x5Nbulm4NlmpLx0aq1axbPX8iX7s2XG5Ue7yZ64PFejUzUlnIDFcap8YvTQ4U6/V+ml3sLcwsH89NXw3Afwl3uEl8xDGWAAAAAElFTkSuQmCC"
+              },
+              "images": {
+                "fallback": {
+                  "src": "/static/38ae6d91e4b9fca18981724e1da30b23/5fa06/6bb8a61d-1f7d-4d18-83d8-63b6c7fa42f6.png",
+                  "srcSet": "/static/38ae6d91e4b9fca18981724e1da30b23/d0859/6bb8a61d-1f7d-4d18-83d8-63b6c7fa42f6.png 82w,\n/static/38ae6d91e4b9fca18981724e1da30b23/96f03/6bb8a61d-1f7d-4d18-83d8-63b6c7fa42f6.png 164w,\n/static/38ae6d91e4b9fca18981724e1da30b23/5fa06/6bb8a61d-1f7d-4d18-83d8-63b6c7fa42f6.png 327w,\n/static/38ae6d91e4b9fca18981724e1da30b23/65249/6bb8a61d-1f7d-4d18-83d8-63b6c7fa42f6.png 654w",
+                  "sizes": "(min-width: 327px) 327px, 100vw"
+                },
+                "sources": [
+                  {
+                    "srcSet": "/static/38ae6d91e4b9fca18981724e1da30b23/ffc58/6bb8a61d-1f7d-4d18-83d8-63b6c7fa42f6.webp 82w,\n/static/38ae6d91e4b9fca18981724e1da30b23/c218e/6bb8a61d-1f7d-4d18-83d8-63b6c7fa42f6.webp 164w,\n/static/38ae6d91e4b9fca18981724e1da30b23/b7f1f/6bb8a61d-1f7d-4d18-83d8-63b6c7fa42f6.webp 327w,\n/static/38ae6d91e4b9fca18981724e1da30b23/e6160/6bb8a61d-1f7d-4d18-83d8-63b6c7fa42f6.webp 654w",
+                    "type": "image/webp",
+                    "sizes": "(min-width: 327px) 327px, 100vw"
+                  }
+                ]
+              },
+              "width": 327,
+              "height": 120
+            }
+          }
+        }
+      },
+      "ongoing": true,
+      "shortname": "ABoVE",
+      "longname": "Arctic-Boreal Vulnerability Experiment",
+      "startdate": "2017-04-27",
+      "enddate": null,
+      "region": "Alaska, western Canada",
+      "deployments": [
+        {
+          "id": "7482cd8c-df02-476f-803a-7292ca668ef7",
+          "startdate": "2017-04-27",
+          "enddate": "2017-11-04"
+        },
+        {
+          "id": "05ed8284-2d51-4a0b-bf99-758d39bba52b",
+          "startdate": "2018-07-21",
+          "enddate": "2018-09-01"
+        },
+        {
+          "id": "ad37dd3e-eb17-4521-a604-962d08512282",
+          "startdate": "2019-06-30",
+          "enddate": "2019-09-17"
+        }
+      ],
+      "countDataProducts": 136
+    },
+    {
+      "logo": {
+        "description": "TARFOX Logo",
+        "gatsbyImg": {
+          "childImageSharp": {
+            "gatsbyImageData": {
+              "layout": "constrained",
+              "placeholder": {
+                "fallback": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAIAAABr+ngCAAAACXBIWXMAAAsTAAALEwEAmpwYAAADnklEQVQozwGTA2z8AOLk6So8YhMsVRkxWxIqVRIqVRcuWBYtViI1XVhgeFhfdzVFZhcuVxUtVxYuWBYtVxgwWBgwWggiT3J8lgDg4uk0Q2gzQmU8S25EUnI0RGcuP2cxQGQ8SWw4R2k6R2o/TW4vQGQwQWYuPWQvPGQ1Q2g2RGgfMVt0fZcA5ObqGi9ZIDBSEyVOOVNuEixXEiJJGCxTABZGHS5RDiBMBx5KGy1TBRpJGClQHy9SIzJTHS5SABZEb3eTAOTm7CRAag0vWg0wXQ8yXggtWw4vXBIyXQcrWRAuWAwsWA4vXBUyXiA9YjhNaTNJaTRLaTRMah45X3WDngDv+PyFy+NxwNx1w95vvNp1w990w95zw951w9xtssp0t853xd92x+N5yeR3x+J1xeBtuNNkqMBotM2w3u4A9P3/sPL/pvD/p/D/pu//pu//p/D/pvH/pfD/puPzpuDxoef6md3vmt3unuD0o+r+o+z9nN/zoe38zfj/APP5+qfQ2pzK1pvJ1JnF0prH05fD0ZvI1JvI1J3Cyp7CypW/yoaqs4WosYuxupW9xpjBzJrE0JXAzMXf5QD0+PqqztifydScw9CYvcyawc6dxtKgydOVucSKrbeSt8KdxM+cxM2cxM6dxdCdxM+dxM6cw82aw87H3+UA9Pr7qdXhntDdm8valcTWnsrYpNHdns/elcPRhq25iLC8irK+jbXBlcHMmcbUmcbSmMbTmMTRmMnWyOTtAPP4+KvI0KHCypy8xpe2w569x6K/x5y7xZq7xIqor4mkqZW0vJ7AyaTFzaLDyqLDy6LDy6PEzJ/Bysfa3wD0+funz9ubytiXxtmWxdeZyNmXyNmYyNmdy9uav8yUu8eJsb2ErLeQucafz92f0N+fz9yfzt2WxtXF4OkA8/n6lcLKi7rEn9Dcpdfnp9nopdjnpNXmodLipNTjptXilb7IkbnDotDcn8jUmcDJqdvnncrWha+4vdjeAOXx81iWpkeRoz2esla10mPA6GLA52PA52G+5l+742G+5l243mC74mPC62GszGSjv2O84lu11DuUqYy+ygDi7/dci74ngLwAgMIBe7wAeMIAdsMAdsMAd8MAd8MAdsMAd8UAd8QAdsMAesYAfMgAd8ICeMAAd8Bqs9sA+Pn619/n1eTv0ePv1OXxzuPuzOLuzOLuyd/ryuDsy+HtzuTwy+LuzePvzOLuyeDsy+Huy+LvyN/t3+zzSpwixNqvWOAAAAAASUVORK5CYII="
+              },
+              "images": {
+                "fallback": {
+                  "src": "/static/42d73b53182138a2c45973ea6d99a3a5/bda37/ca68e8e6-0170-45d6-9991-bdead54aa1f6.jpg",
+                  "srcSet": "/static/42d73b53182138a2c45973ea6d99a3a5/de998/ca68e8e6-0170-45d6-9991-bdead54aa1f6.jpg 40w,\n/static/42d73b53182138a2c45973ea6d99a3a5/ee395/ca68e8e6-0170-45d6-9991-bdead54aa1f6.jpg 81w,\n/static/42d73b53182138a2c45973ea6d99a3a5/bda37/ca68e8e6-0170-45d6-9991-bdead54aa1f6.jpg 161w",
+                  "sizes": "(min-width: 161px) 161px, 100vw"
+                },
+                "sources": [
+                  {
+                    "srcSet": "/static/42d73b53182138a2c45973ea6d99a3a5/ce7f3/ca68e8e6-0170-45d6-9991-bdead54aa1f6.webp 40w,\n/static/42d73b53182138a2c45973ea6d99a3a5/cbd4d/ca68e8e6-0170-45d6-9991-bdead54aa1f6.webp 81w,\n/static/42d73b53182138a2c45973ea6d99a3a5/44a64/ca68e8e6-0170-45d6-9991-bdead54aa1f6.webp 161w",
+                    "type": "image/webp",
+                    "sizes": "(min-width: 161px) 161px, 100vw"
+                  }
+                ]
+              },
+              "width": 161,
+              "height": 120.00000000000001
+            }
+          }
+        }
+      },
+      "ongoing": false,
+      "shortname": "TARFOX",
+      "longname": "Tropospheric Aerosol Radiative Forcing Observational Experiment",
+      "startdate": "1996-07-07",
+      "enddate": "1996-07-31",
+      "region": "Western Atlantic Ocean, US Eastern Seaboard",
+      "deployments": [
+        {
+          "id": "4276018a-4270-403f-ab5b-2f734d3da9c7",
+          "startdate": "1996-07-07",
+          "enddate": "1996-07-31"
+        }
+      ],
+      "countDataProducts": 5
+    },
+    {
+      "logo": {
+        "description": "AirMOSS logo",
+        "gatsbyImg": {
+          "childImageSharp": {
+            "gatsbyImageData": {
+              "layout": "constrained",
+              "placeholder": {
+                "fallback": "data:image/png;base64,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"
+              },
+              "images": {
+                "fallback": {
+                  "src": "/static/0d8b9bce5b2fabe7daa6ad4e8e418ba8/d6731/57a03538-3e5c-49f5-a1a8-196447a71eb7.png",
+                  "srcSet": "/static/0d8b9bce5b2fabe7daa6ad4e8e418ba8/9274b/57a03538-3e5c-49f5-a1a8-196447a71eb7.png 30w,\n/static/0d8b9bce5b2fabe7daa6ad4e8e418ba8/9d5b3/57a03538-3e5c-49f5-a1a8-196447a71eb7.png 60w,\n/static/0d8b9bce5b2fabe7daa6ad4e8e418ba8/d6731/57a03538-3e5c-49f5-a1a8-196447a71eb7.png 120w,\n/static/0d8b9bce5b2fabe7daa6ad4e8e418ba8/39f46/57a03538-3e5c-49f5-a1a8-196447a71eb7.png 240w",
+                  "sizes": "(min-width: 120px) 120px, 100vw"
+                },
+                "sources": [
+                  {
+                    "srcSet": "/static/0d8b9bce5b2fabe7daa6ad4e8e418ba8/d6c2c/57a03538-3e5c-49f5-a1a8-196447a71eb7.webp 30w,\n/static/0d8b9bce5b2fabe7daa6ad4e8e418ba8/b8ad1/57a03538-3e5c-49f5-a1a8-196447a71eb7.webp 60w,\n/static/0d8b9bce5b2fabe7daa6ad4e8e418ba8/47534/57a03538-3e5c-49f5-a1a8-196447a71eb7.webp 120w,\n/static/0d8b9bce5b2fabe7daa6ad4e8e418ba8/bde7b/57a03538-3e5c-49f5-a1a8-196447a71eb7.webp 240w",
+                    "type": "image/webp",
+                    "sizes": "(min-width: 120px) 120px, 100vw"
+                  }
+                ]
+              },
+              "width": 120,
+              "height": 120
+            }
+          }
+        }
+      },
+      "ongoing": false,
+      "shortname": "AirMOSS",
+      "longname": "Airborne Microwave Observatory of Subcanopy and Subsurface",
+      "startdate": "2012-09-18",
+      "enddate": "2015-09-29",
+      "region": "North America",
+      "deployments": [
+        {
+          "id": "ebb5b6d6-e5fb-497a-a50e-b75e397a6086",
+          "startdate": "2012-09-18",
+          "enddate": "2012-09-20"
+        },
+        {
+          "id": "00ffd952-6439-4da9-884b-17f9b000c4de",
+          "startdate": "2012-10-02",
+          "enddate": "2012-10-11"
+        },
+        {
+          "id": "ebf994c0-96b3-4a9e-9912-794e1530acfc",
+          "startdate": "2012-10-12",
+          "enddate": "2012-10-22"
+        },
+        {
+          "id": "73510cdd-978d-44eb-be54-4f2357246bf6",
+          "startdate": "2012-10-23",
+          "enddate": "2012-10-30"
+        },
+        {
+          "id": "b1e95aa7-0efd-443a-a615-ad5f88c34187",
+          "startdate": "2013-02-19",
+          "enddate": "2013-02-25"
+        },
+        {
+          "id": "86d70356-931d-472a-8f2b-a35cd3c82c3e",
+          "startdate": "2013-04-11",
+          "enddate": "2013-04-19"
+        },
+        {
+          "id": "a8327fd1-a826-488f-815c-cc1caabae27d",
+          "startdate": "2013-04-20",
+          "enddate": "2013-05-01"
+        },
+        {
+          "id": "e2ad028b-d3b0-4bfe-816b-403fb7b69746",
+          "startdate": "2013-05-28",
+          "enddate": "2013-06-07"
+        },
+        {
+          "id": "cb392956-0385-4388-bd12-583982c7a700",
+          "startdate": "2013-06-10",
+          "enddate": "2013-06-21"
+        },
+        {
+          "id": "8e5354f7-74f6-4047-ae5d-f3788344b817",
+          "startdate": "2013-07-06",
+          "enddate": "2013-07-14"
+        },
+        {
+          "id": "d5c47d1e-78b6-4cd3-80bb-1d5b4014b6eb",
+          "startdate": "2013-07-15",
+          "enddate": "2013-07-25"
+        },
+        {
+          "id": "c0b7c4e8-68b2-424d-a859-43cbdf844d05",
+          "startdate": "2013-07-26",
+          "enddate": "2013-08-03"
+        },
+        {
+          "id": "1147167c-3a1a-4d40-a4c5-eff780c185a6",
+          "startdate": "2013-08-18",
+          "enddate": "2013-08-27"
+        },
+        {
+          "id": "eec907b2-6362-4be6-b1b4-43c515e378a8",
+          "startdate": "2013-09-27",
+          "enddate": "2013-09-30"
+        },
+        {
+          "id": "eda4463e-b3d0-4df7-9de8-a81ac775f89d",
+          "startdate": "2013-11-19",
+          "enddate": "2013-11-21"
+        },
+        {
+          "id": "b145955a-37f4-475f-8dd8-cdbf69697adb",
+          "startdate": "2014-03-24",
+          "enddate": "2014-04-02"
+        },
+        {
+          "id": "989a6025-a9ca-4dc5-a32f-f1640d2e6d9c",
+          "startdate": "2014-04-14",
+          "enddate": "2014-04-25"
+        },
+        {
+          "id": "da4f74fe-3205-4c56-9dc8-7c25b5c42e4f",
+          "startdate": "2014-05-27",
+          "enddate": "2014-06-04"
+        },
+        {
+          "id": "e185b5ae-7690-4e10-8a8c-6f8347031f7a",
+          "startdate": "2014-06-06",
+          "enddate": "2014-06-16"
+        },
+        {
+          "id": "b8ce6c3c-91cc-4646-9824-d14b162003b7",
+          "startdate": "2014-06-26",
+          "enddate": "2014-07-07"
+        },
+        {
+          "id": "b615d040-050f-4d77-abcf-771d47f2411c",
+          "startdate": "2014-07-08",
+          "enddate": "2014-07-19"
+        },
+        {
+          "id": "32093afd-d248-49e6-ad65-5a85ebe954c1",
+          "startdate": "2014-08-07",
+          "enddate": "2014-08-14"
+        },
+        {
+          "id": "3aa23d8b-9b2a-471b-bae9-f809ed188c71",
+          "startdate": "2014-08-18",
+          "enddate": "2014-08-27"
+        },
+        {
+          "id": "9d7d0abe-fdf3-4377-85e9-a0de7a3eadb0",
+          "startdate": "2014-09-28",
+          "enddate": "2014-10-08"
+        },
+        {
+          "id": "a7fe632b-4a78-4b35-8f52-f59c15564b10",
+          "startdate": "2014-10-14",
+          "enddate": "2014-10-23"
+        },
+        {
+          "id": "dabaf87a-09f1-4dbb-967e-a7832fcf84a0",
+          "startdate": "2015-02-17",
+          "enddate": "2015-02-25"
+        },
+        {
+          "id": "46c3b3f0-1acd-414d-b982-35273b567bca",
+          "startdate": "2015-04-03",
+          "enddate": "2015-04-14"
+        },
+        {
+          "id": "4fc5a47e-b11d-4263-b6be-7747adc3c377",
+          "startdate": "2015-04-15",
+          "enddate": "2015-04-24"
+        },
+        {
+          "id": "62039a1d-3085-4a4d-b1db-e9241b1cde46",
+          "startdate": "2015-05-20",
+          "enddate": "2015-05-24"
+        },
+        {
+          "id": "98acf4db-dc8e-4e26-93ca-7dec0fe37a28",
+          "startdate": "2015-06-29",
+          "enddate": "2015-07-06"
+        },
+        {
+          "id": "f9439c39-72e4-452e-9567-b77591f36e0b",
+          "startdate": "2015-08-07",
+          "enddate": "2015-08-18"
+        },
+        {
+          "id": "d072e7d9-5d9c-4fe0-abd9-d6826fa9ab3b",
+          "startdate": "2015-08-19",
+          "enddate": "2015-08-27"
+        },
+        {
+          "id": "e0255600-f820-40df-836c-148fd39954d5",
+          "startdate": "2015-09-01",
+          "enddate": "2015-09-10"
+        },
+        {
+          "id": "06706fc9-0012-4123-9a8b-a9470c380bcc",
+          "startdate": "2015-09-22",
+          "enddate": "2015-09-29"
+        }
+      ],
+      "countDataProducts": 19
+    },
+    {
+      "logo": {
+        "description": "BOREAS logo",
+        "gatsbyImg": {
+          "childImageSharp": {
+            "gatsbyImageData": {
+              "layout": "constrained",
+              "placeholder": {
+                "fallback": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAACXBIWXMAAAsTAAALEwEAmpwYAAADQklEQVQ4y2P4TwFg+P///79///7//0eKrn9gLWDN5Nv88+evW/eePX3+Gi709+/fP39A6C+I/PP79x8Q+y/CaU+evbx179nPn78Yvnz52jdrU0Hvpvlbzy/afGLBlnNr91/ZePjaxiM3Nhy5sf7Irc1Hr28+en39wSvzN52Zv/HE7E3n8rrW987a9OXLV4bfv3+/ffdxz5n7m4/cPHzuzqodZ5MrFwYkTfSN6nALbnIObPEOa3ULbE0pnLXl8NUD5+5tPHRzz5kHb999/P37NwM8BP7//3/j3ou44nk6ZtnS8iGq6qGmxjFmRhGS0v6iYn7SYkFRQY2PH72EK4aHNoi1/8x52+QeOYs8XtNULstsIfsCFa9Sg5Aqfrs8butcPqtMNtFAS5Ps5+DQgYY2xJB/f/6a5GewOLhxBjYzRPcxxfQxRPRyxvazRPUxRPSwRPcxRfexxvSwikWUFU4BBypEM9iMl+/eC0b6c0blsDbuNevenjRls3nzavmaZfI1K6Tr1odM3mzavZm1fR+vX5eBWszHT58hlkM1P3/7hj3ExzevsLGjo60jr74lP6Io3TzRzzbRwz/Jt6AwraS0pKCp0jc0T04y4uWLVzDNsNizLC3UC7LvK/avynCzDHAwTXALTbLLT7cty3UsyUgydg/Q9XETlw50dyz8++cnJKQYIKni////R69dZg/3Dc3xX9ju35Dn3V8R3lsTHp3h5p3u7ZsZIeDnxhaVwCngPqFvyf/////8+Yvw85Nnrw8evFrZ0MHm5y4fZ55WptPbatrSbBxWohhRJO9aYMBbmMiSn926dOHzE+fenL8CiV4GiBk7t5/SMSldmNJ5tLTKMShcISYsriwxuTwyoig0vDrLPCfdzC94eULOk5reK8FZp/xTIcmY4R/Yzc9OXzpZ0X+9fuLLuv7nrVNuXr267/jxlVu2Lt6wYdfpkyeXrjopb/dm5op7dX1XA9LPBKRDNUOSyI/Xbz8eO/Px5IU3x8+9PXXx76/f8Mz3////Xx8+vT1w8u/vP/////984dqH81ehzsaeX///+/sPlKX+gHMUNA3++/f/7z/0wgCauP/+hSPMzP8fJggqB/7+Q9VMVmEAAGo+hMmbPMbOAAAAAElFTkSuQmCC"
+              },
+              "images": {
+                "fallback": {
+                  "src": "/static/7addfb83fc452c4c43d6d7f708f4b409/d6731/272b0097-1886-4dcb-9043-f58e075dd9d9.png",
+                  "srcSet": "/static/7addfb83fc452c4c43d6d7f708f4b409/9274b/272b0097-1886-4dcb-9043-f58e075dd9d9.png 30w,\n/static/7addfb83fc452c4c43d6d7f708f4b409/9d5b3/272b0097-1886-4dcb-9043-f58e075dd9d9.png 60w,\n/static/7addfb83fc452c4c43d6d7f708f4b409/d6731/272b0097-1886-4dcb-9043-f58e075dd9d9.png 120w",
+                  "sizes": "(min-width: 120px) 120px, 100vw"
+                },
+                "sources": [
+                  {
+                    "srcSet": "/static/7addfb83fc452c4c43d6d7f708f4b409/d6c2c/272b0097-1886-4dcb-9043-f58e075dd9d9.webp 30w,\n/static/7addfb83fc452c4c43d6d7f708f4b409/b8ad1/272b0097-1886-4dcb-9043-f58e075dd9d9.webp 60w,\n/static/7addfb83fc452c4c43d6d7f708f4b409/47534/272b0097-1886-4dcb-9043-f58e075dd9d9.webp 120w",
+                    "type": "image/webp",
+                    "sizes": "(min-width: 120px) 120px, 100vw"
+                  }
+                ]
+              },
+              "width": 120,
+              "height": 120
+            }
+          }
+        }
+      },
+      "ongoing": false,
+      "shortname": "BOREAS",
+      "longname": "Boreal Ecosystem-Atmosphere Study",
+      "startdate": "1994-02-02",
+      "enddate": "1996-10-21",
+      "region": "Boreal forests of central Canada",
+      "deployments": [
+        {
+          "id": "de2ede92-3941-4ab9-8c0d-c9a77bc3109e",
+          "startdate": "1994-02-02",
+          "enddate": "1994-09-19"
+        },
+        {
+          "id": "147b4cd5-9dea-4613-9222-b0b42ff4f57e",
+          "startdate": "1996-02-27",
+          "enddate": "1996-10-21"
+        }
+      ],
+      "countDataProducts": 302
+    },
+    {
+      "logo": {
+        "description": "CAMP2Ex Logo",
+        "gatsbyImg": {
+          "childImageSharp": {
+            "gatsbyImageData": {
+              "layout": "constrained",
+              "placeholder": {
+                "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAOABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMFAgT/xAAVAQEBAAAAAAAAAAAAAAAAAAACA//aAAwDAQACEAMQAAAB0ujyUnSGAf8A/8QAGhABAAMBAQEAAAAAAAAAAAAAAgEDBAAREv/aAAgBAQABBQLTqUWVt8LfTdnhKM/1xEE//8QAFhEAAwAAAAAAAAAAAAAAAAAAARAR/9oACAEDAQE/ATV//8QAFhEAAwAAAAAAAAAAAAAAAAAAARAR/9oACAECAQE/ARF//8QAHRAAAgIBBQAAAAAAAAAAAAAAAAECERIDITFRYf/aAAgBAQAGPwLCOxa1LXpZnwynIS6P/8QAGhABAQEBAQEBAAAAAAAAAAAAAREAMSFRgf/aAAgBAQABPyFCkHXOVgfGh9XSh8JTP0/yTH08EN//2gAMAwEAAgADAAAAEATP/8QAGBEBAQADAAAAAAAAAAAAAAAAAQARIUH/2gAIAQMBAT8QPEDjd//EABcRAQEBAQAAAAAAAAAAAAAAAAEAESH/2gAIAQIBAT8Q4Sm3/8QAHBABAAIDAAMAAAAAAAAAAAAAAREhADFRQWGB/9oACAEBAAE/EEhRaRZboa13NtJwRfcGj7hJDBvJubyC+SPMgb02FKfDzDjkQHWf/9k="
+              },
+              "images": {
+                "fallback": {
+                  "src": "/static/adcfb9176ab4f106aa2a865e0d36d739/6b8e7/c01afe84-2f0b-4b48-a47b-c2b8eed1af99.jpg",
+                  "srcSet": "/static/adcfb9176ab4f106aa2a865e0d36d739/76d9c/c01afe84-2f0b-4b48-a47b-c2b8eed1af99.jpg 44w,\n/static/adcfb9176ab4f106aa2a865e0d36d739/cc79e/c01afe84-2f0b-4b48-a47b-c2b8eed1af99.jpg 88w,\n/static/adcfb9176ab4f106aa2a865e0d36d739/6b8e7/c01afe84-2f0b-4b48-a47b-c2b8eed1af99.jpg 176w,\n/static/adcfb9176ab4f106aa2a865e0d36d739/40f8a/c01afe84-2f0b-4b48-a47b-c2b8eed1af99.jpg 352w",
+                  "sizes": "(min-width: 176px) 176px, 100vw"
+                },
+                "sources": [
+                  {
+                    "srcSet": "/static/adcfb9176ab4f106aa2a865e0d36d739/5db2d/c01afe84-2f0b-4b48-a47b-c2b8eed1af99.webp 44w,\n/static/adcfb9176ab4f106aa2a865e0d36d739/6e923/c01afe84-2f0b-4b48-a47b-c2b8eed1af99.webp 88w,\n/static/adcfb9176ab4f106aa2a865e0d36d739/cafdf/c01afe84-2f0b-4b48-a47b-c2b8eed1af99.webp 176w,\n/static/adcfb9176ab4f106aa2a865e0d36d739/93206/c01afe84-2f0b-4b48-a47b-c2b8eed1af99.webp 352w",
+                    "type": "image/webp",
+                    "sizes": "(min-width: 176px) 176px, 100vw"
+                  }
+                ]
+              },
+              "width": 176,
+              "height": 120.00000000000001
+            }
+          }
+        }
+      },
+      "ongoing": false,
+      "shortname": "CAMP2Ex",
+      "longname": "Clouds, Aerosol, and Monsoon Processes-Philippines Experiment",
+      "startdate": "2019-08-20",
+      "enddate": "2019-10-10",
+      "region": "Philippines",
+      "deployments": [
+        {
+          "id": "891e90c2-2083-446c-90c5-99a8b6f50b75",
+          "startdate": "2019-08-20",
+          "enddate": "2019-10-10"
+        }
+      ],
+      "countDataProducts": 9
+    },
+    {
+      "logo": {
+        "description": "CPEX Logo",
+        "gatsbyImg": {
+          "childImageSharp": {
+            "gatsbyImageData": {
+              "layout": "constrained",
+              "placeholder": {
+                "fallback": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAIAAAAf7rriAAAACXBIWXMAAAsTAAALEwEAmpwYAAADNklEQVQ4y42UW2/aZhiA+T37Ibvqzf5Cd1H1olIvpqmRliaNqnXqUkhIO5rjUJOsVcqSNAESGKQhhnA0OI452QaMCYSAjQEbnw9TMAlVVlV79V280vs933v+LMaNaPro6MZXRNcNXb9rsfz3nqpq9QYFIziYKWTO0HKlwbL8kNfv8CNY1Y0YrRKcGmyp5ECBMgW3H3Ltpz2Bc/AMDx6nULzGDQTziTGsG4aiGYys/54XfslLEUpZ2y8+eHL4068h2yo4ORt+PBVc3MyQF5T3MEqQV1/y156RnuppyHne8JXYJ8/8P74A/vIUmTZXJTpYtesK4q+d4KOnARCuHf4Tq9Xbt7zlVuv3xYcTB471NF5nvTiXqzChQnsrR2+XeylatK0mHk8Fz3L1PU9EUbSxZxN+8y5t/xNsNFkkd/UmRTmwwXuCX0G593n673LPn2svvgOdW8hnAIrGs8Pu6BaTbLa4uZUkVu5suwtwk9uEr2airecnl9ZMd6kkOfLsRrF7VO0vf4BPk+VoHDFdWjTtGobzLXcAW/+UdQMlV5RY8uXXIuSLJG0HavNAzZZmrFB/t8Z9StZDEaKIkaIoX4dtwmiJPgiV1vYQX4JwnZSOzptJnN6oSH/kB46j8uwBOg91N9EeQPbBTCNwnG5TvWGrhmFfNPqeEO50I57TCtriG4LRFHSIVuxF8W1uMOfHF5OXH9BulRGrZHfPG+0w7BhutQcxqLEVRA9jRFvQ26JOSQYlaO66vIDJW4UucNFHKYHnlfplb//gVJKV8YTxgiKKSq5C752UKEFt8RrJSKJuVDlth5A+It3dz+V4qpaCWzBS8frio2rftgrKXs3YI1M2YH03O2kLW1dTE6/C0/bI5OvY8j46vXA68fJ414/5AwkUuxhV2zAMRb1u+vRc+OVinGaEV8uJe/c/WlcS93/2/vBge8YeyWL0+g7y3ferIEyCUNFcslHY2lBFiu2nVuDZfMTpOv/NERvwMs0IU7bw7FJ8x1dccIJvNzJO1/nd2b4VWVYlSTF1usOXCIas91hOUlTNBFRN177cqvFncGNQh1mg5U4wTABxkuUkMzpV++ZnoN8k8z/lX8rb47/kkMEmAAAAAElFTkSuQmCC"
+              },
+              "images": {
+                "fallback": {
+                  "src": "/static/44506be77bf2a316a0094b892f7c4b8b/aea02/dd16031d-9838-45cb-95e1-9a770f077652.png",
+                  "srcSet": "/static/44506be77bf2a316a0094b892f7c4b8b/66ef7/dd16031d-9838-45cb-95e1-9a770f077652.png 31w,\n/static/44506be77bf2a316a0094b892f7c4b8b/407fd/dd16031d-9838-45cb-95e1-9a770f077652.png 62w,\n/static/44506be77bf2a316a0094b892f7c4b8b/aea02/dd16031d-9838-45cb-95e1-9a770f077652.png 123w,\n/static/44506be77bf2a316a0094b892f7c4b8b/67d61/dd16031d-9838-45cb-95e1-9a770f077652.png 246w",
+                  "sizes": "(min-width: 123px) 123px, 100vw"
+                },
+                "sources": [
+                  {
+                    "srcSet": "/static/44506be77bf2a316a0094b892f7c4b8b/468a8/dd16031d-9838-45cb-95e1-9a770f077652.webp 31w,\n/static/44506be77bf2a316a0094b892f7c4b8b/2deaa/dd16031d-9838-45cb-95e1-9a770f077652.webp 62w,\n/static/44506be77bf2a316a0094b892f7c4b8b/0ff6e/dd16031d-9838-45cb-95e1-9a770f077652.webp 123w,\n/static/44506be77bf2a316a0094b892f7c4b8b/b9da3/dd16031d-9838-45cb-95e1-9a770f077652.webp 246w",
+                    "type": "image/webp",
+                    "sizes": "(min-width: 123px) 123px, 100vw"
+                  }
+                ]
+              },
+              "width": 123,
+              "height": 120.00000000000001
+            }
+          }
+        }
+      },
+      "ongoing": false,
+      "shortname": "CPEX",
+      "longname": "Convective Processes Experiment",
+      "startdate": "2017-05-25",
+      "enddate": "2017-06-25",
+      "region": "North Atlantic, Gulf of Mexico, Caribbean Oceanic region",
+      "deployments": [
+        {
+          "id": "4d3377e9-bc8b-4568-8f20-5cdf777ee7e1",
+          "startdate": "2017-05-25",
+          "enddate": "2017-06-25"
+        }
+      ],
+      "countDataProducts": 1
+    },
+    {
+      "logo": {
+        "description": "GCPEx logo",
+        "gatsbyImg": {
+          "childImageSharp": {
+            "gatsbyImageData": {
+              "layout": "constrained",
+              "placeholder": {
+                "fallback": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAVCAYAAABG1c6oAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFZklEQVQ4y2XTeUwbZBjH8f5l/NcYEo8pMUqibgvqdGQ3KJRyr7S0HW1ZW1jXWtrSUqCUHtBC6djBTtmQbWUcG8pg95xxTpjL3DQa4zWdGHTOqJkHTMYobb+myBKjv+TNm7x5n8+bN+/zCuLxOP8d0Wh0bk5kauovhoYGGRu7zr3EYrH/18TizMbiCP69mNiYwO7lwoXz6HQVCIVl6LQOBgYG5g74B40zG40SicW4G41zZzbO1Mw8+F/o2rUvqa2rIytLQum6aoSZWgpyDchLzFgtTkZHR4H5G0Si3InEmIrEuX13HryXW7d+Zdeu7eTnFVOyVk+J1E5q6mrW5BaS+tIalr6YQ3GxDanEhM/XyudffUUMmI7C5J0ok9NxBAloevoOx44dRSZT8sorBmTyJtLyTDyY9CgPJD1M/YFT5FTYuE9wP8lJT5CbrUGlclJaaua1ji5u/vILEeB2ApyZmcHj8bJyhRSx2I9CUs3CNcU8UzNM6stKHk9ZxMLVJTy7QkRGykLKlyxHKlZg3WhHqXCSn+9mvaaa4eNnmJgCQTQaobLSSdFaPyqdnTKthiKJgpRsLYszClgjzOa5ZctJeX4FG0xmPN56nlgtJ/nRJSTf9zjLUsVIJEHkijL+mIwiiMUi1NQ2k5VtpUz/KnUeLy6Pl0qDmiqrnvUaNVl5hSxZVYjD46art5NFaQUkp6t56rFlLEp6HpksiEZr4PeJ2X9Ah8NPtsiOxmjHaPFgMnmpq2+htqYVn287jupNlGsdVNX6qawKkrY4k5TnMknL1fP0I6lIJX7WazZy6/d5sNreSG5BPTWtr6Fc7yIvV4MwU41O42bHzp1UmpqQy8yI1xpIX6XmoaQUnkp+gZXLS1m8aBVyxWbWlVbw62+RBDiLzeZDKvfRtHkX5eYmiuT1vCxUk/LkS4Q8tbjd9Ty9cCmDg0PYbQHKVAa2BgNsCoTwtuzFamzEbLJw8+fpRB9GsVjdNDVu4dRwmO6eg/Rc/oP2oQ/JkOkwWatQqpUUKTScPfsWR4cGGb18lZ43h9l7oI+e7m5slU7KdQZu/DQPms0NNLg2M/LOAH2DAwxch+4vJpDtPEaBPYi4TI/BHeLSlc/oCYdx1DmRqg04vC107O+nRBZCrtBx46epBDg79yi5eQ5s1Ta0lTY6hs/R+dZF/P1naNjxOmM/3OTPqbu8/c4IfeEwo++ep31bG+1tAbwNXuTyFpQqPeM3phDMRBJ96CYv343R5mPBggX4m0N09b7Be++PMHrpPW7fnpz7moPHT9BzqI+jR45gNlSwVrSa9BUZlEhDiCUqvh2fRPD9zUlMZhfp6RVYLZ1kZEi4dHGE6+NjdPX2sqdzN919YT757FPCA29icQSp2OiiVGVFo/Egl7WQn2/C5QnyzXcTCL774S9GL48RCO0jS6ghR+TA5dyDqyFIebmSQGsAo2kjy9KWoNJWsVKop1BiQ6FwIsq2IJVZ2Lt/iKuf/Milq+MIvh6bYPSDcU68fY2O/WdRa2tIz5AiLnqVolw1B8I9BNq2kPTQAkT55ajUXqTFRkSidZjtIfYePE/XoYvs3neOfQffRXDl4xsMn/6Y18Pn2bbrNJu2DWFzbKGgQIdQqKLKEmSDwU1mthblOgfZwlIKi43YavfQ1n4CX6Aff+thvIE+mloOI7j4wRj9g5fZ3XmO0NYhGpu7aWzupTHQj07vIz1DQl7OBsRFRkQ5Zegr2/A2H8blO4TL243Le4imliN45sAjCN6/8j0Dxz6iI3yBzTtO0BTsxdfci9vfS2PrG7gbeygqNlKmc9O27SShLcdxerrnitv3nKVtxyk2bT/J1p2n2XdghL8By2BlAex3N00AAAAASUVORK5CYII="
+              },
+              "images": {
+                "fallback": {
+                  "src": "/static/aee23860a3428c35081ea98fb6630d60/b1ae4/3aeb86d7-2702-477a-bcc7-7e8159f232f3.png",
+                  "srcSet": "/static/aee23860a3428c35081ea98fb6630d60/75ae7/3aeb86d7-2702-477a-bcc7-7e8159f232f3.png 29w,\n/static/aee23860a3428c35081ea98fb6630d60/5581a/3aeb86d7-2702-477a-bcc7-7e8159f232f3.png 57w,\n/static/aee23860a3428c35081ea98fb6630d60/b1ae4/3aeb86d7-2702-477a-bcc7-7e8159f232f3.png 114w",
+                  "sizes": "(min-width: 114px) 114px, 100vw"
+                },
+                "sources": [
+                  {
+                    "srcSet": "/static/aee23860a3428c35081ea98fb6630d60/390b0/3aeb86d7-2702-477a-bcc7-7e8159f232f3.webp 29w,\n/static/aee23860a3428c35081ea98fb6630d60/86064/3aeb86d7-2702-477a-bcc7-7e8159f232f3.webp 57w,\n/static/aee23860a3428c35081ea98fb6630d60/f4be8/3aeb86d7-2702-477a-bcc7-7e8159f232f3.webp 114w",
+                    "type": "image/webp",
+                    "sizes": "(min-width: 114px) 114px, 100vw"
+                  }
+                ]
+              },
+              "width": 114,
+              "height": 120
+            }
+          }
+        }
+      },
+      "ongoing": false,
+      "shortname": "GCPEx",
+      "longname": "GPM Cold Season Precipitation Experiment",
+      "startdate": "2012-01-15",
+      "enddate": "2012-03-04",
+      "region": "Ontario, Canada and northern portions of the United States (e.g., New York state, the New England area, etc.)",
+      "deployments": [
+        {
+          "id": "72553dae-1d5d-424e-ae5c-376162ba9a37",
+          "startdate": "2012-01-15",
+          "enddate": "2012-03-04"
+        }
+      ],
+      "countDataProducts": 44
+    },
+    {
+      "logo": {
+        "description": "GRIP logo",
+        "gatsbyImg": {
+          "childImageSharp": {
+            "gatsbyImageData": {
+              "layout": "constrained",
+              "placeholder": {
+                "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAOABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABAAD/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQL/2gAMAwEAAhADEAAAAdMmHhTJqP/EABoQAAMBAQEBAAAAAAAAAAAAAAECAwATEhT/2gAIAQEAAQUCZ2rpj0fp56s+YShfLBQP/8QAFhEBAQEAAAAAAAAAAAAAAAAAARBR/9oACAEDAQE/AQ2f/8QAFxEBAAMAAAAAAAAAAAAAAAAAAQIQIv/aAAgBAgEBPwGSjmv/xAAdEAACAQQDAAAAAAAAAAAAAAAAARECEiJRITFB/9oACAEBAAY/Am/NHdsaIr5extRBbCMsmf/EABoQAQACAwEAAAAAAAAAAAAAAAEAESExQVH/2gAIAQEAAT8hvFa6DHRCerCwqz8h0mWJt07I3sesx2dVn//aAAwDAQACAAMAAAAQiy//xAAXEQEBAQEAAAAAAAAAAAAAAAABACFh/9oACAEDAQE/EATU8v/EABkRAAMAAwAAAAAAAAAAAAAAAAABESExkf/aAAgBAgEBPxCgTorM7P/EAB0QAQACAgIDAAAAAAAAAAAAAAEAEVFhIUGBodH/2gAIAQEAAT8QPJI8MB1eWITEfEEEKkWCsF7lUqYstxshMs+LE+wgKGxejU//2Q=="
+              },
+              "images": {
+                "fallback": {
+                  "src": "/static/2803312240ff21bec233dee65f422031/6202a/1323a71a-c5e5-4a66-bd6e-8ce81a7840b1.jpg",
+                  "srcSet": "/static/2803312240ff21bec233dee65f422031/9923d/1323a71a-c5e5-4a66-bd6e-8ce81a7840b1.jpg 43w,\n/static/2803312240ff21bec233dee65f422031/fe818/1323a71a-c5e5-4a66-bd6e-8ce81a7840b1.jpg 87w,\n/static/2803312240ff21bec233dee65f422031/6202a/1323a71a-c5e5-4a66-bd6e-8ce81a7840b1.jpg 173w,\n/static/2803312240ff21bec233dee65f422031/de274/1323a71a-c5e5-4a66-bd6e-8ce81a7840b1.jpg 346w",
+                  "sizes": "(min-width: 173px) 173px, 100vw"
+                },
+                "sources": [
+                  {
+                    "srcSet": "/static/2803312240ff21bec233dee65f422031/0c70f/1323a71a-c5e5-4a66-bd6e-8ce81a7840b1.webp 43w,\n/static/2803312240ff21bec233dee65f422031/681e5/1323a71a-c5e5-4a66-bd6e-8ce81a7840b1.webp 87w,\n/static/2803312240ff21bec233dee65f422031/0e177/1323a71a-c5e5-4a66-bd6e-8ce81a7840b1.webp 173w,\n/static/2803312240ff21bec233dee65f422031/a8b6e/1323a71a-c5e5-4a66-bd6e-8ce81a7840b1.webp 346w",
+                    "type": "image/webp",
+                    "sizes": "(min-width: 173px) 173px, 100vw"
+                  }
+                ]
+              },
+              "width": 173,
+              "height": 120
+            }
+          }
+        }
+      },
+      "ongoing": false,
+      "shortname": "GRIP",
+      "longname": "Genesis and Rapid Intensification Processes",
+      "startdate": "2010-08-15",
+      "enddate": "2010-09-25",
+      "region": "Tropical Atlantic, Gulf of Mexico, Eastern North Pacific, Caribbean Sea",
+      "deployments": [
+        {
+          "id": "c2317ae1-7327-4338-8bfc-aabd0f80469f",
+          "startdate": "2010-08-15",
+          "enddate": "2010-09-25"
+        }
+      ],
+      "countDataProducts": 23
+    },
+    {
+      "logo": {
+        "description": "HyMeX Logo",
+        "gatsbyImg": {
+          "childImageSharp": {
+            "gatsbyImageData": {
+              "layout": "constrained",
+              "placeholder": {
+                "fallback": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAACx0lEQVQoz22T21PMYRjHf5dcuKAjhTQhh6RW7a9dbWULFatkKtrMVIxQ03RjBmMYp93fVlZWpSi7HVk5jEMRmekgTDmEGa1GxAX+gNyY6WN+bw4XXLzzfWe+z/N93pnn80pacxPy9mbk3GaicxqZG38KP52C/2rbP8dPb8Nv9V/PV2fFT68wN+EUcwxl4i6pQau2OonOaSI2r42QdQ58YizCVBtmx6rNUyFq02wRrOCvV1icWi3qw9LPC0+tl9SgWbIVb1khIN7OzGgLAYYyAuPKmW+04xWjEJJcJV43I/I4s7QWMSTIaGfVtiZCTXWszHQKnbfmNFJUtoukAicRGdXEmuvRZtcRaHQQltHAkk3nSSlsxbijlWVpdSTmu4hIr2F6+FG8dRWkFl+l4EgHKXsus/tEF+HptUihKTUMDX/gYEUXnT0eqt3PKLJ2UWLrJu/QLTr6RukfGiN3/w0mJ3+QlN/I2gIXOw/fRM6qp//ZGN0DHk47HxGUUI600FRPR+87LrS/pP/FJ/aevM/VByO8Gv3G4Zo+Co938nr0C3f7PDwc/Ih5Xztv33/l3sAo4RscbC5qY+L7BJqMGqaFH0PSZF7k6fA4Jbb73O7xcMDejcHcwPDIF4LXV3GmZZC2O6+59tBD7/Nx9pV3cbv3HYrzMYVHbtF2Z5ja9iEG33wmNLkSKdBQRmRaFWEbHazY6ECzuZoL7idkl7qZGWUhvfQ6ibsuY8hvJa30GnEFl5BzXKQWuUksdLOh+AqxeS3EbXeywFiB5KtXxOa8ZKtQdfXLTWfxli0ExlewxFSLJtuFnNtCZJaLiMyLAjF1w1pzM5qtjURta8JXZxM9ksrXFGt/1Utr+QXyFIvz1tiJzHKycksD/nobQYmVLEqpYqnpHMFJZwRev2EXgb/pF8D+54f46hThBcSV/xniE2P9o+rA4LWV4qf8BNoW72enAVSRAAAAAElFTkSuQmCC"
+              },
+              "images": {
+                "fallback": {
+                  "src": "/static/80174fb33abdbef4619584a07962887d/6ea7a/0e54d9fc-b017-470e-81fb-b1c5853a17d2.png",
+                  "srcSet": "/static/80174fb33abdbef4619584a07962887d/7a3fb/0e54d9fc-b017-470e-81fb-b1c5853a17d2.png 38w,\n/static/80174fb33abdbef4619584a07962887d/c5602/0e54d9fc-b017-470e-81fb-b1c5853a17d2.png 75w,\n/static/80174fb33abdbef4619584a07962887d/6ea7a/0e54d9fc-b017-470e-81fb-b1c5853a17d2.png 150w",
+                  "sizes": "(min-width: 150px) 150px, 100vw"
+                },
+                "sources": [
+                  {
+                    "srcSet": "/static/80174fb33abdbef4619584a07962887d/2c972/0e54d9fc-b017-470e-81fb-b1c5853a17d2.webp 38w,\n/static/80174fb33abdbef4619584a07962887d/bb656/0e54d9fc-b017-470e-81fb-b1c5853a17d2.webp 75w,\n/static/80174fb33abdbef4619584a07962887d/8ad42/0e54d9fc-b017-470e-81fb-b1c5853a17d2.webp 150w",
+                    "type": "image/webp",
+                    "sizes": "(min-width: 150px) 150px, 100vw"
+                  }
+                ]
+              },
+              "width": 150,
+              "height": 82
+            }
+          }
+        }
+      },
+      "ongoing": false,
+      "shortname": "HyMeX",
+      "longname": "The Hydrological Cycle in Mediterranean Experiment",
+      "startdate": "2012-09-05",
+      "enddate": "2013-03-15",
+      "region": "The Mediterranean",
+      "deployments": [
+        {
+          "id": "29c42aef-0f2b-4fd7-a817-364ff095a450",
+          "startdate": "2012-09-05",
+          "enddate": "2012-11-06"
+        }
+      ],
+      "countDataProducts": 3
+    },
+    {
+      "logo": {
+        "description": "ICEPOP Logo",
+        "gatsbyImg": {
+          "childImageSharp": {
+            "gatsbyImageData": {
+              "layout": "constrained",
+              "placeholder": {
+                "fallback": "data:image/png;base64,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"
+              },
+              "images": {
+                "fallback": {
+                  "src": "/static/e0fcfda1882a50475bd77893d03e4116/d6731/d2ea24ad-a970-4aa7-b2c8-83ed4f8749c0.png",
+                  "srcSet": "/static/e0fcfda1882a50475bd77893d03e4116/9274b/d2ea24ad-a970-4aa7-b2c8-83ed4f8749c0.png 30w,\n/static/e0fcfda1882a50475bd77893d03e4116/9d5b3/d2ea24ad-a970-4aa7-b2c8-83ed4f8749c0.png 60w,\n/static/e0fcfda1882a50475bd77893d03e4116/d6731/d2ea24ad-a970-4aa7-b2c8-83ed4f8749c0.png 120w,\n/static/e0fcfda1882a50475bd77893d03e4116/39f46/d2ea24ad-a970-4aa7-b2c8-83ed4f8749c0.png 240w",
+                  "sizes": "(min-width: 120px) 120px, 100vw"
+                },
+                "sources": [
+                  {
+                    "srcSet": "/static/e0fcfda1882a50475bd77893d03e4116/d6c2c/d2ea24ad-a970-4aa7-b2c8-83ed4f8749c0.webp 30w,\n/static/e0fcfda1882a50475bd77893d03e4116/b8ad1/d2ea24ad-a970-4aa7-b2c8-83ed4f8749c0.webp 60w,\n/static/e0fcfda1882a50475bd77893d03e4116/47534/d2ea24ad-a970-4aa7-b2c8-83ed4f8749c0.webp 120w,\n/static/e0fcfda1882a50475bd77893d03e4116/bde7b/d2ea24ad-a970-4aa7-b2c8-83ed4f8749c0.webp 240w",
+                    "type": "image/webp",
+                    "sizes": "(min-width: 120px) 120px, 100vw"
+                  }
+                ]
+              },
+              "width": 120,
+              "height": 120
+            }
+          }
+        }
+      },
+      "ongoing": false,
+      "shortname": "ICE-POP",
+      "longname": "International Collaborative Experiment for PyeongChang Olympic and Paralympics",
+      "startdate": "2017-11-01",
+      "enddate": "2018-03-17",
+      "region": "South Korea",
+      "deployments": [
+        {
+          "id": "90175e54-1830-443c-a2c1-e47badcef042",
+          "startdate": "2017-11-01",
+          "enddate": "2018-03-17"
+        }
+      ],
+      "countDataProducts": 5
+    },
+    {
+      "logo": {
+        "description": "LPVEx Logo",
+        "gatsbyImg": {
+          "childImageSharp": {
+            "gatsbyImageData": {
+              "layout": "constrained",
+              "placeholder": {
+                "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAATABQDASIAAhEBAxEB/8QAGQABAQADAQAAAAAAAAAAAAAAAAQBAgUD/8QAFgEBAQEAAAAAAAAAAAAAAAAAAQIA/9oADAMBAAIQAxAAAAH3k2xN9hMxfGJ0An//xAAYEAADAQEAAAAAAAAAAAAAAAABAgMAEv/aAAgBAQABBQK9iXDMujYOlk5oFHMZEo4B0kUtv//EABcRAAMBAAAAAAAAAAAAAAAAAAABERD/2gAIAQMBAT8Bo5v/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AR//xAAcEAACAgIDAAAAAAAAAAAAAAAAAREhAjEQMlH/2gAIAQEABj8CeKcJFZkvY0dr8LSRMWjXH//EABwQAQACAgMBAAAAAAAAAAAAAAEAESFBEDFhUf/aAAgBAQABPyFcWNjcYt7NQCodGYBz3HN8Qbl5zGPYJYaH5EN24//aAAwDAQACAAMAAAAQaCh8/8QAGREBAAIDAAAAAAAAAAAAAAAAAQAQESEx/9oACAEDAQE/EFGiDKHK/8QAGREBAAIDAAAAAAAAAAAAAAAAAQARECEx/9oACAECAQE/EKHbBaj3H//EAB4QAQACAgMAAwAAAAAAAAAAAAEAESFBMVFhcYHB/9oACAEBAAE/EFzlZ5rb8StZmoqv4wUTaNL2QyMt5FCLyd9xs1vRZWEqXKC9rHb7zLagLu+09wlK1AAAKCf/2Q=="
+              },
+              "images": {
+                "fallback": {
+                  "src": "/static/8a87fdd5574c24f9f55e00e4682d563b/f8283/e88e78c2-107e-4e75-b23d-d72688dc01dd.jpg",
+                  "srcSet": "/static/8a87fdd5574c24f9f55e00e4682d563b/8b5e7/e88e78c2-107e-4e75-b23d-d72688dc01dd.jpg 31w,\n/static/8a87fdd5574c24f9f55e00e4682d563b/05cc0/e88e78c2-107e-4e75-b23d-d72688dc01dd.jpg 63w,\n/static/8a87fdd5574c24f9f55e00e4682d563b/f8283/e88e78c2-107e-4e75-b23d-d72688dc01dd.jpg 125w",
+                  "sizes": "(min-width: 125px) 125px, 100vw"
+                },
+                "sources": [
+                  {
+                    "srcSet": "/static/8a87fdd5574c24f9f55e00e4682d563b/468a8/e88e78c2-107e-4e75-b23d-d72688dc01dd.webp 31w,\n/static/8a87fdd5574c24f9f55e00e4682d563b/6f746/e88e78c2-107e-4e75-b23d-d72688dc01dd.webp 63w,\n/static/8a87fdd5574c24f9f55e00e4682d563b/8e61f/e88e78c2-107e-4e75-b23d-d72688dc01dd.webp 125w",
+                    "type": "image/webp",
+                    "sizes": "(min-width: 125px) 125px, 100vw"
+                  }
+                ]
+              },
+              "width": 125,
+              "height": 119.99999999999999
+            }
+          }
+        }
+      },
+      "ongoing": false,
+      "shortname": "LPVEx",
+      "longname": "Light Precipitation Evaluation Experiment",
+      "startdate": "2010-09-15",
+      "enddate": "2010-12-31",
+      "region": "Gulf of Finland",
+      "deployments": [
+        {
+          "id": "3b7d164d-c67a-4a97-83c2-88501b97f51f",
+          "startdate": "2010-09-15",
+          "enddate": "2010-12-31"
+        }
+      ],
+      "countDataProducts": 22
+    },
+    {
+      "logo": {
+        "description": "NAMMA logo",
+        "gatsbyImg": {
+          "childImageSharp": {
+            "gatsbyImageData": {
+              "layout": "constrained",
+              "placeholder": {
+                "fallback": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEeklEQVQ4yxXU/VcNdgDH8U/33rr3eihpirCkclOathlTUQ3RuKmb7kM3ubdaKg9JT5OidLSKWs8xE7V2UIpLhENSHmoezowzc85yjs3OYT+MzsamW9/Pjn/hfc7rjbYdElgKbNBbo7D5AMDdMmAjgNcd8BuqROJAAaoubcfxq9nS4zdzUXs7C8m/5sEfACw6gAyGJdlW0qQDDqwD0LMPGKi3kby8IkNHBPD4ELT9JbhemzBlZFNkKOMNCdQatjAiOIxRAQEsS/DlkZQZo20JssFuM+JVADqNQIsWkgMRAG7VQ/JHF2B9PM3p8h50Fekm0dtNzWB1GndWxlorjkRbvz64dLSxwWO0tHqxtaQu2FpVlsZT+1LZnuPPJh16rqbCtTkKaImBBG/uScFh18lnduFBtvFTbsuqsPosyrd6LdkrgkLUQjVPQ+dpa4STR4YIjqujpSlRvDifLl71Vo8OddeM3Gow8uImxZOOOExv0wLo1gK369EZs+xDmjcf+2/41W/CYC4mFCkCiBdALAEdpaqjPPRNK59f3M8nlhLxyFLModNFYvhO09ufD+vZacLlgHdhX11CcF2mJ2Vzm0ejTA0iPrFcOHhXCCgSCIWBsslbOfvjvYwwN/P+2UoO95fzz75KPrtSJl70VYi/BuvEPwN11uu7/Hg2Fmtxr0nSmJEcyNANX1rt/aoJaZJw8P2WUvs02o3X087BSP+gAq4z1fJEzQ72Hs7lnRPFfNBexKHucvHsZh1/7Pxq9GR+GM+a0IGrVcoefWwwl2tcxvw1ZqHwquaq6HoakpqYmt7CmR4bCVs9J/lWUp24ndu2BLMkbx33FxpYU2xkzW6zyM3Qit1poTxnlj7E3UPyE0nmWfRe5jy6MEzJ+dF5YuLcVjp6lnJKQBfHeTZS6dlI6dRCymfk0u/z9QyMXMP5YVsZpN8qwrUqLlrrPpZtmsu+L+S9+OmgbP2+9ImcE+IysiDMkYuj3IXX6jwh9zxIqVs9pb4tVLpXU+K4nXAoIOzziHEbiEmFYmpIs1ga6cZ54TNG9uic2J8oS8fTH2baXSiWPjIaHOmzctpIqMaVq2NniRVxkcItpJYrdVV0dk6hi6qI+cUDDAhvJRy2CKljtlDO3s8A3fIRo8aZJ412vz/NsLfHvUob3K6WB7bvkIlEkwtTMz3empI8xbLIFWKyTym9Q0qExN7M6X41bG0fEuq4MwJ22cJuQoxYstY4krNNxaPRMvaZ5auuGQFcyoWkJwcYLJeFdWTZvmzIfY+7Cpz4mSne6v5R2phyyhohm2DgBFU5HYJOiakLS8fe94myBgYtYvXmOTxvtn19JdZO06UBzr2TkiYBTm+C5NpOYLBCOfNCpqSlJVX+b2HiAiZHB1Gv9qOPaqUIV2tFnNnElOhPmK92ZZ3aceS0Rt52zaD07NcDlihISL67RQay3YGuHEgfVtliIAP4pUTidSsTWScT7Hq/j1P8/Z1ByaO68TymV75pi1HcuLFekvc8Az6WEOB+vA0u6CBNUwAsmYP/ARpsKn36lxtTAAAAAElFTkSuQmCC"
+              },
+              "images": {
+                "fallback": {
+                  "src": "/static/4401e4df50022eb8b33889594b4c828d/5c48d/1b5dfdb5-bb30-474b-9cc2-538942c17c31.png",
+                  "srcSet": "/static/4401e4df50022eb8b33889594b4c828d/b3a9a/1b5dfdb5-bb30-474b-9cc2-538942c17c31.png 40w,\n/static/4401e4df50022eb8b33889594b4c828d/ad4ce/1b5dfdb5-bb30-474b-9cc2-538942c17c31.png 79w,\n/static/4401e4df50022eb8b33889594b4c828d/5c48d/1b5dfdb5-bb30-474b-9cc2-538942c17c31.png 158w,\n/static/4401e4df50022eb8b33889594b4c828d/da94e/1b5dfdb5-bb30-474b-9cc2-538942c17c31.png 316w",
+                  "sizes": "(min-width: 158px) 158px, 100vw"
+                },
+                "sources": [
+                  {
+                    "srcSet": "/static/4401e4df50022eb8b33889594b4c828d/ce7f3/1b5dfdb5-bb30-474b-9cc2-538942c17c31.webp 40w,\n/static/4401e4df50022eb8b33889594b4c828d/7b430/1b5dfdb5-bb30-474b-9cc2-538942c17c31.webp 79w,\n/static/4401e4df50022eb8b33889594b4c828d/644bb/1b5dfdb5-bb30-474b-9cc2-538942c17c31.webp 158w,\n/static/4401e4df50022eb8b33889594b4c828d/9398d/1b5dfdb5-bb30-474b-9cc2-538942c17c31.webp 316w",
+                    "type": "image/webp",
+                    "sizes": "(min-width: 158px) 158px, 100vw"
+                  }
+                ]
+              },
+              "width": 158,
+              "height": 120
+            }
+          }
+        }
+      },
+      "ongoing": false,
+      "shortname": "NAMMA",
+      "longname": "NASA African Monsoon Multidisciplinary Analyses",
+      "startdate": "2006-08-15",
+      "enddate": "2006-09-15",
+      "region": "Cape Verde Islands, Atlantic Ocean",
+      "deployments": [
+        {
+          "id": "8faa87bb-f2c3-4769-8244-bd7fb6777f4e",
+          "startdate": "2006-08-15",
+          "enddate": "2006-09-15"
+        }
+      ],
+      "countDataProducts": 23
+    },
+    {
+      "logo": {
+        "description": "OMG Logo",
+        "gatsbyImg": {
+          "childImageSharp": {
+            "gatsbyImageData": {
+              "layout": "constrained",
+              "placeholder": {
+                "fallback": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFZklEQVQ4y32TaUxUVxTHz3tvhoFhEwFZh/ferGzDNghlCQJlUYFhBxGm4LBIBYogiChYLWGTglIVEVEKCkqhdQU0itRGLTb4yVRbQ221xvih9VNtKjD3NIPWxLTpP7k5//vOub/7/3AfiMwtQWy9EmiGoQGAFohMgRYIwKiE5FRjMW5MAcAMAISIuNwDigKBiei1o2nGRGwBQjMxgHbHvuU+zTDLVWRl4yA0M88GgP12js6XvTRB95Rqv8degcFPfIJD77vy8mlaIDxCC0V6E7E5v0ykafCOTwehqRjeihYIgymGGQKAFwBgjIEW1itQwkmRVbgjq1Ahr3RHZ5ZH6k2foqiXFE1fpBnBeiNDvML2TXqGqQKKWh4CikFLr9VLIkd+wcreacnGL8xgp/Q12HlqDDbeQQZzG/slMzflgrnce+mfi5fhNN3zNh3FMIeMH2mB8M/kvn6DfvIqyT03TXwKqkjz/GOS1Hkci8amsPbrWRJQtpMUzsxiwfkpElnfQADgL2MYiqavvQUKRKI6I9Arcf2C/so0cfZYTWrPTeCeuQc4+uw5HnrwCw49eYafP3yE7ffmsezECAZXNJDYrj5iYmG5+CblwDKMEQhBZG6RJRCJMUK/2VD3/SPiW9mO2298hzu+Oo+1F6ew5YcfcdetW1g+MooNk5ex4OQFzD5zBTufPie+SRsWVinVaO3outvS3glAHhYH8tAYpU9izit/bR5uHjhJqubuk03j59A/OQ0zP+vF/BODmNV9GNP2daEmPQsrZm5j2c27pPT0GPFP1hn8knUYmFWs1WToAWK3tYHxbXnGpNx1j9ZiZE7RUm5jO0YVVCCvCUGf+BRcnZ6P/onZ6JeQha7eGgzK3ITByVlEHrbWEJalx9DMgt9Fbh721ioNgGdMGqOM1IIiIqHxvfQC9E/IWVRFaol3fAZxVnmhg1SFvCYUZSFr0Enljatk7mjLKYhME4rquPTF6A/KMDA573RS6XZYX1xDg0dMBmWlDAZT1l8aW1TzMiq/El2D4ohvoo74xScTG1cObZzd0JaTodGvdGGRVfuT4DQdCc/dYnhfX2Wcj5MEx4MqOo0Bq/BUiCqpYyIKa0Cdqu+Jq2hEj0TdgiwuGwO0OcSWk6Nx2biwaMfJ0S8lj4Trq9EjKX8xurQevVM2Xa/oGYadwxdAui4PADziQbJWR5n4xQJ4RjoFldT/FvphA7LaoiU+IQ9teXdi7SpHaUg0hpfWEfeNlegQk0NCSneR8Io9aBORHmK7JgO4xALaOiAOQBaVBs6BMaDI3cpIsivAJbsyL2bvYVSX7l5SlO4l6txytFX6E/mGciIt3EUkOVsxtHbfwpqGbnTbWN0s1W0D78I6Zh0AqKJSAeSJ+RCQkAOuhy6BsqSBdivZDYrazgNcdQdKKloW1Ht6ScTH+1Fe04FulW2Eq2p/5fNxD7rX7Z+6+OtTALCCVYWNALpWkMZvfP2nsBlbQPpRC0jquilh0whoe8eAbT5ximsbREnT8UV554hB2j5E2OaBBbZ1EF0/6b8trD4gtixvA4fyFtoptwbYzDJ4R8ryJmC3dQK79xhl1jwELlUdwPVeOsz3X0b26ARyfZPE6LmjE5M+X34rtm0aAJfGI7RjWTPwxY2g3HHwXSBXfxDYnQeBax0EvmuUktz8GfieC6AYmy1WnZ37Q3X2LirH7zQ5l7cCNzRtnKHZ1sHlM2xtF/ynuI5TwB34Avi+CZD2TVD8p2co5dk58Jme91JfeximGL8D6hcI0v4pmj82BVz3OPAdp+B/JRu6DrKTM6AYvQVs34SxMj4zP4F6eh7kw9/QsuEboByfNXqQDlz9F+Bv93cgODARh3YAAAAASUVORK5CYII="
+              },
+              "images": {
+                "fallback": {
+                  "src": "/static/7147b5295eaef72034d4b4c7e80a79c4/d6731/6a9dec53-edb3-4c74-b1ce-9fc49da085f5.png",
+                  "srcSet": "/static/7147b5295eaef72034d4b4c7e80a79c4/9274b/6a9dec53-edb3-4c74-b1ce-9fc49da085f5.png 30w,\n/static/7147b5295eaef72034d4b4c7e80a79c4/9d5b3/6a9dec53-edb3-4c74-b1ce-9fc49da085f5.png 60w,\n/static/7147b5295eaef72034d4b4c7e80a79c4/d6731/6a9dec53-edb3-4c74-b1ce-9fc49da085f5.png 120w,\n/static/7147b5295eaef72034d4b4c7e80a79c4/39f46/6a9dec53-edb3-4c74-b1ce-9fc49da085f5.png 240w",
+                  "sizes": "(min-width: 120px) 120px, 100vw"
+                },
+                "sources": [
+                  {
+                    "srcSet": "/static/7147b5295eaef72034d4b4c7e80a79c4/d6c2c/6a9dec53-edb3-4c74-b1ce-9fc49da085f5.webp 30w,\n/static/7147b5295eaef72034d4b4c7e80a79c4/b8ad1/6a9dec53-edb3-4c74-b1ce-9fc49da085f5.webp 60w,\n/static/7147b5295eaef72034d4b4c7e80a79c4/47534/6a9dec53-edb3-4c74-b1ce-9fc49da085f5.webp 120w,\n/static/7147b5295eaef72034d4b4c7e80a79c4/bde7b/6a9dec53-edb3-4c74-b1ce-9fc49da085f5.webp 240w",
+                    "type": "image/webp",
+                    "sizes": "(min-width: 120px) 120px, 100vw"
+                  }
+                ]
+              },
+              "width": 120,
+              "height": 120
+            }
+          }
+        }
+      },
+      "ongoing": true,
+      "shortname": "OMG",
+      "longname": "Oceans Melting Greenland",
+      "startdate": "2015-07-25",
+      "enddate": null,
+      "region": "Greenland",
+      "deployments": [
+        {
+          "id": "eb8fed84-471f-4601-8bdb-a213c6c4275b",
+          "startdate": "2015-07-25",
+          "enddate": "2015-09-21"
+        },
+        {
+          "id": "4c5f2493-5781-4b75-9624-63fed8b6665b",
+          "startdate": "2016-03-20",
+          "enddate": "2016-03-31"
+        },
+        {
+          "id": "b57c72fc-5169-4802-bd99-436d7cfdb91d",
+          "startdate": "2016-09-13",
+          "enddate": "2016-10-10"
+        },
+        {
+          "id": "c0d397c4-8f92-4a34-b760-58079a4bcab2",
+          "startdate": "2017-03-11",
+          "enddate": "2017-03-22"
+        },
+        {
+          "id": "599477d8-6eea-4f42-b43b-04c877213602",
+          "startdate": "2017-10-14",
+          "enddate": "2017-10-23"
+        },
+        {
+          "id": "72284365-7ab3-441e-9599-46a5e241158c",
+          "startdate": "2018-03-06",
+          "enddate": "2018-03-20"
+        },
+        {
+          "id": "00febec1-40d5-4cd5-b91d-174ef7c19d48",
+          "startdate": "2018-08-22",
+          "enddate": "2018-09-11"
+        },
+        {
+          "id": "c5226c02-8225-4b29-9e99-d185efe10770",
+          "startdate": "2019-03-05",
+          "enddate": "2019-04-16"
+        },
+        {
+          "id": "106d3c5e-685e-4dd9-84be-d14d7e29363a",
+          "startdate": "2019-08-12",
+          "enddate": "2019-09-05"
+        },
+        {
+          "id": "88d67da5-601d-4062-8e45-3a686626b35e",
+          "startdate": "2020-03-27",
+          "enddate": "2020-04-15"
+        }
+      ],
+      "countDataProducts": 5
+    },
+    {
+      "logo": {
+        "description": "SnowEx logo",
+        "gatsbyImg": {
+          "childImageSharp": {
+            "gatsbyImageData": {
+              "layout": "constrained",
+              "placeholder": {
+                "fallback": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAAD/klEQVQ4yy3TaUwTdhyH8R/im2WbmZlmbE6mAzWTBdEFdDMMN9mBGgZVUBCwK9gBQZgco5y2QMdNEWy5Sg/bUUi57xboQMsphoG2iGDc2JK5BLMti9P0+H8Xkr15Xj7vPjRARJlENP3JF66zRNQfk0Qg2m5+fWfwrSNHhabT5zTjEbyBzuCogeGgs9oBL9/CBffdHBDt7E0tpG4iMgYGu04Q0SD9n6kbN7fc9fCgeaI9Br+AGzWR6X+oK3UobRhFVIkRhS13cTJ/CJfKRiCSjiAttRGNvOynAx+ebOomOjC234v6Vp65DG0OTVKdy73gEJpxezNan5D7T2LpICKbl3Cias7pXzpp8xWN2y813nX45I46fPJM9lT9A9vnNfNOfssDxJcbMHmt4sWI2+6E6YRUGmNwIYO7Jw1tf4NnqlKi5+ELHBZN2GJks85DgmH2Qe4I884yIkE+x94XGNh7GUNIVC6wkMpJJmy3Oj8tn7bd2QCMtS0w7Np7dfjQMaIJoj29V4uedazaoZ363c6TLyBO8RPLbl9hqTorwqV3UNG9iLimeSRpLcjUr4BTM8euaC0sUjYP+fivDv1joCev2jlG5E2D+7wr5bppyO78bZeN/4brxjVW1GJGgXYCRdpxiNQmxOfXQiDrRb7CCLFuCjnNRlwfWkaydpG9ndyPU0KD4weVCX0+x3XU5Rc4Udh2D5ltiyxLt8DyOywQdloh7F5BuuIWBOpJpNUbINJNQ9A8BlHXMq51WCDuf4SgolFcvNbDvk5Rsgz1Ano+PrNKfZ7eEoFkFHztsv2b+inwVRYWp/0ZPPUaopvu44pyBlLDMvJ0c4iR3UaoZAaxqhUk69cRWmZme2NbsCd73JFyw4wer6NttE70bskFwfMwzWOE1Vsd3+vn0GYws5vdvaxOo0JZnRL1Si3kmmZUNtZBqlJANTjFxJpRlqy5jzPXlxxnFI9QzC3AEpEPdbl7kWHHLn4aVwROcStqkk7bWrNCnabaRNYvTWft8jI0lWUzTW4466xOwoC6kEmrhIx7PoglZaXbuNUqpF0Wo/ctzwz1wQCiyykSF+F+f+p4+TVee2TEv8ONEiSm8RH7bZzzVPQ520ecL+2nojiOqASeI5TPtfuf/8rG4V90xKfHo6GiADpumL3z1ZeSU/xOkPvtNZdNZpSRo9hi3LuPntA2j9ngsIa6sLMbWdwIKKUSNNRJUFtfjdLqYogKs1EiFECUwENWwPE/FYeOqDa2H/D68aAnhZjXXZ5vSvmFiBgR6Y995vrX1lfI2qCih0Q7lr19OWsXYsRP8gpan5ZLjOsi8chq2ndtDy5El9w/fDQc5OqWE8ulp9veoY4Tga5WIrLQVvoPawlJRxgZNwwAAAAASUVORK5CYII="
+              },
+              "images": {
+                "fallback": {
+                  "src": "/static/0e2b12d19d240c81214f4926b7363cd3/63f66/b408303a-6d28-4d93-b1dc-74cad775968f.png",
+                  "srcSet": "/static/0e2b12d19d240c81214f4926b7363cd3/f2e76/b408303a-6d28-4d93-b1dc-74cad775968f.png 46w,\n/static/0e2b12d19d240c81214f4926b7363cd3/484f9/b408303a-6d28-4d93-b1dc-74cad775968f.png 91w,\n/static/0e2b12d19d240c81214f4926b7363cd3/63f66/b408303a-6d28-4d93-b1dc-74cad775968f.png 182w,\n/static/0e2b12d19d240c81214f4926b7363cd3/a18ce/b408303a-6d28-4d93-b1dc-74cad775968f.png 364w",
+                  "sizes": "(min-width: 182px) 182px, 100vw"
+                },
+                "sources": [
+                  {
+                    "srcSet": "/static/0e2b12d19d240c81214f4926b7363cd3/01340/b408303a-6d28-4d93-b1dc-74cad775968f.webp 46w,\n/static/0e2b12d19d240c81214f4926b7363cd3/a87a9/b408303a-6d28-4d93-b1dc-74cad775968f.webp 91w,\n/static/0e2b12d19d240c81214f4926b7363cd3/9b492/b408303a-6d28-4d93-b1dc-74cad775968f.webp 182w,\n/static/0e2b12d19d240c81214f4926b7363cd3/248cd/b408303a-6d28-4d93-b1dc-74cad775968f.webp 364w",
+                    "type": "image/webp",
+                    "sizes": "(min-width: 182px) 182px, 100vw"
+                  }
+                ]
+              },
+              "width": 182,
+              "height": 120
+            }
+          }
+        }
+      },
+      "ongoing": true,
+      "shortname": "SnowEx",
+      "longname": "",
+      "startdate": "2016-09-26",
+      "enddate": null,
+      "region": "Grand Mesa, CO & Senator Beck Basin, CO",
+      "deployments": [
+        {
+          "id": "cd8201a8-f33d-4b9a-ac5f-19cc6d347c5b",
+          "startdate": "2016-09-26",
+          "enddate": "2017-02-26"
+        },
+        {
+          "id": "73b05b6c-3314-4696-b78f-32305bc7e7bc",
+          "startdate": "2019-12-19",
+          "enddate": "2019-12-20"
+        }
+      ],
+      "countDataProducts": 5
+    },
+    {
+      "logo": {
+        "description": "TCSP Logo",
+        "gatsbyImg": {
+          "childImageSharp": {
+            "gatsbyImageData": {
+              "layout": "constrained",
+              "placeholder": {
+                "fallback": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEY0lEQVQ4yz2TeUwTdhTHv22FmeJQaz0yRRQFXcTY6VS2iM4ICsoQGOpQ1HgAuo1BRARrqchR5YiwOMShg1DqBQoICl6AigfeYq0oh8ilItvcsmkmtL/vUkz2/njvv0++3/d9D8eHyqGRAksBvJriJMv+2AacOgRs0CJFMcjhqlLhbhxg4/3Q1taresRwtyhb2XAePYd3SiW8ADTMVslIwlqZchtALwF0gIRNxRAuQ5E4VDG61cFO3aVyut0xS/Vng8dsGr1m0ug1i0/cVeb2Ga6/NblMqHqgGBLmANi9mOYEhqyUWoHrrC0ZkFgn47xR76iI6Jzq9KZ64XLu9tvFPMNWlt+MZtnFKEvZlWjL6fORPF34Ha9rAvnka3e2TRr3rG6Kgy9XLQK3r+3nwCqXPYVoch2b83DufMasOkCP2Je9YYdKzCUvUyzFNzWidrunuJy5UlxIXSEuhblbaiLmmyvLwnpPpIby0Rfz+GiiIoIu9uCsiVLw08EwOY/cdm+BN1dE1vX6JL+2+G1rpSYvX1R2a8WxGg0z9/zA6uPrWanfKKoylovTVVt5pjOVhvb0vvjEvTROc2PdR/DqshpPB0a0KOVvwtcd4cKdnRa/mHpGJFcLQ+l1ccl0mPvPRzNWv4fqIz/R8CSOFV161nQcFfl3tovieg0z7qf0Zfj6s1mCuv5ojEBA9VhXeqtNZvfVBQwO+kUEbaljqt7Ec9UtDNYWMt7wMwNjrjD3moZnWxNY+SydRY8TRNHjRFHakihyzkfzzjA78w3AGY1A2Mmpi7gk5pY5eF2WCA7LF4ujTEw/9op//ysYm93Ged838pu4Vq5OusaoX48z93YSy9uSWdK0W1S07RLak/ni0nAn3gA+xz3A8+qYifRRPzXPXX+WCyJviWXxnUKb28203Ps0FF7modI2rtll4lJ1G5fFNHBDQi1zLqaIspYkUdaWLBIPpLNOrnx7T4YxkH2iGvhsAJp2+qdxyd7evm/VzfTdVCr8w88Ij4Ak6nbn8PWLVh4sqKb/jkaGxh6lOq5AhCccEkX1Wha+zXp/edMcNgAl/TvsBnBNAl/TYDk3rzZwUWxtX1b2YVFx6gz378sXmzYniuwsPVOyqhgQYxSBmmbhs6WJkQeLRGa97v3hrYFsscM/emDShf47BKRW8l0ZQkwDZTzi4UOdzmDZkHShd1tamVmjy7Po9hVbAiJPWZbGt1sWJ3SbPeN7ekN2VIiz/l/yqQR/lAPzGgF0ADJgmOp/6LmBcHsO1N6ePJkFnmsY57eTPwYnc2NoEdeGlDM89ARTVqSx+KsgGhcsFM3KYYXZgOMjAL8Dsn7LHtaHsZ8J2kD24INi3J2gnP9y+viM5yrnmx1uM7qejx/d0zHDtafjs0ntrSqnms6RsvgaR3sVMQgnADRLP8A4EsAeG4DOAO2AWimk3OKHxnEKMGgOyHdQAnKtwnZUuOOoEZDJbXkqHnQCrjrYg9NdpOWApNkG+EsO5NkC/wHwSVsKrkzr9QAAAABJRU5ErkJggg=="
+              },
+              "images": {
+                "fallback": {
+                  "src": "/static/9507b8d99af5368985574dddecd6982b/b0a07/2b17222b-09b3-47b8-84a4-b00c773227bc.png",
+                  "srcSet": "/static/9507b8d99af5368985574dddecd6982b/a695f/2b17222b-09b3-47b8-84a4-b00c773227bc.png 41w,\n/static/9507b8d99af5368985574dddecd6982b/3f2d1/2b17222b-09b3-47b8-84a4-b00c773227bc.png 83w,\n/static/9507b8d99af5368985574dddecd6982b/b0a07/2b17222b-09b3-47b8-84a4-b00c773227bc.png 165w,\n/static/9507b8d99af5368985574dddecd6982b/5fb80/2b17222b-09b3-47b8-84a4-b00c773227bc.png 330w",
+                  "sizes": "(min-width: 165px) 165px, 100vw"
+                },
+                "sources": [
+                  {
+                    "srcSet": "/static/9507b8d99af5368985574dddecd6982b/08855/2b17222b-09b3-47b8-84a4-b00c773227bc.webp 41w,\n/static/9507b8d99af5368985574dddecd6982b/996b2/2b17222b-09b3-47b8-84a4-b00c773227bc.webp 83w,\n/static/9507b8d99af5368985574dddecd6982b/990e1/2b17222b-09b3-47b8-84a4-b00c773227bc.webp 165w,\n/static/9507b8d99af5368985574dddecd6982b/6a7a9/2b17222b-09b3-47b8-84a4-b00c773227bc.webp 330w",
+                    "type": "image/webp",
+                    "sizes": "(min-width: 165px) 165px, 100vw"
+                  }
+                ]
+              },
+              "width": 165,
+              "height": 120
+            }
+          }
+        }
+      },
+      "ongoing": false,
+      "shortname": "TCSP",
+      "longname": "Tropical Cloud Systems and Processes",
+      "startdate": "2005-07-01",
+      "enddate": "2005-07-27",
+      "region": "Costa Rica, Caribbean, Gulf of Mexico, eastern North Pacific",
+      "deployments": [
+        {
+          "id": "932ccb71-4b3f-483c-8fe3-dbdfe62d393a",
+          "startdate": "2005-07-01",
+          "enddate": "2005-07-27"
+        }
+      ],
+      "countDataProducts": 14
+    },
+    {
+      "logo": null,
+      "ongoing": false,
+      "shortname": "VIRGAS",
+      "longname": "Volcano-plume Investigation Readiness and Gas-phase and Aerosol Sulfur",
+      "startdate": "2015-10-19",
+      "enddate": "2015-10-30",
+      "region": "Houston, Texas",
+      "deployments": [
+        {
+          "id": "5ebe7365-d456-4b98-8b05-7df32ca3645f",
+          "startdate": "2015-10-19",
+          "enddate": "2015-10-30"
+        }
+      ],
+      "countDataProducts": 0
+    },
+    {
+      "logo": null,
+      "ongoing": false,
+      "shortname": "PODEX",
+      "longname": "Polarimeter Definition Experiment",
+      "startdate": "2013-01-14",
+      "enddate": "2013-02-06",
+      "region": "San Joaquin Valley, California",
+      "deployments": [
+        {
+          "id": "b90ac156-5e71-44bb-8918-222ffc16b289",
+          "startdate": "2013-01-14",
+          "enddate": "2013-02-06"
+        }
+      ],
+      "countDataProducts": 0
+    },
+    {
+      "logo": null,
+      "ongoing": true,
+      "shortname": "ACTIVATE",
+      "longname": "Aerosol Cloud meTerology Interactions oVer the western ATlantic Experiment",
+      "startdate": "2020-02-14",
+      "enddate": null,
+      "region": "Western North Atlantic Ocean",
+      "deployments": [
+        {
+          "id": "d70e4ad6-2510-491a-a2a3-c3d6b7491cbc",
+          "startdate": "2020-02-14",
+          "enddate": "2020-03-12"
+        },
+        {
+          "id": "a26c1677-c949-4fce-8482-0791f1b60c06",
+          "startdate": "2020-08-13",
+          "enddate": "2020-09-30"
+        },
+        {
+          "id": "0b5da132-23f0-4c85-a4e3-da6b28e85b16",
+          "startdate": "2021-05-13",
+          "enddate": "2021-06-30"
+        },
+        {
+          "id": "dda45690-3f95-4162-bba4-53a2ce519a26",
+          "startdate": "2021-01-27",
+          "enddate": "2021-04-02"
+        }
+      ],
+      "countDataProducts": 0
+    },
+    {
+      "logo": null,
+      "ongoing": true,
+      "shortname": "Delta-X",
+      "longname": "Delta Exchange",
+      "startdate": "2021-03-26",
+      "enddate": null,
+      "region": "Atchafalaya and Terrebonne basins of the Mississippi River Delta",
+      "deployments": [
+        {
+          "id": "fbd636cb-223c-4562-9823-2187ff5c4e87",
+          "startdate": "2021-03-26",
+          "enddate": "2021-04-18"
+        },
+        {
+          "id": "7187d4ac-7552-4f95-aae8-738eb6111681",
+          "startdate": "2021-08-18",
+          "enddate": "2021-09-15"
+        }
+      ],
+      "countDataProducts": 0
+    },
+    {
+      "logo": null,
+      "ongoing": true,
+      "shortname": "DCOTSS",
+      "longname": "Dynamics and Chemistry of the Summer Stratosphere",
+      "startdate": "2021-05-03",
+      "enddate": "2022-07-15",
+      "region": "Central United States",
+      "deployments": [
+        {
+          "id": "ea279a6d-37a3-494c-9923-de6da3b41676",
+          "startdate": "2021-05-03",
+          "enddate": "2021-06-17"
+        },
+        {
+          "id": "04270881-64f6-44b0-ae67-228655349db7",
+          "startdate": "2021-07-06",
+          "enddate": "2021-09-03"
+        },
+        {
+          "id": "e66ea3be-cbc7-496b-b504-d3c01c964817",
+          "startdate": "2022-04-25",
+          "enddate": "2022-07-15"
+        }
+      ],
+      "countDataProducts": 0
+    },
+    {
+      "logo": null,
+      "ongoing": false,
+      "shortname": "TC4",
+      "longname": "Tropical Composition, Cloud and Climate Coupling",
+      "startdate": "2007-06-16",
+      "enddate": "2007-08-15",
+      "region": "Costa Rica, tropical Eastern Pacific",
+      "deployments": [
+        {
+          "id": "3a42a158-ebd4-48e5-ab0c-b59f9d5e2197",
+          "startdate": "2007-06-16",
+          "enddate": "2007-08-15"
+        }
+      ],
+      "countDataProducts": 0
+    },
+    {
+      "logo": null,
+      "ongoing": false,
+      "shortname": "CITE",
+      "longname": "Global Tropospheric Experiment - Chemical Instrument Test and Evaluation",
+      "startdate": "1983-07-05",
+      "enddate": "1989-09-29",
+      "region": "Wallops Island, Hawaii, Central Pacific, California, Eastern Pacific Ocean, North Atlantic",
+      "deployments": [
+        {
+          "id": "899e090d-d190-433d-a4b4-d75d7524c7a0",
+          "startdate": "1983-07-05",
+          "enddate": "1983-07-29"
+        },
+        {
+          "id": "d07bbd1b-cc0f-47d3-aab8-bb0dfb5a8070",
+          "startdate": "1983-10-19",
+          "enddate": "1983-11-26"
+        },
+        {
+          "id": "1c9a5489-a733-486c-9e78-adf372866d24",
+          "startdate": "1984-04-17",
+          "enddate": "1984-05-09"
+        },
+        {
+          "id": "0ed941b2-79c4-47a5-8338-dfeb9fbc6e52",
+          "startdate": "1986-08-11",
+          "enddate": "1986-09-05"
+        },
+        {
+          "id": "088e5722-20a9-4971-9b20-fbb9fefcc54b",
+          "startdate": "1989-08-22",
+          "enddate": "1989-09-29"
+        }
+      ],
+      "countDataProducts": 0
+    },
+    {
+      "logo": null,
+      "ongoing": false,
+      "shortname": "MACPEX",
+      "longname": "Mid-latitude Airborne Cirrus Properties Experiment",
+      "startdate": "2011-03-18",
+      "enddate": "2011-04-26",
+      "region": "Central United States, based out of Ellington, Texas",
+      "deployments": [
+        {
+          "id": "76f4220d-bd69-4c5b-8b8f-4e380ce6c036",
+          "startdate": "2011-03-18",
+          "enddate": "2011-04-26"
+        }
+      ],
+      "countDataProducts": 0
+    },
+    {
+      "logo": null,
+      "ongoing": true,
+      "shortname": "S-MODE",
+      "longname": "Sub-Mesoscale Ocean Dynamics Experiment",
+      "startdate": "2021-05-03",
+      "enddate": "2021-05-31",
+      "region": "Centered approximately 150 km offshore of San Francisco, California, USA",
+      "deployments": [
+        {
+          "id": "78e311e1-6d50-4e85-9ff0-b902cc5a07e7",
+          "startdate": "2021-05-03",
+          "enddate": "2021-05-19"
+        }
+      ],
+      "countDataProducts": 0
+    },
+    {
+      "logo": null,
+      "ongoing": true,
+      "shortname": "CPEX-AW",
+      "longname": "Convective Processes Experiment – Aerosols & Winds",
+      "startdate": "2021-08-20",
+      "enddate": "2021-10-02",
+      "region": "St. Croix, U.S. Virgin Islands; Western Atlantic and Caribbean Sea",
+      "deployments": [
+        {
+          "id": "e976cc0a-7b06-44b1-b40e-88b95c98a97c",
+          "startdate": "2021-08-20",
+          "enddate": "2021-10-02"
+        }
+      ],
+      "countDataProducts": 0
+    },
+    {
+      "logo": null,
+      "ongoing": false,
+      "shortname": "POLARIS",
+      "longname": "Photochemistry of Ozone Loss in the Arctic Region In Summer",
+      "startdate": "1997-04-17",
+      "enddate": "1997-09-27",
+      "region": "Arctic, Mid-latitudes",
+      "deployments": [
+        {
+          "id": "9ee994a8-7400-4311-a214-98bd97f7287a",
+          "startdate": "1997-09-02",
+          "enddate": "1997-09-25"
+        },
+        {
+          "id": "e3d2f6fb-57ab-448c-a320-e56ff405946b",
+          "startdate": "1997-04-16",
+          "enddate": "1997-05-15"
+        },
+        {
+          "id": "343d0ffe-b23f-40be-b4fe-c539e7d5d050",
+          "startdate": "1997-06-23",
+          "enddate": "1997-07-12"
+        }
+      ],
+      "countDataProducts": 0
+    },
+    {
+      "logo": null,
+      "ongoing": false,
+      "shortname": "CASIE",
+      "longname": "Characterization of Arctic Sea Ice Experiment",
+      "startdate": "2009-07-13",
+      "enddate": "2009-07-29",
+      "region": "Svalbard archipelago of Norway",
+      "deployments": [
+        {
+          "id": "cad1d9d4-bdd6-45e9-a1c6-f4ff8784e012",
+          "startdate": "2009-07-13",
+          "enddate": "2009-07-29"
+        }
+      ],
+      "countDataProducts": 0
+    },
+    {
+      "logo": null,
+      "ongoing": false,
+      "shortname": "CR-AVE",
+      "longname": "Costa Rica Aura Validation Experiment",
+      "startdate": "2006-01-14",
+      "enddate": "2006-02-12",
+      "region": "Costa Rica",
+      "deployments": [
+        {
+          "id": "cb87141c-4672-4d66-a800-c2f0c86fb09d",
+          "startdate": "2006-01-14",
+          "enddate": "2006-02-12"
+        }
+      ],
+      "countDataProducts": 0
+    },
+    {
+      "logo": null,
+      "ongoing": true,
+      "shortname": "IMPACTS",
+      "longname": "Investigation of Microphysics and Precipitation for Atlantic Coast-Threatening Snowstorms",
+      "startdate": "2020-01-17",
+      "enddate": "2023-03-01",
+      "region": "Eastern United States",
+      "deployments": [
+        {
+          "id": "1311f9fa-1984-4bcc-823b-ab75d8f4b007",
+          "startdate": "2020-01-17",
+          "enddate": "2020-03-01"
+        }
+      ],
+      "countDataProducts": 60
+    },
+    {
+      "logo": null,
+      "ongoing": false,
+      "shortname": "TRACE",
+      "longname": "Transport and Atmospheric Chemistry near the Equator",
+      "startdate": "1992-09-02",
+      "enddate": "2001-04-15",
+      "region": "Brazil, Southern Africa, Tropical Atlantic, Central & Western Regions of the Pacific Ocean Basin",
+      "deployments": [
+        {
+          "id": "244fc1f1-06b3-434a-b4c3-40798c18c51e",
+          "startdate": "1992-09-02",
+          "enddate": "1992-10-26"
+        },
+        {
+          "id": "ced44fa1-9a02-43d1-9528-afcbd6e948a8",
+          "startdate": "2001-02-24",
+          "enddate": "2001-04-15"
+        }
+      ],
+      "countDataProducts": 0
+    },
+    {
+      "logo": null,
+      "ongoing": false,
+      "shortname": "CRYSTAL-FACE",
+      "longname": "Cirrus Regional Study of Tropical Anvils and Cirrus Layers Florida Area Cirrus Experiment",
+      "startdate": "2002-07-03",
+      "enddate": "2002-07-29",
+      "region": "Southern Florida",
+      "deployments": [
+        {
+          "id": "5c5a0488-69ec-4ac0-adf5-a29d205b3ea2",
+          "startdate": "2002-07-03",
+          "enddate": "2002-07-29"
+        }
+      ],
+      "countDataProducts": 1
+    },
+    {
+      "logo": null,
+      "ongoing": false,
+      "shortname": "SABOR",
+      "longname": "Ship-Aircraft Bio-Optical Research Experiment",
+      "startdate": "2014-07-17",
+      "enddate": "2014-08-07",
+      "region": "NW Atlantic Ocean",
+      "deployments": [
+        {
+          "id": "f34cc0cf-a910-4c72-bc39-c93bff845d85",
+          "startdate": "2014-07-17",
+          "enddate": "2014-08-07"
+        }
+      ],
+      "countDataProducts": 0
+    },
+    {
+      "logo": null,
+      "ongoing": false,
+      "shortname": "KORUS-AQ",
+      "longname": "Korean United States - Air Quality",
+      "startdate": "2016-04-18",
+      "enddate": "2016-06-19",
+      "region": "South Korean peninsula, including surrounding seas",
+      "deployments": [
+        {
+          "id": "950ab1b7-2d70-4350-9b9c-08b397b19c6a",
+          "startdate": "2016-04-18",
+          "enddate": "2016-06-19"
+        }
+      ],
+      "countDataProducts": 0
+    },
+    {
+      "logo": null,
+      "ongoing": false,
+      "shortname": "ACCLIP",
+      "longname": "Asian Summer Monsoon Chemical & Climate Impact Project",
+      "startdate": "2022-07-15",
+      "enddate": "2022-08-31",
+      "region": "West Pacific, South Korea",
+      "deployments": [
+        {
+          "id": "754eec02-7311-4c22-bd12-da5095774d3c",
+          "startdate": "2022-07-15",
+          "enddate": "2022-08-31"
+        }
+      ],
+      "countDataProducts": 0
+    },
+    {
+      "logo": null,
+      "ongoing": false,
+      "shortname": "ICESCAPE",
+      "longname": "Impacts of Climate on the Eco-Systems and Chemistry of the Arctic Pacific Environment",
+      "startdate": "2010-06-15",
+      "enddate": "2011-07-29",
+      "region": "Beaufort Sea, Chukchi Sea",
+      "deployments": [
+        {
+          "id": "61cda7b6-c542-4e94-a5b4-64bec95f3cb7",
+          "startdate": "2010-06-15",
+          "enddate": "2010-07-21"
+        },
+        {
+          "id": "8447b647-d007-4995-9043-3ba7b5314791",
+          "startdate": "2011-06-25",
+          "enddate": "2011-07-29"
+        }
+      ],
+      "countDataProducts": 0
+    },
+    {
+      "logo": null,
+      "ongoing": true,
+      "shortname": "EXPORTS",
+      "longname": "EXport Processes in the Ocean from RemoTe Sensing",
+      "startdate": "2018-07-21",
+      "enddate": "2022-03-10",
+      "region": "Northeast Pacific Ocean, Northeast Atlantic",
+      "deployments": [
+        {
+          "id": "e06d6c98-935d-4fd0-917d-e4de4ec3ec73",
+          "startdate": "2021-03-10",
+          "enddate": "2022-03-10"
+        },
+        {
+          "id": "98edc068-20c1-409a-9ab2-ddd01e3ff78f",
+          "startdate": "2018-07-21",
+          "enddate": "2018-12-01"
+        }
+      ],
+      "countDataProducts": 0
+    },
+    {
+      "logo": null,
+      "ongoing": false,
+      "shortname": "CORAL",
+      "longname": "Coral Reef Airborne Laboratory",
+      "startdate": "2016-06-06",
+      "enddate": "2017-05-28",
+      "region": "Great Barrier Reef, Hawaiian Islands, Florida, Mariana Islands, Palau",
+      "deployments": [
+        {
+          "id": "b6ebe990-bfdc-4c15-aab5-054992a44830",
+          "startdate": "2016-06-06",
+          "enddate": "2016-06-26"
+        },
+        {
+          "id": "ca60aed7-5910-4de8-9ee3-c27891f5a474",
+          "startdate": "2016-09-01",
+          "enddate": "2016-10-31"
+        },
+        {
+          "id": "c6f88d36-4e23-448e-8e34-d48be8f280f9",
+          "startdate": "2017-02-01",
+          "enddate": "2017-03-15"
+        },
+        {
+          "id": "b748bb0d-7e26-41d1-b6c6-a92642e5734d",
+          "startdate": "2017-04-03",
+          "enddate": "2017-04-28"
+        },
+        {
+          "id": "67c054c2-7f57-429a-9d55-0330b0f52458",
+          "startdate": "2017-05-01",
+          "enddate": "2017-05-26"
+        },
+        {
+          "id": "8e570f45-da0e-4c09-8510-f5f91e735d70",
+          "startdate": "2017-05-27",
+          "enddate": "2017-05-28"
+        }
+      ],
+      "countDataProducts": 0
+    },
+    {
+      "logo": null,
+      "ongoing": false,
+      "shortname": "DEVOTE",
+      "longname": "Development and Evaluation of satellite ValidatiOn Tools by Experimenters",
+      "startdate": "2011-09-19",
+      "enddate": "2011-11-18",
+      "region": "Eastern and Southeastern United States",
+      "deployments": [
+        {
+          "id": "d0780233-b966-44df-9766-acc1da106f28",
+          "startdate": "2011-09-19",
+          "enddate": "2011-11-18"
+        }
+      ],
+      "countDataProducts": 5
+    },
+    {
+      "logo": null,
+      "ongoing": false,
+      "shortname": "ASHOE",
+      "longname": "Airborne Southern Hemisphere Ozone Experiment",
+      "startdate": "1994-03-18",
+      "enddate": "1994-11-04",
+      "region": "Moffett Field, California, Christchurch, New Zealand, Hawaii, Fiji",
+      "deployments": [
+        {
+          "id": "6a135fb6-97e7-40e5-812f-18daf9c6bb1b",
+          "startdate": "1994-03-18",
+          "enddate": "1994-11-04"
+        }
+      ],
+      "countDataProducts": 0
+    },
+    {
+      "logo": null,
+      "ongoing": false,
+      "shortname": "ATom",
+      "longname": "Atmospheric Tomography Mission",
+      "startdate": "2016-07-29",
+      "enddate": "2018-05-21",
+      "region": "Western Arctic, South Pacific, Atlantic Ocean, Greenland, Central North America",
+      "deployments": [
+        {
+          "id": "63f9aad9-1880-44df-87d2-d9e2bb5e9349",
+          "startdate": "2016-07-29",
+          "enddate": "2016-08-23"
+        },
+        {
+          "id": "9dee6818-6108-473d-a1e8-320be35b9a6e",
+          "startdate": "2017-01-26",
+          "enddate": "2017-02-21"
+        },
+        {
+          "id": "58053297-0620-4f28-984a-e6d7ba621afe",
+          "startdate": "2017-09-28",
+          "enddate": "2017-10-27"
+        },
+        {
+          "id": "8e03a434-453e-4ea6-a2f3-938fdb8da64f",
+          "startdate": "2018-04-24",
+          "enddate": "2018-05-21"
+        }
+      ],
+      "countDataProducts": 0
+    },
+    {
+      "logo": null,
+      "ongoing": false,
+      "shortname": "NAAMES",
+      "longname": "North Atlantic Aerosols and Marine Ecosystems Study",
+      "startdate": "2015-11-06",
+      "enddate": "2018-04-13",
+      "region": "Northwestern Atlantic Ocean",
+      "deployments": [
+        {
+          "id": "639e5f3b-6ee2-48f1-a18d-3a2b987d46fb",
+          "startdate": "2015-11-05",
+          "enddate": "2015-12-02"
+        },
+        {
+          "id": "885c8711-1562-4e80-9533-ea107a5045f9",
+          "startdate": "2018-03-20",
+          "enddate": "2018-04-13"
+        },
+        {
+          "id": "e5d76c50-8ab3-4f28-aeee-9f1a739bd133",
+          "startdate": "2016-05-11",
+          "enddate": "2016-06-05"
+        },
+        {
+          "id": "f32f9d56-8ae1-404e-8cb1-1112e3853d15",
+          "startdate": "2017-08-30",
+          "enddate": "2017-09-24"
+        }
+      ],
+      "countDataProducts": 0
+    },
+    {
+      "logo": null,
+      "ongoing": false,
+      "shortname": "ORACLES",
+      "longname": "Observations of Aerosols above Clouds and their Interactions",
+      "startdate": "2016-08-19",
+      "enddate": "2018-10-27",
+      "region": "Southeastern Atlantic Ocean, Southern Africa",
+      "deployments": [
+        {
+          "id": "fb33e30c-7d49-4c33-b514-ac1ba71e1abf",
+          "startdate": "2016-08-19",
+          "enddate": "2016-10-27"
+        },
+        {
+          "id": "6a0dc334-658c-4086-9059-b68309b760b6",
+          "startdate": "2017-08-01",
+          "enddate": "2017-09-04"
+        },
+        {
+          "id": "6e6134ba-c7dd-437b-8a19-3e422a28a468",
+          "startdate": "2018-09-21",
+          "enddate": "2018-10-27"
+        }
+      ],
+      "countDataProducts": 0
+    },
+    {
+      "logo": null,
+      "ongoing": false,
+      "shortname": "AMISA",
+      "longname": "Arctic Mechanisms of Interaction Between the Surface and Atmosphere",
+      "startdate": "2008-08-01",
+      "enddate": "2008-09-12",
+      "region": "Arctic: Scandinavia and Greenland",
+      "deployments": [
+        {
+          "id": "6ce15602-5fb7-4e1c-b24c-a46a8c359790",
+          "startdate": "2008-08-01",
+          "enddate": "2008-09-12"
+        }
+      ],
+      "countDataProducts": 0
+    }
+  ]
+}

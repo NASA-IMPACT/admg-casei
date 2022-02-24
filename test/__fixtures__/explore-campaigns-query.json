@@ -1,0 +1,5785 @@
+{
+  "data": {
+    "allCampaign": {
+      "totalCount": 70,
+      "list": [
+        {
+          "id": "d031186d-1a41-430b-ae02-1c76f4cfa441",
+          "shortname": "Aeolus Cal/Val",
+          "longname": "NASA Aeolus Calibration/Validation Test Flight Campaign",
+          "seasons": [
+            {
+              "id": "3a6f6d82-cbcc-40af-868e-7b68e6761e05"
+            }
+          ],
+          "focus": [
+            {
+              "id": "4f11cba8-8970-463b-a0b3-9aaf59cc1629"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "1eeb9fa8-e993-4b99-82b3-28e12466382a"
+            },
+            {
+              "id": "d0025a1e-4589-4e52-81ab-a9847e8db317"
+            },
+            {
+              "id": "ea75c9d3-9e71-4975-8e18-2e77a0bdd436"
+            }
+          ],
+          "startdate": "2019-04-17",
+          "enddate": "2019-04-30",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "98972937-92d5-4084-817d-7ef1c15f9a67"
+                },
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "80155bc3-2cde-4978-932e-5c69fd13212d"
+            }
+          ],
+          "fundingAgency": "ESA, NASA",
+          "bounds": "SRID=4326;POLYGON ((-159 5, -113 5, -113 52, -159 52, -159 5))"
+        },
+        {
+          "id": "de488673-6d5b-40ed-8797-f303240aec54",
+          "shortname": "ACEPOL",
+          "longname": "Aerosol Characterization from Polarimeter and Lidar",
+          "seasons": [
+            {
+              "id": "6a0f610e-cf94-453b-a071-232b068c416a"
+            }
+          ],
+          "focus": [
+            {
+              "id": "bfc1f1e2-e86a-4b39-bd29-39feedfe79d1"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "1eeb9fa8-e993-4b99-82b3-28e12466382a"
+            },
+            {
+              "id": "d27ec267-8941-4b21-909d-5fe45e001fee"
+            },
+            {
+              "id": "d0025a1e-4589-4e52-81ab-a9847e8db317"
+            },
+            {
+              "id": "5c7fa512-4539-48c3-91be-5d69971c9ff3"
+            },
+            {
+              "id": "88ba769b-b9c2-43eb-8bba-1fc6ffa2dc98"
+            }
+          ],
+          "startdate": "2017-10-19",
+          "enddate": "2017-11-09",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "98972937-92d5-4084-817d-7ef1c15f9a67"
+                },
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                },
+                {
+                  "id": "11f68b53-ab2f-4c47-b821-c3f5bf91fe30"
+                },
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                },
+                {
+                  "id": "2dac2cbe-0674-49a5-ad45-0d6decf8ab41"
+                },
+                {
+                  "id": "afd3b4fa-4c13-43b6-ba15-c143a34b4ddd"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "7867ce72-1e68-47a1-9aa7-99656b9356bc"
+            },
+            {
+              "id": "dc4416e7-c644-41ce-bce9-131c714a0a3b"
+            },
+            {
+              "id": "eafadae9-5e1b-41a4-bf25-3448e2d39b31"
+            }
+          ],
+          "fundingAgency": "NASA, SRON",
+          "bounds": "SRID=4326;POLYGON ((-126 31, -107 31, -107 40, -126 40, -126 31))"
+        },
+        {
+          "id": "30ba471c-0844-447a-91fd-b63a2f42b715",
+          "shortname": "ACES",
+          "longname": "Altus Cumulus Electrification Study",
+          "seasons": [
+            {
+              "id": "1e4626e1-1cca-491d-817d-6741bdb56521"
+            },
+            {
+              "id": "3aed90d0-dc86-4c8a-a8a0-43fd6fadaf9a"
+            }
+          ],
+          "focus": [
+            {
+              "id": "205df828-b591-4c02-878c-5758a5e50b80"
+            },
+            {
+              "id": "4f11cba8-8970-463b-a0b3-9aaf59cc1629"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "630d6951-8022-4aa1-a05f-2c0c91a894ea"
+            },
+            {
+              "id": "5c7fa512-4539-48c3-91be-5d69971c9ff3"
+            }
+          ],
+          "startdate": "2002-08-02",
+          "enddate": "2002-08-30",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "98972937-92d5-4084-817d-7ef1c15f9a67"
+                },
+                {
+                  "id": "0f344562-9780-403d-ad40-5fddc7ce0e14"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "5de87b18-06c9-4746-b7be-4345ba030820"
+            },
+            {
+              "id": "7867ce72-1e68-47a1-9aa7-99656b9356bc"
+            },
+            {
+              "id": "dc4416e7-c644-41ce-bce9-131c714a0a3b"
+            }
+          ],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((-83 23, -80 23, -80 26, -83 26, -83 23))"
+        },
+        {
+          "id": "dd804086-5fe2-494f-aac3-e63b5ff342ce",
+          "shortname": "AfriSAR",
+          "longname": "",
+          "seasons": [
+            {
+              "id": "ba9407d6-cd89-4364-906f-9d78a0c93858"
+            }
+          ],
+          "focus": [
+            {
+              "id": "84550819-09b6-471c-ab6f-17e38d822d83"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "3c7414fd-578f-4068-a2e6-3830e0e39c51"
+            }
+          ],
+          "startdate": "2015-06-30",
+          "enddate": "2016-02-25",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "4d395e23-2d32-414d-a551-689e874cd4c0"
+                },
+                {
+                  "id": "0f344562-9780-403d-ad40-5fddc7ce0e14"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "5d31cef4-e365-47f3-ac70-df3abcd39db3"
+            },
+            {
+              "id": "c0d6d5ed-28a5-436a-994e-a0cf1381a1cf"
+            },
+            {
+              "id": "dc4416e7-c644-41ce-bce9-131c714a0a3b"
+            },
+            {
+              "id": "ed057836-a9d8-453b-b9b6-911203e63000"
+            }
+          ],
+          "fundingAgency": "ESA, NASA",
+          "bounds": "SRID=4326;POLYGON ((9 -2, 12 -2, 12 0, 9 0, 9 -2))"
+        },
+        {
+          "id": "ebaa3852-2922-4671-a366-e7533a23d3a1",
+          "shortname": "ARCTAS",
+          "longname": "Arctic Research of the Composition of the Troposphere from Aircraft and Satellites",
+          "seasons": [
+            {
+              "id": "3a6f6d82-cbcc-40af-868e-7b68e6761e05"
+            },
+            {
+              "id": "1e4626e1-1cca-491d-817d-6741bdb56521"
+            },
+            {
+              "id": "3aed90d0-dc86-4c8a-a8a0-43fd6fadaf9a"
+            }
+          ],
+          "focus": [
+            {
+              "id": "bfc1f1e2-e86a-4b39-bd29-39feedfe79d1"
+            },
+            {
+              "id": "630b2833-ac8c-42bb-ac7f-525f5d1d6036"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "1eeb9fa8-e993-4b99-82b3-28e12466382a"
+            },
+            {
+              "id": "d27ec267-8941-4b21-909d-5fe45e001fee"
+            },
+            {
+              "id": "d0025a1e-4589-4e52-81ab-a9847e8db317"
+            },
+            {
+              "id": "88ba769b-b9c2-43eb-8bba-1fc6ffa2dc98"
+            },
+            {
+              "id": "ea75c9d3-9e71-4975-8e18-2e77a0bdd436"
+            }
+          ],
+          "startdate": "2008-04-01",
+          "enddate": "2008-07-14",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "5d31cef4-e365-47f3-ac70-df3abcd39db3"
+            },
+            {
+              "id": "80155bc3-2cde-4978-932e-5c69fd13212d"
+            },
+            {
+              "id": "d644c030-b578-4f71-827a-7d1a2efe90bf"
+            },
+            {
+              "id": "dc4416e7-c644-41ce-bce9-131c714a0a3b"
+            }
+          ],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((-160 33, -75 33, -75 84, -160 84, -160 33))"
+        },
+        {
+          "id": "25879f8b-1a51-4959-9a7a-8a3043025444",
+          "shortname": "ATTREX",
+          "longname": "Airborne Tropical Tropopause Experiment",
+          "seasons": [
+            {
+              "id": "6a0f610e-cf94-453b-a071-232b068c416a"
+            },
+            {
+              "id": "3a6f6d82-cbcc-40af-868e-7b68e6761e05"
+            },
+            {
+              "id": "03ef7251-2897-4bc3-9755-24fad2ec98e6"
+            }
+          ],
+          "focus": [
+            {
+              "id": "bfc1f1e2-e86a-4b39-bd29-39feedfe79d1"
+            },
+            {
+              "id": "630b2833-ac8c-42bb-ac7f-525f5d1d6036"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "d27ec267-8941-4b21-909d-5fe45e001fee"
+            },
+            {
+              "id": "d0025a1e-4589-4e52-81ab-a9847e8db317"
+            },
+            {
+              "id": "ea75c9d3-9e71-4975-8e18-2e77a0bdd436"
+            }
+          ],
+          "startdate": "2011-10-20",
+          "enddate": "2015-03-14",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                },
+                {
+                  "id": "0f344562-9780-403d-ad40-5fddc7ce0e14"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                },
+                {
+                  "id": "0f344562-9780-403d-ad40-5fddc7ce0e14"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                },
+                {
+                  "id": "0f344562-9780-403d-ad40-5fddc7ce0e14"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                },
+                {
+                  "id": "0f344562-9780-403d-ad40-5fddc7ce0e14"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "700f9f12-0086-4661-92b4-81507ba92bec"
+            }
+          ],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((-174 -12, -113 -12, -113 36, -174 36, -174 -12))"
+        },
+        {
+          "id": "e3998140-3fe3-4a56-9e4e-e17351d22b6a",
+          "shortname": "CARAFE",
+          "longname": "NASA Carbon Atmospheric Flux Experiment",
+          "seasons": [
+            {
+              "id": "6a0f610e-cf94-453b-a071-232b068c416a"
+            },
+            {
+              "id": "1e4626e1-1cca-491d-817d-6741bdb56521"
+            }
+          ],
+          "focus": [
+            {
+              "id": "84550819-09b6-471c-ab6f-17e38d822d83"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "d0025a1e-4589-4e52-81ab-a9847e8db317"
+            }
+          ],
+          "startdate": "2016-09-07",
+          "enddate": "2017-05-26",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "98972937-92d5-4084-817d-7ef1c15f9a67"
+                },
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                },
+                {
+                  "id": "629fbde4-d2ea-4767-8378-c03bda7647cd"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "98972937-92d5-4084-817d-7ef1c15f9a67"
+                },
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                },
+                {
+                  "id": "629fbde4-d2ea-4767-8378-c03bda7647cd"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "5a5a1893-d3c6-4fdc-8c45-53431754a994"
+            }
+          ],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((-77 35, -74 35, -74 40, -77 40, -77 35))"
+        },
+        {
+          "id": "65aa20d9-5d82-4c4f-956a-163b7b22df4a",
+          "shortname": "CLASIC07",
+          "longname": "Cloud and Land Surface Interaction Campaign 2007",
+          "seasons": [
+            {
+              "id": "1e4626e1-1cca-491d-817d-6741bdb56521"
+            }
+          ],
+          "focus": [
+            {
+              "id": "205df828-b591-4c02-878c-5758a5e50b80"
+            },
+            {
+              "id": "4f11cba8-8970-463b-a0b3-9aaf59cc1629"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "1a6ab70d-4bf1-4dab-8600-fbd67327f564"
+            },
+            {
+              "id": "5c7fa512-4539-48c3-91be-5d69971c9ff3"
+            },
+            {
+              "id": "88ba769b-b9c2-43eb-8bba-1fc6ffa2dc98"
+            }
+          ],
+          "startdate": "2007-06-11",
+          "enddate": "2007-07-06",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "429d9328-dd8c-4513-96e8-97bda333c76e"
+            },
+            {
+              "id": "4a1205c4-d9a1-42b2-8746-b906f5c33770"
+            },
+            {
+              "id": "5c029c3c-4e8f-49d9-bc1a-3775e3825677"
+            },
+            {
+              "id": "7867ce72-1e68-47a1-9aa7-99656b9356bc"
+            },
+            {
+              "id": "d644c030-b578-4f71-827a-7d1a2efe90bf"
+            },
+            {
+              "id": "dc4416e7-c644-41ce-bce9-131c714a0a3b"
+            },
+            {
+              "id": "dd5e0b45-a2a5-4017-b58c-4c198a21eb9c"
+            },
+            {
+              "id": "eafadae9-5e1b-41a4-bf25-3448e2d39b31"
+            }
+          ],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((-99 34, -96 34, -96 36, -99 36, -99 34))"
+        },
+        {
+          "id": "f3b2ef25-e06a-418b-9cf8-122f114d0491",
+          "shortname": "LMOS",
+          "longname": "Lake Michigan Ozone Study",
+          "seasons": [
+            {
+              "id": "1e4626e1-1cca-491d-817d-6741bdb56521"
+            }
+          ],
+          "focus": [
+            {
+              "id": "bfc1f1e2-e86a-4b39-bd29-39feedfe79d1"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "1eeb9fa8-e993-4b99-82b3-28e12466382a"
+            },
+            {
+              "id": "d27ec267-8941-4b21-909d-5fe45e001fee"
+            },
+            {
+              "id": "d0025a1e-4589-4e52-81ab-a9847e8db317"
+            }
+          ],
+          "startdate": "2017-05-22",
+          "enddate": "2017-06-22",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "629fbde4-d2ea-4767-8378-c03bda7647cd"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "504dc29d-34b6-41ae-b2d1-5c9ecb7e47ac"
+            },
+            {
+              "id": "5d31cef4-e365-47f3-ac70-df3abcd39db3"
+            },
+            {
+              "id": "5f53719f-fe90-424c-9de5-53ba526ed437"
+            },
+            {
+              "id": "7867ce72-1e68-47a1-9aa7-99656b9356bc"
+            },
+            {
+              "id": "a8a25583-a4ad-419f-9a2d-48e8356507c0"
+            },
+            {
+              "id": "dc4416e7-c644-41ce-bce9-131c714a0a3b"
+            }
+          ],
+          "fundingAgency": "NASA, NSF, EPA, NOAA, Electric Power Research Institute, LADCO",
+          "bounds": "SRID=4326;POLYGON ((-90 40, -85 40, -85 45, -90 45, -90 40))"
+        },
+        {
+          "id": "9b69e72e-43f0-4da8-bec3-52e4aa9b3bda",
+          "shortname": "CARVE",
+          "longname": "Carbon in Arctic Reservoirs Vulnerability Experiment",
+          "seasons": [
+            {
+              "id": "6a0f610e-cf94-453b-a071-232b068c416a"
+            },
+            {
+              "id": "3a6f6d82-cbcc-40af-868e-7b68e6761e05"
+            },
+            {
+              "id": "1e4626e1-1cca-491d-817d-6741bdb56521"
+            }
+          ],
+          "focus": [
+            {
+              "id": "bfc1f1e2-e86a-4b39-bd29-39feedfe79d1"
+            },
+            {
+              "id": "84550819-09b6-471c-ab6f-17e38d822d83"
+            },
+            {
+              "id": "630b2833-ac8c-42bb-ac7f-525f5d1d6036"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "d27ec267-8941-4b21-909d-5fe45e001fee"
+            },
+            {
+              "id": "d0025a1e-4589-4e52-81ab-a9847e8db317"
+            },
+            {
+              "id": "32472be5-7057-4c11-8a31-4dff69740cf0"
+            },
+            {
+              "id": "3c7414fd-578f-4068-a2e6-3830e0e39c51"
+            },
+            {
+              "id": "5f0a8700-6791-44c2-aed9-461bf277bbe4"
+            },
+            {
+              "id": "7dbb57a4-6e32-40e9-acf1-da50347b6bbe"
+            },
+            {
+              "id": "ea75c9d3-9e71-4975-8e18-2e77a0bdd436"
+            }
+          ],
+          "startdate": "2012-05-23",
+          "enddate": "2015-11-12",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                },
+                {
+                  "id": "bb1e8eb7-c469-4783-8da2-d0a43fae490d"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                },
+                {
+                  "id": "bb1e8eb7-c469-4783-8da2-d0a43fae490d"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                },
+                {
+                  "id": "bb1e8eb7-c469-4783-8da2-d0a43fae490d"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                },
+                {
+                  "id": "bb1e8eb7-c469-4783-8da2-d0a43fae490d"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "5a5a1893-d3c6-4fdc-8c45-53431754a994"
+            },
+            {
+              "id": "dc4416e7-c644-41ce-bce9-131c714a0a3b"
+            }
+          ],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((-168 59, -132 59, -132 72, -168 72, -168 59))"
+        },
+        {
+          "id": "297a0d2b-6f73-40b5-93b8-8a108c4fcc1f",
+          "shortname": "DC3",
+          "longname": "Deep Convective Clouds & Chemistry",
+          "seasons": [
+            {
+              "id": "3a6f6d82-cbcc-40af-868e-7b68e6761e05"
+            },
+            {
+              "id": "1e4626e1-1cca-491d-817d-6741bdb56521"
+            },
+            {
+              "id": "3aed90d0-dc86-4c8a-a8a0-43fd6fadaf9a"
+            }
+          ],
+          "focus": [
+            {
+              "id": "bfc1f1e2-e86a-4b39-bd29-39feedfe79d1"
+            },
+            {
+              "id": "4f11cba8-8970-463b-a0b3-9aaf59cc1629"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "1eeb9fa8-e993-4b99-82b3-28e12466382a"
+            },
+            {
+              "id": "d0025a1e-4589-4e52-81ab-a9847e8db317"
+            },
+            {
+              "id": "630d6951-8022-4aa1-a05f-2c0c91a894ea"
+            },
+            {
+              "id": "5c7fa512-4539-48c3-91be-5d69971c9ff3"
+            },
+            {
+              "id": "01588d13-383c-4f4c-b79b-102da1c24cae"
+            },
+            {
+              "id": "7dbb57a4-6e32-40e9-acf1-da50347b6bbe"
+            },
+            {
+              "id": "88ba769b-b9c2-43eb-8bba-1fc6ffa2dc98"
+            },
+            {
+              "id": "ea75c9d3-9e71-4975-8e18-2e77a0bdd436"
+            }
+          ],
+          "startdate": "2012-05-18",
+          "enddate": "2012-06-30",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                },
+                {
+                  "id": "629fbde4-d2ea-4767-8378-c03bda7647cd"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "738660bd-574d-4c7f-ad88-0294bbd3db48"
+            },
+            {
+              "id": "7867ce72-1e68-47a1-9aa7-99656b9356bc"
+            },
+            {
+              "id": "80155bc3-2cde-4978-932e-5c69fd13212d"
+            },
+            {
+              "id": "a8a25583-a4ad-419f-9a2d-48e8356507c0"
+            },
+            {
+              "id": "f7ce3b39-4785-4cbe-a929-a3727259013e"
+            }
+          ],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((-107 24, -84 24, -84 43, -107 43, -107 24))"
+        },
+        {
+          "id": "697daf7d-4ea6-4b91-99a1-4fae69d93e9a",
+          "shortname": "DISCOVER-AQ",
+          "longname": "Deriving Information on Surface Conditions from COlumn and VERtically Resolved Observations Relevant to Air Quality",
+          "seasons": [
+            {
+              "id": "6a0f610e-cf94-453b-a071-232b068c416a"
+            },
+            {
+              "id": "1e4626e1-1cca-491d-817d-6741bdb56521"
+            },
+            {
+              "id": "03ef7251-2897-4bc3-9755-24fad2ec98e6"
+            }
+          ],
+          "focus": [
+            {
+              "id": "bfc1f1e2-e86a-4b39-bd29-39feedfe79d1"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "1eeb9fa8-e993-4b99-82b3-28e12466382a"
+            },
+            {
+              "id": "d27ec267-8941-4b21-909d-5fe45e001fee"
+            },
+            {
+              "id": "d0025a1e-4589-4e52-81ab-a9847e8db317"
+            }
+          ],
+          "startdate": "2011-06-27",
+          "enddate": "2014-08-16",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "afd3b4fa-4c13-43b6-ba15-c143a34b4ddd"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "373185f2-99bf-4e26-9db2-9e1de82042fe"
+                },
+                {
+                  "id": "afd3b4fa-4c13-43b6-ba15-c143a34b4ddd"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "afd3b4fa-4c13-43b6-ba15-c143a34b4ddd"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "2dac2cbe-0674-49a5-ad45-0d6decf8ab41"
+                },
+                {
+                  "id": "afd3b4fa-4c13-43b6-ba15-c143a34b4ddd"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "26c88037-f328-40c1-96f5-b3514d0a5926"
+            },
+            {
+              "id": "5d31cef4-e365-47f3-ac70-df3abcd39db3"
+            },
+            {
+              "id": "7867ce72-1e68-47a1-9aa7-99656b9356bc"
+            },
+            {
+              "id": "973491bf-0994-4a99-9e51-635f3f87e81c"
+            },
+            {
+              "id": "a8a25583-a4ad-419f-9a2d-48e8356507c0"
+            },
+            {
+              "id": "d644c030-b578-4f71-827a-7d1a2efe90bf"
+            },
+            {
+              "id": "dc4416e7-c644-41ce-bce9-131c714a0a3b"
+            }
+          ],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((-124 28, -74 28, -74 40, -124 40, -124 28))"
+        },
+        {
+          "id": "5a267a68-2222-49bb-a82d-501b5c45eba2",
+          "shortname": "FIFE",
+          "longname": "First International Satellite Land Surface Climatology Project (ISLSCP) Field Experiment",
+          "seasons": [
+            {
+              "id": "9f983005-3a6f-430b-9045-a6ac7d1d82ac"
+            }
+          ],
+          "focus": [
+            {
+              "id": "84550819-09b6-471c-ab6f-17e38d822d83"
+            },
+            {
+              "id": "5f94ba1b-ec12-4df0-87cd-e0715310a9af"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "be33fd5e-8b1b-4712-9ccc-ebfa59c55c3b"
+            },
+            {
+              "id": "2d0acd22-74c4-4f22-b7ad-208384bd5ee8"
+            }
+          ],
+          "startdate": "1987-05-26",
+          "enddate": "1989-08-12",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "429d9328-dd8c-4513-96e8-97bda333c76e"
+            },
+            {
+              "id": "5d31cef4-e365-47f3-ac70-df3abcd39db3"
+            },
+            {
+              "id": "70ca6522-bc1d-4727-a298-c28cfbc9e5b3"
+            },
+            {
+              "id": "973491bf-0994-4a99-9e51-635f3f87e81c"
+            },
+            {
+              "id": "a6be1a8e-bc75-451d-85bd-9bb7a32fdb59"
+            },
+            {
+              "id": "b8125bcc-4f7f-452b-bfa5-be976118d128"
+            },
+            {
+              "id": "dc4416e7-c644-41ce-bce9-131c714a0a3b"
+            },
+            {
+              "id": "dfc9e361-4f91-4f82-84e2-4ddc11939551"
+            }
+          ],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((-102 37, -95 37, -95 40, -102 40, -102 37))"
+        },
+        {
+          "id": "a3327734-f9dc-4a45-bec9-79f06bc4c840",
+          "shortname": "ACT-America",
+          "longname": "Atmospheric Carbon and Transport – America",
+          "seasons": [
+            {
+              "id": "9f983005-3a6f-430b-9045-a6ac7d1d82ac"
+            }
+          ],
+          "focus": [
+            {
+              "id": "bfc1f1e2-e86a-4b39-bd29-39feedfe79d1"
+            },
+            {
+              "id": "84550819-09b6-471c-ab6f-17e38d822d83"
+            },
+            {
+              "id": "630b2833-ac8c-42bb-ac7f-525f5d1d6036"
+            },
+            {
+              "id": "4f11cba8-8970-463b-a0b3-9aaf59cc1629"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "d0025a1e-4589-4e52-81ab-a9847e8db317"
+            },
+            {
+              "id": "3c7414fd-578f-4068-a2e6-3830e0e39c51"
+            }
+          ],
+          "startdate": "2016-05-27",
+          "enddate": "2019-07-27",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                },
+                {
+                  "id": "629fbde4-d2ea-4767-8378-c03bda7647cd"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                },
+                {
+                  "id": "629fbde4-d2ea-4767-8378-c03bda7647cd"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                },
+                {
+                  "id": "629fbde4-d2ea-4767-8378-c03bda7647cd"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                },
+                {
+                  "id": "629fbde4-d2ea-4767-8378-c03bda7647cd"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                },
+                {
+                  "id": "629fbde4-d2ea-4767-8378-c03bda7647cd"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "5d31cef4-e365-47f3-ac70-df3abcd39db3"
+            },
+            {
+              "id": "70ca6522-bc1d-4727-a298-c28cfbc9e5b3"
+            },
+            {
+              "id": "7867ce72-1e68-47a1-9aa7-99656b9356bc"
+            }
+          ],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((-127 27, -60 27, -60 50, -127 50, -127 27))"
+        },
+        {
+          "id": "6cb87a73-60f6-4a85-a1ea-dbd29143d281",
+          "shortname": "GOES-R PLT",
+          "longname": "GOES-R Post Launch Test",
+          "seasons": [
+            {
+              "id": "3a6f6d82-cbcc-40af-868e-7b68e6761e05"
+            },
+            {
+              "id": "3aed90d0-dc86-4c8a-a8a0-43fd6fadaf9a"
+            }
+          ],
+          "focus": [
+            {
+              "id": "205df828-b591-4c02-878c-5758a5e50b80"
+            },
+            {
+              "id": "4f11cba8-8970-463b-a0b3-9aaf59cc1629"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "630d6951-8022-4aa1-a05f-2c0c91a894ea"
+            },
+            {
+              "id": "5c7fa512-4539-48c3-91be-5d69971c9ff3"
+            },
+            {
+              "id": "7dbb57a4-6e32-40e9-acf1-da50347b6bbe"
+            },
+            {
+              "id": "88ba769b-b9c2-43eb-8bba-1fc6ffa2dc98"
+            }
+          ],
+          "startdate": "2017-03-21",
+          "enddate": "2017-05-17",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "7867ce72-1e68-47a1-9aa7-99656b9356bc"
+            },
+            {
+              "id": "eafadae9-5e1b-41a4-bf25-3448e2d39b31"
+            }
+          ],
+          "fundingAgency": "NOAA, NASA",
+          "bounds": "SRID=4326;POLYGON ((-125 24, -66 24, -66 50, -125 50, -125 24))"
+        },
+        {
+          "id": "2e014a89-267a-4157-86b3-56e975e9ce6e",
+          "shortname": "HS3",
+          "longname": "Hurricane and Severe Storm Sentinel",
+          "seasons": [
+            {
+              "id": "6a0f610e-cf94-453b-a071-232b068c416a"
+            },
+            {
+              "id": "1e4626e1-1cca-491d-817d-6741bdb56521"
+            }
+          ],
+          "focus": [
+            {
+              "id": "205df828-b591-4c02-878c-5758a5e50b80"
+            },
+            {
+              "id": "4f11cba8-8970-463b-a0b3-9aaf59cc1629"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "630d6951-8022-4aa1-a05f-2c0c91a894ea"
+            },
+            {
+              "id": "88ba769b-b9c2-43eb-8bba-1fc6ffa2dc98"
+            },
+            {
+              "id": "14051781-0eb5-453c-86d3-60f2c2e19f74"
+            }
+          ],
+          "startdate": "2012-08-28",
+          "enddate": "2014-10-20",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                },
+                {
+                  "id": "629fbde4-d2ea-4767-8378-c03bda7647cd"
+                },
+                {
+                  "id": "0f344562-9780-403d-ad40-5fddc7ce0e14"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                },
+                {
+                  "id": "629fbde4-d2ea-4767-8378-c03bda7647cd"
+                },
+                {
+                  "id": "0f344562-9780-403d-ad40-5fddc7ce0e14"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                },
+                {
+                  "id": "629fbde4-d2ea-4767-8378-c03bda7647cd"
+                },
+                {
+                  "id": "0f344562-9780-403d-ad40-5fddc7ce0e14"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "5b641473-5c2e-48f2-adca-76a641966da7"
+            },
+            {
+              "id": "700f9f12-0086-4661-92b4-81507ba92bec"
+            },
+            {
+              "id": "7867ce72-1e68-47a1-9aa7-99656b9356bc"
+            }
+          ],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((-120 12, -60 12, -60 45, -120 45, -120 12))"
+        },
+        {
+          "id": "32842970-8729-4ceb-9e44-ef2baa6763aa",
+          "shortname": "LISTOS",
+          "longname": "Long Island Sound Tropospheric Ozone Study",
+          "seasons": [
+            {
+              "id": "6a0f610e-cf94-453b-a071-232b068c416a"
+            },
+            {
+              "id": "1e4626e1-1cca-491d-817d-6741bdb56521"
+            }
+          ],
+          "focus": [
+            {
+              "id": "bfc1f1e2-e86a-4b39-bd29-39feedfe79d1"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "1eeb9fa8-e993-4b99-82b3-28e12466382a"
+            },
+            {
+              "id": "d27ec267-8941-4b21-909d-5fe45e001fee"
+            },
+            {
+              "id": "d0025a1e-4589-4e52-81ab-a9847e8db317"
+            }
+          ],
+          "startdate": "2017-05-17",
+          "enddate": "2019-07-31",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "98972937-92d5-4084-817d-7ef1c15f9a67"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "98972937-92d5-4084-817d-7ef1c15f9a67"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "26c88037-f328-40c1-96f5-b3514d0a5926"
+            },
+            {
+              "id": "762ba147-b6ea-4b38-88d0-433f8c7f7f3f"
+            },
+            {
+              "id": "89f62a41-7bdd-420f-8e9f-2c17224842e4"
+            },
+            {
+              "id": "973491bf-0994-4a99-9e51-635f3f87e81c"
+            },
+            {
+              "id": "a8a25583-a4ad-419f-9a2d-48e8356507c0"
+            },
+            {
+              "id": "c9a5bf90-5004-455a-aa01-b8e34efb0495"
+            },
+            {
+              "id": "dc4416e7-c644-41ce-bce9-131c714a0a3b"
+            }
+          ],
+          "fundingAgency": "NESCAUM, NASA, NYSERDA, CT DEEP, NJ DEP, NYS DEC, NFWF, NOAA, EPA",
+          "bounds": "SRID=4326;POLYGON ((-80 35, -70 35, -70 45, -80 45, -80 35))"
+        },
+        {
+          "id": "8ac42ff4-eb61-45f7-85da-4ba96d1ed0fa",
+          "shortname": "IFloodS",
+          "longname": "Iowa Flood Studies",
+          "seasons": [
+            {
+              "id": "3a6f6d82-cbcc-40af-868e-7b68e6761e05"
+            },
+            {
+              "id": "ba9407d6-cd89-4364-906f-9d78a0c93858"
+            }
+          ],
+          "focus": [
+            {
+              "id": "4f11cba8-8970-463b-a0b3-9aaf59cc1629"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "7dbb57a4-6e32-40e9-acf1-da50347b6bbe"
+            },
+            {
+              "id": "652f9f80-3a68-475e-a1b9-08443537b358"
+            }
+          ],
+          "startdate": "2013-04-10",
+          "enddate": "2013-06-15",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "7867ce72-1e68-47a1-9aa7-99656b9356bc"
+            },
+            {
+              "id": "dc4416e7-c644-41ce-bce9-131c714a0a3b"
+            }
+          ],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((-95 41, -90 41, -90 44, -95 44, -95 41))"
+        },
+        {
+          "id": "8ad5a7e2-2c1c-4b18-8db7-ae8f5a4356b2",
+          "shortname": "IPHEx",
+          "longname": "Integrated Precipitation and Hydrology Experiment",
+          "seasons": [
+            {
+              "id": "3a6f6d82-cbcc-40af-868e-7b68e6761e05"
+            },
+            {
+              "id": "1e4626e1-1cca-491d-817d-6741bdb56521"
+            },
+            {
+              "id": "3aed90d0-dc86-4c8a-a8a0-43fd6fadaf9a"
+            }
+          ],
+          "focus": [
+            {
+              "id": "205df828-b591-4c02-878c-5758a5e50b80"
+            },
+            {
+              "id": "4f11cba8-8970-463b-a0b3-9aaf59cc1629"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "1ff853b4-d075-4fc6-912f-3eb1f98c8919"
+            },
+            {
+              "id": "7dbb57a4-6e32-40e9-acf1-da50347b6bbe"
+            },
+            {
+              "id": "276a5b0e-87c8-42f8-b0cc-fb5581873e98"
+            },
+            {
+              "id": "652f9f80-3a68-475e-a1b9-08443537b358"
+            }
+          ],
+          "startdate": "2014-05-01",
+          "enddate": "2014-06-15",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                },
+                {
+                  "id": "629fbde4-d2ea-4767-8378-c03bda7647cd"
+                },
+                {
+                  "id": "2dac2cbe-0674-49a5-ad45-0d6decf8ab41"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "7867ce72-1e68-47a1-9aa7-99656b9356bc"
+            },
+            {
+              "id": "973491bf-0994-4a99-9e51-635f3f87e81c"
+            },
+            {
+              "id": "a8a25583-a4ad-419f-9a2d-48e8356507c0"
+            },
+            {
+              "id": "c101fd14-d9b8-4720-8ce1-d46b0a9bdf33"
+            },
+            {
+              "id": "dc4416e7-c644-41ce-bce9-131c714a0a3b"
+            },
+            {
+              "id": "eafadae9-5e1b-41a4-bf25-3448e2d39b31"
+            }
+          ],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((-86 32, -75 32, -75 38, -86 38, -86 32))"
+        },
+        {
+          "id": "bdcb3702-a079-495b-8897-5dcf0558bb56",
+          "shortname": "MC3E",
+          "longname": "Mid-latitude Continental Convective Clouds Experiment",
+          "seasons": [
+            {
+              "id": "3a6f6d82-cbcc-40af-868e-7b68e6761e05"
+            },
+            {
+              "id": "1e4626e1-1cca-491d-817d-6741bdb56521"
+            }
+          ],
+          "focus": [
+            {
+              "id": "205df828-b591-4c02-878c-5758a5e50b80"
+            },
+            {
+              "id": "4f11cba8-8970-463b-a0b3-9aaf59cc1629"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "5c7fa512-4539-48c3-91be-5d69971c9ff3"
+            },
+            {
+              "id": "01588d13-383c-4f4c-b79b-102da1c24cae"
+            },
+            {
+              "id": "7dbb57a4-6e32-40e9-acf1-da50347b6bbe"
+            }
+          ],
+          "startdate": "2011-04-22",
+          "enddate": "2011-06-06",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "7867ce72-1e68-47a1-9aa7-99656b9356bc"
+            },
+            {
+              "id": "973491bf-0994-4a99-9e51-635f3f87e81c"
+            },
+            {
+              "id": "c101fd14-d9b8-4720-8ce1-d46b0a9bdf33"
+            },
+            {
+              "id": "dc4416e7-c644-41ce-bce9-131c714a0a3b"
+            },
+            {
+              "id": "eafadae9-5e1b-41a4-bf25-3448e2d39b31"
+            }
+          ],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((-121 28, -91 28, -91 43, -121 43, -121 28))"
+        },
+        {
+          "id": "6b70cdd6-a6d7-4aad-98d5-fb8d631ece69",
+          "shortname": "SEAC4RS",
+          "longname": "Studies of Emissions and Atmospheric Composition, Clouds and Climate Coupling by Regional Surveys",
+          "seasons": [
+            {
+              "id": "6a0f610e-cf94-453b-a071-232b068c416a"
+            },
+            {
+              "id": "1e4626e1-1cca-491d-817d-6741bdb56521"
+            }
+          ],
+          "focus": [
+            {
+              "id": "bfc1f1e2-e86a-4b39-bd29-39feedfe79d1"
+            },
+            {
+              "id": "4f11cba8-8970-463b-a0b3-9aaf59cc1629"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "1eeb9fa8-e993-4b99-82b3-28e12466382a"
+            },
+            {
+              "id": "d27ec267-8941-4b21-909d-5fe45e001fee"
+            },
+            {
+              "id": "d0025a1e-4589-4e52-81ab-a9847e8db317"
+            },
+            {
+              "id": "5c7fa512-4539-48c3-91be-5d69971c9ff3"
+            },
+            {
+              "id": "01588d13-383c-4f4c-b79b-102da1c24cae"
+            },
+            {
+              "id": "88ba769b-b9c2-43eb-8bba-1fc6ffa2dc98"
+            }
+          ],
+          "startdate": "2013-08-01",
+          "enddate": "2013-09-23",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                },
+                {
+                  "id": "629fbde4-d2ea-4767-8378-c03bda7647cd"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "7867ce72-1e68-47a1-9aa7-99656b9356bc"
+            },
+            {
+              "id": "80155bc3-2cde-4978-932e-5c69fd13212d"
+            },
+            {
+              "id": "973491bf-0994-4a99-9e51-635f3f87e81c"
+            },
+            {
+              "id": "db9c4305-9526-4e77-aeba-d7540036d38e"
+            },
+            {
+              "id": "eafadae9-5e1b-41a4-bf25-3448e2d39b31"
+            }
+          ],
+          "fundingAgency": "NASA, NRL",
+          "bounds": "SRID=4326;POLYGON ((-130 20, -70 20, -70 50, -130 50, -130 20))"
+        },
+        {
+          "id": "2552174b-213c-4bfc-b36a-632fb16c5ec2",
+          "shortname": "OLYMPEX",
+          "longname": "Olympic Mountains Experiment",
+          "seasons": [
+            {
+              "id": "03ef7251-2897-4bc3-9755-24fad2ec98e6"
+            },
+            {
+              "id": "ad691655-be3a-4519-98f2-09fb0ea18211"
+            },
+            {
+              "id": "ba9407d6-cd89-4364-906f-9d78a0c93858"
+            }
+          ],
+          "focus": [
+            {
+              "id": "205df828-b591-4c02-878c-5758a5e50b80"
+            },
+            {
+              "id": "4f11cba8-8970-463b-a0b3-9aaf59cc1629"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "1ff853b4-d075-4fc6-912f-3eb1f98c8919"
+            },
+            {
+              "id": "7dbb57a4-6e32-40e9-acf1-da50347b6bbe"
+            },
+            {
+              "id": "88ba769b-b9c2-43eb-8bba-1fc6ffa2dc98"
+            },
+            {
+              "id": "652f9f80-3a68-475e-a1b9-08443537b358"
+            }
+          ],
+          "startdate": "2015-11-01",
+          "enddate": "2016-05-01",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                },
+                {
+                  "id": "629fbde4-d2ea-4767-8378-c03bda7647cd"
+                },
+                {
+                  "id": "2dac2cbe-0674-49a5-ad45-0d6decf8ab41"
+                },
+                {
+                  "id": "1a8577f2-7386-404b-8082-487f56ac8119"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "7867ce72-1e68-47a1-9aa7-99656b9356bc"
+            },
+            {
+              "id": "80155bc3-2cde-4978-932e-5c69fd13212d"
+            },
+            {
+              "id": "a8a25583-a4ad-419f-9a2d-48e8356507c0"
+            },
+            {
+              "id": "c101fd14-d9b8-4720-8ce1-d46b0a9bdf33"
+            },
+            {
+              "id": "dc4416e7-c644-41ce-bce9-131c714a0a3b"
+            },
+            {
+              "id": "eafadae9-5e1b-41a4-bf25-3448e2d39b31"
+            },
+            {
+              "id": "f8d5d7e5-1efe-4c49-96b4-f069caf0b38c"
+            }
+          ],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((-126 46, -122 46, -122 48.5, -126 48.5, -126 46))"
+        },
+        {
+          "id": "321f3a62-615d-49e5-8fe3-dc73f9132eb3",
+          "shortname": "OTTER",
+          "longname": "Oregon Transect Ecosystem Research Project",
+          "seasons": [
+            {
+              "id": "9f983005-3a6f-430b-9045-a6ac7d1d82ac"
+            }
+          ],
+          "focus": [
+            {
+              "id": "84550819-09b6-471c-ab6f-17e38d822d83"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "d0025a1e-4589-4e52-81ab-a9847e8db317"
+            },
+            {
+              "id": "9e7e796a-e9d1-400e-a8f1-db562751b234"
+            },
+            {
+              "id": "32472be5-7057-4c11-8a31-4dff69740cf0"
+            }
+          ],
+          "startdate": "1989-05-27",
+          "enddate": "1991-08-24",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                },
+                {
+                  "id": "4d395e23-2d32-414d-a551-689e874cd4c0"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                },
+                {
+                  "id": "4d395e23-2d32-414d-a551-689e874cd4c0"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                },
+                {
+                  "id": "4d395e23-2d32-414d-a551-689e874cd4c0"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "3ce3a9e1-f1c2-4a3b-8bdf-8fa95ba69620"
+            },
+            {
+              "id": "70ca6522-bc1d-4727-a298-c28cfbc9e5b3"
+            },
+            {
+              "id": "777b1069-e012-4f50-8021-b288caf7e8e5"
+            },
+            {
+              "id": "80155bc3-2cde-4978-932e-5c69fd13212d"
+            },
+            {
+              "id": "a40562b3-a188-4ac9-b6de-8c18c1d7348a"
+            },
+            {
+              "id": "a8a25583-a4ad-419f-9a2d-48e8356507c0"
+            },
+            {
+              "id": "dc4416e7-c644-41ce-bce9-131c714a0a3b"
+            },
+            {
+              "id": "eafadae9-5e1b-41a4-bf25-3448e2d39b31"
+            }
+          ],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((-124 44, -121 44, -121 45, -124 45, -124 44))"
+        },
+        {
+          "id": "4dab3cb0-38ae-4199-9b9e-c1dbdd6041a3",
+          "shortname": "OWLETS",
+          "longname": "Ozone Water-Land Environmental Transition Study",
+          "seasons": [
+            {
+              "id": "1e4626e1-1cca-491d-817d-6741bdb56521"
+            }
+          ],
+          "focus": [
+            {
+              "id": "bfc1f1e2-e86a-4b39-bd29-39feedfe79d1"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "1eeb9fa8-e993-4b99-82b3-28e12466382a"
+            },
+            {
+              "id": "d27ec267-8941-4b21-909d-5fe45e001fee"
+            },
+            {
+              "id": "d0025a1e-4589-4e52-81ab-a9847e8db317"
+            }
+          ],
+          "startdate": "2017-07-05",
+          "enddate": "2018-07-19",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "98972937-92d5-4084-817d-7ef1c15f9a67"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "98972937-92d5-4084-817d-7ef1c15f9a67"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "07449080-b951-46ba-9ecc-39c781108455"
+            },
+            {
+              "id": "26c88037-f328-40c1-96f5-b3514d0a5926"
+            },
+            {
+              "id": "5a5a1893-d3c6-4fdc-8c45-53431754a994"
+            },
+            {
+              "id": "5d31cef4-e365-47f3-ac70-df3abcd39db3"
+            },
+            {
+              "id": "7867ce72-1e68-47a1-9aa7-99656b9356bc"
+            },
+            {
+              "id": "973491bf-0994-4a99-9e51-635f3f87e81c"
+            },
+            {
+              "id": "a8a25583-a4ad-419f-9a2d-48e8356507c0"
+            },
+            {
+              "id": "acf557ca-22fa-4cd0-936a-018dd0b092d6"
+            },
+            {
+              "id": "dc4416e7-c644-41ce-bce9-131c714a0a3b"
+            }
+          ],
+          "fundingAgency": "NASA, Maryland Department of Environment",
+          "bounds": "SRID=4326;POLYGON ((-78 36.5, -75 36.5, -75 39.5, -78 39.5, -78 36.5))"
+        },
+        {
+          "id": "53e5198d-a468-4108-8ee2-cdae1a2e6b06",
+          "shortname": "SAFARI 2000",
+          "longname": "Southern African Regional Science Initiative",
+          "seasons": [
+            {
+              "id": "c42d85de-94ba-48bd-8f3a-3322c2acef68"
+            },
+            {
+              "id": "ba9407d6-cd89-4364-906f-9d78a0c93858"
+            }
+          ],
+          "focus": [
+            {
+              "id": "bfc1f1e2-e86a-4b39-bd29-39feedfe79d1"
+            },
+            {
+              "id": "84550819-09b6-471c-ab6f-17e38d822d83"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "1eeb9fa8-e993-4b99-82b3-28e12466382a"
+            },
+            {
+              "id": "d0025a1e-4589-4e52-81ab-a9847e8db317"
+            },
+            {
+              "id": "32472be5-7057-4c11-8a31-4dff69740cf0"
+            }
+          ],
+          "startdate": "1999-08-01",
+          "enddate": "2001-03-31",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "4953a60c-56f6-4061-94ac-98bc4266e676"
+            },
+            {
+              "id": "70ca6522-bc1d-4727-a298-c28cfbc9e5b3"
+            },
+            {
+              "id": "84ff6e8a-771d-4397-9a11-6747d4afccde"
+            },
+            {
+              "id": "a6be1a8e-bc75-451d-85bd-9bb7a32fdb59"
+            },
+            {
+              "id": "dc4416e7-c644-41ce-bce9-131c714a0a3b"
+            },
+            {
+              "id": "eafadae9-5e1b-41a4-bf25-3448e2d39b31"
+            }
+          ],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((5 -35, 60 -35, 60 5, 5 5, 5 -35))"
+        },
+        {
+          "id": "4144d783-0f7a-4f46-886f-6350eb666ab9",
+          "shortname": "SNF",
+          "longname": "Superior National Forest Project",
+          "seasons": [
+            {
+              "id": "6a0f610e-cf94-453b-a071-232b068c416a"
+            },
+            {
+              "id": "1e4626e1-1cca-491d-817d-6741bdb56521"
+            }
+          ],
+          "focus": [
+            {
+              "id": "84550819-09b6-471c-ab6f-17e38d822d83"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "9e7e796a-e9d1-400e-a8f1-db562751b234"
+            },
+            {
+              "id": "32472be5-7057-4c11-8a31-4dff69740cf0"
+            }
+          ],
+          "startdate": "1983-05-05",
+          "enddate": "1984-09-23",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "4d395e23-2d32-414d-a551-689e874cd4c0"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "4d395e23-2d32-414d-a551-689e874cd4c0"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "70ca6522-bc1d-4727-a298-c28cfbc9e5b3"
+            },
+            {
+              "id": "7867ce72-1e68-47a1-9aa7-99656b9356bc"
+            },
+            {
+              "id": "ae21364c-c575-49c1-bc64-648b8cd7de39"
+            }
+          ],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((-92.5 47.7, -91.8 47.7, -91.8 48.2, -92.5 48.2, -92.5 47.7))"
+        },
+        {
+          "id": "6085bda1-08ac-4a87-8075-36bce127ced9",
+          "shortname": "TEFLUN",
+          "longname": "TExas and FLorida UNderflights",
+          "seasons": [
+            {
+              "id": "6a0f610e-cf94-453b-a071-232b068c416a"
+            },
+            {
+              "id": "3a6f6d82-cbcc-40af-868e-7b68e6761e05"
+            },
+            {
+              "id": "1e4626e1-1cca-491d-817d-6741bdb56521"
+            }
+          ],
+          "focus": [
+            {
+              "id": "4f11cba8-8970-463b-a0b3-9aaf59cc1629"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "5c7fa512-4539-48c3-91be-5d69971c9ff3"
+            },
+            {
+              "id": "01588d13-383c-4f4c-b79b-102da1c24cae"
+            },
+            {
+              "id": "7dbb57a4-6e32-40e9-acf1-da50347b6bbe"
+            }
+          ],
+          "startdate": "1998-04-01",
+          "enddate": "1998-09-30",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "98972937-92d5-4084-817d-7ef1c15f9a67"
+                },
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "98972937-92d5-4084-817d-7ef1c15f9a67"
+                },
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "7867ce72-1e68-47a1-9aa7-99656b9356bc"
+            },
+            {
+              "id": "80155bc3-2cde-4978-932e-5c69fd13212d"
+            },
+            {
+              "id": "c101fd14-d9b8-4720-8ce1-d46b0a9bdf33"
+            },
+            {
+              "id": "db9c4305-9526-4e77-aeba-d7540036d38e"
+            },
+            {
+              "id": "dc4416e7-c644-41ce-bce9-131c714a0a3b"
+            },
+            {
+              "id": "eafadae9-5e1b-41a4-bf25-3448e2d39b31"
+            }
+          ],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((-99 26, -92 26, -92 32, -99 32, -99 26))"
+        },
+        {
+          "id": "86a0e3f9-5019-4adc-a248-bbd78c845470",
+          "shortname": "ABoVE",
+          "longname": "Arctic-Boreal Vulnerability Experiment",
+          "seasons": [
+            {
+              "id": "6a0f610e-cf94-453b-a071-232b068c416a"
+            },
+            {
+              "id": "3a6f6d82-cbcc-40af-868e-7b68e6761e05"
+            },
+            {
+              "id": "1e4626e1-1cca-491d-817d-6741bdb56521"
+            }
+          ],
+          "focus": [
+            {
+              "id": "84550819-09b6-471c-ab6f-17e38d822d83"
+            },
+            {
+              "id": "630b2833-ac8c-42bb-ac7f-525f5d1d6036"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "32472be5-7057-4c11-8a31-4dff69740cf0"
+            },
+            {
+              "id": "3c7414fd-578f-4068-a2e6-3830e0e39c51"
+            },
+            {
+              "id": "2d0acd22-74c4-4f22-b7ad-208384bd5ee8"
+            }
+          ],
+          "startdate": "2017-04-27",
+          "enddate": null,
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                },
+                {
+                  "id": "bb1e8eb7-c469-4783-8da2-d0a43fae490d"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                },
+                {
+                  "id": "bb1e8eb7-c469-4783-8da2-d0a43fae490d"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                },
+                {
+                  "id": "bb1e8eb7-c469-4783-8da2-d0a43fae490d"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "429d9328-dd8c-4513-96e8-97bda333c76e"
+            },
+            {
+              "id": "5a2ca85c-7768-4ae1-94a5-2d30b6eb9ea9"
+            },
+            {
+              "id": "5d31cef4-e365-47f3-ac70-df3abcd39db3"
+            },
+            {
+              "id": "5f53719f-fe90-424c-9de5-53ba526ed437"
+            },
+            {
+              "id": "738660bd-574d-4c7f-ad88-0294bbd3db48"
+            },
+            {
+              "id": "7867ce72-1e68-47a1-9aa7-99656b9356bc"
+            },
+            {
+              "id": "ed057836-a9d8-453b-b9b6-911203e63000"
+            }
+          ],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((-168 53, -81 53, -81 80, -168 80, -168 53))"
+        },
+        {
+          "id": "e501857c-0e01-423e-9f53-de2ecd38248e",
+          "shortname": "TARFOX",
+          "longname": "Tropospheric Aerosol Radiative Forcing Observational Experiment",
+          "seasons": [
+            {
+              "id": "1e4626e1-1cca-491d-817d-6741bdb56521"
+            }
+          ],
+          "focus": [
+            {
+              "id": "bfc1f1e2-e86a-4b39-bd29-39feedfe79d1"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "1eeb9fa8-e993-4b99-82b3-28e12466382a"
+            },
+            {
+              "id": "d0025a1e-4589-4e52-81ab-a9847e8db317"
+            },
+            {
+              "id": "88ba769b-b9c2-43eb-8bba-1fc6ffa2dc98"
+            }
+          ],
+          "startdate": "1996-07-07",
+          "enddate": "1996-07-31",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "98972937-92d5-4084-817d-7ef1c15f9a67"
+                },
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                },
+                {
+                  "id": "629fbde4-d2ea-4767-8378-c03bda7647cd"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "2daf8f5f-682f-4375-a2a9-685a4194724a"
+            },
+            {
+              "id": "4c473b42-8e87-43ab-9552-9b98ecb602ca"
+            },
+            {
+              "id": "5a20149d-a3ed-4676-9944-ba729beef4a5"
+            },
+            {
+              "id": "648d7d48-f336-4833-958a-e97ee3e559cc"
+            },
+            {
+              "id": "70ca6522-bc1d-4727-a298-c28cfbc9e5b3"
+            },
+            {
+              "id": "dc4416e7-c644-41ce-bce9-131c714a0a3b"
+            },
+            {
+              "id": "eafadae9-5e1b-41a4-bf25-3448e2d39b31"
+            }
+          ],
+          "fundingAgency": "NASA, NSF, ONR, DOE, NOAA, U.K. Meteorological Office, CNRS, CNES",
+          "bounds": "SRID=4326;POLYGON ((-77 36, -72 36, -72 39, -77 39, -77 36))"
+        },
+        {
+          "id": "30f6df39-343c-4a70-a7ab-ca7e77e9e0c3",
+          "shortname": "AirMOSS",
+          "longname": "Airborne Microwave Observatory of Subcanopy and Subsurface",
+          "seasons": [
+            {
+              "id": "9f983005-3a6f-430b-9045-a6ac7d1d82ac"
+            }
+          ],
+          "focus": [
+            {
+              "id": "84550819-09b6-471c-ab6f-17e38d822d83"
+            },
+            {
+              "id": "5f94ba1b-ec12-4df0-87cd-e0715310a9af"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "9e7e796a-e9d1-400e-a8f1-db562751b234"
+            },
+            {
+              "id": "32472be5-7057-4c11-8a31-4dff69740cf0"
+            },
+            {
+              "id": "3c7414fd-578f-4068-a2e6-3830e0e39c51"
+            },
+            {
+              "id": "2d0acd22-74c4-4f22-b7ad-208384bd5ee8"
+            },
+            {
+              "id": "276a5b0e-87c8-42f8-b0cc-fb5581873e98"
+            },
+            {
+              "id": "652f9f80-3a68-475e-a1b9-08443537b358"
+            }
+          ],
+          "startdate": "2012-09-18",
+          "enddate": "2015-09-29",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "ed057836-a9d8-453b-b9b6-911203e63000"
+            },
+            {
+              "id": "7ad8accf-20dd-492c-a2b6-30507e2db33d"
+            },
+            {
+              "id": "dc4416e7-c644-41ce-bce9-131c714a0a3b"
+            }
+          ],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((-125 8, -68 8, -68 60, -125 60, -125 8))"
+        },
+        {
+          "id": "1d26f72f-d9d5-45cc-b5ac-1c91ed05b76f",
+          "shortname": "BOREAS",
+          "longname": "Boreal Ecosystem-Atmosphere Study",
+          "seasons": [
+            {
+              "id": "9f983005-3a6f-430b-9045-a6ac7d1d82ac"
+            }
+          ],
+          "focus": [
+            {
+              "id": "84550819-09b6-471c-ab6f-17e38d822d83"
+            },
+            {
+              "id": "630b2833-ac8c-42bb-ac7f-525f5d1d6036"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "d0025a1e-4589-4e52-81ab-a9847e8db317"
+            },
+            {
+              "id": "32472be5-7057-4c11-8a31-4dff69740cf0"
+            },
+            {
+              "id": "3c7414fd-578f-4068-a2e6-3830e0e39c51"
+            },
+            {
+              "id": "be33fd5e-8b1b-4712-9ccc-ebfa59c55c3b"
+            },
+            {
+              "id": "5f0a8700-6791-44c2-aed9-461bf277bbe4"
+            },
+            {
+              "id": "2d0acd22-74c4-4f22-b7ad-208384bd5ee8"
+            },
+            {
+              "id": "88ba769b-b9c2-43eb-8bba-1fc6ffa2dc98"
+            },
+            {
+              "id": "276a5b0e-87c8-42f8-b0cc-fb5581873e98"
+            }
+          ],
+          "startdate": "1994-02-02",
+          "enddate": "1996-10-21",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                },
+                {
+                  "id": "4d395e23-2d32-414d-a551-689e874cd4c0"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                },
+                {
+                  "id": "4d395e23-2d32-414d-a551-689e874cd4c0"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "429d9328-dd8c-4513-96e8-97bda333c76e"
+            },
+            {
+              "id": "477a823f-902c-490a-97e3-619cf875d07d"
+            },
+            {
+              "id": "66c69777-fade-4ac4-b255-ef45482a306b"
+            },
+            {
+              "id": "6d7bd71f-21c9-4814-9a43-2bbcea5182a4"
+            },
+            {
+              "id": "70ca6522-bc1d-4727-a298-c28cfbc9e5b3"
+            },
+            {
+              "id": "762ba147-b6ea-4b38-88d0-433f8c7f7f3f"
+            },
+            {
+              "id": "80155bc3-2cde-4978-932e-5c69fd13212d"
+            },
+            {
+              "id": "84ff6e8a-771d-4397-9a11-6747d4afccde"
+            },
+            {
+              "id": "a6be1a8e-bc75-451d-85bd-9bb7a32fdb59"
+            },
+            {
+              "id": "b8125bcc-4f7f-452b-bfa5-be976118d128"
+            },
+            {
+              "id": "dfc9e361-4f91-4f82-84e2-4ddc11939551"
+            },
+            {
+              "id": "eafadae9-5e1b-41a4-bf25-3448e2d39b31"
+            }
+          ],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((-112 50, -94 50, -94 60, -112 60, -112 50))"
+        },
+        {
+          "id": "95df37f3-eb3a-4cdf-83bd-51da34b525d7",
+          "shortname": "CAMP2Ex",
+          "longname": "Clouds, Aerosol, and Monsoon Processes-Philippines Experiment",
+          "seasons": [
+            {
+              "id": "6a0f610e-cf94-453b-a071-232b068c416a"
+            },
+            {
+              "id": "1e4626e1-1cca-491d-817d-6741bdb56521"
+            },
+            {
+              "id": "1a34a3b6-4b2e-4ce7-8e06-2739ea2542af"
+            }
+          ],
+          "focus": [
+            {
+              "id": "bfc1f1e2-e86a-4b39-bd29-39feedfe79d1"
+            },
+            {
+              "id": "4f11cba8-8970-463b-a0b3-9aaf59cc1629"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "1eeb9fa8-e993-4b99-82b3-28e12466382a"
+            },
+            {
+              "id": "d0025a1e-4589-4e52-81ab-a9847e8db317"
+            },
+            {
+              "id": "5c7fa512-4539-48c3-91be-5d69971c9ff3"
+            },
+            {
+              "id": "7dbb57a4-6e32-40e9-acf1-da50347b6bbe"
+            },
+            {
+              "id": "88ba769b-b9c2-43eb-8bba-1fc6ffa2dc98"
+            }
+          ],
+          "startdate": "2019-08-20",
+          "enddate": "2019-10-10",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "4c4ed51e-fc02-490f-a72d-f1df4a6a18b3"
+                },
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "d644c030-b578-4f71-827a-7d1a2efe90bf"
+            },
+            {
+              "id": "db9c4305-9526-4e77-aeba-d7540036d38e"
+            }
+          ],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((115 20, 130 20, 130 5, 115 5, 115 20))"
+        },
+        {
+          "id": "02cbf25b-3002-4ed1-8413-eed2eb52332c",
+          "shortname": "CPEX",
+          "longname": "Convective Processes Experiment",
+          "seasons": [
+            {
+              "id": "1e4626e1-1cca-491d-817d-6741bdb56521"
+            }
+          ],
+          "focus": [
+            {
+              "id": "4f11cba8-8970-463b-a0b3-9aaf59cc1629"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "1a6ab70d-4bf1-4dab-8600-fbd67327f564"
+            },
+            {
+              "id": "5c7fa512-4539-48c3-91be-5d69971c9ff3"
+            },
+            {
+              "id": "01588d13-383c-4f4c-b79b-102da1c24cae"
+            },
+            {
+              "id": "7dbb57a4-6e32-40e9-acf1-da50347b6bbe"
+            },
+            {
+              "id": "14051781-0eb5-453c-86d3-60f2c2e19f74"
+            }
+          ],
+          "startdate": "2017-05-25",
+          "enddate": "2017-06-25",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "80155bc3-2cde-4978-932e-5c69fd13212d"
+            }
+          ],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((-97 16, -69 16, -69 29, -97 29, -97 16))"
+        },
+        {
+          "id": "118d9d82-5e90-466b-8b82-530276b76ecc",
+          "shortname": "GCPEx",
+          "longname": "GPM Cold Season Precipitation Experiment",
+          "seasons": [
+            {
+              "id": "03ef7251-2897-4bc3-9755-24fad2ec98e6"
+            }
+          ],
+          "focus": [
+            {
+              "id": "bfc1f1e2-e86a-4b39-bd29-39feedfe79d1"
+            },
+            {
+              "id": "205df828-b591-4c02-878c-5758a5e50b80"
+            },
+            {
+              "id": "4f11cba8-8970-463b-a0b3-9aaf59cc1629"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "5c7fa512-4539-48c3-91be-5d69971c9ff3"
+            },
+            {
+              "id": "1ff853b4-d075-4fc6-912f-3eb1f98c8919"
+            },
+            {
+              "id": "7dbb57a4-6e32-40e9-acf1-da50347b6bbe"
+            }
+          ],
+          "startdate": "2012-01-15",
+          "enddate": "2012-03-04",
+          "deployments": [
+            {
+              "regions": []
+            }
+          ],
+          "platforms": [
+            {
+              "id": "80155bc3-2cde-4978-932e-5c69fd13212d"
+            },
+            {
+              "id": "84ff6e8a-771d-4397-9a11-6747d4afccde"
+            },
+            {
+              "id": "c101fd14-d9b8-4720-8ce1-d46b0a9bdf33"
+            }
+          ],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((-88.7 34.5, -61.52 34.5, -61.52 50.4, -88.7 50.4, -88.7 34.5))"
+        },
+        {
+          "id": "c0edfee1-2a92-41f8-8c0d-986edcbbdf01",
+          "shortname": "GRIP",
+          "longname": "Genesis and Rapid Intensification Processes",
+          "seasons": [
+            {
+              "id": "6a0f610e-cf94-453b-a071-232b068c416a"
+            },
+            {
+              "id": "1e4626e1-1cca-491d-817d-6741bdb56521"
+            }
+          ],
+          "focus": [
+            {
+              "id": "4f11cba8-8970-463b-a0b3-9aaf59cc1629"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "630d6951-8022-4aa1-a05f-2c0c91a894ea"
+            },
+            {
+              "id": "d4bca0e9-4ee7-4aa2-861e-2b63e993d362"
+            },
+            {
+              "id": "7dbb57a4-6e32-40e9-acf1-da50347b6bbe"
+            },
+            {
+              "id": "88ba769b-b9c2-43eb-8bba-1fc6ffa2dc98"
+            },
+            {
+              "id": "14051781-0eb5-453c-86d3-60f2c2e19f74"
+            }
+          ],
+          "startdate": "2010-08-15",
+          "enddate": "2010-09-25",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                },
+                {
+                  "id": "0f344562-9780-403d-ad40-5fddc7ce0e14"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "5b641473-5c2e-48f2-adca-76a641966da7"
+            },
+            {
+              "id": "700f9f12-0086-4661-92b4-81507ba92bec"
+            },
+            {
+              "id": "80155bc3-2cde-4978-932e-5c69fd13212d"
+            }
+          ],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((-130 0, -60 0, -60 40, -130 40, -130 0))"
+        },
+        {
+          "id": "17108795-e9cb-4d5e-b9c5-34995da998e6",
+          "shortname": "HyMeX",
+          "longname": "The Hydrological Cycle in Mediterranean Experiment",
+          "seasons": [
+            {
+              "id": "9f983005-3a6f-430b-9045-a6ac7d1d82ac"
+            }
+          ],
+          "focus": [
+            {
+              "id": "630b2833-ac8c-42bb-ac7f-525f5d1d6036"
+            },
+            {
+              "id": "205df828-b591-4c02-878c-5758a5e50b80"
+            },
+            {
+              "id": "4f11cba8-8970-463b-a0b3-9aaf59cc1629"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "7dbb57a4-6e32-40e9-acf1-da50347b6bbe"
+            }
+          ],
+          "startdate": "2012-09-05",
+          "enddate": "2013-03-15",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "0b4cb4b7-203d-4702-9282-5277a549de6b"
+            },
+            {
+              "id": "14ecee34-8773-44e9-8c47-f549c10148cf"
+            },
+            {
+              "id": "65d48c11-c9ff-45b3-a8b7-8de5796a2197"
+            },
+            {
+              "id": "973491bf-0994-4a99-9e51-635f3f87e81c"
+            },
+            {
+              "id": "a5d04a46-3228-422c-af17-a85c3f8e2577"
+            },
+            {
+              "id": "bbd37eb8-5856-4590-b4e9-977812eb573b"
+            },
+            {
+              "id": "d16ea245-d096-4d5c-bb28-96801b259a69"
+            },
+            {
+              "id": "dc4416e7-c644-41ce-bce9-131c714a0a3b"
+            },
+            {
+              "id": "f7ce3b39-4785-4cbe-a929-a3727259013e"
+            }
+          ],
+          "fundingAgency": "WCRP, WWRP",
+          "bounds": "SRID=4326;POLYGON ((-10 30, 35 30, 35 50, -10 50, -10 30))"
+        },
+        {
+          "id": "a4fe38ef-2857-41fd-9aee-86500213447d",
+          "shortname": "ICE-POP",
+          "longname": "International Collaborative Experiment for PyeongChang Olympic and Paralympics",
+          "seasons": [
+            {
+              "id": "03ef7251-2897-4bc3-9755-24fad2ec98e6"
+            },
+            {
+              "id": "ad691655-be3a-4519-98f2-09fb0ea18211"
+            }
+          ],
+          "focus": [
+            {
+              "id": "4f11cba8-8970-463b-a0b3-9aaf59cc1629"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "7dbb57a4-6e32-40e9-acf1-da50347b6bbe"
+            }
+          ],
+          "startdate": "2017-11-01",
+          "enddate": "2018-03-17",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "2dac2cbe-0674-49a5-ad45-0d6decf8ab41"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "dc4416e7-c644-41ce-bce9-131c714a0a3b"
+            }
+          ],
+          "fundingAgency": "NASA, KMA",
+          "bounds": "SRID=4326;POLYGON ((128 37, 129 37, 129 38, 128 38, 128 37))"
+        },
+        {
+          "id": "987d7ddc-9110-4c20-b557-6585f6d53fdb",
+          "shortname": "LPVEx",
+          "longname": "Light Precipitation Evaluation Experiment",
+          "seasons": [
+            {
+              "id": "6a0f610e-cf94-453b-a071-232b068c416a"
+            },
+            {
+              "id": "1e4626e1-1cca-491d-817d-6741bdb56521"
+            }
+          ],
+          "focus": [
+            {
+              "id": "205df828-b591-4c02-878c-5758a5e50b80"
+            },
+            {
+              "id": "4f11cba8-8970-463b-a0b3-9aaf59cc1629"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "7dbb57a4-6e32-40e9-acf1-da50347b6bbe"
+            }
+          ],
+          "startdate": "2010-09-15",
+          "enddate": "2010-12-31",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "7867ce72-1e68-47a1-9aa7-99656b9356bc"
+            },
+            {
+              "id": "9d9fbc2f-8730-4578-9bed-92974bfe5a45"
+            },
+            {
+              "id": "dc4416e7-c644-41ce-bce9-131c714a0a3b"
+            },
+            {
+              "id": "dfc9e361-4f91-4f82-84e2-4ddc11939551"
+            }
+          ],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((20 34, 26 34, 26 75, 20 75, 20 34))"
+        },
+        {
+          "id": "484f0d50-b3f7-462b-b090-ab2e3e3a02f6",
+          "shortname": "NAMMA",
+          "longname": "NASA African Monsoon Multidisciplinary Analyses",
+          "seasons": [
+            {
+              "id": "6a0f610e-cf94-453b-a071-232b068c416a"
+            },
+            {
+              "id": "1e4626e1-1cca-491d-817d-6741bdb56521"
+            },
+            {
+              "id": "ba9407d6-cd89-4364-906f-9d78a0c93858"
+            }
+          ],
+          "focus": [
+            {
+              "id": "205df828-b591-4c02-878c-5758a5e50b80"
+            },
+            {
+              "id": "4f11cba8-8970-463b-a0b3-9aaf59cc1629"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "1eeb9fa8-e993-4b99-82b3-28e12466382a"
+            },
+            {
+              "id": "7dbb57a4-6e32-40e9-acf1-da50347b6bbe"
+            },
+            {
+              "id": "14051781-0eb5-453c-86d3-60f2c2e19f74"
+            }
+          ],
+          "startdate": "2006-08-15",
+          "enddate": "2006-09-15",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "98972937-92d5-4084-817d-7ef1c15f9a67"
+                },
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "80155bc3-2cde-4978-932e-5c69fd13212d"
+            },
+            {
+              "id": "973491bf-0994-4a99-9e51-635f3f87e81c"
+            },
+            {
+              "id": "d644c030-b578-4f71-827a-7d1a2efe90bf"
+            },
+            {
+              "id": "dc4416e7-c644-41ce-bce9-131c714a0a3b"
+            },
+            {
+              "id": "f261821f-15b1-4b43-9b0b-ed512cbaabb8"
+            }
+          ],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((-97 -5, 30 -5, 30 48, -97 48, -97 -5))"
+        },
+        {
+          "id": "6efd0071-17b5-4258-9352-0e7c7637ddaa",
+          "shortname": "OMG",
+          "longname": "Oceans Melting Greenland",
+          "seasons": [
+            {
+              "id": "6a0f610e-cf94-453b-a071-232b068c416a"
+            },
+            {
+              "id": "1e4626e1-1cca-491d-817d-6741bdb56521"
+            }
+          ],
+          "focus": [
+            {
+              "id": "5f94ba1b-ec12-4df0-87cd-e0715310a9af"
+            },
+            {
+              "id": "205df828-b591-4c02-878c-5758a5e50b80"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "5f0a8700-6791-44c2-aed9-461bf277bbe4"
+            },
+            {
+              "id": "d4bca0e9-4ee7-4aa2-861e-2b63e993d362"
+            },
+            {
+              "id": "652f9f80-3a68-475e-a1b9-08443537b358"
+            }
+          ],
+          "startdate": "2015-07-25",
+          "enddate": null,
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                },
+                {
+                  "id": "4fd4a08e-5bcf-44c7-9b46-1a8ccfa76822"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                },
+                {
+                  "id": "4fd4a08e-5bcf-44c7-9b46-1a8ccfa76822"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                },
+                {
+                  "id": "4fd4a08e-5bcf-44c7-9b46-1a8ccfa76822"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                },
+                {
+                  "id": "4fd4a08e-5bcf-44c7-9b46-1a8ccfa76822"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                },
+                {
+                  "id": "4fd4a08e-5bcf-44c7-9b46-1a8ccfa76822"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                },
+                {
+                  "id": "4fd4a08e-5bcf-44c7-9b46-1a8ccfa76822"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                },
+                {
+                  "id": "4fd4a08e-5bcf-44c7-9b46-1a8ccfa76822"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                },
+                {
+                  "id": "4fd4a08e-5bcf-44c7-9b46-1a8ccfa76822"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                },
+                {
+                  "id": "4fd4a08e-5bcf-44c7-9b46-1a8ccfa76822"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                },
+                {
+                  "id": "4fd4a08e-5bcf-44c7-9b46-1a8ccfa76822"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "70ca6522-bc1d-4727-a298-c28cfbc9e5b3"
+            },
+            {
+              "id": "7da128b5-2bff-4f4c-a71c-f4d118f446fe"
+            },
+            {
+              "id": "ed057836-a9d8-453b-b9b6-911203e63000"
+            },
+            {
+              "id": "279265f4-e721-4313-b68a-7478b29d506b"
+            },
+            {
+              "id": "1b1ec279-b724-4208-b33d-c8f1d4e7ee59"
+            },
+            {
+              "id": "ebb3943f-2919-43e2-ad6f-171d66deb68b"
+            },
+            {
+              "id": "3161e696-a6ec-47b5-a4be-495012474f34"
+            },
+            {
+              "id": "cf205b4a-cb76-4fb7-a0ed-1588252f55b1"
+            }
+          ],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((-73.59999999999999 59.1, -6.9 59.1, -6.9 83.59999999999999, -73.59999999999999 83.59999999999999, -73.59999999999999 59.1))"
+        },
+        {
+          "id": "c4c7b9d1-471c-4db2-af8a-3e553234280f",
+          "shortname": "SnowEx",
+          "longname": "",
+          "seasons": [
+            {
+              "id": "03ef7251-2897-4bc3-9755-24fad2ec98e6"
+            }
+          ],
+          "focus": [
+            {
+              "id": "205df828-b591-4c02-878c-5758a5e50b80"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "5f0a8700-6791-44c2-aed9-461bf277bbe4"
+            },
+            {
+              "id": "7dbb57a4-6e32-40e9-acf1-da50347b6bbe"
+            }
+          ],
+          "startdate": "2016-09-26",
+          "enddate": null,
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "33180ac5-5f55-47f5-98aa-2d99c2574039"
+            },
+            {
+              "id": "429d9328-dd8c-4513-96e8-97bda333c76e"
+            },
+            {
+              "id": "d644c030-b578-4f71-827a-7d1a2efe90bf"
+            },
+            {
+              "id": "dc4416e7-c644-41ce-bce9-131c714a0a3b"
+            },
+            {
+              "id": "ed057836-a9d8-453b-b9b6-911203e63000"
+            }
+          ],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((-108 37, -107 37, -107 38, -108 38, -108 37))"
+        },
+        {
+          "id": "92d73a00-6278-4905-9769-ecffa4208c61",
+          "shortname": "TCSP",
+          "longname": "Tropical Cloud Systems and Processes",
+          "seasons": [
+            {
+              "id": "1e4626e1-1cca-491d-817d-6741bdb56521"
+            }
+          ],
+          "focus": [
+            {
+              "id": "4f11cba8-8970-463b-a0b3-9aaf59cc1629"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "630d6951-8022-4aa1-a05f-2c0c91a894ea"
+            },
+            {
+              "id": "01588d13-383c-4f4c-b79b-102da1c24cae"
+            },
+            {
+              "id": "7dbb57a4-6e32-40e9-acf1-da50347b6bbe"
+            },
+            {
+              "id": "88ba769b-b9c2-43eb-8bba-1fc6ffa2dc98"
+            },
+            {
+              "id": "14051781-0eb5-453c-86d3-60f2c2e19f74"
+            }
+          ],
+          "startdate": "2005-07-01",
+          "enddate": "2005-07-27",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "7867ce72-1e68-47a1-9aa7-99656b9356bc"
+            },
+            {
+              "id": "973491bf-0994-4a99-9e51-635f3f87e81c"
+            },
+            {
+              "id": "cce7f5cc-d752-4543-9076-027826162509"
+            },
+            {
+              "id": "d644c030-b578-4f71-827a-7d1a2efe90bf"
+            },
+            {
+              "id": "eafadae9-5e1b-41a4-bf25-3448e2d39b31"
+            }
+          ],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((-100 5, -66 5, -66 25, -100 25, -100 5))"
+        },
+        {
+          "id": "37b0e1d5-5659-4dce-88ae-8e5c2c829657",
+          "shortname": "VIRGAS",
+          "longname": "Volcano-plume Investigation Readiness and Gas-phase and Aerosol Sulfur",
+          "seasons": [
+            {
+              "id": "6a0f610e-cf94-453b-a071-232b068c416a"
+            }
+          ],
+          "focus": [
+            {
+              "id": "bfc1f1e2-e86a-4b39-bd29-39feedfe79d1"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "1eeb9fa8-e993-4b99-82b3-28e12466382a"
+            },
+            {
+              "id": "d27ec267-8941-4b21-909d-5fe45e001fee"
+            },
+            {
+              "id": "d0025a1e-4589-4e52-81ab-a9847e8db317"
+            },
+            {
+              "id": "ea75c9d3-9e71-4975-8e18-2e77a0bdd436"
+            }
+          ],
+          "startdate": "2015-10-19",
+          "enddate": "2015-10-30",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "98972937-92d5-4084-817d-7ef1c15f9a67"
+                },
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                },
+                {
+                  "id": "afd3b4fa-4c13-43b6-ba15-c143a34b4ddd"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "5b641473-5c2e-48f2-adca-76a641966da7"
+            }
+          ],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((-110 10, -80 10, -80 50, -110 50, -110 10))"
+        },
+        {
+          "id": "efeb86ff-6245-457c-9166-0e3dcaf47aaa",
+          "shortname": "PODEX",
+          "longname": "Polarimeter Definition Experiment",
+          "seasons": [
+            {
+              "id": "03ef7251-2897-4bc3-9755-24fad2ec98e6"
+            }
+          ],
+          "focus": [
+            {
+              "id": "bfc1f1e2-e86a-4b39-bd29-39feedfe79d1"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "1eeb9fa8-e993-4b99-82b3-28e12466382a"
+            },
+            {
+              "id": "5c7fa512-4539-48c3-91be-5d69971c9ff3"
+            }
+          ],
+          "startdate": "2013-01-14",
+          "enddate": "2013-02-06",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "373185f2-99bf-4e26-9db2-9e1de82042fe"
+                },
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                },
+                {
+                  "id": "afd3b4fa-4c13-43b6-ba15-c143a34b4ddd"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "eafadae9-5e1b-41a4-bf25-3448e2d39b31"
+            }
+          ],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((-123 34, -115 34, -115 39, -123 39, -123 34))"
+        },
+        {
+          "id": "ecf32735-fee8-434f-a64f-873c34992e31",
+          "shortname": "ACTIVATE",
+          "longname": "Aerosol Cloud meTerology Interactions oVer the western ATlantic Experiment",
+          "seasons": [
+            {
+              "id": "9f983005-3a6f-430b-9045-a6ac7d1d82ac"
+            }
+          ],
+          "focus": [
+            {
+              "id": "bfc1f1e2-e86a-4b39-bd29-39feedfe79d1"
+            },
+            {
+              "id": "4f11cba8-8970-463b-a0b3-9aaf59cc1629"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "1eeb9fa8-e993-4b99-82b3-28e12466382a"
+            },
+            {
+              "id": "1a6ab70d-4bf1-4dab-8600-fbd67327f564"
+            },
+            {
+              "id": "5c7fa512-4539-48c3-91be-5d69971c9ff3"
+            }
+          ],
+          "startdate": "2020-02-14",
+          "enddate": null,
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "5d31cef4-e365-47f3-ac70-df3abcd39db3"
+            },
+            {
+              "id": "f7ce3b39-4785-4cbe-a929-a3727259013e"
+            }
+          ],
+          "fundingAgency": "NASA SMD ESD Earth Venture Suborbital-3 Program",
+          "bounds": "SRID=4326;POLYGON ((-85 25, -60 25, -60 50, -85 50, -85 25))"
+        },
+        {
+          "id": "644b00b9-278b-4d6c-a360-4487809de8ef",
+          "shortname": "Delta-X",
+          "longname": "Delta Exchange",
+          "seasons": [
+            {
+              "id": "6a0f610e-cf94-453b-a071-232b068c416a"
+            },
+            {
+              "id": "3a6f6d82-cbcc-40af-868e-7b68e6761e05"
+            },
+            {
+              "id": "1e4626e1-1cca-491d-817d-6741bdb56521"
+            }
+          ],
+          "focus": [
+            {
+              "id": "84550819-09b6-471c-ab6f-17e38d822d83"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "32472be5-7057-4c11-8a31-4dff69740cf0"
+            },
+            {
+              "id": "2d0acd22-74c4-4f22-b7ad-208384bd5ee8"
+            },
+            {
+              "id": "276a5b0e-87c8-42f8-b0cc-fb5581873e98"
+            }
+          ],
+          "startdate": "2021-03-26",
+          "enddate": null,
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "98972937-92d5-4084-817d-7ef1c15f9a67"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "98972937-92d5-4084-817d-7ef1c15f9a67"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "5d31cef4-e365-47f3-ac70-df3abcd39db3"
+            },
+            {
+              "id": "dc4416e7-c644-41ce-bce9-131c714a0a3b"
+            },
+            {
+              "id": "ed057836-a9d8-453b-b9b6-911203e63000"
+            }
+          ],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((-93 28, -88 28, -88 32, -93 32, -93 28))"
+        },
+        {
+          "id": "75658dfd-ebbf-4e87-a435-d9531647ca59",
+          "shortname": "DCOTSS",
+          "longname": "Dynamics and Chemistry of the Summer Stratosphere",
+          "seasons": [
+            {
+              "id": "3a6f6d82-cbcc-40af-868e-7b68e6761e05"
+            },
+            {
+              "id": "1e4626e1-1cca-491d-817d-6741bdb56521"
+            }
+          ],
+          "focus": [
+            {
+              "id": "bfc1f1e2-e86a-4b39-bd29-39feedfe79d1"
+            },
+            {
+              "id": "4f11cba8-8970-463b-a0b3-9aaf59cc1629"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "5c7fa512-4539-48c3-91be-5d69971c9ff3"
+            },
+            {
+              "id": "ea75c9d3-9e71-4975-8e18-2e77a0bdd436"
+            }
+          ],
+          "startdate": "2021-05-03",
+          "enddate": "2022-07-15",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "7867ce72-1e68-47a1-9aa7-99656b9356bc"
+            },
+            {
+              "id": "eafadae9-5e1b-41a4-bf25-3448e2d39b31"
+            }
+          ],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((-108 34, -86 34, -86 49, -108 49, -108 34))"
+        },
+        {
+          "id": "5032471b-316b-481e-b0bc-57a36d956ee8",
+          "shortname": "TC4",
+          "longname": "Tropical Composition, Cloud and Climate Coupling",
+          "seasons": [
+            {
+              "id": "1e4626e1-1cca-491d-817d-6741bdb56521"
+            }
+          ],
+          "focus": [
+            {
+              "id": "bfc1f1e2-e86a-4b39-bd29-39feedfe79d1"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "d0025a1e-4589-4e52-81ab-a9847e8db317"
+            },
+            {
+              "id": "5c7fa512-4539-48c3-91be-5d69971c9ff3"
+            },
+            {
+              "id": "ea75c9d3-9e71-4975-8e18-2e77a0bdd436"
+            }
+          ],
+          "startdate": "2007-06-16",
+          "enddate": "2007-08-15",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "98972937-92d5-4084-817d-7ef1c15f9a67"
+                },
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                },
+                {
+                  "id": "0f344562-9780-403d-ad40-5fddc7ce0e14"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "5b641473-5c2e-48f2-adca-76a641966da7"
+            },
+            {
+              "id": "80155bc3-2cde-4978-932e-5c69fd13212d"
+            },
+            {
+              "id": "973491bf-0994-4a99-9e51-635f3f87e81c"
+            },
+            {
+              "id": "a8a25583-a4ad-419f-9a2d-48e8356507c0"
+            },
+            {
+              "id": "dc4416e7-c644-41ce-bce9-131c714a0a3b"
+            },
+            {
+              "id": "eafadae9-5e1b-41a4-bf25-3448e2d39b31"
+            }
+          ],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((-96 -5, -74 -5, -74 20, -96 20, -96 -5))"
+        },
+        {
+          "id": "8883d919-5905-4d40-8410-b2a76563b326",
+          "shortname": "CITE",
+          "longname": "Global Tropospheric Experiment - Chemical Instrument Test and Evaluation",
+          "seasons": [
+            {
+              "id": "6a0f610e-cf94-453b-a071-232b068c416a"
+            },
+            {
+              "id": "3a6f6d82-cbcc-40af-868e-7b68e6761e05"
+            },
+            {
+              "id": "1e4626e1-1cca-491d-817d-6741bdb56521"
+            }
+          ],
+          "focus": [
+            {
+              "id": "bfc1f1e2-e86a-4b39-bd29-39feedfe79d1"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "d0025a1e-4589-4e52-81ab-a9847e8db317"
+            }
+          ],
+          "startdate": "1983-07-05",
+          "enddate": "1989-09-29",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "98972937-92d5-4084-817d-7ef1c15f9a67"
+                },
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "98972937-92d5-4084-817d-7ef1c15f9a67"
+                },
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                },
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "98972937-92d5-4084-817d-7ef1c15f9a67"
+                },
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                },
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "98972937-92d5-4084-817d-7ef1c15f9a67"
+                },
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "98972937-92d5-4084-817d-7ef1c15f9a67"
+                },
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "420c5906-7def-4091-8579-b4344a94ec74"
+            },
+            {
+              "id": "66c69777-fade-4ac4-b255-ef45482a306b"
+            },
+            {
+              "id": "dc4416e7-c644-41ce-bce9-131c714a0a3b"
+            }
+          ],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((-75 45, -175 45, -175 20, -75 20, -75 45))"
+        },
+        {
+          "id": "88f3ab69-6393-43cb-8c4d-78a20ee7c287",
+          "shortname": "MACPEX",
+          "longname": "Mid-latitude Airborne Cirrus Properties Experiment",
+          "seasons": [
+            {
+              "id": "3a6f6d82-cbcc-40af-868e-7b68e6761e05"
+            }
+          ],
+          "focus": [
+            {
+              "id": "bfc1f1e2-e86a-4b39-bd29-39feedfe79d1"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "5c7fa512-4539-48c3-91be-5d69971c9ff3"
+            }
+          ],
+          "startdate": "2011-03-18",
+          "enddate": "2011-04-26",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "98972937-92d5-4084-817d-7ef1c15f9a67"
+                },
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "5b641473-5c2e-48f2-adca-76a641966da7"
+            },
+            {
+              "id": "973491bf-0994-4a99-9e51-635f3f87e81c"
+            }
+          ],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((-104 27, -85 27, -85 42, -104 42, -104 27))"
+        },
+        {
+          "id": "758dbc6c-83da-4074-8610-fd4a9d1d23ad",
+          "shortname": "S-MODE",
+          "longname": "Sub-Mesoscale Ocean Dynamics Experiment",
+          "seasons": [
+            {
+              "id": "6a0f610e-cf94-453b-a071-232b068c416a"
+            },
+            {
+              "id": "3a6f6d82-cbcc-40af-868e-7b68e6761e05"
+            },
+            {
+              "id": "1e4626e1-1cca-491d-817d-6741bdb56521"
+            }
+          ],
+          "focus": [
+            {
+              "id": "205df828-b591-4c02-878c-5758a5e50b80"
+            },
+            {
+              "id": "4f11cba8-8970-463b-a0b3-9aaf59cc1629"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "01588d13-383c-4f4c-b79b-102da1c24cae"
+            },
+            {
+              "id": "d4bca0e9-4ee7-4aa2-861e-2b63e993d362"
+            }
+          ],
+          "startdate": "2021-05-03",
+          "enddate": "2021-05-31",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "429d9328-dd8c-4513-96e8-97bda333c76e"
+            },
+            {
+              "id": "5d31cef4-e365-47f3-ac70-df3abcd39db3"
+            },
+            {
+              "id": "dc4416e7-c644-41ce-bce9-131c714a0a3b"
+            }
+          ],
+          "fundingAgency": "NASA Earth Venture Suborbital-3 Program",
+          "bounds": "SRID=4326;POLYGON ((-130 35, -120 35, -120 40, -130 40, -130 35))"
+        },
+        {
+          "id": "7490ae29-d258-4a43-b1c9-0fb6e2990317",
+          "shortname": "CPEX-AW",
+          "longname": "Convective Processes Experiment – Aerosols & Winds",
+          "seasons": [
+            {
+              "id": "6a0f610e-cf94-453b-a071-232b068c416a"
+            },
+            {
+              "id": "1e4626e1-1cca-491d-817d-6741bdb56521"
+            }
+          ],
+          "focus": [
+            {
+              "id": "bfc1f1e2-e86a-4b39-bd29-39feedfe79d1"
+            },
+            {
+              "id": "4f11cba8-8970-463b-a0b3-9aaf59cc1629"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "1eeb9fa8-e993-4b99-82b3-28e12466382a"
+            },
+            {
+              "id": "d27ec267-8941-4b21-909d-5fe45e001fee"
+            },
+            {
+              "id": "5c7fa512-4539-48c3-91be-5d69971c9ff3"
+            }
+          ],
+          "startdate": "2021-08-20",
+          "enddate": "2021-10-02",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "baf5e40b-b6f5-40e2-a1e8-99063b136d5d"
+                },
+                {
+                  "id": "4c4ed51e-fc02-490f-a72d-f1df4a6a18b3"
+                },
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "80155bc3-2cde-4978-932e-5c69fd13212d"
+            }
+          ],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((-100 0, 0 0, 0 40, -100 40, -100 0))"
+        },
+        {
+          "id": "ae5eb484-c726-4777-84fb-9197823f72cb",
+          "shortname": "POLARIS",
+          "longname": "Photochemistry of Ozone Loss in the Arctic Region In Summer",
+          "seasons": [
+            {
+              "id": "6a0f610e-cf94-453b-a071-232b068c416a"
+            },
+            {
+              "id": "3a6f6d82-cbcc-40af-868e-7b68e6761e05"
+            },
+            {
+              "id": "1e4626e1-1cca-491d-817d-6741bdb56521"
+            }
+          ],
+          "focus": [
+            {
+              "id": "bfc1f1e2-e86a-4b39-bd29-39feedfe79d1"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "d0025a1e-4589-4e52-81ab-a9847e8db317"
+            },
+            {
+              "id": "ea75c9d3-9e71-4975-8e18-2e77a0bdd436"
+            }
+          ],
+          "startdate": "1997-04-17",
+          "enddate": "1997-09-27",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "629fbde4-d2ea-4767-8378-c03bda7647cd"
+                },
+                {
+                  "id": "bb1e8eb7-c469-4783-8da2-d0a43fae490d"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "629fbde4-d2ea-4767-8378-c03bda7647cd"
+                },
+                {
+                  "id": "bb1e8eb7-c469-4783-8da2-d0a43fae490d"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "bb1e8eb7-c469-4783-8da2-d0a43fae490d"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "973491bf-0994-4a99-9e51-635f3f87e81c"
+            },
+            {
+              "id": "eafadae9-5e1b-41a4-bf25-3448e2d39b31"
+            }
+          ],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((-170 -3, -110 -3, -110 90, -170 90, -170 -3))"
+        },
+        {
+          "id": "505e9f84-cc5e-45fc-802c-c4c098a573c2",
+          "shortname": "CASIE",
+          "longname": "Characterization of Arctic Sea Ice Experiment",
+          "seasons": [
+            {
+              "id": "1e4626e1-1cca-491d-817d-6741bdb56521"
+            }
+          ],
+          "focus": [
+            {
+              "id": "630b2833-ac8c-42bb-ac7f-525f5d1d6036"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "5f0a8700-6791-44c2-aed9-461bf277bbe4"
+            }
+          ],
+          "startdate": "2009-07-13",
+          "enddate": "2009-07-29",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "bb1e8eb7-c469-4783-8da2-d0a43fae490d"
+                },
+                {
+                  "id": "4fd4a08e-5bcf-44c7-9b46-1a8ccfa76822"
+                }
+              ]
+            }
+          ],
+          "platforms": [],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((-5 79, 12 79, 12 83, -5 83, -5 79))"
+        },
+        {
+          "id": "81a5278b-7b4a-4da5-a4a1-9c6ddd644d3b",
+          "shortname": "CR-AVE",
+          "longname": "Costa Rica Aura Validation Experiment",
+          "seasons": [
+            {
+              "id": "7fc6f824-ff79-4db1-8e33-444a9d123aa1"
+            }
+          ],
+          "focus": [
+            {
+              "id": "bfc1f1e2-e86a-4b39-bd29-39feedfe79d1"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "1eeb9fa8-e993-4b99-82b3-28e12466382a"
+            },
+            {
+              "id": "d0025a1e-4589-4e52-81ab-a9847e8db317"
+            },
+            {
+              "id": "5c7fa512-4539-48c3-91be-5d69971c9ff3"
+            },
+            {
+              "id": "ea75c9d3-9e71-4975-8e18-2e77a0bdd436"
+            }
+          ],
+          "startdate": "2006-01-14",
+          "enddate": "2006-02-12",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "98972937-92d5-4084-817d-7ef1c15f9a67"
+                },
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                },
+                {
+                  "id": "0f344562-9780-403d-ad40-5fddc7ce0e14"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "5b641473-5c2e-48f2-adca-76a641966da7"
+            },
+            {
+              "id": "973491bf-0994-4a99-9e51-635f3f87e81c"
+            }
+          ],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((-88 2, -78 2, -78 17, -88 17, -88 2))"
+        },
+        {
+          "id": "7742c7a4-89df-43c1-a391-b445c9253b76",
+          "shortname": "IMPACTS",
+          "longname": "Investigation of Microphysics and Precipitation for Atlantic Coast-Threatening Snowstorms",
+          "seasons": [
+            {
+              "id": "03ef7251-2897-4bc3-9755-24fad2ec98e6"
+            }
+          ],
+          "focus": [
+            {
+              "id": "4f11cba8-8970-463b-a0b3-9aaf59cc1629"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "7dbb57a4-6e32-40e9-acf1-da50347b6bbe"
+            }
+          ],
+          "startdate": "2020-01-17",
+          "enddate": "2023-03-01",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "98972937-92d5-4084-817d-7ef1c15f9a67"
+                },
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                },
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "7867ce72-1e68-47a1-9aa7-99656b9356bc"
+            },
+            {
+              "id": "973491bf-0994-4a99-9e51-635f3f87e81c"
+            },
+            {
+              "id": "d644c030-b578-4f71-827a-7d1a2efe90bf"
+            },
+            {
+              "id": "dc4416e7-c644-41ce-bce9-131c714a0a3b"
+            },
+            {
+              "id": "eafadae9-5e1b-41a4-bf25-3448e2d39b31"
+            }
+          ],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((-118 8, -50 8, -50 50, -118 50, -118 8))"
+        },
+        {
+          "id": "69952552-96a9-499d-9864-28f1e73e9e56",
+          "shortname": "TRACE",
+          "longname": "Transport and Atmospheric Chemistry near the Equator",
+          "seasons": [
+            {
+              "id": "566bf888-d173-4aad-91a7-5ce86ba89e3a"
+            },
+            {
+              "id": "3a6f6d82-cbcc-40af-868e-7b68e6761e05"
+            },
+            {
+              "id": "1e4626e1-1cca-491d-817d-6741bdb56521"
+            }
+          ],
+          "focus": [
+            {
+              "id": "bfc1f1e2-e86a-4b39-bd29-39feedfe79d1"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "d27ec267-8941-4b21-909d-5fe45e001fee"
+            },
+            {
+              "id": "d0025a1e-4589-4e52-81ab-a9847e8db317"
+            }
+          ],
+          "startdate": "1992-09-02",
+          "enddate": "2001-04-15",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "98972937-92d5-4084-817d-7ef1c15f9a67"
+                },
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                },
+                {
+                  "id": "1a8577f2-7386-404b-8082-487f56ac8119"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "98972937-92d5-4084-817d-7ef1c15f9a67"
+                },
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                }
+              ]
+            }
+          ],
+          "platforms": [],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((-52 -39, 170 -39, 170 50, -52 50, -52 -39))"
+        },
+        {
+          "id": "def707b6-70f8-47d3-bb19-941dcd7e2a6c",
+          "shortname": "CRYSTAL-FACE",
+          "longname": "Cirrus Regional Study of Tropical Anvils and Cirrus Layers Florida Area Cirrus Experiment",
+          "seasons": [
+            {
+              "id": "1e4626e1-1cca-491d-817d-6741bdb56521"
+            }
+          ],
+          "focus": [
+            {
+              "id": "bfc1f1e2-e86a-4b39-bd29-39feedfe79d1"
+            },
+            {
+              "id": "4f11cba8-8970-463b-a0b3-9aaf59cc1629"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "d0025a1e-4589-4e52-81ab-a9847e8db317"
+            },
+            {
+              "id": "5c7fa512-4539-48c3-91be-5d69971c9ff3"
+            },
+            {
+              "id": "ea75c9d3-9e71-4975-8e18-2e77a0bdd436"
+            }
+          ],
+          "startdate": "2002-07-03",
+          "enddate": "2002-07-29",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "98972937-92d5-4084-817d-7ef1c15f9a67"
+                },
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "429d9328-dd8c-4513-96e8-97bda333c76e"
+            },
+            {
+              "id": "5b641473-5c2e-48f2-adca-76a641966da7"
+            },
+            {
+              "id": "7867ce72-1e68-47a1-9aa7-99656b9356bc"
+            },
+            {
+              "id": "c101fd14-d9b8-4720-8ce1-d46b0a9bdf33"
+            },
+            {
+              "id": "dc4416e7-c644-41ce-bce9-131c714a0a3b"
+            },
+            {
+              "id": "eafadae9-5e1b-41a4-bf25-3448e2d39b31"
+            }
+          ],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((-84 24, -80 24, -80 28, -84 28, -84 24))"
+        },
+        {
+          "id": "7bdc2161-2dfa-4258-bd5b-a25cd4e63d9c",
+          "shortname": "SABOR",
+          "longname": "Ship-Aircraft Bio-Optical Research Experiment",
+          "seasons": [
+            {
+              "id": "1e4626e1-1cca-491d-817d-6741bdb56521"
+            }
+          ],
+          "focus": [
+            {
+              "id": "84550819-09b6-471c-ab6f-17e38d822d83"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "32472be5-7057-4c11-8a31-4dff69740cf0"
+            },
+            {
+              "id": "d4bca0e9-4ee7-4aa2-861e-2b63e993d362"
+            }
+          ],
+          "startdate": "2014-07-17",
+          "enddate": "2014-08-07",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "5d31cef4-e365-47f3-ac70-df3abcd39db3"
+            }
+          ],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((-80 35, -60 35, -60 45, -80 45, -80 35))"
+        },
+        {
+          "id": "dc041202-327c-4e34-9c42-423e49ca3c90",
+          "shortname": "KORUS-AQ",
+          "longname": "Korean United States - Air Quality",
+          "seasons": [
+            {
+              "id": "3a6f6d82-cbcc-40af-868e-7b68e6761e05"
+            },
+            {
+              "id": "1e4626e1-1cca-491d-817d-6741bdb56521"
+            },
+            {
+              "id": "3aed90d0-dc86-4c8a-a8a0-43fd6fadaf9a"
+            }
+          ],
+          "focus": [
+            {
+              "id": "bfc1f1e2-e86a-4b39-bd29-39feedfe79d1"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "1eeb9fa8-e993-4b99-82b3-28e12466382a"
+            },
+            {
+              "id": "d27ec267-8941-4b21-909d-5fe45e001fee"
+            },
+            {
+              "id": "d0025a1e-4589-4e52-81ab-a9847e8db317"
+            }
+          ],
+          "startdate": "2016-04-18",
+          "enddate": "2016-06-19",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "98972937-92d5-4084-817d-7ef1c15f9a67"
+                },
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                },
+                {
+                  "id": "afd3b4fa-4c13-43b6-ba15-c143a34b4ddd"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "1cb2e40a-eb47-4c5e-9874-5f3c4042aab3"
+            },
+            {
+              "id": "2d7b113b-6afb-43e1-9687-3617d8145009"
+            },
+            {
+              "id": "54cd08a0-b31b-423d-a2f8-a0d638b15609"
+            },
+            {
+              "id": "5d31cef4-e365-47f3-ac70-df3abcd39db3"
+            },
+            {
+              "id": "5e3415d2-abbb-4d30-81e9-62b02963412f"
+            },
+            {
+              "id": "7867ce72-1e68-47a1-9aa7-99656b9356bc"
+            },
+            {
+              "id": "80155bc3-2cde-4978-932e-5c69fd13212d"
+            },
+            {
+              "id": "973491bf-0994-4a99-9e51-635f3f87e81c"
+            },
+            {
+              "id": "dc4416e7-c644-41ce-bce9-131c714a0a3b"
+            }
+          ],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((123 30, 139 30, 139 39, 123 39, 123 30))"
+        },
+        {
+          "id": "04240988-5389-4554-8a20-495e8733d910",
+          "shortname": "ACCLIP",
+          "longname": "Asian Summer Monsoon Chemical & Climate Impact Project",
+          "seasons": [
+            {
+              "id": "1e4626e1-1cca-491d-817d-6741bdb56521"
+            },
+            {
+              "id": "1a34a3b6-4b2e-4ce7-8e06-2739ea2542af"
+            }
+          ],
+          "focus": [
+            {
+              "id": "bfc1f1e2-e86a-4b39-bd29-39feedfe79d1"
+            },
+            {
+              "id": "4f11cba8-8970-463b-a0b3-9aaf59cc1629"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "1eeb9fa8-e993-4b99-82b3-28e12466382a"
+            },
+            {
+              "id": "d0025a1e-4589-4e52-81ab-a9847e8db317"
+            },
+            {
+              "id": "ea75c9d3-9e71-4975-8e18-2e77a0bdd436"
+            }
+          ],
+          "startdate": "2022-07-15",
+          "enddate": "2022-08-31",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "5b641473-5c2e-48f2-adca-76a641966da7"
+            },
+            {
+              "id": "738660bd-574d-4c7f-ad88-0294bbd3db48"
+            }
+          ],
+          "fundingAgency": "NASA, NCAR",
+          "bounds": "SRID=4326;POLYGON ((95 10, 160 10, 160 60, 95 60, 95 10))"
+        },
+        {
+          "id": "60090ade-0e4d-43e1-92a9-d5f13782f37c",
+          "shortname": "ICESCAPE",
+          "longname": "Impacts of Climate on the Eco-Systems and Chemistry of the Arctic Pacific Environment",
+          "seasons": [
+            {
+              "id": "1e4626e1-1cca-491d-817d-6741bdb56521"
+            }
+          ],
+          "focus": [
+            {
+              "id": "84550819-09b6-471c-ab6f-17e38d822d83"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "32472be5-7057-4c11-8a31-4dff69740cf0"
+            },
+            {
+              "id": "5f0a8700-6791-44c2-aed9-461bf277bbe4"
+            },
+            {
+              "id": "d4bca0e9-4ee7-4aa2-861e-2b63e993d362"
+            }
+          ],
+          "startdate": "2010-06-15",
+          "enddate": "2011-07-29",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "bb1e8eb7-c469-4783-8da2-d0a43fae490d"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "bb1e8eb7-c469-4783-8da2-d0a43fae490d"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "65d48c11-c9ff-45b3-a8b7-8de5796a2197"
+            },
+            {
+              "id": "aaee3523-d806-4167-9f67-66be8a1e0556"
+            }
+          ],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((-179 65, -145 65, -145 74, -179 74, -179 65))"
+        },
+        {
+          "id": "0cb11689-0b77-429c-9bc7-270ee7985143",
+          "shortname": "EXPORTS",
+          "longname": "EXport Processes in the Ocean from RemoTe Sensing",
+          "seasons": [
+            {
+              "id": "6a0f610e-cf94-453b-a071-232b068c416a"
+            },
+            {
+              "id": "3a6f6d82-cbcc-40af-868e-7b68e6761e05"
+            },
+            {
+              "id": "1e4626e1-1cca-491d-817d-6741bdb56521"
+            }
+          ],
+          "focus": [
+            {
+              "id": "84550819-09b6-471c-ab6f-17e38d822d83"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "32472be5-7057-4c11-8a31-4dff69740cf0"
+            },
+            {
+              "id": "d4bca0e9-4ee7-4aa2-861e-2b63e993d362"
+            }
+          ],
+          "startdate": "2018-07-21",
+          "enddate": "2022-03-10",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "3a596083-2a6f-413a-98b8-b4e75afd0815"
+            },
+            {
+              "id": "3d6d5b57-4ec7-493f-8382-1acd840223f2"
+            },
+            {
+              "id": "42c5a41b-57d3-4f21-add3-3e6b7a04795d"
+            },
+            {
+              "id": "a5e69012-4f03-4a93-89b6-0fc6cccc6ba0"
+            },
+            {
+              "id": "efbc7c92-52d0-4b91-b70e-8e3d9ddf61d5"
+            }
+          ],
+          "fundingAgency": "NASA, NSF",
+          "bounds": "SRID=4326;POLYGON ((-144 51, -145 51, -145 50, -144 50, -144 51))"
+        },
+        {
+          "id": "821c2132-a2e5-4806-ae81-b45d971e9a15",
+          "shortname": "CORAL",
+          "longname": "Coral Reef Airborne Laboratory",
+          "seasons": [
+            {
+              "id": "9f983005-3a6f-430b-9045-a6ac7d1d82ac"
+            }
+          ],
+          "focus": [
+            {
+              "id": "84550819-09b6-471c-ab6f-17e38d822d83"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "d4bca0e9-4ee7-4aa2-861e-2b63e993d362"
+            }
+          ],
+          "startdate": "2016-06-06",
+          "enddate": "2017-05-28",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "4c4ed51e-fc02-490f-a72d-f1df4a6a18b3"
+                },
+                {
+                  "id": "0f344562-9780-403d-ad40-5fddc7ce0e14"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "98972937-92d5-4084-817d-7ef1c15f9a67"
+                },
+                {
+                  "id": "0f9055c7-0058-4ee6-86af-a71d2ffb2121"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "98972937-92d5-4084-817d-7ef1c15f9a67"
+                },
+                {
+                  "id": "4c4ed51e-fc02-490f-a72d-f1df4a6a18b3"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "98972937-92d5-4084-817d-7ef1c15f9a67"
+                },
+                {
+                  "id": "4c4ed51e-fc02-490f-a72d-f1df4a6a18b3"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "98972937-92d5-4084-817d-7ef1c15f9a67"
+                },
+                {
+                  "id": "4c4ed51e-fc02-490f-a72d-f1df4a6a18b3"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "98972937-92d5-4084-817d-7ef1c15f9a67"
+                },
+                {
+                  "id": "4c4ed51e-fc02-490f-a72d-f1df4a6a18b3"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "f261821f-15b1-4b43-9b0b-ed512cbaabb8"
+            }
+          ],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((-155 -30, 135 -30, 135 30, -155 30, -155 -30))"
+        },
+        {
+          "id": "c95ca268-06dc-413f-866a-9a87f2a8e89a",
+          "shortname": "DEVOTE",
+          "longname": "Development and Evaluation of satellite ValidatiOn Tools by Experimenters",
+          "seasons": [
+            {
+              "id": "6a0f610e-cf94-453b-a071-232b068c416a"
+            }
+          ],
+          "focus": [
+            {
+              "id": "bfc1f1e2-e86a-4b39-bd29-39feedfe79d1"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "1eeb9fa8-e993-4b99-82b3-28e12466382a"
+            },
+            {
+              "id": "5c7fa512-4539-48c3-91be-5d69971c9ff3"
+            }
+          ],
+          "startdate": "2011-09-19",
+          "enddate": "2011-11-18",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "373185f2-99bf-4e26-9db2-9e1de82042fe"
+                },
+                {
+                  "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9"
+                },
+                {
+                  "id": "afd3b4fa-4c13-43b6-ba15-c143a34b4ddd"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "5d31cef4-e365-47f3-ac70-df3abcd39db3"
+            }
+          ],
+          "fundingAgency": "NASA Office of Chief Engineer and NASA HQ Science Mission Directorate",
+          "bounds": "SRID=4326;POLYGON ((-97 25, -65 25, -65 50, -97 50, -97 25))"
+        },
+        {
+          "id": "b637a0f5-9a57-4ea0-8568-4b852c7758ef",
+          "shortname": "ASHOE",
+          "longname": "Airborne Southern Hemisphere Ozone Experiment",
+          "seasons": [
+            {
+              "id": "add69e41-855e-433a-926c-9ec9e9d12721"
+            },
+            {
+              "id": "566bf888-d173-4aad-91a7-5ce86ba89e3a"
+            },
+            {
+              "id": "024adb34-ad7f-458f-a58a-322c4809fb44"
+            },
+            {
+              "id": "6a0f610e-cf94-453b-a071-232b068c416a"
+            }
+          ],
+          "focus": [
+            {
+              "id": "bfc1f1e2-e86a-4b39-bd29-39feedfe79d1"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "d0025a1e-4589-4e52-81ab-a9847e8db317"
+            }
+          ],
+          "startdate": "1994-03-18",
+          "enddate": "1994-11-04",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                },
+                {
+                  "id": "629fbde4-d2ea-4767-8378-c03bda7647cd"
+                },
+                {
+                  "id": "bb1e8eb7-c469-4783-8da2-d0a43fae490d"
+                },
+                {
+                  "id": "0f344562-9780-403d-ad40-5fddc7ce0e14"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "973491bf-0994-4a99-9e51-635f3f87e81c"
+            },
+            {
+              "id": "dc4416e7-c644-41ce-bce9-131c714a0a3b"
+            },
+            {
+              "id": "eafadae9-5e1b-41a4-bf25-3448e2d39b31"
+            }
+          ],
+          "fundingAgency": "NASA, NOAA",
+          "bounds": "SRID=4326;POLYGON ((115 60, 160 60, 160 70, 115 70, 115 60))"
+        },
+        {
+          "id": "174d2bde-5095-4dc2-93e6-7fdbd6f2d32a",
+          "shortname": "ATom",
+          "longname": "Atmospheric Tomography Mission",
+          "seasons": [
+            {
+              "id": "9f983005-3a6f-430b-9045-a6ac7d1d82ac"
+            }
+          ],
+          "focus": [
+            {
+              "id": "bfc1f1e2-e86a-4b39-bd29-39feedfe79d1"
+            },
+            {
+              "id": "84550819-09b6-471c-ab6f-17e38d822d83"
+            },
+            {
+              "id": "630b2833-ac8c-42bb-ac7f-525f5d1d6036"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "1eeb9fa8-e993-4b99-82b3-28e12466382a"
+            },
+            {
+              "id": "d0025a1e-4589-4e52-81ab-a9847e8db317"
+            }
+          ],
+          "startdate": "2016-07-29",
+          "enddate": "2018-05-21",
+          "deployments": [
+            {
+              "regions": []
+            },
+            {
+              "regions": []
+            },
+            {
+              "regions": []
+            },
+            {
+              "regions": []
+            }
+          ],
+          "platforms": [
+            {
+              "id": "80155bc3-2cde-4978-932e-5c69fd13212d"
+            },
+            {
+              "id": "973491bf-0994-4a99-9e51-635f3f87e81c"
+            }
+          ],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((-180 -80, 180 -80, 180 80, -180 80, -180 -80))"
+        },
+        {
+          "id": "01fa8481-8cb3-48bd-b596-900a8207ac86",
+          "shortname": "NAAMES",
+          "longname": "North Atlantic Aerosols and Marine Ecosystems Study",
+          "seasons": [
+            {
+              "id": "9f983005-3a6f-430b-9045-a6ac7d1d82ac"
+            }
+          ],
+          "focus": [
+            {
+              "id": "84550819-09b6-471c-ab6f-17e38d822d83"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "1eeb9fa8-e993-4b99-82b3-28e12466382a"
+            },
+            {
+              "id": "9e7e796a-e9d1-400e-a8f1-db562751b234"
+            },
+            {
+              "id": "5c7fa512-4539-48c3-91be-5d69971c9ff3"
+            },
+            {
+              "id": "d4bca0e9-4ee7-4aa2-861e-2b63e993d362"
+            }
+          ],
+          "startdate": "2015-11-06",
+          "enddate": "2018-04-13",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "98972937-92d5-4084-817d-7ef1c15f9a67"
+                },
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                },
+                {
+                  "id": "629fbde4-d2ea-4767-8378-c03bda7647cd"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "98972937-92d5-4084-817d-7ef1c15f9a67"
+                },
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                },
+                {
+                  "id": "629fbde4-d2ea-4767-8378-c03bda7647cd"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "98972937-92d5-4084-817d-7ef1c15f9a67"
+                },
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                },
+                {
+                  "id": "629fbde4-d2ea-4767-8378-c03bda7647cd"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "98972937-92d5-4084-817d-7ef1c15f9a67"
+                },
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                },
+                {
+                  "id": "629fbde4-d2ea-4767-8378-c03bda7647cd"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "6fee9f66-da81-4fe7-a9ee-d30b2f870cb4"
+            },
+            {
+              "id": "70ca6522-bc1d-4727-a298-c28cfbc9e5b3"
+            },
+            {
+              "id": "973491bf-0994-4a99-9e51-635f3f87e81c"
+            }
+          ],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((-75 30, -5 30, -5 60, -75 60, -75 30))"
+        },
+        {
+          "id": "a5ca9504-6f2c-4d65-8cf0-f0d5cfb6f31d",
+          "shortname": "ORACLES",
+          "longname": "Observations of Aerosols above Clouds and their Interactions",
+          "seasons": [
+            {
+              "id": "1e4626e1-1cca-491d-817d-6741bdb56521"
+            }
+          ],
+          "focus": [
+            {
+              "id": "bfc1f1e2-e86a-4b39-bd29-39feedfe79d1"
+            },
+            {
+              "id": "630b2833-ac8c-42bb-ac7f-525f5d1d6036"
+            },
+            {
+              "id": "205df828-b591-4c02-878c-5758a5e50b80"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "1eeb9fa8-e993-4b99-82b3-28e12466382a"
+            },
+            {
+              "id": "5c7fa512-4539-48c3-91be-5d69971c9ff3"
+            }
+          ],
+          "startdate": "2016-08-19",
+          "enddate": "2018-10-27",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "98972937-92d5-4084-817d-7ef1c15f9a67"
+                },
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "98972937-92d5-4084-817d-7ef1c15f9a67"
+                },
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                }
+              ]
+            },
+            {
+              "regions": [
+                {
+                  "id": "98972937-92d5-4084-817d-7ef1c15f9a67"
+                },
+                {
+                  "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "d644c030-b578-4f71-827a-7d1a2efe90bf"
+            },
+            {
+              "id": "eafadae9-5e1b-41a4-bf25-3448e2d39b31"
+            }
+          ],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((-126 -24, 15 -24, 15 40, -126 40, -126 -24))"
+        },
+        {
+          "id": "f45fd527-cb23-4efe-bf65-615c5f582925",
+          "shortname": "AMISA",
+          "longname": "Arctic Mechanisms of Interaction Between the Surface and Atmosphere",
+          "seasons": [
+            {
+              "id": "1e4626e1-1cca-491d-817d-6741bdb56521"
+            }
+          ],
+          "focus": [
+            {
+              "id": "bfc1f1e2-e86a-4b39-bd29-39feedfe79d1"
+            },
+            {
+              "id": "630b2833-ac8c-42bb-ac7f-525f5d1d6036"
+            }
+          ],
+          "geophysical": [
+            {
+              "id": "1eeb9fa8-e993-4b99-82b3-28e12466382a"
+            },
+            {
+              "id": "d0025a1e-4589-4e52-81ab-a9847e8db317"
+            },
+            {
+              "id": "5c7fa512-4539-48c3-91be-5d69971c9ff3"
+            },
+            {
+              "id": "be33fd5e-8b1b-4712-9ccc-ebfa59c55c3b"
+            },
+            {
+              "id": "5f0a8700-6791-44c2-aed9-461bf277bbe4"
+            }
+          ],
+          "startdate": "2008-08-01",
+          "enddate": "2008-09-12",
+          "deployments": [
+            {
+              "regions": [
+                {
+                  "id": "bb1e8eb7-c469-4783-8da2-d0a43fae490d"
+                },
+                {
+                  "id": "4fd4a08e-5bcf-44c7-9b46-1a8ccfa76822"
+                }
+              ]
+            }
+          ],
+          "platforms": [
+            {
+              "id": "31921e06-83bc-4de7-bf71-6a624f361d2e"
+            },
+            {
+              "id": "80155bc3-2cde-4978-932e-5c69fd13212d"
+            }
+          ],
+          "fundingAgency": "NASA",
+          "bounds": "SRID=4326;POLYGON ((-50 67, 20 67, 20 84, -50 84, -50 67))"
+        }
+      ],
+      "options": [
+        "ESA, NASA",
+        "NASA",
+        "NASA Earth Venture Suborbital-3 Program",
+        "NASA Office of Chief Engineer and NASA HQ Science Mission Directorate",
+        "NASA SMD ESD Earth Venture Suborbital-3 Program",
+        "NASA, KMA",
+        "NASA, Maryland Department of Environment",
+        "NASA, NCAR",
+        "NASA, NOAA",
+        "NASA, NRL",
+        "NASA, NSF",
+        "NASA, NSF, EPA, NOAA, Electric Power Research Institute, LADCO",
+        "NASA, NSF, ONR, DOE, NOAA, U.K. Meteorological Office, CNRS, CNES",
+        "NASA, SRON",
+        "NESCAUM, NASA, NYSERDA, CT DEEP, NJ DEP, NYS DEC, NFWF, NOAA, EPA",
+        "NOAA, NASA",
+        "WCRP, WWRP"
+      ]
+    },
+    "allSeason": {
+      "options": [
+        {
+          "id": "add69e41-855e-433a-926c-9ec9e9d12721",
+          "shortname": "austral fall",
+          "longname": "southern hemisphere fall months"
+        },
+        {
+          "id": "566bf888-d173-4aad-91a7-5ce86ba89e3a",
+          "shortname": "austral spring",
+          "longname": "southern hemisphere spring months"
+        },
+        {
+          "id": "8054ec90-b06a-49ca-af57-bb7619d9c693",
+          "shortname": "austral summer",
+          "longname": "southern hemisphere summer months"
+        },
+        {
+          "id": "024adb34-ad7f-458f-a58a-322c4809fb44",
+          "shortname": "austral winter",
+          "longname": "southern hemisphere winter months"
+        },
+        {
+          "id": "6a0f610e-cf94-453b-a071-232b068c416a",
+          "shortname": "boreal fall",
+          "longname": "northern hemisphere fall months"
+        },
+        {
+          "id": "3a6f6d82-cbcc-40af-868e-7b68e6761e05",
+          "shortname": "boreal spring",
+          "longname": "northern hemisphere spring months"
+        },
+        {
+          "id": "1e4626e1-1cca-491d-817d-6741bdb56521",
+          "shortname": "boreal summer",
+          "longname": "northern hemisphere summer months"
+        },
+        {
+          "id": "03ef7251-2897-4bc3-9755-24fad2ec98e6",
+          "shortname": "boreal winter",
+          "longname": "northern hemisphere winter months"
+        },
+        {
+          "id": "612d0530-154c-498e-9edc-41966c3ce63f",
+          "shortname": "break",
+          "longname": "non-monsoon period"
+        },
+        {
+          "id": "ad691655-be3a-4519-98f2-09fb0ea18211",
+          "shortname": "cold",
+          "longname": "cool to cold weather months"
+        },
+        {
+          "id": "c42d85de-94ba-48bd-8f3a-3322c2acef68",
+          "shortname": "dry",
+          "longname": "dry season months"
+        },
+        {
+          "id": "7fc6f824-ff79-4db1-8e33-444a9d123aa1",
+          "shortname": "equatorial",
+          "longname": "equatorial region with no seasonal pattern"
+        },
+        {
+          "id": "1a34a3b6-4b2e-4ce7-8e06-2739ea2542af",
+          "shortname": "monsoon",
+          "longname": "monsoon period"
+        },
+        {
+          "id": "3aed90d0-dc86-4c8a-a8a0-43fd6fadaf9a",
+          "shortname": "warm",
+          "longname": "warm to hot weather months"
+        },
+        {
+          "id": "ba9407d6-cd89-4364-906f-9d78a0c93858",
+          "shortname": "wet",
+          "longname": "wet season months"
+        },
+        {
+          "id": "9f983005-3a6f-430b-9045-a6ac7d1d82ac",
+          "shortname": "year round",
+          "longname": "study covers all seasons"
+        }
+      ]
+    },
+    "allFocusArea": {
+      "options": [
+        {
+          "id": "bfc1f1e2-e86a-4b39-bd29-39feedfe79d1",
+          "shortname": "Atmospheric Composition",
+          "longname": "NASA Atmospheric Composition Focus Area"
+        },
+        {
+          "id": "84550819-09b6-471c-ab6f-17e38d822d83",
+          "shortname": "Carbon Cycle & Ecosystems",
+          "longname": "NASA Carbon Cycle and Ecosystems Focus Area"
+        },
+        {
+          "id": "630b2833-ac8c-42bb-ac7f-525f5d1d6036",
+          "shortname": "Climate Variability & Change",
+          "longname": "NASA Climate Variability and Change Focus Area"
+        },
+        {
+          "id": "5f94ba1b-ec12-4df0-87cd-e0715310a9af",
+          "shortname": "Earth Surface & Interior",
+          "longname": "NASA Earth Surface and Interior Focus Area"
+        },
+        {
+          "id": "205df828-b591-4c02-878c-5758a5e50b80",
+          "shortname": "Global Water & Energy Cycle",
+          "longname": "NASA Global Water and Energy Cycle Focus Area"
+        },
+        {
+          "id": "4f11cba8-8970-463b-a0b3-9aaf59cc1629",
+          "shortname": "Weather",
+          "longname": "NASA Weather and Atmospheric Dynamics Focus Area"
+        }
+      ]
+    },
+    "allGeophysicalConcept": {
+      "options": [
+        {
+          "id": "1eeb9fa8-e993-4b99-82b3-28e12466382a",
+          "shortname": "Aerosols",
+          "longname": "Aerosols"
+        },
+        {
+          "id": "d27ec267-8941-4b21-909d-5fe45e001fee",
+          "shortname": "Air Qual",
+          "longname": "Air Quality"
+        },
+        {
+          "id": "d0025a1e-4589-4e52-81ab-a9847e8db317",
+          "shortname": "Atms Chem",
+          "longname": "Atmospheric Chemicals & Trace Gases"
+        },
+        {
+          "id": "630d6951-8022-4aa1-a05f-2c0c91a894ea",
+          "shortname": "Atms Elec",
+          "longname": "Atmospheric Electricity & Lightning"
+        },
+        {
+          "id": "9e7e796a-e9d1-400e-a8f1-db562751b234",
+          "shortname": "Biodiversity",
+          "longname": "Biodiversity"
+        },
+        {
+          "id": "32472be5-7057-4c11-8a31-4dff69740cf0",
+          "shortname": "Biogeochem",
+          "longname": "Ecosystems/Biogeochemical Interactions"
+        },
+        {
+          "id": "1a6ab70d-4bf1-4dab-8600-fbd67327f564",
+          "shortname": "BL Pros",
+          "longname": "Boundary Layer Processes"
+        },
+        {
+          "id": "3c7414fd-578f-4068-a2e6-3830e0e39c51",
+          "shortname": "Carbon Storage",
+          "longname": "Carbon Storage & Processes"
+        },
+        {
+          "id": "5c7fa512-4539-48c3-91be-5d69971c9ff3",
+          "shortname": "Clouds",
+          "longname": "Clouds-Properties & Processes & Dynamics"
+        },
+        {
+          "id": "be33fd5e-8b1b-4712-9ccc-ebfa59c55c3b",
+          "shortname": "Earth/Clim",
+          "longname": "Earth/Climate Interactions"
+        },
+        {
+          "id": "ab36f9cf-49da-4ab1-9ebd-55e7f0a41a8b",
+          "shortname": "Earth Int",
+          "longname": "Earth's Interior"
+        },
+        {
+          "id": "6a12df06-0802-42f0-bcfd-b441f72879c6",
+          "shortname": "Earth Mag Field",
+          "longname": "Earth's Magnetic Field"
+        },
+        {
+          "id": "08203f30-cf4a-4575-9066-e6e91a75b1c1",
+          "shortname": "Geodesy",
+          "longname": "Geodesy"
+        },
+        {
+          "id": "5f0a8700-6791-44c2-aed9-461bf277bbe4",
+          "shortname": "Ice & Glacial",
+          "longname": "Ice and Glacial Properties & Processes"
+        },
+        {
+          "id": "2d0acd22-74c4-4f22-b7ad-208384bd5ee8",
+          "shortname": "Land Chars",
+          "longname": "Land Characteristics"
+        },
+        {
+          "id": "01588d13-383c-4f4c-b79b-102da1c24cae",
+          "shortname": "Meso & Svr Wx",
+          "longname": "Mesoscale Convection & Severe Weather"
+        },
+        {
+          "id": "1ff853b4-d075-4fc6-912f-3eb1f98c8919",
+          "shortname": "Mid-lat Cyclones",
+          "longname": "Mid-latitude Cyclones"
+        },
+        {
+          "id": "d4bca0e9-4ee7-4aa2-861e-2b63e993d362",
+          "shortname": "Oceans",
+          "longname": "Ocean Properties & Processes"
+        },
+        {
+          "id": "7dbb57a4-6e32-40e9-acf1-da50347b6bbe",
+          "shortname": "Precip",
+          "longname": "Precipitation"
+        },
+        {
+          "id": "88ba769b-b9c2-43eb-8bba-1fc6ffa2dc98",
+          "shortname": "Radiation & Energy",
+          "longname": "Radiation & Energy Budget"
+        },
+        {
+          "id": "276a5b0e-87c8-42f8-b0cc-fb5581873e98",
+          "shortname": "Soils",
+          "longname": "Soil Properties"
+        },
+        {
+          "id": "14051781-0eb5-453c-86d3-60f2c2e19f74",
+          "shortname": "TCs",
+          "longname": "Tropical Cyclones"
+        },
+        {
+          "id": "e0e60ed5-d693-4f76-b645-e5c4f8bd7880",
+          "shortname": "Tectonics",
+          "longname": "Tectonic Processes"
+        },
+        {
+          "id": "652f9f80-3a68-475e-a1b9-08443537b358",
+          "shortname": "Terr Hydro",
+          "longname": "Terrestrial Hydrology"
+        },
+        {
+          "id": "ea75c9d3-9e71-4975-8e18-2e77a0bdd436",
+          "shortname": "Upper Atms Chem",
+          "longname": "Upper Atmospheric Chemistry"
+        },
+        {
+          "id": "578df7b1-34c9-4f1e-834c-cb495468e290",
+          "shortname": "Volcanics",
+          "longname": "Volcanic Processes"
+        }
+      ]
+    },
+    "allGeographicalRegion": {
+      "options": [
+        {
+          "id": "373185f2-99bf-4e26-9db2-9e1de82042fe",
+          "shortname": "agricultural"
+        },
+        {
+          "id": "98972937-92d5-4084-817d-7ef1c15f9a67",
+          "shortname": "coastal"
+        },
+        {
+          "id": "e7cc17c1-b963-4efa-b2ab-e8100cad06c9",
+          "shortname": "continental"
+        },
+        {
+          "id": "0f9055c7-0058-4ee6-86af-a71d2ffb2121",
+          "shortname": "coral"
+        },
+        {
+          "id": "11f68b53-ab2f-4c47-b821-c3f5bf91fe30",
+          "shortname": "desert"
+        },
+        {
+          "id": "baf5e40b-b6f5-40e2-a1e8-99063b136d5d",
+          "shortname": "equatorial"
+        },
+        {
+          "id": "4d395e23-2d32-414d-a551-689e874cd4c0",
+          "shortname": "forest"
+        },
+        {
+          "id": "4c4ed51e-fc02-490f-a72d-f1df4a6a18b3",
+          "shortname": "island"
+        },
+        {
+          "id": "e76d3b1e-62ab-4ca0-ba26-d96626943349",
+          "shortname": "maritime"
+        },
+        {
+          "id": "629fbde4-d2ea-4767-8378-c03bda7647cd",
+          "shortname": "mid-latitude"
+        },
+        {
+          "id": "2dac2cbe-0674-49a5-ad45-0d6decf8ab41",
+          "shortname": "mountains"
+        },
+        {
+          "id": "bb1e8eb7-c469-4783-8da2-d0a43fae490d",
+          "shortname": "polar"
+        },
+        {
+          "id": "1a8577f2-7386-404b-8082-487f56ac8119",
+          "shortname": "rainforest"
+        },
+        {
+          "id": "4fd4a08e-5bcf-44c7-9b46-1a8ccfa76822",
+          "shortname": "sea ice"
+        },
+        {
+          "id": "0f344562-9780-403d-ad40-5fddc7ce0e14",
+          "shortname": "tropical"
+        },
+        {
+          "id": "afd3b4fa-4c13-43b6-ba15-c143a34b4ddd",
+          "shortname": "urban"
+        }
+      ]
+    },
+    "allPlatform": {
+      "totalCount": 81,
+      "options": [
+        {
+          "id": "777b1069-e012-4f50-8021-b288caf7e8e5",
+          "shortname": "Apache Light",
+          "longname": "Apache Light"
+        },
+        {
+          "id": "d16ea245-d096-4d5c-bb28-96801b259a69",
+          "shortname": "ATR-42",
+          "longname": "French ATR-42"
+        },
+        {
+          "id": "cce7f5cc-d752-4543-9076-027826162509",
+          "shortname": "Aerosonde",
+          "longname": "Aerosonde Small Unmanned Aircraft System"
+        },
+        {
+          "id": "7ad8accf-20dd-492c-a2b6-30507e2db33d",
+          "shortname": "ALAR",
+          "longname": "Airborne Laboratory for Atmospheric Research"
+        },
+        {
+          "id": "5de87b18-06c9-4746-b7be-4345ba030820",
+          "shortname": "ALTUS II",
+          "longname": "ALTUS II"
+        },
+        {
+          "id": "f8d5d7e5-1efe-4c49-96b4-f069caf0b38c",
+          "shortname": "ASO",
+          "longname": "Airborne Snow Observatory"
+        },
+        {
+          "id": "70ca6522-bc1d-4727-a298-c28cfbc9e5b3",
+          "shortname": "C-130",
+          "longname": "C-130 Hercules"
+        },
+        {
+          "id": "4c473b42-8e87-43ab-9552-9b98ecb602ca",
+          "shortname": "C-131A",
+          "longname": "Convair C-131 Samaritan"
+        },
+        {
+          "id": "5a5a1893-d3c6-4fdc-8c45-53431754a994",
+          "shortname": "C-23 Sherpa",
+          "longname": "Short Brothers C-23 Sherpa"
+        },
+        {
+          "id": "5c029c3c-4e8f-49d9-bc1a-3775e3825677",
+          "shortname": "Cessna 206",
+          "longname": "Cessna 206H Stationair"
+        },
+        {
+          "id": "ebb3943f-2919-43e2-ad6f-171d66deb68b",
+          "shortname": "Cessna 208B",
+          "longname": "Cessna Grand Caravan 208B"
+        },
+        {
+          "id": "a40562b3-a188-4ac9-b6de-8c18c1d7348a",
+          "shortname": "Cessna Light",
+          "longname": "Cessna Light"
+        },
+        {
+          "id": "5a20149d-a3ed-4676-9944-ba729beef4a5",
+          "shortname": "Cessna Pelican",
+          "longname": "Cessna Pelican"
+        },
+        {
+          "id": "477a823f-902c-490a-97e3-619cf875d07d",
+          "shortname": "Chieftain",
+          "longname": "Piper Chieftain"
+        },
+        {
+          "id": "c101fd14-d9b8-4720-8ce1-d46b0a9bdf33",
+          "shortname": "Citation",
+          "longname": "Cessna Citation II"
+        },
+        {
+          "id": "84ff6e8a-771d-4397-9a11-6747d4afccde",
+          "shortname": "CV-580",
+          "longname": "Convair CV-580"
+        },
+        {
+          "id": "1b1ec279-b724-4208-b33d-c8f1d4e7ee59",
+          "shortname": "DC-3",
+          "longname": "Douglas DC-3"
+        },
+        {
+          "id": "bbd37eb8-5856-4590-b4e9-977812eb573b",
+          "shortname": "DO128",
+          "longname": "Dornier 128-6"
+        },
+        {
+          "id": "c0d6d5ed-28a5-436a-994e-a0cf1381a1cf",
+          "shortname": "DO-228",
+          "longname": "Dornier 228"
+        },
+        {
+          "id": "66c69777-fade-4ac4-b255-ef45482a306b",
+          "shortname": "Electra",
+          "longname": "Lockheed L-188C Electra"
+        },
+        {
+          "id": "eafadae9-5e1b-41a4-bf25-3448e2d39b31",
+          "shortname": "ER-2",
+          "longname": "NASA Earth Resources-2 aircraft"
+        },
+        {
+          "id": "f7ce3b39-4785-4cbe-a929-a3727259013e",
+          "shortname": "Falcon",
+          "longname": "Dassault Falcon 20-E5"
+        },
+        {
+          "id": "ed057836-a9d8-453b-b9b6-911203e63000",
+          "shortname": "G-III",
+          "longname": "Gulfstream III"
+        },
+        {
+          "id": "f261821f-15b1-4b43-9b0b-ed512cbaabb8",
+          "shortname": "G-IV",
+          "longname": "Gulfstream IV"
+        },
+        {
+          "id": "738660bd-574d-4c7f-ad88-0294bbd3db48",
+          "shortname": "G-V",
+          "longname": "Gulfstream-V"
+        },
+        {
+          "id": "89f62a41-7bdd-420f-8e9f-2c17224842e4",
+          "shortname": "HU-25",
+          "longname": ""
+        },
+        {
+          "id": "ae21364c-c575-49c1-bc64-648b8cd7de39",
+          "shortname": "NASA Bell Jet-Ranger",
+          "longname": "NASA Bell Jet-Ranger"
+        },
+        {
+          "id": "5a2ca85c-7768-4ae1-94a5-2d30b6eb9ea9",
+          "shortname": "NEON AOP",
+          "longname": "NEON Airborne Observation Platform"
+        },
+        {
+          "id": "4953a60c-56f6-4061-94ac-98bc4266e676",
+          "shortname": "Piper Navajo",
+          "longname": ""
+        },
+        {
+          "id": "07449080-b951-46ba-9ecc-39c781108455",
+          "shortname": "UAV",
+          "longname": "Unmanned Aerial Vehicle"
+        },
+        {
+          "id": "3ce3a9e1-f1c2-4a3b-8bdf-8fa95ba69620",
+          "shortname": "Ultralight",
+          "longname": "Ultralight Aircraft"
+        },
+        {
+          "id": "4a1205c4-d9a1-42b2-8746-b906f5c33770",
+          "shortname": "HOP",
+          "longname": "Duke Bell 206 Helicopter"
+        },
+        {
+          "id": "dd5e0b45-a2a5-4017-b58c-4c198a21eb9c",
+          "shortname": "J-31",
+          "longname": "Jetstream-31"
+        },
+        {
+          "id": "db9c4305-9526-4e77-aeba-d7540036d38e",
+          "shortname": "Learjet",
+          "longname": "SPEC Inc. Learjet 25"
+        },
+        {
+          "id": "762ba147-b6ea-4b38-88d0-433f8c7f7f3f",
+          "shortname": "Long EZ",
+          "longname": "NOAA Long-EZ N3R"
+        },
+        {
+          "id": "5f53719f-fe90-424c-9de5-53ba526ed437",
+          "shortname": "Mooney",
+          "longname": "Mooney Ovation"
+        },
+        {
+          "id": "d644c030-b578-4f71-827a-7d1a2efe90bf",
+          "shortname": "P-3",
+          "longname": "P-3 Orion"
+        },
+        {
+          "id": "6d7bd71f-21c9-4814-9a43-2bbcea5182a4",
+          "shortname": "PA-34",
+          "longname": "Piper PA-34 Seneca"
+        },
+        {
+          "id": "429d9328-dd8c-4513-96e8-97bda333c76e",
+          "shortname": "Twin Otter",
+          "longname": "DeHavilland Twin Otter"
+        },
+        {
+          "id": "b8125bcc-4f7f-452b-bfa5-be976118d128",
+          "shortname": "UH-1",
+          "longname": "UH-1 Huey"
+        },
+        {
+          "id": "dfc9e361-4f91-4f82-84e2-4ddc11939551",
+          "shortname": "UWKA",
+          "longname": "University of Wyoming King Air"
+        },
+        {
+          "id": "5b641473-5c2e-48f2-adca-76a641966da7",
+          "shortname": "WB-57",
+          "longname": "NASA WB-57"
+        },
+        {
+          "id": "9d9fbc2f-8730-4578-9bed-92974bfe5a45",
+          "shortname": "Aranda",
+          "longname": "R/V Aranda"
+        },
+        {
+          "id": "cf205b4a-cb76-4fb7-a0ed-1588252f55b1",
+          "shortname": "Ault",
+          "longname": "R/V Ault"
+        },
+        {
+          "id": "7da128b5-2bff-4f4c-a71c-f4d118f446fe",
+          "shortname": "Ivilia",
+          "longname": "S/Y Ivilia"
+        },
+        {
+          "id": "14ecee34-8773-44e9-8c47-f549c10148cf",
+          "shortname": "Le Provence",
+          "longname": "Le Provence"
+        },
+        {
+          "id": "648d7d48-f336-4833-958a-e97ee3e559cc",
+          "shortname": "Meridian",
+          "longname": "S.S. Meridian"
+        },
+        {
+          "id": "c9a5bf90-5004-455a-aa01-b8e34efb0495",
+          "shortname": "MV Park City",
+          "longname": "M/V Park City Ferry"
+        },
+        {
+          "id": "279265f4-e721-4313-b68a-7478b29d506b",
+          "shortname": "Neptune",
+          "longname": "R/V Neptune"
+        },
+        {
+          "id": "504dc29d-34b6-41ae-b2d1-5c9ecb7e47ac",
+          "shortname": "RV 5503",
+          "longname": "NOAA RV 5503"
+        },
+        {
+          "id": "acf557ca-22fa-4cd0-936a-018dd0b092d6",
+          "shortname": "SERC",
+          "longname": "Research Vessel (R/V) Smithsonian Environmental Research Center (SERC)"
+        },
+        {
+          "id": "dc4416e7-c644-41ce-bce9-131c714a0a3b",
+          "shortname": "Campaign FS",
+          "longname": "Campaign Field Sites"
+        },
+        {
+          "id": "a5d04a46-3228-422c-af17-a85c3f8e2577",
+          "shortname": "Campaign S",
+          "longname": "Campaign Field Surveys"
+        },
+        {
+          "id": "a8a25583-a4ad-419f-9a2d-48e8356507c0",
+          "shortname": "Campaign V",
+          "longname": "Campaign Vehicles"
+        },
+        {
+          "id": "7867ce72-1e68-47a1-9aa7-99656b9356bc",
+          "shortname": "Campaign PL",
+          "longname": "Campaign Permanent Land Sites"
+        },
+        {
+          "id": "973491bf-0994-4a99-9e51-635f3f87e81c",
+          "shortname": "Campaign B",
+          "longname": "Campaign Balloons"
+        },
+        {
+          "id": "65d48c11-c9ff-45b3-a8b7-8de5796a2197",
+          "shortname": "Campaign PW",
+          "longname": "Campaign Permanent Water Sites"
+        },
+        {
+          "id": "33180ac5-5f55-47f5-98aa-2d99c2574039",
+          "shortname": "A90",
+          "longname": "Beechcraft King Air A90"
+        },
+        {
+          "id": "a6be1a8e-bc75-451d-85bd-9bb7a32fdb59",
+          "shortname": "Aerocommander",
+          "longname": "Rockwell Aero Commander"
+        },
+        {
+          "id": "3161e696-a6ec-47b5-a4be-495012474f34",
+          "shortname": "Cape Race",
+          "longname": "M/V Cape Race"
+        },
+        {
+          "id": "0b4cb4b7-203d-4702-9282-5277a549de6b",
+          "shortname": "Tethys-2",
+          "longname": "R/V Tethys-II"
+        },
+        {
+          "id": "2daf8f5f-682f-4375-a2a9-685a4194724a",
+          "shortname": "Zenith",
+          "longname": "M/V Zenith"
+        },
+        {
+          "id": "5d31cef4-e365-47f3-ac70-df3abcd39db3",
+          "shortname": "B-200",
+          "longname": "Beechcraft King Air B-200"
+        },
+        {
+          "id": "26c88037-f328-40c1-96f5-b3514d0a5926",
+          "shortname": "Cessna 402B",
+          "longname": "UMD Cessna 402B"
+        },
+        {
+          "id": "80155bc3-2cde-4978-932e-5c69fd13212d",
+          "shortname": "DC-8",
+          "longname": "Douglas DC-8"
+        },
+        {
+          "id": "700f9f12-0086-4661-92b4-81507ba92bec",
+          "shortname": "GH",
+          "longname": "Global Hawk UAV"
+        },
+        {
+          "id": "420c5906-7def-4091-8579-b4344a94ec74",
+          "shortname": "CV-990",
+          "longname": "Convair CV-990"
+        },
+        {
+          "id": "2d7b113b-6afb-43e1-9687-3617d8145009",
+          "shortname": "Onnuri",
+          "longname": "R/V Onnuri"
+        },
+        {
+          "id": "54cd08a0-b31b-423d-a2f8-a0d638b15609",
+          "shortname": "Hanseo King Air",
+          "longname": "Hanseo King Air"
+        },
+        {
+          "id": "1cb2e40a-eb47-4c5e-9874-5f3c4042aab3",
+          "shortname": "JangMok",
+          "longname": "R/V JangMok"
+        },
+        {
+          "id": "5e3415d2-abbb-4d30-81e9-62b02963412f",
+          "shortname": "KMA King Air",
+          "longname": "Korean Meteorological Administration (KMA) King Air 350"
+        },
+        {
+          "id": "aaee3523-d806-4167-9f67-66be8a1e0556",
+          "shortname": "Healy",
+          "longname": "U.S. Coast Guard Cutter Healy"
+        },
+        {
+          "id": "42118130-85b2-47d5-911b-afe2ef02fe88",
+          "shortname": "SIERRA",
+          "longname": "NASA Sensor Integrated Environmental Remote Research Aircraft"
+        },
+        {
+          "id": "3a596083-2a6f-413a-98b8-b4e75afd0815",
+          "shortname": "SeaGlider",
+          "longname": "AUV SeaGlider"
+        },
+        {
+          "id": "3d6d5b57-4ec7-493f-8382-1acd840223f2",
+          "shortname": "Wirewalker",
+          "longname": "Del Mar Oceanographic’s Wirewalker TM profiling system"
+        },
+        {
+          "id": "f71c852c-07bc-44f3-8d35-e12e5d3300cf",
+          "shortname": "Proteus",
+          "longname": "Scaled Composites Proteus"
+        },
+        {
+          "id": "6fee9f66-da81-4fe7-a9ee-d30b2f870cb4",
+          "shortname": "Atlantis",
+          "longname": "R/V Atlantis"
+        },
+        {
+          "id": "a5e69012-4f03-4a93-89b6-0fc6cccc6ba0",
+          "shortname": "Roger Revelle",
+          "longname": "R/V Roger Revelle"
+        },
+        {
+          "id": "efbc7c92-52d0-4b91-b70e-8e3d9ddf61d5",
+          "shortname": "Sally Ride",
+          "longname": "R/V Sally Ride"
+        },
+        {
+          "id": "42c5a41b-57d3-4f21-add3-3e6b7a04795d",
+          "shortname": "Drifting Buoy",
+          "longname": ""
+        },
+        {
+          "id": "31921e06-83bc-4de7-bf71-6a624f361d2e",
+          "shortname": "Oden",
+          "longname": "Icebreaker Oden"
+        }
+      ]
+    },
+    "allInstrument": {
+      "totalCount": 432
+    }
+  },
+  "extensions": {}
+}
