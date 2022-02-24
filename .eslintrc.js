@@ -1,5 +1,5 @@
 module.exports = {
-  parser: "babel-eslint", // Specifies the ESLint parser
+  parser: "@babel/eslint-parser", // Specifies the ESLint parser
   extends: [
     "eslint:recommended",
     "plugin:react/recommended",

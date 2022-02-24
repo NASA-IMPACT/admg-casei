@@ -112,13 +112,15 @@ const About = ({ data }) => {
 
         <Section id="about-image">
           <SectionContent columns={[1, 12]}>
-            <GatsbyImage
-              image={data.bodyImage.nasaImg.childImageSharp.gatsbyImageData}
-              css={`
-                max-height: 400px;
-              `}
-              alt={data.bodyImage.nasaImgAlt}
-            />
+            {data.bodyImage.gatsbyImg && (
+              <GatsbyImage
+                image={data.bodyImage.gatsbyImg.childImageSharp.gatsbyImageData}
+                css={`
+                  max-height: 400px;
+                `}
+                alt={data.bodyImage.nasaImgAlt}
+              />
+            )}
           </SectionContent>
         </Section>
 
@@ -161,7 +163,7 @@ export const query = graphql`
   {
     heroImage: nasaImagesJson(shortname: { eq: "about-hero" }) {
       nasaImgAlt
-      nasaImg {
+      gatsbyImg {
         childImageSharp {
           gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
         }
@@ -169,7 +171,7 @@ export const query = graphql`
     }
     bodyImage: nasaImagesJson(shortname: { eq: "about-body" }) {
       nasaImgAlt
-      nasaImg {
+      gatsbyImg {
         childImageSharp {
           gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
         }
@@ -182,13 +184,13 @@ About.propTypes = {
   data: PropTypes.shape({
     heroImage: PropTypes.shape({
       nasaImgAlt: PropTypes.string.isRequired,
-      nasaImg: PropTypes.shape({
+      gatsbyImg: PropTypes.shape({
         childImageSharp: PropTypes.object.isRequired,
       }).isRequired,
     }).isRequired,
     bodyImage: PropTypes.shape({
       nasaImgAlt: PropTypes.string.isRequired,
-      nasaImg: PropTypes.shape({
+      gatsbyImg: PropTypes.shape({
         childImageSharp: PropTypes.object.isRequired,
       }).isRequired,
     }).isRequired,

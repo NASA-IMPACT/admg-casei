@@ -90,7 +90,7 @@ export default function Accordion({ folds, id }) {
               `}
               data-cy={`${id}-accordion-content`}
             >
-              {fold.image && (
+              {fold.image && fold.image.gatsbyImg && (
                 <GatsbyImage
                   image={fold.image.gatsbyImg.childImageSharp.gatsbyImageData}
                   css={`

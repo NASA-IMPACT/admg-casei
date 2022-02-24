@@ -22,7 +22,7 @@ function terminalLog(violations) {
 }
 
 describe("Accessibility tests", () => {
-  it("Has no detectable accessibility violations on load", () => {
+  it.skip("Has no detectable accessibility violations on load", () => {
     cy.visit("/")
 
     cy.get("h1").should("exist")

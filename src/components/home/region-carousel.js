@@ -86,9 +86,11 @@ export const RegionCarousel = ({ regions }) => {
                   height: 550px;
                 `}
               >
-                {region.image?.nasaImg && (
+                {region.image?.gatsbyImg && (
                   <GatsbyImage
-                    image={region.image.nasaImg.childImageSharp.gatsbyImageData}
+                    image={
+                      region.image.gatsbyImg.childImageSharp.gatsbyImageData
+                    }
                     alt={region.image.nasaImgAlt}
                     css={`
                       height: 550px;
@@ -110,10 +112,10 @@ export const RegionCarousel = ({ regions }) => {
               >
                 {region.shortname}
               </div>
-              <span>
-                {region.image ? region.image.nasaImgAlt : "No image available."}
-              </span>
             </Link>
+            <span>
+              {region.image ? region.image.nasaImgAlt : "No image available."}
+            </span>
           </React.Fragment>
         ))}
       </Carousel>
@@ -127,7 +129,7 @@ RegionCarousel.propTypes = {
       id: PropTypes.string,
       shortname: PropTypes.string,
       image: PropTypes.shape({
-        nasaImgUrl: PropTypes.string.isRequired,
+        gatsbyImg: PropTypes.object.isRequired,
         nasaImgAlt: PropTypes.string.isRequired,
       }),
     }).isRequired

@@ -2,16 +2,16 @@
 
 exports[`Data Section matches snapshot 1`] = `
 <section
-  className="section__Container-sc-1oozlr5-0 hnlTsG"
+  className="section__Container-sc-1oozlr5-0 fpqxos"
   data-cy="data-section"
   mode="darkTheme"
 >
   <div
-    className="section__Buffer-sc-1oozlr5-1 dMJVzf"
+    className="section__Buffer-sc-1oozlr5-1 kmpZfx"
     id="data"
   />
   <div
-    className="section-header___StyledDiv-sc-1i4pe2i-0 bgiGcO"
+    className="section-header___StyledDiv-sc-1i4pe2i-0 eOVtic"
     data-cy="data-section-header"
   >
     <a
@@ -23,7 +23,7 @@ exports[`Data Section matches snapshot 1`] = `
     </a>
   </div>
   <div
-    className="section__SectionContent-sc-1oozlr5-2 bgcrwl"
+    className="section__SectionContent-sc-1oozlr5-2 eDhOSH"
     mode="darkTheme"
   >
     <p>
@@ -37,10 +37,10 @@ exports[`Data Section matches snapshot 1`] = `
       .
     </p>
     <div
-      className="data-section___StyledDiv-sc-11szotn-0 hXSGCa"
+      className="data-section___StyledDiv-sc-11szotn-0 iRwCpM"
     >
       <div
-        className="filter-box___StyledDiv-sc-1n4l7nk-0 ca-dKcH"
+        className="filter-box___StyledDiv-sc-1n4l7nk-0 hBBlmR"
       >
         <span
           id="Campaigns"
@@ -71,7 +71,7 @@ exports[`Data Section matches snapshot 1`] = `
           <span
             aria-haspopup="listbox"
             aria-labelledby="Campaigns button--listbox-input"
-            className="filter-box___StyledListboxButton-sc-1n4l7nk-1 khURrB"
+            className="filter-box___StyledListboxButton-sc-1n4l7nk-1 iAcLtr"
             data-reach-listbox-button=""
             id="button--listbox-input"
             onKeyDown={[Function]}
@@ -92,7 +92,7 @@ exports[`Data Section matches snapshot 1`] = `
         </div>
       </div>
       <div
-        className="filter-box___StyledDiv-sc-1n4l7nk-0 ca-dKcH"
+        className="filter-box___StyledDiv-sc-1n4l7nk-0 hBBlmR"
       >
         <span
           id="Platforms"
@@ -123,7 +123,7 @@ exports[`Data Section matches snapshot 1`] = `
           <span
             aria-haspopup="listbox"
             aria-labelledby="Platforms button--listbox-input"
-            className="filter-box___StyledListboxButton-sc-1n4l7nk-1 khURrB"
+            className="filter-box___StyledListboxButton-sc-1n4l7nk-1 iAcLtr"
             data-reach-listbox-button=""
             id="button--listbox-input"
             onKeyDown={[Function]}
@@ -145,15 +145,15 @@ exports[`Data Section matches snapshot 1`] = `
       </div>
     </div>
     <div
-      className="data-section___StyledDiv2-sc-11szotn-1 bBYaVi"
+      className="data-section___StyledDiv2-sc-11szotn-1 cIwSvs"
     >
       <div
-        className="data-section___StyledDiv3-sc-11szotn-2 buihze"
+        className="data-section___StyledDiv3-sc-11szotn-2 cphOcI"
         data-cy="data-product"
       >
         <div>
           <label
-            className="label___StyledLabel-sc-b3994k-0 eNUjrw"
+            className="label___StyledLabel-sc-b3994k-0 kFtAUG"
             data-cy="doi-label"
           >
             GPM GROUND VALIDATION ADVANCED MICROWAVE PRECIPITATION RADIOMETER (AMPR) IPHEX V2
@@ -161,13 +161,13 @@ exports[`Data Section matches snapshot 1`] = `
           
         </div>
         <div
-          className="data-section___StyledDiv4-sc-11szotn-3 iXKgiz"
+          className="data-section___StyledDiv4-sc-11szotn-3 fnKckZ"
         >
           <div
             data-cy="data-product-campaigns"
           >
             <label
-              className="label___StyledLabel-sc-b3994k-0 kjDAEr"
+              className="label___StyledLabel-sc-b3994k-0 ipaqcJ"
               data-cy="doi-campaign-label"
             >
               Campaigns
@@ -184,7 +184,7 @@ exports[`Data Section matches snapshot 1`] = `
             data-cy="data-product-platforms"
           >
             <label
-              className="label___StyledLabel-sc-b3994k-0 kjDAEr"
+              className="label___StyledLabel-sc-b3994k-0 ipaqcJ"
               data-cy="doi-platform-label"
             >
               Platforms
@@ -200,18 +200,18 @@ exports[`Data Section matches snapshot 1`] = `
         </div>
       </div>
       <div
-        className="data-section___StyledDiv3-sc-11szotn-2 buihze"
+        className="data-section___StyledDiv3-sc-11szotn-2 cphOcI"
         data-cy="data-product"
       >
         <div>
           <label
-            className="label___StyledLabel-sc-b3994k-0 eNUjrw"
+            className="label___StyledLabel-sc-b3994k-0 kFtAUG"
             data-cy="doi-label"
           >
             CAMP2Ex P-3 Remotely Sensed Aerosol Data
           </label>
           <a
-            className="external-link___StyledA-sc-3ezy1s-0 kBenCL"
+            className="external-link___StyledA-sc-3ezy1s-0 Nckfd"
             data-cy="doi-link"
             href="http://dx.doi.org/10.5067/Airborne/CAMP2Ex_Aerosol_AircraftRemoteSensing_P3_Data_1"
             rel="noopener noreferrer"
@@ -239,20 +239,20 @@ exports[`Data Section matches snapshot 1`] = `
               />
             </svg>
             <span
-              className="external-link___StyledSpan-sc-3ezy1s-1 eAOIiQ"
+              className="external-link___StyledSpan-sc-3ezy1s-1 hiRjrK"
             >
               10.5067/Airborne/CAMP2Ex_Aerosol_AircraftRemoteSensing_P3_Data_1
             </span>
           </a>
         </div>
         <div
-          className="data-section___StyledDiv4-sc-11szotn-3 iXKgiz"
+          className="data-section___StyledDiv4-sc-11szotn-3 fnKckZ"
         >
           <div
             data-cy="data-product-campaigns"
           >
             <label
-              className="label___StyledLabel-sc-b3994k-0 kjDAEr"
+              className="label___StyledLabel-sc-b3994k-0 ipaqcJ"
               data-cy="doi-campaign-label"
             >
               Campaigns
@@ -269,7 +269,7 @@ exports[`Data Section matches snapshot 1`] = `
             data-cy="data-product-platforms"
           >
             <label
-              className="label___StyledLabel-sc-b3994k-0 kjDAEr"
+              className="label___StyledLabel-sc-b3994k-0 ipaqcJ"
               data-cy="doi-platform-label"
             >
               Platforms
@@ -285,12 +285,12 @@ exports[`Data Section matches snapshot 1`] = `
         </div>
       </div>
       <div
-        className="data-section___StyledDiv3-sc-11szotn-2 buihze"
+        className="data-section___StyledDiv3-sc-11szotn-2 cphOcI"
         data-cy="data-product"
       >
         <div>
           <label
-            className="label___StyledLabel-sc-b3994k-0 eNUjrw"
+            className="label___StyledLabel-sc-b3994k-0 kFtAUG"
             data-cy="doi-label"
           >
             GPM GROUND VALIDATION ADVANCED MICROWAVE PRECIPITATION RADIOMETER (AMPR) MC3E V1
@@ -298,13 +298,13 @@ exports[`Data Section matches snapshot 1`] = `
           
         </div>
         <div
-          className="data-section___StyledDiv4-sc-11szotn-3 iXKgiz"
+          className="data-section___StyledDiv4-sc-11szotn-3 fnKckZ"
         >
           <div
             data-cy="data-product-campaigns"
           >
             <label
-              className="label___StyledLabel-sc-b3994k-0 kjDAEr"
+              className="label___StyledLabel-sc-b3994k-0 ipaqcJ"
               data-cy="doi-campaign-label"
             >
               Campaigns
@@ -321,7 +321,7 @@ exports[`Data Section matches snapshot 1`] = `
             data-cy="data-product-platforms"
           >
             <label
-              className="label___StyledLabel-sc-b3994k-0 kjDAEr"
+              className="label___StyledLabel-sc-b3994k-0 ipaqcJ"
               data-cy="doi-platform-label"
             >
               Platforms
@@ -337,12 +337,12 @@ exports[`Data Section matches snapshot 1`] = `
         </div>
       </div>
       <div
-        className="data-section___StyledDiv3-sc-11szotn-2 buihze"
+        className="data-section___StyledDiv3-sc-11szotn-2 cphOcI"
         data-cy="data-product"
       >
         <div>
           <label
-            className="label___StyledLabel-sc-b3994k-0 eNUjrw"
+            className="label___StyledLabel-sc-b3994k-0 kFtAUG"
             data-cy="doi-label"
           >
             GPM Ground Validation Advanced Microwave Precipitation Radiometer (AMPR) OLYMPEX V1
@@ -350,13 +350,13 @@ exports[`Data Section matches snapshot 1`] = `
           
         </div>
         <div
-          className="data-section___StyledDiv4-sc-11szotn-3 iXKgiz"
+          className="data-section___StyledDiv4-sc-11szotn-3 fnKckZ"
         >
           <div
             data-cy="data-product-campaigns"
           >
             <label
-              className="label___StyledLabel-sc-b3994k-0 kjDAEr"
+              className="label___StyledLabel-sc-b3994k-0 ipaqcJ"
               data-cy="doi-campaign-label"
             >
               Campaigns
@@ -373,7 +373,7 @@ exports[`Data Section matches snapshot 1`] = `
             data-cy="data-product-platforms"
           >
             <label
-              className="label___StyledLabel-sc-b3994k-0 kjDAEr"
+              className="label___StyledLabel-sc-b3994k-0 ipaqcJ"
               data-cy="doi-platform-label"
             >
               Platforms
@@ -389,12 +389,12 @@ exports[`Data Section matches snapshot 1`] = `
         </div>
       </div>
       <div
-        className="data-section___StyledDiv3-sc-11szotn-2 buihze"
+        className="data-section___StyledDiv3-sc-11szotn-2 cphOcI"
         data-cy="data-product"
       >
         <div>
           <label
-            className="label___StyledLabel-sc-b3994k-0 eNUjrw"
+            className="label___StyledLabel-sc-b3994k-0 kFtAUG"
             data-cy="doi-label"
           >
             TCSP AMPR BRIGHTNESS TEMPERATURE (TB) V2
@@ -402,13 +402,13 @@ exports[`Data Section matches snapshot 1`] = `
           
         </div>
         <div
-          className="data-section___StyledDiv4-sc-11szotn-3 iXKgiz"
+          className="data-section___StyledDiv4-sc-11szotn-3 fnKckZ"
         >
           <div
             data-cy="data-product-campaigns"
           >
             <label
-              className="label___StyledLabel-sc-b3994k-0 kjDAEr"
+              className="label___StyledLabel-sc-b3994k-0 ipaqcJ"
               data-cy="doi-campaign-label"
             >
               Campaigns
@@ -425,7 +425,7 @@ exports[`Data Section matches snapshot 1`] = `
             data-cy="data-product-platforms"
           >
             <label
-              className="label___StyledLabel-sc-b3994k-0 kjDAEr"
+              className="label___StyledLabel-sc-b3994k-0 ipaqcJ"
               data-cy="doi-platform-label"
             >
               Platforms
