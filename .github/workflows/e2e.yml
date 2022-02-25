@@ -7,7 +7,7 @@ on:
       - develop
 
 jobs:
-  build-and-test-e2e:
+  build:
     runs-on: ubuntu-latest
 
     env:
@@ -43,10 +43,6 @@ jobs:
         with:
           path: node_modules
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
 
       - name: Cache Gatsby .cache folder
         uses: actions/cache@v2
@@ -55,8 +51,6 @@ jobs:
         with:
           path: .cache
           key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-${{ env.cache-name }}
 
       - name: Cache Gatsby public folder
         uses: actions/cache@v2
@@ -65,8 +59,6 @@ jobs:
         with:
           path: public/
           key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-${{ env.cache-name }}
 
       - name: Cache Cypress .cache folder
         uses: actions/cache@v2
@@ -75,14 +67,73 @@ jobs:
         with:
           path: ~/.cache/Cypress
           key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-${{ env.cache-name }}
 
       - name: Install
         run: yarn install && yarn cypress install
 
       - name: Build
         run: yarn build
+
+  test-e2e:
+    runs-on: ubuntu-latest
+
+    env:
+      ADMG_ACCESS_TOKEN: ${{ secrets.ADMG_ACCESS_TOKEN }}
+      CYPRESS_password: ${{ secrets.CYPRESS_password }}
+      GATSBY_ADMG_CLIENT_ID: ${{ secrets.GATSBY_ADMG_CLIENT_ID }}
+      GATSBY_ADMG_CLIENT_SECRET: ${{ secrets.GATSBY_ADMG_CLIENT_SECRET }}
+      GATSBY_CPU_COUNT: 4
+      GATSBY_MAPBOX_TOKEN: ${{ secrets.GATSBY_MAPBOX_TOKEN }}
+
+    steps:
+      - name: Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.8.0
+        with:
+          access_token: ${{ github.token }}
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Read .nvmrc
+        run: echo ::set-output name=NVMRC::$(cat .nvmrc)
+        id: nvm
+
+      - name: Use Node.js ${{ steps.nvm.outputs.NVMRC }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ steps.nvm.outputs.NVMRC }}
+
+      - name: Restore node modules
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Restore Gatsby .cache folder
+        uses: actions/cache@v2
+        env:
+          cache-name: gatsby-cache-folder
+        with:
+          path: .cache
+          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Restore Gatsby public folder
+        uses: actions/cache@v2
+        env:
+          cache-name: gatsby-public-folder
+        with:
+          path: public/
+          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Restore Cypress .cache folder
+        uses: actions/cache@v2
+        env:
+          cache-name: cypress-cache-folder
+        with:
+          path: ~/.cache/Cypress
+          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
 
       - name: Test End-to-end
         uses: cypress-io/github-action@v2
@@ -96,7 +147,6 @@ jobs:
         with:
           name: cypress-screenshots
           path: cypress/screenshots
-
 
       - name: Store video artifacts
         uses: actions/upload-artifact@v1
