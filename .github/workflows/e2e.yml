@@ -57,7 +57,7 @@ jobs:
         env:
           cache-name: gatsby-public-folder
         with:
-          path: public/
+          path: public
           key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
 
       - name: Cache Cypress .cache folder
