@@ -39,15 +39,15 @@ jobs:
       - name: Cache node modules
         uses: actions/cache@v2
         env:
-          cache-name: cache-node-modules
+          cache-name: node-modules
         with:
           path: node_modules
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
 
       - name: Cache Gatsby .cache folder
         uses: actions/cache@v2
         env:
-          cache-name: gatsby-cache-folder
+          cache-name: gatsby-cache
         with:
           path: .cache
           key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
@@ -56,7 +56,7 @@ jobs:
         id: cache-build
         uses: actions/cache@v2
         env:
-          cache-name: gatsby-public-folder
+          cache-name: gatsby-build
         with:
           path: public
           key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}-${{ hashFiles('src/**') }}
@@ -64,7 +64,7 @@ jobs:
       - name: Cache Cypress .cache folder
         uses: actions/cache@v2
         env:
-          cache-name: cypress-cache-folder
+          cache-name: cypress-cache
         with:
           path: ~/.cache/Cypress
           key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
@@ -109,15 +109,15 @@ jobs:
       - name: Restore node modules
         uses: actions/cache@v2
         env:
-          cache-name: cache-node-modules
+          cache-name: node-modules
         with:
           path: node_modules
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
 
       - name: Restore Gatsby .cache folder
         uses: actions/cache@v2
         env:
-          cache-name: gatsby-cache-folder
+          cache-name: gatsby-cache
         with:
           path: .cache
           key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
@@ -125,15 +125,15 @@ jobs:
       - name: Restore Gatsby public folder
         uses: actions/cache@v2
         env:
-          cache-name: gatsby-public-folder
+          cache-name: gatsby-build
         with:
           path: public/
-          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}-${{ hashFiles('src/**') }}
 
       - name: Restore Cypress .cache folder
         uses: actions/cache@v2
         env:
-          cache-name: cypress-cache-folder
+          cache-name: cypress-cache
         with:
           path: ~/.cache/Cypress
           key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
