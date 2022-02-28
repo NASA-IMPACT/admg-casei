@@ -53,12 +53,13 @@ jobs:
           key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
 
       - name: Cache Gatsby public folder
+        id: cache-build
         uses: actions/cache@v2
         env:
           cache-name: gatsby-public-folder
         with:
           path: public
-          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}-${{ hashFiles('src/**') }}
 
       - name: Cache Cypress .cache folder
         uses: actions/cache@v2
@@ -72,6 +73,7 @@ jobs:
         run: yarn install && yarn cypress install
 
       - name: Build
+        if: steps.cache-build.outputs.cache-hit != 'true'
         run: yarn build
 
   test-e2e:
