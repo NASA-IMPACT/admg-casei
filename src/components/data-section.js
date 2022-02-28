@@ -209,7 +209,9 @@ const DataSection = ({ id, dois, filterBy, category }) => {
             </div>
           </>
         ) : (
-          <label data-cy="no-doi-label">No data products available.</label>
+          <label data-cy="no-doi-label">
+            There are no data products linked to this campaign in CASEI - yet.
+          </label>
         )}
       </SectionContent>
     </Section>
