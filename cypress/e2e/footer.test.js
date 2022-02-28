@@ -47,25 +47,7 @@ describe("Footer", () => {
     // Explore links
     cy.get("[data-cy=footer-explore]").find("p").contains("Explore")
     cy.get("[data-cy=footer-campaigns-link]").should("contain", "Campaigns")
-    cy.get("[data-cy=footer-campaigns-link]").click()
-    cy.url().should("include", "/explore/campaigns")
-    cy.get("h1").should("have.text", "Explore campaigns")
-    cy.go("back")
-    cy.url().should("not.include", "/explore/campaigns")
-
     cy.get("[data-cy=footer-platforms-link]").should("contain", "Platforms")
-    cy.get("[data-cy=footer-platforms-link]").click()
-    cy.url().should("include", "/explore/platforms")
-
-    cy.get("h1").should("have.text", "Explore platforms")
-    cy.go("back")
-    cy.url().should("not.include", "/explore/platforms")
-
     cy.get("[data-cy=footer-instruments-link]").should("contain", "Instruments")
-    cy.get("[data-cy=footer-instruments-link]").click()
-    cy.url().should("include", "/explore/instruments")
-
-    cy.get("h1").should("have.text", "Explore instruments")
-    cy.go("back")
   })
 })
