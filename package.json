@@ -46,7 +46,6 @@
     "styled-components": "^5.3.3",
     "typography": "^0.16.21",
     "use-debounce": "^7.0.1",
-    "webpack": "^5.69.1",
     "wellknown": "^0.5.0"
   },
   "devDependencies": {
