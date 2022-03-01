@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { isWithinInterval } from "date-fns"
+import { isAfter, isBefore, isWithinInterval } from "date-fns"
 
 import { sortFunctions, campaignFilter } from "../utils/filter-utils"
 
@@ -81,9 +81,14 @@ export default function useCampaignList(
         : // ongoing campaigns have enddate: null, use now in that case
           isWithinInterval(new Date(), dateRange)
 
+      const isStartBeforeAndEndAfterRange =
+        isBefore(new Date(campaign.startdate), dateRange.start) &&
+        isAfter(new Date(campaign.enddate), dateRange.end)
+
       // eslint-disable-next-line no-unused-vars
       const isWithinRange = isStartWithinRange && isEndWithinRange
-      const isIntersectingRange = isStartWithinRange || isEndWithinRange
+      const isIntersectingRange =
+        isStartWithinRange || isEndWithinRange || isStartBeforeAndEndAfterRange
 
       return isIntersectingRange
     })

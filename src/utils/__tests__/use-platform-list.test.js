@@ -1,10 +1,10 @@
 import { renderHook } from "@testing-library/react-hooks"
 
 import usePlatformList from "../use-platform-list"
-import { exploreQuery } from "../../../test/__fixtures__"
+import { explorePlatformsQuery } from "../../../test/__fixtures__"
 
 it("the default platform list (without filters)", () => {
-  const list = exploreQuery.data.allPlatform.list
+  const list = explorePlatformsQuery.data.allPlatform.list
   const sortOrder = "most used"
   const selectedFilterIds = []
   const searchResult = null
@@ -36,7 +36,7 @@ it("the default platform list (without filters)", () => {
 })
 
 it("the platform list sorted a > z (without filters)", () => {
-  const list = exploreQuery.data.allPlatform.list
+  const list = explorePlatformsQuery.data.allPlatform.list
   const sortOrder = "a to z"
   const selectedFilterIds = []
   const searchResult = null
@@ -68,7 +68,7 @@ it("the platform list sorted a > z (without filters)", () => {
 })
 
 it("the platform list sorted z > a (without filters)", () => {
-  const list = exploreQuery.data.allPlatform.list
+  const list = explorePlatformsQuery.data.allPlatform.list
   const sortOrder = "z to a"
   const selectedFilterIds = []
   const searchResult = null
@@ -100,9 +100,10 @@ it("the platform list sorted z > a (without filters)", () => {
 })
 
 it("the platform list with a filter selected", () => {
-  const instrumentId = exploreQuery.data.allPlatform.list[0].instruments[0].id
+  const instrumentId =
+    explorePlatformsQuery.data.allPlatform.list[0].instruments[0].id
 
-  const list = exploreQuery.data.allPlatform.list
+  const list = explorePlatformsQuery.data.allPlatform.list
   const sortOrder = "most used"
   const selectedFilterIds = [instrumentId]
   const searchResult = null
