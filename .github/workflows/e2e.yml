@@ -40,26 +40,26 @@ jobs:
         uses: actions/cache@v2
         with:
           path: node_modules
-          key: ${{ runner.os }}-node-modules-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-node-modules-${{ hashFiles('yarn.lock') }}
 
       - name: Cache Gatsby .cache folder
         uses: actions/cache@v2
         with:
           path: .cache
-          key: ${{ runner.os }}-gatsby-cache-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-gatsby-cache-${{ hashFiles('yarn.lock') }}
 
       - name: Cache Gatsby public folder
         id: cache-build
         uses: actions/cache@v2
         with:
           path: public
-          key: ${{ runner.os }}-gatsby-build-${{ hashFiles('**/yarn.lock') }}-${{ hashFiles('src/**') }}
+          key: ${{ runner.os }}-gatsby-build-${{ hashFiles('yarn.lock') }}-${{ hashFiles('src/**') }}
 
       - name: Cache Cypress .cache folder
         uses: actions/cache@v2
         with:
           path: ~/.cache/Cypress
-          key: ${{ runner.os }}-cypress-cache-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-cypress-cache-${{ hashFiles('yarn.lock') }}
 
       - name: Install
         run: yarn install && yarn cypress install
@@ -102,25 +102,25 @@ jobs:
         uses: actions/cache@v2
         with:
           path: node_modules
-          key: ${{ runner.os }}-node-modules-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-node-modules-${{ hashFiles('yarn.lock') }}
 
       - name: Restore Gatsby .cache folder
         uses: actions/cache@v2
         with:
           path: .cache
-          key: ${{ runner.os }}-gatsby-cache-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-gatsby-cache-${{ hashFiles('yarn.lock') }}
 
       - name: Restore Gatsby public folder
         uses: actions/cache@v2
         with:
           path: public
-          key: ${{ runner.os }}-gatsby-build-${{ hashFiles('**/yarn.lock') }}-${{ hashFiles('src/**') }}
+          key: ${{ runner.os }}-gatsby-build-${{ hashFiles('yarn.lock') }}-${{ hashFiles('src/**') }}
 
       - name: Restore Cypress .cache folder
         uses: actions/cache@v2
         with:
           path: ~/.cache/Cypress
-          key: ${{ runner.os }}-cypress-cache-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-cypress-cache-${{ hashFiles('yarn.lock') }}
 
       - name: Test End-to-end
         uses: cypress-io/github-action@v2
