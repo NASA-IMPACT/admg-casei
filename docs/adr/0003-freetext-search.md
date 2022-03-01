@@ -2,7 +2,7 @@
 
 - Status: proposed
 - Deciders: @rwegener2 W @necoline @tania-pires @AliceR @alukach
-- Date: 2021-04-27
+- Date: 2021-04-27, updated 2022-03-01
 
 ## Context and Problem Statement
 
@@ -10,13 +10,11 @@ The current free text search
 
 - only searches on whole words
 - is strict with typos
-- searches on defined database columns (short name, long name, and description)
-
-The frontend currently sends an api request to the backend, where the search is executed and sends back the matching items. This is executed as one request per type (i.e. `/campaign?search=string`, `/platform?search=string`, `/instrument?search=string`, ...). After some seconds, the results can be displayed in the UI. It does not feel very performant, and seems to be an unnecessary dependency.
+- searches on defined database columns (short name, long name)
 
 Do we need to or want to improve the search experience for our users?
 
-Note: A real search experience differs from [filtering cards by text input](https://github.com/NASA-IMPACT/admg-inventory/issues/257).
+Note: A real search experience differs from [filtering cards by text input](https://github.com/NASA-IMPACT/admg-casei/issues/257).
 
 ## Considered Options
 
@@ -66,6 +64,8 @@ We have all the data available from the build process. Just like we currently so
 
 - Good, because we might be able to get live-updating search results while a user is typing.
 - Bad, because it will be on us to implement, test and maintain
+
+Note: this is currently implemented as a text input filter, see [issue #257](https://github.com/NASA-IMPACT/admg-casei/issues/257) for more details.
 
 ### Client-side search tools
 
