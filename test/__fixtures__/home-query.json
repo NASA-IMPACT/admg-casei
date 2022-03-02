@@ -9,7 +9,7 @@
     },
     "heroImage": {
       "nasaImgAlt": "NASA's DC-8 flying laboratory passes Antarctica's tallest peak, Mount Vinson, on Oct. 22, 2012, during a flight over the continent to measure changes in the massive ice sheet and sea ice. Credit: NASA/Michael Studinger (Photography courtesy NASA Images)",
-      "nasaImg": {
+      "gatsbyImg": {
         "childImageSharp": {
           "gatsbyImageData": {
             "layout": "fullWidth",
@@ -71,9 +71,8 @@
           "shortname": "continental",
           "example": "Kansas",
           "image": {
-            "nasaImgUrl": "https://eoimages.gsfc.nasa.gov/images/imagerecords/145000/145932/iss060e035401_lrg.jpg",
             "nasaImgAlt": "A network of farms and ranches surrounds the cities and small towns near the Nebraska–Iowa border. (Photography courtesy NASA/GSFC)",
-            "nasaImg": {
+            "gatsbyImg": {
               "childImageSharp": {
                 "gatsbyImageData": {
                   "layout": "fullWidth",
@@ -106,9 +105,8 @@
           "shortname": "maritime",
           "example": "Atlantic Ocean",
           "image": {
-            "nasaImgUrl": "https://climate.nasa.gov/system/resources/detail_files/170_gulfoffinland_full.jpg",
             "nasaImgAlt": "Phytoplankton blooms across the northern basins of the North Atlantic and Arctic Oceans. (Photography courtesy NASA/Climate)",
-            "nasaImg": {
+            "gatsbyImg": {
               "childImageSharp": {
                 "gatsbyImageData": {
                   "layout": "fullWidth",
@@ -141,9 +139,8 @@
           "shortname": "coastal",
           "example": "US Gulf coast, Pacific NW, FL Everglades",
           "image": {
-            "nasaImgUrl": "https://images-assets.nasa.gov/image/KSC-04pd1634/KSC-04pd1634~orig.jpg",
             "nasaImgAlt": "Pristine sand dunes near the launch pads at Kennedy Space Center in Florida. (Photography courtesy NASA Images)",
-            "nasaImg": {
+            "gatsbyImg": {
               "childImageSharp": {
                 "gatsbyImageData": {
                   "layout": "fullWidth",
@@ -176,9 +173,8 @@
           "shortname": "mountains",
           "example": "Rockies, Andes, Alps",
           "image": {
-            "nasaImgUrl": "https://images-assets.nasa.gov/image/ED04-0056-099/ED04-0056-099~orig.jpg",
             "nasaImgAlt": "The Cuernos del Paine mountains in Torres del Paine National Park, Chile, during NASA's AirSAR 2004 campaign. (Photography courtesy NASA Images)",
-            "nasaImg": {
+            "gatsbyImg": {
               "childImageSharp": {
                 "gatsbyImageData": {
                   "layout": "fullWidth",
@@ -211,9 +207,8 @@
           "shortname": "island",
           "example": "Puerto Rico, St Croix, Hawaii",
           "image": {
-            "nasaImgUrl": "https://climate.nasa.gov/system/resources/detail_files/218_PIA21166_hires-768px-v2.jpg",
             "nasaImgAlt": "The Republic of Maldives with its twenty-six atolls, and 1192 coral islands, with an average ground elevation of 1.5 meters (about 5 feet). (Photography courtesy NASA/Climate)",
-            "nasaImg": {
+            "gatsbyImg": {
               "childImageSharp": {
                 "gatsbyImageData": {
                   "layout": "fullWidth",
@@ -246,9 +241,8 @@
           "shortname": "desert",
           "example": "Sahara, Sonoran regions of SW US",
           "image": {
-            "nasaImgUrl": "https://earthobservatory.nasa.gov/blogs/fromthefield/wp-content/uploads/sites/2/2018/01/desert-plant-and-lidar.jpg",
             "nasaImgAlt": "The lidar on its tripod. (Photography courtesy NASA/GSFC)",
-            "nasaImg": {
+            "gatsbyImg": {
               "childImageSharp": {
                 "gatsbyImageData": {
                   "layout": "fullWidth",
@@ -281,9 +275,8 @@
           "shortname": "forest",
           "example": "Pisgah Forest (NC), Bankhead Forest (AL)",
           "image": {
-            "nasaImgUrl": "https://earthobservatory.nasa.gov/ContentFeature/ForestCarbon/images/gabon_forest.jpg",
             "nasaImgAlt": "Tropical forests, such as those in Gabon, Africa, are an important reservoir of carbon. (Photography courtesy Sassan Saatchi, NASA/JPL-Caltech.)",
-            "nasaImg": {
+            "gatsbyImg": {
               "childImageSharp": {
                 "gatsbyImageData": {
                   "layout": "fullWidth",
@@ -316,9 +309,8 @@
           "shortname": "urban",
           "example": "Huntsville, New York City",
           "image": {
-            "nasaImgUrl": "https://eoimages.gsfc.nasa.gov/images/imagerecords/83000/83828/ISS039-E-018538_lrg.jpg",
             "nasaImgAlt": "The narrow island of Manhattan, located between the Hudson River and the East River. (Photography courtesy NASA/GSFC)",
-            "nasaImg": {
+            "gatsbyImg": {
               "childImageSharp": {
                 "gatsbyImageData": {
                   "layout": "fullWidth",
@@ -351,9 +343,8 @@
           "shortname": "agricultural",
           "example": "corn fields in Iowa",
           "image": {
-            "nasaImgUrl": "https://eoimages.gsfc.nasa.gov/images/imagerecords/5000/5772/kansas_AST_2001175_lrg.jpg",
             "nasaImgAlt": "Variegated green crop circles cover what was once shortgrass prairie in southwestern Kansas. (Photography courtesy NASA/GSFC)",
-            "nasaImg": {
+            "gatsbyImg": {
               "childImageSharp": {
                 "gatsbyImageData": {
                   "layout": "fullWidth",
@@ -386,9 +377,8 @@
           "shortname": "equatorial",
           "example": "Singapore, Indonesia, portions of central Africa",
           "image": {
-            "nasaImgUrl": "https://images-assets.nasa.gov/image/sts054-95-042/sts054-95-042~orig.jpg",
             "nasaImgAlt": "Equatorial Wave Line, Pacific Ocean. (Photography courtesy NASA Images)",
-            "nasaImg": {
+            "gatsbyImg": {
               "childImageSharp": {
                 "gatsbyImageData": {
                   "layout": "fullWidth",
@@ -421,9 +411,8 @@
           "shortname": "tropical",
           "example": "Caribbean Sea, most of Central America, portions of South America, Indonesia, Philippines",
           "image": {
-            "nasaImgUrl": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e001630/GSFC_20171208_Archive_e001630~orig.jpg",
             "nasaImgAlt": "An archipelago in the Andaman Sea surrounded by extensive coral reefs (Photography courtesy NASA/GSFC)",
-            "nasaImg": {
+            "gatsbyImg": {
               "childImageSharp": {
                 "gatsbyImageData": {
                   "layout": "fullWidth",
@@ -456,9 +445,8 @@
           "shortname": "mid-latitude",
           "example": "most of the contiguous US, Europe and extreme northern Africa",
           "image": {
-            "nasaImgUrl": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e000236/GSFC_20171208_Archive_e000236~orig.jpg",
             "nasaImgAlt": "Yosemite Valley (Photography courtesy NASA/GSFC)",
-            "nasaImg": {
+            "gatsbyImg": {
               "childImageSharp": {
                 "gatsbyImageData": {
                   "layout": "fullWidth",
@@ -491,9 +479,8 @@
           "shortname": "polar",
           "example": "Antarctica; portions of AK, Canada",
           "image": {
-            "nasaImgUrl": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e001793/GSFC_20171208_Archive_e001793~orig.jpg",
             "nasaImgAlt": "A NASA scientific balloon awaits launch in McMurdo, Antarctica. (Photography courtesy NASA/GSFC)",
-            "nasaImg": {
+            "gatsbyImg": {
               "childImageSharp": {
                 "gatsbyImageData": {
                   "layout": "fullWidth",
@@ -526,9 +513,8 @@
           "shortname": "sea ice",
           "example": "Greenland's periphery",
           "image": {
-            "nasaImgUrl": "https://eoimages.gsfc.nasa.gov/images/imagerecords/146000/146974/greenlandseaice_amo_2020184_lrg.jpg",
             "nasaImgAlt": "Sea ice hugging the coast of East Greenland. (Photography courtesy NASA/GSFC)",
-            "nasaImg": {
+            "gatsbyImg": {
               "childImageSharp": {
                 "gatsbyImageData": {
                   "layout": "fullWidth",
@@ -561,9 +547,8 @@
           "shortname": "coral",
           "example": "NE coast of Queensland, Australia",
           "image": {
-            "nasaImgUrl": "https://eoimages.gsfc.nasa.gov/images/imagerecords/88000/88109/iss045e056257_lrg.jpg",
             "nasaImgAlt": "Great Barrier Reef near Whitsunday Islands. (Photography courtesy NASA/GSFC)",
-            "nasaImg": {
+            "gatsbyImg": {
               "childImageSharp": {
                 "gatsbyImageData": {
                   "layout": "fullWidth",
@@ -596,9 +581,8 @@
           "shortname": "rainforest",
           "example": "Olympic Pennisula, Amazon Rainforest",
           "image": {
-            "nasaImgUrl": "https://images-assets.nasa.gov/image/ED04-0056-057/ED04-0056-057~orig.jpg",
             "nasaImgAlt": "A stream in the La Selva region of the Costa Rican rain forest, taken during NASA's AirSAR 2004 campaign. (Photography courtesy NASA Images)",
-            "nasaImg": {
+            "gatsbyImg": {
               "childImageSharp": {
                 "gatsbyImageData": {
                   "layout": "fullWidth",
@@ -857,7 +841,7 @@
     },
     "platformPlaceholder": {
       "nasaImgAlt": "NASA’s ER-2 (Photography courtesy NASA Images)",
-      "nasaImg": {
+      "gatsbyImg": {
         "childImageSharp": {
           "gatsbyImageData": {
             "layout": "fullWidth",

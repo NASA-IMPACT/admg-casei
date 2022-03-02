@@ -1,65 +1,88 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { graphql, Link } from "gatsby"
+import styled from "styled-components"
 
-import {
-  Section,
-  SectionHeader,
-  SectionContent,
-  ContentGroup,
-} from "../../components/layout"
+import { Section, SectionHeader, SectionContent } from "../../components/layout"
 import Label from "../../components/label"
 import Chip from "../../components/chip"
 import FocusAreaGallery from "../../components/focus-area-gallery"
+import Button from "../../components/button"
 
-const FocusSection = ({ id, focus, geophysical, focusPhenomena }) => (
+const FocusContent = styled.div`
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+`
+
+const FocusSection = ({ id, focus, geophysical, focusPhenomena, missions }) => (
   <Section id={id}>
     <SectionHeader headline="Focus" id={id} />
-    <SectionContent withBackground>
-      <ContentGroup>
-        <div data-cy="focus-content">
-          <Label showBorder id="focus-content">
-            Focus Area
-          </Label>
-          <FocusAreaGallery focusAreas={focus} size="small" isCompact />
-        </div>
-        <div data-cy="focus-content">
-          <Label showBorder id="focus-content">
-            {`Geophysical Concept${geophysical.length > 1 ? "s" : ""}`}
-          </Label>
+    <SectionContent
+      css={`
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 3rem 1rem;
+      `}
+    >
+      <div data-cy="focus-content">
+        <Label showBorder id="focus-content">
+          Focus Area
+        </Label>
+        <FocusAreaGallery focusAreas={focus} size="small" isCompact />
+      </div>
+
+      <div data-cy="focus-content">
+        <Label showBorder id="focus-content">
+          {`Geophysical Concept${geophysical.length > 1 ? "s" : ""}`}
+        </Label>
+        <FocusContent>
           {geophysical.map(concept => (
-            <React.Fragment key={concept.id}>
+            <Button key={concept.id} as="div" isSecondary>
               <Link
                 to="/explore/campaigns"
                 state={{ selectedFilterId: concept.id }} // Pass state as props to the linked page
-                data-cy="geophysical-concept"
-                key={concept.id}
+                data-cy="geophysical-concept-link"
               >
-                <Chip
-                  id="geophysical-concept"
-                  label={concept.longname}
-                  isDark
-                  isInline
-                />
+                {concept.longname}
               </Link>
-            </React.Fragment>
+            </Button>
           ))}
-        </div>
-        <div data-cy="focus-content">
-          <Label showBorder id="focus-content">
-            Focus Phenomena
-          </Label>
-          {focusPhenomena.split(",").map(phenom => (
+        </FocusContent>
+      </div>
+
+      <div data-cy="focus-content">
+        <Label showBorder id="focus-content">
+          Focus Phenomena
+        </Label>
+        <FocusContent>
+          {focusPhenomena.map(phenom => (
             <Chip
               key={phenom}
               id="focus-phenomena"
               label={phenom.toUpperCase()}
-              isDark
               isInline
             />
           ))}
-        </div>
-      </ContentGroup>
+        </FocusContent>
+      </div>
+
+      <div data-cy="focus-content">
+        <Label showBorder id="focus-content">
+          Supported NASA Missions
+        </Label>
+        <FocusContent>
+          {missions.map(mission => (
+            <Chip
+              key={mission}
+              id="focus-mission"
+              label={mission.toUpperCase()}
+              isInline
+            />
+          ))}
+        </FocusContent>
+      </div>
     </SectionContent>
   </Section>
 )
@@ -76,6 +99,7 @@ export const focus = graphql`
       longname: long_name
     }
     focusPhenomena: focus_phenomena
+    missions: nasa_missions
   }
 `
 
@@ -94,7 +118,8 @@ FocusSection.propTypes = {
       longname: PropTypes.string.isRequired,
     })
   ).isRequired,
-  focusPhenomena: PropTypes.string.isRequired,
+  focusPhenomena: PropTypes.arrayOf(PropTypes.string).isRequired,
+  missions: PropTypes.arrayOf(PropTypes.string).isRequired,
 }
 
 export default FocusSection

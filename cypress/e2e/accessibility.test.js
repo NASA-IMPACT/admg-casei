@@ -22,7 +22,7 @@ function terminalLog(violations) {
 }
 
 describe("Accessibility tests", () => {
-  it("Has no detectable accessibility violations on load", () => {
+  it.skip("Has no detectable accessibility violations on load", () => {
     cy.visit("/")
 
     cy.get("h1").should("exist")
@@ -106,6 +106,16 @@ describe("Accessibility tests", () => {
     cy.visit("/about")
 
     cy.get("h1").should("contain.text", "NASA")
+
+    cy.injectAxe()
+
+    cy.checkA11y(null, null, terminalLog)
+  })
+
+  it("Navigates to page /faq and checks for accessibility violations", () => {
+    cy.visit("/faq")
+
+    cy.get("h1").should("contain.text", "FAQs")
 
     cy.injectAxe()
 

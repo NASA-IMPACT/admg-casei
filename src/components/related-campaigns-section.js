@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useRef } from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import Carousel from "nuka-carousel"
@@ -8,14 +8,20 @@ import CampaignCard from "./cards/campaign-card"
 import { controlButtonLRStyle } from "./carousel-styles"
 import { NEGATIVE } from "../utils/constants"
 import { colors } from "../theme"
+import { useContainerDimensions } from "../utils/use-container-dimensions"
 
 const RelatedCampaignsSection = ({ id, campaigns }) => {
+  const CARD_WIDTH = 250
+  const container = useRef(null)
+  const { width } = useContainerDimensions(container)
+  const columns = Math.floor(width / CARD_WIDTH) || 1
+
   return (
     <Section id={id}>
       <SectionHeader headline="Related Campaigns" id={id} />
       <SectionContent>
         {campaigns.length > 0 ? (
-          <div data-cy="related-campaign-carousel">
+          <div data-cy="related-campaign-carousel" ref={container}>
             <Carousel
               defaultControlsConfig={{
                 nextButtonText: `⦊`,
@@ -38,13 +44,13 @@ const RelatedCampaignsSection = ({ id, campaigns }) => {
                 }
               }}
               heightMode="max"
-              slidesToShow={4}
+              slidesToShow={columns}
             >
               {campaigns.map(campaign => (
                 <div
                   key={campaign.id}
                   css={`
-                    width: 16rem;
+                    width: ${CARD_WIDTH}px;
                     height: 100%;
                   `}
                   data-cy="related-campaign"

@@ -7,7 +7,6 @@ import SEO from "../../components/seo"
 import CampaignHero from "./hero"
 import InpageNav from "../../components/inpage-nav"
 import OverviewSection from "./overview-section"
-import MissionSection from "./mission-section"
 import FocusSection from "./focus-section"
 import PlatformSection from "./platform-section"
 import TimelineSection from "./timeline-section"
@@ -16,7 +15,7 @@ import ProgramInfoSection from "./program-info-section"
 // import OtherResourcesSection from "./other-resources-section"
 import MaintenanceSection from "../../components/maintenance-section"
 
-const CampaignTemplate = ({ data: { campaign, allCampaignWebsite }, path }) => {
+const CampaignTemplate = ({ data: { campaign }, path }) => {
   const [isClient, setIsClient] = useState(false)
   useEffect(() => {
     // useEffect only runs client-side after rehyration
@@ -38,14 +37,7 @@ const CampaignTemplate = ({ data: { campaign, allCampaignWebsite }, path }) => {
         doi: campaign.doi,
         notesPublic: campaign.notesPublic,
         repositories: campaign.repositories,
-        websites: allCampaignWebsite.nodes,
-      },
-    },
-    missions: {
-      nav: "Missions",
-      component: MissionSection,
-      props: {
-        missions: campaign.missions.split(",").filter(x => x),
+        websites: campaign.websites,
       },
     },
     focus: {
@@ -54,7 +46,8 @@ const CampaignTemplate = ({ data: { campaign, allCampaignWebsite }, path }) => {
       props: {
         focus: campaign.focus,
         geophysical: campaign.geophysical,
-        focusPhenomena: campaign.focusPhenomena,
+        focusPhenomena: campaign.focusPhenomena.split(","),
+        missions: campaign.missions.split(",").filter(x => x),
       },
     },
     platform: {
@@ -150,7 +143,6 @@ export const query = graphql`
     campaign: campaign(id: { eq: $slug }) {
       ...heroFields
       ...overviewFields
-      ...missionFields
       ...focusFields
       ...platformSectionFields
       ...deploymentFields
@@ -177,15 +169,6 @@ export const query = graphql`
       }
       ...fundingFields
       uuid
-    }
-    allCampaignWebsite(filter: { campaign: { eq: $slug } }) {
-      nodes {
-        priority: order_priority
-        website {
-          url
-          title
-        }
-      }
     }
   }
 `
@@ -328,17 +311,6 @@ CampaignTemplate.propTypes = {
       partnerWebsite: PropTypes.string,
       resources: PropTypes.string,
       uuid: PropTypes.string.isRequired,
-    }).isRequired,
-    allCampaignWebsite: PropTypes.shape({
-      nodes: PropTypes.arrayOf(
-        PropTypes.shape({
-          priority: PropTypes.number.isRequired,
-          website: PropTypes.shape({
-            title: PropTypes.string.isRequired,
-            url: PropTypes.string.isRequired,
-          }).isRequired,
-        }).isRequired
-      ).isRequired,
     }).isRequired,
   }).isRequired,
   path: PropTypes.string.isRequired,

@@ -32,7 +32,7 @@ const Home = ({ data }) => {
         description={data.site.siteMetadata.description}
         cta="Explore CASEI"
         backgroundImage={data.heroImage}
-        textToImageRatio={[6, 6]}
+        textToImageRatio={[5, 7]}
         id="home"
       />
 
@@ -162,7 +162,7 @@ export const query = graphql`
     }
     heroImage: nasaImagesJson(shortname: { eq: "Home" }) {
       nasaImgAlt
-      nasaImg {
+      gatsbyImg {
         childImageSharp {
           gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
         }
@@ -180,9 +180,8 @@ export const query = graphql`
         shortname: short_name
         example
         image {
-          nasaImgUrl
           nasaImgAlt
-          nasaImg {
+          gatsbyImg {
             childImageSharp {
               gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
             }
@@ -207,7 +206,7 @@ export const query = graphql`
       shortname: { eq: "placeholder-platform" }
     ) {
       nasaImgAlt
-      nasaImg {
+      gatsbyImg {
         childImageSharp {
           gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
         }
@@ -227,7 +226,7 @@ Home.propTypes = {
     }),
     heroImage: PropTypes.shape({
       nasaImgAlt: PropTypes.string.isRequired,
-      nasaImg: PropTypes.shape({
+      gatsbyImg: PropTypes.shape({
         childImageSharp: PropTypes.object.isRequired,
       }).isRequired,
     }).isRequired,
@@ -271,7 +270,7 @@ Home.propTypes = {
     }),
     platformPlaceholder: PropTypes.shape({
       nasaImgAlt: PropTypes.string.isRequired,
-      nasaImg: PropTypes.shape({
+      gatsbyImg: PropTypes.shape({
         childImageSharp: PropTypes.object.isRequired,
       }).isRequired,
     }).isRequired,

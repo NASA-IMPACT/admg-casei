@@ -15,7 +15,7 @@ const Clickable = styled.button`
 `
 
 const Button = React.forwardRef(
-  ({ children, action, mode = NEGATIVE, isSecondary }, ref) => {
+  ({ children, action, mode = NEGATIVE, isSecondary, as }, ref) => {
     // flip mode for primary buttons
     const overrideMode = isSecondary
       ? mode
@@ -25,6 +25,7 @@ const Button = React.forwardRef(
 
     return (
       <Clickable
+        as={as}
         ref={ref}
         onClick={action}
         css={`
@@ -53,10 +54,11 @@ const Button = React.forwardRef(
 )
 
 Button.propTypes = {
-  children: PropTypes.string.isRequired,
-  action: PropTypes.func.isRequired,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
+  action: PropTypes.func,
   mode: PropTypes.oneOf([POSITIVE, NEGATIVE]),
   isSecondary: PropTypes.bool,
+  as: PropTypes.string,
 }
 
 // https://reactjs.org/docs/forwarding-refs.html#displaying-a-custom-name-in-devtools

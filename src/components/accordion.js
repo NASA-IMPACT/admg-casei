@@ -16,7 +16,7 @@ import { ChevronIcon, ArrowIcon } from "../icons"
 import { NEGATIVE } from "../utils/constants"
 import { colors } from "../theme"
 
-const RotatingContainer = styled.div`
+export const RotatingContainer = styled.div`
   transition: transform 240ms ease-in-out;
   transform: ${({ isExpanded }) =>
     isExpanded ? "rotate(180deg)" : "rotate(0deg)"};
@@ -90,7 +90,7 @@ export default function Accordion({ folds, id }) {
               `}
               data-cy={`${id}-accordion-content`}
             >
-              {fold.image && (
+              {fold.image && fold.image.gatsbyImg && (
                 <GatsbyImage
                   image={fold.image.gatsbyImg.childImageSharp.gatsbyImageData}
                   css={`

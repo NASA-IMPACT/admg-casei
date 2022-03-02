@@ -193,7 +193,7 @@ export default function Hero({
         )}
       </div>
 
-      {backgroundImage && (
+      {backgroundImage && backgroundImage.gatsbyImg && (
         <div
           css={`
             grid-row: 1 / span 1;
@@ -202,7 +202,7 @@ export default function Hero({
           `}
         >
           <GatsbyImage
-            image={backgroundImage.nasaImg.childImageSharp.gatsbyImageData}
+            image={backgroundImage.gatsbyImg.childImageSharp.gatsbyImageData}
             alt={backgroundImage.nasaImgAlt}
             objectPosition={"center top"}
             css={`
@@ -229,7 +229,7 @@ Hero.propTypes = {
   image: PropTypes.node,
   backgroundImage: PropTypes.shape({
     nasaImgAlt: PropTypes.string.isRequired,
-    nasaImg: PropTypes.shape({
+    gatsbyImg: PropTypes.shape({
       childImageSharp: PropTypes.object.isRequired,
     }).isRequired,
   }),

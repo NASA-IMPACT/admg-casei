@@ -2,7 +2,7 @@
 
 exports[`Chip renders with action 1`] = `
 <div
-  className="chip___StyledDiv-sc-4ga8fx-0 dJOgjB"
+  className="chip___StyledDiv-sc-4ga8fx-0 hfoZFz"
   data-cy="filter-chip"
 >
   <small
@@ -11,7 +11,7 @@ exports[`Chip renders with action 1`] = `
     Weather
   </small>
   <button
-    className="button__Clickable-sc-1yw7vig-0 button___StyledClickable2-sc-1yw7vig-1 fuGm gyOxkm"
+    className="button__Clickable-sc-1yw7vig-0 button___StyledClickable2-sc-1yw7vig-1 doRZJc cCENbI"
     data-cy="remove-filter"
     onClick={[Function]}
     type="button"
@@ -38,7 +38,7 @@ exports[`Chip renders with action 1`] = `
 
 exports[`Chip renders without action 1`] = `
 <div
-  className="chip___StyledDiv-sc-4ga8fx-0 dJOgjB"
+  className="chip___StyledDiv-sc-4ga8fx-0 hfoZFz"
   data-cy="filter-chip"
 >
   <small
