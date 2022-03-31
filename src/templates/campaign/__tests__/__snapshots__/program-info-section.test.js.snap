@@ -204,7 +204,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
             className="content-item___StyledLabel-sc-goubn5-0 jtQYbG"
             data-cy="program-info-content-label"
           >
-            Principle Investigator(s)
+            Principal Investigator(s)
           </label>
           <p
             data-cy="program-info-content-text"
@@ -384,7 +384,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
             className="content-item___StyledLabel-sc-goubn5-0 jtQYbG"
             data-cy="program-info-content-label"
           >
-            Principle Investigator(s)
+            Principal Investigator(s)
           </label>
           <p
             data-cy="program-info-content-text"
