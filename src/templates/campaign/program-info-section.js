@@ -34,7 +34,7 @@ const ProgramInfoSection = ({
     { label: "Funding Agency", info: fundingAgency },
     { label: "Funding Program", info: fundingProgram },
     { label: "Funding Program Lead", info: programLead },
-    { label: "Principle Investigator(s)", info: leadInvestigator },
+    { label: "Principal Investigator(s)", info: leadInvestigator },
     { label: "Data Manager / Technical Contact", info: dataManager },
     {
       label: "NASA Data Repository",
