@@ -28,7 +28,7 @@ export default function ContentItem({
           <ExternalLink id={id} label={info} url={link} />
         </p>
       ) : (
-        <p data-cy={`${id}-text`}>{info || "Currently unavailable"}</p>
+        <div data-cy={`${id}-text`}>{info || "Currently unavailable"}</div>
       )}
     </div>
   )
@@ -37,7 +37,7 @@ export default function ContentItem({
 ContentItem.propTypes = {
   id: PropTypes.string,
   label: PropTypes.string.isRequired,
-  info: PropTypes.string,
+  info: PropTypes.oneOf(PropTypes.string, PropTypes.array),
   link: PropTypes.string,
   mode: PropTypes.oneOf([POSITIVE, NEGATIVE]),
 }

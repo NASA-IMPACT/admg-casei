@@ -55,7 +55,7 @@ export default function CarouselAccordionCombo({
                 inline: "nearest",
               })
             }}
-            renderBottomCenterControls={false}
+            renderBottomCenterControls={null}
             defaultControlsConfig={{
               nextButtonText: `⦊`,
               nextButtonStyle: controlButtonLRStyle,

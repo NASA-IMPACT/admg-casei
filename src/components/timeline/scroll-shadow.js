@@ -65,7 +65,7 @@ export const ScrollShadow = ({ children, scrollRef }) => {
     return () => {
       node.removeEventListener("scroll", onScroll)
     }
-  }, [])
+  }, [scrollRef])
 
   return (
     <HorizontalShadow showEnd={showEnd} showStart={showStart}>
@@ -76,5 +76,10 @@ export const ScrollShadow = ({ children, scrollRef }) => {
 
 ScrollShadow.propTypes = {
   children: PropTypes.element,
-  scrollRef: PropTypes.ref,
+  scrollRef: PropTypes.oneOfType([
+    // Either a function
+    PropTypes.func,
+    // Or the instance of a DOM native element (see the note about SSR)
+    PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+  ]),
 }

@@ -47,9 +47,7 @@ export default function Entities({ id, campaigns, platforms }) {
                   `}
                 >
                   <div data-cy="related-platform">
-                    <Link to={`/platform/${platform.shortname}`}>
-                      <PlatformCard shortname={platform.shortname} />
-                    </Link>
+                    <PlatformCard shortname={platform.shortname} />
                   </div>
                 </td>
                 <td
