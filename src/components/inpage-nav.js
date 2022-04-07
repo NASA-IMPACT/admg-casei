@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React, { useContext, useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
@@ -36,12 +36,68 @@ InpageLink.propTypes = {
 const InpageNav = ({ shortname, items }) => {
   const { isFBMLoaded } = useContext(FBMContext)
 
+  const node = React.createRef()
+  const scrollDown = "scroll-down"
+  const scrollUp = "scroll-up"
+  const [scrollDirection, setScrollDirection] = useState(null)
+  const [lastScroll, setLastScroll] = useState(0)
+  const [mainHeaderHeight, setMainHeaderHeight] = useState(null)
+  const [startingPosition, setStartingPosition] = useState(null)
+  const [offset, setOffset] = useState(0)
+
+  useEffect(() => {
+    if (startingPosition === null || mainHeaderHeight === null) {
+      windowResized()
+      // scrollHandler(scrollUp)
+      // setScrollDirection(scrollUp)
+    }
+
+    window.addEventListener("scroll", scrollHandler)
+    window.addEventListener("resize", windowResized)
+    return () => {
+      window.removeEventListener("scroll", scrollHandler)
+      window.removeEventListener("resize", windowResized)
+    }
+  })
+
+  const windowResized = () => {
+    setStartingPosition(node.current.offsetTop)
+    setMainHeaderHeight(document.getElementById("main-header").clientHeight)
+  }
+
+  const scrollHandler = () => {
+    const currentScroll = window.scrollY
+    // if (scrollDirection === null) {
+    //   setScrollDirection(scrollUp)
+    // } else {
+    // if (scrollDir !== null) {
+    //   setScrollDirection(scrollDir)
+    // } else {
+    if (currentScroll > lastScroll && currentScroll > 250) {
+      setScrollDirection(scrollDown)
+    } else if (currentScroll < lastScroll) {
+      setScrollDirection(scrollUp)
+    }
+    // }
+    // }
+    setLastScroll(currentScroll)
+    setOffset(
+      scrollDirection === scrollUp &&
+        lastScroll >= startingPosition - mainHeaderHeight
+        ? mainHeaderHeight
+        : 0
+    )
+  }
+
   return (
     <div
+      ref={node}
       css={`
         position: sticky;
         top: 0;
         z-index: 1000;
+        transition: top 0.2s;
+        top: ${offset}px;
       `}
       data-cy="inpage-nav"
     >

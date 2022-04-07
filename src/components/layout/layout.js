@@ -29,7 +29,7 @@ const Container = styled.div`
   min-width: 768px;
 `
 
-const Layout = ({ children, isHeaderFixed }) => {
+const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -43,20 +43,12 @@ const Layout = ({ children, isHeaderFixed }) => {
 
   return (
     <Container id="top" data-cy="page">
-      <Header
-        shortname={data.site.siteMetadata.shortname}
-        mode={POSITIVE}
-        isHeaderFixed={isHeaderFixed}
-      >
+      <Header shortname={data.site.siteMetadata.shortname} mode={POSITIVE}>
         <Nav mode={POSITIVE} />
       </Header>
-      <main
-        css={`
-          flex-grow: 1;
-        `}
-      >
-        {children}
-      </main>
+
+      {children}
+
       <Footer shortname={data.site.siteMetadata.shortname} />
     </Container>
   )
@@ -64,10 +56,6 @@ const Layout = ({ children, isHeaderFixed }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  isHeaderFixed: PropTypes.bool,
-}
-Layout.defaultProps = {
-  isHeaderFixed: false,
 }
 
 export default Layout

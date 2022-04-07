@@ -43,7 +43,7 @@ export default function PlatformTemplate({ data: { platform }, path }) {
   }
 
   return (
-    <Layout isHeaderFixed>
+    <Layout>
       <SEO title={platform.shortname} lang="en" />
 
       <PlatformHero
