@@ -70,25 +70,21 @@ const OverviewSection = ({
           <ContentItem
             id="overview-content"
             label="Study dates"
-            info={
-              <p>
-                {startdate} — {enddate || "ongoing"}
-              </p>
-            }
+            info={`${startdate} — ${enddate || "ongoing"}`}
             mode={POSITIVE}
           />
           <hr />
           <ContentItem
             id="overview-content"
             label="Region"
-            info={<p>{region}</p>}
+            info={region}
             mode={POSITIVE}
           />
 
           <ContentItem
             id="overview-content"
             label="Season of Study"
-            info={<p>{seasonListing}</p>}
+            info={seasonListing}
             mode={POSITIVE}
           />
           <hr />
