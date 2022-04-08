@@ -69,7 +69,7 @@ const CampaignHero = ({
         }
       `}
     >
-      <Map height={height}>
+      <Map height={height ? height : "inherit"}>
         <GeoJsonSource geojson={geojson} id="campaign">
           <BboxLayer id="campaign" bbox={bbox} />
         </GeoJsonSource>
