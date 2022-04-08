@@ -102,10 +102,7 @@ describe("Platform", () => {
 
     cy.get("[data-cy=campaign-carousel]").find(".slider").should("exist")
 
-    cy.get("[data-cy=carousel-campaign-card-link]")
-      .should("exist")
-      .first()
-      .click()
+    cy.get("[data-cy=campaigns-card]").should("exist").first().click()
     cy.url().should("include", "campaign")
     cy.go("back")
 
