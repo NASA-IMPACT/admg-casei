@@ -84,10 +84,11 @@ module.exports = {
           "img-src": "data: 'self' blob:",
           "frame-src": "*.earthdata.nasa.gov",
           "worker-src": "'self' blob:",
+          "child-src": "'self' blob:",
           "connect-src":
             process.env.NODE_ENV === "development"
-              ? "'self' https://api.mapbox.com https://events.mapbox.com http://localhost:* ws://localhost:*"
-              : "'self' https://api.mapbox.com https://events.mapbox.com",
+              ? "'self' https://*.tiles.mapbox.com https://api.mapbox.com https://events.mapbox.com http://localhost:* ws://localhost:*"
+              : "'self' https://*.tiles.mapbox.com https://api.mapbox.com https://events.mapbox.com",
         },
       },
     },
