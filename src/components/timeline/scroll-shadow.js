@@ -77,7 +77,9 @@ export const ScrollShadow = ({ children, scrollRef }) => {
 ScrollShadow.propTypes = {
   children: PropTypes.element,
   scrollRef: PropTypes.oneOfType([
+    // Either a function
     PropTypes.func,
+    // Or the instance of a DOM native element
     PropTypes.shape({ current: PropTypes.any }),
   ]),
 }
