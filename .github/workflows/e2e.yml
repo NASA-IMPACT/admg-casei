@@ -5,6 +5,10 @@ on:
     branches:
       - develop
       - production
+  push:
+    branches:
+      - develop
+      - production
 
 jobs:
   build:
