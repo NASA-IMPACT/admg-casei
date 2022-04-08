@@ -37,7 +37,7 @@ export default function ContentItem({
 ContentItem.propTypes = {
   id: PropTypes.string,
   label: PropTypes.string.isRequired,
-  info: PropTypes.oneOf(PropTypes.string, PropTypes.array),
+  info: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
   link: PropTypes.string,
   mode: PropTypes.oneOf([POSITIVE, NEGATIVE]),
 }
