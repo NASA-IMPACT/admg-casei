@@ -1,7 +1,6 @@
 import React, { useState, useRef } from "react"
 import PropTypes from "prop-types"
 
-import { Link } from "gatsby"
 import Carousel from "nuka-carousel"
 
 import Button from "./button"
@@ -55,7 +54,7 @@ export default function CarouselAccordionCombo({
                 inline: "nearest",
               })
             }}
-            renderBottomCenterControls={false}
+            renderBottomCenterControls={null}
             defaultControlsConfig={{
               nextButtonText: `⦊`,
               nextButtonStyle: controlButtonLRStyle,
@@ -98,15 +97,10 @@ export default function CarouselAccordionCombo({
                   }
                 `}
               >
-                <Link
-                  to={`/${id}/${carouselItem.shortname}`}
-                  data-cy={`carousel-${id}-card-link`}
-                >
-                  <CategoryCard
-                    shortname={carouselItem.shortname}
-                    mode={POSITIVE}
-                  />
-                </Link>
+                <CategoryCard
+                  shortname={carouselItem.shortname}
+                  mode={POSITIVE}
+                />
 
                 <Accordion folds={folds[carouselItem.id]} id="instrument" />
               </div>

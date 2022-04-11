@@ -38,9 +38,7 @@
           "shortname": "ATR-42",
           "longname": "French ATR-42",
           "id": "d16ea245-d096-4d5c-bb28-96801b259a69",
-          "collectionPeriodIds": [
-            "a42338b5-264b-441d-bc0e-60f2afe5c87b"
-          ],
+          "collectionPeriodIds": ["a42338b5-264b-441d-bc0e-60f2afe5c87b"],
           "campaigns": [
             {
               "id": "17108795-e9cb-4d5e-b9c5-34995da998e6"
@@ -113,9 +111,7 @@
           "shortname": "Aerosonde",
           "longname": "Aerosonde Small Unmanned Aircraft System",
           "id": "cce7f5cc-d752-4543-9076-027826162509",
-          "collectionPeriodIds": [
-            "54b7c101-e210-4a57-bddd-dcf919f4582f"
-          ],
+          "collectionPeriodIds": ["54b7c101-e210-4a57-bddd-dcf919f4582f"],
           "campaigns": [
             {
               "id": "92d73a00-6278-4905-9769-ecffa4208c61"
@@ -200,9 +196,7 @@
           "shortname": "ALTUS II",
           "longname": "ALTUS II",
           "id": "5de87b18-06c9-4746-b7be-4345ba030820",
-          "collectionPeriodIds": [
-            "46551b9c-3e71-4993-8ed9-d00dc9ca0e1f"
-          ],
+          "collectionPeriodIds": ["46551b9c-3e71-4993-8ed9-d00dc9ca0e1f"],
           "campaigns": [
             {
               "id": "30ba471c-0844-447a-91fd-b63a2f42b715"
@@ -245,9 +239,7 @@
           "shortname": "ASO",
           "longname": "Airborne Snow Observatory",
           "id": "f8d5d7e5-1efe-4c49-96b4-f069caf0b38c",
-          "collectionPeriodIds": [
-            "a03fcf56-7523-4e0f-adb3-b456c16c1264"
-          ],
+          "collectionPeriodIds": ["a03fcf56-7523-4e0f-adb3-b456c16c1264"],
           "campaigns": [
             {
               "id": "2552174b-213c-4bfc-b36a-632fb16c5ec2"
@@ -417,9 +409,7 @@
           "shortname": "C-131A",
           "longname": "Convair C-131 Samaritan",
           "id": "4c473b42-8e87-43ab-9552-9b98ecb602ca",
-          "collectionPeriodIds": [
-            "e9ceba7b-307b-49c7-9e5b-6e5367d3c67f"
-          ],
+          "collectionPeriodIds": ["e9ceba7b-307b-49c7-9e5b-6e5367d3c67f"],
           "campaigns": [
             {
               "id": "e501857c-0e01-423e-9f53-de2ecd38248e"
@@ -561,9 +551,7 @@
           "shortname": "Cessna 206",
           "longname": "Cessna 206H Stationair",
           "id": "5c029c3c-4e8f-49d9-bc1a-3775e3825677",
-          "collectionPeriodIds": [
-            "11cf2739-c302-478f-8cb8-43cc81c5edb0"
-          ],
+          "collectionPeriodIds": ["11cf2739-c302-478f-8cb8-43cc81c5edb0"],
           "campaigns": [
             {
               "id": "65aa20d9-5d82-4c4f-956a-163b7b22df4a"
@@ -585,9 +573,7 @@
           "shortname": "Cessna 208B",
           "longname": "Cessna Grand Caravan 208B",
           "id": "ebb3943f-2919-43e2-ad6f-171d66deb68b",
-          "collectionPeriodIds": [
-            "a4b87af5-b9d9-4d54-b2ef-dea36f59a806"
-          ],
+          "collectionPeriodIds": ["a4b87af5-b9d9-4d54-b2ef-dea36f59a806"],
           "campaigns": [
             {
               "id": "6efd0071-17b5-4258-9352-0e7c7637ddaa"
@@ -637,9 +623,7 @@
           "shortname": "Cessna Pelican",
           "longname": "Cessna Pelican",
           "id": "5a20149d-a3ed-4676-9944-ba729beef4a5",
-          "collectionPeriodIds": [
-            "c585e42c-c3de-4145-b039-32693e17ae40"
-          ],
+          "collectionPeriodIds": ["c585e42c-c3de-4145-b039-32693e17ae40"],
           "campaigns": [
             {
               "id": "e501857c-0e01-423e-9f53-de2ecd38248e"
@@ -889,9 +873,7 @@
           "shortname": "DO128",
           "longname": "Dornier 128-6",
           "id": "bbd37eb8-5856-4590-b4e9-977812eb573b",
-          "collectionPeriodIds": [
-            "d1bb20b8-9c02-4f80-b2a6-6f7dd8bbc993"
-          ],
+          "collectionPeriodIds": ["d1bb20b8-9c02-4f80-b2a6-6f7dd8bbc993"],
           "campaigns": [
             {
               "id": "17108795-e9cb-4d5e-b9c5-34995da998e6"
@@ -943,9 +925,7 @@
           "shortname": "DO-228",
           "longname": "Dornier 228",
           "id": "c0d6d5ed-28a5-436a-994e-a0cf1381a1cf",
-          "collectionPeriodIds": [
-            "366dd7ca-1118-445f-ad3e-784ca36442e2"
-          ],
+          "collectionPeriodIds": ["366dd7ca-1118-445f-ad3e-784ca36442e2"],
           "campaigns": [
             {
               "id": "dd804086-5fe2-494f-aac3-e63b5ff342ce"
@@ -1682,9 +1662,7 @@
           "shortname": "HU-25",
           "longname": "",
           "id": "89f62a41-7bdd-420f-8e9f-2c17224842e4",
-          "collectionPeriodIds": [
-            "96da2217-b7df-4a8f-9aac-9f261d003f5d"
-          ],
+          "collectionPeriodIds": ["96da2217-b7df-4a8f-9aac-9f261d003f5d"],
           "campaigns": [
             {
               "id": "32842970-8729-4ceb-9e44-ef2baa6763aa"
@@ -1761,9 +1739,7 @@
           "shortname": "Piper Navajo",
           "longname": "",
           "id": "4953a60c-56f6-4061-94ac-98bc4266e676",
-          "collectionPeriodIds": [
-            "4da646c5-ae11-4715-a450-4916496d4bf7"
-          ],
+          "collectionPeriodIds": ["4da646c5-ae11-4715-a450-4916496d4bf7"],
           "campaigns": [
             {
               "id": "53e5198d-a468-4108-8ee2-cdae1a2e6b06"
@@ -1837,9 +1813,7 @@
           "shortname": "HOP",
           "longname": "Duke Bell 206 Helicopter",
           "id": "4a1205c4-d9a1-42b2-8746-b906f5c33770",
-          "collectionPeriodIds": [
-            "23590e0d-d230-4b90-bce9-c56661984ef3"
-          ],
+          "collectionPeriodIds": ["23590e0d-d230-4b90-bce9-c56661984ef3"],
           "campaigns": [
             {
               "id": "65aa20d9-5d82-4c4f-956a-163b7b22df4a"
@@ -1864,9 +1838,7 @@
           "shortname": "J-31",
           "longname": "Jetstream-31",
           "id": "dd5e0b45-a2a5-4017-b58c-4c198a21eb9c",
-          "collectionPeriodIds": [
-            "8ab4bf6e-e08d-4f99-9de8-0ebb66c68915"
-          ],
+          "collectionPeriodIds": ["8ab4bf6e-e08d-4f99-9de8-0ebb66c68915"],
           "campaigns": [
             {
               "id": "65aa20d9-5d82-4c4f-956a-163b7b22df4a"
@@ -2282,9 +2254,7 @@
           "shortname": "PA-34",
           "longname": "Piper PA-34 Seneca",
           "id": "6d7bd71f-21c9-4814-9a43-2bbcea5182a4",
-          "collectionPeriodIds": [
-            "a366e6da-8970-4b82-9417-d3a5133f89d2"
-          ],
+          "collectionPeriodIds": ["a366e6da-8970-4b82-9417-d3a5133f89d2"],
           "campaigns": [
             {
               "id": "1d26f72f-d9d5-45cc-b5ac-1c91ed05b76f"
@@ -2696,9 +2666,7 @@
           "shortname": "Aranda",
           "longname": "R/V Aranda",
           "id": "9d9fbc2f-8730-4578-9bed-92974bfe5a45",
-          "collectionPeriodIds": [
-            "25e0972a-54bb-4c49-97aa-07d3eb353426"
-          ],
+          "collectionPeriodIds": ["25e0972a-54bb-4c49-97aa-07d3eb353426"],
           "campaigns": [
             {
               "id": "987d7ddc-9110-4c20-b557-6585f6d53fdb"
@@ -2787,9 +2755,7 @@
           "shortname": "Le Provence",
           "longname": "Le Provence",
           "id": "14ecee34-8773-44e9-8c47-f549c10148cf",
-          "collectionPeriodIds": [
-            "bfb45eff-80ae-4756-80d5-34413ca8e9b0"
-          ],
+          "collectionPeriodIds": ["bfb45eff-80ae-4756-80d5-34413ca8e9b0"],
           "campaigns": [
             {
               "id": "17108795-e9cb-4d5e-b9c5-34995da998e6"
@@ -2811,9 +2777,7 @@
           "shortname": "Meridian",
           "longname": "S.S. Meridian",
           "id": "648d7d48-f336-4833-958a-e97ee3e559cc",
-          "collectionPeriodIds": [
-            "99bc44dd-2c2e-48b1-ac16-abff47e4b7da"
-          ],
+          "collectionPeriodIds": ["99bc44dd-2c2e-48b1-ac16-abff47e4b7da"],
           "campaigns": [
             {
               "id": "e501857c-0e01-423e-9f53-de2ecd38248e"
@@ -2835,9 +2799,7 @@
           "shortname": "MV Park City",
           "longname": "M/V Park City Ferry",
           "id": "c9a5bf90-5004-455a-aa01-b8e34efb0495",
-          "collectionPeriodIds": [
-            "95ae678b-1484-41ef-bf3e-7aa9717fe4cc"
-          ],
+          "collectionPeriodIds": ["95ae678b-1484-41ef-bf3e-7aa9717fe4cc"],
           "campaigns": [
             {
               "id": "32842970-8729-4ceb-9e44-ef2baa6763aa"
@@ -2884,9 +2846,7 @@
           "shortname": "RV 5503",
           "longname": "NOAA RV 5503",
           "id": "504dc29d-34b6-41ae-b2d1-5c9ecb7e47ac",
-          "collectionPeriodIds": [
-            "c0705f81-3417-4f26-b4a0-469d215f0b76"
-          ],
+          "collectionPeriodIds": ["c0705f81-3417-4f26-b4a0-469d215f0b76"],
           "campaigns": [
             {
               "id": "f3b2ef25-e06a-418b-9cf8-122f114d0491"
@@ -3471,9 +3431,7 @@
           "shortname": "Campaign S",
           "longname": "Campaign Field Surveys",
           "id": "a5d04a46-3228-422c-af17-a85c3f8e2577",
-          "collectionPeriodIds": [
-            "e059de56-5146-4a64-8a04-5b83f651c3d2"
-          ],
+          "collectionPeriodIds": ["e059de56-5146-4a64-8a04-5b83f651c3d2"],
           "campaigns": [
             {
               "id": "17108795-e9cb-4d5e-b9c5-34995da998e6"
@@ -4038,9 +3996,7 @@
           "shortname": "A90",
           "longname": "Beechcraft King Air A90",
           "id": "33180ac5-5f55-47f5-98aa-2d99c2574039",
-          "collectionPeriodIds": [
-            "2a3eda24-ead4-45f0-8653-61ccd75883ef"
-          ],
+          "collectionPeriodIds": ["2a3eda24-ead4-45f0-8653-61ccd75883ef"],
           "campaigns": [
             {
               "id": "c4c7b9d1-471c-4db2-af8a-3e553234280f"
@@ -4129,9 +4085,7 @@
           "shortname": "Tethys-2",
           "longname": "R/V Tethys-II",
           "id": "0b4cb4b7-203d-4702-9282-5277a549de6b",
-          "collectionPeriodIds": [
-            "ebc7c62e-b11d-4dda-99b5-09d1532c8bf8"
-          ],
+          "collectionPeriodIds": ["ebc7c62e-b11d-4dda-99b5-09d1532c8bf8"],
           "campaigns": [
             {
               "id": "17108795-e9cb-4d5e-b9c5-34995da998e6"
@@ -4153,9 +4107,7 @@
           "shortname": "Zenith",
           "longname": "M/V Zenith",
           "id": "2daf8f5f-682f-4375-a2a9-685a4194724a",
-          "collectionPeriodIds": [
-            "b6ac6e6f-89aa-464f-887f-e61081fab584"
-          ],
+          "collectionPeriodIds": ["b6ac6e6f-89aa-464f-887f-e61081fab584"],
           "campaigns": [
             {
               "id": "e501857c-0e01-423e-9f53-de2ecd38248e"
@@ -4872,9 +4824,7 @@
           "shortname": "Onnuri",
           "longname": "R/V Onnuri",
           "id": "2d7b113b-6afb-43e1-9687-3617d8145009",
-          "collectionPeriodIds": [
-            "3cb1536d-a358-44aa-8694-6e56b193107e"
-          ],
+          "collectionPeriodIds": ["3cb1536d-a358-44aa-8694-6e56b193107e"],
           "campaigns": [
             {
               "id": "dc041202-327c-4e34-9c42-423e49ca3c90"
@@ -4911,9 +4861,7 @@
           "shortname": "Hanseo King Air",
           "longname": "Hanseo King Air",
           "id": "54cd08a0-b31b-423d-a2f8-a0d638b15609",
-          "collectionPeriodIds": [
-            "47b54747-0c74-4b39-b3c7-b92ceced11f9"
-          ],
+          "collectionPeriodIds": ["47b54747-0c74-4b39-b3c7-b92ceced11f9"],
           "campaigns": [
             {
               "id": "dc041202-327c-4e34-9c42-423e49ca3c90"
@@ -4944,9 +4892,7 @@
           "shortname": "JangMok",
           "longname": "R/V JangMok",
           "id": "1cb2e40a-eb47-4c5e-9874-5f3c4042aab3",
-          "collectionPeriodIds": [
-            "576adf2c-2af7-440a-9b5b-ee0031a72d74"
-          ],
+          "collectionPeriodIds": ["576adf2c-2af7-440a-9b5b-ee0031a72d74"],
           "campaigns": [
             {
               "id": "dc041202-327c-4e34-9c42-423e49ca3c90"
@@ -4968,9 +4914,7 @@
           "shortname": "KMA King Air",
           "longname": "Korean Meteorological Administration (KMA) King Air 350",
           "id": "5e3415d2-abbb-4d30-81e9-62b02963412f",
-          "collectionPeriodIds": [
-            "fdaa2dc6-e1c6-4e22-a763-7f1639476a94"
-          ],
+          "collectionPeriodIds": ["fdaa2dc6-e1c6-4e22-a763-7f1639476a94"],
           "campaigns": [
             {
               "id": "dc041202-327c-4e34-9c42-423e49ca3c90"
@@ -5040,9 +4984,7 @@
           "shortname": "SeaGlider",
           "longname": "AUV SeaGlider",
           "id": "3a596083-2a6f-413a-98b8-b4e75afd0815",
-          "collectionPeriodIds": [
-            "05f75952-d275-465c-830f-631cfe8ef87c"
-          ],
+          "collectionPeriodIds": ["05f75952-d275-465c-830f-631cfe8ef87c"],
           "campaigns": [
             {
               "id": "0cb11689-0b77-429c-9bc7-270ee7985143"
@@ -5076,9 +5018,7 @@
           "shortname": "Wirewalker",
           "longname": "Del Mar Oceanographic’s Wirewalker TM profiling system",
           "id": "3d6d5b57-4ec7-493f-8382-1acd840223f2",
-          "collectionPeriodIds": [
-            "61366ce6-aa48-45eb-a309-84dbfe38030c"
-          ],
+          "collectionPeriodIds": ["61366ce6-aa48-45eb-a309-84dbfe38030c"],
           "campaigns": [
             {
               "id": "0cb11689-0b77-429c-9bc7-270ee7985143"
@@ -5162,9 +5102,7 @@
           "shortname": "Roger Revelle",
           "longname": "R/V Roger Revelle",
           "id": "a5e69012-4f03-4a93-89b6-0fc6cccc6ba0",
-          "collectionPeriodIds": [
-            "05ed6926-83e9-4eda-94bb-58390bc56f52"
-          ],
+          "collectionPeriodIds": ["05ed6926-83e9-4eda-94bb-58390bc56f52"],
           "campaigns": [
             {
               "id": "0cb11689-0b77-429c-9bc7-270ee7985143"
@@ -5186,9 +5124,7 @@
           "shortname": "Sally Ride",
           "longname": "R/V Sally Ride",
           "id": "efbc7c92-52d0-4b91-b70e-8e3d9ddf61d5",
-          "collectionPeriodIds": [
-            "7eb318a6-6155-4ef2-8c9b-890389edd5d2"
-          ],
+          "collectionPeriodIds": ["7eb318a6-6155-4ef2-8c9b-890389edd5d2"],
           "campaigns": [
             {
               "id": "0cb11689-0b77-429c-9bc7-270ee7985143"
@@ -5238,9 +5174,7 @@
           "shortname": "Oden",
           "longname": "Icebreaker Oden",
           "id": "31921e06-83bc-4de7-bf71-6a624f361d2e",
-          "collectionPeriodIds": [
-            "3408e59a-12c8-40be-84a2-30a5d7efdc27"
-          ],
+          "collectionPeriodIds": ["3408e59a-12c8-40be-84a2-30a5d7efdc27"],
           "campaigns": [
             {
               "id": "f45fd527-cb23-4efe-bf65-615c5f582925"

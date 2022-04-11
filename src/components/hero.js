@@ -33,6 +33,7 @@ export const HeroStats = ({ statList }) => (
         >
           {stat.dates ? (
             <DateList
+              shortname="datelist"
               id={stat.label}
               title={stat.label}
               dates={stat.dates}
