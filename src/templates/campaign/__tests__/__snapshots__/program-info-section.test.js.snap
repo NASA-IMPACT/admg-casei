@@ -161,11 +161,11 @@ exports[`Program Info Section renders logo when present in props 1`] = `
           >
             Funding Agency
           </label>
-          <p
+          <div
             data-cy="program-info-content-text"
           >
             test string
-          </p>
+          </div>
         </div>
         <div
           data-cy="program-info-content"
@@ -176,11 +176,11 @@ exports[`Program Info Section renders logo when present in props 1`] = `
           >
             Funding Program
           </label>
-          <p
+          <div
             data-cy="program-info-content-text"
           >
             test string
-          </p>
+          </div>
         </div>
         <div
           data-cy="program-info-content"
@@ -191,11 +191,11 @@ exports[`Program Info Section renders logo when present in props 1`] = `
           >
             Funding Program Lead
           </label>
-          <p
+          <div
             data-cy="program-info-content-text"
           >
             test string
-          </p>
+          </div>
         </div>
         <div
           data-cy="program-info-content"
@@ -206,11 +206,11 @@ exports[`Program Info Section renders logo when present in props 1`] = `
           >
             Principal Investigator(s)
           </label>
-          <p
+          <div
             data-cy="program-info-content-text"
           >
             test string
-          </p>
+          </div>
         </div>
         <div
           data-cy="program-info-content"
@@ -221,11 +221,11 @@ exports[`Program Info Section renders logo when present in props 1`] = `
           >
             Data Manager / Technical Contact
           </label>
-          <p
+          <div
             data-cy="program-info-content-text"
           >
             test string
-          </p>
+          </div>
         </div>
         <div
           data-cy="program-info-content"
@@ -236,11 +236,11 @@ exports[`Program Info Section renders logo when present in props 1`] = `
           >
             NASA Data Repository
           </label>
-          <p
+          <div
             data-cy="program-info-content-text"
           >
             Currently unavailable
-          </p>
+          </div>
         </div>
         <div
           data-cy="program-info-content"
@@ -251,11 +251,11 @@ exports[`Program Info Section renders logo when present in props 1`] = `
           >
             Partner Organizations
           </label>
-          <p
+          <div
             data-cy="program-info-content-text"
           >
             test string
-          </p>
+          </div>
         </div>
         <div
           data-cy="program-info-content"
@@ -266,11 +266,11 @@ exports[`Program Info Section renders logo when present in props 1`] = `
           >
             Overview Publication
           </label>
-          <p
+          <div
             data-cy="program-info-content-text"
           >
             Currently unavailable
-          </p>
+          </div>
         </div>
       </div>
     </div>
@@ -341,11 +341,11 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
           >
             Funding Agency
           </label>
-          <p
+          <div
             data-cy="program-info-content-text"
           >
             test string
-          </p>
+          </div>
         </div>
         <div
           data-cy="program-info-content"
@@ -356,11 +356,11 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
           >
             Funding Program
           </label>
-          <p
+          <div
             data-cy="program-info-content-text"
           >
             test string
-          </p>
+          </div>
         </div>
         <div
           data-cy="program-info-content"
@@ -371,11 +371,11 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
           >
             Funding Program Lead
           </label>
-          <p
+          <div
             data-cy="program-info-content-text"
           >
             test string
-          </p>
+          </div>
         </div>
         <div
           data-cy="program-info-content"
@@ -386,11 +386,11 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
           >
             Principal Investigator(s)
           </label>
-          <p
+          <div
             data-cy="program-info-content-text"
           >
             test string
-          </p>
+          </div>
         </div>
         <div
           data-cy="program-info-content"
@@ -401,11 +401,11 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
           >
             Data Manager / Technical Contact
           </label>
-          <p
+          <div
             data-cy="program-info-content-text"
           >
             test string
-          </p>
+          </div>
         </div>
         <div
           data-cy="program-info-content"
@@ -416,11 +416,11 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
           >
             NASA Data Repository
           </label>
-          <p
+          <div
             data-cy="program-info-content-text"
           >
             Currently unavailable
-          </p>
+          </div>
         </div>
         <div
           data-cy="program-info-content"
@@ -431,11 +431,11 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
           >
             Partner Organizations
           </label>
-          <p
+          <div
             data-cy="program-info-content-text"
           >
             test string
-          </p>
+          </div>
         </div>
         <div
           data-cy="program-info-content"
@@ -446,11 +446,11 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
           >
             Overview Publication
           </label>
-          <p
+          <div
             data-cy="program-info-content-text"
           >
             Currently unavailable
-          </p>
+          </div>
         </div>
       </div>
     </div>

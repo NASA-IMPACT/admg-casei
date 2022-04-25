@@ -92,6 +92,7 @@
     "clean": "gatsby clean",
     "test": "jest",
     "tdd": "jest --watch",
+    "updateSnapshot": "jest --updateSnapshot",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
     "test:e2e": "start-server-and-test 'yarn develop' http://localhost:8000 'yarn cy:open'",

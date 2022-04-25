@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import styled from "styled-components"
 
 import { Section, SectionHeader, SectionContent } from "../../components/layout"
@@ -47,9 +47,7 @@ export default function Entities({ id, campaigns, platforms }) {
                   `}
                 >
                   <div data-cy="related-platform">
-                    <Link to={`/platform/${platform.shortname}`}>
-                      <PlatformCard shortname={platform.shortname} />
-                    </Link>
+                    <PlatformCard shortname={platform.shortname} />
                   </div>
                 </td>
                 <td
@@ -68,9 +66,7 @@ export default function Entities({ id, campaigns, platforms }) {
                     )
                     .map(campaign => (
                       <div key={campaign.id} data-cy="related-campaign">
-                        <Link to={`/campaign/${campaign.shortname}`}>
-                          <CampaignCard shortname={campaign.shortname} />
-                        </Link>
+                        <CampaignCard shortname={campaign.shortname} />
                       </div>
                     ))}
                 </td>

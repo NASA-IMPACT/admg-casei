@@ -81,11 +81,14 @@ module.exports = {
             "'unsafe-eval' 'unsafe-inline' 'self' *.earthdata.nasa.gov https://www.googletagmanager.com https://fbm.earthdata.nasa.gov https://www.google.com/recaptcha https://www.gstatic.com/recaptcha https://fonts.gstatic.com",
           "style-src": "'unsafe-inline' 'self' data: *.earthdata.nasa.gov",
           "font-src": "data: 'self'",
-          "img-src": "data: 'self'",
+          "img-src": "data: 'self' blob:",
           "frame-src": "*.earthdata.nasa.gov",
           "worker-src": "'self' blob:",
+          "child-src": "'self' blob:",
           "connect-src":
-            "'self' https://api.mapbox.com https://events.mapbox.com",
+            process.env.NODE_ENV === "development"
+              ? "'self' https://*.tiles.mapbox.com https://api.mapbox.com https://events.mapbox.com http://localhost:* ws://localhost:*"
+              : "'self' https://*.tiles.mapbox.com https://api.mapbox.com https://events.mapbox.com",
         },
       },
     },
