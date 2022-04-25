@@ -2,7 +2,8 @@
 
 exports[`Header renders correctly 1`] = `
 <header
-  className="header___StyledHeader-sc-4sefiz-0 kltzQp"
+  className="header___StyledHeader-sc-4sefiz-0 cDpICL"
+  id="main-header"
 >
   <div
     className="header___StyledDiv-sc-4sefiz-1 glgKnv"
