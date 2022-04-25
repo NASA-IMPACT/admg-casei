@@ -47,7 +47,7 @@ const Layout = ({ children }) => {
         <Nav mode={POSITIVE} />
       </Header>
 
-      {children}
+      <main>{children}</main>
 
       <Footer shortname={data.site.siteMetadata.shortname} />
     </Container>
