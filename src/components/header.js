@@ -22,16 +22,11 @@ const Header = ({ shortname, children, mode }) => {
 
   const scrollHandler = () => {
     const currentScroll = window.scrollY
-    // if (scrollDirection === null) {
-    //   // set to scroll-up on first load
-    //   setScrollDirection(scrollUp)
-    // } else {
     if (currentScroll > lastScroll && currentScroll > 250) {
       setScrollDirection(scrollDown)
     } else if (currentScroll < lastScroll) {
       setScrollDirection(scrollUp)
     }
-    // }
     setLastScroll(currentScroll)
   }
 
@@ -43,7 +38,7 @@ const Header = ({ shortname, children, mode }) => {
         top: 0;
         left: 0;
         right: 0;
-        z-index: 2;
+        z-index: 3;
         transition: transform 0.2s;
         transform: ${scrollDirection == scrollDown
           ? "translate3d(0, -120%, 0)"

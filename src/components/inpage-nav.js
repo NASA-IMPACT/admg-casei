@@ -47,9 +47,8 @@ const InpageNav = ({ shortname, items }) => {
 
   useEffect(() => {
     if (startingPosition === null || mainHeaderHeight === null) {
+      // set position on first load
       windowResized()
-      // scrollHandler(scrollUp)
-      // setScrollDirection(scrollUp)
     }
 
     window.addEventListener("scroll", scrollHandler)
@@ -61,25 +60,17 @@ const InpageNav = ({ shortname, items }) => {
   })
 
   const windowResized = () => {
-    setStartingPosition(node.current.offsetTop)
-    setMainHeaderHeight(document.getElementById("main-header").clientHeight)
+    setStartingPosition(node.current.parentNode.offsetTop)
   }
 
   const scrollHandler = () => {
+    setMainHeaderHeight(document.getElementById("main-header").offsetHeight)
     const currentScroll = window.scrollY
-    // if (scrollDirection === null) {
-    //   setScrollDirection(scrollUp)
-    // } else {
-    // if (scrollDir !== null) {
-    //   setScrollDirection(scrollDir)
-    // } else {
     if (currentScroll > lastScroll && currentScroll > 250) {
       setScrollDirection(scrollDown)
     } else if (currentScroll < lastScroll) {
       setScrollDirection(scrollUp)
     }
-    // }
-    // }
     setLastScroll(currentScroll)
     setOffset(
       scrollDirection === scrollUp &&
