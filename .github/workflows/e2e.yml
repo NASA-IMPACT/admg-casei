@@ -19,7 +19,7 @@ jobs:
       CYPRESS_password: ${{ secrets.CYPRESS_password }}
       GATSBY_ADMG_CLIENT_ID: ${{ secrets.GATSBY_ADMG_CLIENT_ID }}
       GATSBY_ADMG_CLIENT_SECRET: ${{ secrets.GATSBY_ADMG_CLIENT_SECRET }}
-      GATSBY_CPU_COUNT: 4
+      GATSBY_CPU_COUNT: 2
       GATSBY_MAPBOX_TOKEN: ${{ secrets.GATSBY_MAPBOX_TOKEN }}
 
     steps:
