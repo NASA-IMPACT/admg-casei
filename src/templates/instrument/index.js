@@ -53,7 +53,7 @@ const InstrumentTemplate = ({ data: { instrument }, path }) => {
     },
   }
   return (
-    <Layout isHeaderFixed>
+    <Layout>
       <SEO title={instrument.shortname} lang="en" />
 
       <InstrumentHero
