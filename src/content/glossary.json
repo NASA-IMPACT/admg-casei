@@ -22,7 +22,7 @@
   },
   {
     "term": "Partner Organization",
-    "definition": "An institution that participates in a field investigation with non-NASA separate funding resources allocated specifically for the field investigation. Includes any organization that provided specific platforms or instruments without NASA funding, including co-participating/ cooperating field campaigns. Also, if investigation data are archived by a non-NASA entity, the archiving organization is a partner organization, regardless of the funding pathway. For example,University X coordinates with NASA during a field investigation to collect data that University X is willing to share with NASA as part of the field investigation, despite University X not receiving any funding from NASA for this effort.  University Y also participates in the field investigation, but is receiving NASA funding, and thus is not considered a partner organization, but rather is an investigation participant.  The $ for University Y's participation is coming from NASA, the /$ for University X's participation is not.",
+    "definition": "An institution that participates in a field investigation with non-NASA separate funding resources allocated specifically for the field investigation. Includes any organization that provided specific platforms or instruments without NASA funding, including co-participating/ cooperating field campaigns. Also, if investigation data are archived by a non-NASA entity, the archiving organization is a partner organization, regardless of the funding pathway. For example, University X coordinates with NASA during a field investigation to collect data that University X is willing to share with NASA as part of the field investigation, despite University X not receiving any funding from NASA for this effort.  University Y also participates in the field investigation, but is receiving NASA funding, and thus is not considered a partner organization, but rather is an investigation participant.  The $ for University Y's participation is coming from NASA, the /$ for University X's participation is not.",
     "note": "Partner organizations are not limited to universities and may include, for example, other government agencies or departments, organizations from other countries, or private companies."
   },
   {
@@ -31,7 +31,7 @@
   },
   {
     "term": "Instrument Package",
-    "definition": "All instruments operating on a platform.  This may consist of a single or multiple individual instruments and all their associated technology.  The instrument package used on a given platform can change over time, by deployment, or by field investigation, to support specific science/research objectives or due to individual instrument failure.",
+    "definition": "All instruments operating on a platform.  This may consist of a single instrument or multiple individual instruments and all their associated technology.  The instrument package used on a given platform can change over time, by deployment, or by field investigation, to support specific science/research objectives or due to individual instrument failure.",
     "note": "For airborne platforms, the instrument package is also often referred to as the instrument payload."
   },
   {
