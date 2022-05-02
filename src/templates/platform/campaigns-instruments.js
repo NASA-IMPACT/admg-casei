@@ -46,7 +46,7 @@ CampaignsAndInstruments.propTypes = {
           shortname: PropTypes.string.isRequired,
           longname: PropTypes.string.isRequired,
           description: PropTypes.string.isRequired,
-          gcmdPhenomenas: PropTypes.arrayOf(
+          gcmdPhenomena: PropTypes.arrayOf(
             PropTypes.shape({
               term: PropTypes.string.isRequired,
               topic: PropTypes.string.isRequired,

@@ -23,7 +23,7 @@ const InstrumentTemplate = ({ data: { instrument }, path }) => {
         spatialResolution: instrument.spatialResolution,
         calibration: instrument.calibration,
         measurementRegions: instrument.measurementRegions,
-        gcmdPhenomenas: instrument.gcmdPhenomenas,
+        gcmdPhenomena: instrument.gcmdPhenomena,
         instrumentDoi: instrument.instrumentDoi,
         instrumentManufacturer: instrument.instrumentManufacturer,
         fundingSource: instrument.fundingSource,
@@ -145,7 +145,7 @@ InstrumentTemplate.propTypes = {
           longname: PropTypes.string.isRequired,
         }).isRequired
       ).isRequired,
-      gcmdPhenomenas: PropTypes.arrayOf(
+      gcmdPhenomena: PropTypes.arrayOf(
         PropTypes.shape({
           term: PropTypes.string,
           topic: PropTypes.string,

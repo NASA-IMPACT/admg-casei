@@ -109,7 +109,7 @@ export const query = graphql`
           shortname: short_name
           longname: long_name
           description
-          gcmdPhenomenas: gcmd_phenomenas {
+          gcmdPhenomena: gcmd_phenomena {
             term
             topic
             variable_1
@@ -171,7 +171,7 @@ PlatformTemplate.propTypes = {
               shortname: PropTypes.string.isRequired,
               longname: PropTypes.string.isRequired,
               description: PropTypes.string.isRequired,
-              gcmdPhenomenas: PropTypes.arrayOf(
+              gcmdPhenomena: PropTypes.arrayOf(
                 PropTypes.shape({
                   term: PropTypes.string.isRequired,
                   topic: PropTypes.string.isRequired,
