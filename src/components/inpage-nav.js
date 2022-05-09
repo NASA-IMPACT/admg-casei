@@ -7,6 +7,7 @@ import { POSITIVE } from "../utils/constants"
 import { colors, breakpoints } from "../theme"
 import Button from "../components/button"
 import { FBMContext } from "./fbm-provider"
+import StickyBanner from "./sticky-banner"
 
 const InpageLink = props => (
   <li
@@ -36,94 +37,107 @@ InpageLink.propTypes = {
 const InpageNav = ({ shortname, items }) => {
   const { isFBMLoaded } = useContext(FBMContext)
 
+  const offsetCalculator = (
+    scrollDirection,
+    startingPosition,
+    _,
+    lastScroll
+  ) => {
+    const mainHeaderHeight = document.getElementById("main-header").clientHeight
+    return scrollDirection === "scroll-up" &&
+      lastScroll >= startingPosition - mainHeaderHeight
+      ? `${mainHeaderHeight}px`
+      : 0
+  }
+
   return (
-    <div
-      css={`
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-      `}
-      data-cy="inpage-nav"
-    >
-      <nav
-        aria-label="inpage-scroll"
+    <StickyBanner offsetCalculator={offsetCalculator}>
+      <div
         css={`
-          margin: 0 -6rem;
-          padding: 0 6rem;
-          @media screen and (max-width: ${breakpoints["sm"]}) {
-            padding: 0 2.5rem;
-          }
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          background-color: ${colors[POSITIVE].background};
-          color: ${colors[POSITIVE].text};
+          z-index: 1000;
         `}
         data-cy="inpage-nav"
       >
-        <ul
+        <nav
+          aria-label="inpage-scroll"
           css={`
+            margin: 0 -6rem;
+            padding: 0 6rem;
+            @media screen and (max-width: ${breakpoints["sm"]}) {
+              padding: 0 2.5rem;
+            }
             display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
+            justify-content: space-between;
             align-items: center;
-            margin: 0;
-            padding: 0.25rem 0;
-            list-style: none;
+            background-color: ${colors[POSITIVE].background};
+            color: ${colors[POSITIVE].text};
           `}
+          data-cy="inpage-nav"
         >
-          <li>
-            <Link
-              to="/"
-              css={`
-                text-decoration: none;
-                display: grid;
-                grid-template-columns: 3rem auto;
-                align-items: center;
-              `}
-              data-cy="home-link"
-            >
-              <CaseiLogoIcon color={colors[POSITIVE].text} size="tiny" />
-            </Link>
-          </li>
-          <li
+          <ul
             css={`
-              margin: 0 1rem 0 0;
+              display: flex;
+              flex-direction: row;
+              justify-content: flex-start;
+              align-items: center;
+              margin: 0;
+              padding: 0.25rem 0;
+              list-style: none;
             `}
           >
-            <a
-              href="#top"
+            <li>
+              <Link
+                to="/"
+                css={`
+                  text-decoration: none;
+                  display: grid;
+                  grid-template-columns: 3rem auto;
+                  align-items: center;
+                `}
+                data-cy="home-link"
+              >
+                <CaseiLogoIcon color={colors[POSITIVE].text} size="tiny" />
+              </Link>
+            </li>
+            <li
               css={`
-                padding-right: 1rem;
-                @media screen and (max-width: ${breakpoints["sm"]}) {
-                  padding-right: 0;
-                }
-                font-size: 2rem;
-                color: ${colors[POSITIVE].text};
+                margin: 0 1rem 0 0;
               `}
-              data-cy={`top-inpage-link`}
             >
-              {shortname}
-            </a>
-          </li>
-          {items.map(item => (
-            <InpageLink key={item.id} id={item.id}>
-              {item.label}
-            </InpageLink>
-          ))}
-        </ul>
-        {isFBMLoaded && (
-          <Button
-            action={() => {
-              window.feedback.showForm()
-            }}
-            mode={POSITIVE}
-          >
-            Feedback
-          </Button>
-        )}
-      </nav>
-    </div>
+              <a
+                href="#top"
+                css={`
+                  padding-right: 1rem;
+                  @media screen and (max-width: ${breakpoints["sm"]}) {
+                    padding-right: 0;
+                  }
+                  font-size: 2rem;
+                  color: ${colors[POSITIVE].text};
+                `}
+                data-cy={`top-inpage-link`}
+              >
+                {shortname}
+              </a>
+            </li>
+            {items.map(item => (
+              <InpageLink key={item.id} id={item.id}>
+                {item.label}
+              </InpageLink>
+            ))}
+          </ul>
+          {isFBMLoaded && (
+            <Button
+              action={() => {
+                window.feedback.showForm()
+              }}
+              mode={POSITIVE}
+            >
+              Feedback
+            </Button>
+          )}
+        </nav>
+      </div>
+    </StickyBanner>
   )
 }
 
