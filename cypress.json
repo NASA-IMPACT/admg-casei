@@ -6,5 +6,6 @@
   "env": {
     "username": "alice",
     "password": ""
-  }
+  },
+  "defaultCommandTimeout": 10000
 }
