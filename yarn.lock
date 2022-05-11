@@ -4016,7 +4016,7 @@
     postcss-parent-selector "1.0.x"
     postcss-safe-parser "4.0.x"
 
-"@reach/accordion@^0.16.1":
+"@reach/accordion@<0.17.0":
   version "0.16.1"
   resolved "https://registry.yarnpkg.com/@reach/accordion/-/accordion-0.16.1.tgz#020fcbfa0d0768a95ca1702952b87eafbfbc7f38"
   integrity sha512-gv0Trq3cfM92h8xZ9RBr5MGyulR6EgfLUKYrf+s9XUJjcIi3sMc611tbwlByigYVSt5gE/TLK0mKHLiXOrT3Sg==
@@ -4055,7 +4055,7 @@
     tiny-warning "^1.0.3"
     tslib "^2.3.0"
 
-"@reach/listbox@^0.16.2":
+"@reach/listbox@<0.17.0":
   version "0.16.2"
   resolved "https://registry.yarnpkg.com/@reach/listbox/-/listbox-0.16.2.tgz#2ed4b30ebdf9ce0addffb0207f843b8232a7db1c"
   integrity sha512-UBotBw7X8e2ajHn6tg1M9ArinisvSvwtu/aP3edEQKCvobd95nAa+dqnfAdihPAQFH2AQ2NFfa/73yawWV3LOQ==
@@ -4130,7 +4130,7 @@
     tiny-warning "^1.0.3"
     tslib "^2.3.0"
 
-"@reach/visually-hidden@^0.16.0":
+"@reach/visually-hidden@<0.17.0":
   version "0.16.0"
   resolved "https://registry.yarnpkg.com/@reach/visually-hidden/-/visually-hidden-0.16.0.tgz#2a5e834af9e93c554065ff8cbb0907fbeb26ad02"
   integrity sha512-IIayZ3jzJtI5KfcfRVtOMFkw2ef/1dMT8D9BUuFcU2ORZAWLNvnzj1oXNoIfABKl5wtsLjY6SGmkYQ+tMPN8TA==
