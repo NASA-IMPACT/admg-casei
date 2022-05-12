@@ -7,5 +7,5 @@
     "username": "alice",
     "password": ""
   },
-  "defaultCommandTimeout": 10000
+  "defaultCommandTimeout": 20000
 }
