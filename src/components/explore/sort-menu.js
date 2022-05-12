@@ -8,7 +8,7 @@ import {
   ListboxOption,
 } from "@reach/listbox"
 import VisuallyHidden from "@reach/visually-hidden"
-
+import { v4 as uuidv4 } from "uuid"
 import { NEGATIVE } from "../../utils/constants"
 import { colors, shape } from "../../theme"
 import { sortFunctions } from "../../utils/filter-utils"
@@ -27,6 +27,7 @@ const SortMenu = ({ sortOrder, setSortOrder, category }) => {
     >
       <VisuallyHidden id="sort-order">Select sort order</VisuallyHidden>
       <ListboxInput
+        id={`${category}-${uuidv4()}`}
         aria-labelledby="sort order"
         defaultValue={sortOrder}
         onChange={value => setSortOrder(value)}

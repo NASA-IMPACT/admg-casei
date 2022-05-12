@@ -66,6 +66,7 @@ const FilterMenu = ({
         filter results by sub-categories
       </VisuallyHidden>
       <ListboxInput
+        id={id}
         name="filter"
         aria-labelledby={`${id}-filter-select`}
         value={value}

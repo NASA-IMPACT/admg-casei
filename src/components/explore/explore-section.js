@@ -6,6 +6,7 @@ import {
   DisclosureButton,
   DisclosurePanel,
 } from "@reach/disclosure"
+import { v4 as uuidv4 } from "uuid"
 
 import { NoResultsMessage } from "../../components/no-results-message"
 import { ArrowIcon } from "../../icons"
@@ -21,6 +22,7 @@ const Grid = styled.div`
 
 const List = ({ list, card }) => {
   const [isOpen, setOpen] = React.useState(false)
+  const disclosureId = uuidv4()
 
   return (
     <>
@@ -33,7 +35,11 @@ const List = ({ list, card }) => {
       </Grid>
 
       {list.length > 20 && (
-        <Disclosure open={isOpen} onChange={() => setOpen(!isOpen)}>
+        <Disclosure
+          id={disclosureId}
+          open={isOpen}
+          onChange={() => setOpen(!isOpen)}
+        >
           {!isOpen && (
             <DisclosureButton
               css={`

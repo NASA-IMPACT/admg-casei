@@ -11,6 +11,7 @@ import styled from "styled-components"
 import { colors } from "../theme"
 import { NEGATIVE, POSITIVE } from "../utils/constants"
 import { scrollFade } from "../theme/style-helpers"
+import { v4 as uuidv4 } from "uuid"
 
 const ListTrigger = styled(ListboxButton)`
   &[data-reach-listbox-button] {
@@ -84,6 +85,7 @@ const DateList = ({
     <>
       <VisuallyHidden>view all deployment dates</VisuallyHidden>
       <ListboxInput
+        id={`${shortname}-${uuidv4()}`}
         name={`${shortname}-hover-list`}
         aria-labelledby={`${shortname}-hover-list`}
         data-cy={`${shortname}-hover-list`}
