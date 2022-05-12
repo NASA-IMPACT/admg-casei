@@ -78,7 +78,7 @@ describe("Explore", () => {
           expect($card.find("[data-cy=daterange]")).to.contain("Ongoing")
         })
 
-      cy.get("[data-cy=explore-input]").clear().type("{enter}")
+      cy.get("[data-cy=explore-input]").clear().type("CPEX-AW").type("{enter}")
 
       cy.get("[data-cy=campaigns-card]")
         .find("big")
