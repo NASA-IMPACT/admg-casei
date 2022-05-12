@@ -113,6 +113,7 @@ const FilterByDate = ({ id, label, dateRange, setDateRange }) => {
         select time range to filter by
       </VisuallyHidden>
       <ListboxInput
+        id={id}
         name="date-filter"
         aria-labelledby={`${id}-filter-select`}
         data-cy={`${id}-filter-select`}

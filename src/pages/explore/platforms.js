@@ -137,7 +137,7 @@ export const query = graphql`
     allCampaign {
       totalCount
     }
-    allPlatform {
+    allPlatform(sort: { fields: [campaign_count], order: DESC }) {
       totalCount
       list: nodes {
         ...platformFields

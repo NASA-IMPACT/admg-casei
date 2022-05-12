@@ -65,6 +65,8 @@ describe("Explore", () => {
           expect($small.find("[data-cy=count2]")).to.contain("Data Product")
         })
 
+      cy.get("[data-cy=explore-input]").type("OMG").type("{enter}")
+
       cy.get("[data-cy=campaigns-card]") // test ongoing campaign card
         .find("big")
         .contains("OMG")
@@ -75,6 +77,8 @@ describe("Explore", () => {
           expect($card.find("[data-cy=shortname]")).to.contain("OMG")
           expect($card.find("[data-cy=daterange]")).to.contain("Ongoing")
         })
+
+      cy.get("[data-cy=explore-input]").clear().type("CPEX-AW").type("{enter}")
 
       cy.get("[data-cy=campaigns-card]")
         .find("big")
