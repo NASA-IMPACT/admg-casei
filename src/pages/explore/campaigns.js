@@ -214,7 +214,7 @@ export default function ExploreCampaigns({ data, location }) {
 
 export const query = graphql`
   query {
-    allCampaign {
+    allCampaign(sort: { fields: [end_date], order: DESC }) {
       totalCount
       list: nodes {
         ...campaignFields

@@ -142,14 +142,28 @@ exports.sourceNodes = async ({ actions, createContentDigest }) => {
       "website_type",
     ]
 
+    const countProps = {
+      campaign_count: "campaigns",
+    }
+
     let responses = await Promise.all(endpoints.map(key => fetchData(key)))
 
     responses.forEach(response => {
       if (response.success) {
         response.data.forEach(item => {
+          let additionalProps = {}
+
+          for (const countProp in countProps) {
+            const arrayProp = countProps[countProp]
+            if (item[arrayProp]) {
+              additionalProps[countProp] = item[arrayProp].length
+            }
+          }
+
           createNode({
             // Data for the node.
             ...item,
+            ...additionalProps,
 
             // Required fields.
             id: item.uuid,

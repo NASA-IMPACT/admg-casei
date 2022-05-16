@@ -16,14 +16,13 @@ const trailingCommaRegex = /(^,)|(,$)/g
  */
 
 /**
- * A funtion to parse text input into an array
+ * A function to parse comma-or-newline-separated text input into an array
  * @param {string} input a string to be parsed
  * @return {array} list with separated strings
  */
 export function parseTextToList(input) {
   return input
-    .split("\n")
-    .filter(x => x)
+    .split(/[\n,]+/)
     .map(str => str.trim().replace(trailingCommaRegex, ""))
 }
 
