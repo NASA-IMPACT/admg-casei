@@ -5,7 +5,7 @@ exports[`Card renders card with tag 1`] = `
   className="card___StyledDiv-sc-16fz0z7-1 rlvQj"
 >
   <a
-    className="card___StyledLink-sc-16fz0z7-2 fJhOVW"
+    className="card___StyledLink-sc-16fz0z7-2 kPQedG"
     data-cy="campaigns-card"
   >
     <div
@@ -67,7 +67,7 @@ exports[`Card renders plain card 1`] = `
   className="card___StyledDiv-sc-16fz0z7-1 rlvQj"
 >
   <a
-    className="card___StyledLink-sc-16fz0z7-2 fJhOVW"
+    className="card___StyledLink-sc-16fz0z7-2 kPQedG"
     data-cy="campaigns-card"
   >
     <div
@@ -123,7 +123,7 @@ exports[`Card renders with footer list 1`] = `
   className="card___StyledDiv-sc-16fz0z7-1 rlvQj"
 >
   <a
-    className="card___StyledLink-sc-16fz0z7-2 fJhOVW"
+    className="card___StyledLink-sc-16fz0z7-2 kPQedG"
     data-cy="campaigns-card"
   >
     <div
