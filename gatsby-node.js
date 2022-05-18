@@ -29,6 +29,9 @@ exports.createSchemaCustomization = ({ actions }) => {
      }
      type collection_period implements Node {
        dois: [doi] @link
+       platform: platform @link
+       deployment: deployment @link
+       instruments: [instrument] @link
      }
      type deployment implements Node {
       aliases: [alias] @link

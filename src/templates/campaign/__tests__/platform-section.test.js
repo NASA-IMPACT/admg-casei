@@ -4,6 +4,71 @@ import * as Gatsby from "gatsby"
 
 import PlatformSection from "../platform-section"
 
+const cdpis = [
+  {
+    id: "b62536a8-117c-4818-a60c-5ff3eaeaa2e3",
+    platform: {
+      shortname: "J-31",
+      longname: "Jetstream-31",
+      id: "dfb8cbd6-c33c-47df-9249-8949de2b81d7",
+      description:
+        "The Jetstream 31 and the Jetstream 32 are 19-seat turboprop airliners in operation worldwide. The aircraft is suited for conversion for special operations \nconfigurations, for example military communications and exclusive economic zone patrol.",
+      collectionPeriodIds: ["b62536a8-117c-4818-a60c-5ff3eaeaa2e3"],
+      campaigns: [
+        {
+          id: "1b0fd195-f46f-4d7a-8874-4225cec7c589",
+        },
+      ],
+      instruments: [
+        {
+          id: "b02a8891-c45c-4479-b3cc-3683a6ee179b",
+          shortname: "CAR",
+        },
+      ],
+      stationary: false,
+    },
+    instruments: [
+      {
+        id: "b02a8891-c45c-4479-b3cc-3683a6ee179b",
+        shortname: "CAR",
+      },
+    ],
+  },
+  {
+    id: "ec826889-bf36-48a8-a62e-ed0aa12e31ab",
+    platform: {
+      shortname: "Aerosonde",
+      longname: "Aerosonde Small Unmanned Aircraft System",
+      id: "8b97267c-bc15-4744-90a3-043dc20a76e8",
+      description:
+        "The Aerosonde is a small, autonomous, high performance, high endurance, expeditionary unmanned aerial system. The air vehicle and its core systems are incredibly robust, with mission success of supporting flights into the eye of several different hurricanes and tropical storms.",
+      collectionPeriodIds: ["ec826889-bf36-48a8-a62e-ed0aa12e31ab"],
+      campaigns: [
+        {
+          id: "bb3806f5-af3c-46cc-ae6f-6065aa51851d",
+        },
+      ],
+      instruments: [
+        {
+          id: "7cda54ad-e12e-4cf0-9c13-f4f601c3075c",
+          shortname: "Pyrometer",
+        },
+        {
+          id: "9fa2d277-d5ec-4234-ba8e-9ccb45762a04",
+          shortname: "Vaisala RS902 sonde",
+        },
+      ],
+      stationary: false,
+    },
+    instruments: [
+      {
+        id: "7cda54ad-e12e-4cf0-9c13-f4f601c3075c",
+        shortname: "Pyrometer",
+      },
+    ],
+  },
+]
+
 const testArray = [
   {
     shortname: "J-31",
@@ -106,20 +171,7 @@ useStaticQuery.mockImplementation(() => ({
 describe("Platform Section", () => {
   it("displays content", () => {
     const tree = create(
-      <PlatformSection
-        id="platform"
-        platforms={testArray}
-        instruments={[
-          {
-            id: "a1f41f4d-2233-49be-a3d3-6eda1ded6be4",
-            shortname: "instrument-1",
-          },
-          {
-            id: "aa6e3d99-17ca-4b4e-9130-c6e0b0864fd9",
-            shortname: "instrument-2",
-          },
-        ]}
-      />
+      <PlatformSection id="platform" collectionPeriods={cdpis} />
     ).toJSON()
     expect(tree).toMatchSnapshot()
   })

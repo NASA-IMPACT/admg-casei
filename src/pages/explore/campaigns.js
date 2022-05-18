@@ -277,6 +277,9 @@ export const query = graphql`
     startdate: start_date # required for temporal filter
     enddate: end_date # required for sort and temporal filter
     deployments {
+      collection_periods: collection_periods {
+        id
+      }
       regions: geographical_regions {
         id # required for filter
       }
@@ -311,6 +314,16 @@ const campaignShape = PropTypes.shape({
   enddate: PropTypes.string,
   deployments: PropTypes.arrayOf(
     PropTypes.shape({
+      collection_periods: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string.isRequired,
+          instruments: PropTypes.arrayOf(
+            PropTypes.shape({
+              id: PropTypes.isRequired,
+            })
+          ),
+        })
+      ),
       regions: PropTypes.arrayOf(
         PropTypes.shape({
           id: PropTypes.string.isRequired,

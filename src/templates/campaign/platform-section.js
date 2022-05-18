@@ -6,26 +6,27 @@ import { Section, SectionHeader, SectionContent } from "../../components/layout"
 import CarouselAccordionCombo from "../../components/carousel-accordion-combo"
 import PlatformCard from "../../components/cards/platform-card"
 
-const PlatformSection = ({ id, platforms, instruments }) => {
+const PlatformSection = ({ id, collectionPeriods }) => {
+  const platforms = [];
+  const platformInstruments = {};
+
+  for (const cdpi of collectionPeriods) {
+    platforms.push(cdpi.platform);
+    platformInstruments[cdpi.platform.id] = cdpi.instruments;
+  }
+
+
   return (
     <Section id={id}>
       <SectionHeader headline="Platforms & Instruments" id={id} />
       <SectionContent>
-        {platforms && instruments && (
+        {platforms && platformInstruments && (
           <CarouselAccordionCombo
             id="platform"
             emptyMessage="No available related platforms or instruments"
             carouselList={platforms}
             card={PlatformCard}
-            folds={platforms.reduce(
-              (acc, platform) =>
-                Object.assign(acc, {
-                  [platform.id]: platform.instruments.filter(instrument =>
-                    instruments.map(x => x.id).includes(instrument.id)
-                  ),
-                }),
-              {}
-            )}
+            folds={platformInstruments}
           />
         )}
       </SectionContent>
@@ -90,30 +91,36 @@ export const platformSectionFields = graphql`
 
 PlatformSection.propTypes = {
   id: PropTypes.string.isRequired,
-  platforms: PropTypes.arrayOf(
+  collectionPeriods: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
-      image: PropTypes.shape({
-        description: PropTypes.string,
-        gatsbyImg: PropTypes.shape({
-          childImageSharp: PropTypes.object,
-        }),
-      }),
-      shortname: PropTypes.string.isRequired,
-      longname: PropTypes.string.isRequired,
-      instruments: PropTypes.arrayOf(
-        PropTypes.shape({
-          id: PropTypes.string.isRequired,
-          shortname: PropTypes.string.isRequired,
-        }).isRequired
-      ).isRequired,
-    }).isRequired
-  ).isRequired,
-  instruments: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-    }).isRequired
-  ).isRequired,
+
+    })
+  ).isRequired
+  // platforms: PropTypes.arrayOf(
+  //   PropTypes.shape({
+  //     id: PropTypes.string.isRequired,
+  //     image: PropTypes.shape({
+  //       description: PropTypes.string,
+  //       gatsbyImg: PropTypes.shape({
+  //         childImageSharp: PropTypes.object,
+  //       }),
+  //     }),
+  //     shortname: PropTypes.string.isRequired,
+  //     longname: PropTypes.string.isRequired,
+  //     instruments: PropTypes.arrayOf(
+  //       PropTypes.shape({
+  //         id: PropTypes.string.isRequired,
+  //         shortname: PropTypes.string.isRequired,
+  //       }).isRequired
+  //     ).isRequired,
+  //   }).isRequired
+  // ).isRequired,
+  // instruments: PropTypes.arrayOf(
+  //   PropTypes.shape({
+  //     id: PropTypes.string.isRequired,
+  //   }).isRequired
+  // ).isRequired,
 }
 
 export default PlatformSection
