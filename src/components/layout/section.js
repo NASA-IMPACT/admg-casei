@@ -57,6 +57,7 @@ export const SectionContent = styled.div`
     `${columns[0]} / span ${columns[1]}`};
   background-color: ${({ withBackground, mode }) =>
     withBackground ? colors[mode].background : null};
+  max-width: 100%;
   min-height: ${({ minHeight }) => (minHeight ? minHeight : null)};
   padding: ${({ withPadding }) => (withPadding ? `5rem` : null)};
 
