@@ -23,7 +23,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
     </a>
   </div>
   <div
-    className="section__SectionContent-sc-1oozlr5-2 hukSLT"
+    className="section__SectionContent-sc-1oozlr5-2 jnafx"
     mode="darkTheme"
   >
     <div
@@ -301,7 +301,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
     </a>
   </div>
   <div
-    className="section__SectionContent-sc-1oozlr5-2 hukSLT"
+    className="section__SectionContent-sc-1oozlr5-2 jnafx"
     mode="darkTheme"
   >
     <div
