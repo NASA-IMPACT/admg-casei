@@ -113,17 +113,4 @@ export const instrumentEntitiesFields = graphql`
 Entities.propTypes = {
   id: PropTypes.string.isRequired,
   collectionPeriods: PropTypes.array.isRequired,
-  // campaigns: PropTypes.arrayOf(
-  //   PropTypes.shape({
-  //     id: PropTypes.string,
-  //     shortname: PropTypes.string,
-  //   })
-  // ).isRequired,
-  // platforms: PropTypes.arrayOf(
-  //   PropTypes.shape({
-  //     id: PropTypes.string.isRequired,
-  //     shortname: PropTypes.string.isRequired,
-  //     campaigns: PropTypes.arrayOf(PropTypes.shape({ id: PropTypes.string })),
-  //   })
-  // ),
 }
