@@ -39,7 +39,9 @@ export default function PlatformCard({ shortname, mode }) {
           shortname: short_name
           longname: long_name
           description
-          collectionPeriodIds: collection_periods
+          collectionPeriodIds: collection_periods {
+            id
+          }
           campaigns {
             shortname: short_name
           }

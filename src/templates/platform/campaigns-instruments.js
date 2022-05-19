@@ -5,7 +5,15 @@ import { Section, SectionHeader, SectionContent } from "../../components/layout"
 import CarouselAccordionCombo from "../../components/carousel-accordion-combo"
 import CampaignCard from "../../components/cards/campaign-card"
 
-const CampaignsAndInstruments = ({ id, campaigns, instruments }) => {
+const CampaignsAndInstruments = ({ id, collectionPeriods }) => {
+  const campaigns = []
+  const campaignInstruments = {}
+
+  for (const cdpi of collectionPeriods) {
+    campaigns.push(cdpi.deployment.campaign)
+    campaignInstruments[cdpi.deployment.campaign.id] = cdpi.instruments
+  }
+
   return (
     <Section id={id}>
       <SectionHeader
@@ -20,15 +28,7 @@ const CampaignsAndInstruments = ({ id, campaigns, instruments }) => {
           emptyMessage="No available related campaigns"
           carouselList={campaigns}
           card={CampaignCard}
-          folds={campaigns.reduce(
-            (acc, campaign) =>
-              Object.assign(acc, {
-                [campaign.id]: campaign.instruments.filter(instrument =>
-                  instruments.map(x => x.id).includes(instrument.id)
-                ),
-              }),
-            {}
-          )}
+          folds={campaignInstruments}
         />
       </SectionContent>
     </Section>
@@ -37,38 +37,7 @@ const CampaignsAndInstruments = ({ id, campaigns, instruments }) => {
 
 CampaignsAndInstruments.propTypes = {
   id: PropTypes.string.isRequired,
-  campaigns: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      instruments: PropTypes.arrayOf(
-        PropTypes.shape({
-          id: PropTypes.string.isRequired,
-          shortname: PropTypes.string.isRequired,
-          longname: PropTypes.string.isRequired,
-          description: PropTypes.string.isRequired,
-          gcmdPhenomenas: PropTypes.arrayOf(
-            PropTypes.shape({
-              term: PropTypes.string.isRequired,
-              topic: PropTypes.string.isRequired,
-              variable_1: PropTypes.string.isRequired,
-              variable_2: PropTypes.string.isRequired,
-              variable_3: PropTypes.string.isRequired,
-            })
-          ),
-        })
-      ).isRequired,
-    }).isRequired
-  ).isRequired,
-  instruments: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      dois: PropTypes.arrayOf(
-        PropTypes.shape({
-          id: PropTypes.string.isRequired,
-        }).isRequired
-      ),
-    })
-  ),
+  collectionPeriods: PropTypes.array.isRequired,
 }
 
 export default CampaignsAndInstruments

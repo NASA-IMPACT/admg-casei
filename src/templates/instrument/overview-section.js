@@ -332,7 +332,9 @@ OverviewSection.propTypes = {
 export const instrumentDetailFields = graphql`
   fragment instrumentDetailFields on instrument {
     id
-    collectionPeriods: collection_periods
+    collectionPeriods: collection_periods {
+      id
+    }
     measurementType: measurement_type {
       id
       longname: long_name
