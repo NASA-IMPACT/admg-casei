@@ -162,7 +162,10 @@ export const query = graphql`
     shortname: short_name # required for sort
     longname: long_name # required for filter by text
     id
-    collectionPeriodIds: collection_periods # required for sort
+    collectionPeriodIds: collection_periods {
+      # required for sort
+      id
+    }
     campaigns {
       id # required for sort
     }

@@ -72,6 +72,7 @@ exports.createSchemaCustomization = ({ actions }) => {
        instruments: [instrument] @link
        dois: [doi] @link
        platform_type: platform_type @link
+       collection_periods: [collection_period] @link
      }
      type website implements Node {
        website_type: website_type @link

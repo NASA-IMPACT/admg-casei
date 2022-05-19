@@ -90,35 +90,7 @@ export const platformSectionFields = graphql`
 
 PlatformSection.propTypes = {
   id: PropTypes.string.isRequired,
-  collectionPeriods: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-    })
-  ).isRequired,
-  // platforms: PropTypes.arrayOf(
-  //   PropTypes.shape({
-  //     id: PropTypes.string.isRequired,
-  //     image: PropTypes.shape({
-  //       description: PropTypes.string,
-  //       gatsbyImg: PropTypes.shape({
-  //         childImageSharp: PropTypes.object,
-  //       }),
-  //     }),
-  //     shortname: PropTypes.string.isRequired,
-  //     longname: PropTypes.string.isRequired,
-  //     instruments: PropTypes.arrayOf(
-  //       PropTypes.shape({
-  //         id: PropTypes.string.isRequired,
-  //         shortname: PropTypes.string.isRequired,
-  //       }).isRequired
-  //     ).isRequired,
-  //   }).isRequired
-  // ).isRequired,
-  // instruments: PropTypes.arrayOf(
-  //   PropTypes.shape({
-  //     id: PropTypes.string.isRequired,
-  //   }).isRequired
-  // ).isRequired,
+  collectionPeriods: PropTypes.array.isRequired,
 }
 
 export default PlatformSection
