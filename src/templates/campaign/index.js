@@ -54,10 +54,7 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
       nav: "Platforms & Instruments",
       component: PlatformSection,
       props: {
-        collectionPeriods: campaign.deployments.reduce(
-          (p, n) => p.concat(n.collectionPeriods),
-          []
-        ),
+        collectionPeriods: campaign.deployments.flatMap(d => d.collectionPeriods),
       },
     },
     timeline: {
