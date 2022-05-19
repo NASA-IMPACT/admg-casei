@@ -7,14 +7,13 @@ import CarouselAccordionCombo from "../../components/carousel-accordion-combo"
 import PlatformCard from "../../components/cards/platform-card"
 
 const PlatformSection = ({ id, collectionPeriods }) => {
-  const platforms = [];
-  const platformInstruments = {};
+  const platforms = []
+  const platformInstruments = {}
 
   for (const cdpi of collectionPeriods) {
-    platforms.push(cdpi.platform);
-    platformInstruments[cdpi.platform.id] = cdpi.instruments;
+    platforms.push(cdpi.platform)
+    platformInstruments[cdpi.platform.id] = cdpi.instruments
   }
-
 
   return (
     <Section id={id}>
@@ -94,9 +93,8 @@ PlatformSection.propTypes = {
   collectionPeriods: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
-
     })
-  ).isRequired
+  ).isRequired,
   // platforms: PropTypes.arrayOf(
   //   PropTypes.shape({
   //     id: PropTypes.string.isRequired,
