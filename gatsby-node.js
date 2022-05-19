@@ -58,6 +58,7 @@ exports.createSchemaCustomization = ({ actions }) => {
      }
      type instrument implements Node {
        campaigns: [campaign] @link
+       collection_periods: [collection_period] @link
        gcmd_phenomenas: [gcmd_phenomena] @link
        image: image @link
        measurement_type: measurement_type @link
