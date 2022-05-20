@@ -54,8 +54,9 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
       nav: "Platforms & Instruments",
       component: PlatformSection,
       props: {
-        platforms: campaign.platforms,
-        instruments: campaign.instruments,
+        collectionPeriods: campaign.deployments.flatMap(
+          d => d.collectionPeriods
+        ),
       },
     },
     timeline: {
@@ -145,7 +146,39 @@ export const query = graphql`
       ...overviewFields
       ...focusFields
       ...platformSectionFields
-      ...deploymentFields
+      deployments {
+        id: uuid
+        shortname: short_name
+        collectionPeriods: collection_periods {
+          id
+          platform: platform {
+            id
+            shortname: short_name
+          }
+          instruments: instruments {
+            id
+            shortname: short_name
+            longname: long_name
+            description
+            gcmdPhenomenas: gcmd_phenomenas {
+              id
+              term
+              topic
+              variable_1
+              variable_2
+              variable_3
+            }
+          }
+        }
+        end: end_date
+        start: start_date
+        events: significant_events {
+          end: end_date
+          start: start_date
+          shortname: short_name
+          id
+        }
+      }
       dois {
         cmrTitle: cmr_entry_title
         doi

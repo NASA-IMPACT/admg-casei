@@ -80,6 +80,7 @@ Deployment.propTypes = {
       start: PropTypes.string.isRequired,
     }).isRequired
   ),
+  collection_periods: PropTypes.array,
   xScale: PropTypes.func.isRequired,
   update: PropTypes.func.isRequired,
   priority: PropTypes.number.isRequired,

@@ -58,7 +58,9 @@ export const platformHeroFields = graphql`
     campaigns {
       id
     }
-    collectionPeriods: collection_periods
+    collectionPeriods: collection_periods {
+      id
+    }
     image {
       description
       gatsbyImg {

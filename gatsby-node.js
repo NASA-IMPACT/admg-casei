@@ -29,6 +29,9 @@ exports.createSchemaCustomization = ({ actions }) => {
      }
      type collection_period implements Node {
        dois: [doi] @link
+       platform: platform @link
+       deployment: deployment @link
+       instruments: [instrument] @link
      }
      type deployment implements Node {
       aliases: [alias] @link
@@ -55,6 +58,7 @@ exports.createSchemaCustomization = ({ actions }) => {
      }
      type instrument implements Node {
        campaigns: [campaign] @link
+       collection_periods: [collection_period] @link
        gcmd_phenomenas: [gcmd_phenomena] @link
        image: image @link
        measurement_type: measurement_type @link
@@ -69,6 +73,7 @@ exports.createSchemaCustomization = ({ actions }) => {
        instruments: [instrument] @link
        dois: [doi] @link
        platform_type: platform_type @link
+       collection_periods: [collection_period] @link
      }
      type website implements Node {
        website_type: website_type @link
