@@ -129,7 +129,7 @@ exports.sourceNodes = async ({ actions, createContentDigest }) => {
       "deployment",
       "doi",
       "focus_area",
-      "gcmd_phenomena",
+      "gcmd_phenomenon",
       "geographical_region",
       "geophysical_concept",
       "image",
