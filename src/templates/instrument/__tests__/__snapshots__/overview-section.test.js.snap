@@ -40,7 +40,7 @@ exports[`Overview Section displays content 1`] = `
     </div>
   </span>
   <div
-    className="section__SectionContent-sc-1oozlr5-2 eQJqab"
+    className="section__SectionContent-sc-1oozlr5-2 knKudV"
     mode="lightTheme"
   >
     <h3>
@@ -211,7 +211,7 @@ exports[`Overview Section displays content 1`] = `
     </section>
   </div>
   <div
-    className="section__SectionContent-sc-1oozlr5-2 joIarM"
+    className="section__SectionContent-sc-1oozlr5-2 gmSFJK"
     mode="lightTheme"
   >
     <ul

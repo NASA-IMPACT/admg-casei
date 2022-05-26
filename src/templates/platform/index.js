@@ -27,8 +27,7 @@ export default function PlatformTemplate({ data: { platform }, path }) {
       component: CampaignsAndInstruments,
       props: {
         id: "campaigns-instruments",
-        campaigns: platform.campaigns,
-        instruments: platform.instruments,
+        collectionPeriods: platform.collectionPeriods,
       },
     },
     data: {
@@ -43,7 +42,7 @@ export default function PlatformTemplate({ data: { platform }, path }) {
   }
 
   return (
-    <Layout isHeaderFixed>
+    <Layout>
       <SEO title={platform.shortname} lang="en" />
 
       <PlatformHero
@@ -76,6 +75,34 @@ export const query = graphql`
     platform: platform(id: { eq: $slug }) {
       ...platformHeroFields
       ...platformOverviewFields
+      collectionPeriods: collection_periods {
+        id
+        deployment: deployment {
+          id
+          campaign: campaign {
+            id
+            shortname: short_name
+            longname: long_name
+            dois {
+              id
+            }
+          }
+        }
+        instruments: instruments {
+          id
+          shortname: short_name
+          longname: long_name
+          description
+          gcmdPhenomena: gcmd_phenomena {
+            id
+            term
+            topic
+            variable_1
+            variable_2
+            variable_3
+          }
+        }
+      }
       dois {
         cmrTitle: cmr_entry_title
         doi

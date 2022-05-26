@@ -38,8 +38,7 @@ const InstrumentTemplate = ({ data: { instrument }, path }) => {
       nav: "Instrument Operation",
       component: Entities,
       props: {
-        platforms: instrument.platforms,
-        campaigns: instrument.campaigns,
+        collectionPeriods: instrument.collectionPeriods,
       },
     },
     data: {
@@ -53,7 +52,7 @@ const InstrumentTemplate = ({ data: { instrument }, path }) => {
     },
   }
   return (
-    <Layout isHeaderFixed>
+    <Layout>
       <SEO title={instrument.shortname} lang="en" />
 
       <InstrumentHero
@@ -85,6 +84,24 @@ export const query = graphql`
       ...instrumentHeroFields
       ...instrumentDetailFields
       ...instrumentEntitiesFields
+      collectionPeriods: collection_periods {
+        id
+        deployment: deployment {
+          id
+          campaign: campaign {
+            id
+            shortname: short_name
+            longname: long_name
+            dois {
+              id
+            }
+          }
+        }
+        platform: platform {
+          id
+          shortname: short_name
+        }
+      }
       dois {
         cmrTitle: cmr_entry_title
         doi

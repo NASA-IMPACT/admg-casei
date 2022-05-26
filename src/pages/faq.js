@@ -73,7 +73,7 @@ export default function FAQ({ data }) {
           </SectionContent>
         </Section>
 
-        {data.allFaqJson.group.map(({ nodes, section }) => {
+        {data.allFaqJson.group.map(({ nodes, section }, sectionIdx) => {
           return (
             <Section id={section} key={section}>
               <SectionHeader
@@ -83,8 +83,8 @@ export default function FAQ({ data }) {
               />
 
               <SectionContent>
-                {nodes.map(x => (
-                  <QandA key={x.question} {...x} />
+                {nodes.map((x, idx) => (
+                  <QandA id={`${sectionIdx}-${idx}`} key={x.question} {...x} />
                 ))}
               </SectionContent>
             </Section>
@@ -150,11 +150,16 @@ FAQ.propTypes = {
   // location: PropTypes.object.isRequired,
 }
 
-const QandA = ({ question, answer, links, images }) => {
+const QandA = ({ id, question, answer, links, images }) => {
   const [isOpen, setOpen] = React.useState(false)
 
   return (
-    <Disclosure key={question} open={isOpen} onChange={() => setOpen(!isOpen)}>
+    <Disclosure
+      id={id}
+      key={question}
+      open={isOpen}
+      onChange={() => setOpen(!isOpen)}
+    >
       <Border>
         <Question>
           <h3
@@ -196,6 +201,7 @@ const QandA = ({ question, answer, links, images }) => {
 }
 
 QandA.propTypes = {
+  id: PropTypes.string.isRequired,
   question: PropTypes.string.isRequired,
   answer: PropTypes.string.isRequired,
   links: PropTypes.PropTypes.arrayOf(

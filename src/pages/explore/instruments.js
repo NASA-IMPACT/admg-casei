@@ -129,7 +129,7 @@ export default function ExploreInstruments({ data, location }) {
 
 export const query = graphql`
   query {
-    allInstrument {
+    allInstrument(sort: { fields: [short_name], order: ASC }) {
       totalCount
       list: nodes {
         ...instrumentFields

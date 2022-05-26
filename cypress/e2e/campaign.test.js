@@ -177,7 +177,6 @@ describe("Campaign", () => {
       .find("[data-cy=accordion-button]")
       .first()
       .click()
-    cy.get("[data-cy=instrument-accordion-content]").should("exist").find("img")
     cy.get("[data-cy=instrument-accordion-content]").find(
       "[data-cy=instrument-accordion-image-description]"
     )

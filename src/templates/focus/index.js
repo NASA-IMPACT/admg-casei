@@ -21,7 +21,7 @@ import { ArrowIcon } from "../../icons"
 
 const FocusTemplate = ({ data: { focusArea, allFocusArea }, path }) => {
   return (
-    <Layout isHeaderFixed>
+    <Layout>
       <SEO title={focusArea.shortname} lang="en" />
 
       <PageBody id="focus">

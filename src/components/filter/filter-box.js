@@ -37,6 +37,7 @@ export default function FilterBox({
     >
       <VisuallyHidden id={filterName}>{filterName}</VisuallyHidden>
       <ListboxInput
+        id={`${filterName}-listbox`}
         aria-labelledby={filterName}
         defaultValue={value}
         onChange={value => handleSelection(value)}

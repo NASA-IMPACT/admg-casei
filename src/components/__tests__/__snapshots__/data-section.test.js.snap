@@ -23,7 +23,7 @@ exports[`Data Section matches snapshot 1`] = `
     </a>
   </div>
   <div
-    className="section__SectionContent-sc-1oozlr5-2 eDhOSH"
+    className="section__SectionContent-sc-1oozlr5-2 jMjZSB"
     mode="darkTheme"
   >
     <p>
@@ -66,14 +66,14 @@ exports[`Data Section matches snapshot 1`] = `
           data-reach-listbox-input=""
           data-state="closed"
           data-value={null}
-          id="listbox-input"
+          id="Campaigns-listbox"
         >
           <span
             aria-haspopup="listbox"
-            aria-labelledby="Campaigns button--listbox-input"
+            aria-labelledby="Campaigns button--Campaigns-listbox"
             className="filter-box___StyledListboxButton-sc-1n4l7nk-1 iAcLtr"
             data-reach-listbox-button=""
-            id="button--listbox-input"
+            id="button--Campaigns-listbox"
             onKeyDown={[Function]}
             onMouseDown={[Function]}
             onMouseUp={[Function]}
@@ -88,7 +88,6 @@ exports[`Data Section matches snapshot 1`] = `
               ▼
             </span>
           </span>
-          <span />
         </div>
       </div>
       <div
@@ -118,14 +117,14 @@ exports[`Data Section matches snapshot 1`] = `
           data-reach-listbox-input=""
           data-state="closed"
           data-value={null}
-          id="listbox-input"
+          id="Platforms-listbox"
         >
           <span
             aria-haspopup="listbox"
-            aria-labelledby="Platforms button--listbox-input"
+            aria-labelledby="Platforms button--Platforms-listbox"
             className="filter-box___StyledListboxButton-sc-1n4l7nk-1 iAcLtr"
             data-reach-listbox-button=""
-            id="button--listbox-input"
+            id="button--Platforms-listbox"
             onKeyDown={[Function]}
             onMouseDown={[Function]}
             onMouseUp={[Function]}
@@ -140,7 +139,6 @@ exports[`Data Section matches snapshot 1`] = `
               ▼
             </span>
           </span>
-          <span />
         </div>
       </div>
     </div>
