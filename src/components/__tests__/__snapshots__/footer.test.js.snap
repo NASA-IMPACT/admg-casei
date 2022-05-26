@@ -191,7 +191,7 @@ exports[`Footer renders correctly 1`] = `
             <span
               className="external-link___StyledSpan-sc-3ezy1s-1 hiRjrK"
             >
-              Impact Website
+              IMPACT Website
             </span>
           </a>
         </li>
