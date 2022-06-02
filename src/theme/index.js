@@ -41,7 +41,7 @@ const shape = {
 }
 
 const layout = {
-  pageMargin: "4rem",
+  pageMargin: "5%", //"4rem",
   smallPageMargin: "2rem",
   maxWidth: "1280px",
 }
