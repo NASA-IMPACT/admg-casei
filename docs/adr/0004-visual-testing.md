@@ -71,7 +71,7 @@ https://www.browserstack.com/percy
 Percy is BrowserStack's visual comparison tool. It appears to come with out-of-the-box Gatsby integration, allowing us to run snapshots on all (or some) pages as part of the Gatsby build process. However, the npm package which enables this appears to be quite outdated compared to the core Percy packages (despite being an official library). Unfortunate, but Percy comes with a CLI tool which can be integrated pretty easily nonetheless.
 
 - Good, because the CLI tool is easy to configure and integrate with Github Actions.
-- Good, because the free tier offers 5000 snapshots/month (enough to run ~10 comparisons per day, assuming 15 pages per test run).
+- Good, because the free tier offers 5000 snapshots/month (enough to run ~1 comparisons per day, assuming 180 snapshots (15 pages x 4 browsers x 3 resolutions) per test run.
 - Good, because it includes a web interface for reviewing each build and approving changes.
 - Good, because it integrates with Github PRs, allowing us to make visual review a required step in PRs to production.
 - Bad, because no integration with Github Issues
