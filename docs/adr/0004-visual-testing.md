@@ -23,19 +23,19 @@ The curators/administrators of CASEI may also be interested in the opportunity t
 
 ### Option 1: Headless regression testing (Developer workflow)
 
-- Integrate visual regression testing with our current test suite and run it on each PR in Github Actions. Add a suite to the current unit tests and behavioral tests that would run the visual regression, saving image outputs as baseline (and then with every run we would compare the diff between each image). There are some customizations we can do like how severe the warning is if we find something.
-- Since it’s normal that curator content always changes, we would need to ignore the “normal and expected” differences
-- This option isn’t something visible to curators. Curators won’t interact directly. You just see the test fail, but if you want to make a change you need to go into the code. Can still store all the screenshots.
+- Integrate visual regression testing with our current test suite and run it on each PR in Github Actions. Each test run compares the current snapshot of each page against an approved baseline snapshot. There are some customizations we can do like how severe the warning is if we find something.
+- Since it’s normal that curator content always changes, we would need to ignore the “normal and expected” differences.
+- This option isn’t highly visible/actionable for curators. Curators won’t interact directly. You just see the test fail, but if you want to make a change you need to go into the code. Can still review the screenshots.
 - We should do this regardless of whether we also pursure option 2 or 3. It's relatively straightforward to set up and provides the development team with a set of safeguards against breaking the new mobile layout. It's also a necessary preliminary step if we pursue option 2.
 
 ### Option 2: Interface for reviewing production builds ahead of deployment (Curator/Admin workflow)
 
-- Employ a third party service that displays snapshots (output of test) and provides an interface allowing curators to approve/reject a build. Approvals link back to GitHub pull request and integrates better in the current workflow where things are blocked until approval is granted.
-- Will be extra work for curators on each production push
+- Employ a third party service that displays snapshots and provides an interface allowing curators to approve/reject a build. Approvals link back to a GitHub pull request and integrate into the Github-based workflow where deployments are blocked until approval is granted.
+- Will be extra work for curators on each production push.
 - This would only be employed on PRs to the `production` branch, to avoid unnecessary review by curators. Option 1 would run on every PR, to allow developers to catch design issues early.
-- If curators update content and not code, they deploy without kicking off this kind of process (short circuit process). We might need to modify that workflow to trigger Option 2 and make a build that they need to approve.
-- Performing this step on each production push means we’re dealing with smaller changes each time instead of one massive set of changes (see Option 3)
-- Curators already approve content changes through the MI and this process would not snapshot every page of content, anyway, so this would only be necessary if curators want final approval on design changes and the opportunity to act as one final layer of QA before deploying.
+- If curators update content and not code, they deploy without creating a PR, and would avoid kicking off this of process. We might need to modify that workflow to trigger Option 2 and make a build that they need to approve.
+- Performing this step on each production push means we’re dealing with smaller changes each time instead of one massive set of changes (see Option 3).
+- Curators already approve content changes through the MI and this process would not snapshot every page of content, anyway, so this would only be necessary if curators want final approval on design changes and the opportunity to act as a final layer of QA before deploying.
 
 ### Option 3: Visual review on demand or on a schedule (Curator/Admin workflow)
 
