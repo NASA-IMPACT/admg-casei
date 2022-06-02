@@ -1,7 +1,7 @@
 # 4. Visual Testing
 
 - Status: proposed
-- Deciders: [list everyone involved in the decision]
+- Deciders: @edkeeble @heidimok @smwingo @deborahUAH
 - Date: 2022-05-24
 
 Technical Story: https://github.com/NASA-IMPACT/admg-casei/issues/434
@@ -21,14 +21,14 @@ The curators/administrators of CASEI may also be interested in the opportunity t
 
 ## Workflow Options
 
-### Option 1: Headless regression testing
+### Option 1: Headless regression testing (Developer workflow)
 
 - Integrate visual regression testing with our current test suite and run it on each PR in Github Actions. Add a suite to the current unit tests and behavioral tests that would run the visual regression, saving image outputs as baseline (and then with every run we would compare the diff between each image). There are some customizations we can do like how severe the warning is if we find something.
 - Since it’s normal that curator content always changes, we would need to ignore the “normal and expected” differences
 - This option isn’t something visible to curators. Curators won’t interact directly. You just see the test fail, but if you want to make a change you need to go into the code. Can still store all the screenshots.
 - We should do this regardless of whether we also pursure option 2 or 3. It's relatively straightforward to set up and provides the development team with a set of safeguards against breaking the new mobile layout. It's also a necessary preliminary step if we pursue option 2.
 
-### Option 2: Curator/Admin interface for reviewing production builds ahead of deployment
+### Option 2: Interface for reviewing production builds ahead of deployment (Curator/Admin workflow)
 
 - Employ a third party service that displays snapshots (output of test) and provides an interface allowing curators to approve/reject a build. Approvals link back to GitHub pull request and integrates better in the current workflow where things are blocked until approval is granted.
 - Will be extra work for curators on each production push
@@ -37,7 +37,7 @@ The curators/administrators of CASEI may also be interested in the opportunity t
 - Performing this step on each production push means we’re dealing with smaller changes each time instead of one massive set of changes (see Option 3)
 - Curators already approve content changes through the MI and this process would not snapshot every page of content, anyway, so this would only be necessary if curators want final approval on design changes and the opportunity to act as one final layer of QA before deploying.
 
-### Option 3: Visual review on demand (or on a schedule)
+### Option 3: Visual review on demand or on a schedule (Curator/Admin workflow)
 
 - We could still use one of the services from Option 2, but would not integrate with GitHub.
 - Create a full set of snapshots for review on demand or on a schedule.
@@ -56,17 +56,11 @@ The curators/administrators of CASEI may also be interested in the opportunity t
 
 ## Decision Outcome
 
-Chosen option: "[option 1]", because [justification. e.g., only option, which meets k.o. criterion decision driver | which resolves force force | … | comes out best (see below)].
+Recommend adopting Playwright for running end-to-end tests and conducting visual regression testing in our developer workflow (locally and on each PR via Github Actions), because it includes built-in support for cross-browser/mobile emulated testing. Porting the existing E2E test suite should be minimal work, based on the one test that we have already ported over, and will provide the opportunity the review the current suite for flakiness.
 
-### Positive Consequences <!-- optional -->
+If the Curation/Admin team would like the opportunity to review diffs on production builds ahead of deployment, we recommend adopting Percy for that purpose. Its integration with Github PRs will make blocking deployments on build approval straightforward and it includes a free tier with enough capacity to meet our needs.
 
-- [e.g., improvement of quality attribute satisfaction, follow-up decisions required, …]
-- …
-
-### Negative Consequences <!-- optional -->
-
-- [e.g., compromising quality attribute, follow-up decisions required, …]
-- …
+For the time being, we don't recommend adopting a service which tests on real mobile devices, as they typically cost a minimum of $150-200 USD/month and the emulated devices provide by Playwright should give us reasonable coverage at no additional cost.
 
 ## Pros and Cons of the Options
 
