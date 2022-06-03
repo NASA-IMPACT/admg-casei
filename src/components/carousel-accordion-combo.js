@@ -13,7 +13,6 @@ export default function CarouselAccordionCombo({
   emptyMessage,
   carouselList,
   card: CategoryCard,
-  folds,
 }) {
   const controlTextRef = useRef(null)
   const [slideIndex, setSlideIndex] = useState(0)
@@ -34,12 +33,12 @@ export default function CarouselAccordionCombo({
           >
             {carouselList.map((carouselItem, index) => (
               <Button
-                key={carouselItem.id}
+                key={carouselItem.item.id}
                 ref={index === slideIndex ? controlTextRef : null}
                 isSecondary={!(index === slideIndex)}
                 action={() => setSlideIndex(index)}
               >
-                {carouselItem.shortname}
+                {carouselItem.item.shortname}
               </Button>
             ))}
           </div>
@@ -85,7 +84,7 @@ export default function CarouselAccordionCombo({
             {carouselList.map(carouselItem => (
               <div
                 role="group"
-                key={carouselItem.id}
+                key={carouselItem.item.id}
                 data-cy={id}
                 css={`
                    {
@@ -98,11 +97,11 @@ export default function CarouselAccordionCombo({
                 `}
               >
                 <CategoryCard
-                  shortname={carouselItem.shortname}
+                  shortname={carouselItem.item.shortname}
                   mode={POSITIVE}
                 />
 
-                <Accordion folds={folds[carouselItem.id]} id="instrument" />
+                <Accordion folds={carouselItem.folds} id="instrument" />
               </div>
             ))}
           </Carousel>
