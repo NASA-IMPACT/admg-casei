@@ -1,8 +1,6 @@
 import { test, expect } from "@playwright/test"
-const percySnapshot = require("@percy/playwright")
 
 test.beforeEach(async ({ page }) => {
-  test.setTimeout(60000)
   await page.goto("/about")
 })
 
