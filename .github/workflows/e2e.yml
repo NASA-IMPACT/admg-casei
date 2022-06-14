@@ -159,5 +159,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Restore Gatsby public folder
+        uses: actions/cache@v2
+        with:
+          path: public
+          key: ${{ runner.os }}-gatsby-build-${{ hashFiles('yarn.lock') }}-${{ hashFiles('src/**') }}
+
       - name: Percy Build
         run: npx @percy/cli snapshot -c .percy.yml ./public
