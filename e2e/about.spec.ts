@@ -2,14 +2,11 @@ import { test, expect } from "@playwright/test"
 const percySnapshot = require("@percy/playwright")
 
 test.beforeEach(async ({ page }) => {
+  test.setTimeout(60000)
   await page.goto("/about")
 })
 
 test.describe("About Page", () => {
-  test("upload snapshots to percy", async ({ page }) => {
-    await percySnapshot(page, `About Page`)
-  })
-
   test("matches snapshots", async ({ page }) => {
     await expect(page).toHaveScreenshot({ fullPage: false })
     await expect(page).toHaveScreenshot({ fullPage: true })
