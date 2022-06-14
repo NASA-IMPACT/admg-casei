@@ -56,7 +56,7 @@ The curators/administrators of CASEI may also be interested in the opportunity t
 
 ## Decision Outcome
 
-Recommend adopting Playwright for running end-to-end tests and conducting visual regression testing in our developer workflow (locally and on each PR via Github Actions), because it includes built-in support for cross-browser/mobile emulated testing. Porting the existing E2E test suite should be minimal work, based on the one test that we have already ported over, and will provide the opportunity the review the current suite for flakiness.
+Recommend adopting Playwright for running end-to-end tests and conducting visual regression testing in our developer workflow (locally and on each PR via Github Actions), because it includes built-in support for cross-browser/mobile emulated testing. Porting the existing E2E test suite should be minimal work, based on the one test that we have already ported over, and will provide the opportunity to review the current suite for flakiness.
 
 If the Curation/Admin team would like the opportunity to review diffs on production builds ahead of deployment, we recommend adopting Percy for that purpose. Its integration with Github PRs will make blocking deployments on build approval straightforward and it includes a free tier with enough capacity to meet our needs.
 

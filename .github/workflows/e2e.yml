@@ -145,3 +145,19 @@ jobs:
         with:
           name: cypress-videos
           path: cypress/videos
+
+  visual-regression:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.8.0
+        with:
+          access_token: ${{ github.token }}
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Percy Build
+        run: npx @percy/cli snapshot -c .percy.yml ./public

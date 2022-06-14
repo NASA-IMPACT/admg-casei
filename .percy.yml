@@ -1,0 +1,16 @@
+version: 2
+snapshot:
+  widths:
+    - 375 # minimum iPhone resolution
+    - 810 # iPad
+    - 1280 # desktop
+  minHeight: 1024
+  percyCSS: ""
+static:
+  include:
+    - "index.html"
+    - "/{about,contact,faq,glossary,}/index.html"
+    - "/{explore,focus}/**/index.html"
+    - "/campaign/ABoVE/index.html"
+    - "/instrument/LIDAR/index.html"
+    - "/platform/Twin Otter/index.html"
