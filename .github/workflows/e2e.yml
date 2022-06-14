@@ -72,7 +72,81 @@ jobs:
         if: steps.cache-build.outputs.cache-hit != 'true'
         run: yarn build
 
-  test-e2e:
+  # test-e2e:
+  #   needs: build
+  #   runs-on: ubuntu-latest
+
+  #   env:
+  #     ADMG_ACCESS_TOKEN: ${{ secrets.ADMG_ACCESS_TOKEN }}
+  #     CYPRESS_password: ${{ secrets.CYPRESS_password }}
+  #     GATSBY_ADMG_CLIENT_ID: ${{ secrets.GATSBY_ADMG_CLIENT_ID }}
+  #     GATSBY_ADMG_CLIENT_SECRET: ${{ secrets.GATSBY_ADMG_CLIENT_SECRET }}
+  #     GATSBY_CPU_COUNT: 2
+  #     GATSBY_MAPBOX_TOKEN: ${{ secrets.GATSBY_MAPBOX_TOKEN }}
+
+  #   steps:
+  #     - name: Cancel Previous Runs
+  #       uses: styfle/cancel-workflow-action@0.8.0
+  #       with:
+  #         access_token: ${{ github.token }}
+
+  #     - name: Checkout
+  #       uses: actions/checkout@v2
+
+  #     - name: Read .nvmrc
+  #       run: echo ::set-output name=NVMRC::$(cat .nvmrc)
+  #       id: nvm
+
+  #     - name: Use Node.js ${{ steps.nvm.outputs.NVMRC }}
+  #       uses: actions/setup-node@v1
+  #       with:
+  #         node-version: ${{ steps.nvm.outputs.NVMRC }}
+
+  #     - name: Restore node modules
+  #       uses: actions/cache@v2
+  #       with:
+  #         path: node_modules
+  #         key: ${{ runner.os }}-node-modules-${{ hashFiles('yarn.lock') }}
+
+  #     - name: Restore Gatsby .cache folder
+  #       uses: actions/cache@v2
+  #       with:
+  #         path: .cache
+  #         key: ${{ runner.os }}-gatsby-cache-${{ hashFiles('yarn.lock') }}
+
+  #     - name: Restore Gatsby public folder
+  #       uses: actions/cache@v2
+  #       with:
+  #         path: public
+  #         key: ${{ runner.os }}-gatsby-build-${{ hashFiles('yarn.lock') }}-${{ hashFiles('src/**') }}
+
+  #     - name: Restore Cypress .cache folder
+  #       uses: actions/cache@v2
+  #       with:
+  #         path: ~/.cache/Cypress
+  #         key: ${{ runner.os }}-cypress-cache-${{ hashFiles('yarn.lock') }}
+
+  #     - name: Test End-to-end
+  #       uses: cypress-io/github-action@v2
+  #       with:
+  #         start: yarn serve -p 8000
+  #         wait-on: "http://localhost:8000"
+
+  #     - name: Store screenshot artifacts
+  #       uses: actions/upload-artifact@v1
+  #       if: failure()
+  #       with:
+  #         name: cypress-screenshots
+  #         path: cypress/screenshots
+
+  #     - name: Store video artifacts
+  #       uses: actions/upload-artifact@v1
+  #       if: failure()
+  #       with:
+  #         name: cypress-videos
+  #         path: cypress/videos
+
+  test-e2e-playwright:
     needs: build
     runs-on: ubuntu-latest
 
@@ -120,34 +194,25 @@ jobs:
           path: public
           key: ${{ runner.os }}-gatsby-build-${{ hashFiles('yarn.lock') }}-${{ hashFiles('src/**') }}
 
-      - name: Restore Cypress .cache folder
-        uses: actions/cache@v2
-        with:
-          path: ~/.cache/Cypress
-          key: ${{ runner.os }}-cypress-cache-${{ hashFiles('yarn.lock') }}
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Install Playwright
+        run: npx playwright install --with-deps
 
       - name: Test End-to-end
-        uses: cypress-io/github-action@v2
-        with:
-          start: yarn serve -p 8000
-          wait-on: "http://localhost:8000"
+        run: npx playwright test
 
-      - name: Store screenshot artifacts
-        uses: actions/upload-artifact@v1
-        if: failure()
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v2
         with:
-          name: cypress-screenshots
-          path: cypress/screenshots
-
-      - name: Store video artifacts
-        uses: actions/upload-artifact@v1
-        if: failure()
-        with:
-          name: cypress-videos
-          path: cypress/videos
+          name: playwright-report
+          path: playwright-report
 
   visual-regression:
     needs: build
+    if: ${{ github.event.pull_request.base.ref == 'production'}}
     runs-on: ubuntu-latest
 
     env:
