@@ -9,8 +9,19 @@ snapshot:
 static:
   include:
     - "index.html"
-    - "/{about,contact,faq,glossary,}/index.html"
+    - "/{about,contact,faq,glossary}/index.html"
     - "/{explore,focus}/**/index.html"
     - "/campaign/ABoVE/index.html"
     - "/instrument/LIDAR/index.html"
     - "/platform/Twin Otter/index.html"
+    - "/explore/campaigns/index.html"
+  overrides:
+    - files:
+        - "index.html"
+        - "/{about,contact,faq,glossary}/index.html"
+        - "/{explore,focus}/**/index.html"
+        - "/campaign/ABoVE/index.html"
+        - "/instrument/LIDAR/index.html"
+        - "/platform/Twin Otter/index.html"
+        - "/explore/campaigns/index.html"
+      waitForTimeout: 2000
