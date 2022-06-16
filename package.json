@@ -5,7 +5,8 @@
   "version": "0.1.0",
   "contributors": [
     "Necoline Hubner <necoline@developmentseed.org>",
-    "Alice Rühl <alice@developmentseed.org>"
+    "Alice Rühl <alice@developmentseed.org>",
+    "Edward Keeble <edward@developmentseed.org>"
   ],
   "dependencies": {
     "@fontsource/titillium-web": "^4.5.2",
@@ -52,6 +53,8 @@
   "devDependencies": {
     "@babel/eslint-parser": "^7.17.0",
     "@cypress/code-coverage": "^3.9.12",
+    "@percy/playwright": "^1.0.4",
+    "@playwright/test": "^1.22.2",
     "@quickbaseoss/babel-plugin-styled-components-css-namespace": "^1.0.1",
     "@testing-library/cypress": "^8.0.2",
     "@testing-library/react-hooks": "^7.0.2",
@@ -76,6 +79,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.5.1",
     "jest-styled-components": "^7.0.8",
+    "playwright": "^1.22.2",
     "prettier": "^2.5.1",
     "react-test-renderer": "^17.0.1",
     "start-server-and-test": "^1.14.0"
