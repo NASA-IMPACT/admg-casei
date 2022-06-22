@@ -1,4 +1,5 @@
 import { test, expect } from "@playwright/test"
+import { delay } from "./utils"
 
 test.beforeEach(async ({ page }) => {
   await page.goto("/about")
@@ -7,6 +8,9 @@ test.beforeEach(async ({ page }) => {
 test.describe("About Page", () => {
   test("matches snapshots", async ({ page }) => {
     await expect(page).toHaveScreenshot({ fullPage: false })
+    await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight))
+    await delay(500)
+    await page.evaluate(() => window.scrollTo(0, -document.body.scrollHeight))
     await expect(page).toHaveScreenshot({ fullPage: true })
   })
 
