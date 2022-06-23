@@ -22,7 +22,7 @@ const measurementRegions = [
     longname: "test2",
   },
 ]
-const gcmdPhenomenas = [
+const gcmdPhenomena = [
   {
     term: "test",
     topic: "test",
@@ -62,7 +62,7 @@ describe("Overview Section", () => {
         spatialResolution={spatialResolution}
         calibration={calibration}
         measurementRegions={measurementRegions}
-        gcmdPhenomenas={gcmdPhenomenas}
+        gcmdPhenomena={gcmdPhenomena}
         instrumentDoi={instrumentDoi}
         instrumentManufacturer={instrumentManufacturer}
         fundingSource={fundingSource}
