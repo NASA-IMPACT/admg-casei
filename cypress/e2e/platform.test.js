@@ -58,7 +58,7 @@ describe("Platform", () => {
       .should("have.text", "Overview")
       .and("be.visible")
 
-    cy.get("[data-cy=link-list]").find("li").should("have.length.within", 0, 2)
+    cy.get("[data-cy=link-list]").find("li").should("have.length.within", 0, 3)
 
     cy.get("[data-cy=overview-section]").first().find("p").should("exist")
 

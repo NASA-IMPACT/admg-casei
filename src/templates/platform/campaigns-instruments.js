@@ -6,12 +6,26 @@ import CarouselAccordionCombo from "../../components/carousel-accordion-combo"
 import CampaignCard from "../../components/cards/campaign-card"
 
 const CampaignsAndInstruments = ({ id, collectionPeriods }) => {
-  const campaigns = []
-  const campaignInstruments = {}
+  // We want to display one carousel item per combination of Platform and
+  // Instrument Set. For example, if the HS3 Campaign has 5 Deployments for this
+  // Platform, but only 2 unique sets of Instruments across those Deployments,
+  // HS3 should appear in the carousel twice, with each carousel item displaying
+  // one of those unique sets of Instruments.
+  let uniqueSets = []
+  let campaigns = []
 
   for (const cdpi of collectionPeriods) {
-    campaigns.push(cdpi.deployment.campaign)
-    campaignInstruments[cdpi.deployment.campaign.id] = cdpi.instruments
+    const campaignId = cdpi.deployment.campaign.id
+    const instrumentIds = cdpi.instruments.map(instrument => instrument.id)
+    const combinedId = `${campaignId}${instrumentIds.sort().join()}`
+
+    if (!uniqueSets.includes(combinedId)) {
+      uniqueSets.push(combinedId)
+      campaigns.push({
+        item: cdpi.deployment.campaign,
+        folds: cdpi.instruments,
+      })
+    }
   }
 
   return (
@@ -28,7 +42,6 @@ const CampaignsAndInstruments = ({ id, collectionPeriods }) => {
           emptyMessage="No available related campaigns"
           carouselList={campaigns}
           card={CampaignCard}
-          folds={campaignInstruments}
         />
       </SectionContent>
     </Section>
