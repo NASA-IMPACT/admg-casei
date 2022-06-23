@@ -93,7 +93,7 @@ export const query = graphql`
           shortname: short_name
           longname: long_name
           description
-          gcmdPhenomenas: gcmd_phenomenas {
+          gcmdPhenomena: gcmd_phenomena {
             id
             term
             topic
@@ -130,6 +130,31 @@ export const query = graphql`
         longname: long_name
         dois {
           id
+        }
+        instruments {
+          id
+          shortname: short_name
+          longname: long_name
+          description
+          gcmdPhenomena: gcmd_phenomena {
+            term
+            topic
+            variable_1
+            variable_2
+            variable_3
+          }
+          image {
+            description
+            gatsbyImg {
+              childImageSharp {
+                gatsbyImageData(
+                  height: 100
+                  layout: FIXED
+                  placeholder: BLURRED
+                )
+              }
+            }
+          }
         }
       }
       instruments {
@@ -173,7 +198,7 @@ PlatformTemplate.propTypes = {
               shortname: PropTypes.string.isRequired,
               longname: PropTypes.string.isRequired,
               description: PropTypes.string.isRequired,
-              gcmdPhenomenas: PropTypes.arrayOf(
+              gcmdPhenomena: PropTypes.arrayOf(
                 PropTypes.shape({
                   term: PropTypes.string.isRequired,
                   topic: PropTypes.string.isRequired,

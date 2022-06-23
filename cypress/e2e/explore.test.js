@@ -41,13 +41,14 @@ describe("Explore", () => {
         .invoke("text")
         .should("match", /[0-9]+/i)
 
+      cy.get("[data-cy=explore-input]").type("CPEX-AW").type("{enter}")
+
       cy.get("[data-cy=campaigns-card]")
         .find("big")
         .contains("CPEX-AW")
         .parent()
         .parent() // is there a better way to select the card?
         .should($card => {
-          expect($card.find("[data-cy=ongoing-tag]")).to.exist
           expect($card.find("[data-cy=shortname]")).to.contain("CPEX-AW")
           expect($card.find("[data-cy=longname]")).to.contain(
             "Convective Processes Experiment – Aerosols & Winds"

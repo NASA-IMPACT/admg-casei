@@ -73,3 +73,6 @@ yarn-error.log
 cypress/integration/examples/
 cypress/videos
 cypress/screenshots
+/test-results/
+/playwright-report/
+/playwright/.cache/

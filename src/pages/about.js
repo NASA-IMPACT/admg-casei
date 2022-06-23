@@ -35,7 +35,7 @@ const LinkedParagraph = () => (
     <ExternalLink
       url="https://earthdata.nasa.gov/esds"
       label="(ESDS)"
-      id="about-impact"
+      id="about-esds"
     />{" "}
     . The primary responsibility of ADMG is to support data producers and
     archivers with the task of ensuring NASA’s airborne and field investigation

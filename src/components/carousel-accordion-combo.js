@@ -134,7 +134,7 @@ CarouselAccordionCombo.propTypes = {
     shortname: PropTypes.string,
     longname: PropTypes.string,
     description: PropTypes.string,
-    gcmdPhenomenas: PropTypes.arrayOf(
+    gcmdPhenomena: PropTypes.arrayOf(
       PropTypes.shape({
         term: PropTypes.string.isRequired,
         topic: PropTypes.string.isRequired,

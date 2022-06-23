@@ -27,7 +27,7 @@ describe("Campaign", () => {
       .should($stat => {
         expect($stat, "3 items").to.have.length(3)
         expect($stat.eq(0), "first item").to.contain("1")
-        expect($stat.eq(1), "second item").to.contain("62")
+        expect($stat.eq(1), "second item").to.contain("713")
         expect($stat.eq(2), "third item").to.exist
       })
 
@@ -90,10 +90,10 @@ describe("Campaign", () => {
       .should($label => {
         expect($label, "4 items").to.have.length(4)
 
-        expect($label.eq(0), "first item").to.contain("Study dates")
+        expect($label.eq(0), "first item").to.contain("Study Dates")
         expect($label.eq(1), "first item").to.contain("Region")
         expect($label.eq(2), "first item").to.contain("Season of Study")
-        expect($label.eq(3), "first item").to.contain("Spatial bounds")
+        expect($label.eq(3), "first item").to.contain("Spatial Bounds")
       })
 
     cy.get("[data-cy=link-list]").find("li").should("have.length.within", 2, 10)
