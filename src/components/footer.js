@@ -136,7 +136,7 @@ const Footer = ({ shortname }) => {
             </li>
             <li>
               <ExternalLink
-                label="Impact Website"
+                label="IMPACT Website"
                 url="https://earthdata.nasa.gov/esds/impact"
                 id="impact-website"
               />

@@ -165,7 +165,7 @@ export default function OverviewSection({
   spatialResolution,
   calibration,
   measurementRegions,
-  gcmdPhenomenas,
+  gcmdPhenomena,
   instrumentDoi,
   instrumentManufacturer,
   fundingSource,
@@ -196,7 +196,7 @@ export default function OverviewSection({
             {
               title: "Measurement/Variables",
               content:
-                gcmdPhenomenas
+                gcmdPhenomena
                   .map(x =>
                     Object.values(x)
                       .filter(x => x)
@@ -304,7 +304,7 @@ OverviewSection.propTypes = {
       longname: PropTypes.string.isRequired,
     }).isRequired
   ).isRequired,
-  gcmdPhenomenas: PropTypes.arrayOf(
+  gcmdPhenomena: PropTypes.arrayOf(
     PropTypes.shape({
       term: PropTypes.string,
       topic: PropTypes.string,
@@ -347,7 +347,7 @@ export const instrumentDetailFields = graphql`
       id
       longname: long_name
     }
-    gcmdPhenomenas: gcmd_phenomenas {
+    gcmdPhenomena: gcmd_phenomena {
       term
       topic
       variable_1

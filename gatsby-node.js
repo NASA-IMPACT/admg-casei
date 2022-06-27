@@ -59,7 +59,7 @@ exports.createSchemaCustomization = ({ actions }) => {
      type instrument implements Node {
        campaigns: [campaign] @link
        collection_periods: [collection_period] @link
-       gcmd_phenomenas: [gcmd_phenomena] @link
+       gcmd_phenomena: [gcmd_phenomenon] @link
        image: image @link
        measurement_type: measurement_type @link
        measurement_regions: [measurement_region] @link
@@ -129,7 +129,7 @@ exports.sourceNodes = async ({ actions, createContentDigest }) => {
       "deployment",
       "doi",
       "focus_area",
-      "gcmd_phenomena",
+      "gcmd_phenomenon",
       "geographical_region",
       "geophysical_concept",
       "image",

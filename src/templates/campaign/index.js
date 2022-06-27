@@ -160,7 +160,7 @@ export const query = graphql`
             shortname: short_name
             longname: long_name
             description
-            gcmdPhenomenas: gcmd_phenomenas {
+            gcmdPhenomena: gcmd_phenomena {
               id
               term
               topic

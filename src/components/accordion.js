@@ -127,7 +127,7 @@ export default function Accordion({ folds, id }) {
                 </div>
               )}
             </div>
-            {fold.gcmdPhenomenas && (
+            {fold.gcmdPhenomena && (
               <div
                 css={`
                    {
@@ -136,7 +136,7 @@ export default function Accordion({ folds, id }) {
                 `}
               >
                 <Label id="accordion-measurements">Parameters</Label>
-                {fold.gcmdPhenomenas
+                {fold.gcmdPhenomena
                   .map(x =>
                     Object.values(x)
                       .filter(x => x)
@@ -178,7 +178,7 @@ Accordion.propTypes = {
       shortname: PropTypes.string,
       longname: PropTypes.string,
       description: PropTypes.string,
-      gcmdPhenomenas: PropTypes.arrayOf(
+      gcmdPhenomena: PropTypes.arrayOf(
         PropTypes.shape({
           term: PropTypes.string,
           topic: PropTypes.string,

@@ -69,7 +69,7 @@ const OverviewSection = ({
         >
           <ContentItem
             id="overview-content"
-            label="Study dates"
+            label="Study Dates"
             info={`${startdate} — ${enddate || "ongoing"}`}
             mode={POSITIVE}
           />
@@ -90,7 +90,7 @@ const OverviewSection = ({
           <hr />
           <ContentItem
             id="overview-content"
-            label="Spatial bounds"
+            label="Spatial Bounds"
             info={Object.entries(convertBoundsToNSWE(bounds)).map(
               ([label, coord]) => (
                 <p key={label}>
