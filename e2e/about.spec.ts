@@ -2,11 +2,12 @@ import { test, expect } from "@playwright/test"
 import { delay } from "./utils"
 
 test.beforeEach(async ({ page }) => {
-  await page.goto("/about")
+  await page.goto("/about", { waitUntil: "networkidle" })
 })
 
 test.describe("About Page", () => {
   test("matches snapshots", async ({ page }) => {
+    await page.locator("[data-cy=nasa-logo-footer]").waitFor()
     await expect(page).toHaveScreenshot({ fullPage: false })
     await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight))
     await delay(500)

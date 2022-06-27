@@ -176,7 +176,7 @@ const Footer = ({ shortname }) => {
                 alt="NASA's red, white and blue insignia, nicknamed the 'meatball'"
                 width={100} // make the blue circle match the svg logo of size 60
                 height={100} // make the blue circle match the svg logo of size 60
-                data-cy="nasa-logo"
+                data-cy="nasa-logo-footer"
               />
             </a>
             <div data-cy="footer-credits">
