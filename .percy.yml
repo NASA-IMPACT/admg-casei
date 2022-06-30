@@ -24,4 +24,5 @@ static:
         - "/instrument/LIDAR/index.html"
         - "/platform/Twin Otter/index.html"
         - "/explore/campaigns/index.html"
+      execute: "window.scrollTo(0, document.body.scrollHeight); setTimeout(()=>{window.scrollTo(0, -document.body.scrollHeight)}, 1000);"
       waitForTimeout: 2000
