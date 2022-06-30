@@ -135,7 +135,7 @@ jobs:
 
   visual-regression:
     needs: build
-    if: ${{ github.event.pull_request.base.ref == 'production'}}
+    if: ${{ github.event.pull_request.base.ref == 'develop'}}
     runs-on: ubuntu-latest
 
     env:
