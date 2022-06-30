@@ -12,17 +12,15 @@ static:
     - "/{about,contact,faq,glossary}/index.html"
     - "/{explore,focus}/**/index.html"
     - "/campaign/ABoVE/index.html"
-    - "/instrument/LIDAR/index.html"
+    - "/instrument/CPL/index.html"
     - "/platform/Twin Otter/index.html"
-    - "/explore/campaigns/index.html"
   overrides:
     - files:
         - "index.html"
         - "/{about,contact,faq,glossary}/index.html"
         - "/{explore,focus}/**/index.html"
         - "/campaign/ABoVE/index.html"
-        - "/instrument/LIDAR/index.html"
+        - "/instrument/CPL/index.html"
         - "/platform/Twin Otter/index.html"
-        - "/explore/campaigns/index.html"
       execute: "window.scrollTo(0, document.body.scrollHeight); setTimeout(()=>{window.scrollTo(0, -document.body.scrollHeight)}, 1000);"
       waitForTimeout: 2000
