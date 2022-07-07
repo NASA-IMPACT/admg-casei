@@ -22,5 +22,5 @@ static:
         - "/campaign/ABoVE/index.html"
         - "/instrument/CPL/index.html"
         - "/platform/Twin Otter/index.html"
-      execute: "window.scrollTo(0, document.body.scrollHeight); setTimeout(()=>{window.scrollTo(0, -document.body.scrollHeight)}, 1000);"
+      execute: "window.scrollTo(0, document.body.scrollHeight); setTimeout(()=>{window.scrollTo(0, -document.body.scrollHeight)}, 5000);"
       waitForTimeout: 2000
