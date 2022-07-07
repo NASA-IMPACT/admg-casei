@@ -5,7 +5,8 @@ snapshot:
     - 810 # iPad
     - 1280 # desktop
   minHeight: 1024
-  percyCSS: ""
+discovery:
+  network-idle-timeout: 700
 static:
   include:
     - "index.html"
@@ -22,5 +23,5 @@ static:
         - "/campaign/ABoVE/index.html"
         - "/instrument/CPL/index.html"
         - "/platform/Twin Otter/index.html"
-      execute: "window.scrollTo(0, document.body.scrollHeight); setTimeout(()=>{window.scrollTo(0, -document.body.scrollHeight)}, 5000);"
-      waitForTimeout: 2000
+      execute:
+        afterNavigation: "const delay=1000; const steps=10; let sleep = (ms, v) => new Promise(r => setTimeout(r, ms, v)); for (let i=1;i<=steps;i++){ window.scrollTo(0, document.body.scrollHeight*(i/steps)); await sleep(delay); }; window.scrollTo(0, -document.body.scrollHeight); await sleep(1000);"
