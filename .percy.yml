@@ -1,0 +1,27 @@
+version: 2
+snapshot:
+  widths:
+    - 375 # minimum iPhone resolution
+    - 810 # iPad
+    - 1280 # desktop
+  minHeight: 1024
+discovery:
+  network-idle-timeout: 700
+static:
+  include:
+    - "index.html"
+    - "/{about,contact,faq,glossary}/index.html"
+    - "/{explore,focus}/**/index.html"
+    - "/campaign/ABoVE/index.html"
+    - "/instrument/CPL/index.html"
+    - "/platform/Twin Otter/index.html"
+  overrides:
+    - files:
+        - "index.html"
+        - "/{about,contact,faq,glossary}/index.html"
+        - "/{explore,focus}/**/index.html"
+        - "/campaign/ABoVE/index.html"
+        - "/instrument/CPL/index.html"
+        - "/platform/Twin Otter/index.html"
+      execute:
+        afterNavigation: "const delay=1000; const steps=10; let sleep = (ms, v) => new Promise(r => setTimeout(r, ms, v)); for (let i=1;i<=steps;i++){ window.scrollTo(0, document.body.scrollHeight*(i/steps)); await sleep(delay); }; window.scrollTo(0, -document.body.scrollHeight); await sleep(1000);"

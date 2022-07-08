@@ -56,7 +56,6 @@ const InpageNav = ({ shortname, items }) => {
         css={`
           z-index: 1000;
         `}
-        data-cy="inpage-nav"
       >
         <nav
           aria-label="inpage-scroll"
