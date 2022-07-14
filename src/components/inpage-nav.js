@@ -1,8 +1,5 @@
 import React, { useContext } from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
-
-import { CaseiLogoIcon } from "../icons"
 import { POSITIVE } from "../utils/constants"
 import { colors, breakpoints } from "../theme"
 import Button from "../components/button"
