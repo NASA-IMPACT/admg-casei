@@ -36,7 +36,7 @@ describe("Campaign", () => {
     cy.get("[data-cy=inpage-nav]")
       .find("a")
       .should($anchor => {
-        expect($anchor, "7 items").to.have.length(8)
+        expect($anchor, "7 items").to.have.length(7)
         expect($anchor.eq(0), "first item").to.exist
         expect($anchor.eq(1), "second item").to.contain("Overview")
         expect($anchor.eq(2), "third item").to.contain("Focus")

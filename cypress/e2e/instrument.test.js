@@ -25,7 +25,7 @@ describe("Instrument", () => {
     cy.get("[data-cy=inpage-nav]")
       .find("a")
       .should($anchor => {
-        expect($anchor, "4 items").to.have.length(5)
+        expect($anchor, "4 items").to.have.length(4)
         expect($anchor.eq(0), "first item").to.exist
         expect($anchor.eq(1), "second item").to.contain("Instrument Details")
         expect($anchor.eq(2), "third item").to.contain("Instrument Operation")
