@@ -2,8 +2,7 @@ import React, { useMemo } from "react"
 import PropTypes from "prop-types"
 import * as d3 from "d3"
 
-export const Axis = ({ domain, range, chartSettings }) => {
-  const xScale = d3.scaleUtc().domain(domain).range(range).nice()
+export const Axis = ({ domain, range, chartSettings, xScale }) => {
   const dependency = `${domain.join("-")}, ${range.join("-")}`
   const timeFormat = d3.utcFormat("%b %Y")
 
@@ -81,4 +80,5 @@ Axis.propTypes = {
   chartSettings: PropTypes.shape({
     paddingX: PropTypes.number,
   }),
+  xScale: PropTypes.any,
 }

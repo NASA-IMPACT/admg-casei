@@ -84,6 +84,7 @@ export const Details = ({ xPosition, yPosition, id, close }) => {
           display: flex;
           justify-content: flex-end;
           margin-top: 5px;
+          float: right;
         `}
       >
         <IconButton

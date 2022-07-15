@@ -8,7 +8,9 @@ import { Label } from "./label"
 
 export const Deployment = ({
   id,
+  longname,
   shortname,
+  aliases,
   start,
   end,
   events,
@@ -59,7 +61,9 @@ export const Deployment = ({
         <Label
           x={xPosition}
           y={labelOffset}
-          text={shortname}
+          text={
+            longname ? longname : aliases ? aliases[0].shortname : shortname
+          }
           priority={priority}
         />
       )}
@@ -69,7 +73,9 @@ export const Deployment = ({
 
 Deployment.propTypes = {
   id: PropTypes.string.isRequired,
+  longname: PropTypes.string.isRequired,
   shortname: PropTypes.string.isRequired,
+  aliases: PropTypes.array.isRequired,
   end: PropTypes.string.isRequired,
   start: PropTypes.string.isRequired,
   events: PropTypes.arrayOf(
