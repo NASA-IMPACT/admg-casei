@@ -1,8 +1,5 @@
 import React, { useContext } from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
-
-import { CaseiLogoIcon } from "../icons"
 import { POSITIVE } from "../utils/constants"
 import { colors, breakpoints } from "../theme"
 import Button from "../components/button"
@@ -84,20 +81,6 @@ const InpageNav = ({ shortname, items }) => {
               list-style: none;
             `}
           >
-            <li>
-              <Link
-                to="/"
-                css={`
-                  text-decoration: none;
-                  display: grid;
-                  grid-template-columns: 3rem auto;
-                  align-items: center;
-                `}
-                data-cy="home-link"
-              >
-                <CaseiLogoIcon color={colors[POSITIVE].text} size="tiny" />
-              </Link>
-            </li>
             <li
               css={`
                 margin: 0 1rem 0 0;
