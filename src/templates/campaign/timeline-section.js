@@ -53,7 +53,11 @@ export const deploymentFields = graphql`
   fragment deploymentFields on campaign {
     deployments {
       id: uuid
+      longname: long_name
       shortname: short_name
+      aliases: aliases {
+        shortname: short_name
+      }
       collectionPeriods: collection_periods {
         id
       }
@@ -74,11 +78,12 @@ TimelineSection.propTypes = {
   deployments: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
+      longname: PropTypes.string.isRequired,
       shortname: PropTypes.string.isRequired,
+      aliases: PropTypes.array.isRequired,
       collectionPeriods: PropTypes.array.isRequired,
       regions: PropTypes.array.isRequired,
       campaign: PropTypes.string.isRequired,
-      longname: PropTypes.string.isRequired,
       end: PropTypes.string.isRequired,
       start: PropTypes.string.isRequired,
       events: PropTypes.arrayOf(

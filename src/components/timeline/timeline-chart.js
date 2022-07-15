@@ -147,28 +147,32 @@ export const TimelineChart = ({ deployments }) => {
                 ","
               )})`}
             >
-              {deployments.map(({ start, end, events, id, shortname }) => (
-                <Deployment
-                  key={id}
-                  {...{
-                    id,
-                    shortname,
-                    start,
-                    end,
-                    events,
-                    xScale,
-                    update,
-                  }}
-                  yPosition={dms.boundedHeight - 20}
-                  priority={priority[id] || 0}
-                  isFocussed={focussedDeployment === id}
-                  isAnyFocussed={!!focussedDeployment}
-                  updateFocus={updateFocus}
-                />
-              ))}
+              {deployments.map(
+                ({ start, end, events, id, longname, shortname, aliases }) => (
+                  <Deployment
+                    key={id}
+                    {...{
+                      id,
+                      longname,
+                      shortname,
+                      aliases,
+                      start,
+                      end,
+                      events,
+                      xScale,
+                      update,
+                    }}
+                    yPosition={dms.boundedHeight - 20}
+                    priority={priority[id] || 0}
+                    isFocussed={focussedDeployment === id}
+                    isAnyFocussed={!!focussedDeployment}
+                    updateFocus={updateFocus}
+                  />
+                )
+              )}
 
               <g transform={`translate(${[0, dms.boundedHeight].join(",")})`}>
-                <Axis {...{ domain, range, chartSettings }} />
+                <Axis {...{ domain, range, chartSettings, xScale }} />
               </g>
             </g>
           </svg>
@@ -182,11 +186,12 @@ TimelineChart.propTypes = {
   deployments: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
+      longname: PropTypes.string.isRequired,
       shortname: PropTypes.string.isRequired,
+      aliases: PropTypes.array.isRequired,
       collectionPeriods: PropTypes.array.isRequired,
       regions: PropTypes.array.isRequired,
       campaign: PropTypes.string.isRequired,
-      longname: PropTypes.string.isRequired,
       end: PropTypes.string.isRequired,
       start: PropTypes.string.isRequired,
       events: PropTypes.arrayOf(

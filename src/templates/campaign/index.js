@@ -148,7 +148,11 @@ export const query = graphql`
       ...platformSectionFields
       deployments {
         id: uuid
+        longname: long_name
         shortname: short_name
+        aliases: aliases {
+          shortname: short_name
+        }
         collectionPeriods: collection_periods {
           id
           platform: platform {
@@ -299,11 +303,12 @@ CampaignTemplate.propTypes = {
       deployments: PropTypes.arrayOf(
         PropTypes.shape({
           id: PropTypes.string.isRequired,
+          longname: PropTypes.string.isRequired,
           shortname: PropTypes.string.isRequired,
+          aliases: PropTypes.array.isRequired,
           flights: PropTypes.array,
           region: PropTypes.array,
           campaign: PropTypes.string.isRequired,
-          longname: PropTypes.string.isRequired,
           end: PropTypes.string.isRequired,
           start: PropTypes.string.isRequired,
           collection_periods: PropTypes.shape({
