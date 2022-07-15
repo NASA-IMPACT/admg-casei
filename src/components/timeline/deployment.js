@@ -62,7 +62,11 @@ export const Deployment = ({
           x={xPosition}
           y={labelOffset}
           text={
-            longname ? longname : aliases ? aliases[0].shortname : shortname
+            longname
+              ? longname
+              : aliases.length > 0
+              ? aliases[0].shortname
+              : shortname
           }
           priority={priority}
         />
