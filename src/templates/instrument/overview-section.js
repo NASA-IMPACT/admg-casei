@@ -10,6 +10,7 @@ import {
   SectionContent,
   ListLink,
 } from "../../components/layout"
+import GcmdPhenomenon from "../../components/gcmd_phenomenon"
 import ExternalLink from "../../components/external-link"
 import { POSITIVE } from "../../utils/constants"
 import { isUrl } from "../../utils/helpers"
@@ -195,14 +196,9 @@ export default function OverviewSection({
             },
             {
               title: "Measurement/Variables",
-              content:
-                gcmdPhenomena
-                  .map(x =>
-                    Object.values(x)
-                      .filter(x => x)
-                      .join(", ")
-                  )
-                  .join(", ") || "Currently unavailble",
+              content: gcmdPhenomena.map(x => (
+                <GcmdPhenomenon key={x.id} gcmdPhenomenon={x} />
+              )),
             },
             {
               title: "Vertical Measurement Regions",
