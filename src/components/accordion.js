@@ -136,7 +136,9 @@ export default function Accordion({ folds, id }) {
                   }
                 `}
               >
-                <Label id="accordion-measurements">Parameters</Label>
+                <Label id="accordion-measurements">
+                  Measurements/Variables
+                </Label>
                 {fold.gcmdPhenomena.map(x => (
                   <GcmdPhenomenon key={x.id} gcmdPhenomenon={x} />
                 ))}
