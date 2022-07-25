@@ -15,6 +15,7 @@ import Label from "./label"
 import { ChevronIcon, ArrowIcon } from "../icons"
 import { NEGATIVE } from "../utils/constants"
 import { colors } from "../theme"
+import GcmdPhenomenon from "./gcmd_phenomenon"
 
 export const RotatingContainer = styled.div`
   transition: transform 240ms ease-in-out;
@@ -136,13 +137,9 @@ export default function Accordion({ folds, id }) {
                 `}
               >
                 <Label id="accordion-measurements">Parameters</Label>
-                {fold.gcmdPhenomena
-                  .map(x =>
-                    Object.values(x)
-                      .filter(x => x)
-                      .join(" > ")
-                  )
-                  .join(" > ") || "Currently unavailble"}
+                {fold.gcmdPhenomena.map(x => (
+                  <GcmdPhenomenon key={x.id} gcmdPhenomenon={x} />
+                ))}
               </div>
             )}
             <Label
@@ -180,6 +177,7 @@ Accordion.propTypes = {
       description: PropTypes.string,
       gcmdPhenomena: PropTypes.arrayOf(
         PropTypes.shape({
+          category: PropTypes.string,
           term: PropTypes.string,
           topic: PropTypes.string,
           variable_1: PropTypes.string,

@@ -348,6 +348,8 @@ export const instrumentDetailFields = graphql`
       longname: long_name
     }
     gcmdPhenomena: gcmd_phenomena {
+      id
+      category
       term
       topic
       variable_1
