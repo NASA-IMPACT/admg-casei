@@ -183,9 +183,9 @@ const ExploreTools = React.forwardRef(
             font-size: 90%;
           `}
         >
-          CASEI's metadata inventory is constantly being updated. If content is
-          unavailable, we may be currently working on it and it will be
-          available once reviewed.
+          CASEI&apos;s metadata inventory is constantly being updated. If
+          content is unavailable, we may be currently working on it and it will
+          be available once reviewed.
         </p>
       </div>
     )
