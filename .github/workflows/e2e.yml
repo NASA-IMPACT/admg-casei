@@ -2,7 +2,8 @@ name: End-to-End Test
 
 on:
   pull_request:
-    branches-ignore:
+    branches:
+      - develop
       - production
   push:
     branches:
