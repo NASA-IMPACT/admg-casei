@@ -95,6 +95,7 @@ export const query = graphql`
           description
           gcmdPhenomena: gcmd_phenomena {
             id
+            category
             term
             topic
             variable_1
@@ -137,6 +138,8 @@ export const query = graphql`
           longname: long_name
           description
           gcmdPhenomena: gcmd_phenomena {
+            id
+            category
             term
             topic
             variable_1

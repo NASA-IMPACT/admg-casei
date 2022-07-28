@@ -166,6 +166,7 @@ export const query = graphql`
             description
             gcmdPhenomena: gcmd_phenomena {
               id
+              category
               term
               topic
               variable_1

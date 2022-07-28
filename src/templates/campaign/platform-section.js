@@ -82,6 +82,8 @@ export const platformSectionFields = graphql`
           }
         }
         gcmdPhenomena: gcmd_phenomena {
+          id
+          category
           term
           topic
           variable_1

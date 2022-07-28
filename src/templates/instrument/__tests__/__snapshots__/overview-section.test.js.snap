@@ -71,7 +71,19 @@ exports[`Overview Section displays content 1`] = `
           </label>
         </dt>
         <dd>
-          test, test, test, test, test
+          <div
+            className="gcmd_phenomenon___StyledDiv-sc-1h92xqb-0 jqLpOo"
+          >
+            Test
+             &gt;
+             
+            Test
+             &gt; 
+            Test
+             &gt; Test
+             &gt; Test
+             &gt; Test
+          </div>
         </dd>
         <dt>
           <label

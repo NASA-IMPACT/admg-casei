@@ -24,6 +24,8 @@ const measurementRegions = [
 ]
 const gcmdPhenomena = [
   {
+    id: "test",
+    category: "test",
     term: "test",
     topic: "test",
     variable_1: "test",
