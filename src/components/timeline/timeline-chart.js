@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react"
 import PropTypes from "prop-types"
 import * as d3 from "d3"
-import { differenceInHours } from "date-fns"
+// import { differenceInHours } from "date-fns"
 
 import { Axis } from "./axis"
 import { NEGATIVE } from "../../utils/constants"
@@ -11,6 +11,8 @@ import { occlusion } from "./occlusion"
 import { Deployment } from "./deployment"
 import { ScrollShadow } from "./scroll-shadow"
 import { Details } from "./details"
+import { Disclosure } from "@reach/disclosure"
+import { DeploymentPanel } from "./deployment-panel"
 
 const chartSettings = {
   marginTop: 1,
@@ -38,15 +40,16 @@ export const TimelineChart = ({ deployments }) => {
     )
   )
   const domain = [minDate, maxDate]
-  const extend = Math.max(
-    differenceInHours(maxDate, minDate) / 4,
-    dms.boundedWidth
-  )
-  const range = [0, extend]
+  // const extend = Math.max(
+  //   differenceInHours(maxDate, minDate) / 4,
+  //   dms.boundedWidth
+  // )
+  const range = [0, dms.boundedWidth]
   // maps dates to x-values
   const xScale = d3.scaleUtc().domain(domain).range(range)
 
   const isFirstRun = useRef(true)
+  const [selectedDeployment, setSelectedDeployment] = useState(null)
   const [count, setCount] = useState(1)
   const [priority, setPriority] = useState({})
   const [focussedDeployment, setFocussedDeployment] = useState(null)
@@ -83,102 +86,118 @@ export const TimelineChart = ({ deployments }) => {
   const scrollRef = useRef()
 
   return (
-    <div
-      ref={containerRef}
-      css={`
-        height: 200px;
-        max-width: ${layout.maxWidth};
-        isolation: isolate;
-
-        & .occluded {
-          /* hide occluded labels */
-          display: none;
-        }
-      `}
+    <Disclosure
+      open={!!selectedDeployment}
+      // onChange={() => setDrawerOpen(!isDrawerOpen)}
     >
-      <svg // background
-        width={dms.width}
-        height={dms.height}
+      <div
+        ref={containerRef}
         css={`
-          position: absolute;
-          z-index: 1;
+          height: 200px;
+          max-width: ${layout.maxWidth};
+          isolation: isolate;
+
+          & .occluded {
+            /* hide occluded labels */
+            display: none;
+          }
         `}
       >
-        <rect
-          width={dms.boundedWidth + chartSettings.paddingX * 2}
-          height={dms.boundedHeight}
-          fill={colors[NEGATIVE].background}
-        />
-      </svg>
-      <ScrollShadow scrollRef={scrollRef}>
-        <div
-          ref={scrollRef}
+        <svg // background
+          width={dms.width}
+          height={dms.height}
           css={`
-            overflow: hidden;
-            overflow-x: scroll;
-            -webkit-overflow-scrolling: touch;
-            position: static;
-            isolation: isolate; /* z-index on Details */
+            position: absolute;
+            z-index: 1;
           `}
         >
-          {focussedDeployment && (
-            <Details
-              xPosition={
-                xPosition +
-                chartSettings.marginLeft -
-                scrollRef.current.scrollLeft
-              }
-              yPosition={dms.boundedHeight - 80}
-              id={focussedDeployment}
-              close={clearFocus}
-            />
-          )}
-          <svg // scrollable chart
-            className="scrollable"
-            width={range[1] + chartSettings.paddingX * 2}
-            height={dms.height}
+          <rect
+            width={dms.boundedWidth + chartSettings.paddingX * 2}
+            height={dms.boundedHeight}
+            fill={colors[NEGATIVE].background}
+          />
+        </svg>
+        <ScrollShadow scrollRef={scrollRef}>
+          <div
+            ref={scrollRef}
             css={`
-              position: relative; /* required for zIndex */
-              z-index: 2; /* place chart above background */
+              overflow: hidden;
+              position: static;
+              isolation: isolate; /* z-index on Details */
             `}
           >
-            <g
-              transform={`translate(${[dms.marginLeft, dms.marginTop].join(
-                ","
-              )})`}
+            {focussedDeployment && (
+              <Details
+                xPosition={
+                  xPosition +
+                  chartSettings.marginLeft -
+                  scrollRef.current.scrollLeft
+                }
+                yPosition={dms.boundedHeight - 80}
+                id={focussedDeployment}
+                close={clearFocus}
+              />
+            )}
+            <svg // scrollable chart
+              className="scrollable"
+              width={range[1] + chartSettings.paddingX * 2}
+              height={dms.height}
+              css={`
+                position: relative; /* required for zIndex */
+                z-index: 2; /* place chart above background */
+              `}
             >
-              {deployments.map(
-                ({ start, end, events, id, longname, shortname, aliases }) => (
-                  <Deployment
-                    key={id}
-                    {...{
-                      id,
-                      longname,
-                      shortname,
-                      aliases,
-                      start,
-                      end,
-                      events,
-                      xScale,
-                      update,
-                    }}
-                    yPosition={dms.boundedHeight - 20}
-                    priority={priority[id] || 0}
-                    isFocussed={focussedDeployment === id}
-                    isAnyFocussed={!!focussedDeployment}
-                    updateFocus={updateFocus}
-                  />
-                )
-              )}
+              <g
+                transform={`translate(${[dms.marginLeft, dms.marginTop].join(
+                  ","
+                )})`}
+              >
+                {deployments.map(
+                  ({
+                    start,
+                    end,
+                    events,
+                    id,
+                    longname,
+                    shortname,
+                    aliases,
+                  }) => (
+                    <Deployment
+                      key={id}
+                      {...{
+                        id,
+                        longname,
+                        shortname,
+                        aliases,
+                        start,
+                        end,
+                        events,
+                        xScale,
+                        update,
+                      }}
+                      yPosition={dms.boundedHeight - 20}
+                      priority={priority[id] || 0}
+                      isFocussed={focussedDeployment === id}
+                      isAnyFocussed={!!focussedDeployment}
+                      updateFocus={updateFocus}
+                      setSelectedDeployment={setSelectedDeployment}
+                      selectedDeployment={selectedDeployment}
+                    />
+                  )
+                )}
 
-              <g transform={`translate(${[0, dms.boundedHeight].join(",")})`}>
-                <Axis {...{ domain, range, chartSettings, xScale }} />
+                <g transform={`translate(${[0, dms.boundedHeight].join(",")})`}>
+                  <Axis {...{ domain, range, chartSettings, xScale }} />
+                </g>
               </g>
-            </g>
-          </svg>
-        </div>
-      </ScrollShadow>
-    </div>
+            </svg>
+          </div>
+        </ScrollShadow>
+      </div>
+      <DeploymentPanel
+        selectedDeployment={selectedDeployment}
+      ></DeploymentPanel>
+    </Disclosure>
   )
 }
 

@@ -181,6 +181,7 @@ export const query = graphql`
           end: end_date
           start: start_date
           shortname: short_name
+          description: description
           id
         }
       }

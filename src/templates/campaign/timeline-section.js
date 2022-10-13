@@ -67,6 +67,7 @@ export const deploymentFields = graphql`
         end: end_date
         start: start_date
         shortname: short_name
+        description: description
         id
       }
     }
@@ -92,6 +93,7 @@ TimelineSection.propTypes = {
           shortname: PropTypes.string.isRequired,
           end: PropTypes.string.isRequired,
           start: PropTypes.string.isRequired,
+          description: PropTypes.string.isRequired,
         }).isRequired
       ),
     })

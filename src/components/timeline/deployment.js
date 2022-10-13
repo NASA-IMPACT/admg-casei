@@ -21,6 +21,8 @@ export const Deployment = ({
   isFocussed,
   isAnyFocussed,
   updateFocus,
+  setSelectedDeployment,
+  selectedDeployment,
 }) => {
   const xPosition = useMemo(() => {
     return xScale(new Date(start))
@@ -37,6 +39,7 @@ export const Deployment = ({
       key={id}
       onClick={() => {
         updateFocus(id, xPosition)
+        setSelectedDeployment(selectedDeployment ? null : id)
       }}
       css={`
         cursor: pointer;
@@ -98,4 +101,6 @@ Deployment.propTypes = {
   isFocussed: PropTypes.bool.isRequired,
   isAnyFocussed: PropTypes.bool.isRequired,
   updateFocus: PropTypes.func.isRequired,
+  setSelectedDeployment: PropTypes.func.isRequired,
+  selectedDeployment: PropTypes.string.isRequired,
 }
