@@ -63,6 +63,9 @@ export const deploymentFields = graphql`
       }
       end: end_date
       start: start_date
+      regions: geographical_regions {
+        short_name
+      }
       events: significant_events {
         end: end_date
         start: start_date

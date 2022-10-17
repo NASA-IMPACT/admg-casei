@@ -12,7 +12,6 @@ export const Events = ({ events, xScale, yPosition }) => (
 
       const eventX1Position = xScale(eventStart)
       const eventX2Position = xScale(eventEnd)
-      const eventYPosition = yPosition - 20
 
       const duration = Math.max(eventX2Position - eventX1Position, 5)
       // should be minimum 5 to be visible
@@ -29,11 +28,11 @@ export const Events = ({ events, xScale, yPosition }) => (
           height: 30,
         })
       }, [textRef.current])
-      console.log(event)
+
       return (
         <g
           key={event.id}
-          transform={`translate(${eventX1Position}, ${eventYPosition})`}
+          transform={`translate(${eventX1Position}, ${yPosition})`}
           css={`
             cursor: default;
           `}

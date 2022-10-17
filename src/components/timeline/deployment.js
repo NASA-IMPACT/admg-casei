@@ -4,7 +4,6 @@ import PropTypes from "prop-types"
 import { NEGATIVE } from "../../utils/constants"
 import { colors } from "../../theme"
 import { Events } from "./events"
-import { Label } from "./label"
 
 export const Deployment = ({
   id,
@@ -16,13 +15,11 @@ export const Deployment = ({
   events,
   xScale,
   update,
-  priority,
   yPosition,
-  isFocussed,
-  isAnyFocussed,
   updateFocus,
   setSelectedDeployment,
   selectedDeployment,
+  regions,
 }) => {
   const xPosition = useMemo(() => {
     return xScale(new Date(start))
@@ -32,14 +29,27 @@ export const Deployment = ({
     return xScale(new Date(end)) - xScale(new Date(start))
   }, [xScale, start, end])
 
-  const labelOffset = yPosition - 60
-
   return (
     <g
       key={id}
       onClick={() => {
         updateFocus(id, xPosition)
-        setSelectedDeployment(selectedDeployment ? null : id)
+        setSelectedDeployment(
+          selectedDeployment?.id === id
+            ? null
+            : {
+                ...{
+                  start,
+                  end,
+                  events,
+                  id,
+                  longname,
+                  shortname,
+                  aliases,
+                  regions,
+                },
+              }
+        )
       }}
       css={`
         cursor: pointer;
@@ -53,27 +63,15 @@ export const Deployment = ({
         <rect
           width={width}
           height={20}
-          fill={colors[NEGATIVE].dataVizOne}
-          stroke={isFocussed ? "white" : "none"}
+          fill={
+            selectedDeployment?.id === id || !selectedDeployment?.id
+              ? colors[NEGATIVE].dataVizOne
+              : colors[NEGATIVE].altText
+          }
         />
       </g>
 
       <Events events={events} xScale={xScale} yPosition={yPosition} />
-
-      {!isAnyFocussed && (
-        <Label
-          x={xPosition}
-          y={labelOffset}
-          text={
-            longname
-              ? longname
-              : aliases.length > 0
-              ? aliases[0].shortname
-              : shortname
-          }
-          priority={priority}
-        />
-      )}
     </g>
   )
 }
@@ -101,6 +99,7 @@ Deployment.propTypes = {
   isFocussed: PropTypes.bool.isRequired,
   isAnyFocussed: PropTypes.bool.isRequired,
   updateFocus: PropTypes.func.isRequired,
+  regions: PropTypes.array.isRequired,
   setSelectedDeployment: PropTypes.func.isRequired,
   selectedDeployment: PropTypes.string.isRequired,
 }

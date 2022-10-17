@@ -78,18 +78,10 @@ export const TimelineChart = ({ deployments }) => {
     setXPosition(xPosition)
   }
 
-  const clearFocus = () => {
-    setFocussedDeployment(null)
-    setXPosition(null)
-  }
-
   const scrollRef = useRef()
 
   return (
-    <Disclosure
-      open={!!selectedDeployment}
-      // onChange={() => setDrawerOpen(!isDrawerOpen)}
-    >
+    <Disclosure open={!!selectedDeployment}>
       <div
         ref={containerRef}
         css={`
@@ -126,18 +118,6 @@ export const TimelineChart = ({ deployments }) => {
               isolation: isolate; /* z-index on Details */
             `}
           >
-            {focussedDeployment && (
-              <Details
-                xPosition={
-                  xPosition +
-                  chartSettings.marginLeft -
-                  scrollRef.current.scrollLeft
-                }
-                yPosition={dms.boundedHeight - 80}
-                id={focussedDeployment}
-                close={clearFocus}
-              />
-            )}
             <svg // scrollable chart
               className="scrollable"
               width={range[1] + chartSettings.paddingX * 2}
@@ -161,11 +141,13 @@ export const TimelineChart = ({ deployments }) => {
                     longname,
                     shortname,
                     aliases,
+                    regions,
                   }) => (
                     <Deployment
                       key={id}
                       {...{
                         id,
+                        regions,
                         longname,
                         shortname,
                         aliases,

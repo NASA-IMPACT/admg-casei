@@ -153,6 +153,9 @@ export const query = graphql`
         aliases: aliases {
           shortname: short_name
         }
+        regions: geographical_regions {
+          short_name
+        }
         collectionPeriods: collection_periods {
           id
           platform: platform {

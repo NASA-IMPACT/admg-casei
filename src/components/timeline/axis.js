@@ -44,11 +44,11 @@ export const Axis = ({ domain, range, chartSettings, xScale }) => {
         fill="none"
         stroke="currentColor"
       />
-      {weekTicks.map(({ value, xOffset }) => (
+      {/* {weekTicks.map(({ value, xOffset }) => (
         <g key={value} transform={`translate(${xOffset}, 0)`}>
           <line y2="6" stroke="currentColor" />
         </g>
-      ))}
+      ))} */}
       {monthTicks.map(({ value, xOffset }) => (
         <g key={value} transform={`translate(${xOffset}, 0)`}>
           <line y2="15" stroke="currentColor" />
