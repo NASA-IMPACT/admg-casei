@@ -14,12 +14,15 @@ export const Deployment = ({
   end,
   events,
   xScale,
-  update,
+  tooltipOffsetY = 0,
   yPosition,
+  eventYOffset = 0,
   updateFocus,
   setSelectedDeployment,
   selectedDeployment,
   regions,
+  setTooltip,
+  setTooltipContent,
 }) => {
   const xPosition = useMemo(() => {
     return xScale(new Date(start))
@@ -58,7 +61,41 @@ export const Deployment = ({
       <g
         className="deployment"
         transform={`translate(${xPosition}, ${yPosition})`}
-        onMouseEnter={() => update(id)}
+        onMouseEnter={() => {
+          setTooltipContent(
+            <div>
+              <div
+                css={`
+                  font-weight: bold;
+                `}
+              >
+                Deployment
+              </div>
+              <div>{shortname}</div>
+              <div>{`${start}-${end}`}</div>
+              <div>
+                {" "}
+                {regions?.length === 1
+                  ? regions[0].short_name
+                  : "multiple regions"}
+              </div>
+            </div>
+          )
+        }}
+        onMouseLeave={() => {
+          setTooltipContent(null)
+        }}
+        onMouseMove={e => {
+          setTooltip({
+            x:
+              e.clientX -
+              e.target.ownerSVGElement.parentElement.getBoundingClientRect().x,
+            y:
+              e.clientY -
+              e.target.ownerSVGElement.parentElement.getBoundingClientRect().y +
+              tooltipOffsetY,
+          })
+        }}
       >
         <rect
           width={width}
@@ -71,7 +108,13 @@ export const Deployment = ({
         />
       </g>
 
-      <Events events={events} xScale={xScale} yPosition={yPosition} />
+      <Events
+        events={events}
+        xScale={xScale}
+        yPosition={yPosition + eventYOffset}
+        setTooltipContent={setTooltipContent}
+        setTooltip={setTooltip}
+      />
     </g>
   )
 }
@@ -101,5 +144,9 @@ Deployment.propTypes = {
   updateFocus: PropTypes.func.isRequired,
   regions: PropTypes.array.isRequired,
   setSelectedDeployment: PropTypes.func.isRequired,
-  selectedDeployment: PropTypes.string.isRequired,
+  setTooltip: PropTypes.func.isRequired,
+  selectedDeployment: PropTypes.string,
+  eventYOffset: PropTypes.number,
+  tooltipOffsetY: PropTypes.number,
+  setTooltipContent: PropTypes.func.isRequired,
 }

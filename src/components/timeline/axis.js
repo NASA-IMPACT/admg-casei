@@ -2,16 +2,17 @@ import React, { useMemo } from "react"
 import PropTypes from "prop-types"
 import * as d3 from "d3"
 
-export const Axis = ({ domain, range, chartSettings, xScale }) => {
+export const Axis = ({ domain, range, chartSettings, xScale, labelFormat }) => {
   const dependency = `${domain.join("-")}, ${range.join("-")}`
-  const timeFormat = d3.utcFormat("%b %Y")
+  const timeFormat =
+    labelFormat == "month" ? d3.utcFormat("%b %Y") : d3.utcFormat("%Y")
 
-  const weekTicks = useMemo(() => {
-    return xScale.ticks(d3.utcWeek).map(value => ({
-      value,
-      xOffset: xScale(value),
-    }))
-  }, [dependency])
+  // const weekTicks = useMemo(() => {
+  //   return xScale.ticks(d3.utcWeek).map(value => ({
+  //     value,
+  //     xOffset: xScale(value),
+  //   }))
+  // }, [dependency])
 
   const monthTicks = useMemo(() => {
     return xScale.ticks(d3.utcMonth).map(value => ({
@@ -20,12 +21,17 @@ export const Axis = ({ domain, range, chartSettings, xScale }) => {
     }))
   }, [dependency])
 
-  const labels = useMemo(() => {
-    return xScale.ticks(d3.utcMonth).map(value => ({
-      value,
-      xOffset: xScale(value),
-    }))
-  }, [dependency])
+  const labels = [
+    { value: domain[0], xOffset: 0 },
+    { value: domain[1], xOffset: xScale(domain[1]) },
+  ]
+
+  // useMemo(() => {
+  //   return xScale.ticks(d3.utcMonth).map(value => ({
+  //     value,
+  //     xOffset: xScale(value),
+  //   }))
+  // }, [dependency])
 
   return (
     <>
@@ -51,7 +57,7 @@ export const Axis = ({ domain, range, chartSettings, xScale }) => {
       ))} */}
       {monthTicks.map(({ value, xOffset }) => (
         <g key={value} transform={`translate(${xOffset}, 0)`}>
-          <line y2="15" stroke="currentColor" />
+          <line y2="7" stroke="currentColor" />
         </g>
       ))}
       {labels.map(({ value, xOffset }) => (
@@ -81,4 +87,5 @@ Axis.propTypes = {
     paddingX: PropTypes.number,
   }),
   xScale: PropTypes.any,
+  labelFormat: PropTypes.oneOf(["year, month"]).required,
 }

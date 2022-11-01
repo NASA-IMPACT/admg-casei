@@ -1,30 +1,55 @@
 import React, { useEffect, useRef, useState } from "react"
 import PropTypes from "prop-types"
 import * as d3 from "d3"
-// import { differenceInHours } from "date-fns"
+import styled from "styled-components"
 
 import { Axis } from "./axis"
-import { NEGATIVE } from "../../utils/constants"
-import { colors, layout } from "../../theme"
+import { NEGATIVE, POSITIVE } from "../../utils/constants"
+import { colors } from "../../theme"
 import { useChartDimensions } from "../../utils/use-chart-dimensions"
 import { occlusion } from "./occlusion"
 import { Deployment } from "./deployment"
-import { ScrollShadow } from "./scroll-shadow"
-import { Details } from "./details"
 import { Disclosure } from "@reach/disclosure"
 import { DeploymentPanel } from "./deployment-panel"
 
 const chartSettings = {
   marginTop: 1,
   marginRight: 20,
-  marginBottom: 40,
+  marginBottom: 60,
   marginLeft: 20,
   paddingX: 20,
 }
 
+const Legend = styled.div`
+  min-width: 200px;
+`
+
+const LegendItem = styled.div`
+  display: flex;
+  align-items: center;
+`
+
+const Swatch = styled.div`
+  width: 10px;
+  height: 10px;
+  margin-right: 4px;
+  background-color: ${({ color }) => color};
+`
+
 export const TimelineChart = ({ deployments }) => {
   const [containerRef, dms] = useChartDimensions(chartSettings)
-
+  // const startYear = getYear(
+  //   new Date(
+  //     d3.min(
+  //       deployments.map(({ start, events }) =>
+  //         d3.min([start, ...events.map(({ start }) => start)])
+  //       )
+  //     )
+  //   )
+  // )
+  // const startDate = new Date(startYear - 1, 11, 31)
+  // const endDate = new Date(startYear, 11, 31)
+  // console.log(startDate)
   const minDate = new Date(
     d3.min(
       deployments.map(({ start, events }) =>
@@ -40,11 +65,8 @@ export const TimelineChart = ({ deployments }) => {
     )
   )
   const domain = [minDate, maxDate]
-  // const extend = Math.max(
-  //   differenceInHours(maxDate, minDate) / 4,
-  //   dms.boundedWidth
-  // )
-  const range = [0, dms.boundedWidth]
+
+  const range = [0, dms.boundedWidth - 200]
   // maps dates to x-values
   const xScale = d3.scaleUtc().domain(domain).range(range)
 
@@ -54,6 +76,8 @@ export const TimelineChart = ({ deployments }) => {
   const [priority, setPriority] = useState({})
   const [focussedDeployment, setFocussedDeployment] = useState(null)
   const [xPosition, setXPosition] = useState(null)
+  const [tooltip, setTooltip] = useState({ x: null, y: null })
+  const [tooltipContent, setTooltipContent] = useState(null)
 
   useEffect(() => {
     //wait for first render to get correct measures
@@ -78,54 +102,65 @@ export const TimelineChart = ({ deployments }) => {
     setXPosition(xPosition)
   }
 
-  const scrollRef = useRef()
+  const events = deployments.reduce(
+    (prev, deployment) => [...prev, ...deployment.events],
+    []
+  )
 
   return (
     <Disclosure open={!!selectedDeployment}>
       <div
         ref={containerRef}
         css={`
-          height: 200px;
-          max-width: ${layout.maxWidth};
-          isolation: isolate;
-
-          & .occluded {
-            /* hide occluded labels */
-            display: none;
-          }
+          display: flex;
         `}
       >
-        <svg // background
-          width={dms.width}
-          height={dms.height}
+        <Legend>
+          Events
+          <LegendItem>
+            <Swatch color={colors[NEGATIVE].dataVizOne} />
+            {deployments.length} Deployment{deployments.length > 1 ? "s" : ""}
+          </LegendItem>
+          {events.length > 0 ? (
+            <LegendItem>
+              <Swatch color={colors[NEGATIVE].dataVizTwo} />
+              {events.length} Significant Event{events.length > 1 ? "s" : ""}
+            </LegendItem>
+          ) : null}
+        </Legend>
+
+        <div
           css={`
-            position: absolute;
-            z-index: 1;
+            height: 70px;
+            width: 100%;
+            margin-bottom: 20px;
+            margin-top: 6px;
+            max-width: calc(1280px - 200px);
+            position: relative;
           `}
         >
-          <rect
-            width={dms.boundedWidth + chartSettings.paddingX * 2}
-            height={dms.boundedHeight}
-            fill={colors[NEGATIVE].background}
-          />
-        </svg>
-        <ScrollShadow scrollRef={scrollRef}>
           <div
-            ref={scrollRef}
-            css={`
-              overflow: hidden;
-              position: static;
-              isolation: isolate; /* z-index on Details */
-            `}
+            style={{
+              display: tooltipContent ? "flex" : "none",
+              zIndex: 10,
+              background: colors[POSITIVE].background,
+              position: "absolute",
+              bottom: -tooltip.y + 80,
+              left: tooltip.x + 5,
+              padding: 12,
+              // opacity:  1 : 0,
+
+              color: colors[POSITIVE].text,
+              boxShadow:
+                "rgba(255, 255, 255, 0.2) 0px -1px 1px 0px, rgba(255, 255, 255, 0.2) 0px 2px 6px 0px",
+            }}
           >
+            {tooltipContent}
+          </div>
+          <div>
             <svg // scrollable chart
-              className="scrollable"
               width={range[1] + chartSettings.paddingX * 2}
               height={dms.height}
-              css={`
-                position: relative; /* required for zIndex */
-                z-index: 2; /* place chart above background */
-              `}
             >
               <g
                 transform={`translate(${[dms.marginLeft, dms.marginTop].join(
@@ -164,20 +199,32 @@ export const TimelineChart = ({ deployments }) => {
                       updateFocus={updateFocus}
                       setSelectedDeployment={setSelectedDeployment}
                       selectedDeployment={selectedDeployment}
+                      setTooltip={setTooltip}
+                      setTooltipContent={setTooltipContent}
                     />
                   )
                 )}
 
                 <g transform={`translate(${[0, dms.boundedHeight].join(",")})`}>
-                  <Axis {...{ domain, range, chartSettings, xScale }} />
+                  <Axis
+                    {...{
+                      domain,
+                      range,
+                      chartSettings,
+                      xScale,
+                      labelFormat: "year",
+                    }}
+                  />
                 </g>
               </g>
             </svg>
           </div>
-        </ScrollShadow>
+        </div>
       </div>
       <DeploymentPanel
         selectedDeployment={selectedDeployment}
+        setTooltip={setTooltip}
+        setTooltipContent={setTooltipContent}
       ></DeploymentPanel>
     </Disclosure>
   )
@@ -192,7 +239,7 @@ TimelineChart.propTypes = {
       aliases: PropTypes.array.isRequired,
       collectionPeriods: PropTypes.array.isRequired,
       regions: PropTypes.array.isRequired,
-      campaign: PropTypes.string.isRequired,
+      campaign: PropTypes.string,
       end: PropTypes.string.isRequired,
       start: PropTypes.string.isRequired,
       events: PropTypes.arrayOf(

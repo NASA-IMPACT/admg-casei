@@ -14,10 +14,14 @@ const InfoContent = styled.div`
   font-size: 12px;
 `
 
-export const DeploymentPanel = ({ selectedDeployment }) => {
+export const DeploymentPanel = ({
+  selectedDeployment,
+  setTooltip,
+  setTooltipContent,
+}) => {
   if (!selectedDeployment) return <div />
   const { start, end, events, regions, shortname } = selectedDeployment
-  console.log(selectedDeployment)
+
   return (
     <DisclosurePanel style={{ height: "200px" }}>
       <div
@@ -28,7 +32,7 @@ export const DeploymentPanel = ({ selectedDeployment }) => {
       >
         <div
           css={`
-            width: 13em;
+            width: 200px;
             padding-left: 1em;
             padding-top: 1em;
             padding-bottom: 1em;
@@ -63,7 +67,11 @@ export const DeploymentPanel = ({ selectedDeployment }) => {
             justify-content: center;
           `}
         >
-          <MinorTimeline deployment={selectedDeployment} />
+          <MinorTimeline
+            deployment={selectedDeployment}
+            setTooltip={setTooltip}
+            setTooltipContent={setTooltipContent}
+          />
         </div>
       </div>
     </DisclosurePanel>
@@ -71,5 +79,7 @@ export const DeploymentPanel = ({ selectedDeployment }) => {
 }
 
 DeploymentPanel.propTypes = {
-  selectedDeployment: PropTypes.string.isRequired,
+  selectedDeployment: PropTypes.string,
+  setTooltip: PropTypes.func.isRequired,
+  setTooltipContent: PropTypes.func.isRequired,
 }

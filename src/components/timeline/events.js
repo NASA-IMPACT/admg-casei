@@ -4,7 +4,14 @@ import PropTypes from "prop-types"
 import { NEGATIVE } from "../../utils/constants"
 import { colors } from "../../theme"
 
-export const Events = ({ events, xScale, yPosition }) => (
+export const Events = ({
+  events,
+  xScale,
+  yPosition,
+  setTooltip,
+  setTooltipContent,
+  tooltipOffsetY,
+}) => (
   <>
     {events.map(event => {
       const eventStart = new Date(event.start)
@@ -14,20 +21,6 @@ export const Events = ({ events, xScale, yPosition }) => (
       const eventX2Position = xScale(eventEnd)
 
       const duration = Math.max(eventX2Position - eventX1Position, 5)
-      // should be minimum 5 to be visible
-      const [popupId, setPopupId] = useState(null)
-      const textRef = useRef(null)
-      const [{ width, height }, setDimensions] = useState({
-        width: 200,
-        height: 30,
-      })
-
-      useEffect(() => {
-        setDimensions({
-          width: textRef.current.getBBox().width + 10,
-          height: 30,
-        })
-      }, [textRef.current])
 
       return (
         <g
@@ -38,32 +31,24 @@ export const Events = ({ events, xScale, yPosition }) => (
           `}
         >
           <rect
-            transform={`translate(${-10}, ${-height})`}
-            width={width}
-            height={height}
-            fill={popupId === event.id ? "white" : "none"}
-          ></rect>
-          <text
-            ref={textRef}
-            style={{
-              fontSize: "1rem",
-              fontWeight: 600,
-              textAnchor: "left",
-              transform: "translate(-5px, -10px)",
-              fill:
-                popupId === event.id
-                  ? colors[NEGATIVE].background
-                  : "transparent",
-            }}
-          >
-            {`Event: ${event.shortname}`}
-          </text>
-          <rect
             onMouseEnter={() => {
-              setPopupId(event.id)
+              setTooltipContent(<div>{`Event: ${event.shortname}`}</div>)
             }}
             onMouseLeave={() => {
-              setPopupId(null)
+              setTooltipContent(null)
+            }}
+            onMouseMove={e => {
+              setTooltip({
+                x:
+                  e.clientX -
+                  e.target.ownerSVGElement.parentElement.getBoundingClientRect()
+                    .x,
+                y:
+                  e.clientY -
+                  e.target.ownerSVGElement.parentElement.getBoundingClientRect()
+                    .y +
+                  tooltipOffsetY,
+              })
             }}
             width={duration}
             height={20}
@@ -86,4 +71,7 @@ Events.propTypes = {
   ),
   xScale: PropTypes.func.isRequired,
   yPosition: PropTypes.number.isRequired,
+  setTooltip: PropTypes.func.isRequired,
+  tooltipOffsetY: PropTypes.number,
+  setTooltipContent: PropTypes.func.isRequired,
 }

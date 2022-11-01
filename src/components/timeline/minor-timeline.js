@@ -16,7 +16,11 @@ const chartSettings = {
   paddingX: 20,
 }
 
-export const MinorTimeline = ({ deployment }) => {
+export const MinorTimeline = ({
+  deployment,
+  setTooltip,
+  setTooltipContent,
+}) => {
   if (!deployment) return <div />
   const { start, end, events, id, longname, shortname, aliases } = deployment
   const [containerRef, dms] = useChartDimensions(chartSettings)
@@ -57,13 +61,7 @@ export const MinorTimeline = ({ deployment }) => {
         max-width: ${layout.maxWidth};
       `}
     >
-      <div
-        css={`
-          overflow: hidden;
-          position: static;
-          isolation: isolate; /* z-index on Details */
-        `}
-      >
+      <div>
         <svg
           width={range[1] + chartSettings.paddingX * 2}
           height={dms.height}
@@ -97,10 +95,22 @@ export const MinorTimeline = ({ deployment }) => {
               updateFocus={() => {}}
               setSelectedDeployment={setSelectedDeployment}
               selectedDeployment={selectedDeployment}
+              eventYOffset={-20}
+              setTooltip={setTooltip}
+              tooltipOffsetY={90}
+              setTooltipContent={setTooltipContent}
             />
 
             <g transform={`translate(${[0, dms.boundedHeight].join(",")})`}>
-              <Axis {...{ domain, range, chartSettings, xScale }} />
+              <Axis
+                {...{
+                  domain,
+                  range,
+                  chartSettings,
+                  xScale,
+                  labelFormat: "month",
+                }}
+              />
             </g>
           </g>
         </svg>
@@ -129,4 +139,6 @@ MinorTimeline.propTypes = {
       }).isRequired
     ),
   }),
+  setTooltip: PropTypes.func.isRequired,
+  setTooltipContent: PropTypes.func.isRequired,
 }
