@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 
 import { NEGATIVE } from "../../utils/constants"
 import { colors } from "../../theme"
+import { reformatDate } from "../../utils/helpers"
 
 export const Events = ({
   events,
@@ -12,6 +13,8 @@ export const Events = ({
   setTooltipContent,
   tooltipOffsetY,
   eventBarHeight,
+  showTooltip,
+  isParentSelected,
 }) => (
   <>
     {events.map(event => {
@@ -28,32 +31,53 @@ export const Events = ({
           key={event.id + tooltipOffsetY}
           transform={`translate(${eventX1Position}, ${yPosition})`}
           css={`
-            cursor: default;
+            cursor: ${showTooltip ? "pointer" : "default"};
           `}
         >
           <rect
             onMouseEnter={() => {
-              setTooltipContent(<div>{`Event: ${event.shortname}`}</div>)
+              if (showTooltip) {
+                setTooltipContent(
+                  <div>
+                    <div
+                      css={`
+                        font-weight: bold;
+                      `}
+                    >
+                      Event
+                    </div>
+                    <div> {`${event.shortname}`}</div>
+                    <div>{`${reformatDate(event.start)}-${reformatDate(
+                      event.end
+                    )}`}</div>
+                    <div> {`${event.description}`}</div>
+                  </div>
+                )
+              }
             }}
             onMouseLeave={() => {
               setTooltipContent(null)
             }}
             onMouseMove={e => {
-              setTooltip({
-                x:
-                  e.clientX -
-                  e.target.ownerSVGElement.parentElement.getBoundingClientRect()
-                    .x,
-                y:
-                  e.clientY -
-                  e.target.ownerSVGElement.parentElement.getBoundingClientRect()
-                    .y +
-                  tooltipOffsetY,
-              })
+              if (showTooltip) {
+                setTooltip({
+                  x:
+                    e.clientX -
+                    e.target.ownerSVGElement.parentElement.getBoundingClientRect()
+                      .x -
+                    32,
+                  y:
+                    e.clientY -
+                    e.target.ownerSVGElement.parentElement.getBoundingClientRect()
+                      .y +
+                    90,
+                })
+              }
             }}
             width={duration}
             height={eventBarHeight}
             fill={colors[NEGATIVE].dataVizTwo}
+            opacity={isParentSelected ? 1 : 0.3}
           />
         </g>
       )
@@ -76,4 +100,6 @@ Events.propTypes = {
   setTooltip: PropTypes.func.isRequired,
   tooltipOffsetY: PropTypes.number,
   setTooltipContent: PropTypes.func.isRequired,
+  showTooltip: PropTypes.bool,
+  isParentSelected: PropTypes.bool,
 }

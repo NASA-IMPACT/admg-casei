@@ -29,6 +29,9 @@ export const Deployment = ({
   barHeight = 14,
   eventBarHeight = 4,
   iopHeight = 4,
+  showEventTooltip,
+  showIopTooltip,
+  showDeploymentTooltip,
 }) => {
   const xPosition = useMemo(() => {
     return xScale(new Date(start))
@@ -62,55 +65,59 @@ export const Deployment = ({
         )
       }}
       css={`
-        cursor: pointer;
+        cursor: ${showDeploymentTooltip ? "pointer" : "default"};
       `}
     >
       <g
         className="deployment"
         transform={`translate(${xPosition}, ${yPosition})`}
         onMouseEnter={() => {
-          setTooltipContent(
-            <div>
-              <div
-                css={`
-                  font-weight: bold;
-                `}
-              >
-                Deployment
-              </div>
-              <div>{shortname}</div>
-              <div>{`${start}-${end}`}</div>
+          if (showDeploymentTooltip) {
+            setTooltipContent(
               <div>
-                {" "}
-                {regions?.length === 1
-                  ? regions[0].short_name
-                  : "multiple regions"}
+                <div
+                  css={`
+                    font-weight: bold;
+                  `}
+                >
+                  Deployment
+                </div>
+                <div>{shortname}</div>
+                <div>{`${start}-${end}`}</div>
+                <div>
+                  {regions?.length === 1
+                    ? regions[0].short_name
+                    : "multiple regions"}
+                </div>
               </div>
-            </div>
-          )
+            )
+          }
         }}
         onMouseLeave={() => {
           setTooltipContent(null)
         }}
         onMouseMove={e => {
-          setTooltip({
-            x:
-              e.clientX -
-              e.target.ownerSVGElement.parentElement.getBoundingClientRect().x,
-            y:
-              e.clientY -
-              e.target.ownerSVGElement.parentElement.getBoundingClientRect().y +
-              tooltipOffsetY,
-          })
+          if (showDeploymentTooltip) {
+            setTooltip({
+              x:
+                e.clientX -
+                e.target.ownerSVGElement.parentElement.getBoundingClientRect()
+                  .x,
+              y:
+                e.clientY -
+                e.target.ownerSVGElement.parentElement.getBoundingClientRect()
+                  .y +
+                tooltipOffsetY,
+            })
+          }
         }}
       >
         <rect
           width={width}
           height={barHeight}
-          fill={
-            selectedDeployment?.id === id || !selectedDeployment?.id
-              ? colors[NEGATIVE].dataVizOne
-              : colors[NEGATIVE].altText
+          fill={colors[NEGATIVE].dataVizOne}
+          opacity={
+            selectedDeployment?.id === id || !selectedDeployment?.id ? 1 : 0.3
           }
         />
       </g>
@@ -122,6 +129,11 @@ export const Deployment = ({
         setTooltipContent={setTooltipContent}
         setTooltip={setTooltip}
         eventBarHeight={eventBarHeight}
+        tooltipOffsetY={-5}
+        showTooltip={showEventTooltip}
+        isParentSelected={
+          selectedDeployment?.id === id || !selectedDeployment?.id
+        }
       />
       <Iops
         iops={iops}
@@ -130,6 +142,11 @@ export const Deployment = ({
         yPosition={yPosition + iopOffsetY}
         setTooltipContent={setTooltipContent}
         setTooltip={setTooltip}
+        tooltipOffsetY={-2}
+        showTooltip={showIopTooltip}
+        isParentSelected={
+          selectedDeployment?.id === id || !selectedDeployment?.id
+        }
       />
     </g>
   )
@@ -178,4 +195,7 @@ Deployment.propTypes = {
   iopHeight: PropTypes.number,
   iopOffsetY: PropTypes.number,
   eventBarHeight: PropTypes.number,
+  showEventTooltip: PropTypes.bool,
+  showIopTooltip: PropTypes.bool,
+  showDeploymentTooltip: PropTypes.bool,
 }

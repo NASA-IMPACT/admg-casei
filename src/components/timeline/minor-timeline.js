@@ -100,11 +100,13 @@ export const MinorTimeline = ({
               eventOffsetY={-30}
               iopOffsetY={-16}
               setTooltip={setTooltip}
-              tooltipOffsetY={90}
+              tooltipOffsetY={-90}
               setTooltipContent={setTooltipContent}
               barHeight={2}
               iopHeight={11}
               eventBarHeight={11}
+              showEventTooltip={true}
+              showIopTooltip={true}
             />
 
             <g transform={`translate(${[0, dms.boundedHeight].join(",")})`}>

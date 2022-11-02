@@ -66,6 +66,7 @@ export const TimelineChart = ({ deployments }) => {
   const xScale = d3.scaleUtc().domain(domain).range(range)
 
   const isFirstRun = useRef(true)
+  const tooltipRef = useRef(null)
   const [selectedDeployment, setSelectedDeployment] = useState(null)
   const [count, setCount] = useState(1)
   const [priority, setPriority] = useState({})
@@ -130,7 +131,7 @@ export const TimelineChart = ({ deployments }) => {
           {iops.length > 0 ? (
             <LegendItem>
               <Swatch color={colors[NEGATIVE].dataVizThree} />
-              {iops.length} IOPs{iops.length > 1 ? "s" : ""}
+              {iops.length} IOP{iops.length > 1 ? "s" : ""}
             </LegendItem>
           ) : null}
         </Legend>
@@ -146,20 +147,31 @@ export const TimelineChart = ({ deployments }) => {
           `}
         >
           <div
+            ref={tooltipRef}
             style={{
               display: tooltipContent ? "flex" : "none",
-              zIndex: 10,
+              maxWidth: "600px",
+              zIndex: 11,
               background: colors[POSITIVE].background,
               position: "absolute",
-              bottom: -tooltip.y + 80,
-              left: tooltip.x + 5,
+              bottom: -tooltip.y + 86,
+              left: tooltip.x - 8 - tooltipRef.current?.clientWidth / 2,
               padding: 12,
               color: colors[POSITIVE].text,
               boxShadow:
-                "rgba(255, 255, 255, 0.2) 0px -1px 1px 0px, rgba(255, 255, 255, 0.2) 0px 2px 6px 0px",
+                "rgba(255, 255, 255, 0.2) 0px -1px 1px 0px, rgba(255, 255, 255, 0.2) 0px 2px 2px 0px",
             }}
           >
             {tooltipContent}
+            <div
+              style={{
+                position: "absolute",
+                border: "10px solid white",
+                bottom: -15,
+                left: "50%",
+                borderColor: "white transparent transparent transparent",
+              }}
+            />
           </div>
           <div>
             <svg // scrollable chart
@@ -208,6 +220,7 @@ export const TimelineChart = ({ deployments }) => {
                       setTooltip={setTooltip}
                       setTooltipContent={setTooltipContent}
                       eventOffsetY={-16}
+                      showDeploymentTooltip
                     />
                   )
                 )}

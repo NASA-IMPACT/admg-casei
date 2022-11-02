@@ -128,3 +128,5 @@ export function convertBoundsToNSWE(bounds) {
     E: stringified(maxx, "lon"),
   }
 }
+
+export const reformatDate = dateString => dateString.split("-").join("/")

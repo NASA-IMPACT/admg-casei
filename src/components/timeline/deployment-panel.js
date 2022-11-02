@@ -25,7 +25,7 @@ export const DeploymentPanel = ({
   setSelectedDeployment,
 }) => {
   if (!selectedDeployment) return <div />
-  const { start, end, events, regions, shortname } = selectedDeployment
+  const { events, regions, shortname } = selectedDeployment
 
   return (
     <DisclosurePanel style={{ height: "200px" }}>

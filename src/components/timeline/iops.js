@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 
 import { NEGATIVE } from "../../utils/constants"
 import { colors } from "../../theme"
+import { reformatDate } from "../../utils/helpers"
 
 export const Iops = ({
   iops,
@@ -10,8 +11,10 @@ export const Iops = ({
   yPosition,
   setTooltip,
   setTooltipContent,
-  tooltipOffsetY,
+  tooltipOffsetY = -90,
   iopHeight = 12,
+  showTooltip,
+  isParentSelected,
 }) => (
   <>
     {iops.map(iop => {
@@ -28,32 +31,53 @@ export const Iops = ({
           key={iop.id + tooltipOffsetY}
           transform={`translate(${iopX1Position}, ${yPosition})`}
           css={`
-            cursor: default;
+            cursor: ${showTooltip ? "pointer" : "default"};
           `}
         >
           <rect
             onMouseEnter={() => {
-              setTooltipContent(<div>{`IOP: ${iop.short_name}`}</div>)
+              if (showTooltip) {
+                setTooltipContent(
+                  <div>
+                    <div
+                      css={`
+                        font-weight: bold;
+                      `}
+                    >
+                      IOP
+                    </div>
+                    <div> {`${iop.short_name}`}</div>
+                    <div>{`${reformatDate(iop.start_date)}-${reformatDate(
+                      iop.end_date
+                    )}`}</div>
+                    <div> {`${iop.description}`}</div>
+                  </div>
+                )
+              }
             }}
             onMouseLeave={() => {
               setTooltipContent(null)
             }}
             onMouseMove={e => {
-              setTooltip({
-                x:
-                  e.clientX -
-                  e.target.ownerSVGElement.parentElement.getBoundingClientRect()
-                    .x,
-                y:
-                  e.clientY -
-                  e.target.ownerSVGElement.parentElement.getBoundingClientRect()
-                    .y +
-                  tooltipOffsetY,
-              })
+              if (showTooltip) {
+                setTooltip({
+                  x:
+                    e.clientX -
+                    e.target.ownerSVGElement.parentElement.getBoundingClientRect()
+                      .x -
+                    32,
+                  y:
+                    e.clientY -
+                    e.target.ownerSVGElement.parentElement.getBoundingClientRect()
+                      .y +
+                    90,
+                })
+              }
             }}
             width={duration}
             height={iopHeight}
             fill={colors[NEGATIVE].dataVizThree}
+            opacity={isParentSelected ? 1 : 0.3}
           />
         </g>
       )
@@ -77,4 +101,6 @@ Iops.propTypes = {
   setTooltip: PropTypes.func.isRequired,
   tooltipOffsetY: PropTypes.number,
   setTooltipContent: PropTypes.func.isRequired,
+  showTooltip: PropTypes.bool,
+  isParentSelected: PropTypes.bool,
 }
