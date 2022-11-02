@@ -4,6 +4,10 @@ import styled from "styled-components"
 
 import { DisclosurePanel } from "@reach/disclosure"
 import { MinorTimeline } from "./minor-timeline"
+import { IconButton } from "../button"
+import { CloseIcon } from "../../icons"
+import { NEGATIVE } from "../../utils/constants"
+import { colors } from "../../theme"
 
 const SubHeader = styled.div`
   font-weight: bold;
@@ -18,6 +22,7 @@ export const DeploymentPanel = ({
   selectedDeployment,
   setTooltip,
   setTooltipContent,
+  setSelectedDeployment,
 }) => {
   if (!selectedDeployment) return <div />
   const { start, end, events, regions, shortname } = selectedDeployment
@@ -27,13 +32,28 @@ export const DeploymentPanel = ({
       <div
         css={`
           display: flex;
-          border: 2px white solid;
+          border-top: 1px rgba(255, 255, 255, 0.6) solid;
+          position: relative;
         `}
       >
         <div
           css={`
+            position: absolute;
+            right: 0px;
+            z-index: 10;
+          `}
+        >
+          <IconButton
+            id="remove-filter"
+            action={() => setSelectedDeployment(null)}
+            icon={<CloseIcon color={colors[NEGATIVE].text} />}
+          />
+        </div>
+
+        <div
+          css={`
             width: 200px;
-            padding-left: 1em;
+
             padding-top: 1em;
             padding-bottom: 1em;
             display: grid;
@@ -42,10 +62,6 @@ export const DeploymentPanel = ({
           <div>
             <SubHeader>Deployment</SubHeader>
             <InfoContent>{shortname}</InfoContent>
-          </div>
-          <div>
-            <SubHeader>Date</SubHeader>
-            <InfoContent>{`${start}-${end}`}</InfoContent>
           </div>
           <div>
             <SubHeader>Regions</SubHeader>
@@ -79,7 +95,8 @@ export const DeploymentPanel = ({
 }
 
 DeploymentPanel.propTypes = {
-  selectedDeployment: PropTypes.string,
+  selectedDeployment: PropTypes.object,
   setTooltip: PropTypes.func.isRequired,
   setTooltipContent: PropTypes.func.isRequired,
+  setSelectedDeployment: PropTypes.func.isRequired,
 }

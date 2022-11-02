@@ -4,6 +4,7 @@ import PropTypes from "prop-types"
 import { NEGATIVE } from "../../utils/constants"
 import { colors } from "../../theme"
 import { Events } from "./events"
+import { Iops } from "./iops"
 
 export const Deployment = ({
   id,
@@ -13,16 +14,21 @@ export const Deployment = ({
   start,
   end,
   events,
+  iops,
   xScale,
   tooltipOffsetY = 0,
+  iopOffsetY = -8,
   yPosition,
-  eventYOffset = 0,
+  eventOffsetY = 0,
   updateFocus,
   setSelectedDeployment,
   selectedDeployment,
   regions,
   setTooltip,
   setTooltipContent,
+  barHeight = 14,
+  eventBarHeight = 4,
+  iopHeight = 4,
 }) => {
   const xPosition = useMemo(() => {
     return xScale(new Date(start))
@@ -34,7 +40,7 @@ export const Deployment = ({
 
   return (
     <g
-      key={id}
+      key={id + eventOffsetY}
       onClick={() => {
         updateFocus(id, xPosition)
         setSelectedDeployment(
@@ -45,6 +51,7 @@ export const Deployment = ({
                   start,
                   end,
                   events,
+                  iops,
                   id,
                   longname,
                   shortname,
@@ -99,7 +106,7 @@ export const Deployment = ({
       >
         <rect
           width={width}
-          height={20}
+          height={barHeight}
           fill={
             selectedDeployment?.id === id || !selectedDeployment?.id
               ? colors[NEGATIVE].dataVizOne
@@ -111,7 +118,16 @@ export const Deployment = ({
       <Events
         events={events}
         xScale={xScale}
-        yPosition={yPosition + eventYOffset}
+        yPosition={yPosition + eventOffsetY}
+        setTooltipContent={setTooltipContent}
+        setTooltip={setTooltip}
+        eventBarHeight={eventBarHeight}
+      />
+      <Iops
+        iops={iops}
+        xScale={xScale}
+        iopHeight={iopHeight}
+        yPosition={yPosition + iopOffsetY}
         setTooltipContent={setTooltipContent}
         setTooltip={setTooltip}
       />
@@ -134,6 +150,15 @@ Deployment.propTypes = {
       start: PropTypes.string.isRequired,
     }).isRequired
   ),
+  iops: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      short_name: PropTypes.string.isRequired,
+      start_date: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
+      end_date: PropTypes.string.isRequired,
+    })
+  ),
   collection_periods: PropTypes.array,
   xScale: PropTypes.func.isRequired,
   update: PropTypes.func.isRequired,
@@ -145,8 +170,12 @@ Deployment.propTypes = {
   regions: PropTypes.array.isRequired,
   setSelectedDeployment: PropTypes.func.isRequired,
   setTooltip: PropTypes.func.isRequired,
-  selectedDeployment: PropTypes.string,
-  eventYOffset: PropTypes.number,
+  selectedDeployment: PropTypes.object,
+  eventOffsetY: PropTypes.number,
   tooltipOffsetY: PropTypes.number,
   setTooltipContent: PropTypes.func.isRequired,
+  barHeight: PropTypes.number,
+  iopHeight: PropTypes.number,
+  iopOffsetY: PropTypes.number,
+  eventBarHeight: PropTypes.number,
 }

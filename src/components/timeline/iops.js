@@ -4,36 +4,36 @@ import PropTypes from "prop-types"
 import { NEGATIVE } from "../../utils/constants"
 import { colors } from "../../theme"
 
-export const Events = ({
-  events,
+export const Iops = ({
+  iops,
   xScale,
   yPosition,
   setTooltip,
   setTooltipContent,
   tooltipOffsetY,
-  eventBarHeight,
+  iopHeight = 12,
 }) => (
   <>
-    {events.map(event => {
-      const eventStart = new Date(event.start)
-      const eventEnd = new Date(event.end)
+    {iops.map(iop => {
+      const iopStart = new Date(iop.start_date)
+      const iopEnd = new Date(iop.end_date)
 
-      const eventX1Position = xScale(eventStart)
-      const eventX2Position = xScale(eventEnd)
+      const iopX1Position = xScale(iopStart)
+      const iopX2Position = xScale(iopEnd)
 
-      const duration = Math.max(eventX2Position - eventX1Position, 5)
+      const duration = Math.max(iopX2Position - iopX1Position, 5)
 
       return (
         <g
-          key={event.id + tooltipOffsetY}
-          transform={`translate(${eventX1Position}, ${yPosition})`}
+          key={iop.id + tooltipOffsetY}
+          transform={`translate(${iopX1Position}, ${yPosition})`}
           css={`
             cursor: default;
           `}
         >
           <rect
             onMouseEnter={() => {
-              setTooltipContent(<div>{`Event: ${event.shortname}`}</div>)
+              setTooltipContent(<div>{`IOP: ${iop.short_name}`}</div>)
             }}
             onMouseLeave={() => {
               setTooltipContent(null)
@@ -52,8 +52,8 @@ export const Events = ({
               })
             }}
             width={duration}
-            height={eventBarHeight}
-            fill={colors[NEGATIVE].dataVizTwo}
+            height={iopHeight}
+            fill={colors[NEGATIVE].dataVizThree}
           />
         </g>
       )
@@ -61,16 +61,17 @@ export const Events = ({
   </>
 )
 
-Events.propTypes = {
-  events: PropTypes.arrayOf(
+Iops.propTypes = {
+  iops: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
-      shortname: PropTypes.string.isRequired,
-      end: PropTypes.string.isRequired,
-      start: PropTypes.string.isRequired,
-    }).isRequired
+      short_name: PropTypes.string.isRequired,
+      start_date: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
+      end_date: PropTypes.string.isRequired,
+    })
   ),
-  eventBarHeight: PropTypes.number.isRequired,
+  iopHeight: PropTypes.number,
   xScale: PropTypes.func.isRequired,
   yPosition: PropTypes.number.isRequired,
   setTooltip: PropTypes.func.isRequired,

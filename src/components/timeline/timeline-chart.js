@@ -38,32 +38,27 @@ const Swatch = styled.div`
 
 export const TimelineChart = ({ deployments }) => {
   const [containerRef, dms] = useChartDimensions(chartSettings)
-  // const startYear = getYear(
-  //   new Date(
-  //     d3.min(
-  //       deployments.map(({ start, events }) =>
-  //         d3.min([start, ...events.map(({ start }) => start)])
-  //       )
-  //     )
-  //   )
-  // )
-  // const startDate = new Date(startYear - 1, 11, 31)
-  // const endDate = new Date(startYear, 11, 31)
-  // console.log(startDate)
-  const minDate = new Date(
-    d3.min(
+
+  const minDateString = d3
+    .min(
       deployments.map(({ start, events }) =>
         d3.min([start, ...events.map(({ start }) => start)])
       )
     )
-  )
-  const maxDate = new Date(
-    d3.max(
+    .split("-")
+
+  const minDate = new Date([minDateString[0], "01", "01"].join("-"))
+
+  const maxDateString = d3
+    .max(
       deployments.map(({ end, events }) =>
         d3.max([end, ...events.map(({ end }) => end)])
       )
     )
-  )
+    .split("-")
+
+  const maxDate = new Date([maxDateString[0], "12", "31"].join("-"))
+
   const domain = [minDate, maxDate]
 
   const range = [0, dms.boundedWidth - 200]
@@ -107,6 +102,11 @@ export const TimelineChart = ({ deployments }) => {
     []
   )
 
+  const iops = deployments.reduce(
+    (prev, deployment) => [...prev, ...deployment.iops],
+    []
+  )
+
   return (
     <Disclosure open={!!selectedDeployment}>
       <div
@@ -125,6 +125,12 @@ export const TimelineChart = ({ deployments }) => {
             <LegendItem>
               <Swatch color={colors[NEGATIVE].dataVizTwo} />
               {events.length} Significant Event{events.length > 1 ? "s" : ""}
+            </LegendItem>
+          ) : null}
+          {iops.length > 0 ? (
+            <LegendItem>
+              <Swatch color={colors[NEGATIVE].dataVizThree} />
+              {iops.length} IOPs{iops.length > 1 ? "s" : ""}
             </LegendItem>
           ) : null}
         </Legend>
@@ -148,8 +154,6 @@ export const TimelineChart = ({ deployments }) => {
               bottom: -tooltip.y + 80,
               left: tooltip.x + 5,
               padding: 12,
-              // opacity:  1 : 0,
-
               color: colors[POSITIVE].text,
               boxShadow:
                 "rgba(255, 255, 255, 0.2) 0px -1px 1px 0px, rgba(255, 255, 255, 0.2) 0px 2px 6px 0px",
@@ -172,6 +176,7 @@ export const TimelineChart = ({ deployments }) => {
                     start,
                     end,
                     events,
+                    iops,
                     id,
                     longname,
                     shortname,
@@ -189,10 +194,11 @@ export const TimelineChart = ({ deployments }) => {
                         start,
                         end,
                         events,
+                        iops,
                         xScale,
                         update,
                       }}
-                      yPosition={dms.boundedHeight - 20}
+                      yPosition={dms.boundedHeight - 18}
                       priority={priority[id] || 0}
                       isFocussed={focussedDeployment === id}
                       isAnyFocussed={!!focussedDeployment}
@@ -201,6 +207,7 @@ export const TimelineChart = ({ deployments }) => {
                       selectedDeployment={selectedDeployment}
                       setTooltip={setTooltip}
                       setTooltipContent={setTooltipContent}
+                      eventOffsetY={-16}
                     />
                   )
                 )}
@@ -225,7 +232,8 @@ export const TimelineChart = ({ deployments }) => {
         selectedDeployment={selectedDeployment}
         setTooltip={setTooltip}
         setTooltipContent={setTooltipContent}
-      ></DeploymentPanel>
+        setSelectedDeployment={setSelectedDeployment}
+      />
     </Disclosure>
   )
 }
@@ -234,6 +242,15 @@ TimelineChart.propTypes = {
   deployments: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
+      iops: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string.isRequired,
+          short_name: PropTypes.string.isRequired,
+          start_date: PropTypes.string.isRequired,
+          description: PropTypes.string.isRequired,
+          end_date: PropTypes.string.isRequired,
+        })
+      ),
       longname: PropTypes.string.isRequired,
       shortname: PropTypes.string.isRequired,
       aliases: PropTypes.array.isRequired,
@@ -242,6 +259,7 @@ TimelineChart.propTypes = {
       campaign: PropTypes.string,
       end: PropTypes.string.isRequired,
       start: PropTypes.string.isRequired,
+
       events: PropTypes.arrayOf(
         PropTypes.shape({
           id: PropTypes.string.isRequired,

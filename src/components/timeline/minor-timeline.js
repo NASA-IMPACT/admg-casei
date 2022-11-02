@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from "react"
 import PropTypes from "prop-types"
 import * as d3 from "d3"
 
-import { Axis } from "./axis"
 import { layout } from "../../theme"
 import { useChartDimensions } from "../../utils/use-chart-dimensions"
 import { occlusion } from "./occlusion"
@@ -10,10 +9,10 @@ import { Deployment } from "./deployment"
 
 const chartSettings = {
   marginTop: 1,
-  marginRight: 20,
+  marginRight: 0,
   marginBottom: 40,
   marginLeft: 20,
-  paddingX: 20,
+  paddingX: 0,
 }
 
 export const MinorTimeline = ({
@@ -22,11 +21,13 @@ export const MinorTimeline = ({
   setTooltipContent,
 }) => {
   if (!deployment) return <div />
-  const { start, end, events, id, longname, shortname, aliases } = deployment
+  const { start, end, events, iops, id, longname, shortname, aliases } =
+    deployment
+
   const [containerRef, dms] = useChartDimensions(chartSettings)
 
   const domain = [new Date(start), new Date(end)]
-  const range = [30, dms.boundedWidth - 30]
+  const range = [0, dms.boundedWidth]
   // maps dates to x-values
   const xScale = d3.scaleUtc().domain(domain).range(range)
 
@@ -63,7 +64,7 @@ export const MinorTimeline = ({
     >
       <div>
         <svg
-          width={range[1] + chartSettings.paddingX * 2}
+          width={range[1] + 20}
           height={dms.height}
           css={`
             position: relative; /* required for zIndex */
@@ -76,7 +77,7 @@ export const MinorTimeline = ({
             )})`}
           >
             <Deployment
-              key={id}
+              key={id + "minor-timeline"}
               {...{
                 id,
                 longname,
@@ -85,32 +86,52 @@ export const MinorTimeline = ({
                 start,
                 end,
                 events,
+                iops,
                 xScale,
                 update,
               }}
-              yPosition={dms.boundedHeight - 20}
+              yPosition={dms.boundedHeight}
               priority={priority[id] || 0}
               isFocussed={false}
               isAnyFocussed={false}
               updateFocus={() => {}}
               setSelectedDeployment={setSelectedDeployment}
               selectedDeployment={selectedDeployment}
-              eventYOffset={-20}
+              eventOffsetY={-30}
+              iopOffsetY={-16}
               setTooltip={setTooltip}
               tooltipOffsetY={90}
               setTooltipContent={setTooltipContent}
+              barHeight={2}
+              iopHeight={11}
+              eventBarHeight={11}
             />
 
             <g transform={`translate(${[0, dms.boundedHeight].join(",")})`}>
-              <Axis
-                {...{
-                  domain,
-                  range,
-                  chartSettings,
-                  xScale,
-                  labelFormat: "month",
-                }}
-              />
+              <g transform={`translate(${22}, 0)`}>
+                <text
+                  fill="currentColor"
+                  style={{
+                    fontSize: "10px",
+                    textAnchor: "middle",
+                    transform: "translateY(15px)",
+                  }}
+                >
+                  {`${d3.utcFormat("%b %d %Y")(domain[0])}`}
+                </text>
+              </g>
+              <g transform={`translate(${xScale(domain[1]) - 28}, 0)`}>
+                <text
+                  fill="currentColor"
+                  style={{
+                    fontSize: "10px",
+                    textAnchor: "middle",
+                    transform: "translateY(15px)",
+                  }}
+                >
+                  {`${d3.utcFormat("%b %d %Y")(domain[1])}`}
+                </text>
+              </g>
             </g>
           </g>
         </svg>
@@ -137,6 +158,15 @@ MinorTimeline.propTypes = {
         end: PropTypes.string.isRequired,
         start: PropTypes.string.isRequired,
       }).isRequired
+    ),
+    iops: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        short_name: PropTypes.string.isRequired,
+        start_date: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+        end_date: PropTypes.string.isRequired,
+      })
     ),
   }),
   setTooltip: PropTypes.func.isRequired,

@@ -11,6 +11,7 @@ const palette = {
   "red ryb": "#f93c21",
   "caribbean green": "#3AD6AB",
   "medium slate blue": "#6F5FE9",
+  "orange blossom": "#cb6528",
 }
 
 const colors = {
@@ -33,6 +34,7 @@ const colors = {
     division: palette["davys grey"],
     dataVizOne: palette["caribbean green"],
     dataVizTwo: palette["medium slate blue"],
+    dataVizThree: palette["orange blossom"],
   },
 }
 
