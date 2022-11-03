@@ -100,21 +100,22 @@ export const MinorTimeline = ({
               eventOffsetY={-30}
               iopOffsetY={-16}
               setTooltip={setTooltip}
-              tooltipOffsetY={-90}
+              tooltipOffsetY={-114}
               setTooltipContent={setTooltipContent}
               barHeight={2}
               iopHeight={11}
               eventBarHeight={11}
               showEventTooltip={true}
               showIopTooltip={true}
+              setHoveredDeployment={() => {}}
             />
 
             <g transform={`translate(${[0, dms.boundedHeight].join(",")})`}>
-              <g transform={`translate(${22}, 0)`}>
+              <g transform={`translate(${38}, 2)`}>
                 <text
                   fill="currentColor"
                   style={{
-                    fontSize: "10px",
+                    fontSize: "14px",
                     textAnchor: "middle",
                     transform: "translateY(15px)",
                   }}
@@ -122,11 +123,11 @@ export const MinorTimeline = ({
                   {`${d3.utcFormat("%b %d %Y")(domain[0])}`}
                 </text>
               </g>
-              <g transform={`translate(${xScale(domain[1]) - 28}, 0)`}>
+              <g transform={`translate(${xScale(domain[1]) - 38}, 2)`}>
                 <text
                   fill="currentColor"
                   style={{
-                    fontSize: "10px",
+                    fontSize: "14px",
                     textAnchor: "middle",
                     transform: "translateY(15px)",
                   }}

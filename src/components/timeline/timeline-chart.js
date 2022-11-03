@@ -57,7 +57,15 @@ export const TimelineChart = ({ deployments }) => {
     )
     .split("-")
 
-  const maxDate = new Date([maxDateString[0], "12", "31"].join("-"))
+  const maxDate = new Date(
+    [
+      maxDateString[0] === minDateString[0]
+        ? parseInt(maxDateString[0]) + 1
+        : maxDateString[0],
+      "12",
+      "31",
+    ].join("-")
+  )
 
   const domain = [minDate, maxDate]
 
@@ -68,10 +76,10 @@ export const TimelineChart = ({ deployments }) => {
   const isFirstRun = useRef(true)
   const tooltipRef = useRef(null)
   const [selectedDeployment, setSelectedDeployment] = useState(null)
+  const [hoveredDeployment, setHoveredDeployment] = useState(null)
   const [count, setCount] = useState(1)
   const [priority, setPriority] = useState({})
-  const [focussedDeployment, setFocussedDeployment] = useState(null)
-  const [xPosition, setXPosition] = useState(null)
+
   const [tooltip, setTooltip] = useState({ x: null, y: null })
   const [tooltipContent, setTooltipContent] = useState(null)
 
@@ -91,11 +99,6 @@ export const TimelineChart = ({ deployments }) => {
     setCount(prev => prev + 1)
 
     setPriority(prev => ({ ...prev, [id]: count }))
-  }
-
-  const updateFocus = (id, xPosition) => {
-    setFocussedDeployment(id)
-    setXPosition(xPosition)
   }
 
   const events = deployments.reduce(
@@ -122,16 +125,16 @@ export const TimelineChart = ({ deployments }) => {
             <Swatch color={colors[NEGATIVE].dataVizOne} />
             {deployments.length} Deployment{deployments.length > 1 ? "s" : ""}
           </LegendItem>
-          {events.length > 0 ? (
-            <LegendItem>
-              <Swatch color={colors[NEGATIVE].dataVizTwo} />
-              {events.length} Significant Event{events.length > 1 ? "s" : ""}
-            </LegendItem>
-          ) : null}
           {iops.length > 0 ? (
             <LegendItem>
               <Swatch color={colors[NEGATIVE].dataVizThree} />
               {iops.length} IOP{iops.length > 1 ? "s" : ""}
+            </LegendItem>
+          ) : null}
+          {events.length > 0 ? (
+            <LegendItem>
+              <Swatch color={colors[NEGATIVE].dataVizTwo} />
+              {events.length} Significant Event{events.length > 1 ? "s" : ""}
             </LegendItem>
           ) : null}
         </Legend>
@@ -212,11 +215,10 @@ export const TimelineChart = ({ deployments }) => {
                       }}
                       yPosition={dms.boundedHeight - 18}
                       priority={priority[id] || 0}
-                      isFocussed={focussedDeployment === id}
-                      isAnyFocussed={!!focussedDeployment}
-                      updateFocus={updateFocus}
                       setSelectedDeployment={setSelectedDeployment}
                       selectedDeployment={selectedDeployment}
+                      hoveredDeployment={hoveredDeployment}
+                      setHoveredDeployment={setHoveredDeployment}
                       setTooltip={setTooltip}
                       setTooltipContent={setTooltipContent}
                       eventOffsetY={-16}

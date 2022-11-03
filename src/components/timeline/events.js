@@ -70,7 +70,7 @@ export const Events = ({
                     e.clientY -
                     e.target.ownerSVGElement.parentElement.getBoundingClientRect()
                       .y +
-                    90,
+                    114,
                 })
               }
             }}

@@ -20,7 +20,8 @@ export const Deployment = ({
   iopOffsetY = -8,
   yPosition,
   eventOffsetY = 0,
-  updateFocus,
+  hoveredDeployment,
+  setHoveredDeployment,
   setSelectedDeployment,
   selectedDeployment,
   regions,
@@ -45,7 +46,6 @@ export const Deployment = ({
     <g
       key={id + eventOffsetY}
       onClick={() => {
-        updateFocus(id, xPosition)
         setSelectedDeployment(
           selectedDeployment?.id === id
             ? null
@@ -73,6 +73,7 @@ export const Deployment = ({
         transform={`translate(${xPosition}, ${yPosition})`}
         onMouseEnter={() => {
           if (showDeploymentTooltip) {
+            setHoveredDeployment(id)
             setTooltipContent(
               <div>
                 <div
@@ -94,6 +95,7 @@ export const Deployment = ({
           }
         }}
         onMouseLeave={() => {
+          setHoveredDeployment(null)
           setTooltipContent(null)
         }}
         onMouseMove={e => {
@@ -117,8 +119,13 @@ export const Deployment = ({
           height={barHeight}
           fill={colors[NEGATIVE].dataVizOne}
           opacity={
-            selectedDeployment?.id === id || !selectedDeployment?.id ? 1 : 0.3
+            hoveredDeployment === id
+              ? 0.6
+              : selectedDeployment?.id === id || !selectedDeployment?.id
+              ? 1
+              : 0.3
           }
+          transition="all 2s"
         />
       </g>
 
@@ -181,9 +188,6 @@ Deployment.propTypes = {
   update: PropTypes.func.isRequired,
   priority: PropTypes.number.isRequired,
   yPosition: PropTypes.number.isRequired,
-  isFocussed: PropTypes.bool.isRequired,
-  isAnyFocussed: PropTypes.bool.isRequired,
-  updateFocus: PropTypes.func.isRequired,
   regions: PropTypes.array.isRequired,
   setSelectedDeployment: PropTypes.func.isRequired,
   setTooltip: PropTypes.func.isRequired,
@@ -198,4 +202,6 @@ Deployment.propTypes = {
   showEventTooltip: PropTypes.bool,
   showIopTooltip: PropTypes.bool,
   showDeploymentTooltip: PropTypes.bool,
+  hoveredDeployment: PropTypes.string,
+  setHoveredDeployment: PropTypes.func.isRequired,
 }

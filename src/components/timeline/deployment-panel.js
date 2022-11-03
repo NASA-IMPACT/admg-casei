@@ -34,6 +34,7 @@ export const DeploymentPanel = ({
           display: flex;
           border-top: 1px rgba(255, 255, 255, 0.6) solid;
           position: relative;
+          margin-top: 24px;
         `}
       >
         <div

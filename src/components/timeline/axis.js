@@ -65,7 +65,7 @@ export const Axis = ({ domain, range, chartSettings, xScale, labelFormat }) => {
           <text
             fill="currentColor"
             style={{
-              fontSize: "10px",
+              fontSize: "14px",
               textAnchor: "middle",
               transform: "translateY(25px)",
             }}
