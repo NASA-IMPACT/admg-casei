@@ -3,7 +3,6 @@ import PropTypes from "prop-types"
 
 import { NEGATIVE } from "../../utils/constants"
 import { colors } from "../../theme"
-import { reformatDate } from "../../utils/helpers"
 
 export const Events = ({
   events,
@@ -15,6 +14,10 @@ export const Events = ({
   eventBarHeight,
   showTooltip,
   isParentSelected,
+  setSelectedEvent,
+  selectedEvent,
+  hoveredEvent,
+  setHoveredEvent,
 }) => (
   <>
     {events.map(event => {
@@ -36,26 +39,13 @@ export const Events = ({
         >
           <rect
             onMouseEnter={() => {
+              setHoveredEvent(event.id)
               if (showTooltip) {
-                setTooltipContent(
-                  <div>
-                    <div
-                      css={`
-                        font-weight: bold;
-                      `}
-                    >
-                      Event
-                    </div>
-                    <div> {`${event.shortname}`}</div>
-                    <div>{`${reformatDate(event.start)}-${reformatDate(
-                      event.end
-                    )}`}</div>
-                    <div> {`${event.description}`}</div>
-                  </div>
-                )
+                setTooltipContent(<div> {`${event.shortname}`}</div>)
               }
             }}
             onMouseLeave={() => {
+              setHoveredEvent(null)
               setTooltipContent(null)
             }}
             onMouseMove={e => {
@@ -64,8 +54,7 @@ export const Events = ({
                   x:
                     e.clientX -
                     e.target.ownerSVGElement.parentElement.getBoundingClientRect()
-                      .x -
-                    32,
+                      .x,
                   y:
                     e.clientY -
                     e.target.ownerSVGElement.parentElement.getBoundingClientRect()
@@ -74,10 +63,22 @@ export const Events = ({
                 })
               }
             }}
+            onClick={
+              setSelectedEvent
+                ? () => setSelectedEvent({ content: event, type: "event" })
+                : () => {}
+            }
             width={duration}
             height={eventBarHeight}
             fill={colors[NEGATIVE].dataVizTwo}
-            opacity={isParentSelected ? 1 : 0.3}
+            opacity={
+              hoveredEvent === event.id
+                ? 0.6
+                : (isParentSelected && !selectedEvent?.content) ||
+                  (isParentSelected && selectedEvent?.content?.id == event.id)
+                ? 1
+                : 0.5
+            }
           />
         </g>
       )
@@ -102,4 +103,11 @@ Events.propTypes = {
   setTooltipContent: PropTypes.func.isRequired,
   showTooltip: PropTypes.bool,
   isParentSelected: PropTypes.bool,
+  setSelectedEvent: PropTypes.func,
+  selectedEvent: PropTypes.shape({
+    type: PropTypes.string,
+    content: PropTypes.object,
+  }),
+  hoveredEvent: PropTypes.string,
+  setHoveredEvent: PropTypes.func.isRequired,
 }

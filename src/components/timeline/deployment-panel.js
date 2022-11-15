@@ -1,6 +1,5 @@
 import PropTypes from "prop-types"
 import React from "react"
-import styled from "styled-components"
 
 import { DisclosurePanel } from "@reach/disclosure"
 import { MinorTimeline } from "./minor-timeline"
@@ -8,27 +7,48 @@ import { IconButton } from "../button"
 import { CloseIcon } from "../../icons"
 import { NEGATIVE } from "../../utils/constants"
 import { colors } from "../../theme"
-
-const SubHeader = styled.div`
-  font-weight: bold;
-  font-size: 14px;
-`
-
-const InfoContent = styled.div`
-  font-size: 12px;
-`
+import { EventPanel } from "./event-panel"
+import { Legend, LegendItem, Swatch } from "./timeline-chart"
+import { EventDetail } from "./event-detail"
+import { IopDetail } from "./iop-detail"
+import { DeploymentDetail } from "./deployment-detail"
 
 export const DeploymentPanel = ({
   selectedDeployment,
   setTooltip,
   setTooltipContent,
   setSelectedDeployment,
+  selectedEvent,
+  setSelectedEvent,
+  hoveredDeployment,
+  setHoveredDeployment,
 }) => {
   if (!selectedDeployment) return <div />
-  const { events, regions, shortname } = selectedDeployment
+  const { events, iops, regions, shortname } = selectedDeployment
+
+  const eventDetailSection = () => {
+    switch (selectedEvent.type) {
+      case "event":
+        return (
+          <EventDetail
+            event={selectedEvent.content}
+            setSelectedEvent={setSelectedEvent}
+          />
+        )
+      case "iop":
+        return (
+          <IopDetail
+            iop={selectedEvent.content}
+            setSelectedEvent={setSelectedEvent}
+          />
+        )
+      default:
+        return <DeploymentDetail {...{ events, regions, shortname }} />
+    }
+  }
 
   return (
-    <DisclosurePanel style={{ height: "200px" }}>
+    <DisclosurePanel style={{ height: "100%" }}>
       <div
         css={`
           display: flex;
@@ -45,8 +65,11 @@ export const DeploymentPanel = ({
           `}
         >
           <IconButton
-            id="remove-filter"
-            action={() => setSelectedDeployment(null)}
+            id="close-panel"
+            action={() => {
+              setSelectedDeployment(null)
+              setSelectedEvent({ content: undefined, type: "deployment" })
+            }}
             icon={<CloseIcon color={colors[NEGATIVE].text} />}
           />
         </div>
@@ -54,26 +77,40 @@ export const DeploymentPanel = ({
         <div
           css={`
             width: 200px;
-
-            padding-top: 1em;
+            padding-top: 4.5em;
             padding-bottom: 1em;
-            display: grid;
           `}
         >
-          <div>
-            <SubHeader>Deployment</SubHeader>
-            <InfoContent>{shortname}</InfoContent>
+          <div
+            css={`
+              margin-bottom: 12px;
+            `}
+          >
+            <div
+              css={`
+                font-weight: bold;
+                font-size: 18px;
+              `}
+            >
+              Deployment
+            </div>
+            <div>{selectedDeployment?.shortname}</div>
           </div>
-          <div>
-            <SubHeader>Regions</SubHeader>
-            <InfoContent>
-              {regions.length === 1 ? regions[0].short_name : "multiple"}
-            </InfoContent>
-          </div>
-          <div>
-            <SubHeader>Significant Events</SubHeader>
-            <InfoContent>{events.length}</InfoContent>
-          </div>
+
+          <Legend>
+            {iops.length > 0 ? (
+              <LegendItem>
+                <Swatch color={colors[NEGATIVE].dataVizThree} />
+                {iops.length} IOP{iops.length > 1 ? "s" : ""}
+              </LegendItem>
+            ) : null}
+            {events.length > 0 ? (
+              <LegendItem>
+                <Swatch color={colors[NEGATIVE].dataVizTwo} />
+                {events.length} Significant Event{events.length > 1 ? "s" : ""}
+              </LegendItem>
+            ) : null}
+          </Legend>
         </div>
         <div
           css={`
@@ -86,9 +123,15 @@ export const DeploymentPanel = ({
         >
           <MinorTimeline
             deployment={selectedDeployment}
+            setSelectedDeployment={setSelectedDeployment}
             setTooltip={setTooltip}
             setTooltipContent={setTooltipContent}
+            setSelectedEvent={setSelectedEvent}
+            selectedEvent={selectedEvent}
+            hoveredDeployment={hoveredDeployment}
+            setHoveredDeployment={setHoveredDeployment}
           />
+          <EventPanel>{eventDetailSection()}</EventPanel>
         </div>
       </div>
     </DisclosurePanel>
@@ -100,4 +143,11 @@ DeploymentPanel.propTypes = {
   setTooltip: PropTypes.func.isRequired,
   setTooltipContent: PropTypes.func.isRequired,
   setSelectedDeployment: PropTypes.func.isRequired,
+  selectedEvent: PropTypes.shape({
+    type: PropTypes.string,
+    content: PropTypes.object,
+  }),
+  setSelectedEvent: PropTypes.func.isRequired,
+  hoveredDeployment: PropTypes.string,
+  setHoveredDeployment: PropTypes.func.isRequired,
 }

@@ -19,20 +19,25 @@ export const MinorTimeline = ({
   deployment,
   setTooltip,
   setTooltipContent,
+  setSelectedEvent,
+  selectedEvent,
+  setSelectedDeployment,
+  hoveredDeployment,
+  setHoveredDeployment,
 }) => {
   if (!deployment) return <div />
   const { start, end, events, iops, id, longname, shortname, aliases } =
     deployment
 
   const [containerRef, dms] = useChartDimensions(chartSettings)
-
   const domain = [new Date(start), new Date(end)]
+  const [hoveredEvent, setHoveredEvent] = useState(null)
+
   const range = [0, dms.boundedWidth]
   // maps dates to x-values
   const xScale = d3.scaleUtc().domain(domain).range(range)
 
   const isFirstRun = useRef(true)
-  const [selectedDeployment, setSelectedDeployment] = useState(null)
   const [count, setCount] = useState(1)
   const [priority, setPriority] = useState({})
 
@@ -96,26 +101,30 @@ export const MinorTimeline = ({
               isAnyFocussed={false}
               updateFocus={() => {}}
               setSelectedDeployment={setSelectedDeployment}
-              selectedDeployment={selectedDeployment}
-              eventOffsetY={-30}
-              iopOffsetY={-16}
+              selectedDeployment={deployment}
+              eventOffsetY={-49}
+              iopOffsetY={-25}
               setTooltip={setTooltip}
               tooltipOffsetY={-114}
               setTooltipContent={setTooltipContent}
               barHeight={2}
-              iopHeight={11}
-              eventBarHeight={11}
+              iopHeight={20}
+              eventBarHeight={20}
               showEventTooltip={true}
               showIopTooltip={true}
-              setHoveredDeployment={() => {}}
+              setHoveredDeployment={setHoveredDeployment}
+              setSelectedEvent={setSelectedEvent}
+              selectedEvent={selectedEvent}
+              hoveredEvent={hoveredEvent}
+              setHoveredEvent={setHoveredEvent}
             />
 
             <g transform={`translate(${[0, dms.boundedHeight].join(",")})`}>
-              <g transform={`translate(${38}, 2)`}>
+              <g transform={`translate(${43}, 2)`}>
                 <text
                   fill="currentColor"
                   style={{
-                    fontSize: "14px",
+                    fontSize: "16px",
                     textAnchor: "middle",
                     transform: "translateY(15px)",
                   }}
@@ -123,11 +132,11 @@ export const MinorTimeline = ({
                   {`${d3.utcFormat("%b %d %Y")(domain[0])}`}
                 </text>
               </g>
-              <g transform={`translate(${xScale(domain[1]) - 38}, 2)`}>
+              <g transform={`translate(${xScale(domain[1]) - 46}, 2)`}>
                 <text
                   fill="currentColor"
                   style={{
-                    fontSize: "14px",
+                    fontSize: "16px",
                     textAnchor: "middle",
                     transform: "translateY(15px)",
                   }}
@@ -174,4 +183,13 @@ MinorTimeline.propTypes = {
   }),
   setTooltip: PropTypes.func.isRequired,
   setTooltipContent: PropTypes.func.isRequired,
+  setSelectedEvent: PropTypes.func.isRequired,
+  selectedEvent: PropTypes.shape({
+    type: PropTypes.string,
+    content: PropTypes.object,
+  }),
+  setSelectedDeployment: PropTypes.func.isRequired,
+  selectedDeployment: PropTypes.object,
+  hoveredDeployment: PropTypes.string,
+  setHoveredDeployment: PropTypes.func.isRequired,
 }

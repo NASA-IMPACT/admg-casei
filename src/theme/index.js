@@ -32,9 +32,9 @@ const colors = {
     linkText: palette["baby blue eyes"],
     highlight: palette["red ryb"],
     division: palette["davys grey"],
-    dataVizOne: palette["caribbean green"],
-    dataVizTwo: palette["medium slate blue"],
-    dataVizThree: palette["orange blossom"],
+    dataVizOne: "#1B9E77", // palette["caribbean green"],
+    dataVizTwo: "#7570B3", //palette["medium slate blue"],
+    dataVizThree: "#D95F02", // palette["orange blossom"],
   },
 }
 

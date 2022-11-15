@@ -29,6 +29,7 @@ export default function SectionHeader({
       <a href={`#${id}`}>
         <h2>{headline}</h2>
       </a>
+      <div>Select a deployment to see details</div>
       {description && (
         <p
           css={`

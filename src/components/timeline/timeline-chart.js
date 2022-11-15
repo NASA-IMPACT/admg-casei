@@ -14,22 +14,22 @@ import { DeploymentPanel } from "./deployment-panel"
 
 const chartSettings = {
   marginTop: 1,
-  marginRight: 20,
+  marginRight: 0,
   marginBottom: 60,
   marginLeft: 20,
-  paddingX: 20,
+  paddingX: 0,
 }
 
-const Legend = styled.div`
+export const Legend = styled.div`
   min-width: 200px;
 `
 
-const LegendItem = styled.div`
+export const LegendItem = styled.div`
   display: flex;
   align-items: center;
 `
 
-const Swatch = styled.div`
+export const Swatch = styled.div`
   width: 10px;
   height: 10px;
   margin-right: 4px;
@@ -82,6 +82,10 @@ export const TimelineChart = ({ deployments }) => {
 
   const [tooltip, setTooltip] = useState({ x: null, y: null })
   const [tooltipContent, setTooltipContent] = useState(null)
+  const [selectedEvent, setSelectedEvent] = useState({
+    content: undefined,
+    type: "deployment",
+  })
 
   useEffect(() => {
     //wait for first render to get correct measures
@@ -178,13 +182,14 @@ export const TimelineChart = ({ deployments }) => {
           </div>
           <div>
             <svg // scrollable chart
-              width={range[1] + chartSettings.paddingX * 2}
+              width={range[1] + 40}
               height={dms.height}
             >
               <g
-                transform={`translate(${[dms.marginLeft, dms.marginTop].join(
-                  ","
-                )})`}
+                transform={`translate(${[
+                  dms.marginLeft,
+                  dms.marginTop + 5,
+                ].join(",")})`}
               >
                 {deployments.map(
                   ({
@@ -213,7 +218,7 @@ export const TimelineChart = ({ deployments }) => {
                         xScale,
                         update,
                       }}
-                      yPosition={dms.boundedHeight - 18}
+                      yPosition={dms.boundedHeight - 24}
                       priority={priority[id] || 0}
                       setSelectedDeployment={setSelectedDeployment}
                       selectedDeployment={selectedDeployment}
@@ -223,6 +228,9 @@ export const TimelineChart = ({ deployments }) => {
                       setTooltipContent={setTooltipContent}
                       eventOffsetY={-16}
                       showDeploymentTooltip
+                      setSelectedEvent={setSelectedEvent}
+                      setHoveredEvent={() => {}}
+                      hoveredEvent={null}
                     />
                   )
                 )}
@@ -248,6 +256,10 @@ export const TimelineChart = ({ deployments }) => {
         setTooltip={setTooltip}
         setTooltipContent={setTooltipContent}
         setSelectedDeployment={setSelectedDeployment}
+        selectedEvent={selectedEvent}
+        setSelectedEvent={setSelectedEvent}
+        hoveredDeployment={hoveredDeployment}
+        setHoveredDeployment={setHoveredDeployment}
       />
     </Disclosure>
   )

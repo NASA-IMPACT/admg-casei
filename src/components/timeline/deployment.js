@@ -27,12 +27,16 @@ export const Deployment = ({
   regions,
   setTooltip,
   setTooltipContent,
-  barHeight = 14,
+  barHeight = 20,
   eventBarHeight = 4,
   iopHeight = 4,
   showEventTooltip,
   showIopTooltip,
   showDeploymentTooltip,
+  setSelectedEvent,
+  selectedEvent,
+  hoveredEvent,
+  setHoveredEvent,
 }) => {
   const xPosition = useMemo(() => {
     return xScale(new Date(start))
@@ -46,23 +50,19 @@ export const Deployment = ({
     <g
       key={id + eventOffsetY}
       onClick={() => {
-        setSelectedDeployment(
-          selectedDeployment?.id === id
-            ? null
-            : {
-                ...{
-                  start,
-                  end,
-                  events,
-                  iops,
-                  id,
-                  longname,
-                  shortname,
-                  aliases,
-                  regions,
-                },
-              }
-        )
+        setSelectedDeployment({
+          ...{
+            start,
+            end,
+            events,
+            iops,
+            id,
+            longname,
+            shortname,
+            aliases,
+            regions,
+          },
+        })
       }}
       css={`
         cursor: ${showDeploymentTooltip ? "pointer" : "default"};
@@ -74,24 +74,7 @@ export const Deployment = ({
         onMouseEnter={() => {
           if (showDeploymentTooltip) {
             setHoveredDeployment(id)
-            setTooltipContent(
-              <div>
-                <div
-                  css={`
-                    font-weight: bold;
-                  `}
-                >
-                  Deployment
-                </div>
-                <div>{shortname}</div>
-                <div>{`${start}-${end}`}</div>
-                <div>
-                  {regions?.length === 1
-                    ? regions[0].short_name
-                    : "multiple regions"}
-                </div>
-              </div>
-            )
+            setTooltipContent(<div>{shortname}</div>)
           }
         }}
         onMouseLeave={() => {
@@ -121,7 +104,8 @@ export const Deployment = ({
           opacity={
             hoveredDeployment === id
               ? 0.6
-              : selectedDeployment?.id === id || !selectedDeployment?.id
+              : (selectedDeployment?.id === id && !selectedEvent?.content) ||
+                !selectedDeployment?.id
               ? 1
               : 0.3
           }
@@ -141,6 +125,10 @@ export const Deployment = ({
         isParentSelected={
           selectedDeployment?.id === id || !selectedDeployment?.id
         }
+        setSelectedEvent={setSelectedEvent}
+        selectedEvent={selectedEvent}
+        hoveredEvent={hoveredEvent}
+        setHoveredEvent={setHoveredEvent}
       />
       <Iops
         iops={iops}
@@ -154,6 +142,12 @@ export const Deployment = ({
         isParentSelected={
           selectedDeployment?.id === id || !selectedDeployment?.id
         }
+        setSelectedEvent={setSelectedEvent}
+        selectedEvent={selectedEvent}
+        setHoveredDeployment={setHoveredDeployment}
+        hoveredDeployment={hoveredDeployment}
+        hoveredEvent={hoveredEvent}
+        setHoveredEvent={setHoveredEvent}
       />
     </g>
   )
@@ -204,4 +198,8 @@ Deployment.propTypes = {
   showDeploymentTooltip: PropTypes.bool,
   hoveredDeployment: PropTypes.string,
   setHoveredDeployment: PropTypes.func.isRequired,
+  hoveredEvent: PropTypes.string,
+  setHoveredEvent: PropTypes.func.isRequired,
+  setSelectedEvent: PropTypes.func,
+  selectedEvent: PropTypes.object,
 }
