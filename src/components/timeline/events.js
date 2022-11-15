@@ -72,11 +72,11 @@ export const Events = ({
             height={eventBarHeight}
             fill={colors[NEGATIVE].dataVizTwo}
             opacity={
-              hoveredEvent === event.id
-                ? 0.6
-                : (isParentSelected && !selectedEvent?.content) ||
-                  (isParentSelected && selectedEvent?.content?.id == event.id)
+              (isParentSelected && !selectedEvent?.content) ||
+              (isParentSelected && selectedEvent?.content?.id == event.id)
                 ? 1
+                : hoveredEvent === event.id
+                ? 0.6
                 : 0.5
             }
           />

@@ -81,11 +81,11 @@ export const Iops = ({
               height={iopHeight}
               fill={colors[NEGATIVE].dataVizThree}
               opacity={
-                hoveredEvent === iop.id
-                  ? 0.6
-                  : (isParentSelected && !selectedEvent?.content) ||
-                    (isParentSelected && selectedEvent?.content?.id == iop.id)
+                (isParentSelected && !selectedEvent?.content) ||
+                (isParentSelected && selectedEvent?.content?.id == iop.id)
                   ? 1
+                  : hoveredEvent === iop.id
+                  ? 0.6
                   : 0.3
               }
             />

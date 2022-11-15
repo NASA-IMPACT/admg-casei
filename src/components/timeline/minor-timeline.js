@@ -21,9 +21,6 @@ export const MinorTimeline = ({
   setTooltipContent,
   setSelectedEvent,
   selectedEvent,
-  setSelectedDeployment,
-  hoveredDeployment,
-  setHoveredDeployment,
 }) => {
   if (!deployment) return <div />
   const { start, end, events, iops, id, longname, shortname, aliases } =
@@ -100,7 +97,7 @@ export const MinorTimeline = ({
               isFocussed={false}
               isAnyFocussed={false}
               updateFocus={() => {}}
-              setSelectedDeployment={setSelectedDeployment}
+              setSelectedDeployment={() => {}}
               selectedDeployment={deployment}
               eventOffsetY={-49}
               iopOffsetY={-25}
@@ -112,7 +109,7 @@ export const MinorTimeline = ({
               eventBarHeight={20}
               showEventTooltip={true}
               showIopTooltip={true}
-              setHoveredDeployment={setHoveredDeployment}
+              setHoveredDeployment={() => {}}
               setSelectedEvent={setSelectedEvent}
               selectedEvent={selectedEvent}
               hoveredEvent={hoveredEvent}
@@ -190,6 +187,4 @@ MinorTimeline.propTypes = {
   }),
   setSelectedDeployment: PropTypes.func.isRequired,
   selectedDeployment: PropTypes.object,
-  hoveredDeployment: PropTypes.string,
-  setHoveredDeployment: PropTypes.func.isRequired,
 }

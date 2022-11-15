@@ -49,21 +49,6 @@ export const Deployment = ({
   return (
     <g
       key={id + eventOffsetY}
-      onClick={() => {
-        setSelectedDeployment({
-          ...{
-            start,
-            end,
-            events,
-            iops,
-            id,
-            longname,
-            shortname,
-            aliases,
-            regions,
-          },
-        })
-      }}
       css={`
         cursor: ${showDeploymentTooltip ? "pointer" : "default"};
       `}
@@ -102,14 +87,30 @@ export const Deployment = ({
           height={barHeight}
           fill={colors[NEGATIVE].dataVizOne}
           opacity={
-            hoveredDeployment === id
-              ? 0.6
-              : (selectedDeployment?.id === id && !selectedEvent?.content) ||
-                !selectedDeployment?.id
+            (selectedDeployment?.id === id && !selectedEvent?.content) ||
+            !selectedDeployment?.id
               ? 1
+              : hoveredDeployment === id
+              ? 0.6
               : 0.3
           }
           transition="all 2s"
+          onClick={() => {
+            setSelectedDeployment({
+              ...{
+                start,
+                end,
+                events,
+                iops,
+                id,
+                longname,
+                shortname,
+                aliases,
+                regions,
+              },
+            })
+            setSelectedEvent({ content: null, type: "deployment" })
+          }}
         />
       </g>
 
