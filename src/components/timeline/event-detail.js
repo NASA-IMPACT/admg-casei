@@ -65,7 +65,7 @@ export const EventDetail = ({ event, setSelectedEvent }) => {
         event.end
       )}`}</SectionContent>
       <SubHeader>Description</SubHeader>
-      <SectionContent>{`${event.end}`}</SectionContent>
+      <SectionContent>{`${event.description}`}</SectionContent>
     </div>
   )
 }
@@ -76,6 +76,7 @@ EventDetail.propTypes = {
     shortname: PropTypes.string.isRequired,
     end: PropTypes.string.isRequired,
     start: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
   }).isRequired,
   setSelectedEvent: PropTypes.func,
 }

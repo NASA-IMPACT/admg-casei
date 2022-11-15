@@ -293,6 +293,7 @@ TimelineChart.propTypes = {
           shortname: PropTypes.string.isRequired,
           end: PropTypes.string.isRequired,
           start: PropTypes.string.isRequired,
+          description: PropTypes.string.isRequired,
         }).isRequired
       ),
     })
