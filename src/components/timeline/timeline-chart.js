@@ -229,6 +229,7 @@ export const TimelineChart = ({ deployments }) => {
                       eventOffsetY={-16}
                       showDeploymentTooltip
                       setSelectedEvent={setSelectedEvent}
+                      disableEventSelection={true}
                       setHoveredEvent={() => {}}
                       hoveredEvent={null}
                     />

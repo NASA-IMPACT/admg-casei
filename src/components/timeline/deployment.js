@@ -37,6 +37,7 @@ export const Deployment = ({
   selectedEvent,
   hoveredEvent,
   setHoveredEvent,
+  disableEventSelection,
 }) => {
   const xPosition = useMemo(() => {
     return xScale(new Date(start))
@@ -126,7 +127,7 @@ export const Deployment = ({
         isParentSelected={
           selectedDeployment?.id === id || !selectedDeployment?.id
         }
-        setSelectedEvent={setSelectedEvent}
+        setSelectedEvent={disableEventSelection ? () => {} : setSelectedEvent}
         selectedEvent={selectedEvent}
         hoveredEvent={hoveredEvent}
         setHoveredEvent={setHoveredEvent}
@@ -144,7 +145,7 @@ export const Deployment = ({
           selectedDeployment?.id === id || !selectedDeployment?.id
         }
         setSelectedEvent={setSelectedEvent}
-        selectedEvent={selectedEvent}
+        selectedEvent={disableEventSelection ? () => {} : setSelectedEvent}
         setHoveredDeployment={setHoveredDeployment}
         hoveredDeployment={hoveredDeployment}
         hoveredEvent={hoveredEvent}
@@ -203,4 +204,5 @@ Deployment.propTypes = {
   setHoveredEvent: PropTypes.func.isRequired,
   setSelectedEvent: PropTypes.func,
   selectedEvent: PropTypes.object,
+  disableEventSelection: PropTypes.boolean,
 }
