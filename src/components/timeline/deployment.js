@@ -59,7 +59,7 @@ export const Deployment = ({
         onMouseEnter={() => {
           if (showDeploymentTooltip) {
             setHoveredDeployment(id)
-            setTooltipContent(<div>{shortname}</div>)
+            setTooltipContent(<div>{longname}</div>)
           }
         }}
         onMouseLeave={() => {
