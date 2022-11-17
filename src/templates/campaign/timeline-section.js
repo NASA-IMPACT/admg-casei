@@ -9,7 +9,11 @@ import { TimelineChart } from "../../components/timeline"
 const TimelineSection = ({ id, deployments }) => {
   return (
     <Section id={id}>
-      <SectionHeader headline="Timeline" id={id} />
+      <SectionHeader
+        headline="Timeline"
+        subtitle={"Select a time bar to see details."}
+        id={id}
+      />
       <SectionContent>
         <TimelineChart {...{ deployments }} />
       </SectionContent>
