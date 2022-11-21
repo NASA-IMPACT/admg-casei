@@ -17,11 +17,10 @@ export const Iops = ({
   setSelectedEvent,
   selectedEvent,
   visuallyDeselected,
-  hoveredDeployment,
   hoveredEvent,
   setHoveredEvent,
 }) => {
-  console.log(hoveredDeployment)
+  console.log(selectedEvent)
   return (
     <>
       {iops.map(iop => {

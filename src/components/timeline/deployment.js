@@ -145,7 +145,7 @@ export const Deployment = ({
           selectedDeployment?.id === id || !selectedDeployment?.id
         }
         setSelectedEvent={setSelectedEvent}
-        selectedEvent={disableEventSelection ? () => {} : setSelectedEvent}
+        selectedEvent={disableEventSelection ? () => {} : selectedEvent}
         setHoveredDeployment={setHoveredDeployment}
         hoveredDeployment={hoveredDeployment}
         hoveredEvent={hoveredEvent}
