@@ -20,7 +20,6 @@ export const Iops = ({
   hoveredEvent,
   setHoveredEvent,
 }) => {
-  console.log(selectedEvent)
   return (
     <>
       {iops.map(iop => {
