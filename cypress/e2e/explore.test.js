@@ -146,7 +146,7 @@ describe("Explore", () => {
           expect($card.find("[data-cy=stationary-tag]")).not.to.exist
           expect($card.find("[data-cy=shortname]")).to.contain("B-200")
           expect($card.find("[data-cy=longname]")).to.contain(
-            "Beechcraft King Air B-200"
+            "Beechcraft B-200 King Air"
           )
           expect($card.find("[data-cy=longname]")).to.exist
         })
@@ -167,7 +167,7 @@ describe("Explore", () => {
 
       cy.url().should("include", "/platform/")
 
-      cy.get("h1").should("have.text", "GHGlobal Hawk UAV")
+      cy.get("h1").should("have.text", "GHGlobal Hawk")
     })
   })
 
