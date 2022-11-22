@@ -28,13 +28,6 @@ export const Axis = ({ domain, range, chartSettings, xScale, labelFormat }) => {
           })
         )
 
-  // useMemo(() => {
-  //   return xScale.ticks(d3.utcMonth).map(value => ({
-  //     value,
-  //     xOffset: xScale(value),
-  //   }))
-  // }, [dependency])
-
   return (
     <>
       <path

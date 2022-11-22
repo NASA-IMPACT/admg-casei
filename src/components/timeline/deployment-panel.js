@@ -24,7 +24,8 @@ export const DeploymentPanel = ({
   setHoveredDeployment,
 }) => {
   if (!selectedDeployment) return <div />
-  const { events, iops, regions, longname, aliases } = selectedDeployment
+  const { events, iops, regions, longname, aliases, shortname } =
+    selectedDeployment
 
   const eventDetailSection = () => {
     switch (selectedEvent.type) {
@@ -43,7 +44,11 @@ export const DeploymentPanel = ({
           />
         )
       default:
-        return <DeploymentDetail {...{ events, regions, longname, aliases }} />
+        return (
+          <DeploymentDetail
+            {...{ events, regions, longname, shortname, aliases }}
+          />
+        )
     }
   }
 
@@ -94,7 +99,11 @@ export const DeploymentPanel = ({
             >
               Deployment
             </div>
-            <div>{selectedDeployment?.longname}</div>
+            <div>
+              {selectedDeployment?.longname
+                ? selectedDeployment?.longname
+                : selectedDeployment?.shortname}
+            </div>
           </div>
 
           <Legend>

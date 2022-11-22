@@ -2,10 +2,10 @@ import React from "react"
 import PropTypes from "prop-types"
 import { MainHeader, SectionContent, SubHeader } from "./iop-detail"
 
-export const DeploymentDetail = ({ longname, regions, aliases }) => {
+export const DeploymentDetail = ({ longname, shortname, regions, aliases }) => {
   return (
     <div>
-      <MainHeader>{longname}</MainHeader>
+      <MainHeader>{longname ? longname : shortname}</MainHeader>
       <div>
         <SubHeader>Regions</SubHeader>
         <SectionContent>
@@ -27,5 +27,6 @@ export const DeploymentDetail = ({ longname, regions, aliases }) => {
 DeploymentDetail.propTypes = {
   regions: PropTypes.array.isRequired,
   longname: PropTypes.string.isRequired,
+  shortname: PropTypes.string.isRequired,
   aliases: PropTypes.arrayOf(PropTypes.string),
 }
