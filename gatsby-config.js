@@ -55,18 +55,21 @@ module.exports = {
       resolve: `gatsby-plugin-create-client-paths`,
       options: { prefixes: [`/edit/*`] },
     },
-    // bundle analysis
-    // `gatsby-plugin-perf-budgets`, // located at /_report.html
-    // {
-    //   resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
-    //   options: {
-    //     // devMode: true,
-    //     // disable: true,
-    //     analyzerPort: 8001,
-    //   },
-    // },
-    // for csp headers
-    // `gatsby-plugin-csp`,
+    // google analytics
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        // You can add multiple tracking ids and a pageview event will be fired for all of them.
+        trackingIds: [
+          `${process.env.GA_MEASUREMENT_ID}`, // Google Analytics measurement ID
+        ],
+        // This object is used for configuration specific to this plugin
+        pluginConfig: {
+          // Puts tracking script in the head instead of the body
+          head: true,
+        },
+      },
+    },
     {
       resolve: `gatsby-plugin-csp`,
       options: {
