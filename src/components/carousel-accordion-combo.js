@@ -33,7 +33,7 @@ export default function CarouselAccordionCombo({
           >
             {carouselList.map((carouselItem, index) => (
               <Button
-                key={carouselItem.item.id}
+                key={"button" + carouselItem.item.id + index}
                 ref={index === slideIndex ? controlTextRef : null}
                 isSecondary={!(index === slideIndex)}
                 action={() => setSlideIndex(index)}
@@ -81,10 +81,10 @@ export default function CarouselAccordionCombo({
             }}
             heightMode="max"
           >
-            {carouselList.map(carouselItem => (
+            {carouselList.map((carouselItem, index) => (
               <div
                 role="group"
-                key={carouselItem.item.id}
+                key={carouselItem.item.id + "card" + index}
                 data-cy={id}
                 css={`
                    {

@@ -148,10 +148,20 @@ export const query = graphql`
       ...platformSectionFields
       deployments {
         id: uuid
+        iops: iops {
+          id
+          short_name
+          start_date
+          description
+          end_date
+        }
         longname: long_name
         shortname: short_name
         aliases: aliases {
           shortname: short_name
+        }
+        regions: geographical_regions {
+          short_name
         }
         collectionPeriods: collection_periods {
           id
@@ -181,6 +191,7 @@ export const query = graphql`
           end: end_date
           start: start_date
           shortname: short_name
+          description: description
           id
         }
       }

@@ -245,7 +245,6 @@ Home.propTypes = {
           shortname: PropTypes.string.isRequired,
           example: PropTypes.string.isRequired,
           image: PropTypes.shape({
-            nasaImgUrl: PropTypes.string.isRequired,
             nasaImgAlt: PropTypes.string.isRequired,
           }),
         })

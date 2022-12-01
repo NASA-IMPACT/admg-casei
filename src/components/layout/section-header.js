@@ -6,6 +6,7 @@ export default function SectionHeader({
   headline,
   description,
   id,
+  subtitle,
   spanWidth = 6,
 }) {
   return (
@@ -29,6 +30,7 @@ export default function SectionHeader({
       <a href={`#${id}`}>
         <h2>{headline}</h2>
       </a>
+      {subtitle && <div>{subtitle}</div>}
       {description && (
         <p
           css={`
@@ -49,4 +51,5 @@ SectionHeader.propTypes = {
   description: PropTypes.string,
   id: PropTypes.string.isRequired,
   spanWidth: PropTypes.number,
+  subtitle: PropTypes.string,
 }

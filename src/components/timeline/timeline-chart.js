@@ -1,56 +1,91 @@
 import React, { useEffect, useRef, useState } from "react"
 import PropTypes from "prop-types"
 import * as d3 from "d3"
-import { differenceInHours } from "date-fns"
+import styled from "styled-components"
 
 import { Axis } from "./axis"
-import { NEGATIVE } from "../../utils/constants"
-import { colors, layout } from "../../theme"
+import { NEGATIVE, POSITIVE } from "../../utils/constants"
+import { colors } from "../../theme"
 import { useChartDimensions } from "../../utils/use-chart-dimensions"
 import { occlusion } from "./occlusion"
 import { Deployment } from "./deployment"
-import { ScrollShadow } from "./scroll-shadow"
-import { Details } from "./details"
+import { Disclosure } from "@reach/disclosure"
+import { DeploymentPanel } from "./deployment-panel"
 
 const chartSettings = {
   marginTop: 1,
-  marginRight: 20,
-  marginBottom: 40,
+  marginRight: 0,
+  marginBottom: 60,
   marginLeft: 20,
-  paddingX: 20,
+  paddingX: 0,
 }
+
+export const Legend = styled.div`
+  min-width: 200px;
+`
+
+export const LegendItem = styled.div`
+  display: flex;
+  align-items: center;
+`
+
+export const Swatch = styled.div`
+  width: 10px;
+  height: 10px;
+  margin-right: 4px;
+  background-color: ${({ color }) => color};
+`
 
 export const TimelineChart = ({ deployments }) => {
   const [containerRef, dms] = useChartDimensions(chartSettings)
 
-  const minDate = new Date(
-    d3.min(
+  const minDateString = d3
+    .min(
       deployments.map(({ start, events }) =>
         d3.min([start, ...events.map(({ start }) => start)])
       )
     )
-  )
-  const maxDate = new Date(
-    d3.max(
+    .split("-")
+
+  const minDate = new Date([minDateString[0], "01", "01"].join("-"))
+
+  const maxDateString = d3
+    .max(
       deployments.map(({ end, events }) =>
         d3.max([end, ...events.map(({ end }) => end)])
       )
     )
+    .split("-")
+
+  const maxDate = new Date(
+    [
+      maxDateString[0] === minDateString[0]
+        ? parseInt(maxDateString[0]) + 1
+        : maxDateString[0],
+      "12",
+      "31",
+    ].join("-")
   )
+
   const domain = [minDate, maxDate]
-  const extend = Math.max(
-    differenceInHours(maxDate, minDate) / 4,
-    dms.boundedWidth
-  )
-  const range = [0, extend]
+
+  const range = [0, dms.boundedWidth - 200]
   // maps dates to x-values
   const xScale = d3.scaleUtc().domain(domain).range(range)
 
   const isFirstRun = useRef(true)
+  const tooltipRef = useRef(null)
+  const [selectedDeployment, setSelectedDeployment] = useState(null)
+  const [hoveredDeployment, setHoveredDeployment] = useState(null)
   const [count, setCount] = useState(1)
   const [priority, setPriority] = useState({})
-  const [focussedDeployment, setFocussedDeployment] = useState(null)
-  const [xPosition, setXPosition] = useState(null)
+
+  const [tooltip, setTooltip] = useState({ x: null, y: null })
+  const [tooltipContent, setTooltipContent] = useState(null)
+  const [selectedEvent, setSelectedEvent] = useState({
+    content: undefined,
+    type: "deployment",
+  })
 
   useEffect(() => {
     //wait for first render to get correct measures
@@ -70,115 +105,164 @@ export const TimelineChart = ({ deployments }) => {
     setPriority(prev => ({ ...prev, [id]: count }))
   }
 
-  const updateFocus = (id, xPosition) => {
-    setFocussedDeployment(id)
-    setXPosition(xPosition)
-  }
+  const events = deployments.reduce(
+    (prev, deployment) => [...prev, ...deployment.events],
+    []
+  )
 
-  const clearFocus = () => {
-    setFocussedDeployment(null)
-    setXPosition(null)
-  }
-
-  const scrollRef = useRef()
+  const iops = deployments.reduce(
+    (prev, deployment) => [...prev, ...deployment.iops],
+    []
+  )
 
   return (
-    <div
-      ref={containerRef}
-      css={`
-        height: 200px;
-        max-width: ${layout.maxWidth};
-        isolation: isolate;
-
-        & .occluded {
-          /* hide occluded labels */
-          display: none;
-        }
-      `}
-    >
-      <svg // background
-        width={dms.width}
-        height={dms.height}
+    <Disclosure open={!!selectedDeployment}>
+      <div
+        ref={containerRef}
         css={`
-          position: absolute;
-          z-index: 1;
+          display: flex;
         `}
       >
-        <rect
-          width={dms.boundedWidth + chartSettings.paddingX * 2}
-          height={dms.boundedHeight}
-          fill={colors[NEGATIVE].background}
-        />
-      </svg>
-      <ScrollShadow scrollRef={scrollRef}>
+        <Legend>
+          Events
+          <LegendItem>
+            <Swatch color={colors[NEGATIVE].dataVizOne} />
+            {deployments.length} Deployment{deployments.length > 1 ? "s" : ""}
+          </LegendItem>
+          {iops.length > 0 ? (
+            <LegendItem>
+              <Swatch color={colors[NEGATIVE].dataVizThree} />
+              {iops.length} IOP{iops.length > 1 ? "s" : ""}
+            </LegendItem>
+          ) : null}
+          {events.length > 0 ? (
+            <LegendItem>
+              <Swatch color={colors[NEGATIVE].dataVizTwo} />
+              {events.length} Significant Event{events.length > 1 ? "s" : ""}
+            </LegendItem>
+          ) : null}
+        </Legend>
+
         <div
-          ref={scrollRef}
           css={`
-            overflow: hidden;
-            overflow-x: scroll;
-            -webkit-overflow-scrolling: touch;
-            position: static;
-            isolation: isolate; /* z-index on Details */
+            height: 70px;
+            width: 100%;
+            margin-bottom: 20px;
+            margin-top: 6px;
+            max-width: calc(1280px - 200px);
+            position: relative;
           `}
         >
-          {focussedDeployment && (
-            <Details
-              xPosition={
-                xPosition +
-                chartSettings.marginLeft -
-                scrollRef.current.scrollLeft
-              }
-              yPosition={dms.boundedHeight - 80}
-              id={focussedDeployment}
-              close={clearFocus}
-            />
-          )}
-          <svg // scrollable chart
-            className="scrollable"
-            width={range[1] + chartSettings.paddingX * 2}
-            height={dms.height}
-            css={`
-              position: relative; /* required for zIndex */
-              z-index: 2; /* place chart above background */
-            `}
+          <div
+            ref={tooltipRef}
+            style={{
+              display: tooltipContent ? "flex" : "none",
+              maxWidth: "600px",
+              zIndex: 11,
+              background: colors[POSITIVE].background,
+              position: "absolute",
+              bottom: -tooltip.y + 86,
+              left: tooltip.x - 8 - tooltipRef.current?.clientWidth / 2,
+              padding: 12,
+              color: colors[POSITIVE].text,
+              boxShadow:
+                "rgba(255, 255, 255, 0.2) 0px -1px 1px 0px, rgba(255, 255, 255, 0.2) 0px 2px 2px 0px",
+            }}
           >
-            <g
-              transform={`translate(${[dms.marginLeft, dms.marginTop].join(
-                ","
-              )})`}
+            {tooltipContent}
+            <div
+              style={{
+                position: "absolute",
+                border: "10px solid white",
+                bottom: -15,
+                left: "50%",
+                borderColor: "white transparent transparent transparent",
+              }}
+            />
+          </div>
+          <div>
+            <svg // scrollable chart
+              width={range[1] + 40}
+              height={dms.height}
             >
-              {deployments.map(
-                ({ start, end, events, id, longname, shortname, aliases }) => (
-                  <Deployment
-                    key={id}
-                    {...{
-                      id,
-                      longname,
-                      shortname,
-                      aliases,
-                      start,
-                      end,
-                      events,
-                      xScale,
-                      update,
-                    }}
-                    yPosition={dms.boundedHeight - 20}
-                    priority={priority[id] || 0}
-                    isFocussed={focussedDeployment === id}
-                    isAnyFocussed={!!focussedDeployment}
-                    updateFocus={updateFocus}
-                  />
-                )
-              )}
+              <g
+                transform={`translate(${[
+                  dms.marginLeft,
+                  dms.marginTop + 5,
+                ].join(",")})`}
+              >
+                {deployments.map(
+                  ({
+                    start,
+                    end,
+                    events,
+                    iops,
+                    id,
+                    longname,
+                    shortname,
+                    aliases,
+                    regions,
+                  }) => (
+                    <Deployment
+                      key={id}
+                      {...{
+                        id,
+                        regions,
+                        longname,
+                        shortname,
+                        aliases,
+                        start,
+                        end,
+                        events,
+                        iops,
+                        xScale,
+                        update,
+                      }}
+                      yPosition={dms.boundedHeight - 24}
+                      priority={priority[id] || 0}
+                      setSelectedDeployment={setSelectedDeployment}
+                      selectedDeployment={selectedDeployment}
+                      hoveredDeployment={hoveredDeployment}
+                      setHoveredDeployment={setHoveredDeployment}
+                      setTooltip={setTooltip}
+                      setTooltipContent={setTooltipContent}
+                      eventOffsetY={-16}
+                      showDeploymentTooltip
+                      setSelectedEvent={setSelectedEvent}
+                      disableEventSelection={true}
+                      setHoveredEvent={() => {}}
+                      hoveredEvent={null}
+                    />
+                  )
+                )}
 
-              <g transform={`translate(${[0, dms.boundedHeight].join(",")})`}>
-                <Axis {...{ domain, range, chartSettings, xScale }} />
+                <g transform={`translate(${[0, dms.boundedHeight].join(",")})`}>
+                  <Axis
+                    {...{
+                      domain,
+                      range,
+                      chartSettings,
+                      xScale,
+                      labelFormat: "year",
+                    }}
+                  />
+                </g>
               </g>
-            </g>
-          </svg>
+            </svg>
+          </div>
         </div>
-      </ScrollShadow>
-    </div>
+      </div>
+      <DeploymentPanel
+        selectedDeployment={selectedDeployment}
+        setTooltip={setTooltip}
+        setTooltipContent={setTooltipContent}
+        setSelectedDeployment={setSelectedDeployment}
+        selectedEvent={selectedEvent}
+        setSelectedEvent={setSelectedEvent}
+        hoveredDeployment={hoveredDeployment}
+        setHoveredDeployment={setHoveredDeployment}
+      />
+    </Disclosure>
   )
 }
 
@@ -186,20 +270,31 @@ TimelineChart.propTypes = {
   deployments: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
+      iops: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string.isRequired,
+          short_name: PropTypes.string.isRequired,
+          start_date: PropTypes.string.isRequired,
+          description: PropTypes.string.isRequired,
+          end_date: PropTypes.string.isRequired,
+        })
+      ),
       longname: PropTypes.string.isRequired,
       shortname: PropTypes.string.isRequired,
       aliases: PropTypes.array.isRequired,
       collectionPeriods: PropTypes.array.isRequired,
       regions: PropTypes.array.isRequired,
-      campaign: PropTypes.string.isRequired,
+      campaign: PropTypes.string,
       end: PropTypes.string.isRequired,
       start: PropTypes.string.isRequired,
+
       events: PropTypes.arrayOf(
         PropTypes.shape({
           id: PropTypes.string.isRequired,
           shortname: PropTypes.string.isRequired,
           end: PropTypes.string.isRequired,
           start: PropTypes.string.isRequired,
+          description: PropTypes.string.isRequired,
         }).isRequired
       ),
     })
