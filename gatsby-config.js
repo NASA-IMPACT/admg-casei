@@ -11,6 +11,19 @@ module.exports = {
     author: `@developmentseed`,
   },
   plugins: [
+    // google analytics
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        // You can add multiple tracking ids and a pageview event will be fired for all of them.
+        trackingIds: [`${process.env.GA_MEASUREMENT_ID}`],
+        // This object is used for configuration specific to this plugin
+        pluginConfig: {
+          // Puts tracking script in the head instead of the body
+          head: false,
+        },
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -26,6 +39,7 @@ module.exports = {
         path: `${__dirname}/src/content/`,
       },
     },
+
     `gatsby-transformer-json`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -55,21 +69,7 @@ module.exports = {
       resolve: `gatsby-plugin-create-client-paths`,
       options: { prefixes: [`/edit/*`] },
     },
-    // google analytics
-    {
-      resolve: `gatsby-plugin-google-gtag`,
-      options: {
-        // You can add multiple tracking ids and a pageview event will be fired for all of them.
-        trackingIds: [
-          `${process.env.GA_MEASUREMENT_ID}`, // Google Analytics measurement ID
-        ],
-        // This object is used for configuration specific to this plugin
-        pluginConfig: {
-          // Puts tracking script in the head instead of the body
-          head: true,
-        },
-      },
-    },
+
     {
       resolve: `gatsby-plugin-csp`,
       options: {
@@ -79,9 +79,9 @@ module.exports = {
         mergeStyleHashes: false, // you can disable styles sha256 hashes
         mergeDefaultDirectives: false,
         directives: {
-          "default-src": "'self'",
+          "default-src": "'self' https://www.google-analytics.com",
           "script-src":
-            "'unsafe-eval' 'unsafe-inline' 'self' *.earthdata.nasa.gov https://www.googletagmanager.com https://fbm.earthdata.nasa.gov https://www.google.com/recaptcha https://www.gstatic.com/recaptcha https://fonts.gstatic.com",
+            "'unsafe-eval' 'unsafe-inline' 'self' *.earthdata.nasa.gov https://www.googletagmanager.com https://www.google-analytics.com https://fbm.earthdata.nasa.gov https://www.google.com/recaptcha https://www.gstatic.com/recaptcha https://fonts.gstatic.com",
           "style-src": "'unsafe-inline' 'self' data: *.earthdata.nasa.gov",
           "font-src": "data: 'self'",
           "img-src": "data: 'self' blob:",
@@ -90,8 +90,8 @@ module.exports = {
           "child-src": "'self' blob:",
           "connect-src":
             process.env.NODE_ENV === "development"
-              ? "'self' https://*.tiles.mapbox.com https://api.mapbox.com https://events.mapbox.com http://localhost:* ws://localhost:*"
-              : "'self' https://*.tiles.mapbox.com https://api.mapbox.com https://events.mapbox.com",
+              ? "'self' https://www.google-analytics.com https://*.tiles.mapbox.com https://api.mapbox.com https://events.mapbox.com http://localhost:* ws://localhost:*"
+              : "'self' https://www.google-analytics.com https://*.tiles.mapbox.com https://api.mapbox.com https://events.mapbox.com",
         },
       },
     },
