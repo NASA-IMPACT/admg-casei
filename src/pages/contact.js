@@ -11,8 +11,6 @@ import ExternalLink from "../components/external-link"
 import Button from "../components/button"
 import { FBMContext } from "../components/fbm-provider"
 import { Modal } from "../components/modal"
-import { Dialog, DialogContent, DialogOverlay } from "@reach/dialog"
-import VisuallyHidden from "@reach/visually-hidden"
 
 const Contact = () => {
   const { isFBMLoaded } = useContext(FBMContext)
