@@ -2,9 +2,6 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 
-import { NEGATIVE } from "../utils/constants"
-import { colors } from "../theme"
-
 const Backdrop = styled.div`
   position: fixed;
   top: 0;
@@ -21,11 +18,13 @@ const Backdrop = styled.div`
 `
 
 const Component = styled.div`
-  width: 400px;
+  width: 80%;
+  height: 84vh;
   position: relative;
-  padding: 32px;
+  overflow: hidden;
+  max-height: 720px;
   border-radius: 3px;
-  background: ${colors[NEGATIVE].background};
+  background: #f2f7fb;
   pointer-events: auto;
 `
 

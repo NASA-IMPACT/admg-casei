@@ -82,7 +82,7 @@ module.exports = {
           "style-src": "'unsafe-inline' 'self' data: *.earthdata.nasa.gov",
           "font-src": "data: 'self'",
           "img-src": "data: 'self' blob:",
-          "frame-src": "*.earthdata.nasa.gov",
+          "frame-src": "*.earthdata.nasa.gov https://docs.google.com/",
           "worker-src": "'self' blob:",
           "child-src": "'self' blob:",
           "connect-src":

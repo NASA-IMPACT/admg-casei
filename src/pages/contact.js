@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React, { useContext, useState } from "react"
 
 import Layout, {
   PageBody,
@@ -10,9 +10,13 @@ import SEO from "../components/seo"
 import ExternalLink from "../components/external-link"
 import Button from "../components/button"
 import { FBMContext } from "../components/fbm-provider"
+import { Modal } from "../components/modal"
+import { Dialog, DialogContent, DialogOverlay } from "@reach/dialog"
+import VisuallyHidden from "@reach/visually-hidden"
 
 const Contact = () => {
   const { isFBMLoaded } = useContext(FBMContext)
+  const [showModal, setShowModal] = useState(false)
 
   return (
     <Layout>
@@ -67,7 +71,7 @@ const Contact = () => {
                   click{" "}
                   <Button
                     action={() => {
-                      window.feedback.showForm()
+                      setShowModal(true)
                     }}
                   >
                     here
@@ -75,7 +79,7 @@ const Contact = () => {
                   or{" "}
                 </>
               )}
-              contact{" "}
+              contact
               <ExternalLink
                 url="mailto:info@developmentseed.org"
                 label="info@developmentseed.org"
@@ -86,6 +90,28 @@ const Contact = () => {
           </SectionContent>
         </Section>
       </PageBody>
+      <Modal
+        id="modal"
+        isOpen={showModal}
+        handleClose={() => setShowModal(false)}
+      >
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSfCQzZHtaDSiWNdwiJa3TIzsyhjEbYyyHwfrcwIKn_UmdVaKA/viewform?embedded=true"
+          embedded={true}
+          width="100%"
+          height="100%"
+          frameBorder="0"
+          marginHeight="0"
+          marginWidth="0"
+          css={`
+            border: unset;
+            box-sizing: border-box;
+            width: calc(100% + 20px);
+          `}
+        >
+          Loading…
+        </iframe>
+      </Modal>
     </Layout>
   )
 }
