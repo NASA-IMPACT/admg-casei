@@ -51,14 +51,30 @@ export default function Glossary({ data }) {
 
         <Section id="intro">
           <SectionContent columns={[1, 8]}>
+            <h2>Introduction</h2>
             <p>
-              We use the formalized definitions below for building NASA’s
-              Catalog of Archived Suborbital Earth Science Investigations.
-              Consistent use of vocabulary is required for clear organization of
-              the variety of airborne and field investigation metadata. Where
-              possible, we aim to align terminology with conventions in use
-              among the communities served by ADMG. Feedback on these
-              definitions are welcome.
+              The Airborne Data Management Group (ADMG) uses the following formalized definitions to build the NASA Airborne and Field Investigation Inventory, also called the Catalog of Archived Suborbital Earth science Investigations, or CASEI.<br></br>Consistent terminology is required to organize the wide variety of airborne and field investigation metadata; therefore, these definitions are used to communicate the ADMG terminology to inventory users. Where possible, definitions are made to agree with those in standard use in the communities served by ADMG and some are similar to those in the EOSDIS <a href="https://www.earthdata.nasa.gov/learn/glossary">Glossary</a>. Note, however, that ADMG definitions may or may not match similar terms used by other entities within or external to NASA. These ADMG definitions of inventory-specific terms are provided below.
+            </p>
+
+            <h2>Structure of Airborne and Field Investigation Components</h2>
+            <p>
+              Many terms are related and represent the hierarchical organization of investigation information structure as outlined below:
+            </p>
+            <p>
+              NASA Project, Program, Mission
+            </p>
+            <ul>
+              <li>Field Investigation (also called campaign) — supports NASA goals</li>
+              <ul>
+                <li>Deployment — occurs within a Field Investigation (one or more per investigation)</li>
+                <ul>
+                  <li>Significant Event — within a Deployment (may/may not occur, can be outside IOP)</li>
+                  <li>IOP (Intensive Operation Period) — one or more per deployment, must be within a deployment</li>
+                </ul>
+              </ul>
+            </ul>
+            <p>
+              This relationship is shown in the following figure representing the information model used in inventory development.  The goal of this ADMG effort is to identify the terms used for inventory construction and identify the correct level within this set of definitions. Synonyms for a given term that we have found to be used by various communities are listed. It is important to note that these synonyms are only words we hear used. ADMG uses the contextual information from authoritative sources to translate used terms to inventory terms.  The various words used do not always relate to the same word in this ADMG term list. For example, the synonym mission for a flight is in no way connected to the term mission as defined by ADMG.  To aid with translation between existing words and these inventory terms, decision trees are utilized to ensure consistent decision making by the curation team members.<br></br>Note:  ADMG uses the terms “instrument” and “sensor” interchangeably.
             </p>
           </SectionContent>
         </Section>
