@@ -80,23 +80,23 @@ export default function Glossary({ data }) {
             <ul>
               <li>
                 Field Investigation (also called campaign) — supports NASA goals
-              </li>
-              <ul>
-                <li>
-                  Deployment — occurs within a Field Investigation (one or more
-                  per investigation)
-                </li>
                 <ul>
                   <li>
-                    Significant Event — within a Deployment (may/may not occur,
-                    can be outside IOP)
-                  </li>
-                  <li>
-                    IOP (Intensive Operation Period) — one or more per
-                    deployment, must be within a deployment
+                    Deployment — occurs within a Field Investigation (one or
+                    more per investigation)
+                    <ul>
+                      <li>
+                        Significant Event — within a Deployment (may/may not
+                        occur, can be outside IOP)
+                      </li>
+                      <li>
+                        IOP (Intensive Operation Period) — one or more per
+                        deployment, must be within a deployment
+                      </li>
+                    </ul>
                   </li>
                 </ul>
-              </ul>
+              </li>
             </ul>
             <p>
               This relationship is shown in the following figure representing
