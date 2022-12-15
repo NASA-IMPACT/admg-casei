@@ -198,3 +198,7 @@ The project is set up to deploy with [Github Actions](https://github.com/develop
 To manually deploy the project, fill the .env credentials in `.env.production` (more on .env variables above in the above section [Start developing](https://github.com/NASA-IMPACT/admg-inventory/blob/develop/README.md#-start-developing)) and run `yarn build`. This step will create a folder `./public` that can be deployed to a web server. Test if the project has been build correcly with `yarn serve`, which serves the result to a local webserver on `http://localhost:9000/`.
 
 Running `yarn deploy` will deploy to project to surge. If you skip the CI pipeline and want to deploy to surge, you need to be added as a collaborator to the surge domain first.
+
+### Managing Content Security Policy headers
+
+From time to time, it may be necessary to update the Content Security Policy header on the production site, in order to integrate some third party service (e.g. Google Analytics). This header is set in a CloudFront Distribution that we do not have direct access to. The Distribution ID is `E337PI8QFEHP11` and it resides in AWS account `505082353357`. Shawn Foley, at NASA IMPACT, has the ability to modify this Distribution. If you need to update it, contact him on Slack with the details above.
