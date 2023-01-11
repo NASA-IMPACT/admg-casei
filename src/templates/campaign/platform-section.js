@@ -24,6 +24,8 @@ const PlatformSection = ({ id, collectionPeriods }) => {
       uniqueSets.push(combinedId)
       platforms.push({
         id: platformId,
+        shortname: cdpi.platform.shortname,
+        longname: cdpi.platform.longname,
         item: cdpi.platform,
         folds: cdpi.instruments,
       })
