@@ -23,6 +23,7 @@ const PlatformSection = ({ id, collectionPeriods }) => {
     if (!uniqueSets.includes(combinedId)) {
       uniqueSets.push(combinedId)
       platforms.push({
+        id: platformId,
         item: cdpi.platform,
         folds: cdpi.instruments,
       })
