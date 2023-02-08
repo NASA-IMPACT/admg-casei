@@ -191,7 +191,7 @@ export default CampaignHero
 const HeroMap = ({ bounds, height }) => {
   console.log(bounds)
   if (bounds === null) {
-    return <></>
+    return <Map height={height ? height : "inherit"} />
   } else {
     const geojson = {
       type: "Feature",
