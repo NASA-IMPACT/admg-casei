@@ -91,13 +91,23 @@ const OverviewSection = ({
           <ContentItem
             id="overview-content"
             label="Spatial Bounds"
-            info={Object.entries(convertBoundsToNSWE(bounds)).map(
-              ([label, coord]) => (
-                <p key={label}>
-                  {label}: {coord}
+            info={
+              bounds ? (
+                Object.entries(convertBoundsToNSWE(bounds)).map(
+                  ([label, coord]) => (
+                    <p key={label}>
+                      {label}: {coord}
+                    </p>
+                  )
+                )
+              ) : (
+                <p>
+                  {
+                    "We have not yet determined the spatial bounds for this Campaign."
+                  }
                 </p>
               )
-            )}
+            }
             mode={POSITIVE}
           />
         </div>
@@ -218,7 +228,7 @@ OverviewSection.propTypes = {
   enddate: PropTypes.string,
   region: PropTypes.string.isRequired,
   seasonListing: PropTypes.string.isRequired,
-  bounds: PropTypes.string.isRequired,
+  bounds: PropTypes.string,
   doi: PropTypes.string,
   notesPublic: PropTypes.string.isRequired,
   repositories: PropTypes.arrayOf(
