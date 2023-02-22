@@ -225,7 +225,7 @@ export const query = graphql`
 CampaignTemplate.propTypes = {
   data: PropTypes.shape({
     campaign: PropTypes.shape({
-      bounds: PropTypes.string.isRequired,
+      bounds: PropTypes.string,
       shortname: PropTypes.string.isRequired,
       longname: PropTypes.string.isRequired,
       focus: PropTypes.arrayOf(

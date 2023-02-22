@@ -1,5 +1,5 @@
 import React, { useRef } from "react"
-import PropTypes from "prop-types"
+import PropTypes, { any } from "prop-types"
 import { graphql, Link } from "gatsby"
 import styled from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
@@ -46,12 +46,6 @@ const CampaignHero = ({
   countDataProducts,
   deployments,
 }) => {
-  const geojson = {
-    type: "Feature",
-    geometry: parse(bounds),
-  }
-  const bbox = turfBbox(geojson)
-
   const containerRef = useRef()
   const { height } = useContainerDimensions(containerRef)
 
@@ -69,14 +63,8 @@ const CampaignHero = ({
         }
       `}
     >
-      <Map height={height ? height : "inherit"}>
-        <GeoJsonSource geojson={geojson} id="campaign">
-          <BboxLayer id="campaign" bbox={bbox} />
-        </GeoJsonSource>
-      </Map>
-
+      <HeroMap bounds={bounds} height={height} />
       <BackgroundGradient />
-
       <div
         css={`
            {
@@ -188,7 +176,7 @@ CampaignHero.propTypes = {
       childImageSharp: PropTypes.object,
     }),
   }),
-  bounds: PropTypes.string.isRequired,
+  bounds: PropTypes.string,
   longname: PropTypes.string,
   shortname: PropTypes.string.isRequired,
   focusListing: PropTypes.string.isRequired,
@@ -199,3 +187,28 @@ CampaignHero.propTypes = {
 }
 
 export default CampaignHero
+
+const HeroMap = ({ bounds, height }) => {
+  console.log(bounds)
+  if (bounds === null) {
+    return <Map height={height ? height : "inherit"} />
+  } else {
+    const geojson = {
+      type: "Feature",
+      geometry: parse(bounds),
+    }
+    const bbox = turfBbox(geojson)
+    return (
+      <Map height={height ? height : "inherit"}>
+        <GeoJsonSource geojson={geojson} id="campaign">
+          <BboxLayer id="campaign" bbox={bbox} />
+        </GeoJsonSource>
+      </Map>
+    )
+  }
+}
+
+HeroMap.propTypes = {
+  bounds: PropTypes.string,
+  height: any,
+}
