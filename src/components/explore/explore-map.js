@@ -23,6 +23,7 @@ const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
   const [geojson, setGeojson] = useState(() => ({
     type: "FeatureCollection",
     features: filteredData
+      .filter(d => d.bounds)
       .map((d, i) => ({
         type: "Feature",
         id: i + 1,
@@ -38,15 +39,17 @@ const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
 
   useEffect(() => {
     // updates the map after a filter was changed
-    const updatedFeatures = filteredData.map((d, i) => ({
-      type: "Feature",
-      id: i + 1,
-      geometry: parse(d.bounds),
-      properties: {
-        id: d.id,
-        shortname: d.shortname,
-      },
-    }))
+    const updatedFeatures = filteredData
+      .filter(d => d.bounds)
+      .map((d, i) => ({
+        type: "Feature",
+        id: i + 1,
+        geometry: parse(d.bounds),
+        properties: {
+          id: d.id,
+          shortname: d.shortname,
+        },
+      }))
 
     setGeojson({
       type: "FeatureCollection",
@@ -58,6 +61,7 @@ const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
     // updates the list of campaign ids intersecting the drawn aoi after the aoi was changed
     setGeoFilter(
       allData
+        .filter(d => d.bounds)
         .map((d, i) => ({
           type: "Feature",
           id: i + 1,
@@ -92,13 +96,13 @@ ExploreMap.propTypes = {
   allData: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
-      bounds: PropTypes.string.isRequired,
+      bounds: PropTypes.string,
     }).isRequired
   ).isRequired,
   filteredData: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
-      bounds: PropTypes.string.isRequired,
+      bounds: PropTypes.string,
       shortname: PropTypes.string.isRequired,
     }).isRequired
   ).isRequired,

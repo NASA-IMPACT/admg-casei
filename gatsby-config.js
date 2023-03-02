@@ -79,7 +79,7 @@ module.exports = {
         mergeStyleHashes: false, // you can disable styles sha256 hashes
         mergeDefaultDirectives: false,
         directives: {
-          "default-src": "'self' https://www.google-analytics.com",
+          "default-src": "'self' https://www.google-analytics.com data:",
           "script-src":
             "'unsafe-eval' 'unsafe-inline' 'self' *.earthdata.nasa.gov https://www.googletagmanager.com https://www.google-analytics.com https://fbm.earthdata.nasa.gov https://www.google.com/recaptcha https://www.gstatic.com/recaptcha https://fonts.gstatic.com",
           "style-src": "'unsafe-inline' 'self' data: *.earthdata.nasa.gov",
