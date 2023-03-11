@@ -54,13 +54,13 @@ const CampaignHero = ({
 
   var listOfSpatialBounds = data.allCampaign.nodes[0].deployments.map(deployment => deployment.spatial_bounds);
 
-  console.log(listOfSpatialBounds, 'the list of spatial bounds')
-
   // parse the array of multi spatial bounds and separate the polygon strings
   var parsedBounds = []
-  var multiSpatialBounds = listOfSpatialBounds.forEach(element => {
+  var _multiSpatialBounds = listOfSpatialBounds.forEach(element => {
     // move the parsed elements into the parsedBounds array
     parsedBounds.push(parse(element))
+
+    console.log(element, 'unparsed elements of listOfSpatialBounds')
   });
 
   // this handles the geojson and single bounding box for the map
@@ -69,9 +69,25 @@ const CampaignHero = ({
     geometry: parse(bounds),
   }
   const bbox = turfBbox(geojson)
+  console.log(geojson, 'the single geojson')
+  console.log(bbox, 'the single bbox turfed')
 
-  // this creates the multi polygon for the map
-  const multiPoly = multiPolygon(parsedBounds)
+  // create a multi polygon geojson object
+  const multiPolyGeoJson = multiPolygon(parsedBounds)
+
+  console.log(multiPolyGeoJson, 'the multi polygon geojson')
+
+  // isolate the multiple polygon bounding box values
+  console.log(
+    multiPolyGeoJson.geometry.coordinates[0].coordinates,
+    'the multi polygon coordinates'
+  )
+
+  bboxes = multiPolyGeoJson.geometry.coordinates[0].coordinates
+
+  // form latlong like objects
+  // https://github.com/mapbox/mapbox-gl-js/blob/198bb84eb9e6dba719e66ab06e9c312ab8596d7b/src/geo/lng_lat.js#L167-L176
+
 
   const containerRef = useRef()
   const { height } = useContainerDimensions(containerRef)
@@ -93,6 +109,9 @@ const CampaignHero = ({
       <Map height={height ? height : "inherit"}>
         <GeoJsonSource geojson={geojson} id="campaign">
           <BboxLayer id="campaign" bbox={bbox} />
+        </GeoJsonSource>
+        <GeoJsonSource geojson={multiPolyGeoJson.geometry} id="campaign">
+          <BboxLayer id="campaign-multi" bbox={bboxes} />
         </GeoJsonSource>
       </Map>
 
