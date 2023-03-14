@@ -148,6 +148,7 @@ export const query = graphql`
       ...platformSectionFields
       deployments {
         id: uuid
+        spatial_bounds: spatial_bounds
         iops: iops {
           id
           short_name

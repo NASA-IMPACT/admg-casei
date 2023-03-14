@@ -1,12 +1,10 @@
 import React, { useRef } from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import { graphql, Link } from "gatsby"
 import styled from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
 import turfBbox from "@turf/bbox"
-import { multiPolygon } from "@turf/helpers"
 import parse from "wellknown"
-import { createResolvers } from "gatsby"
 import { HeroStats } from "../../components/hero"
 import Map from "../../components/map"
 import BboxLayer from "../../components/map/bbox-layer"
@@ -48,46 +46,15 @@ const CampaignHero = ({
   deployments,
 }) => {
 
-  // graphql query for all spatial bounds here
-  var data = useStaticQuery(allSpatialBounds)
-  // console.log(data, 'the static query data')
+  // create multispatialbounds object excluding null spatial bounds
+  var multiSpatialBounds = deployments ? deployments.filter(d => d.spatial_bounds !== null).map(deployment => {
 
-  var listOfSpatialBounds = data.allCampaign.nodes[0].deployments.map(deployment => deployment.spatial_bounds);
+    return {
+      type: "Feature",
+      geometry: parse(deployment.spatial_bounds),
+    }
 
-  // parse the array of multi spatial bounds and separate the polygon strings
-  var parsedBounds = []
-  var _multiSpatialBounds = listOfSpatialBounds.forEach(element => {
-    // move the parsed elements into the parsedBounds array
-    parsedBounds.push(parse(element))
-
-    console.log(element, 'unparsed elements of listOfSpatialBounds')
-  });
-
-  // this handles the geojson and single bounding box for the map
-  const geojson = {
-    type: "Feature",
-    geometry: parse(bounds),
-  }
-  const bbox = turfBbox(geojson)
-  console.log(geojson, 'the single geojson')
-  console.log(bbox, 'the single bbox turfed')
-
-  // create a multi polygon geojson object
-  const multiPolyGeoJson = multiPolygon(parsedBounds)
-
-  console.log(multiPolyGeoJson, 'the multi polygon geojson')
-
-  // isolate the multiple polygon bounding box values
-  console.log(
-    multiPolyGeoJson.geometry.coordinates[0].coordinates,
-    'the multi polygon coordinates'
-  )
-
-  bboxes = multiPolyGeoJson.geometry.coordinates[0].coordinates
-
-  // form latlong like objects
-  // https://github.com/mapbox/mapbox-gl-js/blob/198bb84eb9e6dba719e66ab06e9c312ab8596d7b/src/geo/lng_lat.js#L167-L176
-
+  }) : null
 
   const containerRef = useRef()
   const { height } = useContainerDimensions(containerRef)
@@ -107,12 +74,15 @@ const CampaignHero = ({
       `}
     >
       <Map height={height ? height : "inherit"}>
-        <GeoJsonSource geojson={geojson} id="campaign">
-          <BboxLayer id="campaign" bbox={bbox} />
-        </GeoJsonSource>
-        <GeoJsonSource geojson={multiPolyGeoJson.geometry} id="campaign">
-          <BboxLayer id="campaign-multi" bbox={bboxes} />
-        </GeoJsonSource>
+        {multiSpatialBounds.map((geojson, index) => {
+          const bbox = turfBbox(geojson)
+          return (
+            <GeoJsonSource geojson={geojson} id={`campaign-${index}`}>
+              <BboxLayer id={`campaign-${index}`} bbox={bbox} />
+            </GeoJsonSource>
+          )
+        })
+        }
       </Map>
 
       <BackgroundGradient />
@@ -183,8 +153,7 @@ const CampaignHero = ({
                 dates: deployments,
               },
               { number: countCollectionPeriods, label: "Collection Periods" },
-              { number: countDataProducts, label: "Data Products" },
-              { number: 100, label: "TESTING ALL BOUNDS" }
+              { number: countDataProducts, label: "Data Products" }
             ]}
           />
         </div>
@@ -196,23 +165,10 @@ const CampaignHero = ({
           `}
         ></div>
       </div>
-    </section>
+    </section >
   )
 }
 
-export const allSpatialBounds = graphql`
-  {
-    allCampaign(filter: {id: {eq: "fe4d404a-3b84-43af-a0f0-d864ec89bf7b"}}) {
-      nodes {
-        short_name
-        deployments {
-          spatial_bounds
-          short_name
-        }
-      }
-    }
-  }
-`
 
 export const heroFields = graphql`
   fragment heroFields on campaign {
@@ -225,7 +181,6 @@ export const heroFields = graphql`
       }
     }
     bounds: spatial_bounds
-    # COMMENT put deployments here
 
     shortname: short_name
     longname: long_name
@@ -252,7 +207,7 @@ CampaignHero.propTypes = {
   countDeployments: PropTypes.number.isRequired,
   countCollectionPeriods: PropTypes.number.isRequired,
   countDataProducts: PropTypes.number,
-  // deployments: PropTypes.array,
+  deployments: PropTypes.array,
 }
 
 export default CampaignHero

@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import mapbox from "mapbox-gl"
+import * as envelope from "@turf/envelope"
 
 export default function Map({ height, basemap, children }) {
   const containerRef = useRef()
@@ -16,6 +17,35 @@ export default function Map({ height, basemap, children }) {
       center: [0, 0],
     })
 
+    // conditional if logic to check if children exist
+    if (!children || children.length === 0) {
+      // pass
+    } else {
+
+      // extract geojson from all objects in children
+      const geojsons = children.map(child => child.props.geojson)
+
+      // create a featureCollection from the geojsons
+      const fc = {
+        type: "FeatureCollection",
+        features: geojsons,
+      }
+
+      // use turf envelope to calculate a bounding box that fits all boxes
+      envelopBox = envelope.default(fc)
+
+      // get width
+      const { width } = m.getContainer().getBoundingClientRect()
+
+      console.log(envelopBox, 'envelopBox')
+
+      // map should show bounding boxes in the right area of the map
+      m.flyTo(
+        m.cameraForBounds(envelopBox.bbox, {
+          padding: { top: 200, right: 25, bottom: 25, left: width / 1.5 },
+        })
+      )
+    }
     m.on("load", () => {
       setMap(m)
 
