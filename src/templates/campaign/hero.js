@@ -36,7 +36,6 @@ const BackgroundGradient = styled.div`
 
 const CampaignHero = ({
   logo150h,
-  bounds,
   longname,
   shortname,
   focusListing,
@@ -45,16 +44,17 @@ const CampaignHero = ({
   countDataProducts,
   deployments,
 }) => {
-
   // create multispatialbounds object excluding null spatial bounds
-  var multiSpatialBounds = deployments ? deployments.filter(d => d.spatial_bounds !== null).map(deployment => {
-
-    return {
-      type: "Feature",
-      geometry: parse(deployment.spatial_bounds),
-    }
-
-  }) : null
+  var multiSpatialBounds = deployments
+    ? deployments
+        .filter(d => d.spatial_bounds !== null)
+        .map(deployment => {
+          return {
+            type: "Feature",
+            geometry: parse(deployment.spatial_bounds),
+          }
+        })
+    : null
 
   const containerRef = useRef()
   const { height } = useContainerDimensions(containerRef)
@@ -77,12 +77,15 @@ const CampaignHero = ({
         {multiSpatialBounds.map((geojson, index) => {
           const bbox = turfBbox(geojson)
           return (
-            <GeoJsonSource geojson={geojson} id={`campaign-${index}`}>
+            <GeoJsonSource
+              key={index}
+              geojson={geojson}
+              id={`campaign-${index}`}
+            >
               <BboxLayer id={`campaign-${index}`} bbox={bbox} />
             </GeoJsonSource>
           )
-        })
-        }
+        })}
       </Map>
 
       <BackgroundGradient />
@@ -153,7 +156,7 @@ const CampaignHero = ({
                 dates: deployments,
               },
               { number: countCollectionPeriods, label: "Collection Periods" },
-              { number: countDataProducts, label: "Data Products" }
+              { number: countDataProducts, label: "Data Products" },
             ]}
           />
         </div>
@@ -165,10 +168,9 @@ const CampaignHero = ({
           `}
         ></div>
       </div>
-    </section >
+    </section>
   )
 }
-
 
 export const heroFields = graphql`
   fragment heroFields on campaign {
@@ -200,7 +202,6 @@ CampaignHero.propTypes = {
       childImageSharp: PropTypes.object,
     }),
   }),
-  // bounds: PropTypes.string.isRequired,
   longname: PropTypes.string,
   shortname: PropTypes.string.isRequired,
   focusListing: PropTypes.string.isRequired,

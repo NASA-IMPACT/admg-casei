@@ -21,7 +21,7 @@ export default function Map({ height, basemap, children }) {
     if (!children || children.length === 0) {
       // pass
     } else {
-
+      console.log(children)
       // extract geojson from all objects in children
       const geojsons = children.map(child => child.props.geojson)
 
@@ -32,12 +32,10 @@ export default function Map({ height, basemap, children }) {
       }
 
       // use turf envelope to calculate a bounding box that fits all boxes
-      envelopBox = envelope.default(fc)
+      const envelopBox = envelope.default(fc)
 
       // get width
       const { width } = m.getContainer().getBoundingClientRect()
-
-      console.log(envelopBox, 'envelopBox')
 
       // map should show bounding boxes in the right area of the map
       m.flyTo(
