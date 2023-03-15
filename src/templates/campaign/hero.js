@@ -1,5 +1,5 @@
 import React, { useRef } from "react"
-import PropTypes from "prop-types"
+import PropTypes, { any } from "prop-types"
 import { graphql, Link } from "gatsby"
 import styled from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
@@ -46,16 +46,6 @@ const CampaignHero = ({
   deployments,
 }) => {
 
-  // create multispatialbounds object excluding null spatial bounds
-  var multiSpatialBounds = deployments ? deployments.filter(d => d.spatial_bounds !== null).map(deployment => {
-
-    return {
-      type: "Feature",
-      geometry: parse(deployment.spatial_bounds),
-    }
-
-  }) : null
-
   const containerRef = useRef()
   const { height } = useContainerDimensions(containerRef)
 
@@ -73,20 +63,8 @@ const CampaignHero = ({
         }
       `}
     >
-      <Map height={height ? height : "inherit"}>
-        {multiSpatialBounds.map((geojson, index) => {
-          const bbox = turfBbox(geojson)
-          return (
-            <GeoJsonSource geojson={geojson} id={`campaign-${index}`}>
-              <BboxLayer id={`campaign-${index}`} bbox={bbox} />
-            </GeoJsonSource>
-          )
-        })
-        }
-      </Map>
-
+      <HeroMap bounds={bounds} height={height} deployments={deployments} />
       <BackgroundGradient />
-
       <div
         css={`
            {
@@ -181,7 +159,9 @@ export const heroFields = graphql`
       }
     }
     bounds: spatial_bounds
-
+    deployments: deployments {
+      spatial_bounds
+    }
     shortname: short_name
     longname: long_name
     focus: focus_areas {
@@ -200,7 +180,7 @@ CampaignHero.propTypes = {
       childImageSharp: PropTypes.object,
     }),
   }),
-  // bounds: PropTypes.string.isRequired,
+  bounds: PropTypes.string,
   longname: PropTypes.string,
   shortname: PropTypes.string.isRequired,
   focusListing: PropTypes.string.isRequired,
@@ -211,3 +191,44 @@ CampaignHero.propTypes = {
 }
 
 export default CampaignHero
+
+
+
+const HeroMap = ({ bounds, height, deployments }) => {
+
+  // create multispatialbounds object excluding null spatial bounds
+  var multiSpatialBounds = deployments ? deployments.filter(d => d.spatial_bounds !== null).map(deployment => {
+
+    return {
+      type: "Feature",
+      geometry: parse(deployment.spatial_bounds),
+    }
+
+  }) : null
+
+  if (bounds === null) {
+    return <Map height={height ? height : "inherit"} />
+  } else {
+
+    return (
+      <Map height={height ? height : "inherit"}>
+        {multiSpatialBounds.map((geojson, index) => {
+          const bbox = turfBbox(geojson)
+          return (
+            <GeoJsonSource geojson={geojson} id={`campaign-${index}`}>
+              <BboxLayer id={`campaign-${index}`} bbox={bbox} />
+            </GeoJsonSource>
+          )
+        })
+        }
+      </Map>
+    )
+  }
+}
+
+
+HeroMap.propTypes = {
+  bounds: PropTypes.string,
+  height: any,
+  deployments: PropTypes.array,
+}
