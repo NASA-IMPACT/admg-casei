@@ -5,7 +5,7 @@ export const FBMContext = createContext({ isFBMLoaded: false })
 
 function FBMProvider({ children }) {
   const [isFBMLoaded, setIsFBMLoaded] = useState(
-    typeof window !== undefined && window.feedback && window.feedback.showForm
+    typeof window !== "undefined" && window.feedback && window.feedback.showForm
   )
 
   return (

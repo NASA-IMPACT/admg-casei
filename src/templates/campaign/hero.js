@@ -36,9 +36,9 @@ const BackgroundGradient = styled.div`
 
 const CampaignHero = ({
   logo150h,
-  bounds,
   longname,
   shortname,
+  bounds,
   focusListing,
   countDeployments,
   countCollectionPeriods,
@@ -131,7 +131,7 @@ const CampaignHero = ({
                 dates: deployments,
               },
               { number: countCollectionPeriods, label: "Collection Periods" },
-              { number: countDataProducts, label: "Data Products" }
+              { number: countDataProducts, label: "Data Products" },
             ]}
           />
         </div>
@@ -146,7 +146,6 @@ const CampaignHero = ({
     </section >
   )
 }
-
 
 export const heroFields = graphql`
   fragment heroFields on campaign {
