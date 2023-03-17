@@ -128,7 +128,7 @@ export default function ExploreCampaigns({ data, location }) {
         toggleMap={toggleMap}
         isDisplayingMap={isDisplayingMap}
       />
-      {/* {console.log(campaignList, 'campaignList in campaigns.js')} */}
+
       {isDisplayingMap && (
         <ExploreMap
           allData={campaignList.all.map(c => ({
@@ -205,7 +205,7 @@ export default function ExploreCampaigns({ data, location }) {
           category={"campaigns"}
         />
       </div>
-
+      {/* {console.log(campaignList, 'campaignList in campaigns.js')} */}
       <ExploreSection
         list={campaignList.filtered}
         card={{ component: CampaignCard }}
@@ -279,7 +279,11 @@ export const query = graphql`
     startdate: start_date # required for temporal filter
     enddate: end_date # required for sort and temporal filter
     deployments {
-      deployment_spatial_bounds: spatial_bounds 
+      deployment_spatial_bounds: spatial_bounds
+      related_campaign: campaign {
+        id
+        short_name
+      }
       collection_periods: collection_periods {
         id
       }

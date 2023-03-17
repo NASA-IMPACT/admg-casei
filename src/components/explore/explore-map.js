@@ -21,7 +21,7 @@ const sortFeaturesBySize = (a, b) => {
 const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
   const [isDrawing, setIsDrawing] = useState(false)
 
-  // loop through allData and extract deployments from allData
+  // loop through allData and extract deployments, along with campaign ids and campaign shortname from allData
   const deployments = allData.map(d => d.deployments)
 
   // loop through deployments and extract deployment_spatial_bounds from each deployment_spatial_bounds array
@@ -35,7 +35,7 @@ const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
     })
   })
 
-  console.log(spatialBounds, "spatial_bounds")
+  console.log(allData, 'allData in explore-map.js checking for id properties')
 
   new_geojson = {
     type: "FeatureCollection",
@@ -43,38 +43,31 @@ const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
       type: "Feature",
       id: i + 1,
       geometry: parse(bounds),
-      // properties: {
-      //   id: d.id,
-      //   shortname: d.shortname,
-      // },
+      properties: {
+        id: allData.id,
+        shortname: allData.shortname,
+      },
     }))
   }
 
-  console.log(new_geojson, "new_geojson")
+  console.log(new_geojson, 'new_geojson in explore-map.js')
 
   const [geojson, setGeojson] = useState(() => ({
     type: "FeatureCollection",
-    features: spatialBounds.map((bounds, i) => ({
-      type: "Feature",
-      id: i + 1,
-      geometry: parse(bounds),
-      // properties: {
-      //   id: d.id,
-      //   shortname: d.shortname,
-      // },
-    }))
+    features: new_geojson.features
       .sort(sortFeaturesBySize),
   }))
   const [bbox] = useState(() => turfBbox(geojson))
 
   useEffect(() => {
     // updates the map after a filter was changed
+    console.log(filteredData, 'filteredData in explore-map.js useEffect which updates the map after a filter was changed')
     const updatedFeatures = filteredData
-      .filter(d => d.bounds)
+      .filter(d => d.deployments)
       .map((d, i) => ({
         type: "Feature",
         id: i + 1,
-        geometry: parse(d.bounds),
+        geometry: parse(d.deployment_spatial_bounds),
         properties: {
           id: d.id,
           shortname: d.shortname,
@@ -91,11 +84,12 @@ const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
     // updates the list of campaign ids intersecting the drawn aoi after the aoi was changed
     setGeoFilter(
       allData
-        .filter(d => d.bounds)
+        .flatMap(d => d.deployments)
+        .filter(d => d.deployment_spatial_bounds)
         .map((d, i) => ({
           type: "Feature",
           id: i + 1,
-          geometry: parse(d.bounds),
+          geometry: parse(d.deployment_spatial_bounds),
           properties: {
             id: d.id,
             shortname: d.shortname,
@@ -114,7 +108,7 @@ const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
         aoi={aoi}
         setAoi={setAoi}
       />
-      <GeoJsonSource geojson={geojson} id="explore">
+      <GeoJsonSource geojson={new_geojson} id="explore">
         <HoverLayer id="explore" isDrawing={isDrawing} />
         <BboxLayer id="explore" bbox={bbox} />
       </GeoJsonSource>
