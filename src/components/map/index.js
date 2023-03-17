@@ -28,19 +28,24 @@ export default function Map({ height, basemap, children }) {
         features: geojsons,
       }
 
-      // use turf envelope to calculate a bounding box that fits all boxes
-      const envelopBox = envelope.default(fc)
-
       // get width
       const { width } = m.getContainer().getBoundingClientRect()
 
-      // map should show bounding boxes in the right area of the map
-      m.flyTo(
-        m.cameraForBounds(envelopBox.bbox, {
-          padding: { top: 200, right: 25, bottom: 25, left: width / 1.5 },
-        })
-      )
+      // use turf envelope to calculate a bounding box that fits all boxes
+      if (fc.features[0]) {
+        const envelopBox = envelope.default(fc)
+
+        // map should show bounding boxes in the right area of the map
+        m.flyTo(
+          m.cameraForBounds(envelopBox.bbox, {
+            padding: { top: 200, right: 25, bottom: 25, left: width / 1.5 },
+          })
+        )
+      }
+
+
     }
+
     m.on("load", () => {
       setMap(m)
 

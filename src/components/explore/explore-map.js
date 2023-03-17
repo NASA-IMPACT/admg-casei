@@ -20,19 +20,49 @@ const sortFeaturesBySize = (a, b) => {
 
 const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
   const [isDrawing, setIsDrawing] = useState(false)
+
+  // loop through allData and extract deployments from allData
+  const deployments = allData.map(d => d.deployments)
+
+  // loop through deployments and extract deployment_spatial_bounds from each deployment_spatial_bounds array
+  var spatialBounds = []
+  deployments.forEach(deployment => {
+    deployment.forEach(d => {
+
+      if (d.deployment_spatial_bounds !== null) {
+        spatialBounds.push(d.deployment_spatial_bounds)
+      }
+    })
+  })
+
+  console.log(spatialBounds, "spatial_bounds")
+
+  new_geojson = {
+    type: "FeatureCollection",
+    features: spatialBounds.map((bounds, i) => ({
+      type: "Feature",
+      id: i + 1,
+      geometry: parse(bounds),
+      // properties: {
+      //   id: d.id,
+      //   shortname: d.shortname,
+      // },
+    }))
+  }
+
+  console.log(new_geojson, "new_geojson")
+
   const [geojson, setGeojson] = useState(() => ({
     type: "FeatureCollection",
-    features: filteredData
-      .filter(d => d.bounds)
-      .map((d, i) => ({
-        type: "Feature",
-        id: i + 1,
-        geometry: parse(d.bounds),
-        properties: {
-          id: d.id,
-          shortname: d.shortname,
-        },
-      }))
+    features: spatialBounds.map((bounds, i) => ({
+      type: "Feature",
+      id: i + 1,
+      geometry: parse(bounds),
+      // properties: {
+      //   id: d.id,
+      //   shortname: d.shortname,
+      // },
+    }))
       .sort(sortFeaturesBySize),
   }))
   const [bbox] = useState(() => turfBbox(geojson))
