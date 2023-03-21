@@ -24,16 +24,11 @@ const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
   // loop through allData and extract deployments, along with campaign ids and campaign shortname from allData
   const deployments = allData.map(d => d.deployments)
 
-  // loop through deployments and extract deployment_spatial_bounds from each deployment_spatial_bounds array
-  var spatialBounds = []
-  deployments.forEach(deployment => {
-    deployment.forEach(d => {
-
-      if (d.deployment_spatial_bounds !== null) {
-        spatialBounds.push(d.deployment_spatial_bounds)
-      }
-    })
-  })
+  // Loop through deployments and extract deployment_spatial_bounds from each deployment_spatial_bounds array
+  const spatialBounds = deployments
+    .flat()
+    .filter(d => d.deployment_spatial_bounds !== null)
+    .map(d => d.deployment_spatial_bounds);
 
   new_geojson = {
     type: "FeatureCollection",
