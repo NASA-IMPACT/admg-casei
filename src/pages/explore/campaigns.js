@@ -205,7 +205,6 @@ export default function ExploreCampaigns({ data, location }) {
           category={"campaigns"}
         />
       </div>
-      {/* {console.log(campaignList, 'campaignList in campaigns.js')} */}
       <ExploreSection
         list={campaignList.filtered}
         card={{ component: CampaignCard }}

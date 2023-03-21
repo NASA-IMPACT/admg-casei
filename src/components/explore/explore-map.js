@@ -35,8 +35,6 @@ const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
     })
   })
 
-  console.log(allData, 'allData in explore-map.js checking for id properties')
-
   new_geojson = {
     type: "FeatureCollection",
     features: spatialBounds.map((bounds, i) => ({
@@ -50,8 +48,6 @@ const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
     }))
   }
 
-  console.log(new_geojson, 'new_geojson in explore-map.js')
-
   const [geojson, setGeojson] = useState(() => ({
     type: "FeatureCollection",
     features: new_geojson.features
@@ -61,7 +57,6 @@ const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
 
   useEffect(() => {
     // updates the map after a filter was changed
-    console.log(filteredData, 'filteredData in explore-map.js useEffect which updates the map after a filter was changed')
     const updatedFeatures = filteredData
       .filter(d => d.deployments)
       .map((d, i) => ({
