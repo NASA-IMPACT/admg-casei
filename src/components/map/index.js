@@ -42,8 +42,6 @@ export default function Map({ height, basemap, children }) {
           })
         )
       }
-
-
     }
 
     m.on("load", () => {

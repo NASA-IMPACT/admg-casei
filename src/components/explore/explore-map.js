@@ -28,9 +28,9 @@ const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
   const spatialBounds = deployments
     .flat()
     .filter(d => d.deployment_spatial_bounds !== null)
-    .map(d => d.deployment_spatial_bounds);
+    .map(d => d.deployment_spatial_bounds)
 
-  new_geojson = {
+  var new_geojson = {
     type: "FeatureCollection",
     features: spatialBounds.map((bounds, i) => ({
       type: "Feature",
@@ -40,13 +40,12 @@ const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
         id: allData.id,
         shortname: allData.shortname,
       },
-    }))
+    })),
   }
 
   const [geojson, setGeojson] = useState(() => ({
     type: "FeatureCollection",
-    features: new_geojson.features
-      .sort(sortFeaturesBySize),
+    features: new_geojson.features.sort(sortFeaturesBySize),
   }))
   const [bbox] = useState(() => turfBbox(geojson))
 
