@@ -27,6 +27,7 @@ module.exports = {
   },
   rules: {
     "inclusive-language/use-inclusive-words": "error",
+    "react/no-unknown-property": ["error", { ignore: ["jsx"] }],
   },
   overrides: [
     {
