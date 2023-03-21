@@ -27,7 +27,7 @@ module.exports = {
   },
   rules: {
     "inclusive-language/use-inclusive-words": "error",
-    "react/no-unknown-property": ["error", { ignore: ["css"] }],
+    "react/no-unknown-property": ["error", { ignore: ["css", "transition"] }],
   },
   overrides: [
     {
