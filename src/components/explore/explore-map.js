@@ -69,8 +69,8 @@ const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
         id: i + 1,
         geometry: parse(d.deployment_spatial_bounds),
         properties: {
-          id: d.id,
-          shortname: d.shortname,
+          id: d.related_campaign.id,
+          shortname: d.related_campaign.shortname,
         },
       }))
 
@@ -91,8 +91,8 @@ const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
           id: i + 1,
           geometry: parse(d.deployment_spatial_bounds),
           properties: {
-            id: d.id,
-            shortname: d.shortname,
+            id: d.related_campaign.id,
+            shortname: d.related_campaign.shortname,
           },
         }))
         .filter(feature => (aoi ? !turfBooleanDisjoint(feature, aoi) : true))
