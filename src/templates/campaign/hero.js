@@ -45,7 +45,6 @@ const CampaignHero = ({
   countDataProducts,
   deployments,
 }) => {
-
   const containerRef = useRef()
   const { height } = useContainerDimensions(containerRef)
 
@@ -143,7 +142,7 @@ const CampaignHero = ({
           `}
         ></div>
       </div>
-    </section >
+    </section>
   )
 }
 
@@ -191,40 +190,40 @@ CampaignHero.propTypes = {
 
 export default CampaignHero
 
-
-
 const HeroMap = ({ bounds, height, deployments }) => {
-
   // create multispatialbounds object excluding null spatial bounds
-  var multiSpatialBounds = deployments ? deployments.filter(d => d.spatial_bounds !== null).map(deployment => {
-
-    return {
-      type: "Feature",
-      geometry: parse(deployment.spatial_bounds),
-    }
-
-  }) : null
+  var multiSpatialBounds = deployments
+    ? deployments
+        .filter(d => d.spatial_bounds !== null)
+        .map(deployment => {
+          return {
+            type: "Feature",
+            geometry: parse(deployment.spatial_bounds),
+          }
+        })
+    : null
 
   if (bounds === null) {
     return <Map height={height ? height : "inherit"} />
   } else {
-
     return (
       <Map height={height ? height : "inherit"}>
         {multiSpatialBounds.map((geojson, index) => {
           const bbox = turfBbox(geojson)
           return (
-            <GeoJsonSource geojson={geojson} id={`campaign-${index}`}>
+            <GeoJsonSource
+              key={index}
+              geojson={geojson}
+              id={`campaign-${index}`}
+            >
               <BboxLayer id={`campaign-${index}`} bbox={bbox} />
             </GeoJsonSource>
           )
-        })
-        }
+        })}
       </Map>
     )
   }
 }
-
 
 HeroMap.propTypes = {
   bounds: PropTypes.string,
