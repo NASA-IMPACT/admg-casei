@@ -2,17 +2,17 @@
 
 exports[`Card renders card with tag 1`] = `
 <div
-  className="card___StyledDiv-sc-16fz0z7-1 rlvQj"
+  className="card___StyledDiv-sc-16fz0z7-1 ekcpoJ"
 >
   <a
-    className="card___StyledLink-sc-16fz0z7-2 kPQedG"
+    className="card___StyledLink-sc-16fz0z7-2 drpVBk"
     data-cy="campaigns-card"
   >
     <div
-      className="card__CardHeader-sc-16fz0z7-0 iwhWlg"
+      className="card__CardHeader-sc-16fz0z7-0 eXZBRC"
     >
       <div
-        className="card___StyledDiv2-sc-16fz0z7-4 cucPti"
+        className="card___StyledDiv2-sc-16fz0z7-4 eFucfA"
       >
         <svg
           height="80"
@@ -34,7 +34,7 @@ exports[`Card renders card with tag 1`] = `
         </svg>
       </div>
       <div
-        className="card___StyledDiv3-sc-16fz0z7-5 iDQUCc"
+        className="card___StyledDiv3-sc-16fz0z7-5 ezPWHK"
         data-cy="stationary-tag"
       >
         Stationary
@@ -42,7 +42,7 @@ exports[`Card renders card with tag 1`] = `
     </div>
     <div>
       <big
-        className="cardtest___StyledBig-sc-1cx8i5d-0 dQDGjD"
+        className="cardtest___StyledBig-sc-1cx8i5d-0 cHzNEZ"
         data-cy="shortname"
       >
         GCPEx
@@ -64,17 +64,17 @@ exports[`Card renders card with tag 1`] = `
 
 exports[`Card renders plain card 1`] = `
 <div
-  className="card___StyledDiv-sc-16fz0z7-1 rlvQj"
+  className="card___StyledDiv-sc-16fz0z7-1 ekcpoJ"
 >
   <a
-    className="card___StyledLink-sc-16fz0z7-2 kPQedG"
+    className="card___StyledLink-sc-16fz0z7-2 drpVBk"
     data-cy="campaigns-card"
   >
     <div
-      className="card__CardHeader-sc-16fz0z7-0 iwhWlg"
+      className="card__CardHeader-sc-16fz0z7-0 eXZBRC"
     >
       <div
-        className="card___StyledDiv2-sc-16fz0z7-4 cucPti"
+        className="card___StyledDiv2-sc-16fz0z7-4 eFucfA"
       >
         <svg
           height="80"
@@ -98,7 +98,7 @@ exports[`Card renders plain card 1`] = `
     </div>
     <div>
       <big
-        className="cardtest___StyledBig-sc-1cx8i5d-0 dQDGjD"
+        className="cardtest___StyledBig-sc-1cx8i5d-0 cHzNEZ"
         data-cy="shortname"
       >
         GCPEx
@@ -120,17 +120,17 @@ exports[`Card renders plain card 1`] = `
 
 exports[`Card renders with footer list 1`] = `
 <div
-  className="card___StyledDiv-sc-16fz0z7-1 rlvQj"
+  className="card___StyledDiv-sc-16fz0z7-1 ekcpoJ"
 >
   <a
-    className="card___StyledLink-sc-16fz0z7-2 kPQedG"
+    className="card___StyledLink-sc-16fz0z7-2 drpVBk"
     data-cy="campaigns-card"
   >
     <div
-      className="card__CardHeader-sc-16fz0z7-0 iwhWlg"
+      className="card__CardHeader-sc-16fz0z7-0 eXZBRC"
     >
       <div
-        className="card___StyledDiv2-sc-16fz0z7-4 cucPti"
+        className="card___StyledDiv2-sc-16fz0z7-4 eFucfA"
       >
         <svg
           height="80"
@@ -154,7 +154,7 @@ exports[`Card renders with footer list 1`] = `
     </div>
     <div>
       <big
-        className="cardtest___StyledBig-sc-1cx8i5d-0 dQDGjD"
+        className="cardtest___StyledBig-sc-1cx8i5d-0 cHzNEZ"
         data-cy="shortname"
       >
         GCPEx
