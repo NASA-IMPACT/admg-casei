@@ -38,6 +38,8 @@ const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
       .filter(d => d.deploymentSpatialBounds !== null)
       .map(d => d.deploymentSpatialBounds)
 
+    console.log("spatialBounds", spatialBounds)
+
     var geojson = {
       type: "FeatureCollection",
       features: spatialBounds.map((bounds, i) => ({
