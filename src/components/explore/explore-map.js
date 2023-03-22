@@ -3,13 +3,11 @@ import PropTypes from "prop-types"
 import turfBbox from "@turf/bbox"
 import turfBooleanDisjoint from "@turf/boolean-disjoint"
 import parse from "wellknown"
-
 import Map from "../map"
 import AoiControl from "../map/aoi-control"
 import GeoJsonSource from "../map/geojson-source"
 import HoverLayer from "../map/hover-layer"
 import BboxLayer from "../map/bbox-layer"
-import { filter } from "d3"
 
 const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
   const [isDrawing, setIsDrawing] = useState(false)
@@ -27,6 +25,8 @@ const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
     type: "FeatureCollection",
     features: [],
   }))
+
+  const [bbox, setBbox] = useState(() => turfBbox(new_geojson))
 
   useEffect(() => {
     // loop through allData and extract deployments, along with campaign ids and campaign shortname from allData
