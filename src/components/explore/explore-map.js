@@ -10,6 +10,7 @@ import AoiControl from "../map/aoi-control"
 import GeoJsonSource from "../map/geojson-source"
 import HoverLayer from "../map/hover-layer"
 import BboxLayer from "../map/bbox-layer"
+import { filter } from "d3"
 
 const sortFeaturesBySize = (a, b) => {
   // this is required by the hover effect:
@@ -21,53 +22,55 @@ const sortFeaturesBySize = (a, b) => {
 const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
   const [isDrawing, setIsDrawing] = useState(false)
 
-  // loop through allData and extract deployments, along with campaign ids and campaign shortname from allData
-  const deployments = allData.map(d => d.deployments)
-
-  // Loop through deployments and extract deployment_spatial_bounds from each deployment_spatial_bounds array
-  const spatialBounds = deployments
-    .flat()
-    .filter(d => d.deployment_spatial_bounds !== null)
-    .map(d => d.deployment_spatial_bounds)
-
-  var new_geojson = {
-    type: "FeatureCollection",
-    features: spatialBounds.map((bounds, i) => ({
-      type: "Feature",
-      id: i + 1,
-      geometry: parse(bounds),
-      properties: {
-        id: allData.id,
-        shortname: allData.shortname,
-      },
-    })),
-  }
+  const cleanedFilteredData = filteredData.reduce((acc, entry) => {
+    const filteredDeployments = entry.deployments.filter(
+      deployment => deployment.deployment_spatial_bounds
+    )
+    const cleanedEntry = { ...entry, deployments: filteredDeployments }
+    acc.push(cleanedEntry)
+    return acc
+  }, [])
 
   const [geojson, setGeojson] = useState(() => ({
     type: "FeatureCollection",
-    features: new_geojson.features.sort(sortFeaturesBySize),
+    features: [],
   }))
-  const [bbox] = useState(() => turfBbox(geojson))
+  const [bbox, setBbox] = useState(() => turfBbox(geojson))
+
+  const [new_geojson, setNewGeojson] = useState(() => ({
+    type: "FeatureCollection",
+    features: [],
+  }))
+
+  const [newBbox, setNewBBox] = useState(() => turfBbox(new_geojson))
 
   useEffect(() => {
-    // updates the map after a filter was changed
-    const updatedFeatures = filteredData
-      .filter(d => d.deployments)
-      .map((d, i) => ({
+
+    // loop through allData and extract deployments, along with campaign ids and campaign shortname from allData
+    const deployments = allData.map(d => d.deployments)
+
+    // Loop through deployments and extract deployment_spatial_bounds from each deployment_spatial_bounds array
+    const spatialBounds = deployments
+      .flat()
+      .filter(d => d.deployment_spatial_bounds !== null)
+      .map(d => d.deployment_spatial_bounds)
+
+    var new_geojson = {
+      type: "FeatureCollection",
+      features: spatialBounds.map((bounds, i) => ({
         type: "Feature",
         id: i + 1,
-        geometry: parse(d.deployment_spatial_bounds),
+        geometry: parse(bounds),
         properties: {
-          id: d.related_campaign.id,
-          shortname: d.related_campaign.shortname,
+          id: allData.id,
+          shortname: allData.shortname,
         },
-      }))
+      })),
+    }
 
-    setGeojson({
-      type: "FeatureCollection",
-      features: updatedFeatures.sort(sortFeaturesBySize),
-    })
-  }, [filteredData])
+    setBbox(turfBbox(new_geojson))
+    setNewGeojson(new_geojson)
+  }, [cleanedFilteredData])
 
   useEffect(() => {
     // updates the list of campaign ids intersecting the drawn aoi after the aoi was changed
