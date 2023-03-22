@@ -14,31 +14,31 @@ const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
 
   const cleanedFilteredData = filteredData.reduce((acc, entry) => {
     const filteredDeployments = entry.deployments.filter(
-      deployment => deployment.deployment_spatial_bounds
+      deployment => deployment.deploymentSpatialBounds
     )
     const cleanedEntry = { ...entry, deployments: filteredDeployments }
     acc.push(cleanedEntry)
     return acc
   }, [])
 
-  const [new_geojson, setNewGeojson] = useState(() => ({
+  const [geojson, setNewGeojson] = useState(() => ({
     type: "FeatureCollection",
     features: [],
   }))
 
-  const [bbox, setBbox] = useState(() => turfBbox(new_geojson))
+  const [bbox, setBbox] = useState(() => turfBbox(geojson))
 
   useEffect(() => {
     // loop through allData and extract deployments, along with campaign ids and campaign shortname from allData
     const deployments = allData.map(d => d.deployments)
 
-    // Loop through deployments and extract deployment_spatial_bounds from each deployment_spatial_bounds array
+    // Loop through deployments and extract deploymentSpatialBounds from each deploymentSpatialBounds array
     const spatialBounds = deployments
       .flat()
-      .filter(d => d.deployment_spatial_bounds !== null)
-      .map(d => d.deployment_spatial_bounds)
+      .filter(d => d.deploymentSpatialBounds !== null)
+      .map(d => d.deploymentSpatialBounds)
 
-    var new_geojson = {
+    var geojson = {
       type: "FeatureCollection",
       features: spatialBounds.map((bounds, i) => ({
         type: "Feature",
@@ -51,8 +51,8 @@ const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
       })),
     }
 
-    setBbox(turfBbox(new_geojson))
-    setNewGeojson(new_geojson)
+    setBbox(turfBbox(geojson))
+    setNewGeojson(geojson)
   }, [cleanedFilteredData])
 
   useEffect(() => {
@@ -60,14 +60,14 @@ const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
     setGeoFilter(
       allData
         .flatMap(d => d.deployments)
-        .filter(d => d.deployment_spatial_bounds)
+        .filter(d => d.deploymentSpatialBounds)
         .map((d, i) => ({
           type: "Feature",
           id: i + 1,
-          geometry: parse(d.deployment_spatial_bounds),
+          geometry: parse(d.deploymentSpatialBounds),
           properties: {
-            id: d.related_campaign.id,
-            shortname: d.related_campaign.shortname,
+            id: d.relatedCampaign.id,
+            shortname: d.relatedCampaign.shortname,
           },
         }))
         .filter(feature => (aoi ? !turfBooleanDisjoint(feature, aoi) : true))
@@ -83,7 +83,7 @@ const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
         aoi={aoi}
         setAoi={setAoi}
       />
-      <GeoJsonSource geojson={new_geojson} id="explore">
+      <GeoJsonSource geojson={geojson} id="explore">
         <HoverLayer id="explore" isDrawing={isDrawing} />
         <BboxLayer id="explore" bbox={bbox} />
       </GeoJsonSource>

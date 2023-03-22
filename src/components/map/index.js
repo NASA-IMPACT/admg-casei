@@ -18,7 +18,7 @@ export default function Map({ height, basemap, children }) {
     })
 
     // conditional if logic to check if children exist
-    if (children.length > 0) {
+    if (children.length) {
       // extract geojson from all objects in children
       const geojsons = children.map(child => child.props.geojson)
 
