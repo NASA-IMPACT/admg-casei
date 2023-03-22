@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
-import turfArea from "@turf/area"
 import turfBbox from "@turf/bbox"
 import turfBooleanDisjoint from "@turf/boolean-disjoint"
 import parse from "wellknown"
@@ -10,14 +9,6 @@ import AoiControl from "../map/aoi-control"
 import GeoJsonSource from "../map/geojson-source"
 import HoverLayer from "../map/hover-layer"
 import BboxLayer from "../map/bbox-layer"
-import { filter } from "d3"
-
-const sortFeaturesBySize = (a, b) => {
-  // this is required by the hover effect:
-  // to be able to select small features contained within others,
-  // they need to be added to the map last
-  return turfArea(b.geometry) - turfArea(a.geometry)
-}
 
 const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
   const [isDrawing, setIsDrawing] = useState(false)
@@ -31,21 +22,12 @@ const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
     return acc
   }, [])
 
-  const [geojson, setGeojson] = useState(() => ({
-    type: "FeatureCollection",
-    features: [],
-  }))
-  const [bbox, setBbox] = useState(() => turfBbox(geojson))
-
   const [new_geojson, setNewGeojson] = useState(() => ({
     type: "FeatureCollection",
     features: [],
   }))
 
-  const [newBbox, setNewBBox] = useState(() => turfBbox(new_geojson))
-
   useEffect(() => {
-
     // loop through allData and extract deployments, along with campaign ids and campaign shortname from allData
     const deployments = allData.map(d => d.deployments)
 
