@@ -9,6 +9,7 @@ import AoiControl from "../map/aoi-control"
 import GeoJsonSource from "../map/geojson-source"
 import HoverLayer from "../map/hover-layer"
 import BboxLayer from "../map/bbox-layer"
+import { filter } from "d3"
 
 const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
   const [isDrawing, setIsDrawing] = useState(false)

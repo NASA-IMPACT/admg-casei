@@ -20,8 +20,13 @@ export default function GeoJsonSource({ geojson, id, map, children }) {
     return () => {
       // TODO: Error "Source "campaign-source" cannot be removed while layer "campaign-layer" is using it."
       // if (source) map.removeSource(`${id}-source`)
+<<<<<<< HEAD
       React.Children.map(children, c => map.removeLayer(c.props.map.id))
       if (source) map.removeSource(`${id}-source`)
+=======
+      React.Children.map(children, (c) => map.removeLayer(c.props.map.id));
+      if (source) map.removeSource(`${id}-source`);
+>>>>>>> de2a4e5d6a255b859f589fc8ca692c5e0faef432
     }
   }, [])
 
