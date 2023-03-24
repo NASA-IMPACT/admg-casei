@@ -2,17 +2,17 @@
 
 exports[`Header renders correctly 1`] = `
 <section
-  className="hero__Container-sc-qftwzr-0 eBjRBG"
+  className="hero__Container-sc-qftwzr-0 SSTCg"
   data-cy="test-hero"
 >
   <div
-    className="hero___StyledDiv-sc-qftwzr-4 hMRAxd"
+    className="hero___StyledDiv-sc-qftwzr-4 jLqjvX"
   >
     <div
-      className="hero___StyledDiv2-sc-qftwzr-5 hiknBk"
+      className="hero___StyledDiv2-sc-qftwzr-5 gktQuS"
     >
       <p
-        className="hero___StyledP-sc-qftwzr-7 jLprtR"
+        className="hero___StyledP-sc-qftwzr-7 ebNrDP"
       >
         Instrument
       </p>
@@ -23,7 +23,7 @@ exports[`Header renders correctly 1`] = `
       </h1>
     </div>
     <div
-      className="hero___StyledDiv3-sc-qftwzr-8 dJJcuR"
+      className="hero___StyledDiv3-sc-qftwzr-8 hIojD"
     >
       <p>
         The 2DC probe records images of hydrometeors...
@@ -35,17 +35,17 @@ exports[`Header renders correctly 1`] = `
 
 exports[`Header renders with adjust ratios 1`] = `
 <section
-  className="hero__Container-sc-qftwzr-0 eBjRBG"
+  className="hero__Container-sc-qftwzr-0 SSTCg"
   data-cy="undefined-hero"
 >
   <div
-    className="hero___StyledDiv-sc-qftwzr-4 eegkKF"
+    className="hero___StyledDiv-sc-qftwzr-4 cMgrSf"
   >
     <div
-      className="hero___StyledDiv2-sc-qftwzr-5 hiknBk"
+      className="hero___StyledDiv2-sc-qftwzr-5 gktQuS"
     >
       <p
-        className="hero___StyledP-sc-qftwzr-7 jLprtR"
+        className="hero___StyledP-sc-qftwzr-7 ebNrDP"
       >
         Instrument
       </p>
@@ -56,7 +56,7 @@ exports[`Header renders with adjust ratios 1`] = `
       </h1>
     </div>
     <div
-      className="hero___StyledDiv3-sc-qftwzr-8 dJJcuR"
+      className="hero___StyledDiv3-sc-qftwzr-8 hIojD"
     >
       <p>
         The 2DC probe records images of hydrometeors...
