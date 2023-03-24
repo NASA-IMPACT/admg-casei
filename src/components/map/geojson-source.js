@@ -1,30 +1,39 @@
 import React, { useEffect, useState } from "react"
 import PropTypes from "prop-types"
 
+// GeoJsonSource component
 export default function GeoJsonSource({ geojson, id, map, children }) {
   const [source, setSource] = useState(null)
 
+  // Effect to handle component unmounting
   useEffect(() => {
+    // Clean up function to remove source from map when the component is unmounted
+    return () => {
+      // TODO Error: Source "explore-source" cannot be removed while layer "explore-hover-layer" is using it.
+      map.removeSource(`${id}-source`)
+    }
+  }, [])
+
+  // Effect to handle source updates based on geojson changes
+  useEffect(() => {
+    // Get the source from the map
     let s = map.getSource(`${id}-source`)
+
+    // If the source doesn't exist, create a new source and add it to the map
     if (!s) {
       s = map.addSource(`${id}-source`, {
         type: "geojson",
         data: geojson,
       })
     } else {
+      // If the source exists, update the data with the new geojson
       s.setData(geojson)
     }
-
+    // Update the state with the new source
     setSource(s)
+  }, [JSON.stringify(geojson)])
 
-    return () => {
-      // TODO: Error "Source "campaign-source" cannot be removed while layer "campaign-layer" is using it."
-      // if (source) map.removeSource(`${id}-source`)
-      React.Children.map(children, c => map.removeLayer(c.props.map.id))
-      if (source) map.removeSource(`${id}-source`)
-    }
-  }, [])
-
+  // Render children components and pass the sourceId and map as props
   return (
     <>
       {source &&
@@ -39,6 +48,7 @@ export default function GeoJsonSource({ geojson, id, map, children }) {
   )
 }
 
+// Define PropTypes for the GeoJsonSource component
 GeoJsonSource.propTypes = {
   id: PropTypes.string.isRequired,
   geojson: PropTypes.object,

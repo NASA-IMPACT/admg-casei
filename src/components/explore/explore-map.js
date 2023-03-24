@@ -9,9 +9,12 @@ import GeoJsonSource from "../map/geojson-source"
 import HoverLayer from "../map/hover-layer"
 import BboxLayer from "../map/bbox-layer"
 
+// Define the ExploreMap component
 const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
+  // State variable for drawing status
   const [isDrawing, setIsDrawing] = useState(false)
 
+  // Clean filteredData by filtering out deployments without spatial bounds
   const cleanedFilteredData = filteredData.reduce((acc, entry) => {
     const filteredDeployments = entry.deployments.filter(
       deployment => deployment.deploymentSpatialBounds
@@ -21,42 +24,32 @@ const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
     return acc
   }, [])
 
-  const [geojson, setNewGeojson] = useState(() => ({
+  // Extract cleaned deployments from the cleanedFilteredData
+  var filteredDeployments = cleanedFilteredData.map(d => d.deployments)
+
+  // Extract the spatial bounds of the filtered deployments
+  const filteredBounds = filteredDeployments
+    .flat()
+    .filter(d => d.deploymentSpatialBounds !== null)
+    .map(d => d.deploymentSpatialBounds)
+
+  // Create a GeoJSON object from the filteredBounds
+  var geojson = {
     type: "FeatureCollection",
-    features: [],
-  }))
+    features: filteredBounds.map((bounds, i) => ({
+      type: "Feature",
+      id: i + 1,
+      geometry: parse(bounds),
+      properties: {
+        id: allData.id,
+        shortname: allData.shortname,
+      },
+    })),
+  }
+  // Compute and set the initial bounding box
+  const [bbox] = useState(() => turfBbox(geojson))
 
-  const [bbox, setBbox] = useState(() => turfBbox(geojson))
-
-  useEffect(() => {
-    // loop through allData and extract deployments, along with campaign ids and campaign shortname from allData
-    const deployments = allData.map(d => d.deployments)
-
-    // Loop through deployments and extract deploymentSpatialBounds from each deploymentSpatialBounds array
-    const spatialBounds = deployments
-      .flat()
-      .filter(d => d.deploymentSpatialBounds !== null)
-      .map(d => d.deploymentSpatialBounds)
-
-    console.log("spatialBounds", spatialBounds)
-
-    var geojson = {
-      type: "FeatureCollection",
-      features: spatialBounds.map((bounds, i) => ({
-        type: "Feature",
-        id: i + 1,
-        geometry: parse(bounds),
-        properties: {
-          id: allData.id,
-          shortname: allData.shortname,
-        },
-      })),
-    }
-
-    setBbox(turfBbox(geojson))
-    setNewGeojson(geojson)
-  }, [cleanedFilteredData])
-
+  // Effect to update the GeoFilter when the AOI changes
   useEffect(() => {
     // updates the list of campaign ids intersecting the drawn aoi after the aoi was changed
     setGeoFilter(
@@ -77,6 +70,7 @@ const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
     )
   }, [aoi])
 
+  // Render the Map component along with its children
   return (
     <Map height={500} basemap="mapbox://styles/mapbox/light-v10">
       <AoiControl
@@ -93,6 +87,7 @@ const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
   )
 }
 
+// Define PropTypes for the ExploreMap component
 ExploreMap.propTypes = {
   allData: PropTypes.arrayOf(
     PropTypes.shape({
@@ -117,4 +112,5 @@ ExploreMap.propTypes = {
   setGeoFilter: PropTypes.func.isRequired,
 }
 
+// Export
 export default ExploreMap
