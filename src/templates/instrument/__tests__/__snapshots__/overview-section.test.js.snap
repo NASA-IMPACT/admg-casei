@@ -333,7 +333,7 @@ exports[`Overview Section displays content 1`] = `
         <label
           className="overview-section___StyledLabel-sc-1oemh85-1 hkiVBL"
         >
-          Data Locations
+          Overview Publications
         </label>
         <p>
           Currently unavailable
