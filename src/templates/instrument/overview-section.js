@@ -96,7 +96,7 @@ function Background({
           </p>
         </div>
       )}
-      <BackgroundListItem id="data-locations" label="Data Locations">
+      <BackgroundListItem id="data-locations" label="Overview Publications">
         {overviewPublication && isUrl(overviewPublication) ? (
           <ExternalLink
             label="Overview Publication"
