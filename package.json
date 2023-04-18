@@ -6,7 +6,9 @@
   "contributors": [
     "Necoline Hubner <necoline@developmentseed.org>",
     "Alice Rühl <alice@developmentseed.org>",
-    "Edward Keeble <edward@developmentseed.org>"
+    "Edward Keeble <edward@developmentseed.org>",
+    "Tammo Feldman <tammo@developmentseed.org>",
+    "Matt Robinson <matthew@developmentseed.org>"
   ],
   "dependencies": {
     "@fontsource/titillium-web": "^4.5.2",
@@ -58,6 +60,7 @@
     "@cypress/code-coverage": "^3.9.12",
     "@percy/playwright": "^1.0.4",
     "@playwright/test": "^1.22.2",
+    "axe-playwright": "^1.2.3",
     "@quickbaseoss/babel-plugin-styled-components-css-namespace": "^1.0.1",
     "@testing-library/cypress": "^8.0.2",
     "@testing-library/react-hooks": "^7.0.2",
