@@ -1,11 +1,15 @@
 const { chromium } = require('@playwright/test');
 const { test, expect } = require('@playwright/test');
+import config from "../playwright.config"
+const baseUrl = config.use?.baseURL
 
 test.describe('Explore', () => {
     let browser, page;
 
     test.beforeAll(async () => {
         browser = await chromium.launch();
+        page = await browser.newPage();
+        await page.goto(baseUrl);
     });
 
     test.afterAll(async () => {
@@ -22,10 +26,10 @@ test.describe('Explore', () => {
 
     test.describe('campaigns', () => {
         test.beforeEach(async () => {
-            await page.goto('/explore/campaigns');
+            await page.goto(baseUrl + '/explore/campaigns');
             await page.waitForSelector('[data-cy=h1-campaigns]');
             expect(await page.textContent('[data-cy=h1-campaigns]')).toEqual('Explore campaigns');
-            expect(await page.isVisible('[data-cy=h1-campaigns]')).toBe(false);
+            expect(await page.isVisible('[data-cy=h1-campaigns]')).toBe(true);
         });
 
         test('displays campaign cards and navigates to the selected campaign', async ({ page }) => {
@@ -80,10 +84,10 @@ test.describe('Explore', () => {
 
     test.describe('platforms', () => {
         test.beforeEach(async () => {
-            await page.goto('/explore/platforms');
+            await page.goto(baseUrl + '/explore/platforms');
             await page.waitForSelector('[data-cy=h1-platforms]');
             expect(await page.textContent('[data-cy=h1-platforms]')).toEqual('Explore platforms');
-            expect(await page.isVisible('[data-cy=h1-platforms]')).toBe(false);
+            expect(await page.isVisible('[data-cy=h1-platforms]')).toBe(true);
         });
 
         test('displays platform cards and navigates to the selected platform', async ({ page }) => {
@@ -125,10 +129,10 @@ test.describe('Explore', () => {
 
     test.describe('instruments', () => {
         test.beforeEach(async () => {
-            await page.goto('/explore/instruments');
+            await page.goto(baseUrl + '/explore/instruments');
             await page.waitForSelector('[data-cy=h1-instruments]');
             expect(await page.textContent('[data-cy=h1-instruments]')).toEqual('Explore instruments');
-            expect(await page.isVisible('[data-cy=h1-instruments]')).toBe(false);
+            expect(await page.isVisible('[data-cy=h1-instruments]')).toBe(true);
         });
 
         test('displays instrument cards and navigates to the selected instrument', async ({ page }) => {

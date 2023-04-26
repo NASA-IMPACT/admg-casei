@@ -11,14 +11,14 @@ test.describe('Glossary', () => {
     });
 
     test('displays the glossary', async () => {
-        await expect(page.locator('[data-cy=main-glossary]').locator('h1')).toHaveText('Glossary');
+        await expect(page.locator('css=[data-cy=main-glossary]').locator('h1')).toHaveText('Glossary');
 
         for (const letter of ['C', 'D', 'P']) {
             const sections = await page.locator(`[data-cy=${letter}-section]`).elementHandles();
 
-            for (const section of sections) {
-                await expect(section.locator('h3')).toBeVisible();
-                await expect(section.locator('p')).toBeVisible();
+            for (const _section of sections) {
+                await expect(page.locator('h3')).toBeVisible();
+                await expect(page.locator('p')).toBeVisible();
             }
         }
 

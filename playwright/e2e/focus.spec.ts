@@ -12,7 +12,7 @@ test.describe('Focus Area', () => {
     });
 
     test.beforeEach(async ({ page }) => {
-        await page.goto('/focus/Global%20Water%20&%20Energy%20Cycle');
+        await page.goto(baseUrl + '/focus/Global%20Water%20&%20Energy%20Cycle');
     });
 
     test('explains the focus area Global Water & Energy Cycle', async ({ page }) => {
@@ -40,7 +40,7 @@ test.describe('Focus Area', () => {
 
         for (let i = 0; i < 6; i++) {
             await expect(focusAreas.nth(i).locator('svg')).toBeVisible();
-            await expect(focusAreas.nth(i).locator('label')).toHaveText(await focusAreas.nth(i).innerText());
+            await expect(focusAreas.nth(i).locator('label')).toHaveText('Atmospheric Composition');
         }
 
         await page.locator('[data-cy=focus-areas-section]').locator('[data-cy=focus-area] >> text=Weather').click();

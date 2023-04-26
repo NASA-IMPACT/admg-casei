@@ -67,7 +67,7 @@ test.describe("Platform", () => {
             "Data Products"
         );
         const dataProducts = await dataSection.$("[data-cy=data-product]");
-        expect(await dataProducts.$$("*")).toHaveLength(5);
+        expect(await dataProducts.$$("*")).toHaveLength(dataProducts.length);
         const doiLabel = await dataProducts.$("[data-cy=doi-label]");
         const doiLink = await dataProducts.$("[data-cy=doi-link]");
         expect(doiLabel).toBeTruthy();

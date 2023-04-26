@@ -1,11 +1,13 @@
 const { test, expect } = require('@playwright/test');
+import config from "../playwright.config"
+const baseUrl = config.use?.baseURL
 
 test.describe('Campaign', () => {
     let page;
 
     test.beforeAll(async ({ browser }) => {
         page = await browser.newPage();
-        await page.goto('/campaign/OLYMPEX');
+        await page.goto(baseUrl + '/campaign/OLYMPEX');
     });
 
     test('provides information on the campaign', async () => {

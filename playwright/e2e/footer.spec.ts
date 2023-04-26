@@ -13,7 +13,7 @@ test.describe('Footer', () => {
     })
 
     test('renders on all pages', async ({ page }) => {
-        const urls = [
+        const paths = [
             '/',
             '/explore/campaigns',
             '/explore/platforms',
@@ -26,14 +26,14 @@ test.describe('Footer', () => {
             '/instrument/UAVSAR',
         ];
 
-        for (const url of urls) {
-            await page.goto(url);
+        for (const path of paths) {
+            await page.goto(baseUrl + path);
             await expect(page.locator('[data-cy=page]').locator('[data-cy=page-footer]')).toBeVisible();
         }
     });
 
     test('has content', async ({ page }) => {
-        await page.goto('/');
+        await page.goto(baseUrl + '/');
 
         await expect(page.locator('[data-cy=page-footer]').locator('[data-cy=footer-title]')).toHaveText(site.siteMetadata.shortname);
         await expect(page.locator('[data-cy=page-footer]').locator('[data-cy=footer-subtitle]')).toHaveText(site.siteMetadata.siteDefinition);

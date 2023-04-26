@@ -3,10 +3,15 @@ import config from "../playwright.config"
 const baseUrl = config.use?.baseURL
 
 test.describe('Filter, Search and Sort', () => {
-    let page = baseUrl
+    let page;
+
+    test.beforeAll(async ({ browser }) => {
+        page = await browser.newPage();
+        await page.goto(baseUrl);
+    });
 
     test.beforeEach(async ({ page }) => {
-        await page.goto('/explore/campaigns');
+        await page.goto(baseUrl + '/explore/campaigns');
     });
 
     test('should not reload on button click nor type and enter', async ({ page }) => {
@@ -31,7 +36,7 @@ test.describe('Filter, Search and Sort', () => {
     // Create separate test.describe for each category: campaigns, platforms, and instruments
     test.describe('campaigns', () => {
         test.beforeEach(async ({ page }) => {
-            await page.goto('/explore/campaigns');
+            await page.goto(baseUrl + '/explore/campaigns');
         });
 
         // Implement filter test for campaigns
@@ -83,7 +88,7 @@ test.describe('Filter, Search and Sort', () => {
 
     test.describe('platforms', () => {
         test.beforeEach(async ({ page }) => {
-            await page.goto('/explore/platforms');
+            await page.goto(baseUrl + '/explore/platforms');
         });
 
         // Implement filter test for platforms
@@ -137,7 +142,7 @@ test.describe('Filter, Search and Sort', () => {
 
     test.describe('instruments', () => {
         test.beforeEach(async ({ page }) => {
-            await page.goto('/explore/instruments');
+            await page.goto(baseUrl + '/explore/instruments');
         });
 
         // Implement filter test for instruments

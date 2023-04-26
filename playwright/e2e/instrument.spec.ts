@@ -12,7 +12,7 @@ test.describe('Instrument', () => {
     });
 
     test.beforeEach(async ({ page }) => {
-        await page.goto('/instrument/ACAM');
+        await page.goto(baseUrl + '/instrument/ACAM');
     });
 
     test('explains the instrument', async ({ page }) => {

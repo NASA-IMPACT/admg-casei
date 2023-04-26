@@ -1,20 +1,27 @@
 const { chromium } = require("@playwright/test");
 const { test, expect } = require('@playwright/test');
+import config from "../playwright.config"
+const baseUrl = config.use?.baseURL
 
 test.describe("Contact", () => {
+
     let browser, page;
 
-    test.beforeAll(async () => {
-        browser = await chromium.launch();
+    test.beforeAll(async ({ browser }) => {
+
+        page = await browser.newPage();
+        await page.goto(baseUrl);
     });
 
-    test.afterAll(async () => {
+    test.afterAll(async (browser) => {
+        browser = await chromium.launch();
         await browser.close();
     });
 
-    test.beforeEach(async () => {
+    test.beforeEach(async (browser) => {
+        browser = await chromium.launch();
         page = await browser.newPage();
-        await page.goto("/contact");
+        await page.goto(baseUrl + "/contact");
     });
 
     test.afterEach(async () => {
