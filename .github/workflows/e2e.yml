@@ -186,7 +186,7 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Test End-to-end
-        run: xvfb-run npx playwright test
+        run: xvfb-run npx playwright test -c ./playwright/e2e
 
       - name: Upload test results
         if: always()
