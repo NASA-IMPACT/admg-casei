@@ -4,10 +4,10 @@ import config from "../playwright.config"
 const baseUrl = config.use?.baseURL
 
 async function terminalLog(page, violations) {
-    // console.log(
-    //     `${violations.length} accessibility violation${violations.length === 1 ? '' : 's'
-    //     } ${violations.length === 1 ? 'was' : 'were'} detected`
-    // );
+    console.log(
+        `${violations.length} accessibility violation${violations.length === 1 ? '' : 's'
+        } ${violations.length === 1 ? 'was' : 'were'} detected`
+    );
 
     const violationData = violations.map(({ id, impact, description, nodes }) => ({
         id,
@@ -71,7 +71,10 @@ test.describe('Accessibility tests', () => {
 
             await injectAxe(page);
             const violations = await checkA11y(page);
-            await terminalLog(page, violations);
+
+            if (violations && violations.length > 0) {
+                await terminalLog(page, violations);
+            }
         });
     }
 });
