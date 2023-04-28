@@ -66,16 +66,18 @@ test.describe("Platform", () => {
         expect(await dataSection.$eval("h2", el => el.textContent)).toContain(
             "Data Products"
         );
-        const dataProducts = await dataSection.$("[data-cy=data-product]");
-        expect(await dataProducts.$$("*")).toHaveLength(dataProducts.length);
-        const doiLabel = await dataProducts.$("[data-cy=doi-label]");
-        const doiLink = await dataProducts.$("[data-cy=doi-link]");
+        const dataProducts = await dataSection.$$("[data-cy=data-product]"); // returns a list of elementHandles
+
+        expect(await dataProducts).toHaveLength(dataProducts.length);
+
+        const doiLabel = dataProducts[0].$("[data-cy=doi-label]");
+        const doiLink = dataProducts[0].$("[data-cy=doi-link]");
         expect(doiLabel).toBeTruthy();
         expect(doiLink).toBeTruthy();
-        const campaignsLabel = await dataProducts.$(
+        const campaignsLabel = await dataProducts[0].$(
             "[data-cy=doi-campaign-label]"
         );
-        const instrumentsLabel = await dataProducts.$(
+        const instrumentsLabel = await dataProducts[0].$(
             "[data-cy=doi-instrument-label]"
         );
         expect(campaignsLabel).toBeTruthy();
