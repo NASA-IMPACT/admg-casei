@@ -11,20 +11,20 @@ test.describe('Glossary', () => {
     });
 
     test('displays the glossary', async () => {
-        await expect(page.locator('css=[data-cy=main-glossary]').locator('h1')).toHaveText('Glossary');
+        await expect(page.locator('[data-cy=main-glossary]').locator('h1')).toHaveText('Glossary');
 
         for (const letter of ['C', 'D', 'P']) {
             const sections = await page.locator(`[data-cy=${letter}-section]`).elementHandles();
 
             for (const _section of sections) {
-                await expect(page.locator('h3')).toBeVisible();
-                await expect(page.locator('p')).toBeVisible();
+                await expect(page.locator('h3').first()).toBeVisible();
+                await expect(page.locator('p').first()).toBeVisible();
             }
         }
 
-        const listItemCount = await page.locator('[data-cy=glossary-definition-note').count();
+        const listItemCount = await page.locator('[data-cy=glossary-definition-note]').count();
         expect(listItemCount).toBeGreaterThanOrEqual(1);
 
-        await expect(page.locator('[data-cy=glossary-img-section]').first().locator('img')).toBeVisible();
+        await expect(page.locator('[data-cy=glossary-img-section]').locator('img').first()).toBeVisible();
     });
 });
