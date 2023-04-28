@@ -2,6 +2,8 @@ const { test, expect } = require('@playwright/test');
 import config from "../playwright.config"
 const baseUrl = config.use?.baseURL
 
+// TODO - cards data-cy names seem to have changed. We should check to see if page elements are still being targeted by name in a fashion that enables this test to be effective
+
 test.describe('Filter, Search and Sort', () => {
     let page;
 
@@ -41,13 +43,12 @@ test.describe('Filter, Search and Sort', () => {
 
         // Implement filter test for campaigns
         test('filter campaigns', async ({ page }) => {
-            const initialCardCount = await page.$$eval('[data-cy=campaign-card]', cards => cards.length);
-
+            const initialCardCount = await page.$$eval('[data-cy=campaigns-card]', cards => cards.length);
             await page.click('[data-cy=focus-filter-select]');
             await page.click('[data-cy=filter-options] >> text=Weather');
             await page.click('[data-cy=submit]');
 
-            const filteredCardCount = await page.$$eval('[data-cy=campaign-card]', cards => cards.length);
+            const filteredCardCount = await page.$$eval('[data-cy=campaigns-card]', cards => cards.length);
             expect(filteredCardCount).toBeLessThan(initialCardCount);
         });
 
@@ -93,13 +94,13 @@ test.describe('Filter, Search and Sort', () => {
 
         // Implement filter test for platforms
         test('filter platforms', async ({ page }) => {
-            const initialCardCount = await page.$$eval('[data-cy=platform-card]', cards => cards.length);
+            const initialCardCount = await page.$$eval('[data-cy=platforms-card]', cards => cards.length);
 
             await page.click('[data-cy=instrument-filter-select]');
             await page.click('[data-cy=filter-options] >> text=Aerolaser');
             await page.click('[data-cy=submit]');
 
-            const filteredCardCount = await page.$$eval('[data-cy=platform-card]', cards => cards.length);
+            const filteredCardCount = await page.$$eval('[data-cy=platforms-card]', cards => cards.length);
             expect(filteredCardCount).toBeLessThan(initialCardCount);
         });
 
@@ -147,13 +148,13 @@ test.describe('Filter, Search and Sort', () => {
 
         // Implement filter test for instruments
         test('filter instruments', async ({ page }) => {
-            const initialCardCount = await page.$$eval('[data-cy=instrument-card]', cards => cards.length);
+            const initialCardCount = await page.$$eval('[data-cy=instruments-card]', cards => cards.length);
 
             await page.click('[data-cy=type-filter-select]');
             await page.click('[data-cy=filter-options] >> text=Multi');
             await page.click('[data-cy=submit]');
 
-            const filteredCardCount = await page.$$eval('[data-cy=instrument-card]', cards => cards.length);
+            const filteredCardCount = await page.$$eval('[data-cy=instruments-card]', cards => cards.length);
             expect(filteredCardCount).toBeLessThan(initialCardCount);
         });
 
