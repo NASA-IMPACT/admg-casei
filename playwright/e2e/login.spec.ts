@@ -2,7 +2,7 @@ const { test, expect } = require('@playwright/test');
 import config from "../playwright.config";
 const baseUrl = config.use?.baseURL
 
-test.describe("Login", () => {
+test.skip("Login", () => { // TODO get configurations for this test to run in new environment(s)
     let page;
 
     test.beforeAll(async ({ browser }) => {
