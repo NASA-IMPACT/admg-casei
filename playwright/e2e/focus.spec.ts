@@ -40,7 +40,7 @@ test.describe('Focus Area', () => {
 
         for (let i = 0; i < 6; i++) {
             await expect(focusAreas.nth(i).locator('svg')).toBeVisible();
-            await expect(focusAreas.nth(i).locator('label')).toHaveText('Atmospheric Composition');
+            await expect(focusAreas.locator('label')).toHaveText(['Atmospheric Composition', 'Carbon Cycle & Ecosystems', 'Climate Variability & Change', 'Earth Surface & Interior', 'Global Water & Energy Cycle', 'Weather']);
         }
 
         await page.locator('[data-cy=focus-areas-section]').locator('[data-cy=focus-area] >> text=Weather').click();
