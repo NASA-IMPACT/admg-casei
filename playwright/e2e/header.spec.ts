@@ -13,7 +13,7 @@ test.describe('Header', () => {
     });
 
     test('renders correctly', async () => {
-        await expect(page.locator('header')).toHaveText(site.siteMetadata.shortname);
+        await expect(page.locator('header')).toHaveText(site.siteMetadata.headerType);
 
         const nasaLogo = page.locator('[data-cy=nasa-logo]');
         await expect(nasaLogo).toHaveAttribute('alt', "NASA's red, white and blue insignia, nicknamed the 'meatball'");
