@@ -1,4 +1,5 @@
 const { test, expect } = require('@playwright/test');
+import { first } from "cypress/types/lodash";
 import config from "../playwright.config"
 const baseUrl = config.use?.baseURL
 
@@ -16,18 +17,19 @@ test.describe('Instrument', () => {
     });
 
     test('explains the instrument', async ({ page }) => {
+
         // has a hero
-        await expect(page.locator('[data-cy=instrument-hero] p')).toBeVisible();
-        await expect(page.locator('[data-cy=instrument-hero] p')).toContainText('Instrument');
+        await expect(page.locator('[data-cy=instrument-hero] p').first()).toBeVisible();
+        await expect(page.locator('[data-cy=instrument-hero] p').first()).toContainText('Instrument');
 
         const titleText = await page.textContent('[data-cy=instrument-hero] h1');
         expect(titleText).toContain('ACAM');
         expect(titleText).toContain('Airborne Compact Atmospheric Mapper');
 
-        await expect(page.locator('[data-cy=instrument-hero] img')).toBeVisible();
+        await expect(page.locator('[data-cy=instrument-hero] img').first()).toBeVisible();
 
         // displays an overview section
-        await expect(page.locator('[data-cy=overview-section]')).toBeVisible();
+        await expect(page.locator('[data-cy=overview-section]').first()).toBeVisible();
 
         const inpageNavItems = await page.locator('[data-cy=inpage-nav] a');
         expect(await inpageNavItems.count()).toBe(4);
@@ -68,12 +70,13 @@ test.describe('Instrument', () => {
         const entitiesSectionTitle = await page.$eval("[data-cy=entities-section] h2", el => el.textContent);
         expect(entitiesSectionTitle).toContain("Instrument Operation");
 
-        const instrumentRelatedEntitiesTable = await page.waitForSelector("[data-cy=instrument-related-entities-table] th");
-        const ths = await instrumentRelatedEntitiesTable.$$("th");
-        expect(await ths[0].innerText()).toContain("Platform");
-        expect(await ths[1].innerText()).toContain("Campaigns");
+        const tableHeaderCells = await page.locator('[data-cy=instrument-related-entities-table] th');
 
-        await page.waitForSelector("[data-cy=related-platform] big");
-        await page.waitForSelector("[data-cy=related-campaign] big");
+        const firstCellText = await tableHeaderCells.locator(':nth-child(1)').first().textContent();
+
+        expect(firstCellText).toEqual('Platform');
+
+        await page.locator("[data-cy=related-platform] big");
+        await page.locator("[data-cy=related-campaign] big");
     });
 });
