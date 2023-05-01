@@ -182,8 +182,16 @@ jobs:
           path: public
           key: ${{ runner.os }}-gatsby-build-${{ hashFiles('yarn.lock') }}-${{ hashFiles('src/**') }}
 
+      - name: Install dependencies
+        run: npm ci
+
       - name: Install Playwright
         run: npx playwright install --with-deps
+
+      - name: Serve App
+        with:
+          start: yarn serve -p 8000
+          wait-on: "http://localhost:8000"
 
       - name: Test End-to-end
         run: xvfb-run npx playwright test -c ./playwright/e2e
