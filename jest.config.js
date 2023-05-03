@@ -13,6 +13,7 @@ module.exports = {
     `<rootDir>.*/public`,
     `<rootDir>/cypress/`,
     `<rootDir>/e2e/`,
+    `<rootDir>/playwright/*`,
   ],
   transformIgnorePatterns: [`node_modules/(?!(gatsby)/)`],
   globals: {
