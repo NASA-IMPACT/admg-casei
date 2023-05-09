@@ -63,6 +63,10 @@ export function campaignFilter(selectedFilterIds) {
 
 export function productsFilter(selectedFilterIds) {
   return product => {
+    if (!product?.instruments || selectedFilterIds.length === 0) {
+      return true
+    }
+
     const measurementTypes = Array.from(
       product.instruments.reduce((acc, instrument) => {
         if (instrument.measurement_type) {
@@ -72,9 +76,9 @@ export function productsFilter(selectedFilterIds) {
       }, new Set())
     )
 
-    return selectedFilterIds.length === 0
-      ? true
-      : selectedFilterIds.every(filterId => measurementTypes.includes(filterId))
+    return selectedFilterIds.every(filterId =>
+      measurementTypes.includes(filterId)
+    )
   }
 }
 

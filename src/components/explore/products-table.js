@@ -46,23 +46,6 @@ export function ProductsTable({ dois }) {
                     }
                   })}
                 </span>
-                {doi.platforms.length > 1 && (
-                  <span
-                    css={`
-                      background: #efc100;
-                      color: #fc3d21;
-                      border-radius: 16px;
-                      height: 24px;
-                      width: 24px;
-                      padding: 0px 8px;
-                      text-align: center;
-                      display: inline-block;
-                      font-weight: bold;
-                    `}
-                  >
-                    {doi.platforms.length}
-                  </span>
-                )}
               </span>
             </td>
             <td>
@@ -84,23 +67,6 @@ export function ProductsTable({ dois }) {
                     }
                   })}
                 </span>
-                {doi.instruments.length > 1 && (
-                  <span
-                    css={`
-                      background: #efc100;
-                      color: #fc3d21;
-                      border-radius: 16px;
-                      height: 24px;
-                      width: 24px;
-                      padding: 0px 8px;
-                      text-align: center;
-                      display: inline-block;
-                      font-weight: bold;
-                    `}
-                  >
-                    {doi.instruments.length}
-                  </span>
-                )}
               </span>
             </td>
           </tr>
