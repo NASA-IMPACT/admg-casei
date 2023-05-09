@@ -12,14 +12,16 @@ import FocusAreaGallery from "../components/focus-area-gallery"
 import { RegionCarousel } from "../components/home/region-carousel"
 import { GeophysicsGrid } from "../components/home/geophysics-grid"
 import { InstrumentsGrid } from "../components/home/instruments-grid"
+import { TypeAhead } from "../components/typeahead-box"
 import { ArrowIcon } from "../icons"
 import { NEGATIVE } from "../utils/constants"
 import { colors } from "../theme"
 import { FBMContext } from "../components/fbm-provider"
+import { typeAhead } from "../utils/filter-utils"
 
 const Home = ({ data }) => {
   const { isFBMLoaded } = useContext(FBMContext)
-
+  console.log({ data })
   return (
     <Layout>
       <SEO title="Home" lang="en" />
@@ -35,6 +37,15 @@ const Home = ({ data }) => {
         textToImageRatio={[5, 7]}
         id="home"
       />
+
+      <TypeAhead
+        campaigns={data.allCampaign}
+        platforms={data.allPlatform}
+        instruments={data.allInstrument}
+        onSearch={typeAhead}
+      >
+      </TypeAhead>
+
 
       <PageBody id="home">
         <Section id="focus-area" isSpaced>
@@ -210,6 +221,27 @@ export const query = graphql`
         childImageSharp {
           gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
         }
+      }
+    }
+    allCampaign {
+      nodes {
+        long_name
+        id
+        short_name
+      }
+    }
+    allPlatform {
+      nodes {
+        long_name
+        short_name
+        id
+      }
+    }
+    allInstrument {
+      nodes {
+        short_name
+        long_name
+        id
       }
     }
   }

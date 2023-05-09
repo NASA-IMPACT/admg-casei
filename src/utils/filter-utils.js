@@ -16,6 +16,29 @@ export const uniqueElementsById = arr =>
     return acc
   }, [])
 
+export const typeAhead = {
+  // typeahead here
+  "searchCampaigns": (chars, campaigns) => {
+    // Convert the search characters to lowercase for case-insensitive search
+    const searchChars = chars.toLowerCase();
+    // Filter the data array based on matching values
+    const filteredData = campaigns.filter((item) => {
+      // Loop through the key-value pairs in the item
+      for (const [key, value] of Object.entries(item)) {
+        // Convert the value to lowercase and check if it includes the search characters
+        if (item[key].toLowerCase().includes(searchChars)) {
+          // If there's a match, return true to include this item in the filtered data
+          return true;
+        }
+      }
+      // If no matches found in any key-value pairs, return false to exclude this item
+      return false;
+    });
+
+    return filteredData;
+  }
+}
+
 export const sortFunctions = {
   campaigns: {
     "a to z": (a, b) => a.shortname.localeCompare(b.shortname),
@@ -44,17 +67,17 @@ export function campaignFilter(selectedFilterIds) {
     selectedFilterIds.length === 0
       ? true
       : selectedFilterIds.every(
-          filterId =>
-            campaign.seasons.map(x => x.id).includes(filterId) ||
-            campaign.focus.map(x => x.id).includes(filterId) ||
-            campaign.geophysical.map(x => x.id).includes(filterId) ||
-            campaign.deployments
-              .map(x => x.regions.map(y => y.id))
-              .flat()
-              .includes(filterId) ||
-            campaign.platforms.map(x => x.id).includes(filterId) ||
-            campaign.fundingAgency.includes(filterId)
-        )
+        filterId =>
+          campaign.seasons.map(x => x.id).includes(filterId) ||
+          campaign.focus.map(x => x.id).includes(filterId) ||
+          campaign.geophysical.map(x => x.id).includes(filterId) ||
+          campaign.deployments
+            .map(x => x.regions.map(y => y.id))
+            .flat()
+            .includes(filterId) ||
+          campaign.platforms.map(x => x.id).includes(filterId) ||
+          campaign.fundingAgency.includes(filterId)
+      )
 }
 
 export function platformFilter(selectedFilterIds) {
@@ -62,8 +85,8 @@ export function platformFilter(selectedFilterIds) {
     selectedFilterIds.length === 0
       ? true
       : selectedFilterIds.every(filterId =>
-          platform.instruments.map(x => x.id).includes(filterId)
-        )
+        platform.instruments.map(x => x.id).includes(filterId)
+      )
 }
 
 export function instrumentFilter(selectedFilterIds) {
@@ -71,11 +94,11 @@ export function instrumentFilter(selectedFilterIds) {
     selectedFilterIds.length === 0
       ? true
       : selectedFilterIds.every(
-          filterId =>
-            (instrument.measurementType &&
-              instrument.measurementType.id === filterId) ||
-            instrument.measurementRegions.map(x => x.id).includes(filterId)
-        )
+        filterId =>
+          (instrument.measurementType &&
+            instrument.measurementType.id === filterId) ||
+          instrument.measurementRegions.map(x => x.id).includes(filterId)
+      )
 }
 
 export function doiFilter(selectedFilterIds) {
@@ -83,12 +106,12 @@ export function doiFilter(selectedFilterIds) {
     selectedFilterIds.length === 0
       ? true
       : doi.campaigns
-          ?.map(x => x.id)
-          .some(id => selectedFilterIds.includes(id)) ||
-        doi.platforms
-          ?.map(x => x.id)
-          .some(id => selectedFilterIds.includes(id)) ||
-        doi.instruments
-          ?.map(x => x.id)
-          .some(id => selectedFilterIds.includes(id))
+        ?.map(x => x.id)
+        .some(id => selectedFilterIds.includes(id)) ||
+      doi.platforms
+        ?.map(x => x.id)
+        .some(id => selectedFilterIds.includes(id)) ||
+      doi.instruments
+        ?.map(x => x.id)
+        .some(id => selectedFilterIds.includes(id))
 }
