@@ -1,15 +1,20 @@
 import { useState, useEffect } from "react"
 import { isAfter, isBefore, isWithinInterval } from "date-fns"
 
-import { sortFunctions, campaignFilter } from "../utils/filter-utils"
+import {
+  sortFunctions,
+  campaignFilter,
+  productsFilter,
+} from "../utils/filter-utils"
 
-export default function useCampaignList(
+export default function useFilteredList(
   queryResult,
   sortOrder,
   selectedFilterIds,
   geoFilterResult,
   dateRange,
-  searchResult
+  searchResult,
+  category
 ) {
   const [campaignList, setCampaignList] = useState({
     all: queryResult,
@@ -24,14 +29,16 @@ export default function useCampaignList(
     // update sort order
     setCampaignList(prev => ({
       ...prev,
-      filtered: campaignList.filtered.sort(sortFunctions.campaigns[sortOrder]),
+      filtered: campaignList.filtered.sort(sortFunctions[category][sortOrder]),
     }))
   }, [sortOrder])
 
   useEffect(() => {
     // update after filter selection
     const filteredCampaignByMenu = queryResult.filter(
-      campaignFilter(selectedFilterIds)
+      category === "campaign"
+        ? campaignFilter(selectedFilterIds)
+        : productsFilter(selectedFilterIds)
     )
 
     setCampaignList(prev => ({

@@ -25,6 +25,10 @@ export const sortFunctions = {
       (b.enddate ? new Date(b.enddate) : new Date()), // if there is no enddate, use today
     "most recent": (a, b) => new Date(b.enddate) - new Date(a.enddate),
   },
+  products: {
+    "a to z": (a, b) => a.doi.localeCompare(b.doi),
+    "z to a": (a, b) => b.doi.localeCompare(a.doi),
+  },
   platforms: {
     "a to z": (a, b) => a.shortname.localeCompare(b.shortname),
     "z to a": (a, b) => b.shortname.localeCompare(a.shortname),
@@ -55,6 +59,23 @@ export function campaignFilter(selectedFilterIds) {
             campaign.platforms.map(x => x.id).includes(filterId) ||
             campaign.fundingAgency.includes(filterId)
         )
+}
+
+export function productsFilter(selectedFilterIds) {
+  return product => {
+    const measurementTypes = Array.from(
+      product.instruments.reduce((acc, instrument) => {
+        if (instrument.measurement_type) {
+          acc.add(instrument.measurement_type?.short_name)
+        }
+        return acc
+      }, new Set())
+    )
+
+    return selectedFilterIds.length === 0
+      ? true
+      : selectedFilterIds.every(filterId => measurementTypes.includes(filterId))
+  }
 }
 
 export function platformFilter(selectedFilterIds) {

@@ -6,7 +6,7 @@ import { format } from "date-fns"
 import { NEGATIVE } from "../../utils/constants"
 import { colors } from "../../theme"
 import { selector } from "../../utils/filter-utils"
-import useCampaignList from "../../utils/use-campaign-list"
+import useFilteredList from "../../utils/use-campaign-list"
 
 import ExploreLayout from "../../components/explore/explore-layout"
 import ExploreTools from "../../components/explore/explore-tools"
@@ -26,6 +26,7 @@ export default function ExploreCampaigns({ data, location }) {
     allGeophysicalConcept,
     allGeographicalRegion,
     allInstrument,
+    allDoi,
   } = data
   const { selectedFilterId } = location.state || {}
 
@@ -50,13 +51,14 @@ export default function ExploreCampaigns({ data, location }) {
     }
   }, [selectedFilterId])
 
-  const campaignList = useCampaignList(
+  const campaignList = useFilteredList(
     allCampaign.list,
     sortOrder,
     selectedFilterIds,
     geoFilterResult,
     dateRange,
-    searchResult
+    searchResult,
+    "campaigns"
   )
 
   const addFilter = id => setFilter([...selectedFilterIds, id])
@@ -112,6 +114,7 @@ export default function ExploreCampaigns({ data, location }) {
         campaigns: campaignList.filtered.length,
         platforms: allPlatform.totalCount,
         instruments: allInstrument.totalCount,
+        products: allDoi.totalCount,
       }}
     >
       <ExploreTools
@@ -265,6 +268,9 @@ export const query = graphql`
     allInstrument {
       totalCount
     }
+    allDoi {
+      totalCount
+    }
   }
 
   fragment campaignFields on campaign {
@@ -382,6 +388,9 @@ ExploreCampaigns.propTypes = {
     allGeophysicalConcept: filterOptionShape,
     allGeographicalRegion: filterOptionShape,
     allInstrument: PropTypes.shape({
+      totalCount: PropTypes.number.isRequired,
+    }),
+    allDoi: PropTypes.shape({
       totalCount: PropTypes.number.isRequired,
     }),
   }).isRequired,

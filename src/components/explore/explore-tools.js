@@ -146,6 +146,93 @@ const ExploreTools = React.forwardRef(
             </>
           )}
 
+          {category === "products" && (
+            <>
+              <FilterByDate
+                id="date"
+                label="Date range"
+                dateRange={dateRange}
+                setDateRange={setDateRange}
+              />
+              <FilterMenu
+                id="measurement"
+                selectedFilterIds={selectedFilterIds}
+                addFilter={addFilter}
+                removeFilter={removeFilter}
+                label="Measurement Types"
+                options={getFilterOptionsById("measurement")}
+                category={category}
+              />
+              {/*
+              <FilterMenu
+                id="geophysical"
+                selectedFilterIds={selectedFilterIds}
+                addFilter={addFilter}
+                removeFilter={removeFilter}
+                label="Geophysical Concept"
+                options={getFilterOptionsById("geophysical")}
+                category={category}
+              />
+              <FilterMenu
+                id="season"
+                selectedFilterIds={selectedFilterIds}
+                addFilter={addFilter}
+                removeFilter={removeFilter}
+                label="Season"
+                options={getFilterOptionsById("season")}
+                category={category}
+              />
+              <FilterMenu
+                id="region"
+                selectedFilterIds={selectedFilterIds}
+                addFilter={addFilter}
+                removeFilter={removeFilter}
+                label="Geographical Region"
+                options={getFilterOptionsById("region")}
+                category={category}
+              />
+              <FilterMenu
+                id="platform"
+                selectedFilterIds={selectedFilterIds}
+                addFilter={addFilter}
+                removeFilter={removeFilter}
+                label="Platform"
+                options={getFilterOptionsById("platform")}
+                category={category}
+              />
+              <FilterMenu
+                id="funding"
+                selectedFilterIds={selectedFilterIds}
+                addFilter={addFilter}
+                removeFilter={removeFilter}
+                label="Funding Agency"
+                options={getFilterOptionsById("funding")}
+                category={category}
+              /> */}
+
+              <button
+                css={`
+                  flex-grow: 1;
+                  border: 1px solid ${colors[NEGATIVE].text};
+                  padding: 0.25rem;
+
+                  flex-grow: 0;
+                  background: transparent;
+                  color: ${colors[NEGATIVE].text};
+                  vertical-align: middle;
+                  cursor: pointer;
+                `}
+                data-cy="map-toggle-btn"
+                onClick={e => {
+                  e.preventDefault()
+                  toggleMap(!isDisplayingMap)
+                }}
+              >
+                <span>{isDisplayingMap ? "Hide" : "Show"} Map</span>
+              </button>
+            </>
+          )}
+
           {category === "platforms" && (
             <FilterMenu
               id="instrument"

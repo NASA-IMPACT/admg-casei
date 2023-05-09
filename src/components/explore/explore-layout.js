@@ -27,6 +27,7 @@ export default function ExploreLayout({ filteredCount, children }) {
             campaigns: filteredCount?.["campaigns"],
             platforms: filteredCount?.["platforms"],
             instruments: filteredCount?.["instruments"],
+            products: filteredCount?.["products"],
           }}
         />
 
@@ -41,6 +42,7 @@ ExploreLayout.propTypes = {
     campaigns: PropTypes.number.isRequired,
     platforms: PropTypes.number.isRequired,
     instruments: PropTypes.number.isRequired,
+    products: PropTypes.number.isRequired,
   }).isRequired,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),

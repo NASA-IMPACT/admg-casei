@@ -132,16 +132,29 @@ const ExploreMenu = ({ selectedCategory, filteredCount }) => (
       label="Instruments"
       count={filteredCount["instruments"]}
     />
+
+    <Tab
+      to="/explore/products"
+      isSelected={selectedCategory === "products"}
+      id="products"
+      label="products"
+      count={filteredCount["products"]}
+    />
   </div>
 )
 
 ExploreMenu.propTypes = {
-  selectedCategory: PropTypes.oneOf(["campaigns", "platforms", "instruments"])
-    .isRequired,
+  selectedCategory: PropTypes.oneOf([
+    "campaigns",
+    "platforms",
+    "instruments",
+    "products",
+  ]).isRequired,
   filteredCount: PropTypes.shape({
     campaigns: PropTypes.number,
     platforms: PropTypes.number,
     instruments: PropTypes.number,
+    products: PropTypes.number,
   }),
 }
 
