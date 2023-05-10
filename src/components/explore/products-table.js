@@ -18,47 +18,50 @@ export function ProductsTable({ dois }) {
         </tr>
       </thead>
       <tbody>
-        {dois.map(doi => (
-          <tr key={doi.id}>
-            <td>
-              <ExternalLink
-                label={doi.doi}
-                url={`http://dx.doi.org/${doi.doi}`}
-                id="doi"
-              />
-            </td>
-            <td>
-              <span
-                css={`
-                  display: flex;
-                  justify-content: space-between;
-                `}
-              >
-                <span>
-                  {doi.platforms.map((item, idx) => {
-                    const spacer = idx < doi.platforms.length - 1 ? ", " : ""
-                    return <span key={idx}>{item.short_name + spacer}</span>
-                  })}
+        {dois
+          .filter(doi => doi.doi)
+          .map(doi => (
+            <tr key={doi.id}>
+              <td>
+                <ExternalLink
+                  label={doi.doi}
+                  url={`http://dx.doi.org/${doi.doi}`}
+                  id="doi"
+                />
+              </td>
+              <td>
+                <span
+                  css={`
+                    display: flex;
+                    justify-content: space-between;
+                  `}
+                >
+                  <span>
+                    {doi.platforms.map((item, idx) => {
+                      const spacer = idx < doi.platforms.length - 1 ? ", " : ""
+                      return <span key={idx}>{item.short_name + spacer}</span>
+                    })}
+                  </span>
                 </span>
-              </span>
-            </td>
-            <td>
-              <span
-                css={`
-                  display: flex;
-                  justify-content: space-between;
-                `}
-              >
-                <span>
-                  {doi.instruments.map((item, idx) => {
-                    const spacer = idx < doi.instruments.length - 1 ? ", " : ""
-                    return <span key={idx}>{item.short_name + spacer}</span>
-                  })}
+              </td>
+              <td>
+                <span
+                  css={`
+                    display: flex;
+                    justify-content: space-between;
+                  `}
+                >
+                  <span>
+                    {doi.instruments.map((item, idx) => {
+                      const spacer =
+                        idx < doi.instruments.length - 1 ? ", " : ""
+                      return <span key={idx}>{item.short_name + spacer}</span>
+                    })}
+                  </span>
                 </span>
-              </span>
-            </td>
-          </tr>
-        ))}
+              </td>
+            </tr>
+          ))}
       </tbody>
     </table>
   )

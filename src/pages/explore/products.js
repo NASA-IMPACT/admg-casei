@@ -26,7 +26,7 @@ export default function ExploreProducts({ data }) {
   const [searchResult, setSearchResult] = useState(null)
   const { selectedFilterId } = location.state || {}
 
-  const [sortOrder, setSortOrder] = useState("most recent")
+  const [sortOrder, setSortOrder] = useState("a to z")
 
   const [selectedFilterIds, setFilter] = useState([])
   const [aoi, setAoi] = useState(null)
