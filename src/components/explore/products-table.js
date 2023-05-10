@@ -6,6 +6,7 @@ import { colors } from "../../theme"
 import { ExternalLinkIcon } from "../../icons"
 
 export function ProductsTable({ dois }) {
+  const linkLimit = 3
   return (
     <table
       css={`
@@ -55,34 +56,68 @@ export function ProductsTable({ dois }) {
                 </a>
               </td>
               <td>
-                <span
-                  css={`
-                    display: flex;
-                    justify-content: space-between;
-                  `}
-                >
+                <span>
                   <span>
                     {doi.platforms.map((item, idx) => {
-                      const spacer = idx < doi.platforms.length - 1 ? ", " : ""
-                      return <span key={idx}>{item.short_name + spacer}</span>
+                      if (idx < linkLimit) {
+                        const spacer =
+                          idx < Math.min(doi.platforms.length, linkLimit) - 1
+                            ? ", "
+                            : ""
+                        return (
+                          <span key={idx}>
+                            <a
+                              href={`/platform/${item.short_name}`}
+                              css={`
+                                font-weight: 600;
+                              `}
+                              data-cy={`${item.id}-inpage-link`}
+                            >
+                              {item.short_name + spacer}
+                            </a>
+                          </span>
+                        )
+                      }
                     })}
                   </span>
+                  {doi.platforms.length > linkLimit ? (
+                    <>{`, +${doi.platforms.length - linkLimit}`}</>
+                  ) : (
+                    <></>
+                  )}
                 </span>
               </td>
               <td>
-                <span
-                  css={`
-                    display: flex;
-                    justify-content: space-between;
-                  `}
-                >
+                <span>
                   <span>
                     {doi.instruments.map((item, idx) => {
-                      const spacer =
-                        idx < doi.instruments.length - 1 ? ", " : ""
-                      return <span key={idx}>{item.short_name + spacer}</span>
+                      if (idx < linkLimit) {
+                        const spacer =
+                          idx < Math.min(doi.instruments.length, linkLimit) - 1
+                            ? ", "
+                            : ""
+                        return (
+                          <span key={idx}>
+                            {" "}
+                            <a
+                              href={`/instrument/${item.short_name}`}
+                              css={`
+                                font-weight: 600;
+                              `}
+                              data-cy={`${item.id}-inpage-link`}
+                            >
+                              {item.short_name + spacer}
+                            </a>
+                          </span>
+                        )
+                      }
                     })}
                   </span>
+                  {doi.instruments.length > linkLimit ? (
+                    <>{`, +${doi.instruments.length - linkLimit}`}</>
+                  ) : (
+                    <></>
+                  )}
                 </span>
               </td>
             </tr>
