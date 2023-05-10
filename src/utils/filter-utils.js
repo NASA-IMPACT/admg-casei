@@ -1,3 +1,5 @@
+import { filter } from "d3"
+
 export const selector = filterOptions => ({
   getFilterLabelById: id => {
     for (let [key, value] of Object.entries(filterOptions)) {
@@ -76,8 +78,21 @@ export function productsFilter(selectedFilterIds) {
       }, new Set())
     )
 
-    return selectedFilterIds.every(filterId =>
-      measurementTypes.includes(filterId)
+    const measurementRegions = Array.from(
+      product.instruments.reduce((acc, instrument) => {
+        if (instrument.measurement_regions) {
+          for (const region of instrument.measurement_regions) {
+            acc.add(region?.id)
+          }
+        }
+        return acc
+      }, new Set())
+    )
+    console.log(measurementRegions)
+    return selectedFilterIds.every(
+      filterId =>
+        measurementTypes.includes(filterId) ||
+        measurementRegions.includes(filterId)
     )
   }
 }

@@ -1,13 +1,9 @@
 import { useState, useEffect } from "react"
 import { isAfter, isBefore, isWithinInterval } from "date-fns"
 
-import {
-  sortFunctions,
-  campaignFilter,
-  productsFilter,
-} from "../utils/filter-utils"
+import { sortFunctions, productsFilter } from "../utils/filter-utils"
 
-export default function useCampaignList(
+export default function useProductsList(
   queryResult,
   sortOrder,
   selectedFilterIds,
@@ -16,7 +12,7 @@ export default function useCampaignList(
   searchResult,
   category
 ) {
-  const [campaignList, setCampaignList] = useState({
+  const [productList, setProductList] = useState({
     all: queryResult,
     filtered: queryResult,
     filteredByMenu: queryResult,
@@ -27,28 +23,26 @@ export default function useCampaignList(
 
   useEffect(() => {
     // update sort order
-    setCampaignList(prev => ({
+    setProductList(prev => ({
       ...prev,
-      filtered: campaignList.filtered.sort(sortFunctions[category][sortOrder]),
+      filtered: productList.filtered.sort(sortFunctions[category][sortOrder]),
     }))
   }, [sortOrder])
 
   useEffect(() => {
     // update after filter selection
     const filteredCampaignByMenu = queryResult.filter(
-      category === "campaign"
-        ? campaignFilter(selectedFilterIds)
-        : productsFilter(selectedFilterIds)
+      productsFilter(selectedFilterIds)
     )
 
-    setCampaignList(prev => ({
+    setProductList(prev => ({
       ...prev,
       filtered: prev.all.filter(
-        campaign =>
-          filteredCampaignByMenu.map(c => c.id).includes(campaign.id) &&
-          prev.filteredByGeo.map(c => c.id).includes(campaign.id) &&
-          prev.filteredByDateRange.map(c => c.id).includes(campaign.id) &&
-          prev.filteredBySearch.map(c => c.id).includes(campaign.id)
+        product =>
+          filteredCampaignByMenu.map(c => c.id).includes(product.id) &&
+          prev.filteredByGeo.map(c => c.id).includes(product.id) &&
+          prev.filteredByDateRange.map(c => c.id).includes(product.id) &&
+          prev.filteredBySearch.map(c => c.id).includes(product.id)
       ),
       filteredByMenu: filteredCampaignByMenu,
     }))
@@ -56,18 +50,18 @@ export default function useCampaignList(
 
   useEffect(() => {
     // update after drawing an area
-    const filteredByGeo = queryResult.filter(campaign =>
-      geoFilterResult ? geoFilterResult.includes(campaign.id) : true
+    const filteredByGeo = queryResult.filter(product =>
+      geoFilterResult ? geoFilterResult.includes(product.id) : true
     )
 
-    setCampaignList(prev => ({
+    setProductList(prev => ({
       ...prev,
       filtered: prev.all.filter(
-        campaign =>
-          prev.filteredByMenu.map(c => c.id).includes(campaign.id) &&
-          filteredByGeo.map(c => c.id).includes(campaign.id) &&
-          prev.filteredByDateRange.map(c => c.id).includes(campaign.id) &&
-          prev.filteredBySearch.map(c => c.id).includes(campaign.id)
+        product =>
+          prev.filteredByMenu.map(c => c.id).includes(product.id) &&
+          filteredByGeo.map(c => c.id).includes(product.id) &&
+          prev.filteredByDateRange.map(c => c.id).includes(product.id) &&
+          prev.filteredBySearch.map(c => c.id).includes(product.id)
       ),
       filteredByGeo,
     }))
@@ -75,22 +69,22 @@ export default function useCampaignList(
 
   useEffect(() => {
     // update after changing the date range
-    const filteredCampaignByDateRange = queryResult.filter(campaign => {
+    const filteredCampaignByDateRange = queryResult.filter(product => {
       if (!(dateRange.start && dateRange.end)) return true
 
       const isStartWithinRange = isWithinInterval(
-        new Date(campaign.startdate),
+        new Date(product.startdate),
         dateRange
       )
 
-      const isEndWithinRange = campaign.enddate
-        ? isWithinInterval(new Date(campaign.enddate), dateRange)
+      const isEndWithinRange = product.enddate
+        ? isWithinInterval(new Date(product.enddate), dateRange)
         : // ongoing campaigns have enddate: null, use now in that case
           isWithinInterval(new Date(), dateRange)
 
       const isStartBeforeAndEndAfterRange =
-        isBefore(new Date(campaign.startdate), dateRange.start) &&
-        isAfter(new Date(campaign.enddate), dateRange.end)
+        isBefore(new Date(product.startdate), dateRange.start) &&
+        isAfter(new Date(product.enddate), dateRange.end)
 
       // eslint-disable-next-line no-unused-vars
       const isWithinRange = isStartWithinRange && isEndWithinRange
@@ -100,7 +94,7 @@ export default function useCampaignList(
       return isIntersectingRange
     })
 
-    setCampaignList(prev => ({
+    setProductList(prev => ({
       ...prev,
       filtered: prev.all.filter(
         campaign =>
@@ -126,7 +120,7 @@ export default function useCampaignList(
         : true
     })
 
-    setCampaignList(prev => ({
+    setProductList(prev => ({
       ...prev,
       filtered: prev.all.filter(
         campaign =>
@@ -139,5 +133,5 @@ export default function useCampaignList(
     }))
   }, [searchResult])
 
-  return campaignList
+  return productList
 }

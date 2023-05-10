@@ -163,52 +163,14 @@ const ExploreTools = React.forwardRef(
                 options={getFilterOptionsById("measurement")}
                 category={category}
               />
-              {/*
               <FilterMenu
-                id="geophysical"
+                id="vertical"
                 selectedFilterIds={selectedFilterIds}
                 addFilter={addFilter}
                 removeFilter={removeFilter}
-                label="Geophysical Concept"
-                options={getFilterOptionsById("geophysical")}
-                category={category}
+                label="Vertical Measurement Region"
+                options={getFilterOptionsById("vertical")}
               />
-              <FilterMenu
-                id="season"
-                selectedFilterIds={selectedFilterIds}
-                addFilter={addFilter}
-                removeFilter={removeFilter}
-                label="Season"
-                options={getFilterOptionsById("season")}
-                category={category}
-              />
-              <FilterMenu
-                id="region"
-                selectedFilterIds={selectedFilterIds}
-                addFilter={addFilter}
-                removeFilter={removeFilter}
-                label="Geographical Region"
-                options={getFilterOptionsById("region")}
-                category={category}
-              />
-              <FilterMenu
-                id="platform"
-                selectedFilterIds={selectedFilterIds}
-                addFilter={addFilter}
-                removeFilter={removeFilter}
-                label="Platform"
-                options={getFilterOptionsById("platform")}
-                category={category}
-              />
-              <FilterMenu
-                id="funding"
-                selectedFilterIds={selectedFilterIds}
-                addFilter={addFilter}
-                removeFilter={removeFilter}
-                label="Funding Agency"
-                options={getFilterOptionsById("funding")}
-                category={category}
-              /> */}
 
               <button
                 css={`
@@ -291,8 +253,12 @@ ExploreTools.propTypes = {
   addFilter: PropTypes.func.isRequired,
   getFilterOptionsById: PropTypes.func.isRequired,
   removeFilter: PropTypes.func.isRequired,
-  category: PropTypes.oneOf(["campaigns", "platforms", "instruments"])
-    .isRequired,
+  category: PropTypes.oneOf([
+    "campaigns",
+    "platforms",
+    "instruments",
+    "products",
+  ]).isRequired,
   toggleMap: PropTypes.func,
   isDisplayingMap: PropTypes.bool,
 }

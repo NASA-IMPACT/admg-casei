@@ -9,14 +9,11 @@ import SortMenu from "../../components/explore/sort-menu"
 import { colors } from "../../theme"
 import { format } from "date-fns"
 import Chip from "../../components/chip"
+import FilterChips from "../../components/filter/filter-chips"
 import { NEGATIVE } from "../../utils/constants"
 import { selector } from "../../utils/filter-utils"
-import FilterChips from "../../components/filter/filter-chips"
-import useFilteredList from "../../utils/use-campaign-list"
+import useProductsList from "../../utils/use-products-list"
 import { doiRelationalMapper } from "../../utils/doi_relational_mapper"
-// import FilterChips from "./filter/filter-chips"
-// import FilterBox from "./filter/filter-box"
-// import Chip from "./chip"
 
 export default function ExploreProducts({ data }) {
   const { allCampaign, allPlatform, allInstrument, allDoi } = data
@@ -46,7 +43,7 @@ export default function ExploreProducts({ data }) {
     }
   }, [selectedFilterId])
 
-  const productList = useFilteredList(
+  const productList = useProductsList(
     allShapedDoi,
     sortOrder,
     selectedFilterIds,
@@ -97,11 +94,33 @@ export default function ExploreProducts({ data }) {
     longname: m,
   }))
 
+  const allMeasurementRegions = allShapedDoi.reduce(
+    (acc, doi) => {
+      if (doi.instruments) {
+        for (const instrument of doi.instruments) {
+          if (instrument.measurement_regions) {
+            for (const measurement_region of instrument.measurement_regions) {
+              if (
+                measurement_region?.shortname &&
+                !acc.set.has(measurement_region?.shortname)
+              ) {
+                acc.set.add(measurement_region.shortname)
+                acc.vals.push(measurement_region)
+              }
+            }
+          }
+        }
+      }
+      return acc
+    },
+    { vals: [], set: new Set() }
+  ).vals
+
   const { getFilterLabelById, getFilterOptionsById } = selector({
     // focus: allFocusArea,
     // geophysical: allGeophysicalConcept,
     measurement: { options: allMeasurementStyles },
-    // region: allGeographicalRegion,
+    vertical: { options: allMeasurementRegions },
     platform: allPlatform,
     funding: {
       // This transforms the query results from the distinct `funding_agency`
@@ -144,25 +163,25 @@ export default function ExploreProducts({ data }) {
 
       {/* {isDisplayingMap && (
         <ExploreMap
-          allData={campaignList.all.map(c => ({
-            id: c.id,
-            campaignBounds: c.bounds,
-            deployments: c.deployments,
-            shortname: c.shortname,
-          }))}
-          filteredData={campaignList.filtered.map(c => {
-            if (c.deployments && c.deployments.length) {
-              return {
-                id: c.id,
-                bounds: c.bounds,
-                deployments: c.deployments,
-                shortname: c.shortname,
-              }
+        allData={campaignList.all.map(c => ({
+          id: c.id,
+          campaignBounds: c.bounds,
+          deployments: c.deployments,
+          shortname: c.shortname,
+        }))}
+        filteredData={campaignList.filtered.map(c => {
+          if (c.deployments && c.deployments.length) {
+            return {
+              id: c.id,
+              bounds: c.bounds,
+              deployments: c.deployments,
+              shortname: c.shortname,
             }
-          })}
-          setGeoFilter={setGeoFilter}
-          aoi={aoi}
-          setAoi={setAoi}
+          }
+        })}
+        setGeoFilter={setGeoFilter}
+        aoi={aoi}
+        setAoi={setAoi}
         />
       )} */}
 
@@ -194,8 +213,8 @@ export default function ExploreProducts({ data }) {
               <Chip
                 id="filter"
                 label={`date:
-                ${format(dateRange.start, "MM/dd/yyyy")} to 
-                ${format(dateRange.end, "MM/dd/yyyy")}`}
+              ${format(dateRange.start, "MM/dd/yyyy")} to 
+              ${format(dateRange.end, "MM/dd/yyyy")}`}
                 actionId={"dateRange"}
                 removeAction={removeDateRange}
               />
@@ -265,6 +284,13 @@ export const query = graphql`
           id
           measurement_type {
             short_name
+            id
+            long_name
+          }
+          measurement_regions {
+            shortname: short_name
+            id
+            longname: long_name
           }
           short_name
           long_name
