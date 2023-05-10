@@ -1,5 +1,3 @@
-import { filter } from "d3"
-
 export const selector = filterOptions => ({
   getFilterLabelById: id => {
     for (let [key, value] of Object.entries(filterOptions)) {
