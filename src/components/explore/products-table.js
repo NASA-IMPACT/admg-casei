@@ -36,14 +36,8 @@ export function ProductsTable({ dois }) {
               >
                 <span>
                   {doi.platforms.map((item, idx) => {
-                    const limit = 2
-                    const spacer =
-                      idx < Math.min(doi.platforms.length, limit) - 1
-                        ? ", "
-                        : ""
-                    if (idx < limit) {
-                      return <span key={idx}>{item.short_name + spacer}</span>
-                    }
+                    const spacer = idx < doi.platforms.length - 1 ? ", " : ""
+                    return <span key={idx}>{item.short_name + spacer}</span>
                   })}
                 </span>
               </span>
@@ -57,14 +51,8 @@ export function ProductsTable({ dois }) {
               >
                 <span>
                   {doi.instruments.map((item, idx) => {
-                    const limit = 2
-                    const spacer =
-                      idx < Math.min(doi.instruments.length, limit) - 1
-                        ? ", "
-                        : ""
-                    if (idx < limit) {
-                      return <span key={idx}>{item.short_name + spacer}</span>
-                    }
+                    const spacer = idx < doi.instruments.length - 1 ? ", " : ""
+                    return <span key={idx}>{item.short_name + spacer}</span>
                   })}
                 </span>
               </span>
