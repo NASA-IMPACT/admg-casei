@@ -226,7 +226,6 @@ export const query = graphql`
     allCampaign {
       nodes {
         long_name
-        id
         short_name
       }
     }
@@ -234,14 +233,12 @@ export const query = graphql`
       nodes {
         long_name
         short_name
-        id
       }
     }
     allInstrument {
       nodes {
         short_name
         long_name
-        id
       }
     }
   }
@@ -306,6 +303,18 @@ Home.propTypes = {
       }).isRequired,
     }).isRequired,
   }).isRequired,
+  allCampaign: PropTypes.shape({
+    short_name: PropTypes.string,
+    long_name: PropTypes.string
+  }),
+  allPlatform: PropTypes.shape({
+    short_name: PropTypes.string,
+    long_name: PropTypes.string
+  }),
+  allInstrument: PropTypes.shape({
+    short_name: PropTypes.string,
+    long_name: PropTypes.string
+  }),
 }
 
 export default Home

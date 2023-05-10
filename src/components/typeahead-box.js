@@ -4,15 +4,36 @@ import { sortFunctions, typeAhead } from "../utils/filter-utils"
 
 export function TypeAhead({ campaigns, platforms, instruments, onSearch }) {
     const [value, setValue] = useState("");
-    const [topFive, setTopFive] = useState([]);
+    const [topTen, setTopTen] = useState([]);
     const handleSearch = (event) => {
 
-        let results = typeAhead.searchCampaigns(event.target.value, campaigns.nodes)
+        let caseiData = {
+            'Campaign': campaigns.nodes,
+            'Platform': platforms.nodes,
+            'Instrument': instruments.nodes,
+        }
 
-        // get top 5 results
-        let newTopFive = results.slice(0, 5);
-        setTopFive(newTopFive)
-        console.log({ newTopFive })
+        let results = typeAhead.searchData(event.target.value, caseiData)
+
+        let resultNums = {
+            'Campaign': results['Campaign'].length,
+            'Platform': results['Platform'].length,
+            'Instrument': results['Instrument'].length,
+        }
+
+        console.log({ resultNums })
+        // get top 10 results as an array
+
+        let newTopTen = []
+        // push a slice of size 4 from each sub array in results into newTopTen array
+        for (const key in results) {
+            newTopTen.push(
+                (key, results[key].slice(0, 4))
+            )
+        }
+
+        setTopTen(newTopTen)
+        console.log({ newTopTen })
 
         setValue(event.target.value);
 
@@ -40,7 +61,7 @@ export function TypeAhead({ campaigns, platforms, instruments, onSearch }) {
         `}
             />
             <div class='type-ahead-dropdown'>
-                {topFive.length > 0 && (
+                {topTen.length > 0 && (
                     <ul
                         css={`
                         position: absolute;
@@ -53,7 +74,7 @@ export function TypeAhead({ campaigns, platforms, instruments, onSearch }) {
                         z-index: 1;
                     `}
                     >
-                        {topFive.map((item, index) => (
+                        {topTen.map((item, index) => (
                             <li
                                 key={index}
                                 css={`
@@ -65,7 +86,7 @@ export function TypeAhead({ campaigns, platforms, instruments, onSearch }) {
                         `
                                 }
                             >
-                                {item.id} - {item.long_name || item.short_name}
+                                Short Name: {item[index].short_name || item[index].long_name}
                             </li>
                         ))}
                     </ul>

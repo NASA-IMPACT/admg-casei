@@ -18,23 +18,22 @@ export const uniqueElementsById = arr =>
 
 export const typeAhead = {
   // typeahead here
-  "searchCampaigns": (chars, campaigns) => {
+  "searchData": (chars, caseiData) => {
     // Convert the search characters to lowercase for case-insensitive search
     const searchChars = chars.toLowerCase();
-    // Filter the data array based on matching values
-    const filteredData = campaigns.filter((item) => {
-      // Loop through the key-value pairs in the item
-      for (const [key, value] of Object.entries(item)) {
-        // Convert the value to lowercase and check if it includes the search characters
-        if (item[key].toLowerCase().includes(searchChars)) {
-          // If there's a match, return true to include this item in the filtered data
-          return true;
-        }
-      }
-      // If no matches found in any key-value pairs, return false to exclude this item
-      return false;
-    });
 
+    let filteredData = {};
+
+    for (const key in caseiData) {
+      filteredData[key] = caseiData[key].filter((item) => {
+        for (const [subKey, subValue] of Object.entries(item)) {
+          if (subValue.toLowerCase().includes(searchChars)) {
+            return true;
+          }
+        }
+        return false;
+      });
+    }
     return filteredData;
   }
 }
