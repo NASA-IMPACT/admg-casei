@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import { sortFunctions, typeAhead } from "../utils/filter-utils"
+import { typeAhead } from "../utils/filter-utils"
+import { NEGATIVE, POSITIVE } from "../utils/constants"
+import { colors, layout } from "../theme"
 
 export function TypeAhead({ campaigns, platforms, instruments, onSearch }) {
     const [value, setValue] = useState("");
@@ -48,14 +50,15 @@ export function TypeAhead({ campaigns, platforms, instruments, onSearch }) {
                 placeholder="Enter Search Term"
                 onChange={handleSearch}
                 css={`
-          height: 2.5rem;
-          webkit-appearance: none;
-          background: transparent;
-          border: 1px solid ;
-          border-radius: 2px ;
-          color: red ;
-          padding: 0.5rem;
-          cursor: pointer;
+            height: 2.5rem;
+            webkit-appearance: none;
+            background: transparent;
+            border: 1px solid ;
+            border-radius: 2px ;
+            color: ${colors[POSITIVE].text} !important;
+            font-weight: bold;
+            padding: 1rem 1rem -1rem;
+            cursor: pointer;
         `}
             />
             <div class='type-ahead-dropdown'>
@@ -83,6 +86,7 @@ export function TypeAhead({ campaigns, platforms, instruments, onSearch }) {
                             }
                         `
                                 }
+                                link={`/campaign/${item.shortname}`}
                             >
                                 {item?.short_name || item?.long_name}
                                 "("{item?.parent}")"
