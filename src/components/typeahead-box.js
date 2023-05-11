@@ -49,6 +49,7 @@ export function TypeAhead({ campaigns, platforms, instruments, onSearch }) {
       css={`
         margin-right: 2rem;
         margin-bottom: 5em;
+        position: relative;
       `}
     >
       <div
@@ -94,13 +95,14 @@ export function TypeAhead({ campaigns, platforms, instruments, onSearch }) {
           <ul
             css={`
               position: absolute;
-              background-color: black;
+              background-color: #303641;
               border: 1px solid #ccc;
               border-radius: 4px;
               list-style-type: none;
               margin: 0;
               padding: 0;
               z-index: 1;
+              width: 100%;
             `}
           >
             {topTen.map((item, index) => (
@@ -110,7 +112,7 @@ export function TypeAhead({ campaigns, platforms, instruments, onSearch }) {
                   padding: 8px 16px;
                   cursor: pointer;
                   &:hover {
-                    background-color: #f1f1f1;
+                    background-color: rgba(255, 255, 255, 0.2);
                   }
                 `}
               >
