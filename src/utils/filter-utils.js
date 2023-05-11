@@ -27,7 +27,7 @@ export const typeAhead = {
     for (const key in caseiData) {
       filteredData[key] = caseiData[key].filter((item) => {
         for (const [subKey, subValue] of Object.entries(item)) {
-          if (subValue.toLowerCase().includes(searchChars)) {
+          if (subValue.toLowerCase().startsWith(searchChars)) {
             return true;
           }
         }

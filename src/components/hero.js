@@ -3,11 +3,12 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
-
 import { NEGATIVE, POSITIVE } from "../utils/constants"
 import { colors, layout } from "../theme"
 import DateList from "./date-list-hover"
 import { ArrowIcon } from "../icons"
+import { TypeAhead } from "../components/typeahead-box"
+import { typeAhead } from "../utils/filter-utils"
 
 export const HeroStats = ({ statList }) => (
   <dl
@@ -67,9 +68,8 @@ const Container = styled.section`
   margin-bottom: 6rem;
   background: ${({ backgroundImage, ratioInPercent }) =>
     backgroundImage
-      ? `linear-gradient(90deg, rgba(12,21,32, 0.8) 0%, rgba(12,21,32, 0.7)${
-          ratioInPercent - 20
-        }%, rgba(12,21,32, 0.0)${ratioInPercent + 20}%)`
+      ? `linear-gradient(90deg, rgba(12,21,32, 0.8) 0%, rgba(12,21,32, 0.7)${ratioInPercent - 20
+      }%, rgba(12,21,32, 0.0)${ratioInPercent + 20}%)`
       : null};
 `
 
@@ -84,6 +84,7 @@ export default function Hero({
   textToImageRatio = [3, 5],
   backgroundImage,
   id,
+  data,
 }) {
   const ratioInPercent =
     (100 / (textToImageRatio[0] + textToImageRatio[1])) * textToImageRatio[0]
@@ -179,6 +180,25 @@ export default function Hero({
               </Link>
             </div>
           )}
+          <div
+            css={`
+              display: flex;
+              flex-direction: column;
+              height: 3rem;
+              color: ${colors[POSITIVE].text} !important;
+              background-color: ${colors[POSITIVE].background};
+              font-weight: bold;
+              padding: 1rem 5rem;
+            `}
+          >
+            <TypeAhead
+              campaigns={data.allCampaign}
+              platforms={data.allPlatform}
+              instruments={data.allInstrument}
+              onSearch={typeAhead}
+            >
+            </TypeAhead>
+          </div>
         </div>
 
         {image && (

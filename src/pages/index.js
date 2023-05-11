@@ -12,12 +12,10 @@ import FocusAreaGallery from "../components/focus-area-gallery"
 import { RegionCarousel } from "../components/home/region-carousel"
 import { GeophysicsGrid } from "../components/home/geophysics-grid"
 import { InstrumentsGrid } from "../components/home/instruments-grid"
-import { TypeAhead } from "../components/typeahead-box"
 import { ArrowIcon } from "../icons"
 import { NEGATIVE } from "../utils/constants"
 import { colors } from "../theme"
 import { FBMContext } from "../components/fbm-provider"
-import { typeAhead } from "../utils/filter-utils"
 
 const Home = ({ data }) => {
   const { isFBMLoaded } = useContext(FBMContext)
@@ -36,17 +34,8 @@ const Home = ({ data }) => {
         backgroundImage={data.heroImage}
         textToImageRatio={[5, 7]}
         id="home"
+        data={data}
       />
-
-      <TypeAhead
-        campaigns={data.allCampaign}
-        platforms={data.allPlatform}
-        instruments={data.allInstrument}
-        onSearch={typeAhead}
-      >
-      </TypeAhead>
-
-
       <PageBody id="home">
         <Section id="focus-area" isSpaced>
           <SectionHeader

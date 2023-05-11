@@ -8,9 +8,9 @@ export function TypeAhead({ campaigns, platforms, instruments, onSearch }) {
     const handleSearch = (event) => {
 
         let caseiData = {
-            'Campaign': campaigns.nodes,
-            'Platform': platforms.nodes,
-            'Instrument': instruments.nodes,
+            'Campaign': campaigns.nodes.map(node => { return { 'parent': 'Campaign', ...node } }),
+            'Platform': platforms.nodes.map(node => { return { 'parent': 'Platform', ...node } }),
+            'Instrument': instruments.nodes.map(node => { return { 'parent': 'Instrument', ...node } }),
         }
 
         let results = typeAhead.searchData(event.target.value, caseiData)
@@ -25,15 +25,13 @@ export function TypeAhead({ campaigns, platforms, instruments, onSearch }) {
         // get top 10 results as an array
 
         let newTopTen = []
-        // push a slice of size 4 from each sub array in results into newTopTen array
+        // push a slice of size N from each sub array in results into newTopTen array
         for (const key in results) {
-            newTopTen.push(
-                (key, results[key].slice(0, 4))
-            )
-        }
 
-        setTopTen(newTopTen)
+            newTopTen = newTopTen.concat(results[key].slice(0, 5))
+        }
         console.log({ newTopTen })
+        setTopTen(newTopTen)
 
         setValue(event.target.value);
 
@@ -86,7 +84,8 @@ export function TypeAhead({ campaigns, platforms, instruments, onSearch }) {
                         `
                                 }
                             >
-                                Short Name: {item[index].short_name || item[index].long_name}
+                                {item?.short_name || item?.long_name}
+                                "("{item?.parent}")"
                             </li>
                         ))}
                     </ul>
