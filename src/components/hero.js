@@ -68,9 +68,8 @@ const Container = styled.section`
   margin-bottom: 6rem;
   background: ${({ backgroundImage, ratioInPercent }) =>
     backgroundImage
-      ? `linear-gradient(90deg, rgba(12,21,32, 0.8) 0%, rgba(12,21,32, 0.7)${
-          ratioInPercent - 20
-        }%, rgba(12,21,32, 0.0)${ratioInPercent + 20}%)`
+      ? `linear-gradient(90deg, rgba(12,21,32, 0.8) 0%, rgba(12,21,32, 0.7)${ratioInPercent - 20
+      }%, rgba(12,21,32, 0.0)${ratioInPercent + 20}%)`
       : null};
 `
 
@@ -181,19 +180,6 @@ export default function Hero({
               </Link>
             </div>
           )}
-          {/* <div
-            css={`
-              display: flex;
-              justify-content: center;
-              align-items: flex-start;
-              flex-direction: column;
-              height: 3rem;
-
-              font-weight: bold;
-
-              margin-bottom: 5em;
-            `}
-          > */}
           <TypeAhead
             campaigns={data.allCampaign}
             platforms={data.allPlatform}
@@ -201,7 +187,6 @@ export default function Hero({
             onSearch={typeAhead}
           />
         </div>
-        {/* </div> */}
 
         {image && (
           <div

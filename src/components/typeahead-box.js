@@ -1,54 +1,37 @@
-<<<<<<< HEAD
-import React, { useState } from "react";
-import PropTypes from "prop-types";
-import { typeAhead } from "../utils/filter-utils"
-import { NEGATIVE, POSITIVE } from "../utils/constants"
-import { colors, layout } from "../theme"
-=======
 import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { typeAhead } from "../utils/filter-utils"
 import { graphql } from "gatsby"
 
 import { NEGATIVE, POSITIVE } from "../utils/constants"
-import { colors, layout } from "../theme"
+import { colors } from "../theme"
 import { SearchIcon } from "../icons"
->>>>>>> 130f038aafaa17a41519166418421daa9e5d7171
 
 export function TypeAhead({ campaigns, platforms, instruments, onSearch }) {
     const [value, setValue] = useState("")
-    const [topTen, setTopTen] = useState([])
+    const [typeAheadDisplay, setTypeAheadDisplay] = useState([])
     const handleSearch = event => {
         let caseiData = {
             Campaign: campaigns.nodes.map(node => {
-                return { parent: "Campaign", ...node }
+                return { parent: "Campaign", link: `/campaign/${node.short_name}`, ...node }
             }),
             Platform: platforms.nodes.map(node => {
-                return { parent: "Platform", ...node }
+                return { parent: "Platform", link: `/platform/${node.short_name}`, ...node }
             }),
             Instrument: instruments.nodes.map(node => {
-                return { parent: "Instrument", ...node }
+                return { parent: "Instrument", link: `/instrument/${node.short_name}`, ...node }
             }),
         }
 
         let results = typeAhead.searchData(event.target.value, caseiData)
 
-        let resultNums = {
-            Campaign: results["Campaign"].length,
-            Platform: results["Platform"].length,
-            Instrument: results["Instrument"].length,
-        }
-
-        console.log({ resultNums })
-        // get top 10 results as an array
-
-        let newTopTen = []
-        // push a slice of size N from each sub array in results into newTopTen array
+        let searchResult = []
+        // push a slice of size N from each sub array in results into searchResult array
         for (const key in results) {
-            newTopTen = newTopTen.concat(results[key].slice(0, 5))
+            searchResult = searchResult.concat(results[key].slice(0, 5))
         }
-        console.log({ newTopTen })
-        setTopTen(newTopTen)
+        console.log({ searchResult })
+        setTypeAheadDisplay(searchResult)
 
         setValue(event.target.value)
     }
@@ -99,7 +82,7 @@ export function TypeAhead({ campaigns, platforms, instruments, onSearch }) {
             </div>
 
             <div className="type-ahead-dropdown">
-                {topTen.length > 0 && (
+                {typeAheadDisplay.length > 0 && (
                     <ul
                         css={`
               position: absolute;
@@ -113,20 +96,22 @@ export function TypeAhead({ campaigns, platforms, instruments, onSearch }) {
               width: 100%;
             `}
                     >
-                        {topTen.map((item, index) => (
-                            <li
-                                key={index}
-                                css={`
-                  padding: 8px 16px;
-                  cursor: pointer;
-                  &:hover {
-                    background-color: rgba(255, 255, 255, 0.2);
-                  }
-                `}
-                            >
-                                {item?.short_name || item?.long_name}
-                                {item?.parent}
-                            </li>
+                        {typeAheadDisplay.map((item, index) => (
+                            <a href={`${item?.link}`}>
+                                <li
+                                    key={index}
+                                    css={`
+                                    padding: 8px 16px;
+                                    cursor: pointer;
+                                    &:hover {
+                                        background-color: rgba(255, 255, 255, 0.2);
+                                    }
+                                `}
+                                >
+                                    <span>{item?.short_name || item?.long_name} </span>
+                                    <span>- &#40;{item?.parent}&#41;</span>
+                                </li>
+                            </a>
                         ))}
                     </ul>
                 )}
