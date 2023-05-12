@@ -125,7 +125,7 @@ export function TypeAhead() {
                         {typeAheadDisplay.map((item, index) => (
                             <a href={`${item?.link}`}>
                                 <li
-                                    key={index}
+                                    key={index} // TODO need unique key for each list item
                                     css={`
                                     padding: 8px 16px;
                                     cursor: pointer;
@@ -144,12 +144,4 @@ export function TypeAhead() {
             </div>
         </div>
     )
-}
-
-
-
-TypeAhead.propTypes = {
-    data: PropTypes.any,
-    placeholder: PropTypes.string,
-    onSearch: PropTypes.object,
 }

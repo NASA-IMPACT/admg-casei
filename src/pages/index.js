@@ -33,7 +33,6 @@ const Home = ({ data }) => {
         backgroundImage={data.heroImage}
         textToImageRatio={[5, 7]}
         id="home"
-        data={data}
       />
       <PageBody id="home">
         <Section id="focus-area" isSpaced>

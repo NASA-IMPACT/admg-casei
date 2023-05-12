@@ -84,7 +84,6 @@ export default function Hero({
   textToImageRatio = [3, 5],
   backgroundImage,
   id,
-  data,
 }) {
   const ratioInPercent =
     (100 / (textToImageRatio[0] + textToImageRatio[1])) * textToImageRatio[0]
@@ -181,9 +180,6 @@ export default function Hero({
             </div>
           )}
           <TypeAhead
-            campaigns={data.allCampaign}
-            platforms={data.allPlatform}
-            instruments={data.allInstrument}
             onSearch={typeAhead}
           />
         </div>
