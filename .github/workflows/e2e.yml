@@ -129,7 +129,7 @@ jobs:
 
       - name: Serve App
         with:
-          start: yarn serve -p 8000
+          run: yarn serve -p 8000
           wait-on: "http://localhost:8000"
 
       - name: Test End-to-end
