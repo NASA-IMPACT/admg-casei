@@ -88,6 +88,12 @@ export default function Hero({
 }) {
   const ratioInPercent =
     (100 / (textToImageRatio[0] + textToImageRatio[1])) * textToImageRatio[0]
+  // logic to support conditional display of TypeAhead searchbox component
+  const displayTypeAhead = !(
+    backlink?.includes("instrument") || backlink?.includes("platform")
+  )
+    ? true
+    : false
 
   return (
     <Container
@@ -180,7 +186,8 @@ export default function Hero({
               </Link>
             </div>
           )}
-          <TypeAhead onSearch={typeAhead} />
+
+          {displayTypeAhead && <TypeAhead onSearch={typeAhead} />}
         </div>
 
         {image && (
