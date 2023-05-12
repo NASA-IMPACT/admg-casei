@@ -18,24 +18,24 @@ export const uniqueElementsById = arr =>
 
 export const typeAhead = {
   // typeahead here
-  "searchData": (chars, caseiData) => {
+  searchData: (chars, caseiData) => {
     // Convert the search characters to lowercase for case-insensitive search
-    const searchChars = chars.toLowerCase();
+    const searchChars = chars.toLowerCase()
 
-    let filteredData = {};
+    let filteredData = {}
 
     for (const key in caseiData) {
-      filteredData[key] = caseiData[key].filter((item) => {
-        for (const [subKey, subValue] of Object.entries(item)) {
+      filteredData[key] = caseiData[key].filter(item => {
+        for (const [_subKey, subValue] of Object.entries(item)) { // eslint-disable-line 
           if (subValue.toLowerCase().startsWith(searchChars)) {
-            return true;
+            return true
           }
         }
-        return false;
-      });
+        return false
+      })
     }
-    return filteredData;
-  }
+    return filteredData
+  },
 }
 
 export const sortFunctions = {
@@ -66,17 +66,17 @@ export function campaignFilter(selectedFilterIds) {
     selectedFilterIds.length === 0
       ? true
       : selectedFilterIds.every(
-        filterId =>
-          campaign.seasons.map(x => x.id).includes(filterId) ||
-          campaign.focus.map(x => x.id).includes(filterId) ||
-          campaign.geophysical.map(x => x.id).includes(filterId) ||
-          campaign.deployments
-            .map(x => x.regions.map(y => y.id))
-            .flat()
-            .includes(filterId) ||
-          campaign.platforms.map(x => x.id).includes(filterId) ||
-          campaign.fundingAgency.includes(filterId)
-      )
+          filterId =>
+            campaign.seasons.map(x => x.id).includes(filterId) ||
+            campaign.focus.map(x => x.id).includes(filterId) ||
+            campaign.geophysical.map(x => x.id).includes(filterId) ||
+            campaign.deployments
+              .map(x => x.regions.map(y => y.id))
+              .flat()
+              .includes(filterId) ||
+            campaign.platforms.map(x => x.id).includes(filterId) ||
+            campaign.fundingAgency.includes(filterId)
+        )
 }
 
 export function platformFilter(selectedFilterIds) {
@@ -84,8 +84,8 @@ export function platformFilter(selectedFilterIds) {
     selectedFilterIds.length === 0
       ? true
       : selectedFilterIds.every(filterId =>
-        platform.instruments.map(x => x.id).includes(filterId)
-      )
+          platform.instruments.map(x => x.id).includes(filterId)
+        )
 }
 
 export function instrumentFilter(selectedFilterIds) {
@@ -93,11 +93,11 @@ export function instrumentFilter(selectedFilterIds) {
     selectedFilterIds.length === 0
       ? true
       : selectedFilterIds.every(
-        filterId =>
-          (instrument.measurementType &&
-            instrument.measurementType.id === filterId) ||
-          instrument.measurementRegions.map(x => x.id).includes(filterId)
-      )
+          filterId =>
+            (instrument.measurementType &&
+              instrument.measurementType.id === filterId) ||
+            instrument.measurementRegions.map(x => x.id).includes(filterId)
+        )
 }
 
 export function doiFilter(selectedFilterIds) {
@@ -105,12 +105,12 @@ export function doiFilter(selectedFilterIds) {
     selectedFilterIds.length === 0
       ? true
       : doi.campaigns
-        ?.map(x => x.id)
-        .some(id => selectedFilterIds.includes(id)) ||
-      doi.platforms
-        ?.map(x => x.id)
-        .some(id => selectedFilterIds.includes(id)) ||
-      doi.instruments
-        ?.map(x => x.id)
-        .some(id => selectedFilterIds.includes(id))
+          ?.map(x => x.id)
+          .some(id => selectedFilterIds.includes(id)) ||
+        doi.platforms
+          ?.map(x => x.id)
+          .some(id => selectedFilterIds.includes(id)) ||
+        doi.instruments
+          ?.map(x => x.id)
+          .some(id => selectedFilterIds.includes(id))
 }

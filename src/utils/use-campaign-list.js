@@ -78,7 +78,7 @@ export default function useCampaignList(
       const isEndWithinRange = campaign.enddate
         ? isWithinInterval(new Date(campaign.enddate), dateRange)
         : // ongoing campaigns have enddate: null, use now in that case
-        isWithinInterval(new Date(), dateRange)
+          isWithinInterval(new Date(), dateRange)
 
       const isStartBeforeAndEndAfterRange =
         isBefore(new Date(campaign.startdate), dateRange.start) &&
@@ -110,11 +110,11 @@ export default function useCampaignList(
     const filteredCampaignBySearch = queryResult.filter(campaign => {
       return searchResult
         ? campaign.shortname
-          .toLowerCase()
-          .includes(searchResult.toLowerCase()) ||
-        campaign.longname
-          ?.toLowerCase()
-          .includes(searchResult.toLowerCase())
+            .toLowerCase()
+            .includes(searchResult.toLowerCase()) ||
+            campaign.longname
+              ?.toLowerCase()
+              .includes(searchResult.toLowerCase())
         : true
     })
 

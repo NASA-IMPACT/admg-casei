@@ -292,15 +292,15 @@ Home.propTypes = {
   }).isRequired,
   allCampaign: PropTypes.shape({
     short_name: PropTypes.string,
-    long_name: PropTypes.string
+    long_name: PropTypes.string,
   }),
   allPlatform: PropTypes.shape({
     short_name: PropTypes.string,
-    long_name: PropTypes.string
+    long_name: PropTypes.string,
   }),
   allInstrument: PropTypes.shape({
     short_name: PropTypes.string,
-    long_name: PropTypes.string
+    long_name: PropTypes.string,
   }),
 }
 

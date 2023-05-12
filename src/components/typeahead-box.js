@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import PropTypes from "prop-types"
 import { typeAhead } from "../utils/filter-utils"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -9,51 +8,61 @@ import { SearchIcon } from "../icons"
 
 export function TypeAhead() {
     const queryData = useStaticQuery(graphql`
-        {
-            allCampaign {
-            nodes {
-                long_name
-                id
-                short_name
-            }
-            }
-            allPlatform {
-            nodes {
-                long_name
-                short_name
-                id
-            }
-            }
-            allInstrument {
-            nodes {
-                short_name
-                long_name
-                id
-            }
-            }
+    {
+      allCampaign {
+        nodes {
+          long_name
+          id
+          short_name
         }
-        `
-    )
+      }
+      allPlatform {
+        nodes {
+          long_name
+          short_name
+          id
+        }
+      }
+      allInstrument {
+        nodes {
+          short_name
+          long_name
+          id
+        }
+      }
+    }
+  `)
 
     const [value, setValue] = useState("")
     const [typeAheadDisplay, setTypeAheadDisplay] = useState([])
     const handleSearch = event => {
-
         // remove the typeahead dropdown when there is no current user input
-        if (event.target.value === '') {
+        if (event.target.value === "") {
             setTypeAheadDisplay([])
             setValue("")
         } else {
             // if there is user input, execute the search on the static queried data
             let caseiData = {
                 Campaign: queryData.allCampaign.nodes.map(node => {
-                    return { parent: "Campaign", link: `/campaign/${node.short_name}`, ...node }
+                    return {
+                        parent: "Campaign",
+                        link: `/campaign/${node.short_name}`,
+                        ...node,
+                    }
                 }),
                 Platform: queryData.allPlatform.nodes.map(node => {
-                    return { parent: "Platform", link: `/platform/${node.short_name}`, ...node }
+                    return {
+                        parent: "Platform",
+                        link: `/platform/${node.short_name}`,
+                        ...node,
+                    }
                 }),
                 Instrument: queryData.allInstrument.nodes.map(node => {
-                    return { parent: "Instrument", link: `/instrument/${node.short_name}`, ...node }
+                    return {
+                        parent: "Instrument",
+                        link: `/instrument/${node.short_name}`,
+                        ...node,
+                    }
                 }),
             }
 
@@ -67,9 +76,7 @@ export function TypeAhead() {
             }
             setTypeAheadDisplay(searchResult)
             setValue(event.target.value)
-
         }
-
     }
     return (
         <div
@@ -133,16 +140,16 @@ export function TypeAhead() {
             `}
                     >
                         {typeAheadDisplay.map((item, index) => (
-                            <a href={`${item?.link}`}>
+                            <a href={`${item?.link}`} key={`${index}-${item?.short_name}`}>
                                 <li
-                                    key={index} // TODO need unique key for each list item
+                                    key={`${index}-${item?.short_name}`}
                                     css={`
-                                    padding: 8px 16px;
-                                    cursor: pointer;
-                                    &:hover {
-                                        background-color: rgba(255, 255, 255, 0.2);
-                                    }
-                                `}
+                    padding: 8px 16px;
+                    cursor: pointer;
+                    &:hover {
+                      background-color: rgba(255, 255, 255, 0.2);
+                    }
+                  `}
                                 >
                                     <span>{item?.short_name || item?.long_name} </span>
                                     <span>- &#40;{item?.parent}&#41;</span>
