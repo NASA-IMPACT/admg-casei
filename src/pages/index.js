@@ -19,7 +19,6 @@ import { FBMContext } from "../components/fbm-provider"
 
 const Home = ({ data }) => {
   const { isFBMLoaded } = useContext(FBMContext)
-  console.log({ data })
   return (
     <Layout>
       <SEO title="Home" lang="en" />

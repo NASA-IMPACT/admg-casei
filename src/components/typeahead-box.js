@@ -1,24 +1,51 @@
 import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { typeAhead } from "../utils/filter-utils"
-import { graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
 import { NEGATIVE, POSITIVE } from "../utils/constants"
 import { colors } from "../theme"
 import { SearchIcon } from "../icons"
 
-export function TypeAhead({ campaigns, platforms, instruments, onSearch }) {
+export function TypeAhead() {
+    const queryData = useStaticQuery(graphql`
+        {
+            allCampaign {
+            nodes {
+                long_name
+                id
+                short_name
+            }
+            }
+            allPlatform {
+            nodes {
+                long_name
+                short_name
+                id
+            }
+            }
+            allInstrument {
+            nodes {
+                short_name
+                long_name
+                id
+            }
+            }
+        }
+        `
+    )
+
     const [value, setValue] = useState("")
     const [typeAheadDisplay, setTypeAheadDisplay] = useState([])
     const handleSearch = event => {
         let caseiData = {
-            Campaign: campaigns.nodes.map(node => {
+            Campaign: queryData.allCampaign.nodes.map(node => {
                 return { parent: "Campaign", link: `/campaign/${node.short_name}`, ...node }
             }),
-            Platform: platforms.nodes.map(node => {
+            Platform: queryData.allPlatform.nodes.map(node => {
                 return { parent: "Platform", link: `/platform/${node.short_name}`, ...node }
             }),
-            Instrument: instruments.nodes.map(node => {
+            Instrument: queryData.allInstrument.nodes.map(node => {
                 return { parent: "Instrument", link: `/instrument/${node.short_name}`, ...node }
             }),
         }
@@ -30,7 +57,6 @@ export function TypeAhead({ campaigns, platforms, instruments, onSearch }) {
         for (const key in results) {
             searchResult = searchResult.concat(results[key].slice(0, 5))
         }
-        console.log({ searchResult })
         setTypeAheadDisplay(searchResult)
 
         setValue(event.target.value)
@@ -120,32 +146,7 @@ export function TypeAhead({ campaigns, platforms, instruments, onSearch }) {
     )
 }
 
-// TODO can and should this query be moved here
-export const query = graphql`
-  {
-    allCampaign {
-      nodes {
-        long_name
-        id
-        short_name
-      }
-    }
-    allPlatform {
-      nodes {
-        long_name
-        short_name
-        id
-      }
-    }
-    allInstrument {
-      nodes {
-        short_name
-        long_name
-        id
-      }
-    }
-  }
-`
+
 
 TypeAhead.propTypes = {
     data: PropTypes.any,
