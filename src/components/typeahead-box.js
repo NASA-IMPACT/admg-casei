@@ -38,28 +38,38 @@ export function TypeAhead() {
     const [value, setValue] = useState("")
     const [typeAheadDisplay, setTypeAheadDisplay] = useState([])
     const handleSearch = event => {
-        let caseiData = {
-            Campaign: queryData.allCampaign.nodes.map(node => {
-                return { parent: "Campaign", link: `/campaign/${node.short_name}`, ...node }
-            }),
-            Platform: queryData.allPlatform.nodes.map(node => {
-                return { parent: "Platform", link: `/platform/${node.short_name}`, ...node }
-            }),
-            Instrument: queryData.allInstrument.nodes.map(node => {
-                return { parent: "Instrument", link: `/instrument/${node.short_name}`, ...node }
-            }),
+
+        // remove the typeahead dropdown when there is no current user input
+        if (event.target.value === '') {
+            setTypeAheadDisplay([])
+            setValue("")
+        } else {
+            // if there is user input, execute the search on the static queried data
+            let caseiData = {
+                Campaign: queryData.allCampaign.nodes.map(node => {
+                    return { parent: "Campaign", link: `/campaign/${node.short_name}`, ...node }
+                }),
+                Platform: queryData.allPlatform.nodes.map(node => {
+                    return { parent: "Platform", link: `/platform/${node.short_name}`, ...node }
+                }),
+                Instrument: queryData.allInstrument.nodes.map(node => {
+                    return { parent: "Instrument", link: `/instrument/${node.short_name}`, ...node }
+                }),
+            }
+
+            // typeahead utility function
+            let results = typeAhead.searchData(event.target.value, caseiData)
+
+            let searchResult = []
+            // push a slice of size N from each sub array in results into searchResult array
+            for (const key in results) {
+                searchResult = searchResult.concat(results[key].slice(0, 5))
+            }
+            setTypeAheadDisplay(searchResult)
+            setValue(event.target.value)
+
         }
 
-        let results = typeAhead.searchData(event.target.value, caseiData)
-
-        let searchResult = []
-        // push a slice of size N from each sub array in results into searchResult array
-        for (const key in results) {
-            searchResult = searchResult.concat(results[key].slice(0, 5))
-        }
-        setTypeAheadDisplay(searchResult)
-
-        setValue(event.target.value)
     }
     return (
         <div
