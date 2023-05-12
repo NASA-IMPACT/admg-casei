@@ -7,7 +7,7 @@ import { colors } from "../theme"
 import { SearchIcon } from "../icons"
 
 export function TypeAhead() {
-    const queryData = useStaticQuery(graphql`
+  const queryData = useStaticQuery(graphql`
     {
       allCampaign {
         nodes {
@@ -33,61 +33,61 @@ export function TypeAhead() {
     }
   `)
 
-    const [value, setValue] = useState("")
-    const [typeAheadDisplay, setTypeAheadDisplay] = useState([])
-    const handleSearch = event => {
-        // remove the typeahead dropdown when there is no current user input
-        if (event.target.value === "") {
-            setTypeAheadDisplay([])
-            setValue("")
-        } else {
-            // if there is user input, execute the search on the static queried data
-            let caseiData = {
-                Campaign: queryData.allCampaign.nodes.map(node => {
-                    return {
-                        parent: "Campaign",
-                        link: `/campaign/${node.short_name}`,
-                        ...node,
-                    }
-                }),
-                Platform: queryData.allPlatform.nodes.map(node => {
-                    return {
-                        parent: "Platform",
-                        link: `/platform/${node.short_name}`,
-                        ...node,
-                    }
-                }),
-                Instrument: queryData.allInstrument.nodes.map(node => {
-                    return {
-                        parent: "Instrument",
-                        link: `/instrument/${node.short_name}`,
-                        ...node,
-                    }
-                }),
-            }
+  const [value, setValue] = useState("")
+  const [typeAheadDisplay, setTypeAheadDisplay] = useState([])
+  const handleSearch = event => {
+    // remove the typeahead dropdown when there is no current user input
+    if (event.target.value === "") {
+      setTypeAheadDisplay([])
+      setValue("")
+    } else {
+      // if there is user input, execute the search on the static queried data
+      let caseiData = {
+        Campaign: queryData.allCampaign.nodes.map(node => {
+          return {
+            parent: "Campaign",
+            link: `/campaign/${node.short_name}`,
+            ...node,
+          }
+        }),
+        Platform: queryData.allPlatform.nodes.map(node => {
+          return {
+            parent: "Platform",
+            link: `/platform/${node.short_name}`,
+            ...node,
+          }
+        }),
+        Instrument: queryData.allInstrument.nodes.map(node => {
+          return {
+            parent: "Instrument",
+            link: `/instrument/${node.short_name}`,
+            ...node,
+          }
+        }),
+      }
 
-            // typeahead utility function
-            let results = typeAhead.searchData(event.target.value, caseiData)
+      // typeahead utility function
+      let results = typeAhead.searchData(event.target.value, caseiData)
 
-            let searchResult = []
-            // push a slice of size N from each sub array in results into searchResult array
-            for (const key in results) {
-                searchResult = searchResult.concat(results[key].slice(0, 5))
-            }
-            setTypeAheadDisplay(searchResult)
-            setValue(event.target.value)
-        }
+      let searchResult = []
+      // push a slice of size N from each sub array in results into searchResult array
+      for (const key in results) {
+        searchResult = searchResult.concat(results[key].slice(0, 5))
+      }
+      setTypeAheadDisplay(searchResult)
+      setValue(event.target.value)
     }
-    return (
-        <div
-            css={`
+  }
+  return (
+    <div
+      css={`
         margin-right: 2rem;
         margin-bottom: 5em;
         position: relative;
       `}
-        >
-            <div
-                css={`
+    >
+      <div
+        css={`
           height: 2.5rem;
           webkit-appearance: none;
           background: transparent;
@@ -101,16 +101,16 @@ export function TypeAhead() {
           cursor: pointer;
           width: 100%;
         `}
-            >
-                <span role="img" aria-label="Magnifying glass icon">
-                    <SearchIcon color={colors[NEGATIVE].text} />
-                </span>
-                <input
-                    type="text"
-                    value={value}
-                    placeholder="Enter a campaign, platform, or instrument"
-                    onChange={handleSearch}
-                    css={`
+      >
+        <span role="img" aria-label="Magnifying glass icon">
+          <SearchIcon color={colors[NEGATIVE].text} />
+        </span>
+        <input
+          type="text"
+          value={value}
+          placeholder="Enter a campaign, platform, or instrument"
+          onChange={handleSearch}
+          css={`
             webkit-appearance: none;
             background: transparent;
             border: unset;
@@ -121,13 +121,13 @@ export function TypeAhead() {
             cursor: pointer;
             width: 100%;
           `}
-                />
-            </div>
+        />
+      </div>
 
-            <div className="type-ahead-dropdown">
-                {typeAheadDisplay.length > 0 && (
-                    <ul
-                        css={`
+      <div className="type-ahead-dropdown">
+        {typeAheadDisplay.length > 0 && (
+          <ul
+            css={`
               position: absolute;
               background-color: #303641;
               border: 1px solid #ccc;
@@ -138,27 +138,27 @@ export function TypeAhead() {
               z-index: 1;
               width: 100%;
             `}
-                    >
-                        {typeAheadDisplay.map((item, index) => (
-                            <a href={`${item?.link}`} key={`${index}-${item?.short_name}`}>
-                                <li
-                                    key={`${index}-${item?.short_name}`}
-                                    css={`
+          >
+            {typeAheadDisplay.map((item, index) => (
+              <a href={`${item?.link}`} key={`${index}-${item?.short_name}`}>
+                <li
+                  key={`${index}-${item?.short_name}`}
+                  css={`
                     padding: 8px 16px;
                     cursor: pointer;
                     &:hover {
                       background-color: rgba(255, 255, 255, 0.2);
                     }
                   `}
-                                >
-                                    <span>{item?.short_name || item?.long_name} </span>
-                                    <span>- &#40;{item?.parent}&#41;</span>
-                                </li>
-                            </a>
-                        ))}
-                    </ul>
-                )}
-            </div>
-        </div>
-    )
+                >
+                  <span>{item?.short_name || item?.long_name} </span>
+                  <span>- &#40;{item?.parent}&#41;</span>
+                </li>
+              </a>
+            ))}
+          </ul>
+        )}
+      </div>
+    </div>
+  )
 }
