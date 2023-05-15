@@ -16,7 +16,13 @@ import useProductsList from "../../utils/use-products-list"
 import { doiRelationalMapper } from "../../utils/doi_relational_mapper"
 
 export default function ExploreProducts({ data }) {
-  const { allCampaign, allPlatform, allInstrument, allDoi } = data
+  const {
+    allCampaign,
+    allPlatform,
+    allInstrument,
+    allDoi,
+    allMeasurementStyle,
+  } = data
   const allShapedDoi = doiRelationalMapper(allDoi.nodes)
   const inputElement = useRef(null)
   const [geoFilterResult, setGeoFilter] = useState(null)
@@ -79,7 +85,7 @@ export default function ExploreProducts({ data }) {
     setSearchResult(null)
   }
 
-  const allMeasurementStyles = Array.from(
+  const allMeasurementTypes = Array.from(
     allShapedDoi.reduce((acc, doi) => {
       for (const instrument of doi.instruments) {
         if (instrument.measurement_type?.short_name) {
@@ -119,7 +125,8 @@ export default function ExploreProducts({ data }) {
   const { getFilterLabelById, getFilterOptionsById } = selector({
     // focus: allFocusArea,
     // geophysical: allGeophysicalConcept,
-    measurement: { options: allMeasurementStyles },
+    measurement: { options: allMeasurementTypes },
+    style: { options: allMeasurementStyle.nodes },
     vertical: { options: allMeasurementRegions },
     platform: allPlatform,
     funding: {
@@ -292,6 +299,11 @@ export const query = graphql`
             id
             longname: long_name
           }
+          measurement_style {
+            short_name
+            id
+            long_name
+          }
           short_name
           long_name
         }
@@ -299,6 +311,13 @@ export const query = graphql`
     }
     allCampaign {
       totalCount
+    }
+    allMeasurementStyle {
+      nodes {
+        shortname: short_name
+        id
+        longname: long_name
+      }
     }
   }
 `
@@ -330,6 +349,21 @@ ExploreProducts.propTypes = {
               id: PropTypes.string.isRequired,
               long_name: PropTypes.string.isRequired,
               short_name: PropTypes.string.isRequired,
+              measurement_type: PropTypes.shape({
+                short_name: PropTypes.string.isRequired,
+                id: PropTypes.string.isRequired,
+                long_name: PropTypes.string.isRequired,
+              }),
+              measurement_regions: PropTypes.shape({
+                short_name: PropTypes.string.isRequired,
+                id: PropTypes.string.isRequired,
+                long_name: PropTypes.string.isRequired,
+              }),
+              measurement_style: PropTypes.shape({
+                short_name: PropTypes.string.isRequired,
+                id: PropTypes.string.isRequired,
+                long_name: PropTypes.string.isRequired,
+              }),
             })
           ),
           platforms: PropTypes.arrayOf(
@@ -348,6 +382,13 @@ ExploreProducts.propTypes = {
     }),
     allCampaign: PropTypes.shape({
       totalCount: PropTypes.number.isRequired,
+    }).isRequired,
+    allMeasurementStyle: PropTypes.shape({
+      nodes: PropTypes.arrayOf({
+        short_name: PropTypes.string.isRequired,
+        id: PropTypes.string.isRequired,
+        long_name: PropTypes.string.isRequired,
+      }),
     }).isRequired,
   }).isRequired,
 }

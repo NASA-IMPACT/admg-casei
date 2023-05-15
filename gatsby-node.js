@@ -62,6 +62,7 @@ exports.createSchemaCustomization = ({ actions }) => {
        gcmd_phenomena: [gcmd_phenomenon] @link
        image: image @link
        measurement_type: measurement_type @link
+       measurement_style: measurement_style @link
        measurement_regions: [measurement_region] @link
        platforms: [platform] @link
        repositories: [repository] @link
@@ -136,6 +137,7 @@ exports.sourceNodes = async ({ actions, createContentDigest }) => {
       "instrument",
       "iop",
       "measurement_type",
+      "measurement_style",
       "measurement_region",
       "partner_org",
       "platform",

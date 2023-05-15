@@ -77,12 +77,11 @@ const Count = styled.span`
 const Tab = ({ id, to, isSelected, label, count }) => (
   <TabButton role="tab" to={to} $isSelected={isSelected}>
     <Label isSelected={isSelected}>{label}</Label>
-    {count && (
-      <Count isSelected={isSelected} data-cy={`${id}-count`}>
-        {" "}
-        ({count})
-      </Count>
-    )}
+
+    <Count isSelected={isSelected} data-cy={`${id}-count`}>
+      {" "}
+      ({count ? count : 0})
+    </Count>
   </TabButton>
 )
 

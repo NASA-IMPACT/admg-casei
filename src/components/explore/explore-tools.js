@@ -155,12 +155,21 @@ const ExploreTools = React.forwardRef(
                 setDateRange={setDateRange}
               />
               <FilterMenu
-                id="measurement"
+                id="type"
                 selectedFilterIds={selectedFilterIds}
                 addFilter={addFilter}
                 removeFilter={removeFilter}
                 label="Measurement Types"
                 options={getFilterOptionsById("measurement")}
+                category={category}
+              />
+              <FilterMenu
+                id="style"
+                selectedFilterIds={selectedFilterIds}
+                addFilter={addFilter}
+                removeFilter={removeFilter}
+                label="Measurement Styles"
+                options={getFilterOptionsById("style")}
                 category={category}
               />
               <FilterMenu

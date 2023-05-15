@@ -76,6 +76,15 @@ export function productsFilter(selectedFilterIds) {
       }, new Set())
     )
 
+    const measurementStyles = Array.from(
+      product.instruments.reduce((acc, instrument) => {
+        if (instrument.measurement_style) {
+          acc.add(instrument.measurement_style?.id)
+        }
+        return acc
+      }, new Set())
+    )
+
     const measurementRegions = Array.from(
       product.instruments.reduce((acc, instrument) => {
         if (instrument.measurement_regions) {
@@ -86,11 +95,12 @@ export function productsFilter(selectedFilterIds) {
         return acc
       }, new Set())
     )
-    console.log(measurementRegions)
+
     return selectedFilterIds.every(
       filterId =>
         measurementTypes.includes(filterId) ||
-        measurementRegions.includes(filterId)
+        measurementRegions.includes(filterId) ||
+        measurementStyles.includes(filterId)
     )
   }
 }
