@@ -129,8 +129,6 @@ jobs:
 
       - name: Serve App
         run: yarn serve -p 8000
-        with:
-          wait-on: "http://localhost:8000"
 
       - name: Test End-to-end
         run: xvfb-run npx playwright test -c ./playwright/e2e
