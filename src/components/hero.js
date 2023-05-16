@@ -68,8 +68,9 @@ const Container = styled.section`
   margin-bottom: 6rem;
   background: ${({ backgroundImage, ratioInPercent }) =>
     backgroundImage
-      ? `linear-gradient(90deg, rgba(12,21,32, 0.8) 0%, rgba(12,21,32, 0.7)${ratioInPercent - 20
-      }%, rgba(12,21,32, 0.0)${ratioInPercent + 20}%)`
+      ? `linear-gradient(90deg, rgba(12,21,32, 0.8) 0%, rgba(12,21,32, 0.7)${
+          ratioInPercent - 20
+        }%, rgba(12,21,32, 0.0)${ratioInPercent + 20}%)`
       : null};
 `
 
@@ -88,10 +89,10 @@ export default function Hero({
   const ratioInPercent =
     (100 / (textToImageRatio[0] + textToImageRatio[1])) * textToImageRatio[0]
   // logic to support conditional display of TypeAhead searchbox component on only the home page(s)
-  const displayTypeAhead = (
-    window.location.pathname === '/casei/' || window.location.pathname === '/')
-    ? true
-    : false
+  const displayTypeAhead =
+    window.location.pathname === "/casei/" || window.location.pathname === "/"
+      ? true
+      : false
 
   return (
     <Container
