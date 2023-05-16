@@ -49,7 +49,6 @@ const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
   // Compute and set the initial bounding box
   const [bbox] = useState(() => turfBbox(geojson))
 
-
   // Effect to update the GeoFilter when the AOI changes
   useEffect(() => {
     // updates the list of campaign ids intersecting the drawn aoi after the aoi was changed
