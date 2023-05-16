@@ -62,7 +62,7 @@
     "@babel/preset-typescript": "^7.21.4",
     "@cypress/code-coverage": "^3.9.12",
     "@percy/playwright": "^1.0.4",
-    "@playwright/test": "^1.22.2",
+    "@playwright/test": "1.22.2",
     "@quickbaseoss/babel-plugin-styled-components-css-namespace": "^1.0.1",
     "@testing-library/cypress": "^8.0.2",
     "@testing-library/react-hooks": "^7.0.2",
