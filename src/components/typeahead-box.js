@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react"
 import { typeAhead } from "../utils/filter-utils"
 import { useStaticQuery, graphql } from "gatsby"
-
+import { sortBy } from "lodash"
 import { NEGATIVE, POSITIVE } from "../utils/constants"
 import { colors } from "../theme"
 import { SearchIcon } from "../icons"
@@ -98,7 +98,7 @@ export function TypeAhead() {
       for (const key in results) {
         searchResult = searchResult.concat(results[key].slice(0, n))
       }
-      let sortedSearchResult = searchResult.sort()
+      let sortedSearchResult = sortBy(searchResult, value => value.short_name)
       setTypeAheadDisplay(sortedSearchResult)
       setValue(event.target.value)
       setDropDownOpen(searchResult.length > 0);
