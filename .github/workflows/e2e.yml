@@ -128,8 +128,8 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Serve App
+        run: yarn serve -p 8000
         with:
-          run: yarn serve -p 8000
           wait-on: "http://localhost:8000"
 
       - name: Test End-to-end
