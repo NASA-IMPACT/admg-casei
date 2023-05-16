@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react"
+import React, { useState } from "react"
 import { typeAhead } from "../utils/filter-utils"
 import { useStaticQuery, graphql } from "gatsby"
 import { sortBy } from "lodash"
@@ -35,24 +35,6 @@ export function TypeAhead() {
 
   const [value, setValue] = useState("")
   const [typeAheadDisplay, setTypeAheadDisplay] = useState([])
-  const dropDownRef = useRef(null) // dropDownRef will add a reference hook to allow closing dropdown upon click-away
-  const [dropDownOpen, setDropDownOpen] = useState(false) // state var tracks whether dropdown is open
-
-  useEffect(() => {
-    // handleClickOut click-away
-    // eslint-disable-next-line no-unused-vars
-    const handleClickOutside = event => {
-      if (dropDownRef.current && !dropDownRef.current.contains(event.target)) {
-        setDropDownOpen(false)
-      }
-
-      window.addEventListener("mousedown", handleClickOutside)
-
-      return () => {
-        window.removeEventListener("mousedown", handleClickOutside)
-      }
-    }
-  }, [dropDownOpen])
 
   const handleSearch = event => {
     // remove the typeahead dropdown when there is no current user input
@@ -98,7 +80,6 @@ export function TypeAhead() {
       let sortedSearchResult = sortBy(searchResult, value => value.short_name)
       setTypeAheadDisplay(sortedSearchResult)
       setValue(event.target.value)
-      setDropDownOpen(sortedSearchResult.length > 0)
     }
   }
   return (
@@ -147,8 +128,8 @@ export function TypeAhead() {
         />
       </div>
 
-      <div className="type-ahead-dropdown" ref={dropDownRef}>
-        {dropDownOpen && typeAheadDisplay.length > 0 && (
+      <div className="type-ahead-dropdown">
+        {typeAheadDisplay.length > 0 && (
           <ul
             css={`
               position: absolute;

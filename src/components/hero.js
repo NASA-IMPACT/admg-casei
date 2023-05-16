@@ -89,10 +89,11 @@ export default function Hero({
   const ratioInPercent =
     (100 / (textToImageRatio[0] + textToImageRatio[1])) * textToImageRatio[0]
   // logic to support conditional display of TypeAhead searchbox component on only the home page(s)
-  const displayTypeAhead =
-    window.location.pathname === "/casei/" || window.location.pathname === "/"
-      ? true
-      : false
+  const displayTypeAhead = !(
+    backlink?.includes("instrument") || backlink?.includes("platform")
+  )
+    ? true
+    : false
 
   return (
     <Container
