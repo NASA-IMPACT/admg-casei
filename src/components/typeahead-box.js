@@ -98,7 +98,8 @@ export function TypeAhead() {
       for (const key in results) {
         searchResult = searchResult.concat(results[key].slice(0, n))
       }
-      setTypeAheadDisplay(searchResult)
+      let sortedSearchResult = searchResult.sort()
+      setTypeAheadDisplay(sortedSearchResult)
       setValue(event.target.value)
       setDropDownOpen(searchResult.length > 0);
     }
