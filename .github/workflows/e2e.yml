@@ -16,7 +16,6 @@ jobs:
 
     env:
       ADMG_ACCESS_TOKEN: ${{ secrets.ADMG_ACCESS_TOKEN }}
-      CYPRESS_password: ${{ secrets.CYPRESS_password }}
       GATSBY_ADMG_CLIENT_ID: ${{ secrets.GATSBY_ADMG_CLIENT_ID }}
       GATSBY_ADMG_CLIENT_SECRET: ${{ secrets.GATSBY_ADMG_CLIENT_SECRET }}
       GATSBY_CPU_COUNT: 2
@@ -59,14 +58,8 @@ jobs:
           path: public
           key: ${{ runner.os }}-gatsby-build-${{ hashFiles('yarn.lock') }}-${{ hashFiles('src/**') }}
 
-      - name: Cache Cypress .cache folder
-        uses: actions/cache@v2
-        with:
-          path: ~/.cache/Cypress
-          key: ${{ runner.os }}-cypress-cache-${{ hashFiles('yarn.lock') }}
-
       - name: Install
-        run: yarn install && yarn cypress install
+        run: yarn install 
 
       - name: Build
         if: steps.cache-build.outputs.cache-hit != 'true'
@@ -79,7 +72,6 @@ jobs:
 
     env:
       ADMG_ACCESS_TOKEN: ${{ secrets.ADMG_ACCESS_TOKEN }}
-      CYPRESS_password: ${{ secrets.CYPRESS_password }}
       GATSBY_ADMG_CLIENT_ID: ${{ secrets.GATSBY_ADMG_CLIENT_ID }}
       GATSBY_ADMG_CLIENT_SECRET: ${{ secrets.GATSBY_ADMG_CLIENT_SECRET }}
       GATSBY_CPU_COUNT: 2
@@ -122,15 +114,13 @@ jobs:
           key: ${{ runner.os }}-gatsby-build-${{ hashFiles('yarn.lock') }}-${{ hashFiles('src/**') }}
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Install Playwright
         run: npx playwright install --with-deps
 
       - name: Serve App
-        with:
-          run: yarn serve -p 8000
-          wait-on: "http://localhost:8000"
+        run: yarn serve -p 8888
 
       - name: Test End-to-end
         run: xvfb-run npx playwright test -c ./playwright/e2e

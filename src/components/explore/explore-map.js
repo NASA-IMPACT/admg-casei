@@ -56,6 +56,7 @@ const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
       allData
         .flatMap(d => d.deployments)
         .filter(d => d.deploymentSpatialBounds)
+
         .map((d, i) => ({
           type: "Feature",
           id: i + 1,
