@@ -3,11 +3,12 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
-
 import { NEGATIVE, POSITIVE } from "../utils/constants"
 import { colors, layout } from "../theme"
 import DateList from "./date-list-hover"
 import { ArrowIcon } from "../icons"
+import { TypeAhead } from "../components/typeahead-box"
+import { typeAhead } from "../utils/filter-utils"
 
 export const HeroStats = ({ statList }) => (
   <dl
@@ -87,6 +88,11 @@ export default function Hero({
 }) {
   const ratioInPercent =
     (100 / (textToImageRatio[0] + textToImageRatio[1])) * textToImageRatio[0]
+  // logic to support conditional display of TypeAhead searchbox component on only the home page(s)
+  const displayTypeAhead =
+    window.location.pathname === "/casei/" || window.location.pathname === "/"
+      ? true
+      : false
 
   return (
     <Container
@@ -179,6 +185,8 @@ export default function Hero({
               </Link>
             </div>
           )}
+
+          {displayTypeAhead && <TypeAhead onSearch={typeAhead} />}
         </div>
 
         {image && (
