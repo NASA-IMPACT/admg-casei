@@ -54,14 +54,14 @@ const ExploreTools = React.forwardRef(
             <strong>Filter By</strong>
           </div>
 
-          <FilterByTextInput
-            ref={ref}
-            setSearchResult={setSearchResult}
-            category={category}
-          />
-
           {category === "campaigns" && (
             <>
+              <FilterByTextInput
+                ref={ref}
+                setSearchResult={setSearchResult}
+                category={category}
+              />
+
               <FilterByDate
                 id="date"
                 label="Date range"
@@ -205,17 +205,30 @@ const ExploreTools = React.forwardRef(
           )}
 
           {category === "platforms" && (
-            <FilterMenu
-              id="instrument"
-              selectedFilterIds={selectedFilterIds}
-              addFilter={addFilter}
-              removeFilter={removeFilter}
-              label="Instrument"
-              options={getFilterOptionsById("instrument")}
-            />
+            <>
+              {" "}
+              <FilterByTextInput
+                ref={ref}
+                setSearchResult={setSearchResult}
+                category={category}
+              />
+              <FilterMenu
+                id="instrument"
+                selectedFilterIds={selectedFilterIds}
+                addFilter={addFilter}
+                removeFilter={removeFilter}
+                label="Instrument"
+                options={getFilterOptionsById("instrument")}
+              />
+            </>
           )}
           {category === "instruments" && (
             <>
+              <FilterByTextInput
+                ref={ref}
+                setSearchResult={setSearchResult}
+                category={category}
+              />
               <FilterMenu
                 id="type"
                 selectedFilterIds={selectedFilterIds}
