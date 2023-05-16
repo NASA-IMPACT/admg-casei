@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import { typeAhead } from "../utils/filter-utils"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -35,11 +35,34 @@ export function TypeAhead() {
 
   const [value, setValue] = useState("")
   const [typeAheadDisplay, setTypeAheadDisplay] = useState([])
+  const dropdownRef = useRef(null) // dropDownRef will add a reference hook to allow closing dropdown upon click-away
+  const [dropDownOpen, setDropDownOpen] = useState(false); // state var tracks whether dropdown is open
+
+  useEffect(() => {
+    // handleClickOut click-away
+    const handleClickOutside = (event) => {
+      console.log({ event })
+      if (dropdownRef.current && !dropdownRef.current.containers(event.target)) {
+        setDropDownOpen(false);
+      }
+      if (dropDownOpen) {
+        document.addEventListener('mousedown', handleClickOutside);
+      } else {
+        document.removeEventListener('mousedown', handleClickOutside);
+      }
+      return () => {
+        document.removeEventListener('mousedown', handleClickOutside);
+      }
+    }
+  }, [dropDownOpen]);
+
   const handleSearch = event => {
     // remove the typeahead dropdown when there is no current user input
     if (event.target.value === "") {
       setTypeAheadDisplay([])
       setValue("")
+      // if there are results open the dropdown
+
     } else {
       // if there is user input, execute the search on the static queried data
       let caseiData = {
@@ -70,12 +93,14 @@ export function TypeAhead() {
       let results = typeAhead.searchData(event.target.value, caseiData)
 
       let searchResult = []
+      const n = 5
       // push a slice of size N from each sub array in results into searchResult array
       for (const key in results) {
-        searchResult = searchResult.concat(results[key].slice(0, 5))
+        searchResult = searchResult.concat(results[key].slice(0, n))
       }
       setTypeAheadDisplay(searchResult)
       setValue(event.target.value)
+      setDropDownOpen(searchResult.length > 0);
     }
   }
   return (
@@ -124,8 +149,8 @@ export function TypeAhead() {
         />
       </div>
 
-      <div className="type-ahead-dropdown">
-        {typeAheadDisplay.length > 0 && (
+      <div className="type-ahead-dropdown" ref={dropdownRef}>
+        {dropDownOpen && typeAheadDisplay.length > 0 && (
           <ul
             css={`
               position: absolute;
