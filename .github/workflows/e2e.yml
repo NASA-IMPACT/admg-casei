@@ -59,12 +59,11 @@ jobs:
           key: ${{ runner.os }}-gatsby-build-${{ hashFiles('yarn.lock') }}-${{ hashFiles('src/**') }}
 
       - name: Install
-        run: yarn install 
+        run: yarn install
 
       - name: Build
         if: steps.cache-build.outputs.cache-hit != 'true'
         run: yarn build
-
 
   test-e2e-playwright:
     needs: build
@@ -84,14 +83,14 @@ jobs:
           access_token: ${{ github.token }}
 
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Read .nvmrc
         run: echo ::set-output name=NVMRC::$(cat .nvmrc)
         id: nvm
 
       - name: Use Node.js ${{ steps.nvm.outputs.NVMRC }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ steps.nvm.outputs.NVMRC }}
 

@@ -12,6 +12,7 @@ module.exports = {
     `\\.cache`,
     `<rootDir>.*/public`,
     `<rootDir>/e2e/`,
+    `<rootDir>/playwright/`,
   ],
   transformIgnorePatterns: [`node_modules/(?!(gatsby)/)`],
   globals: {
