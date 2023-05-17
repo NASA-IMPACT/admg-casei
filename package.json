@@ -38,6 +38,7 @@
     "gatsby-plugin-sharp": "^4.8.1",
     "gatsby-plugin-styled-components": "^5.8.0",
     "gatsby-plugin-typography": "^4.8.0",
+    "gatsby-plugin-postcss": "6.10.0",
     "gatsby-source-filesystem": "^4.8.1",
     "gatsby-transformer-json": "^4.8.0",
     "gatsby-transformer-sharp": "^4.8.0",
@@ -89,7 +90,8 @@
     "jest-styled-components": "^7.0.8",
     "prettier": "^2.5.1",
     "react-test-renderer": "^17.0.1",
-    "start-server-and-test": "^1.14.0"
+    "start-server-and-test": "^1.14.0",
+    "postcss": "8.4.23"
   },
   "license": "MIT",
   "scripts": {
