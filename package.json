@@ -119,5 +119,8 @@
   },
   "bugs": {
     "url": "http://github.com/developmentseed/airborne-metadata-catalog-internal/issues"
+  },
+  "resolutions": {
+    "playwright": "1.31.2"
   }
 }
