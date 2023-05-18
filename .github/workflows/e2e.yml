@@ -94,25 +94,37 @@ jobs:
         with:
           node-version: ${{ steps.nvm.outputs.NVMRC }}
 
-      - name: Restore node modules
-        uses: actions/cache@v2
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-node-modules-${{ hashFiles('yarn.lock') }}
+      # - name: Restore node modules
+      #   uses: actions/cache@v2
+      #   with:
+      #     path: node_modules
+      #     key: ${{ runner.os }}-node-modules-${{ hashFiles('yarn.lock') }}
 
-      - name: Restore Gatsby .cache folder
-        uses: actions/cache@v2
-        with:
-          path: .cache
-          key: ${{ runner.os }}-gatsby-cache-${{ hashFiles('yarn.lock') }}
+      # - name: Restore Gatsby .cache folder
+      #   uses: actions/cache@v2
+      #   with:
+      #     path: .cache
+      #     key: ${{ runner.os }}-gatsby-cache-${{ hashFiles('yarn.lock') }}
 
-      - name: Restore Gatsby public folder
-        uses: actions/cache@v2
-        with:
-          path: public
-          key: ${{ runner.os }}-gatsby-build-${{ hashFiles('yarn.lock') }}-${{ hashFiles('src/**') }}
+      # - name: Restore Gatsby public folder
+      #   uses: actions/cache@v2
+      #   with:
+      #     path: public
+      #     key: ${{ runner.os }}-gatsby-build-${{ hashFiles('yarn.lock') }}-${{ hashFiles('src/**') }}
 
-      - name: Install dependencies
+      # - name: Clean directories
+      #   run: |
+      #     rm -rf yarn.lock
+      #     rm -rf .cache
+      #     rm -rf node_modules
+
+      - name: Clean yarn
+        run: yarn clean
+
+      - name: Install yarn dependencies
+        run: yarn install
+
+      - name: Install npm dependencies
         run: npm install
 
       - name: Install Playwright
