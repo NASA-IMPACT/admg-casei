@@ -71,6 +71,12 @@ export default function Glossary({ data }) {
               These ADMG definitions of inventory-specific terms are provided
               below.
             </p>
+            <p>
+                A technical note documenting ADMG CASEI Inventory Terms Definitions was approved by NASA Earth Science Data Systems (ESDS) and is available{" "} 
+                <a href="https://www.earthdata.nasa.gov/esdis/esco/standards-and-practices/admg-casei">
+                  via their website.
+                </a>
+            </p>
             <h2>Structure of Airborne and Field Investigation Components</h2>
             <p>
               Many terms are related and represent the hierarchical organization
