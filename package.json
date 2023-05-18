@@ -122,5 +122,8 @@
   },
   "resolutions": {
     "playwright": "1.31.2"
+  },
+  "overrides": {
+    "playwright": "1.31.2"
   }
 }
