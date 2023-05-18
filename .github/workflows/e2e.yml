@@ -112,14 +112,14 @@ jobs:
           path: public
           key: ${{ runner.os }}-gatsby-build-${{ hashFiles('yarn.lock') }}-${{ hashFiles('src/**') }}
 
-      - name: Install dependencies
+      - name: Install npm dependencies
         run: npm install
 
       - name: Install Playwright
         run: npx playwright install --with-deps
 
       - name: Serve App
-        run: yarn serve -p 8888
+        run: yarn serve -p 8888 &
 
       - name: Test End-to-end
         run: xvfb-run npx playwright test -c ./playwright/e2e
