@@ -66,7 +66,7 @@ test.describe('Accessibility tests', () => {
     for (const { url, title } of testCases) {
         test(`Navigates to page ${url} and checks for accessibility violations`, async () => {
             await page.goto(baseUrl + url);
-            const h1Element = await page.$('h1');
+            const h1Element = await page.$('h1', { visible: true });
             expect(await h1Element.textContent()).toContain(title);
 
             await injectAxe(page);
