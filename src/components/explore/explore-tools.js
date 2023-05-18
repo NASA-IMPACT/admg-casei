@@ -8,6 +8,7 @@ import FilterByDate from "./filter-by-date"
 import { FilterIcon } from "../../icons"
 import { NEGATIVE } from "../../utils/constants"
 import { colors } from "../../theme"
+import DropdownByTextInput from "./filter-text-dropdown"
 
 const ExploreTools = React.forwardRef(
   (
@@ -148,6 +149,17 @@ const ExploreTools = React.forwardRef(
 
           {category === "products" && (
             <>
+              <DropdownByTextInput
+                ref={ref}
+                setSearchResult={setSearchResult}
+                id="type"
+                selectedFilterIds={selectedFilterIds}
+                addFilter={addFilter}
+                removeFilter={removeFilter}
+                label="Measurement Types"
+                options={getFilterOptionsById("measurement")}
+                category={category}
+              />
               <FilterByDate
                 id="date"
                 label="Date range"
