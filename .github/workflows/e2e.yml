@@ -118,12 +118,6 @@ jobs:
       #     rm -rf .cache
       #     rm -rf node_modules
 
-      - name: Clean yarn
-        run: yarn clean
-
-      - name: Install yarn dependencies
-        run: yarn install
-
       - name: Install npm dependencies
         run: npm install
 
