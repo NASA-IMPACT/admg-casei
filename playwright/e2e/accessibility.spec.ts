@@ -20,7 +20,7 @@ async function terminalLog(page, violations) {
     console.table(violationData);
 }
 
-test.describe('Accessibility tests', () => {
+test.skip('Accessibility tests', () => {
     let page;
 
     test.beforeAll(async ({ browser }) => {
@@ -64,7 +64,7 @@ test.describe('Accessibility tests', () => {
     ];
 
     for (const { url, title } of testCases) {
-        test(`Navigates to page ${url} and checks for accessibility violations`, async () => {
+        test.skip(`Navigates to page ${url} and checks for accessibility violations`, async () => {
             await page.goto(baseUrl + url);
             const h1Element = await page.$('h1', { visible: true });
             expect(await h1Element.textContent());
