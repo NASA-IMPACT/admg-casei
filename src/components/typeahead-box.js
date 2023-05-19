@@ -5,6 +5,7 @@ import { sortBy } from "lodash"
 import { NEGATIVE, POSITIVE } from "../utils/constants"
 import { colors } from "../theme"
 import { SearchIcon } from "../icons"
+import { Link } from "gatsby"
 
 export function TypeAhead() {
   const queryData = useStaticQuery(graphql`
@@ -144,7 +145,7 @@ export function TypeAhead() {
             `}
           >
             {typeAheadDisplay.map((item, index) => (
-              <a href={`${item?.link}`} key={`${index}-${item?.short_name}`}>
+              <Link to={`${item?.link}`} key={`${index}-${item?.short_name}`}>
                 <li
                   key={`${index}-${item?.short_name}`}
                   css={`
@@ -158,7 +159,7 @@ export function TypeAhead() {
                   <span>{item?.short_name || item?.long_name} </span>
                   <span>- &#40;{item?.parent}&#41;</span>
                 </li>
-              </a>
+              </Link>
             ))}
           </ul>
         )}
