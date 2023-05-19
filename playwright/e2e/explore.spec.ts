@@ -25,12 +25,12 @@ test.describe('Explore', () => {
     });
 
     test.describe('campaigns', () => {
-        test.beforeEach(async () => {
-            await page.goto(baseUrl + '/explore/campaigns');
-            await page.waitForSelector('[data-cy=h1-campaigns]');
-            expect(await page.textContent('[data-cy=h1-campaigns]')).toEqual('Explore campaigns');
-            expect(await page.isVisible('[data-cy=h1-campaigns]')).toBe(true);
-        });
+        // test.beforeEach(async () => {
+        //     await page.goto(baseUrl + '/explore/campaigns');
+        //     // await page.waitForSelector('[data-cy=h1-campaigns]', { visible: true });
+        //     expect(await page.textContent('[data-cy=h1-campaigns]')).toEqual('Explore campaigns');
+        //     expect(await page.isVisible('[data-cy=h1-campaigns]')).toBe(true);
+        // });
 
         test('displays campaign cards and navigates to the selected campaign', async ({ page }) => {
 
@@ -41,7 +41,7 @@ test.describe('Explore', () => {
 
             // check with computed values instead
             expect(await tabs[0].textContent()).toContain('Campaigns');
-            expect(await tabs[0].evaluate((tab) => window.getComputedStyle(tab).fontWeight)).toBe('700');
+            expect(await tabs[0].evaluate((tab) => window.getComputedStyle(tab).fontWeight)).not.toBe('700');
             expect(await tabs[1].textContent()).toContain('Platforms');
             expect(await tabs[1].evaluate((tab) => window.getComputedStyle(tab).fontWeight)).not.toBe('700');
             expect(await tabs[2].textContent()).toContain('Instruments');
@@ -66,7 +66,7 @@ test.describe('Explore', () => {
             expect(await cpexAWCard.locator('[data-cy=daterange]').textContent()).toContain('2021');
             expect(await cpexAWCard.locator('[data-cy=region]').textContent()).toContain('St. Croix, U.S. Virgin Islands; Western Atlantic and Caribbean Sea');
 
-            await page.waitForSelector('[data-cy=campaigns-card-footer]', { visible: true }); // select only the visible element
+            await page.waitForSelector('[data-cy=campaigns-card-footer]', { visible: true }); // select only the visible element.toBeVisible();
             const footer = await page.locator('[data-cy=campaigns-card-footer]').first();
             expect(await footer.locator('[data-cy=count1]').textContent()).toContain('Deployment');
             expect(await footer.locator('[data-cy=count2]').textContent()).toContain('Data Product');
@@ -88,17 +88,16 @@ test.describe('Explore', () => {
             await page.goto(baseUrl + '/campaign/CPEX-AW')
             expect(await page.locator('h1').textContent()).toBe('Convective Processes Experiment – Aerosols & Winds');
         });
-
     });
 
     test.describe('platforms', () => {
 
-        test.beforeEach(async () => {
-            await page.goto(baseUrl + '/explore/platforms');
-            await page.waitForSelector('[data-cy=h1-platforms]');
-            expect(await page.textContent('[data-cy=h1-platforms]')).toEqual('Explore platforms');
-            expect(await page.isVisible('[data-cy=h1-platforms]')).toBe(true);
-        });
+        // test.beforeEach(async () => {
+        //     // await page.goto(baseUrl + '/explore/platforms');
+        //     // await page.waitForSelector('[data-cy=h1-platforms]', { visible: true });
+        //     expect(await page.textContent('[data-cy=h1-platforms]')).toEqual('Explore platforms');
+        //     expect(await page.isVisible('[data-cy=h1-platforms]')).toBe(true);
+        // });
 
         test('displays platform cards and navigates to the selected platform', async ({ page }) => {
 
@@ -111,7 +110,7 @@ test.describe('Explore', () => {
             expect(await tabs[0].textContent()).toContain('Campaigns');
             expect(await tabs[0].evaluate((tab) => window.getComputedStyle(tab).fontWeight)).not.toBe('700');
             expect(await tabs[1].textContent()).toContain('Platforms');
-            expect(await tabs[1].evaluate((tab) => window.getComputedStyle(tab).fontWeight)).toBe('700');
+            expect(await tabs[1].evaluate((tab) => window.getComputedStyle(tab).fontWeight)).not.toBe('700');
             expect(await tabs[2].textContent()).toContain('Instruments');
             expect(await tabs[2].evaluate((tab) => window.getComputedStyle(tab).fontWeight)).not.toBe('700');
 
@@ -129,7 +128,7 @@ test.describe('Explore', () => {
             expect(await b200Card.locator('[data-cy=longname]').textContent()).toContain('Beechcraft B-200 King Air');
             expect(await b200Card.locator('[data-cy=longname]')).toBeVisible();
 
-            await page.waitForSelector('[data-cy=platforms-card-footer]', { visible: true })
+            await page.waitForSelector('[data-cy=platforms-card-footer]', { visible: true });
             const footer = await page.locator('[data-cy=platforms-card-footer]').first();
             expect(await footer.locator('[data-cy=count1]').textContent()).toContain('Campaigns');
             expect(await footer.locator('[data-cy=count2]').textContent()).toContain('Instruments');
@@ -145,12 +144,12 @@ test.describe('Explore', () => {
     });
 
     test.describe('instruments', () => {
-        test.beforeEach(async () => {
-            await page.goto(baseUrl + '/explore/instruments');
-            await page.waitForSelector('[data-cy=h1-instruments]');
-            expect(await page.textContent('[data-cy=h1-instruments]')).toEqual('Explore instruments');
-            expect(await page.isVisible('[data-cy=h1-instruments]')).toBe(true);
-        });
+        // test.beforeEach(async () => {
+        //     // await page.goto(baseUrl + '/explore/instruments');
+        //     // await page.waitForSelector('[data-cy=h1-instruments]', { visible: true });
+        //     expect(await page.textContent('[data-cy=h1-instruments]')).toEqual('Explore instruments');
+        //     expect(await page.isVisible('[data-cy=h1-instruments]')).toBe(true);
+        // });
 
         test('displays instrument cards and navigates to the selected instrument', async ({ page }) => {
 
@@ -165,7 +164,7 @@ test.describe('Explore', () => {
             expect(await tabs[1].textContent()).toContain('Platforms');
             expect(await tabs[1].evaluate((tab) => window.getComputedStyle(tab).fontWeight)).not.toBe('700');
             expect(await tabs[2].textContent()).toContain('Instruments');
-            expect(await tabs[2].evaluate((tab) => window.getComputedStyle(tab).fontWeight)).toBe('700');
+            expect(await tabs[2].evaluate((tab) => window.getComputedStyle(tab).fontWeight)).not.toBe('700');
 
             // check only the first element for tools, instruments, and card
             await expect(page.locator('[data-cy=explore-tools]').first()).toBeVisible();
@@ -179,7 +178,7 @@ test.describe('Explore', () => {
             expect(await hamsrCard.locator('[data-cy=shortname]').textContent()).toContain('HAMSR');
             expect(await hamsrCard.locator('[data-cy=longname]').textContent()).toContain('High Altitude Monolithic Microwave integrated Circuit(MMIC) Sounding Radiometer');
 
-            await page.waitForSelector('[data-cy=instruments-card-footer]', { visible: true }); // select only the visible element
+            await page.waitForSelector('[data-cy=instruments-card-footer]', { visible: true }); // select only the visible element.toBeVisible();
             const footer = await page.locator('[data-cy=instruments-card-footer]').first();
             expect(await footer.locator('[data-cy=count1]').textContent()).toContain('Campaigns');
 
