@@ -22,6 +22,7 @@ export default function ExploreProducts({ data }) {
     allInstrument,
     allDoi,
     allMeasurementStyle,
+    allGcmdPhenomenon,
   } = data
   const allShapedDoi = doiRelationalMapper(allDoi.nodes)
   const inputElement = useRef(null)
@@ -101,9 +102,9 @@ export default function ExploreProducts({ data }) {
   }))
 
   const allMeasurementRegions = allShapedDoi.reduce(
-    (acc, doi) => {
-      if (doi.instruments) {
-        for (const instrument of doi.instruments) {
+    (acc, measurement) => {
+      if (measurement.instruments) {
+        for (const instrument of measurement.instruments) {
           if (instrument.measurement_regions) {
             for (const measurement_region of instrument.measurement_regions) {
               if (
@@ -128,7 +129,9 @@ export default function ExploreProducts({ data }) {
     measurement: { options: allMeasurementTypes },
     style: { options: allMeasurementStyle.nodes },
     vertical: { options: allMeasurementRegions },
-    platform: allPlatform,
+    doi: { options: allMeasurementRegions },
+    gcmd: { options: allGcmdPhenomenon.nodes },
+    platform: { options: allPlatform.nodes },
     funding: {
       // This transforms the query results from the distinct `funding_agency`
       // field into the filter format { id, shortname }.
@@ -263,6 +266,11 @@ export default function ExploreProducts({ data }) {
 export const query = graphql`
   query {
     allPlatform {
+      nodes {
+        shortname: short_name
+        id
+        longname: long_name
+      }
       totalCount
     }
     allInstrument {
@@ -312,12 +320,21 @@ export const query = graphql`
     allCampaign {
       totalCount
     }
+    allGcmdPhenomenon {
+      nodes {
+        variable_1
+        variable_2
+        variable_3
+        term
+      }
+    }
     allMeasurementStyle {
       nodes {
         shortname: short_name
         id
         longname: long_name
       }
+      totalCount
     }
   }
 `
@@ -328,6 +345,19 @@ ExploreProducts.propTypes = {
       totalCount: PropTypes.number.isRequired,
     }),
     allPlatform: PropTypes.shape({
+      nodes: PropTypes.arrayOf({
+        short_name: PropTypes.string.isRequired,
+        id: PropTypes.string.isRequired,
+        long_name: PropTypes.string.isRequired,
+      }),
+    }).isRequired,
+    allGcmdPhenomenon: PropTypes.shape({
+      nodes: PropTypes.arrayOf({
+        variable_1: PropTypes.string.isRequired,
+        variable_2: PropTypes.string.isRequired,
+        variable_3: PropTypes.string.isRequired,
+        term: PropTypes.string.isRequired,
+      }),
       totalCount: PropTypes.number.isRequired,
     }),
     allDoi: PropTypes.shape({

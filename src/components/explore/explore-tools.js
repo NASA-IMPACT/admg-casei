@@ -158,6 +158,7 @@ const ExploreTools = React.forwardRef(
                 removeFilter={removeFilter}
                 label="Measurement Types"
                 options={getFilterOptionsById("measurement")}
+                secondaryOptions={getFilterOptionsById("gcmd")}
                 category={category}
               />
               <FilterByDate
