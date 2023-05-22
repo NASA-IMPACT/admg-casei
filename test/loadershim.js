@@ -9,6 +9,13 @@ Object.defineProperty(global, "sessionStorage", {
   },
 })
 
-global.window = {
-  setTimeout: jest.fn(),
-}
+// global.window = {
+//   setTimeout: jest.fn(),
+// }
+
+Object.defineProperty(global, "window", {
+  value: {
+    getItem: jest.fn(),
+    setItem: jest.fn(),
+  },
+})
