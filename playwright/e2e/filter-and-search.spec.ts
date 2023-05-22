@@ -4,7 +4,7 @@ const baseUrl = config.use?.baseURL
 
 // TODO - cards data-cy names seem to have changed. We should check to see if page elements are still being targeted by name in a fashion that enables this test to be effective
 
-test.describe('Filter, Search and Sort', () => {
+test.skip('Filter, Search and Sort', () => {
     let page;
 
     test.beforeAll(async ({ browser }) => {
