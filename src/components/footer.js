@@ -116,6 +116,9 @@ const Footer = ({ shortname }) => {
             <li>
               <Link to="/contact/">Contact us</Link>
             </li>
+            <li>
+              <Link to="https://admg.nasa-impact.net/api/docs/">API Documentation</Link>
+            </li>
           </Ul>
         </div>
 
