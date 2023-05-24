@@ -1,14 +1,15 @@
 import React, { useRef, useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
+import { format } from "date-fns"
 
+import { colors } from "../../theme"
 import { ProductsTable } from "../../components/explore/products-table"
 import ExploreLayout from "../../components/explore/explore-layout"
 import ExploreTools from "../../components/explore/explore-tools"
 import SortMenu from "../../components/explore/sort-menu"
-import { colors } from "../../theme"
-import { format } from "date-fns"
 import Chip from "../../components/chip"
+import ExploreMap from "../../components/explore/explore-map"
 import FilterChips from "../../components/filter/filter-chips"
 import { NEGATIVE } from "../../utils/constants"
 import { selector } from "../../utils/filter-utils"
@@ -25,6 +26,7 @@ export default function ExploreProducts({ data }) {
     allGcmdPhenomenon,
   } = data
   const allShapedDoi = doiRelationalMapper(allDoi.nodes)
+
   const inputElement = useRef(null)
   const [geoFilterResult, setGeoFilter] = useState(null)
   const [searchResult, setSearchResult] = useState(null)
@@ -86,20 +88,22 @@ export default function ExploreProducts({ data }) {
     setSearchResult(null)
   }
 
-  const allMeasurementTypes = Array.from(
-    allShapedDoi.reduce((acc, doi) => {
+  const allMeasurementTypes = allShapedDoi.reduce(
+    (acc, doi) => {
       for (const instrument of doi.instruments) {
-        if (instrument.measurement_type?.short_name) {
-          acc.add(instrument.measurement_type.short_name)
+        if (
+          instrument.measurement_type?.shortname &&
+          !acc.set.has(instrument.measurement_type.id)
+        ) {
+          acc.set.add(instrument.measurement_type.id)
+          acc.values.push(instrument.measurement_type)
         }
       }
       return acc
-    }, new Set())
-  ).map(m => ({
-    id: m,
-    shortname: m,
-    longname: m,
-  }))
+    },
+    { values: [], set: new Set() }
+  ).values
+  console.log({ allMeasurementTypes })
 
   const allMeasurementRegions = allShapedDoi.reduce(
     (acc, measurement) => {
@@ -122,6 +126,11 @@ export default function ExploreProducts({ data }) {
     },
     { vals: [], set: new Set() }
   ).vals
+
+  const shapedGcmdPhenomena = allGcmdPhenomenon?.nodes?.map(node => ({
+    shortname: node.term,
+    ...node,
+  }))
 
   const { getFilterLabelById, getFilterOptionsById } = selector({
     // focus: allFocusArea,
@@ -171,45 +180,70 @@ export default function ExploreProducts({ data }) {
         isDisplayingMap={isDisplayingMap}
       />
 
-      {/* {isDisplayingMap && (
+      {isDisplayingMap && (
         <ExploreMap
-        allData={campaignList.all.map(c => ({
-          id: c.id,
-          campaignBounds: c.bounds,
-          deployments: c.deployments,
-          shortname: c.shortname,
-        }))}
-        filteredData={campaignList.filtered.map(c => {
-          if (c.deployments && c.deployments.length) {
-            return {
-              id: c.id,
-              bounds: c.bounds,
-              deployments: c.deployments,
-              shortname: c.shortname,
-            }
-          }
-        })}
-        setGeoFilter={setGeoFilter}
-        aoi={aoi}
-        setAoi={setAoi}
+          // remove duplciate parent campaigns
+          allData={productList.all
+            .reduce(
+              (acc, product) => {
+                if (!acc.set.has(product.campaigns[0].id)) {
+                  acc.values.push(product)
+                  acc.set.add(product.campaigns[0].id)
+                }
+                return acc
+              },
+              { values: [], set: new Set() }
+            )
+            .values.map(p => ({
+              id: p.id,
+              campaignBounds: p.campaignBounds,
+              deployments: p.deployments,
+              shortname: p.shortname,
+            }))}
+          filteredData={productList.filtered
+            .reduce(
+              (acc, product) => {
+                if (!acc.set.has(product.campaigns[0].id)) {
+                  acc.values.push(product)
+                  acc.set.add(product.campaigns[0].id)
+                }
+                return acc
+              },
+              { values: [], set: new Set() }
+            )
+            .values.map(p => {
+              if (p.deployments && p.deployments.length) {
+                return {
+                  id: p.id,
+                  campaignBounds: p.campaignBounds,
+                  deployments: p.deployments,
+                  shortname: p.shortname,
+                }
+              }
+            })}
+          setGeoFilter={setGeoFilter}
+          aoi={aoi}
+          setAoi={setAoi}
         />
-      )} */}
+      )}
 
       {(selectedFilterIds.length > 0 ||
         aoi ||
         !!(dateRange.start && dateRange.end)) && (
         <>
           <FilterChips clearFilters={clearFilters}>
-            {selectedFilterIds.map(f => (
-              <Chip
-                key={f}
-                id="filter"
-                label={getFilterLabelById ? getFilterLabelById(f) : f}
-                actionId={f}
-                removeAction={removeFilter}
-              />
-            ))}
-
+            {selectedFilterIds.map(f => {
+              console.log({ f })
+              return (
+                <Chip
+                  key={f}
+                  id="filter"
+                  label={getFilterLabelById ? getFilterLabelById(f) : f}
+                  actionId={f}
+                  removeAction={removeFilter}
+                />
+              )
+            })}
             {aoi && (
               <Chip
                 id="filter"
@@ -289,6 +323,20 @@ export const query = graphql`
           short_name
           end_date
           start_date
+          campaignBounds: spatial_bounds
+          deployments {
+            deploymentSpatialBounds: spatial_bounds
+            relatedCampaign: campaign {
+              id
+              short_name
+            }
+            collection_periods: collection_periods {
+              id
+            }
+            regions: geographical_regions {
+              id # required for filter
+            }
+          }
         }
         platforms {
           id
@@ -298,9 +346,9 @@ export const query = graphql`
         instruments {
           id
           measurement_type {
-            short_name
+            shortname: short_name
             id
-            long_name
+            longname: long_name
           }
           measurement_regions {
             shortname: short_name
@@ -322,11 +370,13 @@ export const query = graphql`
     }
     allGcmdPhenomenon {
       nodes {
+        id
         variable_1
         variable_2
         variable_3
         term
       }
+      totalCount
     }
     allMeasurementStyle {
       nodes {
@@ -345,19 +395,25 @@ ExploreProducts.propTypes = {
       totalCount: PropTypes.number.isRequired,
     }),
     allPlatform: PropTypes.shape({
-      nodes: PropTypes.arrayOf({
-        short_name: PropTypes.string.isRequired,
-        id: PropTypes.string.isRequired,
-        long_name: PropTypes.string.isRequired,
-      }),
+      totalCount: PropTypes.number.isRequired,
+      nodes: PropTypes.arrayOf(
+        PropTypes.shape({
+          shortname: PropTypes.string.isRequired,
+          id: PropTypes.string.isRequired,
+          longname: PropTypes.string.isRequired,
+        })
+      ),
     }).isRequired,
     allGcmdPhenomenon: PropTypes.shape({
-      nodes: PropTypes.arrayOf({
-        variable_1: PropTypes.string.isRequired,
-        variable_2: PropTypes.string.isRequired,
-        variable_3: PropTypes.string.isRequired,
-        term: PropTypes.string.isRequired,
-      }),
+      nodes: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string.isRequired,
+          variable_1: PropTypes.string,
+          variable_2: PropTypes.string,
+          variable_3: PropTypes.string,
+          term: PropTypes.string.isRequired,
+        })
+      ),
       totalCount: PropTypes.number.isRequired,
     }),
     allDoi: PropTypes.shape({
@@ -384,11 +440,13 @@ ExploreProducts.propTypes = {
                 id: PropTypes.string.isRequired,
                 long_name: PropTypes.string.isRequired,
               }),
-              measurement_regions: PropTypes.shape({
-                short_name: PropTypes.string.isRequired,
-                id: PropTypes.string.isRequired,
-                long_name: PropTypes.string.isRequired,
-              }),
+              measurement_regions: PropTypes.arrayOf(
+                PropTypes.shape({
+                  shortname: PropTypes.string.isRequired,
+                  id: PropTypes.string.isRequired,
+                  longname: PropTypes.string.isRequired,
+                })
+              ),
               measurement_style: PropTypes.shape({
                 short_name: PropTypes.string.isRequired,
                 id: PropTypes.string.isRequired,
@@ -414,11 +472,13 @@ ExploreProducts.propTypes = {
       totalCount: PropTypes.number.isRequired,
     }).isRequired,
     allMeasurementStyle: PropTypes.shape({
-      nodes: PropTypes.arrayOf({
-        short_name: PropTypes.string.isRequired,
-        id: PropTypes.string.isRequired,
-        long_name: PropTypes.string.isRequired,
-      }),
+      nodes: PropTypes.arrayOf(
+        PropTypes.shape({
+          shortname: PropTypes.string.isRequired,
+          id: PropTypes.string.isRequired,
+          longname: PropTypes.string.isRequired,
+        })
+      ),
     }).isRequired,
   }).isRequired,
 }

@@ -10,6 +10,15 @@ export function doiRelationalMapper(doiList) {
       doi.campaigns,
       campaign => campaign.end_date
     )?.end_date
-    return { enddate: enddate, startdate: startdate, ...doi }
+    const deployments = doi.campaigns.reduce((acc, campaign) => {
+      return acc.concat(campaign.deployments)
+    }, [])
+    return {
+      enddate: enddate,
+      startdate: startdate,
+      deployments: deployments,
+      campaignBounds: doi.campaigns[0].campaignBounds,
+      ...doi,
+    }
   })
 }

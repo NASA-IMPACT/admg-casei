@@ -12,6 +12,7 @@ import {
   ComboboxPopover,
   ComboboxOption,
   ComboboxList,
+  ComboboxOptionText,
 } from "@reach/combobox"
 import { IconButton } from "../button"
 import { FilterButton, FilterItem } from "./filter-menu"
@@ -59,18 +60,31 @@ const DropdownByTextInput = React.forwardRef(
     },
     ref
   ) => {
-    const [inputsize, setInputsize] = useState(50)
     const [term, setTerm] = useState("")
 
     const handleInput = event => {
       setTerm(event.target.value)
     }
-    const handleSelection = event => {
-      const value = { id: event }
-      selectedFilterIds.includes(value) ? removeFilter(value) : addFilter(value)
-      setTerm(event)
-    }
+    console.log(selectedFilterIds)
     const filteredOptions = useFilterOptions(term)
+
+    const handleSelection = event => {
+      const selection = filteredOptions.find(
+        option =>
+          `${[
+            option.term,
+            option.variable_1,
+            option.variable_2,
+            option.variable_3,
+          ]
+            .filter(item => item !== "")
+            .join(" > ")}` === event
+      )
+      const id = selection?.id ?? "None"
+
+      selectedFilterIds.includes(id) ? removeFilter(id) : addFilter(id)
+      setTerm(id)
+    }
 
     // const debounced = useDebouncedCallback(
     //   // function
