@@ -109,6 +109,13 @@ exports[`Footer renders correctly 1`] = `
             Contact us
           </a>
         </li>
+        <li>
+          <a
+            href="https://admg.nasa-impact.net/api/docs/"
+          >
+            API Documentation
+          </a>
+        </li>
       </ul>
     </div>
     <div
