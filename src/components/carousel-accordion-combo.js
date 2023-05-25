@@ -119,9 +119,9 @@ CarouselAccordionCombo.propTypes = {
   card: PropTypes.func,
   carouselList: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      shortname: PropTypes.string.isRequired,
-      longname: PropTypes.string.isRequired,
+      id: PropTypes.string,
+      shortname: PropTypes.string,
+      longname: PropTypes.string,
       image: PropTypes.shape({
         description: PropTypes.string,
         gatsbyImg: PropTypes.shape({

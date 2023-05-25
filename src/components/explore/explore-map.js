@@ -25,7 +25,7 @@ const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
   }, [])
 
   // Extract cleaned deployments from the cleanedFilteredData
-  var filteredDeployments = cleanedFilteredData.map(d => d.deployments)
+  const filteredDeployments = cleanedFilteredData.map(d => d.deployments)
 
   // Extract the spatial bounds of the filtered deployments
   const filteredBounds = filteredDeployments
@@ -34,7 +34,7 @@ const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
     .map(d => d.deploymentSpatialBounds)
 
   // Create a GeoJSON object from the filteredBounds
-  var geojson = {
+  const geojson = {
     type: "FeatureCollection",
     features: filteredBounds.map((bounds, i) => ({
       type: "Feature",
@@ -64,7 +64,7 @@ const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
             geometry: parse(d.deploymentSpatialBounds),
             properties: {
               id: d.relatedCampaign.id,
-              shortname: d.relatedCampaign.short_name,
+              shortname: d.relatedCampaign.shortname,
             },
           }))
           .filter(feature => (aoi ? !turfBooleanDisjoint(feature, aoi) : true))

@@ -39,6 +39,7 @@
     "gatsby-plugin-sharp": "^4.8.1",
     "gatsby-plugin-styled-components": "^5.8.0",
     "gatsby-plugin-typography": "^4.8.0",
+    "gatsby-plugin-postcss": "5.10.0",
     "gatsby-source-filesystem": "^4.8.1",
     "gatsby-transformer-json": "^4.8.0",
     "gatsby-transformer-sharp": "^4.8.0",
@@ -62,8 +63,7 @@
     "@babel/preset-env": "^7.21.4",
     "@babel/preset-typescript": "^7.21.4",
     "@cypress/code-coverage": "^3.9.12",
-    "@percy/playwright": "^1.0.4",
-    "@playwright/test": "^1.22.2",
+    "@playwright/test": "1.31.2",
     "@quickbaseoss/babel-plugin-styled-components-css-namespace": "^1.0.1",
     "@testing-library/cypress": "^8.0.2",
     "@testing-library/react-hooks": "^7.0.2",
@@ -78,7 +78,7 @@
     "eslint": "^8.10.0",
     "eslint-config-prettier": "^8.4.0",
     "eslint-config-react-app": "^7.0.0",
-    "eslint-plugin-cypress": "^2.12.1",
+    "eslint-plugin-playwright": "0.12.0",
     "eslint-plugin-inclusive-language": "^2.2.0",
     "eslint-plugin-jest": "^26.1.1",
     "eslint-plugin-prettier": "^4.0.0",
@@ -89,20 +89,20 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.5.1",
     "jest-styled-components": "^7.0.8",
-    "playwright": "^1.22.2",
     "prettier": "^2.5.1",
     "react-test-renderer": "^17.0.1",
-    "start-server-and-test": "^1.14.0"
+    "start-server-and-test": "^1.14.0",
+    "postcss": "8.4.23"
   },
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
+    "build": "gatsby build --prefix-paths",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "lint": "eslint --ignore-path .gitignore \"**/*.{js,jsx}\"",
     "lint:fix": "eslint --ignore-path .gitignore \"**/*.{js,jsx}\" --fix",
     "start": "gatsby develop",
-    "serve": "gatsby serve",
+    "serve": "gatsby serve --prefix-paths",
     "clean": "gatsby clean",
     "test": "jest",
     "tdd": "jest --watch",
@@ -120,5 +120,11 @@
   },
   "bugs": {
     "url": "http://github.com/developmentseed/airborne-metadata-catalog-internal/issues"
+  },
+  "resolutions": {
+    "playwright": "1.31.2"
+  },
+  "overrides": {
+    "playwright": "1.31.2"
   }
 }

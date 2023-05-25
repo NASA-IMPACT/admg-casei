@@ -18,7 +18,7 @@ export default function Map({ height, basemap, children }) {
     })
 
     // check if children exist
-    if (children.length) {
+    if (children.length > 0) {
       // extract geojson from all objects in children
       const geojsons = children.map(child => child.props.geojson)
       // create a featureCollection from the geojsons

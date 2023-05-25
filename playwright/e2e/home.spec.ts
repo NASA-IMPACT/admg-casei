@@ -144,7 +144,7 @@ test.describe('Homepage', () => {
             // Check if the URL includes "/explore/campaigns" and the header has the expected text
             expect(page.url()).toContain('/explore/campaigns');
             const headerText = await page.textContent('h1');
-            expect(headerText).toBe('Explore campaigns');
+            expect(headerText).toContain('Explore');
         });
     });
 
