@@ -23,7 +23,6 @@ export default function ExploreProducts({ data }) {
     allInstrument,
     allDoi,
     allMeasurementStyle,
-    allGcmdPhenomenon,
   } = data
   const allShapedDoi = doiRelationalMapper(allDoi.nodes)
 
@@ -126,16 +125,30 @@ export default function ExploreProducts({ data }) {
     { vals: [], set: new Set() }
   ).vals
 
-  const shapedGcmdPhenomena = allGcmdPhenomenon?.nodes?.map(node => ({
-    shortname: `${[node.term, node.variable_1, node.variable_2, node.variable_3]
-      .filter(item => item !== "")
-      .join(" > ")}`,
-    ...node,
-  }))
+  let shapedGcmdPhenomena = []
+  let GcmdKeywordSet = new Set()
+  for (const node of allDoi.nodes) {
+    for (const instrument of node.instruments) {
+      for (const keyword of instrument.gcmd_phenomena) {
+        if (!GcmdKeywordSet.has(keyword.id)) {
+          GcmdKeywordSet.add(keyword.id)
+          shapedGcmdPhenomena.push({
+            shortname: `${[
+              keyword.term,
+              keyword.variable_1,
+              keyword.variable_2,
+              keyword.variable_3,
+            ]
+              .filter(item => item !== "")
+              .join(" > ")}`,
+            ...keyword,
+          })
+        }
+      }
+    }
+  }
 
   const { getFilterLabelById, getFilterOptionsById } = selector({
-    // focus: allFocusArea,
-    // geophysical: allGeophysicalConcept,
     measurement: { options: allMeasurementTypes },
     style: { options: allMeasurementStyle.nodes },
     vertical: { options: allMeasurementRegions },
@@ -150,7 +163,6 @@ export default function ExploreProducts({ data }) {
       // - Set() is used to remove duplicate elements from the array
       //   (see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set)
       options: [],
-
       // [
       //   ...new Set(allCampaign.options.map(x => x.split(/\s*,\s*/)).flat()),
       // ].map(x => ({ id: x, shortname: x })),
