@@ -50,8 +50,6 @@ export default function useProductsList(
 
   useEffect(() => {
     // update after drawing an area
-
-    // TODO check that this is not a many to many relationship
     const filteredByGeo = queryResult.filter(product =>
       geoFilterResult ? geoFilterResult.includes(product.campaigns[0].id) : true
     )

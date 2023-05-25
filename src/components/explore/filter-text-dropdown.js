@@ -4,7 +4,6 @@ import PropTypes from "prop-types"
 import { CloseIcon, SearchIcon } from "../../icons"
 import { NEGATIVE, POSITIVE } from "../../utils/constants"
 import { colors } from "../../theme"
-// import { ListboxInput, ListboxList, ListboxPopover } from "@reach/listbox"
 import {
   Combobox,
   ComboboxInput,
@@ -75,15 +74,11 @@ const DropdownByTextInput = ({
           .join(" > ")}` === event
     )
     const id = selection?.id ?? "None"
-
-    //TODO add what we matched on term, variable_1, variable_2, or variable_3 (only one can be matched at a time)
-
     selectedFilterIds.includes(id) ? removeFilter(id) : addFilter(id)
     setTerm("")
   }
 
   function useFilterOptions(term) {
-    // TODO update to match on all variables and terms
     return React.useMemo(
       () =>
         term.trim() === ""
