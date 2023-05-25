@@ -2,9 +2,9 @@ module.exports = {
   parser: "@babel/eslint-parser", // Specifies the ESLint parser
   extends: [
     "eslint:recommended",
+    "plugin:playwright/playwright-test",
     "plugin:react/recommended",
     "plugin:prettier/recommended",
-    "plugin:cypress/recommended",
     "plugin:jest/recommended",
   ],
   settings: {
@@ -27,12 +27,12 @@ module.exports = {
   },
   rules: {
     "inclusive-language/use-inclusive-words": "error",
+    "react/no-unknown-property": ["error", { ignore: ["css", "transition"] }],
   },
   overrides: [
     {
-      files: ["**/cypress/**"],
+      files: ["playwright/e2e/**"],
       rules: {
-        "cypress/no-unnecessary-waiting": "warn",
         "jest/expect-expect": "off",
         "jest/no-commented-out-tests": "off",
         "jest/no-disabled-tests": "off",

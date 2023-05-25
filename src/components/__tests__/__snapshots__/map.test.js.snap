@@ -2,7 +2,7 @@
 
 exports[`Map renders correctly 1`] = `
 <div
-  className="map___StyledDiv-sc-j9lea3-0 ihlrNU"
+  className="map___StyledDiv-sc-j9lea3-0 gGiMsW"
   data-cy="mapboxgl-map"
 />
 `;

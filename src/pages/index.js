@@ -19,7 +19,6 @@ import { FBMContext } from "../components/fbm-provider"
 
 const Home = ({ data }) => {
   const { isFBMLoaded } = useContext(FBMContext)
-
   return (
     <Layout>
       <SEO title="Home" lang="en" />
@@ -35,7 +34,6 @@ const Home = ({ data }) => {
         textToImageRatio={[5, 7]}
         id="home"
       />
-
       <PageBody id="home">
         <Section id="focus-area" isSpaced>
           <SectionHeader
@@ -212,6 +210,24 @@ export const query = graphql`
         }
       }
     }
+    allCampaign {
+      nodes {
+        long_name
+        short_name
+      }
+    }
+    allPlatform {
+      nodes {
+        long_name
+        short_name
+      }
+    }
+    allInstrument {
+      nodes {
+        short_name
+        long_name
+      }
+    }
   }
 `
 
@@ -274,6 +290,18 @@ Home.propTypes = {
       }).isRequired,
     }).isRequired,
   }).isRequired,
+  allCampaign: PropTypes.shape({
+    short_name: PropTypes.string,
+    long_name: PropTypes.string,
+  }),
+  allPlatform: PropTypes.shape({
+    short_name: PropTypes.string,
+    long_name: PropTypes.string,
+  }),
+  allInstrument: PropTypes.shape({
+    short_name: PropTypes.string,
+    long_name: PropTypes.string,
+  }),
 }
 
 export default Home

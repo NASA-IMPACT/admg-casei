@@ -2,16 +2,16 @@
 
 exports[`Focus Section displays content 1`] = `
 <section
-  className="section__Container-sc-1oozlr5-0 fpqxos"
+  className="section__Container-sc-1oozlr5-0 bIfvkW"
   data-cy="focus-section"
   mode="darkTheme"
 >
   <div
-    className="section__Buffer-sc-1oozlr5-1 kmpZfx"
+    className="section__Buffer-sc-1oozlr5-1 eTpLgr"
     id="focus"
   />
   <div
-    className="section-header___StyledDiv-sc-1i4pe2i-0 eOVtic"
+    className="section-header___StyledDiv-sc-1i4pe2i-0 SXaMi"
     data-cy="focus-section-header"
   >
     <a
@@ -23,23 +23,23 @@ exports[`Focus Section displays content 1`] = `
     </a>
   </div>
   <div
-    className="section__SectionContent-sc-1oozlr5-2 focus-section___StyledSectionContent-sc-tyy683-1 jMjZSB wjqQy"
+    className="section__SectionContent-sc-1oozlr5-2 focus-section___StyledSectionContent-sc-tyy683-1 ivTKjv hFoHvE"
     mode="darkTheme"
   >
     <div
       data-cy="focus-content"
     >
       <label
-        className="label___StyledLabel-sc-b3994k-0 ipaqcJ"
+        className="label___StyledLabel-sc-b3994k-0 JLqlD"
         data-cy="focus-content-label"
       >
         Focus Area
       </label>
       <div
-        className="focus-area-gallery___StyledDiv-sc-1sdjxri-1 hBtPNr"
+        className="focus-area-gallery___StyledDiv-sc-1sdjxri-1 cAgvLl"
       >
         <a
-          className="focus-area-gallery___StyledLink-sc-1sdjxri-0 ersgWX"
+          className="focus-area-gallery___StyledLink-sc-1sdjxri-0 cynSCt"
           data-cy="focus-area"
           href="/focus/Carbon Cycle & Ecosystems"
           state={
@@ -73,16 +73,16 @@ exports[`Focus Section displays content 1`] = `
       data-cy="focus-content"
     >
       <label
-        className="label___StyledLabel-sc-b3994k-0 ipaqcJ"
+        className="label___StyledLabel-sc-b3994k-0 JLqlD"
         data-cy="focus-content-label"
       >
         Geophysical Concept
       </label>
       <div
-        className="focus-section__FocusContent-sc-tyy683-0 eFdMNQ"
+        className="focus-section__FocusContent-sc-tyy683-0 hhthVO"
       >
         <div
-          className="button__Clickable-sc-1yw7vig-0 button___StyledClickable-sc-1yw7vig-2 doRZJc eBUvqX"
+          className="button__Clickable-sc-1yw7vig-0 button___StyledClickable-sc-1yw7vig-2 fRqvWm kUpNvF"
         >
           <a
             data-cy="geophysical-concept-link"
@@ -102,16 +102,16 @@ exports[`Focus Section displays content 1`] = `
       data-cy="focus-content"
     >
       <label
-        className="label___StyledLabel-sc-b3994k-0 ipaqcJ"
+        className="label___StyledLabel-sc-b3994k-0 JLqlD"
         data-cy="focus-content-label"
       >
         Focus Phenomena
       </label>
       <div
-        className="focus-section__FocusContent-sc-tyy683-0 eFdMNQ"
+        className="focus-section__FocusContent-sc-tyy683-0 hhthVO"
       >
         <div
-          className="chip___StyledDiv-sc-4ga8fx-0 jWqaOZ"
+          className="chip___StyledDiv-sc-4ga8fx-0 fAohBv"
           data-cy="focus-phenomena-chip"
         >
           <small
@@ -121,7 +121,7 @@ exports[`Focus Section displays content 1`] = `
           </small>
         </div>
         <div
-          className="chip___StyledDiv-sc-4ga8fx-0 jWqaOZ"
+          className="chip___StyledDiv-sc-4ga8fx-0 fAohBv"
           data-cy="focus-phenomena-chip"
         >
           <small
@@ -136,16 +136,16 @@ exports[`Focus Section displays content 1`] = `
       data-cy="focus-content"
     >
       <label
-        className="label___StyledLabel-sc-b3994k-0 ipaqcJ"
+        className="label___StyledLabel-sc-b3994k-0 JLqlD"
         data-cy="focus-content-label"
       >
         Supported NASA Missions
       </label>
       <div
-        className="focus-section__FocusContent-sc-tyy683-0 eFdMNQ"
+        className="focus-section__FocusContent-sc-tyy683-0 hhthVO"
       >
         <div
-          className="chip___StyledDiv-sc-4ga8fx-0 jWqaOZ"
+          className="chip___StyledDiv-sc-4ga8fx-0 fAohBv"
           data-cy="focus-mission-chip"
         >
           <small
@@ -155,7 +155,7 @@ exports[`Focus Section displays content 1`] = `
           </small>
         </div>
         <div
-          className="chip___StyledDiv-sc-4ga8fx-0 jWqaOZ"
+          className="chip___StyledDiv-sc-4ga8fx-0 fAohBv"
           data-cy="focus-mission-chip"
         >
           <small

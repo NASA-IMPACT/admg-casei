@@ -11,8 +11,8 @@ module.exports = {
     `node_modules`,
     `\\.cache`,
     `<rootDir>.*/public`,
-    `<rootDir>/cypress/`,
     `<rootDir>/e2e/`,
+    `<rootDir>/playwright/`,
   ],
   transformIgnorePatterns: [`node_modules/(?!(gatsby)/)`],
   globals: {

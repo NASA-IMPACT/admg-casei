@@ -5,7 +5,6 @@ import styled from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
 import turfBbox from "@turf/bbox"
 import parse from "wellknown"
-
 import { HeroStats } from "../../components/hero"
 import Map from "../../components/map"
 import BboxLayer from "../../components/map/bbox-layer"
@@ -37,9 +36,9 @@ const BackgroundGradient = styled.div`
 
 const CampaignHero = ({
   logo150h,
-  bounds,
   longname,
   shortname,
+  bounds,
   focusListing,
   countDeployments,
   countCollectionPeriods,
@@ -63,7 +62,7 @@ const CampaignHero = ({
         }
       `}
     >
-      <HeroMap bounds={bounds} height={height} />
+      <HeroMap bounds={bounds} height={height} deployments={deployments} />
       <BackgroundGradient />
       <div
         css={`
@@ -158,6 +157,9 @@ export const heroFields = graphql`
       }
     }
     bounds: spatial_bounds
+    deployments: deployments {
+      spatial_bounds
+    }
     shortname: short_name
     longname: long_name
     focus: focus_areas {
@@ -188,21 +190,36 @@ CampaignHero.propTypes = {
 
 export default CampaignHero
 
-const HeroMap = ({ bounds, height }) => {
-  console.log(bounds)
+const HeroMap = ({ bounds, height, deployments }) => {
+  // create multispatialbounds object excluding null spatial bounds
+  var multiSpatialBounds = deployments
+    ? deployments
+        .filter(d => d.spatial_bounds !== null)
+        .map(deployment => {
+          return {
+            type: "Feature",
+            geometry: parse(deployment.spatial_bounds),
+          }
+        })
+    : null
+
   if (bounds === null) {
     return <Map height={height ? height : "inherit"} />
   } else {
-    const geojson = {
-      type: "Feature",
-      geometry: parse(bounds),
-    }
-    const bbox = turfBbox(geojson)
     return (
       <Map height={height ? height : "inherit"}>
-        <GeoJsonSource geojson={geojson} id="campaign">
-          <BboxLayer id="campaign" bbox={bbox} />
-        </GeoJsonSource>
+        {multiSpatialBounds.map((geojson, index) => {
+          const bbox = turfBbox(geojson)
+          return (
+            <GeoJsonSource
+              key={index}
+              geojson={geojson}
+              id={`campaign-${index}`}
+            >
+              <BboxLayer id={`campaign-${index}`} bbox={bbox} />
+            </GeoJsonSource>
+          )
+        })}
       </Map>
     )
   }
@@ -211,4 +228,5 @@ const HeroMap = ({ bounds, height }) => {
 HeroMap.propTypes = {
   bounds: PropTypes.string,
   height: any,
+  deployments: PropTypes.array,
 }

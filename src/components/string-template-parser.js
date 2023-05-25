@@ -66,6 +66,7 @@ export const StringTemplateParser = ({ expression, replacements }) => {
     if (image && images[part]) {
       return (
         <GatsbyImage
+          key={image.id}
           image={images[part].childImageSharp.gatsbyImageData}
           alt={image.alt}
           css={`

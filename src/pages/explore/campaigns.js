@@ -128,18 +128,25 @@ export default function ExploreCampaigns({ data, location }) {
         toggleMap={toggleMap}
         isDisplayingMap={isDisplayingMap}
       />
+
       {isDisplayingMap && (
         <ExploreMap
           allData={campaignList.all.map(c => ({
             id: c.id,
-            bounds: c.bounds,
+            campaignBounds: c.bounds,
+            deployments: c.deployments,
             shortname: c.shortname,
           }))}
-          filteredData={campaignList.filtered.map(c => ({
-            id: c.id,
-            bounds: c.bounds,
-            shortname: c.shortname,
-          }))}
+          filteredData={campaignList.filtered.map(c => {
+            if (c.deployments && c.deployments.length) {
+              return {
+                id: c.id,
+                bounds: c.bounds,
+                deployments: c.deployments,
+                shortname: c.shortname,
+              }
+            }
+          })}
           setGeoFilter={setGeoFilter}
           aoi={aoi}
           setAoi={setAoi}
@@ -203,7 +210,6 @@ export default function ExploreCampaigns({ data, location }) {
           category={"campaigns"}
         />
       </div>
-
       <ExploreSection
         list={campaignList.filtered}
         card={{ component: CampaignCard }}
@@ -277,6 +283,11 @@ export const query = graphql`
     startdate: start_date # required for temporal filter
     enddate: end_date # required for sort and temporal filter
     deployments {
+      deploymentSpatialBounds: spatial_bounds
+      relatedCampaign: campaign {
+        id
+        short_name
+      }
       collection_periods: collection_periods {
         id
       }

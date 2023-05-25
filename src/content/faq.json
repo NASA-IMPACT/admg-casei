@@ -110,6 +110,18 @@
     ]
   },
   {
+    "section": "3 Instructions for Use",
+    "question": "Can I access data through an API?",
+    "answer": "Yes. CASEI is built on top of a PostgreSQL database with multiple tables that each contain fields and foreign keys. Each endpoint in the API will point to its corresponding table. {{link.casei-api}}.",
+    "links": [
+      {
+        "id": "link.casei-api",
+        "text": "Access the CASEI API",
+        "url": "https://admg.nasa-impact.net/api/docs/"
+      }
+    ]
+  },
+  {
     "section": "4 Feedback",
     "question": "What if I cannot find the campaign I am searching for?",
     "answer": "CASEI is a living inventory that the ADMG team continues to update.  In order for a campaign to be included in CASEI, it must go through an intensive curation and review process by the ADMG team. If the campaign you need is not available in CASEI, it likely has not been completed yet. Once it is reviewed, it will become available in CASEI. {{linebreak}} Currently, CASEI is still in a beta stage. Campaigns, platforms, and instruments are continually being added to CASEI. If you would like to request a campaign, instrument, or platform be added to CASEI, {{link.contact}}.",

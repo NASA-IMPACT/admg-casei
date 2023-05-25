@@ -66,6 +66,7 @@ public
 yarn-error.log
 .pnp/
 .pnp.js
+
 # Yarn Integrity file
 .yarn-integrity
 
@@ -76,3 +77,6 @@ cypress/screenshots
 /test-results/
 /playwright-report
 /playwright/.cache/
+
+# Casei Node Env (https://pypi.org/project/nodeenv/#basic)
+/casei

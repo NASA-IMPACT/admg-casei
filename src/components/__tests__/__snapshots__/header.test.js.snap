@@ -2,17 +2,17 @@
 
 exports[`Header renders correctly 1`] = `
 <div
-  className="sticky-banner___StyledDiv-sc-e0ldth-0 jBryyL"
+  className="sticky-banner___StyledDiv-sc-e0ldth-0 gjXAxl"
 >
   <header
-    className="header___StyledHeader-sc-4sefiz-0 fjDVFs"
+    className="header___StyledHeader-sc-4sefiz-0 eymLSC"
     id="main-header"
   >
     <div
-      className="header___StyledDiv-sc-4sefiz-1 glgKnv"
+      className="header___StyledDiv-sc-4sefiz-1 hgzXFp"
     >
       <div
-        className="header___StyledDiv2-sc-4sefiz-2 kfNHrk"
+        className="header___StyledDiv2-sc-4sefiz-2 hkPJce"
       >
         <a
           aria-label="Visit nasa.gov (opens in a new window)"
@@ -21,10 +21,10 @@ exports[`Header renders correctly 1`] = `
           target="_blank"
         />
         <div
-          className="header___StyledDiv3-sc-4sefiz-3 gXhFHX"
+          className="header___StyledDiv3-sc-4sefiz-3 xYXsp"
         />
         <a
-          className="header___StyledLink-sc-4sefiz-4 heHkSd"
+          className="header___StyledLink-sc-4sefiz-4 zwKr"
           href="/"
         >
           <svg
@@ -57,14 +57,14 @@ exports[`Header renders correctly 1`] = `
             </g>
           </svg>
           <div
-            className="header___StyledDiv4-sc-4sefiz-5 eKHXnY"
+            className="header___StyledDiv4-sc-4sefiz-5 jQxBae"
           >
             Shortname from props
           </div>
         </a>
       </div>
       <div
-        className="header___StyledDiv5-sc-4sefiz-6 eBHApF"
+        className="header___StyledDiv5-sc-4sefiz-6 iMBbkb"
       />
     </div>
   </header>

@@ -16,6 +16,28 @@ export const uniqueElementsById = arr =>
     return acc
   }, [])
 
+export const typeAhead = {
+  // typeahead here
+  searchData: (chars, caseiData) => {
+    // Convert the search characters to lowercase for case-insensitive search
+    const searchChars = chars.toLowerCase()
+
+    let filteredData = {}
+
+    for (const key in caseiData) {
+      filteredData[key] = caseiData[key].filter(item => {
+        for (const [_subKey, subValue] of Object.entries(item)) { // eslint-disable-line 
+          if (subValue.toLowerCase().startsWith(searchChars)) {
+            return true
+          }
+        }
+        return false
+      })
+    }
+    return filteredData
+  },
+}
+
 export const sortFunctions = {
   campaigns: {
     "a to z": (a, b) => a.shortname.localeCompare(b.shortname),
