@@ -23,6 +23,9 @@ const FilterOption = styled(ComboboxOption)`
     background: ${colors[POSITIVE].background};
     opacity: 0.64;
   }
+  [data-user-value] {
+    font-weight: bold;
+  }
 `
 
 const StyledComboboxList = styled(ComboboxList)`
@@ -46,7 +49,8 @@ const StyledComboboxInput = styled(ComboboxInput)`
   background: transparent;
   color: white;
   width: 100%;
-  height: 42px;
+  height: 41px;
+  max-height: 41px;
 `
 const DropdownByTextInput = React.forwardRef(
   (
@@ -65,7 +69,6 @@ const DropdownByTextInput = React.forwardRef(
     const handleInput = event => {
       setTerm(event.target.value)
     }
-    console.log(selectedFilterIds)
     const filteredOptions = useFilterOptions(term)
 
     const handleSelection = event => {
@@ -82,8 +85,10 @@ const DropdownByTextInput = React.forwardRef(
       )
       const id = selection?.id ?? "None"
 
+      //TODO add what we matched on term, variable_1, variable_2, or variable_3 (only one can be matched at a time)
+
       selectedFilterIds.includes(id) ? removeFilter(id) : addFilter(id)
-      setTerm(id)
+      setTerm("")
     }
 
     // const debounced = useDebouncedCallback(
@@ -104,12 +109,22 @@ const DropdownByTextInput = React.forwardRef(
     function useFilterOptions(term) {
       //   const throttledTerm = useThrottledCallback(() => term, 100)
 
+      // TODO update to match on all variables and terms
       return React.useMemo(
         () =>
           term.trim() === ""
             ? null
             : secondaryOptions.filter(option => {
-                return option.term.toLowerCase().startsWith(term.toLowerCase())
+                return (
+                  option.term.toLowerCase().startsWith(term.toLowerCase()) ||
+                  option.variable_1
+                    .toLowerCase()
+                    .startsWith(term.toLowerCase()) ||
+                  option.variable_2
+                    .toLowerCase()
+                    .startsWith(term.toLowerCase()) ||
+                  option.variable_3.toLowerCase().startsWith(term.toLowerCase())
+                )
               }),
         [term]
       )
@@ -119,6 +134,7 @@ const DropdownByTextInput = React.forwardRef(
       <div
         css={`
           width: 60%;
+          position: relative;
         `}
       >
         <Combobox onSelect={e => handleSelection(e)} value aria-label="Cities">
@@ -149,7 +165,7 @@ const DropdownByTextInput = React.forwardRef(
             <ComboboxPopover className="shadow-popup">
               {filteredOptions.length > 0 ? (
                 <StyledComboboxList>
-                  {filteredOptions.slice(0, 50).map((option, index) => (
+                  {filteredOptions.slice(0, 100).map((option, index) => (
                     <FilterOption
                       key={index}
                       value={`${[
@@ -160,7 +176,9 @@ const DropdownByTextInput = React.forwardRef(
                       ]
                         .filter(item => item !== "")
                         .join(" > ")}`}
-                    />
+                    >
+                      <ComboboxOptionText />
+                    </FilterOption>
                   ))}
                 </StyledComboboxList>
               ) : (
@@ -171,6 +189,27 @@ const DropdownByTextInput = React.forwardRef(
                 </span>
               )}
             </ComboboxPopover>
+          )}
+          {term && (
+            <button
+              onClick={() => {
+                setTerm("")
+              }}
+              css={`
+                position: absolute;
+                top: 4px;
+                right: 4px;
+                border: none;
+                background: transparent;
+                color: ${colors[NEGATIVE].text};
+                cursor: pointer;
+              `}
+              data-cy="reset"
+            >
+              <span role="img" aria-label="X icon">
+                <CloseIcon color={colors[NEGATIVE].text} />
+              </span>
+            </button>
           )}
         </Combobox>
       </div>

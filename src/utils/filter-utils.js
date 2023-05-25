@@ -96,11 +96,23 @@ export function productsFilter(selectedFilterIds) {
       }, new Set())
     )
 
+    const gcmdKeywords = Array.from(
+      product.instruments.reduce((acc, instrument) => {
+        if (instrument.gcmd_phenomena) {
+          for (const gcmd_keyword of instrument.gcmd_phenomena) {
+            acc.add(gcmd_keyword?.id)
+          }
+        }
+        return acc
+      }, new Set())
+    )
+
     return selectedFilterIds.every(
       filterId =>
         measurementTypes.includes(filterId) ||
         measurementRegions.includes(filterId) ||
-        measurementStyles.includes(filterId)
+        measurementStyles.includes(filterId) ||
+        gcmdKeywords.includes(filterId)
     )
   }
 }

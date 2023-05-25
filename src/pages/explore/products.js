@@ -103,7 +103,6 @@ export default function ExploreProducts({ data }) {
     },
     { values: [], set: new Set() }
   ).values
-  console.log({ allMeasurementTypes })
 
   const allMeasurementRegions = allShapedDoi.reduce(
     (acc, measurement) => {
@@ -128,7 +127,9 @@ export default function ExploreProducts({ data }) {
   ).vals
 
   const shapedGcmdPhenomena = allGcmdPhenomenon?.nodes?.map(node => ({
-    shortname: node.term,
+    shortname: `${[node.term, node.variable_1, node.variable_2, node.variable_3]
+      .filter(item => item !== "")
+      .join(" > ")}`,
     ...node,
   }))
 
@@ -139,7 +140,7 @@ export default function ExploreProducts({ data }) {
     style: { options: allMeasurementStyle.nodes },
     vertical: { options: allMeasurementRegions },
     doi: { options: allMeasurementRegions },
-    gcmd: { options: allGcmdPhenomenon.nodes },
+    gcmd: { options: shapedGcmdPhenomena },
     platform: { options: allPlatform.nodes },
     funding: {
       // This transforms the query results from the distinct `funding_agency`
@@ -233,7 +234,6 @@ export default function ExploreProducts({ data }) {
         <>
           <FilterChips clearFilters={clearFilters}>
             {selectedFilterIds.map(f => {
-              console.log({ f })
               return (
                 <Chip
                   key={f}
@@ -360,6 +360,13 @@ export const query = graphql`
             id
             long_name
           }
+          gcmd_phenomena {
+            id
+            term
+            variable_1
+            variable_2
+            variable_3
+          }
           short_name
           long_name
         }
@@ -451,6 +458,12 @@ ExploreProducts.propTypes = {
                 short_name: PropTypes.string.isRequired,
                 id: PropTypes.string.isRequired,
                 long_name: PropTypes.string.isRequired,
+              }),
+              gcmd_phenomena: PropTypes.shape({
+                term: PropTypes.string.isRequired,
+                variable_1: PropTypes.string,
+                variable_2: PropTypes.string,
+                variable_3: PropTypes.string,
               }),
             })
           ),
