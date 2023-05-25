@@ -150,7 +150,6 @@ const ExploreTools = React.forwardRef(
           {category === "products" && (
             <>
               <DropdownByTextInput
-                ref={ref}
                 setSearchResult={setSearchResult}
                 id="type"
                 selectedFilterIds={selectedFilterIds}
