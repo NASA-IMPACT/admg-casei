@@ -118,7 +118,7 @@ const Footer = ({ shortname }) => {
             </li>
             <li>
               {/* eslint-disable-next-line prettier/prettier  */}
-              <Link to="https://admg.nasa-impact.net/api/docs/">API Documentation</Link>
+              <Link to="https://nasa-impact.github.io/admg-backend/documentation/casei_overview.html">API Documentation</Link>
             </li>
           </Ul>
         </div>
