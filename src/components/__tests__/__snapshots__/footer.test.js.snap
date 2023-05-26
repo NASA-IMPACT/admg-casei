@@ -111,7 +111,7 @@ exports[`Footer renders correctly 1`] = `
         </li>
         <li>
           <a
-            href="https://admg.nasa-impact.net/api/docs/"
+            href="https://nasa-impact.github.io/admg-backend/documentation/api_doc.html"
           >
             API Documentation
           </a>
