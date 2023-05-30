@@ -183,6 +183,10 @@ DropdownByTextInput.propTypes = {
   ).isRequired,
   category: PropTypes.string,
   placeholder: PropTypes.string,
+  getMatchTerm: PropTypes.func,
+  getFilterOptions: PropTypes.func,
+  filterValue: PropTypes.func,
+  filterLayoutWidth: PropTypes.func,
 }
 
 // https://reactjs.org/docs/forwarding-refs.html#displaying-a-custom-name-in-devtools
