@@ -26,7 +26,8 @@ export const typeAhead = {
 
     for (const key in caseiData) {
       filteredData[key] = caseiData[key].filter(item => {
-        for (const [_subKey, subValue] of Object.entries(item)) { // eslint-disable-line 
+        // eslint-disable-next-line
+        for (const [_subKey, subValue] of Object.entries(item)) {
           if (subValue.toLowerCase().startsWith(searchChars)) {
             return true
           }
@@ -92,7 +93,7 @@ export function productsFilter(selectedFilterIds) {
     const measurementTypes = Array.from(
       product.instruments.reduce((acc, instrument) => {
         if (instrument.measurement_type) {
-          acc.add(instrument.measurement_type?.short_name)
+          acc.add(instrument.measurement_type?.id)
         }
         return acc
       }, new Set())

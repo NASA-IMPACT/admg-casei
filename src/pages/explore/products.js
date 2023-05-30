@@ -17,13 +17,7 @@ import useProductsList from "../../utils/use-products-list"
 import { doiRelationalMapper } from "../../utils/doi_relational_mapper"
 
 export default function ExploreProducts({ data }) {
-  const {
-    allCampaign,
-    allPlatform,
-    allInstrument,
-    allDoi,
-    allMeasurementStyle,
-  } = data
+  const { allCampaign, allPlatform, allInstrument, allDoi } = data
   const allShapedDoi = doiRelationalMapper(allDoi.nodes)
 
   const inputElement = useRef(null)
@@ -103,6 +97,22 @@ export default function ExploreProducts({ data }) {
     { values: [], set: new Set() }
   ).values
 
+  const allMeasurementStyles = allShapedDoi.reduce(
+    (acc, doi) => {
+      for (const instrument of doi.instruments) {
+        if (
+          instrument.measurement_style?.shortname &&
+          !acc.set.has(instrument.measurement_style.id)
+        ) {
+          acc.set.add(instrument.measurement_style.id)
+          acc.values.push(instrument.measurement_style)
+        }
+      }
+      return acc
+    },
+    { values: [], set: new Set() }
+  ).values
+
   const allMeasurementRegions = allShapedDoi.reduce(
     (acc, measurement) => {
       if (measurement.instruments) {
@@ -150,7 +160,7 @@ export default function ExploreProducts({ data }) {
 
   const { getFilterLabelById, getFilterOptionsById } = selector({
     measurement: { options: allMeasurementTypes },
-    style: { options: allMeasurementStyle.nodes },
+    style: { options: allMeasurementStyles },
     vertical: { options: allMeasurementRegions },
     doi: { options: allMeasurementRegions },
     gcmd: { options: shapedGcmdPhenomena },
@@ -368,9 +378,9 @@ export const query = graphql`
             longname: long_name
           }
           measurement_style {
-            short_name
+            shortname: short_name
             id
-            long_name
+            longname: long_name
           }
           gcmd_phenomena {
             id
@@ -394,14 +404,6 @@ export const query = graphql`
         variable_2
         variable_3
         term
-      }
-      totalCount
-    }
-    allMeasurementStyle {
-      nodes {
-        shortname: short_name
-        id
-        longname: long_name
       }
       totalCount
     }
@@ -455,9 +457,9 @@ ExploreProducts.propTypes = {
               long_name: PropTypes.string.isRequired,
               short_name: PropTypes.string.isRequired,
               measurement_type: PropTypes.shape({
-                short_name: PropTypes.string.isRequired,
+                shortname: PropTypes.string.isRequired,
                 id: PropTypes.string.isRequired,
-                long_name: PropTypes.string.isRequired,
+                longname: PropTypes.string.isRequired,
               }),
               measurement_regions: PropTypes.arrayOf(
                 PropTypes.shape({
@@ -467,16 +469,18 @@ ExploreProducts.propTypes = {
                 })
               ),
               measurement_style: PropTypes.shape({
-                short_name: PropTypes.string.isRequired,
+                shortname: PropTypes.string.isRequired,
                 id: PropTypes.string.isRequired,
-                long_name: PropTypes.string.isRequired,
+                longname: PropTypes.string.isRequired,
               }),
-              gcmd_phenomena: PropTypes.shape({
-                term: PropTypes.string.isRequired,
-                variable_1: PropTypes.string,
-                variable_2: PropTypes.string,
-                variable_3: PropTypes.string,
-              }),
+              gcmd_phenomena: PropTypes.arrayOf(
+                PropTypes.shape({
+                  term: PropTypes.string.isRequired,
+                  variable_1: PropTypes.string,
+                  variable_2: PropTypes.string,
+                  variable_3: PropTypes.string,
+                })
+              ),
             })
           ),
           platforms: PropTypes.arrayOf(
@@ -495,15 +499,6 @@ ExploreProducts.propTypes = {
     }),
     allCampaign: PropTypes.shape({
       totalCount: PropTypes.number.isRequired,
-    }).isRequired,
-    allMeasurementStyle: PropTypes.shape({
-      nodes: PropTypes.arrayOf(
-        PropTypes.shape({
-          shortname: PropTypes.string.isRequired,
-          id: PropTypes.string.isRequired,
-          longname: PropTypes.string.isRequired,
-        })
-      ),
     }).isRequired,
   }).isRequired,
 }
