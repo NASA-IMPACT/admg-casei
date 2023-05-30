@@ -130,12 +130,24 @@ export function productsFilter(selectedFilterIds) {
       }, new Set())
     )
 
+    let relatedKeywords = new Set()
+    for (const instrument of product.instruments) {
+      relatedKeywords.add(instrument.id)
+    }
+    for (const campaign of product.campaigns) {
+      relatedKeywords.add(campaign.id)
+    }
+    for (const platform of product.platforms) {
+      relatedKeywords.add(platform.id)
+    }
+
     return selectedFilterIds.every(
       filterId =>
         measurementTypes.includes(filterId) ||
         measurementRegions.includes(filterId) ||
         measurementStyles.includes(filterId) ||
-        gcmdKeywords.includes(filterId)
+        gcmdKeywords.includes(filterId) ||
+        relatedKeywords.has(filterId)
     )
   }
 }

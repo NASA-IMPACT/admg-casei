@@ -45,14 +45,19 @@ const StyledComboboxInput = styled(ComboboxInput)`
   background: transparent;
   color: white;
   width: 100%;
-  height: 41px;
-  max-height: 41px;
+  height: 40px;
+  max-height: 40px;
 `
 const DropdownByTextInput = ({
   secondaryOptions,
   selectedFilterIds,
   addFilter,
   removeFilter,
+  placeholder,
+  getMatchTerm,
+  getFilterOptions,
+  filterValue,
+  filterLayoutWidth,
 }) => {
   const [term, setTerm] = useState("")
 
@@ -63,15 +68,7 @@ const DropdownByTextInput = ({
 
   const handleSelection = event => {
     const selection = filteredOptions.find(
-      option =>
-        `${[
-          option.term,
-          option.variable_1,
-          option.variable_2,
-          option.variable_3,
-        ]
-          .filter(item => item !== "")
-          .join(" > ")}` === event
+      option => getMatchTerm(option) === event
     )
     const id = selection?.id ?? "None"
     selectedFilterIds.includes(id) ? removeFilter(id) : addFilter(id)
@@ -81,20 +78,7 @@ const DropdownByTextInput = ({
   function useFilterOptions(term) {
     return React.useMemo(
       () =>
-        term.trim() === ""
-          ? null
-          : secondaryOptions.filter(option => {
-              return (
-                option.term.toLowerCase().startsWith(term.toLowerCase()) ||
-                option.variable_1
-                  .toLowerCase()
-                  .startsWith(term.toLowerCase()) ||
-                option.variable_2
-                  .toLowerCase()
-                  .startsWith(term.toLowerCase()) ||
-                option.variable_3.toLowerCase().startsWith(term.toLowerCase())
-              )
-            }),
+        term.trim() === "" ? null : getFilterOptions(secondaryOptions, term),
       [term]
     )
   }
@@ -102,8 +86,9 @@ const DropdownByTextInput = ({
   return (
     <div
       css={`
-        width: 60%;
+        width: ${filterLayoutWidth};
         position: relative;
+        border: white 1px solid;
       `}
     >
       <Combobox onSelect={e => handleSelection(e)} value aria-label="Cities">
@@ -126,7 +111,7 @@ const DropdownByTextInput = ({
             className="city-search-input"
             onChange={e => handleInput(e)}
             value={term}
-            placeholder={"Enter a variable"}
+            placeholder={placeholder}
             style={{ border: "unset" }}
           />
         </span>
@@ -134,21 +119,13 @@ const DropdownByTextInput = ({
           <ComboboxPopover className="shadow-popup">
             {filteredOptions.length > 0 ? (
               <StyledComboboxList>
-                {filteredOptions.slice(0, 100).map((option, index) => (
-                  <FilterOption
-                    key={index}
-                    value={`${[
-                      option.term,
-                      option.variable_1,
-                      option.variable_2,
-                      option.variable_3,
-                    ]
-                      .filter(item => item !== "")
-                      .join(" > ")}`}
-                  >
-                    <ComboboxOptionText />
-                  </FilterOption>
-                ))}
+                {filteredOptions.slice(0, 100).map((option, index) => {
+                  return (
+                    <FilterOption key={index} value={filterValue(option)}>
+                      <ComboboxOptionText />
+                    </FilterOption>
+                  )
+                })}
               </StyledComboboxList>
             ) : (
               <span
@@ -205,6 +182,7 @@ DropdownByTextInput.propTypes = {
     })
   ).isRequired,
   category: PropTypes.string,
+  placeholder: PropTypes.string,
 }
 
 // https://reactjs.org/docs/forwarding-refs.html#displaying-a-custom-name-in-devtools

@@ -158,6 +158,46 @@ export default function ExploreProducts({ data }) {
     }
   }
 
+  const allCampaignPlatformInstruments = allShapedDoi.reduce(
+    (acc, doi) => {
+      for (const instrument of doi.instruments) {
+        if (instrument && !acc.set.has(instrument.id)) {
+          acc.set.add(instrument.id)
+          acc.values.push({
+            id: instrument.id,
+            shortname: instrument.shortname,
+            longname: instrument.longname,
+            type: "instrument",
+          })
+        }
+      }
+      for (const platform of doi.platforms) {
+        if (platform && !acc.set.has(platform.id)) {
+          acc.set.add(platform.id)
+          acc.values.push({
+            id: platform.id,
+            shortname: platform.shortname,
+            longname: platform.longname,
+            type: "platform",
+          })
+        }
+      }
+      for (const campaign of doi.campaigns) {
+        if (campaign && !acc.set.has(campaign.id)) {
+          acc.set.add(campaign.id)
+          acc.values.push({
+            id: campaign.id,
+            shortname: campaign.shortname,
+            longname: campaign.longname,
+            type: "campaign",
+          })
+        }
+      }
+      return acc
+    },
+    { values: [], set: new Set() }
+  ).values
+
   const { getFilterLabelById, getFilterOptionsById } = selector({
     measurement: { options: allMeasurementTypes },
     style: { options: allMeasurementStyles },
@@ -165,6 +205,7 @@ export default function ExploreProducts({ data }) {
     doi: { options: allMeasurementRegions },
     gcmd: { options: shapedGcmdPhenomena },
     platform: { options: allPlatform.nodes },
+    related: { options: allCampaignPlatformInstruments },
     funding: {
       // This transforms the query results from the distinct `funding_agency`
       // field into the filter format { id, shortname }.
@@ -341,8 +382,8 @@ export const query = graphql`
         shortname: cmr_short_name
         campaigns {
           id
-          long_name
-          short_name
+          shortname: short_name
+          longname: long_name
           end_date
           start_date
           campaignBounds: spatial_bounds
@@ -361,9 +402,9 @@ export const query = graphql`
           }
         }
         platforms {
+          shortname: short_name
           id
-          long_name
-          short_name
+          longname: long_name
         }
         instruments {
           id
@@ -389,8 +430,8 @@ export const query = graphql`
             variable_2
             variable_3
           }
-          short_name
-          long_name
+          shortname: short_name
+          longname: long_name
         }
       }
     }
@@ -444,8 +485,8 @@ ExploreProducts.propTypes = {
           campaigns: PropTypes.arrayOf(
             PropTypes.shape({
               id: PropTypes.string.isRequired,
-              long_name: PropTypes.string.isRequired,
-              short_name: PropTypes.string.isRequired,
+              longname: PropTypes.string.isRequired,
+              shortname: PropTypes.string.isRequired,
               measurement_type: PropTypes.shape({
                 short_name: PropTypes.string,
               }),
@@ -454,8 +495,8 @@ ExploreProducts.propTypes = {
           instruments: PropTypes.arrayOf(
             PropTypes.shape({
               id: PropTypes.string.isRequired,
-              long_name: PropTypes.string.isRequired,
-              short_name: PropTypes.string.isRequired,
+              longname: PropTypes.string.isRequired,
+              shortname: PropTypes.string.isRequired,
               measurement_type: PropTypes.shape({
                 shortname: PropTypes.string.isRequired,
                 id: PropTypes.string.isRequired,
@@ -486,8 +527,8 @@ ExploreProducts.propTypes = {
           platforms: PropTypes.arrayOf(
             PropTypes.shape({
               id: PropTypes.string.isRequired,
-              long_name: PropTypes.string.isRequired,
-              short_name: PropTypes.string.isRequired,
+              longname: PropTypes.string.isRequired,
+              shortname: PropTypes.string.isRequired,
             })
           ),
           cmrTitle: PropTypes.string,

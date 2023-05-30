@@ -67,13 +67,13 @@ export function ProductsTable({ dois }) {
                         return (
                           <span key={idx}>
                             <a
-                              href={`/platform/${item.short_name}`}
+                              href={`/platform/${item.shortname}`}
                               css={`
                                 font-weight: 600;
                               `}
                               data-cy={`${item.id}-inpage-link`}
                             >
-                              {item.short_name + spacer}
+                              {item.shortname + spacer}
                             </a>
                           </span>
                         )
@@ -100,13 +100,13 @@ export function ProductsTable({ dois }) {
                           <span key={idx}>
                             {" "}
                             <a
-                              href={`/instrument/${item.short_name}`}
+                              href={`/instrument/${item.shortname}`}
                               css={`
                                 font-weight: 600;
                               `}
                               data-cy={`${item.id}-inpage-link`}
                             >
-                              {item.short_name + spacer}
+                              {item.shortname + spacer}
                             </a>
                           </span>
                         )

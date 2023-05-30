@@ -159,21 +159,29 @@ const ExploreTools = React.forwardRef(
                 options={getFilterOptionsById("measurement")}
                 secondaryOptions={getFilterOptionsById("gcmd")}
                 category={category}
-              />
-              <FilterByDate
-                id="date"
-                label="Date range"
-                dateRange={dateRange}
-                setDateRange={setDateRange}
-              />
-              <FilterMenu
-                id="type"
-                selectedFilterIds={selectedFilterIds}
-                addFilter={addFilter}
-                removeFilter={removeFilter}
-                label="Measurement Types"
-                options={getFilterOptionsById("measurement")}
-                category={category}
+                placeholder={"Search for a measurement variable"}
+                getMatchTerm={option =>
+                  `${[
+                    option.term,
+                    option.variable_1,
+                    option.variable_2,
+                    option.variable_3,
+                  ]
+                    .filter(item => item !== "")
+                    .join(" > ")}`
+                }
+                getFilterOptions={getGcmdOptions}
+                filterValue={option =>
+                  `${[
+                    option.term,
+                    option.variable_1,
+                    option.variable_2,
+                    option.variable_3,
+                  ]
+                    .filter(item => item !== "")
+                    .join(" > ")}`
+                }
+                filterLayoutWidth={"60%"}
               />
               <FilterMenu
                 id="style"
@@ -182,6 +190,48 @@ const ExploreTools = React.forwardRef(
                 removeFilter={removeFilter}
                 label="Measurement Styles"
                 options={getFilterOptionsById("style")}
+                category={category}
+              />
+              <DropdownByTextInput
+                setSearchResult={setSearchResult}
+                id="type"
+                selectedFilterIds={selectedFilterIds}
+                addFilter={addFilter}
+                removeFilter={removeFilter}
+                label="Measurement Types"
+                options={getFilterOptionsById("measurement")}
+                secondaryOptions={getFilterOptionsById("related")}
+                category={category}
+                placeholder={
+                  "Search for related campaigns, instruments, or platforms"
+                }
+                getMatchTerm={option =>
+                  `${[option.shortname, `(${option.type})`]
+                    .filter(item => item !== "")
+                    .join(" ")}`
+                }
+                getFilterOptions={getRelatedOptions}
+                filterValue={option =>
+                  `${[option.shortname, `(${option.type})`]
+                    .filter(item => item !== "")
+                    .join(" ")}`
+                }
+                filterLayoutWidth={"40%"}
+              />
+              <FilterByDate
+                id="date"
+                label="Date range"
+                dateRange={dateRange}
+                setDateRange={setDateRange}
+              />
+
+              <FilterMenu
+                id="type"
+                selectedFilterIds={selectedFilterIds}
+                addFilter={addFilter}
+                removeFilter={removeFilter}
+                label="Measurement Types"
+                options={getFilterOptionsById("measurement")}
                 category={category}
               />
               <FilterMenu
@@ -274,6 +324,21 @@ const ExploreTools = React.forwardRef(
     )
   }
 )
+
+const getGcmdOptions = (values, term) =>
+  values.filter(
+    option =>
+      option.term.toLowerCase().startsWith(term.toLowerCase()) ||
+      option.variable_1.toLowerCase().startsWith(term.toLowerCase()) ||
+      option.variable_2.toLowerCase().startsWith(term.toLowerCase()) ||
+      option.variable_3.toLowerCase().startsWith(term.toLowerCase())
+  )
+
+function getRelatedOptions(values, term) {
+  return values.filter(option =>
+    option.shortname.toLowerCase().startsWith(term.toLowerCase())
+  )
+}
 
 ExploreTools.propTypes = {
   dateRange: PropTypes.shape({
