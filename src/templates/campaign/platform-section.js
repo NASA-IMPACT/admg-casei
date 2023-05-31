@@ -23,6 +23,9 @@ const PlatformSection = ({ id, collectionPeriods }) => {
     if (!uniqueSets.includes(combinedId)) {
       uniqueSets.push(combinedId)
       platforms.push({
+        id: platformId,
+        shortname: cdpi.platform.shortname,
+        longname: cdpi.platform.longname,
         item: cdpi.platform,
         folds: cdpi.instruments,
       })
@@ -33,7 +36,7 @@ const PlatformSection = ({ id, collectionPeriods }) => {
     <Section id={id}>
       <SectionHeader headline="Platforms & Instruments" id={id} />
       <SectionContent>
-        {platforms && (
+        {platforms.length && (
           <CarouselAccordionCombo
             id="platform"
             emptyMessage="No available related platforms or instruments"
