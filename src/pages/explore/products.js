@@ -16,7 +16,7 @@ import { selector } from "../../utils/filter-utils"
 import useProductsList from "../../utils/use-products-list"
 import { doiRelationalMapper } from "../../utils/doi_relational_mapper"
 
-export default function ExploreProducts({ data }) {
+export default function ExploreProducts({ data, location }) {
   const { allCampaign, allPlatform, allInstrument, allDoi } = data
   const allShapedDoi = doiRelationalMapper(allDoi.nodes)
 
