@@ -117,7 +117,7 @@
       {
         "id": "link.casei-api",
         "text": "Access the CASEI API",
-        "url": "https://admg.nasa-impact.net/api/docs/"
+        "url": "https://nasa-impact.github.io/admg-backend/documentation/api_doc.html"
       }
     ]
   },
