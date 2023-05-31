@@ -13,8 +13,7 @@ export default function useCampaignList(
   selectedFilterIds,
   geoFilterResult,
   dateRange,
-  searchResult,
-  category
+  searchResult
 ) {
   const [campaignList, setCampaignList] = useState({
     all: queryResult,
@@ -24,7 +23,7 @@ export default function useCampaignList(
     filteredByDateRange: queryResult,
     filteredBySearch: queryResult,
   })
-
+  const category = "campaigns"
   useEffect(() => {
     // update sort order
     setCampaignList(prev => ({
@@ -36,9 +35,7 @@ export default function useCampaignList(
   useEffect(() => {
     // update after filter selection
     const filteredCampaignByMenu = queryResult.filter(
-      category === "campaign"
-        ? campaignFilter(selectedFilterIds)
-        : productsFilter(selectedFilterIds)
+      campaignFilter(selectedFilterIds)
     )
 
     setCampaignList(prev => ({
