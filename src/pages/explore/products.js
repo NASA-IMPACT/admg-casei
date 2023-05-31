@@ -542,4 +542,9 @@ ExploreProducts.propTypes = {
       totalCount: PropTypes.number.isRequired,
     }).isRequired,
   }).isRequired,
+  location: PropTypes.shape({
+    state: PropTypes.shape({
+      selectedFilterId: PropTypes.string,
+    }),
+  }),
 }

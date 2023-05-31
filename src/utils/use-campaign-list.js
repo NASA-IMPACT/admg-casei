@@ -1,11 +1,7 @@
 import { useState, useEffect } from "react"
 import { isAfter, isBefore, isWithinInterval } from "date-fns"
 
-import {
-  sortFunctions,
-  campaignFilter,
-  productsFilter,
-} from "../utils/filter-utils"
+import { sortFunctions, campaignFilter } from "../utils/filter-utils"
 
 export default function useCampaignList(
   queryResult,
