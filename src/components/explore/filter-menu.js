@@ -15,7 +15,7 @@ import { IconButton } from "../button"
 import { CloseIcon } from "../../icons"
 import { colors } from "../../theme"
 
-const FilterButton = styled(ListboxButton)`
+export const FilterButton = styled(ListboxButton)`
   flex-grow: 0;
   width: 100%;
   -webkit-appearance: none;
@@ -27,7 +27,7 @@ const FilterButton = styled(ListboxButton)`
   text-transform: uppercase;
 `
 
-const FilterItem = styled(ListboxOption)`
+export const FilterItem = styled(ListboxOption)`
   display: flex;
   justify-content: space-between;
   background-color: ${props =>

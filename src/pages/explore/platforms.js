@@ -17,7 +17,7 @@ import ExploreSection from "../../components/explore/explore-section"
 import PlatformCard from "../../components/cards/platform-card"
 
 export default function ExplorePlatforms({ data, location }) {
-  const { allCampaign, allPlatform, allInstrument } = data
+  const { allCampaign, allPlatform, allInstrument, allDoi } = data
   const { selectedFilterId } = location.state || {}
 
   const [sortOrder, setSortOrder] = useState("most used")
@@ -68,6 +68,7 @@ export default function ExplorePlatforms({ data, location }) {
         campaigns: allCampaign.totalCount,
         platforms: platformList.filtered.length,
         instruments: allInstrument.totalCount,
+        products: allDoi?.totalCount,
       }}
     >
       <ExploreTools
@@ -137,6 +138,9 @@ export const query = graphql`
     allCampaign {
       totalCount
     }
+    allDoi {
+      totalCount
+    }
     allPlatform(sort: { fields: [campaign_count], order: DESC }) {
       totalCount
       list: nodes {
@@ -198,6 +202,9 @@ const platformShape = PropTypes.shape({
 ExplorePlatforms.propTypes = {
   data: PropTypes.shape({
     allCampaign: PropTypes.shape({
+      totalCount: PropTypes.number.isRequired,
+    }),
+    allDoi: PropTypes.shape({
       totalCount: PropTypes.number.isRequired,
     }),
     allPlatform: PropTypes.shape({

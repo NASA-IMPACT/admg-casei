@@ -26,7 +26,8 @@ export const typeAhead = {
 
     for (const key in caseiData) {
       filteredData[key] = caseiData[key].filter(item => {
-        for (const [_subKey, subValue] of Object.entries(item)) { // eslint-disable-line 
+        // eslint-disable-next-line
+        for (const [_subKey, subValue] of Object.entries(item)) {
           if (subValue.toLowerCase().startsWith(searchChars)) {
             return true
           }
@@ -46,6 +47,10 @@ export const sortFunctions = {
       (a.enddate ? new Date(a.enddate) : new Date()) -
       (b.enddate ? new Date(b.enddate) : new Date()), // if there is no enddate, use today
     "most recent": (a, b) => new Date(b.enddate) - new Date(a.enddate),
+  },
+  products: {
+    "a to z": (a, b) => a.doi.localeCompare(b.doi),
+    "z to a": (a, b) => b.doi.localeCompare(a.doi),
   },
   platforms: {
     "a to z": (a, b) => a.shortname.localeCompare(b.shortname),
@@ -77,6 +82,74 @@ export function campaignFilter(selectedFilterIds) {
             campaign.platforms.map(x => x.id).includes(filterId) ||
             campaign.fundingAgency.includes(filterId)
         )
+}
+
+export function productsFilter(selectedFilterIds) {
+  return product => {
+    if (!product?.instruments || selectedFilterIds.length === 0) {
+      return true
+    }
+
+    const measurementTypes = Array.from(
+      product.instruments.reduce((acc, instrument) => {
+        if (instrument.measurement_type) {
+          acc.add(instrument.measurement_type?.id)
+        }
+        return acc
+      }, new Set())
+    )
+
+    const measurementStyles = Array.from(
+      product.instruments.reduce((acc, instrument) => {
+        if (instrument.measurement_style) {
+          acc.add(instrument.measurement_style?.id)
+        }
+        return acc
+      }, new Set())
+    )
+
+    const measurementRegions = Array.from(
+      product.instruments.reduce((acc, instrument) => {
+        if (instrument.measurement_regions) {
+          for (const region of instrument.measurement_regions) {
+            acc.add(region?.id)
+          }
+        }
+        return acc
+      }, new Set())
+    )
+
+    const gcmdKeywords = Array.from(
+      product.instruments.reduce((acc, instrument) => {
+        if (instrument.gcmd_phenomena) {
+          for (const gcmd_keyword of instrument.gcmd_phenomena) {
+            acc.add(gcmd_keyword?.id)
+          }
+        }
+        return acc
+      }, new Set())
+    )
+
+    let relatedKeywords = new Set()
+    for (const instrument of product.instruments) {
+      relatedKeywords.add(instrument.id)
+    }
+    for (const campaign of product.campaigns) {
+      relatedKeywords.add(campaign.id)
+    }
+    for (const platform of product.platforms) {
+      relatedKeywords.add(platform.id)
+    }
+
+    return selectedFilterIds.every(
+      filterId =>
+        measurementTypes.includes(filterId) ||
+        measurementRegions.includes(filterId) ||
+        measurementStyles.includes(filterId) ||
+        gcmdKeywords.includes(filterId) ||
+        relatedKeywords.has(filterId)
+    )
+  }
 }
 
 export function platformFilter(selectedFilterIds) {
