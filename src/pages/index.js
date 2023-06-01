@@ -136,7 +136,10 @@ const Home = ({ data }) => {
             <SectionContent>
               <Button
                 action={() => {
-                  window.feedback.showForm()
+                  window.open(
+                    "https://docs.google.com/forms/d/e/1FAIpQLSfCQzZHtaDSiWNdwiJa3TIzsyhjEbYyyHwfrcwIKn_UmdVaKA/viewform",
+                    "_blank"
+                  )
                 }}
               >
                 How can we improve CASEI?
