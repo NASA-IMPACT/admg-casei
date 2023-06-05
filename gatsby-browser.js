@@ -15,4 +15,3 @@ export const shouldUpdateScroll = ({ routerProps: { location } }) => {
 
   return true
 }
-

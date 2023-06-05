@@ -11,7 +11,6 @@ import SEO from "../components/seo"
 import ExternalLink from "../components/external-link"
 
 const Contact = () => {
-
   return (
     <Layout>
       <SEO title="Contact" lang="en" />

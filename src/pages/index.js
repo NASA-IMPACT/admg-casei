@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React from "react"
 import PropTypes from "prop-types"
 import { graphql, Link } from "gatsby"
 import { FEEDBACK_FORM_URL } from "../utils/constants"
@@ -134,10 +134,7 @@ const Home = ({ data }) => {
             <SectionContent>
               <Button
                 action={() => {
-                  window.open(
-                    FEEDBACK_FORM_URL,
-                    "_blank"
-                  )
+                  window.open(FEEDBACK_FORM_URL, "_blank")
                 }}
               >
                 How can we improve CASEI?

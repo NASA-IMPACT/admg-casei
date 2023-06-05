@@ -31,7 +31,6 @@ InpageLink.propTypes = {
 }
 
 const InpageNav = ({ shortname, items }) => {
-  const { isFBMLoaded } = useContext(FBMContext)
 
   const offsetCalculator = (
     scrollDirection,

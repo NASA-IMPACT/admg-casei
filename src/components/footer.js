@@ -123,7 +123,6 @@ const Footer = ({ shortname }) => {
                 target="_blank"
                 label="API Documentation"
                 id="api documentation"
-
               >
                 API Documentation
               </ExternalLink>
