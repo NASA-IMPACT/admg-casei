@@ -156,7 +156,6 @@ export const heroFields = graphql`
         }
       }
     }
-    bounds: spatial_bounds
     deployments: deployments {
       spatial_bounds
     }

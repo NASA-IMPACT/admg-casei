@@ -260,7 +260,7 @@ export default function ExploreProducts({ data, location }) {
             )
             .values.map(p => ({
               id: p.id,
-              campaignBounds: p.campaignBounds,
+
               deployments: p.deployments,
               shortname: p.shortname,
             }))}
@@ -279,7 +279,7 @@ export default function ExploreProducts({ data, location }) {
               if (p.deployments && p.deployments.length) {
                 return {
                   id: p.id,
-                  campaignBounds: p.campaignBounds,
+
                   deployments: p.deployments,
                   shortname: p.shortname,
                 }
@@ -386,7 +386,6 @@ export const query = graphql`
           longname: long_name
           end_date
           start_date
-          campaignBounds: spatial_bounds
           deployments {
             deploymentSpatialBounds: spatial_bounds
             relatedCampaign: campaign {

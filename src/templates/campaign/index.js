@@ -22,6 +22,8 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
     setIsClient(true)
   }, [])
 
+  const bounds = []
+
   const sections = {
     overview: {
       nav: "Overview",
@@ -33,7 +35,6 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
         enddate: campaign.enddate,
         region: campaign.region,
         seasonListing: campaign.seasons.map(x => x.shortname).join(", "),
-        bounds: campaign.bounds,
         doi: campaign.doi,
         notesPublic: campaign.notesPublic,
         repositories: campaign.repositories,
@@ -105,7 +106,7 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
     <Layout>
       <SEO title={campaign.shortname} lang="en" />
       <CampaignHero
-        bounds={campaign.bounds}
+        bounds={bounds}
         longname={campaign.longname}
         shortname={campaign.shortname}
         focusListing={campaign.focus.map(x => x.shortname).join(", ")}
@@ -226,7 +227,6 @@ export const query = graphql`
 CampaignTemplate.propTypes = {
   data: PropTypes.shape({
     campaign: PropTypes.shape({
-      bounds: PropTypes.string,
       shortname: PropTypes.string.isRequired,
       longname: PropTypes.string.isRequired,
       focus: PropTypes.arrayOf(

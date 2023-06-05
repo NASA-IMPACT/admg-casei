@@ -136,7 +136,6 @@ export default function ExploreCampaigns({ data, location }) {
         <ExploreMap
           allData={campaignList.all.map(c => ({
             id: c.id,
-            campaignBounds: c.bounds,
             deployments: c.deployments,
             shortname: c.shortname,
           }))}
@@ -144,7 +143,6 @@ export default function ExploreCampaigns({ data, location }) {
             if (c.deployments && c.deployments.length) {
               return {
                 id: c.id,
-                bounds: c.bounds,
                 deployments: c.deployments,
                 shortname: c.shortname,
               }
@@ -305,7 +303,6 @@ export const query = graphql`
       id # required for filter
     }
     fundingAgency: funding_agency # required for filter
-    bounds: spatial_bounds # required for map
   }
 `
 

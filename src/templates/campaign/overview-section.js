@@ -195,7 +195,6 @@ export const overviewFields = graphql`
       shortname: short_name
       longname: long_name
     }
-    bounds: spatial_bounds
     doi: campaign_doi
     notesPublic: notes_public
     repositories {
