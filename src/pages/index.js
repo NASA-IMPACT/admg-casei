@@ -1,7 +1,7 @@
 import React, { useContext } from "react"
 import PropTypes from "prop-types"
 import { graphql, Link } from "gatsby"
-
+import { FEEDBACK_FORM_URL } from "../utils/constants"
 import Layout, { PageBody } from "../components/layout"
 import SEO from "../components/seo"
 import { Section, SectionHeader, SectionContent } from "../components/layout"
@@ -15,10 +15,8 @@ import { InstrumentsGrid } from "../components/home/instruments-grid"
 import { ArrowIcon } from "../icons"
 import { NEGATIVE } from "../utils/constants"
 import { colors } from "../theme"
-import { FBMContext } from "../components/fbm-provider"
 
 const Home = ({ data }) => {
-  const { isFBMLoaded } = useContext(FBMContext)
   return (
     <Layout>
       <SEO title="Home" lang="en" />
@@ -130,14 +128,14 @@ const Home = ({ data }) => {
           </SectionContent>
         </Section>
 
-        {isFBMLoaded && (
+        {
           <Section id="feedback" isSpaced>
             <SectionHeader headline="Provide Feedback" id="feedback" />
             <SectionContent>
               <Button
                 action={() => {
                   window.open(
-                    "https://docs.google.com/forms/d/e/1FAIpQLSfCQzZHtaDSiWNdwiJa3TIzsyhjEbYyyHwfrcwIKn_UmdVaKA/viewform",
+                    FEEDBACK_FORM_URL,
                     "_blank"
                   )
                 }}
@@ -146,7 +144,7 @@ const Home = ({ data }) => {
               </Button>
             </SectionContent>
           </Section>
-        )}
+        }
       </PageBody>
     </Layout>
   )
