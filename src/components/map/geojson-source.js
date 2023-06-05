@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import PropTypes from "prop-types"
 
 // GeoJsonSource component
-export default function GeoJsonSource({ geojson, id, map, children }) {
+export default function GeoJsonSource({ geojson, id, map, children, isDrawing }) {
   const [source, setSource] = useState(null)
 
   // Effect to handle component unmounting
@@ -10,7 +10,10 @@ export default function GeoJsonSource({ geojson, id, map, children }) {
     // Clean up function to remove source from map when the component is unmounted
     return () => {
       // TODO Error: Source "explore-source" cannot be removed while layer "explore-hover-layer" is using it.
-      map.removeSource(`${id}-source`)
+      if (isDrawing) {
+        map.removeSource(`${id}-source`)
+      }
+
     }
   }, [])
 
