@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React from "react"
 import PropTypes from "prop-types"
 import { POSITIVE } from "../utils/constants"
 import { colors, breakpoints } from "../theme"
@@ -31,7 +31,6 @@ InpageLink.propTypes = {
 }
 
 const InpageNav = ({ shortname, items }) => {
-
   const offsetCalculator = (
     scrollDirection,
     startingPosition,
