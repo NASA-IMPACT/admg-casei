@@ -186,7 +186,7 @@ DropdownByTextInput.propTypes = {
   getMatchTerm: PropTypes.func,
   getFilterOptions: PropTypes.func,
   filterValue: PropTypes.func,
-  filterLayoutWidth: PropTypes.func,
+  filterLayoutWidth: PropTypes.string,
 }
 
 // https://reactjs.org/docs/forwarding-refs.html#displaying-a-custom-name-in-devtools
