@@ -194,13 +194,13 @@ const HeroMap = ({ height, deployments }) => {
   // create multispatialbounds object excluding null spatial bounds
   var multiSpatialBounds = deployments
     ? deployments
-      .filter(d => d.spatial_bounds !== null)
-      .map(deployment => {
-        return {
-          type: "Feature",
-          geometry: parse(deployment.spatial_bounds),
-        }
-      })
+        .filter(d => d.spatial_bounds !== null)
+        .map(deployment => {
+          return {
+            type: "Feature",
+            geometry: parse(deployment.spatial_bounds),
+          }
+        })
     : null
   if (deployments.length === 0 || deployments === null) {
     return <Map height={height ? height : "inherit"} />

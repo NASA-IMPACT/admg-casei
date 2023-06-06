@@ -12,9 +12,6 @@ test.describe('Campaign', () => {
 
     test('provides information on the campaign', async () => {
 
-        // wait for page load
-        await page.waitForNavigation()
-
         await expect(page.locator('[data-cy=campaign-hero] h1')).toBeVisible();
         await expect(page.locator('[data-cy=campaign-hero-header]')).toHaveCount(1);
 
