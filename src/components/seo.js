@@ -27,16 +27,6 @@ function SEO({ description, lang, meta, title }) {
 
   const metaDescription = description || site.siteMetadata.description
 
-  const handleChangeClientState = (newState, addedTags) => {
-    if (addedTags && addedTags.scriptTags) {
-      // eslint-disable-next-line no-undef
-      const foundScript = addedTags.scriptTags.find({ src })
-      if (foundScript) {
-        foundScript.onload = () => window.feedback.init({ showIcon: false })
-      }
-    }
-  }
-
   return (
     <Helmet
       htmlAttributes={{
@@ -78,7 +68,6 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
-      onChangeClientState={handleChangeClientState}
     ></Helmet>
   )
 }
