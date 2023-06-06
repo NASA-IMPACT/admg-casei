@@ -119,16 +119,45 @@ export function productsFilter(selectedFilterIds) {
       }, new Set())
     )
 
-    const gcmdKeywords = Array.from(
-      product.instruments.reduce((acc, instrument) => {
-        if (instrument.gcmd_phenomena) {
-          for (const gcmd_keyword of instrument.gcmd_phenomena) {
-            acc.add(gcmd_keyword?.id)
-          }
-        }
-        return acc
-      }, new Set())
-    )
+    const gcmdKeywords = new Set()
+    const keywords = JSON.parse(product.keywords)
+    if (
+      keywords?.length &&
+      keywords != "null" &&
+      keywords != '"null"' &&
+      typeof keywords != "string"
+    ) {
+      for (const keyword of keywords) {
+        gcmdKeywords.add(keyword.Term)
+        gcmdKeywords.add(
+          `${[
+            keyword.Term,
+            keyword.VariableLevel1 ? keyword.VariableLevel1 : "",
+          ]
+            .filter(item => item !== "")
+            .join(" > ")}`
+        )
+        gcmdKeywords.add(
+          `${[
+            keyword.Term,
+            keyword.VariableLevel1 ? keyword.VariableLevel1 : "",
+            keyword.VariableLevel2 ? keyword.VariableLevel2 : "",
+          ]
+            .filter(item => item !== "")
+            .join(" > ")}`
+        )
+        gcmdKeywords.add(
+          `${[
+            keyword.Term,
+            keyword.VariableLevel1 ? keyword.VariableLevel1 : "",
+            keyword.VariableLevel2 ? keyword.VariableLevel2 : "",
+            keyword.VariableLevel3 ? keyword.VariableLevel3 : "",
+          ]
+            .filter(item => item !== "")
+            .join(" > ")}`
+        )
+      }
+    }
 
     let relatedKeywords = new Set()
     for (const instrument of product.instruments) {
@@ -146,7 +175,7 @@ export function productsFilter(selectedFilterIds) {
         measurementTypes.includes(filterId) ||
         measurementRegions.includes(filterId) ||
         measurementStyles.includes(filterId) ||
-        gcmdKeywords.includes(filterId) ||
+        gcmdKeywords.has(filterId) ||
         relatedKeywords.has(filterId)
     )
   }

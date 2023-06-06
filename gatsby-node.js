@@ -45,6 +45,7 @@ exports.createSchemaCustomization = ({ actions }) => {
        cmr_entry_title: String
        doi: String
        long_name: String
+       cmr_science_keywords: String
        campaigns: [campaign] @link
        instruments: [instrument] @link
        platforms: [platform] @link

@@ -137,21 +137,32 @@ export default function ExploreProducts({ data, location }) {
 
   let shapedGcmdPhenomena = []
   let GcmdKeywordSet = new Set()
-  for (const node of allDoi.nodes) {
-    for (const instrument of node.instruments) {
-      for (const keyword of instrument.gcmd_phenomena) {
-        if (!GcmdKeywordSet.has(keyword.id)) {
-          GcmdKeywordSet.add(keyword.id)
+  for (const doi of allShapedDoi) {
+    const keywords = JSON.parse(doi.keywords)
+    if (
+      keywords?.length &&
+      keywords != "null" &&
+      keywords != '"null"' &&
+      typeof keywords != "string"
+    ) {
+      for (const keyword of keywords) {
+        const shortname = `${[
+          keyword.Term,
+          keyword.VariableLevel1 ? keyword.VariableLevel1 : "",
+          keyword.VariableLevel2 ? keyword.VariableLevel2 : "",
+          keyword.VariableLevel3 ? keyword.VariableLevel3 : "",
+        ]
+          .filter(item => item !== "")
+          .join(" > ")}`
+        if (!GcmdKeywordSet.has(shortname)) {
+          GcmdKeywordSet.add(shortname)
           shapedGcmdPhenomena.push({
-            shortname: `${[
-              keyword.term,
-              keyword.variable_1,
-              keyword.variable_2,
-              keyword.variable_3,
-            ]
-              .filter(item => item !== "")
-              .join(" > ")}`,
-            ...keyword,
+            term: keyword.Term,
+            variable_1: keyword.VariableLevel1 ? keyword.VariableLevel1 : "",
+            variable_2: keyword.VariableLevel2 ? keyword.VariableLevel2 : "",
+            variable_3: keyword.VariableLevel3 ? keyword.VariableLevel3 : "",
+            shortname: shortname,
+            id: shortname,
           })
         }
       }
@@ -379,6 +390,7 @@ export const query = graphql`
         doi
         id
         cmr_entry_title
+        keywords: cmr_science_keywords
         shortname: cmr_short_name
         campaigns {
           id
