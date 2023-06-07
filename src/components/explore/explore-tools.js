@@ -160,27 +160,9 @@ const ExploreTools = React.forwardRef(
                 secondaryOptions={getFilterOptionsById("gcmd")}
                 category={category}
                 placeholder={"Search for a measurement variable"}
-                getMatchTerm={option =>
-                  `${[
-                    option.term,
-                    option.variable_1,
-                    option.variable_2,
-                    option.variable_3,
-                  ]
-                    .filter(item => item !== "")
-                    .join(" > ")}`
-                }
+                getMatchTerm={option => option.shortname}
                 getFilterOptions={getGcmdOptions}
-                filterValue={option =>
-                  `${[
-                    option.term,
-                    option.variable_1,
-                    option.variable_2,
-                    option.variable_3,
-                  ]
-                    .filter(item => item !== "")
-                    .join(" > ")}`
-                }
+                filterValue={option => option.shortname}
                 filterLayoutWidth={"60%"}
               />
               <FilterMenu
@@ -325,14 +307,25 @@ const ExploreTools = React.forwardRef(
   }
 )
 
-const getGcmdOptions = (values, term) =>
-  values.filter(
+const getGcmdOptions = (values, term) => {
+  return values.filter(
     option =>
       option.term.toLowerCase().startsWith(term.toLowerCase()) ||
       option.variable_1.toLowerCase().startsWith(term.toLowerCase()) ||
       option.variable_2.toLowerCase().startsWith(term.toLowerCase()) ||
-      option.variable_3.toLowerCase().startsWith(term.toLowerCase())
+      option.variable_3.toLowerCase().startsWith(term.toLowerCase()) ||
+      `${[
+        option.term.toLowerCase(),
+        option.variable_1 ? option.variable_1.toLowerCase() : "",
+        option.variable_2 ? option.variable_2.toLowerCase() : "",
+        option.variable_3 ? option.variable_3.toLowerCase() : "",
+      ]
+        .filter(item => item !== "")
+        .join(" > ")}`
+        .toLocaleLowerCase()
+        .startsWith(term.toLowerCase())
   )
+}
 
 function getRelatedOptions(values, term) {
   return values.filter(option =>

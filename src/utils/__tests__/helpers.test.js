@@ -3,19 +3,19 @@ import { convertBoundsToNSWE } from "../helpers"
 it("converts bounds to NSWE", () => {
   const input = [
     // NE hemisphere test case
-    "SRID=4326;POLYGON ((115 20, 130 20, 130 5, 115 5, 115 20))",
+    [115, 5, 130, 20],
     // NW hemisphere test case
-    "SRID=4326;POLYGON ((-80 35, -70 35, -70 45, -80 45, -80 35))",
+    [-80, 35, -70, 45],
     // SE hemisphere test case
-    "SRID=4326;POLYGON ((115 -3, 130 -3, 130 -10, 115 -10, 115 -3))",
+    [115, -10, 130, -3],
     // SW hemisphere test case
-    "SRID=4326;POLYGON ((-80 -22, -70 -22, -70 -15, -80 -15, -80 -22))",
+    [-80, -22, -70, -15],
     // Cross hemisphere test case
-    "SRID=4326;POLYGON ((-10 -12, 15 -12, 15 6, -10 6, -10 -12))",
+    [-10, -12, 15, 6],
     // Null island
-    "SRID=4326;POLYGON ((0 0, 0 0, 0 0, 0 0, 0 0))",
+    [0, 0, 0, 0],
     // Overly precise coordinates
-    "SRID=4326;POLYGON ((-73.59999999999999 59.1, -6.9 59.1, -6.9 83.59999999999999, -73.59999999999999 83.59999999999999, -73.59999999999999 59.1))",
+    [-73.6, 59.1, -6.9, 83.6],
   ]
 
   const output = [

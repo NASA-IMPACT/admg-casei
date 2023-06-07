@@ -4,6 +4,7 @@ import PropTypes from "prop-types"
 import { NEGATIVE } from "../../utils/constants"
 import { colors } from "../../theme"
 import { ExternalLinkIcon } from "../../icons"
+import { Link } from "gatsby"
 
 export function ProductsTable({ dois }) {
   const linkLimit = 3
@@ -66,15 +67,15 @@ export function ProductsTable({ dois }) {
                             : ""
                         return (
                           <span key={idx}>
-                            <a
-                              href={`/platform/${item.shortname}`}
+                            <Link
+                              to={`/platform/${item.shortname}`}
                               css={`
                                 font-weight: 600;
                               `}
                               data-cy={`${item.id}-inpage-link`}
                             >
                               {item.shortname + spacer}
-                            </a>
+                            </Link>
                           </span>
                         )
                       }

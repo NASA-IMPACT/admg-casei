@@ -136,7 +136,7 @@ const ExploreMenu = ({ selectedCategory, filteredCount }) => (
       to="/explore/products"
       isSelected={selectedCategory === "products"}
       id="products"
-      label="products"
+      label="Data Products"
       count={filteredCount["products"]}
     />
   </div>

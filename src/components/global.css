@@ -2,9 +2,5 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: radial-gradient(
-    circle at top,
-    /* other blue color (?) */ #294060 0%,
-    /* darkTheme.altBackground */ #0c1520 45%
-  );
+  background: #294060;
 }
