@@ -75,6 +75,7 @@ export default function ExploreInstruments({ data, location }) {
         instruments: instrumentList.filtered.length,
         products: allDoi?.totalCount,
       }}
+      category={"instruments"}
     >
       <ExploreTools
         ref={inputElement}
