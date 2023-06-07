@@ -316,6 +316,7 @@ CampaignTemplate.propTypes = {
       deployments: PropTypes.arrayOf(
         PropTypes.shape({
           id: PropTypes.string.isRequired,
+          spatial_bounds: PropTypes.string,
           longname: PropTypes.string.isRequired,
           shortname: PropTypes.string.isRequired,
           aliases: PropTypes.array.isRequired,

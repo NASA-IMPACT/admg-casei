@@ -190,7 +190,7 @@ CampaignHero.propTypes = {
 
 export default CampaignHero
 
-const HeroMap = ({ bounds, height, deployments }) => {
+const HeroMap = ({ height, deployments }) => {
   // create multispatialbounds object excluding null spatial bounds
   var multiSpatialBounds = deployments
     ? deployments
@@ -202,8 +202,7 @@ const HeroMap = ({ bounds, height, deployments }) => {
           }
         })
     : null
-
-  if (bounds === null) {
+  if (deployments.length === 0 || deployments === null) {
     return <Map height={height ? height : "inherit"} />
   } else {
     return (
