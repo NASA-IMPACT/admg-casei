@@ -138,6 +138,8 @@ export default function ExploreProducts({ data, location }) {
   let shapedGcmdPhenomena = []
   let GcmdKeywordSet = new Set()
   for (const doi of allShapedDoi) {
+    // The doi keywords are stored as a JSON string in the database
+    // parsing them here into an object
     const keywords = JSON.parse(doi.keywords)
     if (
       keywords?.length &&
