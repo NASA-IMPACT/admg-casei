@@ -7,9 +7,6 @@ import SEO from "../seo"
 import ExploreMenu from "./explore-menu"
 
 export default function ExploreLayout({ category, filteredCount, children }) {
-  // pathname is "/explore/:selectedCategory"
-  // const category = location.pathname.split("/")[2]
-
   return (
     <Layout>
       <SEO title="Explore" lang="en" />
