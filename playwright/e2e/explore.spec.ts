@@ -44,7 +44,7 @@ test.describe("Explore", () => {
       expect(await tabs[0].textContent()).toContain("Campaigns")
       expect(
         await tabs[0].evaluate(tab => window.getComputedStyle(tab).fontWeight)
-      ).not.toBe("700")
+      ).toBe("700")
       expect(await tabs[1].textContent()).toContain("Platforms")
       expect(
         await tabs[1].evaluate(tab => window.getComputedStyle(tab).fontWeight)
@@ -156,7 +156,7 @@ test.describe("Explore", () => {
       expect(await tabs[1].textContent()).toContain("Platforms")
       expect(
         await tabs[1].evaluate(tab => window.getComputedStyle(tab).fontWeight)
-      ).not.toBe("700")
+      ).toBe("700")
       expect(await tabs[2].textContent()).toContain("Instruments")
       expect(
         await tabs[2].evaluate(tab => window.getComputedStyle(tab).fontWeight)
@@ -242,7 +242,7 @@ test.describe("Explore", () => {
       expect(await tabs[2].textContent()).toContain("Instruments")
       expect(
         await tabs[2].evaluate(tab => window.getComputedStyle(tab).fontWeight)
-      ).not.toBe("700")
+      ).toBe("700")
 
       // check only the first element for tools, instruments, and card
       await expect(

@@ -228,6 +228,7 @@ export default function ExploreProducts({ data, location }) {
         instruments: allInstrument?.totalCount,
         products: productList?.filtered?.length,
       }}
+      category={"products"}
     >
       <ExploreTools
         ref={inputElement}
