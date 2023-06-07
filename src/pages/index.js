@@ -127,21 +127,18 @@ const Home = ({ data }) => {
             />
           </SectionContent>
         </Section>
-
-        {
-          <Section id="feedback" isSpaced>
-            <SectionHeader headline="Provide Feedback" id="feedback" />
-            <SectionContent>
-              <Button
-                action={() => {
-                  window.open(FEEDBACK_FORM_URL, "_blank")
-                }}
-              >
-                How can we improve CASEI?
-              </Button>
-            </SectionContent>
-          </Section>
-        }
+        <Section id="feedback" isSpaced>
+          <SectionHeader headline="Provide Feedback" id="feedback" />
+          <SectionContent>
+            <Button
+              action={() => {
+                window.open(FEEDBACK_FORM_URL, "_blank")
+              }}
+            >
+              How can we improve CASEI?
+            </Button>
+          </SectionContent>
+        </Section>
       </PageBody>
     </Layout>
   )
