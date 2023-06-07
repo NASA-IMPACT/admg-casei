@@ -315,10 +315,10 @@ const getGcmdOptions = (values, term) => {
       option.variable_2.toLowerCase().startsWith(term.toLowerCase()) ||
       option.variable_3.toLowerCase().startsWith(term.toLowerCase()) ||
       `${[
-        option.term,
-        option.variable_1 ? option.variable_1 : "",
-        option.variable_2 ? option.variable_2 : "",
-        option.variable_3 ? option.variable_3 : "",
+        option.term.toLowerCase(),
+        option.variable_1 ? option.variable_1.toLowerCase() : "",
+        option.variable_2 ? option.variable_2.toLowerCase() : "",
+        option.variable_3 ? option.variable_3.toLowerCase() : "",
       ]
         .filter(item => item !== "")
         .join(" > ")}`
