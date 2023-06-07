@@ -22,6 +22,7 @@ export default function ExploreInstruments({ data, location }) {
     allMeasurementRegion,
     allCampaign,
     allPlatform,
+    allDoi,
   } = data
   const { selectedFilterId } = location.state || {}
 
@@ -72,7 +73,9 @@ export default function ExploreInstruments({ data, location }) {
         campaigns: allCampaign.totalCount,
         platforms: allPlatform.totalCount,
         instruments: instrumentList.filtered.length,
+        products: allDoi?.totalCount,
       }}
+      category={"instruments"}
     >
       <ExploreTools
         ref={inputElement}
@@ -155,6 +158,9 @@ export const query = graphql`
     allPlatform {
       totalCount
     }
+    allDoi {
+      totalCount
+    }
   }
 
   fragment instrumentFields on instrument {
@@ -210,6 +216,9 @@ ExploreInstruments.propTypes = {
     allMeasurementType: filterOptionShape,
     allMeasurementRegion: filterOptionShape,
     allCampaign: PropTypes.shape({
+      totalCount: PropTypes.number.isRequired,
+    }),
+    allDoi: PropTypes.shape({
       totalCount: PropTypes.number.isRequired,
     }),
     allPlatform: PropTypes.shape({

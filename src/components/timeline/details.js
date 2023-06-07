@@ -37,7 +37,6 @@ export const Details = ({ xPosition, yPosition, id, close }) => {
           }
           startdate: start_date
           enddate: end_date
-          bounds: spatial_bounds
           regions: geographical_regions {
             shortname: short_name
           }

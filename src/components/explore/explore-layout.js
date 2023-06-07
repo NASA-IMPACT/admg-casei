@@ -1,32 +1,27 @@
 import React from "react"
 import PropTypes from "prop-types"
 import VisuallyHidden from "@reach/visually-hidden"
-import { useLocation } from "@reach/router"
 
 import Layout, { PageBody } from "../layout"
 import SEO from "../seo"
 import ExploreMenu from "./explore-menu"
 
-export default function ExploreLayout({ filteredCount, children }) {
-  const location = useLocation()
-
-  // pathname is "/explore/:selectedCategory"
-  const selectedCategory = location.pathname.split("/")[2]
-
+export default function ExploreLayout({ category, filteredCount, children }) {
   return (
     <Layout>
       <SEO title="Explore" lang="en" />
       <PageBody id="explore">
         <VisuallyHidden>
-          <h1 data-cy={`h1-${selectedCategory}`}>Explore {selectedCategory}</h1>
+          <h1 data-cy={`h1-${category}`}>Explore {category}</h1>
         </VisuallyHidden>
 
         <ExploreMenu
-          selectedCategory={selectedCategory}
+          selectedCategory={category}
           filteredCount={{
             campaigns: filteredCount?.["campaigns"],
             platforms: filteredCount?.["platforms"],
             instruments: filteredCount?.["instruments"],
+            products: filteredCount?.["products"],
           }}
         />
 
@@ -41,9 +36,11 @@ ExploreLayout.propTypes = {
     campaigns: PropTypes.number.isRequired,
     platforms: PropTypes.number.isRequired,
     instruments: PropTypes.number.isRequired,
+    products: PropTypes.number.isRequired,
   }).isRequired,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]).isRequired,
+  category: PropTypes.string.isRequired,
 }

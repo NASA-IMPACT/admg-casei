@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
+import parse from "wellknown"
+import turfBbox from "@turf/bbox"
 
 import Layout, { PageBody } from "../../components/layout"
 import SEO from "../../components/seo"
@@ -22,18 +24,44 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
     setIsClient(true)
   }, [])
 
+  // create multispatialbounds object excluding null spatial bounds
+  const bounds = campaign.deployments
+    ? campaign.deployments
+        .filter(d => d.spatial_bounds !== null)
+        .map(deployment => {
+          return {
+            type: "Feature",
+            geometry: parse(deployment.spatial_bounds),
+          }
+        })
+    : null
+
+  // Create a GeoJSON object from the filteredBounds
+  const geojson = {
+    type: "FeatureCollection",
+    features: campaign.deployments
+      .filter(d => d.spatial_bounds !== null)
+      .map((bounds, i) => ({
+        type: "Feature",
+        id: i + 1,
+        geometry: parse(bounds.spatial_bounds),
+      })),
+  }
+
+  const aggregatedBounds = turfBbox(geojson)
+
   const sections = {
     overview: {
       nav: "Overview",
       component: OverviewSection,
       props: {
+        bounds: aggregatedBounds,
         aliases: campaign.aliases,
         description: campaign.description,
         startdate: campaign.startdate,
         enddate: campaign.enddate,
         region: campaign.region,
         seasonListing: campaign.seasons.map(x => x.shortname).join(", "),
-        bounds: campaign.bounds,
         doi: campaign.doi,
         notesPublic: campaign.notesPublic,
         repositories: campaign.repositories,
@@ -105,7 +133,7 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
     <Layout>
       <SEO title={campaign.shortname} lang="en" />
       <CampaignHero
-        bounds={campaign.bounds}
+        bounds={bounds}
         longname={campaign.longname}
         shortname={campaign.shortname}
         focusListing={campaign.focus.map(x => x.shortname).join(", ")}
@@ -226,7 +254,6 @@ export const query = graphql`
 CampaignTemplate.propTypes = {
   data: PropTypes.shape({
     campaign: PropTypes.shape({
-      bounds: PropTypes.string,
       shortname: PropTypes.string.isRequired,
       longname: PropTypes.string.isRequired,
       focus: PropTypes.arrayOf(
@@ -316,6 +343,7 @@ CampaignTemplate.propTypes = {
       deployments: PropTypes.arrayOf(
         PropTypes.shape({
           id: PropTypes.string.isRequired,
+          spatial_bounds: PropTypes.string,
           longname: PropTypes.string.isRequired,
           shortname: PropTypes.string.isRequired,
           aliases: PropTypes.array.isRequired,
