@@ -131,8 +131,8 @@ export default function ExploreInstruments({ data, location }) {
 }
 
 export const query = graphql`
-  query {
-    allInstrument(sort: { fields: [short_name], order: ASC }) {
+  {
+    allInstrument(sort: { short_name: ASC }) {
       totalCount
       list: nodes {
         ...instrumentFields
@@ -164,17 +164,17 @@ export const query = graphql`
   }
 
   fragment instrumentFields on instrument {
-    shortname: short_name # required for sort
-    longname: long_name # required for filter by text
+    shortname: short_name
+    longname: long_name
     id
     measurementType: measurement_type {
-      id # required for filter
+      id
     }
     measurementRegions: measurement_regions {
-      id # required for filter
+      id
     }
     campaigns {
-      id # required for sort
+      id
     }
   }
 `

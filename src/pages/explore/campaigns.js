@@ -221,13 +221,13 @@ export default function ExploreCampaigns({ data, location }) {
 }
 
 export const query = graphql`
-  query {
-    allCampaign(sort: { fields: [end_date], order: DESC }) {
+  {
+    allCampaign(sort: { end_date: DESC }) {
       totalCount
       list: nodes {
         ...campaignFields
       }
-      options: distinct(field: funding_agency)
+      options: distinct(field: { funding_agency: SELECT })
     }
     allSeason {
       options: nodes {
@@ -274,19 +274,19 @@ export const query = graphql`
 
   fragment campaignFields on campaign {
     id
-    shortname: short_name # required for sort
-    longname: long_name # required for filter by text
+    shortname: short_name
+    longname: long_name
     seasons {
-      id # required for filter
+      id
     }
     focus: focus_areas {
-      id # required for filter
+      id
     }
     geophysical: geophysical_concepts {
-      id # required for filter
+      id
     }
-    startdate: start_date # required for temporal filter
-    enddate: end_date # required for sort and temporal filter
+    startdate: start_date
+    enddate: end_date
     deployments {
       deploymentSpatialBounds: spatial_bounds
       relatedCampaign: campaign {
@@ -297,13 +297,13 @@ export const query = graphql`
         id
       }
       regions: geographical_regions {
-        id # required for filter
+        id
       }
     }
     platforms {
-      id # required for filter
+      id
     }
-    fundingAgency: funding_agency # required for filter
+    fundingAgency: funding_agency
   }
 `
 

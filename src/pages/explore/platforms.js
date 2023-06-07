@@ -135,14 +135,14 @@ export default function ExplorePlatforms({ data, location }) {
 }
 
 export const query = graphql`
-  query {
+  {
     allCampaign {
       totalCount
     }
     allDoi {
       totalCount
     }
-    allPlatform(sort: { fields: [campaign_count], order: DESC }) {
+    allPlatform(sort: { campaign_count: DESC }) {
       totalCount
       list: nodes {
         ...platformFields
@@ -164,23 +164,22 @@ export const query = graphql`
   }
 
   fragment platformFields on platform {
-    shortname: short_name # required for sort
-    longname: long_name # required for filter by text
+    shortname: short_name
+    longname: long_name
     id
     collectionPeriodIds: collection_periods {
-      # required for sort
       id
     }
     campaigns {
-      id # required for sort
+      id
     }
     instruments {
-      id # required for filter
+      id
     }
     searchCategory: search_category
     platformType: platform_type {
       id
-      shortname: short_name # required for grouping
+      shortname: short_name
       longname: long_name
     }
   }
