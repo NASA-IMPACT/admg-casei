@@ -2,7 +2,13 @@ import React, { useEffect, useState } from "react"
 import PropTypes from "prop-types"
 
 // GeoJsonSource component
-export default function GeoJsonSource({ geojson, id, map, children, isDrawing }) {
+export default function GeoJsonSource({
+  geojson,
+  id,
+  map,
+  children,
+  isDrawing,
+}) {
   const [source, setSource] = useState(null)
 
   // Effect to handle component unmounting
@@ -13,7 +19,6 @@ export default function GeoJsonSource({ geojson, id, map, children, isDrawing })
       if (isDrawing) {
         map.removeSource(`${id}-source`)
       }
-
     }
   }, [])
 
@@ -60,4 +65,5 @@ GeoJsonSource.propTypes = {
     PropTypes.element,
     PropTypes.arrayOf(PropTypes.element),
   ]),
+  isDrawing: PropTypes.bool,
 }
