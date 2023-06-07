@@ -3,10 +3,10 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import styled from "styled-components"
-
 import { NEGATIVE } from "../utils/constants"
 import { colors, layout } from "../theme"
 import ExternalLink from "./external-link"
+import { API_DOCUMENTATION_URL } from "../utils/constants"
 
 const Ul = styled.ul`
   list-style: none;
@@ -118,7 +118,14 @@ const Footer = ({ shortname }) => {
             </li>
             <li>
               {/* eslint-disable-next-line prettier/prettier  */}
-              <Link to="https://nasa-impact.github.io/admg-backend/documentation/api_doc.html">API Documentation</Link>
+              <ExternalLink
+                url={API_DOCUMENTATION_URL}
+                target="_blank"
+                label="API Documentation"
+                id="api documentation"
+              >
+                API Documentation
+              </ExternalLink>
             </li>
           </Ul>
         </div>

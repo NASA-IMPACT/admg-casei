@@ -11,6 +11,7 @@ test.describe('Campaign', () => {
     });
 
     test('provides information on the campaign', async () => {
+
         await expect(page.locator('[data-cy=campaign-hero] h1')).toBeVisible();
         await expect(page.locator('[data-cy=campaign-hero-header]')).toHaveCount(1);
 

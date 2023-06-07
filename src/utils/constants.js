@@ -29,3 +29,9 @@ export const ALPHABET = [
   "Y",
   "Z",
 ]
+
+export const FEEDBACK_FORM_URL =
+  "https://docs.google.com/forms/d/e/1FAIpQLSfCQzZHtaDSiWNdwiJa3TIzsyhjEbYyyHwfrcwIKn_UmdVaKA/viewform"
+
+export const API_DOCUMENTATION_URL =
+  "https://nasa-impact.github.io/admg-backend/documentation/api_doc.html"

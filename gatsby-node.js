@@ -26,6 +26,8 @@ exports.createSchemaCustomization = ({ actions }) => {
        significant_events: [significant_event] @link
        websites: [website] @link
        logo: image @link
+       bounds: String
+       spatial_bounds: String
      }
      type collection_period implements Node {
        dois: [doi] @link

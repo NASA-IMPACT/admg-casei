@@ -70,6 +70,7 @@ export default function ExplorePlatforms({ data, location }) {
         instruments: allInstrument.totalCount,
         products: allDoi?.totalCount,
       }}
+      category={"platforms"}
     >
       <ExploreTools
         ref={inputElement}

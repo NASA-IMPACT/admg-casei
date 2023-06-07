@@ -1,4 +1,5 @@
-import React, { useContext } from "react"
+import React from "react"
+import { FEEDBACK_FORM_URL } from "../utils/constants"
 
 import Layout, {
   PageBody,
@@ -8,11 +9,8 @@ import Layout, {
 } from "../components/layout"
 import SEO from "../components/seo"
 import ExternalLink from "../components/external-link"
-import { FBMContext } from "../components/fbm-provider"
 
 const Contact = () => {
-  const { isFBMLoaded } = useContext(FBMContext)
-
   return (
     <Layout>
       <SEO title="Contact" lang="en" />
@@ -61,18 +59,18 @@ const Contact = () => {
             </Paragraph>
             <Paragraph>
               To provide feedback about the design of CASEI{" "}
-              {isFBMLoaded && (
+              {
                 <>
                   click{" "}
                   <ExternalLink
-                    url="https://docs.google.com/forms/d/e/1FAIpQLSfCQzZHtaDSiWNdwiJa3TIzsyhjEbYyyHwfrcwIKn_UmdVaKA/viewform?usp=sf_link"
+                    url={FEEDBACK_FORM_URL}
                     target="_blank"
                     label="CASEI feedback"
                     id="feedback form"
                   />{" "}
                   or{" "}
                 </>
-              )}
+              }
               contact{" "}
               <ExternalLink
                 url="mailto:info@developmentseed.org"

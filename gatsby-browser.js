@@ -6,12 +6,7 @@
  * Note: There is an equivalent hook in Gatsby’s SSR API. It is recommended to use both APIs together.
  */
 
-import React from "react"
-import PropTypes from "prop-types"
-
 import "@fontsource/titillium-web"
-
-import FBMProvider from "./src/components/fbm-provider"
 
 export const shouldUpdateScroll = ({ routerProps: { location } }) => {
   if (location.hash) {
@@ -19,12 +14,4 @@ export const shouldUpdateScroll = ({ routerProps: { location } }) => {
   }
 
   return true
-}
-
-export const wrapRootElement = ({ element }) => {
-  return <FBMProvider>{element}</FBMProvider>
-}
-
-wrapRootElement.propTypes = {
-  element: PropTypes.element,
 }

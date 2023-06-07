@@ -116,6 +116,7 @@ export default function ExploreCampaigns({ data, location }) {
         instruments: allInstrument.totalCount,
         products: allDoi.totalCount,
       }}
+      category={"campaigns"}
     >
       <ExploreTools
         ref={inputElement}
