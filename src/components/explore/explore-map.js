@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import turfBbox from "@turf/bbox"
 import turfBooleanDisjoint from "@turf/boolean-disjoint"
 import parse from "wellknown"
+
 import Map from "../map"
 import AoiControl from "../map/aoi-control"
 import GeoJsonSource from "../map/geojson-source"
@@ -39,7 +40,7 @@ const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
     features: filteredBounds.map((bounds, i) => ({
       type: "Feature",
       id: i + 1,
-      geometry: parse(bounds),
+      geometry: "",
       properties: {
         id: allData.id,
         shortname: allData.shortname,

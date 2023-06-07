@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
+import parse from "wellknown"
+import turfBbox from "@turf/bbox"
 
 import Layout, { PageBody } from "../../components/layout"
 import SEO from "../../components/seo"
@@ -22,13 +24,38 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
     setIsClient(true)
   }, [])
 
-  const bounds = []
+  // create multispatialbounds object excluding null spatial bounds
+  const bounds = campaign.deployments
+    ? campaign.deployments
+        .filter(d => d.spatial_bounds !== null)
+        .map(deployment => {
+          return {
+            type: "Feature",
+            geometry: parse(deployment.spatial_bounds),
+          }
+        })
+    : null
+
+  // Create a GeoJSON object from the filteredBounds
+  const geojson = {
+    type: "FeatureCollection",
+    features: campaign.deployments
+      .filter(d => d.spatial_bounds !== null)
+      .map((bounds, i) => ({
+        type: "Feature",
+        id: i + 1,
+        geometry: parse(bounds.spatial_bounds),
+      })),
+  }
+
+  const aggregatedBounds = turfBbox(geojson)
 
   const sections = {
     overview: {
       nav: "Overview",
       component: OverviewSection,
       props: {
+        bounds: aggregatedBounds,
         aliases: campaign.aliases,
         description: campaign.description,
         startdate: campaign.startdate,

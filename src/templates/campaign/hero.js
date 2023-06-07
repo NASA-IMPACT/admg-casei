@@ -4,7 +4,7 @@ import { graphql, Link } from "gatsby"
 import styled from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
 import turfBbox from "@turf/bbox"
-import parse from "wellknown"
+
 import { HeroStats } from "../../components/hero"
 import Map from "../../components/map"
 import BboxLayer from "../../components/map/bbox-layer"
@@ -189,25 +189,13 @@ CampaignHero.propTypes = {
 
 export default CampaignHero
 
-const HeroMap = ({ bounds, height, deployments }) => {
-  // create multispatialbounds object excluding null spatial bounds
-  var multiSpatialBounds = deployments
-    ? deployments
-        .filter(d => d.spatial_bounds !== null)
-        .map(deployment => {
-          return {
-            type: "Feature",
-            geometry: parse(deployment.spatial_bounds),
-          }
-        })
-    : null
-
+const HeroMap = ({ bounds, height }) => {
   if (bounds === null) {
     return <Map height={height ? height : "inherit"} />
   } else {
     return (
       <Map height={height ? height : "inherit"}>
-        {multiSpatialBounds.map((geojson, index) => {
+        {bounds.map((geojson, index) => {
           const bbox = turfBbox(geojson)
           return (
             <GeoJsonSource
@@ -227,5 +215,4 @@ const HeroMap = ({ bounds, height, deployments }) => {
 HeroMap.propTypes = {
   bounds: PropTypes.string,
   height: any,
-  deployments: PropTypes.array,
 }
