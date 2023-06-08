@@ -40,7 +40,7 @@ const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
     features: filteredBounds.map((bounds, i) => ({
       type: "Feature",
       id: i + 1,
-      geometry: "",
+      geometry: parse(bounds),
       properties: {
         id: allData.id,
         shortname: allData.shortname,
@@ -49,7 +49,7 @@ const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
   }
 
   // Compute and set the initial bounding box
-  const [bbox] = useState(() => turfBbox(geojson))
+  const bbox = turfBbox(geojson)
 
   // Effect to update the GeoFilter when the AOI changes
   useEffect(() => {

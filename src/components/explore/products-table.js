@@ -99,16 +99,15 @@ export function ProductsTable({ dois }) {
                             : ""
                         return (
                           <span key={idx}>
-                            {" "}
-                            <a
-                              href={`/instrument/${item.shortname}`}
+                            <Link
+                              to={`/instrument/${item.shortname}`}
                               css={`
                                 font-weight: 600;
                               `}
                               data-cy={`${item.id}-inpage-link`}
                             >
                               {item.shortname + spacer}
-                            </a>
+                            </Link>
                           </span>
                         )
                       }
