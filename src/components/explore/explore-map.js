@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import turfBbox from "@turf/bbox"
 import turfBooleanDisjoint from "@turf/boolean-disjoint"
 import parse from "wellknown"
+
 import Map from "../map"
 import AoiControl from "../map/aoi-control"
 import GeoJsonSource from "../map/geojson-source"
@@ -46,29 +47,30 @@ const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
       },
     })),
   }
+
   // Compute and set the initial bounding box
-  const [bbox] = useState(() => turfBbox(geojson))
+  const bbox = turfBbox(geojson)
 
   // Effect to update the GeoFilter when the AOI changes
   useEffect(() => {
     // updates the list of campaign ids intersecting the drawn aoi after the aoi was changed
-    setGeoFilter(
-      allData
-        .flatMap(d => d.deployments)
-        .filter(d => d.deploymentSpatialBounds)
-
-        .map((d, i) => ({
-          type: "Feature",
-          id: i + 1,
-          geometry: parse(d.deploymentSpatialBounds),
-          properties: {
-            id: d.relatedCampaign.id,
-            shortname: d.relatedCampaign.shortname,
-          },
-        }))
-        .filter(feature => (aoi ? !turfBooleanDisjoint(feature, aoi) : true))
-        .map(f => f.properties.id)
-    )
+    if (aoi)
+      setGeoFilter(
+        allData
+          .flatMap(d => d.deployments)
+          .filter(d => d.deploymentSpatialBounds)
+          .map((d, i) => ({
+            type: "Feature",
+            id: i + 1,
+            geometry: parse(d.deploymentSpatialBounds),
+            properties: {
+              id: d.relatedCampaign.id,
+              shortname: d.relatedCampaign.shortname,
+            },
+          }))
+          .filter(feature => (aoi ? !turfBooleanDisjoint(feature, aoi) : true))
+          .map(f => f.properties.id)
+      )
   }, [aoi])
 
   // Render the Map component along with its children

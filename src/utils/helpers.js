@@ -1,5 +1,3 @@
-import parse from "wellknown"
-
 const urlRegex = /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{2,256}\.[a-z]{2,4}/s
 const mailtoRegex =
   /^mailto:(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i
@@ -93,20 +91,11 @@ export function formatDateRange(start, end) {
 }
 
 export function convertBoundsToNSWE(bounds) {
-  // gets coordinates from WKT string
-  const coords = parse(bounds).coordinates[0]
-  // seperate lats from lons
-  var lons = coords.map(function (arr) {
-    return arr[0]
-  })
-  var lats = coords.map(function (arr) {
-    return arr[1]
-  })
-  // get min and max values
-  let minx = Math.min(...lons)
-  let maxx = Math.max(...lons)
-  let miny = Math.min(...lats)
-  let maxy = Math.max(...lats)
+  // get min and max values for bbox bounds
+  let minx = bounds[0]
+  let maxx = bounds[2]
+  let miny = bounds[1]
+  let maxy = bounds[3]
   // format output and return values
   const stringified = (coord, latlong) => {
     if (coord > 0 && latlong == "lat") {

@@ -73,8 +73,12 @@ const SortMenu = ({ sortOrder, setSortOrder, category }) => {
 SortMenu.propTypes = {
   sortOrder: PropTypes.string.isRequired,
   setSortOrder: PropTypes.func.isRequired,
-  category: PropTypes.oneOf(["campaigns", "platforms", "instruments"])
-    .isRequired,
+  category: PropTypes.oneOf([
+    "campaigns",
+    "platforms",
+    "instruments",
+    "products",
+  ]).isRequired,
 }
 
 export default SortMenu

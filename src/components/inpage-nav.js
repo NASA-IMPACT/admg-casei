@@ -1,9 +1,8 @@
-import React, { useContext } from "react"
+import React from "react"
 import PropTypes from "prop-types"
 import { POSITIVE } from "../utils/constants"
 import { colors, breakpoints } from "../theme"
 import Button from "../components/button"
-import { FBMContext } from "./fbm-provider"
 import StickyBanner from "./sticky-banner"
 
 const InpageLink = props => (
@@ -32,8 +31,6 @@ InpageLink.propTypes = {
 }
 
 const InpageNav = ({ shortname, items }) => {
-  const { isFBMLoaded } = useContext(FBMContext)
-
   const offsetCalculator = (
     scrollDirection,
     startingPosition,
@@ -107,7 +104,7 @@ const InpageNav = ({ shortname, items }) => {
               </InpageLink>
             ))}
           </ul>
-          {isFBMLoaded && (
+          {
             <Button
               action={() => {
                 window.feedback.showForm()
@@ -116,7 +113,7 @@ const InpageNav = ({ shortname, items }) => {
             >
               Feedback
             </Button>
-          )}
+          }
         </nav>
       </div>
     </StickyBanner>

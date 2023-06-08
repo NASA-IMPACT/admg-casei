@@ -77,12 +77,11 @@ const Count = styled.span`
 const Tab = ({ id, to, isSelected, label, count }) => (
   <TabButton role="tab" to={to} $isSelected={isSelected}>
     <Label isSelected={isSelected}>{label}</Label>
-    {count && (
-      <Count isSelected={isSelected} data-cy={`${id}-count`}>
-        {" "}
-        ({count})
-      </Count>
-    )}
+
+    <Count isSelected={isSelected} data-cy={`${id}-count`}>
+      {" "}
+      ({count ? count : 0})
+    </Count>
   </TabButton>
 )
 
@@ -132,16 +131,29 @@ const ExploreMenu = ({ selectedCategory, filteredCount }) => (
       label="Instruments"
       count={filteredCount["instruments"]}
     />
+
+    <Tab
+      to="/explore/products"
+      isSelected={selectedCategory === "products"}
+      id="products"
+      label="Data Products"
+      count={filteredCount["products"]}
+    />
   </div>
 )
 
 ExploreMenu.propTypes = {
-  selectedCategory: PropTypes.oneOf(["campaigns", "platforms", "instruments"])
-    .isRequired,
+  selectedCategory: PropTypes.oneOf([
+    "campaigns",
+    "platforms",
+    "instruments",
+    "products",
+  ]).isRequired,
   filteredCount: PropTypes.shape({
     campaigns: PropTypes.number,
     platforms: PropTypes.number,
     instruments: PropTypes.number,
+    products: PropTypes.number,
   }),
 }
 

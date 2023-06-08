@@ -26,6 +26,8 @@ exports.createSchemaCustomization = ({ actions }) => {
        significant_events: [significant_event] @link
        websites: [website] @link
        logo: image @link
+       bounds: String
+       spatial_bounds: String
      }
      type collection_period implements Node {
        dois: [doi] @link
@@ -45,6 +47,7 @@ exports.createSchemaCustomization = ({ actions }) => {
        cmr_entry_title: String
        doi: String
        long_name: String
+       cmr_science_keywords: String
        campaigns: [campaign] @link
        instruments: [instrument] @link
        platforms: [platform] @link
@@ -62,6 +65,7 @@ exports.createSchemaCustomization = ({ actions }) => {
        gcmd_phenomena: [gcmd_phenomenon] @link
        image: image @link
        measurement_type: measurement_type @link
+       measurement_style: measurement_style @link
        measurement_regions: [measurement_region] @link
        platforms: [platform] @link
        repositories: [repository] @link
@@ -136,6 +140,7 @@ exports.sourceNodes = async ({ actions, createContentDigest }) => {
       "instrument",
       "iop",
       "measurement_type",
+      "measurement_style",
       "measurement_region",
       "partner_org",
       "platform",
