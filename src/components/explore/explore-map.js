@@ -82,7 +82,7 @@ const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
         aoi={aoi}
         setAoi={setAoi}
       />
-      <GeoJsonSource geojson={geojson} id="explore">
+      <GeoJsonSource geojson={geojson} id="explore" isDrawing={isDrawing}>
         <HoverLayer id="explore" isDrawing={isDrawing} />
         <BboxLayer id="explore" bbox={bbox} />
       </GeoJsonSource>
