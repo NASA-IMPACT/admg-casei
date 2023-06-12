@@ -140,7 +140,13 @@ export default function ExploreProducts({ data, location }) {
   for (const doi of allShapedDoi) {
     // The doi keywords are stored as a JSON string in the database
     // parsing them here into an object
-    const keywords = JSON.parse(doi.keywords)
+    let keywords
+    try {
+      keywords = JSON.parse(doi.keywords)
+    } catch (e) {
+      console.error("JSON Parsing Error: ", e)
+      keywords = doi.keywords // if parsing fails, use the original object
+    }
     if (
       keywords?.length &&
       keywords != "null" &&
