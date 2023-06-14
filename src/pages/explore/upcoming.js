@@ -2,6 +2,11 @@ import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 import PropTypes from "prop-types"
 import { times } from "lodash"
+import { Link } from "gatsby"
+import ExternalLink from "../../components/external-link"
+import { colors } from "../../theme"
+import { NEGATIVE } from "../../utils/constants"
+import { ArrowIcon } from "../../icons"
 
 const Loader = styled.div`
   display: inline-block;
@@ -90,14 +95,18 @@ const Loader = styled.div`
 
 const Section = ({ title, data }) => {
   return (
-    <>
+    <div
+      css={`
+        margin-bottom: 2rem;
+      `}
+    >
       <h2>{title.charAt(0).toUpperCase() + title.slice(1)}</h2>
       {data.length ? (
         data.map((entry, idx) => <div key={idx}>{entry.update.short_name}</div>)
       ) : (
-        <div>No data in review right now</div>
+        <div>{`No ${title} in review.`}</div>
       )}
-    </>
+    </div>
   )
 }
 
@@ -141,7 +150,6 @@ export default function Upcoming() {
         console.log("catch error", error)
       }
     }
-
     fetchData()
   }, [])
 
@@ -151,9 +159,46 @@ export default function Upcoming() {
         min-height: 100vh;
         display: flex;
         flex-direction: column;
+        padding: 2rem 4rem;
       `}
     >
-      <h1>Campaigns, Instruments, and Platforms in Review</h1>
+      <Link
+        to={"/explore/campaigns"}
+        css={`
+           {
+            color: ${colors[NEGATIVE].linkText};
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            margin-top: 2rem;
+          }
+        `}
+        data-cy="back-link"
+      >
+        <ArrowIcon color={colors[NEGATIVE].linkText} direction="left" />
+        Back to Explore
+      </Link>
+      <h1>Coming Soon to CASEI</h1>
+      <div
+        css={`
+          margin-bottom: 2rem;
+        `}
+      >
+        {
+          " The lists below show Campaigns,\
+            Platforms, and Instruments currently undergoing ADMG's\
+            CASEI metadata curation and vetting process. Once approved,\
+            the items below will be available on this interface. If you'd like to\
+            request a higher priority for one of these (or another) Campaign,\
+            Platform, or Instrument, please contact "
+        }
+        <ExternalLink
+          url="https://impact.earthdata.nasa.gov/casei/contact/"
+          label="ADMG"
+          id=""
+        />
+        {"."}
+      </div>
       {query ? (
         <>
           {contentTypes.map((props, idx) => (
