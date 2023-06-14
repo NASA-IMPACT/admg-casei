@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react"
 import styled from "styled-components"
+import PropTypes from "prop-types"
 import { times } from "lodash"
 
 const Loader = styled.div`
@@ -87,16 +88,43 @@ const Loader = styled.div`
   }
 `
 
+const Section = ({ title, data }) => {
+  return (
+    <>
+      <h2>{title.charAt(0).toUpperCase() + title.slice(1)}</h2>
+      {data.length ? (
+        data.map((entry, idx) => <div key={idx}>{entry.update.short_name}</div>)
+      ) : (
+        <div>No data in review right now</div>
+      )}
+    </>
+  )
+}
+
 export default function Upcoming() {
   const [query, setResponse] = useState()
   const [isLoading, setIsLoading] = useState(false)
+  const contentTypes = [
+    {
+      title: "campaigns",
+      data: query?.data.filter(item => item.content_type === 21),
+    },
+    {
+      title: "platforms",
+      data: query?.data.filter(item => item.content_type === 40),
+    },
+    {
+      title: "instruments",
+      data: query?.data.filter(item => item.content_type === 41),
+    },
+  ]
 
   useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true)
       try {
         const response = await fetch(
-          `https://admg.nasa-impact.net/api/campaign`,
+          `http://localhost:8001/api/unpublished_drafts`,
           {
             method: "GET",
             headers: {
@@ -126,10 +154,12 @@ export default function Upcoming() {
       `}
     >
       <h1>Campaigns, Instruments, and Platforms in Review</h1>
-      <h2>Campaigns</h2>
-
       {query ? (
-        query.data.map((item, idx) => <div key={idx}>{item.short_name}</div>)
+        <>
+          {contentTypes.map((props, idx) => (
+            <Section {...props} key={idx} />
+          ))}
+        </>
       ) : isLoading ? (
         <div
           css={`
@@ -153,4 +183,9 @@ export default function Upcoming() {
       )}
     </div>
   )
+}
+
+Section.propTypes = {
+  title: PropTypes.string.isRequired,
+  data: PropTypes.any,
 }
