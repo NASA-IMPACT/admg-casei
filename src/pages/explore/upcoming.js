@@ -133,12 +133,11 @@ export default function Upcoming() {
       setIsLoading(true)
       try {
         const response = await fetch(
-          `http://localhost:8001/api/unpublished_drafts`,
+          `${process.env.GATSBY_ADMG_API}/unpublished_drafts`,
           {
             method: "GET",
             headers: {
               "Content-Type": "application/json",
-              Authorization: `Bearer ${process.env.ADMG_ACCESS_TOKEN}`,
             },
           }
         )
