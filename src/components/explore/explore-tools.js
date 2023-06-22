@@ -155,7 +155,7 @@ const ExploreTools = React.forwardRef(
                 selectedFilterIds={selectedFilterIds}
                 addFilter={addFilter}
                 removeFilter={removeFilter}
-                label="Measurement Types"
+                label="gcmd"
                 options={getFilterOptionsById("measurement")}
                 secondaryOptions={getFilterOptionsById("gcmd")}
                 category={category}
@@ -164,6 +164,7 @@ const ExploreTools = React.forwardRef(
                 getFilterOptions={getGcmdOptions}
                 filterValue={option => option.shortname}
                 filterLayoutWidth={"60%"}
+                hasLinkOut={true}
               />
               <FilterMenu
                 id="style"

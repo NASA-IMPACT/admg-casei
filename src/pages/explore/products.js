@@ -140,7 +140,13 @@ export default function ExploreProducts({ data, location }) {
   for (const doi of allShapedDoi) {
     // The doi keywords are stored as a JSON string in the database
     // parsing them here into an object
-    const keywords = JSON.parse(doi.keywords)
+    let keywords = []
+    try {
+      keywords = JSON.parse(doi.keywords)
+    } catch (e) {
+      console.error(`ERROR: Could not parse ${doi.keywords}`)
+    }
+
     if (
       keywords?.length &&
       keywords != "null" &&
@@ -274,7 +280,6 @@ export default function ExploreProducts({ data, location }) {
             )
             .values.map(p => ({
               id: p.id,
-
               deployments: p.deployments,
               shortname: p.shortname,
             }))}
@@ -293,7 +298,6 @@ export default function ExploreProducts({ data, location }) {
               if (p.deployments && p.deployments.length) {
                 return {
                   id: p.id,
-
                   deployments: p.deployments,
                   shortname: p.shortname,
                 }
