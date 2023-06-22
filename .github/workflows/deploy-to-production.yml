@@ -17,6 +17,7 @@ jobs:
       GATSBY_CPU_COUNT: 2
       GATSBY_MAPBOX_TOKEN: ${{ secrets.GATSBY_MAPBOX_TOKEN }}
       GA_MEASUREMENT_ID: ${{ secrets.GA_MEASUREMENT_ID }}
+      GATSBY_ADMG_API: ${{ secrets.GATSBY_ADMG_API }}
 
     steps:
       - name: Cancel Previous Runs
