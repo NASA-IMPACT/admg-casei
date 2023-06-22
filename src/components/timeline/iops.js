@@ -113,10 +113,7 @@ Iops.propTypes = {
   showTooltip: PropTypes.bool,
   isParentSelected: PropTypes.bool,
   setSelectedEvent: PropTypes.func.isRequired,
-  selectedEvent: PropTypes.shape({
-    type: PropTypes.string,
-    content: PropTypes.object,
-  }),
+  selectedEvent: PropTypes.func.isRequired,
   visuallyDeselected: PropTypes.bool,
   hoveredDeployment: PropTypes.string,
   hoveredEvent: PropTypes.string,

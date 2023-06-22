@@ -84,7 +84,7 @@ export const Deployment = ({
         }}
       >
         <rect
-          width={width}
+          width={Math.max(0, width)}
           height={barHeight}
           fill={colors[NEGATIVE].dataVizOne}
           opacity={
@@ -204,5 +204,5 @@ Deployment.propTypes = {
   setHoveredEvent: PropTypes.func.isRequired,
   setSelectedEvent: PropTypes.func,
   selectedEvent: PropTypes.object,
-  disableEventSelection: PropTypes.boolean,
+  disableEventSelection: PropTypes.bool,
 }

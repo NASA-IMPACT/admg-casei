@@ -227,7 +227,7 @@ OverviewSection.propTypes = {
   enddate: PropTypes.string,
   region: PropTypes.string.isRequired,
   seasonListing: PropTypes.string.isRequired,
-  bounds: PropTypes.string,
+  bounds: PropTypes.array,
   doi: PropTypes.string,
   notesPublic: PropTypes.string.isRequired,
   repositories: PropTypes.arrayOf(
@@ -236,15 +236,6 @@ OverviewSection.propTypes = {
       shortname: PropTypes.string.isRequired,
       longname: PropTypes.string.isRequired,
       url: PropTypes.string.isRequired,
-    }).isRequired
-  ).isRequired,
-  websites: PropTypes.arrayOf(
-    PropTypes.shape({
-      priority: PropTypes.number.isRequired,
-      website: PropTypes.shape({
-        title: PropTypes.string.isRequired,
-        url: PropTypes.string.isRequired,
-      }).isRequired,
     }).isRequired
   ).isRequired,
 }
