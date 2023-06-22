@@ -56,7 +56,7 @@ export function ProductsTable({ dois }) {
                   data-cy={`doi-link`}
                 >
                   <ExternalLinkIcon color={colors[NEGATIVE].linkText} />{" "}
-                  <span>{doi.doi}</span>
+                  <span>{doi.shortname}</span>
                 </a>
               </td>
               <td>

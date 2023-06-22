@@ -280,7 +280,6 @@ export default function ExploreProducts({ data, location }) {
             )
             .values.map(p => ({
               id: p.id,
-
               deployments: p.deployments,
               shortname: p.shortname,
             }))}
@@ -299,7 +298,6 @@ export default function ExploreProducts({ data, location }) {
               if (p.deployments && p.deployments.length) {
                 return {
                   id: p.id,
-
                   deployments: p.deployments,
                   shortname: p.shortname,
                 }
