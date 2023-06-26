@@ -90,8 +90,8 @@ module.exports = {
           "child-src": "'self' blob:",
           "connect-src":
             process.env.NODE_ENV === "development"
-              ? "'self' https://www.google-analytics.com https://*.tiles.mapbox.com https://api.mapbox.com https://events.mapbox.com http://localhost:* ws://localhost:*"
-              : "'self' https://www.google-analytics.com https://*.tiles.mapbox.com https://api.mapbox.com https://events.mapbox.com",
+              ? "'self' https://admg.nasa-impact.net https://www.google-analytics.com https://*.tiles.mapbox.com https://api.mapbox.com https://events.mapbox.com http://localhost:* ws://localhost:*"
+              : "'self' https://admg.nasa-impact.net https://www.google-analytics.com https://*.tiles.mapbox.com https://api.mapbox.com https://events.mapbox.com https://admgstaging.nasa-impact.net/api/unpublished_drafts",
         },
       },
     },
