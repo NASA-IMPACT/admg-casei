@@ -183,6 +183,11 @@ export function productsFilter(selectedFilterIds) {
     }
     for (const campaign of product.campaigns) {
       relatedKeywords.add(campaign.id)
+      if (campaign.aliases) {
+        for (const alias of campaign.aliases) {
+          relatedKeywords.add(alias.id)
+        }
+      }
     }
     for (const platform of product.platforms) {
       relatedKeywords.add(platform.id)

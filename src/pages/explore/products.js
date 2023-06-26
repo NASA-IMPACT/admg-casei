@@ -222,6 +222,17 @@ export default function ExploreProducts({ data, location }) {
       }
       for (const campaign of doi.campaigns) {
         if (campaign && !acc.set.has(campaign.id)) {
+          if (campaign.aliases) {
+            for (const alias of campaign.aliases) {
+              acc.set.add(alias.id)
+              acc.values.push({
+                id: alias.id,
+                shortname: alias.shortname,
+                longname: alias.longname,
+                type: "alias",
+              })
+            }
+          }
           acc.set.add(campaign.id)
           acc.values.push({
             id: campaign.id,
@@ -235,7 +246,7 @@ export default function ExploreProducts({ data, location }) {
     },
     { values: [], set: new Set() }
   ).values
-
+  console.log({ allCampaignPlatformInstruments })
   const { getFilterLabelById, getFilterOptionsById } = selector({
     measurement: { options: allMeasurementTypes },
     style: { options: allMeasurementStyles },
@@ -426,6 +437,10 @@ export const query = graphql`
           geophysical_concepts {
             shortname: short_name
             id
+          }
+          aliases {
+            id
+            shortname: short_name
           }
           end_date
           start_date
