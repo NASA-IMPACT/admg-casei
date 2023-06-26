@@ -227,7 +227,7 @@ OverviewSection.propTypes = {
   enddate: PropTypes.string,
   region: PropTypes.string.isRequired,
   seasonListing: PropTypes.string.isRequired,
-  bounds: PropTypes.string,
+  bounds: PropTypes.array,
   doi: PropTypes.string,
   notesPublic: PropTypes.string.isRequired,
   repositories: PropTypes.arrayOf(
