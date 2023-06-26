@@ -238,6 +238,15 @@ OverviewSection.propTypes = {
       url: PropTypes.string.isRequired,
     }).isRequired
   ).isRequired,
+  websites: PropTypes.arrayOf(
+    PropTypes.shape({
+      priority: PropTypes.number.isRequired,
+      website: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        url: PropTypes.string.isRequired,
+      }).isRequired,
+    }).isRequired
+  ).isRequired,
 }
 
 export default OverviewSection
