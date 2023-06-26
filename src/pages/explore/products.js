@@ -544,6 +544,11 @@ ExploreProducts.propTypes = {
               id: PropTypes.string.isRequired,
               longname: PropTypes.string.isRequired,
               shortname: PropTypes.string.isRequired,
+              aliases: PropTypes.arrayOf(
+                PropTypes.shape({
+                  shortname: PropTypes.string,
+                })
+              ),
               measurement_type: PropTypes.shape({
                 short_name: PropTypes.string,
               }),

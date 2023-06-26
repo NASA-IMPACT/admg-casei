@@ -273,7 +273,7 @@ CampaignTemplate.propTypes = {
       countDataProducts: PropTypes.number,
       aliases: PropTypes.arrayOf(
         PropTypes.shape({
-          shortname: PropTypes.string.isRequired,
+          shortname: PropTypes.string,
         }).isRequired
       ),
       description: PropTypes.string.isRequired,
