@@ -119,8 +119,26 @@ export function productsFilter(selectedFilterIds) {
       }, new Set())
     )
 
+    const geophysicalConcepts = Array.from(
+      product.campaigns.reduce((acc, campaign) => {
+        if (campaign.geophysical_concepts) {
+          for (const concept of campaign.geophysical_concepts) {
+            acc.add(concept?.id)
+          }
+        }
+        return acc
+      }, new Set())
+    )
+
     const gcmdKeywords = new Set()
-    const keywords = JSON.parse(product.keywords)
+    // const keywords = JSON.parse(product.keywords)
+    let keywords = []
+    try {
+      keywords = JSON.parse(product.keywords)
+    } catch (e) {
+      console.error(`ERROR: Could not parse ${product.keywords}`)
+    }
+
     if (
       keywords?.length &&
       keywords != "null" &&
@@ -176,7 +194,8 @@ export function productsFilter(selectedFilterIds) {
         measurementRegions.includes(filterId) ||
         measurementStyles.includes(filterId) ||
         gcmdKeywords.has(filterId) ||
-        relatedKeywords.has(filterId)
+        relatedKeywords.has(filterId) ||
+        geophysicalConcepts.includes(filterId)
     )
   }
 }

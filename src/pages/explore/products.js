@@ -135,6 +135,25 @@ export default function ExploreProducts({ data, location }) {
     { vals: [], set: new Set() }
   ).vals
 
+  const allGeophysicalConcepts = allShapedDoi.reduce(
+    (acc, doi) => {
+      if (doi.campaigns) {
+        for (const campaign of doi.campaigns) {
+          if (campaign.geophysical_concepts) {
+            for (const concept of campaign.geophysical_concepts) {
+              if (concept?.shortname && !acc.set.has(concept?.shortname)) {
+                acc.set.add(concept.shortname)
+                acc.vals.push(concept)
+              }
+            }
+          }
+        }
+      }
+      return acc
+    },
+    { vals: [], set: new Set() }
+  ).vals
+
   let shapedGcmdPhenomena = []
   let GcmdKeywordSet = new Set()
   for (const doi of allShapedDoi) {
@@ -225,6 +244,7 @@ export default function ExploreProducts({ data, location }) {
     gcmd: { options: shapedGcmdPhenomena },
     platform: { options: allPlatform.nodes },
     related: { options: allCampaignPlatformInstruments },
+    concepts: { options: allGeophysicalConcepts },
     funding: {
       // This transforms the query results from the distinct `funding_agency`
       // field into the filter format { id, shortname }.
@@ -403,6 +423,10 @@ export const query = graphql`
           id
           shortname: short_name
           longname: long_name
+          geophysical_concepts {
+            shortname: short_name
+            id
+          }
           end_date
           start_date
           deployments {
