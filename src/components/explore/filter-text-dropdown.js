@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import PropTypes from "prop-types"
 
-import { CloseIcon, ExternalLinkIcon, SearchIcon } from "../../icons"
+import { CloseIcon, SearchIcon, InformationIcon } from "../../icons"
 import { NEGATIVE, POSITIVE } from "../../utils/constants"
 import { colors } from "../../theme"
 import {
@@ -115,7 +115,7 @@ const DropdownByTextInput = ({
             placeholder={placeholder}
             style={{ border: "unset" }}
           />
-          {hasLinkOut && (
+          {hasLinkOut && !term && (
             <a
               href={
                 "https://gcmd.earthdata.nasa.gov/KeywordViewer/scheme/all/e9f67a66-e9fc-435c-b720-ae32a2c3d8f5?gtm_keyword=EARTH%20SCIENCE&gtm_scheme=Earth%20Science "
@@ -124,10 +124,10 @@ const DropdownByTextInput = ({
               rel="noreferrer"
               aria-label="Link to GCMD keywords"
               css={`
-                margin: 4px 10px;
+                margin: 10px 10px 4px 10px;
               `}
             >
-              <ExternalLinkIcon color={colors[NEGATIVE].text} />
+              <InformationIcon color={colors[NEGATIVE].text} />
             </a>
           )}
         </span>

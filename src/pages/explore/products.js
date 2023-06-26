@@ -135,6 +135,25 @@ export default function ExploreProducts({ data, location }) {
     { vals: [], set: new Set() }
   ).vals
 
+  const allGeophysicalConcepts = allShapedDoi.reduce(
+    (acc, doi) => {
+      if (doi.campaigns) {
+        for (const campaign of doi.campaigns) {
+          if (campaign.geophysical_concepts) {
+            for (const concept of campaign.geophysical_concepts) {
+              if (concept?.shortname && !acc.set.has(concept?.shortname)) {
+                acc.set.add(concept.shortname)
+                acc.vals.push(concept)
+              }
+            }
+          }
+        }
+      }
+      return acc
+    },
+    { vals: [], set: new Set() }
+  ).vals
+
   let shapedGcmdPhenomena = []
   let GcmdKeywordSet = new Set()
   for (const doi of allShapedDoi) {
@@ -203,6 +222,17 @@ export default function ExploreProducts({ data, location }) {
       }
       for (const campaign of doi.campaigns) {
         if (campaign && !acc.set.has(campaign.id)) {
+          if (campaign.aliases) {
+            for (const alias of campaign.aliases) {
+              acc.set.add(alias.id)
+              acc.values.push({
+                id: alias.id,
+                shortname: alias.shortname,
+                longname: alias.longname,
+                type: "alias",
+              })
+            }
+          }
           acc.set.add(campaign.id)
           acc.values.push({
             id: campaign.id,
@@ -216,7 +246,7 @@ export default function ExploreProducts({ data, location }) {
     },
     { values: [], set: new Set() }
   ).values
-
+  console.log({ allCampaignPlatformInstruments })
   const { getFilterLabelById, getFilterOptionsById } = selector({
     measurement: { options: allMeasurementTypes },
     style: { options: allMeasurementStyles },
@@ -225,6 +255,7 @@ export default function ExploreProducts({ data, location }) {
     gcmd: { options: shapedGcmdPhenomena },
     platform: { options: allPlatform.nodes },
     related: { options: allCampaignPlatformInstruments },
+    concepts: { options: allGeophysicalConcepts },
     funding: {
       // This transforms the query results from the distinct `funding_agency`
       // field into the filter format { id, shortname }.
@@ -403,6 +434,14 @@ export const query = graphql`
           id
           shortname: short_name
           longname: long_name
+          geophysical_concepts {
+            shortname: short_name
+            id
+          }
+          aliases {
+            id
+            shortname: short_name
+          }
           end_date
           start_date
           deployments {
@@ -505,6 +544,11 @@ ExploreProducts.propTypes = {
               id: PropTypes.string.isRequired,
               longname: PropTypes.string.isRequired,
               shortname: PropTypes.string.isRequired,
+              aliases: PropTypes.arrayOf(
+                PropTypes.shape({
+                  shortname: PropTypes.string,
+                })
+              ),
               measurement_type: PropTypes.shape({
                 short_name: PropTypes.string,
               }),
