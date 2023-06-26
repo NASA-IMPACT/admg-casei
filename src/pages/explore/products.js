@@ -246,7 +246,7 @@ export default function ExploreProducts({ data, location }) {
     },
     { values: [], set: new Set() }
   ).values
-  console.log({ allCampaignPlatformInstruments })
+
   const { getFilterLabelById, getFilterOptionsById } = selector({
     measurement: { options: allMeasurementTypes },
     style: { options: allMeasurementStyles },

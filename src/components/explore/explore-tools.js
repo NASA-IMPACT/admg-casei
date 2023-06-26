@@ -291,12 +291,28 @@ const ExploreTools = React.forwardRef(
                 options={getFilterOptionsById("type")}
               />
               <FilterMenu
+                id="type"
+                selectedFilterIds={selectedFilterIds}
+                addFilter={addFilter}
+                removeFilter={removeFilter}
+                label="Measurement Style"
+                options={getFilterOptionsById("style")}
+              />
+              <FilterMenu
                 id="vertical"
                 selectedFilterIds={selectedFilterIds}
                 addFilter={addFilter}
                 removeFilter={removeFilter}
                 label="Vertical Measurement Region"
                 options={getFilterOptionsById("vertical")}
+              />
+              <FilterMenu
+                id="type"
+                selectedFilterIds={selectedFilterIds}
+                addFilter={addFilter}
+                removeFilter={removeFilter}
+                label="Platforms"
+                options={getFilterOptionsById("platform")}
               />
             </>
           )}
