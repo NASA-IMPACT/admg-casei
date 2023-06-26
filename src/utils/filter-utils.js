@@ -120,7 +120,14 @@ export function productsFilter(selectedFilterIds) {
     )
 
     const gcmdKeywords = new Set()
-    const keywords = JSON.parse(product.keywords)
+    // guard against maleformed json fields
+    let keywords = []
+    try {
+      keywords = JSON.parse(product.keywords)
+    } catch (e) {
+      console.error(`ERROR: Could not parse ${product.keywords}`)
+    }
+
     if (
       keywords?.length &&
       keywords != "null" &&
