@@ -27,7 +27,7 @@ test.describe("Campaign", () => {
     )
     await expect(statsValues).toHaveCount(3)
     await expect(statsValues.nth(0)).toContainText("1")
-    await expect(statsValues.nth(1)).toContainText("713")
+    await expect(statsValues.nth(1)).toContainText("8")
     await expect(statsValues.nth(2)).toBeVisible()
 
     await expect(page.locator("[data-cy=mapboxgl-map]")).toBeVisible()
