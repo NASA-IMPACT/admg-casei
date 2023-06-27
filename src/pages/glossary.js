@@ -6,7 +6,6 @@ import VisuallyHidden from "@reach/visually-hidden"
 
 import Layout, {
   PageBody,
-  Section,
   SectionHeader,
   SectionContent,
 } from "../components/layout"
@@ -49,88 +48,106 @@ export default function Glossary({ data }) {
       <PageBody id="glossary">
         <h1>Glossary</h1>
 
-        <Section id="intro">
-          <SectionContent columns={[1, 8]}>
-            <h2>Introduction</h2>
-            <p>
-              The Airborne Data Management Group (ADMG) uses the following
-              formalized definitions to build the NASA Airborne and Field
-              Investigation Inventory, also called the Catalog of Archived
-              Suborbital Earth science Investigations, or CASEI.<br></br>
-              Consistent terminology is required to organize the wide variety of
-              airborne and field investigation metadata; therefore, these
-              definitions are used to communicate the ADMG terminology to
-              inventory users. Where possible, definitions are made to agree
-              with those in standard use in the communities served by ADMG and
-              some are similar to those in the EOSDIS{" "}
-              <a href="https://www.earthdata.nasa.gov/learn/glossary">
-                Glossary
-              </a>
-              . Note, however, that ADMG definitions may or may not match
-              similar terms used by other entities within or external to NASA.
-              These ADMG definitions of inventory-specific terms are provided
-              below.
-            </p>
-            <p>
-              A technical note documenting ADMG CASEI Inventory Terms
-              Definitions was approved by NASA Earth Science Data Systems (ESDS)
-              and is available{" "}
-              <a href="https://www.earthdata.nasa.gov/esdis/esco/standards-and-practices/admg-casei">
-                via their website.
-              </a>
-            </p>
-            <h2>Structure of Airborne and Field Investigation Components</h2>
-            <p>
-              Many terms are related and represent the hierarchical organization
-              of investigation information structure as outlined below:
-            </p>
-            <p>NASA Project, Program, Mission</p>
-            <ul>
-              <li>
-                Field Investigation (also called campaign) — supports NASA goals
-                <ul>
-                  <li>
-                    Deployment — occurs within a Field Investigation (one or
-                    more per investigation)
-                    <ul>
-                      <li>
-                        Significant Event — within a Deployment (may/may not
-                        occur, can be outside IOP)
-                      </li>
-                      <li>
-                        IOP (Intensive Operation Period) — one or more per
-                        deployment, must be within a deployment
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-            <p>
-              This relationship is shown in the following figure representing
-              the information model used in inventory development. The goal of
-              this ADMG effort is to identify the terms used for inventory
-              construction and identify the correct level within this set of
-              definitions. Synonyms for a given term that we have found to be
-              used by various communities are listed. It is important to note
-              that these synonyms are only words we hear used. ADMG uses the
-              contextual information from authoritative sources to translate
-              used terms to inventory terms. The various words used do not
-              always relate to the same word in this ADMG term list. For
-              example, the synonym mission for a flight is in no way connected
-              to the term mission as defined by ADMG. To aid with translation
-              between existing words and these inventory terms, decision trees
-              are utilized to ensure consistent decision making by the curation
-              team members.<br></br>Note: ADMG uses the terms “instrument” and
-              “sensor” interchangeably.
-            </p>
-          </SectionContent>
-        </Section>
+        <SectionContent columns={[1, 8]}>
+          <h2
+            css={`
+              margin-top: 2rem;
+            `}
+          >
+            Introduction
+          </h2>
+          <p>
+            The Airborne Data Management Group (ADMG) uses the following
+            formalized definitions to build the NASA Airborne and Field
+            Investigation Inventory, also called the Catalog of Archived
+            Suborbital Earth science Investigations, or CASEI.<br></br>
+            Consistent terminology is required to organize the wide variety of
+            airborne and field investigation metadata; therefore, these
+            definitions are used to communicate the ADMG terminology to
+            inventory users. Where possible, definitions are made to agree with
+            those in standard use in the communities served by ADMG and some are
+            similar to those in the EOSDIS{" "}
+            <a href="https://www.earthdata.nasa.gov/learn/glossary">Glossary</a>
+            . Note, however, that ADMG definitions may or may not match similar
+            terms used by other entities within or external to NASA. These ADMG
+            definitions of inventory-specific terms are provided below.
+          </p>
+          <p>
+            A technical note documenting ADMG CASEI Inventory Terms Definitions
+            was approved by NASA Earth Science Data Systems (ESDS) and is
+            available{" "}
+            <a href="https://www.earthdata.nasa.gov/esdis/esco/standards-and-practices/admg-casei">
+              via their website.
+            </a>
+          </p>
+          <h2
+            css={`
+              margin-top: 2rem;
+            `}
+          >
+            Structure of Airborne and Field Investigation Components
+          </h2>
+          <p>
+            Many terms are related and represent the hierarchical organization
+            of investigation information structure as outlined below:
+          </p>
+          <p>NASA Project, Program, Mission</p>
+          <ul>
+            <li>
+              Field Investigation (also called campaign) — supports NASA goals
+              <ul>
+                <li>
+                  Deployment — occurs within a Field Investigation (one or more
+                  per investigation)
+                  <ul>
+                    <li>
+                      Significant Event — within a Deployment (may/may not
+                      occur, can be outside IOP)
+                    </li>
+                    <li>
+                      IOP (Intensive Operation Period) — one or more per
+                      deployment, must be within a deployment
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <p>
+            This relationship is shown in the following figure representing the
+            information model used in inventory development. The goal of this
+            ADMG effort is to identify the terms used for inventory construction
+            and identify the correct level within this set of definitions.
+            Synonyms for a given term that we have found to be used by various
+            communities are listed. It is important to note that these synonyms
+            are only words we hear used. ADMG uses the contextual information
+            from authoritative sources to translate used terms to inventory
+            terms. The various words used do not always relate to the same word
+            in this ADMG term list. For example, the synonym mission for a
+            flight is in no way connected to the term mission as defined by
+            ADMG. To aid with translation between existing words and these
+            inventory terms, decision trees are utilized to ensure consistent
+            decision making by the curation team members.<br></br>Note: ADMG
+            uses the terms “instrument” and “sensor” interchangeably.
+          </p>
+        </SectionContent>
 
-        <Section id="glossary-img">
-          <SectionHeader id="glossary-img" headline="Terminology map" />
+        <div
+          css={`
+            margin-bottom: 6rem;
+          `}
+          data-cy="glossary-img-section"
+        >
+          <h2
+            id="glossary-img"
+            css={`
+              margin-top: 2rem;
+            `}
+          >
+            Terminology map
+          </h2>
 
-          <SectionContent withPadding>
+          <SectionContent>
             <figure
               css={`
                 text-align: center;
@@ -156,52 +173,50 @@ export default function Glossary({ data }) {
               </figcaption>
             </figure>
           </SectionContent>
-        </Section>
+        </div>
 
-        <Section id="letter-navigation">
-          <VisuallyHidden>
-            <SectionHeader id="letter-navigation" headline="Jump to letter" />
-          </VisuallyHidden>
+        <VisuallyHidden>
+          <SectionHeader id="letter-navigation" headline="Jump to letter" />
+        </VisuallyHidden>
 
-          <SectionContent columns={[1, 12]}>
-            <nav
-              aria-label="letter selection"
-              css={`
-                color: ${colors[NEGATIVE].altText};
-                text-align: center;
-              `}
-            >
-              {ALPHABET.map((letter, i) =>
-                alphabeticalGlossary[letter].length ? (
-                  <React.Fragment key={letter}>
-                    <a
-                      href={`#${letter}`}
-                      css={`
-                        font-weight: 600;
-                        font-size: x-large;
-                      `}
-                      data-cy={`${letter}-inpage-link`}
-                    >
-                      {letter}
-                    </a>{" "}
-                    {i !== ALPHABET.length - 1 && <span>&mdash; </span>}
-                  </React.Fragment>
-                ) : (
-                  <React.Fragment key={letter}>
-                    <span
-                      css={`
-                        font-weight: 600;
-                      `}
-                    >
-                      {letter}
-                    </span>{" "}
-                    {i !== ALPHABET.length - 1 && <span>&mdash; </span>}
-                  </React.Fragment>
-                )
-              )}
-            </nav>
-          </SectionContent>
-        </Section>
+        <SectionContent columns={[1, 12]}>
+          <nav
+            aria-label="letter selection"
+            css={`
+              color: ${colors[NEGATIVE].altText};
+              text-align: center;
+            `}
+          >
+            {ALPHABET.map((letter, i) =>
+              alphabeticalGlossary[letter].length ? (
+                <React.Fragment key={letter}>
+                  <a
+                    href={`#${letter}`}
+                    css={`
+                      font-weight: 600;
+                      font-size: x-large;
+                    `}
+                    data-cy={`${letter}-inpage-link`}
+                  >
+                    {letter}
+                  </a>{" "}
+                  {i !== ALPHABET.length - 1 && <span>&mdash; </span>}
+                </React.Fragment>
+              ) : (
+                <React.Fragment key={letter}>
+                  <span
+                    css={`
+                      font-weight: 600;
+                    `}
+                  >
+                    {letter}
+                  </span>{" "}
+                  {i !== ALPHABET.length - 1 && <span>&mdash; </span>}
+                </React.Fragment>
+              )
+            )}
+          </nav>
+        </SectionContent>
 
         {Object.entries(alphabeticalGlossary)
           // eslint-disable-next-line no-unused-vars
@@ -212,7 +227,25 @@ export default function Glossary({ data }) {
           // )
           .map(([letter, entries]) => {
             return (
-              <Section id={letter} key={letter}>
+              <div
+                css={`
+                  margin: 0 -6rem;
+                  padding: 0rem 6rem;
+                  display: grid;
+                  grid-template-columns: repeat(12, 1fr);
+                  column-gap: 1rem;
+
+                  position: relative;
+                `}
+                id={letter}
+                key={letter}
+              >
+                <div
+                  css={`
+                    position: absolute;
+                    top: -76px;
+                  `}
+                />
                 <SectionHeader id={letter} headline={letter} />
                 <a
                   href="#top"
@@ -230,7 +263,7 @@ export default function Glossary({ data }) {
                     columns={[2, 10]}
                     withBackground
                     mode={POSITIVE}
-                    withPadding
+                    slimPadding
                   >
                     <h3>{x.term}</h3>
                     <p>{x.definition}</p>
@@ -247,7 +280,7 @@ export default function Glossary({ data }) {
                     )}
                   </SectionContent>
                 ))}
-              </Section>
+              </div>
             )
           })}
       </PageBody>
@@ -287,5 +320,4 @@ Glossary.propTypes = {
       childImageSharp: PropTypes.object.isRequired,
     }).isRequired,
   }),
-  // location: PropTypes.object.isRequired,
 }
