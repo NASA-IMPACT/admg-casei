@@ -49,7 +49,13 @@ export default function Glossary({ data }) {
         <h1>Glossary</h1>
 
         <SectionContent columns={[1, 8]}>
-          <h2>Introduction</h2>
+          <h2
+            css={`
+              margin-top: 2rem;
+            `}
+          >
+            Introduction
+          </h2>
           <p>
             The Airborne Data Management Group (ADMG) uses the following
             formalized definitions to build the NASA Airborne and Field
@@ -74,7 +80,13 @@ export default function Glossary({ data }) {
               via their website.
             </a>
           </p>
-          <h2>Structure of Airborne and Field Investigation Components</h2>
+          <h2
+            css={`
+              margin-top: 2rem;
+            `}
+          >
+            Structure of Airborne and Field Investigation Components
+          </h2>
           <p>
             Many terms are related and represent the hierarchical organization
             of investigation information structure as outlined below:
@@ -125,7 +137,14 @@ export default function Glossary({ data }) {
             margin-bottom: 6rem;
           `}
         >
-          <SectionHeader id="glossary-img" headline="Terminology map" />
+          <h2
+            id="glossary-img"
+            css={`
+              margin-top: 2rem;
+            `}
+          >
+            Terminology map
+          </h2>
 
           <SectionContent>
             <figure
