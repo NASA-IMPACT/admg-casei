@@ -215,15 +215,18 @@ export function platformFilter(selectedFilterIds) {
 }
 
 export function instrumentFilter(selectedFilterIds) {
-  return instrument =>
-    selectedFilterIds.length === 0
+  return instrument => {
+    return selectedFilterIds.length === 0
       ? true
       : selectedFilterIds.every(
           filterId =>
             (instrument.measurementType &&
               instrument.measurementType.id === filterId) ||
+            (instrument.measurementStyle?.id ?? 0) === filterId ||
+            instrument.platforms.map(x => x.id).includes(filterId) ||
             instrument.measurementRegions.map(x => x.id).includes(filterId)
         )
+  }
 }
 
 export function doiFilter(selectedFilterIds) {
