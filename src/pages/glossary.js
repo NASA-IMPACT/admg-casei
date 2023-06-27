@@ -136,6 +136,7 @@ export default function Glossary({ data }) {
           css={`
             margin-bottom: 6rem;
           `}
+          data-cy="glossary-img-section"
         >
           <h2
             id="glossary-img"
