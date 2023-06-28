@@ -297,7 +297,7 @@ export const query = graphql`
         note
       }
     }
-    image: file(relativePath: { eq: "glossary-map.png" }) {
+    image: file(relativePath: { eq: "glossary-map.jpeg" }) {
       childImageSharp {
         gatsbyImageData(layout: CONSTRAINED, width: 600, placeholder: BLURRED)
       }
