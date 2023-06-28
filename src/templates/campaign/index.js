@@ -99,7 +99,7 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
       component: DataSection,
       props: {
         dois: campaign.dois,
-        filterBy: ["platforms", "instruments"],
+        filterBy: ["platforms", "instruments", "formats"],
         category: "campaign",
       },
     },
@@ -230,6 +230,7 @@ export const query = graphql`
       }
       dois {
         cmrTitle: cmr_entry_title
+        formats: cmr_data_formats
         doi
         id
         longname: long_name
@@ -365,6 +366,7 @@ CampaignTemplate.propTypes = {
         PropTypes.shape({
           cmrTitle: PropTypes.string.isRequired,
           doi: PropTypes.string.isRequired,
+          format: PropTypes.string,
           id: PropTypes.string.isRequired,
           longname: PropTypes.string,
         })

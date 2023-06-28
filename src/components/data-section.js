@@ -36,7 +36,7 @@ const DataSection = ({ id, dois, filterBy, category }) => {
     instrument: { options: instrumentList },
     platform: { options: platformList },
   })
-
+  console.log({ filteredDois })
   return (
     <Section id={id}>
       <SectionHeader headline="Data Products" id={id} />
@@ -177,6 +177,7 @@ const DataSection = ({ id, dois, filterBy, category }) => {
                             ))}
                           </div>
                         )}
+
                       {filterBy.includes("instruments") &&
                         !!doi.instruments.length && (
                           <div data-cy="data-product-instruments">
@@ -194,6 +195,24 @@ const DataSection = ({ id, dois, filterBy, category }) => {
                                   </small>
                                 </Link>
                                 {index !== doi.instruments.length - 1 && ", "}
+                              </React.Fragment>
+                            ))}
+                          </div>
+                        )}
+                      {filterBy.includes("platforms") &&
+                        !!doi.platforms.length && (
+                          <div data-cy="data-product-platforms">
+                            <Label id="doi-platform" showBorder>
+                              Platforms
+                            </Label>
+                            {doi.platforms.map((platform, index) => (
+                              <React.Fragment key={platform.id}>
+                                <Link to={`/platform/${platform.shortname}`}>
+                                  <small>
+                                    {platform.longname || platform.shortname}
+                                  </small>
+                                </Link>
+                                {index !== doi.platforms.length - 1 && ", "}
                               </React.Fragment>
                             ))}
                           </div>
@@ -233,6 +252,7 @@ DataSection.propTypes = {
           longname: PropTypes.string.isRequired,
         })
       ),
+      data_formats: PropTypes.arrayOf(PropTypes.string),
       instruments: PropTypes.arrayOf(
         PropTypes.shape({
           id: PropTypes.string.isRequired,
@@ -243,9 +263,9 @@ DataSection.propTypes = {
     })
   ).isRequired,
   filterBy: PropTypes.arrayOf(
-    PropTypes.oneOf(["campaigns", "platforms", "instruments"])
+    PropTypes.oneOf(["campaigns", "platforms", "instruments", "formats"])
   ),
-  category: PropTypes.oneOf(["campaign", "platform", "instrument"]),
+  category: PropTypes.oneOf(["campaign", "platform", "instrument", "format"]),
 }
 
 export default DataSection
