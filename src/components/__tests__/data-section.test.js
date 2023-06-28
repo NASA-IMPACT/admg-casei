@@ -10,7 +10,7 @@ describe("Data Section", () => {
       <DataSection
         id="data"
         dois={instrumentQuery.data.instrument.dois}
-        filterBy={["campaigns", "platforms"]}
+        filterBy={["campaigns", "platforms", "formats"]}
         category="instrument"
       />
     ).toJSON()
