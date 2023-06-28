@@ -241,5 +241,6 @@ export function doiFilter(selectedFilterIds) {
           .some(id => selectedFilterIds.includes(id)) ||
         doi.instruments
           ?.map(x => x.id)
-          .some(id => selectedFilterIds.includes(id))
+          .some(id => selectedFilterIds.includes(id)) ||
+        doi.formats?.map(x => x.id).some(id => selectedFilterIds.includes(id))
 }
