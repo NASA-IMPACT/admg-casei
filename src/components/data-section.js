@@ -20,7 +20,7 @@ const DataSection = ({ id, dois, filterBy, category }) => {
   const parsedDois = dois.map(doi => ({
     ...doi,
     formats:
-      doi.formats && !doi.formats.includes("null")
+      doi.formats && !doi.formats.includes("null") && doi.formats.split("[")[1]
         ? doi.formats
             ?.split("[")[1]
             .split("]")[0]
