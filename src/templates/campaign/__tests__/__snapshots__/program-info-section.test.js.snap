@@ -2,16 +2,16 @@
 
 exports[`Program Info Section renders logo when present in props 1`] = `
 <section
-  className="section__Container-sc-1oozlr5-0 bIfvkW"
+  className="section__Container-sc-1oozlr5-0 eQIPNT"
   data-cy="program-info-section"
   mode="darkTheme"
 >
   <div
-    className="section__Buffer-sc-1oozlr5-1 eTpLgr"
+    className="section__Buffer-sc-1oozlr5-1 gccBEq"
     id="program-info"
   />
   <div
-    className="section-header___StyledDiv-sc-1i4pe2i-0 SXaMi"
+    className="section-header___StyledDiv-sc-1i4pe2i-0 gcWtjD"
     data-cy="program-info-section-header"
   >
     <a
@@ -23,24 +23,24 @@ exports[`Program Info Section renders logo when present in props 1`] = `
     </a>
   </div>
   <div
-    className="section__SectionContent-sc-1oozlr5-2 eZkTzL"
+    className="section__SectionContent-sc-1oozlr5-2 JetPe"
     mode="darkTheme"
   >
     <div
-      className="program-info-section___StyledDiv-sc-celi18-0 kubiqB"
+      className="program-info-section___StyledDiv-sc-celi18-0 dnobPw"
     >
       <div
-        className="program-info-section___StyledDiv2-sc-celi18-1 eiVFAq"
+        className="program-info-section___StyledDiv2-sc-celi18-1 hzQNQr"
       >
         <div
-          className="program-info-section___StyledDiv3-sc-celi18-2 cbYsnX"
+          className="program-info-section___StyledDiv3-sc-celi18-2 jjVLEm"
           data-cy="campaign-logo"
         >
           <div
             className="gatsby-image-wrapper"
             data-gatsby-image-wrapper=""
             style={
-              Object {
+              {
                 "backgroundColor": undefined,
                 "overflow": "hidden",
                 "position": "relative",
@@ -50,7 +50,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
             <div
               aria-hidden={true}
               style={
-                Object {
+                {
                   "paddingTop": "99.2248062015504%",
                 }
               }
@@ -59,7 +59,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
               aria-hidden={true}
               data-placeholder-image=""
               style={
-                Object {
+                {
                   "height": "100%",
                   "left": 0,
                   "position": "absolute",
@@ -84,7 +84,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
                 loading="lazy"
                 sizes="100vw"
                 style={
-                  Object {
+                  {
                     "backgroundColor": undefined,
                     "height": "100%",
                     "left": 0,
@@ -118,7 +118,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
                   src="/static/3d17ba6135efff1e39e6b4d97157a123/893c2/3b06165b-7033-4357-8f15-d2b68cbd84ff.png"
                   srcSet="/static/3d17ba6135efff1e39e6b4d97157a123/893c2/3b06165b-7033-4357-8f15-d2b68cbd84ff.png 129w"
                   style={
-                    Object {
+                    {
                       "backgroundColor": undefined,
                       "height": "100%",
                       "left": 0,
@@ -138,8 +138,8 @@ exports[`Program Info Section renders logo when present in props 1`] = `
             </noscript>
             <script
               dangerouslySetInnerHTML={
-                Object {
-                  "__html": "const t=\\"undefined\\"!=typeof HTMLImageElement&&\\"loading\\"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll(\\"img[data-main-image]\\");for(let e of t){e.dataset.src&&(e.setAttribute(\\"src\\",e.dataset.src),e.removeAttribute(\\"data-src\\")),e.dataset.srcset&&(e.setAttribute(\\"srcset\\",e.dataset.srcset),e.removeAttribute(\\"data-srcset\\"));const t=e.parentNode.querySelectorAll(\\"source[data-srcset]\\");for(let e of t)e.setAttribute(\\"srcset\\",e.dataset.srcset),e.removeAttribute(\\"data-srcset\\");e.complete&&(e.style.opacity=1,e.parentNode.parentNode.querySelector(\\"[data-placeholder-image]\\").style.opacity=0)}}",
+                {
+                  "__html": "const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t){e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset"));const t=e.parentNode.querySelectorAll("source[data-srcset]");for(let e of t)e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset");e.complete&&(e.style.opacity=1,e.parentNode.parentNode.querySelector("[data-placeholder-image]").style.opacity=0)}}",
                 }
               }
               type="module"
@@ -148,13 +148,13 @@ exports[`Program Info Section renders logo when present in props 1`] = `
         </div>
       </div>
       <div
-        className="content-group___StyledDiv-sc-gouaoh-0 gWModr"
+        className="content-group___StyledDiv-sc-gouaoh-0 bIZIQe"
       >
         <div
           data-cy="program-info-content"
         >
           <label
-            className="content-item___StyledLabel-sc-goubn5-0 dlWxCg"
+            className="content-item___StyledLabel-sc-goubn5-0 dgQhVR"
             data-cy="program-info-content-label"
           >
             Funding Agency
@@ -169,7 +169,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
           data-cy="program-info-content"
         >
           <label
-            className="content-item___StyledLabel-sc-goubn5-0 dlWxCg"
+            className="content-item___StyledLabel-sc-goubn5-0 dgQhVR"
             data-cy="program-info-content-label"
           >
             Funding Program
@@ -184,7 +184,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
           data-cy="program-info-content"
         >
           <label
-            className="content-item___StyledLabel-sc-goubn5-0 dlWxCg"
+            className="content-item___StyledLabel-sc-goubn5-0 dgQhVR"
             data-cy="program-info-content-label"
           >
             Funding Program Lead
@@ -199,7 +199,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
           data-cy="program-info-content"
         >
           <label
-            className="content-item___StyledLabel-sc-goubn5-0 dlWxCg"
+            className="content-item___StyledLabel-sc-goubn5-0 dgQhVR"
             data-cy="program-info-content-label"
           >
             Principal Investigator(s)
@@ -214,7 +214,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
           data-cy="program-info-content"
         >
           <label
-            className="content-item___StyledLabel-sc-goubn5-0 dlWxCg"
+            className="content-item___StyledLabel-sc-goubn5-0 dgQhVR"
             data-cy="program-info-content-label"
           >
             Data Manager / Technical Contact
@@ -229,7 +229,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
           data-cy="program-info-content"
         >
           <label
-            className="content-item___StyledLabel-sc-goubn5-0 dlWxCg"
+            className="content-item___StyledLabel-sc-goubn5-0 dgQhVR"
             data-cy="program-info-content-label"
           >
             NASA Data Repository
@@ -244,7 +244,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
           data-cy="program-info-content"
         >
           <label
-            className="content-item___StyledLabel-sc-goubn5-0 dlWxCg"
+            className="content-item___StyledLabel-sc-goubn5-0 dgQhVR"
             data-cy="program-info-content-label"
           >
             Partner Organizations
@@ -259,7 +259,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
           data-cy="program-info-content"
         >
           <label
-            className="content-item___StyledLabel-sc-goubn5-0 dlWxCg"
+            className="content-item___StyledLabel-sc-goubn5-0 dgQhVR"
             data-cy="program-info-content-label"
           >
             Overview Publication
@@ -278,16 +278,16 @@ exports[`Program Info Section renders logo when present in props 1`] = `
 
 exports[`Program Info Section renders placeholder when no logo is available 1`] = `
 <section
-  className="section__Container-sc-1oozlr5-0 bIfvkW"
+  className="section__Container-sc-1oozlr5-0 eQIPNT"
   data-cy="program-info-section"
   mode="darkTheme"
 >
   <div
-    className="section__Buffer-sc-1oozlr5-1 eTpLgr"
+    className="section__Buffer-sc-1oozlr5-1 gccBEq"
     id="program-info"
   />
   <div
-    className="section-header___StyledDiv-sc-1i4pe2i-0 SXaMi"
+    className="section-header___StyledDiv-sc-1i4pe2i-0 gcWtjD"
     data-cy="program-info-section-header"
   >
     <a
@@ -299,14 +299,14 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
     </a>
   </div>
   <div
-    className="section__SectionContent-sc-1oozlr5-2 eZkTzL"
+    className="section__SectionContent-sc-1oozlr5-2 JetPe"
     mode="darkTheme"
   >
     <div
-      className="program-info-section___StyledDiv-sc-celi18-0 kubiqB"
+      className="program-info-section___StyledDiv-sc-celi18-0 dnobPw"
     >
       <div
-        className="program-info-section___StyledDiv2-sc-celi18-1 eiVFAq"
+        className="program-info-section___StyledDiv2-sc-celi18-1 hzQNQr"
       >
         <svg
           height="120"
@@ -328,13 +328,13 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
         </svg>
       </div>
       <div
-        className="content-group___StyledDiv-sc-gouaoh-0 gWModr"
+        className="content-group___StyledDiv-sc-gouaoh-0 bIZIQe"
       >
         <div
           data-cy="program-info-content"
         >
           <label
-            className="content-item___StyledLabel-sc-goubn5-0 dlWxCg"
+            className="content-item___StyledLabel-sc-goubn5-0 dgQhVR"
             data-cy="program-info-content-label"
           >
             Funding Agency
@@ -349,7 +349,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
           data-cy="program-info-content"
         >
           <label
-            className="content-item___StyledLabel-sc-goubn5-0 dlWxCg"
+            className="content-item___StyledLabel-sc-goubn5-0 dgQhVR"
             data-cy="program-info-content-label"
           >
             Funding Program
@@ -364,7 +364,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
           data-cy="program-info-content"
         >
           <label
-            className="content-item___StyledLabel-sc-goubn5-0 dlWxCg"
+            className="content-item___StyledLabel-sc-goubn5-0 dgQhVR"
             data-cy="program-info-content-label"
           >
             Funding Program Lead
@@ -379,7 +379,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
           data-cy="program-info-content"
         >
           <label
-            className="content-item___StyledLabel-sc-goubn5-0 dlWxCg"
+            className="content-item___StyledLabel-sc-goubn5-0 dgQhVR"
             data-cy="program-info-content-label"
           >
             Principal Investigator(s)
@@ -394,7 +394,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
           data-cy="program-info-content"
         >
           <label
-            className="content-item___StyledLabel-sc-goubn5-0 dlWxCg"
+            className="content-item___StyledLabel-sc-goubn5-0 dgQhVR"
             data-cy="program-info-content-label"
           >
             Data Manager / Technical Contact
@@ -409,7 +409,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
           data-cy="program-info-content"
         >
           <label
-            className="content-item___StyledLabel-sc-goubn5-0 dlWxCg"
+            className="content-item___StyledLabel-sc-goubn5-0 dgQhVR"
             data-cy="program-info-content-label"
           >
             NASA Data Repository
@@ -424,7 +424,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
           data-cy="program-info-content"
         >
           <label
-            className="content-item___StyledLabel-sc-goubn5-0 dlWxCg"
+            className="content-item___StyledLabel-sc-goubn5-0 dgQhVR"
             data-cy="program-info-content-label"
           >
             Partner Organizations
@@ -439,7 +439,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
           data-cy="program-info-content"
         >
           <label
-            className="content-item___StyledLabel-sc-goubn5-0 dlWxCg"
+            className="content-item___StyledLabel-sc-goubn5-0 dgQhVR"
             data-cy="program-info-content-label"
           >
             Overview Publication

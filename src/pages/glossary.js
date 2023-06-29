@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
-import VisuallyHidden from "@reach/visually-hidden"
+import { VisuallyHidden } from "@reach/visually-hidden"
 
 import Layout, {
   PageBody,

@@ -98,7 +98,7 @@ export default function FAQ({ data }) {
 export const query = graphql`
   {
     allFaqJson {
-      group(field: section) {
+      group(field: { section: SELECT }) {
         nodes {
           question
           answer

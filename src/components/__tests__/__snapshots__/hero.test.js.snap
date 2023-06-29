@@ -2,17 +2,17 @@
 
 exports[`Header renders correctly 1`] = `
 <section
-  className="hero__Container-sc-qftwzr-0 kylHls"
+  className="hero__Container-sc-qftwzr-0 dlffaV"
   data-cy="test-hero"
 >
   <div
-    className="hero___StyledDiv-sc-qftwzr-4 XtAsv"
+    className="hero___StyledDiv-sc-qftwzr-4 cKZRIK"
   >
     <div
-      className="hero___StyledDiv2-sc-qftwzr-5 kAspDW"
+      className="hero___StyledDiv2-sc-qftwzr-5 eXoLfX"
     >
       <p
-        className="hero___StyledP-sc-qftwzr-7 yHaZP"
+        className="hero___StyledP-sc-qftwzr-7 bPDHKe"
       >
         Instrument
       </p>
@@ -23,16 +23,16 @@ exports[`Header renders correctly 1`] = `
       </h1>
     </div>
     <div
-      className="hero___StyledDiv3-sc-qftwzr-8 ePXdob"
+      className="hero___StyledDiv3-sc-qftwzr-8 dKxgzu"
     >
       <p>
         The 2DC probe records images of hydrometeors...
       </p>
       <div
-        className="typeahead-box___StyledDiv-sc-1kp6jj-0 dwmmKD"
+        className="typeahead-box___StyledDiv-sc-1kp6jj-0 gCmfi"
       >
         <div
-          className="typeahead-box___StyledDiv2-sc-1kp6jj-1 iRbPqx"
+          className="typeahead-box___StyledDiv2-sc-1kp6jj-1 dyZbBA"
         >
           <span
             aria-label="Magnifying glass icon"
@@ -55,7 +55,7 @@ exports[`Header renders correctly 1`] = `
             </svg>
           </span>
           <input
-            className="typeahead-box___StyledInput-sc-1kp6jj-2 hXXipG"
+            className="typeahead-box___StyledInput-sc-1kp6jj-2 cSZagv"
             onChange={[Function]}
             placeholder="Enter a campaign, platform, or instrument"
             type="text"
@@ -73,17 +73,17 @@ exports[`Header renders correctly 1`] = `
 
 exports[`Header renders with adjust ratios 1`] = `
 <section
-  className="hero__Container-sc-qftwzr-0 kylHls"
+  className="hero__Container-sc-qftwzr-0 dlffaV"
   data-cy="undefined-hero"
 >
   <div
-    className="hero___StyledDiv-sc-qftwzr-4 fnFsnz"
+    className="hero___StyledDiv-sc-qftwzr-4 gkzLha"
   >
     <div
-      className="hero___StyledDiv2-sc-qftwzr-5 kAspDW"
+      className="hero___StyledDiv2-sc-qftwzr-5 eXoLfX"
     >
       <p
-        className="hero___StyledP-sc-qftwzr-7 yHaZP"
+        className="hero___StyledP-sc-qftwzr-7 bPDHKe"
       >
         Instrument
       </p>
@@ -94,16 +94,16 @@ exports[`Header renders with adjust ratios 1`] = `
       </h1>
     </div>
     <div
-      className="hero___StyledDiv3-sc-qftwzr-8 ePXdob"
+      className="hero___StyledDiv3-sc-qftwzr-8 dKxgzu"
     >
       <p>
         The 2DC probe records images of hydrometeors...
       </p>
       <div
-        className="typeahead-box___StyledDiv-sc-1kp6jj-0 dwmmKD"
+        className="typeahead-box___StyledDiv-sc-1kp6jj-0 gCmfi"
       >
         <div
-          className="typeahead-box___StyledDiv2-sc-1kp6jj-1 iRbPqx"
+          className="typeahead-box___StyledDiv2-sc-1kp6jj-1 dyZbBA"
         >
           <span
             aria-label="Magnifying glass icon"
@@ -126,7 +126,7 @@ exports[`Header renders with adjust ratios 1`] = `
             </svg>
           </span>
           <input
-            className="typeahead-box___StyledInput-sc-1kp6jj-2 hXXipG"
+            className="typeahead-box___StyledInput-sc-1kp6jj-2 cSZagv"
             onChange={[Function]}
             placeholder="Enter a campaign, platform, or instrument"
             type="text"
