@@ -190,6 +190,9 @@ export const query = graphql`
     measurementStyle: measurement_style {
       id # required for filter
     }
+    measurementStyle: measurement_style {
+      id # required for filter
+    }
     platforms: platforms {
       id
     }
