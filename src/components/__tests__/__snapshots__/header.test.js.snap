@@ -5,14 +5,80 @@ exports[`Header renders correctly 1`] = `
   className="sticky-banner___StyledDiv-sc-e0ldth-0 gjXAxl"
 >
   <header
-    className="header___StyledHeader-sc-4sefiz-0 eymLSC"
+    className="header___StyledHeader-sc-4sefiz-2 hiqoIw"
     id="main-header"
   >
     <div
-      className="header___StyledDiv-sc-4sefiz-1 hgzXFp"
+      className="header___StyledDiv-sc-4sefiz-3 iKHhtg"
+    >
+      July 2023 Update! While CASEI has been publicly available in beta mode
+          since 2021, we are launching our 
+      <button
+        className="header___StyledButton2-sc-4sefiz-4 exbWCs"
+        onClick={[Function]}
+      >
+         
+        full-release version
+      </button>
+      <button
+        className="button__Clickable-sc-1yw7vig-0 button___StyledClickable2-sc-1yw7vig-1 fRqvWm kXXfwm"
+        data-cy="remove-filter"
+        onClick={[Function]}
+        type="button"
+      >
+        <span
+          aria-label="remove-filter-icon"
+          role="img"
+        >
+          <svg
+            height="12px"
+            viewBox="0 0 16 16"
+            width="12px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <polygon
+              fill="#262a31"
+              points="13.707,3.707 12.293,2.293 8,6.586 3.707,2.293 2.293,3.707 6.586,8 2.293,12.293 3.707,13.707 8,9.414  12.293,13.707 13.707,12.293 9.414,8"
+            />
+          </svg>
+        </span>
+      </button>
+    </div>
+    <div
+      className="modal__Backdrop-sc-1e4q5bt-0 dIthjC"
+      onClick={[Function]}
     >
       <div
-        className="header___StyledDiv2-sc-4sefiz-2 hkPJce"
+        className="header__Component-sc-4sefiz-0 gyuNAV"
+      >
+        <p>
+          July 2023 Update! While CASEI has been publicly available in beta mode since 2021, there is now a majority (65%) of known NASA airborne and field campaigns represented across the database and a unique range of search/browse functionality built into CASEI and its API.
+        </p>
+        <br />
+        <p>
+          As you explore CASEI in this full-release version, keep in mind that additional campaigns, platforms, instruments, and data products are still being curated. We welcome
+          <button
+            className="header___StyledButton-sc-4sefiz-1 iEQOrb"
+            onClick={[Function]}
+          >
+            your feedback
+          </button>
+          !
+        </p>
+        <br />
+        <button
+          className="button__Clickable-sc-1yw7vig-0 button___StyledClickable-sc-1yw7vig-2 fRqvWm jVedgi"
+          onClick={[Function]}
+        >
+          okay
+        </button>
+      </div>
+    </div>
+    <div
+      className="header___StyledDiv2-sc-4sefiz-5 bEeJMv"
+    >
+      <div
+        className="header___StyledDiv3-sc-4sefiz-6 cgFMxT"
       >
         <a
           aria-label="Visit nasa.gov (opens in a new window)"
@@ -21,10 +87,10 @@ exports[`Header renders correctly 1`] = `
           target="_blank"
         />
         <div
-          className="header___StyledDiv3-sc-4sefiz-3 xYXsp"
+          className="header___StyledDiv4-sc-4sefiz-7 jYWWxy"
         />
         <a
-          className="header___StyledLink-sc-4sefiz-4 zwKr"
+          className="header___StyledLink-sc-4sefiz-8 egmcyn"
           href="/"
         >
           <svg
@@ -57,14 +123,14 @@ exports[`Header renders correctly 1`] = `
             </g>
           </svg>
           <div
-            className="header___StyledDiv4-sc-4sefiz-5 jQxBae"
+            className="header___StyledDiv5-sc-4sefiz-9 gNekkr"
           >
             Shortname from props
           </div>
         </a>
       </div>
       <div
-        className="header___StyledDiv5-sc-4sefiz-6 iMBbkb"
+        className="header___StyledDiv6-sc-4sefiz-10 exMgZX"
       />
     </div>
   </header>
