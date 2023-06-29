@@ -1,4 +1,7 @@
+import { Link } from "gatsby"
 import React from "react"
+import { colors } from "../theme"
+import { NEGATIVE } from "../utils/constants"
 
 export const NoResultsMessage = () => (
   <div
@@ -7,14 +10,25 @@ export const NoResultsMessage = () => (
     `}
   >
     <h2>No results found in the CASEI metadata inventory&mdash;yet!</h2>
-    <p
+    <div
       css={`
         padding-bottom: 3rem;
       `}
     >
-      We are constantly adding curated metadata to the inventory, so please
-      check back soon!
-    </p>
+      <Link
+        to={"/explore/upcoming"}
+        css={`
+           {
+            color: ${colors[NEGATIVE].linkText};
+            cursor: pointer;
+          }
+        `}
+        data-cy="back-link"
+      >
+        We are constantly adding curated metadata to the inventory, so please
+        check back soon!
+      </Link>
+    </div>
     <h3>Search Tips</h3>
     <ul>
       <li>Try using fewer filters</li>

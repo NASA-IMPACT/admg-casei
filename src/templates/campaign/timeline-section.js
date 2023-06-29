@@ -59,7 +59,7 @@ TimelineSection.propTypes = {
       aliases: PropTypes.array.isRequired,
       collectionPeriods: PropTypes.array.isRequired,
       regions: PropTypes.array.isRequired,
-      campaign: PropTypes.string.isRequired,
+      campaign: PropTypes.string,
       end: PropTypes.string.isRequired,
       start: PropTypes.string.isRequired,
       events: PropTypes.arrayOf(

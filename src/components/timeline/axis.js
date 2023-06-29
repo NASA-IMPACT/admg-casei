@@ -77,5 +77,5 @@ Axis.propTypes = {
     paddingX: PropTypes.number,
   }),
   xScale: PropTypes.any,
-  labelFormat: PropTypes.oneOf(["year, month"]).required,
+  labelFormat: PropTypes.oneOf(["year", "month"]).isRequired,
 }

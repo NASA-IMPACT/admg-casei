@@ -56,9 +56,10 @@ const Footer = ({ shortname }) => {
             {shortname}
           </div>
           <p data-cy="footer-subtitle">
-            {shortname} is a comprehensive inventory containing information
-            about all airborne and field campaigns as well as aircrafts,
-            instruments, and data products.
+            {`CASEI is a comprehensive inventory of holistic contextual
+            information for NASA's Earth Science airborne and field campaigns,
+            including details on instruments, aircraft and other platforms, and
+            access to data products.`}
           </p>
         </div>
 

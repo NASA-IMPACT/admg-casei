@@ -5,9 +5,12 @@ import { NEGATIVE } from "../../utils/constants"
 import { colors } from "../../theme"
 import { ExternalLinkIcon } from "../../icons"
 import { Link } from "gatsby"
+import { Tooltip } from "@reach/tooltip"
+import "@reach/tooltip/styles.css"
 
 export function ProductsTable({ dois }) {
   const linkLimit = 3
+
   return (
     <table
       css={`
@@ -53,33 +56,49 @@ export function ProductsTable({ dois }) {
                   data-cy={`doi-link`}
                 >
                   <ExternalLinkIcon color={colors[NEGATIVE].linkText} />{" "}
-                  <span>{doi.doi}</span>
+                  <span>{doi.shortname}</span>
                 </a>
               </td>
               <td>
                 <span>
                   <span>
-                    {doi.platforms.map((item, idx) => {
-                      if (idx < linkLimit) {
-                        const spacer =
-                          idx < Math.min(doi.platforms.length, linkLimit) - 1
-                            ? ", "
-                            : ""
-                        return (
-                          <span key={idx}>
-                            <Link
-                              to={`/platform/${item.shortname}`}
-                              css={`
-                                font-weight: 600;
-                              `}
-                              data-cy={`${item.id}-inpage-link`}
-                            >
-                              {item.shortname + spacer}
-                            </Link>
-                          </span>
-                        )
-                      }
-                    })}
+                    {doi.platforms.length ? (
+                      doi.platforms.map((item, idx) => {
+                        if (idx < linkLimit) {
+                          const spacer =
+                            idx < Math.min(doi.platforms.length, linkLimit) - 1
+                              ? ", "
+                              : ""
+                          return (
+                            <span key={idx}>
+                              <Link
+                                to={`/platform/${item.shortname}`}
+                                css={`
+                                  font-weight: 600;
+                                `}
+                                data-cy={`${item.id}-inpage-link`}
+                              >
+                                {item.shortname + spacer}
+                              </Link>
+                            </span>
+                          )
+                        }
+                      })
+                    ) : (
+                      <Tooltip
+                        label="Please visit product page"
+                        style={{
+                          background: "hsla(0, 0%, 0%, 0.85)",
+                          color: "white",
+                          border: "none",
+                          borderRadius: "4px",
+                          padding: "0.5em 1em",
+                          marginTop: "-43px",
+                        }}
+                      >
+                        <span style={{ fontSize: 25 }}>{"---"}</span>
+                      </Tooltip>
+                    )}
                   </span>
                   {doi.platforms.length > linkLimit ? (
                     <>{`, +${doi.platforms.length - linkLimit}`}</>
@@ -91,28 +110,44 @@ export function ProductsTable({ dois }) {
               <td>
                 <span>
                   <span>
-                    {doi.instruments.map((item, idx) => {
-                      if (idx < linkLimit) {
-                        const spacer =
-                          idx < Math.min(doi.instruments.length, linkLimit) - 1
-                            ? ", "
-                            : ""
-                        return (
-                          <span key={idx}>
-                            {" "}
-                            <a
-                              href={`/instrument/${item.shortname}`}
-                              css={`
-                                font-weight: 600;
-                              `}
-                              data-cy={`${item.id}-inpage-link`}
-                            >
-                              {item.shortname + spacer}
-                            </a>
-                          </span>
-                        )
-                      }
-                    })}
+                    {doi.instruments.length ? (
+                      doi.instruments.map((item, idx) => {
+                        if (idx < linkLimit) {
+                          const spacer =
+                            idx <
+                            Math.min(doi.instruments.length, linkLimit) - 1
+                              ? ", "
+                              : ""
+                          return (
+                            <span key={idx}>
+                              <Link
+                                to={`/instrument/${item.shortname}`}
+                                css={`
+                                  font-weight: 600;
+                                `}
+                                data-cy={`${item.id}-inpage-link`}
+                              >
+                                {item.shortname + spacer}
+                              </Link>
+                            </span>
+                          )
+                        }
+                      })
+                    ) : (
+                      <Tooltip
+                        label="Please visit product page"
+                        style={{
+                          background: "hsla(0, 0%, 0%, 0.85)",
+                          color: "white",
+                          border: "none",
+                          borderRadius: "4px",
+                          padding: "0.5em 1em",
+                          marginTop: "-43px",
+                        }}
+                      >
+                        <span style={{ fontSize: 25 }}>{"---"}</span>
+                      </Tooltip>
+                    )}
                   </span>
                   {doi.instruments.length > linkLimit ? (
                     <>{`, +${doi.instruments.length - linkLimit}`}</>

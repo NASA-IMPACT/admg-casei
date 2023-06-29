@@ -54,7 +54,7 @@ export default function HoverLayer({ id, map, sourceId, isDrawing }) {
       id: `${id}-hover-layer`,
       type: "fill",
       source: sourceId,
-      layout: {},
+      layout: { visibility: isDrawing ? "visible" : "none" }, // control visibility here},
       paint: {
         "fill-color": colors[POSITIVE].linkText,
         "fill-opacity": [
