@@ -1248,15 +1248,6 @@
     "@parcel/plugin" "2.8.3"
     "gatsby-core-utils" "^4.11.0"
 
-"@gatsbyjs/reach-router@^1.3.4":
-  "integrity" "sha512-/354IaUSM54xb7K/TxpLBJB94iEAJ3P82JD38T8bLnIDWF+uw8+W/82DKnQ7y24FJcKxtVmG43aiDLG88KSuYQ=="
-  "resolved" "https://registry.npmjs.org/@gatsbyjs/reach-router/-/reach-router-1.3.9.tgz"
-  "version" "1.3.9"
-  dependencies:
-    "invariant" "^2.2.3"
-    "prop-types" "^15.6.1"
-    "react-lifecycles-compat" "^3.0.4"
-
 "@gatsbyjs/reach-router@^2.0.1":
   "integrity" "sha512-gmSZniS9/phwgEgpFARMpNg21PkYDZEpfgEzvkgpE/iku4uvXqCrxr86fXbTpI9mkrhKS1SCTYmLGe60VdHcdQ=="
   "resolved" "https://registry.npmjs.org/@gatsbyjs/reach-router/-/reach-router-2.0.1.tgz"
@@ -2351,17 +2342,15 @@
     "postcss-parent-selector" "1.0.x"
     "postcss-safe-parser" "4.0.x"
 
-"@reach/accordion@^0.17.0":
-  "integrity" "sha512-BoFDIYpaW56j1Ys2N1wA2E5UsMW7yJQtVCJkaV0OO4Q/JJY8r8JZoiQ/+Juc8z0DqOJGVIgYebMAgroDT8Oo0g=="
-  "resolved" "https://registry.npmjs.org/@reach/accordion/-/accordion-0.17.0.tgz"
-  "version" "0.17.0"
+"@reach/accordion@^0.18.0":
+  "integrity" "sha512-jOQ1jj0Oc4yYu58R7WzSCkDSNO8kpy8ovQTjKk0Bo3pbmmkX7QQq292TTl8dMz0RXGe0pmLViubRsD0GkrBFIA=="
+  "resolved" "https://registry.npmjs.org/@reach/accordion/-/accordion-0.18.0.tgz"
+  "version" "0.18.0"
   dependencies:
-    "@reach/auto-id" "0.17.0"
-    "@reach/descendants" "0.17.0"
-    "@reach/utils" "0.17.0"
-    "prop-types" "^15.7.2"
-    "tiny-warning" "^1.0.3"
-    "tslib" "^2.3.0"
+    "@reach/auto-id" "0.18.0"
+    "@reach/descendants" "0.18.0"
+    "@reach/polymorphic" "0.18.0"
+    "@reach/utils" "0.18.0"
 
 "@reach/auto-id@^0.17.0", "@reach/auto-id@0.17.0":
   "integrity" "sha512-ud8iPwF52RVzEmkHq1twuqGuPA+moreumUHdtgvU3sr3/15BNhwp3KyDLrKKSz0LP1r3V4pSdyF9MbYM8BoSjA=="
@@ -8749,7 +8738,7 @@
   "resolved" "https://registry.npmjs.org/internmap/-/internmap-2.0.3.tgz"
   "version" "2.0.3"
 
-"invariant@^2.2.3", "invariant@^2.2.4":
+"invariant@^2.2.4":
   "integrity" "sha512-phJfQVBuaJM5raOpJjSfkiD6BpbCE4Ns//LaXl6wGYtUBY83nWS6Rf9tXm2e8VaK60JEjYldbPif/A2B1C2gNA=="
   "resolved" "https://registry.npmjs.org/invariant/-/invariant-2.2.4.tgz"
   "version" "2.2.4"
@@ -11770,7 +11759,7 @@
     "kleur" "^3.0.3"
     "sisteransi" "^1.0.5"
 
-"prop-types@^15.6.0", "prop-types@^15.6.1", "prop-types@^15.7.2", "prop-types@^15.8.1":
+"prop-types@^15.6.0", "prop-types@^15.7.2", "prop-types@^15.8.1":
   "integrity" "sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg=="
   "resolved" "https://registry.npmjs.org/prop-types/-/prop-types-15.8.1.tgz"
   "version" "15.8.1"
@@ -12039,11 +12028,6 @@
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-17.0.2.tgz"
   "version" "17.0.2"
 
-"react-lifecycles-compat@^3.0.4":
-  "integrity" "sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA=="
-  "resolved" "https://registry.npmjs.org/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz"
-  "version" "3.0.4"
-
 "react-move@^6.5.0":
   "integrity" "sha512-tl8zwCqtXXWfmrUJGnkyPMNhx8DUTy1NugEuPW/JTMp2TGSEC819aMXGYMG8FWFzV9I6jy4kbgoZJnBpmZRktA=="
   "resolved" "https://registry.npmjs.org/react-move/-/react-move-6.5.0.tgz"
@@ -12108,7 +12092,7 @@
   "resolved" "https://registry.npmjs.org/react-typography/-/react-typography-0.16.23.tgz"
   "version" "0.16.23"
 
-"react@^18.0.0":
+"react@^18.2.0":
   "integrity" "sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ=="
   "resolved" "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   "version" "18.2.0"
