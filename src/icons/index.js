@@ -6,6 +6,7 @@ import SearchIcon from "./search-icon"
 import TrashIcon from "./trash-icon"
 import FilterIcon from "./filter-icon"
 import ExternalLinkIcon from "./external-link-icon"
+import InformationIcon from "./information-icon"
 
 import CampaignIcon from "./campaign-icon"
 import InstrumentIcon from "./instrument-icon"
@@ -25,6 +26,7 @@ export {
   TrashIcon,
   FilterIcon,
   ExternalLinkIcon,
+  InformationIcon,
 }
 
 export { CampaignIcon, InstrumentIcon, PlatformIcon, CaseiLogoIcon }

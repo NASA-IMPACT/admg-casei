@@ -19,6 +19,7 @@ export default function ExploreInstruments({ data, location }) {
   const {
     allInstrument,
     allMeasurementType,
+    allMeasurementStyle,
     allMeasurementRegion,
     allCampaign,
     allPlatform,
@@ -64,7 +65,9 @@ export default function ExploreInstruments({ data, location }) {
 
   const { getFilterLabelById, getFilterOptionsById } = selector({
     type: allMeasurementType,
+    style: allMeasurementStyle,
     vertical: allMeasurementRegion,
+    platform: allPlatform,
   })
 
   return (
@@ -145,6 +148,20 @@ export const query = graphql`
         longname: long_name
       }
     }
+    allMeasurementStyle {
+      options: nodes {
+        id
+        shortname: short_name
+        longname: long_name
+      }
+    }
+    allPlatform {
+      options: nodes {
+        id
+        shortname: short_name
+        longname: long_name
+      }
+    }
     allMeasurementRegion {
       options: nodes {
         id
@@ -170,6 +187,12 @@ export const query = graphql`
     measurementType: measurement_type {
       id # required for filter
     }
+    measurementStyle: measurement_style {
+      id # required for filter
+    }
+    platforms: platforms {
+      id
+    }
     measurementRegions: measurement_regions {
       id # required for filter
     }
@@ -185,6 +208,14 @@ const instrumentShape = PropTypes.shape({
   measurementType: PropTypes.shape({
     id: PropTypes.string.isRequired,
   }),
+  measurementStyle: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+  }),
+  platforms: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+    }).isRequired
+  ),
   measurementRegions: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
@@ -214,6 +245,7 @@ ExploreInstruments.propTypes = {
       list: PropTypes.arrayOf(instrumentShape).isRequired,
     }),
     allMeasurementType: filterOptionShape,
+    allMeasurementStyle: filterOptionShape,
     allMeasurementRegion: filterOptionShape,
     allCampaign: PropTypes.shape({
       totalCount: PropTypes.number.isRequired,

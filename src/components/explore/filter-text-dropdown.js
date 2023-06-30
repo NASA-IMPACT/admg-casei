@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import PropTypes from "prop-types"
 
-import { CloseIcon, SearchIcon } from "../../icons"
+import { CloseIcon, SearchIcon, InformationIcon } from "../../icons"
 import { NEGATIVE, POSITIVE } from "../../utils/constants"
 import { colors } from "../../theme"
 import {
@@ -58,6 +58,7 @@ const DropdownByTextInput = ({
   getFilterOptions,
   filterValue,
   filterLayoutWidth,
+  hasLinkOut,
 }) => {
   const [term, setTerm] = useState("")
 
@@ -114,7 +115,23 @@ const DropdownByTextInput = ({
             placeholder={placeholder}
             style={{ border: "unset" }}
           />
+          {hasLinkOut && !term && (
+            <a
+              href={
+                "https://gcmd.earthdata.nasa.gov/KeywordViewer/scheme/all/e9f67a66-e9fc-435c-b720-ae32a2c3d8f5?gtm_keyword=EARTH%20SCIENCE&gtm_scheme=Earth%20Science "
+              }
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Link to GCMD keywords"
+              css={`
+                margin: 10px 10px 4px 10px;
+              `}
+            >
+              <InformationIcon color={colors[NEGATIVE].text} />
+            </a>
+          )}
         </span>
+
         {filteredOptions && (
           <ComboboxPopover className="shadow-popup">
             {filteredOptions.length > 0 ? (
@@ -187,6 +204,7 @@ DropdownByTextInput.propTypes = {
   getFilterOptions: PropTypes.func,
   filterValue: PropTypes.func,
   filterLayoutWidth: PropTypes.string,
+  hasLinkOut: PropTypes.bool,
 }
 
 // https://reactjs.org/docs/forwarding-refs.html#displaying-a-custom-name-in-devtools

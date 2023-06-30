@@ -59,7 +59,8 @@ export const SectionContent = styled.div`
     withBackground ? colors[mode].background : null};
   max-width: 100%;
   min-height: ${({ minHeight }) => (minHeight ? minHeight : null)};
-  padding: ${({ withPadding }) => (withPadding ? `5rem` : null)};
+  padding: ${({ withPadding, slimPadding }) =>
+    slimPadding ? `2rem 3rem` : withPadding ? `5rem` : null};
 
   > *,
   h3 {
