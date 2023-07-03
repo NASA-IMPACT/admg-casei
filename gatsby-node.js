@@ -99,6 +99,7 @@ exports.onCreateNode = async ({
   createNodeId,
   getCache,
 }) => {
+  console.log(node)
   if (
     node.internal.type === "image" ||
     (node.internal.type === "NasaImagesJson" && node.image !== null)

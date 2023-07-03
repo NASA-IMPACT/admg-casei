@@ -39,10 +39,11 @@ module.exports = {
         path: `${__dirname}/src/content/`,
       },
     },
-
     `gatsby-transformer-json`,
-    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-transformer-sharp`,
+    },
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-plugin-manifest`,
