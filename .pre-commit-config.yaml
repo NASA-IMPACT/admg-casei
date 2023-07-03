@@ -6,6 +6,6 @@ repos:
         entry: ./node_modules/.bin/eslint
         language: script
         types: [javascript]
-        args: ["--ignore-path .gitignore /\"**/*.{js,jsx}\"", "--fix"]
+        args: ["--fix"]
         pass_filenames: true
         always_run: false

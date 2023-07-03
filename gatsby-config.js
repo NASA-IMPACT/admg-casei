@@ -66,11 +66,6 @@ module.exports = {
     },
     `gatsby-plugin-styled-components`,
     {
-      resolve: `gatsby-plugin-create-client-paths`,
-      options: { prefixes: [`/edit/*`] },
-    },
-
-    {
       resolve: `gatsby-plugin-csp`,
       options: {
         disableOnDev: false,
