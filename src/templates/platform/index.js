@@ -49,7 +49,7 @@ export default function PlatformTemplate({ data: { platform }, path }) {
         shortname={platform.shortname}
         longname={platform.longname}
         campaigns={platform.campaigns.length}
-        collectionPeriods={platform.collectionPeriods.length}
+        dois={platform.dois.length}
         textToImageRatio={[3, 5]}
         image={platform.image}
       />
