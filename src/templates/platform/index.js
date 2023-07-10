@@ -35,7 +35,7 @@ export default function PlatformTemplate({ data: { platform }, path }) {
       component: DataSection,
       props: {
         dois: platform.dois,
-        filterBy: ["campaigns", "instruments"],
+        filterBy: ["campaigns", "instruments", "formats"],
         category: "platform",
       },
     },
@@ -49,7 +49,7 @@ export default function PlatformTemplate({ data: { platform }, path }) {
         shortname={platform.shortname}
         longname={platform.longname}
         campaigns={platform.campaigns.length}
-        collectionPeriods={platform.collectionPeriods.length}
+        dois={platform.dois.length}
         textToImageRatio={[3, 5]}
         image={platform.image}
       />
@@ -106,6 +106,7 @@ export const query = graphql`
       }
       dois {
         cmrTitle: cmr_entry_title
+        formats: cmr_data_formats
         doi
         id
         longname: long_name
@@ -182,6 +183,7 @@ PlatformTemplate.propTypes = {
       dois: PropTypes.arrayOf(
         PropTypes.shape({
           cmrTitle: PropTypes.string.isRequired,
+          format: PropTypes.string,
           doi: PropTypes.string.isRequired,
           id: PropTypes.string.isRequired,
           longname: PropTypes.string,

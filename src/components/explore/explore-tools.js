@@ -155,7 +155,7 @@ const ExploreTools = React.forwardRef(
                 selectedFilterIds={selectedFilterIds}
                 addFilter={addFilter}
                 removeFilter={removeFilter}
-                label="Measurement Types"
+                label="gcmd"
                 options={getFilterOptionsById("measurement")}
                 secondaryOptions={getFilterOptionsById("gcmd")}
                 category={category}
@@ -163,17 +163,44 @@ const ExploreTools = React.forwardRef(
                 getMatchTerm={option => option.shortname}
                 getFilterOptions={getGcmdOptions}
                 filterValue={option => option.shortname}
-                filterLayoutWidth={"60%"}
+                filterLayoutWidth={"50%"}
+                hasLinkOut={true}
               />
               <FilterMenu
-                id="style"
+                id="concepts"
                 selectedFilterIds={selectedFilterIds}
                 addFilter={addFilter}
                 removeFilter={removeFilter}
-                label="Measurement Styles"
-                options={getFilterOptionsById("style")}
+                label="Geophysical Concepts"
+                options={getFilterOptionsById("concepts")}
                 category={category}
               />
+              <FilterByDate
+                id="date"
+                label="Date range"
+                dateRange={dateRange}
+                setDateRange={setDateRange}
+              />
+              <button
+                css={`
+                  flex-grow: 1;
+                  border: 1px solid ${colors[NEGATIVE].text};
+                  padding: 0.25rem;
+
+                  flex-grow: 0;
+                  background: transparent;
+                  color: ${colors[NEGATIVE].text};
+                  vertical-align: middle;
+                  cursor: pointer;
+                `}
+                data-cy="map-toggle-btn"
+                onClick={e => {
+                  e.preventDefault()
+                  toggleMap(!isDisplayingMap)
+                }}
+              >
+                <span>{isDisplayingMap ? "Hide" : "Show"} Map</span>
+              </button>
               <DropdownByTextInput
                 setSearchResult={setSearchResult}
                 id="type"
@@ -198,13 +225,16 @@ const ExploreTools = React.forwardRef(
                     .filter(item => item !== "")
                     .join(" ")}`
                 }
-                filterLayoutWidth={"40%"}
+                filterLayoutWidth={"41.75%"}
               />
-              <FilterByDate
-                id="date"
-                label="Date range"
-                dateRange={dateRange}
-                setDateRange={setDateRange}
+              <FilterMenu
+                id="style"
+                selectedFilterIds={selectedFilterIds}
+                addFilter={addFilter}
+                removeFilter={removeFilter}
+                label="Measurement Styles"
+                options={getFilterOptionsById("style")}
+                category={category}
               />
 
               <FilterMenu
@@ -224,27 +254,6 @@ const ExploreTools = React.forwardRef(
                 label="Vertical Measurement Region"
                 options={getFilterOptionsById("vertical")}
               />
-
-              <button
-                css={`
-                  flex-grow: 1;
-                  border: 1px solid ${colors[NEGATIVE].text};
-                  padding: 0.25rem;
-
-                  flex-grow: 0;
-                  background: transparent;
-                  color: ${colors[NEGATIVE].text};
-                  vertical-align: middle;
-                  cursor: pointer;
-                `}
-                data-cy="map-toggle-btn"
-                onClick={e => {
-                  e.preventDefault()
-                  toggleMap(!isDisplayingMap)
-                }}
-              >
-                <span>{isDisplayingMap ? "Hide" : "Show"} Map</span>
-              </button>
             </>
           )}
 
@@ -282,12 +291,28 @@ const ExploreTools = React.forwardRef(
                 options={getFilterOptionsById("type")}
               />
               <FilterMenu
+                id="type"
+                selectedFilterIds={selectedFilterIds}
+                addFilter={addFilter}
+                removeFilter={removeFilter}
+                label="Measurement Style"
+                options={getFilterOptionsById("style")}
+              />
+              <FilterMenu
                 id="vertical"
                 selectedFilterIds={selectedFilterIds}
                 addFilter={addFilter}
                 removeFilter={removeFilter}
                 label="Vertical Measurement Region"
                 options={getFilterOptionsById("vertical")}
+              />
+              <FilterMenu
+                id="type"
+                selectedFilterIds={selectedFilterIds}
+                addFilter={addFilter}
+                removeFilter={removeFilter}
+                label="Platforms"
+                options={getFilterOptionsById("platform")}
               />
             </>
           )}

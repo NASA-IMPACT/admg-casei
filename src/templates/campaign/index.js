@@ -99,7 +99,7 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
       component: DataSection,
       props: {
         dois: campaign.dois,
-        filterBy: ["platforms", "instruments"],
+        filterBy: ["platforms", "instruments", "formats"],
         category: "campaign",
       },
     },
@@ -142,6 +142,7 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
         countDataProducts={campaign.countDataProducts}
         deployments={campaign.deployments}
         logo150h={campaign.logo150h}
+        platforms={campaign.platforms}
       />
       <PageBody id="campaign">
         <InpageNav
@@ -224,8 +225,12 @@ export const query = graphql`
           id
         }
       }
+      platforms {
+        short_name
+      }
       dois {
         cmrTitle: cmr_entry_title
+        formats: cmr_data_formats
         doi
         id
         longname: long_name
@@ -273,7 +278,7 @@ CampaignTemplate.propTypes = {
       countDataProducts: PropTypes.number,
       aliases: PropTypes.arrayOf(
         PropTypes.shape({
-          shortname: PropTypes.string.isRequired,
+          shortname: PropTypes.string,
         }).isRequired
       ),
       description: PropTypes.string.isRequired,
@@ -349,7 +354,7 @@ CampaignTemplate.propTypes = {
           aliases: PropTypes.array.isRequired,
           flights: PropTypes.array,
           region: PropTypes.array,
-          campaign: PropTypes.string.isRequired,
+          campaign: PropTypes.string,
           end: PropTypes.string.isRequired,
           start: PropTypes.string.isRequired,
           collection_periods: PropTypes.shape({
@@ -361,6 +366,7 @@ CampaignTemplate.propTypes = {
         PropTypes.shape({
           cmrTitle: PropTypes.string.isRequired,
           doi: PropTypes.string.isRequired,
+          format: PropTypes.string,
           id: PropTypes.string.isRequired,
           longname: PropTypes.string,
         })

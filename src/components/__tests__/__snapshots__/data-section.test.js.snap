@@ -32,8 +32,10 @@ exports[`Data Section matches snapshot 1`] = `
        by specific
        
       campaigns
-       or 
+      , 
       platforms
+      , or 
+      formats
       .
     </p>
     <div

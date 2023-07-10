@@ -119,8 +119,19 @@ export function productsFilter(selectedFilterIds) {
       }, new Set())
     )
 
+    const geophysicalConcepts = Array.from(
+      product.campaigns.reduce((acc, campaign) => {
+        if (campaign.geophysical_concepts) {
+          for (const concept of campaign.geophysical_concepts) {
+            acc.add(concept?.id)
+          }
+        }
+        return acc
+      }, new Set())
+    )
+
     const gcmdKeywords = new Set()
-    // guard against maleformed json fields
+    // const keywords = JSON.parse(product.keywords)
     let keywords = []
     try {
       keywords = JSON.parse(product.keywords)
@@ -172,6 +183,11 @@ export function productsFilter(selectedFilterIds) {
     }
     for (const campaign of product.campaigns) {
       relatedKeywords.add(campaign.id)
+      if (campaign.aliases) {
+        for (const alias of campaign.aliases) {
+          relatedKeywords.add(alias.id)
+        }
+      }
     }
     for (const platform of product.platforms) {
       relatedKeywords.add(platform.id)
@@ -183,7 +199,8 @@ export function productsFilter(selectedFilterIds) {
         measurementRegions.includes(filterId) ||
         measurementStyles.includes(filterId) ||
         gcmdKeywords.has(filterId) ||
-        relatedKeywords.has(filterId)
+        relatedKeywords.has(filterId) ||
+        geophysicalConcepts.includes(filterId)
     )
   }
 }
@@ -198,15 +215,18 @@ export function platformFilter(selectedFilterIds) {
 }
 
 export function instrumentFilter(selectedFilterIds) {
-  return instrument =>
-    selectedFilterIds.length === 0
+  return instrument => {
+    return selectedFilterIds.length === 0
       ? true
       : selectedFilterIds.every(
           filterId =>
             (instrument.measurementType &&
               instrument.measurementType.id === filterId) ||
+            (instrument.measurementStyle?.id ?? 0) === filterId ||
+            instrument.platforms.map(x => x.id).includes(filterId) ||
             instrument.measurementRegions.map(x => x.id).includes(filterId)
         )
+  }
 }
 
 export function doiFilter(selectedFilterIds) {
@@ -221,5 +241,6 @@ export function doiFilter(selectedFilterIds) {
           .some(id => selectedFilterIds.includes(id)) ||
         doi.instruments
           ?.map(x => x.id)
-          .some(id => selectedFilterIds.includes(id))
+          .some(id => selectedFilterIds.includes(id)) ||
+        doi.formats?.map(x => x.id).some(id => selectedFilterIds.includes(id))
 }

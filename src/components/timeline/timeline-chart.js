@@ -162,7 +162,10 @@ export const TimelineChart = ({ deployments }) => {
               background: colors[POSITIVE].background,
               position: "absolute",
               bottom: -tooltip.y + 86,
-              left: tooltip.x - 8 - tooltipRef.current?.clientWidth / 2,
+              left:
+                tooltip.x - 8 - tooltipRef.current?.clientWidth / 2
+                  ? tooltip.x && tooltipRef.current
+                  : 0,
               padding: 12,
               color: colors[POSITIVE].text,
               boxShadow:
@@ -182,7 +185,7 @@ export const TimelineChart = ({ deployments }) => {
           </div>
           <div>
             <svg // scrollable chart
-              width={range[1] + 40}
+              width={Math.max(0, range[1] + 40)}
               height={dms.height}
             >
               <g

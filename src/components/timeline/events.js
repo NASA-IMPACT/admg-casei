@@ -68,7 +68,7 @@ export const Events = ({
                 ? () => setSelectedEvent({ content: event, type: "event" })
                 : () => {}
             }
-            width={duration}
+            width={Math.max(0, duration)}
             height={eventBarHeight}
             fill={colors[NEGATIVE].dataVizTwo}
             opacity={

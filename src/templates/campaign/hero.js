@@ -41,9 +41,9 @@ const CampaignHero = ({
   bounds,
   focusListing,
   countDeployments,
-  countCollectionPeriods,
   countDataProducts,
   deployments,
+  platforms,
 }) => {
   const containerRef = useRef()
   const { height } = useContainerDimensions(containerRef)
@@ -129,7 +129,7 @@ const CampaignHero = ({
                 label: "Deployment",
                 dates: deployments,
               },
-              { number: countCollectionPeriods, label: "Collection Periods" },
+              { number: Object.keys(platforms).length, label: "Platforms" },
               { number: countDataProducts, label: "Data Products" },
             ]}
           />
@@ -164,6 +164,9 @@ export const heroFields = graphql`
     focus: focus_areas {
       shortname: short_name
     }
+    platforms: platforms {
+      short_name
+    }
     countCollectionPeriods: number_ventures
     countDataProducts: number_data_products
     countDeployments: number_deployments
@@ -177,7 +180,8 @@ CampaignHero.propTypes = {
       childImageSharp: PropTypes.object,
     }),
   }),
-  bounds: PropTypes.string,
+  platforms: PropTypes.any,
+  bounds: PropTypes.array,
   longname: PropTypes.string,
   shortname: PropTypes.string.isRequired,
   focusListing: PropTypes.string.isRequired,
@@ -213,6 +217,6 @@ const HeroMap = ({ bounds, height }) => {
 }
 
 HeroMap.propTypes = {
-  bounds: PropTypes.string,
+  bounds: PropTypes.array,
   height: any,
 }

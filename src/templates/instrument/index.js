@@ -46,7 +46,7 @@ const InstrumentTemplate = ({ data: { instrument }, path }) => {
       component: DataSection,
       props: {
         dois: instrument.dois,
-        filterBy: ["campaigns", "platforms"],
+        filterBy: ["campaigns", "platforms", "formats"],
         category: "instrument",
       },
     },
@@ -104,6 +104,7 @@ export const query = graphql`
       }
       dois {
         cmrTitle: cmr_entry_title
+        formats: cmr_data_formats
         doi
         id
         longname: long_name
@@ -136,6 +137,7 @@ InstrumentTemplate.propTypes = {
       dois: PropTypes.arrayOf(
         PropTypes.shape({
           cmrTitle: PropTypes.string.isRequired,
+          format: PropTypes.string,
           doi: PropTypes.string.isRequired,
           id: PropTypes.string.isRequired,
           longname: PropTypes.string,
