@@ -10,7 +10,7 @@ export default function PlatformHero({
   shortname,
   longname,
   campaigns,
-  collectionPeriods,
+  dois,
   image,
 }) {
   return (
@@ -45,7 +45,7 @@ export default function PlatformHero({
       textToImageRatio={[5, 3]}
       stats={[
         { label: "Campaigns", number: campaigns },
-        { label: "Collection Periods", number: collectionPeriods },
+        { label: "Data Products", number: dois },
       ]}
       id="platform"
     />
@@ -76,7 +76,7 @@ PlatformHero.propTypes = {
   shortname: PropTypes.string.isRequired,
   longname: PropTypes.string.isRequired,
   campaigns: PropTypes.number.isRequired,
-  collectionPeriods: PropTypes.number.isRequired,
+  dois: PropTypes.number.isRequired,
   image: PropTypes.shape({
     description: PropTypes.string.isRequired,
     gatsbyImg: PropTypes.shape({
