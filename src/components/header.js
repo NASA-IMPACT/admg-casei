@@ -108,7 +108,7 @@ const Header = ({ shortname, children, mode }) => {
       >
         <div
           css={`
-            position: absolute;
+            position: relative;
             background: #ebba33;
             color: ${colors[POSITIVE].text};
             opacity: 0.95;
