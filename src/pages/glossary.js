@@ -16,8 +16,6 @@ import { colors } from "../theme"
 import { ALPHABET, POSITIVE, NEGATIVE } from "../utils/constants"
 
 export default function Glossary({ data }) {
-  // const { hash } = location
-
   // eslint-disable-next-line no-unused-vars
   const [alphabeticalGlossary, setAlphabeticalGlossary] = useState(() =>
     ALPHABET.reduce(
@@ -30,17 +28,6 @@ export default function Glossary({ data }) {
       {}
     )
   )
-
-  /* In case we want to filter by letter, we can use these lines: */
-
-  // const [selectedLetter, setSelectedLetter] = useState(null)
-
-  // useEffect(() => {
-  //   setSelectedLetter(hash.replace("#", ""))
-  //   return () => {
-  //     setSelectedLetter(null)
-  //   }
-  // }, [hash])
 
   return (
     <Layout>
