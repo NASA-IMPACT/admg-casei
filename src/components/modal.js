@@ -28,13 +28,13 @@ const Component = styled.div`
   pointer-events: auto;
 `
 
-export const Modal = ({ handleClose, isOpen, children }) => {
+export const Modal = ({ handleClose, isOpen, children, Custom }) => {
   return (
     <Backdrop
       isOpen={isOpen}
       onClick={e => (e.target === e.currentTarget ? handleClose() : null)}
     >
-      <Component>{children}</Component>
+      {Custom ? <Custom /> : <Component>{children}</Component>}
     </Backdrop>
   )
 }
@@ -43,4 +43,5 @@ Modal.propTypes = {
   handleClose: PropTypes.func.isRequired,
   isOpen: PropTypes.bool.isRequired,
   children: PropTypes.element,
+  Custom: PropTypes.element,
 }
