@@ -11,6 +11,7 @@
     "Matt Robinson <matthew@developmentseed.org>"
   ],
   "dependencies": {
+    "@emotion/styled": "^11.11.0",
     "@fontsource/titillium-web": "^4.5.2",
     "@gatsbyjs/reach-router": "^2.0.1",
     "@juggle/resize-observer": "^3.3.1",
@@ -87,7 +88,7 @@
     "gatsby-plugin-perf-budgets": "^0.0.18",
     "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.26",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^27.5.1",
+    "jest": "^29.6.1",
     "jest-styled-components": "^7.0.8",
     "postcss": "8.4.23",
     "prettier": "^2.5.1",
@@ -106,6 +107,7 @@
     "clean": "gatsby clean",
     "test": "jest",
     "tdd": "jest --watch",
+    "jest-clear": "jest --clearCache",
     "updateSnapshot": "jest --updateSnapshot",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
