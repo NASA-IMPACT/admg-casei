@@ -11,6 +11,7 @@
     "Matt Robinson <matthew@developmentseed.org>"
   ],
   "dependencies": {
+    "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@fontsource/titillium-web": "^4.5.2",
     "@gatsbyjs/reach-router": "^2.0.1",

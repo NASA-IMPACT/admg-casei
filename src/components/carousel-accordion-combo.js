@@ -1,8 +1,6 @@
 import React, { useState, useRef } from "react"
 import PropTypes from "prop-types"
-
 import Carousel from "nuka-carousel"
-
 import Button from "./button"
 import { controlButtonLRStyle } from "./carousel-styles"
 import Accordion from "./accordion"
@@ -101,7 +99,7 @@ export default function CarouselAccordionCombo({
                   mode={POSITIVE}
                 />
 
-                <Accordion folds={carouselItem.folds} id="instrument" />
+                <Slice alias="accordion" folds={carouselItem.folds} id="instrument" />
               </div>
             ))}
           </Carousel>

@@ -212,6 +212,11 @@ const fetchData = async endpoint => {
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
+
+  actions.createSlice({
+    id: `accordion`,
+    component: require.resolve(`./src/components/accordion.js`)
+  })
   // **Note:** The graphql function call returns a Promise
   // see: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise for more info
   const result = await graphql(`
