@@ -105,14 +105,16 @@ const InpageNav = ({ shortname, items }) => {
             ))}
           </ul>
           {
-            <Button
-              action={() => {
-                window.feedback.showForm()
-              }}
-              mode={POSITIVE}
-            >
+            <div>
+              <Slice
+                alias="button"
+                action={() => {
+                  window.feedback.showForm()
+                }}
+                mode={POSITIVE}
+              />
               Feedback
-            </Button>
+            </div>
           }
         </nav>
       </div>

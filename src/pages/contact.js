@@ -34,13 +34,14 @@ const Contact = () => {
                   margin-top: 16px;
                 `}
               >
-                <Button
+                <Slice
+                  alias="button"
                   action={() => {
                     window.open(FEEDBACK_FORM_URL, "_blank")
                   }}
                 >
                   How can we improve CASEI?
-                </Button>
+                </Slice>
               </div>
             </Paragraph>
             <Paragraph>

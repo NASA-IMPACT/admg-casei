@@ -39,7 +39,7 @@ const FocusSection = ({ id, focus, geophysical, focusPhenomena, missions }) => (
         </Label>
         <FocusContent>
           {geophysical.map(concept => (
-            <Button key={concept.id} as="div" isSecondary>
+            <Slice alias="button" key={concept.id} as="div" isSecondary>
               <Link
                 to="/explore/campaigns"
                 state={{ selectedFilterId: concept.id }} // Pass state as props to the linked page
@@ -47,7 +47,7 @@ const FocusSection = ({ id, focus, geophysical, focusPhenomena, missions }) => (
               >
                 {concept.longname}
               </Link>
-            </Button>
+            </Slice>
           ))}
         </FocusContent>
       </div>

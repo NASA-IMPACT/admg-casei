@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { graphql, Link } from "gatsby"
+import { graphql, Link, Slice } from "gatsby"
 import { FEEDBACK_FORM_URL } from "../utils/constants"
 import Layout, { PageBody } from "../components/layout"
 import SEO from "../components/seo"
@@ -130,13 +130,12 @@ const Home = ({ data }) => {
         <Section id="feedback" isSpaced>
           <SectionHeader headline="Provide Feedback" id="feedback" />
           <SectionContent>
-            <Button
+            <Slice
               action={() => {
                 window.open(FEEDBACK_FORM_URL, "_blank")
               }}
-            >
-              How can we improve CASEI?
-            </Button>
+            />
+            How can we improve CASEI?
           </SectionContent>
         </Section>
       </PageBody>

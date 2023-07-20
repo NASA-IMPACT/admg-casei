@@ -30,14 +30,17 @@ export default function CarouselAccordionCombo({
             data-cy="carousel-list-text-control"
           >
             {carouselList.map((carouselItem, index) => (
-              <Button
-                key={"button" + carouselItem.item.id + index}
-                ref={index === slideIndex ? controlTextRef : null}
-                isSecondary={!(index === slideIndex)}
-                action={() => setSlideIndex(index)}
-              >
-                {carouselItem.item.shortname}
-              </Button>
+              <div>
+                <Slice
+                  alias="button"
+                  key={"button" + carouselItem.item.id + index}
+                  ref={index === slideIndex ? controlTextRef : null}
+                  isSecondary={!(index === slideIndex)}
+                  action={() => setSlideIndex(index)}
+                >
+                  {carouselItem.item.shortname}
+                </Slice>
+              </div>
             ))}
           </div>
 
@@ -99,7 +102,11 @@ export default function CarouselAccordionCombo({
                   mode={POSITIVE}
                 />
 
-                <Slice alias="accordion" folds={carouselItem.folds} id="instrument" />
+                <Slice
+                  alias="accordion"
+                  folds={carouselItem.folds}
+                  id="instrument"
+                />
               </div>
             ))}
           </Carousel>

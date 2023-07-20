@@ -31,12 +31,13 @@ const Login = () => {
 
   return (
     <>
-      <Button
+      <Slice
+        alias="button"
         action={() => (isLoggedIn ? handleLogout() : setModal(true))}
         isSecondary
       >
         {buttonText}
-      </Button>
+      </Slice>
 
       <Modal
         id="modal"

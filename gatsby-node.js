@@ -215,7 +215,11 @@ exports.createPages = async ({ graphql, actions }) => {
 
   actions.createSlice({
     id: `accordion`,
-    component: require.resolve(`./src/components/accordion.js`)
+    component: require.resolve(`./src/components/accordion.js`),
+  })
+  actions.createSlice({
+    id: `button`,
+    component: require.resolve(`./src/components/button.js`),
   })
   // **Note:** The graphql function call returns a Promise
   // see: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise for more info
