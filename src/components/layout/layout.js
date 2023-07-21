@@ -7,8 +7,8 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-import styled from "styled-components"
+import { useStaticQuery, graphql, Slice } from "gatsby"
+import styled from "@emotion/styled"
 
 import "@reach/listbox/styles.css"
 import "@reach/accordion/styles.css"
@@ -49,7 +49,7 @@ const Layout = ({ children }) => {
 
       <main>{children}</main>
 
-      <Footer shortname={data.site.siteMetadata.shortname} />
+      <Slice alias="footer" shortname={data.site.siteMetadata.shortname} />
     </Container>
   )
 }

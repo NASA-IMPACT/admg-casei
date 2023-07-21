@@ -221,6 +221,14 @@ exports.createPages = async ({ graphql, actions }) => {
     id: `button`,
     component: require.resolve(`./src/components/button.js`),
   })
+  actions.createSlice({
+    id: `footer`,
+    component: require.resolve(`./src/components/footer.js`)
+  })
+  actions.createSlice({
+    id: `hero`,
+    component: require.resolve(`./src/components/hero.js`)
+  })
   // **Note:** The graphql function call returns a Promise
   // see: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise for more info
   const result = await graphql(`

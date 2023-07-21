@@ -21,7 +21,7 @@ const Home = ({ data }) => {
     <Layout>
       <SEO title="Home" lang="en" />
 
-      <Hero
+      <Slice alias='hero'
         title={data.site.siteMetadata.title.replace(
           "Earth Science",
           "Earth\u00a0Science" // add non-breaking space
@@ -130,7 +130,7 @@ const Home = ({ data }) => {
         <Section id="feedback" isSpaced>
           <SectionHeader headline="Provide Feedback" id="feedback" />
           <SectionContent>
-            <Slice
+            <Button
               action={() => {
                 window.open(FEEDBACK_FORM_URL, "_blank")
               }}

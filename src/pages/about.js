@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { graphql } from "gatsby"
+import { graphql, Slice } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 import { DiscoveryIcon, MetadataIcon, AccountingIcon } from "../icons"
@@ -51,7 +51,7 @@ const About = ({ data }) => {
     <Layout>
       <SEO title="About" lang="en" />
 
-      <Hero
+      <Slice alias='hero'
         tagline="About"
         title="NASA"
         description="conducts and supports Earth Science field investigations, including airborne campaigns, to supplement space-borne observations and advance scientific understanding and predictive capability of our home planet’s natural processes."

@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { graphql } from "gatsby"
+import { graphql, Slice } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import Hero from "../../components/hero"
@@ -13,7 +13,7 @@ export default function InstrumentHero({
   image,
 }) {
   return (
-    <Hero
+    <Slice alias='hero'
       backlink="/explore/instruments"
       tagline="Instrument"
       title={
