@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Slice } from "gatsby"
 
 import Card from "./card"
 import CardFooterItem from "./card-footer-item"
