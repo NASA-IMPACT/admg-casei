@@ -1,13 +1,13 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { graphql, Link } from "gatsby"
-import styled from "styled-components"
+import { graphql, Link, Slice } from "gatsby"
+import styled from "@emotion/styled"
 
 import { Section, SectionHeader, SectionContent } from "../../components/layout"
 import Label from "../../components/label"
 import Chip from "../../components/chip"
 import FocusAreaGallery from "../../components/focus-area-gallery"
-import Button from "../../components/button"
+// import Button from "../../components/button"
 
 const FocusContent = styled.div`
   margin-top: 0.5rem;
@@ -39,7 +39,7 @@ const FocusSection = ({ id, focus, geophysical, focusPhenomena, missions }) => (
         </Label>
         <FocusContent>
           {geophysical.map(concept => (
-            <Button key={concept.id} as="div" isSecondary>
+            <Slice alias="button" key={concept.id} as="div" isSecondary>
               <Link
                 to="/explore/campaigns"
                 state={{ selectedFilterId: concept.id }} // Pass state as props to the linked page
@@ -47,7 +47,7 @@ const FocusSection = ({ id, focus, geophysical, focusPhenomena, missions }) => (
               >
                 {concept.longname}
               </Link>
-            </Button>
+            </Slice>
           ))}
         </FocusContent>
       </div>

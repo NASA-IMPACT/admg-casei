@@ -1,8 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
-
-import Button from "../button"
+// import Button from "../button"
 import { POSITIVE } from "../../utils/constants"
+import { Slice } from "gatsby"
 
 const DrawControlButton = ({
   drawControl,
@@ -72,7 +72,8 @@ const DrawControlButton = ({
           }
         `}
       >
-        <Button
+        <Slice
+          alias="button"
           isSecondary={!isDrawing}
           mode={POSITIVE}
           action={handlePolygonClick}
@@ -82,12 +83,17 @@ const DrawControlButton = ({
             : hasDrawing
             ? "Draw new Polygon"
             : "Draw Polygon"}
-        </Button>
+        </Slice>
 
         {hasDrawing && (
-          <Button isSecondary mode={POSITIVE} action={handleDeleteClick}>
+          <Slice
+            alias="button"
+            isSecondary
+            mode={POSITIVE}
+            action={handleDeleteClick}
+          >
             {isDrawing ? "Cancel" : "Delete Polygon"}
-          </Button>
+          </Slice>
         )}
       </div>
     </div>

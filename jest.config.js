@@ -18,6 +18,13 @@ module.exports = {
   globals: {
     __PATH_PREFIX__: ``,
   },
-  testURL: `http://localhost`,
-  setupFiles: [`<rootDir>/test/jest.setup.js`, `<rootDir>/test/loadershim.js`],
+  testEnvironmentOptions: {
+    testURL: `http://localhost`,
+  },
+  setupFiles: [
+    `<rootDir>/test/jest.setup.js`,
+    `<rootDir>/test/loadershim.js`,
+    `<rootDir>/test/__mocks__/react.js`,
+    `raf/polyfill`,
+  ],
 }

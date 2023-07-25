@@ -1,6 +1,6 @@
 import React from "react"
 import { FEEDBACK_FORM_URL } from "../utils/constants"
-
+import { Slice } from "gatsby"
 import Layout, {
   PageBody,
   Paragraph,
@@ -9,7 +9,7 @@ import Layout, {
 } from "../components/layout"
 import SEO from "../components/seo"
 import ExternalLink from "../components/external-link"
-import Button from "../components/button"
+// import Button from "../components/button"
 
 const Contact = () => {
   return (
@@ -34,13 +34,14 @@ const Contact = () => {
                   margin-top: 16px;
                 `}
               >
-                <Button
+                <Slice
+                  alias="button"
                   action={() => {
                     window.open(FEEDBACK_FORM_URL, "_blank")
                   }}
                 >
                   How can we improve CASEI?
-                </Button>
+                </Slice>
               </div>
             </Paragraph>
             <Paragraph>

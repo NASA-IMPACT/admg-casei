@@ -1,11 +1,11 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { graphql, Link } from "gatsby"
+import { graphql, Link, Slice } from "gatsby"
 import { FEEDBACK_FORM_URL } from "../utils/constants"
 import Layout, { PageBody } from "../components/layout"
 import SEO from "../components/seo"
 import { Section, SectionHeader, SectionContent } from "../components/layout"
-import Hero from "../components/hero"
+// import Hero from "../components/hero"
 import Label from "../components/label"
 import Button from "../components/button"
 import FocusAreaGallery from "../components/focus-area-gallery"
@@ -21,7 +21,8 @@ const Home = ({ data }) => {
     <Layout>
       <SEO title="Home" lang="en" />
 
-      <Hero
+      <Slice
+        alias="hero"
         title={data.site.siteMetadata.title.replace(
           "Earth Science",
           "Earth\u00a0Science" // add non-breaking space
@@ -134,9 +135,8 @@ const Home = ({ data }) => {
               action={() => {
                 window.open(FEEDBACK_FORM_URL, "_blank")
               }}
-            >
-              How can we improve CASEI?
-            </Button>
+            />
+            How can we improve CASEI?
           </SectionContent>
         </Section>
       </PageBody>

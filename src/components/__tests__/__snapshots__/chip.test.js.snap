@@ -10,8 +10,16 @@ exports[`Chip renders with action 1`] = `
   >
     Weather
   </small>
+  <style
+    dangerouslySetInnerHTML={
+      {
+        "__html": ".css-z2b5q:hover{opacity:0.64;}.css-z2b5q:active{-webkit-transform:translate(0, 1px);-moz-transform:translate(0, 1px);-ms-transform:translate(0, 1px);transform:translate(0, 1px);}",
+      }
+    }
+    data-emotion="css z2b5q"
+  />
   <button
-    className="button__Clickable-sc-1yw7vig-0 button___StyledClickable2-sc-1yw7vig-1 fRqvWm kXXfwm"
+    className="button___StyledClickable2-sc-1yw7vig-0 lcsDTH css-z2b5q"
     data-cy="remove-filter"
     onClick={[Function]}
     type="button"

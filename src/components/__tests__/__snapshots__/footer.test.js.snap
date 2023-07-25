@@ -2,17 +2,17 @@
 
 exports[`Footer renders correctly 1`] = `
 <footer
-  className="footer___StyledFooter-sc-p4lrvs-2 dfJapw"
+  className="footer___StyledFooter-sc-p4lrvs-0 dzLcjS"
   data-cy="page-footer"
 >
   <div
-    className="footer___StyledDiv-sc-p4lrvs-3 dRYVQo"
+    className="footer___StyledDiv-sc-p4lrvs-1 lhXvfW"
   >
     <div
-      className="footer___StyledDiv2-sc-p4lrvs-4 fvMgqH"
+      className="footer___StyledDiv2-sc-p4lrvs-2 hjDzrd"
     >
       <div
-        className="footer___StyledDiv3-sc-p4lrvs-5 iHlXaS"
+        className="footer___StyledDiv3-sc-p4lrvs-3 jyOVsI"
         data-cy="footer-title"
       >
         NASA | CASEI
@@ -27,16 +27,32 @@ exports[`Footer renders correctly 1`] = `
       </p>
     </div>
     <div
-      className="footer___StyledDiv4-sc-p4lrvs-6 fEgwOa"
+      className="footer___StyledDiv4-sc-p4lrvs-4 leGtCI"
       data-cy="footer-explore"
     >
+      <style
+        dangerouslySetInnerHTML={
+          {
+            "__html": ".css-o5z2wc{margin:0 0 1.5rem 0;font-weight:bold;line-height:3rem;}",
+          }
+        }
+        data-emotion="css o5z2wc"
+      />
       <p
-        className="footer__Headline-sc-p4lrvs-1 huPSJz"
+        className="css-o5z2wc"
       >
         Explore
       </p>
+      <style
+        dangerouslySetInnerHTML={
+          {
+            "__html": ".css-1x4wnfw{list-style:none;margin:0;}",
+          }
+        }
+        data-emotion="css 1x4wnfw"
+      />
       <ul
-        className="footer__Ul-sc-p4lrvs-0 gJnPLs"
+        className="css-1x4wnfw"
       >
         <li>
           <a
@@ -65,16 +81,32 @@ exports[`Footer renders correctly 1`] = `
       </ul>
     </div>
     <div
-      className="footer___StyledDiv5-sc-p4lrvs-7 eCdWMk"
+      className="footer___StyledDiv5-sc-p4lrvs-5 eQOLLS"
       data-cy="footer-resources"
     >
+      <style
+        dangerouslySetInnerHTML={
+          {
+            "__html": ".css-o5z2wc{margin:0 0 1.5rem 0;font-weight:bold;line-height:3rem;}",
+          }
+        }
+        data-emotion="css o5z2wc"
+      />
       <p
-        className="footer__Headline-sc-p4lrvs-1 huPSJz"
+        className="css-o5z2wc"
       >
         Resources
       </p>
+      <style
+        dangerouslySetInnerHTML={
+          {
+            "__html": ".css-1x4wnfw{list-style:none;margin:0;}",
+          }
+        }
+        data-emotion="css 1x4wnfw"
+      />
       <ul
-        className="footer__Ul-sc-p4lrvs-0 gJnPLs"
+        className="css-1x4wnfw"
       >
         <li>
           <a
@@ -86,16 +118,32 @@ exports[`Footer renders correctly 1`] = `
       </ul>
     </div>
     <div
-      className="footer___StyledDiv6-sc-p4lrvs-8 hcKsFu"
+      className="footer___StyledDiv6-sc-p4lrvs-6 jKqoEw"
       data-cy="footer-quick-links"
     >
+      <style
+        dangerouslySetInnerHTML={
+          {
+            "__html": ".css-o5z2wc{margin:0 0 1.5rem 0;font-weight:bold;line-height:3rem;}",
+          }
+        }
+        data-emotion="css o5z2wc"
+      />
       <p
-        className="footer__Headline-sc-p4lrvs-1 huPSJz"
+        className="css-o5z2wc"
       >
         Quick Links
       </p>
+      <style
+        dangerouslySetInnerHTML={
+          {
+            "__html": ".css-1x4wnfw{list-style:none;margin:0;}",
+          }
+        }
+        data-emotion="css 1x4wnfw"
+      />
       <ul
-        className="footer__Ul-sc-p4lrvs-0 gJnPLs"
+        className="css-1x4wnfw"
       >
         <li>
           <a
@@ -150,16 +198,32 @@ exports[`Footer renders correctly 1`] = `
       </ul>
     </div>
     <div
-      className="footer___StyledDiv7-sc-p4lrvs-9 hqhAHf"
+      className="footer___StyledDiv7-sc-p4lrvs-7 fErgVR"
       data-cy="footer-organizations"
     >
+      <style
+        dangerouslySetInnerHTML={
+          {
+            "__html": ".css-o5z2wc{margin:0 0 1.5rem 0;font-weight:bold;line-height:3rem;}",
+          }
+        }
+        data-emotion="css o5z2wc"
+      />
       <p
-        className="footer__Headline-sc-p4lrvs-1 huPSJz"
+        className="css-o5z2wc"
       >
         Organizations
       </p>
+      <style
+        dangerouslySetInnerHTML={
+          {
+            "__html": ".css-1x4wnfw{list-style:none;margin:0;}",
+          }
+        }
+        data-emotion="css 1x4wnfw"
+      />
       <ul
-        className="footer__Ul-sc-p4lrvs-0 gJnPLs"
+        className="css-1x4wnfw"
       >
         <li>
           <a
@@ -236,13 +300,13 @@ exports[`Footer renders correctly 1`] = `
       </ul>
     </div>
     <hr
-      className="footer___StyledHr-sc-p4lrvs-10 dGzKT"
+      className="footer___StyledHr-sc-p4lrvs-8 eRcpHq"
     />
     <div
-      className="footer___StyledDiv8-sc-p4lrvs-11 ijvCrx"
+      className="footer___StyledDiv8-sc-p4lrvs-9 dMUCkk"
     >
       <div
-        className="footer___StyledDiv9-sc-p4lrvs-12 cSnrgC"
+        className="footer___StyledDiv9-sc-p4lrvs-10 eqjWfI"
       >
         <a
           aria-label="Visit nasa.gov (opens in a new window)"
@@ -264,7 +328,7 @@ exports[`Footer renders correctly 1`] = `
             NASA Official:
              
             <span
-              className="footer___StyledSpan-sc-p4lrvs-13 bYDfQL"
+              className="footer___StyledSpan-sc-p4lrvs-11 jvDJap"
             >
               Rahul Ramachandran
             </span>
@@ -274,7 +338,7 @@ exports[`Footer renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="footer___StyledDiv10-sc-p4lrvs-14 gElVjt"
+    className="footer___StyledDiv10-sc-p4lrvs-12 ieiCrD"
     data-cy="footer-credit-devseed"
   >
     © 

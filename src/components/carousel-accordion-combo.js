@@ -1,12 +1,11 @@
 import React, { useState, useRef } from "react"
 import PropTypes from "prop-types"
-
 import Carousel from "nuka-carousel"
-
-import Button from "./button"
+// import Button from "./button"
 import { controlButtonLRStyle } from "./carousel-styles"
-import Accordion from "./accordion"
+// import Accordion from "./accordion"
 import { POSITIVE } from "../utils/constants"
+import { Slice } from "gatsby"
 
 export default function CarouselAccordionCombo({
   id,
@@ -31,15 +30,20 @@ export default function CarouselAccordionCombo({
             `}
             data-cy="carousel-list-text-control"
           >
+            {/* eslint-disable-next-line no-use-before-define */}
             {carouselList.map((carouselItem, index) => (
-              <Button
-                key={"button" + carouselItem.item.id + index}
-                ref={index === slideIndex ? controlTextRef : null}
-                isSecondary={!(index === slideIndex)}
-                action={() => setSlideIndex(index)}
-              >
-                {carouselItem.item.shortname}
-              </Button>
+              <div key={"button" + carouselItem.item.id + index}>
+                {" "}
+                {/* eslint-disable-next-line no-use-before-define */}
+                <Slice
+                  alias="button"
+                  ref={index === slideIndex ? controlTextRef : null}
+                  isSecondary={!(index === slideIndex)}
+                  action={() => setSlideIndex(index)}
+                >
+                  {carouselItem.item.shortname}
+                </Slice>
+              </div>
             ))}
           </div>
 
@@ -101,7 +105,11 @@ export default function CarouselAccordionCombo({
                   mode={POSITIVE}
                 />
 
-                <Accordion folds={carouselItem.folds} id="instrument" />
+                <Slice
+                  alias="accordion"
+                  folds={carouselItem.folds}
+                  id="instrument"
+                />
               </div>
             ))}
           </Carousel>
