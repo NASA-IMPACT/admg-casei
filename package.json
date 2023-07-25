@@ -90,10 +90,12 @@
     "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.26",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^29.6.1",
+    "jest-environment-jsdom": "^29.6.1",
     "jest-styled-components": "^7.0.8",
     "postcss": "8.4.23",
     "prettier": "^2.5.1",
-    "react-test-renderer": "^17.0.1",
+    "raf": "^3.4.1",
+    "react-test-renderer": "18.2.0",
     "start-server-and-test": "^1.14.0"
   },
   "license": "MIT",
