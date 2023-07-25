@@ -14,7 +14,8 @@ export default function PlatformHero({
   image,
 }) {
   return (
-    <Slice alias='hero'
+    <Slice
+      alias="hero"
       backlink="/explore/platforms"
       tagline="Platform"
       title={

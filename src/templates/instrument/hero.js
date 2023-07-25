@@ -13,7 +13,8 @@ export default function InstrumentHero({
   image,
 }) {
   return (
-    <Slice alias='hero'
+    <Slice
+      alias="hero"
       backlink="/explore/instruments"
       tagline="Instrument"
       title={

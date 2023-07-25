@@ -21,7 +21,8 @@ const Home = ({ data }) => {
     <Layout>
       <SEO title="Home" lang="en" />
 
-      <Slice alias='hero'
+      <Slice
+        alias="hero"
         title={data.site.siteMetadata.title.replace(
           "Earth Science",
           "Earth\u00a0Science" // add non-breaking space

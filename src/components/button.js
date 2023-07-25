@@ -20,8 +20,8 @@ const Button = React.forwardRef(
     const overrideMode = isSecondary
       ? mode
       : mode === NEGATIVE
-        ? POSITIVE
-        : NEGATIVE
+      ? POSITIVE
+      : NEGATIVE
 
     return (
       <Clickable
@@ -40,8 +40,8 @@ const Button = React.forwardRef(
             border: 1px solid ${colors[overrideMode].text};
             cursor: pointer;
             background-color: ${isSecondary
-            ? colors[mode].background
-            : colors[overrideMode].background};
+              ? colors[mode].background
+              : colors[overrideMode].background};
             font-weight: bold;
             white-space: nowrap;
           }

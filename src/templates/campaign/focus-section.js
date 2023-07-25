@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { graphql, Link } from "gatsby"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 import { Section, SectionHeader, SectionContent } from "../../components/layout"
 import Label from "../../components/label"
