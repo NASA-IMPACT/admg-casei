@@ -2,8 +2,9 @@ import React from "react"
 import PropTypes from "prop-types"
 import { POSITIVE } from "../utils/constants"
 import { colors, breakpoints } from "../theme"
-import Button from "../components/button"
+// import Button from "../components/button"
 import StickyBanner from "./sticky-banner"
+import { Slice } from "gatsby"
 
 const InpageLink = props => (
   <li

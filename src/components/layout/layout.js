@@ -18,7 +18,7 @@ import "../global.css"
 
 import Header from "../header"
 import Nav from "../nav"
-import Footer from "../footer"
+// import Footer from "../footer"
 
 import { POSITIVE } from "../../utils/constants"
 

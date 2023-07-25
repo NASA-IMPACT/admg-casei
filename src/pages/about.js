@@ -12,7 +12,7 @@ import Layout, {
   SectionContent,
 } from "../components/layout"
 import SEO from "../components/seo"
-import Hero from "../components/hero"
+// import Hero from "../components/hero"
 import ExternalLink from "../components/external-link"
 import about from "../content/about.json"
 

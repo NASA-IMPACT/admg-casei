@@ -1,9 +1,9 @@
 import React, { useContext, useState } from "react"
-
-import Button from "./button"
+// import Button from "./button"
 import { Modal } from "./modal"
 import { AuthContext } from "../components/auth-provider"
 import { login, logout } from "../utils/auth"
+import { Slice } from "gatsby"
 
 const Login = () => {
   const { isLoggedIn, setIsLoggedIn } = useContext(AuthContext)

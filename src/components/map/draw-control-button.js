@@ -1,8 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
-
-import Button from "../button"
+// import Button from "../button"
 import { POSITIVE } from "../../utils/constants"
+import { Slice } from "gatsby"
 
 const DrawControlButton = ({
   drawControl,

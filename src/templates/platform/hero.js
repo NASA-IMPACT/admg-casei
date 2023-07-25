@@ -2,8 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { graphql, Slice } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-
-import Hero from "../../components/hero"
+// import Hero from "../../components/hero"
 import { PlatformIcon } from "../../icons"
 
 export default function PlatformHero({

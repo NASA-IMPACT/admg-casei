@@ -1,13 +1,13 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { graphql, Link } from "gatsby"
+import { graphql, Link, Slice } from "gatsby"
 import styled from "@emotion/styled"
 
 import { Section, SectionHeader, SectionContent } from "../../components/layout"
 import Label from "../../components/label"
 import Chip from "../../components/chip"
 import FocusAreaGallery from "../../components/focus-area-gallery"
-import Button from "../../components/button"
+// import Button from "../../components/button"
 
 const FocusContent = styled.div`
   margin-top: 0.5rem;
