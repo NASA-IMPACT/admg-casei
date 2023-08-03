@@ -47,7 +47,7 @@ exports[`Data Section matches snapshot 1`] = `
         <span
           id="Campaigns"
           style={
-            Object {
+            {
               "border": 0,
               "clip": "rect(0 0 0 0)",
               "height": "1px",
@@ -98,7 +98,7 @@ exports[`Data Section matches snapshot 1`] = `
         <span
           id="Platforms"
           style={
-            Object {
+            {
               "border": 0,
               "clip": "rect(0 0 0 0)",
               "height": "1px",
@@ -158,7 +158,6 @@ exports[`Data Section matches snapshot 1`] = `
           >
             GPM GROUND VALIDATION ADVANCED MICROWAVE PRECIPITATION RADIOMETER (AMPR) IPHEX V2
           </label>
-          
         </div>
         <div
           className="data-section___StyledDiv4-sc-11szotn-3 hZXqEX"
@@ -295,7 +294,6 @@ exports[`Data Section matches snapshot 1`] = `
           >
             GPM GROUND VALIDATION ADVANCED MICROWAVE PRECIPITATION RADIOMETER (AMPR) MC3E V1
           </label>
-          
         </div>
         <div
           className="data-section___StyledDiv4-sc-11szotn-3 hZXqEX"
@@ -347,7 +345,6 @@ exports[`Data Section matches snapshot 1`] = `
           >
             GPM Ground Validation Advanced Microwave Precipitation Radiometer (AMPR) OLYMPEX V1
           </label>
-          
         </div>
         <div
           className="data-section___StyledDiv4-sc-11szotn-3 hZXqEX"
@@ -399,7 +396,6 @@ exports[`Data Section matches snapshot 1`] = `
           >
             TCSP AMPR BRIGHTNESS TEMPERATURE (TB) V2
           </label>
-          
         </div>
         <div
           className="data-section___StyledDiv4-sc-11szotn-3 hZXqEX"

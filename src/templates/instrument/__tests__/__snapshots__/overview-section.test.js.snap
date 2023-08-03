@@ -12,7 +12,7 @@ exports[`Overview Section displays content 1`] = `
   />
   <span
     style={
-      Object {
+      {
         "border": 0,
         "clip": "rect(0 0 0 0)",
         "height": "1px",
