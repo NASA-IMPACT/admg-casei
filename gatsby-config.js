@@ -39,10 +39,11 @@ module.exports = {
         path: `${__dirname}/src/content/`,
       },
     },
-
     `gatsby-transformer-json`,
-    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-transformer-sharp`,
+    },
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -65,11 +66,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-styled-components`,
-    {
-      resolve: `gatsby-plugin-create-client-paths`,
-      options: { prefixes: [`/edit/*`] },
-    },
-
     {
       resolve: `gatsby-plugin-csp`,
       options: {

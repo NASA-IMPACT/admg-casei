@@ -140,13 +140,13 @@ exports[`Platform Section displays content 1`] = `
               data-state="collapsed"
             >
               <button
-                aria-controls="panel---1"
+                aria-controls="panel--:r0:---1"
                 aria-expanded={false}
                 className="accordion___StyledAccordionButton-sc-1dzvn26-2 ihAXTv"
                 data-cy="accordion-button"
                 data-reach-accordion-button=""
                 data-state="collapsed"
-                id="button---1"
+                id="button--:r0:---1"
                 onClick={[Function]}
                 onKeyDown={[Function]}
               >
@@ -180,12 +180,12 @@ exports[`Platform Section displays content 1`] = `
                 </div>
               </button>
               <div
-                aria-labelledby="button---1"
+                aria-labelledby="button--:r0:---1"
                 className="accordion___StyledAccordionPanel-sc-1dzvn26-3 ctpjXv"
                 data-reach-accordion-panel=""
                 data-state="collapsed"
                 hidden={true}
-                id="panel---1"
+                id="panel--:r0:---1"
                 role="region"
               >
                 <div
@@ -328,13 +328,13 @@ exports[`Platform Section displays content 1`] = `
               data-state="collapsed"
             >
               <button
-                aria-controls="panel---1"
+                aria-controls="panel--:r1:---1"
                 aria-expanded={false}
                 className="accordion___StyledAccordionButton-sc-1dzvn26-2 ihAXTv"
                 data-cy="accordion-button"
                 data-reach-accordion-button=""
                 data-state="collapsed"
-                id="button---1"
+                id="button--:r1:---1"
                 onClick={[Function]}
                 onKeyDown={[Function]}
               >
@@ -368,12 +368,12 @@ exports[`Platform Section displays content 1`] = `
                 </div>
               </button>
               <div
-                aria-labelledby="button---1"
+                aria-labelledby="button--:r1:---1"
                 className="accordion___StyledAccordionPanel-sc-1dzvn26-3 ctpjXv"
                 data-reach-accordion-panel=""
                 data-state="collapsed"
                 hidden={true}
-                id="panel---1"
+                id="panel--:r1:---1"
                 role="region"
               >
                 <div
