@@ -285,11 +285,13 @@ const LinkSection = ({ node }) => {
     <div>
       {parts.map((part, index) => {
         // return first element of parts array which matches node.id
+        // eslint-disable-next-line
         const link = node.links?.find(link => link.id === part)
 
         // if a part matches link.id, replace that part with an ExternalLink, and reconcat as node.definition
         if (link) {
           return (
+            // eslint-disable-next-line
             <span>
               <ExternalLink
                 key={index}
@@ -305,6 +307,19 @@ const LinkSection = ({ node }) => {
       })}
     </div>
   )
+}
+
+LinkSection.propTypes = {
+  node: PropTypes.shape({
+    definition: PropTypes.string.isRequired,
+    links: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        text: PropTypes.string.isRequired,
+        url: PropTypes.string.isRequired,
+      })
+    ),
+  }).isRequired,
 }
 
 export const query = graphql`
