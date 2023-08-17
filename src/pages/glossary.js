@@ -244,7 +244,7 @@ export default function Glossary({ data }) {
                   to top <ArrowIcon direction="up" />
                 </a>
                 {entries.map(x => (
-                  < SectionContent
+                  <SectionContent
                     key={x.term}
                     columns={[2, 10]}
                     withBackground
@@ -253,34 +253,26 @@ export default function Glossary({ data }) {
                   >
                     <h3>{x.term}</h3>
                     <div>
-                      {
-                        x.links ?
-                          < LinkSection
-                            node={x}
-                          />
-                          : x.definition
-                      }
+                      {x.links ? <LinkSection node={x} /> : x.definition}
                     </div>
-                    {
-                      x.note && (
-                        <p
-                          data-cy="glossary-definition-note"
-                          css={`
+                    {x.note && (
+                      <p
+                        data-cy="glossary-definition-note"
+                        css={`
                           font-style: italic;
                           margin-top: 1rem;
                         `}
-                        >
-                          Note: {x.note}
-                        </p>
-                      )
-                    }
+                      >
+                        Note: {x.note}
+                      </p>
+                    )}
                   </SectionContent>
                 ))}
               </div>
             )
           })}
       </PageBody>
-    </Layout >
+    </Layout>
   )
 }
 
@@ -309,7 +301,7 @@ const LinkSection = ({ node }) => {
           )
         }
         // Otherwise, return the part as is
-        return part;
+        return part
       })}
     </div>
   )
@@ -351,7 +343,7 @@ Glossary.propTypes = {
               text: PropTypes.string,
               url: PropTypes.string,
             })
-          )
+          ),
         })
       ),
     }).isRequired,
