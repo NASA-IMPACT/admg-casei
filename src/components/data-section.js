@@ -170,9 +170,10 @@ const DataSection = ({ id, dois, filterBy, category }) => {
                       )}
                     </div>
 
-                    {doi[filter1].length +
-                    doi[filter2].length +
-                    doi[filter3].length ? (
+                    {doi[filter1]?.length ??
+                    0 + doi[filter2]?.length ??
+                    0 + doi[filter3]?.length ??
+                    0 ? (
                       <div
                         css={`
                           display: flex;

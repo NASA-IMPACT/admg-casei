@@ -43,5 +43,5 @@ Modal.propTypes = {
   handleClose: PropTypes.func.isRequired,
   isOpen: PropTypes.bool.isRequired,
   children: PropTypes.element,
-  Custom: PropTypes.element,
+  Custom: PropTypes.func,
 }

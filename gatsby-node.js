@@ -342,9 +342,11 @@ exports.createResolvers = ({ createResolvers }) => {
                 keyword => keyword.term && keyword.term !== "Not provided"
               )
             } catch (e) {
-              console.error(
-                `ERROR: Could not parse ${source.cmr_science_keywords}`
-              )
+              if (source.cmr_science_keywords !== null) {
+                console.error(
+                  `ERROR: Could not parse ${source.cmr_science_keywords}`
+                )
+              }
             }
             return keywords
           }

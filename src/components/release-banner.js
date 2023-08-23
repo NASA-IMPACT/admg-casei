@@ -139,10 +139,6 @@ const ReleaseBanner = () => {
   )
 }
 
-ReleaseBanner.propTypes = {
-  shortname: PropTypes.string.isRequired,
-  children: PropTypes.element,
-  mode: PropTypes.string.isRequired,
-}
+ReleaseBanner.propTypes = {}
 
 export default ReleaseBanner
