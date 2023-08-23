@@ -310,6 +310,7 @@ exports.createResolvers = ({ createResolvers }) => {
     doi: {
       cmr_data_formats: {
         resolve: source => {
+          // parse strings and log errors for arrays in string format
           return typeof source.cmr_data_formats === "string"
             ? source.cmr_data_formats &&
               !source.cmr_data_formats.includes("null") &&
