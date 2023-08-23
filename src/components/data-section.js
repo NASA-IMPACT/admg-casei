@@ -42,7 +42,7 @@ const DataSection = ({ id, dois, filterBy, category }) => {
   )
   const formatList = parsedDois.reduce(
     (acc, doi) => {
-      if (doi.formats.length > 0) {
+      if (doi.formats && doi.formats.length > 0) {
         for (const format of doi.formats) {
           if (!acc.unique.has(format.id)) {
             acc.unique.add(format.id)
