@@ -19,22 +19,11 @@ const DataSection = ({ id, dois, filterBy, category }) => {
   // manually parse the data formats string to derive array of objects
   const parsedDois = dois.map(doi => ({
     ...doi,
-    formats:
-      doi.formats && !doi.formats.includes("null") && doi.formats.split("[")[1]
-        ? doi.formats
-            ?.split("[")[1]
-            .split("]")[0]
-            .split(",")
-            .map(s =>
-              s.replace(/[^a-zA-Z ]/g, "").replace(/^\s+|\s+$|\s+(?=\s)/g, "")
-            )
-            .filter(f => f !== "")
-            .map(format => ({
-              id: format,
-              shortname: format,
-              longname: format,
-            }))
-        : [],
+    formats: doi.formats.map(format => ({
+      id: format,
+      shortname: format,
+      longname: format,
+    })),
   }))
 
   const clearFilters = () => setSelectedFilterIds([])

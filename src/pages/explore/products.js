@@ -157,22 +157,12 @@ export default function ExploreProducts({ data, location }) {
   let shapedGcmdPhenomena = []
   let GcmdKeywordSet = new Set()
   for (const doi of allShapedDoi) {
-    // The doi keywords are stored as a JSON string in the database
-    // parsing them here into an object
-    let keywords = []
-    try {
-      keywords = JSON.parse(doi.keywords)
-    } catch (e) {
-      console.error(`ERROR: Could not parse ${doi.keywords}`)
-    }
-
     if (
-      keywords?.length &&
-      keywords != "null" &&
-      keywords != '"null"' &&
-      typeof keywords != "string"
+      doi.keywords?.length &&
+      doi.keywords != "null" &&
+      doi.keywords != '"null"'
     ) {
-      for (const keyword of keywords) {
+      for (const keyword of doi.keywords) {
         const shortname = `${[
           keyword.Term,
           keyword.VariableLevel1 ? keyword.VariableLevel1 : "",
@@ -428,7 +418,14 @@ export const query = graphql`
         doi
         id
         cmr_entry_title
-        keywords: cmr_science_keywords
+        keywords: cmr_science_keywords {
+          Term
+          Topic
+          Category
+          VariableLevel1
+          VariableLevel2
+          VariableLevel3
+        }
         shortname: cmr_short_name
         campaigns {
           id

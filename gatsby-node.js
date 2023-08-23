@@ -43,11 +43,20 @@ exports.createSchemaCustomization = ({ actions }) => {
       iops: [iop] @link
       significant_events: [significant_event] @link
     }
+    type cmr_science_keyword implements Node {
+      Term: String
+      Topic: String
+      Category: String
+      VariableLevel1: String
+      VariableLevel2: String
+      VariableLevel3: String
+    }
      type doi implements Node {
        cmr_entry_title: String
        doi: String
        long_name: String
-       cmr_science_keywords: String
+       cmr_data_formats: [String]
+       cmr_science_keywords: [cmr_science_keyword]
        campaigns: [campaign] @link
        instruments: [instrument] @link
        platforms: [platform] @link
@@ -294,4 +303,55 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
       },
     })
   }
+}
+
+exports.createResolvers = ({ createResolvers }) => {
+  const resolvers = {
+    doi: {
+      cmr_data_formats: {
+        resolve: source => {
+          return typeof source.cmr_data_formats === "string"
+            ? source.cmr_data_formats &&
+              !source.cmr_data_formats.includes("null") &&
+              source.cmr_data_formats.split("[")[1]
+              ? source.cmr_data_formats
+                  ?.split("[")[1]
+                  .split("]")[0]
+                  .split(",")
+                  .map(s =>
+                    s
+                      .replace(/[^a-zA-Z ]/g, "")
+                      .replace(/^\s+|\s+$|\s+(?=\s)/g, "")
+                  )
+                  .filter(f => f !== "")
+              : []
+            : source.cmr_data_formats
+        },
+      },
+      cmr_science_keywords: {
+        resolve: source => {
+          if (
+            source.cmr_science_keywords &&
+            typeof source.cmr_science_keywords === "string"
+          ) {
+            // The doi keywords are stored as a JSON string in the database
+            // parsing them here into an object
+            let keywords = []
+            try {
+              keywords = JSON.parse(source.cmr_science_keywords).filter(
+                keyword => keyword.term && keyword.term !== "Not provided"
+              )
+            } catch (e) {
+              console.error(
+                `ERROR: Could not parse ${source.cmr_science_keywords}`
+              )
+            }
+            return keywords
+          }
+          return source.cmr_science_keywords
+        },
+      },
+    },
+  }
+  createResolvers(resolvers)
 }
