@@ -19,13 +19,13 @@ const DataSection = ({ id, dois, filterBy, category }) => {
   // manually parse the data formats string to derive array of objects
   const parsedDois = dois.map(doi => ({
     ...doi,
-    formats: doi.formats.map(format => ({
+    formats: doi.formats?.map(format => ({
       id: format,
       shortname: format,
       longname: format,
     })),
   }))
-
+  console.log(parsedDois)
   const clearFilters = () => setSelectedFilterIds([])
 
   const removeFilter = id =>
@@ -61,7 +61,7 @@ const DataSection = ({ id, dois, filterBy, category }) => {
     platform: { options: platformList },
     format: { options: formatList },
   })
-
+  console.log({ formatList })
   return (
     <Section id={id}>
       <SectionHeader headline="Data Products" id={id} />

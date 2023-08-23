@@ -325,7 +325,7 @@ exports.createResolvers = ({ createResolvers }) => {
                   )
                   .filter(f => f !== "")
               : []
-            : source.cmr_data_formats
+            : source.cmr_data_formats.filter(f => f !== "")
         },
       },
       cmr_science_keywords: {
