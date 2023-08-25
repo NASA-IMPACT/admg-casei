@@ -67,23 +67,25 @@ Records in CMR/KMS do not contain the entirety of metadata contained within the 
 
 Focusing on transferring curation to existing CMR/KMS tools. Focus attention on re-evaluating which metadata within the current CASEI system is required to be maintained post-ESDS transfer.  The CASEI frontend should be updated as such:
 
-1. Utilize the CMR/KMS as the sole backends.
+1. Utilize the CMR/KMS as the sole backends. Being that the CASEI system does not intend to serve the entirety of the CMR/KMS dataset, a simple list of KMS Projects (identified by their short_names) could be maintained within the CASEI frontend. At time of build, this list would determine which CASEI Campaigns would be retrieved from the KMS backend. Relationships between records stemming from these Campaigns would then be traversed, populating a dataset which would be used to assemble the CASEI frontend.
 1. Reduce the data displayed on the CASEI UI to conform to the limited metadata schema offered by the CMR/KMS backends.
 1. Generate documentation to guide future data curators to make use of existing CMR & KMS submission processes.
-1. As the CASEI system does not intend to serve the entirety of the CMR/KMS dataset, a simple list of KMS Projects (identified by their short_names) could be maintained within the CASEI frontend. At time of build, this list would determine which CASEI Campaigns would be retrieved from the KMS backend. Relationships between records stemming from these Campaigns would then be traversed, populating a dataset which would be used to assemble the CASEI frontend.
 
 ### Augment CMR records
 
-#### How to perform 
+To accomodate the desire to utilize the CMR/KMS as a backend but to also compensate for the lack of completeness in data that the CMR/KMS currently provide, it is possible to retrieve what is available from the CMR but additionally augment that data with data stored in an auxillary system.  During the build process of the CASEI frontend, these various datasources would be queried and records for coincidental concepts would be merged into a single record, likely giving precident to information retrieved from the CMR/KMS.  Such a system would likely require extensive planning and consultation with future CASEI maintainers.  On a very simple level, these records could be stored as flat files within the CASEI frontend repository, wherein the approval process would be reduced to Pull Requests on Github and validation would occur via linting operations via Github Actions.  At a more complex level, a system similar to the current CASEI backend could be developed to assist in this curation process.  Modifying the current CASEI backend to accomplish this task is possible but would likely involve a significant refactor and substantial amount of development hours.
+
 
 ### Continue usage CASEI Backend
 
+:TODO: Describe...
+
 #### Concerns
 
-The uptake of the ADMG backend may be a steep learning curve. The CASEI Backend should be considered an intermediate-to-expert level Django project, which would greatly benefit from a team of developers with prior experience with Django-based applications. It is worth noting that the CMR source code ([`nasa/Common-Metadata-Repository`](https://github.com/nasa/Common-Metadata-Repository)) or the MMT source code ([`nasa/mmt`](https://github.com/nasa/mmt)) are written in Clojure & Ruby, respectively.
+Onboarding to the current CASEI backend can be a steep learning curve. The CASEI backend should be considered an intermediate-to-expert level Django project, which would greatly benefit from a team of developers with prior experience with Django-based applications. It is worth noting that the CMR source code ([`nasa/Common-Metadata-Repository`](https://github.com/nasa/Common-Metadata-Repository)) or the MMT source code ([`nasa/mmt`](https://github.com/nasa/mmt)) are written in Clojure & Ruby, respectively.
 
-If the future maintainers are not familiar with Django framework, it would be prudent to identify which languages and frameworks are familiar to these maintainers and to evaluate the level of effort to port the ADMG backend functionality to another toolset, perhaps in conjunction with the future maintainers.
+If the future maintainers are not familiar with Django framework, it would be prudent to identify which languages and frameworks are familiar to these maintainers and to evaluate the level of effort to port the CASEI backend functionality to another toolset, perhaps in conjunction with the future maintainers.
 
 ## Decision Criteria
 
-A chief decision driver regarding the direction to take CASEI is regarding what is to be done with data that the current iteration of CASEI contains but is missing from current CMR/KMS records. This determination will inform us as to whether efforts should be undertaken to maintain 
+A chief decision driver regarding the direction to take CASEI is regarding what is to be done with data that the current iteration of CASEI contains but is missing from current CMR/KMS records. This determination will inform us as to whether efforts should be undertaken to maintain/en
