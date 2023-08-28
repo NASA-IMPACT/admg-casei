@@ -104,7 +104,7 @@ High; roughly one to two product increments for a team of three or more develope
 - Future data curators must be trained to use CMR and KMS to submit new metadata.
 - Loss of the current CASEI backend public API. However, efforts could be made to add a read-only API to the CASEI frontend where JSON serialized version of the CASEI data.
 
-### Continue usage CASEI Backend
+### Continue usage of CASEI Backend
 
 The current CASEI backend was custom-built to accommodate the specific needs of the CASEI project, particularly its data model and approval workflow. Given that it is currently addressing the needs of the CASEI project, development requirements could be alleviated by continuing to use the CASEI backend as we do today. As such, efforts should shift towards developing detailed documentation about the software architecture to set up future codebase maintainers for success.
 
