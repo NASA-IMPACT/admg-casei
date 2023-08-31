@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react"
-import PropTypes from "prop-types"
 import styled from "styled-components"
 
 import { CloseIcon } from "../icons"
@@ -137,12 +136,6 @@ const ReleaseBanner = () => {
       ></Modal>
     </>
   )
-}
-
-ReleaseBanner.propTypes = {
-  shortname: PropTypes.string.isRequired,
-  children: PropTypes.element,
-  mode: PropTypes.string.isRequired,
 }
 
 export default ReleaseBanner
