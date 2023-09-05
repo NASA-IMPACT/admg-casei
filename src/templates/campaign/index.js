@@ -27,13 +27,13 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
   // create multispatialbounds object excluding null spatial bounds
   const bounds = campaign.deployments
     ? campaign.deployments
-        .filter(d => d.spatial_bounds !== null)
-        .map(deployment => {
-          return {
-            type: "Feature",
-            geometry: parse(deployment.spatial_bounds),
-          }
-        })
+      .filter(d => d.spatial_bounds !== null)
+      .map(deployment => {
+        return {
+          type: "Feature",
+          geometry: parse(deployment.spatial_bounds),
+        }
+      })
     : null
 
   // Create a GeoJSON object from the filteredBounds
@@ -366,7 +366,7 @@ CampaignTemplate.propTypes = {
         PropTypes.shape({
           cmrTitle: PropTypes.string.isRequired,
           doi: PropTypes.string.isRequired,
-          format: PropTypes.string,
+          formats: PropTypes.string,
           id: PropTypes.string.isRequired,
           longname: PropTypes.string,
         })
