@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react"
-
 import { sortFunctions, platformFilter } from "../utils/filter-utils"
 
 // Setting these default search categories will ensure their order of appearance.
 const searchCategories = {
-  Aircraft: [],
+  "Air-based platforms": [],
   "Mobile land-based platforms": [],
   "Stationary land sites": [],
   "Water-based platforms": [],

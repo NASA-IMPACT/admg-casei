@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
-
+import { replaceCategoryInGrouped } from "../../utils/replace-category-name"
 import { NEGATIVE } from "../../utils/constants"
 import { colors } from "../../theme"
 import { selector } from "../../utils/filter-utils"
@@ -35,12 +35,18 @@ export default function ExplorePlatforms({ data, location }) {
     }
   }, [selectedFilterId])
 
-  const platformList = usePlatformList(
+  let platformList = usePlatformList(
     allPlatform.list,
     sortOrder,
     selectedFilterIds,
     searchResult
   )
+
+  // modify after receiving from hook
+  platformList = {
+    ...platformList,
+    grouped: replaceCategoryInGrouped(platformList.grouped),
+  }
 
   const addFilter = id => setFilter([...selectedFilterIds, id])
 
