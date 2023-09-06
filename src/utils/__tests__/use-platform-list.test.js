@@ -18,9 +18,9 @@ it("the default platform list (without filters)", () => {
   const platformGroups = Object.keys(platformList.grouped)
   // console.log({ platformList })
   // console.log({ platformGroups })
-  const firstGroup = platformList.grouped[platformGroups[platformGroups.length - 1]]
+  const firstGroup =
+    platformList.grouped[platformGroups[platformGroups.length - 1]]
   console.log({ firstGroup })
-
 
   expect(platformList.filtered.length).toEqual(list.length)
   expect(platformGroups.length).toBeGreaterThanOrEqual(5)
@@ -52,7 +52,8 @@ it("the platform list sorted a > z (without filters)", () => {
   const firstPlatform = platformList.filtered[0]
   const lastPlatform = platformList.filtered[platformList.filtered.length - 1]
   const platformGroups = Object.keys(platformList.grouped)
-  const firstGroup = platformList.grouped[platformGroups[platformGroups.length - 1]]
+  const firstGroup =
+    platformList.grouped[platformGroups[platformGroups.length - 1]]
 
   expect(platformList.filtered.length).toEqual(list.length)
   expect(platformGroups.length).toBeGreaterThanOrEqual(5)
@@ -84,7 +85,8 @@ it("the platform list sorted z > a (without filters)", () => {
   const firstPlatform = platformList.filtered[0]
   const lastPlatform = platformList.filtered[platformList.filtered.length - 1]
   const platformGroups = Object.keys(platformList.grouped)
-  const firstGroup = platformList.grouped[platformGroups[platformGroups.length - 1]]
+  const firstGroup =
+    platformList.grouped[platformGroups[platformGroups.length - 1]]
 
   expect(platformList.filtered.length).toEqual(list.length)
   expect(platformGroups.length).toBeGreaterThanOrEqual(5)
@@ -119,7 +121,8 @@ it("the platform list with a filter selected", () => {
   const firstPlatform = platformList.filtered[0]
   const lastPlatform = platformList.filtered[platformList.filtered.length - 1]
   const platformGroups = Object.keys(platformList.grouped)
-  const firstGroup = platformList.grouped[platformGroups[platformGroups.length - 1]]
+  const firstGroup =
+    platformList.grouped[platformGroups[platformGroups.length - 1]]
 
   expect(platformList.filtered.length).toBeLessThan(list.length)
   expect(platformGroups.length).toBeGreaterThanOrEqual(5)
@@ -142,7 +145,7 @@ it("the platform list with a filter selected", () => {
   })
   platformGroups.forEach(group => {
     // Adjusting group name for the changed category name
-    const adjustedGroupName = getCategoryName(group);
+    const adjustedGroupName = getCategoryName(group)
 
     platformList.grouped[adjustedGroupName].forEach(platform => {
       expect(platform.instruments.map(x => x.id)).toContain(instrumentId)
