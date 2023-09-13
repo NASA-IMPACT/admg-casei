@@ -10,16 +10,18 @@ const searchCategories = {
   Other: [],
 }
 
-const groupByPlatformType = (acc, item) =>
-  item.searchCategory
-    ? {
-        ...acc,
-        [item.searchCategory]: [...(acc[item.searchCategory] || []), item],
-      }
-    : {
-        ...acc,
-        ["Other"]: [...(acc["Other"] || []), item],
-      }
+const groupByPlatformType = (acc, item) => {
+  const categoryTranslations = {
+    Aircraft: "Air-based platforms",
+  }
+
+  const group =
+    categoryTranslations[item.searchCategory] ?? item.searchCategory ?? "Other"
+
+  ;(acc[group] ??= []).push(item)
+
+  return acc
+}
 
 export default function usePlatformList(
   queryResult,
