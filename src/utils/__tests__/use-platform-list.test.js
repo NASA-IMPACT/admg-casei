@@ -16,8 +16,6 @@ it("the default platform list (without filters)", () => {
   const firstPlatform = platformList.filtered[0]
   const lastPlatform = platformList.filtered[platformList.filtered.length - 1]
   const platformGroups = Object.keys(platformList.grouped)
-  // console.log({ platformList })
-  // console.log({ platformGroups })
   const firstGroup =
     platformList.grouped[platformGroups[platformGroups.length - 1]]
   console.log({ firstGroup })
