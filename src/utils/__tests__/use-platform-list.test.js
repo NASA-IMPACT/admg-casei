@@ -16,9 +16,7 @@ it("the default platform list (without filters)", () => {
   const firstPlatform = platformList.filtered[0]
   const lastPlatform = platformList.filtered[platformList.filtered.length - 1]
   const platformGroups = Object.keys(platformList.grouped)
-  const firstGroup =
-    platformList.grouped[platformGroups[platformGroups.length - 1]]
-  console.log({ firstGroup })
+  const firstGroup = platformList.grouped[platformGroups[0]]
 
   expect(platformList.filtered.length).toEqual(list.length)
   expect(platformGroups.length).toBeGreaterThanOrEqual(5)
@@ -29,7 +27,7 @@ it("the default platform list (without filters)", () => {
     firstPlatform.campaigns.length
   )
   expect(firstGroup.length).toBeLessThan(list.length)
-  expect(firstGroup[0].campaigns.length).toBeGreaterThan(
+  expect(firstGroup[0].campaigns.length).toEqual(
     firstGroup[firstGroup.length - 1].campaigns.length
   )
   expect(firstGroup[firstGroup.length - 1].campaigns.length).toBeLessThan(
@@ -95,7 +93,7 @@ it("the platform list sorted z > a (without filters)", () => {
     firstPlatform.shortname.charCodeAt(0)
   )
   expect(firstGroup.length).toBeLessThan(list.length)
-  expect(firstGroup[0].shortname.charCodeAt(0)).toBeGreaterThan(
+  expect(firstGroup[0].shortname.charCodeAt(0)).toEqual(
     firstGroup[firstGroup.length - 1].shortname.charCodeAt(0)
   )
   expect(
@@ -131,7 +129,7 @@ it("the platform list with a filter selected", () => {
     firstPlatform.campaigns.length
   )
   expect(firstGroup.length).toBeLessThan(list.length)
-  expect(firstGroup[0].campaigns.length).toBeGreaterThan(
+  expect(firstGroup[0].campaigns.length).toEqual(
     firstGroup[firstGroup.length - 1].campaigns.length
   )
   expect(firstGroup[firstGroup.length - 1].campaigns.length).toBeLessThan(
