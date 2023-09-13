@@ -13,13 +13,13 @@ const searchCategories = {
 const groupByPlatformType = (acc, item) =>
   item.searchCategory
     ? {
-      ...acc,
-      [item.searchCategory]: [...(acc[item.searchCategory] || []), item],
-    }
+        ...acc,
+        [item.searchCategory]: [...(acc[item.searchCategory] || []), item],
+      }
     : {
-      ...acc,
-      ["Other"]: [...(acc["Other"] || []), item],
-    }
+        ...acc,
+        ["Other"]: [...(acc["Other"] || []), item],
+      }
 
 export default function usePlatformList(
   queryResult,
@@ -76,9 +76,9 @@ export default function usePlatformList(
     const filteredPlatformBySearch = queryResult.filter(platform =>
       searchResult
         ? platform.shortname
-          .toLowerCase()
-          .includes(searchResult.toLowerCase()) ||
-        platform.longname.toLowerCase().includes(searchResult.toLowerCase())
+            .toLowerCase()
+            .includes(searchResult.toLowerCase()) ||
+          platform.longname.toLowerCase().includes(searchResult.toLowerCase())
         : true
     )
 
