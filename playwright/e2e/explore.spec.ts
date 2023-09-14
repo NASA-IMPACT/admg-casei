@@ -268,7 +268,7 @@ test.describe("Explore", () => {
       ).toMatch("HAMSR")
       expect(
         await hamsrCard.locator("[data-cy=longname]").textContent()
-      ).toMatch(
+      ).expect.stringContaining(
         "High Altitude Monolithic Microwave integrated Circuit(MMIC) Sounding Radiometer"
       )
 
