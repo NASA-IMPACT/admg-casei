@@ -265,10 +265,10 @@ test.describe("Explore", () => {
         .locator("xpath=..") // TODO
       expect(
         await hamsrCard.locator("[data-cy=shortname]").textContent()
-      ).toContain("HAMSR")
+      ).stringContaining("HAMSR")
       expect(
         await hamsrCard.locator("[data-cy=longname]").textContent()
-      ).toContain(
+      ).stringContaining(
         "High Altitude Monolithic Microwave integrated Circuit(MMIC) Sounding Radiometer"
       )
 
