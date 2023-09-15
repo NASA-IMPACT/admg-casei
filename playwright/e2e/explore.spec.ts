@@ -268,8 +268,8 @@ test.describe("Explore", () => {
       ).toMatch("HAMSR")
       expect(
         await hamsrCard.locator("[data-cy=longname]").textContent()
-      ).expect.stringContaining(
-        "High Altitude Monolithic Microwave integrated Circuit(MMIC) Sounding Radiometer"
+      ).toMatch(
+        "High Altitude Monolithic Microwave integrated Circuit (MMIC) Sounding Radiometer"
       )
 
       await page.waitForSelector("[data-cy=instruments-card-footer]", {
