@@ -5,6 +5,7 @@
  */
 const fetch = require("node-fetch")
 const path = require("path")
+const fs = require("fs")
 const { createRemoteFileNode } = require("gatsby-source-filesystem")
 
 exports.createSchemaCustomization = ({ actions }) => {
@@ -135,38 +136,44 @@ exports.onCreateNode = async ({
 exports.sourceNodes = async ({ actions, createContentDigest }) => {
   const { createNode } = actions
   try {
-    const endpoints = [
-      "alias",
-      "campaign",
-      "collection_period",
-      "deployment",
-      "doi",
-      "focus_area",
-      "gcmd_phenomenon",
-      "geographical_region",
-      "geophysical_concept",
-      "image",
-      "instrument",
-      "iop",
-      "measurement_type",
-      "measurement_style",
-      "measurement_region",
-      "partner_org",
-      "platform",
-      "platform_type",
-      "repository",
-      "season",
-      "significant_event",
-      "website",
-      "website_type",
-    ]
+    const buildJsonPath = process.env.BUILD_JSON;
 
+    const responses = await (
+      buildJsonPath
+        ? Promise.resolve(JSON.parse(fs.readFileSync(buildJsonPath, 'utf8'))
+        : Promise.all(
+            [
+              "alias",
+              "campaign",
+              "collection_period",
+              "deployment",
+              "doi",
+              "focus_area",
+              "gcmd_phenomenon",
+              "geographical_region",
+              "geophysical_concept",
+              "image",
+              "instrument",
+              "iop",
+              "measurement_type",
+              "measurement_style",
+              "measurement_region",
+              "partner_org",
+              "platform",
+              "platform_type",
+              "repository",
+              "season",
+              "significant_event",
+              "website",
+              "website_type",
+            ].map(key => fetchData(key))
+        )
+    )
+    
     const countProps = {
       campaign_count: "campaigns",
     }
-
-    let responses = await Promise.all(endpoints.map(key => fetchData(key)))
-
+    
     responses.forEach(response => {
       if (response.success) {
         response.data.forEach(item => {
