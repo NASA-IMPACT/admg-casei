@@ -1,0 +1,1720 @@
+[
+  {
+    "id": "a2dcce05-b2ed-4d74-b5d8-1f09d46e9f37",
+    "platform": {
+      "id": "80155bc3-2cde-4978-932e-5c69fd13212d",
+      "shortname": "DC-8"
+    },
+    "instruments": [
+      {
+        "id": "4a0803ac-b3d4-4f66-b9ae-e270f680b0da",
+        "shortname": "MASC",
+        "longname": "Microwave Atmospheric Sounder for CubeSat",
+        "description": "The Microwave Atmospheric Sounder for Cubesat (MASC) is an 8 channel, cross track scanning instrument. It operates at two frequencies, 118 GHz and 183 GHz. It’s used to measure radiance, which is converted to brightness temperature. MASC was developed by JPL.",
+        "gcmdPhenomena": [
+          {
+            "id": "59137c1e-2695-40f8-8376-657f205ed838",
+            "category": "EARTH SCIENCE",
+            "term": "MICROWAVE",
+            "topic": "SPECTRAL/ENGINEERING",
+            "variable_1": "BRIGHTNESS TEMPERATURE",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "fd154c3a-a9d0-451c-936c-6af8486de652",
+            "category": "EARTH SCIENCE",
+            "term": "MICROWAVE",
+            "topic": "SPECTRAL/ENGINEERING",
+            "variable_1": "MICROWAVE RADIANCE",
+            "variable_2": "",
+            "variable_3": ""
+          }
+        ]
+      },
+      {
+        "id": "abd8b7e8-4e11-473d-ad41-d46a8d21d957",
+        "shortname": "AVAPS",
+        "longname": "Airborne Vertical Atmospheric Profiling System",
+        "description": "The Airborne Vertical Atmospheric Profiling System (AVAPS) is an airborne system that utilizes dropsondes and Global Positioning System (GPS) receivers to collect in situ profiles of atmospheric state parameters. It provides profile measurements of temperature, pressure, and humidity at a sampling frequency of 0.5 s and measurements of atmospheric winds at a frequency of 0.25 s. AVAPS has a vertical resolution of about 10 m and has the capability to allow for dropsonde launches every 20 s. AVAPS was developed by the National Center for Atmospheric Research (NCAR) for the NASA Global Hawk, but it can be deployed on other aircraft such as the DC-8 and P-3.",
+        "gcmdPhenomena": [
+          {
+            "id": "40b49274-e087-4218-a3a8-909c73c03836",
+            "category": "EARTH SCIENCE",
+            "term": "ATMOSPHERIC WATER VAPOR",
+            "topic": "ATMOSPHERE",
+            "variable_1": "WATER VAPOR INDICATORS",
+            "variable_2": "HUMIDITY",
+            "variable_3": ""
+          },
+          {
+            "id": "899ce6c1-81de-4bf7-9642-7ef786bd8e75",
+            "category": "EARTH SCIENCE",
+            "term": "ATMOSPHERIC PRESSURE",
+            "topic": "ATMOSPHERE",
+            "variable_1": "ATMOSPHERIC PRESSURE MEASUREMENTS",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "59325046-d4fa-4675-91d9-285be2674900",
+            "category": "EARTH SCIENCE",
+            "term": "ATMOSPHERIC WINDS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "WIND PROFILES",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "b74057d7-8c04-4cc3-9f9d-148dd4c5561e",
+            "category": "EARTH SCIENCE",
+            "term": "ATMOSPHERIC PRESSURE",
+            "topic": "ATMOSPHERE",
+            "variable_1": "",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "6c0df995-37d3-4915-80a7-4adb98fca4e2",
+            "category": "EARTH SCIENCE",
+            "term": "ATMOSPHERIC WINDS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "WIND PROFILES",
+            "variable_2": "WIND VELOCITY/SPEED PROFILES",
+            "variable_3": ""
+          },
+          {
+            "id": "0e5e97eb-ea82-49d9-aa9d-92c05febb37a",
+            "category": "EARTH SCIENCE",
+            "term": "ATMOSPHERIC TEMPERATURE",
+            "topic": "ATMOSPHERE",
+            "variable_1": "UPPER AIR TEMPERATURE",
+            "variable_2": "VERTICAL PROFILES",
+            "variable_3": ""
+          },
+          {
+            "id": "4d4d7908-5099-4b5c-a11a-058df34a07b5",
+            "category": "EARTH SCIENCE",
+            "term": "ATMOSPHERIC WINDS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "WIND PROFILES",
+            "variable_2": "WIND DIRECTION PROFILES",
+            "variable_3": ""
+          },
+          {
+            "id": "7c49d36b-cbf7-4996-9a00-29a32968d808",
+            "category": "EARTH SCIENCE",
+            "term": "ATMOSPHERIC TEMPERATURE",
+            "topic": "ATMOSPHERE",
+            "variable_1": "",
+            "variable_2": "",
+            "variable_3": ""
+          }
+        ]
+      },
+      {
+        "id": "ae85df2a-5c80-4fd1-acf6-114e6aa7609a",
+        "shortname": "APR-3",
+        "longname": "Airborne Third Generation Precipitation Radar",
+        "description": "The Airborne Third Generation Precipitation Radar (APR-3) is an airborne Doppler, dual-polarization radar. It provides measurements of Doppler velocity and radar reflectivity across three frequencies: 13.4 GHz, 35.6 GHz, and 94 GHz. These measurements can be used to derive vertical structures of clouds and precipitation properties. APR-3 has a horizontal resolution of 700-800 m at an altitude of 10 km and vertical resolution of 60 m. The APR-3 was developed by NASA Jet Propulsion Laboratory (JPL) and replaced the APR-2.",
+        "gcmdPhenomena": [
+          {
+            "id": "90061b80-d6bd-4d29-8005-1a63e2b81e7b",
+            "category": "EARTH SCIENCE",
+            "term": "RADAR",
+            "topic": "SPECTRAL/ENGINEERING",
+            "variable_1": "DOPPLER VELOCITY",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "101f17f7-3b17-4d9b-aba4-3c08b8c2e87b",
+            "category": "EARTH SCIENCE",
+            "term": "RADAR",
+            "topic": "SPECTRAL/ENGINEERING",
+            "variable_1": "RADAR REFLECTIVITY",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "715e10e6-6b39-4b0c-b676-ceecc00f2fb0",
+            "category": "EARTH SCIENCE",
+            "term": "PRECIPITATION",
+            "topic": "ATMOSPHERE",
+            "variable_1": "PRECIPITATION RATE",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "a5e1af80-eee0-4794-965a-c14a874feb89",
+            "category": "EARTH SCIENCE",
+            "term": "RADAR",
+            "topic": "SPECTRAL/ENGINEERING",
+            "variable_1": "RADAR BACKSCATTER",
+            "variable_2": "",
+            "variable_3": ""
+          }
+        ]
+      },
+      {
+        "id": "cdf54751-ec52-40fe-9fd2-3213f2a71eda",
+        "shortname": "CoSMIR",
+        "longname": "Conical Scanning Millimeter-wave Imaging Radiometer",
+        "description": "The Conical Scanning Millimeter-wave Imaging Radiometer (CoSMIR) is an airborne imaging radiometer that was developed to validate the Special Sensor Microwave Imager/Sounder (SSMIS) instrument. CoSMIR operates across 9 spectral channels in the 50-183 GHz range to measure microwave brightness temperature. At nadir, CoSMIR has a surface footprint resolution of 1.4 km x 1.4 km at an altitude of 20 km. It has the ability to perform both conical and cross-tracking scanning.",
+        "gcmdPhenomena": [
+          {
+            "id": "59137c1e-2695-40f8-8376-657f205ed838",
+            "category": "EARTH SCIENCE",
+            "term": "MICROWAVE",
+            "topic": "SPECTRAL/ENGINEERING",
+            "variable_1": "BRIGHTNESS TEMPERATURE",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "fd154c3a-a9d0-451c-936c-6af8486de652",
+            "category": "EARTH SCIENCE",
+            "term": "MICROWAVE",
+            "topic": "SPECTRAL/ENGINEERING",
+            "variable_1": "MICROWAVE RADIANCE",
+            "variable_2": "",
+            "variable_3": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "18bcaa00-515e-48e6-a144-0a979c56664d",
+    "platform": {
+      "id": "eafadae9-5e1b-41a4-bf25-3448e2d39b31",
+      "shortname": "ER-2"
+    },
+    "instruments": [
+      {
+        "id": "0904daa4-af93-4f49-93b9-d0a0ef11d17c",
+        "shortname": "AirMSPI",
+        "longname": "Airborne Multiangle SpectroPolarimetric Imager",
+        "description": "The Airborne Multiangle SpectroPolarimetric Imager (AirMSPI) is a passive remote, airborne pushbroom camera developed by Jet Propulsion Laboratory (JPL) and engineers from the University of Arizona and the University of Texas. AirMSPI operates across 8 spectral bands (355, 380, 445, 470, 555, 660, 865, 935 nm) to provide multiangle radiance and linear polarization imagery which can be used to retrieve aerosol and cloud microphysical properties. AirMSPI has a spatial resolution of 10-25 m depending on the scan mode and typically provides image frames at a rate of 23 Hz. AirMSPI was designed to fly on the nose of NASA’s ER-2 aircraft and has been utilized in several aerosol and cloud investigations.",
+        "gcmdPhenomena": [
+          {
+            "id": "bf2ad232-06d5-4502-a170-31550fce0969",
+            "category": "EARTH SCIENCE",
+            "term": "AEROSOLS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "AEROSOL OPTICAL DEPTH/THICKNESS",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "a2da7398-92ab-4e8b-8115-7b02918f2e7e",
+            "category": "EARTH SCIENCE",
+            "term": "ULTRAVIOLET WAVELENGTHS",
+            "topic": "SPECTRAL/ENGINEERING",
+            "variable_1": "ULTRAVIOLET RADIANCE",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "ca82b93a-8d45-43b9-aac7-f020650bc11d",
+            "category": "EARTH SCIENCE",
+            "term": "CLOUDS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "CLOUD MICROPHYSICS",
+            "variable_2": "CLOUD OPTICAL DEPTH/THICKNESS",
+            "variable_3": ""
+          },
+          {
+            "id": "a4b9b9b1-3dec-4746-a7ad-1c71dd5e4267",
+            "category": "EARTH SCIENCE",
+            "term": "VISIBLE WAVELENGTHS",
+            "topic": "SPECTRAL/ENGINEERING",
+            "variable_1": "VISIBLE RADIANCE",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "dbe73b8f-a532-481a-9e5d-910fc78c9424",
+            "category": "EARTH SCIENCE",
+            "term": "AEROSOLS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "AEROSOL PARTICLE PROPERTIES",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "7f8a1875-a862-4e38-88dc-ae8a98088eec",
+            "category": "EARTH SCIENCE",
+            "term": "CLOUDS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "CLOUD MICROPHYSICS",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "a757052c-8b9b-4bbc-bfd2-55488f8127ed",
+            "category": "EARTH SCIENCE",
+            "term": "CLOUDS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "CLOUD MICROPHYSICS",
+            "variable_2": "CLOUD DROPLET CONCENTRATION/SIZE",
+            "variable_3": ""
+          }
+        ]
+      },
+      {
+        "id": "1f0a59d6-da6c-4932-9349-55601af9b63c",
+        "shortname": "CPL",
+        "longname": "Cloud Physics Lidar",
+        "description": "The Cloud Physics Lidar is an airborne lidar system designed specifically to provide multi-wavelength measurements of cirrus clouds, sub-visual cirrus clouds, and aerosols. The CPL has a 30 m vertical resolution and a 200 m horizontal resolution at the following wavelengths: 355 nm, 532 nm, and 1064 nm. As a result, it allows comprehensive analysis of radiative and optical properties of optically thin clouds.",
+        "gcmdPhenomena": [
+          {
+            "id": "4dda4a88-874d-4d53-afa6-43d76ee847e8",
+            "category": "EARTH SCIENCE",
+            "term": "CLOUDS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "CLOUD MICROPHYSICS",
+            "variable_2": "PARTICLE SIZE DISTRIBUTION",
+            "variable_3": ""
+          },
+          {
+            "id": "ca82b93a-8d45-43b9-aac7-f020650bc11d",
+            "category": "EARTH SCIENCE",
+            "term": "CLOUDS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "CLOUD MICROPHYSICS",
+            "variable_2": "CLOUD OPTICAL DEPTH/THICKNESS",
+            "variable_3": ""
+          },
+          {
+            "id": "4fd68c3b-630f-40cf-b04e-2ed6bb09ef7c",
+            "category": "EARTH SCIENCE",
+            "term": "AEROSOLS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "f6bb10c7-afe0-414b-a0ae-f50909a383f3",
+            "category": "EARTH SCIENCE",
+            "term": "LIDAR",
+            "topic": "SPECTRAL/ENGINEERING",
+            "variable_1": "LIDAR DEPOLARIZATION RATIO",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "0daa59f2-743d-4bc5-81be-032e513f96f4",
+            "category": "EARTH SCIENCE",
+            "term": "LIDAR",
+            "topic": "SPECTRAL/ENGINEERING",
+            "variable_1": "LIDAR BACKSCATTER",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "8fc6b511-e0c5-4016-b4ed-aa9fddb89dab",
+            "category": "EARTH SCIENCE",
+            "term": "CLOUDS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "92284b92-873d-453e-9935-999f6bd4f84d",
+            "category": "EARTH SCIENCE",
+            "term": "AEROSOLS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "AEROSOL EXTINCTION",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "bf2ad232-06d5-4502-a170-31550fce0969",
+            "category": "EARTH SCIENCE",
+            "term": "AEROSOLS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "AEROSOL OPTICAL DEPTH/THICKNESS",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "7f8a1875-a862-4e38-88dc-ae8a98088eec",
+            "category": "EARTH SCIENCE",
+            "term": "CLOUDS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "CLOUD MICROPHYSICS",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "fa262c0f-77fa-4819-9d10-0358d76b8768",
+            "category": "EARTH SCIENCE",
+            "term": "AEROSOLS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "AEROSOL BACKSCATTER",
+            "variable_2": "",
+            "variable_3": ""
+          }
+        ]
+      },
+      {
+        "id": "33288674-2a6d-4e63-8093-5142002f19f4",
+        "shortname": "eMAS",
+        "longname": "Enhanced MODIS Airborne Simulator",
+        "description": "The Enhanced MODIS Airborne Simulator (eMAS) is an airborne cross-track scanning spectrometer operated by the Airborne Sensor Facility (ASF) at NASA Ames Research Center. eMAS collects high resolution imagery of cloud and surface features which can be used to help develop and test algorithms for MODIS satellite observations. It operates across 38 spectral channels at 0.445-14.1 µm wavelengths and has a scan rate of 6.25 Hz. eMAS has a spatial resolution of 50 m and swath width of 37.25 km at an altitude of 20 km.",
+        "gcmdPhenomena": [
+          {
+            "id": "a7092b83-bdc0-4216-824c-7b39f0f9d4a5",
+            "category": "EARTH SCIENCE",
+            "term": "VISIBLE WAVELENGTHS",
+            "topic": "SPECTRAL/ENGINEERING",
+            "variable_1": "VISIBLE IMAGERY",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "d272e784-bec7-4360-bd6d-010fbed22225",
+            "category": "EARTH SCIENCE",
+            "term": "INFRARED WAVELENGTHS",
+            "topic": "SPECTRAL/ENGINEERING",
+            "variable_1": "INFRARED IMAGERY",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "a4b9b9b1-3dec-4746-a7ad-1c71dd5e4267",
+            "category": "EARTH SCIENCE",
+            "term": "VISIBLE WAVELENGTHS",
+            "topic": "SPECTRAL/ENGINEERING",
+            "variable_1": "VISIBLE RADIANCE",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "ce01d89f-d408-4e9b-9925-dc4b50798d05",
+            "category": "EARTH SCIENCE",
+            "term": "INFRARED WAVELENGTHS",
+            "topic": "SPECTRAL/ENGINEERING",
+            "variable_1": "INFRARED RADIANCE",
+            "variable_2": "",
+            "variable_3": ""
+          }
+        ]
+      },
+      {
+        "id": "48678c9e-e5c8-4b43-a5f5-68dbfbb04161",
+        "shortname": "EXRAD",
+        "longname": "ER-2 X-band Doppler Radar",
+        "description": "The ER-2 X-band Doppler Radar (EXRAD) operates onboard NASA’s ER-2 aircraft. While originally built for the Global Hawk (GH), it became the successor to the ER-2 Doppler Radar (EDOP). The EXRAD operates at 9.6 GHz and is used to study precipitation structure and air velocity by measuring the backscatter of participation particles present in the upper levels of the atmosphere. It is equipped with two antennas, one that is nadir-facing with a co-polarized receiver while the other is forward-facing with co- and cross-polarized receivers, which allows scientists to gain a clear picture of the precipitation structure and air motions at higher altitudes.",
+        "gcmdPhenomena": [
+          {
+            "id": "90061b80-d6bd-4d29-8005-1a63e2b81e7b",
+            "category": "EARTH SCIENCE",
+            "term": "RADAR",
+            "topic": "SPECTRAL/ENGINEERING",
+            "variable_1": "DOPPLER VELOCITY",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "101f17f7-3b17-4d9b-aba4-3c08b8c2e87b",
+            "category": "EARTH SCIENCE",
+            "term": "RADAR",
+            "topic": "SPECTRAL/ENGINEERING",
+            "variable_1": "RADAR REFLECTIVITY",
+            "variable_2": "",
+            "variable_3": ""
+          }
+        ]
+      },
+      {
+        "id": "707234db-12a4-43e5-bcca-629a78b044a9",
+        "shortname": "HIWRAP",
+        "longname": "High-Altitude Wind and Rain Airborne Profiler",
+        "description": "The High-Altitude Wind and Rain Airborne Profiler (HIWRAP) is an airborne Ka- and Ku- band, dual-beam Doppler radar system. It has the capability to provide radar reflectivity and 3-D wind fields within clouds and precipitation making it ideal for research missions into hurricanes and severe storms. It was designed to operate at higher altitudes (~ 20 km) than previous airborne wind profilers allowing for a better vertical profile of the troposphere. HIWRAP has a range resolution of 150 m and operates at the following frequencies: 13.5 GHz, 13.9 GHz, 33.7 GHz, and 35.6 GHz.",
+        "gcmdPhenomena": [
+          {
+            "id": "59325046-d4fa-4675-91d9-285be2674900",
+            "category": "EARTH SCIENCE",
+            "term": "ATMOSPHERIC WINDS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "WIND PROFILES",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "90061b80-d6bd-4d29-8005-1a63e2b81e7b",
+            "category": "EARTH SCIENCE",
+            "term": "RADAR",
+            "topic": "SPECTRAL/ENGINEERING",
+            "variable_1": "DOPPLER VELOCITY",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "a5e1af80-eee0-4794-965a-c14a874feb89",
+            "category": "EARTH SCIENCE",
+            "term": "RADAR",
+            "topic": "SPECTRAL/ENGINEERING",
+            "variable_1": "RADAR BACKSCATTER",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "9a5075dd-17ae-4b5d-8a2e-1de9e5dc1908",
+            "category": "EARTH SCIENCE",
+            "term": "PRECIPITATION",
+            "topic": "ATMOSPHERE",
+            "variable_1": "PRECIPITATION PROFILES",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "101f17f7-3b17-4d9b-aba4-3c08b8c2e87b",
+            "category": "EARTH SCIENCE",
+            "term": "RADAR",
+            "topic": "SPECTRAL/ENGINEERING",
+            "variable_1": "RADAR REFLECTIVITY",
+            "variable_2": "",
+            "variable_3": ""
+          }
+        ]
+      },
+      {
+        "id": "918b8305-3600-487a-b740-0daf997810f7",
+        "shortname": "AMPR",
+        "longname": "Advanced Microwave Precipitation Radiometer",
+        "description": "The Advanced Microwave Precipitation Radiometer (AMPR) is an airborne passive microwave radiometer. AMPR provides calibrated brightness temperature, which can be used to derive cloud and precipitation properties. It operates across four microwave channels: 10.7, 19.35, 37.1, and 85.5 GHz. These frequencies are sensitive to precipitation, thus making AMPR well-suited for rain event studies.",
+        "gcmdPhenomena": [
+          {
+            "id": "59137c1e-2695-40f8-8376-657f205ed838",
+            "category": "EARTH SCIENCE",
+            "term": "MICROWAVE",
+            "topic": "SPECTRAL/ENGINEERING",
+            "variable_1": "BRIGHTNESS TEMPERATURE",
+            "variable_2": "",
+            "variable_3": ""
+          }
+        ]
+      },
+      {
+        "id": "92f1c1bf-cdf9-4697-a203-caa47cd6f3e5",
+        "shortname": "CRS",
+        "longname": "Cloud Radar System",
+        "description": "The Cloud Radar System (CRS) is an airborne W-band polarimetric Doppler radar. CRS provides radar observations of clouds and precipitation from the surface up to the lower stratosphere. It has an operating frequency of 94 GHz and has a 150m range resolution. CRS has a typical vertical resolution of 100m and a gate spacing of 37.5m.",
+        "gcmdPhenomena": [
+          {
+            "id": "7f8a1875-a862-4e38-88dc-ae8a98088eec",
+            "category": "EARTH SCIENCE",
+            "term": "CLOUDS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "CLOUD MICROPHYSICS",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "90061b80-d6bd-4d29-8005-1a63e2b81e7b",
+            "category": "EARTH SCIENCE",
+            "term": "RADAR",
+            "topic": "SPECTRAL/ENGINEERING",
+            "variable_1": "DOPPLER VELOCITY",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "101f17f7-3b17-4d9b-aba4-3c08b8c2e87b",
+            "category": "EARTH SCIENCE",
+            "term": "RADAR",
+            "topic": "SPECTRAL/ENGINEERING",
+            "variable_1": "RADAR REFLECTIVITY",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "6fe9f652-0867-4458-92ca-a007695db868",
+            "category": "EARTH SCIENCE",
+            "term": "CLOUDS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "CLOUD PROPERTIES",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "8fc6b511-e0c5-4016-b4ed-aa9fddb89dab",
+            "category": "EARTH SCIENCE",
+            "term": "CLOUDS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "48f11306-f53b-4208-960d-edb5d258c4b2",
+            "category": "EARTH SCIENCE",
+            "term": "PRECIPITATION",
+            "topic": "ATMOSPHERE",
+            "variable_1": "",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "99885ac3-5ec4-42a1-91de-9899a30821ca",
+            "category": "EARTH SCIENCE",
+            "term": "CLOUDS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "TROPOSPHERIC/HIGH-LEVEL CLOUDS (OBSERVED/ANALYZED)",
+            "variable_2": "CIRRUS/SYSTEMS",
+            "variable_3": "CIRRUS CLOUD SYSTEMS"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cb9eb4f2-e7c5-4d0a-8c3f-784ed6a88836",
+    "platform": {
+      "id": "c101fd14-d9b8-4720-8ce1-d46b0a9bdf33",
+      "shortname": "Citation"
+    },
+    "instruments": [
+      {
+        "id": "0c018dfd-549e-4030-93f1-dae1948b667d",
+        "shortname": "Nevzorov Probe",
+        "longname": "Nevzorov Liquid Water Content and Total Water Content Probe",
+        "description": "The Nevzorov liquid water content (LWC) and total water content (TWC) probe is a constant-temperature, hot-wire probe designed for aircraft measurements of the ice and liquid water content of clouds. The probe consists of two separate sensors for measurements of cloud liquid and total (ice plus liquid) water content. Each sensor consists of a collector and a reference winding. The reference sensors are shielded from impact with cloud particles, specifically to provide an automatic compensation for convective heat losses.",
+        "gcmdPhenomena": [
+          {
+            "id": "7f8a1875-a862-4e38-88dc-ae8a98088eec",
+            "category": "EARTH SCIENCE",
+            "term": "CLOUDS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "CLOUD MICROPHYSICS",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "40b4c855-85d4-4f1b-b014-09dfc66e1a06",
+            "category": "EARTH SCIENCE",
+            "term": "CLOUDS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "CLOUD MICROPHYSICS",
+            "variable_2": "CLOUD LIQUID WATER/ICE",
+            "variable_3": ""
+          }
+        ]
+      },
+      {
+        "id": "11214a55-c900-4021-a1e2-382984cec105",
+        "shortname": "RICE",
+        "longname": "Rosemount Icing Detector",
+        "description": "The Rosemount Icing Detector, or RID for short, is an instrument that measures ice accumulation on both research and commercial aircraft. The measured icing rate, along with other useful information recorded by the aircraft, then make it possible for the Liquid Water Content (LWC) of the ambient atmosphere to be derived.",
+        "gcmdPhenomena": [
+          {
+            "id": "6fe9f652-0867-4458-92ca-a007695db868",
+            "category": "EARTH SCIENCE",
+            "term": "CLOUDS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "CLOUD PROPERTIES",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "40b4c855-85d4-4f1b-b014-09dfc66e1a06",
+            "category": "EARTH SCIENCE",
+            "term": "CLOUDS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "CLOUD MICROPHYSICS",
+            "variable_2": "CLOUD LIQUID WATER/ICE",
+            "variable_3": ""
+          },
+          {
+            "id": "7f8a1875-a862-4e38-88dc-ae8a98088eec",
+            "category": "EARTH SCIENCE",
+            "term": "CLOUDS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "CLOUD MICROPHYSICS",
+            "variable_2": "",
+            "variable_3": ""
+          }
+        ]
+      },
+      {
+        "id": "589c641e-2bd9-477a-9ed0-7759d958c0d1",
+        "shortname": "CDP",
+        "longname": "Cloud Droplet Probe",
+        "description": "a miniature, lightweight, low-power cloud particle spectrometer that measures droplets in the range of 2-50 Âµm in concentrations as high as 2000 particles/cm3",
+        "gcmdPhenomena": [
+          {
+            "id": "75042015-3218-467e-9908-6a1f3015f875",
+            "category": "EARTH SCIENCE",
+            "term": "",
+            "topic": "",
+            "variable_1": "",
+            "variable_2": "",
+            "variable_3": ""
+          }
+        ]
+      },
+      {
+        "id": "5b67bcd1-0392-48bc-b7a7-a4a67a10f77b",
+        "shortname": "2D-S",
+        "longname": "2D-Stereo Particle Probe",
+        "description": "The 2D-Stereo Particle Probe (2D-S) is an in situ airborne optical imaging probe developed by SPEC Inc. The 2D-S uses two diode laser beams to produce stereo cloud particle images through linear array shadowing. Through the imagery, cloud particle size distribution, particle number concentration, and ice/liquid water content can be determined. It has a resolution of 10 µm and can measure hydrometeors in the 25-1280 µm range.",
+        "gcmdPhenomena": [
+          {
+            "id": "4dda4a88-874d-4d53-afa6-43d76ee847e8",
+            "category": "EARTH SCIENCE",
+            "term": "CLOUDS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "CLOUD MICROPHYSICS",
+            "variable_2": "PARTICLE SIZE DISTRIBUTION",
+            "variable_3": ""
+          },
+          {
+            "id": "92284b92-873d-453e-9935-999f6bd4f84d",
+            "category": "EARTH SCIENCE",
+            "term": "AEROSOLS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "AEROSOL EXTINCTION",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "4fd68c3b-630f-40cf-b04e-2ed6bb09ef7c",
+            "category": "EARTH SCIENCE",
+            "term": "AEROSOLS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "dbe73b8f-a532-481a-9e5d-910fc78c9424",
+            "category": "EARTH SCIENCE",
+            "term": "AEROSOLS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "AEROSOL PARTICLE PROPERTIES",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "7f8a1875-a862-4e38-88dc-ae8a98088eec",
+            "category": "EARTH SCIENCE",
+            "term": "CLOUDS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "CLOUD MICROPHYSICS",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "8fc6b511-e0c5-4016-b4ed-aa9fddb89dab",
+            "category": "EARTH SCIENCE",
+            "term": "CLOUDS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "",
+            "variable_2": "",
+            "variable_3": ""
+          }
+        ]
+      },
+      {
+        "id": "6cbc8fb7-e2f8-4247-b9fc-ad89aa58806a",
+        "shortname": "CPI",
+        "longname": "Cloud Particle Imager",
+        "description": "The Cloud Particle Imager (CPI) is an airborne imager manufactured by SPEC Inc. CPI collects high resolution (2.3 μm pixel size) images of cloud particles that pass through its sample volume. It uses a charge-coupled device (CCD) camera that operates at 810 nm to record images and can take up to 74 frames per second with a refresh rate of 40 Hz. The imagery from CPI can be used to derive microphysical properties such as particle size and habit.",
+        "gcmdPhenomena": [
+          {
+            "id": "4dda4a88-874d-4d53-afa6-43d76ee847e8",
+            "category": "EARTH SCIENCE",
+            "term": "CLOUDS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "CLOUD MICROPHYSICS",
+            "variable_2": "PARTICLE SIZE DISTRIBUTION",
+            "variable_3": ""
+          },
+          {
+            "id": "7f8a1875-a862-4e38-88dc-ae8a98088eec",
+            "category": "EARTH SCIENCE",
+            "term": "CLOUDS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "CLOUD MICROPHYSICS",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "8fc6b511-e0c5-4016-b4ed-aa9fddb89dab",
+            "category": "EARTH SCIENCE",
+            "term": "CLOUDS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "",
+            "variable_2": "",
+            "variable_3": ""
+          }
+        ]
+      },
+      {
+        "id": "6d901414-7208-4084-af7d-96043a0decf0",
+        "shortname": "CSI",
+        "longname": "Cloud Spectrometer and Impactor",
+        "description": "The Cloud Spectrometer and Impactor (CSI) combines the counterflow virtual impactor with a new lightweight cloud droplet probe to allow for detailed studies of total condensed water (TCW), liquid and ice, in clouds. The CSI can measure TCW from ~ 1 mg/m3 to several g/m3 depending on the configuration; in addition particle sizes from 2 to 50 μm are resolved with the droplet probe. The instrumentation can be mounted externally on most aircraft.",
+        "gcmdPhenomena": [
+          {
+            "id": "7f8a1875-a862-4e38-88dc-ae8a98088eec",
+            "category": "EARTH SCIENCE",
+            "term": "CLOUDS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "CLOUD MICROPHYSICS",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "40b4c855-85d4-4f1b-b014-09dfc66e1a06",
+            "category": "EARTH SCIENCE",
+            "term": "CLOUDS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "CLOUD MICROPHYSICS",
+            "variable_2": "CLOUD LIQUID WATER/ICE",
+            "variable_3": ""
+          }
+        ]
+      },
+      {
+        "id": "bb1f19a8-0646-4f76-a0e2-12b08b290dd3",
+        "shortname": "HVPS-3",
+        "longname": "High Volume Precipitation Spectrometer 3",
+        "description": "The High Volume Precipitation Spectrometer 3 (HVPS-3) is an in situ airborne particle imager manufactured by SPEC Inc. It uses a 128-photodiode array to provide imagery of precipitation particles. The imagery can be used to determine the shape, size, and concentration of the particles. HVPS-3 has a pixel resolution of 150 μm and maximum field of view of 1.92 cm.",
+        "gcmdPhenomena": [
+          {
+            "id": "4dda4a88-874d-4d53-afa6-43d76ee847e8",
+            "category": "EARTH SCIENCE",
+            "term": "CLOUDS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "CLOUD MICROPHYSICS",
+            "variable_2": "PARTICLE SIZE DISTRIBUTION",
+            "variable_3": ""
+          },
+          {
+            "id": "a757052c-8b9b-4bbc-bfd2-55488f8127ed",
+            "category": "EARTH SCIENCE",
+            "term": "CLOUDS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "CLOUD MICROPHYSICS",
+            "variable_2": "CLOUD DROPLET CONCENTRATION/SIZE",
+            "variable_3": ""
+          },
+          {
+            "id": "7f8a1875-a862-4e38-88dc-ae8a98088eec",
+            "category": "EARTH SCIENCE",
+            "term": "CLOUDS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "CLOUD MICROPHYSICS",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "8fc6b511-e0c5-4016-b4ed-aa9fddb89dab",
+            "category": "EARTH SCIENCE",
+            "term": "CLOUDS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "",
+            "variable_2": "",
+            "variable_3": ""
+          }
+        ]
+      },
+      {
+        "id": "c21147c2-ecb6-4d8e-b23a-10ea136d6fd6",
+        "shortname": "2D-C/P",
+        "longname": "2D-C/P Hydrometeor Imaging Probe",
+        "description": "The 2D-C/P Hydrometeor Imaging Probe (2D-C/P) is an in situ, airborne instrument that captures imagery of hydrometeors. It collects these images by recording the status (illuminated or shadowed) of the photodiode array as the shadow of the hydrometeors pass over. 2D-C/P also provides measurements of particle size distribution, cloud droplet concentration, and hydrometeor shape. Typically, 2D-C/P probes have an image resolution of 25 micrometers and can image hydrometeors with diameters up to 1600 micrometers.",
+        "gcmdPhenomena": [
+          {
+            "id": "4dda4a88-874d-4d53-afa6-43d76ee847e8",
+            "category": "EARTH SCIENCE",
+            "term": "CLOUDS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "CLOUD MICROPHYSICS",
+            "variable_2": "PARTICLE SIZE DISTRIBUTION",
+            "variable_3": ""
+          },
+          {
+            "id": "a757052c-8b9b-4bbc-bfd2-55488f8127ed",
+            "category": "EARTH SCIENCE",
+            "term": "CLOUDS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "CLOUD MICROPHYSICS",
+            "variable_2": "CLOUD DROPLET CONCENTRATION/SIZE",
+            "variable_3": ""
+          },
+          {
+            "id": "7f8a1875-a862-4e38-88dc-ae8a98088eec",
+            "category": "EARTH SCIENCE",
+            "term": "CLOUDS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "CLOUD MICROPHYSICS",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "e69c231f-63ba-4fed-ad59-c49da0f9635e",
+            "category": "EARTH SCIENCE",
+            "term": "PRECIPITATION",
+            "topic": "ATMOSPHERE",
+            "variable_1": "HYDROMETEORS",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "48f11306-f53b-4208-960d-edb5d258c4b2",
+            "category": "EARTH SCIENCE",
+            "term": "PRECIPITATION",
+            "topic": "ATMOSPHERE",
+            "variable_1": "",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "8fc6b511-e0c5-4016-b4ed-aa9fddb89dab",
+            "category": "EARTH SCIENCE",
+            "term": "CLOUDS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "",
+            "variable_2": "",
+            "variable_3": ""
+          }
+        ]
+      },
+      {
+        "id": "c9dd81ed-656b-4c6a-83b3-9c48442abb21",
+        "shortname": "King Probe",
+        "longname": "King (CSIRO) Liquid Water Probe",
+        "description": "The King Probe is an airborne cloud probe developed by Warren King (Commonwealth Scientific and Industrial Research Organisation) and manufactured by Particle Measuring Systems (PMS) and Droplet Measurement Technologies (DMT). The King Probe provides measurements of cloud liquid water content (LWC) by measuring the heat released when water droplets are vaporized. The King Probe operates at a constant temperature (~100 C) and has a data output rate of 1 to 10 Hz. It is typically used in cloud microphysics and aircraft icing studies.",
+        "gcmdPhenomena": [
+          {
+            "id": "7f8a1875-a862-4e38-88dc-ae8a98088eec",
+            "category": "EARTH SCIENCE",
+            "term": "CLOUDS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "CLOUD MICROPHYSICS",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "40b4c855-85d4-4f1b-b014-09dfc66e1a06",
+            "category": "EARTH SCIENCE",
+            "term": "CLOUDS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "CLOUD MICROPHYSICS",
+            "variable_2": "CLOUD LIQUID WATER/ICE",
+            "variable_3": ""
+          },
+          {
+            "id": "8fc6b511-e0c5-4016-b4ed-aa9fddb89dab",
+            "category": "EARTH SCIENCE",
+            "term": "CLOUDS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "",
+            "variable_2": "",
+            "variable_3": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "fecce04d-ac94-4a21-9b85-d94e809dfde8",
+    "platform": {
+      "id": "a8a25583-a4ad-419f-9a2d-48e8356507c0",
+      "shortname": "Campaign V"
+    },
+    "instruments": [
+      {
+        "id": "b687c039-454a-409b-a5d2-a9aa612115d6",
+        "shortname": "DOW",
+        "longname": "Doppler on Wheels",
+        "description": "DOW is a combination of two truck-borne quick-scanning dual-polarization Doppler radars, frequently deployed in a multiple-Doppler network, DOW6 and DOW7. The DOW can remain nearly indefinitely on station, even in severe conditions such as those in hurricanes, blizzards, supercells, mesoscale convective systems, etc. to obtain uninterrupted data during prolonged events.",
+        "gcmdPhenomena": [
+          {
+            "id": "477d8c60-351c-474e-969c-790735c096db",
+            "category": "EARTH SCIENCE",
+            "term": "WEATHER EVENTS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "RAIN STORMS",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "52419cf3-735b-4e5d-b9af-1e96a746a4e3",
+            "category": "EARTH SCIENCE",
+            "term": "NATURAL HAZARDS",
+            "topic": "HUMAN DIMENSIONS",
+            "variable_1": "SEVERE STORMS",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "064d0f1b-5732-45c4-94a8-b8d6860996ab",
+            "category": "EARTH SCIENCE",
+            "term": "WEATHER EVENTS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "EXTRATROPICAL CYCLONES",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "c5400a4f-af9f-467e-8b48-c7cdf71c7bd1",
+            "category": "EARTH SCIENCE",
+            "term": "ATMOSPHERIC/OCEAN INDICATORS",
+            "topic": "CLIMATE INDICATORS",
+            "variable_1": "EXTREME WEATHER",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "27179a7c-dfd1-448e-b30b-c5d57483a597",
+            "category": "EARTH SCIENCE",
+            "term": "WEATHER EVENTS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "TORNADOES",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "c95d9807-808b-4c58-91d6-8fd0cf341d44",
+            "category": "EARTH SCIENCE",
+            "term": "WEATHER EVENTS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "SNOW STORMS",
+            "variable_2": "",
+            "variable_3": ""
+          }
+        ]
+      },
+      {
+        "id": "caeb9115-c79c-4373-b758-a9151642cf1a",
+        "shortname": "D3R",
+        "longname": "Dual-frequency Dual-polarized Doppler Radar",
+        "description": "The Dual-frequency Dual-polarized Doppler Radar (D3R) is a mobile Ku-/Ka-band radar that was developed for NASA’s Global Precipitation Measurement (GPM) mission Ground Validation (GV) program. D3R is an active remote, ground-based sensor that measures radar backscatter to provide reflectivity, Doppler velocity, differential reflectivity, correlation coefficient, and other radar observations. These measurements can be used to derive droplet size distribution and determine hydrometer type. D3R has a beam width around 0.9 degrees, a maximum range of 30 km, and a gate spacing of 150 m. D3R operates at similar wavelengths as the Dual-frequency Precipitation Radar (DPR) on the GPM Core satellite and can be used for validation of DPR observations.",
+        "gcmdPhenomena": [
+          {
+            "id": "e69c231f-63ba-4fed-ad59-c49da0f9635e",
+            "category": "EARTH SCIENCE",
+            "term": "PRECIPITATION",
+            "topic": "ATMOSPHERE",
+            "variable_1": "HYDROMETEORS",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "a429dadd-d3b8-485e-acc5-48e631dd39ea",
+            "category": "EARTH SCIENCE",
+            "term": "PRECIPITATION",
+            "topic": "ATMOSPHERE",
+            "variable_1": "LIQUID PRECIPITATION",
+            "variable_2": "RAIN",
+            "variable_3": ""
+          },
+          {
+            "id": "90061b80-d6bd-4d29-8005-1a63e2b81e7b",
+            "category": "EARTH SCIENCE",
+            "term": "RADAR",
+            "topic": "SPECTRAL/ENGINEERING",
+            "variable_1": "DOPPLER VELOCITY",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "a5e1af80-eee0-4794-965a-c14a874feb89",
+            "category": "EARTH SCIENCE",
+            "term": "RADAR",
+            "topic": "SPECTRAL/ENGINEERING",
+            "variable_1": "RADAR BACKSCATTER",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "36b10c03-ade3-4a21-a060-a78953853661",
+            "category": "EARTH SCIENCE",
+            "term": "PRECIPITATION",
+            "topic": "ATMOSPHERE",
+            "variable_1": "DROPLET SIZE",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "101f17f7-3b17-4d9b-aba4-3c08b8c2e87b",
+            "category": "EARTH SCIENCE",
+            "term": "RADAR",
+            "topic": "SPECTRAL/ENGINEERING",
+            "variable_1": "RADAR REFLECTIVITY",
+            "variable_2": "",
+            "variable_3": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "113fcc66-69cd-4850-a5ad-d23c23138c9e",
+    "platform": {
+      "id": "7867ce72-1e68-47a1-9aa7-99656b9356bc",
+      "shortname": "Campaign PL"
+    },
+    "instruments": [
+      {
+        "id": "e2e8c6aa-cf14-4109-b081-f97f1eb3c626",
+        "shortname": "NEXRAD",
+        "longname": "Next Generation Weather Radar",
+        "description": "The Next Generation Weather Radar (NEXRAD) is a network of high-resolution, S-band radars operated by the National Weather Service (NWS), Federal Aviation Administration (FAA), and United States Air Force. NEXRAD measures the magnitude of the returned energy to provide reflectivity, velocity, and spectrum width observations, which can be processed to create mosaic maps of precipitation. NEXRAD radars typically operate with a 0.9 degree beamwidth, 0.25-1 km spatial resolution, and 230-460 km maximum range. There are currently over 160 NEXRAD radars operating in the United States and select overseas locations.",
+        "gcmdPhenomena": [
+          {
+            "id": "90061b80-d6bd-4d29-8005-1a63e2b81e7b",
+            "category": "EARTH SCIENCE",
+            "term": "RADAR",
+            "topic": "SPECTRAL/ENGINEERING",
+            "variable_1": "DOPPLER VELOCITY",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "101f17f7-3b17-4d9b-aba4-3c08b8c2e87b",
+            "category": "EARTH SCIENCE",
+            "term": "RADAR",
+            "topic": "SPECTRAL/ENGINEERING",
+            "variable_1": "RADAR REFLECTIVITY",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "594cd2bb-b164-4efc-8dc4-7fa6acee030c",
+            "category": "EARTH SCIENCE",
+            "term": "RADAR",
+            "topic": "SPECTRAL/ENGINEERING",
+            "variable_1": "RADIAL VELOCITY",
+            "variable_2": "MEAN RADIAL VELOCITY",
+            "variable_3": ""
+          },
+          {
+            "id": "bee0c4fd-255d-48a2-98b8-2ff7e958dd63",
+            "category": "EARTH SCIENCE",
+            "term": "RADAR",
+            "topic": "SPECTRAL/ENGINEERING",
+            "variable_1": "RADAR IMAGERY",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "3615e7d3-2b69-4188-92f4-515154995495",
+            "category": "EARTH SCIENCE",
+            "term": "RADAR",
+            "topic": "SPECTRAL/ENGINEERING",
+            "variable_1": "SPECTRUM WIDTH",
+            "variable_2": "",
+            "variable_3": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "a03fcf56-7523-4e0f-adb3-b456c16c1264",
+    "platform": {
+      "id": "429d9328-dd8c-4513-96e8-97bda333c76e",
+      "shortname": "Twin Otter"
+    },
+    "instruments": [
+      {
+        "id": "2b55850a-158a-4356-85ca-ce143515a394",
+        "shortname": "ASO",
+        "longname": "Airborne Snow Observatory",
+        "description": "The Airborne Snow Observatory (ASO) is a suite of instruments that fly aboard an aircraft. In this suite is a Riegl Q1560 scanning lidar and a CASI 1500 imaging spectrometer. ASO measures snow water equivalent, albedo, and reflected radiance.",
+        "gcmdPhenomena": [
+          {
+            "id": "d48f8c5c-852a-40e7-bf44-c82251296135",
+            "category": "EARTH SCIENCE",
+            "term": "SNOW/ICE",
+            "topic": "CRYOSPHERE",
+            "variable_1": "ALBEDO",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "ddbe5e24-67ca-49d0-8da9-f51f3efc5508",
+            "category": "EARTH SCIENCE",
+            "term": "PRECIPITATION",
+            "topic": "ATMOSPHERE",
+            "variable_1": "SNOW WATER EQUIVALENT",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "a4b9b9b1-3dec-4746-a7ad-1c71dd5e4267",
+            "category": "EARTH SCIENCE",
+            "term": "VISIBLE WAVELENGTHS",
+            "topic": "SPECTRAL/ENGINEERING",
+            "variable_1": "VISIBLE RADIANCE",
+            "variable_2": "",
+            "variable_3": ""
+          }
+        ]
+      },
+      {
+        "id": "49403170-1719-466a-9961-d2f7b603bc32",
+        "shortname": "Riegl Lidar",
+        "longname": "Riegl Q1560",
+        "description": "Lidar is a surveying method that measures distance to a target by illuminating the target with laser light and measuring the reflected light with a sensor. Differences in laser return times and wavelengths can then be used to make digital 3-D representations of the target.",
+        "gcmdPhenomena": [
+          {
+            "id": "75042015-3218-467e-9908-6a1f3015f875",
+            "category": "EARTH SCIENCE",
+            "term": "",
+            "topic": "",
+            "variable_1": "",
+            "variable_2": "",
+            "variable_3": ""
+          }
+        ]
+      },
+      {
+        "id": "75b319ca-af55-41d2-bafa-e2d52e002cc1",
+        "shortname": "Spectrometer",
+        "longname": "Spectrometers (non-specific)",
+        "description": "If instrument mode or detailed specification information is not available, can use this entry for spectrometers of various types. A spectrometer is an instrument that measures a range of a characteristic for a given substance or wavelength. There are many different types of spectrometers. Some examples are mass spectrometers, spectrophotometers, and magnetic radiation spectrometers.",
+        "gcmdPhenomena": [
+          {
+            "id": "aae18d2e-f5a0-4161-91d0-7a2ecaea6a04",
+            "category": "EARTH SCIENCE",
+            "term": "INFRARED WAVELENGTHS",
+            "topic": "SPECTRAL/ENGINEERING",
+            "variable_1": "",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "cdef3c3c-629e-4116-a798-53de2774f2ad",
+            "category": "EARTH SCIENCE",
+            "term": "ULTRAVIOLET WAVELENGTHS",
+            "topic": "SPECTRAL/ENGINEERING",
+            "variable_1": "",
+            "variable_2": "",
+            "variable_3": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "96786190-2e41-4c43-a7c4-75b240c5defb",
+    "platform": {
+      "id": "973491bf-0994-4a99-9e51-635f3f87e81c",
+      "shortname": "Campaign B"
+    },
+    "instruments": [
+      {
+        "id": "e542a5ad-3d51-4136-9852-dc3731c56853",
+        "shortname": "Radiosonde",
+        "longname": "Radiosonde",
+        "description": "This data will be added in future versions.",
+        "gcmdPhenomena": [
+          {
+            "id": "40e79826-623d-4ec6-b37e-f45fe19c2dc4",
+            "category": "EARTH SCIENCE",
+            "term": "ATMOSPHERIC WATER VAPOR",
+            "topic": "ATMOSPHERE",
+            "variable_1": "WATER VAPOR PROFILES",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "59325046-d4fa-4675-91d9-285be2674900",
+            "category": "EARTH SCIENCE",
+            "term": "ATMOSPHERIC WINDS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "WIND PROFILES",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "7c49d36b-cbf7-4996-9a00-29a32968d808",
+            "category": "EARTH SCIENCE",
+            "term": "ATMOSPHERIC TEMPERATURE",
+            "topic": "ATMOSPHERE",
+            "variable_1": "",
+            "variable_2": "",
+            "variable_3": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "83be707d-6c9d-4ad6-b314-5938005f287c",
+    "platform": {
+      "id": "dc4416e7-c644-41ce-bce9-131c714a0a3b",
+      "shortname": "Campaign FS"
+    },
+    "instruments": [
+      {
+        "id": "07a515e5-bcfa-4d97-ad45-d81b3bde0845",
+        "shortname": "2DVD",
+        "longname": "Two-Dimensional Video Disdrometer",
+        "description": "The Two-Dimensional Video Disdrometer (2DVD) is a stationary ground-based optical disdrometer. It is equipped with two line-scan cameras that provide continuous measurements of various precipitation properties such as: droplet shape, fall velocity, and size distribution. The 2DVD is capable of accurate measurements for all precipitation particles with a diameter > 0.2 mm, making it well-suited for various precipitation studies.",
+        "gcmdPhenomena": [
+          {
+            "id": "48f11306-f53b-4208-960d-edb5d258c4b2",
+            "category": "EARTH SCIENCE",
+            "term": "PRECIPITATION",
+            "topic": "ATMOSPHERE",
+            "variable_1": "",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "715e10e6-6b39-4b0c-b676-ceecc00f2fb0",
+            "category": "EARTH SCIENCE",
+            "term": "PRECIPITATION",
+            "topic": "ATMOSPHERE",
+            "variable_1": "PRECIPITATION RATE",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "36b10c03-ade3-4a21-a060-a78953853661",
+            "category": "EARTH SCIENCE",
+            "term": "PRECIPITATION",
+            "topic": "ATMOSPHERE",
+            "variable_1": "DROPLET SIZE",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "e69c231f-63ba-4fed-ad59-c49da0f9635e",
+            "category": "EARTH SCIENCE",
+            "term": "PRECIPITATION",
+            "topic": "ATMOSPHERE",
+            "variable_1": "HYDROMETEORS",
+            "variable_2": "",
+            "variable_3": ""
+          }
+        ]
+      },
+      {
+        "id": "0ea97bc3-effc-4be0-a459-891a02c6e250",
+        "shortname": "MRR",
+        "longname": "Micro Rain Radar",
+        "description": "The Micro Rain Radar (MRR) is a ground-based, vertically pointing, continuous wave K-band (24.23 GHz) radar that measures various parameters of precipitation such as liquid water content and rain rate from near ground level to the lower troposphere. The backscatter received by the MRR’s antenna is able to measure precipitation size distributions in the range of 0.25 mm to 4.53 mm, as well as calculate the frequency shift of falling precipitation to be used to calculate its velocity. Additional applications of the MRR include locating bright-bands, nowcasting precipitation, and capturing chemical transport during precipitation events.",
+        "gcmdPhenomena": [
+          {
+            "id": "bee0c4fd-255d-48a2-98b8-2ff7e958dd63",
+            "category": "EARTH SCIENCE",
+            "term": "RADAR",
+            "topic": "SPECTRAL/ENGINEERING",
+            "variable_1": "RADAR IMAGERY",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "90061b80-d6bd-4d29-8005-1a63e2b81e7b",
+            "category": "EARTH SCIENCE",
+            "term": "RADAR",
+            "topic": "SPECTRAL/ENGINEERING",
+            "variable_1": "DOPPLER VELOCITY",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "d4e3a8a1-f0e6-4def-894b-118a86a5b562",
+            "category": "EARTH SCIENCE",
+            "term": "RADAR",
+            "topic": "SPECTRAL/ENGINEERING",
+            "variable_1": "RETURN POWER",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "a5e1af80-eee0-4794-965a-c14a874feb89",
+            "category": "EARTH SCIENCE",
+            "term": "RADAR",
+            "topic": "SPECTRAL/ENGINEERING",
+            "variable_1": "RADAR BACKSCATTER",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "101f17f7-3b17-4d9b-aba4-3c08b8c2e87b",
+            "category": "EARTH SCIENCE",
+            "term": "RADAR",
+            "topic": "SPECTRAL/ENGINEERING",
+            "variable_1": "RADAR REFLECTIVITY",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "4dda4a88-874d-4d53-afa6-43d76ee847e8",
+            "category": "EARTH SCIENCE",
+            "term": "CLOUDS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "CLOUD MICROPHYSICS",
+            "variable_2": "PARTICLE SIZE DISTRIBUTION",
+            "variable_3": ""
+          },
+          {
+            "id": "48f11306-f53b-4208-960d-edb5d258c4b2",
+            "category": "EARTH SCIENCE",
+            "term": "PRECIPITATION",
+            "topic": "ATMOSPHERE",
+            "variable_1": "",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "715e10e6-6b39-4b0c-b676-ceecc00f2fb0",
+            "category": "EARTH SCIENCE",
+            "term": "PRECIPITATION",
+            "topic": "ATMOSPHERE",
+            "variable_1": "PRECIPITATION RATE",
+            "variable_2": "",
+            "variable_3": ""
+          }
+        ]
+      },
+      {
+        "id": "1a14cc4f-647d-4acc-9c98-a878c5fb5d7d",
+        "shortname": "Rain Gauge",
+        "longname": "Rain Gauge",
+        "description": "A rain gauge is an in-situ gauge used to measure liquid precipitation amounts. There are many different types of rain gauges that each collect and record data differently. Because of their size and relative ease of set-up, rain gauges can be deployed in various locations to help scientists determine how much rain has fallen over a given area during a set period of time.",
+        "gcmdPhenomena": [
+          {
+            "id": "0e53b858-d2e7-4ac6-93ce-227aa0f84cf1",
+            "category": "EARTH SCIENCE",
+            "term": "PRECIPITATION",
+            "topic": "ATMOSPHERE",
+            "variable_1": "LIQUID PRECIPITATION",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "65890a6b-9cfd-46b0-b819-e134b09b2da0",
+            "category": "EARTH SCIENCE",
+            "term": "PRECIPITATION",
+            "topic": "ATMOSPHERE",
+            "variable_1": "PRECIPITATION AMOUNT",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "48f11306-f53b-4208-960d-edb5d258c4b2",
+            "category": "EARTH SCIENCE",
+            "term": "PRECIPITATION",
+            "topic": "ATMOSPHERE",
+            "variable_1": "",
+            "variable_2": "",
+            "variable_3": ""
+          }
+        ]
+      },
+      {
+        "id": "2ab8dad8-4344-4dac-8127-42978279fb5a",
+        "shortname": "PIP",
+        "longname": "Precipitation and Imaging Probe",
+        "description": "The Precipitation and Imaging Probe (PIP) measures the concentration and records images of cloud particles from approximately 500-30000 microns in diameter with a resolution of 100 microns per pixel.",
+        "gcmdPhenomena": [
+          {
+            "id": "4dda4a88-874d-4d53-afa6-43d76ee847e8",
+            "category": "EARTH SCIENCE",
+            "term": "CLOUDS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "CLOUD MICROPHYSICS",
+            "variable_2": "PARTICLE SIZE DISTRIBUTION",
+            "variable_3": ""
+          },
+          {
+            "id": "a757052c-8b9b-4bbc-bfd2-55488f8127ed",
+            "category": "EARTH SCIENCE",
+            "term": "CLOUDS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "CLOUD MICROPHYSICS",
+            "variable_2": "CLOUD DROPLET CONCENTRATION/SIZE",
+            "variable_3": ""
+          },
+          {
+            "id": "7f8a1875-a862-4e38-88dc-ae8a98088eec",
+            "category": "EARTH SCIENCE",
+            "term": "CLOUDS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "CLOUD MICROPHYSICS",
+            "variable_2": "",
+            "variable_3": ""
+          }
+        ]
+      },
+      {
+        "id": "4418474f-493d-476d-89d4-1fcde32fc2a0",
+        "shortname": "X-Band Radar",
+        "longname": "X-Band Radar",
+        "description": "X-band radars operate at the frequency of 8-12 GHz. Due to operating at a smaller wavelength, X-band radars are more sensitive and can detect smaller particles compared to other radar bands. X-band radars are typically used for studies about cloud development and light precipitation due to their abilities to detect tiny water particles and snow.",
+        "gcmdPhenomena": [
+          {
+            "id": "48f11306-f53b-4208-960d-edb5d258c4b2",
+            "category": "EARTH SCIENCE",
+            "term": "PRECIPITATION",
+            "topic": "ATMOSPHERE",
+            "variable_1": "",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "90061b80-d6bd-4d29-8005-1a63e2b81e7b",
+            "category": "EARTH SCIENCE",
+            "term": "RADAR",
+            "topic": "SPECTRAL/ENGINEERING",
+            "variable_1": "DOPPLER VELOCITY",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "8fc6b511-e0c5-4016-b4ed-aa9fddb89dab",
+            "category": "EARTH SCIENCE",
+            "term": "CLOUDS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "a5e1af80-eee0-4794-965a-c14a874feb89",
+            "category": "EARTH SCIENCE",
+            "term": "RADAR",
+            "topic": "SPECTRAL/ENGINEERING",
+            "variable_1": "RADAR BACKSCATTER",
+            "variable_2": "",
+            "variable_3": ""
+          }
+        ]
+      },
+      {
+        "id": "46f01a0f-e9f9-42fe-9c11-38d6a93e9f1f",
+        "shortname": "APU",
+        "longname": "Autonomous Parsivel Unit",
+        "description": "The Autonomous Parsivel Unit (APU) is an in situ ground-based optical disdrometer. APU measures the size and fall velocity of hydrometeors with a size range of 0-25mm and fall velocities between 0-20 m/s. From these measurements, the drop size distribution, type, intensity, and amount of precipitation can be determined. APU operates in the 650-780 nm wavelength range and has a typical sampling frequency of 10 s.",
+        "gcmdPhenomena": [
+          {
+            "id": "48f11306-f53b-4208-960d-edb5d258c4b2",
+            "category": "EARTH SCIENCE",
+            "term": "PRECIPITATION",
+            "topic": "ATMOSPHERE",
+            "variable_1": "",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "36b10c03-ade3-4a21-a060-a78953853661",
+            "category": "EARTH SCIENCE",
+            "term": "PRECIPITATION",
+            "topic": "ATMOSPHERE",
+            "variable_1": "DROPLET SIZE",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "e69c231f-63ba-4fed-ad59-c49da0f9635e",
+            "category": "EARTH SCIENCE",
+            "term": "PRECIPITATION",
+            "topic": "ATMOSPHERE",
+            "variable_1": "HYDROMETEORS",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "a429dadd-d3b8-485e-acc5-48e631dd39ea",
+            "category": "EARTH SCIENCE",
+            "term": "PRECIPITATION",
+            "topic": "ATMOSPHERE",
+            "variable_1": "LIQUID PRECIPITATION",
+            "variable_2": "RAIN",
+            "variable_3": ""
+          },
+          {
+            "id": "715e10e6-6b39-4b0c-b676-ceecc00f2fb0",
+            "category": "EARTH SCIENCE",
+            "term": "PRECIPITATION",
+            "topic": "ATMOSPHERE",
+            "variable_1": "PRECIPITATION RATE",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "65890a6b-9cfd-46b0-b819-e134b09b2da0",
+            "category": "EARTH SCIENCE",
+            "term": "PRECIPITATION",
+            "topic": "ATMOSPHERE",
+            "variable_1": "PRECIPITATION AMOUNT",
+            "variable_2": "",
+            "variable_3": ""
+          }
+        ]
+      },
+      {
+        "id": "a2367f94-70a6-411c-bea6-07fe7ade379b",
+        "shortname": "Pluvio",
+        "longname": "Pluvio",
+        "description": "The OTT Pluvio² is an all-weather precipitation gauge that uses superior weight-based technology to measure the amount and intensity of rain, snow, and hail. It employs a high-precision load cell and algorithms that compensate for wind, temperature, and evaporation. It uses a high-capacity collection bucket to capture liquid, solid, and mixed precipitation types, and measure the weight of the collected water as a function of time.",
+        "gcmdPhenomena": [
+          {
+            "id": "0e53b858-d2e7-4ac6-93ce-227aa0f84cf1",
+            "category": "EARTH SCIENCE",
+            "term": "PRECIPITATION",
+            "topic": "ATMOSPHERE",
+            "variable_1": "LIQUID PRECIPITATION",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "715e10e6-6b39-4b0c-b676-ceecc00f2fb0",
+            "category": "EARTH SCIENCE",
+            "term": "PRECIPITATION",
+            "topic": "ATMOSPHERE",
+            "variable_1": "PRECIPITATION RATE",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "16c380a9-f0d7-4b34-acf8-825239b33576",
+            "category": "EARTH SCIENCE",
+            "term": "PRECIPITATION",
+            "topic": "ATMOSPHERE",
+            "variable_1": "SOLID PRECIPITATION",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "65890a6b-9cfd-46b0-b819-e134b09b2da0",
+            "category": "EARTH SCIENCE",
+            "term": "PRECIPITATION",
+            "topic": "ATMOSPHERE",
+            "variable_1": "PRECIPITATION AMOUNT",
+            "variable_2": "",
+            "variable_3": ""
+          }
+        ]
+      },
+      {
+        "id": "b3eb4967-87ef-49cd-979c-34d7b388b0f5",
+        "shortname": "Snow Pole & Camera",
+        "longname": "Snow Pole & Camera",
+        "description": "This data will be added in future versions",
+        "gcmdPhenomena": [
+          {
+            "id": "75042015-3218-467e-9908-6a1f3015f875",
+            "category": "EARTH SCIENCE",
+            "term": "",
+            "topic": "",
+            "variable_1": "",
+            "variable_2": "",
+            "variable_3": ""
+          }
+        ]
+      },
+      {
+        "id": "bd8bc0df-e6cd-4ae6-9829-402233a0c3f9",
+        "shortname": "NPOL",
+        "longname": "NASA S-band Dual Polarimetric Radar",
+        "description": "The NASA S-band Dual Polarimetric Radar (NPOL) is a transportable, ground-based scanning dual polarimetric Doppler radar. As an active remote sensor, NPOL detects returned electromagnetic radiation to identify radar reflectivity, Doppler velocity, rainfall rate, particle size distribution, water contents and precipitation type. Under typical operating conditions, NPOL has a beamwidth of 0.95° and a 150 km maximum range. NPOL is operationally equivalent to Doppler radars employed by the U.S. National Weather Service’s Next Generation Weather Radar (NEXRAD) network, but NPOL has the added advantage of being fully deployable.",
+        "gcmdPhenomena": [
+          {
+            "id": "4dda4a88-874d-4d53-afa6-43d76ee847e8",
+            "category": "EARTH SCIENCE",
+            "term": "CLOUDS",
+            "topic": "ATMOSPHERE",
+            "variable_1": "CLOUD MICROPHYSICS",
+            "variable_2": "PARTICLE SIZE DISTRIBUTION",
+            "variable_3": ""
+          },
+          {
+            "id": "90061b80-d6bd-4d29-8005-1a63e2b81e7b",
+            "category": "EARTH SCIENCE",
+            "term": "RADAR",
+            "topic": "SPECTRAL/ENGINEERING",
+            "variable_1": "DOPPLER VELOCITY",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "101f17f7-3b17-4d9b-aba4-3c08b8c2e87b",
+            "category": "EARTH SCIENCE",
+            "term": "RADAR",
+            "topic": "SPECTRAL/ENGINEERING",
+            "variable_1": "RADAR REFLECTIVITY",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "6e328b14-4f50-4ee6-8761-7d8dfa232779",
+            "category": "EARTH SCIENCE",
+            "term": "PRECIPITATION",
+            "topic": "ATMOSPHERE",
+            "variable_1": "PRECIPITATION PROFILES",
+            "variable_2": "RAIN TYPE",
+            "variable_3": ""
+          },
+          {
+            "id": "48f11306-f53b-4208-960d-edb5d258c4b2",
+            "category": "EARTH SCIENCE",
+            "term": "PRECIPITATION",
+            "topic": "ATMOSPHERE",
+            "variable_1": "",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "715e10e6-6b39-4b0c-b676-ceecc00f2fb0",
+            "category": "EARTH SCIENCE",
+            "term": "PRECIPITATION",
+            "topic": "ATMOSPHERE",
+            "variable_1": "PRECIPITATION RATE",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "e69c231f-63ba-4fed-ad59-c49da0f9635e",
+            "category": "EARTH SCIENCE",
+            "term": "PRECIPITATION",
+            "topic": "ATMOSPHERE",
+            "variable_1": "HYDROMETEORS",
+            "variable_2": "",
+            "variable_3": ""
+          },
+          {
+            "id": "3615e7d3-2b69-4188-92f4-515154995495",
+            "category": "EARTH SCIENCE",
+            "term": "RADAR",
+            "topic": "SPECTRAL/ENGINEERING",
+            "variable_1": "SPECTRUM WIDTH",
+            "variable_2": "",
+            "variable_3": ""
+          }
+        ]
+      },
+      {
+        "id": "be05a966-2534-43f8-b9a6-4f8f51cb518c",
+        "shortname": "Gen-AtmsState",
+        "longname": "Generic-Atmospheric State",
+        "description": "If instrument model information is not available, can use this instrument entry for temperature, pressues, wind speed, wind direction, humidity",
+        "gcmdPhenomena": [
+          {
+            "id": "75042015-3218-467e-9908-6a1f3015f875",
+            "category": "EARTH SCIENCE",
+            "term": "",
+            "topic": "",
+            "variable_1": "",
+            "variable_2": "",
+            "variable_3": ""
+          }
+        ]
+      }
+    ]
+  }
+]

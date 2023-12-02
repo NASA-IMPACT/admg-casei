@@ -6,16 +6,12 @@ import { graphql } from "gatsby"
 import { Section, SectionHeader, SectionContent } from "../../components/layout"
 import { TimelineChart } from "../../components/timeline"
 
-const TimelineSection = ({ id, deployments }) => {
+const TimelineSection = ({ id, deployments, bounds }) => {
   return (
     <Section id={id}>
-      <SectionHeader
-        headline="Timeline"
-        subtitle={"Select a time bar to see details."}
-        id={id}
-      />
+      <SectionHeader headline="Deployment & Events" id={id} />
       <SectionContent>
-        <TimelineChart {...{ deployments }} />
+        <TimelineChart {...{ deployments }} bounds={bounds} />
       </SectionContent>
     </Section>
   )
@@ -73,6 +69,7 @@ TimelineSection.propTypes = {
       ),
     })
   ),
+  bounds: PropTypes.array,
 }
 
 export default TimelineSection

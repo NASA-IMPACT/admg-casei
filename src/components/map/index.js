@@ -3,7 +3,12 @@ import PropTypes from "prop-types"
 import mapbox from "mapbox-gl"
 import * as envelope from "@turf/envelope"
 
-export default function Map({ height, basemap, children }) {
+export default function Map({
+  height,
+  basemap,
+  children,
+  showControls = false,
+}) {
   const containerRef = useRef()
 
   const [map, setMap] = useState(null)
@@ -15,7 +20,13 @@ export default function Map({ height, basemap, children }) {
       style: basemap || "mapbox://styles/mapbox/satellite-streets-v11/",
       zoom: 1,
       center: [0, 0],
+      cooperativeGestures: showControls ? true : false,
     })
+
+    if (showControls) {
+      m.addControl(new mapbox.FullscreenControl(), "bottom-right")
+      m.addControl(new mapbox.NavigationControl(), "bottom-right")
+    }
 
     // check if children exist
     if (children.length > 0) {
@@ -98,4 +109,5 @@ Map.propTypes = {
     PropTypes.element,
     PropTypes.arrayOf(PropTypes.element),
   ]),
+  showControls: PropTypes.boolean,
 }
