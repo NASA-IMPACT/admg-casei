@@ -149,7 +149,7 @@ const MapLegend = ({ map, platforms = [] }) => {
             {platform.type === "Jet" ? (
               <LineIcon color="#1B9E77" size="text" />
             ) : (
-              <CircleIcon color="#E8E845" size="text" />
+              <CircleIcon color="#E8E845" size="extra-tiny" />
             )}
             {platform.name}
           </LegendText>

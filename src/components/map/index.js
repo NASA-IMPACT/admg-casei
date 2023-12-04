@@ -3,12 +3,7 @@ import PropTypes from "prop-types"
 import mapbox from "mapbox-gl"
 import * as envelope from "@turf/envelope"
 
-export default function Map({
-  height,
-  basemap,
-  children,
-  showControls = false,
-}) {
+export default function Map({ height, basemap, children, showControls }) {
   const containerRef = useRef()
 
   const [map, setMap] = useState(null)

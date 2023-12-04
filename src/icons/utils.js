@@ -39,6 +39,7 @@ export function getFocusIcon(id) {
 }
 
 export const sizes = {
+  "extra-tiny": { width: "12", height: "12" },
   text: { width: "16", height: "16" },
   tiny: { width: "30", height: "30" },
   small: { width: "60", height: "60" },
