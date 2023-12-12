@@ -1,6 +1,5 @@
 <p align="center">
-  <a href="https://earthdata.nasa.gov/esds/impact/admg">
-  </a>
+  <a href="https://earthdata.nasa.gov/esds/impact/admg">NASA IMPACT - ADMG</a>
 </p>
 <h1 align="center">
   ADMG Inventory
