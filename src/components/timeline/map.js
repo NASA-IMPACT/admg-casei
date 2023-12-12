@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 
@@ -7,8 +7,16 @@ import Source from "../map/source"
 import Layer from "../map/layer"
 import { getUniquePlatforms } from "../../utils/get-unique-platforms"
 import { LineIcon, CircleIcon } from "../../icons"
+import { mapLayerFilter } from "../../utils/filter-utils"
+import { colors } from "../../theme"
 
-export default function DeploymentMap({ geojson, deployments, bounds }) {
+export function DeploymentMap({
+  geojson,
+  deployments,
+  bounds,
+  selectedDeployment,
+}) {
+  const [selectedPlatform, setSelectedPlatform] = useState("")
   const platforms = getUniquePlatforms(
     deployments.flatMap(d => d.collectionPeriods)
   ).map(i => ({ name: i.item.shortname, type: i.item.platformType.shortname }))
@@ -27,7 +35,7 @@ export default function DeploymentMap({ geojson, deployments, bounds }) {
             data: geojson,
           }}
         >
-          <Layer
+          <DeploymentLayer
             config={{
               id: "flights",
               type: "line",
@@ -35,26 +43,17 @@ export default function DeploymentMap({ geojson, deployments, bounds }) {
               paint: {
                 "line-color": "#1B9E77",
                 "line-width": 2,
-                "line-opacity": 0.6,
+                "line-opacity": 0.9,
               },
               visible: true,
             }}
             onLoad={map => map.fitBounds(bounds, { padding: 20 })}
+            selectedPlatform={selectedPlatform}
+            selectedDeployment={
+              selectedDeployment ? selectedDeployment.longname : ""
+            }
           />
-          <Layer
-            config={{
-              id: "highlighted-platform",
-              type: "line",
-              source: "deployment",
-              paint: {
-                "line-color": "#1B9E77",
-                "line-width": 2,
-                "line-opacity": 1,
-              },
-              filter: ["==", "platform_name", ""],
-            }}
-          />
-          <Layer
+          <DeploymentLayer
             config={{
               id: "static-locations",
               type: "circle",
@@ -64,7 +63,7 @@ export default function DeploymentMap({ geojson, deployments, bounds }) {
                 "circle-opacity": {
                   base: 1.5,
                   stops: [
-                    [10, 0.45],
+                    [10, 0.65],
                     [14, 0.85],
                   ],
                 },
@@ -77,75 +76,94 @@ export default function DeploymentMap({ geojson, deployments, bounds }) {
                   ],
                 },
                 "circle-stroke-width": 1,
-                "circle-stroke-opacity": 0.9,
+                "circle-stroke-opacity": 0.1,
                 "circle-stroke-color": "#E8E845",
               },
-              filter: ["==", "$type", "Point"],
+              filter: ["all", ["==", "$type", "Point"]],
             }}
-          />
-          <Layer
-            config={{
-              id: "highlighted-static-locations",
-              type: "circle",
-              source: "deployment",
-              paint: {
-                "circle-color": "#E8E845",
-                "circle-opacity": 1,
-                "circle-radius": {
-                  base: 3,
-                  stops: [
-                    [10, 8],
-                    [16, 16],
-                    [20, 20],
-                  ],
-                },
-                "circle-stroke-width": 1,
-                "circle-stroke-opacity": 0.9,
-                "circle-stroke-color": "#E8E845",
-              },
-              filter: [
-                "all",
-                ["==", "$type", "Point"],
-                ["==", "platform_name", ""],
-              ],
-            }}
+            selectedPlatform={selectedPlatform}
+            selectedDeployment={
+              selectedDeployment ? selectedDeployment.longname : ""
+            }
           />
         </Source>
       )}
-      <MapLegend platforms={platforms} />
+      <MapLegend
+        platforms={platforms}
+        selectedPlatform={selectedPlatform}
+        setSelectedPlatform={setSelectedPlatform}
+      />
     </Map>
   )
 }
 
-const MapLegend = ({ map, platforms = [] }) => {
-  const [highlightedPlatform, setHighlightedPlatform] = useState("")
-  const highlight = platform => {
-    if (highlightedPlatform !== platform) {
-      setHighlightedPlatform(platform)
-      map.setFilter("highlighted-platform", ["==", "platform_name", platform])
-      map.setPaintProperty("flights", "line-opacity", 0.1)
-      map.setFilter("highlighted-static-locations", [
-        "all",
-        ["==", "$type", "Point"],
-        ["==", "platform_name", platform],
-      ])
-    } else {
-      setHighlightedPlatform("")
-      map.setFilter("highlighted-platform", ["==", "platform_name", ""])
-      map.setPaintProperty("flights", "line-opacity", 0.6)
-      map.setFilter("highlighted-static-locations", [
-        "all",
-        ["==", "$type", "Point"],
-        ["==", "platform_name", ""],
-      ])
-    }
-  }
+DeploymentMap.propTypes = {
+  geojson: PropTypes.object,
+  deployments: PropTypes.array,
+  bounds: PropTypes.array,
+  selectedDeployment: PropTypes.object,
+}
 
+const DeploymentLayer = ({
+  map,
+  config,
+  selectedDeployment,
+  selectedPlatform,
+  onLoad,
+}) => {
+  const mapHasStarted = map !== undefined
+
+  useEffect(() => {
+    if (mapHasStarted) {
+      const newFilter = mapLayerFilter(
+        map.getFilter(config.id),
+        "deployment",
+        selectedDeployment
+      )
+      map.setFilter(config.id, newFilter)
+    }
+  }, [selectedDeployment, mapHasStarted])
+
+  useEffect(() => {
+    if (mapHasStarted) {
+      const newFilter = mapLayerFilter(
+        map.getFilter(config.id),
+        "platform_name",
+        selectedPlatform
+      )
+      map.setFilter(config.id, newFilter)
+    }
+  }, [selectedPlatform, mapHasStarted])
+
+  return <Layer config={config} onLoad={onLoad} map={map} />
+}
+
+DeploymentLayer.propTypes = {
+  map: PropTypes.object,
+  config: PropTypes.object,
+  selectedDeployment: PropTypes.string,
+  selectedPlatform: PropTypes.string,
+  onLoad: PropTypes.func,
+}
+
+export const MapLegend = ({
+  platforms = [],
+  setSelectedPlatform,
+  selectedPlatform,
+}) => {
   return (
     <LegendBox>
+      <h3>Platforms</h3>
       {platforms.map(platform => (
-        <button key={platform.name} onClick={() => highlight(platform.name)}>
-          <LegendText selected={platform.name === highlightedPlatform}>
+        <button
+          key={platform.name}
+          onClick={() =>
+            platform.name === selectedPlatform
+              ? setSelectedPlatform("")
+              : setSelectedPlatform(platform.name)
+          }
+        >
+          <LegendText selected={platform.name === selectedPlatform}>
             {platform.type === "Jet" ? (
               <LineIcon color="#1B9E77" size="text" />
             ) : (
@@ -160,8 +178,9 @@ const MapLegend = ({ map, platforms = [] }) => {
 }
 
 MapLegend.propTypes = {
-  map: PropTypes.object,
   platforms: PropTypes.array,
+  setSelectedPlatform: PropTypes.func,
+  selectedPlatform: PropTypes.string,
 }
 
 const LegendText = styled.span`
@@ -178,23 +197,25 @@ const LegendText = styled.span`
 const LegendBox = styled.div`
   display: inline-block;
   text-align: left;
+  min-width: 10rem;
   position: absolute;
   right: 5px;
   margin-top: 5px;
   margin-right: 5px;
   padding: 8px;
-  color: #000;
+  color: ${colors.lightTheme.text};
   background-color: rgba(255, 255, 255, 0.6);
   > button {
+    font-family: "Titillium Web", sans-serif;
     display: block;
     cursor: pointer;
     background: transparent;
     border: none;
   }
+  > h3 {
+    margin: 0 0 8px;
+    color: ${colors.lightTheme.text};
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
 `
-
-DeploymentMap.propTypes = {
-  geojson: PropTypes.object,
-  deployments: PropTypes.array,
-  bounds: PropTypes.array,
-}

@@ -11,7 +11,7 @@ import { occlusion } from "./occlusion"
 import { Deployment } from "./deployment"
 import { Disclosure } from "@reach/disclosure"
 import { DeploymentPanel } from "./deployment-panel"
-import DeploymentMap from "./map"
+import { DeploymentMap } from "./map"
 
 const chartSettings = {
   marginTop: 1,
@@ -37,7 +37,7 @@ export const Swatch = styled.div`
   background-color: ${({ color }) => color};
 `
 
-export const TimelineChart = ({ deployments, bounds }) => {
+export const TimelineChart = ({ deployments, bounds, campaignName }) => {
   const [containerRef, dms] = useChartDimensions(chartSettings)
 
   const minDateString = d3
@@ -93,7 +93,7 @@ export const TimelineChart = ({ deployments, bounds }) => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `https://proxy.willemarcel.workers.dev/?https://6567b4707abd461c463f3c7c--visionary-sopapillas-62534f.netlify.app/OLYMPEX.geojson`,
+          `https://proxy.willemarcel.workers.dev/?https://65721c8ff4a4f70099bd9ee0--visionary-sopapillas-62534f.netlify.app/${campaignName}.geojson  `,
           {
             method: "GET",
             headers: {
@@ -140,11 +140,14 @@ export const TimelineChart = ({ deployments, bounds }) => {
 
   return (
     <Disclosure open={!!selectedDeployment}>
-      <DeploymentMap
-        geojson={geojson}
-        deployments={deployments}
-        bounds={bounds}
-      />
+      {geojson?.features?.length && (
+        <DeploymentMap
+          geojson={geojson}
+          deployments={deployments}
+          bounds={bounds}
+          selectedDeployment={selectedDeployment}
+        />
+      )}
       <div
         ref={containerRef}
         css={`
@@ -331,4 +334,5 @@ TimelineChart.propTypes = {
     })
   ),
   bounds: PropTypes.array,
+  campaignName: PropTypes.string.isRequired,
 }

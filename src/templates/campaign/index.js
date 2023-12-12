@@ -91,6 +91,7 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
       nav: "Deployment & Events",
       component: TimelineSection,
       props: {
+        campaignName: campaign.shortname,
         deployments: campaign.deployments,
         bounds: aggregatedBounds,
       },

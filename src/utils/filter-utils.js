@@ -238,3 +238,22 @@ export function doiFilter(selectedFilterIds) {
           .some(id => selectedFilterIds.includes(id)) ||
         doi.formats?.map(x => x.id).some(id => selectedFilterIds.includes(id))
 }
+
+export function mapLayerFilter(currentFilter, property, value) {
+  if (!currentFilter && !value) return null
+  const hasAnotherValue = currentFilter
+    ? currentFilter.some(i => i[1] === property && i[2] !== value)
+    : false
+  const noProperty = currentFilter
+    ? currentFilter.every(i => i[1] !== property)
+    : false
+
+  if (hasAnotherValue || noProperty) {
+    const newFilter = currentFilter.filter(i => i[1] !== property)
+    if (value) newFilter.push(["==", property, value])
+    if (newFilter.length === 1 && newFilter[0] === "all") return null
+    return newFilter
+  }
+
+  return ["all", ["==", property, value]]
+}
