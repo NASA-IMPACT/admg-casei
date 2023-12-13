@@ -14,7 +14,9 @@ test.describe("Header", () => {
 
   test("renders correctly", async () => {
     // TODO re-enable this header test once temporary release banner is removed
-    // await expect(page.locator('header')).toHaveText(site.siteMetadata.headerType);
+    await expect(page.locator("header")).toHaveText(
+      site.siteMetadata.headerType
+    )
 
     const nasaLogo = page.locator("[data-cy=nasa-logo]")
     await expect(nasaLogo).toHaveAttribute(
