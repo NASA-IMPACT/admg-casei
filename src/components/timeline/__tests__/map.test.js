@@ -13,6 +13,7 @@ describe("MapLegend", () => {
         platforms={[
           { name: "Falcon", type: "Jet" },
           { name: "Campaign FS", type: "static" },
+          { name: "Campaign FS", type: "static" },
         ]}
         selectedPlatform={""}
         setSelectedPlatform={fn}
@@ -29,11 +30,12 @@ describe("MapLegend", () => {
     expect(instance.findByType(LineIcon).props.size).toBe("text")
     expect(instance.findByType(CircleIcon).props.size).toBe("extra-tiny")
   })
-  it("render option with one selected", () => {
+  it("render with one option selected", () => {
     const fn = jest.fn()
     const element = renderer.create(
       <MapLegend
         platforms={[
+          { name: "Falcon", type: "Jet" },
           { name: "Falcon", type: "Jet" },
           { name: "Campaign FS", type: "static" },
         ]}

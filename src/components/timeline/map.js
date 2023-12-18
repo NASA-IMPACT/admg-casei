@@ -151,10 +151,14 @@ export const MapLegend = ({
   setSelectedPlatform,
   selectedPlatform,
 }) => {
+  const names = platforms.map(i => i.name)
+  const uniquePlatforms = platforms.filter(
+    (i, index) => names.indexOf(i.name) === index
+  )
   return (
     <LegendBox>
       <h3>Platforms</h3>
-      {platforms.map(platform => (
+      {uniquePlatforms.map(platform => (
         <button
           key={platform.name}
           onClick={() =>
