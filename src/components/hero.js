@@ -103,7 +103,9 @@ export default function Hero({
       }
     }
   `)
-  const backgroundImage = images["home"].childImageSharp.gatsbyImageData
+  const backgroundImage = images
+    ? images["home"].childImageSharp.gatsbyImageData
+    : null
   const homeImageAlt =
     "NASA's DC-8 flying laboratory passes Antarctica's tallest peak, Mount Vinson, on Oct. 22, 2012, during a flight over the continent to measure changes in the massive ice sheet and sea ice. Credit: NASA/Michael Studinger (Photography courtesy NASA Images)"
 
