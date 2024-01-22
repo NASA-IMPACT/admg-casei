@@ -238,7 +238,7 @@ export default function Hero({
               src="../images/main_ice_bridge.png"
               alt={homeImageAlt}
               placeholder="blurred"
-              objectPosition="center-top"
+              objectPosition="top"
               layout="fullWidth"
               objectFit="cover"
               style={{ height: "100%" }}
