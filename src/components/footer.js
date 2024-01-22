@@ -184,7 +184,7 @@ const Footer = ({ shortname }) => {
               aria-label="Visit nasa.gov (opens in a new window)"
             >
               <StaticImage
-                src="https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png"
+                src="../images/nasa-logo-web-rgb.png"
                 alt="NASA's red, white and blue insignia, nicknamed the 'meatball'"
                 width={100} // make the blue circle match the svg logo of size 60
                 height={100} // make the blue circle match the svg logo of size 60

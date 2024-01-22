@@ -28,7 +28,6 @@ const Home = ({ data }) => {
         )}
         description={data.site.siteMetadata.description}
         cta="Explore CASEI"
-        backgroundImage={data.heroImage}
         textToImageRatio={[5, 7]}
         id="home"
       />
@@ -153,14 +152,6 @@ export const query = graphql`
         description
       }
     }
-    heroImage: nasaImagesJson(shortname: { eq: "Home" }) {
-      nasaImgAlt
-      gatsbyImg {
-        childImageSharp {
-          gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
-        }
-      }
-    }
     allFocusArea {
       nodes {
         id
@@ -235,12 +226,6 @@ Home.propTypes = {
         description: PropTypes.string.isRequired,
       }),
     }),
-    heroImage: PropTypes.shape({
-      nasaImgAlt: PropTypes.string.isRequired,
-      gatsbyImg: PropTypes.shape({
-        childImageSharp: PropTypes.object.isRequired,
-      }).isRequired,
-    }).isRequired,
     allFocusArea: PropTypes.shape({
       nodes: PropTypes.arrayOf(
         PropTypes.shape({
