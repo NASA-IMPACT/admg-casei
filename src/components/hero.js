@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
+
 import { NEGATIVE, POSITIVE } from "../utils/constants"
 import { colors, layout } from "../theme"
 import DateList from "./date-list-hover"
@@ -98,7 +99,7 @@ export default function Hero({
     {
       home: file(relativePath: { eq: "main_ice_bridge.png" }) {
         childImageSharp {
-          gatsbyImageData(layout: CONSTRAINED, width: 600)
+          gatsbyImageData(layout: CONSTRAINED, width: 1600)
         }
       }
     }
@@ -223,14 +224,26 @@ export default function Hero({
             grid-row: 1 / span 1;
             grid-column: 1 / span 3;
             z-index: -1;
+            min-height: 100%;
+            max-height: 60vh;
+            overflow: hidden;
           `}
         >
-          <StaticImage
-            src="../images/main_ice_bridge.png"
-            alt={homeImageAlt}
-            placeholder="blurred"
-            layout="constrained"
-          />
+          <div
+            css={`
+              height: 100%;
+            `}
+          >
+            <StaticImage
+              src="../images/main_ice_bridge.png"
+              alt={homeImageAlt}
+              placeholder="blurred"
+              objectPosition="center-top"
+              layout="fullWidth"
+              objectFit="cover"
+              style={{ height: "100%" }}
+            />
+          </div>
         </div>
       )}
     </Container>
