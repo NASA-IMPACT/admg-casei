@@ -7,35 +7,6 @@
         "description": "An inventory of NASA’s airborne and field campaigns for Earth Science"
       }
     },
-    "heroImage": {
-      "nasaImgAlt": "NASA's DC-8 flying laboratory passes Antarctica's tallest peak, Mount Vinson, on Oct. 22, 2012, during a flight over the continent to measure changes in the massive ice sheet and sea ice. Credit: NASA/Michael Studinger (Photography courtesy NASA Images)",
-      "gatsbyImg": {
-        "childImageSharp": {
-          "gatsbyImageData": {
-            "layout": "fullWidth",
-            "placeholder": {
-              "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAQBAgMF/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQL/2gAMAwEAAhADEAAAAXMGqVMHME//xAAaEAEAAgMBAAAAAAAAAAAAAAACAAEDEhMR/9oACAEBAAEFAuRi0Mqj4zsOdRq8b//EABcRAQADAAAAAAAAAAAAAAAAAAABEiH/2gAIAQMBAT8BrDH/xAAXEQEAAwAAAAAAAAAAAAAAAAAAARIh/9oACAECAQE/AbS1/8QAGRAAAgMBAAAAAAAAAAAAAAAAAAECITEQ/9oACAEBAAY/AjONF2OKw//EABsQAAMAAgMAAAAAAAAAAAAAAAABESExYZGh/9oACAEBAAE/IXwEdrc0N1fCkuUTHe40rHg//9oADAMBAAIAAwAAABBrz//EABcRAQADAAAAAAAAAAAAAAAAAAABUXH/2gAIAQMBAT8Qohl//8QAFxEBAAMAAAAAAAAAAAAAAAAAABFRYf/aAAgBAgEBPxDRN3//xAAaEAEAAwEBAQAAAAAAAAAAAAABABExIVFx/9oACAEBAAE/EOdQBqkyGbIM1PSFBYYJMBqz7cLd9VQiXrrOD2p//9k="
-            },
-            "images": {
-              "fallback": {
-                "src": "/static/cc615e0141fde7a8fd097548c4c05c6b/45171/699943main_ice_bridge_full_full.jpg",
-                "srcSet": "/static/cc615e0141fde7a8fd097548c4c05c6b/a1f66/699943main_ice_bridge_full_full.jpg 750w,\n/static/cc615e0141fde7a8fd097548c4c05c6b/df080/699943main_ice_bridge_full_full.jpg 1080w,\n/static/cc615e0141fde7a8fd097548c4c05c6b/73892/699943main_ice_bridge_full_full.jpg 1366w,\n/static/cc615e0141fde7a8fd097548c4c05c6b/45171/699943main_ice_bridge_full_full.jpg 1920w",
-                "sizes": "100vw"
-              },
-              "sources": [
-                {
-                  "srcSet": "/static/cc615e0141fde7a8fd097548c4c05c6b/f80d9/699943main_ice_bridge_full_full.webp 750w,\n/static/cc615e0141fde7a8fd097548c4c05c6b/292a9/699943main_ice_bridge_full_full.webp 1080w,\n/static/cc615e0141fde7a8fd097548c4c05c6b/0dd88/699943main_ice_bridge_full_full.webp 1366w,\n/static/cc615e0141fde7a8fd097548c4c05c6b/ddcb4/699943main_ice_bridge_full_full.webp 1920w",
-                  "type": "image/webp",
-                  "sizes": "100vw"
-                }
-              ]
-            },
-            "width": 1,
-            "height": 0.6625
-          }
-        }
-      }
-    },
     "allFocusArea": {
       "nodes": [
         {

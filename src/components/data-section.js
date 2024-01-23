@@ -25,7 +25,6 @@ const DataSection = ({ id, dois, filterBy, category }) => {
       longname: format,
     })),
   }))
-  console.log(parsedDois)
   const clearFilters = () => setSelectedFilterIds([])
 
   const removeFilter = id =>
@@ -61,7 +60,6 @@ const DataSection = ({ id, dois, filterBy, category }) => {
     platform: { options: platformList },
     format: { options: formatList },
   })
-  console.log({ formatList })
   return (
     <Section id={id}>
       <SectionHeader headline="Data Products" id={id} />

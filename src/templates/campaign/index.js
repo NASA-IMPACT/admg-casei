@@ -366,7 +366,7 @@ CampaignTemplate.propTypes = {
         PropTypes.shape({
           cmrTitle: PropTypes.string.isRequired,
           doi: PropTypes.string.isRequired,
-          format: PropTypes.string,
+          formats: PropTypes.string,
           id: PropTypes.string.isRequired,
           longname: PropTypes.string,
         })

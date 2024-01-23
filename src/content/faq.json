@@ -34,11 +34,18 @@
   {
     "section": "2 Inventory Content/What’s New",
     "question": "What are Geophysical Concepts?",
-    "answer": "Geophysical concepts are terms that correlate to the six NASA Earth Science Focus Areas and the Global Change Master Directory (GCMD) Earth Science Keywords, bridging the gap between the general and specific terms used to describe scientific studies and data. {{concepts}}",
+    "answer": "{{link.geophysicalconcepts}} are terms that correlate to the six NASA Earth Science Focus Areas and the Global Change Master Directory (GCMD) Earth Science Keywords, bridging the gap between the general and specific terms used to describe scientific studies and data. {{concepts}}",
     "images": [
       {
         "id": "concepts",
         "alt": "Relationship between geophysical concepts, NASA Earth Science Focus Areas, and GCMD Earth Science Keywords"
+      }
+    ],
+    "links": [
+      {
+        "id": "link.geophysicalconcepts",
+        "text": "Geophysical concepts",
+        "url": "https://drive.google.com/file/d/1YvQ6iR5S_ehJ4cTP87q6Y7odQ8oW5gg0/view?usp=drive_link"
       }
     ]
   },

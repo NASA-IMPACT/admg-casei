@@ -7,7 +7,6 @@ import { colors, layout, breakpoints } from "../theme"
 import { CaseiLogoIcon } from "../icons"
 import { NEGATIVE } from "../utils/constants"
 import StickyBanner from "./sticky-banner"
-import ReleaseBanner from "./release-banner"
 
 const Header = ({ shortname, children, mode }) => {
   const offsetCalculator = (scrollDirection, _, currentScroll) => {
@@ -29,7 +28,6 @@ const Header = ({ shortname, children, mode }) => {
             rgba(68, 63, 63, 0.08) 0px 2px 6px 0px;
         `}
       >
-        <ReleaseBanner />
         <div
           css={`
             margin: 0 auto;
@@ -59,7 +57,7 @@ const Header = ({ shortname, children, mode }) => {
               aria-label="Visit nasa.gov (opens in a new window)"
             >
               <StaticImage
-                src="https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png"
+                src="../images/nasa-logo-web-rgb.png"
                 alt="NASA's red, white and blue insignia, nicknamed the 'meatball'"
                 width={78} // make the blue circle match the svg logo of size 60
                 height={78} // make the blue circle match the svg logo of size 60
