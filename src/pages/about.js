@@ -56,7 +56,6 @@ const About = ({ data }) => {
         title="NASA"
         description="conducts and supports Earth Science field investigations, including airborne campaigns, to supplement space-borne observations and advance scientific understanding and predictive capability of our home planet’s natural processes."
         textToImageRatio={[12, 0]}
-        backgroundImage={data.heroImage}
         id="about"
       />
 
@@ -161,14 +160,6 @@ const About = ({ data }) => {
 
 export const query = graphql`
   {
-    heroImage: nasaImagesJson(shortname: { eq: "about-hero" }) {
-      nasaImgAlt
-      gatsbyImg {
-        childImageSharp {
-          gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
-        }
-      }
-    }
     bodyImage: nasaImagesJson(shortname: { eq: "about-body" }) {
       nasaImgAlt
       gatsbyImg {
@@ -182,12 +173,6 @@ export const query = graphql`
 
 About.propTypes = {
   data: PropTypes.shape({
-    heroImage: PropTypes.shape({
-      nasaImgAlt: PropTypes.string.isRequired,
-      gatsbyImg: PropTypes.shape({
-        childImageSharp: PropTypes.object.isRequired,
-      }).isRequired,
-    }).isRequired,
     bodyImage: PropTypes.shape({
       nasaImgAlt: PropTypes.string.isRequired,
       gatsbyImg: PropTypes.shape({

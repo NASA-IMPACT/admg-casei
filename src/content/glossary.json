@@ -31,7 +31,7 @@
   },
   {
     "term": "Instrument Package",
-    "definition": "All instruments operating on a platform. This may consist of a single instrument or multiple individual instruments and any associated technology such as power systems or telecommunications hardware. The instrument package used on a given platform can change over time, by flight, deployment, or field investigation, in order to support specific science/research objectives or due to an individual instrument failure.", 
+    "definition": "All instruments operating on a platform. This may consist of a single instrument or multiple individual instruments and any associated technology such as power systems or telecommunications hardware. The instrument package used on a given platform can change over time, by flight, deployment, or field investigation, in order to support specific science/research objectives or due to an individual instrument failure.",
     "note": "Note that individuals, science teams, or research groups may also refer to the instrument package as the instrument payload, particularly for airborne platforms."
   },
   {
@@ -64,7 +64,14 @@
   },
   {
     "term": "Geophysical Concept",
-    "definition": "High-level science concepts identified by ADMG as a means to bridge the necessary generality of NASA’s Earth Science Focus Areas and the inherent specificity of the GCMD Science Keywords. These intermediary concepts are intended to facilitate improved communication and contextual use of both the NASA Earth Science Focus Areas and the GCMD Earth Science Keywords, bearing in mind the many-to-many relationships among them and the fundamental interconnectedness of the various processes that comprise the Earth system. There are currently 26 ADMG-identified geophysical concepts which can be assigned as metadata in CASEI to categorize a field investigation with respect to its purpose, goals, effort, or findings."
+    "definition": "High-level science concepts identified by ADMG as a means to bridge the necessary generality of NASA’s Earth Science Focus Areas and the inherent specificity of the GCMD Science Keywords. These intermediary concepts are intended to facilitate improved communication and contextual use of both the NASA Earth Science Focus Areas and the GCMD Earth Science Keywords, bearing in mind the many-to-many relationships among them and the fundamental interconnectedness of the various processes that comprise the Earth system. There are currently 26 {{link.geophysicaldoc}} which can be assigned as metadata in CASEI to categorize a field investigation with respect to its purpose, goals, effort, or findings.",
+    "links": [
+      {
+        "id": "link.geophysicaldoc",
+        "text": "ADMG-identified geophysical concepts",
+        "url": "https://drive.google.com/file/d/1YvQ6iR5S_ehJ4cTP87q6Y7odQ8oW5gg0/view?usp=drive_link"
+      }
+    ]
   },
   {
     "term": "Assigned DAAC",

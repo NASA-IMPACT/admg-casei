@@ -3,7 +3,6 @@ import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import VisuallyHidden from "@reach/visually-hidden"
-
 import Layout, {
   PageBody,
   SectionHeader,
@@ -253,7 +252,9 @@ export default function Glossary({ data }) {
                     slimPadding
                   >
                     <h3>{x.term}</h3>
-                    <p>{x.definition}</p>
+                    <div>
+                      {x.links ? <LinkSection node={x} /> : x.definition}
+                    </div>
                     {x.note && (
                       <p
                         data-cy="glossary-definition-note"
@@ -275,6 +276,52 @@ export default function Glossary({ data }) {
   )
 }
 
+const LinkSection = ({ node }) => {
+  const templatePattern = /{{\s?([^{}\s]*)\s?}}/g
+  // split definition text by the template pattern
+  const parts = node.definition.split(templatePattern)
+  // map over parts and perform replacement
+  return (
+    <div>
+      {parts.map((part, index) => {
+        // return first element of parts array which matches node.id
+        // eslint-disable-next-line
+        const link = node.links?.find(link => link.id === part)
+
+        // if a part matches link.id, replace that part with an ExternalLink, and reconcat as node.definition
+        if (link) {
+          return (
+            // eslint-disable-next-line
+            <span>
+              <ExternalLink
+                key={index}
+                label={link.text}
+                url={link.url}
+                id={link.id}
+              ></ExternalLink>
+            </span>
+          )
+        }
+        // Otherwise, return the part as is
+        return part
+      })}
+    </div>
+  )
+}
+
+LinkSection.propTypes = {
+  node: PropTypes.shape({
+    definition: PropTypes.string.isRequired,
+    links: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        text: PropTypes.string.isRequired,
+        url: PropTypes.string.isRequired,
+      })
+    ),
+  }).isRequired,
+}
+
 export const query = graphql`
   {
     allGlossaryJson {
@@ -282,6 +329,11 @@ export const query = graphql`
         term
         definition
         note
+        links {
+          id
+          text
+          url
+        }
       }
     }
     image: file(relativePath: { eq: "glossary-map.jpeg" }) {
@@ -300,6 +352,13 @@ Glossary.propTypes = {
           term: PropTypes.string.isRequired,
           definition: PropTypes.string.isRequired,
           note: PropTypes.string,
+          links: PropTypes.PropTypes.arrayOf(
+            PropTypes.shape({
+              id: PropTypes.string,
+              text: PropTypes.string,
+              url: PropTypes.string,
+            })
+          ),
         })
       ),
     }).isRequired,

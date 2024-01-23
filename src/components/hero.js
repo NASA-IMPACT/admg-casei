@@ -1,8 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
 import styled from "styled-components"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { StaticImage } from "gatsby-plugin-image"
+
 import { NEGATIVE, POSITIVE } from "../utils/constants"
 import { colors, layout } from "../theme"
 import DateList from "./date-list-hover"
@@ -83,7 +84,6 @@ export default function Hero({
   cta,
   image,
   textToImageRatio = [3, 5],
-  backgroundImage,
   id,
 }) {
   const ratioInPercent =
@@ -94,6 +94,21 @@ export default function Hero({
   )
     ? true
     : false
+
+  const images = useStaticQuery(graphql`
+    {
+      home: file(relativePath: { eq: "main_ice_bridge.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: CONSTRAINED, width: 1600)
+        }
+      }
+    }
+  `)
+  const backgroundImage = images
+    ? images["home"].childImageSharp.gatsbyImageData
+    : null
+  const homeImageAlt =
+    "NASA's DC-8 flying laboratory passes Antarctica's tallest peak, Mount Vinson, on Oct. 22, 2012, during a flight over the continent to measure changes in the massive ice sheet and sea ice. Credit: NASA/Michael Studinger (Photography courtesy NASA Images)"
 
   return (
     <Container
@@ -203,23 +218,32 @@ export default function Hero({
         )}
       </div>
 
-      {backgroundImage && backgroundImage.gatsbyImg && (
+      {backgroundImage && (
         <div
           css={`
             grid-row: 1 / span 1;
             grid-column: 1 / span 3;
             z-index: -1;
+            min-height: 100%;
+            max-height: 60vh;
+            overflow: hidden;
           `}
         >
-          <GatsbyImage
-            image={backgroundImage.gatsbyImg.childImageSharp.gatsbyImageData}
-            alt={backgroundImage.nasaImgAlt}
-            objectPosition={"center top"}
+          <div
             css={`
-              min-height: 100%;
-              max-height: 60vh;
+              height: 100%;
             `}
-          />
+          >
+            <StaticImage
+              src="../images/main_ice_bridge.png"
+              alt={homeImageAlt}
+              placeholder="blurred"
+              objectPosition="top"
+              layout="fullWidth"
+              objectFit="cover"
+              style={{ height: "100%" }}
+            />
+          </div>
         </div>
       )}
     </Container>
@@ -237,11 +261,5 @@ Hero.propTypes = {
   cta: PropTypes.node,
   textToImageRatio: PropTypes.arrayOf(PropTypes.number),
   image: PropTypes.node,
-  backgroundImage: PropTypes.shape({
-    nasaImgAlt: PropTypes.string.isRequired,
-    gatsbyImg: PropTypes.shape({
-      childImageSharp: PropTypes.object.isRequired,
-    }).isRequired,
-  }),
   id: PropTypes.string,
 }

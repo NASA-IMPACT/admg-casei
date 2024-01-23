@@ -278,7 +278,7 @@ exports[`Footer renders correctly 1`] = `
     data-cy="footer-credit-devseed"
   >
     © 
-    2023
+    2024
     , Built by
      
     <a

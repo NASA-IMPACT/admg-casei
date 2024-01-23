@@ -108,12 +108,6 @@
     "nasaImgAlt": "NASA’s Global Hawk aircraft being deployed to Florida from Armstrong Flight Research Center (Photography courtesy NASA Images)"
   },
   {
-    "shortname": "Home",
-    "category": "layout",
-    "image": "https://www.nasa.gov/sites/default/files/images/699943main_ice_bridge_full_full.jpg",
-    "nasaImgAlt": "NASA's DC-8 flying laboratory passes Antarctica's tallest peak, Mount Vinson, on Oct. 22, 2012, during a flight over the continent to measure changes in the massive ice sheet and sea ice. Credit: NASA/Michael Studinger (Photography courtesy NASA Images)"
-  },
-  {
     "shortname": "about-hero",
     "category": "layout",
     "image": "https://images-assets.nasa.gov/image/GRC-2020-C-00100/GRC-2020-C-00100~orig.jpg",
