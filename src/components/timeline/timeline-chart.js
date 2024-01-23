@@ -152,11 +152,19 @@ export const TimelineChart = ({ deployments, bounds, campaignName }) => {
         ref={containerRef}
         css={`
           display: flex;
-          margin-top: 12px;
+          margin-top: 16px;
         `}
       >
         <Legend>
-          <strong>Events</strong>
+          <h3
+            css={`
+              font-size: 1.2rem;
+              font-weight: 600;
+              margin: 0 0 6px;
+            `}
+          >
+            Events
+          </h3>
           <LegendItem>
             <Swatch color={colors[NEGATIVE].dataVizOne} />
             {deployments.length} Deployment{deployments.length > 1 ? "s" : ""}
@@ -194,10 +202,7 @@ export const TimelineChart = ({ deployments, bounds, campaignName }) => {
               background: colors[POSITIVE].background,
               position: "absolute",
               bottom: -tooltip.y + 86,
-              left:
-                tooltip.x - 8 - tooltipRef.current?.clientWidth / 2
-                  ? tooltip.x && tooltipRef.current
-                  : 0,
+              left: tooltip.x - 12 - tooltipRef.current?.clientWidth / 2,
               padding: 12,
               color: colors[POSITIVE].text,
               boxShadow:
