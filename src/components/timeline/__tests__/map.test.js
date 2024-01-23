@@ -15,15 +15,15 @@ describe("MapLegend", () => {
           { name: "Campaign FS", type: "static" },
           { name: "Campaign FS", type: "static" },
         ]}
-        selectedPlatform={""}
-        setSelectedPlatform={fn}
+        selectedPlatforms={[]}
+        setSelectedPlatforms={fn}
       />
     )
     const instance = element.root
-    expect(instance.findAllByType("button").length).toBe(2)
-    const b1 = instance.findAllByType("button")[0]
+    expect(instance.findAllByType("input").length).toBe(2)
+    const b1 = instance.findAllByType("input")[0]
     expect(
-      instance.findAllByType("button").every(i => !i.props.selected)
+      instance.findAllByType("input").every(i => !i.props.checked)
     ).toBeTruthy()
     act(() => b1.props.onClick())
     expect(fn).toHaveBeenCalledTimes(1)
@@ -39,15 +39,15 @@ describe("MapLegend", () => {
           { name: "Falcon", type: "Jet" },
           { name: "Campaign FS", type: "static" },
         ]}
-        selectedPlatform={"Falcon"}
-        setSelectedPlatform={fn}
+        selectedPlatforms={["Falcon"]}
+        setSelectedPlatforms={fn}
       />
     )
     const instance = element.root
-    expect(instance.findAllByType("button").length).toBe(2)
-    const [b1, b2] = instance.findAllByType("button")
-    expect(b1.children[0].props.selected).toBeTruthy()
-    expect(b2.children[0].props.selected).toBeFalsy()
+    expect(instance.findAllByType("input").length).toBe(2)
+    const [b1, b2] = instance.findAllByType("input")
+    expect(b1.props.checked).toBeTruthy()
+    expect(b2.props.checked).toBeFalsy()
     act(() => b1.props.onClick())
     expect(fn).toHaveBeenCalledTimes(1)
     act(() => b2.props.onClick())

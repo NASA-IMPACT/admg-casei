@@ -240,9 +240,13 @@ export function doiFilter(selectedFilterIds) {
 }
 
 export function mapLayerFilter(currentFilter, property, value) {
-  if (!currentFilter && !value) return null
+  if (!currentFilter && (!value || !value.length)) return null
   const hasAnotherValue = currentFilter
-    ? currentFilter.some(i => i[1] === property && i[2] !== value)
+    ? currentFilter.some(i =>
+        i[1] === property && typeof value === "object"
+          ? JSON.stringify(i.slice(2)) !== JSON.stringify(value)
+          : i[2] !== value
+      )
     : false
   const noProperty = currentFilter
     ? currentFilter.every(i => i[1] !== property)
@@ -250,10 +254,21 @@ export function mapLayerFilter(currentFilter, property, value) {
 
   if (hasAnotherValue || noProperty) {
     const newFilter = currentFilter.filter(i => i[1] !== property)
-    if (value) newFilter.push(["==", property, value])
+    if (value && value.length) {
+      if (typeof value === "object") {
+        newFilter.push(["in", property, ...value])
+      } else {
+        newFilter.push(["==", property, value])
+      }
+    }
     if (newFilter.length === 1 && newFilter[0] === "all") return null
     return newFilter
   }
 
-  return ["all", ["==", property, value]]
+  return [
+    "all",
+    typeof value === "object"
+      ? ["in", property, ...value]
+      : ["==", property, value],
+  ]
 }

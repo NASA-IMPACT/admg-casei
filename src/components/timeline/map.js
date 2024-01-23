@@ -16,10 +16,13 @@ export function DeploymentMap({
   bounds,
   selectedDeployment,
 }) {
-  const [selectedPlatform, setSelectedPlatform] = useState("")
   const platforms = getUniquePlatforms(
     deployments.flatMap(d => d.collectionPeriods)
   ).map(i => ({ name: i.item.shortname, type: i.item.platformType.shortname }))
+  const names = platforms.map(i => i.name)
+  const [selectedPlatforms, setSelectedPlatforms] = useState(
+    names.filter((name, index) => names.indexOf(name) === index)
+  )
 
   return (
     <Map
@@ -47,8 +50,8 @@ export function DeploymentMap({
               },
               visible: true,
             }}
-            onLoad={map => map.fitBounds(bounds, { padding: 20 })}
-            selectedPlatform={selectedPlatform}
+            onLoad={map => map.fitBounds(bounds, { padding: 50 })}
+            selectedPlatforms={selectedPlatforms}
             selectedDeployment={
               selectedDeployment ? selectedDeployment.longname : ""
             }
@@ -81,7 +84,7 @@ export function DeploymentMap({
               },
               filter: ["all", ["==", "$type", "Point"]],
             }}
-            selectedPlatform={selectedPlatform}
+            selectedPlatforms={selectedPlatforms}
             selectedDeployment={
               selectedDeployment ? selectedDeployment.longname : ""
             }
@@ -90,8 +93,8 @@ export function DeploymentMap({
       )}
       <MapLegend
         platforms={platforms}
-        selectedPlatform={selectedPlatform}
-        setSelectedPlatform={setSelectedPlatform}
+        selectedPlatforms={selectedPlatforms}
+        setSelectedPlatforms={setSelectedPlatforms}
       />
     </Map>
   )
@@ -108,7 +111,7 @@ const DeploymentLayer = ({
   map,
   config,
   selectedDeployment,
-  selectedPlatform,
+  selectedPlatforms,
   onLoad,
 }) => {
   const mapHasStarted = map !== undefined
@@ -129,11 +132,11 @@ const DeploymentLayer = ({
       const newFilter = mapLayerFilter(
         map.getFilter(config.id),
         "platform_name",
-        selectedPlatform
+        selectedPlatforms
       )
       map.setFilter(config.id, newFilter)
     }
-  }, [selectedPlatform, mapHasStarted])
+  }, [JSON.stringify(selectedPlatforms), mapHasStarted])
 
   return <Layer config={config} onLoad={onLoad} map={map} />
 }
@@ -142,14 +145,14 @@ DeploymentLayer.propTypes = {
   map: PropTypes.object,
   config: PropTypes.object,
   selectedDeployment: PropTypes.string,
-  selectedPlatform: PropTypes.string,
+  selectedPlatforms: PropTypes.string,
   onLoad: PropTypes.func,
 }
 
 export const MapLegend = ({
   platforms = [],
-  setSelectedPlatform,
-  selectedPlatform,
+  setSelectedPlatforms,
+  selectedPlatforms,
 }) => {
   const names = platforms.map(i => i.name)
   const uniquePlatforms = platforms.filter(
@@ -157,44 +160,54 @@ export const MapLegend = ({
   )
   return (
     <LegendBox>
-      <h3>Platforms</h3>
-      {uniquePlatforms.map(platform => (
-        <button
-          key={platform.name}
-          onClick={() =>
-            platform.name === selectedPlatform
-              ? setSelectedPlatform("")
-              : setSelectedPlatform(platform.name)
-          }
-        >
-          <LegendText selected={platform.name === selectedPlatform}>
-            {platform.type === "Jet" ? (
-              <LineIcon color="#1B9E77" size="text" />
-            ) : (
-              <CircleIcon color="#E8E845" size="extra-tiny" />
-            )}
-            {platform.name}
-          </LegendText>
-        </button>
-      ))}
+      <fieldset>
+        <legend>Platforms</legend>
+        {uniquePlatforms.map(platform => (
+          <div key={platform.name}>
+            <input
+              type="checkbox"
+              checked={selectedPlatforms.includes(platform.name)}
+              disabled={
+                selectedPlatforms.length === 1 &&
+                selectedPlatforms.includes(platform.name)
+              }
+              onClick={() =>
+                selectedPlatforms.includes(platform.name)
+                  ? setSelectedPlatforms(
+                      selectedPlatforms.filter(i => i !== platform.name)
+                    )
+                  : setSelectedPlatforms([...selectedPlatforms, platform.name])
+              }
+            />
+            <LegendText checked={selectedPlatforms.includes(platform.name)}>
+              {["Jet", "Prop", "UAV"].includes(platform.type) ? (
+                <LineIcon color="#1B9E77" size="text" />
+              ) : (
+                <CircleIcon color="#E8E845" size="extra-tiny" />
+              )}
+              {platform.name}
+            </LegendText>
+          </div>
+        ))}
+      </fieldset>
     </LegendBox>
   )
 }
 
 MapLegend.propTypes = {
   platforms: PropTypes.array,
-  setSelectedPlatform: PropTypes.func,
-  selectedPlatform: PropTypes.string,
+  setSelectedPlatforms: PropTypes.func,
+  selectedPlatforms: PropTypes.array,
 }
 
-const LegendText = styled.span`
-  font-weight: ${props => (props.selected ? 600 : 400)};
-  &:hover {
-    font-weight: 600;
-    text-decoration: underline;
-  }
+const LegendText = styled.label`
+  font-weight: ${props => (props.checked ? 600 : 400)};
+  font-family: "Titillium Web", sans-serif;
+  display: inline-block;
+  background: transparent;
+  border: none;
   > svg {
-    margin-right: 10px;
+    margin: 0 8px;
   }
 `
 
@@ -209,17 +222,18 @@ const LegendBox = styled.div`
   padding: 8px;
   color: ${colors.lightTheme.text};
   background-color: rgba(255, 255, 255, 0.6);
-  > button {
-    font-family: "Titillium Web", sans-serif;
-    display: block;
-    cursor: pointer;
-    background: transparent;
-    border: none;
+  > fieldset {
+    border: 0px;
+    margin-bottom: 4px;
   }
-  > h3 {
-    margin: 0 0 8px;
+  > fieldset > legend {
+    padding: 0 0 8px;
+    font-family: "Titillium Web", sans-serif;
     color: ${colors.lightTheme.text};
     font-size: 1.1rem;
     font-weight: 600;
+  }
+  & input {
+    cursor: pointer;
   }
 `

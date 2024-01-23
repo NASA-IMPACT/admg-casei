@@ -7,6 +7,12 @@ describe("mapLayerFilter", () => {
       ["==", "deployment", "D1"],
     ])
   })
+  it("returns updated platform_name filter", () => {
+    expect(mapLayerFilter(undefined, "platform_name", ["P-3"])).toEqual([
+      "all",
+      ["in", "platform_name", "P-3"],
+    ])
+  })
   it("returns null if current filter is null and new value is empty", () => {
     expect(mapLayerFilter(null, "deployment", "")).toBeNull()
   })
@@ -18,32 +24,45 @@ describe("mapLayerFilter", () => {
   it("returns new value with no deployment filter", () => {
     expect(
       mapLayerFilter(
-        ["all", ["==", "platform_name", "B-200"], ["==", "deployment", "D1"]],
+        ["all", ["in", "platform_name", "B-200"], ["==", "deployment", "D1"]],
         "deployment",
         ""
       )
-    ).toEqual(["all", ["==", "platform_name", "B-200"]])
+    ).toEqual(["all", ["in", "platform_name", "B-200"]])
   })
   it("returns new value with no platform_name filter", () => {
     expect(
       mapLayerFilter(
-        ["all", ["==", "platform_name", "B-200"], ["==", "deployment", "D1"]],
+        ["all", ["in", "platform_name", "B-200"], ["==", "deployment", "D1"]],
         "platform_name",
-        ""
+        []
       )
     ).toEqual(["all", ["==", "deployment", "D1"]])
   })
   it("returns new value to the platform_name filter", () => {
     expect(
       mapLayerFilter(
-        ["all", ["==", "platform_name", "B-200"], ["==", "deployment", "D1"]],
+        ["all", ["in", "platform_name", "B-200"], ["==", "deployment", "D1"]],
         "platform_name",
-        "Falcon"
+        ["Falcon", "B-200"]
       )
     ).toEqual([
       "all",
       ["==", "deployment", "D1"],
-      ["==", "platform_name", "Falcon"],
+      ["in", "platform_name", "Falcon", "B-200"],
+    ])
+  })
+  it("supports the in condition when value is an array", () => {
+    expect(
+      mapLayerFilter(
+        ["all", ["in", "platform_name", "B-200"], ["==", "deployment", "D1"]],
+        "platform_name",
+        ["ER-2", "P8"]
+      )
+    ).toEqual([
+      "all",
+      ["==", "deployment", "D1"],
+      ["in", "platform_name", "ER-2", "P8"],
     ])
   })
 })

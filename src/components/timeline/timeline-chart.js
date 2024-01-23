@@ -93,7 +93,7 @@ export const TimelineChart = ({ deployments, bounds, campaignName }) => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `https://proxy.willemarcel.workers.dev/?https://657ce9f3a6dfa74fdbb10d02--visionary-sopapillas-62534f.netlify.app/${campaignName}.geojson  `,
+          `https://proxy.willemarcel.workers.dev/?https://659e9c3267d89df07de0017c--visionary-sopapillas-62534f.netlify.app/${campaignName}.geojson  `,
           {
             method: "GET",
             headers: {
@@ -152,10 +152,11 @@ export const TimelineChart = ({ deployments, bounds, campaignName }) => {
         ref={containerRef}
         css={`
           display: flex;
+          margin-top: 12px;
         `}
       >
         <Legend>
-          Events
+          <strong>Events</strong>
           <LegendItem>
             <Swatch color={colors[NEGATIVE].dataVizOne} />
             {deployments.length} Deployment{deployments.length > 1 ? "s" : ""}
