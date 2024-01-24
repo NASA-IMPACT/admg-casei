@@ -93,7 +93,7 @@ export const TimelineChart = ({ deployments, bounds, campaignName }) => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `https://proxy.willemarcel.workers.dev/?https://659e9c3267d89df07de0017c--visionary-sopapillas-62534f.netlify.app/${campaignName}.geojson  `,
+          `https://proxy.willemarcel.workers.dev/?http://admg-inventory-staging.s3-website-us-east-1.amazonaws.com/casei/flight-tracks/${campaignName}.geojson`,
           {
             method: "GET",
             headers: {
