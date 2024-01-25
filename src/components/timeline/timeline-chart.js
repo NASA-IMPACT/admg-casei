@@ -92,15 +92,12 @@ export const TimelineChart = ({ deployments, bounds, campaignName }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(
-          `https://proxy.willemarcel.workers.dev/?http://admg-inventory-staging.s3-website-us-east-1.amazonaws.com/casei/flight-tracks/${campaignName}.geojson`,
-          {
-            method: "GET",
-            headers: {
-              "Content-Type": "application/json",
-            },
-          }
-        )
+        const response = await fetch(`/flight-tracks/${campaignName}.geojson`, {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        })
         const vals = await response.json()
         setGeojson(vals)
       } catch (error) {
