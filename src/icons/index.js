@@ -1,4 +1,6 @@
 import ArrowIcon from "./arrow-icon"
+import LineIcon from "./line-icon"
+import CircleIcon from "./circle-icon"
 import ChevronIcon from "./chevron-icon"
 import CloseIcon from "./close-icon"
 import ExclamationIcon from "./exclamation-icon.js"
@@ -19,6 +21,8 @@ import MetadataIcon from "./about/metadata-icon"
 
 export {
   ArrowIcon,
+  LineIcon,
+  CircleIcon,
   ChevronIcon,
   CloseIcon,
   ExclamationIcon,

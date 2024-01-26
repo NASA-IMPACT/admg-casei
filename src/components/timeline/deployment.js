@@ -97,19 +97,21 @@ export const Deployment = ({
           }
           transition="all 2s"
           onClick={() => {
-            setSelectedDeployment({
-              ...{
-                start,
-                end,
-                events,
-                iops,
-                id,
-                longname,
-                shortname,
-                aliases,
-                regions,
-              },
-            })
+            selectedDeployment?.id === id
+              ? setSelectedDeployment(null)
+              : setSelectedDeployment({
+                  ...{
+                    start,
+                    end,
+                    events,
+                    iops,
+                    id,
+                    longname,
+                    shortname,
+                    aliases,
+                    regions,
+                  },
+                })
             setSelectedEvent({ content: null, type: "deployment" })
           }}
         />
