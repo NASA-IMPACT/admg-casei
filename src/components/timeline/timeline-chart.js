@@ -12,6 +12,7 @@ import { Deployment } from "./deployment"
 import { Disclosure } from "@reach/disclosure"
 import { DeploymentPanel } from "./deployment-panel"
 import { DeploymentMap } from "./map"
+import { replaceSlashes } from "../../utils/helpers"
 
 const chartSettings = {
   marginTop: 1,
@@ -92,12 +93,15 @@ export const TimelineChart = ({ deployments, bounds, campaignName }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`/flight-tracks/${campaignName}.geojson`, {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        })
+        const response = await fetch(
+          `/flight-tracks/${replaceSlashes(campaignName)}.geojson`,
+          {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        )
         const vals = await response.json()
         setGeojson(vals)
       } catch (error) {
