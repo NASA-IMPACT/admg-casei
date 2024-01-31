@@ -38,7 +38,7 @@ test.describe("Campaign", () => {
     await expect(inpageNavItems.nth(1)).toContainText("Overview")
     await expect(inpageNavItems.nth(2)).toContainText("Focus")
     await expect(inpageNavItems.nth(3)).toContainText("Platforms & Instruments")
-    await expect(inpageNavItems.nth(4)).toContainText("Timeline")
+    await expect(inpageNavItems.nth(4)).toContainText("Deployment & Events")
     await expect(inpageNavItems.nth(5)).toContainText("Data")
     await expect(inpageNavItems.nth(6)).toContainText("Program Info")
 
@@ -46,7 +46,7 @@ test.describe("Campaign", () => {
       "program-info",
       "platform",
       "overview",
-      "timeline",
+      "deployment",
       "focus",
     ]
 

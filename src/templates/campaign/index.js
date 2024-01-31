@@ -87,11 +87,13 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
         ),
       },
     },
-    timeline: {
-      nav: "Timeline",
+    deployment: {
+      nav: "Deployment & Events",
       component: TimelineSection,
       props: {
+        campaignName: campaign.shortname,
         deployments: campaign.deployments,
+        bounds: aggregatedBounds,
       },
     },
     data: {
@@ -198,6 +200,9 @@ export const query = graphql`
           platform: platform {
             id
             shortname: short_name
+            platformType: platform_type {
+              shortname: short_name # required for grouping
+            }
           }
           instruments: instruments {
             id

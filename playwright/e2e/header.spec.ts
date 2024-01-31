@@ -13,6 +13,7 @@ test.describe("Header", () => {
   })
 
   test("renders correctly", async () => {
+    // disable this header test for temporary release banner
     await expect(page.locator("header")).toHaveText(
       site.siteMetadata.headerType
     )

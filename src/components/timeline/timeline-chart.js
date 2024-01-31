@@ -11,6 +11,7 @@ import { occlusion } from "./occlusion"
 import { Deployment } from "./deployment"
 import { Disclosure } from "@reach/disclosure"
 import { DeploymentPanel } from "./deployment-panel"
+import { DeploymentMap } from "./map"
 
 const chartSettings = {
   marginTop: 1,
@@ -36,7 +37,7 @@ export const Swatch = styled.div`
   background-color: ${({ color }) => color};
 `
 
-export const TimelineChart = ({ deployments }) => {
+export const TimelineChart = ({ deployments, bounds, campaignName }) => {
   const [containerRef, dms] = useChartDimensions(chartSettings)
 
   const minDateString = d3
@@ -79,6 +80,7 @@ export const TimelineChart = ({ deployments }) => {
   const [hoveredDeployment, setHoveredDeployment] = useState(null)
   const [count, setCount] = useState(1)
   const [priority, setPriority] = useState({})
+  const [geojson, setGeojson] = useState({})
 
   const [tooltip, setTooltip] = useState({ x: null, y: null })
   const [tooltipContent, setTooltipContent] = useState(null)
@@ -86,6 +88,24 @@ export const TimelineChart = ({ deployments }) => {
     content: undefined,
     type: "deployment",
   })
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(`/flight-tracks/${campaignName}.geojson`, {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        })
+        const vals = await response.json()
+        setGeojson(vals)
+      } catch (error) {
+        console.log("catch error", error)
+      }
+    }
+    fetchData()
+  }, [])
 
   useEffect(() => {
     //wait for first render to get correct measures
@@ -117,14 +137,31 @@ export const TimelineChart = ({ deployments }) => {
 
   return (
     <Disclosure open={!!selectedDeployment}>
+      {geojson?.features?.length && (
+        <DeploymentMap
+          geojson={geojson}
+          deployments={deployments}
+          bounds={bounds}
+          selectedDeployment={selectedDeployment}
+        />
+      )}
       <div
         ref={containerRef}
         css={`
           display: flex;
+          margin-top: 16px;
         `}
       >
         <Legend>
-          Events
+          <h3
+            css={`
+              font-size: 1.2rem;
+              font-weight: 600;
+              margin: 0 0 6px;
+            `}
+          >
+            Events
+          </h3>
           <LegendItem>
             <Swatch color={colors[NEGATIVE].dataVizOne} />
             {deployments.length} Deployment{deployments.length > 1 ? "s" : ""}
@@ -162,10 +199,7 @@ export const TimelineChart = ({ deployments }) => {
               background: colors[POSITIVE].background,
               position: "absolute",
               bottom: -tooltip.y + 86,
-              left:
-                tooltip.x - 8 - tooltipRef.current?.clientWidth / 2
-                  ? tooltip.x && tooltipRef.current
-                  : 0,
+              left: tooltip.x - 12 - tooltipRef.current?.clientWidth / 2,
               padding: 12,
               color: colors[POSITIVE].text,
               boxShadow:
@@ -302,4 +336,6 @@ TimelineChart.propTypes = {
       ),
     })
   ),
+  bounds: PropTypes.array,
+  campaignName: PropTypes.string.isRequired,
 }
