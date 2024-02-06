@@ -119,3 +119,5 @@ export function convertBoundsToNSWE(bounds) {
 }
 
 export const reformatDate = dateString => dateString.split("-").join("/")
+
+export const replaceSlashes = str => str.replaceAll("/", "-")

@@ -9,6 +9,7 @@ import { getUniquePlatforms } from "../../utils/get-unique-platforms"
 import { LineIcon, CircleIcon } from "../../icons"
 import { mapLayerFilter } from "../../utils/filter-utils"
 import { colors } from "../../theme"
+import { replaceSlashes } from "../../utils/helpers"
 
 export function DeploymentMap({
   geojson,
@@ -53,7 +54,9 @@ export function DeploymentMap({
             onLoad={map => map.fitBounds(bounds, { padding: 50 })}
             selectedPlatforms={selectedPlatforms}
             selectedDeployment={
-              selectedDeployment ? selectedDeployment.longname : ""
+              selectedDeployment
+                ? replaceSlashes(selectedDeployment.longname)
+                : ""
             }
           />
           <DeploymentLayer
@@ -86,7 +89,9 @@ export function DeploymentMap({
             }}
             selectedPlatforms={selectedPlatforms}
             selectedDeployment={
-              selectedDeployment ? selectedDeployment.longname : ""
+              selectedDeployment
+                ? replaceSlashes(selectedDeployment.longname)
+                : ""
             }
           />
         </Source>
