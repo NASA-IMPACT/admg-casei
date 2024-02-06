@@ -163,7 +163,6 @@ export const MapLegend = ({
   const uniquePlatforms = platforms.filter(
     (i, index) => names.indexOf(i.name) === index
   )
-
   return (
     <LegendBox>
       <fieldset>
