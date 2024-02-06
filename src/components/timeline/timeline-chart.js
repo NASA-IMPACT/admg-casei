@@ -271,7 +271,7 @@ export const TimelineChart = ({ deployments, bounds, campaignName }) => {
                       showDeploymentTooltip
                       setSelectedEvent={setSelectedEvent}
                       disableEventSelection={true}
-                      setHoveredEvent={() => { }}
+                      setHoveredEvent={() => {}}
                       hoveredEvent={null}
                     />
                   )
