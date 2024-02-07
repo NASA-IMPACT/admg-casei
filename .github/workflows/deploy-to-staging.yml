@@ -63,7 +63,7 @@ jobs:
       - name: Deploy 🚀
         uses: jakejarvis/s3-sync-action@master
         with:
-          args: --acl public-read --follow-symlinks --delete --exclude "flight-tracks/*"
+          args: --acl public-read --follow-symlinks --delete --exclude "casei/flight-tracks/*"
         env:
           AWS_S3_BUCKET: ${{ secrets.STAGING_BUCKET }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID_ALICER_DEVSEED }}

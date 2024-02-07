@@ -94,7 +94,7 @@ export const TimelineChart = ({ deployments, bounds, campaignName }) => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `/flight-tracks/${replaceSlashes(campaignName)}.geojson`,
+          `/casei/flight-tracks/${replaceSlashes(campaignName)}.geojson`,
           {
             method: "GET",
             headers: {
