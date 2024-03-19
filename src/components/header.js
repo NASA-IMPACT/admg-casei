@@ -7,6 +7,7 @@ import { colors, layout, breakpoints } from "../theme"
 import { CaseiLogoIcon } from "../icons"
 import { NEGATIVE } from "../utils/constants"
 import StickyBanner from "./sticky-banner"
+import SimpleBanner from "./simple-banner"
 
 const Header = ({ shortname, children, mode }) => {
   const offsetCalculator = (scrollDirection, _, currentScroll) => {
@@ -28,6 +29,7 @@ const Header = ({ shortname, children, mode }) => {
             rgba(68, 63, 63, 0.08) 0px 2px 6px 0px;
         `}
       >
+        <SimpleBanner />
         <div
           css={`
             margin: 0 auto;
