@@ -4,7 +4,6 @@ import { CloseIcon } from "../icons"
 import { IconButton } from "./button"
 import { POSITIVE } from "../utils/constants"
 import { colors } from "../theme"
-import ExternalLink from "./external-link"
 
 const SimpleBanner = () => {
   const [hasSeenWorkshopNotice, setHasSeenNotice] = useState(false)
@@ -37,12 +36,20 @@ const SimpleBanner = () => {
           display: ${hasSeenWorkshopNotice ? "none" : "flex"};
         `}
       >
-        <span>{`Please join us online 23-24 April for the 2024 NASA Airborne & Field Data Workshop! For more information and to register (free), click here!`}</span>
-        <ExternalLink
-          label={"here"}
-          url={`https://www.earthdata.nasa.gov/learn/webinars-and-tutorials/second-airborne-field-data-workshop`}
-          id="workshop"
-        ></ExternalLink>
+        <span>{`Please join us online 23-24 April for the 2024 NASA Airborne & Field Data Workshop! For more information and to register (free), click `}</span>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href={`https://www.earthdata.nasa.gov/learn/webinars-and-tutorials/second-airborne-field-data-workshop`}
+          css={`
+            color: ${colors[POSITIVE].text};
+            font-weight: bold;
+          `}
+          data-cy={`workshop-link`}
+        >
+          {"\u00a0here"}
+        </a>
+
         <span>!</span>
 
         <IconButton
