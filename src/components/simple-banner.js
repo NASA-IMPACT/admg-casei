@@ -32,31 +32,42 @@ const SimpleBanner = () => {
           justify-content: center;
           align-items: center;
           padding: 1rem;
+          padding-left: 2.5rem;
+          padding-right: 2.5rem;
           z-index: 400;
           display: ${hasSeenWorkshopNotice ? "none" : "flex"};
         `}
       >
-        <span>{`Please join us online 23-24 April for the 2024 NASA Airborne & Field Data Workshop! For more information and to register (free), click `}</span>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href={`https://www.earthdata.nasa.gov/learn/webinars-and-tutorials/second-airborne-field-data-workshop`}
+        <div>
+          <span>{`Please join us online 23-24 April for the 2024 NASA Airborne & Field Data Workshop! For more information and to register (free), click `}</span>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href={`https://www.earthdata.nasa.gov/learn/webinars-and-tutorials/second-airborne-field-data-workshop`}
+            css={`
+              color: ${colors[POSITIVE].text};
+              font-weight: bold;
+            `}
+            data-cy={`workshop-link`}
+          >
+            {"\u00a0here"}
+          </a>
+
+          <span>!</span>
+        </div>
+        <div
           css={`
-            color: ${colors[POSITIVE].text};
-            font-weight: bold;
+            position: absolute;
+            right: 15px;
+            top: 17px;
           `}
-          data-cy={`workshop-link`}
         >
-          {"\u00a0here"}
-        </a>
-
-        <span>!</span>
-
-        <IconButton
-          id="remove-filter"
-          action={markWorkshopNoticeSeen}
-          icon={<CloseIcon color={colors[POSITIVE].text} />}
-        />
+          <IconButton
+            id="remove-filter"
+            action={markWorkshopNoticeSeen}
+            icon={<CloseIcon color={colors[POSITIVE].text} />}
+          />
+        </div>
       </div>
     </>
   )
