@@ -21,8 +21,13 @@ export function DeploymentMap({
     deployments.flatMap(d => d.collectionPeriods)
   ).map(i => ({ name: i.item.shortname, type: i.item.platformType.shortname }))
   const names = platforms.map(i => i.name)
+  const platformsWithData = geojson.features.map(
+    f => f.properties.platform_name
+  )
   const [selectedPlatforms, setSelectedPlatforms] = useState(
-    names.filter((name, index) => names.indexOf(name) === index)
+    names
+      .filter((name, index) => names.indexOf(name) === index)
+      .filter(name => platformsWithData.includes(name))
   )
 
   return (
@@ -98,6 +103,7 @@ export function DeploymentMap({
       )}
       <MapLegend
         platforms={platforms}
+        platformsWithData={platformsWithData}
         selectedPlatforms={selectedPlatforms}
         setSelectedPlatforms={setSelectedPlatforms}
       />
@@ -156,6 +162,7 @@ DeploymentLayer.propTypes = {
 
 export const MapLegend = ({
   platforms = [],
+  platformsWithData = [],
   setSelectedPlatforms,
   selectedPlatforms,
 }) => {
@@ -173,8 +180,9 @@ export const MapLegend = ({
               type="checkbox"
               checked={selectedPlatforms.includes(platform.name)}
               disabled={
-                selectedPlatforms.length === 1 &&
-                selectedPlatforms.includes(platform.name)
+                (selectedPlatforms.length === 1 &&
+                  selectedPlatforms.includes(platform.name)) ||
+                !platformsWithData.includes(platform.name)
               }
               onClick={() =>
                 selectedPlatforms.includes(platform.name)
@@ -191,6 +199,7 @@ export const MapLegend = ({
                 <CircleIcon color="#E8E845" size="extra-tiny" />
               )}
               {platform.name}
+              {!platformsWithData.includes(platform.name) && " (Not Shown)"}
             </LegendText>
           </div>
         ))}
@@ -201,6 +210,7 @@ export const MapLegend = ({
 
 MapLegend.propTypes = {
   platforms: PropTypes.array,
+  platformsWithData: PropTypes.array,
   setSelectedPlatforms: PropTypes.func,
   selectedPlatforms: PropTypes.array,
 }
