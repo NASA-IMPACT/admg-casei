@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
+import { Tooltip } from "react-tooltip"
 
 import Map from "../map"
 import Source from "../map/source"
@@ -199,7 +200,24 @@ export const MapLegend = ({
                 <CircleIcon color="#E8E845" size="extra-tiny" />
               )}
               {platform.name}
-              {!platformsWithData.includes(platform.name) && " (Not Shown)"}
+              {!platformsWithData.includes(platform.name) && (
+                <NotShown>
+                  <u data-tooltip-id={`tooltip-${platform.name}`}>
+                    (Not Shown)
+                  </u>
+                  <Tooltip
+                    id={`tooltip-${platform.name}`}
+                    content="The data for this platform is not available for visualization."
+                    place="bottom-end"
+                    style={{
+                      backgroundColor: "#fff",
+                      color: "#000",
+                      textTransform: "none",
+                      fontSize: "1em",
+                    }}
+                  />
+                </NotShown>
+              )}
             </LegendText>
           </div>
         ))}
@@ -229,7 +247,7 @@ const LegendText = styled.label`
 const LegendBox = styled.div`
   display: inline-block;
   text-align: left;
-  min-width: 10rem;
+  min-width: 14rem;
   position: absolute;
   right: 5px;
   margin-top: 5px;
@@ -250,5 +268,20 @@ const LegendBox = styled.div`
   }
   & input {
     cursor: pointer;
+  }
+`
+
+const NotShown = styled.div`
+  display: inline;
+  > u {
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: #4d4d4d;
+    color: #333;
+    text-decoration-thickness: 2px;
+    padding-left: 7px;
+    &:hover {
+      cursor: pointer;
+    }
   }
 `

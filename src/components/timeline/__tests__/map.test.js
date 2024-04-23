@@ -5,6 +5,10 @@ import { act } from "react-dom/test-utils"
 import { MapLegend } from "../map"
 import { LineIcon, CircleIcon } from "../../../icons"
 
+jest.mock("react-tooltip", () => ({
+  Tooltip: () => <div>Mocked tooltip</div>,
+}))
+
 describe("MapLegend", () => {
   it("render options", () => {
     const fn = jest.fn()
@@ -80,9 +84,6 @@ describe("MapLegend", () => {
     expect(b3.props.disabled).toBeTruthy()
     act(() => b2.props.onClick())
     expect(fn).toHaveBeenCalledTimes(1)
-    const [l1, l2, l3] = instance.findAllByType("label")
-    expect(l1.children.includes(" (Not Shown)")).toBeFalsy()
-    expect(l2.children.includes(" (Not Shown)")).toBeFalsy()
-    expect(l3.children.includes(" (Not Shown)")).toBeTruthy()
+    expect(instance.findAllByType("u").length).toBe(1)
   })
 })
