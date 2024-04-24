@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
+import { Tooltip } from "react-tooltip"
 
 import Map from "../map"
 import Source from "../map/source"
@@ -21,8 +22,13 @@ export function DeploymentMap({
     deployments.flatMap(d => d.collectionPeriods)
   ).map(i => ({ name: i.item.shortname, type: i.item.platformType.shortname }))
   const names = platforms.map(i => i.name)
+  const platformsWithData = geojson.features.map(
+    f => f.properties.platform_name
+  )
   const [selectedPlatforms, setSelectedPlatforms] = useState(
-    names.filter((name, index) => names.indexOf(name) === index)
+    names
+      .filter((name, index) => names.indexOf(name) === index)
+      .filter(name => platformsWithData.includes(name))
   )
 
   return (
@@ -98,6 +104,7 @@ export function DeploymentMap({
       )}
       <MapLegend
         platforms={platforms}
+        platformsWithData={platformsWithData}
         selectedPlatforms={selectedPlatforms}
         setSelectedPlatforms={setSelectedPlatforms}
       />
@@ -156,6 +163,7 @@ DeploymentLayer.propTypes = {
 
 export const MapLegend = ({
   platforms = [],
+  platformsWithData = [],
   setSelectedPlatforms,
   selectedPlatforms,
 }) => {
@@ -173,8 +181,9 @@ export const MapLegend = ({
               type="checkbox"
               checked={selectedPlatforms.includes(platform.name)}
               disabled={
-                selectedPlatforms.length === 1 &&
-                selectedPlatforms.includes(platform.name)
+                (selectedPlatforms.length === 1 &&
+                  selectedPlatforms.includes(platform.name)) ||
+                !platformsWithData.includes(platform.name)
               }
               onClick={() =>
                 selectedPlatforms.includes(platform.name)
@@ -191,6 +200,24 @@ export const MapLegend = ({
                 <CircleIcon color="#E8E845" size="extra-tiny" />
               )}
               {platform.name}
+              {!platformsWithData.includes(platform.name) && (
+                <NotShown>
+                  <u data-tooltip-id={`tooltip-${platform.name}`}>
+                    (Not Shown)
+                  </u>
+                  <Tooltip
+                    id={`tooltip-${platform.name}`}
+                    content="The data for this platform is not available for visualization."
+                    place="bottom-end"
+                    style={{
+                      backgroundColor: "#fff",
+                      color: "#000",
+                      textTransform: "none",
+                      fontSize: "1em",
+                    }}
+                  />
+                </NotShown>
+              )}
             </LegendText>
           </div>
         ))}
@@ -201,6 +228,7 @@ export const MapLegend = ({
 
 MapLegend.propTypes = {
   platforms: PropTypes.array,
+  platformsWithData: PropTypes.array,
   setSelectedPlatforms: PropTypes.func,
   selectedPlatforms: PropTypes.array,
 }
@@ -219,7 +247,7 @@ const LegendText = styled.label`
 const LegendBox = styled.div`
   display: inline-block;
   text-align: left;
-  min-width: 10rem;
+  min-width: 14rem;
   position: absolute;
   right: 5px;
   margin-top: 5px;
@@ -240,5 +268,20 @@ const LegendBox = styled.div`
   }
   & input {
     cursor: pointer;
+  }
+`
+
+const NotShown = styled.div`
+  display: inline;
+  > u {
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: #4d4d4d;
+    color: #333;
+    text-decoration-thickness: 2px;
+    padding-left: 7px;
+    &:hover {
+      cursor: pointer;
+    }
   }
 `
