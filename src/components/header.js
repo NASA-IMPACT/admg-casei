@@ -29,7 +29,7 @@ const Header = ({ shortname, children, mode }) => {
             rgba(68, 63, 63, 0.08) 0px 2px 6px 0px;
         `}
       >
-        <SimpleBanner />
+        {/* <SimpleBanner /> */}
         <div
           css={`
             margin: 0 auto;
