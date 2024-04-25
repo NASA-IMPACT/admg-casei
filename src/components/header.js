@@ -7,7 +7,6 @@ import { colors, layout, breakpoints } from "../theme"
 import { CaseiLogoIcon } from "../icons"
 import { NEGATIVE } from "../utils/constants"
 import StickyBanner from "./sticky-banner"
-import SimpleBanner from "./simple-banner"
 
 const Header = ({ shortname, children, mode }) => {
   const offsetCalculator = (scrollDirection, _, currentScroll) => {
