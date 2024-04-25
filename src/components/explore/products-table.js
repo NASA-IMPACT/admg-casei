@@ -5,8 +5,7 @@ import { NEGATIVE } from "../../utils/constants"
 import { colors } from "../../theme"
 import { ExternalLinkIcon } from "../../icons"
 import { Link } from "gatsby"
-import { Tooltip } from "@reach/tooltip"
-import "@reach/tooltip/styles.css"
+import { Tooltip } from "react-tooltip"
 
 export function ProductsTable({ dois }) {
   const linkLimit = 3
@@ -85,19 +84,19 @@ export function ProductsTable({ dois }) {
                         }
                       })
                     ) : (
-                      <Tooltip
-                        label="Please visit product page"
-                        style={{
-                          background: "hsla(0, 0%, 0%, 0.85)",
-                          color: "white",
-                          border: "none",
-                          borderRadius: "4px",
-                          padding: "0.5em 1em",
-                          marginTop: "-43px",
-                        }}
-                      >
-                        <span style={{ fontSize: 25 }}>{"---"}</span>
-                      </Tooltip>
+                      <>
+                        <span
+                          data-tooltip-id={`tooltip-platform-${doi.id}`}
+                          style={{ fontSize: 25 }}
+                        >
+                          {"---"}
+                        </span>
+                        <Tooltip
+                          id={`tooltip-platform-${doi.id}`}
+                          content="Please visit product page"
+                          place="bottom"
+                        />
+                      </>
                     )}
                   </span>
                   {doi.platforms.length > linkLimit ? (
@@ -134,19 +133,19 @@ export function ProductsTable({ dois }) {
                         }
                       })
                     ) : (
-                      <Tooltip
-                        label="Please visit product page"
-                        style={{
-                          background: "hsla(0, 0%, 0%, 0.85)",
-                          color: "white",
-                          border: "none",
-                          borderRadius: "4px",
-                          padding: "0.5em 1em",
-                          marginTop: "-43px",
-                        }}
-                      >
-                        <span style={{ fontSize: 25 }}>{"---"}</span>
-                      </Tooltip>
+                      <>
+                        <span
+                          data-tooltip-id={`tooltip-instrument-${doi.id}`}
+                          style={{ fontSize: 25 }}
+                        >
+                          {"---"}
+                        </span>
+                        <Tooltip
+                          id={`tooltip-instrument-${doi.id}`}
+                          content="Please visit product page"
+                          place="bottom"
+                        />
+                      </>
                     )}
                   </span>
                   {doi.instruments.length > linkLimit ? (

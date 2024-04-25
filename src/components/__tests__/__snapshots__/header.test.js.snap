@@ -9,54 +9,6 @@ exports[`Header renders correctly 1`] = `
     id="main-header"
   >
     <div
-      className="simple-banner___StyledDiv-sc-nvhdfo-0 iibwwt"
-    >
-      <div>
-        <span>
-          Please join us online 23-24 April for the 2024 NASA Airborne & Field Data Workshop! For more information and to register (free), click 
-        </span>
-        <a
-          className="simple-banner___StyledA-sc-nvhdfo-1 jCgWjy"
-          data-cy="workshop-link"
-          href="https://www.earthdata.nasa.gov/learn/webinars-and-tutorials/second-airborne-field-data-workshop"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-           here
-        </a>
-        <span>
-          !
-        </span>
-      </div>
-      <div
-        className="simple-banner___StyledDiv2-sc-nvhdfo-2 dQQWQk"
-      >
-        <button
-          className="button__Clickable-sc-1yw7vig-0 button___StyledClickable2-sc-1yw7vig-1 fRqvWm kXXfwm"
-          data-cy="remove-filter"
-          onClick={[Function]}
-          type="button"
-        >
-          <span
-            aria-label="remove-filter-icon"
-            role="img"
-          >
-            <svg
-              height="12px"
-              viewBox="0 0 16 16"
-              width="12px"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <polygon
-                fill="#262a31"
-                points="13.707,3.707 12.293,2.293 8,6.586 3.707,2.293 2.293,3.707 6.586,8 2.293,12.293 3.707,13.707 8,9.414  12.293,13.707 13.707,12.293 9.414,8"
-              />
-            </svg>
-          </span>
-        </button>
-      </div>
-    </div>
-    <div
       className="header___StyledDiv-sc-4sefiz-1 hgzXFp"
     >
       <div
