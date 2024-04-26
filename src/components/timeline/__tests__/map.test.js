@@ -1,8 +1,7 @@
 import React from "react"
-import renderer from "react-test-renderer"
-import { act } from "react-dom/test-utils"
+import renderer, { act } from "react-test-renderer"
 
-import { MapLegend } from "../map"
+import { MapLegend, PlatformStatus } from "../map"
 import { LineIcon, CircleIcon } from "../../../icons"
 
 jest.mock("react-tooltip", () => ({
@@ -59,31 +58,53 @@ describe("MapLegend", () => {
     act(() => b2.props.onClick())
     expect(fn).toHaveBeenCalledTimes(2)
   })
-  it("presents Not Shown on platforms without data", () => {
-    const fn = jest.fn()
-    const element = renderer.create(
-      <MapLegend
-        platforms={[
-          { name: "Falcon", type: "Jet" },
-          { name: "DC-8", type: "Jet" },
-          { name: "Campaign FS", type: "static" },
-        ]}
-        selectedPlatforms={["Falcon"]}
-        platformsWithData={["Falcon", "DC-8"]}
-        setSelectedPlatforms={fn}
-      />
-    )
+})
+
+describe("PlatformStatus", () => {
+  it("does not render anything if platform is operational", () => {
+    let element
+    act(() => {
+      element = renderer.create(
+        <PlatformStatus
+          platformName="DC-8"
+          platformsWithData={["DC-8", "Learjet"]}
+          activeDeploymentPlatforms={["DC-8"]}
+        />
+      )
+    })
     const instance = element.root
-    expect(instance.findAllByType("input").length).toBe(3)
-    const [b1, b2, b3] = instance.findAllByType("input")
-    expect(b1.props.checked).toBeTruthy()
-    expect(b2.props.checked).toBeFalsy()
-    expect(b3.props.checked).toBeFalsy()
-    expect(b1.props.disabled).toBeTruthy()
-    expect(b2.props.disabled).toBeFalsy()
-    expect(b3.props.disabled).toBeTruthy()
-    act(() => b2.props.onClick())
-    expect(fn).toHaveBeenCalledTimes(1)
-    expect(instance.findAllByType("u").length).toBe(1)
+    expect(instance.findAllByType("div").length).toBe(0)
+  })
+  it("renders Not Shown if it does not have platform data", () => {
+    let element
+    act(() => {
+      element = renderer.create(
+        <PlatformStatus
+          platformName="DC-8"
+          platformsWithData={[]}
+          activeDeploymentPlatforms={["DC-8"]}
+        />
+      )
+    })
+    const instance = element.root
+    expect(
+      instance.findByProps({ "data-tooltip-id": "tooltip-DC-8" }).children
+    ).toEqual(["(Not Shown)"])
+  })
+  it("renders Not Operating if it is not in the active deployment", () => {
+    let element
+    act(() => {
+      element = renderer.create(
+        <PlatformStatus
+          platformName="Learjet"
+          platformsWithData={["Learjet"]}
+          activeDeploymentPlatforms={["DC-8"]}
+        />
+      )
+    })
+    const instance = element.root
+    expect(
+      instance.findByProps({ "data-tooltip-id": "tooltip-Learjet" }).children
+    ).toEqual(["(Not Operating)"])
   })
 })
