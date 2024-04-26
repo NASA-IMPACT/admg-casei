@@ -11,6 +11,7 @@ import { LineIcon, CircleIcon } from "../../icons"
 import { mapLayerFilter } from "../../utils/filter-utils"
 import { colors } from "../../theme"
 import { replaceSlashes } from "../../utils/helpers"
+import { usePlatformStatus } from "../../utils/use-platform-status"
 
 export function DeploymentMap({
   geojson,
@@ -22,6 +23,15 @@ export function DeploymentMap({
     deployments.flatMap(d => d.collectionPeriods)
   ).map(i => ({ name: i.item.shortname, type: i.item.platformType.shortname }))
   const names = platforms.map(i => i.name)
+  const activeDeploymentPlatforms = getUniquePlatforms(
+    deployments
+      .filter(d =>
+        selectedDeployment ? d.longname === selectedDeployment.longname : false
+      )
+      .flatMap(d => d.collectionPeriods)
+  )
+    .map(i => ({ name: i.item.shortname, type: i.item.platformType.shortname }))
+    .map(i => i.name)
   const platformsWithData = geojson.features.map(
     f => f.properties.platform_name
   )
@@ -105,6 +115,7 @@ export function DeploymentMap({
       <MapLegend
         platforms={platforms}
         platformsWithData={platformsWithData}
+        activeDeploymentPlatforms={activeDeploymentPlatforms}
         selectedPlatforms={selectedPlatforms}
         setSelectedPlatforms={setSelectedPlatforms}
       />
@@ -164,6 +175,7 @@ DeploymentLayer.propTypes = {
 export const MapLegend = ({
   platforms = [],
   platformsWithData = [],
+  activeDeploymentPlatforms = [],
   setSelectedPlatforms,
   selectedPlatforms,
 }) => {
@@ -200,24 +212,11 @@ export const MapLegend = ({
                 <CircleIcon color="#E8E845" size="extra-tiny" />
               )}
               {platform.name}
-              {!platformsWithData.includes(platform.name) && (
-                <NotShown>
-                  <u data-tooltip-id={`tooltip-${platform.name}`}>
-                    (Not Shown)
-                  </u>
-                  <Tooltip
-                    id={`tooltip-${platform.name}`}
-                    content="The data for this platform is not available for visualization."
-                    place="bottom-end"
-                    style={{
-                      backgroundColor: "#fff",
-                      color: "#000",
-                      textTransform: "none",
-                      fontSize: "1em",
-                    }}
-                  />
-                </NotShown>
-              )}
+              <PlatformStatus
+                platformName={platform.name}
+                activeDeploymentPlatforms={activeDeploymentPlatforms}
+                platformsWithData={platformsWithData}
+              />
             </LegendText>
           </div>
         ))}
@@ -229,8 +228,53 @@ export const MapLegend = ({
 MapLegend.propTypes = {
   platforms: PropTypes.array,
   platformsWithData: PropTypes.array,
+  activeDeploymentPlatforms: PropTypes.array,
   setSelectedPlatforms: PropTypes.func,
   selectedPlatforms: PropTypes.array,
+}
+
+export const PlatformStatus = ({
+  platformName,
+  platformsWithData,
+  activeDeploymentPlatforms,
+}) => {
+  const status = usePlatformStatus(
+    platformName,
+    platformsWithData,
+    activeDeploymentPlatforms
+  )
+
+  if (status !== "operational") {
+    return (
+      <Tag>
+        <u data-tooltip-id={`tooltip-${platformName}`}>
+          {status === "notShown" ? "(Not Shown)" : "(Not Operating)"}
+        </u>
+        <Tooltip
+          id={`tooltip-${platformName}`}
+          content={
+            status === "notShown"
+              ? "The data for this platform is not available for visualization."
+              : "This platform is not operating in the selected deployment."
+          }
+          place="bottom-end"
+          style={{
+            backgroundColor: "#fff",
+            color: "#000",
+            textTransform: "none",
+            fontSize: "1em",
+          }}
+        />
+      </Tag>
+    )
+  }
+  return <></>
+}
+
+PlatformStatus.propTypes = {
+  platformName: PropTypes.string,
+  platformsWithData: PropTypes.array,
+  activeDeploymentPlatforms: PropTypes.array,
 }
 
 const LegendText = styled.label`
@@ -271,7 +315,7 @@ const LegendBox = styled.div`
   }
 `
 
-const NotShown = styled.div`
+const Tag = styled.div`
   display: inline;
   > u {
     text-decoration-line: underline;
