@@ -104,5 +104,5 @@ Map.propTypes = {
     PropTypes.element,
     PropTypes.arrayOf(PropTypes.element),
   ]),
-  showControls: PropTypes.boolean,
+  showControls: PropTypes.bool,
 }
