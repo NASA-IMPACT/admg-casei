@@ -47,9 +47,11 @@ export const TimelineChart = ({ deployments, bounds, campaignName }) => {
         d3.min([start, ...events.map(({ start }) => start)])
       )
     )
-    .split("-")
+    ?.split("-")
 
-  const minDate = new Date([minDateString[0], "01", "01"].join("-"))
+  const minDate = minDateString
+    ? new Date([minDateString[0], "01", "01"].join("-"))
+    : new Date()
 
   const maxDateString = d3
     .max(
@@ -57,17 +59,19 @@ export const TimelineChart = ({ deployments, bounds, campaignName }) => {
         d3.max([end, ...events.map(({ end }) => end)])
       )
     )
-    .split("-")
+    ?.split("-")
 
-  const maxDate = new Date(
-    [
-      maxDateString[0] === minDateString[0]
-        ? parseInt(maxDateString[0]) + 1
-        : maxDateString[0],
-      "12",
-      "31",
-    ].join("-")
-  )
+  const maxDate = maxDateString
+    ? new Date(
+        [
+          maxDateString[0] === minDateString[0]
+            ? parseInt(maxDateString[0]) + 1
+            : maxDateString[0],
+          "12",
+          "31",
+        ].join("-")
+      )
+    : new Date()
 
   const domain = [minDate, maxDate]
 
