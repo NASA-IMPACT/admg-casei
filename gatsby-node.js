@@ -5,6 +5,8 @@
  */
 const fetch = require("node-fetch")
 const path = require("path")
+const fs = require("fs")
+
 const { createRemoteFileNode } = require("gatsby-source-filesystem")
 
 exports.createSchemaCustomization = ({ actions }) => {
@@ -208,15 +210,40 @@ exports.sourceNodes = async ({ actions, createContentDigest }) => {
 }
 
 const fetchData = async endpoint => {
-  const response = await fetch(`https://admg.nasa-impact.net/api/${endpoint}`, {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${process.env.ADMG_ACCESS_TOKEN}`,
-    },
-  })
-  const json = await response.json()
-  return { type: endpoint, ...json }
+  if (endpoint === "instrument") {
+    return {
+      type: endpoint,
+      ...JSON.parse(fs.readFileSync("instrument_response.json", "utf8")),
+    }
+  } else if (endpoint === "doi") {
+    return {
+      type: endpoint,
+      ...JSON.parse(fs.readFileSync("doi_response.json", "utf8")),
+    }
+  }
+  try {
+    const response = await fetch(
+      `https://admg.nasa-impact.net/api/${endpoint}`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${process.env.ADMG_ACCESS_TOKEN}`,
+        },
+      }
+    )
+
+    // Check if the response is not OK (status code outside the range 200-299)
+    if (!response.ok) {
+      throw new Error(`Failed to get response from: ${response.statusText}`)
+    }
+
+    const json = await response.json()
+    return { type: endpoint, ...json }
+  } catch (error) {
+    console.error(`Fetch data failed for endpoint "${endpoint}":`, error)
+    return { type: endpoint, error: error.message }
+  }
 }
 
 exports.createPages = async ({ graphql, actions }) => {
