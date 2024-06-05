@@ -15,6 +15,7 @@ const CardHeader = styled.div`
   justify-items: ${({ imagePosition }) =>
     imagePosition === "left top" ? "flex-start" : "center"};
   min-height: 180px;
+  margin-bottom: 0.5rem;
 `
 
 const Card = ({
@@ -77,27 +78,26 @@ const Card = ({
             <Placeholder size="medium" color={colors[mode].text} />
           </div>
         )}
-        {tag && (
-          <div
-            css={`
-               {
-                grid-area: 1 / 1;
-                align-self: flex-end;
-                justify-self: flex-start;
-                text-transform: uppercase;
-                border: 1px solid;
-                padding: 0.25rem;
-                margin: 1rem 0;
-                background-color: ${colors[mode].background};
-              }
-            `}
-            data-cy={`${tag.toLowerCase()}-tag`}
-          >
-            {tag}
-          </div>
-        )}
       </CardHeader>
       {children}
+      {tag && (
+        <div
+          css={`
+             {
+              grid-area: 1 / 1;
+              display: inline-block;
+              text-transform: uppercase;
+              border: 1px solid;
+              padding: 0.25rem;
+              margin: 1rem 0;
+              background-color: ${colors[mode].background};
+            }
+          `}
+          data-cy={`${tag.toLowerCase()}-tag`}
+        >
+          {tag}
+        </div>
+      )}
     </Link>
     {footerList && (
       <div
