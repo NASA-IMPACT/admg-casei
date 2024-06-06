@@ -63,7 +63,7 @@ exports[`Platform Section displays content 1`] = `
               href="/platform/J-31"
             >
               <div
-                className="card__CardHeader-sc-16fz0z7-0 lmhbIy"
+                className="card__CardHeader-sc-16fz0z7-0 gbZyqC"
               >
                 <div
                   className="card___StyledDiv2-sc-16fz0z7-4 cPSZeM"
@@ -250,7 +250,7 @@ exports[`Platform Section displays content 1`] = `
               href="/platform/Aerosonde"
             >
               <div
-                className="card__CardHeader-sc-16fz0z7-0 lmhbIy"
+                className="card__CardHeader-sc-16fz0z7-0 gbZyqC"
               >
                 <div
                   className="card___StyledDiv2-sc-16fz0z7-4 cPSZeM"
