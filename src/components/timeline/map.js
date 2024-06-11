@@ -206,7 +206,7 @@ export const MapLegend = ({
               }
             />
             <LegendText checked={selectedPlatforms.includes(platform.name)}>
-              {["Jet", "Prop", "UAV"].includes(platform.type) ? (
+              {["Jet", "Prop", "UAV", "Ships/Boats"].includes(platform.type) ? (
                 <LineIcon color="#1B9E77" size="text" />
               ) : (
                 <CircleIcon color="#E8E845" size="extra-tiny" />
