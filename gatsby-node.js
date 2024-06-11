@@ -165,7 +165,11 @@ exports.sourceNodes = async ({ actions, createContentDigest }) => {
       campaign_count: "campaigns",
     }
 
-    let responses = await Promise.all(endpoints.map(key => fetchData(key)))
+    const responses = []
+    for (const key of endpoints) {
+      const response = await fetchData(key)
+      responses.push(response)
+    }
 
     responses.forEach(response => {
       if (response.success) {
