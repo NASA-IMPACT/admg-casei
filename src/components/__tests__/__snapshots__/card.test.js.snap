@@ -9,7 +9,7 @@ exports[`Card renders card with tag 1`] = `
     data-cy="campaigns-card"
   >
     <div
-      className="card__CardHeader-sc-16fz0z7-0 lmhbIy"
+      className="card__CardHeader-sc-16fz0z7-0 gbZyqC"
     >
       <div
         className="card___StyledDiv2-sc-16fz0z7-4 cPSZeM"
@@ -33,12 +33,6 @@ exports[`Card renders card with tag 1`] = `
           </g>
         </svg>
       </div>
-      <div
-        className="card___StyledDiv3-sc-16fz0z7-5 hcAeMi"
-        data-cy="stationary-tag"
-      >
-        Stationary
-      </div>
     </div>
     <div>
       <big
@@ -58,6 +52,12 @@ exports[`Card renders card with tag 1`] = `
         description....
       </p>
     </div>
+    <div
+      className="card___StyledDiv3-sc-16fz0z7-5 hugbRo"
+      data-cy="stationary-tag"
+    >
+      Stationary
+    </div>
   </a>
 </div>
 `;
@@ -71,7 +71,7 @@ exports[`Card renders plain card 1`] = `
     data-cy="campaigns-card"
   >
     <div
-      className="card__CardHeader-sc-16fz0z7-0 lmhbIy"
+      className="card__CardHeader-sc-16fz0z7-0 gbZyqC"
     >
       <div
         className="card___StyledDiv2-sc-16fz0z7-4 cPSZeM"
@@ -127,7 +127,7 @@ exports[`Card renders with footer list 1`] = `
     data-cy="campaigns-card"
   >
     <div
-      className="card__CardHeader-sc-16fz0z7-0 lmhbIy"
+      className="card__CardHeader-sc-16fz0z7-0 gbZyqC"
     >
       <div
         className="card___StyledDiv2-sc-16fz0z7-4 cPSZeM"
