@@ -12,6 +12,7 @@ import { mapLayerFilter } from "../../utils/filter-utils"
 import { colors } from "../../theme"
 import { replaceSlashes } from "../../utils/helpers"
 import { usePlatformStatus } from "../../utils/use-platform-status"
+import { getLineColors } from "../../utils/platform-colors"
 
 export function DeploymentMap({
   geojson,
@@ -35,6 +36,16 @@ export function DeploymentMap({
   const platformsWithData = geojson.features.map(
     f => f.properties.platform_name
   )
+  let movingPlatforms = platforms
+    .filter(platform =>
+      ["Jet", "Prop", "UAV", "Ships/Boats"].includes(platform.type)
+    )
+    .map(platform => platform.name)
+
+  const lineColorsPaint = getLineColors(
+    movingPlatforms.filter((i, index) => movingPlatforms.indexOf(i) === index)
+  )
+
   const [selectedPlatforms, setSelectedPlatforms] = useState(
     names
       .filter((name, index) => names.indexOf(name) === index)
@@ -61,7 +72,7 @@ export function DeploymentMap({
               type: "line",
               source: "deployment",
               paint: {
-                "line-color": "#1B9E77",
+                "line-color": lineColorsPaint,
                 "line-width": 2,
                 "line-opacity": 0.9,
               },
