@@ -1,10 +1,19 @@
-export const flightColors = platforms => {
-  const colors = ["#F1EEF6", "#BDC9E1", "#74A9CF", "#2B8CBE", "#045A8D"]
+export const flightPathColors = platforms => {
+  const colors = [
+    "#a6cee3",
+    "#1f78b4",
+    "#b2df8a",
+    "#33a02c",
+    "#fb9a99",
+    "#e31a1c",
+    "#fdbf6f",
+    "#ff7f00",
+  ]
   return platforms.map((i, index) => [i, colors[index]])
 }
 
 export const getLineColors = platforms => {
-  const colors = flightColors(platforms)
+  const colors = flightPathColors(platforms)
   return [
     "match",
     ["get", "platform_name"],
