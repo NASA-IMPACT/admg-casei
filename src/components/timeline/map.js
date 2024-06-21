@@ -55,7 +55,7 @@ export function DeploymentMap({
   return (
     <Map
       height={500}
-      basemap="mapbox://styles/mapbox/dark-v10"
+      basemap="mapbox://styles/devseed/clx25ggbv076o01ql8k8m03k8"
       showControls={true}
     >
       {geojson && (
@@ -74,7 +74,7 @@ export function DeploymentMap({
               paint: {
                 "line-color": lineColorsPaint,
                 "line-width": 2,
-                "line-opacity": 0.9,
+                "line-opacity": 0.5,
               },
               visible: true,
             }}
