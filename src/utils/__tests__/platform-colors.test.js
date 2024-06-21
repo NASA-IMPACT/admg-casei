@@ -7,9 +7,9 @@ describe("getLineColor", () => {
       "match",
       ["get", "platform_name"],
       "DC-8",
-      "#F1EEF6",
+      "#a6cee3",
       "ER-2",
-      "#BDC9E1",
+      "#1f78b4",
       "#1a9b8c",
     ]
     expect(getLineColors(platforms)).toEqual(result)
