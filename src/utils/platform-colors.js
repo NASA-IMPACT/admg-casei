@@ -1,13 +1,13 @@
 export const flightPathColors = platforms => {
   const colors = [
-    "#a6cee3",
-    "#1f78b4",
     "#b2df8a",
     "#33a02c",
-    "#fb9a99",
-    "#e31a1c",
     "#fdbf6f",
     "#ff7f00",
+    "#a6cee3",
+    "#1f78b4",
+    "#fb9a99",
+    "#e31a1c",
   ]
   return platforms.map((i, index) => [i, colors[index]])
 }
