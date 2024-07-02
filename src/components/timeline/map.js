@@ -7,12 +7,17 @@ import Map from "../map"
 import Source from "../map/source"
 import Layer from "../map/layer"
 import { getUniquePlatforms } from "../../utils/get-unique-platforms"
-import { LineIcon, CircleIcon } from "../../icons"
+import { LineIcon } from "../../icons"
 import { mapLayerFilter } from "../../utils/filter-utils"
 import { colors } from "../../theme"
 import { replaceSlashes } from "../../utils/helpers"
 import { usePlatformStatus } from "../../utils/use-platform-status"
-import { getLineColors } from "../../utils/platform-colors"
+import {
+  FALLBACK_COLOR,
+  MOVING_PLATFORMS_COLORS,
+  STATIC_PLATFORMS,
+  getLineColors,
+} from "../../utils/platform-colors"
 
 export function DeploymentMap({
   geojson,
@@ -203,6 +208,52 @@ DeploymentLayer.propTypes = {
   onLoad: PropTypes.func,
 }
 
+export const LegendItem = ({
+  name,
+  type,
+  color,
+  icon,
+  checked,
+  disabled,
+  onClick,
+  activeDeploymentPlatforms,
+  platformsWithData,
+}) => (
+  <div key={name}>
+    <input
+      type="checkbox"
+      checked={checked}
+      disabled={disabled}
+      onClick={() => onClick()}
+    />
+    <LegendText checked={checked}>
+      {type === "moving" ? (
+        <LineIcon color={color} size="text" />
+      ) : (
+        <IconSpan color={color}>{icon}</IconSpan>
+      )}
+      {name}
+      <PlatformStatus
+        platformName={name}
+        activeDeploymentPlatforms={activeDeploymentPlatforms}
+        platformsWithData={platformsWithData}
+      />
+    </LegendText>
+  </div>
+)
+
+LegendItem.propTypes = {
+  name: PropTypes.string,
+  type: PropTypes.string,
+  color: PropTypes.string,
+  icon: PropTypes.node,
+  checked: PropTypes.bool,
+  disabled: PropTypes.bool,
+  platformsWithData: PropTypes.array,
+  activeDeploymentPlatforms: PropTypes.array,
+  onClick: PropTypes.func,
+}
+
 export const MapLegend = ({
   platforms = [],
   platformsWithData = [],
@@ -214,42 +265,69 @@ export const MapLegend = ({
   const uniquePlatforms = platforms.filter(
     (i, index) => names.indexOf(i.name) === index
   )
+  const movingPlatforms = uniquePlatforms.filter(platform =>
+    ["Jet", "Prop", "UAV", "Ships/Boats"].includes(platform.type)
+  )
+  const staticPlatforms = uniquePlatforms.filter(
+    platform => !["Jet", "Prop", "UAV", "Ships/Boats"].includes(platform.type)
+  )
+
   return (
     <LegendBox>
       <fieldset>
         <legend>Platforms</legend>
-        {uniquePlatforms.map(platform => (
-          <div key={platform.name}>
-            <input
-              type="checkbox"
-              checked={selectedPlatforms.includes(platform.name)}
-              disabled={
-                (selectedPlatforms.length === 1 &&
-                  selectedPlatforms.includes(platform.name)) ||
-                !platformsWithData.includes(platform.name)
-              }
-              onClick={() =>
-                selectedPlatforms.includes(platform.name)
-                  ? setSelectedPlatforms(
-                      selectedPlatforms.filter(i => i !== platform.name)
-                    )
-                  : setSelectedPlatforms([...selectedPlatforms, platform.name])
-              }
-            />
-            <LegendText checked={selectedPlatforms.includes(platform.name)}>
-              {["Jet", "Prop", "UAV", "Ships/Boats"].includes(platform.type) ? (
-                <LineIcon color="#1B9E77" size="text" />
-              ) : (
-                <CircleIcon color="#E8E845" size="extra-tiny" />
-              )}
-              {platform.name}
-              <PlatformStatus
-                platformName={platform.name}
-                activeDeploymentPlatforms={activeDeploymentPlatforms}
-                platformsWithData={platformsWithData}
-              />
-            </LegendText>
-          </div>
+        {movingPlatforms.length > 0 && <h4>Moving</h4>}
+        {movingPlatforms.map((platform, index) => (
+          <LegendItem
+            key={platform.name}
+            type="moving"
+            name={platform.name}
+            color={
+              index <= MOVING_PLATFORMS_COLORS.length
+                ? MOVING_PLATFORMS_COLORS[index]
+                : FALLBACK_COLOR
+            }
+            checked={selectedPlatforms.includes(platform.name)}
+            disabled={
+              (selectedPlatforms.length === 1 &&
+                selectedPlatforms.includes(platform.name)) ||
+              !platformsWithData.includes(platform.name)
+            }
+            onClick={() =>
+              selectedPlatforms.includes(platform.name)
+                ? setSelectedPlatforms(
+                    selectedPlatforms.filter(i => i !== platform.name)
+                  )
+                : setSelectedPlatforms([...selectedPlatforms, platform.name])
+            }
+            activeDeploymentPlatforms={activeDeploymentPlatforms}
+            platformsWithData={platformsWithData}
+          />
+        ))}
+        {staticPlatforms.length > 0 && <h4>Stationary</h4>}
+        {staticPlatforms.map(platform => (
+          <LegendItem
+            key={platform.name}
+            type="static"
+            name={platform.name}
+            color={STATIC_PLATFORMS?.find(i => i.name === platform.name)?.color}
+            icon={STATIC_PLATFORMS?.find(i => i.name === platform.name)?.icon}
+            checked={selectedPlatforms.includes(platform.name)}
+            disabled={
+              (selectedPlatforms.length === 1 &&
+                selectedPlatforms.includes(platform.name)) ||
+              !platformsWithData.includes(platform.name)
+            }
+            onClick={() =>
+              selectedPlatforms.includes(platform.name)
+                ? setSelectedPlatforms(
+                    selectedPlatforms.filter(i => i !== platform.name)
+                  )
+                : setSelectedPlatforms([...selectedPlatforms, platform.name])
+            }
+            activeDeploymentPlatforms={activeDeploymentPlatforms}
+            platformsWithData={platformsWithData}
+          />
         ))}
       </fieldset>
     </LegendBox>
@@ -314,8 +392,16 @@ const LegendText = styled.label`
   display: inline-block;
   background: transparent;
   border: none;
-  > svg {
+  & svg {
     margin: 0 8px;
+    vertical-align: middle;
+  }
+`
+
+const IconSpan = styled.span`
+  color: ${props => props.color};
+  & svg {
+    vertical-align: unset;
   }
 `
 
@@ -332,10 +418,9 @@ const LegendBox = styled.div`
   background-color: rgba(255, 255, 255, 0.6);
   > fieldset {
     border: 0px;
-    margin-bottom: 4px;
   }
   > fieldset > legend {
-    padding: 0 0 8px;
+    padding: 0 0 4px;
     font-family: "Titillium Web", sans-serif;
     color: ${colors.lightTheme.text};
     font-size: 1.1rem;
@@ -343,6 +428,12 @@ const LegendBox = styled.div`
   }
   & input {
     cursor: pointer;
+  }
+  & h4 {
+    font-weight: 600;
+    color: ${colors.lightTheme.text};
+    font-size: 0.8rem;
+    margin: 4px 0 2px;
   }
 `
 
