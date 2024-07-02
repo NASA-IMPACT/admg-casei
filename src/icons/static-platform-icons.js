@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import React from "react"
-import PropTypes from "prop-types"
 import { sizes } from "./utils"
 // All icons by
 // Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com

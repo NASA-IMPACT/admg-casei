@@ -3,7 +3,10 @@ import renderer, { act } from "react-test-renderer"
 
 import { MapLegend, PlatformStatus } from "../map"
 import { LineIcon } from "../../../icons"
-import { BalloonIcon, FieldSiteIcon } from "../../../icons/static-platform-icons"
+import {
+  BalloonIcon,
+  FieldSiteIcon,
+} from "../../../icons/static-platform-icons"
 
 jest.mock("react-tooltip", () => ({
   Tooltip: () => <div>Mocked tooltip</div>,
