@@ -6,7 +6,7 @@ import {
   FieldSurveyIcon,
   MooredBuoyIcon,
   PermanentLandSiteIcon,
-  PermanentWaterIcon,
+  PermanentWaterSiteIcon,
   VehicleIcon,
 } from "../icons/static-platform-icons"
 
@@ -28,17 +28,44 @@ export const STATIC_PLATFORMS = [
     name: "Permanent Land Site",
     color: "#FFFFD4",
     icon: <PermanentLandSiteIcon />,
+    mapIcon: "PermanentLandSiteIcon",
   },
-  { name: "Vehicle", color: "#FEE391", icon: <VehicleIcon /> },
-  { name: "Balloon Launch Site", color: "#FEC44F", icon: <BalloonIcon /> },
-  { name: "Field Site", color: "#EC7014", icon: <FieldSiteIcon /> },
-  { name: "Field Survey", color: "#EC7014", icon: <FieldSurveyIcon /> },
+  {
+    name: "Vehicle",
+    color: "#FEE391",
+    icon: <VehicleIcon />,
+    mapIcon: "VehicleIcon",
+  },
+  {
+    name: "Balloon Launch Site",
+    color: "#FEC44F",
+    icon: <BalloonIcon />,
+    mapIcon: "BalloonIcon",
+  },
+  {
+    name: "Field Site",
+    color: "#FE9929",
+    icon: <FieldSiteIcon />,
+    mapIcon: "FieldSiteIcon",
+  },
+  {
+    name: "Field Survey",
+    color: "#EC7014",
+    icon: <FieldSurveyIcon />,
+    mapIcon: "FieldSurveyIcon",
+  },
   {
     name: "Permanent Water Site",
-    color: "#EC7014",
-    icon: <PermanentWaterIcon />,
+    color: "#CC4C02",
+    icon: <PermanentWaterSiteIcon />,
+    mapIcon: "PermanentWaterSiteIcon",
   },
-  { name: "Moored Buoy", color: "#EC7014", icon: <MooredBuoyIcon /> },
+  {
+    name: "Moored Buoy",
+    color: "#8C2D04",
+    icon: <MooredBuoyIcon />,
+    mapIcon: "MooredBuoyIcon",
+  },
 ]
 
 export const flightPathColors = platforms =>
@@ -51,5 +78,15 @@ export const getLineColors = platforms => {
     ["get", "platform_name"],
     ...colors.flatMap(i => i),
     FALLBACK_COLOR,
+  ]
+}
+
+export const getStaticIcons = () => {
+  const icons = STATIC_PLATFORMS.map(i => [i.name, i.mapIcon])
+  return [
+    "match",
+    ["get", "platform_name"],
+    ...icons.flatMap(i => i),
+    "BalloonIcon", // fallback icon
   ]
 }

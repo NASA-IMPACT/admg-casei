@@ -17,6 +17,7 @@ import {
   MOVING_PLATFORMS_COLORS,
   STATIC_PLATFORMS,
   getLineColors,
+  getStaticIcons,
 } from "../../utils/platform-colors"
 
 export function DeploymentMap({
@@ -50,6 +51,7 @@ export function DeploymentMap({
   const lineColorsPaint = getLineColors(
     movingPlatforms.filter((i, index) => movingPlatforms.indexOf(i) === index)
   )
+  const iconImage = getStaticIcons()
 
   const [selectedPlatforms, setSelectedPlatforms] = useState(
     names
@@ -114,28 +116,24 @@ export function DeploymentMap({
           <DeploymentLayer
             config={{
               id: "static-locations",
-              type: "circle",
+              type: "symbol",
               source: "deployment",
-              paint: {
-                "circle-color": "#E8E845",
-                "circle-opacity": {
-                  base: 1.5,
-                  stops: [
-                    [10, 0.65],
-                    [14, 0.85],
-                  ],
-                },
-                "circle-radius": {
-                  base: 1.5,
-                  stops: [
-                    [10, 4],
-                    [16, 10],
-                    [20, 16],
-                  ],
-                },
-                "circle-stroke-width": 1,
-                "circle-stroke-opacity": 0.1,
-                "circle-stroke-color": "#E8E845",
+              layout: {
+                "icon-image": iconImage,
+                "icon-allow-overlap": true,
+                "icon-size": [
+                  "interpolate",
+                  ["exponential", 0.3],
+                  ["zoom"],
+                  0,
+                  0.1,
+                  12,
+                  0.6,
+                  18,
+                  1,
+                  22,
+                  1.5,
+                ],
               },
               filter: ["all", ["==", "$type", "Point"]],
             }}
@@ -204,7 +202,7 @@ DeploymentLayer.propTypes = {
   map: PropTypes.object,
   config: PropTypes.object,
   selectedDeployment: PropTypes.string,
-  selectedPlatforms: PropTypes.string,
+  selectedPlatforms: PropTypes.array,
   onLoad: PropTypes.func,
 }
 

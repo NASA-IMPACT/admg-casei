@@ -75,7 +75,7 @@ export const FieldSurveyIcon = ({ size = "extra-tiny" }) => (
   </svg>
 )
 
-export const PermanentWaterIcon = ({ size = "extra-tiny" }) => (
+export const PermanentWaterSiteIcon = ({ size = "extra-tiny" }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 576 512"
