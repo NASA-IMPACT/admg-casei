@@ -314,11 +314,13 @@ exports.createResolvers = ({ createResolvers }) => {
     doi: {
       cmr_data_formats: {
         resolve: source => {
+          if (!source.cmr_data_formats) return null
           // parse strings and log errors for arrays in string format
           return typeof source.cmr_data_formats === "string"
             ? source.cmr_data_formats &&
               !source.cmr_data_formats.includes("null") &&
-              source.cmr_data_formats.split("[")[1]
+              source.cmr_data_formats.includes("['") &&
+              source.cmr_data_formats.includes("']")
               ? source.cmr_data_formats
                   ?.split("[")[1]
                   .split("]")[0]
@@ -330,7 +332,7 @@ exports.createResolvers = ({ createResolvers }) => {
                   )
                   .filter(f => f !== "")
               : []
-            : source.cmr_data_formats.filter(f => f !== "")
+            : source.cmr_data_formats?.filter(f => f !== "")
         },
       },
       cmr_science_keywords: {
