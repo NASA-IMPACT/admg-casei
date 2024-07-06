@@ -18,6 +18,7 @@ import {
   STATIC_PLATFORMS,
   getLineColors,
   getStaticIcons,
+  getIconColors,
 } from "../../utils/platform-colors"
 
 export function DeploymentMap({
@@ -52,6 +53,7 @@ export function DeploymentMap({
     movingPlatforms.filter((i, index) => movingPlatforms.indexOf(i) === index)
   )
   const iconImage = getStaticIcons()
+  const iconColors = getIconColors()
 
   const [selectedPlatforms, setSelectedPlatforms] = useState(
     names
@@ -115,6 +117,36 @@ export function DeploymentMap({
           />
           <DeploymentLayer
             config={{
+              id: "bg-static-locations",
+              type: "circle",
+              source: "deployment",
+              paint: {
+                "circle-color": iconColors,
+                "circle-radius": [
+                  "interpolate",
+                  ["exponential", 0.5],
+                  ["zoom"],
+                  0,
+                  4,
+                  10,
+                  10,
+                  22,
+                  18,
+                ],
+                "circle-stroke-width": 1,
+                "circle-stroke-color": "#294060",
+              },
+              filter: ["all", ["==", "$type", "Point"]],
+            }}
+            selectedPlatforms={selectedPlatforms}
+            selectedDeployment={
+              selectedDeployment
+                ? replaceSlashes(selectedDeployment.longname)
+                : ""
+            }
+          />
+          <DeploymentLayer
+            config={{
               id: "static-locations",
               type: "symbol",
               source: "deployment",
@@ -126,13 +158,13 @@ export function DeploymentMap({
                   ["exponential", 0.3],
                   ["zoom"],
                   0,
-                  0.25,
-                  12,
+                  0.5,
+                  10,
                   0.75,
-                  18,
-                  1.25,
-                  22,
-                  1.75,
+                  16,
+                  1,
+                  20,
+                  1.125,
                 ],
               },
               filter: ["all", ["==", "$type", "Point"]],
@@ -413,7 +445,8 @@ const LegendBox = styled.div`
   margin-right: 5px;
   padding: 8px;
   color: ${colors.lightTheme.text};
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.75);
+  transition: all 0.24s ease-out;
   > fieldset {
     border: 0px;
   }
@@ -432,6 +465,9 @@ const LegendBox = styled.div`
     color: ${colors.lightTheme.text};
     font-size: 0.8rem;
     margin: 4px 0 2px;
+  }
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.95);
   }
 `
 

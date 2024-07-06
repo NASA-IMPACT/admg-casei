@@ -90,3 +90,13 @@ export const getStaticIcons = () => {
     "BalloonIcon", // fallback icon
   ]
 }
+
+export const getIconColors = () => {
+  const colors = STATIC_PLATFORMS.map(i => [i.name, i.color])
+  return [
+    "match",
+    ["get", "platform_name"],
+    ...colors.flatMap(i => i),
+    "#fff", // fallback color
+  ]
+}
