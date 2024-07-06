@@ -121,7 +121,7 @@ export function DeploymentMap({
               type: "circle",
               source: "deployment",
               paint: {
-                "circle-color": iconColors,
+                "circle-color": "#294060",
                 "circle-radius": [
                   "interpolate",
                   ["exponential", 0.5],
@@ -133,8 +133,8 @@ export function DeploymentMap({
                   22,
                   18,
                 ],
-                "circle-stroke-width": 1,
-                "circle-stroke-color": "#294060",
+                "circle-stroke-width": 0.75,
+                "circle-stroke-color": iconColors,
               },
               filter: ["all", ["==", "$type", "Point"]],
             }}
@@ -158,7 +158,7 @@ export function DeploymentMap({
                   ["exponential", 0.3],
                   ["zoom"],
                   0,
-                  0.5,
+                  0.25,
                   10,
                   0.75,
                   16,
@@ -419,19 +419,30 @@ PlatformStatus.propTypes = {
 const LegendText = styled.label`
   font-weight: ${props => (props.checked ? 600 : 400)};
   font-family: "Titillium Web", sans-serif;
-  display: inline-block;
+  display: inline-flex;
+  gap: 0.25rem;
+  margin-left: 0.5rem;
   background: transparent;
   border: none;
   & svg {
-    margin: 0 8px;
     vertical-align: middle;
   }
 `
 
 const IconSpan = styled.span`
   color: ${props => props.color};
+  background: #294060;
+  border: 0.5px solid;
+  border-color: ${props => props.color};
+  display: inline-flex;
+  height: 1.25rem;
+  width: 1.25rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 512px;
   & svg {
     vertical-align: unset;
+    font-weight: 600;
   }
 `
 
