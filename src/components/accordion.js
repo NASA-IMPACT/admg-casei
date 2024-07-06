@@ -22,6 +22,17 @@ export const RotatingContainer = styled.div`
   transform: ${({ isExpanded }) =>
     isExpanded ? "rotate(180deg)" : "rotate(0deg)"};
 `
+const LearnMoreLink = styled.label`
+  color: ${colors[NEGATIVE].linkText};
+  display: flex;
+  justify-content: flex-end;
+  & a {
+    display: flex;
+    align-items: center;
+    color: ${colors[NEGATIVE].linkText};
+    cursor: pointer;
+  }
+`
 
 export default function Accordion({ folds, id }) {
   const [indices, setIndices] = useState([])
@@ -59,6 +70,7 @@ export default function Accordion({ folds, id }) {
                 padding: 1rem;
                 text-transform: none;
                 font-weight: bold;
+                font-size: 1rem;
                 justify-content: space-between;
                 display: flex;
               }
@@ -77,8 +89,9 @@ export default function Accordion({ folds, id }) {
           <AccordionPanel
             css={`
                {
-                padding: 0.5rem 1rem;
+                padding: 1rem;
                 cursor: default;
+                background: rgba(235, 235, 248, 0.05);
               }
             `}
           >
@@ -144,25 +157,15 @@ export default function Accordion({ folds, id }) {
                 ))}
               </div>
             )}
-            <Label
-              id="accordion-link"
-              display="flex"
-              color={colors[NEGATIVE].linkText}
-            >
+            <LearnMoreLink id="accordion-link">
               <Link
                 to={`/instrument/${fold.shortname}`}
-                css={`
-                   {
-                    color: ${colors[NEGATIVE].linkText};
-                    cursor: pointer;
-                  }
-                `}
                 data-cy="accordion-link"
               >
                 Learn More
                 <ArrowIcon color={colors[NEGATIVE].linkText} />
               </Link>
-            </Label>
+            </LearnMoreLink>
           </AccordionPanel>
         </AccordionItem>
       ))}
