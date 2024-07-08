@@ -84,22 +84,32 @@ const FilterMenu = ({
           `}
         >
           <ListboxList data-cy="filter-options">
-            {options.map(o => (
-              <FilterItem
-                key={o.id}
-                value={o.id}
-                data-cy="filter-option"
-                selected={!!selectedFilterIds.includes(o.id)}
-              >
-                {o.shortname}
-                {selectedFilterIds.includes(o.id) && (
-                  <IconButton
-                    id="remove-filter"
-                    icon={<CloseIcon color={colors[NEGATIVE].text} />}
-                  />
-                )}
-              </FilterItem>
-            ))}
+            {options
+              .sort((a, b) => {
+                if (a.shortname < b.shortname) {
+                  return -1
+                }
+                if (a.shortname > b.shortname) {
+                  return 1
+                }
+                return 0
+              })
+              .map(o => (
+                <FilterItem
+                  key={o.id}
+                  value={o.id}
+                  data-cy="filter-option"
+                  selected={!!selectedFilterIds.includes(o.id)}
+                >
+                  {o.shortname}
+                  {selectedFilterIds.includes(o.id) && (
+                    <IconButton
+                      id="remove-filter"
+                      icon={<CloseIcon color={colors[NEGATIVE].text} />}
+                    />
+                  )}
+                </FilterItem>
+              ))}
           </ListboxList>
         </ListboxPopover>
       </ListboxInput>
