@@ -25,7 +25,7 @@ export const RotatingContainer = styled.div`
 const LearnMoreLink = styled.label`
   color: ${colors[NEGATIVE].linkText};
   display: flex;
-  justify-content: flex-end;
+  margin-left: 2rem;
   & a {
     display: flex;
     align-items: center;
@@ -89,7 +89,7 @@ export default function Accordion({ folds, id }) {
           <AccordionPanel
             css={`
                {
-                padding: 1rem;
+                padding: 1.5rem 1rem;
                 cursor: default;
                 background: rgba(235, 235, 248, 0.05);
               }
@@ -145,7 +145,7 @@ export default function Accordion({ folds, id }) {
               <div
                 css={`
                    {
-                    margin: 3rem 0;
+                    margin: 2rem 0;
                   }
                 `}
               >
