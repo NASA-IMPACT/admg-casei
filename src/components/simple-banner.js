@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 
 import { CloseIcon } from "../icons"
 import { IconButton } from "./button"
-import { POSITIVE } from "../utils/constants"
+import { POSITIVE, NEGATIVE } from "../utils/constants"
 import { colors } from "../theme"
 
 const SimpleBanner = () => {
@@ -25,7 +25,7 @@ const SimpleBanner = () => {
       <div
         css={`
           position: relative;
-          background: #ebba33;
+          background: ${colors[NEGATIVE].linkText};
           color: ${colors[POSITIVE].text};
           opacity: 0.95;
           width: 100%;
@@ -39,7 +39,7 @@ const SimpleBanner = () => {
         `}
       >
         <div>
-          <span>{`Please join us online 23-24 April for the 2024 NASA Airborne & Field Data Workshop! For more information and to register (free), click `}</span>
+          <span>{`July update: Please note that session recordings from the 2024 Airborne & Field Data Workshop are now available`}</span>
           <a
             target="_blank"
             rel="noopener noreferrer"
