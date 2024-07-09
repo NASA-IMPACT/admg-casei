@@ -23,13 +23,14 @@ const Footer = ({ shortname }) => {
     <footer
       css={`
         margin-top: 5rem;
+        padding-bottom: 2rem;
         background-color: ${colors[NEGATIVE].background};
       `}
       data-cy="page-footer"
     >
       <div
         css={`
-          margin: 5rem auto;
+          margin: 5rem auto 2rem;
           max-width: ${layout.maxWidth};
           padding: 2rem ${layout.pageMargin};
           flex-shrink: 0;

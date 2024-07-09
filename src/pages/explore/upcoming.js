@@ -7,6 +7,13 @@ import ExternalLink from "../../components/external-link"
 import { colors } from "../../theme"
 import { NEGATIVE } from "../../utils/constants"
 import { ArrowIcon } from "../../icons"
+import Layout, {
+  PageBody,
+  SectionContent,
+  Paragraph,
+  Section,
+} from "../../components/layout"
+import SEO from "../../components/seo"
 
 const Loader = styled.div`
   display: inline-block;
@@ -93,7 +100,7 @@ const Loader = styled.div`
   }
 `
 
-const Section = ({ title, data }) => {
+const DataSection = ({ title, data }) => {
   return (
     <div
       css={`
@@ -153,83 +160,79 @@ export default function Upcoming() {
   }, [])
 
   return (
-    <div
-      css={`
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        padding: 2rem 4rem;
-      `}
-    >
-      <Link
-        to={"/explore/campaigns"}
-        css={`
-           {
-            color: ${colors[NEGATIVE].linkText};
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            margin-top: 2rem;
-          }
-        `}
-        data-cy="back-link"
-      >
-        <ArrowIcon color={colors[NEGATIVE].linkText} direction="left" />
-        Back to Explore
-      </Link>
-      <h1>Coming Soon to CASEI</h1>
-      <div
-        css={`
-          margin-bottom: 2rem;
-        `}
-      >
-        {
-          " The lists below show Campaigns,\
-            Platforms, and Instruments currently undergoing ADMG's\
-            CASEI metadata curation and vetting process. Once approved,\
-            the items below will be available on this interface. If you'd like to\
-            request a higher priority for one of these (or another) Campaign,\
-            Platform, or Instrument, please contact "
-        }
-        <ExternalLink
-          url="https://impact.earthdata.nasa.gov/casei/contact/"
-          label="ADMG"
-          id=""
-        />
-        {"."}
-      </div>
-      {query ? (
-        <>
-          {contentTypes.map((props, idx) => (
-            <Section {...props} key={idx} />
-          ))}
-        </>
-      ) : isLoading ? (
-        <div
+    <Layout>
+      <SEO title="Coming Soon" lang="en" />
+      <PageBody>
+        <Link
+          to={"/explore/campaigns"}
           css={`
-            display: flex;
-            flex-direction: column;
-            flex: 1;
-            width: 100%;
-            height: 100%;
-            align-items: center;
-            justify-content: center;
+             {
+              color: ${colors[NEGATIVE].linkText};
+              cursor: pointer;
+              display: flex;
+              align-items: center;
+              margin-top: 2rem;
+            }
           `}
+          data-cy="back-link"
         >
-          <Loader>
-            {times(8, idx => (
-              <div key={idx + "_loader_point"} />
-            ))}
-          </Loader>
-        </div>
-      ) : (
-        <></>
-      )}
-    </div>
+          <ArrowIcon color={colors[NEGATIVE].linkText} direction="left" />
+          Back to Explore
+        </Link>
+        <h1>Coming Soon to CASEI</h1>
+        <Section id="coming-soon-content">
+          <SectionContent>
+            <Paragraph>
+              The lists below show Campaigns, Platforms, and Instruments
+              currently undergoing ADMG&apos;s CASEI metadata curation and
+              vetting process. Once approved, the items below will be available
+              on this interface. If you&apos;d like to request a higher priority
+              for one of these (or another) Campaign, Platform, or Instrument,
+              please contact{" "}
+              <ExternalLink
+                url="https://impact.earthdata.nasa.gov/casei/contact/"
+                label="ADMG"
+                id=""
+              />
+              .
+            </Paragraph>
+          </SectionContent>
+          <SectionContent>
+            {query ? (
+              <>
+                {contentTypes.map((props, idx) => (
+                  <DataSection {...props} key={idx} />
+                ))}
+              </>
+            ) : isLoading ? (
+              <div
+                css={`
+                  display: flex;
+                  flex-direction: column;
+                  flex: 1;
+                  width: 100%;
+                  height: 100%;
+                  align-items: center;
+                  justify-content: center;
+                `}
+              >
+                <Loader>
+                  {times(8, idx => (
+                    <div key={idx + "_loader_point"} />
+                  ))}
+                </Loader>
+              </div>
+            ) : (
+              <>No metadata in review.</>
+            )}
+          </SectionContent>
+        </Section>
+      </PageBody>
+    </Layout>
   )
 }
 
-Section.propTypes = {
+DataSection.propTypes = {
   title: PropTypes.string.isRequired,
   data: PropTypes.any,
 }
