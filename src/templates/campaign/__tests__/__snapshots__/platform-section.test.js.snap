@@ -181,7 +181,7 @@ exports[`Platform Section displays content 1`] = `
               </button>
               <div
                 aria-labelledby="button---1"
-                className="accordion___StyledAccordionPanel-sc-1dzvn26-4 fmEtpI"
+                className="accordion___StyledAccordionPanel-sc-1dzvn26-4 kArqvk"
                 data-reach-accordion-panel=""
                 data-state="collapsed"
                 hidden={true}
@@ -198,7 +198,7 @@ exports[`Platform Section displays content 1`] = `
                   />
                 </div>
                 <label
-                  className="accordion__LearnMoreLink-sc-1dzvn26-1 iwwSoJ"
+                  className="accordion__LearnMoreLink-sc-1dzvn26-1 hTfybq"
                   id="accordion-link"
                 >
                   <a
@@ -368,7 +368,7 @@ exports[`Platform Section displays content 1`] = `
               </button>
               <div
                 aria-labelledby="button---1"
-                className="accordion___StyledAccordionPanel-sc-1dzvn26-4 fmEtpI"
+                className="accordion___StyledAccordionPanel-sc-1dzvn26-4 kArqvk"
                 data-reach-accordion-panel=""
                 data-state="collapsed"
                 hidden={true}
@@ -385,7 +385,7 @@ exports[`Platform Section displays content 1`] = `
                   />
                 </div>
                 <label
-                  className="accordion__LearnMoreLink-sc-1dzvn26-1 iwwSoJ"
+                  className="accordion__LearnMoreLink-sc-1dzvn26-1 hTfybq"
                   id="accordion-link"
                 >
                   <a
