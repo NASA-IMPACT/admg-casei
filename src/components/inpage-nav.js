@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { POSITIVE } from "../utils/constants"
+import { FEEDBACK_FORM_URL, POSITIVE } from "../utils/constants"
 import { colors, breakpoints } from "../theme"
 import Button from "../components/button"
 import StickyBanner from "./sticky-banner"
@@ -107,7 +107,7 @@ const InpageNav = ({ shortname, items }) => {
           {
             <Button
               action={() => {
-                window.feedback.showForm()
+                window.open(FEEDBACK_FORM_URL, "_blank")
               }}
               mode={POSITIVE}
             >

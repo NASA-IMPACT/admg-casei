@@ -2,7 +2,11 @@ import React from "react"
 import renderer, { act } from "react-test-renderer"
 
 import { MapLegend, PlatformStatus } from "../map"
-import { LineIcon, CircleIcon } from "../../../icons"
+import { LineIcon } from "../../../icons"
+import {
+  BalloonIcon,
+  FieldSiteIcon,
+} from "../../../icons/static-platform-icons"
 
 jest.mock("react-tooltip", () => ({
   Tooltip: () => <div>Mocked tooltip</div>,
@@ -15,10 +19,10 @@ describe("MapLegend", () => {
       <MapLegend
         platforms={[
           { name: "Falcon", type: "Jet" },
-          { name: "Campaign FS", type: "static" },
-          { name: "Campaign FS", type: "static" },
+          { name: "Field Site", type: "static" },
+          { name: "Field Site", type: "static" },
         ]}
-        platformsWithData={["Falcon", "Campaign FS"]}
+        platformsWithData={["Falcon", "Field Site"]}
         selectedPlatforms={[]}
         setSelectedPlatforms={fn}
       />
@@ -32,7 +36,7 @@ describe("MapLegend", () => {
     act(() => b1.props.onClick())
     expect(fn).toHaveBeenCalledTimes(1)
     expect(instance.findByType(LineIcon).props.size).toBe("text")
-    expect(instance.findByType(CircleIcon).props.size).toBe("extra-tiny")
+    expect(instance.findByType(FieldSiteIcon)).toBeTruthy()
   })
   it("render with one option selected", () => {
     const fn = jest.fn()
@@ -41,10 +45,10 @@ describe("MapLegend", () => {
         platforms={[
           { name: "Falcon", type: "Jet" },
           { name: "Falcon", type: "Jet" },
-          { name: "Campaign FS", type: "static" },
+          { name: "Balloon Launch Site", type: "static" },
         ]}
         selectedPlatforms={["Falcon"]}
-        platformsWithData={["Falcon", "Campaign FS"]}
+        platformsWithData={["Falcon", "Balloon Launch Site"]}
         setSelectedPlatforms={fn}
       />
     )
@@ -57,6 +61,7 @@ describe("MapLegend", () => {
     expect(fn).toHaveBeenCalledTimes(1)
     act(() => b2.props.onClick())
     expect(fn).toHaveBeenCalledTimes(2)
+    expect(instance.findByType(BalloonIcon)).toBeTruthy()
   })
 })
 

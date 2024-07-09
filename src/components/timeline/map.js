@@ -7,11 +7,19 @@ import Map from "../map"
 import Source from "../map/source"
 import Layer from "../map/layer"
 import { getUniquePlatforms } from "../../utils/get-unique-platforms"
-import { LineIcon, CircleIcon } from "../../icons"
+import { LineIcon } from "../../icons"
 import { mapLayerFilter } from "../../utils/filter-utils"
 import { colors } from "../../theme"
 import { replaceSlashes } from "../../utils/helpers"
 import { usePlatformStatus } from "../../utils/use-platform-status"
+import {
+  FALLBACK_COLOR,
+  MOVING_PLATFORMS_COLORS,
+  STATIC_PLATFORMS,
+  getLineColors,
+  getStaticIcons,
+  getIconColors,
+} from "../../utils/platform-colors"
 
 export function DeploymentMap({
   geojson,
@@ -35,6 +43,18 @@ export function DeploymentMap({
   const platformsWithData = geojson.features.map(
     f => f.properties.platform_name
   )
+  let movingPlatforms = platforms
+    .filter(platform =>
+      ["Jet", "Prop", "UAV", "Ships/Boats"].includes(platform.type)
+    )
+    .map(platform => platform.name)
+
+  const lineColorsPaint = getLineColors(
+    movingPlatforms.filter((i, index) => movingPlatforms.indexOf(i) === index)
+  )
+  const iconImage = getStaticIcons()
+  const iconColors = getIconColors()
+
   const [selectedPlatforms, setSelectedPlatforms] = useState(
     names
       .filter((name, index) => names.indexOf(name) === index)
@@ -44,7 +64,7 @@ export function DeploymentMap({
   return (
     <Map
       height={500}
-      basemap="mapbox://styles/mapbox/dark-v10"
+      basemap="mapbox://styles/devseed/clx25ggbv076o01ql8k8m03k8"
       showControls={true}
     >
       {geojson && (
@@ -61,9 +81,29 @@ export function DeploymentMap({
               type: "line",
               source: "deployment",
               paint: {
-                "line-color": "#1B9E77",
-                "line-width": 2,
-                "line-opacity": 0.9,
+                "line-color": lineColorsPaint,
+                "line-width": [
+                  "interpolate",
+                  ["linear"],
+                  ["zoom"],
+                  0,
+                  1,
+                  10,
+                  2,
+                  22,
+                  6,
+                ],
+                "line-opacity": [
+                  "interpolate",
+                  ["linear"],
+                  ["zoom"],
+                  0,
+                  0.25,
+                  10,
+                  0.5,
+                  22,
+                  1,
+                ],
               },
               visible: true,
             }}
@@ -77,29 +117,55 @@ export function DeploymentMap({
           />
           <DeploymentLayer
             config={{
-              id: "static-locations",
+              id: "bg-static-locations",
               type: "circle",
               source: "deployment",
               paint: {
-                "circle-color": "#E8E845",
-                "circle-opacity": {
-                  base: 1.5,
-                  stops: [
-                    [10, 0.65],
-                    [14, 0.85],
-                  ],
-                },
-                "circle-radius": {
-                  base: 1.5,
-                  stops: [
-                    [10, 4],
-                    [16, 10],
-                    [20, 16],
-                  ],
-                },
-                "circle-stroke-width": 1,
-                "circle-stroke-opacity": 0.1,
-                "circle-stroke-color": "#E8E845",
+                "circle-color": "#294060",
+                "circle-radius": [
+                  "interpolate",
+                  ["exponential", 0.5],
+                  ["zoom"],
+                  0,
+                  4,
+                  10,
+                  10,
+                  22,
+                  18,
+                ],
+                "circle-stroke-width": 0.75,
+                "circle-stroke-color": iconColors,
+              },
+              filter: ["all", ["==", "$type", "Point"]],
+            }}
+            selectedPlatforms={selectedPlatforms}
+            selectedDeployment={
+              selectedDeployment
+                ? replaceSlashes(selectedDeployment.longname)
+                : ""
+            }
+          />
+          <DeploymentLayer
+            config={{
+              id: "static-locations",
+              type: "symbol",
+              source: "deployment",
+              layout: {
+                "icon-image": iconImage,
+                "icon-allow-overlap": true,
+                "icon-size": [
+                  "interpolate",
+                  ["exponential", 0.3],
+                  ["zoom"],
+                  0,
+                  0.25,
+                  10,
+                  0.75,
+                  16,
+                  1,
+                  20,
+                  1.125,
+                ],
               },
               filter: ["all", ["==", "$type", "Point"]],
             }}
@@ -168,8 +234,54 @@ DeploymentLayer.propTypes = {
   map: PropTypes.object,
   config: PropTypes.object,
   selectedDeployment: PropTypes.string,
-  selectedPlatforms: PropTypes.string,
+  selectedPlatforms: PropTypes.array,
   onLoad: PropTypes.func,
+}
+
+export const LegendItem = ({
+  name,
+  type,
+  color,
+  icon,
+  checked,
+  disabled,
+  onClick,
+  activeDeploymentPlatforms,
+  platformsWithData,
+}) => (
+  <div key={name}>
+    <input
+      type="checkbox"
+      checked={checked}
+      disabled={disabled}
+      onClick={() => onClick()}
+    />
+    <LegendText checked={checked}>
+      {type === "moving" ? (
+        <LineIcon color={color} size="text" />
+      ) : (
+        <IconSpan color={color}>{icon}</IconSpan>
+      )}
+      {name}
+      <PlatformStatus
+        platformName={name}
+        activeDeploymentPlatforms={activeDeploymentPlatforms}
+        platformsWithData={platformsWithData}
+      />
+    </LegendText>
+  </div>
+)
+
+LegendItem.propTypes = {
+  name: PropTypes.string,
+  type: PropTypes.string,
+  color: PropTypes.string,
+  icon: PropTypes.node,
+  checked: PropTypes.bool,
+  disabled: PropTypes.bool,
+  platformsWithData: PropTypes.array,
+  activeDeploymentPlatforms: PropTypes.array,
+  onClick: PropTypes.func,
 }
 
 export const MapLegend = ({
@@ -183,42 +295,69 @@ export const MapLegend = ({
   const uniquePlatforms = platforms.filter(
     (i, index) => names.indexOf(i.name) === index
   )
+  const movingPlatforms = uniquePlatforms.filter(platform =>
+    ["Jet", "Prop", "UAV", "Ships/Boats"].includes(platform.type)
+  )
+  const staticPlatforms = uniquePlatforms.filter(
+    platform => !["Jet", "Prop", "UAV", "Ships/Boats"].includes(platform.type)
+  )
+
   return (
     <LegendBox>
       <fieldset>
         <legend>Platforms</legend>
-        {uniquePlatforms.map(platform => (
-          <div key={platform.name}>
-            <input
-              type="checkbox"
-              checked={selectedPlatforms.includes(platform.name)}
-              disabled={
-                (selectedPlatforms.length === 1 &&
-                  selectedPlatforms.includes(platform.name)) ||
-                !platformsWithData.includes(platform.name)
-              }
-              onClick={() =>
-                selectedPlatforms.includes(platform.name)
-                  ? setSelectedPlatforms(
-                      selectedPlatforms.filter(i => i !== platform.name)
-                    )
-                  : setSelectedPlatforms([...selectedPlatforms, platform.name])
-              }
-            />
-            <LegendText checked={selectedPlatforms.includes(platform.name)}>
-              {["Jet", "Prop", "UAV", "Ships/Boats"].includes(platform.type) ? (
-                <LineIcon color="#1B9E77" size="text" />
-              ) : (
-                <CircleIcon color="#E8E845" size="extra-tiny" />
-              )}
-              {platform.name}
-              <PlatformStatus
-                platformName={platform.name}
-                activeDeploymentPlatforms={activeDeploymentPlatforms}
-                platformsWithData={platformsWithData}
-              />
-            </LegendText>
-          </div>
+        {movingPlatforms.length > 0 && <h4>Moving</h4>}
+        {movingPlatforms.map((platform, index) => (
+          <LegendItem
+            key={platform.name}
+            type="moving"
+            name={platform.name}
+            color={
+              index <= MOVING_PLATFORMS_COLORS.length
+                ? MOVING_PLATFORMS_COLORS[index]
+                : FALLBACK_COLOR
+            }
+            checked={selectedPlatforms.includes(platform.name)}
+            disabled={
+              (selectedPlatforms.length === 1 &&
+                selectedPlatforms.includes(platform.name)) ||
+              !platformsWithData.includes(platform.name)
+            }
+            onClick={() =>
+              selectedPlatforms.includes(platform.name)
+                ? setSelectedPlatforms(
+                    selectedPlatforms.filter(i => i !== platform.name)
+                  )
+                : setSelectedPlatforms([...selectedPlatforms, platform.name])
+            }
+            activeDeploymentPlatforms={activeDeploymentPlatforms}
+            platformsWithData={platformsWithData}
+          />
+        ))}
+        {staticPlatforms.length > 0 && <h4>Stationary</h4>}
+        {staticPlatforms.map(platform => (
+          <LegendItem
+            key={platform.name}
+            type="static"
+            name={platform.name}
+            color={STATIC_PLATFORMS?.find(i => i.name === platform.name)?.color}
+            icon={STATIC_PLATFORMS?.find(i => i.name === platform.name)?.icon}
+            checked={selectedPlatforms.includes(platform.name)}
+            disabled={
+              (selectedPlatforms.length === 1 &&
+                selectedPlatforms.includes(platform.name)) ||
+              !platformsWithData.includes(platform.name)
+            }
+            onClick={() =>
+              selectedPlatforms.includes(platform.name)
+                ? setSelectedPlatforms(
+                    selectedPlatforms.filter(i => i !== platform.name)
+                  )
+                : setSelectedPlatforms([...selectedPlatforms, platform.name])
+            }
+            activeDeploymentPlatforms={activeDeploymentPlatforms}
+            platformsWithData={platformsWithData}
+          />
         ))}
       </fieldset>
     </LegendBox>
@@ -280,11 +419,30 @@ PlatformStatus.propTypes = {
 const LegendText = styled.label`
   font-weight: ${props => (props.checked ? 600 : 400)};
   font-family: "Titillium Web", sans-serif;
-  display: inline-block;
+  display: inline-flex;
+  gap: 0.25rem;
+  margin-left: 0.5rem;
   background: transparent;
   border: none;
-  > svg {
-    margin: 0 8px;
+  & svg {
+    vertical-align: middle;
+  }
+`
+
+const IconSpan = styled.span`
+  color: ${props => props.color};
+  background: #294060;
+  border: 0.5px solid;
+  border-color: ${props => props.color};
+  display: inline-flex;
+  height: 1.25rem;
+  width: 1.25rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 512px;
+  & svg {
+    vertical-align: unset;
+    font-weight: 600;
   }
 `
 
@@ -298,13 +456,13 @@ const LegendBox = styled.div`
   margin-right: 5px;
   padding: 8px;
   color: ${colors.lightTheme.text};
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.75);
+  transition: all 0.24s ease-out;
   > fieldset {
     border: 0px;
-    margin-bottom: 4px;
   }
   > fieldset > legend {
-    padding: 0 0 8px;
+    padding: 0 0 4px;
     font-family: "Titillium Web", sans-serif;
     color: ${colors.lightTheme.text};
     font-size: 1.1rem;
@@ -312,6 +470,15 @@ const LegendBox = styled.div`
   }
   & input {
     cursor: pointer;
+  }
+  & h4 {
+    font-weight: 600;
+    color: ${colors.lightTheme.text};
+    font-size: 0.8rem;
+    margin: 4px 0 2px;
+  }
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.95);
   }
 `
 
