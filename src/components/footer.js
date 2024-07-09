@@ -86,6 +86,17 @@ const Footer = ({ shortname }) => {
                 Instruments
               </Link>
             </li>
+            <li
+              css={`
+                padding-top: 0.5rem;
+                font-size: 0.875rem;
+                opacity: 0.75;
+              `}
+            >
+              <Link to="/explore/upcoming" data-cy="footer-coming-soon-link">
+                Coming Soon
+              </Link>
+            </li>
           </Ul>
         </div>
 
