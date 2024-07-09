@@ -10,13 +10,13 @@ const SimpleBanner = () => {
 
   // This runs when the page is loaded.
   useEffect(() => {
-    if (localStorage.getItem("has_seen_workshop")) {
+    if (localStorage.getItem("has_seen_workshop_recording_banner")) {
       setHasSeenNotice(true)
     }
   }, [])
 
   const markWorkshopNoticeSeen = () => {
-    localStorage.setItem("has_seen_workshop", "true")
+    localStorage.setItem("has_seen_workshop_recording_banner", "true")
     setHasSeenNotice(true)
   }
 
