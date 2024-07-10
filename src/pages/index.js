@@ -10,11 +10,10 @@ import Label from "../components/label"
 import Button from "../components/button"
 import FocusAreaGallery from "../components/focus-area-gallery"
 import { RegionCarousel } from "../components/home/region-carousel"
-import { GeophysicsGrid } from "../components/home/geophysics-grid"
-import { InstrumentsGrid } from "../components/home/instruments-grid"
 import { ArrowIcon } from "../icons"
 import { NEGATIVE } from "../utils/constants"
 import { colors } from "../theme"
+import { CampaignsTimeline } from "../components/home/campaigns-timeline"
 
 const Home = ({ data }) => {
   return (
@@ -101,29 +100,14 @@ const Home = ({ data }) => {
             <RegionCarousel regions={data.allGeographicalRegion.nodes} />
           </SectionContent>
         </Section>
-
-        <Section id="instruments" isSpaced>
+        <Section id="campaigns-timeline" isSpaced>
           <SectionHeader
-            tagline="explore instruments by"
-            headline="Measurement Type"
-            id="instruments"
+            headline="Campaigns Timeline"
+            description="View campaigns over time"
+            id="campaigns-timeline"
           />
           <SectionContent>
-            <InstrumentsGrid measurementTypes={data.allMeasurementType.nodes} />
-          </SectionContent>
-        </Section>
-
-        <Section id="geophysical-concepts" isSpaced>
-          <SectionHeader
-            tagline="explore campaigns by"
-            headline="Geophysical Concepts"
-            description="NASA investigates a myriad of factors that comprise Earth’s properties, systems, and processes."
-            id="geophysical-concepts"
-          />
-          <SectionContent>
-            <GeophysicsGrid
-              geophysicalConcepts={data.allGeophysicalConcept.nodes}
-            />
+            <CampaignsTimeline />
           </SectionContent>
         </Section>
         <Section id="feedback" isSpaced>
