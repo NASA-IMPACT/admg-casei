@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
-import { colors } from "../theme"
+import { breakpoints, colors } from "../theme"
 import { POSITIVE, NEGATIVE } from "../utils/constants"
 
 const ListLink = ({ to, children, mode }) => (
@@ -62,6 +62,10 @@ const Nav = ({ mode }) => {
           justify-content: flex-end;
           margin: 0;
           list-style: none;
+
+          @media screen and (max-width: ${breakpoints.sm}) {
+            font-size: 14px;
+          }
         `}
       >
         <ListLink to="/explore/campaigns" mode={mode}>

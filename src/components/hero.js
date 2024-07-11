@@ -5,7 +5,7 @@ import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
 
 import { NEGATIVE, POSITIVE } from "../utils/constants"
-import { colors, layout } from "../theme"
+import { breakpoints, colors, layout } from "../theme"
 import DateList from "./date-list-hover"
 import { ArrowIcon } from "../icons"
 import { TypeAhead } from "../components/typeahead-box"
@@ -164,7 +164,15 @@ export default function Hero({
             </p>
           )}
 
-          <h1>{title}</h1>
+          <h1
+            css={`
+              @media screen and (max-width: ${breakpoints.sm}) {
+                font-size: 3rem;
+              }
+            `}
+          >
+            {title}
+          </h1>
         </div>
 
         <div

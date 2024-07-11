@@ -10,7 +10,7 @@ import Map from "../../components/map"
 import BboxLayer from "../../components/map/bbox-layer"
 import GeoJsonSource from "../../components/map/geojson-source"
 import { ArrowIcon, CampaignIcon } from "../../icons"
-import { colors, layout } from "../../theme"
+import { breakpoints, colors, layout } from "../../theme"
 import { useContainerDimensions } from "../../utils/use-container-dimensions"
 import { NEGATIVE } from "../../utils/constants"
 
@@ -119,7 +119,16 @@ const CampaignHero = ({
             ) : (
               <CampaignIcon />
             )}
-            <h1 data-cy="campaign-hero-header">{longname || shortname}</h1>
+            <h1
+              css={`
+                @media screen and (max-width: ${breakpoints.sm}) {
+                  font-size: 2.5rem;
+                }
+              `}
+              data-cy="campaign-hero-header"
+            >
+              {longname || shortname}
+            </h1>
             <p>{focusListing}</p>
           </div>
           <HeroStats

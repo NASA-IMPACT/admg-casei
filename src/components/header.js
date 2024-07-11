@@ -39,6 +39,7 @@ const Header = ({ shortname, children, mode }) => {
               padding: 0.25rem ${layout.smallPageMargin};
             }
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
           `}
