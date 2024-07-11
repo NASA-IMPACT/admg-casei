@@ -13,6 +13,7 @@ import {
   ComboboxOptionText,
 } from "@reach/combobox"
 import styled from "styled-components"
+import { Tooltip } from "react-tooltip"
 
 const FilterOption = styled(ComboboxOption)`
   [data-reach-combobox-option][aria-selected="true"] {
@@ -97,6 +98,10 @@ const DropdownByTextInput = ({
           css={`
             display: flex;
             align-items: center;
+            .react-tooltip__show {
+              z-index: 100;
+              opacity: 100% !important;
+            }
           `}
         >
           <span
@@ -116,19 +121,27 @@ const DropdownByTextInput = ({
             style={{ border: "unset" }}
           />
           {hasLinkOut && !term && (
-            <a
-              href={
-                "https://gcmd.earthdata.nasa.gov/KeywordViewer/scheme/all/e9f67a66-e9fc-435c-b720-ae32a2c3d8f5?gtm_keyword=EARTH%20SCIENCE&gtm_scheme=Earth%20Science "
-              }
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Link to GCMD keywords"
-              css={`
-                margin: 10px 10px 4px 10px;
-              `}
-            >
-              <InformationIcon color={colors[NEGATIVE].text} />
-            </a>
+            <>
+              <a
+                href={
+                  "https://gcmd.earthdata.nasa.gov/KeywordViewer/scheme/all/e9f67a66-e9fc-435c-b720-ae32a2c3d8f5?gtm_keyword=EARTH%20SCIENCE&gtm_scheme=Earth%20Science "
+                }
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Link to GCMD keywords"
+                css={`
+                  margin: 10px 10px 4px 10px;
+                `}
+                data-tooltip-id="GCMD-link"
+              >
+                <InformationIcon color={colors[NEGATIVE].text} />
+              </a>
+              <Tooltip
+                id="GCMD-link"
+                content="Variable filtering capacity in CASEI is based on the GCMD Science Keywords"
+                place="bottom"
+              />
+            </>
           )}
         </span>
 
