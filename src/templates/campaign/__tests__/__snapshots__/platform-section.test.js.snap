@@ -131,7 +131,7 @@ exports[`Platform Section displays content 1`] = `
             </div>
           </div>
           <div
-            className="accordion___StyledReachAccordion-sc-1dzvn26-1 fiUaUQ"
+            className="accordion___StyledReachAccordion-sc-1dzvn26-2 MQLQP"
             data-cy="instrument-accordion"
             data-reach-accordion=""
           >
@@ -142,7 +142,7 @@ exports[`Platform Section displays content 1`] = `
               <button
                 aria-controls="panel---1"
                 aria-expanded={false}
-                className="accordion___StyledAccordionButton-sc-1dzvn26-2 ihAXTv"
+                className="accordion___StyledAccordionButton-sc-1dzvn26-3 hLJNUX"
                 data-cy="accordion-button"
                 data-reach-accordion-button=""
                 data-state="collapsed"
@@ -181,7 +181,7 @@ exports[`Platform Section displays content 1`] = `
               </button>
               <div
                 aria-labelledby="button---1"
-                className="accordion___StyledAccordionPanel-sc-1dzvn26-3 ctpjXv"
+                className="accordion___StyledAccordionPanel-sc-1dzvn26-4 kArqvk"
                 data-reach-accordion-panel=""
                 data-state="collapsed"
                 hidden={true}
@@ -189,20 +189,19 @@ exports[`Platform Section displays content 1`] = `
                 role="region"
               >
                 <div
-                  className="accordion___StyledDiv-sc-1dzvn26-4 bgnPyw"
+                  className="accordion___StyledDiv-sc-1dzvn26-5 eTJAMp"
                   data-cy="instrument-accordion-content"
                 >
                   <div
-                    className="accordion___StyledDiv3-sc-1dzvn26-7 hRjfzT"
+                    className="accordion___StyledDiv3-sc-1dzvn26-8 jCeKDA"
                     data-cy="instrument-accordion-image-description"
                   />
                 </div>
                 <label
-                  className="label___StyledLabel-sc-b3994k-0 jmRbyG"
-                  data-cy="accordion-link-label"
+                  className="accordion__LearnMoreLink-sc-1dzvn26-1 hTfybq"
+                  id="accordion-link"
                 >
                   <a
-                    className="accordion___StyledLink-sc-1dzvn26-9 bIlZXf"
                     data-cy="accordion-link"
                     href="/instrument/CAR"
                   >
@@ -319,7 +318,7 @@ exports[`Platform Section displays content 1`] = `
             </div>
           </div>
           <div
-            className="accordion___StyledReachAccordion-sc-1dzvn26-1 fiUaUQ"
+            className="accordion___StyledReachAccordion-sc-1dzvn26-2 MQLQP"
             data-cy="instrument-accordion"
             data-reach-accordion=""
           >
@@ -330,7 +329,7 @@ exports[`Platform Section displays content 1`] = `
               <button
                 aria-controls="panel---1"
                 aria-expanded={false}
-                className="accordion___StyledAccordionButton-sc-1dzvn26-2 ihAXTv"
+                className="accordion___StyledAccordionButton-sc-1dzvn26-3 hLJNUX"
                 data-cy="accordion-button"
                 data-reach-accordion-button=""
                 data-state="collapsed"
@@ -369,7 +368,7 @@ exports[`Platform Section displays content 1`] = `
               </button>
               <div
                 aria-labelledby="button---1"
-                className="accordion___StyledAccordionPanel-sc-1dzvn26-3 ctpjXv"
+                className="accordion___StyledAccordionPanel-sc-1dzvn26-4 kArqvk"
                 data-reach-accordion-panel=""
                 data-state="collapsed"
                 hidden={true}
@@ -377,20 +376,19 @@ exports[`Platform Section displays content 1`] = `
                 role="region"
               >
                 <div
-                  className="accordion___StyledDiv-sc-1dzvn26-4 bgnPyw"
+                  className="accordion___StyledDiv-sc-1dzvn26-5 eTJAMp"
                   data-cy="instrument-accordion-content"
                 >
                   <div
-                    className="accordion___StyledDiv3-sc-1dzvn26-7 hRjfzT"
+                    className="accordion___StyledDiv3-sc-1dzvn26-8 jCeKDA"
                     data-cy="instrument-accordion-image-description"
                   />
                 </div>
                 <label
-                  className="label___StyledLabel-sc-b3994k-0 jmRbyG"
-                  data-cy="accordion-link-label"
+                  className="accordion__LearnMoreLink-sc-1dzvn26-1 hTfybq"
+                  id="accordion-link"
                 >
                   <a
-                    className="accordion___StyledLink-sc-1dzvn26-9 bIlZXf"
                     data-cy="accordion-link"
                     href="/instrument/Pyrometer"
                   >
