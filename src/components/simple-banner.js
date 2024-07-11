@@ -7,12 +7,14 @@ import { colors } from "../theme"
 
 const SimpleBanner = () => {
   const [hasSeenWorkshopNotice, setHasSeenNotice] = useState(false)
+  const [checkedLocalStorage, setCheckedLocalStorage] = useState(false)
 
   // This runs when the page is loaded.
   useEffect(() => {
     if (localStorage.getItem("has_seen_workshop_recording_banner")) {
       setHasSeenNotice(true)
     }
+    setCheckedLocalStorage(true)
   }, [])
 
   const markWorkshopNoticeSeen = () => {
@@ -35,7 +37,9 @@ const SimpleBanner = () => {
           padding-left: 2.5rem;
           padding-right: 2.5rem;
           z-index: 400;
-          display: ${hasSeenWorkshopNotice ? "none" : "flex"};
+          display: ${hasSeenWorkshopNotice && checkedLocalStorage
+            ? "none"
+            : "flex"};
         `}
       >
         <div>
@@ -52,7 +56,6 @@ const SimpleBanner = () => {
           >
             {"\u00a0here"}
           </a>
-
           <span>!</span>
         </div>
         <div
