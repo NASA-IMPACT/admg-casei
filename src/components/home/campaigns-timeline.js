@@ -1,20 +1,63 @@
 import React, { useRef, useEffect } from "react"
+import { useStaticQuery, graphql } from "gatsby"
 import { Timeline } from "@knight-lab/timelinejs"
 import "@knight-lab/timelinejs/dist/css/timeline.css"
 
 export const CampaignsTimeline = ({}) => {
+  const data = useStaticQuery(graphql`
+    query {
+      allCampaign {
+        nodes {
+          logo {
+            gatsbyImg {
+              childImageSharp {
+                gatsbyImageData(height: 350, transformOptions: { fit: CONTAIN })
+              }
+            }
+          }
+          shortname: short_name
+          longname: long_name
+          startdate: start_date
+          enddate: end_date
+          description: description_short
+        }
+      }
+    }
+  `)
+
+  const timelineData = {
+    events: data.allCampaign.nodes.map(campaign => ({
+      media: {
+        url: campaign.logo
+          ? campaign.logo?.gatsbyImg.childImageSharp.gatsbyImageData.images
+              .fallback.src
+          : "",
+      },
+      start_date: {
+        month: campaign.startdate.split("-")[1],
+        day: campaign.startdate.split("-")[2],
+        year: campaign.startdate.split("-")[0],
+      },
+      end_date: {
+        month: campaign.enddate.split("-")[1],
+        day: campaign.enddate.split("-")[2],
+        year: campaign.enddate.split("-")[0],
+      },
+      text: {
+        headline: campaign.shortname,
+        text: campaign.description,
+      },
+    })),
+  }
+
   const timelineEl = useRef(null)
   useEffect(() => {
     const additionalOptions = {
       font: "'Titillium Web', Titillium Web",
-      default_bg_color: { r: 0, g: 0, b: 0 },
+      default_bg_color: "#303641",
     }
     if (timelineEl.current != null) {
-      new Timeline(
-        timelineEl.current,
-        "https://docs.google.com/spreadsheets/d/e/2PACX-1vTmIN5sxyLqgSpahykwDYbU118zJePOIc8_L5I8eQ5Vwn9vhn0wgmkXo2Xzh_IcptPrUryGxB5ianzM/pubhtml",
-        additionalOptions
-      )
+      new Timeline(timelineEl.current, timelineData, additionalOptions)
     }
   }, [])
   return (
