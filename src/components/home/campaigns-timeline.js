@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { Timeline } from "@knight-lab/timelinejs"
 import "@knight-lab/timelinejs/dist/css/timeline.css"
+import "./timeline-styles.css"
 
 export const CampaignsTimeline = ({}) => {
   const data = useStaticQuery(graphql`
@@ -32,6 +33,12 @@ export const CampaignsTimeline = ({}) => {
           ? campaign.logo?.gatsbyImg.childImageSharp.gatsbyImageData.images
               .fallback.src
           : "",
+        link: `/campaign/${campaign.shortname}`,
+        thumbnail: campaign.logo
+          ? campaign.logo?.gatsbyImg.childImageSharp.gatsbyImageData.images
+              .fallback.src
+          : "",
+        link_target: "_self",
       },
       start_date: {
         month: campaign.startdate.split("-")[1],
@@ -45,7 +52,13 @@ export const CampaignsTimeline = ({}) => {
       },
       text: {
         headline: campaign.shortname,
-        text: campaign.description,
+        text:
+          `<p class="tl-subheading"
+            >
+              ${campaign.longname}
+            </p>` +
+          `<p>${campaign.description}</p>` +
+          `<a class="tl-button button-clickable" href="/campaign/${campaign.shortname}" target="_self">View campaign</a>`,
       },
     })),
   }
@@ -53,8 +66,9 @@ export const CampaignsTimeline = ({}) => {
   const timelineEl = useRef(null)
   useEffect(() => {
     const additionalOptions = {
-      font: "'Titillium Web', Titillium Web",
+      font: null,
       default_bg_color: "#303641",
+      debug: true,
     }
     if (timelineEl.current != null) {
       new Timeline(timelineEl.current, timelineData, additionalOptions)
@@ -66,7 +80,6 @@ export const CampaignsTimeline = ({}) => {
         height: 600px;
       `}
       ref={timelineEl}
-      className="timeline"
     />
   )
 }

@@ -1,0 +1,83 @@
+.tl-timeline {
+  isolation: isolate;
+}
+.tl-timeline h1,
+.tl-timeline h2,
+.tl-timeline h3,
+.tl-timeline h4,
+.tl-timeline h5,
+.tl-timeline h6,
+.tl-timeline p,
+.tl-text .tl-headline-date,
+.tl-text h3.tl-headline-date,
+.tl-timeaxis
+  .tl-timeaxis-content-container
+  .tl-timeaxis-major
+  .tl-timeaxis-tick
+  .tl-timeaxis-tick-text,
+.tl-timeaxis
+  .tl-timeaxis-content-container
+  .tl-timeaxis-minor
+  .tl-timeaxis-tick
+  .tl-timeaxis-tick-text,
+.tl-slidenav-previous .tl-slidenav-title,
+.tl-slidenav-next .tl-slidenav-title,
+.tl-slidenav-previous .tl-slidenav-description,
+.tl-slidenav-next .tl-slidenav-description,
+.tl-button.button-clickable {
+  font-family: "Titillium Web", sans-serif;
+}
+.tl-timeline h1,
+.tl-timeline h2,
+.tl-timeline h3,
+.tl-timeline h4,
+.tl-timeline h5,
+.tl-timeline h6,
+.tl-timeline p,
+.tl-text .tl-headline-date,
+.tl-text h3.tl-headline-date,
+.tl-slidenav-previous .tl-slidenav-title,
+.tl-slidenav-next .tl-slidenav-title,
+.tl-slidenav-previous .tl-slidenav-description,
+.tl-slidenav-next .tl-slidenav-description {
+  color: #e9eaec;
+}
+.tl-timeline .tl-headline-date,
+.tl-timeline h3.tl-headline-date {
+  text-transform: uppercase;
+  opacity: 0.8;
+  font-size: 0.875rem;
+}
+.tl-subheading {
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.tl-slidenav-previous .tl-slidenav-title,
+.tl-slidenav-next .tl-slidenav-title,
+.tl-slidenav-previous .tl-slidenav-description,
+.tl-slidenav-next .tl-slidenav-description {
+  opacity: 0.5;
+  &:hover {
+    opacity: 0.875;
+  }
+}
+
+a.tl-button.button-clickable {
+  text-transform: uppercase;
+  text-decoration: none;
+  user-select: none;
+  color: #aac9ff;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.125rem 0.5rem;
+  font-size: 0.75rem;
+  border: 1px solid #aac9ff;
+  cursor: pointer;
+  font-weight: bold;
+  white-space: nowrap;
+}
+a.tl-button.button-clickable:hover {
+  text-decoration: none;
+  opacity: 0.875;
+}
