@@ -83,8 +83,7 @@ module.exports = {
           "default-src": "'self' https://www.google-analytics.com data:",
           "script-src":
             "'unsafe-eval' 'unsafe-inline' 'self' *.earthdata.nasa.gov https://www.googletagmanager.com https://www.google-analytics.com https://fbm.earthdata.nasa.gov https://www.google.com/recaptcha https://www.gstatic.com/recaptcha https://fonts.gstatic.com",
-          "style-src":
-            "'unsafe-inline' 'self' data: *.earthdata.nasa.gov https://cdn.knightlab.com",
+          "style-src": "'unsafe-inline' 'self' data: *.earthdata.nasa.gov",
           "font-src": "data: 'self'",
           "img-src": "data: 'self' blob:",
           "frame-src": "*.earthdata.nasa.gov https://docs.google.com/",
@@ -92,8 +91,8 @@ module.exports = {
           "child-src": "'self' blob:",
           "connect-src":
             process.env.NODE_ENV === "development"
-              ? "'self' https://admg.nasa-impact.net https://www.google-analytics.com https://*.tiles.mapbox.com https://api.mapbox.com https://events.mapbox.com http://localhost:* https://sheets-proxy.knightlab.com/ ws://localhost:*"
-              : "'self' https://admg.nasa-impact.net https://www.google-analytics.com https://*.tiles.mapbox.com https://api.mapbox.com https://events.mapbox.com https://sheets-proxy.knightlab.com/ https://admgstaging.nasa-impact.net/api/unpublished_drafts",
+              ? "'self' https://admg.nasa-impact.net https://www.google-analytics.com https://*.tiles.mapbox.com https://api.mapbox.com https://events.mapbox.com http://localhost:* ws://localhost:*"
+              : "'self' https://admg.nasa-impact.net https://www.google-analytics.com https://*.tiles.mapbox.com https://api.mapbox.com https://events.mapbox.com https://admgstaging.nasa-impact.net/api/unpublished_drafts",
         },
       },
     },
