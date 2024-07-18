@@ -102,8 +102,7 @@ const Home = ({ data }) => {
         </Section>
         <Section id="campaigns-timeline" isSpaced>
           <SectionHeader
-            headline="Campaigns Timeline"
-            description="View campaigns over time"
+            headline="NASA Campaigns Timeline"
             id="campaigns-timeline"
           />
           <SectionContent>

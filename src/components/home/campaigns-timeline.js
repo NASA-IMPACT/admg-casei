@@ -77,7 +77,7 @@ export const CampaignsTimeline = ({}) => {
   return (
     <div
       css={`
-        height: 600px;
+        height: 650px;
       `}
       ref={timelineEl}
     />
