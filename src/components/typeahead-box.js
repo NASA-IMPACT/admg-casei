@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { sortBy } from "lodash"
 import { NEGATIVE, POSITIVE } from "../utils/constants"
 import { colors } from "../theme"
-import { SearchIcon } from "../icons"
+import { ArrowIcon } from "../icons"
 import { Link } from "gatsby"
 
 export function TypeAhead() {
@@ -86,11 +86,17 @@ export function TypeAhead() {
   return (
     <div
       css={`
-        margin-right: 2rem;
-        margin-bottom: 5em;
         position: relative;
+        margin-bottom: 3rem;
       `}
     >
+      <span
+        css={`
+          text-transform: uppercase;
+        `}
+      >
+        Data Shortcut
+      </span>
       <div
         css={`
           height: 2.5rem;
@@ -105,15 +111,13 @@ export function TypeAhead() {
           align-items: center;
           cursor: pointer;
           width: 100%;
+          min-width: 24rem;
         `}
       >
-        <span role="img" aria-label="Magnifying glass icon">
-          <SearchIcon color={colors[NEGATIVE].text} />
-        </span>
         <input
           type="text"
           value={value}
-          placeholder="Enter a campaign, platform, or instrument"
+          placeholder="Go directly to a campaign, platform, or instrument"
           onChange={handleSearch}
           css={`
             webkit-appearance: none;
@@ -127,8 +131,17 @@ export function TypeAhead() {
             width: 100%;
           `}
         />
+        <span
+          role="img"
+          aria-label="Arrow icon"
+          css={`
+            display: grid;
+            place-content: center;
+          `}
+        >
+          <ArrowIcon color={colors[NEGATIVE].text} />
+        </span>
       </div>
-
       <div className="type-ahead-dropdown">
         {typeAheadDisplay.length > 0 && (
           <ul
