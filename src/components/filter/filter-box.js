@@ -61,6 +61,8 @@ export default function FilterBox({
         <ListboxPopover
           css={`
             background: ${colors[NEGATIVE].altBackground};
+            max-height: 24rem;
+            overflow-y: scroll;
           `}
         >
           <ListboxList data-cy="data-products-filter-options">
