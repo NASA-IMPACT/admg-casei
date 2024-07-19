@@ -1,20 +1,15 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import { FEEDBACK_FORM_URL } from "../utils/constants"
 import Layout, { PageBody } from "../components/layout"
 import SEO from "../components/seo"
 import { Section, SectionHeader, SectionContent } from "../components/layout"
 import Hero from "../components/hero"
-import Label from "../components/label"
 import Button from "../components/button"
 import FocusAreaGallery from "../components/focus-area-gallery"
 import { RegionCarousel } from "../components/home/region-carousel"
-import { GeophysicsGrid } from "../components/home/geophysics-grid"
-import { InstrumentsGrid } from "../components/home/instruments-grid"
-import { ArrowIcon } from "../icons"
-import { NEGATIVE } from "../utils/constants"
-import { colors } from "../theme"
+import { CampaignsTimeline } from "../components/home/campaigns-timeline"
 
 const Home = ({ data }) => {
   return (
@@ -32,6 +27,26 @@ const Home = ({ data }) => {
         id="home"
       />
       <PageBody id="home">
+        <Section id="campaigns-timeline" isSpaced>
+          <SectionHeader
+            headline="NASA Campaigns Timeline"
+            id="campaigns-timeline"
+          />
+          <SectionContent>
+            <CampaignsTimeline />
+          </SectionContent>
+        </Section>
+        <Section id="region-type" isSpaced>
+          <SectionHeader
+            tagline="explore campaigns by"
+            headline="Region Type"
+            description="Choose a type of geographical region to explore"
+            id="region-type"
+          />
+          <SectionContent>
+            <RegionCarousel regions={data.allGeographicalRegion.nodes} />
+          </SectionContent>
+        </Section>
         <Section id="focus-area" isSpaced>
           <SectionHeader
             tagline="view"
@@ -44,85 +59,6 @@ const Home = ({ data }) => {
             <FocusAreaGallery
               focusAreas={data.allFocusArea.nodes}
               size="large"
-            />
-          </SectionContent>
-        </Section>
-        <Section id="explore" isSpaced>
-          <SectionHeader
-            tagline="explore"
-            headline="CASEI"
-            description="From campaigns to instruments, it takes a lot to understand the earth. Start your discovery journey now:"
-            id="explore"
-          />
-          <SectionContent>
-            <ul
-              css={`
-                list-style: none;
-                margin: 0;
-              `}
-              data-cy={`explore-link-list`}
-            >
-              {["campaigns", "platforms", "instruments"].map(category => (
-                <li
-                  key={category}
-                  css={`
-                    padding-bottom: 1rem;
-                  `}
-                >
-                  <Label id="explore-link">
-                    <Link
-                      to={`/explore/${category}`}
-                      css={`
-                        text-transform: uppercase;
-                        color: ${colors[NEGATIVE].linkText} !important;
-                        display: flex;
-                        align-items: center;
-                      `}
-                      data-cy={`explore-${category}-link`}
-                    >
-                      Explore {category}
-                      <ArrowIcon color={colors[NEGATIVE].linkText} />
-                    </Link>
-                  </Label>
-                </li>
-              ))}
-            </ul>
-          </SectionContent>
-        </Section>
-
-        <Section id="region-type" isSpaced>
-          <SectionHeader
-            tagline="explore campaigns by"
-            headline="Region Type"
-            description="Choose a type of geographical region to explore"
-            id="region-type"
-          />
-          <SectionContent>
-            <RegionCarousel regions={data.allGeographicalRegion.nodes} />
-          </SectionContent>
-        </Section>
-
-        <Section id="instruments" isSpaced>
-          <SectionHeader
-            tagline="explore instruments by"
-            headline="Measurement Type"
-            id="instruments"
-          />
-          <SectionContent>
-            <InstrumentsGrid measurementTypes={data.allMeasurementType.nodes} />
-          </SectionContent>
-        </Section>
-
-        <Section id="geophysical-concepts" isSpaced>
-          <SectionHeader
-            tagline="explore campaigns by"
-            headline="Geophysical Concepts"
-            description="NASA investigates a myriad of factors that comprise Earth’s properties, systems, and processes."
-            id="geophysical-concepts"
-          />
-          <SectionContent>
-            <GeophysicsGrid
-              geophysicalConcepts={data.allGeophysicalConcept.nodes}
             />
           </SectionContent>
         </Section>
