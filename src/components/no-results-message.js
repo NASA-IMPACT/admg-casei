@@ -15,6 +15,11 @@ export const NoResultsMessage = () => (
         padding-bottom: 3rem;
       `}
     >
+      We are constantly adding curated metadata to the inventory, so please
+      check back soon!
+      <br />
+      <br />
+      View the airborn metadata currently under curation on the{" "}
       <Link
         to={"/explore/upcoming"}
         css={`
@@ -25,8 +30,7 @@ export const NoResultsMessage = () => (
         `}
         data-cy="back-link"
       >
-        We are constantly adding curated metadata to the inventory, so please
-        check back soon!
+        Coming Soon Page
       </Link>
     </div>
     <h3>Search Tips</h3>
