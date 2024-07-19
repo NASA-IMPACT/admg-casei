@@ -57,7 +57,14 @@ export const CampaignsTimeline = ({}) => {
             >
               ${campaign.longname}
             </p>` +
-          `<p>${campaign.description}</p>` +
+          `<p>${
+            // if campaign logo exists, truncate campaign description text after 550 characters to avoid container overflow
+            !campaign.logo
+              ? campaign.description
+              : campaign.description.substring(0, 650) +
+                (campaign.description.length > 650 ? "..." : "")
+          }
+          </p>` +
           `<a class="tl-button button-clickable" href="/campaign/${campaign.shortname}" target="_self">View campaign</a>`,
       },
     })),
