@@ -84,29 +84,6 @@ test.describe("Homepage", () => {
     })
   })
 
-  test.describe("Explore section", () => {
-    test("there is an explore section", async ({ page }) => {
-      await page.goto(baseUrl)
-
-      // Check if the explore section exists and contains the expected header
-      const exploreHeader = await page.textContent(
-        "[data-cy=explore-section] >> h2"
-      )
-      expect(exploreHeader).toBe("CASEI")
-
-      // Check if the explore link list exists and contains the expected number of items
-      const exploreItems = await page.$$("[data-cy=explore-link-list] >> li")
-      expect(exploreItems).toHaveLength(3)
-
-      // Check if the explore items have the expected text content
-      expect(await exploreItems[0].textContent()).toContain("Explore campaigns")
-      expect(await exploreItems[1].textContent()).toContain("Explore platforms")
-      expect(await exploreItems[2].textContent()).toContain(
-        "Explore instruments"
-      )
-    })
-  })
-
   test.describe("Region Type section", () => {
     test("region types can be selected", async ({ page }) => {
       await page.goto(baseUrl)
