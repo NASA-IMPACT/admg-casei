@@ -23,7 +23,7 @@ export default function ExternalLink({
         display: inline-flex;
         flex-flow: row nowrap;
         gap: 0.25rem;
-        align-items: center;
+        align-items: baseline;
       `}
       data-cy={`${id}-link`}
     >
