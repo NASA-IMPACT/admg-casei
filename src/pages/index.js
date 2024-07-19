@@ -69,14 +69,14 @@ const Home = ({ data }) => {
                     padding-bottom: 1rem;
                   `}
                 >
-                  <Label id="explore-link" display="flex">
+                  <Label id="explore-link">
                     <Link
                       to={`/explore/${category}`}
                       css={`
                         text-transform: uppercase;
                         color: ${colors[NEGATIVE].linkText} !important;
                         display: flex;
-                        align-items: end;
+                        align-items: center;
                       `}
                       data-cy={`explore-${category}-link`}
                     >

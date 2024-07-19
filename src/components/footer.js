@@ -23,13 +23,14 @@ const Footer = ({ shortname }) => {
     <footer
       css={`
         margin-top: 5rem;
+        padding-bottom: 2rem;
         background-color: ${colors[NEGATIVE].background};
       `}
       data-cy="page-footer"
     >
       <div
         css={`
-          margin: 5rem auto;
+          margin: 5rem auto 2rem;
           max-width: ${layout.maxWidth};
           padding: 2rem ${layout.pageMargin};
           flex-shrink: 0;
@@ -84,6 +85,17 @@ const Footer = ({ shortname }) => {
             <li>
               <Link to="/explore/instruments" data-cy="footer-instruments-link">
                 Instruments
+              </Link>
+            </li>
+            <li
+              css={`
+                padding-top: 0.5rem;
+                font-size: 0.875rem;
+                opacity: 0.75;
+              `}
+            >
+              <Link to="/explore/upcoming" data-cy="footer-coming-soon-link">
+                Coming Soon
               </Link>
             </li>
           </Ul>
