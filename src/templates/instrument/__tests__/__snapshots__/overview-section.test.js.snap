@@ -134,7 +134,7 @@ exports[`Overview Section displays content 1`] = `
         </dt>
         <dd>
           <a
-            className="external-link___StyledA-sc-3ezy1s-0 euyjVx"
+            className="external-link___StyledA-sc-3ezy1s-0 cAMswR"
             data-cy="calibration-doi-link"
             href="http://dx.doi.org/10.5067/calibration"
             rel="noopener noreferrer"
@@ -181,7 +181,7 @@ exports[`Overview Section displays content 1`] = `
               className="overview-section___StyledLi3-sc-1oemh85-9 kDzWeD"
             >
               <a
-                className="external-link___StyledA-sc-3ezy1s-0 euyjVx"
+                className="external-link___StyledA-sc-3ezy1s-0 cAMswR"
                 data-cy="online-information-link"
                 href="http://www.example.com"
                 rel="noopener noreferrer"
@@ -287,7 +287,7 @@ exports[`Overview Section displays content 1`] = `
           DOI:
            
           <a
-            className="external-link___StyledA-sc-3ezy1s-0 zIopN"
+            className="external-link___StyledA-sc-3ezy1s-0 iQSFnp"
             data-cy="instrument-doi-link"
             href="http://dx.doi.org/10.5067/instrument"
             rel="noopener noreferrer"
@@ -350,7 +350,7 @@ exports[`Overview Section displays content 1`] = `
             className="list-link___StyledLi-sc-xxtxki-0 iqaryc"
           >
             <a
-              className="external-link___StyledA-sc-3ezy1s-0 euyjVx"
+              className="external-link___StyledA-sc-3ezy1s-0 cAMswR"
               data-cy="test-link"
               href="http://www.example.com"
               rel="noopener noreferrer"
@@ -386,7 +386,7 @@ exports[`Overview Section displays content 1`] = `
             className="list-link___StyledLi-sc-xxtxki-0 iqaryc"
           >
             <a
-              className="external-link___StyledA-sc-3ezy1s-0 euyjVx"
+              className="external-link___StyledA-sc-3ezy1s-0 cAMswR"
               data-cy="test2-link"
               href="http://www.example.com"
               rel="noopener noreferrer"

@@ -211,7 +211,7 @@ exports[`Data Section matches snapshot 1`] = `
             CAMP2Ex P-3 Remotely Sensed Aerosol Data
           </label>
           <a
-            className="external-link___StyledA-sc-3ezy1s-0 zIopN"
+            className="external-link___StyledA-sc-3ezy1s-0 iQSFnp"
             data-cy="doi-link"
             href="http://dx.doi.org/10.5067/Airborne/CAMP2Ex_Aerosol_AircraftRemoteSensing_P3_Data_1"
             rel="noopener noreferrer"

@@ -123,7 +123,7 @@ exports[`Footer renders correctly 1`] = `
         </li>
         <li>
           <a
-            className="external-link___StyledA-sc-3ezy1s-0 zIopN"
+            className="external-link___StyledA-sc-3ezy1s-0 iQSFnp"
             data-cy="api documentation-link"
             href="https://nasa-impact.github.io/admg-backend/documentation/api_doc.html"
             rel="noopener noreferrer"
@@ -171,7 +171,7 @@ exports[`Footer renders correctly 1`] = `
       >
         <li>
           <a
-            className="external-link___StyledA-sc-3ezy1s-0 zIopN"
+            className="external-link___StyledA-sc-3ezy1s-0 iQSFnp"
             data-cy="admg-website-link"
             href="https://earthdata.nasa.gov/esds/impact/admg"
             rel="noopener noreferrer"
@@ -205,7 +205,7 @@ exports[`Footer renders correctly 1`] = `
         </li>
         <li>
           <a
-            className="external-link___StyledA-sc-3ezy1s-0 zIopN"
+            className="external-link___StyledA-sc-3ezy1s-0 iQSFnp"
             data-cy="impact-website-link"
             href="https://earthdata.nasa.gov/esds/impact"
             rel="noopener noreferrer"
@@ -286,7 +286,7 @@ exports[`Footer renders correctly 1`] = `
     , Built by
      
     <a
-      className="external-link___StyledA-sc-3ezy1s-0 zIopN"
+      className="external-link___StyledA-sc-3ezy1s-0 iQSFnp"
       data-cy="devseed-website-link"
       href="https://www.developmentseed.org"
       rel="noopener noreferrer"
