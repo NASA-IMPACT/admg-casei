@@ -44,6 +44,8 @@ describe("getStaticIcons", () => {
       STATIC_PLATFORMS[5].mapIcon,
       STATIC_PLATFORMS[6].name,
       STATIC_PLATFORMS[6].mapIcon,
+      STATIC_PLATFORMS[7].name,
+      STATIC_PLATFORMS[7].mapIcon,
       "BalloonIcon",
     ]
     expect(getStaticIcons()).toEqual(result)
