@@ -136,29 +136,20 @@ Read more here: https://kentcdodds.com/blog/write-tests or https://testingjavasc
 #### End-to-end testing
 
 End-to-end (e2e) tests are functional tests for automated click-testing of critical paths. It is better to automate this rather than relying on the users to do the testing.
-This project is using [Cypress](https://docs.cypress.io/guides/overview/why-cypress.html#In-a-nutshell) as end-to-end testing framework. [cypress-axe](https://github.com/avanslaars/cypress-axe) is used to uncover accessibility issues.
+This project is using [Playwright](https://playwright.dev/) as end-to-end testing framework. [axe-playwright](https://www.npmjs.com/package/axe-playwright) is used to uncover accessibility issues.
 
-To run the tests locally, start the development server and run `yarn cy:open`, which opens the interactive test runner.
+To run the tests locally, first build the frontend with `yarn build`, then run the tests with `yarn test:e2e`. You may need to set the `GATSBY_MAPBOX_TOKEN` environment variable before running the build command.
 
-```
-yarn cy:open
-```
+Playwright is also configured to run the automated tests on GitHub Actions CI.
 
-**Note:** The login test requires a password. To keep it secure, it can't be hardcoded in the test suite and needs to be passed to cypress by running `CYPRESS_password=<password> yarn cy:open`, this will include it in the cypress env vars. When the tests run on ci, they get this password _automagically_ from the env vars added in the web interface.
-
-You can watch tests run in real time as you develop your applications. TDD FTW 🤩!
-It is also possible to run the tests and get the results in the command line only with `yarn cy:run`.
-
-Cypress is configured to run the automated tests on ci. When running the tests without a development server, use `yarn test:e2e` to open the test runner or `yarn test:e2e:ci` to run them with console output.
-
-Some **testing strategies** with Cypress:
+Some **testing strategies** with Playwright:
 
 - write specs that will solely test a single behavior
 - each spec should be written in isolation and avoid coupling
 - avoid brittle selectors, use `data-*` attributes instead
-- set state directly/programmatically before testing (e.g. use the endpoint to [request](https://docs.cypress.io/api/commands/request.html) a login token instead of making cypress click the login button)
+- set state directly/programmatically before testing (e.g. use the endpoint to [request](https://playwright.dev/docs/api/class-playwright#playwright-request) a login token instead of making playwright click the login button)
 
-Read more on best practices here: https://docs.cypress.io/guides/references/best-practices.html
+Read more on best practices here: https://playwright.dev/docs/best-practices
 
 ### Code review or Pair programming
 
