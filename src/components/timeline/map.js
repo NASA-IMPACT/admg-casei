@@ -133,7 +133,7 @@ export function DeploymentMap({
                   22,
                   20,
                 ],
-                "circle-stroke-width": 0.75,
+                "circle-stroke-width": 1,
                 "circle-stroke-color": iconColors,
               },
               filter: ["all", ["==", "$type", "Point"]],
