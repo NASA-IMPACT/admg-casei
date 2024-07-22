@@ -8,6 +8,7 @@ import {
   PermanentLandSiteIcon,
   PermanentWaterSiteIcon,
   VehicleIcon,
+  ShipIcon,
 } from "../icons/static-platform-icons"
 
 export const MOVING_PLATFORMS_COLORS = [
@@ -65,6 +66,12 @@ export const STATIC_PLATFORMS = [
     color: "#8C2D04",
     icon: <MooredBuoyIcon />,
     mapIcon: "MooredBuoyIcon",
+  },
+  {
+    name: "Ship",
+    color: "#F2290A",
+    icon: <ShipIcon />,
+    mapIcon: "ShipIcon",
   },
 ]
 
