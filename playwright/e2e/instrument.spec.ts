@@ -1,5 +1,4 @@
 const { test, expect } = require('@playwright/test');
-import { first } from "cypress/types/lodash";
 import config from "../playwright.config"
 const baseUrl = config.use?.baseURL
 

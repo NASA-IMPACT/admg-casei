@@ -68,7 +68,6 @@
     "@babel/preset-typescript": "^7.21.4",
     "@playwright/test": "1.31.2",
     "@quickbaseoss/babel-plugin-styled-components-css-namespace": "^1.0.1",
-    "@testing-library/cypress": "^8.0.2",
     "@testing-library/react-hooks": "^7.0.2",
     "axe-core": "^4.4.1",
     "axe-playwright": "^1.2.3",
