@@ -3,7 +3,7 @@ require("dotenv").config({
 })
 
 module.exports = {
-  pathPrefix: `/casei`,
+  pathPrefix: process.env.NODE_ENV === "development" ? "" : `/casei`,
   siteMetadata: {
     title: `Catalog of Archived Suborbital Earth Science Investigations`,
     shortname: `NASA | CASEI`,

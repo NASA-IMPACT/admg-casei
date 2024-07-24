@@ -7,6 +7,9 @@ import "./timeline-styles.css"
 export const CampaignsTimeline = ({}) => {
   const data = useStaticQuery(graphql`
     query {
+      site {
+        pathPrefix
+      }
       allCampaign {
         nodes {
           logo {
@@ -33,7 +36,7 @@ export const CampaignsTimeline = ({}) => {
           ? campaign.logo?.gatsbyImg.childImageSharp.gatsbyImageData.images
               .fallback.src
           : "",
-        link: `/campaign/${campaign.shortname}`,
+        link: `${data.site.pathPrefix}/campaign/${campaign.shortname}`,
         thumbnail: campaign.logo
           ? campaign.logo?.gatsbyImg.childImageSharp.gatsbyImageData.images
               .fallback.src
@@ -65,7 +68,7 @@ export const CampaignsTimeline = ({}) => {
                 (campaign.description.length > 650 ? "..." : "")
           }
           </p>` +
-          `<a class="tl-button button-clickable" href="/campaign/${campaign.shortname}" target="_self">View campaign</a>`,
+          `<a class="tl-button button-clickable" href="${data.site.pathPrefix}/campaign/${campaign.shortname}" target="_self">View campaign</a>`,
       },
     })),
   }
