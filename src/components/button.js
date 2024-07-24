@@ -15,7 +15,10 @@ const Clickable = styled.button`
 `
 
 const Button = React.forwardRef(
-  ({ children, action, mode = NEGATIVE, isSecondary, as }, ref) => {
+  (
+    { children, action, mode = NEGATIVE, isSecondary, as, iconOnly, noBorder },
+    ref
+  ) => {
     // flip mode for primary buttons
     const overrideMode = isSecondary
       ? mode
@@ -30,14 +33,20 @@ const Button = React.forwardRef(
         onClick={action}
         css={`
            {
+            display: inline-flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
             user-select: none;
             color: ${colors[overrideMode].text};
             text-align: center;
             vertical-align: middle;
-            padding: 0.25rem 0.75rem;
+            padding: ${iconOnly ? "0.5rem" : "0.25rem 0.75rem"};
             background: none;
             text-shadow: none;
-            border: 1px solid ${colors[overrideMode].text};
+            border: ${noBorder
+              ? "none"
+              : `1px solid ${colors[overrideMode].text}`};
             cursor: pointer;
             background-color: ${isSecondary
               ? colors[mode].background
@@ -58,6 +67,8 @@ Button.propTypes = {
   action: PropTypes.func,
   mode: PropTypes.oneOf([POSITIVE, NEGATIVE]),
   isSecondary: PropTypes.bool,
+  iconOnly: PropTypes.bool,
+  noBorder: PropTypes.bool,
   as: PropTypes.string,
 }
 

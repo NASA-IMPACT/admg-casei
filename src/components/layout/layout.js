@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
+import React, { useRef } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
@@ -21,12 +21,13 @@ import Nav from "../nav"
 import Footer from "../footer"
 
 import { POSITIVE } from "../../utils/constants"
+import { useContainerDimensions } from "../../utils/use-container-dimensions"
+import { breakpoints } from "../../theme"
 
 const Container = styled.div`
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  min-width: 768px;
   main {
     flex: 1;
   }
@@ -43,10 +44,17 @@ const Layout = ({ children }) => {
       }
     }
   `)
+  const container = useRef(null)
+  const { width } = useContainerDimensions(container)
+  const isMediumDown = width <= breakpoints["sm"].slice(0, -2)
 
   return (
-    <Container id="top" data-cy="page">
-      <Header shortname={data.site.siteMetadata.shortname} mode={POSITIVE}>
+    <Container id="top" data-cy="page" ref={container}>
+      <Header
+        shortname={data.site.siteMetadata.shortname}
+        mode={POSITIVE}
+        isMediumDown={isMediumDown}
+      >
         <Nav mode={POSITIVE} />
       </Header>
 

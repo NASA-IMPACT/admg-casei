@@ -9,6 +9,7 @@ import TrashIcon from "./trash-icon"
 import FilterIcon from "./filter-icon"
 import ExternalLinkIcon from "./external-link-icon"
 import InformationIcon from "./information-icon"
+import HamburgerIcon from "./hamburger"
 
 import CampaignIcon from "./campaign-icon"
 import InstrumentIcon from "./instrument-icon"
@@ -31,6 +32,7 @@ export {
   FilterIcon,
   ExternalLinkIcon,
   InformationIcon,
+  HamburgerIcon,
 }
 
 export { CampaignIcon, InstrumentIcon, PlatformIcon, CaseiLogoIcon }

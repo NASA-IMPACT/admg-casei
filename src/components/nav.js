@@ -1,10 +1,29 @@
 import React from "react"
+import styled from "styled-components"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
-import { colors } from "../theme"
+import { colors, breakpoints } from "../theme"
 import { POSITIVE, NEGATIVE } from "../utils/constants"
 
+const GlobalMenu = styled.ul`
+  display: flex;
+  flex: 1;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-left: 1rem;
+  list-style: none;
+  @media screen and (min-width: ${breakpoints["sm"]}) {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 0;
+    list-style: none;
+    flex-flow: row nowrap;
+  }
+`
 const ListLink = ({ to, children, mode }) => (
   <li
     css={`
@@ -48,44 +67,30 @@ ListLink.propTypes = {
   mode: PropTypes.oneOf([POSITIVE, NEGATIVE]),
 }
 
-const Nav = ({ mode }) => {
+const NavList = ({ mode }) => {
   return (
-    <nav
-      css={`
-        z-index: 100;
-      `}
-    >
-      <ul
-        css={`
-          display: flex;
-          flex-direction: row;
-          justify-content: flex-end;
-          margin: 0;
-          list-style: none;
-        `}
-      >
-        <ListLink to="/explore/campaigns" mode={mode}>
-          Explore
-        </ListLink>
-        <ListLink to="/glossary" mode={mode}>
-          Glossary
-        </ListLink>
-        <ListLink to="/about" mode={mode}>
-          About
-        </ListLink>
-        <ListLink to="/faq" mode={mode}>
-          FAQS
-        </ListLink>
-        <ListLink to="/contact" mode={mode}>
-          Contact
-        </ListLink>
-      </ul>
-    </nav>
+    <GlobalMenu>
+      <ListLink to="/explore/campaigns" mode={mode}>
+        Explore
+      </ListLink>
+      <ListLink to="/glossary" mode={mode}>
+        Glossary
+      </ListLink>
+      <ListLink to="/about" mode={mode}>
+        About
+      </ListLink>
+      <ListLink to="/faq" mode={mode}>
+        FAQS
+      </ListLink>
+      <ListLink to="/contact" mode={mode}>
+        Contact
+      </ListLink>
+    </GlobalMenu>
   )
 }
 
-export default Nav
+export default NavList
 
-Nav.propTypes = {
+NavList.propTypes = {
   mode: PropTypes.string.isRequired,
 }

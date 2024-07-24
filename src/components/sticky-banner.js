@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from "react"
 import PropTypes from "prop-types"
 
-const StickyBanner = ({ children, offsetCalculator }) => {
+const StickyBanner = ({
+  children,
+  offsetCalculator,
+  isMediumDown,
+  navRevealed,
+}) => {
   const scrollDown = "scroll-down"
   const scrollUp = "scroll-up"
   const [scrollDirection, setScrollDirection] = useState(null)
@@ -54,13 +59,13 @@ const StickyBanner = ({ children, offsetCalculator }) => {
     <div
       ref={node}
       css={`
-        position: sticky;
+        position: ${isMediumDown && navRevealed ? "fixed" : "sticky"};
         top: 0;
         left: 0;
         right: 0;
         z-index: 3;
         transition: top 0.2s;
-        top: ${offset};
+        top: ${!navRevealed && offset};
       `}
     >
       {children}
@@ -72,6 +77,8 @@ StickyBanner.propTypes = {
   children: PropTypes.element,
   hideAfter: PropTypes.number,
   offsetCalculator: PropTypes.func,
+  isMediumDown: PropTypes.bool,
+  navRevealed: PropTypes.bool,
 }
 
 export default StickyBanner
