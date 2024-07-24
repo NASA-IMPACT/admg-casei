@@ -15,6 +15,7 @@ export const HeroStats = ({ statList }) => (
   <dl
     css={`
       display: grid;
+      width: 100%;
     `}
     data-cy="stats"
   >
@@ -172,7 +173,8 @@ export default function Hero({
             grid-area: extras;
             display: flex;
             flex-direction: column;
-            gap: 3rem;
+            gap: 2rem;
+            align-items: flex-start;
           `}
         >
           {description && <p>{description}</p>}
@@ -180,26 +182,19 @@ export default function Hero({
           {stats && <HeroStats statList={stats} />}
 
           {cta && (
-            <div
+            <Link
+              to="/explore/campaigns"
               css={`
-                height: 3rem;
-                /* to match h1 default margin-top */
-                margin-bottom: 1.5rem;
+                color: ${colors[POSITIVE].text} !important;
+                background-color: ${colors[POSITIVE].background};
+                font-weight: bold;
+                padding: 1rem 5rem;
+                align-self: flex-start;
               `}
+              data-cy="cta-link"
             >
-              <Link
-                to="/explore/campaigns"
-                css={`
-                  color: ${colors[POSITIVE].text} !important;
-                  background-color: ${colors[POSITIVE].background};
-                  font-weight: bold;
-                  padding: 1rem 5rem;
-                `}
-                data-cy="cta-link"
-              >
-                {cta}
-              </Link>
-            </div>
+              {cta}
+            </Link>
           )}
 
           {displayTypeAhead && <TypeAhead onSearch={typeAhead} />}

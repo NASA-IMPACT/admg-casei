@@ -27,6 +27,9 @@ const Container = styled.div`
   min-height: 100vh;
   flex-direction: column;
   min-width: 768px;
+  main {
+    flex: 1;
+  }
 `
 
 const Layout = ({ children }) => {

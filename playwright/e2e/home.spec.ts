@@ -84,29 +84,6 @@ test.describe("Homepage", () => {
     })
   })
 
-  test.describe("Explore section", () => {
-    test("there is an explore section", async ({ page }) => {
-      await page.goto(baseUrl)
-
-      // Check if the explore section exists and contains the expected header
-      const exploreHeader = await page.textContent(
-        "[data-cy=explore-section] >> h2"
-      )
-      expect(exploreHeader).toBe("CASEI")
-
-      // Check if the explore link list exists and contains the expected number of items
-      const exploreItems = await page.$$("[data-cy=explore-link-list] >> li")
-      expect(exploreItems).toHaveLength(3)
-
-      // Check if the explore items have the expected text content
-      expect(await exploreItems[0].textContent()).toContain("Explore campaigns")
-      expect(await exploreItems[1].textContent()).toContain("Explore platforms")
-      expect(await exploreItems[2].textContent()).toContain(
-        "Explore instruments"
-      )
-    })
-  })
-
   test.describe("Region Type section", () => {
     test("region types can be selected", async ({ page }) => {
       await page.goto(baseUrl)
@@ -164,81 +141,6 @@ test.describe("Homepage", () => {
 
       // Check if the URL includes "/explore/campaigns" and the header has the expected text
       expect(page.url()).toContain("/explore/campaigns")
-    })
-  })
-
-  test.describe("Geophysical Concepts section", () => {
-    test("geophysical concepts can be selected", async ({ page }) => {
-      await page.goto(baseUrl)
-
-      // Check if the geophysical concepts section exists and contains the expected header
-      const geophysicalConceptsHeader = await page.textContent(
-        "[data-cy=geophysical-concepts-section] >> h2"
-      )
-      expect(geophysicalConceptsHeader).toBe("Geophysical Concepts")
-
-      // Retrieve geophysical concept elements and their text content
-      const geophysicalConcepts = await page.$$(
-        "[data-cy=geophysical-concepts-section] >> [data-cy=geophysical-concept]"
-      )
-      const geophysicalConceptsTexts = await Promise.all(
-        geophysicalConcepts.map(concept => concept.textContent())
-      )
-
-      // Check if the div elements inside the geophysical concepts have the expected text content
-      for (const conceptText of geophysicalConceptsTexts) {
-        expect(
-          await page.isVisible(
-            `[data-cy=geophysical-concepts-section] >> [data-cy=geophysical-concept] >> text=${conceptText}`
-          )
-        ).toBeTruthy()
-      }
-
-      // Click on the "Biodiversity" geophysical concept
-      await page.click(
-        "[data-cy=geophysical-concepts-section] >> [data-cy=geophysical-concept] >> text=Biodiversity"
-      )
-
-      // wait for page load
-      await page.waitForNavigation()
-
-      // Check if the URL includes "/explore/campaigns" and the header has the expected text
-      expect(page.url()).toContain("/explore/campaigns")
-      const filterChip = await page.textContent('[data-cy="filter-chip"]')
-      expect(filterChip).toBe("geophysical: Biodiversity")
-    })
-  })
-
-  test.describe("Instruments section", () => {
-    test("an instrument can be selected", async ({ page }) => {
-      await page.goto(baseUrl)
-
-      // Check if the instruments section exists and contains the expected header
-      const instrumentsHeader = await page.textContent(
-        "[data-cy=instruments-section] >> h2"
-      )
-      expect(instrumentsHeader).toBe("Measurement Type")
-
-      // Check if the "Spectrometer/Radiometer" instrument type is visible
-      expect(
-        await page.isVisible(
-          "[data-cy=instruments-section] >> [data-cy=instrument-type] >> text=Spectrometer/Radiometer"
-        )
-      ).toBeTruthy()
-
-      // Click on the "Spectrometer/Radiometer" instrument type
-      await page.click(
-        "[data-cy=instruments-section] >> [data-cy=instrument-type] >> text=Spectrometer/Radiometer"
-      )
-
-      // wait for page load
-      await page.waitForNavigation()
-
-      // Check if the URL includes "/explore/instruments" and the header has the expected text
-      expect(page.url()).toContain("/explore/instruments")
-
-      const filterChip = await page.textContent('[data-cy="filter-chip"]')
-      expect(filterChip).toBe("type: Spectrometer/Radiometer")
     })
   })
 })

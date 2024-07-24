@@ -70,10 +70,7 @@ yarn-error.log
 # Yarn Integrity file
 .yarn-integrity
 
-# Cypress
-cypress/integration/examples/
-cypress/videos
-cypress/screenshots
+# Playwright
 /test-results/
 /playwright-report
 /playwright/.cache/
