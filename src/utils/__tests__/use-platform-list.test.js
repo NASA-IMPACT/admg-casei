@@ -18,7 +18,6 @@ it("the default platform list (without filters)", () => {
   const platformGroups = Object.keys(platformList.grouped)
   const firstGroup =
     platformList.grouped[platformGroups[platformGroups.length - 1]]
-  console.log({ firstGroup })
 
   expect(platformList.filtered.length).toEqual(list.length)
   expect(platformGroups.length).toBeGreaterThanOrEqual(5)

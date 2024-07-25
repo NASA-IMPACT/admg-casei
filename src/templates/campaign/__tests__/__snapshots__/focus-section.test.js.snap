@@ -43,7 +43,7 @@ exports[`Focus Section displays content 1`] = `
           data-cy="focus-area"
           href="/focus/Carbon Cycle & Ecosystems"
           state={
-            Object {
+            {
               "selectedFilterId": "f1bd646f-876f-4e9f-896e-f7d4571ecc00",
             }
           }
@@ -88,7 +88,7 @@ exports[`Focus Section displays content 1`] = `
             data-cy="geophysical-concept-link"
             href="/explore/campaigns"
             state={
-              Object {
+              {
                 "selectedFilterId": "f1bd646f-876f-4e9f-896e-f7d4571ecc00",
               }
             }

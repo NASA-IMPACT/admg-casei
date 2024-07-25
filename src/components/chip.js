@@ -11,9 +11,9 @@ const Chip = ({
   label,
   removeAction,
   actionId,
-  isDark,
-  isInline,
-  hoverText,
+  isDark = false,
+  isInline = false,
+  hoverText = "",
 }) => (
   <div
     css={`
@@ -48,12 +48,6 @@ Chip.propTypes = {
   isDark: PropTypes.bool,
   isInline: PropTypes.bool,
   hoverText: PropTypes.string,
-}
-
-Chip.defaultProps = {
-  isDark: false,
-  isInline: false,
-  hoverText: "",
 }
 
 export default Chip

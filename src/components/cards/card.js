@@ -140,17 +140,12 @@ Card.propTypes = {
   }),
   placeholder: PropTypes.func.isRequired,
   imagePosition: PropTypes.oneOf(["left top"]),
-  height: PropTypes.string,
   link: PropTypes.string,
   tag: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   footerList: PropTypes.object,
   category: PropTypes.oneOf(["campaigns", "platforms", "instruments"])
     .isRequired,
   mode: PropTypes.oneOf([POSITIVE, NEGATIVE]),
-}
-
-Card.defaultProps = {
-  height: "100%",
 }
 
 export default Card

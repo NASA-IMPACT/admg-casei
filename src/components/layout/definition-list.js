@@ -20,7 +20,7 @@ const List = styled.dl`
 export default function DefinitionList({
   id,
   list,
-  isCentered,
+  isCentered = false,
   mode = NEGATIVE,
 }) {
   return (
@@ -75,8 +75,4 @@ DefinitionList.propTypes = {
   ),
   isCentered: PropTypes.bool,
   mode: PropTypes.oneOf([POSITIVE, NEGATIVE]),
-}
-
-DefinitionList.defaultProps = {
-  isCentered: false,
 }
