@@ -57,7 +57,8 @@ const InpageNav = ({ shortname, items }) => {
             margin: 0 -6rem;
             padding: 0 6rem;
             @media screen and (max-width: ${breakpoints["sm"]}) {
-              padding: 0 2.5rem;
+              margin: 0 -2rem;
+              padding: 0 2rem;
             }
             display: flex;
             justify-content: space-between;
@@ -70,12 +71,16 @@ const InpageNav = ({ shortname, items }) => {
           <ul
             css={`
               display: flex;
-              flex-direction: row;
+              flex-direction: column;
               justify-content: flex-start;
-              align-items: center;
+              align-items: flex-start;
               margin: 0;
               padding: 0.25rem 0;
               list-style: none;
+              @media screen and (min-width: ${breakpoints["sm"]}) {
+                flex-direction: row;
+                align-items: center;
+              }
             `}
           >
             <li

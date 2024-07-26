@@ -4,7 +4,7 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 
 import { NEGATIVE } from "../../utils/constants"
-import { colors } from "../../theme"
+import { colors, breakpoints } from "../../theme"
 
 const TabButton = styled(Link)`
   /* remove default button style */
@@ -100,11 +100,17 @@ const ExploreMenu = ({ selectedCategory, filteredCount }) => (
        {
         display: flex;
         flex-direction: row;
-        gap: 2rem;
+        flex-wrap: wrap;
+        gap: 0rem;
         margin-top: 2rem;
         list-style: none;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
+        @media screen and (min-width: ${breakpoints["sm"]}) {
+          align-items: center;
+          justify-content: center;
+          flex-direction: row;
+        }
       }
     `}
     data-cy="tabbar"

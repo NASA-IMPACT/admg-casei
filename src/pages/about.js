@@ -75,7 +75,7 @@ const About = ({ data }) => {
             <section
               css={`
                 display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
                 gap: 3rem;
               `}
               data-cy="about-inventory-objectives"
@@ -137,7 +137,7 @@ const About = ({ data }) => {
               <section
                 css={`
                   display: grid;
-                  grid-template-columns: 1fr 1fr;
+                  grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
                   gap: 3rem;
                 `}
                 data-cy={`about-${aboutSection.id}-text`}

@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 
 import { POSITIVE, NEGATIVE } from "../../utils/constants"
-import { colors } from "../../theme"
+import { colors, breakpoints } from "../../theme"
 
 const Container = styled.section`
   display: grid;
@@ -53,8 +53,7 @@ Section.propTypes = {
 }
 
 export const SectionContent = styled.div`
-  grid-column: ${({ columns = [1, 12] }) =>
-    `${columns[0]} / span ${columns[1]}`};
+  grid-column: 1 / -1;
   background-color: ${({ withBackground, mode }) =>
     withBackground ? colors[mode].background : null};
   max-width: 100%;
@@ -65,6 +64,10 @@ export const SectionContent = styled.div`
   > *,
   h3 {
     color: ${props => colors[props.mode].text};
+  }
+  @media screen and (min-width: ${breakpoints["sm"]}) {
+    grid-column: ${({ columns = [1, 12] }) =>
+      `${columns[0]} / span ${columns[1]}`};
   }
 `
 
