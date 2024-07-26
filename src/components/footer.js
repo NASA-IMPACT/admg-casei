@@ -55,8 +55,7 @@ const Headline = styled.p`
   }
 `
 
-const Footer = ({ shortname, isMediumDown }) => {
-  console.log(isMediumDown)
+const Footer = ({ shortname }) => {
   return (
     <PageFooter data-cy="page-footer">
       <PageFooterInner>
@@ -233,7 +232,6 @@ const Footer = ({ shortname, isMediumDown }) => {
 
 Footer.propTypes = {
   shortname: PropTypes.string.isRequired,
-  isMediumDown: PropTypes.bool,
 }
 
 export default Footer

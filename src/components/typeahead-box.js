@@ -111,7 +111,10 @@ export function TypeAhead() {
           align-items: center;
           cursor: pointer;
           width: 100%;
-          min-width: 24rem;
+          min-width: 80vw;
+          @media screen and (min-width: 800px) {
+            min-width: 24rem;
+          }
         `}
       >
         <input
