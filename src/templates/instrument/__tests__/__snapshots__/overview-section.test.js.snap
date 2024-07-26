@@ -27,7 +27,7 @@ exports[`Overview Section displays content 1`] = `
     }
   >
     <div
-      className="section-header___StyledDiv-sc-1i4pe2i-0 SXaMi"
+      className="section-header___StyledDiv-sc-1i4pe2i-0 cVNCrb"
       data-cy="unique-id-section-header"
     >
       <a
@@ -40,7 +40,7 @@ exports[`Overview Section displays content 1`] = `
     </div>
   </span>
   <div
-    className="section__SectionContent-sc-1oozlr5-2 KrgTv"
+    className="section__SectionContent-sc-1oozlr5-2 lbiqbu"
     mode="lightTheme"
   >
     <h3>
@@ -134,7 +134,7 @@ exports[`Overview Section displays content 1`] = `
         </dt>
         <dd>
           <a
-            className="external-link___StyledA-sc-3ezy1s-0 cAMswR"
+            className="external-link___StyledA-sc-3ezy1s-0 imQDdv"
             data-cy="calibration-doi-link"
             href="http://dx.doi.org/10.5067/calibration"
             rel="noopener noreferrer"
@@ -181,7 +181,7 @@ exports[`Overview Section displays content 1`] = `
               className="overview-section___StyledLi3-sc-1oemh85-9 kDzWeD"
             >
               <a
-                className="external-link___StyledA-sc-3ezy1s-0 cAMswR"
+                className="external-link___StyledA-sc-3ezy1s-0 imQDdv"
                 data-cy="online-information-link"
                 href="http://www.example.com"
                 rel="noopener noreferrer"
@@ -219,7 +219,7 @@ exports[`Overview Section displays content 1`] = `
     </section>
   </div>
   <div
-    className="section__SectionContent-sc-1oozlr5-2 jZFvXE"
+    className="section__SectionContent-sc-1oozlr5-2 cpDwKd"
     mode="lightTheme"
   >
     <ul
@@ -287,7 +287,7 @@ exports[`Overview Section displays content 1`] = `
           DOI:
            
           <a
-            className="external-link___StyledA-sc-3ezy1s-0 iQSFnp"
+            className="external-link___StyledA-sc-3ezy1s-0 cuaQiH"
             data-cy="instrument-doi-link"
             href="http://dx.doi.org/10.5067/instrument"
             rel="noopener noreferrer"
@@ -350,7 +350,7 @@ exports[`Overview Section displays content 1`] = `
             className="list-link___StyledLi-sc-xxtxki-0 iqaryc"
           >
             <a
-              className="external-link___StyledA-sc-3ezy1s-0 cAMswR"
+              className="external-link___StyledA-sc-3ezy1s-0 imQDdv"
               data-cy="test-link"
               href="http://www.example.com"
               rel="noopener noreferrer"
@@ -386,7 +386,7 @@ exports[`Overview Section displays content 1`] = `
             className="list-link___StyledLi-sc-xxtxki-0 iqaryc"
           >
             <a
-              className="external-link___StyledA-sc-3ezy1s-0 cAMswR"
+              className="external-link___StyledA-sc-3ezy1s-0 imQDdv"
               data-cy="test2-link"
               href="http://www.example.com"
               rel="noopener noreferrer"

@@ -11,7 +11,7 @@ exports[`Data Section matches snapshot 1`] = `
     id="data"
   />
   <div
-    className="section-header___StyledDiv-sc-1i4pe2i-0 SXaMi"
+    className="section-header___StyledDiv-sc-1i4pe2i-0 cVNCrb"
     data-cy="data-section-header"
   >
     <a
@@ -23,7 +23,7 @@ exports[`Data Section matches snapshot 1`] = `
     </a>
   </div>
   <div
-    className="section__SectionContent-sc-1oozlr5-2 ivTKjv"
+    className="section__SectionContent-sc-1oozlr5-2 fHLdbu"
     mode="darkTheme"
   >
     <p>
@@ -145,10 +145,10 @@ exports[`Data Section matches snapshot 1`] = `
       </div>
     </div>
     <div
-      className="data-section___StyledDiv2-sc-11szotn-1 cOIOPW"
+      className="data-section___StyledDiv2-sc-11szotn-1 HIsGX"
     >
       <div
-        className="data-section___StyledDiv3-sc-11szotn-2 KRmSO"
+        className="data-section___StyledDiv3-sc-11szotn-2 kYcAOi"
         data-cy="data-product"
       >
         <div>
@@ -200,7 +200,7 @@ exports[`Data Section matches snapshot 1`] = `
         </div>
       </div>
       <div
-        className="data-section___StyledDiv3-sc-11szotn-2 KRmSO"
+        className="data-section___StyledDiv3-sc-11szotn-2 kYcAOi"
         data-cy="data-product"
       >
         <div>
@@ -211,7 +211,7 @@ exports[`Data Section matches snapshot 1`] = `
             CAMP2Ex P-3 Remotely Sensed Aerosol Data
           </label>
           <a
-            className="external-link___StyledA-sc-3ezy1s-0 iQSFnp"
+            className="external-link___StyledA-sc-3ezy1s-0 cuaQiH"
             data-cy="doi-link"
             href="http://dx.doi.org/10.5067/Airborne/CAMP2Ex_Aerosol_AircraftRemoteSensing_P3_Data_1"
             rel="noopener noreferrer"
@@ -283,7 +283,7 @@ exports[`Data Section matches snapshot 1`] = `
         </div>
       </div>
       <div
-        className="data-section___StyledDiv3-sc-11szotn-2 KRmSO"
+        className="data-section___StyledDiv3-sc-11szotn-2 kYcAOi"
         data-cy="data-product"
       >
         <div>
@@ -335,7 +335,7 @@ exports[`Data Section matches snapshot 1`] = `
         </div>
       </div>
       <div
-        className="data-section___StyledDiv3-sc-11szotn-2 KRmSO"
+        className="data-section___StyledDiv3-sc-11szotn-2 kYcAOi"
         data-cy="data-product"
       >
         <div>
@@ -387,7 +387,7 @@ exports[`Data Section matches snapshot 1`] = `
         </div>
       </div>
       <div
-        className="data-section___StyledDiv3-sc-11szotn-2 KRmSO"
+        className="data-section___StyledDiv3-sc-11szotn-2 kYcAOi"
         data-cy="data-product"
       >
         <div>

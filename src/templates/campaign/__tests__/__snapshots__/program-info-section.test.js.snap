@@ -11,7 +11,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
     id="program-info"
   />
   <div
-    className="section-header___StyledDiv-sc-1i4pe2i-0 SXaMi"
+    className="section-header___StyledDiv-sc-1i4pe2i-0 cVNCrb"
     data-cy="program-info-section-header"
   >
     <a
@@ -23,14 +23,14 @@ exports[`Program Info Section renders logo when present in props 1`] = `
     </a>
   </div>
   <div
-    className="section__SectionContent-sc-1oozlr5-2 eZkTzL"
+    className="section__SectionContent-sc-1oozlr5-2 dwmZKy"
     mode="darkTheme"
   >
     <div
-      className="program-info-section___StyledDiv-sc-celi18-0 kubiqB"
+      className="program-info-section___StyledDiv-sc-celi18-0 gqRZlk"
     >
       <div
-        className="program-info-section___StyledDiv2-sc-celi18-1 eiVFAq"
+        className="program-info-section___StyledDiv2-sc-celi18-1 jmfHdz"
       >
         <div
           className="program-info-section___StyledDiv3-sc-celi18-2 cbYsnX"
@@ -287,7 +287,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
     id="program-info"
   />
   <div
-    className="section-header___StyledDiv-sc-1i4pe2i-0 SXaMi"
+    className="section-header___StyledDiv-sc-1i4pe2i-0 cVNCrb"
     data-cy="program-info-section-header"
   >
     <a
@@ -299,14 +299,14 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
     </a>
   </div>
   <div
-    className="section__SectionContent-sc-1oozlr5-2 eZkTzL"
+    className="section__SectionContent-sc-1oozlr5-2 dwmZKy"
     mode="darkTheme"
   >
     <div
-      className="program-info-section___StyledDiv-sc-celi18-0 kubiqB"
+      className="program-info-section___StyledDiv-sc-celi18-0 gqRZlk"
     >
       <div
-        className="program-info-section___StyledDiv2-sc-celi18-1 eiVFAq"
+        className="program-info-section___StyledDiv2-sc-celi18-1 jmfHdz"
       >
         <svg
           height="120"

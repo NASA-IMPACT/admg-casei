@@ -11,7 +11,7 @@ exports[`Platform Section displays content 1`] = `
     id="platform"
   />
   <div
-    className="section-header___StyledDiv-sc-1i4pe2i-0 SXaMi"
+    className="section-header___StyledDiv-sc-1i4pe2i-0 cVNCrb"
     data-cy="platform-section-header"
   >
     <a
@@ -23,7 +23,7 @@ exports[`Platform Section displays content 1`] = `
     </a>
   </div>
   <div
-    className="section__SectionContent-sc-1oozlr5-2 ivTKjv"
+    className="section__SectionContent-sc-1oozlr5-2 fHLdbu"
     mode="darkTheme"
   >
     <div
@@ -34,13 +34,13 @@ exports[`Platform Section displays content 1`] = `
         data-cy="carousel-list-text-control"
       >
         <button
-          className="button__Clickable-sc-1yw7vig-0 button___StyledClickable-sc-1yw7vig-2 fRqvWm jVedgi"
+          className="button__Clickable-sc-1yw7vig-0 button___StyledClickable-sc-1yw7vig-2 fRqvWm cCPXgL"
           onClick={[Function]}
         >
           J-31
         </button>
         <button
-          className="button__Clickable-sc-1yw7vig-0 button___StyledClickable-sc-1yw7vig-2 fRqvWm kUpNvF"
+          className="button__Clickable-sc-1yw7vig-0 button___StyledClickable-sc-1yw7vig-2 fRqvWm dHTFWE"
           onClick={[Function]}
         >
           Aerosonde
