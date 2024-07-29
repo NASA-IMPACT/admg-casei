@@ -40,7 +40,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
             className="gatsby-image-wrapper"
             data-gatsby-image-wrapper=""
             style={
-              Object {
+              {
                 "backgroundColor": undefined,
                 "overflow": "hidden",
                 "position": "relative",
@@ -50,7 +50,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
             <div
               aria-hidden={true}
               style={
-                Object {
+                {
                   "paddingTop": "99.2248062015504%",
                 }
               }
@@ -59,7 +59,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
               aria-hidden={true}
               data-placeholder-image=""
               style={
-                Object {
+                {
                   "height": "100%",
                   "left": 0,
                   "position": "absolute",
@@ -84,7 +84,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
                 loading="lazy"
                 sizes="100vw"
                 style={
-                  Object {
+                  {
                     "backgroundColor": undefined,
                     "height": "100%",
                     "left": 0,
@@ -118,7 +118,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
                   src="/static/3d17ba6135efff1e39e6b4d97157a123/893c2/3b06165b-7033-4357-8f15-d2b68cbd84ff.png"
                   srcSet="/static/3d17ba6135efff1e39e6b4d97157a123/893c2/3b06165b-7033-4357-8f15-d2b68cbd84ff.png 129w"
                   style={
-                    Object {
+                    {
                       "backgroundColor": undefined,
                       "height": "100%",
                       "left": 0,
@@ -138,8 +138,8 @@ exports[`Program Info Section renders logo when present in props 1`] = `
             </noscript>
             <script
               dangerouslySetInnerHTML={
-                Object {
-                  "__html": "const t=\\"undefined\\"!=typeof HTMLImageElement&&\\"loading\\"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll(\\"img[data-main-image]\\");for(let e of t){e.dataset.src&&(e.setAttribute(\\"src\\",e.dataset.src),e.removeAttribute(\\"data-src\\")),e.dataset.srcset&&(e.setAttribute(\\"srcset\\",e.dataset.srcset),e.removeAttribute(\\"data-srcset\\"));const t=e.parentNode.querySelectorAll(\\"source[data-srcset]\\");for(let e of t)e.setAttribute(\\"srcset\\",e.dataset.srcset),e.removeAttribute(\\"data-srcset\\");e.complete&&(e.style.opacity=1,e.parentNode.parentNode.querySelector(\\"[data-placeholder-image]\\").style.opacity=0)}}",
+                {
+                  "__html": "const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t){e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset"));const t=e.parentNode.querySelectorAll("source[data-srcset]");for(let e of t)e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset");e.complete&&(e.style.opacity=1,e.parentNode.parentNode.querySelector("[data-placeholder-image]").style.opacity=0)}}",
                 }
               }
               type="module"

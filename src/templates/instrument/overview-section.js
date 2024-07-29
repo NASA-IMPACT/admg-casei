@@ -16,7 +16,7 @@ import { POSITIVE } from "../../utils/constants"
 import { isUrl } from "../../utils/helpers"
 import { colors } from "../../theme"
 
-function BackgroundListItem({ id, label, children }) {
+function BackgroundListItem({ id, label, children = "Currently unavailable" }) {
   return (
     <li
       css={`
@@ -40,9 +40,6 @@ BackgroundListItem.propTypes = {
   id: PropTypes.string.isRequired,
   label: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-}
-BackgroundListItem.defaultProps = {
-  children: "Currently unavailable",
 }
 
 function Background({
