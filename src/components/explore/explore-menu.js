@@ -110,6 +110,7 @@ const ExploreMenu = ({ selectedCategory, filteredCount }) => (
           align-items: center;
           justify-content: center;
           flex-direction: row;
+          gap: 2rem;
         }
       }
     `}

@@ -31,7 +31,13 @@ export default function ExternalLink({
       data-cy={`${id}-link`}
     >
       <ExternalLinkIcon color={colors[mode].linkText} />
-      <span>{label || children}</span>
+      <span
+        css={`
+          overflow-wrap: anywhere;
+        `}
+      >
+        {label || children}
+      </span>
     </a>
   )
 }

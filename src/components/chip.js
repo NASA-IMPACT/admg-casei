@@ -25,7 +25,7 @@ const Chip = ({
       color: ${colors[NEGATIVE].text};
       border-radius: ${shape.rounded};
       padding: 0.25rem 0.5rem;
-      margin: ${isInline ? 0 : "0.25rem 0.5rem"};
+      gap: 0.5rem;
     `}
     data-cy={`${id}-chip`}
   >

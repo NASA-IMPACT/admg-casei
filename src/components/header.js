@@ -180,7 +180,7 @@ const Header = ({ shortname, children, mode, isMediumDown }) => {
                 text-decoration: none;
                 display: grid;
                 grid-template-columns: max-content auto;
-                column-gap: ${isMediumDown ? "1rem" : "2rem"};
+                column-gap: ${isMediumDown ? "0.5rem" : "1rem"};
                 align-items: center;
               `}
             >

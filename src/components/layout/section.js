@@ -12,9 +12,14 @@ const Container = styled.section`
   row-gap: 2rem;
   position: relative;
 
-  margin: ${props => (props.mode === POSITIVE ? `0 -6rem` : 0)};
-  padding: ${props => (props.mode === POSITIVE ? `6rem` : 0)};
-  margin-bottom: ${props => (props.isSpaced ? `6rem` : `6rem`)};
+  margin: ${props => (props.mode === POSITIVE ? `0 -2rem` : 0)};
+  padding: ${props => (props.mode === POSITIVE ? `2rem` : 0)};
+  margin-bottom: ${props => (props.isSpaced ? `2rem` : `2rem`)};
+  @media screen and (min-width: ${breakpoints["sm"]}) {
+    margin: ${props => (props.mode === POSITIVE ? `0 -6rem` : 0)};
+    padding: ${props => (props.mode === POSITIVE ? `6rem` : 0)};
+    margin-bottom: ${props => (props.isSpaced ? `6rem` : `6rem`)};
+  }
 
   background-color: ${props =>
     props.mode === POSITIVE ? colors[POSITIVE].background : `none`};

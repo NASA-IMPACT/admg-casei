@@ -91,11 +91,12 @@ const InpageNav = ({ shortname, items }) => {
               <a
                 href="#top"
                 css={`
-                  padding-right: 1rem;
-                  @media screen and (max-width: ${breakpoints["sm"]}) {
-                    padding-right: 0;
+                  padding-right: 0;
+                  font-size: 1.25rem;
+                  @media screen and (min-width: ${breakpoints["sm"]}) {
+                    padding-right: 1rem;
+                    font-size: 2rem;
                   }
-                  font-size: 2rem;
                   color: ${colors[POSITIVE].text};
                 `}
                 data-cy={`top-inpage-link`}

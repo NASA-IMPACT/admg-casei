@@ -77,9 +77,9 @@ Button.displayName = "Button"
 
 export default Button
 
-export const IconButton = ({ id, icon, action }) => (
+export const IconButton = ({ id, icon, action, type }) => (
   <Clickable
-    type="button"
+    type={type || "button"}
     onClick={action}
     css={`
       background: none;
@@ -88,11 +88,17 @@ export const IconButton = ({ id, icon, action }) => (
       cursor: pointer;
       color: ${colors[NEGATIVE].text};
       vertical-align: middle;
-      margin-left: 0.5rem;
     `}
     data-cy={id}
   >
-    <span role="img" aria-label={`${id}-icon`}>
+    <span
+      role="img"
+      aria-label={`${id}-icon`}
+      css={`
+        display: flex;
+        align-content: center;
+      `}
+    >
       {icon}
     </span>
   </Clickable>
@@ -102,4 +108,5 @@ IconButton.propTypes = {
   id: PropTypes.string.isRequired,
   action: PropTypes.func,
   icon: PropTypes.node.isRequired,
+  type: PropTypes.string,
 }

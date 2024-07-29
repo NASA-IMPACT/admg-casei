@@ -90,7 +90,7 @@ const HeroContentWrapper = styled.div`
     padding: 0 ${layout.pageMargin};
   }
 `
-const HeroTitle = styled.h1`
+export const HeroTitle = styled.h1`
   @media screen and (max-width: ${breakpoints["sm"]}) {
     font-size: 2.875rem;
   }

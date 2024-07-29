@@ -12,7 +12,7 @@ import VisuallyHidden from "@reach/visually-hidden"
 import { IconButton } from "../button"
 import { CloseIcon } from "../../icons"
 import { NEGATIVE } from "../../utils/constants"
-import { colors, shape } from "../../theme"
+import { colors, shape, breakpoints } from "../../theme"
 
 export default function FilterBox({
   filterOptions,
@@ -32,7 +32,10 @@ export default function FilterBox({
   return (
     <div
       css={`
-        margin-right: 2rem;
+        margin-right: 0.5rem;
+        @media screen and (min-width: ${breakpoints["sm"]}) {
+          margin-right: 2rem;
+        }
       `}
     >
       <VisuallyHidden id={filterName}>{filterName}</VisuallyHidden>

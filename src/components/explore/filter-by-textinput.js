@@ -4,7 +4,8 @@ import { useDebouncedCallback } from "use-debounce"
 
 import { CloseIcon, SearchIcon } from "../../icons"
 import { NEGATIVE } from "../../utils/constants"
-import { colors } from "../../theme"
+import { colors, breakpoints } from "../../theme"
+import { IconButton } from "../button"
 
 const FilterByTextInput = React.forwardRef(
   ({ setSearchResult, category }, ref) => {
@@ -22,26 +23,23 @@ const FilterByTextInput = React.forwardRef(
         css={`
           border: 1px solid ${colors[NEGATIVE].text};
           padding: 0.25rem;
-          flex-grow: 1;
-          width: 30rem;
+          flex: 1;
+          max-width: 100%;
+          flex-basis: 100%;
           display: flex;
           align-content: stretch;
+          align-items: center;
+          @media screen and (min-width: ${breakpoints["sm"]}) {
+            width: 30rem;
+            flex-basis: inherit;
+          }
         `}
       >
-        <button
-          css={`
-            border: none;
-            flex-grow: 0;
-            background: transparent;
-            color: ${colors[NEGATIVE].text};
-            vertical-align: middle;
-          `}
+        <IconButton
           data-cy="submit"
-        >
-          <span role="img" aria-label="Magnifying glass icon">
-            <SearchIcon color={colors[NEGATIVE].text} />
-          </span>
-        </button>
+          icon={<SearchIcon color={colors[NEGATIVE].text} />}
+          type="submit"
+        />
         <input
           autoComplete="off"
           data-cy="explore-input"
@@ -65,22 +63,13 @@ const FilterByTextInput = React.forwardRef(
           ref={ref}
         />
         {ref.current?.value && (
-          <button
+          <IconButton
             type="reset"
-            onClick={() => setInputsize(50)}
-            css={`
-              border: none;
-              flex-grow: 0;
-              background: transparent;
-              color: ${colors[NEGATIVE].text};
-              vertical-align: middle;
-            `}
+            action={() => setInputsize(50)}
             data-cy="reset"
-          >
-            <span role="img" aria-label="X icon">
-              <CloseIcon color={colors[NEGATIVE].text} />
-            </span>
-          </button>
+            icon={<CloseIcon color={colors[NEGATIVE].text} />}
+            aria-label="X icon"
+          />
         )}
       </div>
     )

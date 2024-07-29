@@ -27,8 +27,14 @@ const GlobalMenu = styled.ul`
 const ListLink = ({ to, children, mode }) => (
   <li
     css={`
-      margin: 0 1rem 0 0;
+      margin: 0;
       text-transform: uppercase;
+      @media screen and (min-width: ${breakpoints["sm"]}) {
+        margin-left: 0.5rem;
+      }
+      @media screen and (min-width: ${breakpoints["md"]}) {
+        margin-left: 1rem;
+      }
     `}
   >
     <Link

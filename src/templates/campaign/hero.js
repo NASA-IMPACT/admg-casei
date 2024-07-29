@@ -5,7 +5,7 @@ import styled from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
 import turfBbox from "@turf/bbox"
 
-import { HeroStats } from "../../components/hero"
+import { HeroStats, HeroTitle } from "../../components/hero"
 import Map from "../../components/map"
 import BboxLayer from "../../components/map/bbox-layer"
 import GeoJsonSource from "../../components/map/geojson-source"
@@ -126,7 +126,9 @@ const CampaignHero = ({
             ) : (
               <CampaignIcon />
             )}
-            <h1 data-cy="campaign-hero-header">{longname || shortname}</h1>
+            <HeroTitle data-cy="campaign-hero-header">
+              {longname || shortname}
+            </HeroTitle>
             <p>{focusListing}</p>
           </div>
           <HeroStats
