@@ -143,7 +143,9 @@ exports[`Footer renders correctly 1`] = `
                 fill="#aac9ff"
               />
             </svg>
-            <span>
+            <span
+              className="external-link___StyledSpan-sc-3ezy1s-1 gYHqzm"
+            >
               API Documentation
             </span>
           </a>
@@ -190,7 +192,9 @@ exports[`Footer renders correctly 1`] = `
                 fill="#aac9ff"
               />
             </svg>
-            <span>
+            <span
+              className="external-link___StyledSpan-sc-3ezy1s-1 gYHqzm"
+            >
               ADMG Website
             </span>
           </a>
@@ -224,7 +228,9 @@ exports[`Footer renders correctly 1`] = `
                 fill="#aac9ff"
               />
             </svg>
-            <span>
+            <span
+              className="external-link___StyledSpan-sc-3ezy1s-1 gYHqzm"
+            >
               IMPACT Website
             </span>
           </a>
@@ -303,7 +309,9 @@ exports[`Footer renders correctly 1`] = `
           fill="#aac9ff"
         />
       </svg>
-      <span>
+      <span
+        className="external-link___StyledSpan-sc-3ezy1s-1 gYHqzm"
+      >
         Development Seed
       </span>
     </a>

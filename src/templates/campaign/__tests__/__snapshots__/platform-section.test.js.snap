@@ -2,7 +2,7 @@
 
 exports[`Platform Section displays content 1`] = `
 <section
-  className="section__Container-sc-1oozlr5-0 bIfvkW"
+  className="section__Container-sc-1oozlr5-0 fOmBFm"
   data-cy="platform-section"
   mode="darkTheme"
 >

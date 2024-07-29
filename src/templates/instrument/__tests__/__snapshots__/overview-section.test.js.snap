@@ -2,7 +2,7 @@
 
 exports[`Overview Section displays content 1`] = `
 <section
-  className="section__Container-sc-1oozlr5-0 iMnAlB"
+  className="section__Container-sc-1oozlr5-0 iwtLeQ"
   data-cy="unique-id-section"
   mode="lightTheme"
 >
@@ -161,7 +161,9 @@ exports[`Overview Section displays content 1`] = `
                 fill="#15418c"
               />
             </svg>
-            <span>
+            <span
+              className="external-link___StyledSpan-sc-3ezy1s-1 gYHqzm"
+            >
               http://dx.doi.org/10.5067/calibration
             </span>
           </a>
@@ -208,7 +210,9 @@ exports[`Overview Section displays content 1`] = `
                     fill="#15418c"
                   />
                 </svg>
-                <span>
+                <span
+                  className="external-link___StyledSpan-sc-3ezy1s-1 gYHqzm"
+                >
                   http://www.example.com
                 </span>
               </a>
@@ -314,7 +318,9 @@ exports[`Overview Section displays content 1`] = `
                 fill="#aac9ff"
               />
             </svg>
-            <span>
+            <span
+              className="external-link___StyledSpan-sc-3ezy1s-1 gYHqzm"
+            >
               http://dx.doi.org/10.5067/instrument
             </span>
           </a>
@@ -377,7 +383,9 @@ exports[`Overview Section displays content 1`] = `
                   fill="#15418c"
                 />
               </svg>
-              <span>
+              <span
+                className="external-link___StyledSpan-sc-3ezy1s-1 gYHqzm"
+              >
                 test
               </span>
             </a>
@@ -413,7 +421,9 @@ exports[`Overview Section displays content 1`] = `
                   fill="#15418c"
                 />
               </svg>
-              <span>
+              <span
+                className="external-link___StyledSpan-sc-3ezy1s-1 gYHqzm"
+              >
                 test2
               </span>
             </a>

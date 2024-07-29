@@ -2,7 +2,7 @@
 
 exports[`Data Section matches snapshot 1`] = `
 <section
-  className="section__Container-sc-1oozlr5-0 bIfvkW"
+  className="section__Container-sc-1oozlr5-0 fOmBFm"
   data-cy="data-section"
   mode="darkTheme"
 >
@@ -42,7 +42,7 @@ exports[`Data Section matches snapshot 1`] = `
       className="data-section___StyledDiv-sc-11szotn-0 qHvyW"
     >
       <div
-        className="filter-box___StyledDiv-sc-1n4l7nk-0 koGaSP"
+        className="filter-box___StyledDiv-sc-1n4l7nk-0 kWcCTh"
       >
         <span
           id="Campaigns"
@@ -93,7 +93,7 @@ exports[`Data Section matches snapshot 1`] = `
         </div>
       </div>
       <div
-        className="filter-box___StyledDiv-sc-1n4l7nk-0 koGaSP"
+        className="filter-box___StyledDiv-sc-1n4l7nk-0 kWcCTh"
       >
         <span
           id="Platforms"
@@ -238,7 +238,9 @@ exports[`Data Section matches snapshot 1`] = `
                 fill="#aac9ff"
               />
             </svg>
-            <span>
+            <span
+              className="external-link___StyledSpan-sc-3ezy1s-1 gYHqzm"
+            >
               10.5067/Airborne/CAMP2Ex_Aerosol_AircraftRemoteSensing_P3_Data_1
             </span>
           </a>

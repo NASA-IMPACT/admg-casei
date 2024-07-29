@@ -2,7 +2,7 @@
 
 exports[`Program Info Section renders logo when present in props 1`] = `
 <section
-  className="section__Container-sc-1oozlr5-0 bIfvkW"
+  className="section__Container-sc-1oozlr5-0 fOmBFm"
   data-cy="program-info-section"
   mode="darkTheme"
 >
@@ -148,7 +148,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
         </div>
       </div>
       <div
-        className="content-group___StyledDiv-sc-gouaoh-0 gWModr"
+        className="content-group___StyledDiv-sc-gouaoh-0 jbLbih"
       >
         <div
           data-cy="program-info-content"
@@ -278,7 +278,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
 
 exports[`Program Info Section renders placeholder when no logo is available 1`] = `
 <section
-  className="section__Container-sc-1oozlr5-0 bIfvkW"
+  className="section__Container-sc-1oozlr5-0 fOmBFm"
   data-cy="program-info-section"
   mode="darkTheme"
 >
@@ -328,7 +328,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
         </svg>
       </div>
       <div
-        className="content-group___StyledDiv-sc-gouaoh-0 gWModr"
+        className="content-group___StyledDiv-sc-gouaoh-0 jbLbih"
       >
         <div
           data-cy="program-info-content"

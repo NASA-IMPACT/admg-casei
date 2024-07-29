@@ -2,7 +2,7 @@
 
 exports[`Focus Section displays content 1`] = `
 <section
-  className="section__Container-sc-1oozlr5-0 bIfvkW"
+  className="section__Container-sc-1oozlr5-0 fOmBFm"
   data-cy="focus-section"
   mode="darkTheme"
 >
@@ -111,7 +111,7 @@ exports[`Focus Section displays content 1`] = `
         className="focus-section__FocusContent-sc-tyy683-0 hhthVO"
       >
         <div
-          className="chip___StyledDiv-sc-4ga8fx-0 fAohBv"
+          className="chip___StyledDiv-sc-4ga8fx-0 cQuORu"
           data-cy="focus-phenomena-chip"
         >
           <small
@@ -121,7 +121,7 @@ exports[`Focus Section displays content 1`] = `
           </small>
         </div>
         <div
-          className="chip___StyledDiv-sc-4ga8fx-0 fAohBv"
+          className="chip___StyledDiv-sc-4ga8fx-0 cQuORu"
           data-cy="focus-phenomena-chip"
         >
           <small
@@ -145,7 +145,7 @@ exports[`Focus Section displays content 1`] = `
         className="focus-section__FocusContent-sc-tyy683-0 hhthVO"
       >
         <div
-          className="chip___StyledDiv-sc-4ga8fx-0 fAohBv"
+          className="chip___StyledDiv-sc-4ga8fx-0 cQuORu"
           data-cy="focus-mission-chip"
         >
           <small
@@ -155,7 +155,7 @@ exports[`Focus Section displays content 1`] = `
           </small>
         </div>
         <div
-          className="chip___StyledDiv-sc-4ga8fx-0 fAohBv"
+          className="chip___StyledDiv-sc-4ga8fx-0 cQuORu"
           data-cy="focus-mission-chip"
         >
           <small
