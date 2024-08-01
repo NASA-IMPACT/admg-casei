@@ -7,7 +7,7 @@ import {
   ListboxList,
   ListboxOption,
 } from "@reach/listbox"
-import VisuallyHidden from "@reach/visually-hidden"
+import { VisuallyHidden } from "@reach/visually-hidden"
 
 import { IconButton } from "../button"
 import { CloseIcon } from "../../icons"

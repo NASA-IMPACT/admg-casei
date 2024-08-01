@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
-import VisuallyHidden from "@reach/visually-hidden"
+import { VisuallyHidden } from "@reach/visually-hidden"
 import Layout, {
   PageBody,
   SectionHeader,
@@ -153,6 +153,7 @@ export default function Glossary({ data }) {
               <figcaption>
                 Source:{" "}
                 <ExternalLink
+                  id="ADMG Definitions"
                   label="https://earthdata.nasa.gov/esds/impact/admg/admg-definitions"
                   url="https://earthdata.nasa.gov/esds/impact/admg/admg-definitions"
                 />
@@ -292,9 +293,8 @@ const LinkSection = ({ node }) => {
         if (link) {
           return (
             // eslint-disable-next-line
-            <span>
+            <span key={index}>
               <ExternalLink
-                key={index}
                 label={link.text}
                 url={link.url}
                 id={link.id}

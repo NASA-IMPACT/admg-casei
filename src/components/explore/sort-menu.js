@@ -7,7 +7,7 @@ import {
   ListboxList,
   ListboxOption,
 } from "@reach/listbox"
-import VisuallyHidden from "@reach/visually-hidden"
+import { VisuallyHidden } from "@reach/visually-hidden"
 import { v4 as uuidv4 } from "uuid"
 import { NEGATIVE } from "../../utils/constants"
 import { colors, shape } from "../../theme"
