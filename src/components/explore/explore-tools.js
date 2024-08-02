@@ -48,6 +48,7 @@ const ExploreTools = React.forwardRef(
               display: flex;
               align-items: center;
               gap: 0.55rem;
+              flex-grow: 1;
             `}
             data-cy="main-filter-label"
           >

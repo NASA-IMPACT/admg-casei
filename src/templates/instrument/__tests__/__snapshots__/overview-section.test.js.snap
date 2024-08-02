@@ -2,7 +2,7 @@
 
 exports[`Overview Section displays content 1`] = `
 <section
-  className="section__Container-sc-1oozlr5-0 gEMGnY"
+  className="section__Container-sc-1oozlr5-0 dfaxgJ"
   data-cy="unique-id-section"
   mode="lightTheme"
 >
@@ -27,7 +27,7 @@ exports[`Overview Section displays content 1`] = `
     }
   >
     <div
-      className="sc-aXZVg jITuPT"
+      className="sc-aXZVg fflPGZ"
       data-cy="unique-id-section-header"
     >
       <a
@@ -40,7 +40,7 @@ exports[`Overview Section displays content 1`] = `
     </div>
   </span>
   <div
-    className="section__SectionContent-sc-1oozlr5-2 ezufai"
+    className="section__SectionContent-sc-1oozlr5-2 cuLyFD"
     mode="lightTheme"
   >
     <h3>
@@ -134,7 +134,7 @@ exports[`Overview Section displays content 1`] = `
         </dt>
         <dd>
           <a
-            className="external-link___StyledA-sc-3ezy1s-0 bXnKOc"
+            className="sc-eqUAAy fwapUR"
             data-cy="calibration-doi-link"
             href="http://dx.doi.org/10.5067/calibration"
             rel="noopener noreferrer"
@@ -161,7 +161,9 @@ exports[`Overview Section displays content 1`] = `
                 fill="#15418c"
               />
             </svg>
-            <span>
+            <span
+              className="external-link___StyledSpan-sc-3ezy1s-0 LrNqW"
+            >
               http://dx.doi.org/10.5067/calibration
             </span>
           </a>
@@ -175,13 +177,13 @@ exports[`Overview Section displays content 1`] = `
         </dt>
         <dd>
           <ul
-            className="sc-gFqAkR eDLSOj"
+            className="sc-jlZhew imZdcp"
           >
             <li
               className="overview-section___StyledLi3-sc-1oemh85-0 hwjFCf"
             >
               <a
-                className="external-link___StyledA-sc-3ezy1s-0 bXnKOc"
+                className="sc-eqUAAy fwapUR"
                 data-cy="online-information-link"
                 href="http://www.example.com"
                 rel="noopener noreferrer"
@@ -208,7 +210,9 @@ exports[`Overview Section displays content 1`] = `
                     fill="#15418c"
                   />
                 </svg>
-                <span>
+                <span
+                  className="external-link___StyledSpan-sc-3ezy1s-0 LrNqW"
+                >
                   http://www.example.com
                 </span>
               </a>
@@ -219,19 +223,19 @@ exports[`Overview Section displays content 1`] = `
     </section>
   </div>
   <div
-    className="section__SectionContent-sc-1oozlr5-2 fTUNwB"
+    className="section__SectionContent-sc-1oozlr5-2 kVHFnE"
     mode="lightTheme"
   >
     <ul
-      className="sc-jEACwC gkFeOb"
+      className="sc-kAyceB fcBiQh"
       data-cy="instrument-background"
     >
       <li
-        className="sc-jlZhew ihrdvp"
+        className="sc-iGgWBj byuPRN"
         data-cy="lead-investigator-label"
       >
         <label
-          className="sc-cwHptR fschhV"
+          className="sc-gsFSXq hFxitn"
         >
           Lead Investigator
         </label>
@@ -240,11 +244,11 @@ exports[`Overview Section displays content 1`] = `
         </p>
       </li>
       <li
-        className="sc-jlZhew ihrdvp"
+        className="sc-iGgWBj byuPRN"
         data-cy="technical-contact-label"
       >
         <label
-          className="sc-cwHptR fschhV"
+          className="sc-gsFSXq hFxitn"
         >
           Technical Contact
         </label>
@@ -253,11 +257,11 @@ exports[`Overview Section displays content 1`] = `
         </p>
       </li>
       <li
-        className="sc-jlZhew ihrdvp"
+        className="sc-iGgWBj byuPRN"
         data-cy="instrument-manufacturer-label"
       >
         <label
-          className="sc-cwHptR fschhV"
+          className="sc-gsFSXq hFxitn"
         >
           Instrument Maker
         </label>
@@ -266,11 +270,11 @@ exports[`Overview Section displays content 1`] = `
         </p>
       </li>
       <li
-        className="sc-jlZhew ihrdvp"
+        className="sc-iGgWBj byuPRN"
         data-cy="funding-source-label"
       >
         <label
-          className="sc-cwHptR fschhV"
+          className="sc-gsFSXq hFxitn"
         >
           Funding Source
         </label>
@@ -279,15 +283,15 @@ exports[`Overview Section displays content 1`] = `
         </p>
       </li>
       <div
-        className="sc-cPiKLX cxqyky"
+        className="sc-imWYAI leMHIV"
       >
         <p
-          className="sc-dLMFU eBFfpX"
+          className="sc-jXbUNg jiAqKN"
         >
           DOI:
            
           <a
-            className="external-link___StyledA-sc-3ezy1s-0 cmtvaY"
+            className="sc-eqUAAy gqBnyJ"
             data-cy="instrument-doi-link"
             href="http://dx.doi.org/10.5067/instrument"
             rel="noopener noreferrer"
@@ -314,18 +318,20 @@ exports[`Overview Section displays content 1`] = `
                 fill="#aac9ff"
               />
             </svg>
-            <span>
+            <span
+              className="external-link___StyledSpan-sc-3ezy1s-0 LrNqW"
+            >
               http://dx.doi.org/10.5067/instrument
             </span>
           </a>
         </p>
       </div>
       <li
-        className="sc-jlZhew ihrdvp"
+        className="sc-iGgWBj byuPRN"
         data-cy="data-locations-label"
       >
         <label
-          className="sc-cwHptR fschhV"
+          className="sc-gsFSXq hFxitn"
         >
           Overview Publications
         </label>
@@ -334,23 +340,23 @@ exports[`Overview Section displays content 1`] = `
         </p>
       </li>
       <li
-        className="sc-eDPEul kcOFPe"
+        className="sc-dhKdcB hfEDvZ"
         data-cy="repositories-label"
       >
         <label
-          className="sc-eldPxv bKvqjE"
+          className="sc-kpDqfm iIVHGu"
         >
           Repositories
         </label>
         <ul
-          className="sc-fPXMVe kcuIG"
+          className="sc-dAlyuH dvdrwn"
           data-cy="repository-list"
         >
           <li
             className="list-link___StyledLi-sc-xxtxki-0 hZlwud"
           >
             <a
-              className="external-link___StyledA-sc-3ezy1s-0 bXnKOc"
+              className="sc-eqUAAy fwapUR"
               data-cy="test-link"
               href="http://www.example.com"
               rel="noopener noreferrer"
@@ -377,7 +383,9 @@ exports[`Overview Section displays content 1`] = `
                   fill="#15418c"
                 />
               </svg>
-              <span>
+              <span
+                className="external-link___StyledSpan-sc-3ezy1s-0 LrNqW"
+              >
                 test
               </span>
             </a>
@@ -386,7 +394,7 @@ exports[`Overview Section displays content 1`] = `
             className="list-link___StyledLi-sc-xxtxki-0 hZlwud"
           >
             <a
-              className="external-link___StyledA-sc-3ezy1s-0 bXnKOc"
+              className="sc-eqUAAy fwapUR"
               data-cy="test2-link"
               href="http://www.example.com"
               rel="noopener noreferrer"
@@ -413,7 +421,9 @@ exports[`Overview Section displays content 1`] = `
                   fill="#15418c"
                 />
               </svg>
-              <span>
+              <span
+                className="external-link___StyledSpan-sc-3ezy1s-0 LrNqW"
+              >
                 test2
               </span>
             </a>

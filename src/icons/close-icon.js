@@ -1,11 +1,11 @@
 import React from "react"
 import PropTypes from "prop-types"
-
-const CloseIcon = ({ color = "#FFF" }) => (
+import { sizes } from "./utils"
+const CloseIcon = ({ color = "#FFF", size = "text" }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="12px"
-    height="12px"
+    width={sizes[size].width}
+    height={sizes[size].height}
     viewBox="0 0 16 16"
   >
     <polygon
@@ -17,6 +17,7 @@ const CloseIcon = ({ color = "#FFF" }) => (
 
 CloseIcon.propTypes = {
   color: PropTypes.string,
+  size: PropTypes.string,
 }
 
 export default CloseIcon

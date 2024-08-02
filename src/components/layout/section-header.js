@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-
+import { breakpoints } from "../../theme"
 export default function SectionHeader({
   tagline,
   headline,
@@ -12,8 +12,11 @@ export default function SectionHeader({
   return (
     <div
       css={`
-        grid-column: 1 / span ${spanWidth};
+        grid-column: 1 / -1;
         align-self: end;
+        @media screen and (min-width: ${breakpoints["sm"]}) {
+          grid-column: 1 / span ${spanWidth};
+        }
       `}
       data-cy={`${id}-section-header`}
     >

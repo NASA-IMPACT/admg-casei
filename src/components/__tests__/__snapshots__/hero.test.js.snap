@@ -6,24 +6,26 @@ exports[`Header renders correctly 1`] = `
   data-cy="test-hero"
 >
   <div
-    className="hero___StyledDiv-sc-qftwzr-4 cKZRIK"
+    className="hero__HeroContentWrapper-sc-qftwzr-1 ixuDOH"
   >
     <div
-      className="hero___StyledDiv2-sc-qftwzr-5 eXoLfX"
+      className="hero___StyledDiv-sc-qftwzr-6 hJgUGu"
     >
       <p
-        className="hero___StyledP-sc-qftwzr-7 bPDHKe"
+        className="hero___StyledP-sc-qftwzr-8 codxcZ"
       >
         Instrument
       </p>
-      <h1>
+      <h1
+        className="hero__HeroTitle-sc-qftwzr-2 bSBmwr"
+      >
         2D-C/P
          
         2D-C/P Hydrometeor Imaging Probe
       </h1>
     </div>
     <div
-      className="hero___StyledDiv3-sc-qftwzr-8 jEpAIm"
+      className="hero___StyledDiv2-sc-qftwzr-9 fqzeMC"
     >
       <p>
         The 2DC probe records images of hydrometeors...
@@ -37,7 +39,7 @@ exports[`Header renders correctly 1`] = `
           Data Shortcut
         </span>
         <div
-          className="sc-eqUAAy iPbKrr"
+          className="sc-eqUAAy bXiQQH"
         >
           <input
             className="sc-fqkvVR IicPK"
@@ -91,24 +93,26 @@ exports[`Header renders with adjust ratios 1`] = `
   data-cy="undefined-hero"
 >
   <div
-    className="hero___StyledDiv-sc-qftwzr-4 gkzLha"
+    className="hero__HeroContentWrapper-sc-qftwzr-1 ja-DtGH"
   >
     <div
-      className="hero___StyledDiv2-sc-qftwzr-5 eXoLfX"
+      className="hero___StyledDiv-sc-qftwzr-6 hJgUGu"
     >
       <p
-        className="hero___StyledP-sc-qftwzr-7 bPDHKe"
+        className="hero___StyledP-sc-qftwzr-8 codxcZ"
       >
         Instrument
       </p>
-      <h1>
+      <h1
+        className="hero__HeroTitle-sc-qftwzr-2 bSBmwr"
+      >
         2D-C/P
          
         2D-C/P Hydrometeor Imaging Probe
       </h1>
     </div>
     <div
-      className="hero___StyledDiv3-sc-qftwzr-8 jEpAIm"
+      className="hero___StyledDiv2-sc-qftwzr-9 fqzeMC"
     >
       <p>
         The 2DC probe records images of hydrometeors...
@@ -122,7 +126,7 @@ exports[`Header renders with adjust ratios 1`] = `
           Data Shortcut
         </span>
         <div
-          className="sc-eqUAAy iPbKrr"
+          className="sc-eqUAAy bXiQQH"
         >
           <input
             className="sc-fqkvVR IicPK"

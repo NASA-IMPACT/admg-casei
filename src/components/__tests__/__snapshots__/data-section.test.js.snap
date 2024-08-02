@@ -2,7 +2,7 @@
 
 exports[`Data Section matches snapshot 1`] = `
 <section
-  className="section__Container-sc-1oozlr5-0 eQIPNT"
+  className="section__Container-sc-1oozlr5-0 rgaqP"
   data-cy="data-section"
   mode="darkTheme"
 >
@@ -11,7 +11,7 @@ exports[`Data Section matches snapshot 1`] = `
     id="data"
   />
   <div
-    className="sc-aXZVg jITuPT"
+    className="sc-aXZVg fflPGZ"
     data-cy="data-section-header"
   >
     <a
@@ -23,7 +23,7 @@ exports[`Data Section matches snapshot 1`] = `
     </a>
   </div>
   <div
-    className="section__SectionContent-sc-1oozlr5-2 khMtLu"
+    className="section__SectionContent-sc-1oozlr5-2 dWaYkr"
     mode="darkTheme"
   >
     <p>
@@ -39,10 +39,10 @@ exports[`Data Section matches snapshot 1`] = `
       .
     </p>
     <div
-      className="sc-cPiKLX vfKXt"
+      className="sc-imWYAI eSDDqW"
     >
       <div
-        className="sc-cwHptR cwCXIg"
+        className="sc-gsFSXq jNgvqP"
       >
         <span
           id="Campaigns"
@@ -73,7 +73,7 @@ exports[`Data Section matches snapshot 1`] = `
           <span
             aria-haspopup="listbox"
             aria-labelledby="Campaigns button--Campaigns-listbox"
-            className="sc-jEACwC dlJuHw"
+            className="sc-kAyceB blXOrW"
             data-reach-listbox-button=""
             id="button--Campaigns-listbox"
             onKeyDown={[Function]}
@@ -93,7 +93,7 @@ exports[`Data Section matches snapshot 1`] = `
         </div>
       </div>
       <div
-        className="sc-cwHptR cwCXIg"
+        className="sc-gsFSXq jNgvqP"
       >
         <span
           id="Platforms"
@@ -124,7 +124,7 @@ exports[`Data Section matches snapshot 1`] = `
           <span
             aria-haspopup="listbox"
             aria-labelledby="Platforms button--Platforms-listbox"
-            className="sc-jEACwC dlJuHw"
+            className="sc-kAyceB blXOrW"
             data-reach-listbox-button=""
             id="button--Platforms-listbox"
             onKeyDown={[Function]}
@@ -145,10 +145,10 @@ exports[`Data Section matches snapshot 1`] = `
       </div>
     </div>
     <div
-      className="sc-dLMFU ijhosH"
+      className="sc-jXbUNg fVNCVf"
     >
       <div
-        className="sc-eDPEul ivzIRq"
+        className="sc-dhKdcB kQmcsC"
         data-cy="data-product"
       >
         <div>
@@ -199,7 +199,7 @@ exports[`Data Section matches snapshot 1`] = `
         </div>
       </div>
       <div
-        className="sc-eDPEul ivzIRq"
+        className="sc-dhKdcB kQmcsC"
         data-cy="data-product"
       >
         <div>
@@ -210,7 +210,7 @@ exports[`Data Section matches snapshot 1`] = `
             CAMP2Ex P-3 Remotely Sensed Aerosol Data
           </label>
           <a
-            className="external-link___StyledA-sc-3ezy1s-0 cmtvaY"
+            className="sc-eqUAAy gqBnyJ"
             data-cy="doi-link"
             href="http://dx.doi.org/10.5067/Airborne/CAMP2Ex_Aerosol_AircraftRemoteSensing_P3_Data_1"
             rel="noopener noreferrer"
@@ -237,7 +237,9 @@ exports[`Data Section matches snapshot 1`] = `
                 fill="#aac9ff"
               />
             </svg>
-            <span>
+            <span
+              className="external-link___StyledSpan-sc-3ezy1s-0 LrNqW"
+            >
               10.5067/Airborne/CAMP2Ex_Aerosol_AircraftRemoteSensing_P3_Data_1
             </span>
           </a>
@@ -282,7 +284,7 @@ exports[`Data Section matches snapshot 1`] = `
         </div>
       </div>
       <div
-        className="sc-eDPEul ivzIRq"
+        className="sc-dhKdcB kQmcsC"
         data-cy="data-product"
       >
         <div>
@@ -333,7 +335,7 @@ exports[`Data Section matches snapshot 1`] = `
         </div>
       </div>
       <div
-        className="sc-eDPEul ivzIRq"
+        className="sc-dhKdcB kQmcsC"
         data-cy="data-product"
       >
         <div>
@@ -384,7 +386,7 @@ exports[`Data Section matches snapshot 1`] = `
         </div>
       </div>
       <div
-        className="sc-eDPEul ivzIRq"
+        className="sc-dhKdcB kQmcsC"
         data-cy="data-product"
       >
         <div>

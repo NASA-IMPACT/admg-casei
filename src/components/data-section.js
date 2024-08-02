@@ -7,7 +7,7 @@ import ExternalLink from "./external-link"
 import Label from "./label"
 import { NEGATIVE } from "../utils/constants"
 import { selector, uniqueElementsById, doiFilter } from "../utils/filter-utils"
-import { colors } from "../theme"
+import { colors, breakpoints } from "../theme"
 import FilterChips from "./filter/filter-chips"
 import FilterBox from "./filter/filter-box"
 import Chip from "./chip"
@@ -138,8 +138,11 @@ const DataSection = ({ id, dois, filterBy, category }) => {
                 display: flex;
                 flex-direction: column;
                 max-height: 35rem;
-                overflow: auto;
                 gap: 1rem;
+                overflow-y: scroll;
+                @media screen and (min-width: ${breakpoints["sm"]}) {
+                  overflow: auto;
+                }
               `}
             >
               {filteredDois.map(doi => {
@@ -149,9 +152,14 @@ const DataSection = ({ id, dois, filterBy, category }) => {
                     css={`
                       display: grid;
                       gap: 1rem;
-                      grid-template-columns: 1fr 1fr;
+                      grid-template-columns: minmax(0, 1fr);
+                      grid-template-rows: auto 1fr;
                       background-color: ${colors[NEGATIVE].background};
                       padding: 1.5rem;
+                      @media screen and (min-width: ${breakpoints["sm"]}) {
+                        grid-template-columns: 1fr 1fr;
+                        grid-template-rows: 1fr;
+                      }
                     `}
                     data-cy="data-product"
                   >
