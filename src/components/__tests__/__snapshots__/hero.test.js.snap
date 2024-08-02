@@ -2,17 +2,17 @@
 
 exports[`Header renders correctly 1`] = `
 <section
-  className="hero__Container-sc-qftwzr-0 kylHls"
+  className="hero__Container-sc-qftwzr-0 dlffaV"
   data-cy="test-hero"
 >
   <div
-    className="hero___StyledDiv-sc-qftwzr-4 XtAsv"
+    className="hero___StyledDiv-sc-qftwzr-4 cKZRIK"
   >
     <div
-      className="hero___StyledDiv2-sc-qftwzr-5 kAspDW"
+      className="hero___StyledDiv2-sc-qftwzr-5 eXoLfX"
     >
       <p
-        className="hero___StyledP-sc-qftwzr-7 yHaZP"
+        className="hero___StyledP-sc-qftwzr-7 bPDHKe"
       >
         Instrument
       </p>
@@ -23,24 +23,24 @@ exports[`Header renders correctly 1`] = `
       </h1>
     </div>
     <div
-      className="hero___StyledDiv3-sc-qftwzr-8 eeIULr"
+      className="hero___StyledDiv3-sc-qftwzr-8 jEpAIm"
     >
       <p>
         The 2DC probe records images of hydrometeors...
       </p>
       <div
-        className="typeahead-box___StyledDiv-sc-1kp6jj-0 eiHfjF"
+        className="sc-aXZVg cVUZgM"
       >
         <span
-          className="typeahead-box___StyledSpan-sc-1kp6jj-1 bSFocE"
+          className="sc-gEvEer kFxWaJ"
         >
           Data Shortcut
         </span>
         <div
-          className="typeahead-box___StyledDiv2-sc-1kp6jj-2 gRJNDe"
+          className="sc-eqUAAy iPbKrr"
         >
           <input
-            className="typeahead-box___StyledInput-sc-1kp6jj-3 ddjRvz"
+            className="sc-fqkvVR IicPK"
             onChange={[Function]}
             placeholder="Go directly to a campaign, platform, or instrument"
             type="text"
@@ -48,11 +48,11 @@ exports[`Header renders correctly 1`] = `
           />
           <span
             aria-label="Arrow icon"
-            className="typeahead-box___StyledSpan2-sc-1kp6jj-4 cKpRpq"
+            className="sc-dcJsrY cwKFSh"
             role="img"
           >
             <svg
-              className="arrow-icon___StyledSvg-sc-nsdqlv-0 bgejTZ"
+              className="arrow-icon___StyledSvg-sc-nsdqlv-0 JjVso"
               height="16"
               role="img"
               version="1.1"
@@ -87,17 +87,17 @@ exports[`Header renders correctly 1`] = `
 
 exports[`Header renders with adjust ratios 1`] = `
 <section
-  className="hero__Container-sc-qftwzr-0 kylHls"
+  className="hero__Container-sc-qftwzr-0 dlffaV"
   data-cy="undefined-hero"
 >
   <div
-    className="hero___StyledDiv-sc-qftwzr-4 fnFsnz"
+    className="hero___StyledDiv-sc-qftwzr-4 gkzLha"
   >
     <div
-      className="hero___StyledDiv2-sc-qftwzr-5 kAspDW"
+      className="hero___StyledDiv2-sc-qftwzr-5 eXoLfX"
     >
       <p
-        className="hero___StyledP-sc-qftwzr-7 yHaZP"
+        className="hero___StyledP-sc-qftwzr-7 bPDHKe"
       >
         Instrument
       </p>
@@ -108,24 +108,24 @@ exports[`Header renders with adjust ratios 1`] = `
       </h1>
     </div>
     <div
-      className="hero___StyledDiv3-sc-qftwzr-8 eeIULr"
+      className="hero___StyledDiv3-sc-qftwzr-8 jEpAIm"
     >
       <p>
         The 2DC probe records images of hydrometeors...
       </p>
       <div
-        className="typeahead-box___StyledDiv-sc-1kp6jj-0 eiHfjF"
+        className="sc-aXZVg cVUZgM"
       >
         <span
-          className="typeahead-box___StyledSpan-sc-1kp6jj-1 bSFocE"
+          className="sc-gEvEer kFxWaJ"
         >
           Data Shortcut
         </span>
         <div
-          className="typeahead-box___StyledDiv2-sc-1kp6jj-2 gRJNDe"
+          className="sc-eqUAAy iPbKrr"
         >
           <input
-            className="typeahead-box___StyledInput-sc-1kp6jj-3 ddjRvz"
+            className="sc-fqkvVR IicPK"
             onChange={[Function]}
             placeholder="Go directly to a campaign, platform, or instrument"
             type="text"
@@ -133,11 +133,11 @@ exports[`Header renders with adjust ratios 1`] = `
           />
           <span
             aria-label="Arrow icon"
-            className="typeahead-box___StyledSpan2-sc-1kp6jj-4 cKpRpq"
+            className="sc-dcJsrY cwKFSh"
             role="img"
           >
             <svg
-              className="arrow-icon___StyledSvg-sc-nsdqlv-0 bgejTZ"
+              className="arrow-icon___StyledSvg-sc-nsdqlv-0 JjVso"
               height="16"
               role="img"
               version="1.1"
