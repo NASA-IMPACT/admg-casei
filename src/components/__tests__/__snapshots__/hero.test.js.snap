@@ -6,24 +6,26 @@ exports[`Header renders correctly 1`] = `
   data-cy="test-hero"
 >
   <div
-    className="hero___StyledDiv-sc-qftwzr-4 XtAsv"
+    className="hero__HeroContentWrapper-sc-qftwzr-1 dEHppu"
   >
     <div
-      className="hero___StyledDiv2-sc-qftwzr-5 kAspDW"
+      className="hero___StyledDiv-sc-qftwzr-6 hubuVj"
     >
       <p
-        className="hero___StyledP-sc-qftwzr-7 yHaZP"
+        className="hero___StyledP-sc-qftwzr-8 hbWiGQ"
       >
         Instrument
       </p>
-      <h1>
+      <h1
+        className="hero__HeroTitle-sc-qftwzr-2 ivhDcq"
+      >
         2D-C/P
          
         2D-C/P Hydrometeor Imaging Probe
       </h1>
     </div>
     <div
-      className="hero___StyledDiv3-sc-qftwzr-8 eeIULr"
+      className="hero___StyledDiv2-sc-qftwzr-9 eJqIxP"
     >
       <p>
         The 2DC probe records images of hydrometeors...
@@ -37,7 +39,7 @@ exports[`Header renders correctly 1`] = `
           Data Shortcut
         </span>
         <div
-          className="typeahead-box___StyledDiv2-sc-1kp6jj-2 gRJNDe"
+          className="typeahead-box___StyledDiv2-sc-1kp6jj-2 byvdUB"
         >
           <input
             className="typeahead-box___StyledInput-sc-1kp6jj-3 ddjRvz"
@@ -91,24 +93,26 @@ exports[`Header renders with adjust ratios 1`] = `
   data-cy="undefined-hero"
 >
   <div
-    className="hero___StyledDiv-sc-qftwzr-4 fnFsnz"
+    className="hero__HeroContentWrapper-sc-qftwzr-1 ehQfhu"
   >
     <div
-      className="hero___StyledDiv2-sc-qftwzr-5 kAspDW"
+      className="hero___StyledDiv-sc-qftwzr-6 hubuVj"
     >
       <p
-        className="hero___StyledP-sc-qftwzr-7 yHaZP"
+        className="hero___StyledP-sc-qftwzr-8 hbWiGQ"
       >
         Instrument
       </p>
-      <h1>
+      <h1
+        className="hero__HeroTitle-sc-qftwzr-2 ivhDcq"
+      >
         2D-C/P
          
         2D-C/P Hydrometeor Imaging Probe
       </h1>
     </div>
     <div
-      className="hero___StyledDiv3-sc-qftwzr-8 eeIULr"
+      className="hero___StyledDiv2-sc-qftwzr-9 eJqIxP"
     >
       <p>
         The 2DC probe records images of hydrometeors...
@@ -122,7 +126,7 @@ exports[`Header renders with adjust ratios 1`] = `
           Data Shortcut
         </span>
         <div
-          className="typeahead-box___StyledDiv2-sc-1kp6jj-2 gRJNDe"
+          className="typeahead-box___StyledDiv2-sc-1kp6jj-2 byvdUB"
         >
           <input
             className="typeahead-box___StyledInput-sc-1kp6jj-3 ddjRvz"

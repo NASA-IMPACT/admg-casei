@@ -2,7 +2,7 @@
 
 exports[`Focus Section displays content 1`] = `
 <section
-  className="section__Container-sc-1oozlr5-0 bIfvkW"
+  className="section__Container-sc-1oozlr5-0 fOmBFm"
   data-cy="focus-section"
   mode="darkTheme"
 >
@@ -11,7 +11,7 @@ exports[`Focus Section displays content 1`] = `
     id="focus"
   />
   <div
-    className="section-header___StyledDiv-sc-1i4pe2i-0 SXaMi"
+    className="section-header___StyledDiv-sc-1i4pe2i-0 cVNCrb"
     data-cy="focus-section-header"
   >
     <a
@@ -23,7 +23,7 @@ exports[`Focus Section displays content 1`] = `
     </a>
   </div>
   <div
-    className="section__SectionContent-sc-1oozlr5-2 focus-section___StyledSectionContent-sc-tyy683-1 ivTKjv hFoHvE"
+    className="section__SectionContent-sc-1oozlr5-2 focus-section___StyledSectionContent-sc-tyy683-1 fHLdbu hFoHvE"
     mode="darkTheme"
   >
     <div
@@ -82,7 +82,7 @@ exports[`Focus Section displays content 1`] = `
         className="focus-section__FocusContent-sc-tyy683-0 hhthVO"
       >
         <div
-          className="button__Clickable-sc-1yw7vig-0 button___StyledClickable-sc-1yw7vig-2 fRqvWm kUpNvF"
+          className="button__Clickable-sc-1yw7vig-0 button___StyledClickable-sc-1yw7vig-2 fRqvWm dHTFWE"
         >
           <a
             data-cy="geophysical-concept-link"
@@ -111,7 +111,7 @@ exports[`Focus Section displays content 1`] = `
         className="focus-section__FocusContent-sc-tyy683-0 hhthVO"
       >
         <div
-          className="chip___StyledDiv-sc-4ga8fx-0 fAohBv"
+          className="chip___StyledDiv-sc-4ga8fx-0 cQuORu"
           data-cy="focus-phenomena-chip"
         >
           <small
@@ -121,7 +121,7 @@ exports[`Focus Section displays content 1`] = `
           </small>
         </div>
         <div
-          className="chip___StyledDiv-sc-4ga8fx-0 fAohBv"
+          className="chip___StyledDiv-sc-4ga8fx-0 cQuORu"
           data-cy="focus-phenomena-chip"
         >
           <small
@@ -145,7 +145,7 @@ exports[`Focus Section displays content 1`] = `
         className="focus-section__FocusContent-sc-tyy683-0 hhthVO"
       >
         <div
-          className="chip___StyledDiv-sc-4ga8fx-0 fAohBv"
+          className="chip___StyledDiv-sc-4ga8fx-0 cQuORu"
           data-cy="focus-mission-chip"
         >
           <small
@@ -155,7 +155,7 @@ exports[`Focus Section displays content 1`] = `
           </small>
         </div>
         <div
-          className="chip___StyledDiv-sc-4ga8fx-0 fAohBv"
+          className="chip___StyledDiv-sc-4ga8fx-0 cQuORu"
           data-cy="focus-mission-chip"
         >
           <small

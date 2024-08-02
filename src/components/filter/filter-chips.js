@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import { NEGATIVE } from "../../utils/constants"
-import { colors } from "../../theme"
+import { colors, breakpoints } from "../../theme"
 
 export default function FilterChips({ clearFilters, children }) {
   return (
@@ -10,8 +10,12 @@ export default function FilterChips({ clearFilters, children }) {
       css={`
         display: flex;
         flex-wrap: wrap;
-        margin: 2rem 0;
+        gap: 0.25rem 0.5rem;
         align-items: center;
+        @media screen and (min-width: ${breakpoints["sm"]}) {
+          gap: 0.5rem 1rem;
+        }
+        margin: 0.5rem 0;
       `}
     >
       Active filters:

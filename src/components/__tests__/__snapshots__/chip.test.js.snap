@@ -2,7 +2,7 @@
 
 exports[`Chip renders with action 1`] = `
 <div
-  className="chip___StyledDiv-sc-4ga8fx-0 hrdWGh"
+  className="chip___StyledDiv-sc-4ga8fx-0 cqOzva"
   data-cy="filter-chip"
 >
   <small
@@ -11,19 +11,20 @@ exports[`Chip renders with action 1`] = `
     Weather
   </small>
   <button
-    className="button__Clickable-sc-1yw7vig-0 button___StyledClickable2-sc-1yw7vig-1 fRqvWm kXXfwm"
+    className="button__Clickable-sc-1yw7vig-0 button___StyledClickable2-sc-1yw7vig-1 fRqvWm jFCEpa"
     data-cy="remove-filter"
     onClick={[Function]}
     type="button"
   >
     <span
       aria-label="remove-filter-icon"
+      className="button___StyledSpan-sc-1yw7vig-3 lnRQLV"
       role="img"
     >
       <svg
-        height="12px"
+        height="16"
         viewBox="0 0 16 16"
-        width="12px"
+        width="16"
         xmlns="http://www.w3.org/2000/svg"
       >
         <polygon
@@ -38,7 +39,7 @@ exports[`Chip renders with action 1`] = `
 
 exports[`Chip renders without action 1`] = `
 <div
-  className="chip___StyledDiv-sc-4ga8fx-0 hrdWGh"
+  className="chip___StyledDiv-sc-4ga8fx-0 cqOzva"
   data-cy="filter-chip"
 >
   <small

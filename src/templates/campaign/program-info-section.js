@@ -11,6 +11,7 @@ import {
   ContentGroup,
 } from "../../components/layout"
 import { CampaignIcon } from "../../icons"
+import { breakpoints } from "../../theme"
 
 const ProgramInfoSection = ({
   id,
@@ -56,15 +57,23 @@ const ProgramInfoSection = ({
         <div
           css={`
             display: flex;
+            flex-direction: column;
+            @media screen and (min-width: ${breakpoints["sm"]}) {
+              flex-direction: row;
+            }
           `}
         >
           <div
             css={`
               flex: 0.618;
               display: flex;
+              flex-direction: column;
               justify-content: center;
               align-items: center;
               padding: 1rem;
+              @media screen and (min-width: ${breakpoints["sm"]}) {
+                flex-direction: row;
+              }
             `}
           >
             {logoFullWidth && logoFullWidth.gatsbyImg ? (

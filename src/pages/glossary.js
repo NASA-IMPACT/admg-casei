@@ -11,7 +11,7 @@ import Layout, {
 import SEO from "../components/seo"
 import ExternalLink from "../components/external-link"
 import { ArrowIcon } from "../icons"
-import { colors } from "../theme"
+import { colors, breakpoints } from "../theme"
 import { ALPHABET, POSITIVE, NEGATIVE } from "../utils/constants"
 
 export default function Glossary({ data }) {
@@ -215,8 +215,12 @@ export default function Glossary({ data }) {
             return (
               <div
                 css={`
-                  margin: 0 -6rem;
-                  padding: 0rem 6rem;
+                  margin: 0 -2rem;
+                  padding: 0rem 2rem;
+                  @media screen and (min-width: ${breakpoints["sm"]}) {
+                    margin: 0 -6rem;
+                    padding: 0rem 6rem;
+                  }
                   display: grid;
                   grid-template-columns: repeat(12, 1fr);
                   column-gap: 1rem;

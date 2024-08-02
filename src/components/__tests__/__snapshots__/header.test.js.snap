@@ -2,29 +2,31 @@
 
 exports[`Header renders correctly 1`] = `
 <div
-  className="sticky-banner___StyledDiv-sc-e0ldth-0 gjXAxl"
+  className="sticky-banner___StyledDiv-sc-e0ldth-0 fAmbOa"
 >
   <header
-    className="header___StyledHeader-sc-4sefiz-0 eymLSC"
+    className="header__PageHeaderSelf-sc-4sefiz-0 esItOh"
     id="main-header"
+    mode="lightTheme"
   >
     <div
-      className="header___StyledDiv-sc-4sefiz-1 hgzXFp"
+      className="header__PageHeaderInner-sc-4sefiz-1 jolyZD"
     >
       <div
-        className="header___StyledDiv2-sc-4sefiz-2 hkPJce"
+        className="header___StyledDiv-sc-4sefiz-6 gZfonL"
       >
         <a
           aria-label="Visit nasa.gov (opens in a new window)"
+          className="header__BrandImageLink-sc-4sefiz-3 eImqit"
           href="https://www.nasa.gov"
           rel="noopener noreferrer"
           target="_blank"
         />
         <div
-          className="header___StyledDiv3-sc-4sefiz-3 xYXsp"
+          className="header___StyledDiv2-sc-4sefiz-7 hZZACY"
         />
         <a
-          className="header___StyledLink-sc-4sefiz-4 zwKr"
+          className="header___StyledLink-sc-4sefiz-8 itVwCK"
           href="/"
         >
           <svg
@@ -57,14 +59,40 @@ exports[`Header renders correctly 1`] = `
             </g>
           </svg>
           <div
-            className="header___StyledDiv4-sc-4sefiz-5 jQxBae"
+            className="header___StyledDiv3-sc-4sefiz-9 dgEIeO"
           >
             Shortname from props
           </div>
         </a>
       </div>
       <div
-        className="header___StyledDiv5-sc-4sefiz-6 iMBbkb"
+        className="header__PageNavToggleWrapper-sc-4sefiz-4 inGjsJ"
+      >
+        <button
+          className="button__Clickable-sc-1yw7vig-0 button___StyledClickable-sc-1yw7vig-2 fRqvWm bvKEjn"
+          onClick={[Function]}
+        >
+          <svg
+            fill="currentColor"
+            height="16"
+            viewBox="0 0 16 16"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"
+              fill="#262a31"
+            />
+            <path
+              d="M1,9h14V7H1V9z M1,14h14v-2H1V14z M1,2v2h14V2H1z"
+            />
+          </svg>
+        </button>
+      </div>
+      <nav
+        className="header__PageNavWrapper-sc-4sefiz-2 ca-dZgN"
+        mode="lightTheme"
+        role="navigation"
       />
     </div>
   </header>
