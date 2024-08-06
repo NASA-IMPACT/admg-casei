@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import VisuallyHidden from "@reach/visually-hidden"
+import { VisuallyHidden } from "@reach/visually-hidden"
 
 import Layout, { PageBody } from "../layout"
 import SEO from "../seo"

@@ -2,31 +2,31 @@
 
 exports[`Header renders correctly 1`] = `
 <div
-  className="sticky-banner___StyledDiv-sc-e0ldth-0 fAmbOa"
+  className="sticky-banner___StyledDiv-sc-e0ldth-0 wuqfT"
 >
   <header
-    className="header__PageHeaderSelf-sc-4sefiz-0 esItOh"
+    className="header__PageHeaderSelf-sc-4sefiz-0 ghdlLI"
     id="main-header"
     mode="lightTheme"
   >
     <div
-      className="header__PageHeaderInner-sc-4sefiz-1 jolyZD"
+      className="header__PageHeaderInner-sc-4sefiz-1 ckUGga"
     >
       <div
-        className="header___StyledDiv-sc-4sefiz-6 gZfonL"
+        className="header___StyledDiv-sc-4sefiz-6 hMWwIG"
       >
         <a
           aria-label="Visit nasa.gov (opens in a new window)"
-          className="header__BrandImageLink-sc-4sefiz-3 eImqit"
+          className="header__BrandImageLink-sc-4sefiz-3 ivhxqI"
           href="https://www.nasa.gov"
           rel="noopener noreferrer"
           target="_blank"
         />
         <div
-          className="header___StyledDiv2-sc-4sefiz-7 hZZACY"
+          className="header___StyledDiv2-sc-4sefiz-7 gkSoMR"
         />
         <a
-          className="header___StyledLink-sc-4sefiz-8 itVwCK"
+          className="header___StyledLink-sc-4sefiz-8 kwqCGv"
           href="/"
         >
           <svg
@@ -59,17 +59,17 @@ exports[`Header renders correctly 1`] = `
             </g>
           </svg>
           <div
-            className="header___StyledDiv3-sc-4sefiz-9 dgEIeO"
+            className="header___StyledDiv3-sc-4sefiz-9 cbojL"
           >
             Shortname from props
           </div>
         </a>
       </div>
       <div
-        className="header__PageNavToggleWrapper-sc-4sefiz-4 inGjsJ"
+        className="header__PageNavToggleWrapper-sc-4sefiz-4 dCSoI"
       >
         <button
-          className="button__Clickable-sc-1yw7vig-0 button___StyledClickable-sc-1yw7vig-2 fRqvWm bvKEjn"
+          className="button__Clickable-sc-1yw7vig-0 button___StyledClickable-sc-1yw7vig-2 cpFIXP cXSmVu"
           onClick={[Function]}
         >
           <svg
@@ -90,7 +90,7 @@ exports[`Header renders correctly 1`] = `
         </button>
       </div>
       <nav
-        className="header__PageNavWrapper-sc-4sefiz-2 ca-dZgN"
+        className="header__PageNavWrapper-sc-4sefiz-2 sLWrA"
         mode="lightTheme"
         role="navigation"
       />

@@ -39,7 +39,7 @@ export const StringTemplateParser = ({ expression, replacements }) => {
   `)
 
   return parts.map(part => {
-    if (part === "linebreak") return <br />
+    if (part === "linebreak") return <br key={part} />
 
     const link = replacements.links?.find(link => link.id === part)
     if (link) {

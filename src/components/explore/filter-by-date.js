@@ -7,7 +7,7 @@ import {
   ListboxList,
   ListboxOption,
 } from "@reach/listbox"
-import VisuallyHidden from "@reach/visually-hidden"
+import { VisuallyHidden } from "@reach/visually-hidden"
 import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css"
 import styled from "styled-components"
