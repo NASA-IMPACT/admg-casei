@@ -34,9 +34,6 @@ const typography = new Typography({
       "a:hover": {
         opacity: 0.64,
       },
-      // "a:visited": {
-      //    color: colors[NEGATIVE].text,
-      // },
       h1: {
         fontSize: rhythm(2.5),
         marginTop: rhythm(2),
