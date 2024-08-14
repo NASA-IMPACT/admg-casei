@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
-import Layout, { PageBody } from "../../components/layout"
+import { PageBody } from "../../components/layout"
 import SEO from "../../components/seo"
 import InstrumentHero from "./hero"
 import InpageNav from "../../components/inpage-nav"
@@ -52,7 +52,7 @@ const InstrumentTemplate = ({ data: { instrument }, path }) => {
     },
   }
   return (
-    <Layout>
+    <>
       <SEO title={instrument.shortname} lang="en" />
 
       <InstrumentHero
@@ -74,7 +74,7 @@ const InstrumentTemplate = ({ data: { instrument }, path }) => {
           <section.component key={id} id={id} {...section.props} />
         ))}
       </PageBody>
-    </Layout>
+    </>
   )
 }
 

@@ -5,7 +5,8 @@
  *
  * Note: There is an equivalent hook in Gatsby’s SSR API. It is recommended to use both APIs together.
  */
-
+import React from "react"
+import Layout from "./src/components/layout"
 import "@fontsource/titillium-web"
 
 export const shouldUpdateScroll = ({ routerProps: { location } }) => {
@@ -14,4 +15,15 @@ export const shouldUpdateScroll = ({ routerProps: { location } }) => {
   }
 
   return true
+}
+
+// Logs when the client route changes
+export const onRouteUpdate = ({ location, prevLocation }) => {
+  console.log("new pathname", location.pathname)
+  console.log("old pathname", prevLocation ? prevLocation.pathname : null)
+}
+
+// Wraps every page in a component
+export const wrapPageElement = ({ element, props }) => {
+  return <Layout {...props}>{element}</Layout>
 }

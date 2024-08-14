@@ -3,11 +3,7 @@ import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { VisuallyHidden } from "@reach/visually-hidden"
-import Layout, {
-  PageBody,
-  SectionHeader,
-  SectionContent,
-} from "../components/layout"
+import { PageBody, SectionHeader, SectionContent } from "../components/layout"
 import SEO from "../components/seo"
 import ExternalLink from "../components/external-link"
 import { ArrowIcon } from "../icons"
@@ -29,7 +25,7 @@ export default function Glossary({ data }) {
   )
 
   return (
-    <Layout>
+    <>
       <SEO title="Glossary" lang="en" />
       <PageBody id="glossary">
         <h1>Glossary</h1>
@@ -277,7 +273,7 @@ export default function Glossary({ data }) {
             )
           })}
       </PageBody>
-    </Layout>
+    </>
   )
 }
 
