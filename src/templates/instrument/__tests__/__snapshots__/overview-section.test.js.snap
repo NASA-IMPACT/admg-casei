@@ -177,7 +177,7 @@ exports[`Overview Section displays content 1`] = `
         </dt>
         <dd>
           <ul
-            className="sc-jlZhew imZdcp"
+            className="sc-kpDqfm jLnnIm"
           >
             <li
               className="overview-section___StyledLi3-sc-1oemh85-0 hwjFCf"
@@ -227,15 +227,15 @@ exports[`Overview Section displays content 1`] = `
     mode="lightTheme"
   >
     <ul
-      className="sc-kAyceB fcBiQh"
+      className="sc-iGgWBj RCXbQ"
       data-cy="instrument-background"
     >
       <li
-        className="sc-iGgWBj byuPRN"
+        className="sc-fqkvVR jZuyot"
         data-cy="lead-investigator-label"
       >
         <label
-          className="sc-gsFSXq hFxitn"
+          className="sc-dcJsrY chCXHW"
         >
           Lead Investigator
         </label>
@@ -244,11 +244,11 @@ exports[`Overview Section displays content 1`] = `
         </p>
       </li>
       <li
-        className="sc-iGgWBj byuPRN"
+        className="sc-fqkvVR jZuyot"
         data-cy="technical-contact-label"
       >
         <label
-          className="sc-gsFSXq hFxitn"
+          className="sc-dcJsrY chCXHW"
         >
           Technical Contact
         </label>
@@ -257,11 +257,11 @@ exports[`Overview Section displays content 1`] = `
         </p>
       </li>
       <li
-        className="sc-iGgWBj byuPRN"
+        className="sc-fqkvVR jZuyot"
         data-cy="instrument-manufacturer-label"
       >
         <label
-          className="sc-gsFSXq hFxitn"
+          className="sc-dcJsrY chCXHW"
         >
           Instrument Maker
         </label>
@@ -270,11 +270,11 @@ exports[`Overview Section displays content 1`] = `
         </p>
       </li>
       <li
-        className="sc-iGgWBj byuPRN"
+        className="sc-fqkvVR jZuyot"
         data-cy="funding-source-label"
       >
         <label
-          className="sc-gsFSXq hFxitn"
+          className="sc-dcJsrY chCXHW"
         >
           Funding Source
         </label>
@@ -283,10 +283,10 @@ exports[`Overview Section displays content 1`] = `
         </p>
       </li>
       <div
-        className="sc-imWYAI leMHIV"
+        className="sc-gsFSXq dDMmLj"
       >
         <p
-          className="sc-jXbUNg jiAqKN"
+          className="sc-kAyceB cJuHEe"
         >
           DOI:
            
@@ -327,11 +327,11 @@ exports[`Overview Section displays content 1`] = `
         </p>
       </div>
       <li
-        className="sc-iGgWBj byuPRN"
+        className="sc-fqkvVR jZuyot"
         data-cy="data-locations-label"
       >
         <label
-          className="sc-gsFSXq hFxitn"
+          className="sc-dcJsrY chCXHW"
         >
           Overview Publications
         </label>
@@ -340,16 +340,16 @@ exports[`Overview Section displays content 1`] = `
         </p>
       </li>
       <li
-        className="sc-dhKdcB hfEDvZ"
+        className="sc-imWYAI fgfAYF"
         data-cy="repositories-label"
       >
         <label
-          className="sc-kpDqfm iIVHGu"
+          className="sc-jXbUNg hmvVST"
         >
           Repositories
         </label>
         <ul
-          className="sc-dAlyuH dvdrwn"
+          className="sc-dhKdcB ixDHJU"
           data-cy="repository-list"
         >
           <li
