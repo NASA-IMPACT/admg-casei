@@ -8,6 +8,7 @@
 
 import React from "react"
 import PropTypes from "prop-types"
+import Layout from "./src/components/layout"
 
 export const wrapRootElement = ({ element }) => {
   return <>{element}</>
@@ -15,4 +16,9 @@ export const wrapRootElement = ({ element }) => {
 
 wrapRootElement.propTypes = {
   element: PropTypes.element,
+}
+
+// Wraps every page in a component
+export const wrapPageElement = ({ element, props }) => {
+  return <Layout {...props}>{element}</Layout>
 }
