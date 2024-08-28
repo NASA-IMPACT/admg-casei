@@ -2,7 +2,12 @@ import React from "react"
 import styled from "styled-components"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
-
+import {
+  Menu as DropdownMenu,
+  MenuList,
+  MenuButton,
+  MenuLink,
+} from "@reach/menu-button"
 import { colors, breakpoints } from "../theme"
 import { POSITIVE, NEGATIVE } from "../utils/constants"
 
@@ -22,6 +27,45 @@ const GlobalMenu = styled.ul`
     margin: 0;
     list-style: none;
     flex-flow: row nowrap;
+  }
+`
+
+const DropdownMenuButton = styled(MenuButton)`
+  margin: 0;
+  text-transform: uppercase;
+  background: none;
+  border: none;
+  text-shadow: none;
+  outline: none;
+  padding: 0;
+  font-size: initial;
+  font-weight: normal;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.64;
+  }
+  @media screen and (min-width: ${breakpoints["sm"]}) {
+    margin-left: 0.5rem;
+  }
+  @media screen and (min-width: ${breakpoints["md"]}) {
+    margin-left: 1rem;
+  }
+`
+
+const DropdownMenuList = styled(MenuList)`
+  background: white;
+  position: relative;
+  box-shadow: rgba(68, 63, 63, 0.08) 0px -1px 1px 0px,
+    rgba(68, 63, 63, 0.08) 0px 2px 6px 0px;
+  z-index: 501;
+  list-style: none;
+
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  & > li {
+    margin: 0;
   }
 `
 const ListLink = ({ to, children, mode }) => (
@@ -73,21 +117,51 @@ ListLink.propTypes = {
   mode: PropTypes.oneOf([POSITIVE, NEGATIVE]),
 }
 
-const NavList = ({ mode }) => {
+const NavList = ({ mode, isMediumDown }) => {
+  console.log(isMediumDown)
   return (
     <GlobalMenu>
       <ListLink to="/explore/campaigns" mode={mode}>
         Explore
       </ListLink>
-      <ListLink to="/glossary" mode={mode}>
-        Glossary
-      </ListLink>
       <ListLink to="/about" mode={mode}>
         About
       </ListLink>
-      <ListLink to="/faq" mode={mode}>
-        FAQS
-      </ListLink>
+      {isMediumDown ? (
+        <>
+          <ListLink to="/user-guide" mode={mode}>
+            User Guide
+          </ListLink>
+          <ListLink to="/glossary" mode={mode}>
+            Glossary
+          </ListLink>
+          <ListLink to="/faq" mode={mode}>
+            FAQS
+          </ListLink>
+        </>
+      ) : (
+        <DropdownMenu>
+          <DropdownMenuButton
+            css={`
+              color: ${colors[mode].text};
+            `}
+            as={isMediumDown ? "ul" : null}
+          >
+            Learn <span aria-hidden>▾</span>
+          </DropdownMenuButton>
+          <DropdownMenuList>
+            <MenuLink as={ListLink} to="/user-guide" mode={mode}>
+              User Guide
+            </MenuLink>
+            <MenuLink as={ListLink} to="/glossary" mode={mode}>
+              Glossary
+            </MenuLink>
+            <MenuLink as={ListLink} to="/faq" mode={mode}>
+              FAQS
+            </MenuLink>
+          </DropdownMenuList>
+        </DropdownMenu>
+      )}
       <ListLink to="/contact" mode={mode}>
         Contact
       </ListLink>
@@ -95,8 +169,8 @@ const NavList = ({ mode }) => {
   )
 }
 
-export default NavList
-
 NavList.propTypes = {
+  isMediumDown: PropTypes.bool.isRequired,
   mode: PropTypes.string.isRequired,
 }
+export default NavList

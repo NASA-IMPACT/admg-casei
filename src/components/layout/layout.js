@@ -55,7 +55,7 @@ const Layout = ({ children }) => {
         mode={POSITIVE}
         isMediumDown={isMediumDown}
       >
-        <Nav mode={POSITIVE} />
+        <Nav mode={POSITIVE} isMediumDown={isMediumDown} />
       </Header>
 
       <main>{children}</main>
