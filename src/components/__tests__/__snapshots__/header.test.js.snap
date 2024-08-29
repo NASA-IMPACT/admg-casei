@@ -90,7 +90,7 @@ exports[`Header renders correctly 1`] = `
         </button>
       </div>
       <nav
-        className="header__PageNavWrapper-sc-4sefiz-2 sLWrA"
+        className="header__PageNavWrapper-sc-4sefiz-2 ezcljP"
         mode="lightTheme"
         role="navigation"
       />
