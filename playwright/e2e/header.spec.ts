@@ -25,12 +25,13 @@ test.describe("Header", () => {
     )
 
     const navItems = await page.locator("nav").locator("li")
-    await expect(navItems).toHaveCount(5)
+    await expect(navItems).toHaveCount(7)
 
     await expect(navItems.nth(0)).toHaveText("Explore")
-    await expect(navItems.nth(1)).toHaveText("Glossary")
-    await expect(navItems.nth(2)).toHaveText("About")
-    await expect(navItems.nth(3)).toHaveText("FAQS")
-    await expect(navItems.nth(4)).toHaveText("Contact")
+    await expect(navItems.nth(2)).toHaveText("Glossary")
+    await expect(navItems.nth(3)).toHaveText("FAQ")
+    await expect(navItems.nth(4)).toHaveText("User Guide")
+    await expect(navItems.nth(5)).toHaveText("About")
+    await expect(navItems.nth(6)).toHaveText("Contact")
   })
 })
