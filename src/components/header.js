@@ -8,7 +8,6 @@ import { colors, layout, breakpoints } from "../theme"
 import { CaseiLogoIcon, CloseIcon, HamburgerIcon } from "../icons"
 import { NEGATIVE } from "../utils/constants"
 import StickyBanner from "./sticky-banner"
-import SimpleBanner from "./simple-banner"
 import Button from "./button"
 
 const reveal = keyframes`
@@ -139,7 +138,6 @@ const Header = ({ shortname, children, mode, isMediumDown }) => {
       navRevealed={navRevealed}
     >
       <PageHeaderSelf id="main-header" mode={mode}>
-        <SimpleBanner />
         <PageHeaderInner isMediumDown={isMediumDown}>
           <div
             css={`

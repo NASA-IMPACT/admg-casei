@@ -32,15 +32,17 @@ export const CampaignsTimeline = ({}) => {
   const timelineData = {
     events: data.allCampaign.nodes.map(campaign => ({
       media: {
-        url: campaign.logo
-          ? campaign.logo?.gatsbyImg.childImageSharp.gatsbyImageData.images
-              .fallback.src
-          : "",
+        url:
+          campaign.logo && campaign.logo.gatsbyImg
+            ? campaign.logo?.gatsbyImg.childImageSharp.gatsbyImageData.images
+                .fallback.src
+            : "",
         link: `${data.site.pathPrefix}/campaign/${campaign.shortname}`,
-        thumbnail: campaign.logo
-          ? campaign.logo?.gatsbyImg.childImageSharp.gatsbyImageData.images
-              .fallback.src
-          : "",
+        thumbnail:
+          campaign.logo && campaign.logo.gatsbyImg
+            ? campaign.logo?.gatsbyImg.childImageSharp.gatsbyImageData.images
+                .fallback.src
+            : "",
         link_target: "_self",
       },
       start_date: {

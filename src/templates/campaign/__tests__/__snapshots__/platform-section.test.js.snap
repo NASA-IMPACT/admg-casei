@@ -30,7 +30,7 @@ exports[`Platform Section displays content 1`] = `
       data-cy="platform-carousel"
     >
       <div
-        className="sc-iGgWBj lhcIHu"
+        className="sc-fqkvVR EeYsO"
         data-cy="carousel-list-text-control"
       >
         <button
