@@ -1,7 +1,7 @@
 import React from "react"
 import { FEEDBACK_FORM_URL } from "../utils/constants"
 
-import Layout, {
+import {
   PageBody,
   Paragraph,
   Section,
@@ -13,7 +13,7 @@ import Button from "../components/button"
 
 const Contact = () => {
   return (
-    <Layout>
+    <>
       <SEO title="Contact" lang="en" />
       <PageBody id="contact">
         <h1>We appreciate your feedback!</h1>
@@ -85,7 +85,7 @@ const Contact = () => {
           </SectionContent>
         </Section>
       </PageBody>
-    </Layout>
+    </>
   )
 }
 

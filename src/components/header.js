@@ -121,7 +121,7 @@ const PageNavGlobalStyle = createGlobalStyle`
   }
 `
 
-const Header = ({ shortname, children, mode, isMediumDown }) => {
+const Header = ({ shortname, children, mode, isMediumDown = false }) => {
   const offsetCalculator = (scrollDirection, _, currentScroll) => {
     if (scrollDirection === "scroll-down" && currentScroll > 250) {
       return `-${document.getElementById("main-header").clientHeight}px`

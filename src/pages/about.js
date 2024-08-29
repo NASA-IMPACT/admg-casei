@@ -5,7 +5,7 @@ import { GatsbyImage } from "gatsby-plugin-image"
 
 import { DiscoveryIcon, MetadataIcon, AccountingIcon } from "../icons"
 
-import Layout, {
+import {
   PageBody,
   Section,
   SectionHeader,
@@ -48,7 +48,7 @@ const LinkedParagraph = () => (
 
 const About = ({ data }) => {
   return (
-    <Layout>
+    <>
       <SEO title="About" lang="en" />
 
       <Hero
@@ -154,7 +154,7 @@ const About = ({ data }) => {
           </Section>
         ))}
       </PageBody>
-    </Layout>
+    </>
   )
 }
 

@@ -2,13 +2,13 @@ import React from "react"
 import PropTypes from "prop-types"
 import { VisuallyHidden } from "@reach/visually-hidden"
 
-import Layout, { PageBody } from "../layout"
+import { PageBody } from "../layout"
 import SEO from "../seo"
 import ExploreMenu from "./explore-menu"
 
 export default function ExploreLayout({ category, filteredCount, children }) {
   return (
-    <Layout>
+    <>
       <SEO title="Explore" lang="en" />
       <PageBody id="explore">
         <VisuallyHidden>
@@ -27,7 +27,7 @@ export default function ExploreLayout({ category, filteredCount, children }) {
 
         {children}
       </PageBody>
-    </Layout>
+    </>
   )
 }
 
