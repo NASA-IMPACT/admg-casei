@@ -69,7 +69,7 @@ const PageNavWrapper = styled.div`
   z-index: 20;
   display: flex;
   flex-flow: column nowrap;
-  padding: 5rem 1rem 1rem;
+  padding: 5rem 2rem 1rem;
   overflow: auto;
   pointer-events: auto;
   background-color: ${({ mode }) => mode && colors[mode].background};
