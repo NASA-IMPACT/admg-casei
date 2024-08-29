@@ -43,6 +43,7 @@ export const CampaignsTimeline = ({}) => {
             ? campaign.logo?.gatsbyImg.childImageSharp.gatsbyImageData.images
                 .fallback.src
             : "",
+        link_target: "_self",
       },
       start_date: {
         month: campaign.startdate.split("-")[1],
