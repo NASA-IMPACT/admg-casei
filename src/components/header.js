@@ -194,10 +194,7 @@ const Header = ({ shortname, children, mode }) => {
               href="https://www.nasa.gov"
               aria-label="Visit nasa.gov (opens in a new window)"
             >
-              <NasaLogoIcon
-                data-cy="nasa-logo"
-                alt="NASA's red, white and blue insignia, nicknamed the 'meatball'"
-              />
+              <NasaLogoIcon data-cy="nasa-logo" />
             </BrandImageLink>
 
             <VerticalDivider />

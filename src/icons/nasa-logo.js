@@ -11,6 +11,7 @@ export default function NasaLogoIcon({ size = "text" }) {
       xmlns="http://www.w3.org/2000/svg"
       role="img"
     >
+      <title>NASA logo</title>
       <circle cx="50.049" cy="45" fill="#0b3d91" r="40.14" />
       <g fill="#fff">
         <circle cx="47.679" cy="12.57" r=".45" />
