@@ -173,7 +173,7 @@ const PageNavGlobalStyle = createGlobalStyle`
   }
 `
 
-const Header = ({ shortname, children, mode, isMediumDown = false }) => {
+const Header = ({ shortname, children, mode }) => {
   const offsetCalculator = (scrollDirection, _, currentScroll) => {
     if (scrollDirection === "scroll-down" && currentScroll > 250) {
       return `-${document.getElementById("main-header").clientHeight}px`
@@ -184,11 +184,7 @@ const Header = ({ shortname, children, mode, isMediumDown = false }) => {
 
   const [navRevealed, setNavRevealed] = useState(false)
   return (
-    <StickyBanner
-      offsetCalculator={offsetCalculator}
-      isMediumDown={isMediumDown}
-      navRevealed={navRevealed}
-    >
+    <StickyBanner offsetCalculator={offsetCalculator} navRevealed={navRevealed}>
       <PageHeaderSelf id="main-header" mode={mode}>
         <PageHeaderInner>
           <PageHeadline>
@@ -244,7 +240,6 @@ Header.propTypes = {
   shortname: PropTypes.string.isRequired,
   children: PropTypes.element,
   mode: PropTypes.string.isRequired,
-  isMediumDown: PropTypes.bool.isRequired,
 }
 
 export default Header
