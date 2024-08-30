@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { sizes } from "./utils"
 
-export default function NasaLogoIcon({ size = "text" }) {
+export default function NasaLogoIcon({ size = "text", dataCy }) {
   return (
     <svg
       width={sizes[size].width}
@@ -10,6 +10,7 @@ export default function NasaLogoIcon({ size = "text" }) {
       viewBox="0 0 104 92"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
+      data-cy={dataCy}
     >
       <title>NASA logo</title>
       <circle cx="50.049" cy="45" fill="#0b3d91" r="40.14" />
@@ -68,6 +69,6 @@ export default function NasaLogoIcon({ size = "text" }) {
   )
 }
 NasaLogoIcon.propTypes = {
-  color: PropTypes.string,
   size: PropTypes.string,
+  dataCy: PropTypes.string,
 }
