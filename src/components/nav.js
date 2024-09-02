@@ -24,7 +24,7 @@ const GlobalMenu = styled.ul`
     flex-flow: row nowrap;
   }
 `
-const ListLink = ({ to, children, mode }) => (
+const ListLink = ({ to, children, mode, onClick }) => (
   <li
     css={`
       margin: 0;
@@ -47,6 +47,7 @@ const ListLink = ({ to, children, mode }) => (
         color: ${colors[mode].text};
       `}
       partiallyActive={true}
+      onClick={onClick}
     >
       {children}
     </Link>
@@ -71,24 +72,25 @@ ListLink.propTypes = {
   },
   children: PropTypes.string.isRequired,
   mode: PropTypes.oneOf([POSITIVE, NEGATIVE]),
+  onClick: PropTypes.func,
 }
 
-const NavList = ({ mode }) => {
+const NavList = ({ mode, onLinkClick }) => {
   return (
     <GlobalMenu>
-      <ListLink to="/explore/campaigns" mode={mode}>
+      <ListLink to="/explore/campaigns" mode={mode} onClick={onLinkClick}>
         Explore
       </ListLink>
-      <ListLink to="/glossary" mode={mode}>
+      <ListLink to="/glossary" mode={mode} onClick={onLinkClick}>
         Glossary
       </ListLink>
-      <ListLink to="/about" mode={mode}>
+      <ListLink to="/about" mode={mode} onClick={onLinkClick}>
         About
       </ListLink>
-      <ListLink to="/faq" mode={mode}>
+      <ListLink to="/faq" mode={mode} onClick={onLinkClick}>
         FAQS
       </ListLink>
-      <ListLink to="/contact" mode={mode}>
+      <ListLink to="/contact" mode={mode} onClick={onLinkClick}>
         Contact
       </ListLink>
     </GlobalMenu>
@@ -99,4 +101,5 @@ export default NavList
 
 NavList.propTypes = {
   mode: PropTypes.string.isRequired,
+  onLinkClick: PropTypes.func,
 }
