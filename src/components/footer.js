@@ -1,12 +1,12 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 import { NEGATIVE } from "../utils/constants"
 import { colors, layout, breakpoints } from "../theme"
 import ExternalLink from "./external-link"
 import { API_DOCUMENTATION_URL } from "../utils/constants"
+import NasaLogoIcon from "../icons/nasa-logo"
 
 const PageFooter = styled.footer`
   margin-top: 5rem;
@@ -184,14 +184,14 @@ const Footer = ({ shortname }) => {
               rel="noopener noreferrer"
               href="https://www.nasa.gov"
               aria-label="Visit nasa.gov (opens in a new window)"
+              css={`
+                svg {
+                  height: 100px;
+                  width: 100px;
+                }
+              `}
             >
-              <StaticImage
-                src="../images/nasa-logo-web-rgb.png"
-                alt="NASA's red, white and blue insignia, nicknamed the 'meatball'"
-                width={100} // make the blue circle match the svg logo of size 60
-                height={100} // make the blue circle match the svg logo of size 60
-                data-cy="nasa-logo-footer"
-              />
+              <NasaLogoIcon data-cy="nasa-logo-footer" />
             </a>
             <div data-cy="footer-credits">
               <div data-cy="footer-credit-org">

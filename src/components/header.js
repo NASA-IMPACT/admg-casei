@@ -2,13 +2,13 @@ import React, { useState } from "react"
 import PropTypes from "prop-types"
 import styled, { css, keyframes, createGlobalStyle } from "styled-components"
 import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 
 import { colors, layout, breakpoints } from "../theme"
 import { CaseiLogoIcon, CloseIcon, HamburgerIcon } from "../icons"
 import { NEGATIVE } from "../utils/constants"
 import StickyBanner from "./sticky-banner"
 import Button from "./button"
+import NasaLogoIcon from "../icons/nasa-logo"
 
 const reveal = keyframes`
 0% {
@@ -59,6 +59,16 @@ const PageHeaderInner = styled.div`
     }
   }
 `
+const PageHeadline = styled.div`
+  margin: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  @media screen and (min-width: ${breakpoints["sm"]}) {
+    gap: 1rem;
+  }
+`
 const PageNavWrapper = styled.div`
   position: fixed;
   top: 0;
@@ -95,10 +105,52 @@ const PageNavWrapper = styled.div`
   }
 `
 const BrandImageLink = styled.a`
-  height: ${({ isMediumDown }) => (isMediumDown ? "2rem" : "78px")};
-  width: ${({ isMediumDown }) => (isMediumDown ? "2rem" : "78px")};
+  &,
+  svg {
+    height: 36px;
+    width: 36px;
+  }
+  @media screen and (min-width: ${breakpoints["sm"]}) {
+    &,
+    svg {
+      height: 78px;
+      width: 78px;
+    }
+  }
 `
 
+const VerticalDivider = styled.span`
+  background-color: ${colors[NEGATIVE].text};
+  height: 1.5rem;
+  width: 1px;
+`
+const SiteImageLink = styled(Link)`
+  text-decoration: none;
+  display: grid;
+  grid-template-columns: max-content auto;
+  column-gap: 0.5rem;
+  align-items: center;
+  @media screen and (min-width: ${breakpoints["sm"]}) {
+    column-gap: 1rem;
+  }
+  svg {
+    height: 30px;
+    width: 30px;
+  }
+  @media screen and (min-width: ${breakpoints["sm"]}) {
+    svg {
+      height: 60px;
+      width: 60px;
+    }
+  }
+`
+const SiteName = styled.div`
+  font-size: 1.25rem;
+  color: ${({ mode }) => mode && colors[mode].text};
+  @media screen and (min-width: ${breakpoints["sm"]}) {
+    font-size: 1.5rem;
+  }
+`
 const PageNavToggleWrapper = styled.div`
   position: relative;
   z-index: 50;
@@ -121,7 +173,7 @@ const PageNavGlobalStyle = createGlobalStyle`
   }
 `
 
-const Header = ({ shortname, children, mode, isMediumDown = false }) => {
+const Header = ({ shortname, children, mode }) => {
   const offsetCalculator = (scrollDirection, _, currentScroll) => {
     if (scrollDirection === "scroll-down" && currentScroll > 250) {
       return `-${document.getElementById("main-header").clientHeight}px`
@@ -129,73 +181,29 @@ const Header = ({ shortname, children, mode, isMediumDown = false }) => {
       return 0
     }
   }
-  console.log(isMediumDown)
+
   const [navRevealed, setNavRevealed] = useState(false)
   return (
-    <StickyBanner
-      offsetCalculator={offsetCalculator}
-      isMediumDown={isMediumDown}
-      navRevealed={navRevealed}
-    >
+    <StickyBanner offsetCalculator={offsetCalculator} navRevealed={navRevealed}>
       <PageHeaderSelf id="main-header" mode={mode}>
-        <PageHeaderInner isMediumDown={isMediumDown}>
-          <div
-            css={`
-              margin: 0;
-              z-index: 100;
-              display: flex;
-              align-items: center;
-              gap: ${isMediumDown ? "0.5rem" : "1rem"};
-            `}
-          >
+        <PageHeaderInner>
+          <PageHeadline>
             <BrandImageLink
               target="_blank"
               rel="noopener noreferrer"
               href="https://www.nasa.gov"
               aria-label="Visit nasa.gov (opens in a new window)"
-              isMediumDown={isMediumDown}
             >
-              <StaticImage
-                src="../images/nasa-logo-web-rgb.png"
-                alt="NASA's red, white and blue insignia, nicknamed the 'meatball'"
-                width={78} // make the blue circle match the svg logo of size 60
-                height={78} // make the blue circle match the svg logo of size 60
-                data-cy="nasa-logo"
-              />
+              <NasaLogoIcon dataCy="nasa-logo" />
             </BrandImageLink>
 
-            <div
-              css={`
-                background-color: ${colors[NEGATIVE].text};
-                height: 1.5rem;
-                width: 1px;
-              `}
-            />
+            <VerticalDivider />
 
-            <Link
-              to="/"
-              css={`
-                text-decoration: none;
-                display: grid;
-                grid-template-columns: max-content auto;
-                column-gap: ${isMediumDown ? "0.5rem" : "1rem"};
-                align-items: center;
-              `}
-            >
-              <CaseiLogoIcon
-                size={isMediumDown ? "tiny" : "small"}
-                color={colors[mode].text}
-              />
-              <div
-                css={`
-                  font-size: ${isMediumDown ? "1.25rem" : "1.5rem"};
-                  color: ${colors[mode].text};
-                `}
-              >
-                {shortname}
-              </div>
-            </Link>
-          </div>
+            <SiteImageLink to="/">
+              <CaseiLogoIcon color={colors[mode].text} />
+              <SiteName mode={mode}>{shortname}</SiteName>
+            </SiteImageLink>
+          </PageHeadline>
           <PageNavGlobalStyle isActive={navRevealed} />
           <PageNavToggleWrapper>
             <PageNavToggle
@@ -229,7 +237,6 @@ Header.propTypes = {
   shortname: PropTypes.string.isRequired,
   children: PropTypes.element,
   mode: PropTypes.string.isRequired,
-  isMediumDown: PropTypes.bool.isRequired,
 }
 
 export default Header
