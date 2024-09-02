@@ -76,7 +76,7 @@ ListLink.propTypes = {
 const NavList = ({ mode }) => {
   return (
     <GlobalMenu>
-      <ListLink to="/explore/campaigns" mode={mode}>
+      <ListLink to="/explore" mode={mode}>
         Explore
       </ListLink>
       <ListLink to="/glossary" mode={mode}>
