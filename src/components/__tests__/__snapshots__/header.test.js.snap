@@ -326,7 +326,67 @@ exports[`Header renders correctly 1`] = `
         className="header__PageNavWrapper-sc-4sefiz-3 jXxXzR"
         mode="lightTheme"
         role="navigation"
-      />
+      >
+        <ul
+          className="nav__GlobalMenu-sc-1uj1llz-0 cYMldV"
+        >
+          <li
+            className="nav___StyledLi-sc-1uj1llz-1 bApvbb"
+          >
+            <a
+              className="nav___StyledLink-sc-1uj1llz-2 hukhkl"
+              href="/explore/campaigns"
+              onClick={[Function]}
+            >
+              Explore
+            </a>
+          </li>
+          <li
+            className="nav___StyledLi-sc-1uj1llz-1 bApvbb"
+          >
+            <a
+              className="nav___StyledLink-sc-1uj1llz-2 hukhkl"
+              href="/glossary"
+              onClick={[Function]}
+            >
+              Glossary
+            </a>
+          </li>
+          <li
+            className="nav___StyledLi-sc-1uj1llz-1 bApvbb"
+          >
+            <a
+              className="nav___StyledLink-sc-1uj1llz-2 hukhkl"
+              href="/about"
+              onClick={[Function]}
+            >
+              About
+            </a>
+          </li>
+          <li
+            className="nav___StyledLi-sc-1uj1llz-1 bApvbb"
+          >
+            <a
+              className="nav___StyledLink-sc-1uj1llz-2 hukhkl"
+              href="/faq"
+              onClick={[Function]}
+            >
+              FAQS
+            </a>
+          </li>
+          <li
+            className="nav___StyledLi-sc-1uj1llz-1 bApvbb"
+          >
+            <a
+              className="nav___StyledLink-sc-1uj1llz-2 hukhkl"
+              href="/contact"
+              onClick={[Function]}
+            >
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
     </div>
   </header>
 </div>
