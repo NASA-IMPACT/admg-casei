@@ -11,9 +11,9 @@ const Chip = ({
   label,
   removeAction,
   actionId,
-  isDark,
-  isInline,
-  hoverText,
+  isDark = false,
+  isInline = false,
+  hoverText = "",
 }) => (
   <div
     css={`
@@ -25,7 +25,7 @@ const Chip = ({
       color: ${colors[NEGATIVE].text};
       border-radius: ${shape.rounded};
       padding: 0.25rem 0.5rem;
-      margin: ${isInline ? 0 : "0.25rem 0.5rem"};
+      gap: 0.5rem;
     `}
     data-cy={`${id}-chip`}
   >
@@ -48,12 +48,6 @@ Chip.propTypes = {
   isDark: PropTypes.bool,
   isInline: PropTypes.bool,
   hoverText: PropTypes.string,
-}
-
-Chip.defaultProps = {
-  isDark: false,
-  isInline: false,
-  hoverText: "",
 }
 
 export default Chip

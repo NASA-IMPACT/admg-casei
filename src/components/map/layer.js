@@ -13,8 +13,8 @@ export default function Layer({
   map,
   config,
   before,
-  onLoad,
-  isVisible,
+  onLoad = () => {},
+  isVisible = true,
   popupContent,
 }) {
   const { id } = config
@@ -80,9 +80,4 @@ Layer.propTypes = {
   before: PropTypes.string, // Id of layer which should come directly before this one
   onLoad: PropTypes.func,
   popupContent: PropTypes.func,
-}
-
-Layer.defaultProps = {
-  onLoad: () => {},
-  isVisible: true,
 }

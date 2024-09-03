@@ -5,7 +5,7 @@ import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
 
 import { NEGATIVE, POSITIVE } from "../utils/constants"
-import { colors, layout } from "../theme"
+import { colors, layout, breakpoints } from "../theme"
 import DateList from "./date-list-hover"
 import { ArrowIcon } from "../icons"
 import { TypeAhead } from "../components/typeahead-box"
@@ -75,7 +75,26 @@ const Container = styled.section`
         }%, rgba(12,21,32, 0.0)${ratioInPercent + 20}%)`
       : null};
 `
+const HeroContentWrapper = styled.div`
+  grid-area: 1 / 2 / 1 / 2;
 
+  display: grid;
+  grid-template-columns: ${({ textToImageRatio }) =>
+    textToImageRatio && `${textToImageRatio[0]}fr ${textToImageRatio[1]}fr`};
+  grid-template-areas:
+    "title image"
+    "extras image";
+  grid-gap: 0.5rem;
+  padding: 0 ${layout.smallPageMargin};
+  @media screen and (min-width: ${breakpoints["sm"]}) {
+    padding: 0 ${layout.pageMargin};
+  }
+`
+export const HeroTitle = styled.h1`
+  @media screen and (max-width: ${breakpoints["sm"]}) {
+    font-size: 2.875rem;
+  }
+`
 export default function Hero({
   backlink,
   tagline,
@@ -117,19 +136,7 @@ export default function Hero({
       backgroundImage={backgroundImage}
       ratioInPercent={ratioInPercent}
     >
-      <div
-        css={`
-          grid-area: 1 / 2 / 1 / 2;
-
-          display: grid;
-          grid-template-columns: ${textToImageRatio[0]}fr ${textToImageRatio[1]}fr;
-          grid-template-areas:
-            "title image"
-            "extras image";
-          grid-gap: 0.5rem;
-          padding: 0 ${layout.pageMargin};
-        `}
-      >
+      <HeroContentWrapper textToImageRatio={textToImageRatio}>
         <div
           css={`
             align-self: end;
@@ -165,7 +172,7 @@ export default function Hero({
             </p>
           )}
 
-          <h1>{title}</h1>
+          <HeroTitle>{title}</HeroTitle>
         </div>
 
         <div
@@ -190,6 +197,7 @@ export default function Hero({
                 font-weight: bold;
                 padding: 1rem 5rem;
                 align-self: flex-start;
+                white-space: pre;
               `}
               data-cy="cta-link"
             >
@@ -211,7 +219,7 @@ export default function Hero({
             {image}
           </div>
         )}
-      </div>
+      </HeroContentWrapper>
 
       {backgroundImage && (
         <div

@@ -9,7 +9,7 @@ export default function Label({
   id,
   color = colors[NEGATIVE].altText,
   showBorder,
-  display,
+  display = "block",
 }) {
   return (
     <label
@@ -37,8 +37,4 @@ Label.propTypes = {
   color: PropTypes.string,
   showBorder: PropTypes.bool,
   display: PropTypes.string,
-}
-
-Label.defaultProps = {
-  display: "block",
 }

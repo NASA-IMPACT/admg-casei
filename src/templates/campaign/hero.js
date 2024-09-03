@@ -5,12 +5,12 @@ import styled from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
 import turfBbox from "@turf/bbox"
 
-import { HeroStats } from "../../components/hero"
+import { HeroStats, HeroTitle } from "../../components/hero"
 import Map from "../../components/map"
 import BboxLayer from "../../components/map/bbox-layer"
 import GeoJsonSource from "../../components/map/geojson-source"
 import { ArrowIcon, CampaignIcon } from "../../icons"
-import { colors, layout } from "../../theme"
+import { colors, layout, breakpoints } from "../../theme"
 import { useContainerDimensions } from "../../utils/use-container-dimensions"
 import { NEGATIVE } from "../../utils/constants"
 
@@ -69,6 +69,10 @@ const CampaignHero = ({
            {
             grid-area: 1 / 2 / 1 / 2;
             display: flex;
+            flex-direction: column;
+            @media screen and (min-width: ${breakpoints["sm"]}) {
+              flex-direction: row;
+            }
             padding: 0 0 7rem 0;
             z-index: 1;
           }
@@ -78,7 +82,10 @@ const CampaignHero = ({
           css={`
              {
               flex: 2;
-              padding: ${`3rem ${layout.pageMargin}`};
+              padding: 3rem ${layout.smallPageMargin};
+              @media screen and (min-width: ${breakpoints["sm"]}) {
+                padding: 3rem ${layout.pageMargin};
+              }
             }
           `}
         >
@@ -119,7 +126,9 @@ const CampaignHero = ({
             ) : (
               <CampaignIcon />
             )}
-            <h1 data-cy="campaign-hero-header">{longname || shortname}</h1>
+            <HeroTitle data-cy="campaign-hero-header">
+              {longname || shortname}
+            </HeroTitle>
             <p>{focusListing}</p>
           </div>
           <HeroStats
@@ -137,7 +146,9 @@ const CampaignHero = ({
         <div
           css={`
              {
-              flex: 1;
+              @media screen and (max-width: ${breakpoints["sm"]}) {
+                flex: 1;
+              }
             }
           `}
         ></div>

@@ -1,49 +1,65 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 import { NEGATIVE } from "../utils/constants"
-import { colors, layout } from "../theme"
+import { colors, layout, breakpoints } from "../theme"
 import ExternalLink from "./external-link"
 import { API_DOCUMENTATION_URL } from "../utils/constants"
+import NasaLogoIcon from "../icons/nasa-logo"
 
-const Ul = styled.ul`
+const PageFooter = styled.footer`
+  margin-top: 5rem;
+  padding-bottom: 2rem;
+  background-color: ${colors[NEGATIVE].background};
+`
+const PageFooterInner = styled.div`
+  display: flex;
+  flex-flow: column;
+  gap: 1rem;
+  flex-wrap: nowrap;
+  margin: 5rem auto 2rem;
+  max-width: ${layout.maxWidth};
+  padding: 2rem ${layout.smallPageMargin};
+  @media screen and (min-width: ${breakpoints["sm"]}) {
+    padding: 2rem ${layout.pageMargin};
+    flex-shrink: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem 3rem;
+  }
+  & > div {
+    flex: 1;
+    min-width: fit-content;
+    &:first-child {
+      flex: 2;
+      padding-right: 2rem;
+      min-width: 19rem;
+    }
+  }
+  & > hr {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+`
+const FooterSectionNavList = styled.ul`
   list-style: none;
   margin: 0;
 `
 const Headline = styled.p`
-  margin: 0 0 1.5rem 0;
   font-weight: bold;
   line-height: 3rem;
+  margin: 0;
+  @media screen and (min-width: ${breakpoints["sm"]}) {
+    margin-bottom: 1.5rem;
+  }
 `
 
 const Footer = ({ shortname }) => {
   return (
-    <footer
-      css={`
-        margin-top: 5rem;
-        padding-bottom: 2rem;
-        background-color: ${colors[NEGATIVE].background};
-      `}
-      data-cy="page-footer"
-    >
-      <div
-        css={`
-          margin: 5rem auto 2rem;
-          max-width: ${layout.maxWidth};
-          padding: 2rem ${layout.pageMargin};
-          flex-shrink: 0;
-          display: grid;
-          gap: 1rem;
-          grid-template-columns: repeat(12, 1fr);
-        `}
-      >
-        <div
-          css={`
-            grid-column: 1 / span 3;
-          `}
-        >
+    <PageFooter data-cy="page-footer">
+      <PageFooterInner>
+        <div>
           <div
             css={`
               text-transform: uppercase;
@@ -64,14 +80,9 @@ const Footer = ({ shortname }) => {
           </p>
         </div>
 
-        <div
-          css={`
-            grid-column: 5 / span 2;
-          `}
-          data-cy="footer-explore"
-        >
+        <div data-cy="footer-explore">
           <Headline>Explore</Headline>
-          <Ul>
+          <FooterSectionNavList>
             <li>
               <Link to="/explore/campaigns" data-cy="footer-campaigns-link">
                 Campaigns
@@ -98,31 +109,21 @@ const Footer = ({ shortname }) => {
                 Coming Soon
               </Link>
             </li>
-          </Ul>
+          </FooterSectionNavList>
         </div>
 
-        <div
-          css={`
-            grid-column: 7 / span 2;
-          `}
-          data-cy="footer-resources"
-        >
+        <div>
           <Headline>Resources</Headline>
-          <Ul>
+          <FooterSectionNavList>
             <li>
               <Link to="/glossary/">Glossary</Link>
             </li>
-          </Ul>
+          </FooterSectionNavList>
         </div>
 
-        <div
-          css={`
-            grid-column: 9 / span 2;
-          `}
-          data-cy="footer-quick-links"
-        >
+        <div data-cy="footer-quick-links">
           <Headline>Quick Links</Headline>
-          <Ul>
+          <FooterSectionNavList>
             <li>
               <Link to="/about/">About</Link>
             </li>
@@ -140,17 +141,12 @@ const Footer = ({ shortname }) => {
                 API Documentation
               </ExternalLink>
             </li>
-          </Ul>
+          </FooterSectionNavList>
         </div>
 
-        <div
-          css={`
-            grid-column: 11 / span 2;
-          `}
-          data-cy="footer-organizations"
-        >
+        <div data-cy="footer-organizations">
           <Headline>Organizations</Headline>
-          <Ul>
+          <FooterSectionNavList>
             <li>
               <ExternalLink
                 label="ADMG Website"
@@ -165,19 +161,13 @@ const Footer = ({ shortname }) => {
                 id="impact-website"
               />
             </li>
-          </Ul>
+          </FooterSectionNavList>
         </div>
 
-        <hr
-          css={`
-            grid-column: 1 / span 12;
-            background-color: rgba(255, 255, 255, 0.2);
-          `}
-        />
+        <hr />
 
         <div
           css={`
-            grid-column: 1 / span 12;
             display: flex;
             justify-content: space-between;
           `}
@@ -194,14 +184,14 @@ const Footer = ({ shortname }) => {
               rel="noopener noreferrer"
               href="https://www.nasa.gov"
               aria-label="Visit nasa.gov (opens in a new window)"
+              css={`
+                svg {
+                  height: 100px;
+                  width: 100px;
+                }
+              `}
             >
-              <StaticImage
-                src="../images/nasa-logo-web-rgb.png"
-                alt="NASA's red, white and blue insignia, nicknamed the 'meatball'"
-                width={100} // make the blue circle match the svg logo of size 60
-                height={100} // make the blue circle match the svg logo of size 60
-                data-cy="nasa-logo-footer"
-              />
+              <NasaLogoIcon data-cy="nasa-logo-footer" />
             </a>
             <div data-cy="footer-credits">
               <div data-cy="footer-credit-org">
@@ -220,7 +210,7 @@ const Footer = ({ shortname }) => {
             </div>
           </div>
         </div>
-      </div>
+      </PageFooterInner>
 
       <div
         css={`
@@ -236,7 +226,7 @@ const Footer = ({ shortname }) => {
         />
         .
       </div>
-    </footer>
+    </PageFooter>
   )
 }
 

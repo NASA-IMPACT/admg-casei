@@ -8,7 +8,7 @@ import {
   DisclosurePanel,
 } from "@reach/disclosure"
 
-import Layout, {
+import {
   PageBody,
   Section,
   SectionHeader,
@@ -49,7 +49,7 @@ const Answer = styled(DisclosurePanel)`
 
 export default function FAQ({ data }) {
   return (
-    <Layout>
+    <>
       <SEO title="FAQs" lang="en" />
       <PageBody id="faq">
         <h1>FAQs</h1>
@@ -91,7 +91,7 @@ export default function FAQ({ data }) {
           )
         })}
       </PageBody>
-    </Layout>
+    </>
   )
 }
 

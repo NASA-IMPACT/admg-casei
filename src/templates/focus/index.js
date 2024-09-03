@@ -1,9 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { graphql, Link } from "gatsby"
-import VisuallyHidden from "@reach/visually-hidden"
+import { VisuallyHidden } from "@reach/visually-hidden"
 
-import Layout, {
+import {
   PageBody,
   Section,
   SectionHeader,
@@ -21,7 +21,7 @@ import { ArrowIcon } from "../../icons"
 
 const FocusTemplate = ({ data: { focusArea, allFocusArea }, path }) => {
   return (
-    <Layout>
+    <>
       <SEO title={focusArea.shortname} lang="en" />
 
       <PageBody id="focus">
@@ -122,7 +122,7 @@ const FocusTemplate = ({ data: { focusArea, allFocusArea }, path }) => {
           </SectionContent>
         </Section>
       </PageBody>
-    </Layout>
+    </>
   )
 }
 

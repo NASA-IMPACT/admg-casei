@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import ReactDOM from "react-dom"
+import { createRoot } from "react-dom/client"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import mapbox from "mapbox-gl"
@@ -84,7 +84,7 @@ export default function HoverLayer({ id, map, sourceId, isDrawing }) {
       // only make features clickable when not drawing
       if (campaign && !isDrawing) {
         const placeholder = document.createElement("div")
-        ReactDOM.render(
+        createRoot(
           <PopupCard
             shortname={campaign.shortname}
             longname={campaign.longname}

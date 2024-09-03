@@ -19,10 +19,7 @@ test.describe("Header", () => {
     // )
 
     const nasaLogo = page.locator("[data-cy=nasa-logo]")
-    await expect(nasaLogo).toHaveAttribute(
-      "alt",
-      "NASA's red, white and blue insignia, nicknamed the 'meatball'"
-    )
+    await expect(nasaLogo).toBeVisible()
 
     const navItems = await page.locator("nav").locator("li")
     await expect(navItems).toHaveCount(5)

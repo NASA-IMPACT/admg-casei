@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 
 import { POSITIVE, NEGATIVE } from "../../utils/constants"
-import { colors } from "../../theme"
+import { colors, breakpoints } from "../../theme"
 
 const Container = styled.section`
   display: grid;
@@ -12,9 +12,14 @@ const Container = styled.section`
   row-gap: 2rem;
   position: relative;
 
-  margin: ${props => (props.mode === POSITIVE ? `0 -6rem` : 0)};
-  padding: ${props => (props.mode === POSITIVE ? `6rem` : 0)};
-  margin-bottom: ${props => (props.isSpaced ? `6rem` : `6rem`)};
+  margin: ${props => (props.mode === POSITIVE ? `0 -2rem` : 0)};
+  padding: ${props => (props.mode === POSITIVE ? `2rem` : 0)};
+  margin-bottom: ${props => (props.isSpaced ? `2rem` : `2rem`)};
+  @media screen and (min-width: ${breakpoints["sm"]}) {
+    margin: ${props => (props.mode === POSITIVE ? `0 -6rem` : 0)};
+    padding: ${props => (props.mode === POSITIVE ? `6rem` : 0)};
+    margin-bottom: ${props => (props.isSpaced ? `6rem` : `6rem`)};
+  }
 
   background-color: ${props =>
     props.mode === POSITIVE ? colors[POSITIVE].background : `none`};
@@ -53,8 +58,7 @@ Section.propTypes = {
 }
 
 export const SectionContent = styled.div`
-  grid-column: ${({ columns = [1, 12] }) =>
-    `${columns[0]} / span ${columns[1]}`};
+  grid-column: 1 / -1;
   background-color: ${({ withBackground, mode }) =>
     withBackground ? colors[mode].background : null};
   max-width: 100%;
@@ -65,6 +69,10 @@ export const SectionContent = styled.div`
   > *,
   h3 {
     color: ${props => colors[props.mode].text};
+  }
+  @media screen and (min-width: ${breakpoints["sm"]}) {
+    grid-column: ${({ columns = [1, 12] }) =>
+      `${columns[0]} / span ${columns[1]}`};
   }
 `
 

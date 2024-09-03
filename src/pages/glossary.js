@@ -2,16 +2,12 @@ import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
-import VisuallyHidden from "@reach/visually-hidden"
-import Layout, {
-  PageBody,
-  SectionHeader,
-  SectionContent,
-} from "../components/layout"
+import { VisuallyHidden } from "@reach/visually-hidden"
+import { PageBody, SectionHeader, SectionContent } from "../components/layout"
 import SEO from "../components/seo"
 import ExternalLink from "../components/external-link"
 import { ArrowIcon } from "../icons"
-import { colors } from "../theme"
+import { colors, breakpoints } from "../theme"
 import { ALPHABET, POSITIVE, NEGATIVE } from "../utils/constants"
 
 export default function Glossary({ data }) {
@@ -29,7 +25,7 @@ export default function Glossary({ data }) {
   )
 
   return (
-    <Layout>
+    <>
       <SEO title="Glossary" lang="en" />
       <PageBody id="glossary">
         <h1>Glossary</h1>
@@ -153,6 +149,7 @@ export default function Glossary({ data }) {
               <figcaption>
                 Source:{" "}
                 <ExternalLink
+                  id="ADMG Definitions"
                   label="https://earthdata.nasa.gov/esds/impact/admg/admg-definitions"
                   url="https://earthdata.nasa.gov/esds/impact/admg/admg-definitions"
                 />
@@ -215,8 +212,12 @@ export default function Glossary({ data }) {
             return (
               <div
                 css={`
-                  margin: 0 -6rem;
-                  padding: 0rem 6rem;
+                  margin: 0 -2rem;
+                  padding: 0rem 2rem;
+                  @media screen and (min-width: ${breakpoints["sm"]}) {
+                    margin: 0 -6rem;
+                    padding: 0rem 6rem;
+                  }
                   display: grid;
                   grid-template-columns: repeat(12, 1fr);
                   column-gap: 1rem;
@@ -272,7 +273,7 @@ export default function Glossary({ data }) {
             )
           })}
       </PageBody>
-    </Layout>
+    </>
   )
 }
 
@@ -292,9 +293,8 @@ const LinkSection = ({ node }) => {
         if (link) {
           return (
             // eslint-disable-next-line
-            <span>
+            <span key={index}>
               <ExternalLink
-                key={index}
                 label={link.text}
                 url={link.url}
                 id={link.id}

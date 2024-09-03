@@ -7,7 +7,7 @@ import ExternalLink from "../../components/external-link"
 import { colors } from "../../theme"
 import { NEGATIVE } from "../../utils/constants"
 import { ArrowIcon } from "../../icons"
-import Layout, {
+import {
   PageBody,
   SectionContent,
   Paragraph,
@@ -160,7 +160,7 @@ export default function Upcoming() {
   }, [])
 
   return (
-    <Layout>
+    <>
       <SEO title="Coming Soon" lang="en" />
       <PageBody>
         <Link
@@ -192,7 +192,7 @@ export default function Upcoming() {
               <ExternalLink
                 url="https://impact.earthdata.nasa.gov/casei/contact/"
                 label="ADMG"
-                id=""
+                id="contact"
               />
               .
             </Paragraph>
@@ -228,7 +228,7 @@ export default function Upcoming() {
           </SectionContent>
         </Section>
       </PageBody>
-    </Layout>
+    </>
   )
 }
 
