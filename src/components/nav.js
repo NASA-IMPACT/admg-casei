@@ -160,7 +160,7 @@ const NavList = ({ mode, isMediumDown }) => {
                 FAQ
               </StyledLink>
             </li>
-            <li>
+            {/* <li>
               <StyledLink
                 to="/user-guide"
                 title="Explore the user guide"
@@ -168,7 +168,7 @@ const NavList = ({ mode, isMediumDown }) => {
               >
                 User Guide
               </StyledLink>
-            </li>
+            </li> */}
           </PrimeSubmenu>
         </PrimeMenuBlock>
       </li>
