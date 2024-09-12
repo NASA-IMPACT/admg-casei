@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
-import Layout, { PageBody } from "../../components/layout"
+import { PageBody } from "../../components/layout"
 import SEO from "../../components/seo"
 import PlatformHero from "./hero"
 import InpageNav from "../../components/inpage-nav"
@@ -42,7 +42,7 @@ export default function PlatformTemplate({ data: { platform }, path }) {
   }
 
   return (
-    <Layout>
+    <>
       <SEO title={platform.shortname} lang="en" />
 
       <PlatformHero
@@ -66,7 +66,7 @@ export default function PlatformTemplate({ data: { platform }, path }) {
           <section.component key={id} id={id} {...section.props} />
         ))}
       </PageBody>
-    </Layout>
+    </>
   )
 }
 

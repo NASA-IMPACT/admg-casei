@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import parse from "wellknown"
 import turfBbox from "@turf/bbox"
 
-import Layout, { PageBody } from "../../components/layout"
+import { PageBody } from "../../components/layout"
 import SEO from "../../components/seo"
 import CampaignHero from "./hero"
 import InpageNav from "../../components/inpage-nav"
@@ -132,7 +132,7 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
   }
 
   return (
-    <Layout>
+    <>
       <SEO title={campaign.shortname} lang="en" />
       <CampaignHero
         bounds={bounds}
@@ -166,7 +166,7 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
           />
         )}
       </PageBody>
-    </Layout>
+    </>
   )
 }
 

@@ -9,6 +9,13 @@ const StyledLink = styled(Link)`
   display: inline-flex;
   align-items: center;
   gap: 0.375rem;
+  margin: 0;
+  text-transform: uppercase;
+  > svg {
+    @media screen and (max-width: ${breakpoints["sm"]}) {
+      display: none;
+    }
+  }
 `
 
 const PrimeMenuBlock = styled.section`
@@ -52,8 +59,6 @@ const PrimeMenu = styled.ul`
     position: relative;
     ${StyledLink} {
       color: ${({ mode }) => mode && colors[mode].text};
-      margin: 0;
-      text-transform: uppercase;
     }
     @media screen and (min-width: ${breakpoints["sm"]}) {
       margin: 0 0 0 1rem;
@@ -115,7 +120,7 @@ const activeStyles = {
   borderBottom: `1px solid`,
   fontWeight: `bold`,
 }
-const NavList = ({ mode, isMediumDown }) => {
+const NavList = ({ mode, onLinkClick }) => {
   return (
     <PrimeMenu mode={mode}>
       <li>
@@ -124,20 +129,19 @@ const NavList = ({ mode, isMediumDown }) => {
           title="View the explore page"
           activeStyle={activeStyles}
           partiallyActive={true}
+          onClick={onLinkClick}
         >
           Explore
         </StyledLink>
       </li>
       <li>
-        <StyledLink to="">
+        <StyledLink>
           Learn{" "}
-          {!isMediumDown && (
-            <ChevronIcon
-              role="img"
-              color={colors[mode].text}
-              aria-label="chevron-icon"
-            />
-          )}
+          <ChevronIcon
+            role="img"
+            color={colors[mode].text}
+            aria-label="chevron-icon"
+          />
         </StyledLink>
         <PrimeMenuBlock>
           <PrimeMenuBlockTitle>Learn</PrimeMenuBlockTitle>
@@ -147,6 +151,7 @@ const NavList = ({ mode, isMediumDown }) => {
                 to="/glossary"
                 title="Explore the glossary"
                 activeStyle={activeStyles}
+                onClick={onLinkClick}
               >
                 Glossary
               </StyledLink>
@@ -156,6 +161,7 @@ const NavList = ({ mode, isMediumDown }) => {
                 to="/faq"
                 title="Explore the FAQ"
                 activeStyle={activeStyles}
+                onClick={onLinkClick}
               >
                 FAQ
               </StyledLink>
@@ -173,7 +179,12 @@ const NavList = ({ mode, isMediumDown }) => {
         </PrimeMenuBlock>
       </li>
       <li>
-        <StyledLink to="/about" title="Learn more" activeStyle={activeStyles}>
+        <StyledLink
+          to="/about"
+          title="Learn more"
+          activeStyle={activeStyles}
+          onClick={onLinkClick}
+        >
           About
         </StyledLink>
       </li>
@@ -182,6 +193,7 @@ const NavList = ({ mode, isMediumDown }) => {
           title="Send feedback"
           to="/contact"
           activeStyle={activeStyles}
+          onClick={onLinkClick}
         >
           Contact
         </StyledLink>
@@ -191,7 +203,7 @@ const NavList = ({ mode, isMediumDown }) => {
 }
 
 NavList.propTypes = {
-  isMediumDown: PropTypes.bool.isRequired,
   mode: PropTypes.string.isRequired,
+  onLinkClick: PropTypes.func,
 }
 export default NavList

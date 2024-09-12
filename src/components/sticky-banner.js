@@ -1,12 +1,7 @@
 import React, { useEffect, useState } from "react"
 import PropTypes from "prop-types"
 
-const StickyBanner = ({
-  children,
-  offsetCalculator,
-  isMediumDown,
-  navRevealed,
-}) => {
+const StickyBanner = ({ children, navRevealed }) => {
   const scrollDown = "scroll-down"
   const scrollUp = "scroll-up"
   const [scrollDirection, setScrollDirection] = useState(null)
@@ -14,6 +9,14 @@ const StickyBanner = ({
   const [startingPosition, setStartingPosition] = useState(null)
   const [offset, setOffset] = useState(0)
   const node = React.createRef()
+
+  const offsetCalculator = (scrollDirection, _, currentScroll) => {
+    if (scrollDirection === "scroll-down" && currentScroll > 250) {
+      return `-${document.getElementById("main-header").clientHeight}px`
+    } else {
+      return 0
+    }
+  }
 
   useEffect(() => {
     if (startingPosition === null) {
@@ -46,12 +49,7 @@ const StickyBanner = ({
     }
     setLastScroll(currentScroll)
     setOffset(
-      offsetCalculator(
-        scrollDirection,
-        startingPosition,
-        currentScroll,
-        lastScroll
-      )
+      offsetCalculator(scrollDirection, startingPosition, currentScroll)
     )
   }
 
@@ -59,7 +57,7 @@ const StickyBanner = ({
     <div
       ref={node}
       css={`
-        position: ${isMediumDown && navRevealed ? "fixed" : "sticky"};
+        position: ${navRevealed ? "fixed" : "sticky"};
         top: 0;
         left: 0;
         right: 0;
@@ -76,8 +74,6 @@ const StickyBanner = ({
 StickyBanner.propTypes = {
   children: PropTypes.element,
   hideAfter: PropTypes.number,
-  offsetCalculator: PropTypes.func,
-  isMediumDown: PropTypes.bool,
   navRevealed: PropTypes.bool,
 }
 

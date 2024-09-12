@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 import { FEEDBACK_FORM_URL } from "../utils/constants"
-import Layout, { PageBody } from "../components/layout"
+import { PageBody } from "../components/layout"
 import SEO from "../components/seo"
 import { Section, SectionHeader, SectionContent } from "../components/layout"
 import Hero from "../components/hero"
@@ -13,7 +13,7 @@ import { CampaignsTimeline } from "../components/home/campaigns-timeline"
 
 const Home = ({ data }) => {
   return (
-    <Layout>
+    <>
       <SEO title="Home" lang="en" />
 
       <Hero
@@ -75,7 +75,7 @@ const Home = ({ data }) => {
           </SectionContent>
         </Section>
       </PageBody>
-    </Layout>
+    </>
   )
 }
 
