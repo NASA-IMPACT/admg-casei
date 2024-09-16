@@ -1,10 +1,10 @@
 import React from "react"
-import Layout, { PageBody, SectionContent } from "../components/layout"
+import { PageBody, SectionContent } from "../components/layout"
 import SEO from "../components/seo"
 
 export default function UserGuide() {
   return (
-    <Layout>
+    <>
       <SEO title="User Guide" lang="en" />
       <PageBody id="faq">
         <h1>User Guide</h1>
@@ -19,6 +19,6 @@ export default function UserGuide() {
           <p>Test</p>
         </SectionContent>
       </PageBody>
-    </Layout>
+    </>
   )
 }
