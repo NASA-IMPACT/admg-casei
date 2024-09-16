@@ -17,7 +17,6 @@ import "@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.css"
 import "../global.css"
 
 import Header from "../header"
-import Nav from "../nav"
 import Footer from "../footer"
 
 import { POSITIVE } from "../../utils/constants"
@@ -45,12 +44,8 @@ const Layout = ({ children }) => {
 
   return (
     <Container id="top" data-cy="page">
-      <Header shortname={data.site.siteMetadata.shortname} mode={POSITIVE}>
-        <Nav mode={POSITIVE} />
-      </Header>
-
+      <Header shortname={data.site.siteMetadata.shortname} mode={POSITIVE} />
       <main>{children}</main>
-
       <Footer shortname={data.site.siteMetadata.shortname} />
     </Container>
   )

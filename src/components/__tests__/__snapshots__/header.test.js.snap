@@ -323,10 +323,109 @@ exports[`Header renders correctly 1`] = `
         </button>
       </div>
       <nav
-        className="header__PageNavWrapper-sc-4sefiz-3 jXxXzR"
+        className="header__PageNavWrapper-sc-4sefiz-3 hUCvO"
         mode="lightTheme"
         role="navigation"
-      />
+      >
+        <ul
+          className="nav__PrimeMenu-sc-1uj1llz-3 hqkQAg"
+          mode="lightTheme"
+        >
+          <li>
+            <a
+              className="nav__StyledLink-sc-1uj1llz-0 gvtfTJ"
+              href="/explore"
+              onClick={[Function]}
+              title="View the explore page"
+            >
+              Explore
+            </a>
+          </li>
+          <li>
+            <a
+              className="nav__StyledLink-sc-1uj1llz-0 gvtfTJ"
+            >
+              Learn
+               
+              <svg
+                height="16"
+                role="img"
+                version="1.1"
+                viewBox="0 0 16 16"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>
+                  Chevron Down
+                </title>
+                <rect
+                  fill="none"
+                  height="16"
+                  width="16"
+                />
+                <polygon
+                  fill="#262a31"
+                  points="12.586,4.586 8,9.172 3.414,4.586 2,6 8,12 14,6"
+                />
+              </svg>
+            </a>
+            <section
+              className="nav__PrimeMenuBlock-sc-1uj1llz-1 bzpwcB"
+            >
+              <h6
+                className="nav__PrimeMenuBlockTitle-sc-1uj1llz-2 dWwnBZ"
+              >
+                Learn
+              </h6>
+              <ul
+                aria-label="submenu"
+                className="nav__PrimeSubmenu-sc-1uj1llz-4 juhfVu"
+              >
+                <li>
+                  <a
+                    className="nav__StyledLink-sc-1uj1llz-0 gvtfTJ"
+                    href="/glossary"
+                    onClick={[Function]}
+                    title="Explore the glossary"
+                  >
+                    Glossary
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="nav__StyledLink-sc-1uj1llz-0 gvtfTJ"
+                    href="/faq"
+                    onClick={[Function]}
+                    title="Explore the FAQ"
+                  >
+                    FAQ
+                  </a>
+                </li>
+              </ul>
+            </section>
+          </li>
+          <li>
+            <a
+              className="nav__StyledLink-sc-1uj1llz-0 gvtfTJ"
+              href="/about"
+              onClick={[Function]}
+              title="Learn more"
+            >
+              About
+            </a>
+          </li>
+          <li>
+            <a
+              className="nav__StyledLink-sc-1uj1llz-0 gvtfTJ"
+              href="/contact"
+              onClick={[Function]}
+              title="Send feedback"
+            >
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
     </div>
   </header>
 </div>

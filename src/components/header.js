@@ -5,10 +5,11 @@ import { Link } from "gatsby"
 
 import { colors, layout, breakpoints } from "../theme"
 import { CaseiLogoIcon, CloseIcon, HamburgerIcon } from "../icons"
-import { NEGATIVE } from "../utils/constants"
+import { NEGATIVE, POSITIVE } from "../utils/constants"
 import StickyBanner from "./sticky-banner"
 import Button from "./button"
 import NasaLogoIcon from "../icons/nasa-logo"
+import NavList from "./nav"
 
 const reveal = keyframes`
 0% {
@@ -78,7 +79,7 @@ const PageNavWrapper = styled.div`
   z-index: 20;
   display: flex;
   flex-flow: column nowrap;
-  padding: 5rem 1rem 1rem;
+  padding: 5rem 2rem 1rem;
   overflow: auto;
   pointer-events: auto;
   background-color: ${({ mode }) => mode && colors[mode].background};
@@ -173,18 +174,11 @@ const PageNavGlobalStyle = createGlobalStyle`
   }
 `
 
-const Header = ({ shortname, children, mode }) => {
-  const offsetCalculator = (scrollDirection, _, currentScroll) => {
-    if (scrollDirection === "scroll-down" && currentScroll > 250) {
-      return `-${document.getElementById("main-header").clientHeight}px`
-    } else {
-      return 0
-    }
-  }
-
+const Header = ({ shortname, mode }) => {
   const [navRevealed, setNavRevealed] = useState(false)
+
   return (
-    <StickyBanner offsetCalculator={offsetCalculator} navRevealed={navRevealed}>
+    <StickyBanner navRevealed={navRevealed}>
       <PageHeaderSelf id="main-header" mode={mode}>
         <PageHeaderInner>
           <PageHeadline>
@@ -225,7 +219,10 @@ const Header = ({ shortname, children, mode }) => {
             role="navigation"
             revealed={navRevealed}
           >
-            {children}
+            <NavList
+              mode={POSITIVE}
+              onLinkClick={() => setNavRevealed(false)}
+            />
           </PageNavWrapper>
         </PageHeaderInner>
       </PageHeaderSelf>
