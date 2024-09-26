@@ -10,6 +10,7 @@ import { GeoJsonLayer } from "@deck.gl/layers"
 import { SimpleMeshLayer } from "@deck.gl/mesh-layers"
 import { SphereGeometry } from "@luma.gl/engine"
 import PropTypes from "prop-types"
+import styled from "styled-components"
 
 const INITIAL_VIEW_STATE = {
   longitude: -98,
@@ -69,7 +70,7 @@ export function GlobeMap({ geojson }) {
   })
 
   return (
-    <div style={{ position: "relative", display: "block", height: "500px", width: "100%", overflow: "hidden", background: "#111", }} >
+    <MapContainer>
       <DeckGL
         views={
           new GlobeView({
@@ -79,10 +80,19 @@ export function GlobeMap({ geojson }) {
         initialViewState={initialViewState}
         layers={[backgroundLayers, dataLayers]}
       ></DeckGL>
-    </div>
+    </MapContainer>
   )
 }
 
 GlobeMap.propTypes = {
   geojson: PropTypes.object.required,
 }
+
+const MapContainer = styled.div`
+  position: relative;
+  display: block;
+  height: 500px;
+  width: 100%;
+  overflow: hidden;
+  background: #111;
+`
