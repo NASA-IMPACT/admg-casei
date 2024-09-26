@@ -13,6 +13,8 @@ import { Disclosure } from "@reach/disclosure"
 import { DeploymentPanel } from "./deployment-panel"
 import { DeploymentMap } from "./map"
 import { replaceSlashes } from "../../utils/helpers"
+import { GlobeMap } from "../map/globe-map"
+import Button from "../button"
 
 const chartSettings = {
   marginTop: 1,
@@ -86,6 +88,7 @@ export const TimelineChart = ({ deployments, bounds, campaignName }) => {
   const [count, setCount] = useState(1)
   const [priority, setPriority] = useState({})
   const [geojson, setGeojson] = useState({})
+  const [enable3DView, setEnable3DView] = useState(false)
 
   const [tooltip, setTooltip] = useState({ x: null, y: null })
   const [tooltipContent, setTooltipContent] = useState(null)
@@ -146,12 +149,27 @@ export const TimelineChart = ({ deployments, bounds, campaignName }) => {
   return (
     <Disclosure open={!!selectedDeployment}>
       {geojson?.features?.length && (
-        <DeploymentMap
-          geojson={geojson}
-          deployments={deployments}
-          bounds={bounds}
-          selectedDeployment={selectedDeployment}
-        />
+        <>
+          {enable3DView ? (
+            <GlobeMap geojson={geojson} />
+          ) : (
+            <DeploymentMap
+              geojson={geojson}
+              deployments={deployments}
+              bounds={bounds}
+              selectedDeployment={selectedDeployment}
+            />
+          )}
+          <div css={{ marginTop: "5px" }}>
+            <Button
+              action={() => setEnable3DView(!enable3DView)}
+              mode={POSITIVE}
+              noBorder
+            >
+              Switch to {enable3DView ? "2D" : "3D"} map view
+            </Button>
+          </div>
+        </>
       )}
       <div
         ref={containerRef}
