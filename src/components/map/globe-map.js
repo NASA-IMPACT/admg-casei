@@ -6,7 +6,8 @@ import {
   _GlobeView as GlobeView,
   FlyToInterpolator,
 } from "@deck.gl/core"
-import { GeoJsonLayer } from "@deck.gl/layers"
+import { GeoJsonLayer, BitmapLayer } from "@deck.gl/layers"
+import { TileLayer } from "@deck.gl/geo-layers"
 import { SimpleMeshLayer } from "@deck.gl/mesh-layers"
 import { SphereGeometry } from "@luma.gl/engine"
 import PropTypes from "prop-types"
@@ -17,8 +18,9 @@ const INITIAL_VIEW_STATE = {
   latitude: 40,
   zoom: 0,
 }
+const MAPBOX_TOKEN = process.env.GATSBY_MAPBOX_TOKEN
 
-export function GlobeMap({ geojson }) {
+export function GlobeMap({ geojson, mapStyleID }) {
   const [initialViewState, setInitialViewState] = useState(INITIAL_VIEW_STATE)
 
   useEffect(() => {
@@ -45,16 +47,30 @@ export function GlobeMap({ geojson }) {
         }),
         coordinateSystem: COORDINATE_SYSTEM.CARTESIAN,
         getPosition: [0, 0, 0],
-        getColor: [255, 255, 255],
+        getColor: [18, 42, 70, 255],
       }),
-      new GeoJsonLayer({
-        id: "earth-land",
-        data: "https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_50m_land.geojson",
-        // Styles
-        stroked: false,
-        filled: true,
-        opacity: 0.1,
-        getFillColor: [18, 23, 33],
+      new TileLayer({
+        id: "TileLayer",
+        data: `https://api.mapbox.com/styles/v1/${mapStyleID}/tiles/256/{z}/{x}/{y}@2x?access_token=${MAPBOX_TOKEN}`,
+        maxZoom: 22,
+        minZoom: 0,
+        tileSize: 256,
+
+        renderSubLayers: props => {
+          // eslint-disable-next-line react/prop-types
+          const { boundingBox } = props.tile
+          return new BitmapLayer(props, {
+            data: null,
+            // eslint-disable-next-line react/prop-types
+            image: props.data,
+            bounds: [
+              boundingBox[0][0],
+              boundingBox[0][1],
+              boundingBox[1][0],
+              boundingBox[1][1],
+            ],
+          })
+        },
       }),
     ],
     []
@@ -86,6 +102,7 @@ export function GlobeMap({ geojson }) {
 
 GlobeMap.propTypes = {
   geojson: PropTypes.object.required,
+  mapStyleID: PropTypes.string.required,
 }
 
 const MapContainer = styled.div`

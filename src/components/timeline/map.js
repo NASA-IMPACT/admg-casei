@@ -26,6 +26,7 @@ export function DeploymentMap({
   deployments,
   bounds,
   selectedDeployment,
+  mapStyleID,
 }) {
   const platforms = getUniquePlatforms(
     deployments.flatMap(d => d.collectionPeriods)
@@ -64,7 +65,7 @@ export function DeploymentMap({
   return (
     <Map
       height={500}
-      basemap="mapbox://styles/devseed/clx25ggbv076o01ql8k8m03k8"
+      basemap={`mapbox://styles/${mapStyleID}`}
       showControls={true}
     >
       {geojson && (
@@ -194,6 +195,7 @@ DeploymentMap.propTypes = {
   deployments: PropTypes.array,
   bounds: PropTypes.array,
   selectedDeployment: PropTypes.object,
+  mapStyleID: PropTypes.string.isRequired,
 }
 
 const DeploymentLayer = ({

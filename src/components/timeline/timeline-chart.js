@@ -42,6 +42,7 @@ export const Swatch = styled.div`
 
 export const TimelineChart = ({ deployments, bounds, campaignName }) => {
   const [containerRef, dms] = useChartDimensions(chartSettings)
+  const MAP_STYLE_ID = "devseed/clx25ggbv076o01ql8k8m03k8"
 
   const minDateString = d3
     .min(
@@ -151,13 +152,14 @@ export const TimelineChart = ({ deployments, bounds, campaignName }) => {
       {geojson?.features?.length && (
         <>
           {enable3DView ? (
-            <GlobeMap geojson={geojson} />
+            <GlobeMap geojson={geojson} mapStyleID={MAP_STYLE_ID} />
           ) : (
             <DeploymentMap
               geojson={geojson}
               deployments={deployments}
               bounds={bounds}
               selectedDeployment={selectedDeployment}
+              mapStyleID={MAP_STYLE_ID}
             />
           )}
           <div css={{ marginTop: "5px" }}>
