@@ -152,7 +152,11 @@ export const TimelineChart = ({ deployments, bounds, campaignName }) => {
       {geojson?.features?.length && (
         <>
           {enable3DView ? (
-            <GlobeMap geojson={geojson} mapStyleID={MAP_STYLE_ID} />
+            <GlobeMap
+              geojson={geojson}
+              deployments={deployments}
+              mapStyleID={MAP_STYLE_ID}
+            />
           ) : (
             <DeploymentMap
               geojson={geojson}

@@ -1,5 +1,6 @@
 import {
   getLineColors,
+  getLineColorToDeckGL,
   getStaticIcons,
   MOVING_PLATFORMS_COLORS,
   STATIC_PLATFORMS,
@@ -49,5 +50,17 @@ describe("getStaticIcons", () => {
       "BalloonIcon",
     ]
     expect(getStaticIcons()).toEqual(result)
+  })
+})
+
+describe("getLineColorsToDeckGL", () => {
+  it("returns the color in RGB format", () => {
+    const platforms = ["DC-8", "ER-2", "GH", "Learjet"]
+    expect(getLineColorToDeckGL(platforms.indexOf("DC-8"))).toEqual([
+      178, 223, 138,
+    ])
+    expect(getLineColorToDeckGL(platforms.indexOf("GH"))).toEqual([
+      253, 191, 111,
+    ])
   })
 })

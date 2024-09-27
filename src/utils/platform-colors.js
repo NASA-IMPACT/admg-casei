@@ -78,6 +78,16 @@ export const STATIC_PLATFORMS = [
 export const flightPathColors = platforms =>
   platforms.map((i, index) => [i, MOVING_PLATFORMS_COLORS[index]])
 
+const hex2rgb = hex => hex.match(/[0-9a-f]{2}/g).map(x => parseInt(x, 16))
+
+export const getLineColorToDeckGL = index => {
+  if (index === -1) return hex2rgb(FALLBACK_COLOR)
+  const color = MOVING_PLATFORMS_COLORS[index]
+  // converts from HEX to RGB
+  console.log(hex2rgb)
+  return hex2rgb(color)
+}
+
 export const getLineColors = platforms => {
   const colors = flightPathColors(platforms)
   return [
