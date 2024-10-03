@@ -6,14 +6,14 @@ import {
   _GlobeView as GlobeView,
   FlyToInterpolator,
 } from "@deck.gl/core"
-import { GeoJsonLayer, BitmapLayer } from "@deck.gl/layers"
+import { GeoJsonLayer, BitmapLayer, IconLayer } from "@deck.gl/layers"
 import { TileLayer } from "@deck.gl/geo-layers"
 import { SimpleMeshLayer } from "@deck.gl/mesh-layers"
 import { SphereGeometry } from "@luma.gl/engine"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 import { getUniquePlatforms } from "../../utils/get-unique-platforms"
-import { getLineColorToDeckGL } from "../../utils/platform-colors"
+import { getLineColorAsRGB, getPlatformIcon } from "../../utils/platform-colors"
 
 const INITIAL_VIEW_STATE = {
   longitude: -98,
@@ -24,6 +24,7 @@ const MAPBOX_TOKEN = process.env.GATSBY_MAPBOX_TOKEN
 
 export function GlobeMap({ geojson, deployments, mapStyleID }) {
   const [initialViewState, setInitialViewState] = useState(INITIAL_VIEW_STATE)
+  const [iconMapping, setIconMapping] = useState({})
   const platforms = getUniquePlatforms(
     deployments.flatMap(d => d.collectionPeriods)
   ).map(i => ({ name: i.item.shortname, type: i.item.platformType.shortname }))
@@ -32,6 +33,27 @@ export function GlobeMap({ geojson, deployments, mapStyleID }) {
       ["Jet", "Prop", "UAV", "Ships/Boats"].includes(platform.type)
     )
     .map(platform => platform.name)
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          `https://api.mapbox.com/styles/v1/${mapStyleID}/48lhibiqllsww17zqo5nw6pga/sprite@2x.json?access_token=${MAPBOX_TOKEN}`,
+          {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        )
+        const mapping = await response.json()
+        setIconMapping(mapping)
+      } catch (error) {
+        console.log("catch error", error)
+      }
+    }
+    fetchData()
+  }, [])
 
   useEffect(() => {
     const dataCentroid = centroid(geojson)
@@ -86,33 +108,48 @@ export function GlobeMap({ geojson, deployments, mapStyleID }) {
     []
   )
 
-  const dataLayers = new GeoJsonLayer({
-    id: "flight",
-    data: geojson,
-    pointType: "circle",
-    // Styles
+  const flights = new GeoJsonLayer({
+    id: "flights",
+    data: {
+      ...geojson,
+      features: geojson.features.filter(f => f.geometry.type !== "Point"),
+    },
     lineWidthMinPixels: 0.5,
     getLineWidth: 1,
     getLineColor: f =>
-      getLineColorToDeckGL(movingPlatforms.indexOf(f.properties.platform_name)),
-    getFillColor: [160, 160, 180, 200],
-    getPointRadius: 4,
+      getLineColorAsRGB(movingPlatforms.indexOf(f.properties.platform_name)),
   })
 
-  return (
-    <MapContainer>
-      <DeckGL
-        views={
-          new GlobeView({
-            controller: { keyboard: false, inertia: true },
-          })
-        }
-        parameters={{ cull: true }}
-        initialViewState={initialViewState}
-        layers={[backgroundLayers, dataLayers]}
-      ></DeckGL>
-    </MapContainer>
-  )
+  const staticLocations = new IconLayer({
+    id: "static-platforms",
+    data: geojson.features.filter(f => f.geometry.type === "Point"),
+    pickable: true,
+    iconAtlas: `https://api.mapbox.com/styles/v1/${mapStyleID}/sprite@2x.png?access_token=${MAPBOX_TOKEN}`,
+    iconMapping: iconMapping,
+    getIcon: f => {
+      return getPlatformIcon(f.properties.platform_name)
+    },
+    getPosition: f => f.geometry.coordinates,
+    getSize: 20,
+    sizeScale: 15,
+  })
+
+  if (iconMapping && geojson) {
+    return (
+      <MapContainer>
+        <DeckGL
+          views={
+            new GlobeView({
+              controller: { keyboard: false, inertia: true },
+            })
+          }
+          parameters={{ cull: true }}
+          initialViewState={initialViewState}
+          layers={[backgroundLayers, flights, staticLocations]}
+        ></DeckGL>
+      </MapContainer>
+    )
+  }
 }
 
 GlobeMap.propTypes = {

@@ -1,7 +1,8 @@
 import {
   getLineColors,
-  getLineColorToDeckGL,
+  getLineColorAsRGB,
   getStaticIcons,
+  getPlatformIcon,
   MOVING_PLATFORMS_COLORS,
   STATIC_PLATFORMS,
 } from "../platform-colors"
@@ -53,14 +54,21 @@ describe("getStaticIcons", () => {
   })
 })
 
-describe("getLineColorsToDeckGL", () => {
+describe("getLineColorAsRGB", () => {
   it("returns the color in RGB format", () => {
     const platforms = ["DC-8", "ER-2", "GH", "Learjet"]
-    expect(getLineColorToDeckGL(platforms.indexOf("DC-8"))).toEqual([
+    expect(getLineColorAsRGB(platforms.indexOf("DC-8"))).toEqual([
       178, 223, 138,
     ])
-    expect(getLineColorToDeckGL(platforms.indexOf("GH"))).toEqual([
-      253, 191, 111,
-    ])
+    expect(getLineColorAsRGB(platforms.indexOf("GH"))).toEqual([253, 191, 111])
+  })
+})
+
+describe("getPlatformIcon", () => {
+  it("returns the icon id for a platform", () => {
+    expect(getPlatformIcon("Vehicle")).toEqual("VehicleIcon")
+    expect(getPlatformIcon("Permanent Land Site")).toEqual(
+      "PermanentLandSiteIcon"
+    )
   })
 })

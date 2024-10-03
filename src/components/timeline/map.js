@@ -68,117 +68,115 @@ export function DeploymentMap({
       basemap={`mapbox://styles/${mapStyleID}`}
       showControls={true}
     >
-      {geojson && (
-        <Source
-          id="deployment"
+      <Source
+        id="deployment"
+        config={{
+          type: "geojson",
+          data: geojson,
+        }}
+      >
+        <DeploymentLayer
           config={{
-            type: "geojson",
-            data: geojson,
+            id: "flights",
+            type: "line",
+            source: "deployment",
+            paint: {
+              "line-color": lineColorsPaint,
+              "line-width": [
+                "interpolate",
+                ["linear"],
+                ["zoom"],
+                0,
+                1,
+                10,
+                2,
+                22,
+                6,
+              ],
+              "line-opacity": [
+                "interpolate",
+                ["linear"],
+                ["zoom"],
+                0,
+                0.25,
+                10,
+                0.5,
+                22,
+                1,
+              ],
+            },
+            visible: true,
           }}
-        >
-          <DeploymentLayer
-            config={{
-              id: "flights",
-              type: "line",
-              source: "deployment",
-              paint: {
-                "line-color": lineColorsPaint,
-                "line-width": [
-                  "interpolate",
-                  ["linear"],
-                  ["zoom"],
-                  0,
-                  1,
-                  10,
-                  2,
-                  22,
-                  6,
-                ],
-                "line-opacity": [
-                  "interpolate",
-                  ["linear"],
-                  ["zoom"],
-                  0,
-                  0.25,
-                  10,
-                  0.5,
-                  22,
-                  1,
-                ],
-              },
-              visible: true,
-            }}
-            onLoad={map => map.fitBounds(bounds, { padding: 50 })}
-            selectedPlatforms={selectedPlatforms}
-            selectedDeployment={
-              selectedDeployment
-                ? replaceSlashes(selectedDeployment.longname)
-                : ""
-            }
-          />
-          <DeploymentLayer
-            config={{
-              id: "bg-static-locations",
-              type: "circle",
-              source: "deployment",
-              paint: {
-                "circle-color": "#294060",
-                "circle-radius": [
-                  "interpolate",
-                  ["exponential", 0.5],
-                  ["zoom"],
-                  0,
-                  4,
-                  10,
-                  14,
-                  22,
-                  20,
-                ],
-                "circle-stroke-width": 1,
-                "circle-stroke-color": iconColors,
-              },
-              filter: ["all", ["==", "$type", "Point"]],
-            }}
-            selectedPlatforms={selectedPlatforms}
-            selectedDeployment={
-              selectedDeployment
-                ? replaceSlashes(selectedDeployment.longname)
-                : ""
-            }
-          />
-          <DeploymentLayer
-            config={{
-              id: "static-locations",
-              type: "symbol",
-              source: "deployment",
-              layout: {
-                "icon-image": iconImage,
-                "icon-allow-overlap": true,
-                "icon-size": [
-                  "interpolate",
-                  ["exponential", 0.5],
-                  ["zoom"],
-                  0,
-                  0.25,
-                  10,
-                  0.75,
-                  16,
-                  1,
-                  20,
-                  1.125,
-                ],
-              },
-              filter: ["all", ["==", "$type", "Point"]],
-            }}
-            selectedPlatforms={selectedPlatforms}
-            selectedDeployment={
-              selectedDeployment
-                ? replaceSlashes(selectedDeployment.longname)
-                : ""
-            }
-          />
-        </Source>
-      )}
+          onLoad={map => map.fitBounds(bounds, { padding: 50 })}
+          selectedPlatforms={selectedPlatforms}
+          selectedDeployment={
+            selectedDeployment
+              ? replaceSlashes(selectedDeployment.longname)
+              : ""
+          }
+        />
+        <DeploymentLayer
+          config={{
+            id: "bg-static-locations",
+            type: "circle",
+            source: "deployment",
+            paint: {
+              "circle-color": "#294060",
+              "circle-radius": [
+                "interpolate",
+                ["exponential", 0.5],
+                ["zoom"],
+                0,
+                4,
+                10,
+                14,
+                22,
+                20,
+              ],
+              "circle-stroke-width": 1,
+              "circle-stroke-color": iconColors,
+            },
+            filter: ["all", ["==", "$type", "Point"]],
+          }}
+          selectedPlatforms={selectedPlatforms}
+          selectedDeployment={
+            selectedDeployment
+              ? replaceSlashes(selectedDeployment.longname)
+              : ""
+          }
+        />
+        <DeploymentLayer
+          config={{
+            id: "static-locations",
+            type: "symbol",
+            source: "deployment",
+            layout: {
+              "icon-image": iconImage,
+              "icon-allow-overlap": true,
+              "icon-size": [
+                "interpolate",
+                ["exponential", 0.5],
+                ["zoom"],
+                0,
+                0.25,
+                10,
+                0.75,
+                16,
+                1,
+                20,
+                1.125,
+              ],
+            },
+            filter: ["all", ["==", "$type", "Point"]],
+          }}
+          selectedPlatforms={selectedPlatforms}
+          selectedDeployment={
+            selectedDeployment
+              ? replaceSlashes(selectedDeployment.longname)
+              : ""
+          }
+        />
+      </Source>
       <MapLegend
         platforms={platforms}
         platformsWithData={platformsWithData}

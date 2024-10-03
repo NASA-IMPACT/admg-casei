@@ -80,11 +80,10 @@ export const flightPathColors = platforms =>
 
 const hex2rgb = hex => hex.match(/[0-9a-f]{2}/g).map(x => parseInt(x, 16))
 
-export const getLineColorToDeckGL = index => {
+export const getLineColorAsRGB = index => {
   if (index === -1) return hex2rgb(FALLBACK_COLOR)
   const color = MOVING_PLATFORMS_COLORS[index]
   // converts from HEX to RGB
-  console.log(hex2rgb)
   return hex2rgb(color)
 }
 
@@ -117,3 +116,6 @@ export const getIconColors = () => {
     "#fff", // fallback color
   ]
 }
+
+export const getPlatformIcon = platformName =>
+  STATIC_PLATFORMS.find(i => i.name === platformName).mapIcon
