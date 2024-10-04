@@ -130,8 +130,7 @@ export function GlobeMap({ geojson, deployments, mapStyleID }) {
       return getPlatformIcon(f.properties.platform_name)
     },
     getPosition: f => f.geometry.coordinates,
-    getSize: 20,
-    sizeScale: 15,
+    getSize: 12,
   })
 
   if (iconMapping && geojson) {
@@ -143,7 +142,6 @@ export function GlobeMap({ geojson, deployments, mapStyleID }) {
               controller: { keyboard: false, inertia: true },
             })
           }
-          parameters={{ cull: true }}
           initialViewState={initialViewState}
           layers={[backgroundLayers, flights, staticLocations]}
         ></DeckGL>
