@@ -59,7 +59,7 @@ export const STATIC_PLATFORMS = [
     name: "Permanent Water Site",
     color: "#CC4C02",
     icon: <PermanentWaterSiteIcon />,
-    mapIcon: "PermanentWaterSiteIcon",
+    mapIcon: "PermanentWaterIcon",
   },
   {
     name: "Moored Buoy",
