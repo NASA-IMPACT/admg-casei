@@ -1,0 +1,63 @@
+# NUMBER. ADD LINTING PRECOMMIT
+
+- Status: proposed : 2023-05-23 accepted: 2023-05-31
+- Deciders: Orbaco
+- Date: 2023-05-31
+
+Technical Story: [link to discussion issue](https://github.com/NASA-IMPACT/admg-casei/issues/522) <!-- optional -->
+
+## Context and Problem Statement
+
+[Describe the context and problem statement, e.g., in free form using two to three sentences. You may want to articulate the problem in form of a question.]
+
+## Decision Drivers <!-- optional -->
+
+- Discussion from post-mortem in reference ticket.
+
+## Considered Options
+
+- Local development environment for CASEI can more closely resemble Github Actions runners by using dev containers.
+- Configuring a threshold for Jest unit tests
+- pre-commit hooks for linting procedures in CI
+- Pin versions in package.json
+
+## Decision Outcome
+
+Chosen option: to add pre-commit hooks because it will not slow commit and development process during feature development and is ultimately optional.
+
+### Positive Consequences <!-- optional -->
+
+- Use a python environment and pre-commit hooks to run `eslint` and other commands before they fail in CI.
+- No debugging of linting issues in CI
+- Automate `eslint` so developers do not need to remember to run it manually.
+
+### Negative Consequences <!-- optional -->
+
+### Pre-requisites
+- Python virtualenv (venv, pyenv virtualenv, etc)
+- Install pre-commit package
+
+### Setup 
+```
+    # activate your pyenv environment
+    example... `pyenv activate casei-nodeenv`
+
+    # install all requirements
+    pip install -r requirements.txt
+
+    # OR install pre-commit 
+    pip install pre-commit
+
+    # install the local repository pre commits
+    pre-commit install
+
+    # test a change a git commit
+    git add -A && git commit -m "testing pre commits"
+
+    # optional: run on all files
+    pre-commit run --all-files
+```
+
+## Links <!-- optional -->
+
+- [Pre-commit library](https://pre-commit.com/index.html#plugins)
