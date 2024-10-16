@@ -13,7 +13,11 @@ import { SphereGeometry } from "@luma.gl/engine"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 import { getUniquePlatforms } from "../../utils/get-unique-platforms"
-import { getLineColorAsRGB, getPlatformIcon } from "../../utils/platform-colors"
+import {
+  getLineColorAsRGB,
+  getPlatformIcon,
+  isPlatformVisible,
+} from "../../utils/platform-colors"
 
 const INITIAL_VIEW_STATE = {
   longitude: -98,
@@ -22,7 +26,14 @@ const INITIAL_VIEW_STATE = {
 }
 const MAPBOX_TOKEN = process.env.GATSBY_MAPBOX_TOKEN
 
-export function GlobeMap({ geojson, deployments, mapStyleID }) {
+export function GlobeMap({
+  geojson,
+  deployments,
+  selectedPlatforms,
+  selectedDeployment,
+  mapStyleID,
+  children,
+}) {
   const [initialViewState, setInitialViewState] = useState(INITIAL_VIEW_STATE)
   const [iconMapping, setIconMapping] = useState({})
   const platforms = getUniquePlatforms(
@@ -112,7 +123,15 @@ export function GlobeMap({ geojson, deployments, mapStyleID }) {
     id: "flights",
     data: {
       ...geojson,
-      features: geojson.features.filter(f => f.geometry.type !== "Point"),
+      features: geojson.features
+        .filter(f => f.geometry.type !== "Point")
+        .filter(f =>
+          isPlatformVisible({
+            platformProperties: f.properties,
+            selectedDeployment,
+            selectedPlatforms,
+          })
+        ),
     },
     lineWidthMinPixels: 0.5,
     getLineWidth: 1,
@@ -126,9 +145,14 @@ export function GlobeMap({ geojson, deployments, mapStyleID }) {
     pickable: true,
     iconAtlas: `https://api.mapbox.com/styles/v1/${mapStyleID}/sprite@2x.png?access_token=${MAPBOX_TOKEN}`,
     iconMapping: iconMapping,
-    getIcon: f => {
-      return getPlatformIcon(f.properties.platform_name)
-    },
+    getIcon: f =>
+      isPlatformVisible({
+        platformProperties: f.properties,
+        selectedDeployment,
+        selectedPlatforms,
+      })
+        ? getPlatformIcon(f.properties.platform_name)
+        : null,
     getPosition: f => f.geometry.coordinates,
     getSize: 12,
   })
@@ -145,6 +169,7 @@ export function GlobeMap({ geojson, deployments, mapStyleID }) {
           initialViewState={initialViewState}
           layers={[backgroundLayers, flights, staticLocations]}
         ></DeckGL>
+        {children}
       </MapContainer>
     )
   }
@@ -153,7 +178,10 @@ export function GlobeMap({ geojson, deployments, mapStyleID }) {
 GlobeMap.propTypes = {
   geojson: PropTypes.object,
   deployments: PropTypes.array,
+  selectedDeployment: PropTypes.array,
+  selectedPlatforms: PropTypes.array,
   mapStyleID: PropTypes.string,
+  children: PropTypes.node,
 }
 
 const MapContainer = styled.div`

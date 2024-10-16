@@ -119,3 +119,16 @@ export const getIconColors = () => {
 
 export const getPlatformIcon = platformName =>
   STATIC_PLATFORMS.find(i => i.name === platformName).mapIcon
+
+export const isPlatformVisible = ({
+  platformProperties,
+  selectedPlatforms,
+  selectedDeployment,
+}) => {
+  return (
+    (selectedDeployment === null ||
+      selectedDeployment.longname === platformProperties.deployment) &&
+    (selectedPlatforms === null ||
+      selectedPlatforms.includes(platformProperties.platform_name))
+  )
+}

@@ -13,8 +13,6 @@ import { Disclosure } from "@reach/disclosure"
 import { DeploymentPanel } from "./deployment-panel"
 import { DeploymentMap } from "./map"
 import { replaceSlashes } from "../../utils/helpers"
-import { GlobeMap } from "../map/globe-map"
-import Button from "../button"
 
 const chartSettings = {
   marginTop: 1,
@@ -42,7 +40,6 @@ export const Swatch = styled.div`
 
 export const TimelineChart = ({ deployments, bounds, campaignName }) => {
   const [containerRef, dms] = useChartDimensions(chartSettings)
-  const MAP_STYLE_ID = "devseed/clx25ggbv076o01ql8k8m03k8"
 
   const minDateString = d3
     .min(
@@ -89,7 +86,6 @@ export const TimelineChart = ({ deployments, bounds, campaignName }) => {
   const [count, setCount] = useState(1)
   const [priority, setPriority] = useState({})
   const [geojson, setGeojson] = useState({})
-  const [enable3DView, setEnable3DView] = useState(false)
 
   const [tooltip, setTooltip] = useState({ x: null, y: null })
   const [tooltipContent, setTooltipContent] = useState(null)
@@ -150,32 +146,12 @@ export const TimelineChart = ({ deployments, bounds, campaignName }) => {
   return (
     <Disclosure open={!!selectedDeployment}>
       {geojson?.features?.length && (
-        <>
-          {enable3DView ? (
-            <GlobeMap
-              geojson={geojson}
-              deployments={deployments}
-              mapStyleID={MAP_STYLE_ID}
-            />
-          ) : (
-            <DeploymentMap
-              geojson={geojson}
-              deployments={deployments}
-              bounds={bounds}
-              selectedDeployment={selectedDeployment}
-              mapStyleID={MAP_STYLE_ID}
-            />
-          )}
-          <div css={{ marginTop: "5px" }}>
-            <Button
-              action={() => setEnable3DView(!enable3DView)}
-              mode={POSITIVE}
-              noBorder
-            >
-              Switch to {enable3DView ? "2D" : "3D"} map view
-            </Button>
-          </div>
-        </>
+        <DeploymentMap
+          geojson={geojson}
+          deployments={deployments}
+          bounds={bounds}
+          selectedDeployment={selectedDeployment}
+        />
       )}
       <div
         ref={containerRef}

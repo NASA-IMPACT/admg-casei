@@ -5,6 +5,7 @@ import {
   getPlatformIcon,
   MOVING_PLATFORMS_COLORS,
   STATIC_PLATFORMS,
+  isPlatformVisible,
 } from "../platform-colors"
 
 describe("getLineColor", () => {
@@ -70,5 +71,74 @@ describe("getPlatformIcon", () => {
     expect(getPlatformIcon("Permanent Land Site")).toEqual(
       "PermanentLandSiteIcon"
     )
+  })
+})
+
+describe("isPlatformVisible", () => {
+  const platformProperties = {
+    platform_name: "DC-8",
+    deployment: "SPADE_D1_2018",
+  }
+  it("returns true if there is not selected platforms and deployments", () => {
+    expect(
+      isPlatformVisible({
+        platformProperties,
+        selectedPlatforms: null,
+        selectedDeployment: null,
+      })
+    ).toBeTruthy()
+  })
+  it("returns true if it is one of the selected platforms", () => {
+    expect(
+      isPlatformVisible({
+        platformProperties,
+        selectedPlatforms: ["DC-8", "ER-2"],
+        selectedDeployment: null,
+      })
+    ).toBeTruthy()
+    expect(
+      isPlatformVisible({
+        platformProperties,
+        selectedPlatforms: ["DC-8", "ER-2"],
+        selectedDeployment: { longname: "SPADE_D1_2018" },
+      })
+    ).toBeTruthy()
+    expect(
+      isPlatformVisible({
+        platformProperties,
+        selectedPlatforms: null,
+        selectedDeployment: { longname: "SPADE_D1_2018" },
+      })
+    ).toBeTruthy()
+  })
+  it("returns false if the selected platforms and deployment does not match", () => {
+    expect(
+      isPlatformVisible({
+        platformProperties,
+        selectedPlatforms: ["DC-8", "ER-2"],
+        selectedDeployment: { longname: "SPADE_D2_2019" },
+      })
+    ).toBeFalsy()
+    expect(
+      isPlatformVisible({
+        platformProperties,
+        selectedPlatforms: null,
+        selectedDeployment: { longname: "SPADE_D2_2019" },
+      })
+    ).toBeFalsy()
+    expect(
+      isPlatformVisible({
+        platformProperties,
+        selectedPlatforms: ["ER-2"],
+        selectedDeployment: { longname: "SPADE_D1_2018" },
+      })
+    ).toBeFalsy()
+    expect(
+      isPlatformVisible({
+        platformProperties,
+        selectedPlatforms: ["ER-2"],
+        selectedDeployment: null,
+      })
+    ).toBeFalsy()
   })
 })
