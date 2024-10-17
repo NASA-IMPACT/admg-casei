@@ -12,10 +12,9 @@ import {
   getStaticIcons,
   getIconColors,
 } from "../../utils/platform-colors"
-import Button from "../button"
 import { GlobeMap } from "../map/globe-map"
-import { POSITIVE } from "../../utils/constants"
 import { MapLegend } from "./map-legend"
+import { MapViewControl } from "./map-view-control"
 
 export function DeploymentMap({
   geojson,
@@ -74,6 +73,10 @@ export function DeploymentMap({
             selectedPlatforms={selectedPlatforms}
             setSelectedPlatforms={setSelectedPlatforms}
           />
+          <MapViewControl
+            onClick={() => setEnable3DView(!enable3DView)}
+            is3DViewEnabled={enable3DView}
+          />
         </GlobeMap>
       ) : (
         <MapboxMap
@@ -85,24 +88,21 @@ export function DeploymentMap({
           setSelectedPlatforms={setSelectedPlatforms}
           bounds={bounds}
         >
-          <MapLegend
-            platforms={platforms}
-            platformsWithData={platformsWithData}
-            activeDeploymentPlatforms={activeDeploymentPlatforms}
-            selectedPlatforms={selectedPlatforms}
-            setSelectedPlatforms={setSelectedPlatforms}
-          />
+          <>
+            <MapLegend
+              platforms={platforms}
+              platformsWithData={platformsWithData}
+              activeDeploymentPlatforms={activeDeploymentPlatforms}
+              selectedPlatforms={selectedPlatforms}
+              setSelectedPlatforms={setSelectedPlatforms}
+            />
+            <MapViewControl
+              onClick={() => setEnable3DView(!enable3DView)}
+              is3DViewEnabled={enable3DView}
+            />
+          </>
         </MapboxMap>
       )}
-      <div css={{ marginTop: "5px" }}>
-        <Button
-          action={() => setEnable3DView(!enable3DView)}
-          mode={POSITIVE}
-          noBorder
-        >
-          Switch to {enable3DView ? "2D" : "3D"} map view
-        </Button>
-      </div>
     </>
   )
 }
