@@ -9,6 +9,7 @@ import {
 import { GeoJsonLayer, BitmapLayer, IconLayer } from "@deck.gl/layers"
 import { TileLayer } from "@deck.gl/geo-layers"
 import { SimpleMeshLayer } from "@deck.gl/mesh-layers"
+import { ZoomWidget, FullscreenWidget } from "@deck.gl/widgets"
 import { SphereGeometry } from "@luma.gl/engine"
 import PropTypes from "prop-types"
 import styled from "styled-components"
@@ -18,6 +19,7 @@ import {
   getPlatformIcon,
   isPlatformVisible,
 } from "../../utils/platform-colors"
+import "./deck-gl.css"
 
 const INITIAL_VIEW_STATE = {
   longitude: -98,
@@ -166,8 +168,13 @@ export function GlobeMap({
               controller: { keyboard: false, inertia: true },
             })
           }
+          controller={true}
           initialViewState={initialViewState}
           layers={[backgroundLayers, flights, staticLocations]}
+          widgets={[
+            new ZoomWidget({ placement: "bottom-right" }),
+            new FullscreenWidget({ placement: "bottom-right" }),
+          ]}
         ></DeckGL>
         {children}
       </MapContainer>
