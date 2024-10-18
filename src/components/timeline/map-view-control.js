@@ -18,7 +18,7 @@ const ControlBox = styled.div`
 export const MapViewControl = ({ onClick, is3DViewEnabled }) => (
   <ControlBox>
     <Button action={onClick} mode={POSITIVE} noBorder>
-      Switch to {is3DViewEnabled ? "2D" : "3D"} map view
+      View in {is3DViewEnabled ? "2D" : "3D"}
     </Button>
   </ControlBox>
 )
