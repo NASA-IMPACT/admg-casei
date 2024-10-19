@@ -20,6 +20,7 @@ import {
   isPlatformVisible,
 } from "../../utils/platform-colors"
 import "./deck-gl.css"
+import { colors } from "../../theme"
 
 const INITIAL_VIEW_STATE = {
   longitude: -98,
@@ -177,6 +178,22 @@ export function GlobeMap({
           ]}
         ></DeckGL>
         {children}
+        <Attribution>
+          <a
+            href="https://www.mapbox.com/about/maps/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            © Mapbox
+          </a>
+          <a
+            href="https://www.openstreetmap.org/about/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            © OpenStreetMap
+          </a>
+        </Attribution>
       </MapContainer>
     )
   }
@@ -198,4 +215,19 @@ const MapContainer = styled.div`
   width: 100%;
   overflow: hidden;
   background: #111;
+`
+
+const Attribution = styled.div`
+  display: inline-block;
+  text-align: right;
+  position: absolute;
+  right: 4px;
+  bottom: 2px;
+  font-weight: 400;
+  font-size: 11px;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  color: ${colors.darkTheme.text};
+  > a {
+    margin-left: 4px;
+  }
 `
