@@ -99,8 +99,8 @@ export function GlobeMap({
         id: "TileLayer",
         data: `https://api.mapbox.com/styles/v1/${mapStyleID}/tiles/256/{z}/{x}/{y}@2x?access_token=${MAPBOX_TOKEN}`,
         maxZoom: 22,
-        minZoom: 0,
-        zoomOffset: 1,
+        minZoom: 3,
+        extent: [-180, -90, 180, 90],
         tileSize: 256,
         renderSubLayers: props => {
           // eslint-disable-next-line react/prop-types
