@@ -78,6 +78,15 @@ export const STATIC_PLATFORMS = [
 export const flightPathColors = platforms =>
   platforms.map((i, index) => [i, MOVING_PLATFORMS_COLORS[index]])
 
+const hex2rgb = hex => hex.match(/[0-9a-f]{2}/g).map(x => parseInt(x, 16))
+
+export const getLineColorAsRGB = index => {
+  if (index === -1) return hex2rgb(FALLBACK_COLOR)
+  const color = MOVING_PLATFORMS_COLORS[index]
+  // converts from HEX to RGB
+  return hex2rgb(color)
+}
+
 export const getLineColors = platforms => {
   const colors = flightPathColors(platforms)
   return [
@@ -106,4 +115,20 @@ export const getIconColors = () => {
     ...colors.flatMap(i => i),
     "#fff", // fallback color
   ]
+}
+
+export const getPlatformIcon = platformName =>
+  STATIC_PLATFORMS.find(i => i.name === platformName).mapIcon
+
+export const isPlatformVisible = ({
+  platformProperties,
+  selectedPlatforms,
+  selectedDeployment,
+}) => {
+  return (
+    (selectedDeployment === null ||
+      selectedDeployment.longname === platformProperties.deployment) &&
+    (selectedPlatforms === null ||
+      selectedPlatforms.includes(platformProperties.platform_name))
+  )
 }

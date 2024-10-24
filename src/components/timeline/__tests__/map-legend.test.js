@@ -1,7 +1,7 @@
 import React from "react"
 import renderer, { act } from "react-test-renderer"
 
-import { MapLegend, PlatformStatus } from "../map"
+import { MapLegend, PlatformStatus } from "../map-legend"
 import { LineIcon } from "../../../icons"
 import {
   BalloonIcon,
