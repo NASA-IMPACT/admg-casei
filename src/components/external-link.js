@@ -23,14 +23,18 @@ export default function ExternalLink({
         display: inline-flex;
         flex-flow: row nowrap;
         gap: 0.25rem;
-        align-items: baseline;
+        align-items: center;
+        svg {
+          width: 12px;
+          height: 12px;
+          flex-shrink: 0;
+        }
         @media screen and (min-width: ${breakpoints["sm"]}) {
-          flex-flow: row wrap;
+          /* flex-flow: row wrap; */
         }
       `}
       data-cy={`${id}-link`}
     >
-      <ExternalLinkIcon color={colors[mode].linkText} />
       <span
         css={`
           overflow-wrap: anywhere;
@@ -38,6 +42,7 @@ export default function ExternalLink({
       >
         {label || children}
       </span>
+      <ExternalLinkIcon color={colors[mode].linkText} />
     </a>
   )
 }
