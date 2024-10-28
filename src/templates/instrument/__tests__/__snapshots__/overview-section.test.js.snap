@@ -134,12 +134,17 @@ exports[`Overview Section displays content 1`] = `
         </dt>
         <dd>
           <a
-            className="sc-eqUAAy fwapUR"
+            className="sc-eqUAAy ksibDB"
             data-cy="calibration-doi-link"
             href="http://dx.doi.org/10.5067/calibration"
             rel="noopener noreferrer"
             target="_blank"
           >
+            <span
+              className="external-link___StyledSpan-sc-3ezy1s-0 LrNqW"
+            >
+              http://dx.doi.org/10.5067/calibration
+            </span>
             <svg
               height="16"
               role="img"
@@ -161,11 +166,6 @@ exports[`Overview Section displays content 1`] = `
                 fill="#15418c"
               />
             </svg>
-            <span
-              className="external-link___StyledSpan-sc-3ezy1s-0 LrNqW"
-            >
-              http://dx.doi.org/10.5067/calibration
-            </span>
           </a>
         </dd>
         <dt>
@@ -183,12 +183,17 @@ exports[`Overview Section displays content 1`] = `
               className="overview-section___StyledLi3-sc-1oemh85-0 hwjFCf"
             >
               <a
-                className="sc-eqUAAy fwapUR"
+                className="sc-eqUAAy ksibDB"
                 data-cy="online-information-link"
                 href="http://www.example.com"
                 rel="noopener noreferrer"
                 target="_blank"
               >
+                <span
+                  className="external-link___StyledSpan-sc-3ezy1s-0 LrNqW"
+                >
+                  http://www.example.com
+                </span>
                 <svg
                   height="16"
                   role="img"
@@ -210,11 +215,6 @@ exports[`Overview Section displays content 1`] = `
                     fill="#15418c"
                   />
                 </svg>
-                <span
-                  className="external-link___StyledSpan-sc-3ezy1s-0 LrNqW"
-                >
-                  http://www.example.com
-                </span>
               </a>
             </li>
           </ul>
@@ -291,12 +291,17 @@ exports[`Overview Section displays content 1`] = `
           DOI:
            
           <a
-            className="sc-eqUAAy gqBnyJ"
+            className="sc-eqUAAy jxHsRt"
             data-cy="instrument-doi-link"
             href="http://dx.doi.org/10.5067/instrument"
             rel="noopener noreferrer"
             target="_blank"
           >
+            <span
+              className="external-link___StyledSpan-sc-3ezy1s-0 LrNqW"
+            >
+              http://dx.doi.org/10.5067/instrument
+            </span>
             <svg
               height="16"
               role="img"
@@ -318,11 +323,6 @@ exports[`Overview Section displays content 1`] = `
                 fill="#aac9ff"
               />
             </svg>
-            <span
-              className="external-link___StyledSpan-sc-3ezy1s-0 LrNqW"
-            >
-              http://dx.doi.org/10.5067/instrument
-            </span>
           </a>
         </p>
       </div>
@@ -356,12 +356,17 @@ exports[`Overview Section displays content 1`] = `
             className="list-link___StyledLi-sc-xxtxki-0 hZlwud"
           >
             <a
-              className="sc-eqUAAy fwapUR"
+              className="sc-eqUAAy ksibDB"
               data-cy="test-link"
               href="http://www.example.com"
               rel="noopener noreferrer"
               target="_blank"
             >
+              <span
+                className="external-link___StyledSpan-sc-3ezy1s-0 LrNqW"
+              >
+                test
+              </span>
               <svg
                 height="16"
                 role="img"
@@ -383,23 +388,23 @@ exports[`Overview Section displays content 1`] = `
                   fill="#15418c"
                 />
               </svg>
-              <span
-                className="external-link___StyledSpan-sc-3ezy1s-0 LrNqW"
-              >
-                test
-              </span>
             </a>
           </li>
           <li
             className="list-link___StyledLi-sc-xxtxki-0 hZlwud"
           >
             <a
-              className="sc-eqUAAy fwapUR"
+              className="sc-eqUAAy ksibDB"
               data-cy="test2-link"
               href="http://www.example.com"
               rel="noopener noreferrer"
               target="_blank"
             >
+              <span
+                className="external-link___StyledSpan-sc-3ezy1s-0 LrNqW"
+              >
+                test2
+              </span>
               <svg
                 height="16"
                 role="img"
@@ -421,11 +426,6 @@ exports[`Overview Section displays content 1`] = `
                   fill="#15418c"
                 />
               </svg>
-              <span
-                className="external-link___StyledSpan-sc-3ezy1s-0 LrNqW"
-              >
-                test2
-              </span>
             </a>
           </li>
         </ul>

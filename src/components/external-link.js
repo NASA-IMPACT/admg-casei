@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 
 import { POSITIVE, NEGATIVE } from "../utils/constants"
 import { PropTypeIsUrl } from "../utils/helpers"
-import { colors, breakpoints } from "../theme"
+import { colors } from "../theme"
 import { ExternalLinkIcon } from "../icons"
 
 export default function ExternalLink({
@@ -28,9 +28,6 @@ export default function ExternalLink({
           width: 12px;
           height: 12px;
           flex-shrink: 0;
-        }
-        @media screen and (min-width: ${breakpoints["sm"]}) {
-          /* flex-flow: row wrap; */
         }
       `}
       data-cy={`${id}-link`}
