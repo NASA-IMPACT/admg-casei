@@ -106,8 +106,8 @@ export const TimelineChart = ({ deployments, bounds, campaignName }) => {
             },
           }
         )
-        const vals = await response.json()
-        setGeojson(vals)
+        const geojsonData = await response.json()
+        setGeojson(geojsonData)
       } catch (error) {
         console.log("catch error", error)
       }

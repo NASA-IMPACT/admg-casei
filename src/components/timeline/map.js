@@ -15,6 +15,7 @@ import {
 import { GlobeMap } from "../map/globe-map"
 import { MapLegend } from "./map-legend"
 import { MapViewControl } from "./map-view-control"
+import bbox from "@turf/bbox"
 
 export function DeploymentMap({
   geojson,
@@ -23,7 +24,11 @@ export function DeploymentMap({
   selectedDeployment,
 }) {
   const MAP_STYLE_ID = "devseed/clx25ggbv076o01ql8k8m03k8"
-  const [enable3DView, setEnable3DView] = useState(false)
+  const geojsonBbox = bbox(geojson)
+  const [enable3DView, setEnable3DView] = useState(
+    // if the geojson crosses the 80º or -80º latitude, enables 3D view by default
+    geojsonBbox[1] < -80 || geojsonBbox[3] > 80
+  )
   const platforms = getUniquePlatforms(
     deployments.flatMap(d => d.collectionPeriods)
   ).map(i => ({ name: i.item.shortname, type: i.item.platformType.shortname }))
