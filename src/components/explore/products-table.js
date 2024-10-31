@@ -21,7 +21,7 @@ export function ProductsTable({ dois }) {
         <tr>
           <th
             css={`
-              padding-left: 20px;
+              padding-left: 20px !important;
             `}
           >
             DATA PRODUCT

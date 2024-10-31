@@ -4,6 +4,7 @@ import * as d3 from "d3"
 import styled from "styled-components"
 
 import { Axis } from "./axis"
+import { useFetch } from "@custom-react-hooks/use-fetch"
 import { NEGATIVE, POSITIVE } from "../../utils/constants"
 import { colors } from "../../theme"
 import { useChartDimensions } from "../../utils/use-chart-dimensions"
@@ -13,6 +14,7 @@ import { Disclosure } from "@reach/disclosure"
 import { DeploymentPanel } from "./deployment-panel"
 import { DeploymentMap } from "./map"
 import { replaceSlashes } from "../../utils/helpers"
+import { ExclamationIcon } from "../../icons"
 
 const chartSettings = {
   marginTop: 1,
@@ -85,7 +87,11 @@ export const TimelineChart = ({ deployments, bounds, campaignName }) => {
   const [hoveredDeployment, setHoveredDeployment] = useState(null)
   const [count, setCount] = useState(1)
   const [priority, setPriority] = useState({})
-  const [geojson, setGeojson] = useState({})
+  const {
+    data: geojson,
+    error: geojsonError,
+    loading: geojsonLoading,
+  } = useFetch(`/casei/flight-tracks/${replaceSlashes(campaignName)}.geojson`)
 
   const [tooltip, setTooltip] = useState({ x: null, y: null })
   const [tooltipContent, setTooltipContent] = useState(null)
@@ -93,27 +99,6 @@ export const TimelineChart = ({ deployments, bounds, campaignName }) => {
     content: undefined,
     type: "deployment",
   })
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(
-          `/casei/flight-tracks/${replaceSlashes(campaignName)}.geojson`,
-          {
-            method: "GET",
-            headers: {
-              "Content-Type": "application/json",
-            },
-          }
-        )
-        const geojsonData = await response.json()
-        setGeojson(geojsonData)
-      } catch (error) {
-        console.log("catch error", error)
-      }
-    }
-    fetchData()
-  }, [])
 
   useEffect(() => {
     //wait for first render to get correct measures
@@ -145,7 +130,18 @@ export const TimelineChart = ({ deployments, bounds, campaignName }) => {
 
   return (
     <Disclosure open={!!selectedDeployment}>
-      {geojson?.features?.length && (
+      {geojsonError && (
+        <MapErrorMsg>
+          <ExclamationIcon color={colors.darkTheme.highlight} />
+          <h4>It was not possible to load the map data for this campaign.</h4>
+        </MapErrorMsg>
+      )}
+      {geojsonLoading && (
+        <MapLoading>
+          <span className="loader"></span>
+        </MapLoading>
+      )}
+      {geojson && !geojsonError && !geojsonLoading && (
         <DeploymentMap
           geojson={geojson}
           deployments={deployments}
@@ -347,3 +343,22 @@ TimelineChart.propTypes = {
   bounds: PropTypes.array,
   campaignName: PropTypes.string.isRequired,
 }
+
+const MapErrorMsg = styled.div`
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  > h4 {
+    display: inline;
+    font-size: 1.2rem;
+    padding-left: 0.5rem;
+  }
+`
+
+const MapLoading = styled.div`
+  background-color: #111;
+  height: 500px;
+  text-align: center;
+  align-content: center;
+`

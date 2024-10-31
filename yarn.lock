@@ -1176,6 +1176,11 @@
   resolved "https://registry.yarnpkg.com/@builder.io/partytown/-/partytown-0.7.6.tgz#697acea6b552167a4dd43ddd4827018aa42e0364"
   integrity sha512-snXIGNiZpqjno3XYQN2lbBB+05hsQR/LSttbtIW1c0gmZ7Kh/DIo0YrxlDxCDulAMFPFM8J+4voLwvYepSj3sw==
 
+"@custom-react-hooks/use-fetch@^1.5.1":
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/@custom-react-hooks/use-fetch/-/use-fetch-1.5.1.tgz#ad72ba6625d9bccf7c306df144187ec26ac8d164"
+  integrity sha512-lSzUn+4B1o63h+IfsWuceabVnKr0WiJn1jZg52XheboevuYrn7KZB/5rtjCDBTQcOlDYR5Umt0oKqBQbnnpOxg==
+
 "@deck.gl/aggregation-layers@9.0.33":
   version "9.0.33"
   resolved "https://registry.yarnpkg.com/@deck.gl/aggregation-layers/-/aggregation-layers-9.0.33.tgz#e676907ada185157be49c75c2a4a97474d2cf421"
