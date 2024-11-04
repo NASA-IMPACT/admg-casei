@@ -86,11 +86,7 @@ export const MapLegend = ({
             key={platform.name}
             type="moving"
             name={platform.name}
-            color={
-              index <= MOVING_PLATFORMS_COLORS.length
-                ? MOVING_PLATFORMS_COLORS[index]
-                : FALLBACK_COLOR
-            }
+            color={MOVING_PLATFORMS_COLORS[index] || FALLBACK_COLOR}
             checked={selectedPlatforms.includes(platform.name)}
             disabled={
               (selectedPlatforms.length === 1 &&
