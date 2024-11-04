@@ -58,12 +58,19 @@ describe("getStaticIcons", () => {
 })
 
 describe("getLineColorAsRGB", () => {
+  const platforms = ["DC-8", "ER-2", "GH", "Learjet"]
   it("returns the color in RGB format", () => {
-    const platforms = ["DC-8", "ER-2", "GH", "Learjet"]
     expect(getLineColorAsRGB(platforms.indexOf("DC-8"))).toEqual([
       178, 223, 138,
     ])
     expect(getLineColorAsRGB(platforms.indexOf("GH"))).toEqual([253, 191, 111])
+    expect(getLineColorAsRGB(platforms.indexOf("GH"))).toEqual([253, 191, 111])
+    expect(getLineColorAsRGB(7)).toEqual([227, 26, 28])
+  })
+  it("returns the fallback color in RGB format if index is -1 or greater than 7", () => {
+    expect(getLineColorAsRGB(platforms.indexOf("ABC"))).toEqual([26, 155, 140])
+    expect(getLineColorAsRGB(8)).toEqual([26, 155, 140])
+    expect(getLineColorAsRGB(9)).toEqual([26, 155, 140])
   })
 })
 

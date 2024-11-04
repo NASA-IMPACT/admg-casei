@@ -139,7 +139,11 @@ export function GlobeMap({
     lineWidthMinPixels: 0.5,
     getLineWidth: 1,
     getLineColor: f =>
-      getLineColorAsRGB(movingPlatforms.indexOf(f.properties.platform_name)),
+      getLineColorAsRGB(
+        movingPlatforms
+          .filter((i, index) => movingPlatforms.indexOf(i) === index) // remove duplicates
+          .indexOf(f.properties.platform_name)
+      ),
   })
 
   const staticLocations = new IconLayer({
