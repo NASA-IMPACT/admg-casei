@@ -1,20 +1,28 @@
 /* eslint-disable react/prop-types */
-import React from "react"
+import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
+import { DeploymentMap } from "../../components/timeline/map"
 
 import { Section, SectionHeader, SectionContent } from "../../components/layout"
 import { TimelineChart } from "../../components/timeline"
 
-const TimelineSection = ({ id, deployments, bounds, campaignName }) => {
+const DeploymentEventsSection = ({ id, deployments, bounds, campaignName }) => {
+  const [selectedDeployment, setSelectedDeployment] = useState(null)
   return (
     <Section id={id}>
       <SectionHeader headline="Deployment & Events" id={id} />
       <SectionContent>
+        <DeploymentMap
+          campaignName={campaignName}
+          deployments={deployments}
+          bounds={bounds}
+          selectedDeployment={selectedDeployment}
+        />
         <TimelineChart
           {...{ deployments }}
-          bounds={bounds}
-          campaignName={campaignName}
+          selectedDeployment={selectedDeployment}
+          setSelectedDeployment={setSelectedDeployment}
         />
       </SectionContent>
     </Section>
@@ -49,7 +57,7 @@ export const deploymentFields = graphql`
   }
 `
 
-TimelineSection.propTypes = {
+DeploymentEventsSection.propTypes = {
   id: PropTypes.string.isRequired,
   campaignName: PropTypes.string.isRequired,
   deployments: PropTypes.arrayOf(
@@ -77,4 +85,4 @@ TimelineSection.propTypes = {
   bounds: PropTypes.array,
 }
 
-export default TimelineSection
+export default DeploymentEventsSection
