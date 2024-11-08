@@ -14,7 +14,7 @@ import { Disclosure } from "@reach/disclosure"
 import { DeploymentPanel } from "./deployment-panel"
 import { DeploymentMap } from "./map"
 import { replaceSlashes } from "../../utils/helpers"
-import { ExclamationIcon } from "../../icons"
+import { CaseiLogoIcon } from "../../icons"
 
 const chartSettings = {
   marginTop: 1,
@@ -132,8 +132,8 @@ export const TimelineChart = ({ deployments, bounds, campaignName }) => {
     <Disclosure open={!!selectedDeployment}>
       {geojsonError && (
         <MapErrorMsg>
-          <ExclamationIcon color={colors.darkTheme.highlight} />
-          <h4>It was not possible to load the map data for this campaign.</h4>
+          <CaseiLogoIcon size="tiny" />
+          <h4>Flight path data is not yet available for this campaign.</h4>
         </MapErrorMsg>
       )}
       {geojsonLoading && (
@@ -349,10 +349,13 @@ const MapErrorMsg = styled.div`
   padding: 1rem;
   margin-bottom: 2rem;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
   > h4 {
-    display: inline;
     font-size: 1.2rem;
-    padding-left: 0.5rem;
+    margin: 0;
   }
 `
 
