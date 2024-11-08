@@ -42,12 +42,12 @@ const MapLoading = styled.div`
   align-content: center;
 `
 
-export function DeploymentMap({
+export const DeploymentMap = ({
   campaignName,
   deployments,
   bounds,
   selectedDeployment,
-}) {
+}) => {
   const {
     data: geojson,
     error: geojsonError,

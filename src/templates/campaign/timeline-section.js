@@ -2,10 +2,9 @@
 import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
-import { DeploymentMap } from "../../components/timeline/map"
 
 import { Section, SectionHeader, SectionContent } from "../../components/layout"
-import { TimelineChart } from "../../components/timeline"
+import { DeploymentMap, TimelineChart } from "../../components/deployments"
 
 const DeploymentEventsSection = ({ id, deployments, bounds, campaignName }) => {
   const [selectedDeployment, setSelectedDeployment] = useState(null)
