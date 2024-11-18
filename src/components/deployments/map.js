@@ -62,16 +62,23 @@ export const DeploymentMap = ({
     deployments.flatMap(d => d.collectionPeriods)
   ).map(i => ({ name: i.item.shortname, type: i.item.platformType.shortname }))
   const names = platforms.map(i => i.name)
-  const platformsWithData = geojsonError
-    ? null
-    : geojson?.features.map(f => f.properties.platform_name)
+  const platformsWithData = geojson?.features.map(
+    f => f.properties.platform_name
+  )
   const [selectedPlatforms, setSelectedPlatforms] = useState(
-    geojsonError
-      ? null
-      : names
+    names
+      .filter((name, index) => names.indexOf(name) === index)
+      .filter(name => platformsWithData?.includes(name))
+  )
+  useEffect(() => {
+    if (!geojsonLoading && !selectedPlatforms.length) {
+      setSelectedPlatforms(
+        names
           .filter((name, index) => names.indexOf(name) === index)
           .filter(name => platformsWithData?.includes(name))
-  )
+      )
+    }
+  }, [selectedPlatforms, geojsonLoading])
 
   const MAP_STYLE_ID = "devseed/clx25ggbv076o01ql8k8m03k8"
   const activeDeploymentPlatforms = getUniquePlatforms(
