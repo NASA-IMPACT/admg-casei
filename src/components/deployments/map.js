@@ -61,20 +61,17 @@ export const DeploymentMap = ({
   const platforms = getUniquePlatforms(
     deployments.flatMap(d => d.collectionPeriods)
   ).map(i => ({ name: i.item.shortname, type: i.item.platformType.shortname }))
-  const names = platforms.map(i => i.name)
+  const platformNames = platforms.map(i => i.name)
   const platformsWithData = geojson?.features.map(
     f => f.properties.platform_name
   )
-  const [selectedPlatforms, setSelectedPlatforms] = useState(
-    names
-      .filter((name, index) => names.indexOf(name) === index)
-      .filter(name => platformsWithData?.includes(name))
-  )
+  const [selectedPlatforms, setSelectedPlatforms] = useState([])
+  // Set all platforms as selected after the geojson is loaded
   useEffect(() => {
     if (!geojsonLoading && !selectedPlatforms.length) {
       setSelectedPlatforms(
-        names
-          .filter((name, index) => names.indexOf(name) === index)
+        platformNames
+          .filter((name, index) => platformNames.indexOf(name) === index)
           .filter(name => platformsWithData?.includes(name))
       )
     }
