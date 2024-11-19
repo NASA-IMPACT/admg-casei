@@ -9,6 +9,7 @@ import {
   PermanentWaterSiteIcon,
   VehicleIcon,
   ShipIcon,
+  RocketIcon,
 } from "../icons/static-platform-icons"
 
 export const MOVING_PLATFORMS_COLORS = [
@@ -73,6 +74,12 @@ export const STATIC_PLATFORMS = [
     icon: <ShipIcon />,
     mapIcon: "ShipIcon",
   },
+  {
+    name: "Rocket Launch Site",
+    color: "#FF1F19",
+    icon: <RocketIcon />,
+    mapIcon: "RocketIcon",
+  },
 ]
 
 export const flightPathColors = platforms =>
@@ -81,8 +88,8 @@ export const flightPathColors = platforms =>
 const hex2rgb = hex => hex.match(/[0-9a-f]{2}/g).map(x => parseInt(x, 16))
 
 export const getLineColorAsRGB = index => {
-  if (index === -1) return hex2rgb(FALLBACK_COLOR)
   const color = MOVING_PLATFORMS_COLORS[index]
+  if (color === undefined) return hex2rgb(FALLBACK_COLOR)
   // converts from HEX to RGB
   return hex2rgb(color)
 }

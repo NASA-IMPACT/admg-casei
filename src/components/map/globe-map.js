@@ -51,8 +51,10 @@ export function GlobeMap({
   useEffect(() => {
     const fetchData = async () => {
       try {
+        // We need to update this variable each time we have a new version of the mapbox map style published
+        const mapStyleVersion = "6914ry1z9mxpu0srgeii55c8s"
         const response = await fetch(
-          `https://api.mapbox.com/styles/v1/${mapStyleID}/48lhibiqllsww17zqo5nw6pga/sprite@2x.json?access_token=${MAPBOX_TOKEN}`,
+          `https://api.mapbox.com/styles/v1/${mapStyleID}/${mapStyleVersion}/sprite@2x.json?access_token=${MAPBOX_TOKEN}`,
           {
             method: "GET",
             headers: {
@@ -139,7 +141,11 @@ export function GlobeMap({
     lineWidthMinPixels: 0.5,
     getLineWidth: 1,
     getLineColor: f =>
-      getLineColorAsRGB(movingPlatforms.indexOf(f.properties.platform_name)),
+      getLineColorAsRGB(
+        movingPlatforms
+          .filter((i, index) => movingPlatforms.indexOf(i) === index) // remove duplicates
+          .indexOf(f.properties.platform_name)
+      ),
   })
 
   const staticLocations = new IconLayer({
