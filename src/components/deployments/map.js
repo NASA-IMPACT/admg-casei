@@ -54,10 +54,7 @@ export const DeploymentMap = ({
     loading: geojsonLoading,
   } = useFetch(`/casei/flight-tracks/${replaceSlashes(campaignName)}.geojson`)
   const geojsonBbox = !!geojson && bbox(geojson)
-  const [enable3DView, setEnable3DView] = useState(
-    // if the geojson crosses the 80º or -80º latitude, enables 3D view by default
-    geojsonBbox[1] < -80 || geojsonBbox[3] > 80
-  )
+  const [enable3DView, setEnable3DView] = useState(false)
   const platforms = getUniquePlatforms(
     deployments.flatMap(d => d.collectionPeriods)
   ).map(i => ({ name: i.item.shortname, type: i.item.platformType.shortname }))
@@ -66,14 +63,16 @@ export const DeploymentMap = ({
     f => f.properties.platform_name
   )
   const [selectedPlatforms, setSelectedPlatforms] = useState([])
-  // Set all platforms as selected after the geojson is loaded
   useEffect(() => {
     if (!geojsonLoading && !selectedPlatforms.length) {
+      // Set all platforms as selected after the geojson is loaded
       setSelectedPlatforms(
         platformNames
           .filter((name, index) => platformNames.indexOf(name) === index)
           .filter(name => platformsWithData?.includes(name))
       )
+      // if the geojson crosses the 80º or -80º latitude, enables 3D view by default
+      setEnable3DView(geojsonBbox[1] < -80 || geojsonBbox[3] > 80)
     }
   }, [selectedPlatforms, geojsonLoading])
 
