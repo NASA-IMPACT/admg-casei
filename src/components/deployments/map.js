@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react"
 import PropTypes from "prop-types"
+import styled from "styled-components"
 
 import Map from "../map"
 import Source from "../map/source"
@@ -12,19 +13,47 @@ import {
   getStaticIcons,
   getIconColors,
 } from "../../utils/platform-colors"
+import { useFetch } from "@custom-react-hooks/use-fetch"
+import { CaseiLogoIcon } from "../../icons"
 import { GlobeMap } from "../map/globe-map"
 import { MapLegend } from "./map-legend"
 import { MapViewControl } from "./map-view-control"
 import bbox from "@turf/bbox"
 
-export function DeploymentMap({
-  geojson,
+const MapErrorMsg = styled.div`
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  > h4 {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+`
+
+const MapLoading = styled.div`
+  background-color: #111;
+  height: 500px;
+  text-align: center;
+  align-content: center;
+`
+
+export const DeploymentMap = ({
+  campaignName,
   deployments,
   bounds,
   selectedDeployment,
-}) {
-  const MAP_STYLE_ID = "devseed/clx25ggbv076o01ql8k8m03k8"
-  const geojsonBbox = bbox(geojson)
+}) => {
+  const {
+    data: geojson,
+    error: geojsonError,
+    loading: geojsonLoading,
+  } = useFetch(`/casei/flight-tracks/${replaceSlashes(campaignName)}.geojson`)
+  const geojsonBbox = !!geojson && bbox(geojson)
   const [enable3DView, setEnable3DView] = useState(
     // if the geojson crosses the 80º or -80º latitude, enables 3D view by default
     geojsonBbox[1] < -80 || geojsonBbox[3] > 80
@@ -32,7 +61,23 @@ export function DeploymentMap({
   const platforms = getUniquePlatforms(
     deployments.flatMap(d => d.collectionPeriods)
   ).map(i => ({ name: i.item.shortname, type: i.item.platformType.shortname }))
-  const names = platforms.map(i => i.name)
+  const platformNames = platforms.map(i => i.name)
+  const platformsWithData = geojson?.features.map(
+    f => f.properties.platform_name
+  )
+  const [selectedPlatforms, setSelectedPlatforms] = useState([])
+  // Set all platforms as selected after the geojson is loaded
+  useEffect(() => {
+    if (!geojsonLoading && !selectedPlatforms.length) {
+      setSelectedPlatforms(
+        platformNames
+          .filter((name, index) => platformNames.indexOf(name) === index)
+          .filter(name => platformsWithData?.includes(name))
+      )
+    }
+  }, [selectedPlatforms, geojsonLoading])
+
+  const MAP_STYLE_ID = "devseed/clx25ggbv076o01ql8k8m03k8"
   const activeDeploymentPlatforms = getUniquePlatforms(
     deployments
       .filter(d =>
@@ -42,9 +87,6 @@ export function DeploymentMap({
   )
     .map(i => ({ name: i.item.shortname, type: i.item.platformType.shortname }))
     .map(i => i.name)
-  const platformsWithData = geojson.features.map(
-    f => f.properties.platform_name
-  )
   let movingPlatforms = platforms
     .filter(platform =>
       ["Jet", "Prop", "UAV", "Ships/Boats"].includes(platform.type)
@@ -55,11 +97,22 @@ export function DeploymentMap({
     movingPlatforms.filter((i, index) => movingPlatforms.indexOf(i) === index)
   )
 
-  const [selectedPlatforms, setSelectedPlatforms] = useState(
-    names
-      .filter((name, index) => names.indexOf(name) === index)
-      .filter(name => platformsWithData.includes(name))
-  )
+  if (geojsonError) {
+    return (
+      <MapErrorMsg>
+        <CaseiLogoIcon size="tiny" />
+        <h4>Flight path data is not yet available for this campaign.</h4>
+      </MapErrorMsg>
+    )
+  }
+
+  if (geojsonLoading) {
+    return (
+      <MapLoading>
+        <span className="loader"></span>
+      </MapLoading>
+    )
+  }
 
   return (
     <>
@@ -113,7 +166,7 @@ export function DeploymentMap({
 }
 
 DeploymentMap.propTypes = {
-  geojson: PropTypes.object,
+  campaignName: PropTypes.string,
   deployments: PropTypes.array,
   bounds: PropTypes.array,
   selectedDeployment: PropTypes.object,

@@ -11,7 +11,7 @@ import InpageNav from "../../components/inpage-nav"
 import OverviewSection from "./overview-section"
 import FocusSection from "./focus-section"
 import PlatformSection from "./platform-section"
-import TimelineSection from "./timeline-section"
+import DeploymentEventsSection from "./timeline-section"
 import DataSection from "../../components/data-section"
 import ProgramInfoSection from "./program-info-section"
 // import OtherResourcesSection from "./other-resources-section"
@@ -89,7 +89,7 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
     },
     deployment: {
       nav: "Deployment & Events",
-      component: TimelineSection,
+      component: DeploymentEventsSection,
       props: {
         campaignName: campaign.shortname,
         deployments: campaign.deployments,
