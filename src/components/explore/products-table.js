@@ -15,17 +15,14 @@ export function ProductsTable({ dois }) {
       css={`
         background: rgba(255, 255, 255, 0.06);
         border-spacing: 30px;
+        th:first-child {
+          padding-left: 1.25rem;
+        }
       `}
     >
       <thead>
         <tr>
-          <th
-            css={`
-              padding-left: 20px !important;
-            `}
-          >
-            DATA PRODUCT
-          </th>
+          <th>DATA PRODUCT</th>
           <th>PLATFORMS</th>
           <th>INSTRUMENTS</th>
         </tr>
@@ -46,16 +43,24 @@ export function ProductsTable({ dois }) {
                   href={`http://dx.doi.org/${doi.doi}`}
                   css={`
                     color: ${colors[NEGATIVE].linkText};
-                    display: block;
+                    display: inline-flex;
+                    flex-flow: row nowrap;
+                    gap: 0.25rem;
+                    align-items: center;
                     text-overflow: ellipsis;
                     white-space: nowrap;
                     overflow: hidden;
-                    padding-left: 30px;
+                    padding-left: 1.5rem;
+                    svg {
+                      width: 12px;
+                      height: 12px;
+                      flex-shrink: 0;
+                    }
                   `}
                   data-cy={`doi-link`}
                 >
-                  <ExternalLinkIcon color={colors[NEGATIVE].linkText} />{" "}
                   <span>{doi.shortname}</span>
+                  <ExternalLinkIcon color={colors[NEGATIVE].linkText} />{" "}
                 </a>
               </td>
               <td>
