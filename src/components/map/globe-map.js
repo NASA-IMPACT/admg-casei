@@ -163,7 +163,7 @@ export function GlobeMap({
         ? getPlatformIcon(f.properties.platform_name)
         : null,
     getPosition: f => f.geometry.coordinates,
-    getSize: 12,
+    getSize: 18,
   })
 
   if (iconMapping && geojson) {
