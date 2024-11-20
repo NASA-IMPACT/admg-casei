@@ -1,7 +1,7 @@
 import React from "react"
 import renderer, { act } from "react-test-renderer"
 
-import { MapLegend, PlatformStatus } from "../map"
+import { MapLegend, PlatformStatus } from "../map-legend"
 import { LineIcon } from "../../../icons"
 import {
   BalloonIcon,
@@ -19,6 +19,14 @@ describe("MapLegend", () => {
       <MapLegend
         platforms={[
           { name: "Falcon", type: "Jet" },
+          { name: "G-H", type: "Jet" },
+          { name: "ER-2", type: "Jet" },
+          { name: "DC-8", type: "Jet" },
+          { name: "Learjet", type: "Jet" },
+          { name: "OtterTwin", type: "Jet" },
+          { name: "Laserjet", type: "Jet" },
+          { name: "B-200", type: "Jet" },
+          { name: "ABC", type: "Jet" },
           { name: "Field Site", type: "static" },
           { name: "Field Site", type: "static" },
         ]}
@@ -28,14 +36,18 @@ describe("MapLegend", () => {
       />
     )
     const instance = element.root
-    expect(instance.findAllByType("input").length).toBe(2)
+    expect(instance.findAllByType("input").length).toBe(10)
     const b1 = instance.findAllByType("input")[0]
     expect(
       instance.findAllByType("input").every(i => !i.props.checked)
     ).toBeTruthy()
     act(() => b1.props.onClick())
     expect(fn).toHaveBeenCalledTimes(1)
-    expect(instance.findByType(LineIcon).props.size).toBe("text")
+    expect(instance.findAllByType(LineIcon)[0].props.size).toBe("text")
+    expect(instance.findAllByType(LineIcon)[0].props.color).toBe("#b2df8a")
+    expect(instance.findAllByType(LineIcon)[7].props.color).toBe("#e31a1c")
+    // test fallback color to the 9º moving platform
+    expect(instance.findAllByType(LineIcon)[8].props.color).toBe("#1a9b8c")
     expect(instance.findByType(FieldSiteIcon)).toBeTruthy()
   })
   it("render with one option selected", () => {

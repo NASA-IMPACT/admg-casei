@@ -9,6 +9,7 @@ import {
   PermanentWaterSiteIcon,
   VehicleIcon,
   ShipIcon,
+  RocketIcon,
 } from "../icons/static-platform-icons"
 
 export const MOVING_PLATFORMS_COLORS = [
@@ -73,10 +74,25 @@ export const STATIC_PLATFORMS = [
     icon: <ShipIcon />,
     mapIcon: "ShipIcon",
   },
+  {
+    name: "Rocket Launch Site",
+    color: "#FF1F19",
+    icon: <RocketIcon />,
+    mapIcon: "RocketIcon",
+  },
 ]
 
 export const flightPathColors = platforms =>
   platforms.map((i, index) => [i, MOVING_PLATFORMS_COLORS[index]])
+
+const hex2rgb = hex => hex.match(/[0-9a-f]{2}/g).map(x => parseInt(x, 16))
+
+export const getLineColorAsRGB = index => {
+  const color = MOVING_PLATFORMS_COLORS[index]
+  if (color === undefined) return hex2rgb(FALLBACK_COLOR)
+  // converts from HEX to RGB
+  return hex2rgb(color)
+}
 
 export const getLineColors = platforms => {
   const colors = flightPathColors(platforms)
@@ -106,4 +122,20 @@ export const getIconColors = () => {
     ...colors.flatMap(i => i),
     "#fff", // fallback color
   ]
+}
+
+export const getPlatformIcon = platformName =>
+  STATIC_PLATFORMS.find(i => i.name === platformName).mapIcon
+
+export const isPlatformVisible = ({
+  platformProperties,
+  selectedPlatforms,
+  selectedDeployment,
+}) => {
+  return (
+    (selectedDeployment === null ||
+      selectedDeployment.longname === platformProperties.deployment) &&
+    (selectedPlatforms === null ||
+      selectedPlatforms.includes(platformProperties.platform_name))
+  )
 }

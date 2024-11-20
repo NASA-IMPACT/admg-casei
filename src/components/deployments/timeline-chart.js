@@ -11,8 +11,6 @@ import { occlusion } from "./occlusion"
 import { Deployment } from "./deployment"
 import { Disclosure } from "@reach/disclosure"
 import { DeploymentPanel } from "./deployment-panel"
-import { DeploymentMap } from "./map"
-import { replaceSlashes } from "../../utils/helpers"
 
 const chartSettings = {
   marginTop: 1,
@@ -38,7 +36,11 @@ export const Swatch = styled.div`
   background-color: ${({ color }) => color};
 `
 
-export const TimelineChart = ({ deployments, bounds, campaignName }) => {
+export const TimelineChart = ({
+  deployments,
+  selectedDeployment,
+  setSelectedDeployment,
+}) => {
   const [containerRef, dms] = useChartDimensions(chartSettings)
 
   const minDateString = d3
@@ -81,11 +83,9 @@ export const TimelineChart = ({ deployments, bounds, campaignName }) => {
 
   const isFirstRun = useRef(true)
   const tooltipRef = useRef(null)
-  const [selectedDeployment, setSelectedDeployment] = useState(null)
   const [hoveredDeployment, setHoveredDeployment] = useState(null)
   const [count, setCount] = useState(1)
   const [priority, setPriority] = useState({})
-  const [geojson, setGeojson] = useState({})
 
   const [tooltip, setTooltip] = useState({ x: null, y: null })
   const [tooltipContent, setTooltipContent] = useState(null)
@@ -93,27 +93,6 @@ export const TimelineChart = ({ deployments, bounds, campaignName }) => {
     content: undefined,
     type: "deployment",
   })
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(
-          `/casei/flight-tracks/${replaceSlashes(campaignName)}.geojson`,
-          {
-            method: "GET",
-            headers: {
-              "Content-Type": "application/json",
-            },
-          }
-        )
-        const vals = await response.json()
-        setGeojson(vals)
-      } catch (error) {
-        console.log("catch error", error)
-      }
-    }
-    fetchData()
-  }, [])
 
   useEffect(() => {
     //wait for first render to get correct measures
@@ -145,14 +124,6 @@ export const TimelineChart = ({ deployments, bounds, campaignName }) => {
 
   return (
     <Disclosure open={!!selectedDeployment}>
-      {geojson?.features?.length && (
-        <DeploymentMap
-          geojson={geojson}
-          deployments={deployments}
-          bounds={bounds}
-          selectedDeployment={selectedDeployment}
-        />
-      )}
       <div
         ref={containerRef}
         css={`
@@ -344,6 +315,6 @@ TimelineChart.propTypes = {
       ),
     })
   ),
-  bounds: PropTypes.array,
-  campaignName: PropTypes.string.isRequired,
+  selectedDeployment: PropTypes.object,
+  setSelectedDeployment: PropTypes.func,
 }
