@@ -1,14 +1,17 @@
 {
-  "name": "airborne-inventory",
+  "name": "admg-casei-frontend",
   "private": true,
-  "description": "A centralized airborne data inventory",
-  "version": "0.1.0",
+  "description": "A gatsby frontend for CASEI, the Catalog of Archived Suborbital Earth Science Investigations | NASA ADMG",
+  "version": "1.1.0",
   "contributors": [
-    "Necoline Hubner <necoline@developmentseed.org>",
+    "Necoline Hubner",
     "Alice Rühl <alice@developmentseed.org>",
-    "Edward Keeble <edward@developmentseed.org>",
-    "Tammo Feldman <tammo@developmentseed.org>",
-    "Matt Robinson <matthew@developmentseed.org>"
+    "Edward Keeble",
+    "Tammo Feldman",
+    "Matt Robinson",
+    "Heidi Mok",
+    "Wille Mercel <wille@developmentseed.org>",
+    "Lane Goodman <lane@developmentseed.org>"
   ],
   "dependencies": {
     "@custom-react-hooks/use-fetch": "^1.5.1",
@@ -117,10 +120,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/developmentseed/airborne-metadata-catalog-internal"
+    "url": "https://github.com/NASA-IMPACT/admg-casei"
   },
   "bugs": {
-    "url": "http://github.com/developmentseed/airborne-metadata-catalog-internal/issues"
+    "url": "https://github.com/NASA-IMPACT/admg-casei/issues"
   },
   "resolutions": {
     "playwright": "1.31.2"

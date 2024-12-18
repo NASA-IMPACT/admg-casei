@@ -2,22 +2,22 @@
 
 exports[`Header renders correctly 1`] = `
 <div
-  className="sticky-banner___StyledDiv-sc-e0ldth-0 wuqfT"
+  className="sticky-banner___StyledDiv-sc-884fdm-0 iGcwwZ"
 >
   <header
-    className="header__PageHeaderSelf-sc-4sefiz-0 ghdlLI"
+    className="header__PageHeaderSelf-sc-1x62ed1-0 jQmQSm"
     id="main-header"
     mode="lightTheme"
   >
     <div
-      className="header__PageHeaderInner-sc-4sefiz-1 ckUGga"
+      className="header__PageHeaderInner-sc-1x62ed1-1 fEcpjo"
     >
       <div
-        className="header__PageHeadline-sc-4sefiz-2 kEkVCA"
+        className="header__PageHeadline-sc-1x62ed1-2 brFoSG"
       >
         <a
           aria-label="Visit nasa.gov (opens in a new window)"
-          className="header__BrandImageLink-sc-4sefiz-4 gdciPo"
+          className="header__BrandImageLink-sc-1x62ed1-4 dWSWaO"
           href="https://www.nasa.gov"
           rel="noopener noreferrer"
           target="_blank"
@@ -255,10 +255,10 @@ exports[`Header renders correctly 1`] = `
           </svg>
         </a>
         <span
-          className="header__VerticalDivider-sc-4sefiz-5 ivUMBB"
+          className="header__VerticalDivider-sc-1x62ed1-5 drJENr"
         />
         <a
-          className="header__SiteImageLink-sc-4sefiz-6 jfLIGC"
+          className="header__SiteImageLink-sc-1x62ed1-6 iySDMU"
           href="/"
         >
           <svg
@@ -291,7 +291,7 @@ exports[`Header renders correctly 1`] = `
             </g>
           </svg>
           <div
-            className="header__SiteName-sc-4sefiz-7 fiasmf"
+            className="header__SiteName-sc-1x62ed1-7 gjlzvR"
             mode="lightTheme"
           >
             Shortname from props
@@ -299,10 +299,10 @@ exports[`Header renders correctly 1`] = `
         </a>
       </div>
       <div
-        className="header__PageNavToggleWrapper-sc-4sefiz-8 ixbHqM"
+        className="header__PageNavToggleWrapper-sc-1x62ed1-8 dlYNcK"
       >
         <button
-          className="button__Clickable-sc-1yw7vig-0 button___StyledClickable-sc-1yw7vig-2 cpFIXP cXSmVu"
+          className="button__Clickable-sc-1c81fec-0 button___StyledClickable-sc-1c81fec-2 dsHorc iHwhbN"
           onClick={[Function]}
         >
           <svg
@@ -323,17 +323,17 @@ exports[`Header renders correctly 1`] = `
         </button>
       </div>
       <nav
-        className="header__PageNavWrapper-sc-4sefiz-3 hUCvO"
+        className="header__PageNavWrapper-sc-1x62ed1-3 fumqDI"
         mode="lightTheme"
         role="navigation"
       >
         <ul
-          className="nav__PrimeMenu-sc-1uj1llz-3 hqkQAg"
+          className="nav__PrimeMenu-sc-xno5zg-3 droVXw"
           mode="lightTheme"
         >
           <li>
             <a
-              className="nav__StyledLink-sc-1uj1llz-0 gvtfTJ"
+              className="nav__StyledLink-sc-xno5zg-0 cKZsER"
               href="/explore"
               onClick={[Function]}
               title="View the explore page"
@@ -343,7 +343,7 @@ exports[`Header renders correctly 1`] = `
           </li>
           <li>
             <a
-              className="nav__StyledLink-sc-1uj1llz-0 gvtfTJ"
+              className="nav__StyledLink-sc-xno5zg-0 cKZsER"
             >
               Learn
                
@@ -370,20 +370,20 @@ exports[`Header renders correctly 1`] = `
               </svg>
             </a>
             <section
-              className="nav__PrimeMenuBlock-sc-1uj1llz-1 bzpwcB"
+              className="nav__PrimeMenuBlock-sc-xno5zg-1 vHuXd"
             >
               <h6
-                className="nav__PrimeMenuBlockTitle-sc-1uj1llz-2 dWwnBZ"
+                className="nav__PrimeMenuBlockTitle-sc-xno5zg-2 jjxXKR"
               >
                 Learn
               </h6>
               <ul
                 aria-label="submenu"
-                className="nav__PrimeSubmenu-sc-1uj1llz-4 juhfVu"
+                className="nav__PrimeSubmenu-sc-xno5zg-4 goVkna"
               >
                 <li>
                   <a
-                    className="nav__StyledLink-sc-1uj1llz-0 gvtfTJ"
+                    className="nav__StyledLink-sc-xno5zg-0 cKZsER"
                     href="/glossary"
                     onClick={[Function]}
                     title="Explore the glossary"
@@ -393,7 +393,7 @@ exports[`Header renders correctly 1`] = `
                 </li>
                 <li>
                   <a
-                    className="nav__StyledLink-sc-1uj1llz-0 gvtfTJ"
+                    className="nav__StyledLink-sc-xno5zg-0 cKZsER"
                     href="/faq"
                     onClick={[Function]}
                     title="Explore the FAQ"
@@ -406,7 +406,7 @@ exports[`Header renders correctly 1`] = `
           </li>
           <li>
             <a
-              className="nav__StyledLink-sc-1uj1llz-0 gvtfTJ"
+              className="nav__StyledLink-sc-xno5zg-0 cKZsER"
               href="/about"
               onClick={[Function]}
               title="Learn more"
@@ -416,7 +416,7 @@ exports[`Header renders correctly 1`] = `
           </li>
           <li>
             <a
-              className="nav__StyledLink-sc-1uj1llz-0 gvtfTJ"
+              className="nav__StyledLink-sc-xno5zg-0 cKZsER"
               href="/contact"
               onClick={[Function]}
               title="Send feedback"

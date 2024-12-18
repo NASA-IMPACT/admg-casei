@@ -2,12 +2,12 @@
 
 exports[`Data Section matches snapshot 1`] = `
 <section
-  className="section__Container-sc-1oozlr5-0 rgaqP"
+  className="section__Container-sc-ycubjt-0 jKWcKk"
   data-cy="data-section"
   mode="darkTheme"
 >
   <div
-    className="section__Buffer-sc-1oozlr5-1 gccBEq"
+    className="section__Buffer-sc-ycubjt-1 gbrjpV"
     id="data"
   />
   <div
@@ -23,7 +23,7 @@ exports[`Data Section matches snapshot 1`] = `
     </a>
   </div>
   <div
-    className="section__SectionContent-sc-1oozlr5-2 dWaYkr"
+    className="section__SectionContent-sc-ycubjt-2 ffJZzg"
     mode="darkTheme"
   >
     <p>
@@ -153,20 +153,20 @@ exports[`Data Section matches snapshot 1`] = `
       >
         <div>
           <label
-            className="label___StyledLabel-sc-b3994k-0 McIaR"
+            className="label___StyledLabel-sc-l9e9jc-0 iQMRwD"
             data-cy="doi-label"
           >
             GPM GROUND VALIDATION ADVANCED MICROWAVE PRECIPITATION RADIOMETER (AMPR) IPHEX V2
           </label>
         </div>
         <div
-          className="data-section___StyledDiv4-sc-11szotn-0 StDQZ"
+          className="data-section___StyledDiv4-sc-q7xb9m-0 gYkZPB"
         >
           <div
             data-cy="data-product-campaigns"
           >
             <label
-              className="label___StyledLabel-sc-b3994k-0 cZDpAa"
+              className="label___StyledLabel-sc-l9e9jc-0 kyUPuw"
               data-cy="doi-campaign-label"
             >
               Campaigns
@@ -183,7 +183,7 @@ exports[`Data Section matches snapshot 1`] = `
             data-cy="data-product-platforms"
           >
             <label
-              className="label___StyledLabel-sc-b3994k-0 cZDpAa"
+              className="label___StyledLabel-sc-l9e9jc-0 kyUPuw"
               data-cy="doi-platform-label"
             >
               Platforms
@@ -204,7 +204,7 @@ exports[`Data Section matches snapshot 1`] = `
       >
         <div>
           <label
-            className="label___StyledLabel-sc-b3994k-0 McIaR"
+            className="label___StyledLabel-sc-l9e9jc-0 iQMRwD"
             data-cy="doi-label"
           >
             CAMP2Ex P-3 Remotely Sensed Aerosol Data
@@ -217,7 +217,7 @@ exports[`Data Section matches snapshot 1`] = `
             target="_blank"
           >
             <span
-              className="external-link___StyledSpan-sc-3ezy1s-0 LrNqW"
+              className="external-link___StyledSpan-sc-1dh0bmj-0 bnwLCF"
             >
               10.5067/Airborne/CAMP2Ex_Aerosol_AircraftRemoteSensing_P3_Data_1
             </span>
@@ -245,13 +245,13 @@ exports[`Data Section matches snapshot 1`] = `
           </a>
         </div>
         <div
-          className="data-section___StyledDiv4-sc-11szotn-0 StDQZ"
+          className="data-section___StyledDiv4-sc-q7xb9m-0 gYkZPB"
         >
           <div
             data-cy="data-product-campaigns"
           >
             <label
-              className="label___StyledLabel-sc-b3994k-0 cZDpAa"
+              className="label___StyledLabel-sc-l9e9jc-0 kyUPuw"
               data-cy="doi-campaign-label"
             >
               Campaigns
@@ -268,7 +268,7 @@ exports[`Data Section matches snapshot 1`] = `
             data-cy="data-product-platforms"
           >
             <label
-              className="label___StyledLabel-sc-b3994k-0 cZDpAa"
+              className="label___StyledLabel-sc-l9e9jc-0 kyUPuw"
               data-cy="doi-platform-label"
             >
               Platforms
@@ -289,20 +289,20 @@ exports[`Data Section matches snapshot 1`] = `
       >
         <div>
           <label
-            className="label___StyledLabel-sc-b3994k-0 McIaR"
+            className="label___StyledLabel-sc-l9e9jc-0 iQMRwD"
             data-cy="doi-label"
           >
             GPM GROUND VALIDATION ADVANCED MICROWAVE PRECIPITATION RADIOMETER (AMPR) MC3E V1
           </label>
         </div>
         <div
-          className="data-section___StyledDiv4-sc-11szotn-0 StDQZ"
+          className="data-section___StyledDiv4-sc-q7xb9m-0 gYkZPB"
         >
           <div
             data-cy="data-product-campaigns"
           >
             <label
-              className="label___StyledLabel-sc-b3994k-0 cZDpAa"
+              className="label___StyledLabel-sc-l9e9jc-0 kyUPuw"
               data-cy="doi-campaign-label"
             >
               Campaigns
@@ -319,7 +319,7 @@ exports[`Data Section matches snapshot 1`] = `
             data-cy="data-product-platforms"
           >
             <label
-              className="label___StyledLabel-sc-b3994k-0 cZDpAa"
+              className="label___StyledLabel-sc-l9e9jc-0 kyUPuw"
               data-cy="doi-platform-label"
             >
               Platforms
@@ -340,20 +340,20 @@ exports[`Data Section matches snapshot 1`] = `
       >
         <div>
           <label
-            className="label___StyledLabel-sc-b3994k-0 McIaR"
+            className="label___StyledLabel-sc-l9e9jc-0 iQMRwD"
             data-cy="doi-label"
           >
             GPM Ground Validation Advanced Microwave Precipitation Radiometer (AMPR) OLYMPEX V1
           </label>
         </div>
         <div
-          className="data-section___StyledDiv4-sc-11szotn-0 StDQZ"
+          className="data-section___StyledDiv4-sc-q7xb9m-0 gYkZPB"
         >
           <div
             data-cy="data-product-campaigns"
           >
             <label
-              className="label___StyledLabel-sc-b3994k-0 cZDpAa"
+              className="label___StyledLabel-sc-l9e9jc-0 kyUPuw"
               data-cy="doi-campaign-label"
             >
               Campaigns
@@ -370,7 +370,7 @@ exports[`Data Section matches snapshot 1`] = `
             data-cy="data-product-platforms"
           >
             <label
-              className="label___StyledLabel-sc-b3994k-0 cZDpAa"
+              className="label___StyledLabel-sc-l9e9jc-0 kyUPuw"
               data-cy="doi-platform-label"
             >
               Platforms
@@ -391,20 +391,20 @@ exports[`Data Section matches snapshot 1`] = `
       >
         <div>
           <label
-            className="label___StyledLabel-sc-b3994k-0 McIaR"
+            className="label___StyledLabel-sc-l9e9jc-0 iQMRwD"
             data-cy="doi-label"
           >
             TCSP AMPR BRIGHTNESS TEMPERATURE (TB) V2
           </label>
         </div>
         <div
-          className="data-section___StyledDiv4-sc-11szotn-0 StDQZ"
+          className="data-section___StyledDiv4-sc-q7xb9m-0 gYkZPB"
         >
           <div
             data-cy="data-product-campaigns"
           >
             <label
-              className="label___StyledLabel-sc-b3994k-0 cZDpAa"
+              className="label___StyledLabel-sc-l9e9jc-0 kyUPuw"
               data-cy="doi-campaign-label"
             >
               Campaigns
@@ -421,7 +421,7 @@ exports[`Data Section matches snapshot 1`] = `
             data-cy="data-product-platforms"
           >
             <label
-              className="label___StyledLabel-sc-b3994k-0 cZDpAa"
+              className="label___StyledLabel-sc-l9e9jc-0 kyUPuw"
               data-cy="doi-platform-label"
             >
               Platforms

@@ -2,12 +2,12 @@
 
 exports[`Platform Section displays content 1`] = `
 <section
-  className="section__Container-sc-1oozlr5-0 rgaqP"
+  className="section__Container-sc-ycubjt-0 jKWcKk"
   data-cy="platform-section"
   mode="darkTheme"
 >
   <div
-    className="section__Buffer-sc-1oozlr5-1 gccBEq"
+    className="section__Buffer-sc-ycubjt-1 gbrjpV"
     id="platform"
   />
   <div
@@ -23,7 +23,7 @@ exports[`Platform Section displays content 1`] = `
     </a>
   </div>
   <div
-    className="section__SectionContent-sc-1oozlr5-2 dWaYkr"
+    className="section__SectionContent-sc-ycubjt-2 ffJZzg"
     mode="darkTheme"
   >
     <div
@@ -34,13 +34,13 @@ exports[`Platform Section displays content 1`] = `
         data-cy="carousel-list-text-control"
       >
         <button
-          className="button__Clickable-sc-1yw7vig-0 button___StyledClickable-sc-1yw7vig-2 cpFIXP oFRhW"
+          className="button__Clickable-sc-1c81fec-0 button___StyledClickable-sc-1c81fec-2 dsHorc kKZQgp"
           onClick={[Function]}
         >
           J-31
         </button>
         <button
-          className="button__Clickable-sc-1yw7vig-0 button___StyledClickable-sc-1yw7vig-2 cpFIXP jHmypJ"
+          className="button__Clickable-sc-1c81fec-0 button___StyledClickable-sc-1c81fec-2 dsHorc bXMmgm"
           onClick={[Function]}
         >
           Aerosonde
@@ -50,23 +50,23 @@ exports[`Platform Section displays content 1`] = `
         data-test="mocked-nuka-carousel"
       >
         <div
-          className="carousel-accordion-combo___StyledDiv2-sc-ll7d04-0 kRNbHn"
+          className="carousel-accordion-combo___StyledDiv2-sc-9g1bxw-0 iEEJrG"
           data-cy="platform"
           role="group"
         >
           <div
-            className="card___StyledDiv-sc-16fz0z7-1 jcRYMA"
+            className="card___StyledDiv-sc-199er4f-1 ksYdma"
           >
             <a
-              className="card___StyledLink-sc-16fz0z7-2 dDHGTR"
+              className="card___StyledLink-sc-199er4f-2 hEcjMv"
               data-cy="platforms-card"
               href="/platform/J-31"
             >
               <div
-                className="card__CardHeader-sc-16fz0z7-0 qvFHz"
+                className="card__CardHeader-sc-199er4f-0 fCOuox"
               >
                 <div
-                  className="card___StyledDiv2-sc-16fz0z7-4 eUlfwF"
+                  className="card___StyledDiv2-sc-199er4f-4 eFIIcT"
                 >
                   <svg
                     height="80"
@@ -92,7 +92,7 @@ exports[`Platform Section displays content 1`] = `
                 </div>
               </div>
               <big
-                className="platform-card___StyledBig-sc-1w8j1zf-0 bwGpWf"
+                className="platform-card___StyledBig-sc-16p596y-0 hyyfZS"
                 data-cy="shortname"
               >
                 J-31
@@ -104,11 +104,11 @@ exports[`Platform Section displays content 1`] = `
               </p>
             </a>
             <div
-              className="card___StyledDiv4-sc-16fz0z7-6 daynaM"
+              className="card___StyledDiv4-sc-199er4f-6 fjrPee"
               data-cy="platforms-card-footer"
             >
               <small
-                className="card-footer-item___StyledSmall-sc-1gz7r6e-0 eEvBdL"
+                className="card-footer-item___StyledSmall-sc-1orp45r-0 hUtXza"
                 data-cy="count1"
               >
                 <strong>
@@ -118,7 +118,7 @@ exports[`Platform Section displays content 1`] = `
                 Campaign
               </small>
               <small
-                className="card-footer-item___StyledSmall-sc-1gz7r6e-0 eEvBdL"
+                className="card-footer-item___StyledSmall-sc-1orp45r-0 hUtXza"
                 data-cy="count2"
               >
                  · 
@@ -131,7 +131,7 @@ exports[`Platform Section displays content 1`] = `
             </div>
           </div>
           <div
-            className="accordion___StyledReachAccordion-sc-1dzvn26-2 gqNllu"
+            className="accordion___StyledReachAccordion-sc-8fut7q-2 hFQQeA"
             data-cy="instrument-accordion"
             data-reach-accordion=""
           >
@@ -142,7 +142,7 @@ exports[`Platform Section displays content 1`] = `
               <button
                 aria-controls="panel--:r0:---1"
                 aria-expanded={false}
-                className="accordion___StyledAccordionButton-sc-1dzvn26-3 jbaKjK"
+                className="accordion___StyledAccordionButton-sc-8fut7q-3 fbdbiI"
                 data-cy="accordion-button"
                 data-reach-accordion-button=""
                 data-state="collapsed"
@@ -154,7 +154,7 @@ exports[`Platform Section displays content 1`] = `
                   CAR
                 </span>
                 <div
-                  className="accordion__RotatingContainer-sc-1dzvn26-0 jCGLn"
+                  className="accordion__RotatingContainer-sc-8fut7q-0 eggUDx"
                 >
                   <svg
                     height="16"
@@ -181,7 +181,7 @@ exports[`Platform Section displays content 1`] = `
               </button>
               <div
                 aria-labelledby="button--:r0:---1"
-                className="accordion___StyledAccordionPanel-sc-1dzvn26-4 fqpVrR"
+                className="accordion___StyledAccordionPanel-sc-8fut7q-4 kHxmHr"
                 data-reach-accordion-panel=""
                 data-state="collapsed"
                 hidden={true}
@@ -189,16 +189,16 @@ exports[`Platform Section displays content 1`] = `
                 role="region"
               >
                 <div
-                  className="accordion___StyledDiv-sc-1dzvn26-5 xWXXc"
+                  className="accordion___StyledDiv-sc-8fut7q-5 jkHkNG"
                   data-cy="instrument-accordion-content"
                 >
                   <div
-                    className="accordion___StyledDiv3-sc-1dzvn26-8 iRRuvB"
+                    className="accordion___StyledDiv3-sc-8fut7q-8 eWcVkD"
                     data-cy="instrument-accordion-image-description"
                   />
                 </div>
                 <label
-                  className="accordion__LearnMoreLink-sc-1dzvn26-1 kFWhvr"
+                  className="accordion__LearnMoreLink-sc-8fut7q-1 eItliF"
                   id="accordion-link"
                 >
                   <a
@@ -207,7 +207,7 @@ exports[`Platform Section displays content 1`] = `
                   >
                     Learn More
                     <svg
-                      className="arrow-icon___StyledSvg-sc-nsdqlv-0 JjVso"
+                      className="arrow-icon___StyledSvg-sc-1pkt928-0 gkdsuj"
                       height="16"
                       role="img"
                       version="1.1"
@@ -236,23 +236,23 @@ exports[`Platform Section displays content 1`] = `
           </div>
         </div>
         <div
-          className="carousel-accordion-combo___StyledDiv2-sc-ll7d04-0 kRNbHn"
+          className="carousel-accordion-combo___StyledDiv2-sc-9g1bxw-0 iEEJrG"
           data-cy="platform"
           role="group"
         >
           <div
-            className="card___StyledDiv-sc-16fz0z7-1 jcRYMA"
+            className="card___StyledDiv-sc-199er4f-1 ksYdma"
           >
             <a
-              className="card___StyledLink-sc-16fz0z7-2 dDHGTR"
+              className="card___StyledLink-sc-199er4f-2 hEcjMv"
               data-cy="platforms-card"
               href="/platform/Aerosonde"
             >
               <div
-                className="card__CardHeader-sc-16fz0z7-0 qvFHz"
+                className="card__CardHeader-sc-199er4f-0 fCOuox"
               >
                 <div
-                  className="card___StyledDiv2-sc-16fz0z7-4 eUlfwF"
+                  className="card___StyledDiv2-sc-199er4f-4 eFIIcT"
                 >
                   <svg
                     height="80"
@@ -278,7 +278,7 @@ exports[`Platform Section displays content 1`] = `
                 </div>
               </div>
               <big
-                className="platform-card___StyledBig-sc-1w8j1zf-0 bwGpWf"
+                className="platform-card___StyledBig-sc-16p596y-0 hyyfZS"
                 data-cy="shortname"
               >
                 Aerosonde
@@ -290,11 +290,11 @@ exports[`Platform Section displays content 1`] = `
               </p>
             </a>
             <div
-              className="card___StyledDiv4-sc-16fz0z7-6 daynaM"
+              className="card___StyledDiv4-sc-199er4f-6 fjrPee"
               data-cy="platforms-card-footer"
             >
               <small
-                className="card-footer-item___StyledSmall-sc-1gz7r6e-0 eEvBdL"
+                className="card-footer-item___StyledSmall-sc-1orp45r-0 hUtXza"
                 data-cy="count1"
               >
                 <strong>
@@ -304,7 +304,7 @@ exports[`Platform Section displays content 1`] = `
                 Campaign
               </small>
               <small
-                className="card-footer-item___StyledSmall-sc-1gz7r6e-0 eEvBdL"
+                className="card-footer-item___StyledSmall-sc-1orp45r-0 hUtXza"
                 data-cy="count2"
               >
                  · 
@@ -318,7 +318,7 @@ exports[`Platform Section displays content 1`] = `
             </div>
           </div>
           <div
-            className="accordion___StyledReachAccordion-sc-1dzvn26-2 gqNllu"
+            className="accordion___StyledReachAccordion-sc-8fut7q-2 hFQQeA"
             data-cy="instrument-accordion"
             data-reach-accordion=""
           >
@@ -329,7 +329,7 @@ exports[`Platform Section displays content 1`] = `
               <button
                 aria-controls="panel--:r1:---1"
                 aria-expanded={false}
-                className="accordion___StyledAccordionButton-sc-1dzvn26-3 jbaKjK"
+                className="accordion___StyledAccordionButton-sc-8fut7q-3 fbdbiI"
                 data-cy="accordion-button"
                 data-reach-accordion-button=""
                 data-state="collapsed"
@@ -341,7 +341,7 @@ exports[`Platform Section displays content 1`] = `
                   Pyrometer
                 </span>
                 <div
-                  className="accordion__RotatingContainer-sc-1dzvn26-0 jCGLn"
+                  className="accordion__RotatingContainer-sc-8fut7q-0 eggUDx"
                 >
                   <svg
                     height="16"
@@ -368,7 +368,7 @@ exports[`Platform Section displays content 1`] = `
               </button>
               <div
                 aria-labelledby="button--:r1:---1"
-                className="accordion___StyledAccordionPanel-sc-1dzvn26-4 fqpVrR"
+                className="accordion___StyledAccordionPanel-sc-8fut7q-4 kHxmHr"
                 data-reach-accordion-panel=""
                 data-state="collapsed"
                 hidden={true}
@@ -376,16 +376,16 @@ exports[`Platform Section displays content 1`] = `
                 role="region"
               >
                 <div
-                  className="accordion___StyledDiv-sc-1dzvn26-5 xWXXc"
+                  className="accordion___StyledDiv-sc-8fut7q-5 jkHkNG"
                   data-cy="instrument-accordion-content"
                 >
                   <div
-                    className="accordion___StyledDiv3-sc-1dzvn26-8 iRRuvB"
+                    className="accordion___StyledDiv3-sc-8fut7q-8 eWcVkD"
                     data-cy="instrument-accordion-image-description"
                   />
                 </div>
                 <label
-                  className="accordion__LearnMoreLink-sc-1dzvn26-1 kFWhvr"
+                  className="accordion__LearnMoreLink-sc-8fut7q-1 eItliF"
                   id="accordion-link"
                 >
                   <a
@@ -394,7 +394,7 @@ exports[`Platform Section displays content 1`] = `
                   >
                     Learn More
                     <svg
-                      className="arrow-icon___StyledSvg-sc-nsdqlv-0 JjVso"
+                      className="arrow-icon___StyledSvg-sc-1pkt928-0 gkdsuj"
                       height="16"
                       role="img"
                       version="1.1"

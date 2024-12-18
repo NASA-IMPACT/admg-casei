@@ -2,12 +2,12 @@
 
 exports[`Overview Section displays content 1`] = `
 <section
-  className="section__Container-sc-1oozlr5-0 dfaxgJ"
+  className="section__Container-sc-ycubjt-0 dImcRC"
   data-cy="unique-id-section"
   mode="lightTheme"
 >
   <div
-    className="section__Buffer-sc-1oozlr5-1 gccBEq"
+    className="section__Buffer-sc-ycubjt-1 gbrjpV"
     id="unique-id"
   />
   <span
@@ -40,22 +40,22 @@ exports[`Overview Section displays content 1`] = `
     </div>
   </span>
   <div
-    className="section__SectionContent-sc-1oozlr5-2 cuLyFD"
+    className="section__SectionContent-sc-ycubjt-2 GrrqQ"
     mode="lightTheme"
   >
     <h3>
       Instrument Details
     </h3>
     <section
-      className="definition-list___StyledSection-sc-t6i6ug-1 jzHyGY"
+      className="definition-list___StyledSection-sc-16vkvif-1 ixMCKo"
       data-cy="instrument-definition-list"
     >
       <dl
-        className="definition-list__List-sc-t6i6ug-0 xvitZ"
+        className="definition-list__List-sc-16vkvif-0 jWJovF"
       >
         <dt>
           <label
-            className="definition-list___StyledLabel-sc-t6i6ug-2 jbeKAI"
+            className="definition-list___StyledLabel-sc-16vkvif-2 eLkZoE"
           >
             Measurement Type
           </label>
@@ -65,14 +65,14 @@ exports[`Overview Section displays content 1`] = `
         </dd>
         <dt>
           <label
-            className="definition-list___StyledLabel-sc-t6i6ug-2 jbeKAI"
+            className="definition-list___StyledLabel-sc-16vkvif-2 eLkZoE"
           >
             Measurement/Variables
           </label>
         </dt>
         <dd>
           <div
-            className="gcmd_phenomenon___StyledDiv-sc-1h92xqb-0 hFoqZX"
+            className="gcmd_phenomenon___StyledDiv-sc-f9ap30-0 QKKOz"
           >
             Test
              &gt;
@@ -87,7 +87,7 @@ exports[`Overview Section displays content 1`] = `
         </dd>
         <dt>
           <label
-            className="definition-list___StyledLabel-sc-t6i6ug-2 jbeKAI"
+            className="definition-list___StyledLabel-sc-16vkvif-2 eLkZoE"
           >
             Vertical Measurement Regions
           </label>
@@ -97,7 +97,7 @@ exports[`Overview Section displays content 1`] = `
         </dd>
         <dt>
           <label
-            className="definition-list___StyledLabel-sc-t6i6ug-2 jbeKAI"
+            className="definition-list___StyledLabel-sc-16vkvif-2 eLkZoE"
           >
             Temporal Resolution
           </label>
@@ -107,7 +107,7 @@ exports[`Overview Section displays content 1`] = `
         </dd>
         <dt>
           <label
-            className="definition-list___StyledLabel-sc-t6i6ug-2 jbeKAI"
+            className="definition-list___StyledLabel-sc-16vkvif-2 eLkZoE"
           >
             Spatial Resolution
           </label>
@@ -117,7 +117,7 @@ exports[`Overview Section displays content 1`] = `
         </dd>
         <dt>
           <label
-            className="definition-list___StyledLabel-sc-t6i6ug-2 jbeKAI"
+            className="definition-list___StyledLabel-sc-16vkvif-2 eLkZoE"
           >
             Measurement Frequency
           </label>
@@ -127,7 +127,7 @@ exports[`Overview Section displays content 1`] = `
         </dd>
         <dt>
           <label
-            className="definition-list___StyledLabel-sc-t6i6ug-2 jbeKAI"
+            className="definition-list___StyledLabel-sc-16vkvif-2 eLkZoE"
           >
             Calibration Details
           </label>
@@ -141,7 +141,7 @@ exports[`Overview Section displays content 1`] = `
             target="_blank"
           >
             <span
-              className="external-link___StyledSpan-sc-3ezy1s-0 LrNqW"
+              className="external-link___StyledSpan-sc-1dh0bmj-0 bnwLCF"
             >
               http://dx.doi.org/10.5067/calibration
             </span>
@@ -170,7 +170,7 @@ exports[`Overview Section displays content 1`] = `
         </dd>
         <dt>
           <label
-            className="definition-list___StyledLabel-sc-t6i6ug-2 jbeKAI"
+            className="definition-list___StyledLabel-sc-16vkvif-2 eLkZoE"
           >
             Online Information
           </label>
@@ -180,7 +180,7 @@ exports[`Overview Section displays content 1`] = `
             className="sc-kpDqfm jLnnIm"
           >
             <li
-              className="overview-section___StyledLi3-sc-1oemh85-0 hwjFCf"
+              className="overview-section___StyledLi3-sc-1n109jn-0 hCiXBP"
             >
               <a
                 className="sc-eqUAAy ksibDB"
@@ -190,7 +190,7 @@ exports[`Overview Section displays content 1`] = `
                 target="_blank"
               >
                 <span
-                  className="external-link___StyledSpan-sc-3ezy1s-0 LrNqW"
+                  className="external-link___StyledSpan-sc-1dh0bmj-0 bnwLCF"
                 >
                   http://www.example.com
                 </span>
@@ -223,7 +223,7 @@ exports[`Overview Section displays content 1`] = `
     </section>
   </div>
   <div
-    className="section__SectionContent-sc-1oozlr5-2 kVHFnE"
+    className="section__SectionContent-sc-ycubjt-2 gJkLPD"
     mode="lightTheme"
   >
     <ul
@@ -298,7 +298,7 @@ exports[`Overview Section displays content 1`] = `
             target="_blank"
           >
             <span
-              className="external-link___StyledSpan-sc-3ezy1s-0 LrNqW"
+              className="external-link___StyledSpan-sc-1dh0bmj-0 bnwLCF"
             >
               http://dx.doi.org/10.5067/instrument
             </span>
@@ -353,7 +353,7 @@ exports[`Overview Section displays content 1`] = `
           data-cy="repository-list"
         >
           <li
-            className="list-link___StyledLi-sc-xxtxki-0 hZlwud"
+            className="list-link___StyledLi-sc-o2kojv-0 fsuGfu"
           >
             <a
               className="sc-eqUAAy ksibDB"
@@ -363,7 +363,7 @@ exports[`Overview Section displays content 1`] = `
               target="_blank"
             >
               <span
-                className="external-link___StyledSpan-sc-3ezy1s-0 LrNqW"
+                className="external-link___StyledSpan-sc-1dh0bmj-0 bnwLCF"
               >
                 test
               </span>
@@ -391,7 +391,7 @@ exports[`Overview Section displays content 1`] = `
             </a>
           </li>
           <li
-            className="list-link___StyledLi-sc-xxtxki-0 hZlwud"
+            className="list-link___StyledLi-sc-o2kojv-0 fsuGfu"
           >
             <a
               className="sc-eqUAAy ksibDB"
@@ -401,7 +401,7 @@ exports[`Overview Section displays content 1`] = `
               target="_blank"
             >
               <span
-                className="external-link___StyledSpan-sc-3ezy1s-0 LrNqW"
+                className="external-link___StyledSpan-sc-1dh0bmj-0 bnwLCF"
               >
                 test2
               </span>

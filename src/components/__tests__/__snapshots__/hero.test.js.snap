@@ -2,22 +2,22 @@
 
 exports[`Header renders correctly 1`] = `
 <section
-  className="hero__Container-sc-qftwzr-0 dlffaV"
+  className="hero__Container-sc-eyerl9-0 bKuvRr"
   data-cy="test-hero"
 >
   <div
-    className="hero__HeroContentWrapper-sc-qftwzr-1 ixuDOH"
+    className="hero__HeroContentWrapper-sc-eyerl9-1 fBReeJ"
   >
     <div
-      className="hero___StyledDiv-sc-qftwzr-6 hJgUGu"
+      className="hero___StyledDiv-sc-eyerl9-6 hIuIVQ"
     >
       <p
-        className="hero___StyledP-sc-qftwzr-8 codxcZ"
+        className="hero___StyledP-sc-eyerl9-8 lkCIff"
       >
         Instrument
       </p>
       <h1
-        className="hero__HeroTitle-sc-qftwzr-2 bSBmwr"
+        className="hero__HeroTitle-sc-eyerl9-2 bkcrKl"
       >
         2D-C/P
          
@@ -25,7 +25,7 @@ exports[`Header renders correctly 1`] = `
       </h1>
     </div>
     <div
-      className="hero___StyledDiv2-sc-qftwzr-9 fqzeMC"
+      className="hero___StyledDiv2-sc-eyerl9-9 gZnCjI"
     >
       <p>
         The 2DC probe records images of hydrometeors...
@@ -54,7 +54,7 @@ exports[`Header renders correctly 1`] = `
             role="img"
           >
             <svg
-              className="arrow-icon___StyledSvg-sc-nsdqlv-0 JjVso"
+              className="arrow-icon___StyledSvg-sc-1pkt928-0 gkdsuj"
               height="16"
               role="img"
               version="1.1"
@@ -89,22 +89,22 @@ exports[`Header renders correctly 1`] = `
 
 exports[`Header renders with adjust ratios 1`] = `
 <section
-  className="hero__Container-sc-qftwzr-0 dlffaV"
+  className="hero__Container-sc-eyerl9-0 bKuvRr"
   data-cy="undefined-hero"
 >
   <div
-    className="hero__HeroContentWrapper-sc-qftwzr-1 ja-DtGH"
+    className="hero__HeroContentWrapper-sc-eyerl9-1 Kwxrp"
   >
     <div
-      className="hero___StyledDiv-sc-qftwzr-6 hJgUGu"
+      className="hero___StyledDiv-sc-eyerl9-6 hIuIVQ"
     >
       <p
-        className="hero___StyledP-sc-qftwzr-8 codxcZ"
+        className="hero___StyledP-sc-eyerl9-8 lkCIff"
       >
         Instrument
       </p>
       <h1
-        className="hero__HeroTitle-sc-qftwzr-2 bSBmwr"
+        className="hero__HeroTitle-sc-eyerl9-2 bkcrKl"
       >
         2D-C/P
          
@@ -112,7 +112,7 @@ exports[`Header renders with adjust ratios 1`] = `
       </h1>
     </div>
     <div
-      className="hero___StyledDiv2-sc-qftwzr-9 fqzeMC"
+      className="hero___StyledDiv2-sc-eyerl9-9 gZnCjI"
     >
       <p>
         The 2DC probe records images of hydrometeors...
@@ -141,7 +141,7 @@ exports[`Header renders with adjust ratios 1`] = `
             role="img"
           >
             <svg
-              className="arrow-icon___StyledSvg-sc-nsdqlv-0 JjVso"
+              className="arrow-icon___StyledSvg-sc-1pkt928-0 gkdsuj"
               height="16"
               role="img"
               version="1.1"
