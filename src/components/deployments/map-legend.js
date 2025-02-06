@@ -11,6 +11,7 @@ import {
   MOVING_PLATFORMS_COLORS,
   STATIC_PLATFORMS,
 } from "../../utils/platform-colors"
+import { MOVING_PLATFORMS } from "../../utils/constants"
 
 export const LegendItem = ({
   name,
@@ -70,10 +71,10 @@ export const MapLegend = ({
     (i, index) => names.indexOf(i.name) === index
   )
   const movingPlatforms = uniquePlatforms.filter(platform =>
-    ["Jet", "Prop", "UAV", "Ships/Boats"].includes(platform.type)
+    MOVING_PLATFORMS.includes(platform.type)
   )
   const staticPlatforms = uniquePlatforms.filter(
-    platform => !["Jet", "Prop", "UAV", "Ships/Boats"].includes(platform.type)
+    platform => !MOVING_PLATFORMS.includes(platform.type)
   )
 
   return (
