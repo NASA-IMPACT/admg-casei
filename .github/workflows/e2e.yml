@@ -40,20 +40,20 @@ jobs:
           node-version: ${{ steps.nvm.outputs.NVMRC }}
 
       - name: Cache node modules
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: node_modules
           key: ${{ runner.os }}-node-modules-${{ hashFiles('yarn.lock') }}
 
       - name: Cache Gatsby .cache folder
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: .cache
           key: ${{ runner.os }}-gatsby-cache-${{ hashFiles('yarn.lock') }}
 
       - name: Cache Gatsby public folder
         id: cache-build
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: public
           key: ${{ runner.os }}-gatsby-build-${{ hashFiles('yarn.lock') }}-${{ hashFiles('src/**') }}
@@ -95,19 +95,19 @@ jobs:
           node-version: ${{ steps.nvm.outputs.NVMRC }}
 
       - name: Restore node modules
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: node_modules
           key: ${{ runner.os }}-node-modules-${{ hashFiles('yarn.lock') }}
 
       - name: Restore Gatsby .cache folder
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: .cache
           key: ${{ runner.os }}-gatsby-cache-${{ hashFiles('yarn.lock') }}
 
       - name: Restore Gatsby public folder
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: public
           key: ${{ runner.os }}-gatsby-build-${{ hashFiles('yarn.lock') }}-${{ hashFiles('src/**') }}
@@ -149,7 +149,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Restore Gatsby public folder
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: public
           key: ${{ runner.os }}-gatsby-build-${{ hashFiles('yarn.lock') }}-${{ hashFiles('src/**') }}
