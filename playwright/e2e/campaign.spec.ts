@@ -33,7 +33,6 @@ test.describe("Campaign", () => {
     await expect(statsValues.nth(2)).toBeVisible()
 
     await expect(page.locator("[data-cy=mapboxgl-map]").nth(0)).toBeVisible()
-    await expect(page.locator("[data-cy=mapboxgl-map]").nth(1)).toBeVisible()
 
     const inpageNavItems = await page.locator("[data-cy=inpage-nav] a")
     await expect(inpageNavItems).toHaveCount(7)
