@@ -35,3 +35,5 @@ export const FEEDBACK_FORM_URL =
 
 export const API_DOCUMENTATION_URL =
   "https://nasa-impact.github.io/admg-backend/documentation/api_doc.html"
+
+export const MOVING_PLATFORMS = ["Jet", "Prop", "UAV", "AUV", "Ships/Boats"]

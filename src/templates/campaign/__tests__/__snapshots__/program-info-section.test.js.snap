@@ -2,12 +2,12 @@
 
 exports[`Program Info Section renders logo when present in props 1`] = `
 <section
-  className="section__Container-sc-1oozlr5-0 rgaqP"
+  className="section__Container-sc-ycubjt-0 jKWcKk"
   data-cy="program-info-section"
   mode="darkTheme"
 >
   <div
-    className="section__Buffer-sc-1oozlr5-1 gccBEq"
+    className="section__Buffer-sc-ycubjt-1 gbrjpV"
     id="program-info"
   />
   <div
@@ -23,7 +23,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
     </a>
   </div>
   <div
-    className="section__SectionContent-sc-1oozlr5-2 kkYoHL"
+    className="section__SectionContent-sc-ycubjt-2 lnCAgs"
     mode="darkTheme"
   >
     <div
@@ -33,7 +33,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
         className="sc-dcJsrY eCZDRB"
       >
         <div
-          className="program-info-section___StyledDiv3-sc-celi18-0 URNyM"
+          className="program-info-section___StyledDiv3-sc-g8ragl-0 sRfvN"
           data-cy="campaign-logo"
         >
           <div
@@ -148,13 +148,13 @@ exports[`Program Info Section renders logo when present in props 1`] = `
         </div>
       </div>
       <div
-        className="content-group___StyledDiv-sc-gouaoh-0 Spbag"
+        className="content-group___StyledDiv-sc-13hp0gu-0 kGUjpz"
       >
         <div
           data-cy="program-info-content"
         >
           <label
-            className="content-item___StyledLabel-sc-goubn5-0 dgQhVR"
+            className="content-item___StyledLabel-sc-fnxgpu-0 hQvVCr"
             data-cy="program-info-content-label"
           >
             Funding Agency
@@ -169,7 +169,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
           data-cy="program-info-content"
         >
           <label
-            className="content-item___StyledLabel-sc-goubn5-0 dgQhVR"
+            className="content-item___StyledLabel-sc-fnxgpu-0 hQvVCr"
             data-cy="program-info-content-label"
           >
             Funding Program
@@ -184,7 +184,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
           data-cy="program-info-content"
         >
           <label
-            className="content-item___StyledLabel-sc-goubn5-0 dgQhVR"
+            className="content-item___StyledLabel-sc-fnxgpu-0 hQvVCr"
             data-cy="program-info-content-label"
           >
             Funding Program Lead
@@ -199,7 +199,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
           data-cy="program-info-content"
         >
           <label
-            className="content-item___StyledLabel-sc-goubn5-0 dgQhVR"
+            className="content-item___StyledLabel-sc-fnxgpu-0 hQvVCr"
             data-cy="program-info-content-label"
           >
             Principal Investigator(s)
@@ -214,7 +214,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
           data-cy="program-info-content"
         >
           <label
-            className="content-item___StyledLabel-sc-goubn5-0 dgQhVR"
+            className="content-item___StyledLabel-sc-fnxgpu-0 hQvVCr"
             data-cy="program-info-content-label"
           >
             Data Manager / Technical Contact
@@ -229,7 +229,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
           data-cy="program-info-content"
         >
           <label
-            className="content-item___StyledLabel-sc-goubn5-0 dgQhVR"
+            className="content-item___StyledLabel-sc-fnxgpu-0 hQvVCr"
             data-cy="program-info-content-label"
           >
             NASA Data Repository
@@ -244,7 +244,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
           data-cy="program-info-content"
         >
           <label
-            className="content-item___StyledLabel-sc-goubn5-0 dgQhVR"
+            className="content-item___StyledLabel-sc-fnxgpu-0 hQvVCr"
             data-cy="program-info-content-label"
           >
             Partner Organizations
@@ -259,7 +259,7 @@ exports[`Program Info Section renders logo when present in props 1`] = `
           data-cy="program-info-content"
         >
           <label
-            className="content-item___StyledLabel-sc-goubn5-0 dgQhVR"
+            className="content-item___StyledLabel-sc-fnxgpu-0 hQvVCr"
             data-cy="program-info-content-label"
           >
             Overview Publication
@@ -278,12 +278,12 @@ exports[`Program Info Section renders logo when present in props 1`] = `
 
 exports[`Program Info Section renders placeholder when no logo is available 1`] = `
 <section
-  className="section__Container-sc-1oozlr5-0 rgaqP"
+  className="section__Container-sc-ycubjt-0 jKWcKk"
   data-cy="program-info-section"
   mode="darkTheme"
 >
   <div
-    className="section__Buffer-sc-1oozlr5-1 gccBEq"
+    className="section__Buffer-sc-ycubjt-1 gbrjpV"
     id="program-info"
   />
   <div
@@ -299,7 +299,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
     </a>
   </div>
   <div
-    className="section__SectionContent-sc-1oozlr5-2 kkYoHL"
+    className="section__SectionContent-sc-ycubjt-2 lnCAgs"
     mode="darkTheme"
   >
     <div
@@ -328,13 +328,13 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
         </svg>
       </div>
       <div
-        className="content-group___StyledDiv-sc-gouaoh-0 Spbag"
+        className="content-group___StyledDiv-sc-13hp0gu-0 kGUjpz"
       >
         <div
           data-cy="program-info-content"
         >
           <label
-            className="content-item___StyledLabel-sc-goubn5-0 dgQhVR"
+            className="content-item___StyledLabel-sc-fnxgpu-0 hQvVCr"
             data-cy="program-info-content-label"
           >
             Funding Agency
@@ -349,7 +349,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
           data-cy="program-info-content"
         >
           <label
-            className="content-item___StyledLabel-sc-goubn5-0 dgQhVR"
+            className="content-item___StyledLabel-sc-fnxgpu-0 hQvVCr"
             data-cy="program-info-content-label"
           >
             Funding Program
@@ -364,7 +364,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
           data-cy="program-info-content"
         >
           <label
-            className="content-item___StyledLabel-sc-goubn5-0 dgQhVR"
+            className="content-item___StyledLabel-sc-fnxgpu-0 hQvVCr"
             data-cy="program-info-content-label"
           >
             Funding Program Lead
@@ -379,7 +379,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
           data-cy="program-info-content"
         >
           <label
-            className="content-item___StyledLabel-sc-goubn5-0 dgQhVR"
+            className="content-item___StyledLabel-sc-fnxgpu-0 hQvVCr"
             data-cy="program-info-content-label"
           >
             Principal Investigator(s)
@@ -394,7 +394,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
           data-cy="program-info-content"
         >
           <label
-            className="content-item___StyledLabel-sc-goubn5-0 dgQhVR"
+            className="content-item___StyledLabel-sc-fnxgpu-0 hQvVCr"
             data-cy="program-info-content-label"
           >
             Data Manager / Technical Contact
@@ -409,7 +409,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
           data-cy="program-info-content"
         >
           <label
-            className="content-item___StyledLabel-sc-goubn5-0 dgQhVR"
+            className="content-item___StyledLabel-sc-fnxgpu-0 hQvVCr"
             data-cy="program-info-content-label"
           >
             NASA Data Repository
@@ -424,7 +424,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
           data-cy="program-info-content"
         >
           <label
-            className="content-item___StyledLabel-sc-goubn5-0 dgQhVR"
+            className="content-item___StyledLabel-sc-fnxgpu-0 hQvVCr"
             data-cy="program-info-content-label"
           >
             Partner Organizations
@@ -439,7 +439,7 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
           data-cy="program-info-content"
         >
           <label
-            className="content-item___StyledLabel-sc-goubn5-0 dgQhVR"
+            className="content-item___StyledLabel-sc-fnxgpu-0 hQvVCr"
             data-cy="program-info-content-label"
           >
             Overview Publication

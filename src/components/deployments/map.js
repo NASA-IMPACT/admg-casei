@@ -19,6 +19,7 @@ import { GlobeMap } from "../map/globe-map"
 import { MapLegend } from "./map-legend"
 import { MapViewControl } from "./map-view-control"
 import bbox from "@turf/bbox"
+import { MOVING_PLATFORMS } from "../../utils/constants"
 
 const MapErrorMsg = styled.div`
   background: rgba(255, 255, 255, 0.1);
@@ -87,9 +88,7 @@ export const DeploymentMap = ({
     .map(i => ({ name: i.item.shortname, type: i.item.platformType.shortname }))
     .map(i => i.name)
   let movingPlatforms = platforms
-    .filter(platform =>
-      ["Jet", "Prop", "UAV", "Ships/Boats"].includes(platform.type)
-    )
+    .filter(platform => MOVING_PLATFORMS.includes(platform.type))
     .map(platform => platform.name)
 
   const lineColorsPaint = getLineColors(

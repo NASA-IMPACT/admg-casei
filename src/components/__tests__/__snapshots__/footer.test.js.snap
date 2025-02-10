@@ -2,15 +2,15 @@
 
 exports[`Footer renders correctly 1`] = `
 <footer
-  className="footer__PageFooter-sc-p4lrvs-0 jBYVWu"
+  className="footer__PageFooter-sc-1wwusdr-0 dqDWSQ"
   data-cy="page-footer"
 >
   <div
-    className="footer__PageFooterInner-sc-p4lrvs-1 fUdCIJ"
+    className="footer__PageFooterInner-sc-1wwusdr-1 bGZdaf"
   >
     <div>
       <div
-        className="footer___StyledDiv-sc-p4lrvs-4 ekVWhJ"
+        className="footer___StyledDiv-sc-1wwusdr-4 gGVUZv"
         data-cy="footer-title"
       >
         NASA | CASEI
@@ -28,12 +28,12 @@ exports[`Footer renders correctly 1`] = `
       data-cy="footer-explore"
     >
       <p
-        className="footer__Headline-sc-p4lrvs-3 dBIvOQ"
+        className="footer__Headline-sc-1wwusdr-3 evprsS"
       >
         Explore
       </p>
       <ul
-        className="footer__FooterSectionNavList-sc-p4lrvs-2 gbHWDh"
+        className="footer__FooterSectionNavList-sc-1wwusdr-2 cGSzbX"
       >
         <li>
           <a
@@ -60,7 +60,7 @@ exports[`Footer renders correctly 1`] = `
           </a>
         </li>
         <li
-          className="footer___StyledLi-sc-p4lrvs-5 kEYdDv"
+          className="footer___StyledLi-sc-1wwusdr-5 clzqGx"
         >
           <a
             data-cy="footer-coming-soon-link"
@@ -73,12 +73,12 @@ exports[`Footer renders correctly 1`] = `
     </div>
     <div>
       <p
-        className="footer__Headline-sc-p4lrvs-3 dBIvOQ"
+        className="footer__Headline-sc-1wwusdr-3 evprsS"
       >
         Resources
       </p>
       <ul
-        className="footer__FooterSectionNavList-sc-p4lrvs-2 gbHWDh"
+        className="footer__FooterSectionNavList-sc-1wwusdr-2 cGSzbX"
       >
         <li>
           <a
@@ -93,12 +93,12 @@ exports[`Footer renders correctly 1`] = `
       data-cy="footer-quick-links"
     >
       <p
-        className="footer__Headline-sc-p4lrvs-3 dBIvOQ"
+        className="footer__Headline-sc-1wwusdr-3 evprsS"
       >
         Quick Links
       </p>
       <ul
-        className="footer__FooterSectionNavList-sc-p4lrvs-2 gbHWDh"
+        className="footer__FooterSectionNavList-sc-1wwusdr-2 cGSzbX"
       >
         <li>
           <a
@@ -123,7 +123,7 @@ exports[`Footer renders correctly 1`] = `
             target="_blank"
           >
             <span
-              className="external-link___StyledSpan-sc-3ezy1s-0 LrNqW"
+              className="external-link___StyledSpan-sc-1dh0bmj-0 bnwLCF"
             >
               API Documentation
             </span>
@@ -156,12 +156,12 @@ exports[`Footer renders correctly 1`] = `
       data-cy="footer-organizations"
     >
       <p
-        className="footer__Headline-sc-p4lrvs-3 dBIvOQ"
+        className="footer__Headline-sc-1wwusdr-3 evprsS"
       >
         Organizations
       </p>
       <ul
-        className="footer__FooterSectionNavList-sc-p4lrvs-2 gbHWDh"
+        className="footer__FooterSectionNavList-sc-1wwusdr-2 cGSzbX"
       >
         <li>
           <a
@@ -172,7 +172,7 @@ exports[`Footer renders correctly 1`] = `
             target="_blank"
           >
             <span
-              className="external-link___StyledSpan-sc-3ezy1s-0 LrNqW"
+              className="external-link___StyledSpan-sc-1dh0bmj-0 bnwLCF"
             >
               ADMG Website
             </span>
@@ -208,7 +208,7 @@ exports[`Footer renders correctly 1`] = `
             target="_blank"
           >
             <span
-              className="external-link___StyledSpan-sc-3ezy1s-0 LrNqW"
+              className="external-link___StyledSpan-sc-1dh0bmj-0 bnwLCF"
             >
               IMPACT Website
             </span>
@@ -239,14 +239,14 @@ exports[`Footer renders correctly 1`] = `
     </div>
     <hr />
     <div
-      className="footer___StyledDiv2-sc-p4lrvs-6 SpDfr"
+      className="footer___StyledDiv2-sc-1wwusdr-6 fxsckt"
     >
       <div
-        className="footer___StyledDiv3-sc-p4lrvs-7 iIPsgd"
+        className="footer___StyledDiv3-sc-1wwusdr-7 kVyzbH"
       >
         <a
           aria-label="Visit nasa.gov (opens in a new window)"
-          className="footer___StyledA-sc-p4lrvs-8 hStBNG"
+          className="footer___StyledA-sc-1wwusdr-8 gDsqjo"
           href="https://www.nasa.gov"
           rel="noopener noreferrer"
           target="_blank"
@@ -496,7 +496,7 @@ exports[`Footer renders correctly 1`] = `
             NASA Official:
              
             <span
-              className="footer___StyledSpan-sc-p4lrvs-9 exyjDZ"
+              className="footer___StyledSpan-sc-1wwusdr-9 hNwsMb"
             >
               Rahul Ramachandran
             </span>
@@ -506,11 +506,11 @@ exports[`Footer renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="footer___StyledDiv4-sc-p4lrvs-10 dMzfhR"
+    className="footer___StyledDiv4-sc-1wwusdr-10 futlFD"
     data-cy="footer-credit-devseed"
   >
     © 
-    2024
+    2025
     , Built by
      
     <a
@@ -521,7 +521,7 @@ exports[`Footer renders correctly 1`] = `
       target="_blank"
     >
       <span
-        className="external-link___StyledSpan-sc-3ezy1s-0 LrNqW"
+        className="external-link___StyledSpan-sc-1dh0bmj-0 bnwLCF"
       >
         Development Seed
       </span>

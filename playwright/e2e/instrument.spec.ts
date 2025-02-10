@@ -59,8 +59,8 @@ test.describe('Instrument', () => {
         await expect(dataProductDivs.nth(0).locator('[data-cy=doi-label]')).toBeVisible();
         await expect(dataProductDivs.nth(0).locator('[data-cy=doi-link]')).toBeVisible();
 
-        await expect(page.locator('[data-cy=data-product-campaigns] [data-cy=doi-campaign-label]')).toHaveText('Campaigns');
-        await expect(page.locator('[data-cy=data-product-platforms] [data-cy=doi-platform-label]')).toHaveText('Platforms');
+        await expect(page.locator('[data-cy=data-product-campaigns] [data-cy=doi-campaign-label]').nth(0)).toHaveText('Campaigns');
+        await expect(page.locator('[data-cy=data-product-platforms] [data-cy=doi-platform-label]').nth(0)).toHaveText('Platforms');
 
         await expect(page.locator('[data-cy=entities-section]')).toBeVisible();
         await expect(page.locator('[data-cy=entities-section] h2')).toHaveText('Instrument Operation');

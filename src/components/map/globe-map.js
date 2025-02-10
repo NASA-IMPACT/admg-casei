@@ -21,6 +21,7 @@ import {
 } from "../../utils/platform-colors"
 import "./deck-gl.css"
 import { colors } from "../../theme"
+import { MOVING_PLATFORMS } from "../../utils/constants"
 
 const INITIAL_VIEW_STATE = {
   longitude: -98,
@@ -43,9 +44,7 @@ export function GlobeMap({
     deployments.flatMap(d => d.collectionPeriods)
   ).map(i => ({ name: i.item.shortname, type: i.item.platformType.shortname }))
   const movingPlatforms = platforms
-    .filter(platform =>
-      ["Jet", "Prop", "UAV", "Ships/Boats"].includes(platform.type)
-    )
+    .filter(platform => MOVING_PLATFORMS.includes(platform.type))
     .map(platform => platform.name)
 
   useEffect(() => {
