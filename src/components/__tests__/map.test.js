@@ -38,7 +38,7 @@ describe("Map", () => {
     expect(mapbox.Map).toHaveBeenCalledWith({
       container,
       cooperativeGestures: false,
-      style: `mapbox://styles/mapbox/satellite-streets-v11/`,
+      style: `mapbox://styles/covid-nasa/cm7etyf7t003s01qpfq8kec7y`,
       zoom: 1,
       center: [0, 0],
     })
