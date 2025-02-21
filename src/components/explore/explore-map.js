@@ -75,7 +75,7 @@ const ExploreMap = ({ allData, filteredData, setGeoFilter, aoi, setAoi }) => {
 
   // Render the Map component along with its children
   return (
-    <Map height={500} basemap="mapbox://styles/mapbox/light-v10">
+    <Map height={500} basemap="mapbox://styles/covid-nasa/cm7eu3e5e002601qmc8i46na8">
       <AoiControl
         isDrawing={isDrawing}
         setIsDrawing={setIsDrawing}
