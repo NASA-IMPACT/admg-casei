@@ -137,10 +137,13 @@ test.describe("Homepage", () => {
       await page.click('div[class="slider-slide slide-visible slide-current"]')
 
       // wait for page load
-      await page.waitForNavigation()
+      await page.waitForURL("**/explore/campaigns/")
 
-      // Check if the URL includes "/explore/campaigns" and the header has the expected text
-      expect(page.url()).toContain("/explore/campaigns")
+      // check if Explore campaigns page was loaded with some region filter enabled
+      const regionFilterChip = await page.textContent(
+        "[data-cy=filter-chip]"
+      )
+      expect(regionFilterChip).toContain("region: ")
     })
   })
 })
