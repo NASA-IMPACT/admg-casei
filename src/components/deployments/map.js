@@ -75,7 +75,7 @@ export const DeploymentMap = ({
       // if the geojson crosses the 80º or -80º latitude, enables 3D view by default
       setEnable3DView(geojsonBbox[1] < -80 || geojsonBbox[3] > 80)
     }
-  }, [selectedPlatforms, geojsonLoading])
+  }, [geojsonLoading])
 
   const MAP_STYLE_ID = "devseed/clx25ggbv076o01ql8k8m03k8"
   const activeDeploymentPlatforms = getUniquePlatforms(
