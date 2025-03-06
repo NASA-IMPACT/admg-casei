@@ -1,6 +1,7 @@
-import React, { useEffect, useState, useMemo } from "react"
+import React, { useEffect, useState } from "react"
 import { centroid } from "@turf/centroid"
-import DeckGL from "@deck.gl/react"
+import { Map, useControl, useMap } from "react-map-gl/mapbox"
+import { MapboxOverlay } from "@deck.gl/mapbox"
 import {
   COORDINATE_SYSTEM,
   _GlobeView as GlobeView,
@@ -22,6 +23,7 @@ import {
 import "./deck-gl.css"
 import { colors } from "../../theme"
 import { MOVING_PLATFORMS } from "../../utils/constants"
+import "maplibre-gl/dist/maplibre-gl.css"
 
 const INITIAL_VIEW_STATE = {
   longitude: -98,
@@ -29,6 +31,20 @@ const INITIAL_VIEW_STATE = {
   zoom: 0,
 }
 const MAPBOX_TOKEN = process.env.GATSBY_MAPBOX_TOKEN
+
+function DeckGLOverlay(props) {
+  const overlay = useControl(() => new MapboxOverlay(props))
+  const { current: map } = useMap()
+
+  useEffect(() => {
+    if (map) {
+      map.flyTo({ center: [-90, 20], curve: 0.1, speed: 0.002 })
+    }
+  }, [map])
+
+  overlay.setProps(props)
+  return null
+}
 
 export function GlobeMap({
   geojson,
@@ -77,54 +93,13 @@ export function GlobeMap({
       longitude: lon,
       latitude: lat,
       zoom: 1,
-      transitionInterpolator: new FlyToInterpolator({ speed: 1.5 }),
       transitionDuration: "auto",
     })
   }, [geojson])
 
-  const backgroundLayers = useMemo(
-    () => [
-      new SimpleMeshLayer({
-        id: "earth-sphere",
-        data: [0],
-        mesh: new SphereGeometry({
-          radius: 6.3e6,
-          nlat: 18,
-          nlong: 36,
-        }),
-        coordinateSystem: COORDINATE_SYSTEM.CARTESIAN,
-        getPosition: [0, 0, 0],
-        getColor: [42, 98, 163, 125],
-      }),
-      new TileLayer({
-        id: "TileLayer",
-        data: `https://api.mapbox.com/styles/v1/${mapStyleID}/tiles/256/{z}/{x}/{y}@2x?access_token=${MAPBOX_TOKEN}`,
-        maxZoom: 22,
-        minZoom: 3,
-        extent: [-180, -90, 180, 90],
-        tileSize: 256,
-        renderSubLayers: props => {
-          // eslint-disable-next-line react/prop-types
-          const { boundingBox } = props.tile
-          return new BitmapLayer(props, {
-            data: null,
-            // eslint-disable-next-line react/prop-types
-            image: props.data,
-            bounds: [
-              boundingBox[0][0],
-              boundingBox[0][1],
-              boundingBox[1][0],
-              boundingBox[1][1],
-            ],
-          })
-        },
-      }),
-    ],
-    []
-  )
-
   const flights = new GeoJsonLayer({
     id: "flights",
+    pickable: true,
     data: {
       ...geojson,
       features: geojson.features
@@ -138,7 +113,7 @@ export function GlobeMap({
         ),
     },
     lineWidthMinPixels: 0.5,
-    getLineWidth: 1,
+    getLineWidth: 1.5,
     getLineColor: f =>
       getLineColorAsRGB(
         movingPlatforms
@@ -168,37 +143,18 @@ export function GlobeMap({
   if (iconMapping && geojson) {
     return (
       <MapContainer>
-        <DeckGL
-          views={
-            new GlobeView({
-              controller: { keyboard: false, inertia: true },
-            })
-          }
-          controller={true}
+        <Map
+          reuseMaps
+          projection="globe"
+          id="map"
+          // mapStyle="https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json"
+          mapStyle={`mapbox://styles/${mapStyleID}`}
+          mapboxAccessToken={MAPBOX_TOKEN}
           initialViewState={initialViewState}
-          layers={[backgroundLayers, flights, staticLocations]}
-          widgets={[
-            new ZoomWidget({ placement: "bottom-right" }),
-            new FullscreenWidget({ placement: "bottom-right" }),
-          ]}
-        ></DeckGL>
+        >
+          <DeckGLOverlay layers={[flights, staticLocations]} />
+        </Map>
         {children}
-        <Attribution>
-          <a
-            href="https://www.mapbox.com/about/maps/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            © Mapbox
-          </a>
-          <a
-            href="https://www.openstreetmap.org/about/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            © OpenStreetMap
-          </a>
-        </Attribution>
       </MapContainer>
     )
   }
