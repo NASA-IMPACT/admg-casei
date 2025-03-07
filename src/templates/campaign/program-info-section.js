@@ -37,8 +37,8 @@ const ProgramInfoSection = ({
     { label: "Data Manager / Technical Contact", info: dataManager },
     {
       label: "NASA Data Repository",
-      info: repositories[0]?.shortname,
-      link: repositories[0]?.url,
+      info: repositories && repositories[0]?.shortname,
+      link: repositories && repositories[0]?.url,
     },
     { label: "Partner Organizations", info: partnerOrgListing },
     {
