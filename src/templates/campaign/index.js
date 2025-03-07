@@ -120,6 +120,7 @@ const CampaignTemplate = ({ data: { campaign }, path }) => {
           .join(", "),
         partnerWebsite: campaign.partnerWebsite,
         websites: campaign.websites,
+        repositories: campaign.repositories,
       },
     },
     // "other-resources": {

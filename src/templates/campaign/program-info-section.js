@@ -23,10 +23,8 @@ const ProgramInfoSection = ({
   dataManager,
   partnerOrgListing,
   websites,
+  repositories,
 }) => {
-  const repositoryWebsite = websites?.find(
-    x => x.type.name === "Repository Website"
-  )
   const publicationLink = websites?.find(
     x => x.type.name === "Overview Publication"
   )
@@ -39,8 +37,8 @@ const ProgramInfoSection = ({
     { label: "Data Manager / Technical Contact", info: dataManager },
     {
       label: "NASA Data Repository",
-      info: repositoryWebsite?.url,
-      link: repositoryWebsite?.url,
+      info: repositories[0]?.shortname,
+      link: repositories[0]?.url,
     },
     { label: "Partner Organizations", info: partnerOrgListing },
     {
@@ -158,6 +156,12 @@ ProgramInfoSection.propTypes = {
       }),
     })
   ),
+  repositories: PropTypes.arrayOf(
+    PropTypes.shape({
+      shortname: PropTypes.string.isRequired,
+      url: PropTypes.string.isRequired,
+    }).isRequired
+  ).isRequired,
 }
 
 export default ProgramInfoSection
