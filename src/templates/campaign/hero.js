@@ -56,7 +56,7 @@ const CampaignHero = ({
          {
           display: grid;
           grid-template-columns: ${`1fr minmax(auto, ${layout.maxWidth}) 1fr`};
-          width: 100vw;
+          max-width: 100%;
           min-height: 35rem;
           align-content: center;
         }
