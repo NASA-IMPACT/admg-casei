@@ -20,6 +20,11 @@ export const MOVING_PLATFORMS_COLORS = [
   "#a6cee3",
   "#1f78b4",
   "#fb9a99",
+  "#673AB7",
+  "#F2B705",
+  "#69544F",
+  "#AB47BC",
+  "#B9A7A2",
   "#e31a1c",
 ]
 
@@ -63,8 +68,20 @@ export const STATIC_PLATFORMS = [
     mapIcon: "PermanentWaterIcon",
   },
   {
+    name: "Neutrally Buoyant Float",
+    color: "#F2B705",
+    icon: <PermanentWaterSiteIcon />,
+    mapIcon: "PermanentWaterIcon",
+  },
+  {
     name: "Moored Buoy",
     color: "#8C2D04",
+    icon: <MooredBuoyIcon />,
+    mapIcon: "MooredBuoyIcon",
+  },
+  {
+    name: "ARGO",
+    color: "#FFF7AE",
     icon: <MooredBuoyIcon />,
     mapIcon: "MooredBuoyIcon",
   },
