@@ -27,6 +27,11 @@ describe("MapLegend", () => {
           { name: "Laserjet", type: "Jet" },
           { name: "B-200", type: "Jet" },
           { name: "ABC", type: "Jet" },
+          { name: "OtterTwin2", type: "Jet" },
+          { name: "Learjet2", type: "Jet" },
+          { name: "B-300", type: "Jet" },
+          { name: "ABCD", type: "Jet" },
+          { name: "Plane", type: "Jet" },
           { name: "Field Site", type: "static" },
           { name: "Field Site", type: "static" },
         ]}
@@ -36,7 +41,7 @@ describe("MapLegend", () => {
       />
     )
     const instance = element.root
-    expect(instance.findAllByType("input").length).toBe(10)
+    expect(instance.findAllByType("input").length).toBe(15)
     const b1 = instance.findAllByType("input")[0]
     expect(
       instance.findAllByType("input").every(i => !i.props.checked)
@@ -45,9 +50,9 @@ describe("MapLegend", () => {
     expect(fn).toHaveBeenCalledTimes(1)
     expect(instance.findAllByType(LineIcon)[0].props.size).toBe("text")
     expect(instance.findAllByType(LineIcon)[0].props.color).toBe("#b2df8a")
-    expect(instance.findAllByType(LineIcon)[7].props.color).toBe("#e31a1c")
-    // test fallback color to the 9º moving platform
-    expect(instance.findAllByType(LineIcon)[8].props.color).toBe("#1a9b8c")
+    expect(instance.findAllByType(LineIcon)[12].props.color).toBe("#e31a1c")
+    // test fallback color to the 12º moving platform
+    expect(instance.findAllByType(LineIcon)[13].props.color).toBe("#1a9b8c")
     expect(instance.findByType(FieldSiteIcon)).toBeTruthy()
   })
   it("render with one option selected", () => {
