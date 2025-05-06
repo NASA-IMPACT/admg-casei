@@ -25,7 +25,6 @@ export const MOVING_PLATFORMS_COLORS = [
   "#6a3d9a",
   "#ffff99",
   "#b15928",
-  "#e31a1c",
 ]
 
 export const FALLBACK_COLOR = "#1a9b8c"

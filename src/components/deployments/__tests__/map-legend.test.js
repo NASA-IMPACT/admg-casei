@@ -7,6 +7,7 @@ import {
   BalloonIcon,
   FieldSiteIcon,
 } from "../../../icons/static-platform-icons"
+import { FALLBACK_COLOR } from "../../../utils/platform-colors"
 
 jest.mock("react-tooltip", () => ({
   Tooltip: () => <div>Mocked tooltip</div>,
@@ -50,9 +51,13 @@ describe("MapLegend", () => {
     expect(fn).toHaveBeenCalledTimes(1)
     expect(instance.findAllByType(LineIcon)[0].props.size).toBe("text")
     expect(instance.findAllByType(LineIcon)[0].props.color).toBe("#b2df8a")
-    expect(instance.findAllByType(LineIcon)[12].props.color).toBe("#e31a1c")
+    expect(instance.findAllByType(LineIcon)[12].props.color).toBe(
+      FALLBACK_COLOR
+    )
     // test fallback color to the 12º moving platform
-    expect(instance.findAllByType(LineIcon)[13].props.color).toBe("#1a9b8c")
+    expect(instance.findAllByType(LineIcon)[13].props.color).toBe(
+      FALLBACK_COLOR
+    )
     expect(instance.findByType(FieldSiteIcon)).toBeTruthy()
   })
   it("render with one option selected", () => {

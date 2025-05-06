@@ -69,7 +69,7 @@ describe("getLineColorAsRGB", () => {
     ])
     expect(getLineColorAsRGB(platforms.indexOf("GH"))).toEqual([253, 191, 111])
     expect(getLineColorAsRGB(platforms.indexOf("GH"))).toEqual([253, 191, 111])
-    expect(getLineColorAsRGB(12)).toEqual([227, 26, 28])
+    expect(getLineColorAsRGB(12)).toEqual([26, 155, 140])
   })
   it("returns the fallback color in RGB format if index is -1 or greater than 12", () => {
     expect(getLineColorAsRGB(platforms.indexOf("ABC"))).toEqual([26, 155, 140])
