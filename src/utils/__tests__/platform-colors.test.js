@@ -51,6 +51,10 @@ describe("getStaticIcons", () => {
       STATIC_PLATFORMS[7].mapIcon,
       STATIC_PLATFORMS[8].name,
       STATIC_PLATFORMS[8].mapIcon,
+      STATIC_PLATFORMS[9].name,
+      STATIC_PLATFORMS[9].mapIcon,
+      STATIC_PLATFORMS[10].name,
+      STATIC_PLATFORMS[10].mapIcon,
       "BalloonIcon",
     ]
     expect(getStaticIcons()).toEqual(result)
@@ -65,12 +69,12 @@ describe("getLineColorAsRGB", () => {
     ])
     expect(getLineColorAsRGB(platforms.indexOf("GH"))).toEqual([253, 191, 111])
     expect(getLineColorAsRGB(platforms.indexOf("GH"))).toEqual([253, 191, 111])
-    expect(getLineColorAsRGB(7)).toEqual([227, 26, 28])
+    expect(getLineColorAsRGB(12)).toEqual([26, 155, 140])
   })
-  it("returns the fallback color in RGB format if index is -1 or greater than 7", () => {
+  it("returns the fallback color in RGB format if index is -1 or greater than 12", () => {
     expect(getLineColorAsRGB(platforms.indexOf("ABC"))).toEqual([26, 155, 140])
-    expect(getLineColorAsRGB(8)).toEqual([26, 155, 140])
-    expect(getLineColorAsRGB(9)).toEqual([26, 155, 140])
+    expect(getLineColorAsRGB(13)).toEqual([26, 155, 140])
+    expect(getLineColorAsRGB(14)).toEqual([26, 155, 140])
   })
 })
 
