@@ -20,11 +20,11 @@ export const MOVING_PLATFORMS_COLORS = [
   "#a6cee3",
   "#1f78b4",
   "#fb9a99",
-  "#673AB7",
-  "#F2B705",
-  "#69544F",
-  "#AB47BC",
-  "#B9A7A2",
+  "#e31a1c",
+  "#cab2d6",
+  "#6a3d9a",
+  "#ffff99",
+  "#b15928",
   "#e31a1c",
 ]
 
