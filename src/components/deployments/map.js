@@ -121,19 +121,7 @@ export const DeploymentMap = ({
           selectedPlatforms={selectedPlatforms}
           selectedDeployment={selectedDeployment}
           mapStyleID={MAP_STYLE_ID}
-        >
-          <MapLegend
-            platforms={platforms}
-            platformsWithData={platformsWithData}
-            activeDeploymentPlatforms={activeDeploymentPlatforms}
-            selectedPlatforms={selectedPlatforms}
-            setSelectedPlatforms={setSelectedPlatforms}
-          />
-          <MapViewControl
-            onClick={() => setEnable3DView(!enable3DView)}
-            is3DViewEnabled={enable3DView}
-          />
-        </GlobeMap>
+        />
       ) : (
         <MapboxMap
           geojson={geojson}

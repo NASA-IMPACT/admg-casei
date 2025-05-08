@@ -12,6 +12,7 @@ export default function Map({ height, basemap, children, showControls }) {
     mapbox.accessToken = process.env.GATSBY_MAPBOX_TOKEN
     const m = new mapbox.Map({
       container: containerRef.current,
+      projection: "mercator",
       style: basemap || "mapbox://styles/covid-nasa/cm7etyf7t003s01qpfq8kec7y",
       zoom: 1,
       center: [0, 0],
