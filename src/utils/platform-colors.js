@@ -21,6 +21,10 @@ export const MOVING_PLATFORMS_COLORS = [
   "#1f78b4",
   "#fb9a99",
   "#e31a1c",
+  "#cab2d6",
+  "#6a3d9a",
+  "#ffff99",
+  "#b15928",
 ]
 
 export const FALLBACK_COLOR = "#1a9b8c"
@@ -63,8 +67,20 @@ export const STATIC_PLATFORMS = [
     mapIcon: "PermanentWaterIcon",
   },
   {
+    name: "Neutrally Buoyant Float",
+    color: "#F2B705",
+    icon: <PermanentWaterSiteIcon />,
+    mapIcon: "PermanentWaterIcon",
+  },
+  {
     name: "Moored Buoy",
     color: "#8C2D04",
+    icon: <MooredBuoyIcon />,
+    mapIcon: "MooredBuoyIcon",
+  },
+  {
+    name: "ARGO",
+    color: "#FFF7AE",
     icon: <MooredBuoyIcon />,
     mapIcon: "MooredBuoyIcon",
   },
@@ -83,7 +99,10 @@ export const STATIC_PLATFORMS = [
 ]
 
 export const flightPathColors = platforms =>
-  platforms.map((i, index) => [i, MOVING_PLATFORMS_COLORS[index]])
+  platforms.map((i, index) => [
+    i,
+    MOVING_PLATFORMS_COLORS[index] || FALLBACK_COLOR,
+  ])
 
 const hex2rgb = hex => hex.match(/[0-9a-f]{2}/g).map(x => parseInt(x, 16))
 
