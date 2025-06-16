@@ -39,6 +39,7 @@ const CustomListBox = styled(ListboxList)`
     left: ${props => (props.iscustomspacing ? `7rem` : `100%`)};
     position: absolute;
     background: white;
+    border: 1px solid ${colors[POSITIVE].altBackground};
     padding: 0.25rem 0;
     min-width: 14rem;
   }
