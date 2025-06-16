@@ -55,19 +55,18 @@ exports[`Platform Section displays content 1`] = `
           role="group"
         >
           <div
-            className="card___StyledDiv-sc-199er4f-1 ksYdma"
+            className="card___StyledDiv-sc-199er4f-2 fNeSol"
           >
             <a
-              className="card___StyledLink-sc-199er4f-2 hEcjMv"
+              className="card__CardLink-sc-199er4f-1 jHQNBZ"
               data-cy="platforms-card"
               href="/platform/J-31"
+              mode="lightTheme"
             >
               <div
-                className="card__CardHeader-sc-199er4f-0 fCOuox"
+                className="card__CardHeader-sc-199er4f-0 bHbmu"
               >
-                <div
-                  className="card___StyledDiv2-sc-199er4f-4 eFIIcT"
-                >
+                <div>
                   <svg
                     height="80"
                     viewBox="0 0 69 71"
@@ -104,7 +103,7 @@ exports[`Platform Section displays content 1`] = `
               </p>
             </a>
             <div
-              className="card___StyledDiv4-sc-199er4f-6 fjrPee"
+              className="card___StyledDiv3-sc-199er4f-4 ikmXHD"
               data-cy="platforms-card-footer"
             >
               <small
@@ -241,19 +240,18 @@ exports[`Platform Section displays content 1`] = `
           role="group"
         >
           <div
-            className="card___StyledDiv-sc-199er4f-1 ksYdma"
+            className="card___StyledDiv-sc-199er4f-2 fNeSol"
           >
             <a
-              className="card___StyledLink-sc-199er4f-2 hEcjMv"
+              className="card__CardLink-sc-199er4f-1 jHQNBZ"
               data-cy="platforms-card"
               href="/platform/Aerosonde"
+              mode="lightTheme"
             >
               <div
-                className="card__CardHeader-sc-199er4f-0 fCOuox"
+                className="card__CardHeader-sc-199er4f-0 bHbmu"
               >
-                <div
-                  className="card___StyledDiv2-sc-199er4f-4 eFIIcT"
-                >
+                <div>
                   <svg
                     height="80"
                     viewBox="0 0 69 71"
@@ -290,7 +288,7 @@ exports[`Platform Section displays content 1`] = `
               </p>
             </a>
             <div
-              className="card___StyledDiv4-sc-199er4f-6 fjrPee"
+              className="card___StyledDiv3-sc-199er4f-4 ikmXHD"
               data-cy="platforms-card-footer"
             >
               <small

@@ -2,18 +2,17 @@
 
 exports[`Card renders card with tag 1`] = `
 <div
-  className="card___StyledDiv-sc-199er4f-1 ksYdma"
+  className="card___StyledDiv-sc-199er4f-2 fNeSol"
 >
   <a
-    className="card___StyledLink-sc-199er4f-2 hEcjMv"
+    className="card__CardLink-sc-199er4f-1 jHQNBZ"
     data-cy="campaigns-card"
+    mode="lightTheme"
   >
     <div
-      className="card__CardHeader-sc-199er4f-0 fCOuox"
+      className="card__CardHeader-sc-199er4f-0 bHbmu"
     >
-      <div
-        className="card___StyledDiv2-sc-199er4f-4 eFIIcT"
-      >
+      <div>
         <svg
           height="80"
           viewBox="0 0 65 69"
@@ -53,7 +52,7 @@ exports[`Card renders card with tag 1`] = `
       </p>
     </div>
     <div
-      className="card___StyledDiv3-sc-199er4f-5 jEVnrf"
+      className="card___StyledDiv2-sc-199er4f-3 kkHKIc"
       data-cy="stationary-tag"
     >
       Stationary
@@ -64,18 +63,17 @@ exports[`Card renders card with tag 1`] = `
 
 exports[`Card renders plain card 1`] = `
 <div
-  className="card___StyledDiv-sc-199er4f-1 ksYdma"
+  className="card___StyledDiv-sc-199er4f-2 fNeSol"
 >
   <a
-    className="card___StyledLink-sc-199er4f-2 hEcjMv"
+    className="card__CardLink-sc-199er4f-1 jHQNBZ"
     data-cy="campaigns-card"
+    mode="lightTheme"
   >
     <div
-      className="card__CardHeader-sc-199er4f-0 fCOuox"
+      className="card__CardHeader-sc-199er4f-0 bHbmu"
     >
-      <div
-        className="card___StyledDiv2-sc-199er4f-4 eFIIcT"
-      >
+      <div>
         <svg
           height="80"
           viewBox="0 0 65 69"
@@ -120,18 +118,17 @@ exports[`Card renders plain card 1`] = `
 
 exports[`Card renders with footer list 1`] = `
 <div
-  className="card___StyledDiv-sc-199er4f-1 ksYdma"
+  className="card___StyledDiv-sc-199er4f-2 fNeSol"
 >
   <a
-    className="card___StyledLink-sc-199er4f-2 hEcjMv"
+    className="card__CardLink-sc-199er4f-1 jHQNBZ"
     data-cy="campaigns-card"
+    mode="lightTheme"
   >
     <div
-      className="card__CardHeader-sc-199er4f-0 fCOuox"
+      className="card__CardHeader-sc-199er4f-0 bHbmu"
     >
-      <div
-        className="card___StyledDiv2-sc-199er4f-4 eFIIcT"
-      >
+      <div>
         <svg
           height="80"
           viewBox="0 0 65 69"
