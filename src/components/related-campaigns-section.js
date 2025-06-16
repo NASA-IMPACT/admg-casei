@@ -1,6 +1,5 @@
 import React, { useRef } from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
 import Carousel from "nuka-carousel"
 
 import { Section, SectionHeader, SectionContent } from "./layout"
@@ -59,9 +58,7 @@ const RelatedCampaignsSection = ({ id, campaigns }) => {
                   `}
                   data-cy="related-campaign"
                 >
-                  <Link to={`/campaign/${campaign.shortname}`}>
-                    <CampaignCard shortname={campaign.shortname} />
-                  </Link>
+                  <CampaignCard shortname={campaign.shortname} />
                 </div>
               ))}
             </Carousel>
