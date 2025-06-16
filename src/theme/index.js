@@ -49,6 +49,7 @@ const layout = {
 }
 
 const breakpoints = {
+  xs: "500px",
   sm: "800px",
   md: "1280px",
   lg: "1400px",
