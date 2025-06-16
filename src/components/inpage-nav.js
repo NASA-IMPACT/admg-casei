@@ -57,6 +57,10 @@ const InpageNav = ({ shortname, items }) => {
         const y =
           el.getBoundingClientRect().top + window.scrollY - headerHeight - 8
         window.scrollTo({ top: y, behavior: "smooth" })
+        // Update the URL hash without scrolling
+        if (window.location.hash !== `#${id}`) {
+          history.replaceState(null, "", `#${id}`)
+        }
       }
     },
     []
