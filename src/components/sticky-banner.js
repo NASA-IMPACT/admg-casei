@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react"
 import PropTypes from "prop-types"
 
-const StickyBanner = ({ children, navRevealed }) => {
+const StickyBanner = ({
+  children,
+  navRevealed,
+  offsetCalculator: childOffsetCalculator,
+}) => {
   const scrollDown = "scroll-down"
   const scrollUp = "scroll-up"
   const [scrollDirection, setScrollDirection] = useState(null)
@@ -10,13 +14,14 @@ const StickyBanner = ({ children, navRevealed }) => {
   const [offset, setOffset] = useState(0)
   const node = React.createRef()
 
-  const offsetCalculator = (scrollDirection, _, currentScroll) => {
+  const defaultOffsetCalculator = (scrollDirection, _, currentScroll) => {
     if (scrollDirection === "scroll-down" && currentScroll > 250) {
       return `-${document.getElementById("main-header").clientHeight}px`
     } else {
       return 0
     }
   }
+  const offsetCalculator = childOffsetCalculator || defaultOffsetCalculator
 
   useEffect(() => {
     if (startingPosition === null) {
@@ -75,6 +80,7 @@ StickyBanner.propTypes = {
   children: PropTypes.element,
   hideAfter: PropTypes.number,
   navRevealed: PropTypes.bool,
+  offsetCalculator: PropTypes.func,
 }
 
 export default StickyBanner

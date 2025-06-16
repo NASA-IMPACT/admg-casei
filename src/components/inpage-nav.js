@@ -34,14 +34,21 @@ const InpageNav = ({ shortname, items }) => {
   const offsetCalculator = (
     scrollDirection,
     startingPosition,
-    _,
+    currentScroll,
     lastScroll
   ) => {
-    const mainHeaderHeight = document.getElementById("main-header").clientHeight
-    return scrollDirection === "scroll-up" &&
+    const mainHeader = document.getElementById("main-header")
+    const mainHeaderHeight = mainHeader ? mainHeader.clientHeight : 0
+    if (
+      scrollDirection === "scroll-up" &&
       lastScroll >= startingPosition - mainHeaderHeight
-      ? `${mainHeaderHeight}px`
-      : 0
+    ) {
+      return `${mainHeaderHeight}px`
+    }
+    if (scrollDirection === "scroll-down" && currentScroll > 250) {
+      return `-${mainHeaderHeight}px`
+    }
+    return `${mainHeaderHeight}px`
   }
 
   return (
