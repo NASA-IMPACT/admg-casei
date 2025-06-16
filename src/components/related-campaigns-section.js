@@ -38,6 +38,10 @@ const RelatedCampaignsSection = ({ id, campaigns }) => {
                     return {
                       bottom: "-42px",
                     }
+                  case "CenterLeft":
+                    return { left: -28 }
+                  case "CenterRight":
+                    return { right: -28 }
                   default:
                     // will apply all other keys
                     return

@@ -60,6 +60,17 @@ export default function CarouselAccordionCombo({
               prevButtonText: `⦉`,
               prevButtonStyle: controlButtonLRStyle,
             }}
+            getControlsContainerStyles={key => {
+              switch (key) {
+                case "CenterLeft":
+                  return { left: -28 }
+                case "CenterRight":
+                  return { right: -28 }
+                default:
+                  // will apply all other keys
+                  return
+              }
+            }}
             heightMode="max"
           >
             {carouselList.map((carouselItem, index) => (
