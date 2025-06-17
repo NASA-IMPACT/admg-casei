@@ -7,15 +7,29 @@ import { POSITIVE, NEGATIVE } from "../../utils/constants"
 import { colors } from "../../theme"
 
 const CardHeader = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
+  display: flex;
   align-items: ${({ imagePosition }) =>
     imagePosition === "left top" ? "flex-start" : "center"};
   justify-items: ${({ imagePosition }) =>
     imagePosition === "left top" ? "flex-start" : "center"};
+  flex-direction: column;
   min-height: 180px;
   margin-bottom: 0.5rem;
+`
+
+const CardLink = styled(Link)`
+  color: ${({ mode }) => colors[mode].text};
+  background-color: ${({ mode }) => colors[mode].background};
+  box-shadow: rgba(68, 63, 63, 0.08) 0px -1px 1px 0px,
+    rgba(68, 63, 63, 0.08) 0px 2px 6px 0px;
+  padding: 1rem;
+  min-height: 20rem;
+  flex-grow: 1;
+  transition: all 0.24s ease-out;
+  &:hover {
+    background-color: ${({ mode }) => colors[mode].altBackground};
+    opacity: 1;
+  }
 `
 
 const Card = ({
@@ -38,43 +52,15 @@ const Card = ({
       }
     `}
   >
-    <Link
-      to={link}
-      css={`
-         {
-          color: ${colors[mode].text};
-          background-color: ${colors[mode].background};
-          box-shadow: rgba(68, 63, 63, 0.08) 0px -1px 1px 0px,
-            rgba(68, 63, 63, 0.08) 0px 2px 6px 0px;
-          padding: 1rem;
-          min-height: 20rem;
-          flex-grow: 1;
-          :hover {
-            opacity: 0.64;
-          }
-        }
-      `}
-      data-cy={`${category}-card`}
-    >
+    <CardLink to={link} mode={mode} data-cy={`${category}-card`}>
       <CardHeader imagePosition={image?.gatsbyImg ? imagePosition : "left top"}>
         {image?.gatsbyImg ? (
           <GatsbyImage
             image={getImage(image.gatsbyImg)}
             alt={image.description}
-            css={`
-               {
-                grid-area: 1 / 1;
-              }
-            `}
           />
         ) : (
-          <div
-            css={`
-               {
-                grid-area: 1 / 1;
-              }
-            `}
-          >
+          <div>
             <Placeholder size="medium" color={colors[mode].text} />
           </div>
         )}
@@ -84,13 +70,14 @@ const Card = ({
         <div
           css={`
              {
-              grid-area: 1 / 1;
               display: inline-block;
               text-transform: uppercase;
               border: 1px solid;
-              padding: 0.25rem;
-              margin: 1rem 0;
-              background-color: ${colors[mode].background};
+              padding: 0.125rem 0.5rem;
+              margin-top: 1rem;
+              border-radius: 0.25rem;
+              font-size: 0.675rem;
+              letter-spacing: 0.5px;
             }
           `}
           data-cy={`${tag.toLowerCase()}-tag`}
@@ -98,7 +85,7 @@ const Card = ({
           {tag}
         </div>
       )}
-    </Link>
+    </CardLink>
     {footerList && (
       <div
         css={`

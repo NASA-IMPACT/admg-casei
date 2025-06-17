@@ -1,26 +1,38 @@
-import React from "react"
+import React, { useEffect, useState, useCallback } from "react"
 import PropTypes from "prop-types"
 import { FEEDBACK_FORM_URL, POSITIVE } from "../utils/constants"
 import { colors, breakpoints } from "../theme"
 import Button from "../components/button"
 import StickyBanner from "./sticky-banner"
 
-const InpageLink = props => (
+const InpageLink = ({ id, children, onClick, active }) => (
   <li
     css={`
       margin: 0 1rem 0 0;
       width: fit-content;
+      display: none;
+      white-space: pre;
+      @media screen and (min-width: ${breakpoints["xs"]}) {
+        display: list-item;
+      }
     `}
   >
     <a
-      href={`#${props.id}`}
+      href={`#${id}`}
+      onClick={onClick}
       css={`
-        color: ${colors[POSITIVE].text};
-        font-weight: 600;
+        color: ${active ? colors[POSITIVE].linkText : colors[POSITIVE].text};
+        font-weight: 500;
+        border-radius: 0.25em;
+        padding: 0.1em 0.4em;
+        transition: all 0.2s;
+        text-decoration: "none";
+        cursor: pointer;
       `}
-      data-cy={`${props.id}-inpage-link`}
+      data-cy={`${id}-inpage-link`}
+      aria-current={active ? "true" : undefined}
     >
-      {props.children}
+      {children}
     </a>
   </li>
 )
@@ -28,20 +40,71 @@ const InpageLink = props => (
 InpageLink.propTypes = {
   id: PropTypes.string.isRequired,
   children: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
+  active: PropTypes.bool,
 }
 
 const InpageNav = ({ shortname, items }) => {
+  const [activeId, setActiveId] = useState(items[0]?.id || "")
+
+  const handleLinkClick = useCallback(
+    id => e => {
+      e.preventDefault()
+      const el = document.getElementById(id)
+      if (el) {
+        const header = document.getElementById("main-header")
+        const headerHeight = header ? header.clientHeight : 0
+        const y =
+          el.getBoundingClientRect().top + window.scrollY - headerHeight - 8
+        window.scrollTo({ top: y, behavior: "smooth" })
+        // Update the URL hash without scrolling
+        if (window.location.hash !== `#${id}`) {
+          history.replaceState(null, "", `#${id}`)
+        }
+      }
+    },
+    []
+  )
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const header = document.getElementById("main-header")
+      const headerHeight = header ? header.clientHeight : 0
+      let current = items[0]?.id
+      for (const item of items) {
+        const el = document.getElementById(item.id)
+        if (el) {
+          const rect = el.getBoundingClientRect()
+          if (rect.top - headerHeight <= 8) {
+            current = item.id
+          }
+        }
+      }
+      setActiveId(current)
+    }
+    window.addEventListener("scroll", handleScroll, { passive: true })
+    handleScroll()
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [items])
+
   const offsetCalculator = (
     scrollDirection,
     startingPosition,
-    _,
+    currentScroll,
     lastScroll
   ) => {
-    const mainHeaderHeight = document.getElementById("main-header").clientHeight
-    return scrollDirection === "scroll-up" &&
+    const mainHeader = document.getElementById("main-header")
+    const mainHeaderHeight = mainHeader ? mainHeader.clientHeight : 0
+    if (
+      scrollDirection === "scroll-up" &&
       lastScroll >= startingPosition - mainHeaderHeight
-      ? `${mainHeaderHeight}px`
-      : 0
+    ) {
+      return `${mainHeaderHeight}px`
+    }
+    if (scrollDirection === "scroll-down" && currentScroll > 250) {
+      return `-${mainHeaderHeight}px`
+    }
+    return `${mainHeaderHeight}px`
   }
 
   return (
@@ -77,7 +140,8 @@ const InpageNav = ({ shortname, items }) => {
               margin: 0;
               padding: 0.25rem 0;
               list-style: none;
-              @media screen and (min-width: ${breakpoints["sm"]}) {
+              overflow: auto;
+              @media screen and (min-width: ${breakpoints["xs"]}) {
                 flex-direction: row;
                 align-items: center;
               }
@@ -90,6 +154,10 @@ const InpageNav = ({ shortname, items }) => {
             >
               <a
                 href="#top"
+                onClick={e => {
+                  e.preventDefault()
+                  window.scrollTo({ top: 0, behavior: "smooth" })
+                }}
                 css={`
                   padding-right: 0;
                   font-size: 1.25rem;
@@ -105,21 +173,24 @@ const InpageNav = ({ shortname, items }) => {
               </a>
             </li>
             {items.map(item => (
-              <InpageLink key={item.id} id={item.id}>
+              <InpageLink
+                key={item.id}
+                id={item.id}
+                onClick={handleLinkClick(item.id)}
+                active={activeId === item.id}
+              >
                 {item.label}
               </InpageLink>
             ))}
           </ul>
-          {
-            <Button
-              action={() => {
-                window.open(FEEDBACK_FORM_URL, "_blank")
-              }}
-              mode={POSITIVE}
-            >
-              Feedback
-            </Button>
-          }
+          <Button
+            action={() => {
+              window.open(FEEDBACK_FORM_URL, "_blank")
+            }}
+            mode={POSITIVE}
+          >
+            Feedback
+          </Button>
         </nav>
       </div>
     </StickyBanner>
