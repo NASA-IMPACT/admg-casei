@@ -24,7 +24,7 @@ const PageHeaderSelf = styled.header`
   z-index: 3000;
   background: ${({ scrolledUp }) =>
     scrolledUp
-      ? "radial-gradient(100vh circle at top center, hsl(216, 50%, 41%) -25%,hsl(215, 50%, 18%) 25%)"
+      ? "radial-gradient(100vh circle at top center, #234165, #0c1520)"
       : "transparent"};
   color: ${({ mode }) => mode && colors[mode].background};
   box-shadow: rgba(68, 63, 63, 0.08) 0px -1px 1px 0px,
@@ -90,11 +90,7 @@ const PageNavWrapper = styled.div`
   padding: 5rem 2rem 1rem;
   overflow: auto;
   pointer-events: auto;
-  background: radial-gradient(
-    100vh circle at top center,
-    hsl(216, 50%, 41%) -25%,
-    hsl(215, 50%, 18%) 25%
-  );
+  background: radial-gradient(100vh circle at top center, #234165, #0c1520);
   color: ${({ mode }) => mode && colors[mode].background};
   transform: translate(0, -100%);
   margin: 0;

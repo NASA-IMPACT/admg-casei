@@ -2,11 +2,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: radial-gradient(
-    100vh circle at top center,
-    #345e9d -25%,
-    #172a45 25%
-  );
+  background: radial-gradient(100vh circle at top center, #234165, #0c1520);
   background-attachment: fixed;
 }
 
