@@ -332,7 +332,7 @@ exports[`Header renders correctly 1`] = `
         </button>
       </div>
       <nav
-        className="header__PageNavWrapper-sc-1x62ed1-3 UfsJl"
+        className="header__PageNavWrapper-sc-1x62ed1-3 wYZiN"
         mode="lightTheme"
         role="navigation"
       >
