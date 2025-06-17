@@ -19,7 +19,7 @@ const StyledLink = styled(Link)`
 `
 
 const PrimeMenuBlock = styled.section`
-  color: #ffffff;
+  color: ${({ mode }) => mode && colors[mode].background};
 
   @media screen and (min-width: ${breakpoints["sm"]}) {
     box-shadow: rgba(68, 63, 63, 0.08) 0px -1px 1px 0px,
@@ -58,7 +58,7 @@ const PrimeMenu = styled.ul`
   > li {
     position: relative;
     ${StyledLink} {
-      color: ${({ mode }) => mode && colors[mode].text};
+      color: ${({ mode }) => mode && colors[mode].background};
     }
     @media screen and (min-width: ${breakpoints["sm"]}) {
       margin: 0 0 0 1rem;
@@ -66,7 +66,7 @@ const PrimeMenu = styled.ul`
   }
 
   ${PrimeMenuBlockTitle} {
-    color: ${({ mode }) => mode && colors[mode].text};
+    color: ${({ mode }) => mode && colors[mode].background};
   }
   ${PrimeMenuBlock} {
     transition: all 0.16s ease 0s;
@@ -74,7 +74,7 @@ const PrimeMenu = styled.ul`
     @media screen and (min-width: ${breakpoints["sm"]}) {
       position: absolute;
       right: 0;
-      background: #ffffff;
+      background: ${({ mode }) => mode && colors[mode].text};
       visibility: hidden;
       opacity: 0;
       transform: translate(0, -0.25rem);
@@ -98,7 +98,7 @@ const PrimeMenu = styled.ul`
         position: absolute;
         left: 0;
         bottom: 100%;
-        background: #ffffff;
+        background: ${({ mode }) => mode && colors[mode].text};
         height: 0.25rem;
         width: 100%;
         display: block;
@@ -139,7 +139,7 @@ const NavList = ({ mode, onLinkClick }) => {
           Learn{" "}
           <ChevronIcon
             role="img"
-            color={colors[mode].text}
+            color={colors[mode].background}
             aria-label="chevron-icon"
           />
         </StyledLink>

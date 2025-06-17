@@ -34,13 +34,15 @@ exports[`Platform Section displays content 1`] = `
         data-cy="carousel-list-text-control"
       >
         <button
-          className="button__Clickable-sc-1c81fec-0 button___StyledClickable-sc-1c81fec-2 dsHorc kKZQgp"
+          className="button__Clickable-sc-1c81fec-0 fnOmoW"
+          mode="darkTheme"
           onClick={[Function]}
         >
           J-31
         </button>
         <button
-          className="button__Clickable-sc-1c81fec-0 button___StyledClickable-sc-1c81fec-2 dsHorc bXMmgm"
+          className="button__Clickable-sc-1c81fec-0 kWyXnx"
+          mode="darkTheme"
           onClick={[Function]}
         >
           Aerosonde

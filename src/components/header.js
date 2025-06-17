@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import styled, { css, keyframes, createGlobalStyle } from "styled-components"
 import { Link } from "gatsby"
@@ -7,9 +7,10 @@ import { colors, layout, breakpoints } from "../theme"
 import { CaseiLogoIcon, CloseIcon, HamburgerIcon } from "../icons"
 import { NEGATIVE, POSITIVE } from "../utils/constants"
 import StickyBanner from "./sticky-banner"
-import Button from "./button"
+import { IconButton } from "./button"
 import NasaLogoIcon from "../icons/nasa-logo"
 import NavList from "./nav"
+import UnscrollableBody from "./unscrollable-body"
 
 const reveal = keyframes`
 0% {
@@ -20,11 +21,18 @@ const reveal = keyframes`
 }
 `
 const PageHeaderSelf = styled.header`
-  z-index: 3;
-  background-color: ${({ mode }) => mode && colors[mode].background};
+  z-index: 3000;
+  background: ${({ scrolledUp }) =>
+    scrolledUp
+      ? "radial-gradient(100vh circle at top center, hsl(216, 50%, 41%) -25%,hsl(215, 50%, 18%) 25%)"
+      : "transparent"};
+  color: ${({ mode }) => mode && colors[mode].background};
   box-shadow: rgba(68, 63, 63, 0.08) 0px -1px 1px 0px,
     rgba(68, 63, 63, 0.08) 0px 2px 6px 0px;
   animation: ${reveal} 0.32s ease 0s 1;
+  @media screen and (min-width: ${breakpoints["sm"]}) {
+    backdrop-filter: blur(10px);
+  }
 `
 
 const PageHeaderInner = styled.div`
@@ -39,7 +47,7 @@ const PageHeaderInner = styled.div`
   align-items: center;
 
   position: relative;
-  z-index: 30;
+  z-index: 3000;
   /* Animation */
   animation: ${reveal} 0.32s ease 0s 1;
   &::before {
@@ -53,7 +61,7 @@ const PageHeaderInner = styled.div`
     background: linear-gradient(
       0deg,
       rgba(255, 255, 255, 0) 75%,
-      rgba(255, 255, 255, 1) 100%
+      hsl(215, 50%, 18%) 100%
     );
     @media screen and (min-width: ${breakpoints["sm"]}) {
       display: none;
@@ -62,7 +70,7 @@ const PageHeaderInner = styled.div`
 `
 const PageHeadline = styled.div`
   margin: 0;
-  z-index: 100;
+  z-index: 1000;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -76,13 +84,18 @@ const PageNavWrapper = styled.div`
   left: 0;
   right: 0;
   height: 100%;
-  z-index: 20;
+  z-index: 900;
   display: flex;
   flex-flow: column nowrap;
   padding: 5rem 2rem 1rem;
   overflow: auto;
   pointer-events: auto;
-  background-color: ${({ mode }) => mode && colors[mode].background};
+  background: radial-gradient(
+    100vh circle at top center,
+    hsl(216, 50%, 41%) -25%,
+    hsl(215, 50%, 18%) 25%
+  );
+  color: ${({ mode }) => mode && colors[mode].background};
   transform: translate(0, -100%);
   margin: 0;
   transition: all 0.4s ease-in-out 0s;
@@ -103,6 +116,7 @@ const PageNavWrapper = styled.div`
     transform: translate(0, 0);
     justify-content: space-between;
     box-shadow: none;
+    background: none;
   }
 `
 const BrandImageLink = styled.a`
@@ -131,6 +145,7 @@ const SiteImageLink = styled(Link)`
   grid-template-columns: max-content auto;
   column-gap: 0.5rem;
   align-items: center;
+  color: ${({ mode }) => mode && colors[mode].background};
   @media screen and (min-width: ${breakpoints["sm"]}) {
     column-gap: 1rem;
   }
@@ -147,14 +162,14 @@ const SiteImageLink = styled(Link)`
 `
 const SiteName = styled.div`
   font-size: 1.25rem;
-  color: ${({ mode }) => mode && colors[mode].text};
+  color: ${({ mode }) => mode && colors[mode].background};
   @media screen and (min-width: ${breakpoints["sm"]}) {
     font-size: 1.5rem;
   }
 `
 const PageNavToggleWrapper = styled.div`
   position: relative;
-  z-index: 50;
+  z-index: 5000;
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-end;
@@ -162,7 +177,6 @@ const PageNavToggleWrapper = styled.div`
     display: none;
   }
 `
-const PageNavToggle = styled(Button)``
 
 const PageNavGlobalStyle = createGlobalStyle`
   body {
@@ -176,10 +190,29 @@ const PageNavGlobalStyle = createGlobalStyle`
 
 const Header = ({ shortname, mode }) => {
   const [navRevealed, setNavRevealed] = useState(false)
+  const [scrolledUp, setScrolledUp] = useState(false)
+
+  useEffect(() => {
+    let lastScroll = window.scrollY
+    const onScroll = () => {
+      const currentScroll = window.scrollY
+      if (currentScroll <= 0) {
+        setScrolledUp(false)
+      } else if (currentScroll < lastScroll) {
+        setScrolledUp(true)
+      } else if (currentScroll > lastScroll) {
+        setScrolledUp(false)
+      }
+      lastScroll = currentScroll
+    }
+    window.addEventListener("scroll", onScroll)
+    return () => window.removeEventListener("scroll", onScroll)
+  }, [])
 
   return (
     <StickyBanner navRevealed={navRevealed}>
-      <PageHeaderSelf id="main-header" mode={mode}>
+      <PageHeaderSelf id="main-header" mode={mode} scrolledUp={scrolledUp}>
+        {navRevealed && <UnscrollableBody />}
         <PageHeaderInner>
           <PageHeadline>
             <BrandImageLink
@@ -194,24 +227,24 @@ const Header = ({ shortname, mode }) => {
             <VerticalDivider />
 
             <SiteImageLink to="/">
-              <CaseiLogoIcon color={colors[mode].text} />
+              <CaseiLogoIcon color={colors[mode].background} />
               <SiteName mode={mode}>{shortname}</SiteName>
             </SiteImageLink>
           </PageHeadline>
           <PageNavGlobalStyle isActive={navRevealed} />
           <PageNavToggleWrapper>
-            <PageNavToggle
+            <IconButton
               title="Reveal/hide menu"
+              id="Nav Menu Toggle"
               action={() => setNavRevealed(v => !v)}
-              iconOnly
-              noBorder
-            >
-              {navRevealed ? (
-                <CloseIcon size="text" color={colors[mode].text} />
-              ) : (
-                <HamburgerIcon size="text" color={colors[mode].text} />
-              )}
-            </PageNavToggle>
+              icon={
+                navRevealed ? (
+                  <CloseIcon size="text" />
+                ) : (
+                  <HamburgerIcon size="text" />
+                )
+              }
+            />
           </PageNavToggleWrapper>
           <PageNavWrapper
             mode={mode}

@@ -6,6 +6,26 @@ import { POSITIVE, NEGATIVE } from "../utils/constants"
 import { colors } from "../theme"
 
 const Clickable = styled.button`
+  display: inline-flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  color: ${({ overrideMode }) => overrideMode && colors[overrideMode].text};
+  text-align: center;
+  vertical-align: middle;
+  padding: ${({ iconOnly }) => (iconOnly ? "0.5rem" : "0.25rem 0.75rem")};
+  background: none;
+  text-shadow: none;
+  border: ${({ noBorder, overrideMode }) =>
+    overrideMode &&
+    (noBorder ? "none" : `1px solid ${colors[overrideMode].text}`)};
+  cursor: pointer;
+  background-color: ${({ isSecondary, mode, overrideMode }) =>
+    overrideMode &&
+    (isSecondary ? colors[mode].background : colors[overrideMode].background)};
+  font-weight: bold;
+  white-space: nowrap;
   &:hover {
     opacity: 0.64;
   }
@@ -25,36 +45,17 @@ const Button = React.forwardRef(
       : mode === NEGATIVE
       ? POSITIVE
       : NEGATIVE
-
+    console.log(overrideMode)
     return (
       <Clickable
         as={as}
         ref={ref}
         onClick={action}
-        css={`
-           {
-            display: inline-flex;
-            flex-flow: row nowrap;
-            justify-content: center;
-            align-items: center;
-            user-select: none;
-            color: ${colors[overrideMode].text};
-            text-align: center;
-            vertical-align: middle;
-            padding: ${iconOnly ? "0.5rem" : "0.25rem 0.75rem"};
-            background: none;
-            text-shadow: none;
-            border: ${noBorder
-              ? "none"
-              : `1px solid ${colors[overrideMode].text}`};
-            cursor: pointer;
-            background-color: ${isSecondary
-              ? colors[mode].background
-              : colors[overrideMode].background};
-            font-weight: bold;
-            white-space: nowrap;
-          }
-        `}
+        mode={mode}
+        overrideMode={overrideMode}
+        isSecondary={isSecondary}
+        iconOnly={iconOnly}
+        noBorder={noBorder}
       >
         {children}
       </Clickable>
@@ -77,20 +78,18 @@ Button.displayName = "Button"
 
 export default Button
 
+const ClickableIcon = styled(Clickable)`
+  background: none;
+  border: none;
+  flex-grow: 0;
+  padding: 0.5rem;
+  cursor: pointer;
+  color: ${colors[NEGATIVE].text};
+  vertical-align: middle;
+`
+
 export const IconButton = ({ id, icon, action, type }) => (
-  <Clickable
-    type={type || "button"}
-    onClick={action}
-    css={`
-      background: none;
-      border: none;
-      flex-grow: 0;
-      cursor: pointer;
-      color: ${colors[NEGATIVE].text};
-      vertical-align: middle;
-    `}
-    data-cy={id}
-  >
+  <ClickableIcon type={type || "button"} onClick={action} data-cy={id}>
     <span
       role="img"
       aria-label={`${id}-icon`}
@@ -101,7 +100,7 @@ export const IconButton = ({ id, icon, action, type }) => (
     >
       {icon}
     </span>
-  </Clickable>
+  </ClickableIcon>
 )
 
 IconButton.propTypes = {

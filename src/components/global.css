@@ -2,7 +2,12 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #294060;
+  background: radial-gradient(
+    100vh circle at top center,
+    #345e9d -25%,
+    #172a45 25%
+  );
+  background-attachment: fixed;
 }
 
 .bottom-right {
@@ -18,9 +23,9 @@ body {
   display: inline-block;
   box-sizing: border-box;
   animation: rotation 1s linear infinite;
-  }
+}
 
-  @keyframes rotation {
+@keyframes rotation {
   0% {
     transform: rotate(0deg);
   }

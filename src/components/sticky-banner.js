@@ -4,6 +4,7 @@ import PropTypes from "prop-types"
 const StickyBanner = ({
   children,
   navRevealed,
+  secondaryNav,
   offsetCalculator: childOffsetCalculator,
 }) => {
   const scrollDown = "scroll-down"
@@ -66,7 +67,7 @@ const StickyBanner = ({
         top: 0;
         left: 0;
         right: 0;
-        z-index: 3;
+        z-index: ${secondaryNav ? 5 : 10};
         transition: top 0.2s;
         top: ${!navRevealed && offset};
       `}
@@ -80,6 +81,7 @@ StickyBanner.propTypes = {
   children: PropTypes.element,
   hideAfter: PropTypes.number,
   navRevealed: PropTypes.bool,
+  secondaryNav: PropTypes.bool,
   offsetCalculator: PropTypes.func,
 }
 
