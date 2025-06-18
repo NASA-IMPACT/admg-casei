@@ -2,7 +2,7 @@
 
 exports[`Header renders correctly 1`] = `
 <section
-  className="hero__Container-sc-eyerl9-0 bKuvRr"
+  className="hero__Container-sc-eyerl9-0 fYxBTf"
   data-cy="test-hero"
 >
   <div
@@ -89,7 +89,7 @@ exports[`Header renders correctly 1`] = `
 
 exports[`Header renders with adjust ratios 1`] = `
 <section
-  className="hero__Container-sc-eyerl9-0 bKuvRr"
+  className="hero__Container-sc-eyerl9-0 fYxBTf"
   data-cy="undefined-hero"
 >
   <div

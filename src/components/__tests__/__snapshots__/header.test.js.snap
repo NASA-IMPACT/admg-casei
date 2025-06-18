@@ -2,18 +2,18 @@
 
 exports[`Header renders correctly 1`] = `
 <div
-  className="sticky-banner___StyledDiv-sc-884fdm-0 iGcwwZ"
+  className="sticky-banner___StyledDiv-sc-884fdm-0 hjlHFE"
 >
   <header
-    className="header__PageHeaderSelf-sc-1x62ed1-0 jQmQSm"
+    className="header__PageHeaderSelf-sc-1x62ed1-0 gGPVBR"
     id="main-header"
     mode="lightTheme"
   >
     <div
-      className="header__PageHeaderInner-sc-1x62ed1-1 fEcpjo"
+      className="header__PageHeaderInner-sc-1x62ed1-1 iKmYnc"
     >
       <div
-        className="header__PageHeadline-sc-1x62ed1-2 brFoSG"
+        className="header__PageHeadline-sc-1x62ed1-2 ctVnvm"
       >
         <a
           aria-label="Visit nasa.gov (opens in a new window)"
@@ -258,7 +258,7 @@ exports[`Header renders correctly 1`] = `
           className="header__VerticalDivider-sc-1x62ed1-5 drJENr"
         />
         <a
-          className="header__SiteImageLink-sc-1x62ed1-6 iySDMU"
+          className="header__SiteImageLink-sc-1x62ed1-6 gQJlSj"
           href="/"
         >
           <svg
@@ -278,9 +278,9 @@ exports[`Header renders correctly 1`] = `
               strokeWidth="1"
             >
               <g
-                fill="#262a31"
+                fill="#ffffff"
                 fillRule="nonzero"
-                stroke="#262a31"
+                stroke="#ffffff"
                 strokeWidth="0.5"
                 transform="translate(-132.000000, -29.000000)"
               >
@@ -291,7 +291,7 @@ exports[`Header renders correctly 1`] = `
             </g>
           </svg>
           <div
-            className="header__SiteName-sc-1x62ed1-7 gjlzvR"
+            className="header__SiteName-sc-1x62ed1-7 kjpyCA"
             mode="lightTheme"
           >
             Shortname from props
@@ -299,36 +299,45 @@ exports[`Header renders correctly 1`] = `
         </a>
       </div>
       <div
-        className="header__PageNavToggleWrapper-sc-1x62ed1-8 dlYNcK"
+        className="header__PageNavToggleWrapper-sc-1x62ed1-8 bQnkpq"
       >
         <button
-          className="button__Clickable-sc-1c81fec-0 button___StyledClickable-sc-1c81fec-2 dsHorc iHwhbN"
+          className="button__Clickable-sc-1c81fec-0 button__ClickableIcon-sc-1c81fec-1 dImKvl goJtrU"
+          data-cy="Nav Menu Toggle"
           onClick={[Function]}
+          type="button"
         >
-          <svg
-            fill="currentColor"
-            height="16"
-            viewBox="0 0 16 16"
-            width="16"
-            xmlns="http://www.w3.org/2000/svg"
+          <span
+            aria-label="Nav Menu Toggle-icon"
+            className="button___StyledSpan-sc-1c81fec-2 hqlpTe"
+            role="img"
           >
-            <path
-              d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"
-              fill="#262a31"
-            />
-            <path
-              d="M1,9h14V7H1V9z M1,14h14v-2H1V14z M1,2v2h14V2H1z"
-            />
-          </svg>
+            <svg
+              fill="currentColor"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"
+                fill="#FFF"
+              />
+              <path
+                d="M1,9h14V7H1V9z M1,14h14v-2H1V14z M1,2v2h14V2H1z"
+                fill="#FFF"
+              />
+            </svg>
+          </span>
         </button>
       </div>
       <nav
-        className="header__PageNavWrapper-sc-1x62ed1-3 fumqDI"
+        className="header__PageNavWrapper-sc-1x62ed1-3 wYZiN"
         mode="lightTheme"
         role="navigation"
       >
         <ul
-          className="nav__PrimeMenu-sc-xno5zg-3 droVXw"
+          className="nav__PrimeMenu-sc-xno5zg-3 hifMkU"
           mode="lightTheme"
         >
           <li>
@@ -364,13 +373,13 @@ exports[`Header renders correctly 1`] = `
                   width="16"
                 />
                 <polygon
-                  fill="#262a31"
+                  fill="#ffffff"
                   points="12.586,4.586 8,9.172 3.414,4.586 2,6 8,12 14,6"
                 />
               </svg>
             </a>
             <section
-              className="nav__PrimeMenuBlock-sc-xno5zg-1 vHuXd"
+              className="nav__PrimeMenuBlock-sc-xno5zg-1 flObaJ"
             >
               <h6
                 className="nav__PrimeMenuBlockTitle-sc-xno5zg-2 jjxXKR"

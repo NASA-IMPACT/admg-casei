@@ -11,14 +11,14 @@ exports[`Chip renders with action 1`] = `
     Weather
   </small>
   <button
-    className="button__Clickable-sc-1c81fec-0 button___StyledClickable2-sc-1c81fec-1 dsHorc gpewNA"
+    className="button__Clickable-sc-1c81fec-0 button__ClickableIcon-sc-1c81fec-1 dImKvl goJtrU"
     data-cy="remove-filter"
     onClick={[Function]}
     type="button"
   >
     <span
       aria-label="remove-filter-icon"
-      className="button___StyledSpan-sc-1c81fec-3 gThnOP"
+      className="button___StyledSpan-sc-1c81fec-2 hqlpTe"
       role="img"
     >
       <svg

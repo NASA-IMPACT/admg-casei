@@ -108,91 +108,85 @@ const InpageNav = ({ shortname, items }) => {
   }
 
   return (
-    <StickyBanner offsetCalculator={offsetCalculator}>
-      <div
+    <StickyBanner offsetCalculator={offsetCalculator} secondaryNav>
+      <nav
+        aria-label="inpage-scroll"
         css={`
-          z-index: 1000;
+          margin: 0 -6rem;
+          padding: 0 6rem;
+          @media screen and (max-width: ${breakpoints["sm"]}) {
+            margin: 0 -2rem;
+            padding: 0 2rem;
+          }
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: ${colors[POSITIVE].background};
+          color: ${colors[POSITIVE].text};
         `}
+        data-cy="inpage-nav"
       >
-        <nav
-          aria-label="inpage-scroll"
+        <ul
           css={`
-            margin: 0 -6rem;
-            padding: 0 6rem;
-            @media screen and (max-width: ${breakpoints["sm"]}) {
-              margin: 0 -2rem;
-              padding: 0 2rem;
-            }
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: ${colors[POSITIVE].background};
-            color: ${colors[POSITIVE].text};
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin: 0;
+            padding: 0.25rem 0;
+            list-style: none;
+            overflow: auto;
+            @media screen and (min-width: ${breakpoints["xs"]}) {
+              flex-direction: row;
+              align-items: center;
+            }
           `}
-          data-cy="inpage-nav"
         >
-          <ul
+          <li
             css={`
-              display: flex;
-              flex-direction: column;
-              justify-content: flex-start;
-              align-items: flex-start;
-              margin: 0;
-              padding: 0.25rem 0;
-              list-style: none;
-              overflow: auto;
-              @media screen and (min-width: ${breakpoints["xs"]}) {
-                flex-direction: row;
-                align-items: center;
-              }
+              margin: 0 1rem 0 0;
             `}
           >
-            <li
+            <a
+              href="#top"
+              onClick={e => {
+                e.preventDefault()
+                window.scrollTo({ top: 0, behavior: "smooth" })
+              }}
               css={`
-                margin: 0 1rem 0 0;
+                padding-right: 0;
+                font-size: 1.25rem;
+                @media screen and (min-width: ${breakpoints["sm"]}) {
+                  padding-right: 1rem;
+                  font-size: 2rem;
+                }
+                color: ${colors[POSITIVE].text};
               `}
+              data-cy={`top-inpage-link`}
             >
-              <a
-                href="#top"
-                onClick={e => {
-                  e.preventDefault()
-                  window.scrollTo({ top: 0, behavior: "smooth" })
-                }}
-                css={`
-                  padding-right: 0;
-                  font-size: 1.25rem;
-                  @media screen and (min-width: ${breakpoints["sm"]}) {
-                    padding-right: 1rem;
-                    font-size: 2rem;
-                  }
-                  color: ${colors[POSITIVE].text};
-                `}
-                data-cy={`top-inpage-link`}
-              >
-                {shortname}
-              </a>
-            </li>
-            {items.map(item => (
-              <InpageLink
-                key={item.id}
-                id={item.id}
-                onClick={handleLinkClick(item.id)}
-                active={activeId === item.id}
-              >
-                {item.label}
-              </InpageLink>
-            ))}
-          </ul>
-          <Button
-            action={() => {
-              window.open(FEEDBACK_FORM_URL, "_blank")
-            }}
-            mode={POSITIVE}
-          >
-            Feedback
-          </Button>
-        </nav>
-      </div>
+              {shortname}
+            </a>
+          </li>
+          {items.map(item => (
+            <InpageLink
+              key={item.id}
+              id={item.id}
+              onClick={handleLinkClick(item.id)}
+              active={activeId === item.id}
+            >
+              {item.label}
+            </InpageLink>
+          ))}
+        </ul>
+        <Button
+          action={() => {
+            window.open(FEEDBACK_FORM_URL, "_blank")
+          }}
+          mode={POSITIVE}
+        >
+          Feedback
+        </Button>
+      </nav>
     </StickyBanner>
   )
 }

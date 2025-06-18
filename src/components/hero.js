@@ -66,7 +66,7 @@ const Container = styled.section`
   display: grid;
   grid-template-columns: 1fr minmax(auto, ${layout.maxWidth}) 1fr;
   min-height: 35rem;
-  align-content: center;
+  align-content: stretch;
   margin-bottom: 6rem;
   background: ${({ backgroundImage, ratioInPercent }) =>
     backgroundImage
