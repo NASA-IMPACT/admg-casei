@@ -5,7 +5,7 @@ exports[`Header renders correctly 1`] = `
   className="sticky-banner___StyledDiv-sc-884fdm-0 hjlHFE"
 >
   <header
-    className="header__PageHeaderSelf-sc-1x62ed1-0 gGPVBR"
+    className="header__PageHeaderSelf-sc-1x62ed1-0 gVcQnF"
     id="main-header"
     mode="lightTheme"
   >

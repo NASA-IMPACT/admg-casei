@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import PropTypes from "prop-types"
 import styled, { css, keyframes, createGlobalStyle } from "styled-components"
 import { Link } from "gatsby"
@@ -22,17 +22,11 @@ const reveal = keyframes`
 `
 const PageHeaderSelf = styled.header`
   z-index: 3000;
-  background: ${({ scrolledUp }) =>
-    scrolledUp
-      ? "radial-gradient(100vh circle at top center, #234165, #0c1520)"
-      : "transparent"};
+  background: radial-gradient(100vh circle at top center, #234165, #0c1520);
   color: ${({ mode }) => mode && colors[mode].background};
   box-shadow: rgba(68, 63, 63, 0.08) 0px -1px 1px 0px,
     rgba(68, 63, 63, 0.08) 0px 2px 6px 0px;
   animation: ${reveal} 0.32s ease 0s 1;
-  @media screen and (min-width: ${breakpoints["sm"]}) {
-    backdrop-filter: blur(10px);
-  }
 `
 
 const PageHeaderInner = styled.div`
@@ -186,28 +180,10 @@ const PageNavGlobalStyle = createGlobalStyle`
 
 const Header = ({ shortname, mode }) => {
   const [navRevealed, setNavRevealed] = useState(false)
-  const [scrolledUp, setScrolledUp] = useState(false)
-
-  useEffect(() => {
-    let lastScroll = window.scrollY
-    const onScroll = () => {
-      const currentScroll = window.scrollY
-      if (currentScroll <= 0) {
-        setScrolledUp(false)
-      } else if (currentScroll < lastScroll) {
-        setScrolledUp(true)
-      } else if (currentScroll > lastScroll) {
-        setScrolledUp(false)
-      }
-      lastScroll = currentScroll
-    }
-    window.addEventListener("scroll", onScroll)
-    return () => window.removeEventListener("scroll", onScroll)
-  }, [])
 
   return (
     <StickyBanner navRevealed={navRevealed}>
-      <PageHeaderSelf id="main-header" mode={mode} scrolledUp={scrolledUp}>
+      <PageHeaderSelf id="main-header" mode={mode}>
         {navRevealed && <UnscrollableBody />}
         <PageHeaderInner>
           <PageHeadline>
