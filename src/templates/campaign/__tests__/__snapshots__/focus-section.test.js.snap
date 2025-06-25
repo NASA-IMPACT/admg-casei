@@ -82,7 +82,8 @@ exports[`Focus Section displays content 1`] = `
         className="focus-section__FocusContent-sc-14x93tz-0 fMxbvH"
       >
         <div
-          className="button__Clickable-sc-1c81fec-0 button___StyledClickable-sc-1c81fec-2 dsHorc bXMmgm"
+          className="button__Clickable-sc-1c81fec-0 kWyXnx"
+          mode="darkTheme"
         >
           <a
             data-cy="geophysical-concept-link"
