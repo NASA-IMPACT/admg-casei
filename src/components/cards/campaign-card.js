@@ -56,6 +56,12 @@ export default function CampaignCard({ shortname, mode }) {
   `)
 
   const campaign = data.allCampaign.nodes.find(x => x.shortname === shortname)
+  // this is a temporary fix for the issue #770 that will help us to debug it
+  if (!campaign) {
+    console.log(`Campaign {shortname} not found`)
+    return null
+  }
+
   return (
     <Card
       image={campaign.logo}
