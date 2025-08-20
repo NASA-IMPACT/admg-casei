@@ -51,7 +51,7 @@ export default function InstrumentCard({ shortname }) {
   )
   // this is a temporary fix for the issue #770 that will help us to debug it
   if (!instrument) {
-    console.log(`Instrument {shortname} not found.`)
+    console.log(`Instrument ${shortname} not found.`)
     return null
   }
 
