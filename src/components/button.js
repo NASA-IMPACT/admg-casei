@@ -45,7 +45,6 @@ const Button = React.forwardRef(
       : mode === NEGATIVE
       ? POSITIVE
       : NEGATIVE
-    console.log(overrideMode)
     return (
       <Clickable
         as={as}

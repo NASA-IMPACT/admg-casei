@@ -36,7 +36,7 @@ const FilterByTextInput = React.forwardRef(
         `}
       >
         <IconButton
-          data-cy="submit"
+          id="submit"
           icon={<SearchIcon color={colors[NEGATIVE].text} />}
           type="submit"
         />
