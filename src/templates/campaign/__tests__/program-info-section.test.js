@@ -36,6 +36,14 @@ const testImage = {
     },
   },
 }
+const testRepositories = [
+  {
+    id: "1183964c-6517-4e25-89ca-68b1b409aed6",
+    shortname: "ORNL DAAC",
+    longname: "Oak Ridge National Laboratory DAAC (ORNL)",
+    url: "https://daac.ornl.gov/",
+  },
+]
 
 describe("Program Info Section", () => {
   it("renders logo when present in props", () => {
@@ -49,7 +57,7 @@ describe("Program Info Section", () => {
         programLead={testString}
         leadInvestigator={testString}
         dataManager={testString}
-        repositoryWebsite={testUrl}
+        repositories={testRepositories}
         partnerOrgListing={testString}
         publicationLink={testUrl}
       />
@@ -78,14 +86,14 @@ describe("Program Info Section", () => {
         programLead={testString}
         leadInvestigator={testString}
         dataManager={testString}
-        repositoryWebsite={testUrl}
+        repositories={testRepositories}
         partnerOrgListing={testString}
         publicationLink={testUrl}
       />
     )
     const tree = component.toJSON()
     const instance = component.root
-    expect(instance.findByType("svg")).toBeDefined()
+    expect(instance.findAllByType("svg").length).toBe(2)
     expect(tree).toMatchSnapshot()
   })
 })

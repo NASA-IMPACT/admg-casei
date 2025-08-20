@@ -54,7 +54,6 @@ const ProgramInfoSection = ({
       link: publicationLink?.url,
     },
   ]
-  console.log(repositories)
 
   return (
     <Section id={id}>
