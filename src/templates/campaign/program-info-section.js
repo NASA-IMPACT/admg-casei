@@ -37,8 +37,15 @@ const ProgramInfoSection = ({
     { label: "Data Manager / Technical Contact", info: dataManager },
     {
       label: "NASA Data Repository",
-      info: repositories && repositories[0]?.shortname,
-      link: repositories && repositories[0]?.url,
+      info: repositories
+        ? repositories[0]?.url.startsWith("http")
+          ? repositories[0]?.shortname
+          : repositories[0]?.longname
+        : null,
+      link:
+        repositories && repositories[0]?.url.startsWith("http")
+          ? repositories[0]?.url
+          : null,
     },
     { label: "Partner Organizations", info: partnerOrgListing },
     {
@@ -159,6 +166,7 @@ ProgramInfoSection.propTypes = {
   repositories: PropTypes.arrayOf(
     PropTypes.shape({
       shortname: PropTypes.string.isRequired,
+      longname: PropTypes.string.isRequired,
       url: PropTypes.string.isRequired,
     }).isRequired
   ).isRequired,

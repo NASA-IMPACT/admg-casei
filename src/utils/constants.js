@@ -45,4 +45,5 @@ export const MOVING_PLATFORMS = [
   "Drifting Buoy",
   "Ships/Boats",
   "Saildrone",
+  "Air Platforms",
 ]
