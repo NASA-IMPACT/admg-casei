@@ -6,19 +6,19 @@ import { POSITIVE, NEGATIVE } from "../utils/constants"
 import { colors } from "../theme"
 
 const SimpleBanner = () => {
-  const [hasSeenWorkshopNotice, setHasSeenNotice] = useState(false)
+  const [hasSeenNotice, setHasSeenNotice] = useState(false)
   const [checkedLocalStorage, setCheckedLocalStorage] = useState(false)
 
   // This runs when the page is loaded.
   useEffect(() => {
-    if (localStorage.getItem("has_seen_workshop_recording_banner")) {
+    if (localStorage.getItem("has_seen_shutdown_banner")) {
       setHasSeenNotice(true)
     }
     setCheckedLocalStorage(true)
   }, [])
 
   const markWorkshopNoticeSeen = () => {
-    localStorage.setItem("has_seen_workshop_recording_banner", "true")
+    localStorage.setItem("has_seen_shutdown_banner", "true")
     setHasSeenNotice(true)
   }
 
@@ -38,24 +38,11 @@ const SimpleBanner = () => {
             padding-left: 2.5rem;
             padding-right: 2.5rem;
             z-index: 400;
-            display: ${hasSeenWorkshopNotice ? "none" : "flex"};
+            display: ${hasSeenNotice ? "none" : "flex"};
           `}
         >
           <div>
-            <span>{`July update: Please note that session recordings from the 2024 Airborne & Field Data Workshop are now available`}</span>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href={`https://www.earthdata.nasa.gov/learn/webinars-and-tutorials/second-airborne-field-data-workshop`}
-              css={`
-                color: ${colors[POSITIVE].text};
-                font-weight: bold;
-              `}
-              data-cy={`workshop-link`}
-            >
-              {"\u00a0here"}
-            </a>
-            <span>!</span>
+            <span>{`Due to the lapse in federal government funding, NASA is not updating this website. We sincerely regret this inconvenience.`}</span>
           </div>
           <div
             css={`

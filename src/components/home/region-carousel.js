@@ -9,7 +9,6 @@ import { controlButtonLRStyle } from "../carousel-styles"
 
 export const RegionCarousel = ({ regions }) => {
   const controlTextRef = useRef(null)
-
   const [slideIndex, setSlideIndex] = useState(0)
 
   return (
@@ -86,7 +85,7 @@ export const RegionCarousel = ({ regions }) => {
                   height: 550px;
                 `}
               >
-                {region.image?.gatsbyImg && (
+                {region.image?.gatsbyImg?.childImageSharp && (
                   <GatsbyImage
                     image={
                       region.image.gatsbyImg.childImageSharp.gatsbyImageData

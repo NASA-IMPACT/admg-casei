@@ -39,7 +39,7 @@ exports[`Focus Section displays content 1`] = `
         className="focus-area-gallery___StyledDiv-sc-1h9c11a-0 eGQTcA"
       >
         <a
-          className="sc-fqkvVR eoLNjC"
+          className="sc-dcJsrY llcBLh"
           data-cy="focus-area"
           href="/focus/Carbon Cycle & Ecosystems"
           state={
