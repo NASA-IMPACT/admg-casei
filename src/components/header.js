@@ -11,7 +11,6 @@ import { IconButton } from "./button"
 import NasaLogoIcon from "../icons/nasa-logo"
 import NavList from "./nav"
 import UnscrollableBody from "./unscrollable-body"
-import SimpleBanner from "./simple-banner"
 
 const reveal = keyframes`
 0% {
@@ -185,7 +184,6 @@ const Header = ({ shortname, mode }) => {
   return (
     <StickyBanner navRevealed={navRevealed}>
       <PageHeaderSelf id="main-header" mode={mode}>
-        <SimpleBanner />
         {navRevealed && <UnscrollableBody />}
         <PageHeaderInner>
           <PageHeadline>
