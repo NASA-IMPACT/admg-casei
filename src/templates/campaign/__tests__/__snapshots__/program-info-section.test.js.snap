@@ -27,10 +27,10 @@ exports[`Program Info Section renders logo when present in props 1`] = `
     mode="darkTheme"
   >
     <div
-      className="sc-dcJsrY hKvuh"
+      className="sc-fqkvVR gOztfi"
     >
       <div
-        className="sc-iGgWBj ellSkC"
+        className="sc-dcJsrY eCZDRB"
       >
         <div
           className="program-info-section___StyledDiv3-sc-g8ragl-0 sRfvN"
@@ -334,10 +334,10 @@ exports[`Program Info Section renders placeholder when no logo is available 1`] 
     mode="darkTheme"
   >
     <div
-      className="sc-dcJsrY hKvuh"
+      className="sc-fqkvVR gOztfi"
     >
       <div
-        className="sc-iGgWBj ellSkC"
+        className="sc-dcJsrY eCZDRB"
       >
         <svg
           height="120"
