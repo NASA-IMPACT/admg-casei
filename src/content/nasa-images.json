@@ -32,13 +32,13 @@
   {
     "shortname": "desert",
     "category": "region",
-    "image": "https://earthobservatory.nasa.gov/blogs/fromthefield/wp-content/uploads/sites/2/2018/01/desert-plant-and-lidar.jpg",
+    "image": "https://science.nasa.gov/wp-content/uploads/2018/01/notes-from-the-field_desert-plant-and-lidar.jpg",
     "nasaImgAlt": "The lidar on its tripod. (Photography courtesy NASA/GSFC)"
   },
   {
     "shortname": "forest",
     "category": "region",
-    "image": "https://earthobservatory.nasa.gov/ContentFeature/ForestCarbon/images/gabon_forest.jpg",
+    "image": "https://science.nasa.gov/wp-content/uploads/2016/03/notes-from-the-field_gabon_forest.jpg",
     "nasaImgAlt": "Tropical forests, such as those in Gabon, Africa, are an important reservoir of carbon. (Photography courtesy Sassan Saatchi, NASA/JPL-Caltech.)"
   },
   {
