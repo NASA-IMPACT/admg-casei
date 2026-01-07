@@ -189,7 +189,7 @@ export default function OverviewSection({
               content:
                 measurementType && measurementType.longname
                   ? measurementType.longname
-                  : "Currently unavailble",
+                  : "Currently unavailable",
             },
             {
               title: "Measurement/Variables",
@@ -201,19 +201,19 @@ export default function OverviewSection({
               title: "Vertical Measurement Regions",
               content:
                 measurementRegions.map(x => x.longname).join(", ") ||
-                "Currently unavailble",
+                "Currently unavailable",
             },
             {
               title: "Temporal Resolution",
-              content: temporalResolution || "Currently unavailble",
+              content: temporalResolution || "Currently unavailable",
             },
             {
               title: "Spatial Resolution",
-              content: spatialResolution || "Currently unavailble",
+              content: spatialResolution || "Currently unavailable",
             },
             {
               title: "Measurement Frequency",
-              content: radiometricFrequency || "Currently unavailble",
+              content: radiometricFrequency || "Currently unavailable",
             },
             {
               title: "Calibration Details",
@@ -225,7 +225,7 @@ export default function OverviewSection({
                   mode={POSITIVE}
                 />
               ) : (
-                "Currently unavailble"
+                "Currently unavailable"
               ),
             },
             {
@@ -258,7 +258,7 @@ export default function OverviewSection({
                     ))}
                   </ul>
                 ) : (
-                  "Currently unavailble"
+                  "Currently unavailable"
                 ),
             },
           ]}
