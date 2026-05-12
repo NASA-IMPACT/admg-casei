@@ -22,9 +22,10 @@ test.describe("Header", () => {
     await expect(nasaLogo).toBeVisible()
 
     const navItems = await page.locator("nav").locator("li")
-    await expect(navItems).toHaveCount(6)
+    await expect(navItems).toHaveCount(7)
 
-    await expect(navItems.nth(0)).toHaveText("Explore")
+    await expect(navItems.nth(0)).toHaveText("CASEI")
+    await expect(navItems.nth(1)).toHaveText("Explore")
     await expect(navItems.nth(2)).toHaveText("Glossary")
     await expect(navItems.nth(3)).toHaveText("FAQ")
     await expect(navItems.nth(4)).toHaveText("About")
