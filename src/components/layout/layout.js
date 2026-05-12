@@ -44,7 +44,7 @@ const Layout = ({ children }) => {
 
   return (
     <Container id="top" data-cy="page">
-      <Header shortname={data.site.siteMetadata.shortname} mode={POSITIVE} />
+      <Header mode={POSITIVE} />
       <main>{children}</main>
       <Footer shortname={data.site.siteMetadata.shortname} />
     </Container>

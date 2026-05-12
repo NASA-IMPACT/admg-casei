@@ -9,13 +9,7 @@ import { POSITIVE } from "../../utils/constants"
 describe("Header", () => {
   it("renders correctly", () => {
     const tree = renderer
-      .create(
-        <Header
-          siteTitle="Site title from props"
-          shortname="Shortname from props"
-          mode={POSITIVE}
-        />
-      )
+      .create(<Header siteTitle="Site title from props" mode={POSITIVE} />)
       .toJSON()
     expect(tree).toMatchSnapshot()
   })
