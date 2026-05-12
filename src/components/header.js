@@ -1,11 +1,10 @@
 import React, { useState } from "react"
 import PropTypes from "prop-types"
 import styled, { css, keyframes, createGlobalStyle } from "styled-components"
-import { Link } from "gatsby"
 
 import { colors, layout, breakpoints } from "../theme"
-import { CaseiLogoIcon, CloseIcon, HamburgerIcon } from "../icons"
-import { NEGATIVE, POSITIVE } from "../utils/constants"
+import { CloseIcon, HamburgerIcon } from "../icons"
+import { POSITIVE } from "../utils/constants"
 import StickyBanner from "./sticky-banner"
 import { IconButton } from "./button"
 import NasaLogoIcon from "../icons/nasa-logo"
@@ -124,39 +123,6 @@ const BrandImageLink = styled.a`
   }
 `
 
-const VerticalDivider = styled.span`
-  background-color: ${colors[NEGATIVE].text};
-  height: 1.5rem;
-  width: 1px;
-`
-const SiteImageLink = styled(Link)`
-  text-decoration: none;
-  display: grid;
-  grid-template-columns: max-content auto;
-  column-gap: 0.5rem;
-  align-items: center;
-  color: ${({ mode }) => mode && colors[mode].background};
-  @media screen and (min-width: ${breakpoints["sm"]}) {
-    column-gap: 1rem;
-  }
-  svg {
-    height: 30px;
-    width: 30px;
-  }
-  @media screen and (min-width: ${breakpoints["sm"]}) {
-    svg {
-      height: 60px;
-      width: 60px;
-    }
-  }
-`
-const SiteName = styled.div`
-  font-size: 1.25rem;
-  color: ${({ mode }) => mode && colors[mode].background};
-  @media screen and (min-width: ${breakpoints["sm"]}) {
-    font-size: 1.5rem;
-  }
-`
 const PageNavToggleWrapper = styled.div`
   position: relative;
   z-index: 5000;
@@ -178,7 +144,7 @@ const PageNavGlobalStyle = createGlobalStyle`
   }
 `
 
-const Header = ({ shortname, mode }) => {
+const Header = ({ mode }) => {
   const [navRevealed, setNavRevealed] = useState(false)
 
   return (
@@ -195,13 +161,6 @@ const Header = ({ shortname, mode }) => {
             >
               <NasaLogoIcon dataCy="nasa-logo" />
             </BrandImageLink>
-
-            <VerticalDivider />
-
-            <SiteImageLink to="/">
-              <CaseiLogoIcon color={colors[mode].background} />
-              <SiteName mode={mode}>{shortname}</SiteName>
-            </SiteImageLink>
           </PageHeadline>
           <PageNavGlobalStyle isActive={navRevealed} />
           <PageNavToggleWrapper>
@@ -236,7 +195,6 @@ const Header = ({ shortname, mode }) => {
 }
 
 Header.propTypes = {
-  shortname: PropTypes.string.isRequired,
   children: PropTypes.element,
   mode: PropTypes.string.isRequired,
 }
