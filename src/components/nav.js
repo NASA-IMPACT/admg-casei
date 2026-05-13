@@ -20,6 +20,7 @@ const StyledLink = styled(Link)`
       display: none;
     }
   }
+  cursor: ${props => (props.noPointer ? "default" : "pointer")};
 `
 
 const MainLink = styled(StyledLink)`
@@ -163,7 +164,7 @@ const NavList = ({ mode, onLinkClick }) => {
         </StyledLink>
       </li>
       <li>
-        <StyledLink>
+        <StyledLink noPointer>
           Learn{" "}
           <ChevronIcon
             role="img"
