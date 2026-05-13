@@ -10,6 +10,7 @@ import { IconButton } from "./button"
 import NasaLogoIcon from "../icons/nasa-logo"
 import NavList from "./nav"
 import UnscrollableBody from "./unscrollable-body"
+import { Link } from "gatsby"
 
 const reveal = keyframes`
 0% {
@@ -144,6 +145,15 @@ const PageNavGlobalStyle = createGlobalStyle`
   }
 `
 
+const MobileSiteNameLink = styled(Link)`
+  font-size: 1.25rem;
+  color: ${({ mode }) => mode && colors[mode].background};
+  @media screen and (min-width: ${breakpoints["sm"]}) {
+    display: none;
+  }
+  z-index: 1000;
+`
+
 const Header = ({ mode }) => {
   const [navRevealed, setNavRevealed] = useState(false)
 
@@ -162,6 +172,9 @@ const Header = ({ mode }) => {
               <NasaLogoIcon dataCy="nasa-logo" />
             </BrandImageLink>
           </PageHeadline>
+          <MobileSiteNameLink to="/" mode={mode}>
+            CASEI
+          </MobileSiteNameLink>
           <PageNavGlobalStyle isActive={navRevealed} />
           <PageNavToggleWrapper>
             <IconButton

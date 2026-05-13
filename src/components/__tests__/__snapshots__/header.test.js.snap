@@ -255,6 +255,13 @@ exports[`Header renders correctly 1`] = `
           </svg>
         </a>
       </div>
+      <a
+        className="header__MobileSiteNameLink-sc-1x62ed1-6 jxPpDU"
+        href="/"
+        mode="lightTheme"
+      >
+        CASEI
+      </a>
       <div
         className="header__PageNavToggleWrapper-sc-1x62ed1-5 EisTT"
       >
@@ -299,7 +306,7 @@ exports[`Header renders correctly 1`] = `
         >
           <li>
             <a
-              className="nav__StyledLink-sc-xno5zg-0 nav__MainLink-sc-xno5zg-1 hfoQQh woVUy"
+              className="nav__StyledLink-sc-xno5zg-0 nav__MainLink-sc-xno5zg-1 bRtwxF woVUy"
               href="/"
               onClick={[Function]}
               title="View the CASEI homepage"
@@ -309,7 +316,7 @@ exports[`Header renders correctly 1`] = `
           </li>
           <li>
             <a
-              className="nav__StyledLink-sc-xno5zg-0 hfoQQh"
+              className="nav__StyledLink-sc-xno5zg-0 bRtwxF"
               href="/explore"
               onClick={[Function]}
               title="View the explore page"
@@ -319,7 +326,8 @@ exports[`Header renders correctly 1`] = `
           </li>
           <li>
             <a
-              className="nav__StyledLink-sc-xno5zg-0 hfoQQh"
+              className="nav__StyledLink-sc-xno5zg-0 bBCjJp"
+              noPointer={true}
             >
               Learn
                
@@ -359,7 +367,7 @@ exports[`Header renders correctly 1`] = `
               >
                 <li>
                   <a
-                    className="nav__StyledLink-sc-xno5zg-0 cajCGP"
+                    className="nav__StyledLink-sc-xno5zg-0 gBdtBb"
                     href="/glossary"
                     isSubMenu={true}
                     onClick={[Function]}
@@ -370,7 +378,7 @@ exports[`Header renders correctly 1`] = `
                 </li>
                 <li>
                   <a
-                    className="nav__StyledLink-sc-xno5zg-0 cajCGP"
+                    className="nav__StyledLink-sc-xno5zg-0 gBdtBb"
                     href="/faq"
                     isSubMenu={true}
                     onClick={[Function]}
@@ -384,7 +392,7 @@ exports[`Header renders correctly 1`] = `
           </li>
           <li>
             <a
-              className="nav__StyledLink-sc-xno5zg-0 hfoQQh"
+              className="nav__StyledLink-sc-xno5zg-0 bRtwxF"
               href="/about"
               onClick={[Function]}
               title="Learn more"
@@ -394,7 +402,7 @@ exports[`Header renders correctly 1`] = `
           </li>
           <li>
             <a
-              className="nav__StyledLink-sc-xno5zg-0 hfoQQh"
+              className="nav__StyledLink-sc-xno5zg-0 bRtwxF"
               href="/contact"
               onClick={[Function]}
               title="Send feedback"
