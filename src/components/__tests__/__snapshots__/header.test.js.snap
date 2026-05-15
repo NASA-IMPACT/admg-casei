@@ -255,16 +255,16 @@ exports[`Header renders correctly 1`] = `
           </svg>
         </a>
       </div>
-      <a
-        className="header__MobileSiteNameLink-sc-1x62ed1-6 jxPpDU"
-        href="/"
-        mode="lightTheme"
-      >
-        CASEI
-      </a>
       <div
         className="header__PageNavToggleWrapper-sc-1x62ed1-5 EisTT"
       >
+        <a
+          className="header__MobileSiteNameLink-sc-1x62ed1-6 cGSGyB"
+          href="/"
+          mode="lightTheme"
+        >
+          CASEI
+        </a>
         <button
           className="button__Clickable-sc-1c81fec-0 button__ClickableIcon-sc-1c81fec-1 dImKvl goJtrU"
           data-cy="Nav Menu Toggle"
