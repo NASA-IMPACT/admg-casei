@@ -8,6 +8,10 @@ import { ChevronIcon } from "../icons"
 const StyledLink = styled(Link)`
   display: inline-flex;
   align-items: center;
+  font-size: ${props => (props.isSubMenu ? `1.2rem` : `1.4rem`)};
+  @media screen and (min-width: ${breakpoints["sm"]}) {
+    font-size: 1rem;
+  }
   gap: 0.375rem;
   margin: 0;
   text-transform: uppercase;
@@ -15,6 +19,15 @@ const StyledLink = styled(Link)`
     @media screen and (max-width: ${breakpoints["sm"]}) {
       display: none;
     }
+  }
+  cursor: ${props => (props.noPointer ? "default" : "pointer")};
+`
+
+const MainLink = styled(StyledLink)`
+  font-size: 1.6rem;
+  font-weight: 600;
+  @media screen and (min-width: ${breakpoints["sm"]}) {
+    font-size: 1.4rem;
   }
 `
 
@@ -46,6 +59,7 @@ const PrimeMenuBlockTitle = styled.h6`
 
 const PrimeMenu = styled.ul`
   display: flex;
+  align-items: left;
   flex-flow: column nowrap;
   list-style: none;
   gap: 0.5rem;
@@ -53,6 +67,9 @@ const PrimeMenu = styled.ul`
 
   @media screen and (min-width: ${breakpoints["sm"]}) {
     flex-flow: row;
+  }
+  @media screen and (min-width: ${breakpoints["sm"]}) {
+    align-items: center;
   }
 
   > li {
@@ -120,9 +137,21 @@ const activeStyles = {
   borderBottom: `1px solid`,
   fontWeight: `bold`,
 }
+
 const NavList = ({ mode, onLinkClick }) => {
   return (
     <PrimeMenu mode={mode}>
+      <li>
+        <MainLink
+          to="/"
+          title="View the CASEI homepage"
+          activeStyle={activeStyles}
+          partiallyActive={false}
+          onClick={onLinkClick}
+        >
+          CASEI
+        </MainLink>
+      </li>
       <li>
         <StyledLink
           to="/explore"
@@ -135,7 +164,7 @@ const NavList = ({ mode, onLinkClick }) => {
         </StyledLink>
       </li>
       <li>
-        <StyledLink>
+        <StyledLink noPointer>
           Learn{" "}
           <ChevronIcon
             role="img"
@@ -152,6 +181,7 @@ const NavList = ({ mode, onLinkClick }) => {
                 title="Explore the glossary"
                 activeStyle={activeStyles}
                 onClick={onLinkClick}
+                isSubMenu
               >
                 Glossary
               </StyledLink>
@@ -162,6 +192,7 @@ const NavList = ({ mode, onLinkClick }) => {
                 title="Explore the FAQ"
                 activeStyle={activeStyles}
                 onClick={onLinkClick}
+                isSubMenu
               >
                 FAQ
               </StyledLink>
