@@ -152,6 +152,7 @@ const MobileSiteNameLink = styled(Link)`
     display: none;
   }
   z-index: 1000;
+  margin-right: 1rem;
 `
 
 const Header = ({ mode }) => {
@@ -172,11 +173,12 @@ const Header = ({ mode }) => {
               <NasaLogoIcon dataCy="nasa-logo" />
             </BrandImageLink>
           </PageHeadline>
-          <MobileSiteNameLink to="/" mode={mode}>
-            CASEI
-          </MobileSiteNameLink>
           <PageNavGlobalStyle isActive={navRevealed} />
           <PageNavToggleWrapper>
+            <MobileSiteNameLink to="/" mode={mode}>
+              CASEI
+            </MobileSiteNameLink>
+            <PageNavGlobalStyle isActive={navRevealed} />
             <IconButton
               title="Reveal/hide menu"
               id="Nav Menu Toggle"
