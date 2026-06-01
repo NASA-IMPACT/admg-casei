@@ -20,6 +20,7 @@ jobs:
       GATSBY_ADMG_CLIENT_SECRET: ${{ secrets.GATSBY_ADMG_CLIENT_SECRET }}
       GATSBY_CPU_COUNT: 2
       GATSBY_MAPBOX_TOKEN: ${{ secrets.GATSBY_MAPBOX_TOKEN }}
+      NODE: 22
 
     steps:
       - name: Cancel Previous Runs
@@ -30,14 +31,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Read .nvmrc
-        run: echo ::set-output name=NVMRC::$(cat .nvmrc)
-        id: nvm
-
-      - name: Use Node.js ${{ steps.nvm.outputs.NVMRC }}
-        uses: actions/setup-node@v1
+      - name: Use Node.js ${{ env.NODE }}
+        uses: actions/setup-node@v4
         with:
-          node-version: ${{ steps.nvm.outputs.NVMRC }}
+          node-version: ${{ env.NODE }}
 
       - name: Cache node modules
         uses: actions/cache@v4
@@ -75,6 +72,7 @@ jobs:
       GATSBY_ADMG_CLIENT_SECRET: ${{ secrets.GATSBY_ADMG_CLIENT_SECRET }}
       GATSBY_CPU_COUNT: 2
       GATSBY_MAPBOX_TOKEN: ${{ secrets.GATSBY_MAPBOX_TOKEN }}
+      NODE: 22
 
     steps:
       - name: Cancel Previous Runs
@@ -85,14 +83,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Read .nvmrc
-        run: echo ::set-output name=NVMRC::$(cat .nvmrc)
-        id: nvm
-
-      - name: Use Node.js ${{ steps.nvm.outputs.NVMRC }}
+      - name: Use Node.js ${{ env.NODE }}
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ steps.nvm.outputs.NVMRC }}
+          node-version: ${{ env.NODE }}
 
       - name: Restore node modules
         uses: actions/cache@v4

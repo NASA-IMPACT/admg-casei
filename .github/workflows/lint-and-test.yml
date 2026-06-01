@@ -8,6 +8,7 @@ jobs:
 
     env:
       NODE_ENV: test
+      NODE: 22
 
     steps:
       - name: Cancel Previous Runs
@@ -18,14 +19,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Read .nvmrc
-        run: echo ::set-output name=NVMRC::$(cat .nvmrc)
-        id: nvm
-
-      - name: Use Node.js ${{ steps.nvm.outputs.NVMRC }}
+      - name: Use Node.js ${{ env.NODE }}
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ steps.nvm.outputs.NVMRC }}
+          node-version: ${{ env.NODE }}
+
       - name: Cache node modules
         uses: actions/cache@v4
         env:
@@ -49,19 +47,16 @@ jobs:
 
     env:
       NODE_ENV: test
+      NODE: 22
 
     steps:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Read .nvmrc
-        run: echo ::set-output name=NVMRC::$(cat .nvmrc)
-        id: nvm
-
-      - name: Use Node.js ${{ steps.nvm.outputs.NVMRC }}
+      - name: Use Node.js ${{ env.NODE }}
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ steps.nvm.outputs.NVMRC }}
+          node-version: ${{ env.NODE }}
 
       - name: Cache node modules
         uses: actions/cache@v4
