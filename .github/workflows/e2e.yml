@@ -10,6 +10,10 @@ on:
       - develop
       - production
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -23,11 +27,6 @@ jobs:
       NODE: 22
 
     steps:
-      - name: Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.8.0
-        with:
-          access_token: ${{ github.token }}
-
       - name: Checkout
         uses: actions/checkout@v6.0.2
 
@@ -75,13 +74,8 @@ jobs:
       NODE: 22
 
     steps:
-      - name: Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.8.0
-        with:
-          access_token: ${{ github.token }}
-
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v6.0.2
 
       - name: Use Node.js ${{ env.NODE }}
         uses: actions/setup-node@v6.4.0
@@ -134,11 +128,6 @@ jobs:
       PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
 
     steps:
-      - name: Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.8.0
-        with:
-          access_token: ${{ github.token }}
-
       - name: Checkout
         uses: actions/checkout@v6.0.2
 
