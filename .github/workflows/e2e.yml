@@ -10,6 +10,10 @@ on:
       - develop
       - production
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -20,40 +24,32 @@ jobs:
       GATSBY_ADMG_CLIENT_SECRET: ${{ secrets.GATSBY_ADMG_CLIENT_SECRET }}
       GATSBY_CPU_COUNT: 2
       GATSBY_MAPBOX_TOKEN: ${{ secrets.GATSBY_MAPBOX_TOKEN }}
+      NODE: 22
 
     steps:
-      - name: Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.8.0
-        with:
-          access_token: ${{ github.token }}
-
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v6.0.2
 
-      - name: Read .nvmrc
-        run: echo ::set-output name=NVMRC::$(cat .nvmrc)
-        id: nvm
-
-      - name: Use Node.js ${{ steps.nvm.outputs.NVMRC }}
-        uses: actions/setup-node@v1
+      - name: Use Node.js ${{ env.NODE }}
+        uses: actions/setup-node@v6.4.0
         with:
-          node-version: ${{ steps.nvm.outputs.NVMRC }}
+          node-version: ${{ env.NODE }}
 
       - name: Cache node modules
-        uses: actions/cache@v4
+        uses: actions/cache@v5.0.5
         with:
           path: node_modules
           key: ${{ runner.os }}-node-modules-${{ hashFiles('yarn.lock') }}
 
       - name: Cache Gatsby .cache folder
-        uses: actions/cache@v4
+        uses: actions/cache@v5.0.5
         with:
           path: .cache
           key: ${{ runner.os }}-gatsby-cache-${{ hashFiles('yarn.lock') }}
 
       - name: Cache Gatsby public folder
         id: cache-build
-        uses: actions/cache@v4
+        uses: actions/cache@v5.0.5
         with:
           path: public
           key: ${{ runner.os }}-gatsby-build-${{ hashFiles('yarn.lock') }}-${{ hashFiles('src/**') }}
@@ -75,39 +71,31 @@ jobs:
       GATSBY_ADMG_CLIENT_SECRET: ${{ secrets.GATSBY_ADMG_CLIENT_SECRET }}
       GATSBY_CPU_COUNT: 2
       GATSBY_MAPBOX_TOKEN: ${{ secrets.GATSBY_MAPBOX_TOKEN }}
+      NODE: 22
 
     steps:
-      - name: Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.8.0
-        with:
-          access_token: ${{ github.token }}
-
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v6.0.2
 
-      - name: Read .nvmrc
-        run: echo ::set-output name=NVMRC::$(cat .nvmrc)
-        id: nvm
-
-      - name: Use Node.js ${{ steps.nvm.outputs.NVMRC }}
-        uses: actions/setup-node@v3
+      - name: Use Node.js ${{ env.NODE }}
+        uses: actions/setup-node@v6.4.0
         with:
-          node-version: ${{ steps.nvm.outputs.NVMRC }}
+          node-version: ${{ env.NODE }}
 
       - name: Restore node modules
-        uses: actions/cache@v4
+        uses: actions/cache@v5.0.5
         with:
           path: node_modules
           key: ${{ runner.os }}-node-modules-${{ hashFiles('yarn.lock') }}
 
       - name: Restore Gatsby .cache folder
-        uses: actions/cache@v4
+        uses: actions/cache@v5.0.5
         with:
           path: .cache
           key: ${{ runner.os }}-gatsby-cache-${{ hashFiles('yarn.lock') }}
 
       - name: Restore Gatsby public folder
-        uses: actions/cache@v4
+        uses: actions/cache@v5.0.5
         with:
           path: public
           key: ${{ runner.os }}-gatsby-build-${{ hashFiles('yarn.lock') }}-${{ hashFiles('src/**') }}
@@ -126,33 +114,7 @@ jobs:
 
       - name: Upload test results
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: playwright-report
           path: playwright-report
-
-  visual-regression:
-    needs: build
-    if: ${{ github.event.pull_request.base.ref == 'production'}}
-    runs-on: ubuntu-latest
-
-    env:
-      PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
-
-    steps:
-      - name: Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.8.0
-        with:
-          access_token: ${{ github.token }}
-
-      - name: Checkout
-        uses: actions/checkout@v2
-
-      - name: Restore Gatsby public folder
-        uses: actions/cache@v4
-        with:
-          path: public
-          key: ${{ runner.os }}-gatsby-build-${{ hashFiles('yarn.lock') }}-${{ hashFiles('src/**') }}
-
-      - name: Percy Build
-        run: npx @percy/cli snapshot -c .percy.yml ./public
