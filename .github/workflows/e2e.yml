@@ -16,7 +16,7 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
 
     env:
       ADMG_ACCESS_TOKEN: ${{ secrets.ADMG_ACCESS_TOKEN }}
@@ -63,7 +63,7 @@ jobs:
 
   test-e2e-playwright:
     needs: build
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
 
     env:
       ADMG_ACCESS_TOKEN: ${{ secrets.ADMG_ACCESS_TOKEN }}
