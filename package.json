@@ -70,7 +70,7 @@
     "@babel/eslint-parser": "^7.25.1",
     "@babel/preset-env": "^7.25.3",
     "@babel/preset-typescript": "^7.24.7",
-    "@playwright/test": "1.50.1",
+    "@playwright/test": "1.65.0",
     "@quickbaseoss/babel-plugin-styled-components-css-namespace": "^1.0.1",
     "@testing-library/react-hooks": "^7.0.2",
     "axe-core": "^4.4.1",
@@ -124,10 +124,10 @@
     "url": "https://github.com/NASA-IMPACT/admg-casei/issues"
   },
   "resolutions": {
-    "playwright": "1.50.1"
+    "playwright": "1.65.0"
   },
   "overrides": {
-    "playwright": "1.50.1"
+    "playwright": "1.65.0"
   },
   "browserslist": "> 0.25%, not dead"
 }
