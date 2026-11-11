@@ -124,10 +124,10 @@
     "url": "https://github.com/NASA-IMPACT/admg-casei/issues"
   },
   "resolutions": {
-    "playwright": "1.50.1"
+    "playwright": "1.65.0"
   },
   "overrides": {
-    "playwright": "1.50.1"
+    "playwright": "1.65.0"
   },
   "browserslist": "> 0.25%, not dead"
 }
