@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import styled, { css, keyframes, createGlobalStyle } from "styled-components"
 
@@ -10,7 +11,7 @@ import { IconButton } from "./button"
 import NasaLogoIcon from "../icons/nasa-logo"
 import NavList from "./nav"
 import UnscrollableBody from "./unscrollable-body"
-import { Link } from "gatsby"
+import SimpleBanner from "./simple-banner"
 
 const reveal = keyframes`
 0% {
@@ -161,6 +162,7 @@ const Header = ({ mode }) => {
   return (
     <StickyBanner navRevealed={navRevealed}>
       <PageHeaderSelf id="main-header" mode={mode}>
+        <SimpleBanner />
         {navRevealed && <UnscrollableBody />}
         <PageHeaderInner>
           <PageHeadline>
