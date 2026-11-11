@@ -4,7 +4,6 @@ import { CloseIcon } from "../icons"
 import { IconButton } from "./button"
 import { POSITIVE, NEGATIVE } from "../utils/constants"
 import { colors } from "../theme"
-import ExternalLink from "./external-link"
 
 const SimpleBanner = () => {
   const [hasSeenNotice, setHasSeenNotice] = useState(false)
@@ -12,37 +11,45 @@ const SimpleBanner = () => {
 
   // This runs when the page is loaded.
   useEffect(() => {
-    if (localStorage.getItem("has_seen_shutdown_banner")) {
+    if (localStorage.getItem("has_seen_closeout_banner")) {
       setHasSeenNotice(true)
     }
     setCheckedLocalStorage(true)
   }, [])
 
   const markWorkshopNoticeSeen = () => {
-    localStorage.setItem("has_seen_shutdown_banner", "true")
+    localStorage.setItem("has_seen_closeout_banner", "true")
     setHasSeenNotice(true)
   }
 
-  const feedbackLink = (
-    <ExternalLink
-      title="welcome your feedback"
-      url="https://docs.google.com/forms/d/e/1FAIpQLSfCQzZHtaDSiWNdwiJa3TIzsyhjEbYyyHwfrcwIKn_UmdVaKA/viewform"
+  const FeedbackLink = () => (
+    <a
+      href="https://docs.google.com/forms/d/e/1FAIpQLSfCQzZHtaDSiWNdwiJa3TIzsyhjEbYyyHwfrcwIKn_UmdVaKA/viewform"
       target="_blank"
-      id="feedback-link"
-    />
+      rel="noopener noreferrer"
+      style={{ color: "#000", textDecoration: "underline" }}
+    >
+      welcome your feedback
+    </a>
   )
 
-  const earthdataLink = (
-    <ExternalLink
-      title="Earthdata site"
-      url="https://www.earthdata.nasa.gov/"
+  const EarthdataLink = () => (
+    <a
+      href="https://www.earthdata.nasa.gov/"
       target="_blank"
-      id="earthdata-link"
-    />
+      rel="noopener noreferrer"
+      style={{ color: "#000", textDecoration: "underline" }}
+    >
+      Earthdata site
+    </a>
   )
 
-  const paragraph = `We ${feedbackLink} on what CASEI aspects would be most helpful to
-  include in the broader NASA ${earthdataLink}.`
+  const Paragraph = () => (
+    <strong>
+      We <FeedbackLink /> on what CASEI aspects would be most helpful to include
+      in the broader NASA <EarthdataLink />.
+    </strong>
+  )
 
   if (checkedLocalStorage) {
     return (
@@ -61,6 +68,9 @@ const SimpleBanner = () => {
             padding-right: 2.5rem;
             z-index: 400;
             display: ${hasSeenNotice ? "none" : "flex"};
+            & p:last-of-type {
+              padding-top: 0.5rem;
+            }
           `}
         >
           <div>
@@ -68,7 +78,7 @@ const SimpleBanner = () => {
               Airborne Data Management Group (ADMG) developed and built CASEI as
               part of its work as an inaugural NASA Satellite Needs Working
               Group (SNWG) Implementation Team (NSITE) Solution Team. Now that
-              ADMG has reached formal closeout from NSITE/SNWG,
+              ADMG has reached formal closeout from NSITE/SNWG,{" "}
               <strong>
                 the CASEI resource (including API) is still being maintained and
                 provisioned, but new content curation has ceased.
@@ -79,8 +89,7 @@ const SimpleBanner = () => {
               represent suborbital metadata directly within the NASA ESDIS
               Earthdata Archive. Improvements to the Earthdata web presence for
               a more intuitive approach to suborbital campaigns are part of this
-              process and driven by user input:
-              <strong>{paragraph}</strong>
+              process and driven by user input: <Paragraph />
             </p>
           </div>
           <div
